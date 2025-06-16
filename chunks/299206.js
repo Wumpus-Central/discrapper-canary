@@ -7,13 +7,13 @@ var i = n(512722),
     s = n(695346),
     l = n(572004);
 function c(e) {
-    let { id: t, label: n, onSuccess: i, shiftId: c, showIconFirst: u, showWithoutDeveloperMode: d, focusedClassName: _ } = e,
-        f = s.Sb.useSetting();
+    let { id: t, label: n, onSuccess: i, shiftId: c, showIconFirst: u, showWithoutDeveloperMode: d, focusedClassName: f } = e,
+        _ = s.Sb.useSetting();
     function p(e) {
         let n = null != c && e.shiftKey ? c : t;
         a()(null != n, 'cannot copy null text'), (0, l.JG)(n, i);
     }
-    let h = d || f;
+    let h = d || _;
     if (__OVERLAY__ || !h || !l.wS || null == t) return null;
     let m = 'devmode-copy-id-'.concat(t);
     return (0, r.jsx)(
@@ -24,7 +24,7 @@ function c(e) {
             action: p,
             icon: u ? void 0 : o.VuL,
             iconLeft: u ? o.VuL : void 0,
-            focusedClassName: _
+            focusedClassName: f
         },
         m
     );

@@ -39,7 +39,7 @@ function d(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -51,12 +51,12 @@ function _(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -93,7 +93,7 @@ let m = {
         SIZE_36: c.size36
     },
     E = i.forwardRef(function (e, t) {
-        let { className: n, tooltip: i, color: a, size: u = g.SIZE_32, icon: _, onMouseDown: h, onClick: m, disabled: E, focusProps: b } = e;
+        let { className: n, tooltip: i, color: a, size: u = g.SIZE_32, icon: f, onMouseDown: h, onClick: m, disabled: E, focusProps: b } = e;
         return (0, r.jsx)(l.u, {
             text: i,
             shouldShow: !E,
@@ -102,7 +102,7 @@ let m = {
                     g = p(e, ['onClick']);
                 return (0, r.jsx)(
                     s.P,
-                    f(d({}, g), {
+                    _(d({}, g), {
                         innerRef: t,
                         'aria-label': i,
                         'aria-disabled': E,
@@ -112,7 +112,7 @@ let m = {
                             null == l || l(), m(e);
                         },
                         focusProps: b,
-                        children: _
+                        children: f
                     })
                 );
             }

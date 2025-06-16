@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(481060),
     u = n(583901),
     d = n(997945),
-    _ = n(630117),
-    f = n(441319),
+    f = n(630117),
+    _ = n(441319),
     p = n(981631),
     h = n(388032),
     m = n(770580);
@@ -71,8 +71,8 @@ let O = () => [h.intl.string(h.t.EgWTY2), h.intl.string(h.t.umBn5e), h.intl.stri
         return null != (e = l().sample(O())) ? e : h.intl.string(h.t.EgWTY2);
     };
 function I(e) {
-    let { id: t, className: n, onSelect: a, isSelected: s = !1, tabIndex: l, children: _, locked: h = !1 } = e,
-        [g, b] = i.useState((0, f.aW)(t).name),
+    let { id: t, className: n, onSelect: a, isSelected: s = !1, tabIndex: l, children: f, locked: h = !1 } = e,
+        [g, b] = i.useState((0, _.aW)(t).name),
         O = t === d.Ru.PIRATE,
         I = (0, c.xUy)({
             label: g,
@@ -91,7 +91,7 @@ function I(e) {
                             tabIndex: null != l ? l : I.tabIndex,
                             className: o()(m.appIconSelection, { [m.selected]: s }, n),
                             onClick: s ? p.dG4 : () => (null == a ? void 0 : a(t)),
-                            children: _
+                            children: f
                         })
                     ),
                     s && (0, r.jsx)(u.oK, {}),
@@ -116,9 +116,9 @@ function T(e) {
         className: i ? m.disabled : void 0,
         tabIndex: a,
         locked: s,
-        children: (0, r.jsx)(_.Z, {
+        children: (0, r.jsx)(f.Z, {
             id: t.id,
-            width: f.M9
+            width: _.M9
         })
     });
 }

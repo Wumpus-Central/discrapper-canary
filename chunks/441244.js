@@ -33,7 +33,7 @@ function l(e) {
     return e;
 }
 let c = function (e, t, n) {
-    return null != n && n.forwardRef ? d(e, t) : _(e, t);
+    return null != n && n.forwardRef ? d(e, t) : f(e, t);
 };
 function u(e) {
     var t, n;
@@ -43,7 +43,7 @@ function d(e, t) {
     return (n) => {
         var c;
         let d = 'FluxContainer('.concat(u(n), ')');
-        class _ extends (c = i.Component) {
+        class f extends (c = i.Component) {
             componentDidMount() {
                 this.listener.attach(d);
             }
@@ -57,7 +57,7 @@ function d(e, t) {
             }
             constructor(...n) {
                 super(...n),
-                    s(this, 'memoizedGetStateFromStores', f(t)),
+                    s(this, 'memoizedGetStateFromStores', _(t)),
                     s(
                         this,
                         'listener',
@@ -68,9 +68,9 @@ function d(e, t) {
                     );
             }
         }
-        s(_, 'displayName', d);
+        s(f, 'displayName', d);
         let p = i.forwardRef((e, t) =>
-            (0, r.jsx)(_, {
+            (0, r.jsx)(f, {
                 childProps: e,
                 forwardedConnectStoresRef: t
             })
@@ -78,11 +78,11 @@ function d(e, t) {
         return (p.displayName = 'ForwardRef('.concat(d, ')')), p;
     };
 }
-function _(e, t) {
+function f(e, t) {
     return (n) => {
         var c;
         let d = 'FluxContainer('.concat(u(n), ')');
-        class _ extends (c = i.Component) {
+        class f extends (c = i.Component) {
             componentDidMount() {
                 this.listener.attach(d);
             }
@@ -95,7 +95,7 @@ function _(e, t) {
             }
             constructor(...n) {
                 super(...n),
-                    s(this, 'memoizedGetStateFromStores', f(t)),
+                    s(this, 'memoizedGetStateFromStores', _(t)),
                     s(
                         this,
                         'listener',
@@ -106,10 +106,10 @@ function _(e, t) {
                     );
             }
         }
-        return s(_, 'displayName', d), _;
+        return s(f, 'displayName', d), f;
     };
 }
-function f(e) {
+function _(e) {
     let t = null,
         n = null,
         r = (e) => (null != t && null != n && (0, a.Z)(t, e) ? n : null != t && null != n && (0, a.Z)(t, e) ? ((t = e), n) : null),

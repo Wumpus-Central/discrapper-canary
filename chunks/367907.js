@@ -1,7 +1,7 @@
 n.d(t, {
     $H: () => V,
     AB: () => U,
-    JS: () => k,
+    JS: () => M,
     ZP: () => H,
     hH: () => x,
     kO: () => F,
@@ -18,8 +18,8 @@ var r = n(392711),
     c = n(314897),
     u = n(592125),
     d = n(984933),
-    _ = n(650774),
-    f = n(271383),
+    f = n(650774),
+    _ = n(271383),
     p = n(430824),
     h = n(131951),
     m = n(496675),
@@ -78,14 +78,14 @@ function x(e) {
     if (null == n) return null;
     let r = p.Z.getRoles(n.id),
         i = c.default.getId(),
-        a = f.ZP.getMember(e, i),
+        a = _.ZP.getMember(e, i),
         o = d.ZP.getChannels(e),
         s = o[d.sH].length,
         l = o[d.Zb].length,
         u = T.Z.getVoiceStates(e);
     return {
         guild_id: n.id,
-        guild_size_total: _.Z.getMemberCount(e),
+        guild_size_total: f.Z.getMemberCount(e),
         guild_num_channels: s + l,
         guild_num_text_channels: s,
         guild_num_voice_channels: l,
@@ -97,13 +97,13 @@ function x(e) {
         num_voice_channels_active: L(u)
     };
 }
-function M(e, t) {
+function k(e, t) {
     return {
         channel_static_route: t,
         channel_hidden: !1
     };
 }
-function k(e) {
+function M(e) {
     if (null == e) return null;
     let t = u.Z.getChannel(e);
     return null == t ? null : j(t);
@@ -158,7 +158,7 @@ function B(e) {
         i = 'guild_id' in t ? t.guild_id : r ? O.Z.getGuildId() : null,
         a = 'channel_id' in t ? t.channel_id : r ? y.Z.getChannelId(i) : null,
         o = u.Z.getChannel(a),
-        s = D({}, t, x(G(o, i)), null != i && null != a && (0, P.AB)(a) ? M(i, a) : j(o));
+        s = D({}, t, x(G(o, i)), null != i && null != a && (0, P.AB)(a) ? k(i, a) : j(o));
     S.default.track(e, s, { flush: n });
 }
 function V(e) {

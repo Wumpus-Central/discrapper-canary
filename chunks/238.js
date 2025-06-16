@@ -1,5 +1,5 @@
 n.d(t, {
-    N: () => _,
+    N: () => f,
     Z: () => E
 }),
     n(388685);
@@ -24,10 +24,10 @@ function c(e, t, n) {
 }
 let u = new Map(),
     d = new Map();
-var _ = (function (e) {
+var f = (function (e) {
     return (e[(e.NONE = 0)] = 'NONE'), (e[(e.FETCHING = 1)] = 'FETCHING'), (e[(e.FETCHED = 2)] = 'FETCHED'), (e[(e.FAILED = 3)] = 'FAILED'), e;
 })({});
-let f = new o.Z({
+let _ = new o.Z({
     subscriptions: [],
     otps: []
 });
@@ -52,7 +52,7 @@ class g extends (r = i.ZP.Store) {
     }
     getStoreLayout(e) {
         var t;
-        return null != (t = u.get(e)) ? t : f;
+        return null != (t = u.get(e)) ? t : _;
     }
     getFetchStatus(e) {
         var t;

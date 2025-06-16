@@ -8,8 +8,8 @@ var r,
     c = n(695346),
     u = n(358085),
     d = n(763296),
-    _ = n(242291),
-    f = n(22382),
+    f = n(242291),
+    _ = n(22382),
     p = n(747071),
     h = n(509571);
 function m(e, t) {
@@ -27,13 +27,13 @@ function m(e, t) {
     return {
         playSoundboardSound: i.useCallback(
             (n) => {
-                null != g.current && g.current.pause(), null != t && (0, _.GN)(e, t, n);
+                null != g.current && g.current.pause(), null != t && (0, f.GN)(e, t, n);
             },
             [e, g, t]
         ),
         isPlayingSound: y,
         previewSound: i.useCallback(async () => {
-            let t = (0, f.Z)(e.soundId),
+            let t = (0, _.Z)(e.soundId),
                 r = new (await (0, s.Z)(t))();
             if (((r.src = t), null != g.current && g.current.pause(), u.isPlatformEmbedded && m === h.w.VOICE)) {
                 var i;

@@ -14,8 +14,8 @@ var r = n(255367),
     c = n(442837),
     u = n(481060),
     d = n(456100),
-    _ = n(317381),
-    f = n(884338),
+    f = n(317381),
+    _ = n(884338),
     p = n(470883),
     h = n(540059),
     m = n(666188),
@@ -37,8 +37,8 @@ var r = n(255367),
     D = n(594174),
     L = n(938475),
     x = n(981631),
-    M = n(388032),
-    k = n(714509),
+    k = n(388032),
+    M = n(714509),
     j = n(375613);
 function U(e, t, n) {
     return (
@@ -132,7 +132,7 @@ function F(e) {
                 return (0, p.dq)(n, s);
             })
         ),
-        f = (0, c.e7)([T.Z], () => {
+        _ = (0, c.e7)([T.Z], () => {
             let e = 0;
             for (let t of a) e += T.Z.getParticipantCount(t, S.pV.AUDIENCE);
             return e;
@@ -148,9 +148,9 @@ function F(e) {
             [s, t]
         ),
         m = (0, c.Wu)(
-            [_.ZP],
+            [f.ZP],
             () => {
-                let e = _.ZP.getEmbeddedActivitiesForGuild(t).flatMap((e) => Array.from(e.userIds));
+                let e = f.ZP.getEmbeddedActivitiesForGuild(t).flatMap((e) => Array.from(e.userIds));
                 return (0, p._j)(e, s);
             },
             [t, s]
@@ -171,7 +171,7 @@ function F(e) {
     return {
         voiceUsersToShow: y,
         stageSpeakers: d,
-        numStageListeners: f,
+        numStageListeners: _,
         streamUsersToShow: O,
         embeddedActivitiesUsers: g,
         hasActivity: v
@@ -181,13 +181,13 @@ function Z(e, t, n) {
     return 0 === t.length
         ? null
         : (0, r.jsxs)('div', {
-              className: k.row,
+              className: M.row,
               children: [
                   (0, r.jsx)(e, {
-                      className: k.activityIcon,
+                      className: M.activityIcon,
                       color: 'currentColor'
                   }),
-                  (0, r.jsx)(f.Z, {
+                  (0, r.jsx)(_.Z, {
                       guildId: n,
                       users: t,
                       max: 6
@@ -199,27 +199,27 @@ function H(e, t, n) {
     return 0 === t.length
         ? null
         : (0, r.jsxs)('div', {
-              className: k.row,
+              className: M.row,
               children: [
                   (0, r.jsx)(u.ewx, {
                       size: 'lg',
                       color: 'currentColor',
-                      className: k.activityIcon
+                      className: M.activityIcon
                   }),
-                  (0, r.jsx)(f.Z, {
+                  (0, r.jsx)(_.Z, {
                       guildId: e,
                       users: t,
                       max: 3
                   }),
                   (0, r.jsxs)('div', {
-                      className: k.stageListenerPill,
+                      className: M.stageListenerPill,
                       children: [
                           (0, r.jsx)(u.VWR, {
                               size: 'xs',
                               color: 'currentColor'
                           }),
                           (0, r.jsx)(u.Text, {
-                              className: k.stageListenerCount,
+                              className: M.stageListenerCount,
                               color: 'text-normal',
                               variant: 'text-xs/normal',
                               children: n
@@ -236,7 +236,7 @@ function Y(e) {
               variant: 'text-xs/normal',
               color: 'text-muted',
               className: n,
-              children: M.intl.string(M.t.fpKdS0)
+              children: k.intl.string(k.t.fpKdS0)
           })
         : (0, r.jsx)(I.Z, {
               muteConfig: t,
@@ -247,11 +247,11 @@ function W(e) {
     let { guild: t } = e,
         n = t.id,
         { enabled: i } = d.c.useExperiment({ location: 'GuildTooltip' }, { autoTrackExposure: !0 }),
-        { voiceUsersToShow: a, stageSpeakers: s, numStageListeners: l, streamUsersToShow: _, embeddedActivitiesUsers: f } = F(t),
+        { voiceUsersToShow: a, stageSpeakers: s, numStageListeners: l, streamUsersToShow: f, embeddedActivitiesUsers: _ } = F(t),
         p = Z(u.gj8, a, n),
         h = H(n, s, l),
-        m = Z(u.hGI, _, n),
-        g = Z(i ? u.iWm : u.nG3, f, n),
+        m = Z(u.hGI, f, n),
+        g = Z(i ? u.iWm : u.nG3, _, n),
         { isMuted: E, muteConfig: b } = (0, c.cj)(
             [w.ZP],
             () => ({
@@ -270,7 +270,7 @@ function W(e) {
             E
                 ? (0, r.jsx)(Y, {
                       muteConfig: b,
-                      className: o()(k.muteText, { [k.muteTextWithActivity]: y })
+                      className: o()(M.muteText, { [M.muteTextWithActivity]: y })
                   })
                 : null
         ]
@@ -279,19 +279,19 @@ function W(e) {
 function K(e) {
     switch (e) {
         case b.wB.SUBMITTED:
-            return M.intl.string(M.t['9KFC9/']);
+            return k.intl.string(k.t['9KFC9/']);
         case b.wB.REJECTED:
-            return M.intl.string(M.t['TQY/RU']);
+            return k.intl.string(k.t['TQY/RU']);
         case b.wB.APPROVED:
-            return M.intl.string(M.t.WXHcq6);
+            return k.intl.string(k.t.WXHcq6);
         default:
-            return M.intl.string(M.t.fjHFCw);
+            return k.intl.string(k.t.fjHFCw);
     }
 }
 function z(e) {
     let { guildJoinRequestStatus: t } = e;
     return (0, r.jsx)(u.Text, {
-        className: k.viewAsRolesWarning,
+        className: M.viewAsRolesWarning,
         color: 'text-normal',
         variant: 'text-xs/normal',
         children: K(t)
@@ -304,45 +304,45 @@ function q(e) {
         s = null != a ? (0, r.jsx)(z, { guildJoinRequestStatus: a }) : null,
         l = n ? (0, r.jsx)(W, { guild: t }) : null,
         d = (0, c.e7)([v.Z], () => v.Z.isViewingRoles(t.id)),
-        _ = null != s ? s : l,
-        f = (0, O.Ij)(t);
+        f = null != s ? s : l,
+        _ = (0, O.Ij)(t);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                className: o()(k.row, k.rowGuildName),
+                className: o()(M.row, M.rowGuildName),
                 children: [
                     i
                         ? (0, r.jsx)(E.Z, {
                               guild: t,
-                              className: k.rowIconV2
+                              className: M.rowIconV2
                           })
                         : (0, r.jsx)(g.Z, {
                               guild: t,
                               size: 20,
-                              className: k.rowIcon
+                              className: M.rowIcon
                           }),
                     (0, r.jsx)('span', {
-                        className: o()(k.guildNameText, { [k.guildNameTextLimitedSize]: null != l }),
+                        className: o()(M.guildNameText, { [M.guildNameTextLimitedSize]: null != l }),
                         children: t.toString()
                     })
                 ]
             }),
-            f
+            _
                 ? (0, r.jsx)(u.Text, {
-                      className: k.invitesDisabledTooltip,
+                      className: M.invitesDisabledTooltip,
                       color: 'header-secondary',
                       variant: 'text-sm/medium',
-                      children: M.intl.string(M.t['2n0/Fh'])
+                      children: k.intl.string(k.t['2n0/Fh'])
                   })
                 : null,
             d
                 ? (0, r.jsx)(u.Text, {
-                      className: k.viewAsRolesWarning,
+                      className: M.viewAsRolesWarning,
                       color: 'text-normal',
                       variant: 'text-xs/normal',
-                      children: M.intl.string(M.t['5LwN8/'])
+                      children: k.intl.string(k.t['5LwN8/'])
                   })
-                : _
+                : f
         ]
     });
 }

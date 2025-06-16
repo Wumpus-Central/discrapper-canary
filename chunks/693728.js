@@ -20,10 +20,10 @@ function d(e, t, n) {
         e
     );
 }
-var _ = (function (e) {
+var f = (function (e) {
     return (e.SINGLE_AVATAR = '1'), (e.MULTIPLE_AVATAR = '2'), e;
-})(_ || {});
-let f = {
+})(f || {});
+let _ = {
     [l.EFr.SIZE_32]: u.avatarSmall,
     [l.EFr.SIZE_40]: u.avatarLarge
 };
@@ -35,7 +35,7 @@ class p extends (r = a.Component) {
                   className: s()(u.multiplePlaceholder, u.multiplePlaceholderAnimated, n),
                   children: [
                       (0, i.jsxs)(c.Z, {
-                          children: [(0, i.jsx)('div', { className: s()(u.placeholderAvatar, f[t], u.avatarMasked) }), (0, i.jsx)('div', { className: s()(u.placeholderAvatar, f[t], u.avatarMasked) }), (0, i.jsx)('div', { className: s()(u.placeholderAvatar, f[t]) })]
+                          children: [(0, i.jsx)('div', { className: s()(u.placeholderAvatar, _[t], u.avatarMasked) }), (0, i.jsx)('div', { className: s()(u.placeholderAvatar, _[t], u.avatarMasked) }), (0, i.jsx)('div', { className: s()(u.placeholderAvatar, _[t]) })]
                       }),
                       (0, i.jsx)(c.Z, {
                           grow: 1,
@@ -47,7 +47,7 @@ class p extends (r = a.Component) {
             : (0, i.jsxs)(c.Z, {
                   className: s()(u.placeholder, !a && u.placeholderAnimated, n),
                   children: [
-                      (0, i.jsx)('div', { className: s()(u.placeholderAvatar, f[t], r) }),
+                      (0, i.jsx)('div', { className: s()(u.placeholderAvatar, _[t], r) }),
                       (0, i.jsx)(c.Z, {
                           grow: 1,
                           className: s()(u.placeholderUsername, r),
@@ -60,5 +60,5 @@ class p extends (r = a.Component) {
         super(...e), d(this, 'placeholderMaxWidth', ''.concat(Math.floor(40 * Math.random()) + 40, '%'));
     }
 }
-d(p, 'defaultProps', { type: '1' }), d(p, 'Types', _);
+d(p, 'defaultProps', { type: '1' }), d(p, 'Types', f);
 let h = p;

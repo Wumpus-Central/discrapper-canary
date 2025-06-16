@@ -1,7 +1,7 @@
 n.d(t, {
     X: () => p,
     i: () => h,
-    k9: () => f
+    k9: () => _
 });
 var r = n(602715),
     i = n(544891),
@@ -12,12 +12,12 @@ var r = n(602715),
     c = n(626135),
     u = n(630388),
     d = n(860987),
-    _ = n(981631);
-let f = async () => {
+    f = n(981631);
+let _ = async () => {
     a.Z.dispatch({ type: 'FETCH_CHAT_WALLPAPERS_START' });
     try {
         let e = await i.tn.get({
-            url: _.ANM.CHAT_WALLPAPERS,
+            url: f.ANM.CHAT_WALLPAPERS,
             rejectWithError: !0
         });
         a.Z.dispatch({
@@ -40,13 +40,13 @@ async function p(e, t, n) {
         channelId: e.id
     });
     try {
-        var f;
-        c.default.track(_.rMx.CHAT_WALLPAPER_USER_SIDE_CLEAR_TOGGLED, {
+        var _;
+        c.default.track(f.rMx.CHAT_WALLPAPER_USER_SIDE_CLEAR_TOGGLED, {
             is_hidden: i,
             wallpaper_id: t,
             channel_id: e.id
         });
-        let n = (0, u.mB)(null != (f = e.recipientFlags) ? f : 0, r.V.DISMISSED_CURRENT_CHAT_WALLPAPER, i);
+        let n = (0, u.mB)(null != (_ = e.recipientFlags) ? _ : 0, r.V.DISMISSED_CURRENT_CHAT_WALLPAPER, i);
         (await l.Z.updatePrivateChannelRecipientFlags(e.id, n)).ok || null == d || d();
     } catch (t) {
         let e = new o.Hx(t);

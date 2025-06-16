@@ -99,14 +99,14 @@
             height: 0
         };
     }
-    function _(e, t) {
+    function f(e, t) {
         for (var n = t; n; ) {
             if (n == e) return !0;
-            n = f(n);
+            n = _(n);
         }
         return !1;
     }
-    function f(e) {
+    function _(e) {
         var t = e.parentNode;
         return t && 11 == t.nodeType && t.host ? t.host : t;
     }
@@ -205,12 +205,12 @@
         }),
         (i.prototype._computeTargetAndRootIntersection = function (n, r) {
             if ('none' != e.getComputedStyle(n).display) {
-                for (var i = u(n), a = i, o = f(n), s = !1; !s; ) {
+                for (var i = u(n), a = i, o = _(n), s = !1; !s; ) {
                     var l = null,
                         d = 1 == o.nodeType ? e.getComputedStyle(o) : {};
                     if ('none' == d.display) return;
                     if ((o == this.root || o == t ? ((s = !0), (l = r)) : o != t.body && o != t.documentElement && 'visible' != d.overflow && (l = u(o)), l && !(a = c(l, a)))) break;
-                    o = f(o);
+                    o = _(o);
                 }
                 return a;
             }
@@ -254,10 +254,10 @@
                 }
         }),
         (i.prototype._rootIsInDom = function () {
-            return !this.root || _(t, this.root);
+            return !this.root || f(t, this.root);
         }),
         (i.prototype._rootContainsTarget = function (e) {
-            return _(this.root || t, e);
+            return f(this.root || t, e);
         }),
         (i.prototype._registerInstance = function () {
             0 > n.indexOf(this) && n.push(this);

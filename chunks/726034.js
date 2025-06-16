@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(481060),
     u = n(153867),
     d = n(230711),
-    _ = n(100527),
-    f = n(906732),
+    f = n(100527),
+    _ = n(906732),
     p = n(550385),
     h = n(605236),
     m = n(784238),
@@ -58,7 +58,7 @@ function x(e) {
     }
     return e;
 }
-function M(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -70,12 +70,12 @@ function M(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : M(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -244,7 +244,7 @@ function H(e) {
         children: (e) =>
             (0, r.jsxs)(
                 c.zxk,
-                k(x({}, e), {
+                M(x({}, e), {
                     className: D.surpriseMeButton,
                     innerClassName: D.surpriseMeButtonContent,
                     look: c.zxk.Looks.FILLED,
@@ -270,7 +270,7 @@ function W(e) {
     let { onSaveTheme: t, canApply: n } = e,
         i = (0, E.m)(R.p9.TIER_2);
     return (
-        (0, T.hf)(i, _.Z.CUSTOM_THEMES_EDITOR_COACHMARK),
+        (0, T.hf)(i, f.Z.CUSTOM_THEMES_EDITOR_COACHMARK),
         (0, r.jsxs)('div', {
             className: D.coachmarkFooterContainer,
             children: [
@@ -299,7 +299,7 @@ function W(e) {
 function K(e) {
     let { onSaveTheme: t, canApply: n, metadata: i } = e,
         a = (0, E.m)(R.p9.TIER_2);
-    (0, T.hf)(a, _.Z.CUSTOM_THEMES_EDITOR);
+    (0, T.hf)(a, f.Z.CUSTOM_THEMES_EDITOR);
     let o = () => {
         (0, T.Vb)(), (0, h.EW)(l.z.CUSTOM_THEME_COACHMARK), (null == i ? void 0 : i.from) === p.tE.SETTING ? (d.Z.open(), (0, p.Ll)()) : (null == i ? void 0 : i.from) === p.tE.CLIENT_THEMES_EDITOR ? (0, p.XO)(p.wh.CLIENT_THEMES) : (0, p.Ll)();
     };
@@ -346,14 +346,14 @@ function z(e) {
         m = (0, v.j)(),
         g = i.useRef(!1),
         { colors: E, chassisMixAmount: O, gradientAngle: N, setColors: R, setChassisMixAmount: P, setGradientAngle: L } = (0, y.I)(),
-        [x, M] = i.useState(null != (t = E[0]) ? t : '#4394D4'),
-        k = (0, s.e7)([b.Z], () => b.Z.theme),
+        [x, k] = i.useState(null != (t = E[0]) ? t : '#4394D4'),
+        M = (0, s.e7)([b.Z], () => b.Z.theme),
         j = (0, h.wE)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
-        { analyticsLocations: U } = (0, f.ZP)(_.Z.CUSTOM_THEMES_EDITOR),
+        { analyticsLocations: U } = (0, _.ZP)(f.Z.CUSTOM_THEMES_EDITOR),
         G = () => {
             (g.current = !0),
                 (0, u.ZI)({
-                    theme: k,
+                    theme: M,
                     customUserThemeSettings: {
                         colors: E,
                         gradientColorStops: [],
@@ -361,7 +361,7 @@ function z(e) {
                         baseMix: O
                     }
                 }),
-                (0, T.u7)(E, O, N, k, U),
+                (0, T.u7)(E, O, N, M, U),
                 null == a || a(C.L.TAKE_ACTION),
                 j || (0, h.EW)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
                 (0, p.Ll)();
@@ -394,7 +394,7 @@ function z(e) {
                                   (0, r.jsx)(A.o, {}),
                                   (0, r.jsx)(S.U, {
                                       onChange: (e) => {
-                                          M(e), 0 === E.length && R([e]);
+                                          k(e), 0 === E.length && R([e]);
                                       },
                                       value: x,
                                       colors: E,

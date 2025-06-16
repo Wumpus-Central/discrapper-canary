@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => _ });
 var r,
     i = n(442837),
     a = n(570140);
@@ -31,7 +31,7 @@ function u() {
 function d() {
     l = !0;
 }
-class _ extends (r = i.ZP.Store) {
+class f extends (r = i.ZP.Store) {
     getLastProgress() {
         return s;
     }
@@ -39,8 +39,8 @@ class _ extends (r = i.ZP.Store) {
         return l;
     }
 }
-o(_, 'displayName', 'DispatchApplicationLaunchSetupStore');
-let f = new _(a.Z, {
+o(f, 'displayName', 'DispatchApplicationLaunchSetupStore');
+let _ = new f(a.Z, {
     DISPATCH_APPLICATION_LAUNCH_SETUP_START: d,
     DISPATCH_APPLICATION_INSTALL_SCRIPTS_PROGRESS_UPDATE: c,
     DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE: u

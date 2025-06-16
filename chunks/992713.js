@@ -8,8 +8,8 @@ var r = n(108131),
     c = n(710845),
     u = n(339085),
     d = n(926491),
-    _ = n(592125),
-    f = n(430824),
+    f = n(592125),
+    _ = n(430824),
     p = n(709054),
     h = n(38618);
 function m(e, t, n) {
@@ -44,7 +44,7 @@ class b extends s.Z {
 }
 function y(e) {
     var t;
-    let n = null == (t = f.Z.getGuild(e.guild_id)) ? void 0 : t.name;
+    let n = null == (t = _.Z.getGuild(e.guild_id)) ? void 0 : t.name;
     E.fileOnly('received deleted guild entities (id: '.concat(e.guild_id, ', name: ').concat(n, ')')),
         a.ZP.Emitter.batched(() => {
             null != e.channels && A(e.guild_id, new Set(e.channels)), null != e.roles && N(e.guild_id, new Set(e.roles)), null != e.emojis && C(e.guild_id, new Set(e.emojis)), null != e.stickers && R(e.guild_id, new Set(e.stickers));
@@ -64,10 +64,10 @@ function I(e) {
 }
 function T(e) {
     var t, n, r;
-    let i = null == (t = f.Z.getGuild(e)) ? void 0 : t.name;
+    let i = null == (t = _.Z.getGuild(e)) ? void 0 : t.name;
     E.fileOnly('requesting deleted guild entities (id: '.concat(e, ', name: ').concat(i, ')'));
-    let a = S(Object.keys(_.Z.getMutableBasicGuildChannelsForGuild(e))),
-        o = S(Object.keys(f.Z.getRoles(e))),
+    let a = S(Object.keys(f.Z.getMutableBasicGuildChannelsForGuild(e))),
+        o = S(Object.keys(_.Z.getRoles(e))),
         s = S(u.ZP.getGuildEmoji(e).map((e) => e.id)),
         l = S(null != (r = null == (n = d.Z.getStickersByGuildId(e)) ? void 0 : n.map((e) => e.id)) ? r : []);
     h.Z.getSocket().getDeletedEntityIdsNotMatchingHash(e, a, o, s, l);
@@ -76,7 +76,7 @@ function S(e) {
     return i().v3(e.sort().join(',')).toString();
 }
 function A(e, t) {
-    let n = p.default.keys(_.Z.getMutableBasicGuildChannelsForGuild(e));
+    let n = p.default.keys(f.Z.getMutableBasicGuildChannelsForGuild(e));
     E.fileOnly('syncChannels', {
         channelIdsInMemory: n,
         channelIdsFromServer: t
@@ -94,7 +94,7 @@ function A(e, t) {
         });
 }
 function N(e, t) {
-    p.default.keys(f.Z.getRoles(e)).forEach((n) => {
+    p.default.keys(_.Z.getRoles(e)).forEach((n) => {
         t.has(n) ||
             o.Z.dispatch({
                 type: 'GUILD_ROLE_DELETE',

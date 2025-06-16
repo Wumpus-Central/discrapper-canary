@@ -51,7 +51,7 @@ function d(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -62,7 +62,7 @@ function _(e, t) {
         e
     );
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -84,11 +84,11 @@ function p(e, t) {
 }
 function h(e) {
     var { text: t, onClick: n, component: c } = e,
-        d = f(e, ['text', 'onClick', 'component']);
+        d = _(e, ['text', 'onClick', 'component']);
     let { themeType: p } = (0, o.z)(),
         h = 'string' == typeof t ? t.trim() : t;
     if (null == h || '' === h) return null;
-    let m = () => (p === s.lY.MODAL || p === s.lY.MODAL_V2 ? (0, r.jsx)(c, _(u({ color: 'text-normal' }, d), { children: h })) : (0, r.jsx)(c, _(u({ color: 'text-normal' }, d), { children: (0, r.jsx)(a.Z, { children: h }) })));
+    let m = () => (p === s.lY.MODAL || p === s.lY.MODAL_V2 ? (0, r.jsx)(c, f(u({ color: 'text-normal' }, d), { children: h })) : (0, r.jsx)(c, f(u({ color: 'text-normal' }, d), { children: (0, r.jsx)(a.Z, { children: h }) })));
     return null != n
         ? (0, r.jsx)(i.P3F, {
               onClick: (e) => {

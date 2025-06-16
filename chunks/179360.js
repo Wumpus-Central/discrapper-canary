@@ -1,7 +1,7 @@
 n.d(t, {
     C0: () => u,
-    W3: () => f,
-    X8: () => _,
+    W3: () => _,
+    X8: () => f,
     bG: () => m,
     dG: () => p,
     pD: () => h,
@@ -49,7 +49,7 @@ async function d() {
         t
     );
 }
-async function _() {
+async function f() {
     i.Z.dispatch({ type: 'GUILD_BOOST_SLOTS_FETCH' });
     let e = (
         await r.tn.get({
@@ -66,7 +66,7 @@ async function _() {
         e
     );
 }
-async function f(e, t) {
+async function _(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     i.Z.dispatch({ type: 'GUILD_APPLY_BOOST_START' });
     try {
@@ -85,7 +85,7 @@ async function f(e, t) {
                 type: 'GUILD_APPLY_BOOST_SUCCESS',
                 appliedGuildBoost: s
             }),
-            _(),
+            f(),
             s
         );
     } catch (t) {
@@ -107,7 +107,7 @@ async function p(e, t) {
             oldFormErrors: !0,
             rejectWithError: !1
         }),
-            _();
+            f();
     } catch (t) {
         let e = new a.zN(t);
         throw (

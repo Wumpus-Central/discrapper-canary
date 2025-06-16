@@ -26,7 +26,7 @@ var r = n(367907),
     c = n(185625),
     u = n(443599),
     d = n(981631);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,7 +39,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -50,7 +50,7 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
@@ -323,5 +323,5 @@ function P(e, t) {
     );
 }
 function w(e, t) {
-    r.ZP.trackWithMetadata(d.rMx.IAR_MODAL_OPEN, f({ report_type: e }, t));
+    r.ZP.trackWithMetadata(d.rMx.IAR_MODAL_OPEN, _({ report_type: e }, t));
 }

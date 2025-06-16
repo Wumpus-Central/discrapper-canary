@@ -24,20 +24,20 @@ function c(e) {
     let c = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         u = null != (t = c.contrastRatio) ? t : s.NonText,
         d = null != (n = c.tolerance) ? n : a,
-        _ = i()(null != (r = c.base) ? r : e),
-        f = i()(e),
-        p = _.luminance(),
-        h = f,
+        f = i()(null != (r = c.base) ? r : e),
+        _ = i()(e),
+        p = f.luminance(),
+        h = _,
         m = u,
         g = u + d,
-        E = i().contrast(_, f),
+        E = i().contrast(f, _),
         b = o;
     for (; b-- > 0; ) {
         let e = E < m,
             t = E > g;
         if (!e && !t) break;
         let n = h.luminance() > p;
-        (h = (t && n) || (e && !n) ? h.darken() : h.brighten()), (E = i().contrast(_, h));
+        (h = (t && n) || (e && !n) ? h.darken() : h.brighten()), (E = i().contrast(f, h));
     }
     return l(h);
 }

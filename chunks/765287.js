@@ -8,11 +8,11 @@ var r = n(524437),
     c = n(981631),
     u = n(874893);
 function d(e, t, n) {
-    var d, _, f;
+    var d, f, _;
     if (__OVERLAY__) return c.BRd.DARK;
     let p = (0, a.O_)('resolveTheme') ? u.yW : u.Q5;
     if (i.Z.syncForcedColors && 'active' === i.Z.systemForcedColors && e !== u.zd.NO_PREFERENCE) return e;
     if (s.ZP.useSystemTheme === u.KW.ON && e !== u.zd.NO_PREFERENCE) return t[e];
     let h = null == (d = o.Z.getAppearanceSettings()) ? void 0 : d.theme;
-    return null != h ? h : p[null != (f = null == (_ = l.Z.settings.appearance) ? void 0 : _.theme) ? f : r.Q2.UNSET];
+    return null != h ? h : p[null != (_ = null == (f = l.Z.settings.appearance) ? void 0 : f.theme) ? _ : r.Q2.UNSET];
 }

@@ -8,8 +8,8 @@ var r = n(149765),
     c = n(630388),
     u = n(111361),
     d = n(709054),
-    _ = n(981631),
-    f = n(474936);
+    f = n(981631),
+    _ = n(474936);
 function p(e, t, n) {
     return (
         t in e
@@ -132,20 +132,20 @@ class E extends i.Z {
         return (0, c.yE)(this.premiumUsageFlags, e);
     }
     hasHadSKU(e) {
-        let t = f.vL[e];
+        let t = _.vL[e];
         return null != t && this.hasPurchasedFlag(t);
     }
     hasHadPremium() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-            t = this.hasPurchasedFlag(f.in.PREMIUM_TIER_0),
-            n = this.hasPurchasedFlag(f.in.PREMIUM_TIER_1),
-            r = this.hasPurchasedFlag(f.in.PREMIUM_TIER_2);
+            t = this.hasPurchasedFlag(_.in.PREMIUM_TIER_0),
+            n = this.hasPurchasedFlag(_.in.PREMIUM_TIER_1),
+            r = this.hasPurchasedFlag(_.in.PREMIUM_TIER_2);
         switch (e) {
-            case f.p9.TIER_0:
+            case _.p9.TIER_0:
                 return t;
-            case f.p9.TIER_1:
+            case _.p9.TIER_1:
                 return n;
-            case f.p9.TIER_2:
+            case _.p9.TIER_2:
                 return r;
             default:
                 return t || n || r;
@@ -156,19 +156,19 @@ class E extends i.Z {
         return !(0, u.I5)(this) && this.hasHadPremium(e);
     }
     hasFreePremium() {
-        return this.isStaff() || this.hasFlag(_.xW$.PARTNER) || this.isStaffPersonal();
+        return this.isStaff() || this.hasFlag(f.xW$.PARTNER) || this.isStaffPersonal();
     }
     hasUrgentMessages() {
-        return this.hasFlag(_.xW$.HAS_UNREAD_URGENT_MESSAGES);
+        return this.hasFlag(f.xW$.HAS_UNREAD_URGENT_MESSAGES);
     }
     isNonUserBot() {
-        return this.isSystemUser() || (this.bot && this.discriminator === _.fo$);
+        return this.isSystemUser() || (this.bot && this.discriminator === f.fo$);
     }
     isLocalBot() {
-        return this.bot && this.id === _.LAt;
+        return this.bot && this.id === f.LAt;
     }
     isVerifiedBot() {
-        return this.isSystemUser() || this.isLocalBot() || this.hasFlag(_.xW$.VERIFIED_BOT);
+        return this.isSystemUser() || this.isLocalBot() || this.hasFlag(f.xW$.VERIFIED_BOT);
     }
     isSystemUser() {
         return !0 === this.system;
@@ -180,7 +180,7 @@ class E extends i.Z {
         return '0' === this.discriminator;
     }
     get isProvisional() {
-        return this.hasFlag(_.xW$.PROVISIONAL_ACCOUNT);
+        return this.hasFlag(f.xW$.PROVISIONAL_ACCOUNT);
     }
     get avatarDecoration() {
         return this.avatarDecorationData;
@@ -200,22 +200,22 @@ class E extends i.Z {
               };
     }
     constructor(e) {
-        var t, n, i, a, s, l, c, u, d, f, h, m, g, E, b, y, O, v, I, T, S, A, N, C, R, P, w, D, L, x, M, k;
+        var t, n, i, a, s, l, c, u, d, _, h, m, g, E, b, y, O, v, I, T, S, A, N, C, R, P, w, D, L, x, k, M;
         super(), p(this, 'id', void 0), p(this, 'username', void 0), p(this, 'discriminator', void 0), p(this, 'avatar', void 0), p(this, 'avatarDecorationData', void 0), p(this, 'banner', void 0), p(this, 'email', void 0), p(this, 'verified', void 0), p(this, 'bot', void 0), p(this, 'system', void 0), p(this, 'mfaEnabled', void 0), p(this, 'mobile', void 0), p(this, 'desktop', void 0), p(this, 'premiumType', void 0), p(this, 'flags', void 0), p(this, 'publicFlags', void 0), p(this, 'purchasedFlags', void 0), p(this, 'premiumUsageFlags', void 0), p(this, 'phone', void 0), p(this, 'nsfwAllowed', void 0), p(this, 'ageVerificationStatus', void 0), p(this, 'guildMemberAvatars', void 0), p(this, 'hasBouncedEmail', void 0), p(this, 'personalConnectionId', void 0), p(this, 'globalName', void 0), p(this, 'primaryGuild', void 0), p(this, 'collectibles', void 0), p(this, 'hasFlag', (e) => !1), p(this, 'isStaff', () => !1), p(this, 'isStaffPersonal', () => !1), p(this, 'hasAnyStaffLevel', () => !1);
         let j = null != (n = e.premium_type) ? n : e.premiumType;
         (this.id = e.id),
             (this.username = null != (i = e.username) ? i : ''),
-            (this.discriminator = null != (a = e.discriminator) ? a : _.fo$),
+            (this.discriminator = null != (a = e.discriminator) ? a : f.fo$),
             (this.avatar = null != (s = e.avatar) ? s : null),
             (this.avatarDecoration = null != (l = e.avatar_decoration_data) ? l : e.avatarDecorationData),
             (this.email = null != (c = e.email) ? c : null),
             (this.verified = null != (u = e.verified) && u),
             (this.bot = null != (d = e.bot) && d),
-            (this.system = null != (f = e.system) && f),
+            (this.system = null != (_ = e.system) && _),
             (this.mfaEnabled = null != (m = null != (h = e.mfa_enabled) ? h : e.mfaEnabled) && m),
             (this.mobile = null != (g = e.mobile) && g),
             (this.desktop = null != (E = e.desktop) && E),
-            (this.premiumType = j === _.WND ? null : j),
+            (this.premiumType = j === f.WND ? null : j),
             (this.flags = null != (b = e.flags) ? b : 0),
             (this.publicFlags = null != (O = null != (y = e.public_flags) ? y : e.publicFlags) ? O : 0),
             (this.purchasedFlags = null != (I = null != (v = e.purchased_flags) ? v : e.purchasedFlags) ? I : 0),
@@ -228,7 +228,7 @@ class E extends i.Z {
             (this.personalConnectionId = null != (L = null != (D = e.personal_connection_id) ? D : e.personalConnectionId) ? L : null),
             (this.globalName = null != (x = e.global_name) ? x : e.globalName),
             (this.banner = e.banner),
-            (this.primaryGuild = (0, o.l)(null != (k = null != (M = e.primary_guild) ? M : e.primaryGuild) ? k : null)),
+            (this.primaryGuild = (0, o.l)(null != (M = null != (k = e.primary_guild) ? k : e.primaryGuild) ? M : null)),
             (this.collectibles = e.collectibles),
             Object.defineProperties(this, {
                 hasFlag: {
@@ -247,19 +247,19 @@ class E extends i.Z {
                     writable: !1,
                     configurable: !1,
                     enumerable: !1,
-                    value: () => this.hasFlag(_.xW$.STAFF)
+                    value: () => this.hasFlag(f.xW$.STAFF)
                 },
                 isStaffPersonal: {
                     writable: !1,
                     configurable: !1,
                     enumerable: !1,
-                    value: () => !this.hasFlag(_.xW$.STAFF) && null != this.personalConnectionId
+                    value: () => !this.hasFlag(f.xW$.STAFF) && null != this.personalConnectionId
                 },
                 hasAnyStaffLevel: {
                     writable: !1,
                     configurable: !1,
                     enumerable: !1,
-                    value: () => this.hasFlag(_.xW$.STAFF) || this.hasFlag(_.xW$.COLLABORATOR) || this.hasFlag(_.xW$.RESTRICTED_COLLABORATOR)
+                    value: () => this.hasFlag(f.xW$.STAFF) || this.hasFlag(f.xW$.COLLABORATOR) || this.hasFlag(f.xW$.RESTRICTED_COLLABORATOR)
                 }
             }),
             (null == (t = this.globalName) ? void 0 : t.length) === 0 && (this.globalName = null);

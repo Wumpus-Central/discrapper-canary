@@ -38,6 +38,6 @@ function c(e, t) {
         c = r.useContext(a.Sfi).reducedMotion.enabled,
         u = t;
     'animate-always' !== n && ('respect-motion-settings' !== n || c) && (u = l({}, t, o.F));
-    let [d, _, f] = (0, i.useTransition)(e, u, s);
-    return 4 == arguments.length ? [d, _, f] : d;
+    let [d, f, _] = (0, i.useTransition)(e, u, s);
+    return 4 == arguments.length ? [d, f, _] : d;
 }

@@ -12,8 +12,8 @@ var r = n(255367),
     c = n(481060),
     u = n(355467),
     d = n(37234),
-    _ = n(410030),
-    f = n(174609),
+    f = n(410030),
+    _ = n(174609),
     p = n(703656),
     h = n(626135),
     m = n(74538),
@@ -32,8 +32,8 @@ var r = n(255367),
         return (e[(e.NONE = 0)] = 'NONE'), (e[(e.PARENT_CONTAINER = 1)] = 'PARENT_CONTAINER'), (e[(e.TAB_PARENT_CONTAINER = 2)] = 'TAB_PARENT_CONTAINER'), e;
     })({});
 function R(e) {
-    let { containerContext: t, image: n, title: a, description: C, enableSocialProof: R, analyticsLocationSection: P, upsellViewedTrackingData: w, onClose: D, onDisplay: L, onLearnMore: x, isEmojiPickerOverlay: M = !1 } = e,
-        k = (0, s.e7)([g.Z], () => g.Z.affinities),
+    let { containerContext: t, image: n, title: a, description: C, enableSocialProof: R, analyticsLocationSection: P, upsellViewedTrackingData: w, onClose: D, onDisplay: L, onLearnMore: x, isEmojiPickerOverlay: k = !1 } = e,
+        M = (0, s.e7)([g.Z], () => g.Z.affinities),
         j = (0, s.e7)([g.Z], () => g.Z.hasFetched);
     i.useEffect(() => {
         !j && R && u.MH();
@@ -41,7 +41,7 @@ function R(e) {
         i.useEffect(() => {
             h.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, w), null == L || L();
         }, [L, w]);
-    let U = k.length > 1 && R,
+    let U = M.length > 1 && R,
         G = () => (2 === t ? A.hasTabParentContainer : 1 === t ? A.hasParentContainer : A.noParentContainer),
         B = () => {
             h.default.track(I.rMx.PREMIUM_PROMOTION_OPENED, {
@@ -49,7 +49,7 @@ function R(e) {
                 location_object: I.qAy.NAVIGATION_LINK
             }),
                 null == x || x(),
-                (0, f.Z)(),
+                (0, _.Z)(),
                 D(),
                 (0, d.xf)(),
                 (0, p.uL)(I.Z5c.APPLICATION_STORE);
@@ -59,8 +59,8 @@ function R(e) {
             var e;
             return null != (e = (0, m.fr)(V)) ? e : T.intl.string(T.t.pj0XBA);
         }, [V]),
-        Z = (0, l.ap)((0, _.ZP)()),
-        H = (0, E.Z)({ location: 'PremiumUpsellPickerOverlay' }) && M;
+        Z = (0, l.ap)((0, f.ZP)()),
+        H = (0, E.Z)({ location: 'PremiumUpsellPickerOverlay' }) && k;
     return H
         ? (0, r.jsxs)(r.Fragment, {
               children: [
@@ -167,7 +167,7 @@ function R(e) {
                                       variant: 'heading-xl/bold',
                                       children: a
                                   }),
-                                  U && (0, r.jsx)(O.Z, { affinities: k }),
+                                  U && (0, r.jsx)(O.Z, { affinities: M }),
                                   (0, r.jsx)(c.Text, {
                                       variant: 'text-sm/medium',
                                       className: A.body,

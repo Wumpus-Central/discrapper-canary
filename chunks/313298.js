@@ -20,16 +20,16 @@ function l(e, t, n) {
 let c = 75000,
     u = 10,
     d = 5000,
-    _ = 2,
-    f = 2000,
+    f = 2,
+    _ = 2000,
     p = 10000;
 function h(e) {
     var t;
-    return (null != (t = a.Z.getMemberCount(e)) ? t : 0) >= c ? u : _;
+    return (null != (t = a.Z.getMemberCount(e)) ? t : 0) >= c ? u : f;
 }
 function m(e) {
     var t;
-    return (null != (t = a.Z.getMemberCount(e)) ? t : 0) >= c ? d : f;
+    return (null != (t = a.Z.getMemberCount(e)) ? t : 0) >= c ? d : _;
 }
 let g = {},
     E = {},

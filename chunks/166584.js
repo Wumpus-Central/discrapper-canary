@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(481060),
     u = n(749210),
     d = n(434404),
-    _ = n(271383),
-    f = n(430824),
+    f = n(271383),
+    _ = n(430824),
     p = n(496675),
     h = n(259580),
     m = n(700785),
@@ -100,13 +100,13 @@ let R = 4,
         return t > 0 ? t + R : 0;
     };
 function L(e) {
-    let { user: t, currentUser: n, guild: l, guildMember: u, roles: d, highestRole: _, canManageRoles: f, onAddRole: p, onRemoveRole: I } = e,
+    let { user: t, currentUser: n, guild: l, guildMember: u, roles: d, highestRole: f, canManageRoles: _, onAddRole: p, onRemoveRole: I } = e,
         S = i.useRef({}),
         C = (e, t) => {
             null != t ? (S.current[e] = t) : delete S.current[e];
         },
         [L, x] = i.useState(d),
-        [M, k] = i.useState(P),
+        [k, M] = i.useState(P),
         [j, U] = i.useState(!1),
         G = i.useRef(null),
         B = i.useRef(null),
@@ -134,7 +134,7 @@ function L(e) {
                     (e += o + R), n.push(i);
                 }
             }
-            x(n.length === L.length ? L : n), k(r), V.current++;
+            x(n.length === L.length ? L : n), M(r), V.current++;
         }, [d, L, j]);
     let F = i.useMemo(() => 'roles-'.concat((0, a.Z)()), []),
         Z = (0, o.ZP)({
@@ -153,11 +153,11 @@ function L(e) {
                 {
                     role: e,
                     guildId: l.id,
-                    style: { maxWidth: j || i !== L.length - 1 ? P : M },
+                    style: { maxWidth: j || i !== L.length - 1 ? P : k },
                     disableBorderColor: !0,
                     ref: (t) => C(e.id, t),
                     onRemove: () => I(e),
-                    canRemove: (null == (a = e.tags) ? void 0 : a.guild_connections) === null ? t.id === n.id : f && m.r6(l, n.id, _, e)
+                    canRemove: (null == (a = e.tags) ? void 0 : a.guild_connections) === null ? t.id === n.id : _ && m.r6(l, n.id, f, e)
                 },
                 e.id
             );
@@ -216,13 +216,13 @@ function L(e) {
                                               })
                                           })
                                     : null,
-                                f && null != u
+                                _ && null != u
                                     ? (0, r.jsx)(b.Z, {
                                           buttonRef: B,
                                           guild: l,
                                           guildMember: u,
                                           numRoles: H,
-                                          highestRole: _,
+                                          highestRole: f,
                                           onAddRole: p
                                       })
                                     : null
@@ -237,8 +237,8 @@ function L(e) {
 function x(e) {
     let { user: t, currentUser: n, guild: a } = e,
         { trackUserProfileAction: o } = (0, g.KZ)(),
-        s = (0, l.e7)([_.ZP], () => _.ZP.getMember(a.id, t.id)),
-        c = (0, l.e7)([f.Z], () => f.Z.getRoles(a.id)),
+        s = (0, l.e7)([f.ZP], () => f.ZP.getMember(a.id, t.id)),
+        c = (0, l.e7)([_.Z], () => _.Z.getRoles(a.id)),
         h = null == s ? void 0 : s.roles,
         E = i.useMemo(
             () =>

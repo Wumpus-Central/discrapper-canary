@@ -40,8 +40,8 @@ let d = () => ({
         currentLeaderboardRanks: {},
         prevLeaderboardRanks: {}
     }),
-    _ = d();
-function f(e) {
+    f = d();
+function _(e) {
     var t;
     let { leaderboardResponse: n, intervalOffset: r } = e;
     if (0 !== r) return !1;
@@ -51,33 +51,33 @@ function f(e) {
             ranks: i.users.map((e) => e.user_id),
             ttl: s.default.extractTimestamp(i.interval_end)
         },
-        c = _.currentLeaderboardRanks[o];
+        c = f.currentLeaderboardRanks[o];
     if ((0, a.E)(l.ranks, null != (t = null == c ? void 0 : c.ranks) ? t : [])) return !1;
-    (_.prevLeaderboardRanks[o] = c), (_.currentLeaderboardRanks[o] = l);
+    (f.prevLeaderboardRanks[o] = c), (f.currentLeaderboardRanks[o] = l);
 }
 function p() {
     let e = Date.now();
-    for (let [t, n] of Object.entries(_.prevLeaderboardRanks)) (null == n || e > n.ttl) && delete _.prevLeaderboardRanks[t];
-    for (let [t, n] of Object.entries(_.currentLeaderboardRanks)) (null == n || e > n.ttl) && delete _.currentLeaderboardRanks[t];
+    for (let [t, n] of Object.entries(f.prevLeaderboardRanks)) (null == n || e > n.ttl) && delete f.prevLeaderboardRanks[t];
+    for (let [t, n] of Object.entries(f.currentLeaderboardRanks)) (null == n || e > n.ttl) && delete f.currentLeaderboardRanks[t];
 }
 class h extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        return (_ = c({}, _, null != e ? e : {})), p(), !0;
+        return (f = c({}, f, null != e ? e : {})), p(), !0;
     }
     getState() {
-        return _;
+        return f;
     }
     getPrevLeaderboardRanks(e, t, n) {
         let r = u(e, t, n);
-        return _.prevLeaderboardRanks[r];
+        return f.prevLeaderboardRanks[r];
     }
     getCurrentLeaderboardRanks(e, t, n) {
         let r = u(e, t, n);
-        return _.currentLeaderboardRanks[r];
+        return f.currentLeaderboardRanks[r];
     }
     reset() {
-        _ = d();
+        f = d();
     }
 }
 l(h, 'displayName', 'GuildLeaderboardRanksStore'), l(h, 'persistKey', 'GuildLeaderboardRanksStore');
-let m = new h(o.Z, { SET_GUILD_LEADERBOARD: f });
+let m = new h(o.Z, { SET_GUILD_LEADERBOARD: _ });

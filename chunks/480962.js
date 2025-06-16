@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function _(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,7 +53,7 @@ function p(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -80,7 +80,7 @@ function m(e, t) {
     return i;
 }
 function g(e) {
-    let { subMenuClassName: t, parentItem: n, isFocused: a, menuSubmenuProps: d, renderSubmenu: f } = e,
+    let { subMenuClassName: t, parentItem: n, isFocused: a, menuSubmenuProps: d, renderSubmenu: _ } = e,
         { focusIndex: m, isUsingKeyboardNavigation: g } = d,
         E = h(d, ['focusIndex', 'isUsingKeyboardNavigation']),
         b = i.useRef(null),
@@ -114,11 +114,11 @@ function g(e) {
                                   className: u.submenuPaddingContainer,
                                   children: (0, r.jsx)(
                                       'div',
-                                      p(_({ className: o()(u.submenu, t) }, E), {
+                                      p(f({ className: o()(u.submenu, t) }, E), {
                                           ref: O,
                                           children: (0, r.jsx)(c.zJ, {
                                               className: u.scroller,
-                                              children: f()
+                                              children: _()
                                           })
                                       })
                                   )

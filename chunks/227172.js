@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => M,
+    Z: () => k,
     v: () => x
 });
 var r = n(255367),
@@ -11,8 +11,8 @@ var r = n(255367),
     c = n(841784),
     u = n(420660),
     d = n(429589),
-    _ = n(757182),
-    f = n(706454),
+    f = n(757182),
+    _ = n(706454),
     p = n(374129),
     h = n(639351),
     m = n(823379),
@@ -70,12 +70,12 @@ let x = {
         [a.z.XBOX]: h.Z,
         [a.z.PLAYSTATION]: p.Z
     },
-    M = (e) => {
-        let { channel: t, entry: n, disableGameProfileLinks: p, onReaction: h, onVoiceChannelPreview: D, onUserPopoutClosed: M, trackRankingItemInteraction: k } = e,
+    k = (e) => {
+        let { channel: t, entry: n, disableGameProfileLinks: p, onReaction: h, onVoiceChannelPreview: D, onUserPopoutClosed: k, trackRankingItemInteraction: M } = e,
             { largeImage: j } = (0, g.rv)({ entry: n }),
             { user: U, details: G, appName: B, activity: V } = (0, R.n)(n),
             { primaryColor: F, secondaryColor: Z } = (0, T.Z)(null == j ? void 0 : j.src),
-            H = (0, o.e7)([f.default], () => f.default.locale),
+            H = (0, o.e7)([_.default], () => _.default.locale),
             { streamPreviewUrl: Y, stream: W } = (0, b.Z)(n),
             { displayParticipants: K, participant1: z, participant2: q, numOtherParticipants: X } = (0, E.Z)(n, 3),
             Q = n.extra.platform,
@@ -129,8 +129,8 @@ let x = {
                           badges: en,
                           entry: n,
                           disableGameProfileLinks: p,
-                          onUserPopoutClosed: M,
-                          trackRankingItemInteraction: k
+                          onUserPopoutClosed: k,
+                          trackRankingItemInteraction: M
                       })
                     : (0, r.jsx)(N.jL, {
                           channel: t,
@@ -140,8 +140,8 @@ let x = {
                           userDescription: w.t['6oWFUF'],
                           entry: n,
                           stream: W,
-                          onUserPopoutClosed: M,
-                          trackRankingItemInteraction: k
+                          onUserPopoutClosed: k,
+                          trackRankingItemInteraction: M
                       }),
             ei = [
                 (0, l.Z)(V, P.xjy.JOIN) || (0, c.Z)(V)
@@ -152,7 +152,7 @@ let x = {
                       })
                     : null,
                 (0, u.Z)(V)
-                    ? (0, r.jsx)(_.Z, {
+                    ? (0, r.jsx)(f.Z, {
                           activity: V,
                           ButtonComponent: (e) => (0, r.jsx)(N.Ll, L({ IconComponent: s.tEF }, e))
                       })

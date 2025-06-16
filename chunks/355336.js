@@ -35,7 +35,7 @@ function d(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,12 +47,12 @@ function _(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -88,7 +88,7 @@ function m(e, t) {
             });
         });
     return i.forwardRef(function (t, u) {
-        var { children: _, className: h, onResize: m, contentClassName: g, onScroll: E, dir: b = 'ltr', fade: y = !1, customTheme: O = !1, style: v } = t,
+        var { children: f, className: h, onResize: m, contentClassName: g, onScroll: E, dir: b = 'ltr', fade: y = !1, customTheme: O = !1, style: v } = t,
             I = p(t, ['children', 'className', 'onResize', 'contentClassName', 'onScroll', 'dir', 'fade', 'customTheme', 'style']);
         let T = i.useRef(null),
             S = i.useRef(null),
@@ -136,7 +136,7 @@ function m(e, t) {
             }),
             (0, r.jsx)(
                 'div',
-                f(
+                _(
                     d(
                         {
                             ref: C,
@@ -159,7 +159,7 @@ function m(e, t) {
                             children: (0, r.jsxs)('div', {
                                 ref: S,
                                 className: o()(g, c.content),
-                                children: [_, A && (0, r.jsx)('div', { className: c.pointerCover })]
+                                children: [f, A && (0, r.jsx)('div', { className: c.pointerCover })]
                             })
                         })
                     }

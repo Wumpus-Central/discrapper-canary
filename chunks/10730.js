@@ -35,7 +35,7 @@ var o = n(161796),
                 {
                     key: 'create',
                     value: function (e) {
-                        if (e.outputRange && 'string' == typeof e.outputRange[0]) return f(e);
+                        if (e.outputRange && 'string' == typeof e.outputRange[0]) return _(e);
                         var t = e.outputRange;
                         g('outputRange', t);
                         var n = e.inputRange;
@@ -72,32 +72,32 @@ function d(e) {
     var t = o(e);
     return null === t ? e : 'rgba(' + ((4278190080 & (t = t || 0)) >>> 24) + ', ' + ((16711680 & t) >>> 16) + ', ' + ((65280 & t) >>> 8) + ', ' + (255 & t) / 255 + ')';
 }
-var _ = /[0-9\.-]+/g;
-function f(e) {
+var f = /[0-9\.-]+/g;
+function _(e) {
     var t = e.outputRange;
     s(t.length >= 2, 'Bad output range'), p((t = t.map(d)));
-    var n = t[0].match(_).map(function () {
+    var n = t[0].match(f).map(function () {
         return [];
     });
     t.forEach(function (e) {
-        e.match(_).forEach(function (e, t) {
+        e.match(f).forEach(function (e, t) {
             n[t].push(+e);
         });
     });
-    var i = t[0].match(_).map(function (t, i) {
+    var i = t[0].match(f).map(function (t, i) {
             return c.create(r({}, e, { outputRange: n[i] }));
         }),
         a = /^rgb/.test(t[0]);
     return function (e) {
         var n = 0;
-        return t[0].replace(_, function () {
+        return t[0].replace(f, function () {
             var t = i[n++](e);
             return String(a && n < 4 ? Math.round(t) : t);
         });
     };
 }
 function p(e) {
-    for (var t = e[0].replace(_, ''), n = 1; n < e.length; ++n) s(t === e[n].replace(_, ''), 'invalid pattern ' + e[0] + ' and ' + e[n]);
+    for (var t = e[0].replace(f, ''), n = 1; n < e.length; ++n) s(t === e[n].replace(f, ''), 'invalid pattern ' + e[0] + ' and ' + e[n]);
 }
 function h(e, t) {
     for (var n = 1; n < t.length - 1 && !(t[n] >= e); ++n);

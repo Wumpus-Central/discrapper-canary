@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(63063),
     u = n(112560),
     d = n(981631),
-    _ = n(388032);
-let f = n(66737);
+    f = n(388032);
+let _ = n(66737);
 function p(e) {
     var t;
     let { userId: n, width: p, avError: h, selected: m = !1, noArt: g = !1 } = e,
@@ -23,14 +23,14 @@ function p(e) {
             }, 1000);
     }
     return (0, r.jsx)(u.Z, {
-        artURL: f,
-        header: _.intl.string(_.t['z+mxvr']),
+        artURL: _,
+        header: f.intl.string(f.t['z+mxvr']),
         size: (0, u.L)(p),
         noArt: g,
         selected: m,
-        description: _.intl.format(_.t.d486Wl, { helpUrl: c.Z.getArticleURL(d.BhN.VOICE_VIDEO_TROUBLESHOOTING) }),
-        errorCodeMessage: E ? _.intl.formatToPlainString(_.t['ejOT9/'], { errorCode: b }) : void 0,
+        description: f.intl.format(f.t.d486Wl, { helpUrl: c.Z.getArticleURL(d.BhN.VOICE_VIDEO_TROUBLESHOOTING) }),
+        errorCodeMessage: E ? f.intl.formatToPlainString(f.t['ejOT9/'], { errorCode: b }) : void 0,
         onCTAClick: y,
-        callToAction: _.intl.string(_.t['hxmQ/f'])
+        callToAction: f.intl.string(f.t['hxmQ/f'])
     });
 }

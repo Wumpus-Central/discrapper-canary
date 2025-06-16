@@ -1,7 +1,7 @@
 n.d(t, {
     JV: () => s,
     aA: () => l,
-    mA: () => f,
+    mA: () => _,
     ug: () => o
 }),
     n(388685);
@@ -61,15 +61,15 @@ let c = Object.freeze({
         count_dispatches_left_after_yield: [0, 0],
         count_initial_dispatches_length: [0, 0]
     }),
-    _ = Object.freeze({
+    f = Object.freeze({
         longer_dispatch: 0,
         exceeded_max_consecutive_flushes: 0,
         fired_due_to_max_timeout: 0,
         skip_idle_callback_due_to_backgrounded: 0
     });
-class f {
+class _ {
     reset() {
-        (this._timeTracking = (0, r.cloneDeep)(c)), (this._timingStats = (0, r.cloneDeep)(u)), (this._measurements = (0, r.cloneDeep)(d)), (this._eventCounts = (0, r.cloneDeep)(_));
+        (this._timeTracking = (0, r.cloneDeep)(c)), (this._timingStats = (0, r.cloneDeep)(u)), (this._measurements = (0, r.cloneDeep)(d)), (this._eventCounts = (0, r.cloneDeep)(f));
     }
     clearTime(e) {
         this._timeTracking[e] = null;
@@ -125,6 +125,6 @@ class f {
         );
     }
     constructor() {
-        i(this, '_timeTracking', (0, r.cloneDeep)(c)), i(this, '_timingStats', (0, r.cloneDeep)(u)), i(this, '_measurements', (0, r.cloneDeep)(d)), i(this, '_eventCounts', (0, r.cloneDeep)(_)), i(this, '_enabled', !1);
+        i(this, '_timeTracking', (0, r.cloneDeep)(c)), i(this, '_timingStats', (0, r.cloneDeep)(u)), i(this, '_measurements', (0, r.cloneDeep)(d)), i(this, '_eventCounts', (0, r.cloneDeep)(f)), i(this, '_enabled', !1);
     }
 }

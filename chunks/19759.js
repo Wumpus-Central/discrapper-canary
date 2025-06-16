@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => f,
+    Z: () => _,
     h: () => c
 });
 var r,
@@ -50,7 +50,7 @@ let c = 360,
 function d(e) {
     o.Z.isDeveloper && (u = l({}, u, e.settings));
 }
-class _ extends (r = i.ZP.DeviceSettingsStore) {
+class f extends (r = i.ZP.DeviceSettingsStore) {
     initialize(e) {
         (u = null != e ? e : u), (a.Z.actionLogger.persist = o.Z.isDeveloper);
     }
@@ -77,5 +77,5 @@ class _ extends (r = i.ZP.DeviceSettingsStore) {
         return u.sortedScreenKeys;
     }
 }
-s(_, 'displayName', 'DevToolsSettingsStore'), s(_, 'persistKey', 'DevToolsSettingsStore');
-let f = new _(a.Z, { DEV_TOOLS_SETTINGS_UPDATE: d });
+s(f, 'displayName', 'DevToolsSettingsStore'), s(f, 'persistKey', 'DevToolsSettingsStore');
+let _ = new f(a.Z, { DEV_TOOLS_SETTINGS_UPDATE: d });

@@ -1,14 +1,14 @@
 a.d(e, {
     RA: () => o,
     U4: () => i,
-    vK: () => E
+    vK: () => s
 });
 var r = a(176984),
     _ = a(622916);
 let n = /^(?:(\w+):)\/\/(?:(\w+)(?::(\w+)?)?@)([\w.-]+)(?::(\d+))?\/(.+)/;
 function o(t, e = !1) {
-    let { host: a, path: r, pass: _, port: n, projectId: i, protocol: c, publicKey: E } = t;
-    return `${c}://${E}${e && _ ? `:${_}` : ''}@${a}${n ? `:${n}` : ''}/${r ? `${r}/` : r}${i}`;
+    let { host: a, path: r, pass: _, port: n, projectId: i, protocol: c, publicKey: s } = t;
+    return `${c}://${s}${e && _ ? `:${_}` : ''}@${a}${n ? `:${n}` : ''}/${r ? `${r}/` : r}${i}`;
 }
 function i(t) {
     let e = n.exec(t);
@@ -16,20 +16,20 @@ function i(t) {
         return void (0, _.Cf)(() => {
             console.error(`Invalid Sentry Dsn: ${t}`);
         });
-    let [a, r, o = '', i = '', E = '', s = ''] = e.slice(1),
+    let [a, r, o = '', i = '', s = '', E = ''] = e.slice(1),
         l = '',
-        I = s,
-        u = I.split('/');
-    if ((u.length > 1 && ((l = u.slice(0, -1).join('/')), (I = u.pop())), I)) {
-        let t = I.match(/^\d+/);
-        t && (I = t[0]);
+        u = E,
+        I = u.split('/');
+    if ((I.length > 1 && ((l = I.slice(0, -1).join('/')), (u = I.pop())), u)) {
+        let t = u.match(/^\d+/);
+        t && (u = t[0]);
     }
     return c({
         host: i,
         pass: o,
         path: l,
-        projectId: I,
-        port: E,
+        projectId: u,
+        port: s,
         protocol: a,
         publicKey: r
     });
@@ -45,7 +45,7 @@ function c(t) {
         projectId: t.projectId
     };
 }
-function E(t) {
+function s(t) {
     let e = 'string' == typeof t ? i(t) : c(t);
     if (
         e &&

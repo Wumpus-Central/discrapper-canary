@@ -13,8 +13,8 @@ var r = n(255367),
     c = n(80966),
     u = n(480050),
     d = n(296182),
-    _ = n(524444),
-    f = n(52824),
+    f = n(524444),
+    _ = n(52824),
     p = n(630388),
     h = n(589530),
     m = n(591759),
@@ -108,26 +108,26 @@ function N(e) {
 function C(e) {
     let t,
         { media: n, obscured: i = !1, maxWidth: a, maxHeight: s, onContextMenu: d } = e,
-        { width: f, height: p, url: m, proxyUrl: y, alt: v, type: S, maxWidth: A, maxHeight: C } = n,
+        { width: _, height: p, url: m, proxyUrl: y, alt: v, type: S, maxWidth: A, maxHeight: C } = n,
         R = T(n, ['width', 'height', 'url', 'proxyUrl', 'alt', 'type', 'maxWidth', 'maxHeight']),
         { zoomed: w, setZoomed: D } = (0, E.Y)(),
         L = P(w, m, y),
-        x = null != f && 0 !== f && null != p && 0 !== p;
+        x = null != _ && 0 !== _ && null != p && 0 !== p;
     if ('VIDEO' === S && x && null != y) {
-        var M;
+        var k;
         let e = N(y);
         if (null == e) return null;
-        let t = null != (M = n.renderLinkComponent) ? M : _.iT;
+        let t = null != (k = n.renderLinkComponent) ? k : f.iT;
         return (0, r.jsx)(
             c.Z,
             I(O({}, R), {
                 src: L,
-                width: f,
+                width: _,
                 height: p,
                 maxWidth: a,
                 maxHeight: s,
                 poster: e,
-                naturalWidth: f,
+                naturalWidth: _,
                 naturalHeight: p,
                 volume: h.FC,
                 autoMute: h.rs,
@@ -148,7 +148,7 @@ function C(e) {
                       l.ZP,
                       I(O({}, R), {
                           src: L,
-                          width: f,
+                          width: _,
                           height: p,
                           maxWidth: a,
                           maxHeight: s,
@@ -173,7 +173,7 @@ function C(e) {
                   })),
         null != t
             ? (0, r.jsx)(u.Z, {
-                  width: f,
+                  width: _,
                   height: p,
                   maxWidth: a,
                   maxHeight: s,
@@ -191,7 +191,7 @@ let R = i.memo(C);
 function P(e, t, n) {
     return e && m.Z.isDiscordAssetUrl(t)
         ? (0, d.s$)(t)
-        : (0, f.q)({
+        : (0, _.q)({
               proxyURL: n,
               url: t
           });

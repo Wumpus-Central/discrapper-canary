@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(442837),
     u = n(481060),
     d = n(850840),
-    _ = n(63063),
-    f = n(74538),
+    f = n(63063),
+    _ = n(74538),
     p = n(981631),
     h = n(388032),
     m = n(247382);
@@ -119,7 +119,7 @@ class b extends i.Component {
                       y &&
                           (0, r.jsxs)('div', {
                               className: m.finePrint,
-                              children: ['*', h.intl.format(h.t['5zmY3N'], { documentationLink: _.Z.getArticleURL(p.BhN.LOCALIZED_PRICING) })]
+                              children: ['*', h.intl.format(h.t['5zmY3N'], { documentationLink: f.Z.getArticleURL(p.BhN.LOCALIZED_PRICING) })]
                           }),
                       v &&
                           null != S &&
@@ -127,10 +127,10 @@ class b extends i.Component {
                               variant: 'text-xs/medium',
                               color: 'interactive-normal',
                               children: h.intl.format(h.t['Hvo/Z2'], {
-                                  buttonText: (0, f.W_)(null, S),
-                                  interval: f.ZP.formatInterval(null == S ? void 0 : S.interval),
-                                  cancelSubscriptionArticle: _.Z.getArticleURL(p.BhN.PREMIUM_DETAILS_CANCEL_SUB),
-                                  paidServiceTermsArticle: _.Z.getArticleURL(p.BhN.PAID_TERMS)
+                                  buttonText: (0, _.W_)(null, S),
+                                  interval: _.ZP.formatInterval(null == S ? void 0 : S.interval),
+                                  cancelSubscriptionArticle: f.Z.getArticleURL(p.BhN.PREMIUM_DETAILS_CANCEL_SUB),
+                                  paidServiceTermsArticle: f.Z.getArticleURL(p.BhN.PAID_TERMS)
                               })
                           }),
                       I &&
@@ -139,10 +139,10 @@ class b extends i.Component {
                               variant: 'text-xs/medium',
                               color: 'interactive-normal',
                               children: h.intl.format(h.t.Oo2FeX, {
-                                  buttonText: (0, f.W_)(null, S),
-                                  interval: f.ZP.formatInterval(null == S ? void 0 : S.interval),
-                                  cancelSubscriptionArticle: _.Z.getArticleURL(p.BhN.PREMIUM_DETAILS_CANCEL_SUB),
-                                  paidServiceTermsArticle: _.Z.getArticleURL(p.BhN.PAID_TERMS)
+                                  buttonText: (0, _.W_)(null, S),
+                                  interval: _.ZP.formatInterval(null == S ? void 0 : S.interval),
+                                  cancelSubscriptionArticle: f.Z.getArticleURL(p.BhN.PREMIUM_DETAILS_CANCEL_SUB),
+                                  paidServiceTermsArticle: f.Z.getArticleURL(p.BhN.PAID_TERMS)
                               })
                           }),
                       T &&
@@ -151,10 +151,10 @@ class b extends i.Component {
                               variant: 'text-xs/medium',
                               color: 'interactive-normal',
                               children: h.intl.format(h.t['Z2c+aW'], {
-                                  buttonText: (0, f.W_)(null, S),
-                                  interval: f.ZP.formatInterval(null == S ? void 0 : S.interval),
-                                  cancelSubscriptionArticle: _.Z.getArticleURL(p.BhN.PREMIUM_DETAILS_CANCEL_SUB),
-                                  paidServiceTermsArticle: _.Z.getArticleURL(p.BhN.PAID_TERMS)
+                                  buttonText: (0, _.W_)(null, S),
+                                  interval: _.ZP.formatInterval(null == S ? void 0 : S.interval),
+                                  cancelSubscriptionArticle: f.Z.getArticleURL(p.BhN.PREMIUM_DETAILS_CANCEL_SUB),
+                                  paidServiceTermsArticle: f.Z.getArticleURL(p.BhN.PAID_TERMS)
                               })
                           })
                   ]

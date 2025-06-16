@@ -8,8 +8,8 @@ var r = n(512722),
     c = n(710845),
     u = n(314897),
     d = n(131951),
-    _ = n(19780),
-    f = n(797258),
+    f = n(19780),
+    _ = n(797258),
     p = n(979651),
     h = n(823379),
     m = n(254238),
@@ -38,7 +38,7 @@ let S = new c.Z('GameConsoleManager'),
     N = 60000,
     C = 180000;
 async function R(e) {
-    let t = _.Z.getChannelId();
+    let t = f.Z.getChannelId();
     i()(null == t, 'Syncing to remote while in voice!'), e.selfMute !== d.Z.isSelfMute() && (await s.Z.toggleSelfMute({ syncRemote: !1 })), e.selfDeaf !== d.Z.isSelfDeaf() && s.Z.toggleSelfDeaf({ syncRemote: !1 });
 }
 function P(e) {
@@ -99,7 +99,7 @@ class w extends l.Z {
                     let e = t
                         .map((e) => {
                             let { sessionId: t } = e;
-                            return null != t ? f.Z.getSessionById(t) : null;
+                            return null != t ? _.Z.getSessionById(t) : null;
                         })
                         .filter(h.lm);
                     return this.maybeConnect(e);
@@ -112,7 +112,7 @@ class w extends l.Z {
             }),
             T(this, 'handleSessionsChanged', () => {
                 let e = E.Z.getRemoteSessionId();
-                null != e && null == f.Z.getSessionById(e) && (0, m.s6)(), null == e && this.maybeConnect(Object.values(f.Z.getSessions()));
+                null != e && null == _.Z.getSessionById(e) && (0, m.s6)(), null == e && this.maybeConnect(Object.values(_.Z.getSessions()));
             }),
             T(this, 'handleWaitForRemoteSession', () => {
                 this.awaitRemoteTimeout.start(N, () => {

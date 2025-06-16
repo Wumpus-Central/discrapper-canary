@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => _ });
 var r = n(255367),
     i = n(73800),
     a = n(442837),
@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function _(e) {
     }
     return e;
 }
-let f = () => {
+let _ = () => {
     let e = (0, a.e7)([c.Z], () => c.Z.isInteractionRequired(), []),
         t = i.useRef(null);
     function n() {
@@ -52,7 +52,7 @@ let f = () => {
                     ? (t.current = (0, o.h7j)((e) =>
                           (0, r.jsx)(
                               l.default,
-                              _(
+                              f(
                                   {
                                       title: u.intl.string(u.t.dLLxCw),
                                       body: u.intl.string(u.t['64lmt7']),

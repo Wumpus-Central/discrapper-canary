@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(906732),
     u = n(430824),
     d = n(785717),
-    _ = n(221292),
-    f = n(687158),
+    f = n(221292),
+    _ = n(687158),
     p = n(892001),
     h = n(899007),
     m = n(867176),
@@ -52,8 +52,8 @@ function N(e) {
     return e;
 }
 function C(e) {
-    let { user: t, currentUser: n, guildId: A, channelId: C, messageId: R, roleId: P, openedAt: w, closePopout: D, setPopoutRef: L, disableUserProfileLink: x = __OVERLAY__, newAnalyticsLocations: M = [], disableAutoFocus: k = !1 } = e,
-        { analyticsLocations: j } = (0, c.ZP)([...M, l.Z.USER_PROFILE_POPOUT]),
+    let { user: t, currentUser: n, guildId: A, channelId: C, messageId: R, roleId: P, openedAt: w, closePopout: D, setPopoutRef: L, disableUserProfileLink: x = __OVERLAY__, newAnalyticsLocations: k = [], disableAutoFocus: M = !1 } = e,
+        { analyticsLocations: j } = (0, c.ZP)([...k, l.Z.USER_PROFILE_POPOUT]),
         U = (0, d.ZB)({
             layout: 'POPOUT',
             userId: t.id,
@@ -62,7 +62,7 @@ function C(e) {
             messageId: R,
             roleId: P
         }),
-        G = (0, f.ZP)(t.id, A),
+        G = (0, _.ZP)(t.id, A),
         B = (0, a.e7)([u.Z], () => (null != A ? u.Z.getGuild(A) : null)),
         V = i.useRef(null),
         F = (0, s.Z)(V);
@@ -90,7 +90,7 @@ function C(e) {
                       label: T.intl.string(T.t['+Xp3ho']),
                       action: () => {
                           Z(),
-                              (0, _.pQ)(
+                              (0, f.pQ)(
                                   N(
                                       {
                                           action: 'PRESS_VIEW_PROFILE',
@@ -101,7 +101,7 @@ function C(e) {
                               );
                       }
                   }),
-        Y = k ? 'div' : o.VqE;
+        Y = M ? 'div' : o.VqE;
     return (0, r.jsx)(c.Gt, {
         value: j,
         children: (0, r.jsx)(d.Mt, {
@@ -167,7 +167,7 @@ function C(e) {
                             guildId: A,
                             channelId: C,
                             onClose: D,
-                            disableAutoFocus: k
+                            disableAutoFocus: M
                         })
                     ]
                 })

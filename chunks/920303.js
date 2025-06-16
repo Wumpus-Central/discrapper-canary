@@ -14,8 +14,8 @@ var i,
     c = n(442837),
     u = n(570140),
     d = n(882252),
-    _ = n(228392),
-    f = n(131704),
+    f = n(228392),
+    _ = n(131704),
     p = n(592125),
     h = n(306680),
     m = n(823379),
@@ -55,12 +55,12 @@ function D(e) {
 }
 function L(e) {
     if (e.channelId !== S || e.sortOrder !== A || !(0, m.OL)(e.tagFilter, r) || e.tagSetting !== R) return !1;
-    let t = e.threads.filter((e) => f.AW.has(e.type)).map((e) => e.id);
+    let t = e.threads.filter((e) => _.AW.has(e.type)).map((e) => e.id);
     N = N.concat(t);
     let n = p.Z.getChannel(S);
     null != n &&
         n.isForumLikeChannel() &&
-        (0, _.Hr)({
+        (0, f.Hr)({
             guildId: n.guild_id,
             channelId: n.id,
             numArchivedThreads: N.length,
@@ -68,16 +68,16 @@ function L(e) {
             filterTagIds: Array.from(e.tagFilter),
             sortOrder: e.sortOrder
         }),
-        M(),
+        k(),
         (I = e.hasMore),
         (C = e.offset + y),
         (O = !1),
         (v = !1);
 }
 function x(e) {
-    return (null == S || null == e.channelId || S === e.channelId) && M();
+    return (null == S || null == e.channelId || S === e.channelId) && k();
 }
-function M() {
+function k() {
     if (null == S) return !1;
     let e = !I,
         t = p.Z.getChannel(N[N.length - 1]),
@@ -104,7 +104,7 @@ function M() {
         .reverse()
         .value();
 }
-function k(e) {
+function M(e) {
     if (e.channelId !== S || e.sortOrder !== A || !(0, m.OL)(e.tagFilter, r) || e.tagSetting !== R) return !1;
     (O = !1), (T = !0), (v = !1);
 }
@@ -153,6 +153,6 @@ let Z = new F(u.Z, {
     CHANNEL_DELETE: j,
     LOAD_ARCHIVED_THREADS: D,
     LOAD_ARCHIVED_THREADS_SUCCESS: L,
-    LOAD_ARCHIVED_THREADS_FAIL: k,
+    LOAD_ARCHIVED_THREADS_FAIL: M,
     RESORT_THREADS: x
 });

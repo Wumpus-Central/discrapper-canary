@@ -24,7 +24,7 @@ function d(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function _(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -57,7 +57,7 @@ function p(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -553,7 +553,7 @@ function x(e) {
         })
     });
 }
-function M(e, t) {
+function k(e, t) {
     let n = (0, s.UC)(t),
         i = n.status / 2;
     return (0, r.jsxs)('mask', {
@@ -576,7 +576,7 @@ function M(e, t) {
         ]
     });
 }
-function k(e, t) {
+function M(e, t) {
     let n = (0, s.UC)(t),
         i = n.status / 2,
         a = (i + n.stroke) / n.size / c.hs,
@@ -1098,19 +1098,19 @@ function ea(e) {
     });
 }
 function eo(e) {
-    var { mask: t, width: n = E, height: i = E, rightOverhang: a = 0, bottomOverhang: s = 0, children: l, className: c, style: d, 'aria-label': f } = e,
+    var { mask: t, width: n = E, height: i = E, rightOverhang: a = 0, bottomOverhang: s = 0, children: l, className: c, style: d, 'aria-label': _ } = e,
         m = h(e, ['mask', 'width', 'height', 'rightOverhang', 'bottomOverhang', 'children', 'className', 'style', 'aria-label']);
     return (0, r.jsx)(
         'svg',
         p(
-            _(
+            f(
                 {
                     width: n + a,
                     height: i + s,
                     className: o()(u.svg, c),
                     viewBox: '0 0 '.concat(n + a, ' ').concat(i + s),
                     style: d,
-                    'aria-label': f
+                    'aria-label': _
                 },
                 m
             ),
@@ -1155,62 +1155,62 @@ let es = eo,
                     I('svg-mask-channel-call-control-button-badge-22', 22),
                     I('svg-mask-channel-call-control-button-badge-29', 29),
                     x('svg-mask-avatar-default'),
-                    M('svg-mask-avatar-status-round-16', s.EF.SIZE_16),
-                    k('svg-mask-avatar-decoration-status-round-16', s.EF.SIZE_16),
+                    k('svg-mask-avatar-status-round-16', s.EF.SIZE_16),
+                    M('svg-mask-avatar-decoration-status-round-16', s.EF.SIZE_16),
                     G('svg-mask-avatar-status-mobile-16', s.EF.SIZE_16),
                     B('svg-mask-avatar-decoration-status-mobile-16', s.EF.SIZE_16),
                     j('svg-mask-avatar-status-typing-16', s.EF.SIZE_16),
                     U('svg-mask-avatar-decoration-status-typing-16', s.EF.SIZE_16),
-                    M('svg-mask-avatar-status-round-20', s.EF.SIZE_20),
-                    k('svg-mask-avatar-decoration-status-round-20', s.EF.SIZE_20),
+                    k('svg-mask-avatar-status-round-20', s.EF.SIZE_20),
+                    M('svg-mask-avatar-decoration-status-round-20', s.EF.SIZE_20),
                     G('svg-mask-avatar-status-mobile-20', s.EF.SIZE_20),
                     B('svg-mask-avatar-decoration-status-mobile-20', s.EF.SIZE_20),
                     j('svg-mask-avatar-status-typing-20', s.EF.SIZE_20),
                     U('svg-mask-avatar-decoration-status-typing-20', s.EF.SIZE_20),
-                    M('svg-mask-avatar-status-round-24', s.EF.SIZE_24),
-                    k('svg-mask-avatar-decoration-status-round-24', s.EF.SIZE_24),
+                    k('svg-mask-avatar-status-round-24', s.EF.SIZE_24),
+                    M('svg-mask-avatar-decoration-status-round-24', s.EF.SIZE_24),
                     G('svg-mask-avatar-status-mobile-24', s.EF.SIZE_24),
                     B('svg-mask-avatar-decoration-status-mobile-24', s.EF.SIZE_24),
                     j('svg-mask-avatar-status-typing-24', s.EF.SIZE_24),
                     U('svg-mask-avatar-decoration-status-typing-24', s.EF.SIZE_24),
-                    M('svg-mask-avatar-status-round-32', s.EF.SIZE_32),
-                    k('svg-mask-avatar-decoration-status-round-32', s.EF.SIZE_32),
+                    k('svg-mask-avatar-status-round-32', s.EF.SIZE_32),
+                    M('svg-mask-avatar-decoration-status-round-32', s.EF.SIZE_32),
                     G('svg-mask-avatar-status-mobile-32', s.EF.SIZE_32),
                     B('svg-mask-avatar-decoration-status-mobile-32', s.EF.SIZE_32),
                     j('svg-mask-avatar-status-typing-32', s.EF.SIZE_32),
                     U('svg-mask-avatar-decoration-status-typing-32', s.EF.SIZE_32),
-                    M('svg-mask-avatar-status-round-40', s.EF.SIZE_40),
-                    k('svg-mask-avatar-decoration-status-round-40', s.EF.SIZE_40),
+                    k('svg-mask-avatar-status-round-40', s.EF.SIZE_40),
+                    M('svg-mask-avatar-decoration-status-round-40', s.EF.SIZE_40),
                     G('svg-mask-avatar-status-mobile-40', s.EF.SIZE_40),
                     B('svg-mask-avatar-decoration-status-mobile-40', s.EF.SIZE_40),
                     j('svg-mask-avatar-status-typing-40', s.EF.SIZE_40),
                     U('svg-mask-avatar-decoration-status-typing-40', s.EF.SIZE_40),
-                    M('svg-mask-avatar-status-round-44', s.EF.SIZE_44),
-                    k('svg-mask-avatar-decoration-status-round-44', s.EF.SIZE_44),
+                    k('svg-mask-avatar-status-round-44', s.EF.SIZE_44),
+                    M('svg-mask-avatar-decoration-status-round-44', s.EF.SIZE_44),
                     G('svg-mask-avatar-status-mobile-44', s.EF.SIZE_44),
                     B('svg-mask-avatar-decoration-status-mobile-44', s.EF.SIZE_44),
                     j('svg-mask-avatar-status-typing-44', s.EF.SIZE_44),
                     U('svg-mask-avatar-decoration-status-typing-44', s.EF.SIZE_44),
-                    M('svg-mask-avatar-status-round-48', s.EF.SIZE_48),
-                    k('svg-mask-avatar-decoration-status-round-48', s.EF.SIZE_48),
+                    k('svg-mask-avatar-status-round-48', s.EF.SIZE_48),
+                    M('svg-mask-avatar-decoration-status-round-48', s.EF.SIZE_48),
                     G('svg-mask-avatar-status-mobile-48', s.EF.SIZE_48),
                     B('svg-mask-avatar-decoration-status-mobile-48', s.EF.SIZE_48),
                     j('svg-mask-avatar-status-typing-48', s.EF.SIZE_48),
                     U('svg-mask-avatar-decoration-status-typing-48', s.EF.SIZE_48),
-                    M('svg-mask-avatar-status-round-56', s.EF.SIZE_56),
-                    k('svg-mask-avatar-decoration-status-round-56', s.EF.SIZE_56),
+                    k('svg-mask-avatar-status-round-56', s.EF.SIZE_56),
+                    M('svg-mask-avatar-decoration-status-round-56', s.EF.SIZE_56),
                     G('svg-mask-avatar-status-mobile-56', s.EF.SIZE_56),
                     B('svg-mask-avatar-decoration-status-mobile-56', s.EF.SIZE_56),
                     j('svg-mask-avatar-status-typing-56', s.EF.SIZE_56),
                     U('svg-mask-avatar-decoration-status-typing-56', s.EF.SIZE_56),
-                    M('svg-mask-avatar-status-round-80', s.EF.SIZE_80),
-                    k('svg-mask-avatar-decoration-status-round-80', s.EF.SIZE_80),
+                    k('svg-mask-avatar-status-round-80', s.EF.SIZE_80),
+                    M('svg-mask-avatar-decoration-status-round-80', s.EF.SIZE_80),
                     G('svg-mask-avatar-status-mobile-80', s.EF.SIZE_80),
                     B('svg-mask-avatar-decoration-status-mobile-80', s.EF.SIZE_80),
                     j('svg-mask-avatar-status-typing-80', s.EF.SIZE_80),
                     U('svg-mask-avatar-decoration-status-typing-80', s.EF.SIZE_80),
-                    M('svg-mask-avatar-status-round-120', s.EF.SIZE_120),
-                    k('svg-mask-avatar-decoration-status-round-120', s.EF.SIZE_120),
+                    k('svg-mask-avatar-status-round-120', s.EF.SIZE_120),
+                    M('svg-mask-avatar-decoration-status-round-120', s.EF.SIZE_120),
                     G('svg-mask-avatar-status-mobile-120', s.EF.SIZE_120),
                     B('svg-mask-avatar-decoration-status-mobile-120', s.EF.SIZE_120),
                     j('svg-mask-avatar-status-typing-120', s.EF.SIZE_120),

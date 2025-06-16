@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => f,
-    z: () => _
+    Z: () => _,
+    z: () => f
 }),
     n(388685);
 var r = n(392711),
@@ -12,7 +12,7 @@ var r = n(392711),
     c = n(853856),
     u = n(362658),
     d = n(231338);
-function _(e, t, n) {
+function f(e, t, n) {
     let { canShow: r, isFavoritesPerk: a } = u.Z.getCurrentConfig({ location: 'isFavoritesGuildVisible' }, { autoTrackExposure: !1 });
     if (a) return !0;
     if (!r) return !1;
@@ -24,8 +24,8 @@ function _(e, t, n) {
     });
     return !i().isEmpty(s);
 }
-function f() {
+function _() {
     let { canShow: e, isFavoritesPerk: t } = (0, u.z)('useIsFavoritesGuildVisible'),
-        n = (0, a.e7)([c.Z, o.Z, s.Z], () => e && _(c.Z, o.Z, s.Z));
+        n = (0, a.e7)([c.Z, o.Z, s.Z], () => e && f(c.Z, o.Z, s.Z));
     return !!t || n;
 }

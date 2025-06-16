@@ -8,8 +8,8 @@ var r = n(570140),
     c = n(458725),
     u = n(754142),
     d = n(386146),
-    _ = n(915525),
-    f = n(990291);
+    f = n(915525),
+    _ = n(990291);
 function p(e, t, n) {
     return (
         t in e
@@ -50,7 +50,7 @@ function E(e, t) {
     return n;
 }
 function b(e) {
-    return f.C[e.type];
+    return _.C[e.type];
 }
 function y(e) {
     let t = b(e);
@@ -67,7 +67,7 @@ class O extends i.Z {
             i = null != n && null != (t = l.Z.getVoiceStateForChannel(n)) ? t : null,
             a = o.Z.getAllActiveStreams(),
             u = new Map();
-        for (let e of Object.values(f.C)) {
+        for (let e of Object.values(_.C)) {
             let t = e.getActiveErrors({
                 voiceChannelId: n,
                 voiceState: i,
@@ -75,7 +75,7 @@ class O extends i.Z {
             });
             if (null != t) for (let e of t) u.set(y(e), e);
         }
-        let d = _.Z.getActiveErrors();
+        let d = f.Z.getActiveErrors();
         if (!(d instanceof Map)) return void g.error('existingErrors is not a Map: '.concat(d, ' type: ').concat(Object.prototype.toString.call(d)));
         if (0 === u.size && 0 === d.size) return;
         let p = new Set(u.keys()),

@@ -14,7 +14,7 @@ function u(e) {
         null != i
             ? (t = i.map((e) =>
                   (0, r.jsx)(
-                      _,
+                      f,
                       {
                           applicationId: n,
                           benefit: e,
@@ -71,8 +71,8 @@ function d(e) {
         ]
     });
 }
-function _(e) {
-    let { applicationId: t, benefit: n, className: i, emojiContainerClassName: s, showsDescription: u = !0, nameTextVariant: d = 'text-md/medium', nameTextColor: _ = 'header-primary' } = e;
+function f(e) {
+    let { applicationId: t, benefit: n, className: i, emojiContainerClassName: s, showsDescription: u = !0, nameTextVariant: d = 'text-md/medium', nameTextColor: f = 'header-primary' } = e;
     return (0, r.jsxs)('div', {
         className: a()(c.container, i),
         children: [
@@ -85,7 +85,7 @@ function _(e) {
                 children: [
                     (0, r.jsx)(o.Text, {
                         variant: d,
-                        color: _,
+                        color: f,
                         className: c.name,
                         children: n.name
                     }),

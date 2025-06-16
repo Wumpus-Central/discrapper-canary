@@ -8,15 +8,15 @@ var r = n(255367),
     c = n(70097),
     u = n(981631),
     d = n(73117),
-    _ = n(988868),
-    f = n(554355),
+    f = n(988868),
+    _ = n(554355),
     p = n(991989),
     h = n(787462),
     m = n(635507),
     g = n(470794),
     E = n(886777);
 function b(e) {
-    let { movDark: t = d, movLight: n = h, mp4Dark: i = _, mp4Light: a = m, pngDark: o = f, pngLight: s = g, webmDark: c = p, webmLight: b = E } = e,
+    let { movDark: t = d, movLight: n = h, mp4Dark: i = f, mp4Light: a = m, pngDark: o = _, pngLight: s = g, webmDark: c = p, webmLight: b = E } = e,
         y = (0, l.vu)(),
         O = [
             (0, r.jsx)(
@@ -108,17 +108,17 @@ let y = s.Z.getAppSpinnerSources(),
     v = b({}),
     I = (e) => {
         var t;
-        let { loop: n = !0, autoPlay: s = !0, setRef: l, className: d, onReady: _ } = e,
-            { theme: f } = (0, o.TCT)(),
+        let { loop: n = !0, autoPlay: s = !0, setRef: l, className: d, onReady: f } = e,
+            { theme: _ } = (0, o.TCT)(),
             { reducedMotion: p } = i.useContext(o.Sfi),
             h = v;
         null != O && (h = O);
-        let m = null != (t = h[(0, a.wj)(f) ? u.BRd.DARK : u.BRd.LIGHT]) ? t : h[u.BRd.DARK];
+        let m = null != (t = h[(0, a.wj)(_) ? u.BRd.DARK : u.BRd.LIGHT]) ? t : h[u.BRd.DARK];
         return (0, r.jsx)(
             c.Z,
             {
                 ref: l,
-                onLoadedData: _,
+                onLoadedData: f,
                 className: d,
                 loop: !p.enabled && n,
                 autoPlay: !p.enabled && s,
@@ -126,6 +126,6 @@ let y = s.Z.getAppSpinnerSources(),
                 'data-testid': 'app-spinner',
                 children: m
             },
-            f
+            _
         );
     };

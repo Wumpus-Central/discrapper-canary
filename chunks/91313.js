@@ -24,11 +24,11 @@ var r = n(911969),
     c = n(752305),
     u = n(925994),
     d = n(887490),
-    _ = n(42530);
-let f = RegExp('([\\p{L}\\p{N}\\p{sc=Deva}\\p{sc=Thai}_-]+):', 'gu');
+    f = n(42530);
+let _ = RegExp('([\\p{L}\\p{N}\\p{sc=Deva}\\p{sc=Thai}_-]+):', 'gu');
 function p(e) {
     let t = d.bN.richValue(e)[0];
-    return null == t || 'applicationCommand' !== t.type ? null : [t, _.YD];
+    return null == t || 'applicationCommand' !== t.type ? null : [t, f.YD];
 }
 function h(e) {
     var t, n;
@@ -130,15 +130,15 @@ function y(e, t, n, r, s) {
         u = a.Z.getActiveCommand(n),
         d = null == u || null == (l = u.options) ? void 0 : l.find((e) => e.name === c.optionName);
     if (null == d) return;
-    let _ = E(e, d, c, n),
-        f = o.f({
+    let f = E(e, d, c, n),
+        _ = o.f({
             option: d,
-            content: _,
+            content: f,
             guildId: t,
             channelId: n,
             allowEmptyValues: s
         });
-    return i.g7(n, { [c.optionName]: { lastValidationResult: f } }), f;
+    return i.g7(n, { [c.optionName]: { lastValidationResult: _ } }), _;
 }
 function O(e, t) {
     if (null == t.options || 0 === t.options.length) return [];
@@ -153,7 +153,7 @@ function O(e, t) {
         let i = n[t];
         if ('line' === i.type || 'applicationCommand' === i.type)
             for (let c = 0; c < i.children.length; c++) {
-                let _,
+                let f,
                     p = i.children[c],
                     h = [t, c];
                 if (d.aj.isType(p, 'applicationCommandOption')) {
@@ -170,20 +170,20 @@ function O(e, t) {
                     continue;
                 }
                 if (d.LC.isText(p))
-                    for (f.lastIndex = 0; null != (_ = f.exec(p.text)); ) {
-                        if (0 !== _.index && null == p.text.charAt(_.index - 1).match(/(\t|\s)/)) continue;
-                        let e = _[1];
+                    for (_.lastIndex = 0; null != (f = _.exec(p.text)); ) {
+                        if (0 !== f.index && null == p.text.charAt(f.index - 1).match(/(\t|\s)/)) continue;
+                        let e = f[1];
                         if (!o.has(e)) continue;
                         o.delete(e);
                         let t = a[e];
                         if (null == t) continue;
                         let i = {
                                 path: h,
-                                offset: _.index
+                                offset: f.index
                             },
                             l = {
                                 path: h,
-                                offset: i.offset + _[0].length
+                                offset: i.offset + f[0].length
                             },
                             c = {
                                 path: h,

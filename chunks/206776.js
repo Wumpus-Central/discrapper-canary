@@ -34,8 +34,8 @@ let d =
                       });
                   }, 1);
               },
-    _ = null != (i = window.cancelIdleCallback) ? i : clearTimeout;
-function f(e) {
+    f = null != (i = window.cancelIdleCallback) ? i : clearTimeout;
+function _(e) {
     return null == e ? new c.Lj(c.HO, !0) : new c.Lj(e.timeRemaining(), e.didTimeout);
 }
 class p extends s.W {
@@ -54,7 +54,7 @@ class p extends s.W {
                             this._scheduleRequestIdleCallback(
                                 (e) => {
                                     this.telemetry.timeEnd(l.JV.TIME_TO_FIRE_IDLE_CALLBACK);
-                                    let t = f(e),
+                                    let t = _(e),
                                         n = null == t ? void 0 : t.timeRemaining();
                                     null != n && this.telemetry.timeTrack(l.JV.DEADLINE_INITIAL_TIME_REMAINING, n), this._processWorkCallback(t);
                                 },
@@ -62,7 +62,7 @@ class p extends s.W {
                             );
                     else {
                         this.telemetry.timeEnd(l.JV.TIME_TO_FIRE_IDLE_CALLBACK);
-                        let t = f(e),
+                        let t = _(e),
                             n = null == t ? void 0 : t.timeRemaining();
                         null != n && this.telemetry.timeTrack(l.JV.DEADLINE_INITIAL_TIME_REMAINING, n), this._processWorkCallback(t);
                     }
@@ -83,7 +83,7 @@ class p extends s.W {
             }, e));
     }
     _clearIdleCallback() {
-        null != this._flushIdleHandler && (_(this._flushIdleHandler), (this._flushIdleHandler = null)), null != this._flushIdleMaxTimeoutHandler && (clearTimeout(this._flushIdleMaxTimeoutHandler), (this._flushIdleMaxTimeoutHandler = null));
+        null != this._flushIdleHandler && (f(this._flushIdleHandler), (this._flushIdleHandler = null)), null != this._flushIdleMaxTimeoutHandler && (clearTimeout(this._flushIdleMaxTimeoutHandler), (this._flushIdleMaxTimeoutHandler = null));
     }
     constructor() {
         super(),

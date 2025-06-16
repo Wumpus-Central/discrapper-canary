@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(481060),
     u = n(239091),
     d = n(751688),
-    _ = n(5192),
-    f = n(51144),
+    f = n(5192),
+    _ = n(51144),
     p = n(223390);
 function h(e, t, n) {
     return (
@@ -90,8 +90,8 @@ function O(e) {
     let { users: t, maxUsers: a, guildId: s, channelId: h, className: g, size: O = c.EFr.SIZE_24, overflowCountVariant: v, overflowCountColor: I = 'interactive-normal', overflowCountClassName: T, hideOverflowCount: S = !1, disableUsernameTooltip: A = !1, disableUserPopout: N = !1, onClick: C, onFocus: R, onUserClick: P, onUserPopoutRequestClose: w } = e,
         [D, L] = i.useState(!1),
         x = b(O),
-        M = i.useRef(null);
-    function k() {
+        k = i.useRef(null);
+    function M() {
         return (0, r.jsx)(c.VqE, {
             className: p.popoutWrapper,
             children: (0, r.jsx)(c.Ttm, {
@@ -103,7 +103,7 @@ function O(e) {
                             user: e,
                             guildId: s,
                             channelId: h,
-                            nick: _.ZP.getNickname(s, h, e),
+                            nick: f.ZP.getNickname(s, h, e),
                             disablePopout: 'function' == typeof N ? N(e.id) : N,
                             onClick: P,
                             onPopoutRequestClose: () => {
@@ -141,7 +141,7 @@ function O(e) {
             d = l()(t)
                 .take(a)
                 .map((e, t) => {
-                    let n = f.ZP.getName(e),
+                    let n = _.ZP.getName(e),
                         a = t === u && !i,
                         l = o()(p.avatar, x, a && p.isLast);
                     return A
@@ -177,14 +177,14 @@ function O(e) {
             d[d.length - 1] = (0, r.jsx)(
                 c.yRy,
                 {
-                    targetElementRef: M,
-                    renderPopout: k,
+                    targetElementRef: k,
+                    renderPopout: M,
                     shouldShow: D,
                     position: 'bottom',
                     onRequestClose: () => L(!1),
                     children: () =>
                         (0, r.jsx)(c.zxk, {
-                            buttonRef: M,
+                            buttonRef: k,
                             className: o()(p.overflow, x, T),
                             onFocus: R,
                             onClick: (e) => {

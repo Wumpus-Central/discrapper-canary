@@ -59,10 +59,10 @@ let d = {
     hasAcceptedStoreTerms: !1,
     hasAcceptedEulaIds: []
 };
-function _() {
+function f() {
     r.hasAcceptedStoreTerms = !0;
 }
-function f(e) {
+function _(e) {
     let { eulaId: t } = e;
     if (r.hasAcceptedEulaIds.includes(t)) return !1;
     r.hasAcceptedEulaIds.push(t);
@@ -83,6 +83,6 @@ class p extends (i = a.ZP.PersistedStore) {
 }
 s(p, 'displayName', 'ApplicationStoreUserSettingsStore'), s(p, 'persistKey', 'ApplicationStoreUserSettingsStore'), s(p, 'migrations', [(e) => (null == e.hasAcceptedEulaIds ? u(l({}, e), { hasAcceptedEulaIds: [] }) : e)]);
 let h = new p(o.Z, {
-    APPLICATION_STORE_ACCEPT_STORE_TERMS: _,
-    APPLICATION_STORE_ACCEPT_EULA: f
+    APPLICATION_STORE_ACCEPT_STORE_TERMS: f,
+    APPLICATION_STORE_ACCEPT_EULA: _
 });

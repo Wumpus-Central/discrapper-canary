@@ -1,10 +1,10 @@
 n.d(t, {
-    J: () => M,
+    J: () => k,
     Nt: () => Z,
     Ou: () => G,
     R2: () => L,
     T$: () => w,
-    Uu: () => k,
+    Uu: () => M,
     ZC: () => F,
     Zm: () => D,
     bK: () => j,
@@ -23,8 +23,8 @@ var r = n(73800),
     c = n(607070),
     u = n(578976),
     d = n(569545),
-    _ = n(199902),
-    f = n(430824),
+    f = n(199902),
+    _ = n(430824),
     p = n(131951),
     h = n(158776),
     m = n(959457),
@@ -43,12 +43,12 @@ let C = 3500000,
     R = 10000,
     P = new o.Yd('HDStreamingConsumableModal'),
     w = (e) => {
-        let t = (0, s.e7)([f.Z], () => f.Z.getGuild(null == e ? void 0 : e.guild_id)),
+        let t = (0, s.e7)([_.Z], () => _.Z.getGuild(null == e ? void 0 : e.guild_id)),
             n = (0, s.e7)([g.default], () => {
                 var e;
                 return null == (e = g.default.getCurrentUser()) ? void 0 : e.id;
             }),
-            i = (0, s.Wu)([_.Z], () => (null == e ? [] : _.Z.getAllActiveStreamsForChannel(e.id).filter((e) => e.ownerId !== n))),
+            i = (0, s.Wu)([f.Z], () => (null == e ? [] : f.Z.getAllActiveStreamsForChannel(e.id).filter((e) => e.ownerId !== n))),
             a = i.some((e) => {
                 let t = g.default.getUser(e.ownerId);
                 return null != t && h.Z.isMobileOnline(t.id);
@@ -78,7 +78,7 @@ let C = 3500000,
                 var e;
                 return null == (e = g.default.getCurrentUser()) ? void 0 : e.id;
             }),
-            r = (0, s.Wu)([_.Z], () => (null == e ? [] : _.Z.getAllActiveStreamsForChannel(e.id).filter((e) => e.ownerId !== n))),
+            r = (0, s.Wu)([f.Z], () => (null == e ? [] : f.Z.getAllActiveStreamsForChannel(e.id).filter((e) => e.ownerId !== n))),
             i = (0, T.j)(t),
             a = w(e);
         return i && a && r.length > 0;
@@ -111,7 +111,7 @@ function x(e) {
         }
     );
 }
-function M(e, t) {
+function k(e, t) {
     let n = (0, r.useRef)(!0),
         i = null == e ? void 0 : e.hdStreamingUntil,
         a = (0, r.useRef)(t);
@@ -126,9 +126,9 @@ function M(e, t) {
             if (null != i && new Date(i) > new Date()) return a.current();
         }, [i]);
 }
-function k(e) {
-    M(e, () => {
-        let t = _.Z.getCurrentUserActiveStream();
+function M(e) {
+    k(e, () => {
+        let t = f.Z.getCurrentUserActiveStream();
         if (null != t && t.channelId === e.id) {
             let e = p.Z.getState().goLiveSource;
             (0, y.x8)(null == e ? void 0 : e.quality);
@@ -148,7 +148,7 @@ function U(e) {
     b.default.track(A.rMx.CONSUMABLE_HD_STREAMING_ENTRYPOINT, { location: e });
 }
 function G(e) {
-    let t = (0, s.e7)([f.Z], () => f.Z.getGuild(null == e ? void 0 : e.guild_id)),
+    let t = (0, s.e7)([_.Z], () => _.Z.getGuild(null == e ? void 0 : e.guild_id)),
         n = (0, T.j)('VoiceEffectsActionBar');
     return ((null == t ? void 0 : t.premiumTier) === A.Eu4.NONE || (null == t ? void 0 : t.premiumTier) === A.Eu4.TIER_1) && (null == e ? void 0 : e.type) === A.d4z.GUILD_VOICE && !(null == e ? void 0 : e.isHDStreamSplashed) && n;
 }

@@ -47,7 +47,7 @@ function d(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +58,7 @@ function _(e, t) {
         e
     );
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -80,10 +80,10 @@ function p(e, t) {
 }
 function h(e) {
     var { children: t, className: n, size: i = o.zxk.Sizes.MEDIUM, onlyShineOnHover: c = !1 } = e,
-        d = f(e, ['children', 'className', 'size', 'onlyShineOnHover']);
+        d = _(e, ['children', 'className', 'size', 'onlyShineOnHover']);
     return (0, r.jsx)(
         o.gtL,
-        _(u({}, d), {
+        f(u({}, d), {
             color: o.zxk.Colors.CUSTOM,
             size: i,
             className: a()(l.button, n),

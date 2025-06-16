@@ -29,7 +29,7 @@ function l() {
         u = void 0 === c ? [] : c,
         d = (0, s.dl)(l, u);
     if (!(d.length > 0 || !(0, a.Hj)(l, u))) return o.Hn;
-    var _ = u[u.length - 1],
-        f = l[l.length - 1];
-    return _ !== f && (_ && d.push(_), f && d.push(f)), d;
+    var f = u[u.length - 1],
+        _ = l[l.length - 1];
+    return f !== _ && (f && d.push(f), _ && d.push(_)), d;
 }

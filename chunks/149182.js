@@ -16,7 +16,7 @@
         var i = Object.create((t && t.prototype instanceof E ? t : E).prototype);
         return (i._invoke = N(e, n, new w(r || []))), i;
     }
-    function _(e, t, n) {
+    function f(e, t, n) {
         try {
             return {
                 type: 'normal',
@@ -30,7 +30,7 @@
         }
     }
     (u = t.regeneratorRuntime = c ? e.exports : {}).wrap = d;
-    var f = 'suspendedStart',
+    var _ = 'suspendedStart',
         p = 'suspendedYield',
         h = 'executing',
         m = 'completed',
@@ -56,7 +56,7 @@
     function A(e) {
         var t;
         function n(t, r, a, o) {
-            var s = _(e[t], e, r);
+            var s = f(e[t], e, r);
             if ('throw' === s.type) o(s.arg);
             else {
                 var l = s.arg,
@@ -91,7 +91,7 @@
         this._invoke = r;
     }
     function N(e, t, n) {
-        var r = f;
+        var r = _;
         return function (i, a) {
             if (r === h) throw Error('Generator is already running');
             if (r === m) {
@@ -109,11 +109,11 @@
                 }
                 if ('next' === n.method) n.sent = n._sent = n.arg;
                 else if ('throw' === n.method) {
-                    if (r === f) throw ((r = m), n.arg);
+                    if (r === _) throw ((r = m), n.arg);
                     n.dispatchException(n.arg);
                 } else 'return' === n.method && n.abrupt('return', n.arg);
                 r = h;
-                var l = _(e, t, n);
+                var l = f(e, t, n);
                 if ('normal' === l.type) {
                     if (((r = n.done ? m : p), l.arg === g)) continue;
                     return {
@@ -134,7 +134,7 @@
             }
             return g;
         }
-        var i = _(r, e.iterator, t.arg);
+        var i = f(r, e.iterator, t.arg);
         if ('throw' === i.type) return (t.method = 'throw'), (t.arg = i.arg), (t.delegate = null), g;
         var a = i.arg;
         return a ? (a.done ? ((t[e.resultName] = a.value), (t.next = e.nextLoc), 'return' !== t.method && ((t.method = 'next'), (t.arg = n)), (t.delegate = null), g) : a) : ((t.method = 'throw'), (t.arg = TypeError('iterator result is not an object')), (t.delegate = null), g);

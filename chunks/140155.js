@@ -8,8 +8,8 @@ var r,
     c = n(23750),
     u = n(699516),
     d = n(594174),
-    _ = n(709054),
-    f = n(497089),
+    f = n(709054),
+    _ = n(497089),
     p = n(178480),
     h = n(981631);
 function m(e, t, n) {
@@ -146,12 +146,12 @@ function C(e) {
 }
 function R(e) {
     let { items: t, hasMore: n, cursor: r } = e;
-    y.loading && ((y.loading = !1), (y.initialized = !0), (y.errored = !1), (y.isDataStale = !1), (null != r && y.notifCenterIds.has(r)) || ((y.paginationHasMore = t.length > 0 && n), (y.paginationCursor = t.length > 0 ? r : void 0)), (y.notifCenterItems = [...y.notifCenterItems, ...t.map(A).filter((e) => !y.notifCenterIds.has(e.id))]), y.notifCenterItems.sort((e, t) => _.default.compare(t.id, e.id)), t.forEach((e) => y.notifCenterIds.add(e.id)));
+    y.loading && ((y.loading = !1), (y.initialized = !0), (y.errored = !1), (y.isDataStale = !1), (null != r && y.notifCenterIds.has(r)) || ((y.paginationHasMore = t.length > 0 && n), (y.paginationCursor = t.length > 0 ? r : void 0)), (y.notifCenterItems = [...y.notifCenterItems, ...t.map(A).filter((e) => !y.notifCenterIds.has(e.id))]), y.notifCenterItems.sort((e, t) => f.default.compare(t.id, e.id)), t.forEach((e) => y.notifCenterIds.add(e.id)));
 }
 function P(e) {
     let t = 'NOTIFICATION_CENTER_ITEM_CREATE' === e.type ? A(e.item) : e.item;
     if (!y.initialized || !O(t) || y.notifCenterIds.has(t.id)) return !1;
-    y.notifCenterIds.add(t.id), (y.notifCenterItems = [t, ...y.notifCenterItems]), y.notifCenterItems.sort((e, t) => _.default.compare(t.id, e.id));
+    y.notifCenterIds.add(t.id), (y.notifCenterItems = [t, ...y.notifCenterItems]), y.notifCenterItems.sort((e, t) => f.default.compare(t.id, e.id));
 }
 function w(e) {
     let { id: t } = e;
@@ -169,11 +169,11 @@ function x(e) {
     let { ids: t } = e;
     D(t, !1);
 }
-function M(e) {
+function k(e) {
     let { active: t } = e;
     y.notifCenterActive = t;
 }
-function k(e) {
+function M(e) {
     let { focused: t } = e;
     y.notifCenterTabFocused = t;
 }
@@ -198,19 +198,19 @@ function G(e) {
         null == t.user ||
         a ||
         (y.notifCenterLocalItems = y.notifCenterLocalItems.map((e) =>
-            j(e, f.O7.INCOMING_FRIEND_REQUESTS, t.user.id)
+            j(e, _.O7.INCOMING_FRIEND_REQUESTS, t.user.id)
                 ? b(g({}, e), {
                       acked: !0,
                       forceUnacked: !1,
                       local_id: 'incoming_friend_requests_accepted_'.concat(o.id, '_').concat(e.id),
-                      type: f.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED
+                      type: _.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED
                   })
                 : e
         )),
-        (r === h.OGo.BLOCKED || a) && (y.notifCenterLocalItems = y.notifCenterLocalItems.filter((e) => !j(e, f.O7.INCOMING_FRIEND_REQUESTS, n) && !j(e, f.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, n) && !j(e, f.O7.INCOMING_GAME_FRIEND_REQUESTS, n) && !j(e, f.O7.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED, n)));
+        (r === h.OGo.BLOCKED || a) && (y.notifCenterLocalItems = y.notifCenterLocalItems.filter((e) => !j(e, _.O7.INCOMING_FRIEND_REQUESTS, n) && !j(e, _.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, n) && !j(e, _.O7.INCOMING_GAME_FRIEND_REQUESTS, n) && !j(e, _.O7.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED, n)));
 }
 function B(e) {
-    y.notifCenterLocalItems = y.notifCenterLocalItems.filter((t) => !j(t, f.O7.INCOMING_FRIEND_REQUESTS, e.relationship.id) && !j(t, f.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id));
+    y.notifCenterLocalItems = y.notifCenterLocalItems.filter((t) => !j(t, _.O7.INCOMING_FRIEND_REQUESTS, e.relationship.id) && !j(t, _.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id));
 }
 function V(e) {
     let { gameRelationship: t } = e,
@@ -222,12 +222,12 @@ function V(e) {
     } else {
         if (r !== h.OGo.FRIEND) return !1;
         y.notifCenterLocalItems = y.notifCenterLocalItems.map((e) =>
-            U(e, f.O7.INCOMING_GAME_FRIEND_REQUESTS, n, a)
+            U(e, _.O7.INCOMING_GAME_FRIEND_REQUESTS, n, a)
                 ? b(g({}, e), {
                       acked: !0,
                       forceUnacked: !1,
                       local_id: 'incoming_game_friend_requests_accepted_'.concat(n, '_').concat(e.id),
-                      type: f.O7.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED
+                      type: _.O7.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED
                   })
                 : e
         );
@@ -235,7 +235,7 @@ function V(e) {
 }
 function F(e) {
     let { userId: t, applicationId: n } = e;
-    y.notifCenterLocalItems = y.notifCenterLocalItems.filter((e) => !U(e, f.O7.INCOMING_GAME_FRIEND_REQUESTS, t, n) && !U(e, f.O7.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED, t, n));
+    y.notifCenterLocalItems = y.notifCenterLocalItems.filter((e) => !U(e, _.O7.INCOMING_GAME_FRIEND_REQUESTS, t, n) && !U(e, _.O7.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED, t, n));
 }
 function Z(e) {
     let { item_enum: t } = e;
@@ -255,7 +255,7 @@ function H(e) {
     Y(t);
 }
 function Y(e) {
-    (0, s.Z2)(e) && (y.notifCenterItems = y.notifCenterItems.map((t) => (t.type === f.DY.GUILD_SCHEDULED_EVENT_STARTED && t.guild_scheduled_event_id === e.id ? b(g({}, t), { disable_action: !0 }) : t)));
+    (0, s.Z2)(e) && (y.notifCenterItems = y.notifCenterItems.map((t) => (t.type === _.DY.GUILD_SCHEDULED_EVENT_STARTED && t.guild_scheduled_event_id === e.id ? b(g({}, t), { disable_action: !0 }) : t)));
 }
 function W(e) {
     let { newBuild: t } = e;
@@ -327,8 +327,8 @@ let z = new K(a.Z, {
     LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: S,
     LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: R,
     RESET_NOTIFICATION_CENTER: () => I(),
-    NOTIFICATION_CENTER_SET_ACTIVE: M,
-    NOTIFICATION_CENTER_TAB_FOCUSED: k,
+    NOTIFICATION_CENTER_SET_ACTIVE: k,
+    NOTIFICATION_CENTER_TAB_FOCUSED: M,
     RELATIONSHIP_ADD: G,
     RELATIONSHIP_UPDATE: G,
     RELATIONSHIP_REMOVE: B,

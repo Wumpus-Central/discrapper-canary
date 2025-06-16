@@ -8,8 +8,8 @@ var r = n(570140),
     c = n(131951),
     u = n(19780),
     d = n(944486),
-    _ = n(594174);
-function f(e, t, n) {
+    f = n(594174);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -83,7 +83,7 @@ let g = (e, t) => {
     },
     E = () => {
         var e;
-        let t = (0, a.P)(_.default.getCurrentUser());
+        let t = (0, a.P)(f.default.getCurrentUser());
         return {
             video_device_name: null == (e = c.Z.getVideoDevices()[c.Z.getVideoDeviceId()]) ? void 0 : e.name,
             video_hardware_scaling_enabled: c.Z.getHardwareEncoding(),

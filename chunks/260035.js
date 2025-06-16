@@ -10,7 +10,7 @@ var r = n(255367),
 function d(e) {
     let { children: t } = e,
         [n, d] = i.useState(null),
-        [_, f] = i.useState(null),
+        [f, _] = i.useState(null),
         p = i.useRef(new Set()),
         [h, m] = i.useState(!1),
         g = (0, o.e7)([s.Z], () => s.Z.getCurrentlySelectedChannelId()),
@@ -23,12 +23,12 @@ function d(e) {
         }, []);
     return (
         i.useEffect(() => {
-            null == _ || _.clearConfetti();
-        }, [_, g]),
+            null == f || f.clearConfetti();
+        }, [f, g]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(l.d, {
-                    confettiCanvas: _,
+                    confettiCanvas: f,
                     spriteCanvas: n,
                     baseConfig: c.We,
                     addClickListener: b,
@@ -36,7 +36,7 @@ function d(e) {
                     children: t
                 }),
                 (0, r.jsx)(a.O_, {
-                    ref: f,
+                    ref: _,
                     className: u.canvas,
                     environment: c.rq,
                     onClick: h ? y : void 0

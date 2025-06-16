@@ -48,7 +48,7 @@ function d(e, t) {
     let o = r.substring(i, a),
         c = {};
     return (
-        f({
+        _({
             result: c,
             text: o,
             startIndex: i,
@@ -56,7 +56,7 @@ function d(e, t) {
             type1: 'italics',
             type2: 'bold'
         }),
-        f({
+        _({
             result: c,
             text: o,
             startIndex: i,
@@ -64,17 +64,17 @@ function d(e, t) {
             type1: 'italics',
             type2: 'underline'
         }),
-        _(c, o, i, '**', 'bold'),
-        _(c, o, i, '*', 'italics'),
-        _(c, o, i, '_', 'italics'),
-        _(c, o, i, '__', 'underline'),
-        _(c, o, i, '`', 'inlineCode'),
-        _(c, o, i, '~~', 'strikethrough'),
-        _(c, o, i, '||', 'spoiler'),
+        f(c, o, i, '**', 'bold'),
+        f(c, o, i, '*', 'italics'),
+        f(c, o, i, '_', 'italics'),
+        f(c, o, i, '__', 'underline'),
+        f(c, o, i, '`', 'inlineCode'),
+        f(c, o, i, '~~', 'strikethrough'),
+        f(c, o, i, '||', 'spoiler'),
         c
     );
 }
-function _(e, t, n, r, i) {
+function f(e, t, n, r, i) {
     let a = p(t, r);
     a >= 0 &&
         (e[i] = {
@@ -82,7 +82,7 @@ function _(e, t, n, r, i) {
             location: n + a
         });
 }
-function f(e) {
+function _(e) {
     let { result: t, text: n, startIndex: r, syntax: i, type1: a, type2: o } = e,
         s = p(n, i);
     s >= 0 &&
@@ -111,10 +111,10 @@ function h(e, t) {
                 a = u(e, n, r),
                 l = a.before[t],
                 d = a.after[t],
-                _ = s.bN.node(e, n.path),
-                f = s.bN.node(e, r.path);
-            if (null == _ || null == f || !s.LC.isText(_[0]) || !s.LC.isText(f[0])) return;
-            let p = s.C0.equals(_[1], f[1]);
+                f = s.bN.node(e, n.path),
+                _ = s.bN.node(e, r.path);
+            if (null == f || null == _ || !s.LC.isText(f[0]) || !s.LC.isText(_[0])) return;
+            let p = s.C0.equals(f[1], _[1]);
             if (null != l && null != d) {
                 let t = {
                         path: n.path,
@@ -150,8 +150,8 @@ function h(e, t) {
             } else {
                 let i = c[t];
                 o.Q.insertText(e, i, { at: r }), o.Q.insertText(e, i, { at: n });
-                let a = _[0].text.length + i.length,
-                    s = f[0].text.length + (p ? 2 * i.length : i.length);
+                let a = f[0].text.length + i.length,
+                    s = _[0].text.length + (p ? 2 * i.length : i.length);
                 o.Q.select(e, {
                     anchor: {
                         path: n.path,

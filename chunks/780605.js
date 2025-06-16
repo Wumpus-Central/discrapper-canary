@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(84735),
     u = n(836459),
     d = n(922770),
-    _ = n(993365),
-    f = n(511857),
+    f = n(993365),
+    _ = n(511857),
     p = n(410030),
     h = n(388032),
     m = n(974223),
@@ -101,10 +101,10 @@ function A(e) {
     var n,
         a,
         { role: u = 'button', variant: d = 'primary', size: E = 'md', text: y, icon: I, iconPosition: A = 'start', iconOpticalOffsetMargin: R = 0, fullWidth: P = !1, focusProps: w, submitting: D = !1, submittingStartedLabel: L, submittingFinishedLabel: x } = e,
-        M = v(e, ['role', 'variant', 'size', 'text', 'icon', 'iconPosition', 'iconOpticalOffsetMargin', 'fullWidth', 'focusProps', 'submitting', 'submittingStartedLabel', 'submittingFinishedLabel']);
-    let k = (0, m.M)(),
-        j = null != (n = null == k ? void 0 : k.size) ? n : E,
-        U = null != (a = null == k ? void 0 : k.fullWidth) ? a : P;
+        k = v(e, ['role', 'variant', 'size', 'text', 'icon', 'iconPosition', 'iconOpticalOffsetMargin', 'fullWidth', 'focusProps', 'submitting', 'submittingStartedLabel', 'submittingFinishedLabel']);
+    let M = (0, m.M)(),
+        j = null != (n = null == M ? void 0 : M.size) ? n : E,
+        U = null != (a = null == M ? void 0 : M.fullWidth) ? a : P;
     function G() {
         if (0 === R) return {};
         switch (A) {
@@ -125,7 +125,7 @@ function A(e) {
     let V = i.useRef(null),
         F = 'expressive' === d,
         Z = i.useContext(l.S),
-        H = (0, f.a)((0, p.ZP)()),
+        H = (0, _.a)((0, p.ZP)()),
         Y = i.useRef(!1);
     i.useEffect(() => {
         !0 === D && ((Y.current = !0), s.u.announce(null != L ? L : h.intl.string(h.t.A11Y_LOADING_STARTED))), !1 === D && !0 === Y.current && (s.u.announce(null != x ? x : h.intl.string(h.t.A11Y_LOADING_FINISHED)), (Y.current = !1));
@@ -135,7 +135,7 @@ function A(e) {
             children: [
                 null != t && 'start' === A && t,
                 B &&
-                    (0, r.jsx)(_.x, {
+                    (0, r.jsx)(f.x, {
                         tag: 'span',
                         variant: T[j],
                         color: 'none',
@@ -162,7 +162,7 @@ function A(e) {
                                 }),
                                 ref: V
                             },
-                            M
+                            k
                         ),
                         {
                             children: [

@@ -12,8 +12,8 @@ var r = n(255367),
     c = n(481060),
     u = n(290297),
     d = n(686546),
-    _ = n(540059),
-    f = n(79712),
+    f = n(540059),
+    _ = n(79712),
     p = n(658672);
 function h(e, t, n) {
     return (
@@ -46,8 +46,8 @@ function m(e) {
 }
 let g = 24,
     E = (e) => {
-        let { className: t, wrapperClassName: n, children: i, onContextMenu: a, onClick: s, id: l, muted: u = !1, level: d = 1, ref: f } = e,
-            h = (0, _.Q3)('BaseHeaderBar'),
+        let { className: t, wrapperClassName: n, children: i, onContextMenu: a, onClick: s, id: l, muted: u = !1, level: d = 1, ref: _ } = e,
+            h = (0, f.Q3)('BaseHeaderBar'),
             m = (0, r.jsx)(c.y5t, {
                 forceLevel: d,
                 children: (0, r.jsx)(c.X6q, {
@@ -60,22 +60,22 @@ let g = 24,
             });
         return null != s
             ? (0, r.jsx)(c.P3F, {
-                  innerRef: f,
+                  innerRef: _,
                   onClick: s,
                   onContextMenu: a,
                   className: o()(n, p.titleWrapper),
                   children: m
               })
             : (0, r.jsx)('div', {
-                  ref: f,
+                  ref: _,
                   className: o()(n, p.titleWrapper),
                   onContextMenu: a,
                   children: m
               });
     },
     b = i.forwardRef(function (e, t) {
-        let { className: n, iconClassName: i, children: a, selected: s = !1, disabled: l = !1, showBadge: u = !1, badgePosition: f = 'bottom', color: h, foreground: E, background: b, icon: y, iconSize: O = g, onClick: v, onContextMenu: I, tooltip: T = null, tooltipColor: S, tooltipPosition: A = 'bottom', tooltipDisabled: N, tooltipSpacing: C, hideOnClick: R = !0, role: P, 'aria-label': w, 'aria-hidden': D, 'aria-checked': L, 'aria-expanded': x, 'aria-haspopup': M, 'data-jump-section': k } = e,
-            j = (0, _.Q3)('BaseHeaderBar'),
+        let { className: n, iconClassName: i, children: a, selected: s = !1, disabled: l = !1, showBadge: u = !1, badgePosition: _ = 'bottom', color: h, foreground: E, background: b, icon: y, iconSize: O = g, onClick: v, onContextMenu: I, tooltip: T = null, tooltipColor: S, tooltipPosition: A = 'bottom', tooltipDisabled: N, tooltipSpacing: C, hideOnClick: R = !0, role: P, 'aria-label': w, 'aria-hidden': D, 'aria-checked': L, 'aria-expanded': x, 'aria-haspopup': k, 'data-jump-section': M } = e,
+            j = (0, f.Q3)('BaseHeaderBar'),
             U = null != b ? { secondaryColorClass: b } : {},
             G = (0, r.jsx)(
                 y,
@@ -104,7 +104,7 @@ let g = 24,
                 shouldShow: !N,
                 spacing: C,
                 children: (e) => {
-                    let { onMouseEnter: _, onMouseLeave: g, onFocus: b, onBlur: T } = e;
+                    let { onMouseEnter: f, onMouseLeave: g, onFocus: b, onBlur: T } = e;
                     return null == v
                         ? (0, r.jsx)('div', {
                               ref: t,
@@ -122,7 +122,7 @@ let g = 24,
                                           colorClass: null != E ? E : void 0,
                                           color: null != h ? h : 'currentColor',
                                           'aria-hidden': D,
-                                          onMouseEnter: _,
+                                          onMouseEnter: f,
                                           onMouseLeave: g,
                                           onFocus: b,
                                           onBlur: T
@@ -136,7 +136,7 @@ let g = 24,
                               tag: 'div',
                               onClick: l ? void 0 : v,
                               onContextMenu: l ? void 0 : I,
-                              onMouseEnter: _,
+                              onMouseEnter: f,
                               onMouseLeave: g,
                               onFocus: b,
                               onBlur: T,
@@ -150,20 +150,20 @@ let g = 24,
                               'aria-label': B,
                               'aria-hidden': D,
                               'aria-checked': L,
-                              'aria-haspopup': M,
+                              'aria-haspopup': k,
                               'aria-expanded': x,
                               tabIndex: l || null == v ? -1 : 0,
-                              'data-jump-section': k,
+                              'data-jump-section': M,
                               children: [
                                   u
                                       ? (0, r.jsx)(d.ZP, {
-                                            mask: 'top' === f ? d.ZP.Masks.HEADER_BAR_BADGE_TOP : d.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
+                                            mask: 'top' === _ ? d.ZP.Masks.HEADER_BAR_BADGE_TOP : d.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
                                             height: j ? O : void 0,
                                             width: j ? O : void 0,
                                             children: G
                                         })
                                       : G,
-                                  u ? (0, r.jsx)('span', { className: o()(p.iconBadge, 'top' === f ? p.iconBadgeTop : p.iconBadgeBottom) }) : null,
+                                  u ? (0, r.jsx)('span', { className: o()(p.iconBadge, 'top' === _ ? p.iconBadgeTop : p.iconBadgeBottom) }) : null,
                                   a
                               ]
                           });
@@ -173,7 +173,7 @@ let g = 24,
     }),
     y = (e) => {
         let { className: t } = e;
-        return (0, _.Q3)('BaseHeaderBar.Divider') ? (0, r.jsx)(f.Z, { className: o()(p.dot, t) }) : (0, r.jsx)('div', { className: o()(p.divider, t) });
+        return (0, f.Q3)('BaseHeaderBar.Divider') ? (0, r.jsx)(_.Z, { className: o()(p.dot, t) }) : (0, r.jsx)('div', { className: o()(p.divider, t) });
     };
 function O(e) {
     let { direction: t = 'right' } = e;
@@ -190,7 +190,7 @@ function O(e) {
           });
 }
 let v = (e) => {
-    let { className: t, innerClassName: n, children: a, childrenBottom: d, toolbar: _, onDoubleClick: f, 'aria-label': h, 'aria-labelledby': m, role: g, scrollable: E, transparent: b = !1 } = e,
+    let { className: t, innerClassName: n, children: a, childrenBottom: d, toolbar: f, onDoubleClick: _, 'aria-label': h, 'aria-labelledby': m, role: g, scrollable: E, transparent: b = !1 } = e,
         y = i.useRef(null),
         O = i.useContext(u.Z);
     return (0, r.jsx)('section', {
@@ -211,7 +211,7 @@ let v = (e) => {
                     children: [
                         (0, r.jsxs)('div', {
                             className: o()(p.children, n, { [p.scrollable]: E }),
-                            onDoubleClick: f,
+                            onDoubleClick: _,
                             children: [
                                 l.tq && null != O
                                     ? (0, r.jsx)(s.r, {
@@ -222,10 +222,10 @@ let v = (e) => {
                                 a
                             ]
                         }),
-                        null != _
+                        null != f
                             ? (0, r.jsx)('div', {
                                   className: p.toolbar,
-                                  children: _
+                                  children: f
                               })
                             : null
                     ]

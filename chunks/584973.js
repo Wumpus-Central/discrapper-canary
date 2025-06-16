@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(633302),
     u = n(695346),
     d = n(563114),
-    _ = n(556638),
-    f = n(843280);
+    f = n(556638),
+    _ = n(843280);
 function p(e, t, n) {
     return (
         t in e
@@ -40,17 +40,17 @@ function h(e) {
     return e;
 }
 function m(e) {
-    let { emoji: t, className: n, animate: a = !0, hideTooltip: p = !1, tooltipDelay: m = _.X } = e,
+    let { emoji: t, className: n, animate: a = !0, hideTooltip: p = !1, tooltipDelay: m = f.X } = e,
         g = u.Yk.useSetting(),
         E = i.useRef(null),
         b = null != t.id ? ':'.concat(t.name, ':') : c.ZP.translateSurrogatesToInlineEmoji(t.name);
     if (null == t.id && d.T.has(t.name))
         return (0, r.jsx)('span', {
-            className: o()(f.emoji, n),
+            className: o()(_.emoji, n),
             children: t.name
         });
     let y = {
-        className: o()(f.emoji, n),
+        className: o()(_.emoji, n),
         emojiId: t.id,
         emojiName: t.name,
         autoplay: !0,

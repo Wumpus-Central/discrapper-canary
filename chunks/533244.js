@@ -2,13 +2,13 @@ n.d(t, {
     CG: () => u,
     OY: () => E,
     SG: () => g,
-    T1: () => _,
+    T1: () => f,
     i9: () => c,
     kk: () => d,
     lk: () => p,
     pQ: () => l,
     sN: () => m,
-    sO: () => f,
+    sO: () => _,
     ur: () => h
 }),
     n(539854);
@@ -32,10 +32,10 @@ function u(e) {
 function d(e) {
     return null != e.dmSpamDetectedAt && i()(e.dmSpamDetectedAt).add(o.lp, 'hours') > i()();
 }
-function _(e) {
+function f(e) {
     return null == e ? void 0 : u(e) ? a.Hl.JOIN_RAID : a.Hl.DM_RAID;
 }
-function f(e, t) {
+function _(e, t) {
     let n = [];
     return e && n.push(a.dj.INVITES_DISABLED), t && n.push(a.dj.DMS_DISABLED), n;
 }

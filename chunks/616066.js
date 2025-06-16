@@ -9,8 +9,8 @@ var i = n(120356),
     c = n(125988),
     u = n(998502),
     d = n(388032),
-    _ = n(614490);
-function f(e, t, n) {
+    f = n(614490);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -64,8 +64,8 @@ function m(e, t) {
 }
 let g = u.ZP.getEnableHardwareAcceleration() ? s.Xo$ : s.qEK,
     E = (e) => {
-        let { item: t, user: n, isHighlighted: i = !1, isPurchased: u = !1, avatarSize: f = s.EFr.SIZE_152, avatarPlaceholderSrc: h } = e,
-            E = (0, l.y9)(f),
+        let { item: t, user: n, isHighlighted: i = !1, isPurchased: u = !1, avatarSize: _ = s.EFr.SIZE_152, avatarPlaceholderSrc: h } = e,
+            E = (0, l.y9)(_),
             {
                 avatarDecorationSrc: b,
                 eventHandlers: y,
@@ -81,9 +81,9 @@ let g = u.ZP.getEnableHardwareAcceleration() ? s.Xo$ : s.qEK,
             m(p({}, y), {
                 avatarDecoration: b,
                 src: i ? (null == n ? void 0 : n.getAvatarURL(void 0, 152, !0)) : null != h ? h : O,
-                imageClassName: i ? _.fadeInAvatarImg : void 0,
-                className: a()(_.avatar, { [_.avatarPurchased]: u && !i }),
-                size: f,
+                imageClassName: i ? f.fadeInAvatarImg : void 0,
+                className: a()(f.avatar, { [f.avatarPurchased]: u && !i }),
+                size: _,
                 'aria-label': d.intl.string(d.t.lqaIxM)
             })
         );

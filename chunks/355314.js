@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(210887),
     u = n(914010),
     d = n(594174),
-    _ = n(626135),
-    f = n(424218),
+    f = n(626135),
+    _ = n(424218),
     p = n(403182),
     h = n(63063),
     m = n(74538),
@@ -81,7 +81,7 @@ function A(e) {
         }),
         R = i.useMemo(() => {
             let e = m.ZP.getUserMaxFileSize(v);
-            return (0, f.BU)(e / 1024, { useKibibytes: !0 });
+            return (0, _.BU)(e / 1024, { useKibibytes: !0 });
         }, [v]),
         P = (0, p.iL)({
             guildId: A,
@@ -99,7 +99,7 @@ function A(e) {
     function D() {
         (0, s.Z)(),
             t(),
-            _.default.track(b.rMx.PREMIUM_PROMOTION_OPENED, {
+            f.default.track(b.rMx.PREMIUM_PROMOTION_OPENED, {
                 location_section: b.jXE.FILE_UPLOAD_UPSELL_MODAL,
                 location_object: b.qAy.NAVIGATION_LINK
             }),

@@ -32,64 +32,64 @@ function u(e, t, n) {
     );
 }
 var d = new WeakMap(),
-    _ = new WeakMap();
-class f {
+    f = new WeakMap();
+class _ {
     abort(e) {
-        let { controller: t } = l(this.search(e), _);
+        let { controller: t } = l(this.search(e), f);
         null != t && t.abort();
     }
     doesDataNeedValidation(e) {
-        return !0 === l(this.search(e), _).isStale;
+        return !0 === l(this.search(e), f).isStale;
     }
     getOrCreate(e) {
-        return null == l(this, d)[e] && (l(this, d)[e] = new f()), l(this, d)[e];
+        return null == l(this, d)[e] && (l(this, d)[e] = new _()), l(this, d)[e];
     }
     getState(e) {
         var t;
-        return l((t = this.search(e)), _);
+        return l((t = this.search(e)), f);
     }
     loadingDone(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = this.search(e);
-        t ? ((l(n, _).fetchFailCounter = 0), (l(n, _).isStale = !1), (l(n, _).fetchState = 3)) : ((l(n, _).fetchFailCounter += 1), (l(n, _).fetchState = 2));
+        t ? ((l(n, f).fetchFailCounter = 0), (l(n, f).isStale = !1), (l(n, f).fetchState = 3)) : ((l(n, f).fetchFailCounter += 1), (l(n, f).fetchState = 2));
     }
     loadingStart(e, t) {
         let n = this.search(e);
-        (l(n, _).fetchState = 1), null != t && (l(n, _).controller = t), (l(n, _).error = void 0);
+        (l(n, f).fetchState = 1), null != t && (l(n, f).controller = t), (l(n, f).error = void 0);
     }
     search(e) {
-        if (null == e) return new f();
+        if (null == e) return new _();
         let t = this;
         for (let n of e) t = t.getOrCreate(n);
         return t;
     }
     setError(e, t) {
         let n = this.search(e);
-        (l(n, _).error = t), (l(n, _).isStale = !1);
+        (l(n, f).error = t), (l(n, f).isStale = !1);
     }
     subscribe(e, t) {
-        l(this.search(e), _).validateData = t;
+        l(this.search(e), f).validateData = t;
     }
     validate(e) {
         let t = this.search(e),
             n = [];
-        'function' == typeof l(t, _).validateData && n.push(l(t, _).validateData);
+        'function' == typeof l(t, f).validateData && n.push(l(t, f).validateData);
         let r = Object.values(l(t, d));
         for (; r.length > 0; ) {
             let e = r.pop();
-            null != e && ((l(e, _).isStale = !0), f.resetErrorState(e), r.push(...Object.values(l(e, d))), 'function' == typeof l(e, _).validateData && n.push(l(e, _).validateData));
+            null != e && ((l(e, f).isStale = !0), _.resetErrorState(e), r.push(...Object.values(l(e, d))), 'function' == typeof l(e, f).validateData && n.push(l(e, f).validateData));
         }
-        (l(t, _).isStale = !0), f.resetErrorState(t), n.forEach((e) => e());
+        (l(t, f).isStale = !0), _.resetErrorState(t), n.forEach((e) => e());
     }
     static resetErrorState(e) {
-        (l(e, _).error = void 0), (l(e, _).fetchFailCounter = 0), (l(e, _).fetchState = 0);
+        (l(e, f).error = void 0), (l(e, f).fetchFailCounter = 0), (l(e, f).fetchState = 0);
     }
     constructor() {
         c(this, d, {
             writable: !0,
             value: {}
         }),
-            c(this, _, {
+            c(this, f, {
                 writable: !0,
                 value: {
                     fetchFailCounter: 0,
@@ -98,7 +98,7 @@ class f {
             });
     }
 }
-let p = new f(),
+let p = new _(),
     h = 5;
 class m extends Error {
     setStatus(e) {
@@ -128,47 +128,47 @@ function E(e, t) {
     let { dangerousAbortOnCleanup: n = !1, get: a, load: o, maxNumFetchErrors: s = h, queryId: l, useStateHook: c } = t;
     return function () {
         for (var t = arguments.length, u = Array(t), d = 0; d < t; d++) u[d] = arguments[d];
-        let _ = (0, r.useMemo)(() => l(...u), u),
-            f = c(Array.isArray(e) ? e : [e], () => a(...u), u),
-            h = p.getState(_),
+        let f = (0, r.useMemo)(() => l(...u), u),
+            _ = c(Array.isArray(e) ? e : [e], () => a(...u), u),
+            h = p.getState(f),
             E = h.error,
             b = (0, r.useRef)(u);
         (0, r.useEffect)(() => {
             b.current = u;
         }, [u]);
         let y = (0, r.useCallback)(() => {
-                if (null == _ || 1 === h.fetchState) return !1;
+                if (null == f || 1 === h.fetchState) return !1;
                 let e = !1;
-                c === i.Wu ? f.length > 0 && (e = !0) : null != f && (e = !0);
-                let t = p.doesDataNeedValidation(_),
+                c === i.Wu ? _.length > 0 && (e = !0) : null != _ && (e = !0);
+                let t = p.doesDataNeedValidation(f),
                     n = null != E;
                 return t || (!e && !n);
-            }, [f, h.fetchState, E, _]),
+            }, [_, h.fetchState, E, f]),
             O = (0, r.useCallback)(() => {
-                if (null == _ || !y()) return;
+                if (null == f || !y()) return;
                 let e = new AbortController();
-                p.loadingStart(_, n ? e : void 0),
+                p.loadingStart(f, n ? e : void 0),
                     o(e.signal, ...b.current)
-                        .then((e) => (p.loadingDone(_, !0), e))
+                        .then((e) => (p.loadingDone(f, !0), e))
                         .catch((t) => {
-                            if ((p.loadingDone(_), e.signal.aborted)) return;
+                            if ((p.loadingDone(f), e.signal.aborted)) return;
                             let n = g(t);
-                            (!(h.fetchFailCounter >= s) && n instanceof m && (n.status >= 500 || 429 === n.status)) || p.setError(_, n);
+                            (!(h.fetchFailCounter >= s) && n instanceof m && (n.status >= 500 || 429 === n.status)) || p.setError(f, n);
                         });
-            }, [h.fetchFailCounter, _, y]);
+            }, [h.fetchFailCounter, f, y]);
         return (
             (0, r.useEffect)(
                 () => (
                     O(),
-                    p.subscribe(_, O),
+                    p.subscribe(f, O),
                     () => {
-                        p.abort(_), p.subscribe(_, void 0);
+                        p.abort(f), p.subscribe(f, void 0);
                     }
                 ),
-                [_, O]
+                [f, O]
             ),
             {
-                data: f,
+                data: _,
                 error: E,
                 isLoading: 0 === h.fetchState ? y() : 1 === h.fetchState
             }

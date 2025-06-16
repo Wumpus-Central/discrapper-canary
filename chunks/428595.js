@@ -8,8 +8,8 @@ var r = n(392711),
     c = n(11637),
     u = n(592125),
     d = n(430824),
-    _ = n(594174),
-    f = n(5192),
+    f = n(594174),
+    _ = n(5192),
     p = n(51144),
     h = n(298552),
     m = n(444758),
@@ -79,8 +79,8 @@ function L(e, t) {
     );
 }
 let x = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
-    M = /^$|\n *$/,
-    k = /^ *>>> ?/,
+    k = /^$|\n *$/,
+    M = /^ *>>> ?/,
     j = /^ *> ?/gm,
     U = /^((?:https?|steam):\/\/[^\s<]+[^<.,:;"'\]\s])/;
 function G(e) {
@@ -119,12 +119,12 @@ let B = (e) => {
                 if (r || i) return null;
                 if (null == n) return x.exec(e);
                 let a = n[0];
-                return M.test(a) ? x.exec(e) : null;
+                return k.test(a) ? x.exec(e) : null;
             },
             parse(e, t, n) {
                 let r = e[0],
-                    i = !!k.exec(r),
-                    a = i ? k : j,
+                    i = !!M.exec(r),
+                    a = i ? M : j,
                     o = r.replace(a, ''),
                     s = n.inQuote || !1,
                     l = n.inline || !1;
@@ -233,26 +233,26 @@ let B = (e) => {
             match: (e) => /^<@&(\d+)>/.exec(e),
             parse(e, t, n) {
                 var r, i, a, o, s, c;
-                let [u, _] = e;
+                let [u, f] = e;
                 if (n.returnMentionIds)
                     return {
                         type: 'roleMention',
-                        id: _
+                        id: f
                     };
-                let f = V(n),
-                    p = null != f ? d.Z.getRole(f.id, _) : null;
+                let _ = V(n),
+                    p = null != _ ? d.Z.getRole(_.id, f) : null;
                 if (null == p)
                     return {
                         type: 'text',
                         content: '@'.concat(R.intl.string(R.t['YV4F/v']))
                     };
-                let h = (0, l.i)(null == f ? void 0 : f.id, 'parse'),
+                let h = (0, l.i)(null == _ ? void 0 : _.id, 'parse'),
                     m = (null == (r = p.colors) ? void 0 : r.primary_color) === 0 && (null == (i = p.colors) ? void 0 : i.secondary_color) == null && (null == (a = p.colors) ? void 0 : a.tertiary_color) == null;
                 return {
                     type: 'mention',
                     channelId: n.channelId,
-                    guildId: null != f ? f.id : null,
-                    roleId: _,
+                    guildId: null != _ ? _.id : null,
+                    roleId: f,
                     roleColor: p.color,
                     roleColors:
                         h && !m
@@ -293,11 +293,11 @@ let B = (e) => {
                               type: 'mention',
                               id: e[1]
                           };
-                let a = _.default.getUser(e[1]),
+                let a = f.default.getUser(e[1]),
                     o = u.Z.getChannel(n.channelId);
                 if (null != a && ((i = a.id), (r = a.toString()), null != o)) {
                     var s;
-                    r = null != (s = f.ZP.getNickname(o.getGuildId(), n.channelId, a)) ? s : p.ZP.getName(a);
+                    r = null != (s = _.ZP.getNickname(o.getGuildId(), n.channelId, a)) ? s : p.ZP.getName(a);
                 }
                 let l = e[1],
                     c = null != l && N.Xyh.test(l.trim()),

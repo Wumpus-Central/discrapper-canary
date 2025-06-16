@@ -30,8 +30,8 @@ var r = n(392711),
     c = n(709054),
     u = n(981631),
     d = n(817384);
-let _ = /sketchfab/i,
-    f = /^https:\/\/sketchfab\.com/i,
+let f = /sketchfab/i,
+    _ = /^https:\/\/sketchfab\.com/i,
     p = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i,
     h = 1492472454139,
     m = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
@@ -42,7 +42,7 @@ function b(e) {
     return t > 0 && n > 0;
 }
 function y(e, t, n) {
-    if ((null != t && _.test(t.name)) || f.test(n.url)) return !1;
+    if ((null != t && f.test(t.name)) || _.test(n.url)) return !1;
     let r = null != n.proxy_url || /^https:/i.test(n.url);
     return null != e && c.default.extractTimestamp(e) < h && (r = r && null != t && p.test(t.name)), r;
 }

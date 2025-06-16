@@ -8,7 +8,7 @@ var r = n(255367),
     c = n(28546),
     u = n(368020);
 let d = i.forwardRef(function (e, t) {
-    let { store: n, hasSendableExpressions: d, onKeyDown: _, gridNavigatorId: f, expressionsListRef: p, defaultSearchPlaceholder: h, emptySearchPlaceholder: m } = e,
+    let { store: n, hasSendableExpressions: d, onKeyDown: f, gridNavigatorId: _, expressionsListRef: p, defaultSearchPlaceholder: h, emptySearchPlaceholder: m } = e,
         g = i.useRef(null),
         [E, b] = (0, c.Iu)((e) => [e.searchQuery, e.isSearchSuggestion], a.X),
         y = n.useStore((e) => e.searchPlaceholder),
@@ -46,14 +46,14 @@ let d = i.forwardRef(function (e, t) {
             size: s.E1j.Sizes.MEDIUM,
             placeholder: T(),
             onClear: I,
-            onKeyDown: _,
+            onKeyDown: f,
             onChange: v,
             className: u.__invalid_searchBar,
             inputProps: {
                 'aria-haspopup': 'grid',
-                'aria-controls': f,
+                'aria-controls': _,
                 'aria-expanded': !0,
-                'aria-activedescendant': (0, o.NE)(f, O.columnIndex, O.rowIndex)
+                'aria-activedescendant': (0, o.NE)(_, O.columnIndex, O.rowIndex)
             }
         })
     });

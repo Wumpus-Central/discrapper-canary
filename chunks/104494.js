@@ -1,5 +1,5 @@
 n.d(t, {
-    Ng: () => f,
+    Ng: () => _,
     Wp: () => d,
     kA: () => u
 }),
@@ -18,10 +18,10 @@ function d(e, t) {
     var n;
     return null != e && new Set(null == (n = e.discount) ? void 0 : n.plan_ids.map((e) => c.GP[e].skuId)).has(t);
 }
-function _(e, t) {
+function f(e, t) {
     let n = (0, i.e7)([s.Z], () => s.Z.getUserDiscountOffer(e)),
         [c, d] = r.useState(u(n)),
-        _ = (0, i.e7)([o.default], () => (0, l.I5)(o.default.getCurrentUser()));
+        f = (0, i.e7)([o.default], () => (0, l.I5)(o.default.getCurrentUser()));
     return (
         r.useEffect(() => {
             if (null == n || null == n.expires_at) return;
@@ -35,15 +35,15 @@ function _(e, t) {
                 };
             return t(), () => e.stop();
         }, [c, n]),
-        c || (_ && !t) ? null : n
+        c || (f && !t) ? null : n
     );
 }
-function f() {
+function _() {
     var e, t;
     let n = s.Z.canFractionalPremiumUserUseOffer(),
-        r = _(c.hs, n),
-        i = _(c.RU, n),
-        a = _(c.rB, n),
-        o = _(c.ih, n);
+        r = f(c.hs, n),
+        i = f(c.RU, n),
+        a = f(c.rB, n),
+        o = f(c.ih, n);
     return null != (t = null != (e = null != r ? r : i) ? e : a) ? t : o;
 }

@@ -11,7 +11,7 @@ var a,
     c = n(990492),
     u = n(988965),
     d = n(71509);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,7 +35,7 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
@@ -135,11 +135,11 @@ function S(e) {
 }
 function A(e) {
     let { userId: t, pushSyncToken: n } = e;
-    g = g.map((e) => (e.id === t ? h(f({}, e), { pushSyncToken: n }) : e));
+    g = g.map((e) => (e.id === t ? h(_({}, e), { pushSyncToken: n }) : e));
 }
 function N(e) {
     let { invalidPushSyncTokens: t } = e;
-    g = g.map((e) => (null != e.pushSyncToken && t.includes(e.pushSyncToken) ? h(f({}, e), { pushSyncToken: null }) : e));
+    g = g.map((e) => (null != e.pushSyncToken && t.includes(e.pushSyncToken) ? h(_({}, e), { pushSyncToken: null }) : e));
 }
 class C extends (a = s.ZP.PersistedStore) {
     initialize(e) {
@@ -182,9 +182,9 @@ class C extends (a = s.ZP.PersistedStore) {
         return E;
     }
 }
-_(C, 'displayName', 'MultiAccountStore'),
-    _(C, 'persistKey', 'MultiAccountStore'),
-    _(C, 'migrations', [
+f(C, 'displayName', 'MultiAccountStore'),
+    f(C, 'persistKey', 'MultiAccountStore'),
+    f(C, 'migrations', [
         (e) => {
             if (null != e) {
                 var t;

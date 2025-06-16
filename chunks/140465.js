@@ -16,11 +16,11 @@ var r = n(73800),
     c = n(775412),
     u = n(695349),
     d = n(104494),
-    _ = n(639119),
-    f = n(474936),
+    f = n(639119),
+    _ = n(474936),
     p = n(981631);
 function h() {
-    let e = (0, _.N)(),
+    let e = (0, f.N)(),
         t = (0, c._O)(),
         n = (0, d.Ng)(),
         r = m();
@@ -36,30 +36,30 @@ let m = () => {
         var e;
         let t = (0, o.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription());
         switch (null == t || null == (e = t.metadata) ? void 0 : e.active_discount_id) {
-            case f.dT:
-            case f.rB:
+            case _.dT:
+            case _.rB:
                 return {
                     duration: 1,
                     percentage: 30
                 };
-            case f.dB:
-            case f.hs:
-            case f.RU:
+            case _.dB:
+            case _.hs:
+            case _.RU:
                 return {
                     duration: 3,
                     percentage: 30
                 };
-            case f.ih:
+            case _.ih:
                 return {
                     duration: 1,
                     percentage: 40
                 };
-            case f.gW:
+            case _.gW:
                 return {
                     duration: 1,
                     percentage: 20
                 };
-            case f.Nl:
+            case _.Nl:
                 return {
                     duration: 1,
                     percentage: 25

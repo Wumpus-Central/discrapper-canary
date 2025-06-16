@@ -8,8 +8,8 @@ var r = n(570140),
     c = n(199902),
     u = n(314897),
     d = n(569545),
-    _ = n(803647),
-    f = n(981631),
+    f = n(803647),
+    _ = n(981631),
     p = n(65154);
 function h(e, t, n) {
     return (
@@ -118,7 +118,7 @@ class m {
                 null != t && (0, a.tK)(t, !0);
                 break;
             case s.A.STOP:
-                null != t && (0, _.Z)(t);
+                null != t && (0, f.Z)(t);
                 break;
             default:
                 throw Error('unhandled stream action: '.concat(e.type));
@@ -152,13 +152,13 @@ class m {
             r.Z.subscribe('STREAM_START', (e) => {
                 let { streamType: t, guildId: n, channelId: r, pid: i, sourceId: a, audioSourceId: s, sound: l } = e,
                     c = u.default.getId(),
-                    _ = (0, d.V9)({
+                    f = (0, d.V9)({
                         streamType: t,
                         guildId: n,
                         channelId: r,
                         ownerId: c
                     });
-                (null == i) != (null == a) ? (null != i && this._onStreamApplication(_, i, null == l || l), null != a && this._onStreamDirectSource(_, a, s, l)) : new o.Z('ApplicationSwitchingManager').warn('invalid start_stream: both application + display modes were specified (pid: '.concat(i, ', source-id: ').concat(a, ')'));
+                (null == i) != (null == a) ? (null != i && this._onStreamApplication(f, i, null == l || l), null != a && this._onStreamDirectSource(f, a, s, l)) : new o.Z('ApplicationSwitchingManager').warn('invalid start_stream: both application + display modes were specified (pid: '.concat(i, ', source-id: ').concat(a, ')'));
             }),
             r.Z.subscribe('STREAM_DELETE', (e) => {
                 let { streamKey: t } = e;
@@ -174,7 +174,7 @@ class m {
             }),
             r.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', (e) => {
                 let { videoState: t, context: n } = e;
-                n === p.Yn.STREAM && this._onCapturePaused(t === f.FQ1.PAUSED);
+                n === p.Yn.STREAM && this._onCapturePaused(t === _.FQ1.PAUSED);
             }),
             r.Z.subscribe('MEDIA_ENGINE_SET_GO_LIVE_SOURCE', (e) => {
                 var t;

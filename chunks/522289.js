@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => _ });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -20,7 +20,7 @@ function d() {
             return u.size24;
     }
 }
-function _() {
+function f() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.Z.Sizes.SMALLER;
     switch (e) {
         case c.Z.Sizes.SMOL:
@@ -31,8 +31,8 @@ function _() {
             return 'text-xs/medium';
     }
 }
-function f(e) {
-    let { className: t, maxGuilds: n, guilds: i, onFocus: o, onClick: f, size: p = c.Z.Sizes.SMALLER, hideOverflowCount: h = !1, disableGuildNameTooltip: m = !1 } = e,
+function _(e) {
+    let { className: t, maxGuilds: n, guilds: i, onFocus: o, onClick: _, size: p = c.Z.Sizes.SMALLER, hideOverflowCount: h = !1, disableGuildNameTooltip: m = !1 } = e,
         g = d(p);
     function E() {
         let e = i.length - n,
@@ -50,7 +50,7 @@ function f(e) {
                               className: o,
                               children: (0, r.jsx)(c.Z, {
                                   guild: e,
-                                  onClick: f,
+                                  onClick: _,
                                   size: p,
                                   showTooltip: !1
                               })
@@ -62,7 +62,7 @@ function f(e) {
                                   className: o,
                                   children: (0, r.jsx)(c.Z, {
                                       guild: e,
-                                      onClick: f,
+                                      onClick: _,
                                       size: p
                                   })
                               },
@@ -71,11 +71,11 @@ function f(e) {
                 })
                 .value();
         if (d) {
-            let e = _(p);
+            let e = f(p);
             b[b.length - 1] = (0, r.jsx)(l.zxk, {
                 className: a()(u.overflow, g),
                 onFocus: o,
-                onClick: (e) => (null == f ? void 0 : f(e)),
+                onClick: (e) => (null == _ ? void 0 : _(e)),
                 look: l.zxk.Looks.BLANK,
                 size: l.zxk.Sizes.NONE,
                 children: (0, r.jsx)(l.Text, {

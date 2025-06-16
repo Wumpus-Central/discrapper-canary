@@ -12,9 +12,9 @@ var c = n(70956),
     u = n(709054),
     d = n(561308);
 n(206295);
-var _ = n(737583);
+var f = n(737583);
 n(438226);
-var f = n(169040),
+var _ = n(169040),
     p = n(388032);
 function h(e, t, n) {
     return (
@@ -49,7 +49,7 @@ let g = (e, t) => m({ AvatarImage1: e[0] }, null != e[1] && { AvatarImage2: e[1]
     E = (e, t) => {
         let n = [
                 {
-                    iconPath: f.NM,
+                    iconPath: _.NM,
                     text: t
                 }
             ],
@@ -57,32 +57,32 @@ let g = (e, t) => m({ AvatarImage1: e[0] }, null != e[1] && { AvatarImage2: e[1]
         if (
             (7 >= i()().diff(i()(r), 'days') &&
                 n.push({
-                    iconPath: f.As,
+                    iconPath: _.As,
                     text: p.intl.string(p.t.vYuyWV)
                 }),
             (0, d.Ol)(e) &&
                 n.push({
-                    iconPath: f.fO,
+                    iconPath: _.fO,
                     text: p.intl.string(p.t.keY6mZ)
                 }),
             (0, d.q_)(e))
         ) {
             let t = (0, d.vU)(e);
             n.push({
-                iconPath: f.t1,
+                iconPath: _.t1,
                 text: p.intl.formatToPlainString(p.t['Klie/P'], { days: t })
             });
         }
         (0, d.ig)(e) === a.o.GLOBAL &&
             n.push({
-                iconPath: f.Op,
+                iconPath: _.Op,
                 text: p.intl.string(p.t.kAlUs7)
             });
         let o = (0, d.dw)(e);
         if (
             (null != o &&
                 n.push({
-                    iconPath: f.Z,
+                    iconPath: _.Z,
                     text: (0, d.GE)(o)
                 }),
             (0, d.V5)(e))
@@ -90,7 +90,7 @@ let g = (e, t) => m({ AvatarImage1: e[0] }, null != e[1] && { AvatarImage2: e[1]
             let { text: t } = (0, d.zo)(e);
             null != t &&
                 n.push({
-                    iconPath: f.Md,
+                    iconPath: _.Md,
                     text: t
                 });
         }
@@ -100,7 +100,7 @@ let g = (e, t) => m({ AvatarImage1: e[0] }, null != e[1] && { AvatarImage2: e[1]
                 let e = p.intl.formatToPlainString(p.t.C0Axoa, { hours: Math.round(t / c.Z.Seconds.HOUR) });
                 return [
                     {
-                        iconPath: f.eF,
+                        iconPath: _.eF,
                         text: ''.concat(p.intl.string(p.t['/50eHh']), ' \u2014 ').concat(e)
                     }
                 ];
@@ -116,8 +116,8 @@ let g = (e, t) => m({ AvatarImage1: e[0] }, null != e[1] && { AvatarImage2: e[1]
             }));
         e.setSize(
             {
-                w: f.nx,
-                h: f.bg
+                w: _.nx,
+                h: _.bg
             },
             4
         ),
@@ -125,17 +125,17 @@ let g = (e, t) => m({ AvatarImage1: e[0] }, null != e[1] && { AvatarImage2: e[1]
                 c,
                 {
                     x: 0,
-                    y: f.bg
+                    y: _.bg
                 },
                 {
-                    x: f.nx,
+                    x: _.nx,
                     y: 0
                 },
                 {
                     x: 0,
                     y: 0,
-                    h: f.bg,
-                    w: f.nx
+                    h: _.bg,
+                    w: _.nx
                 },
                 8
             ),
@@ -143,57 +143,57 @@ let g = (e, t) => m({ AvatarImage1: e[0] }, null != e[1] && { AvatarImage2: e[1]
             e.drawRoundedImage(
                 'ApplicationImage',
                 {
-                    x: f.sB,
-                    y: f.sB
+                    x: _.sB,
+                    y: _.sB
                 },
                 {
-                    w: f.Pu,
-                    h: f.Pu
+                    w: _.Pu,
+                    h: _.Pu
                 },
                 8
             ) === s.vP.Failure &&
                 e.drawPath(
                     o.C,
                     {
-                        x: f.sB,
-                        y: f.sB
+                        x: _.sB,
+                        y: _.sB
                     },
                     !0,
                     2 + 2 / 3
                 );
         let u = ['AvatarImage1', 'AvatarImage2', 'AvatarImage3'];
-        (0, _.l)({
+        (0, f.l)({
             canvas: e,
             avatarSrcs: u.slice(0, l),
             position: {
-                x: f.Iq,
-                y: f.sB
+                x: _.Iq,
+                y: _.sB
             },
-            avatarImageSize: f.$S
+            avatarImageSize: _.$S
         }),
             e.setColor('white'),
             e.setFont({
                 size: 16,
-                family: f.I8,
-                weight: f.Ue,
+                family: _.I8,
+                weight: _.Ue,
                 truncate: s.GX.Wrap
             }),
             e.drawText(
                 i,
                 {
-                    x: f.Iq,
+                    x: _.Iq,
                     y: 64,
                     h: 32,
-                    w: f.kC
+                    w: _.kC
                 },
                 !0
             );
         let d = E(a, n);
-        (0, _.J)({
+        (0, f.J)({
             canvas: e,
             badges: d,
-            startPosition: f.Iq,
-            maxWidth: f.kC
+            startPosition: _.Iq,
+            maxWidth: _.kC
         });
     },
     y = async (e) => {

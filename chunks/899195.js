@@ -13,12 +13,12 @@ function n(t) {
 }
 function o(t, e, a, r, n, o, i) {
     let c = t[_] || (t[_] = new Map()),
-        E = `${e}:${a}@${n}`,
-        s = c.get(i);
-    if (s) {
-        let [, t] = s;
+        s = `${e}:${a}@${n}`,
+        E = c.get(i);
+    if (E) {
+        let [, t] = E;
         c.set(i, [
-            E,
+            s,
             {
                 min: Math.min(t.min, r),
                 max: Math.max(t.max, r),
@@ -29,7 +29,7 @@ function o(t, e, a, r, n, o, i) {
         ]);
     } else
         c.set(i, [
-            E,
+            s,
             {
                 min: r,
                 max: r,

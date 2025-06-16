@@ -40,23 +40,23 @@ function c(e, t, n, i) {
 function u(e, t, n, a, s) {
     var u = l(t),
         d = o(u ? e : t),
-        _ = {
+        f = {
             x: n.x - d.x,
             y: n.y - d.y
         },
-        f = e.offsetWidth,
+        _ = e.offsetWidth,
         p = e.offsetHeight,
         h = a.anchorX,
         m = a.anchorY,
-        g = c(u, t, f, p),
+        g = c(u, t, _, p),
         E = g.dragPreviewWidth,
         b = g.dragPreviewHeight,
         y = function () {
-            var e = new i.I([0, 0.5, 1], [_.y, (_.y / p) * b, _.y + b - p]).interpolate(m);
+            var e = new i.I([0, 0.5, 1], [f.y, (f.y / p) * b, f.y + b - p]).interpolate(m);
             return (0, r.G)() && u && (e += (window.devicePixelRatio - 1) * b), e;
         },
         O = function () {
-            return new i.I([0, 0.5, 1], [_.x, (_.x / f) * E, _.x + E - f]).interpolate(h);
+            return new i.I([0, 0.5, 1], [f.x, (f.x / _) * E, f.x + E - _]).interpolate(h);
         },
         v = s.offsetX,
         I = s.offsetY,

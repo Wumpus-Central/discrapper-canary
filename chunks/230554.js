@@ -8,8 +8,8 @@ var r = n(73800),
     c = n(436660),
     u = n(887490),
     d = n(515270),
-    _ = n(847302),
-    f = n(42530);
+    f = n(847302),
+    _ = n(42530);
 let p = (e, t, n) => ({
     getSlateEditor: () => e,
     submit(e) {
@@ -51,7 +51,7 @@ let p = (e, t, n) => ({
             }
             if (!u.LC.isText(i)) break;
             let t = i.text[o];
-            if (f.i$.test(t)) break;
+            if (_.i$.test(t)) break;
             s = t + s;
         }
         return {
@@ -89,7 +89,7 @@ let p = (e, t, n) => ({
                 let n = s.cr(e);
                 if (((a = u.q.updateElement(e, a)), null != n)) {
                     let r = u.q.markdown(n[0], t.guild_id);
-                    (0, _.Gg)(e, a, t.id, r) && (a = u.q.updateElement(e, a));
+                    (0, f.Gg)(e, a, t.id, r) && (a = u.q.updateElement(e, a));
                 }
                 s.xi(e, t.guild_id, t.id, u.q.updateElement(e, a), !1), c.Q.selectNextCommandOption(e);
             }

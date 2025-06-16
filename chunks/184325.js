@@ -9,8 +9,8 @@ var i = n(120356),
     c = n(100527),
     u = n(906732),
     d = n(335131),
-    _ = n(927513),
-    f = n(768865),
+    f = n(927513),
+    _ = n(768865),
     p = n(617136),
     h = n(497505),
     m = n(703656),
@@ -32,7 +32,7 @@ var i = n(120356),
     D = n(681642),
     L = n(388032),
     x = n(286020);
-function M(e, t, n) {
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function M(e, t, n) {
         e
     );
 }
-function k(e) {
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function k(e) {
                 })
             )),
             r.forEach(function (t) {
-                M(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -89,7 +89,7 @@ let G = (e) => {
     return t.id === g.l.ORB_PROFILE_BADGE
         ? (0, r.jsx)(E.Z, { showSubtext: !i && !t.isPreviewMode })
         : void 0 !== n && t.id !== D.a
-          ? (0, r.jsx)(_.Z, {
+          ? (0, r.jsx)(f.Z, {
                 profileBadge: t,
                 tenureBadge: n
             })
@@ -97,7 +97,7 @@ let G = (e) => {
 };
 function B(e) {
     var t;
-    let { badges: n, className: i, badgeClassName: _, displayProfile: E, onClose: M, shouldOpenBadgeTooltip: j, shouldGlowTenureBadge: B } = e,
+    let { badges: n, className: i, badgeClassName: f, displayProfile: E, onClose: k, shouldOpenBadgeTooltip: j, shouldGlowTenureBadge: B } = e,
         { analyticsLocations: V } = (0, u.ZP)(c.Z.BADGE),
         { context: F, trackUserProfileAction: Z } = (0, T.KZ)(),
         H = b.default.getCurrentUser(),
@@ -117,7 +117,7 @@ function B(e) {
                     if (
                         (Z({ action: 'PRESS_BADGE' }),
                         (0, S.NE)(
-                            k(
+                            M(
                                 {
                                     badge: e.id,
                                     analyticsLocations: V
@@ -145,35 +145,35 @@ function B(e) {
                         ) {
                             (null == E ? void 0 : E.userId) === (null == H ? void 0 : H.id)
                                 ? (0, m.uL)(R.Z5c.NITRO_HOME)
-                                : (0, f.k)({
+                                : (0, _.k)({
                                       analyticsLocations: V,
                                       displayProfile: E
                                   }),
-                                null == M || M();
+                                null == k || k();
                             return;
                         }
                         if ((null == E ? void 0 : E.userId) === (null == H ? void 0 : H.id)) {
                             let n = null != e.link ? (0, s.default)(e.link, { analyticsLocations: V }) : null;
                             if (null == n) return;
-                            return null == M || M(), n(t);
+                            return null == k || k(), n(t);
                         }
                         return (
-                            (0, f.k)({
+                            (0, _.k)({
                                 analyticsLocations: V,
                                 displayProfile: E
                             }),
-                            void (null == M || M())
+                            void (null == k || k())
                         );
                     }
                     let n = null != e.link ? (0, s.default)(e.link, { analyticsLocations: V }) : null;
-                    if (null != n) return null == M || M(), n(t);
+                    if (null != n) return null == k || k(), n(t);
                 },
                 T = () => {
                     if (e.id === A.i) {
                         let e = (0, l.S)();
                         y.default.track(
                             R.rMx.QUEST_CONTENT_VIEWED,
-                            U(k({}, (0, p.mH)(h.jn.QUEST_BADGE)), {
+                            U(M({}, (0, p.mH)(h.jn.QUEST_BADGE)), {
                                 android_advertising_id: null != e && (0, O.isAndroid)() ? e.advertisingId : null,
                                 is_targeted: !1
                             })
@@ -181,7 +181,7 @@ function B(e) {
                     }
                     Z({ action: 'HOVER_BADGE' }),
                         (0, S.Qf)(
-                            k(
+                            M(
                                 {
                                     badge: e.id,
                                     analyticsLocations: V
@@ -211,7 +211,7 @@ function B(e) {
                             alt: ' ',
                             'aria-hidden': !0,
                             src: null != (n = e.iconSrc) ? n : (0, C.Ej)(e.icon),
-                            className: a()(x.badge, _)
+                            className: a()(x.badge, f)
                         })
                     })
                 },

@@ -50,7 +50,7 @@ function d(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,7 +61,7 @@ function _(e, t) {
         e
     );
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -84,7 +84,7 @@ function p(e, t) {
 let h = i.createContext({ inDialog: void 0 }),
     m = i.forwardRef(function (e, t) {
         let { children: n, impressionType: c, impression: d, disableTrack: p, returnRef: m } = e,
-            g = f(e, ['children', 'impressionType', 'impression', 'disableTrack', 'returnRef']),
+            g = _(e, ['children', 'impressionType', 'impression', 'disableTrack', 'returnRef']),
             E = i.useRef(null),
             b = i.useRef(null),
             [y, O] = i.useState(!1),
@@ -112,7 +112,7 @@ let h = i.createContext({ inDialog: void 0 }),
             },
             children: (0, r.jsx)(
                 'div',
-                _(u({}, g), {
+                f(u({}, g), {
                     ref: E,
                     role: 'dialog',
                     tabIndex: -1,

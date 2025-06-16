@@ -1,19 +1,19 @@
 a.d(e, {
-    $k: () => d,
+    $k: () => A,
     Dp: () => C,
-    Gx: () => y,
-    HN: () => m,
-    HR: () => A,
-    Hb: () => N,
-    Tt: () => f,
+    Gx: () => m,
+    HN: () => v,
+    HR: () => R,
+    Hb: () => f,
+    Tt: () => L,
     XU: () => p,
-    _4: () => O,
-    ed: () => g,
-    i0: () => R,
-    j5: () => P,
-    ve: () => u,
-    wy: () => T,
-    yc: () => v
+    _4: () => h,
+    ed: () => D,
+    i0: () => d,
+    j5: () => g,
+    ve: () => I,
+    wy: () => N,
+    yc: () => y
 });
 var r = a(370336),
     _ = a(370541),
@@ -21,13 +21,13 @@ var r = a(370336),
     o = a(833873),
     i = a(356442),
     c = a(263449),
-    E = a(899195),
-    s = a(988097),
+    s = a(899195),
+    E = a(988097),
     l = a(793373),
-    I = a(99342);
-let u = 0,
-    R = 1;
-function A(t) {
+    u = a(99342);
+let I = 0,
+    d = 1;
+function R(t) {
     let { spanId: e, traceId: a } = t.spanContext(),
         { data: _, op: n, parent_span_id: o, status: i, origin: c } = p(t);
     return (0, r.Jr)({
@@ -40,7 +40,7 @@ function A(t) {
         origin: c
     });
 }
-function T(t) {
+function N(t) {
     let { spanId: e, traceId: a } = t.spanContext(),
         { parent_span_id: _ } = p(t);
     return (0, r.Jr)({
@@ -49,15 +49,15 @@ function T(t) {
         trace_id: a
     });
 }
-function N(t) {
+function f(t) {
     let { traceId: e, spanId: a } = t.spanContext(),
-        r = f(t);
+        r = L(t);
     return (0, _.$p)(e, a, r);
 }
-function d(t) {
-    return 'number' == typeof t ? L(t) : Array.isArray(t) ? t[0] + t[1] / 1000000000 : t instanceof Date ? L(t.getTime()) : (0, n.ph)();
+function A(t) {
+    return 'number' == typeof t ? T(t) : Array.isArray(t) ? t[0] + t[1] / 1000000000 : t instanceof Date ? T(t.getTime()) : (0, n.ph)();
 }
-function L(t) {
+function T(t) {
     return t > 9999999999 ? t / 1000 : t;
 }
 function p(t) {
@@ -73,12 +73,12 @@ function p(t) {
                 data: e,
                 description: o,
                 parent_span_id: c,
-                start_timestamp: d(n),
-                timestamp: d(i) || void 0,
-                status: O(l),
-                op: e[s.$J],
-                origin: e[s.S3],
-                _metrics_summary: (0, E.y)(t)
+                start_timestamp: A(n),
+                timestamp: A(i) || void 0,
+                status: h(l),
+                op: e[E.$J],
+                origin: e[E.S3],
+                _metrics_summary: (0, s.y)(t)
             });
         }
         return {
@@ -89,40 +89,40 @@ function p(t) {
         return {};
     }
 }
-function f(t) {
+function L(t) {
     let { traceFlags: e } = t.spanContext();
-    return e === R;
+    return e === d;
 }
-function O(t) {
+function h(t) {
     if (t && t.code !== l.pq) return t.code === l.OP ? 'ok' : t.message || 'unknown_error';
 }
-let h = '_sentryChildSpans',
-    D = '_sentryRootSpan';
-function P(t, e) {
-    let a = t[D] || t;
-    (0, r.xp)(e, D, a), t[h] ? t[h].add(e) : (0, r.xp)(t, h, new Set([e]));
-}
+let O = '_sentryChildSpans',
+    P = '_sentryRootSpan';
 function g(t, e) {
-    t[h] && t[h].delete(e);
+    let a = t[P] || t;
+    (0, r.xp)(e, P, a), t[O] ? t[O].add(e) : (0, r.xp)(t, O, new Set([e]));
+}
+function D(t, e) {
+    t[O] && t[O].delete(e);
 }
 function C(t) {
     let e = new Set();
     return (
         !(function t(a) {
-            if (!e.has(a) && f(a)) for (let r of (e.add(a), a[h] ? Array.from(a[h]) : [])) t(r);
+            if (!e.has(a) && L(a)) for (let r of (e.add(a), a[O] ? Array.from(a[O]) : [])) t(r);
         })(t),
         Array.from(e)
     );
 }
-function y(t) {
-    return t[D] || t;
+function m(t) {
+    return t[P] || t;
 }
-function m() {
+function v() {
     let t = (0, i.c)(),
         e = (0, o.G)(t);
-    return e.getActiveSpan ? e.getActiveSpan() : (0, I.Y)((0, c.nZ)());
+    return e.getActiveSpan ? e.getActiveSpan() : (0, u.Y)((0, c.nZ)());
 }
-function v(t, e, a, r, _, n) {
-    let o = m();
-    o && (0, E.V)(o, t, e, a, r, _, n);
+function y(t, e, a, r, _, n) {
+    let o = v();
+    o && (0, s.V)(o, t, e, a, r, _, n);
 }

@@ -2,7 +2,7 @@ n.d(t, {
     $_: () => u,
     KQ: () => c,
     MU: () => l,
-    RF: () => _
+    RF: () => f
 }),
     n(35282);
 var r = n(477690),
@@ -30,7 +30,7 @@ let d = (e) => {
     let t = e.match(/.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#&?]*).*/);
     return null != t ? t[1] : null;
 };
-function _(e) {
+function f(e) {
     switch (e.type) {
         case i.ee.MEDIA_PROXY:
             var t;

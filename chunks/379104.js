@@ -32,15 +32,15 @@ function l(e, t) {
                 c = null,
                 u = n,
                 d = null,
-                _ = this._root;
+                f = this._root;
             for (u.right = this._root; ; ) {
-                if ((null === _ ? ((_ = new i(e)), d.set_child(r, _), (t = !0), this.size++) : o(_.left) && o(_.right) && ((_.red = !0), (_.left.red = !1), (_.right.red = !1)), o(_) && o(d))) {
-                    var f = u.right === c;
-                    _ === d.get_child(a) ? u.set_child(f, s(c, !a)) : u.set_child(f, l(c, !a));
+                if ((null === f ? ((f = new i(e)), d.set_child(r, f), (t = !0), this.size++) : o(f.left) && o(f.right) && ((f.red = !0), (f.left.red = !1), (f.right.red = !1)), o(f) && o(d))) {
+                    var _ = u.right === c;
+                    f === d.get_child(a) ? u.set_child(_, s(c, !a)) : u.set_child(_, l(c, !a));
                 }
-                var p = this._comparator(_.data, e);
+                var p = this._comparator(f.data, e);
                 if (0 === p) break;
-                (a = r), (r = p < 0), null !== c && (u = c), (c = d), (d = _), (_ = _.get_child(r));
+                (a = r), (r = p < 0), null !== c && (u = c), (c = d), (d = f), (f = f.get_child(r));
             }
             this._root = n.right;
         }
@@ -54,11 +54,11 @@ function l(e, t) {
         for (var r = null, a = null, c = null, u = 1; null !== n.get_child(u); ) {
             var d = u;
             (a = r), (r = n), (n = n.get_child(u));
-            var _ = this._comparator(e, n.data);
-            if (((u = _ > 0), 0 === _ && (c = n), !o(n) && !o(n.get_child(u)))) {
+            var f = this._comparator(e, n.data);
+            if (((u = f > 0), 0 === f && (c = n), !o(n) && !o(n.get_child(u)))) {
                 if (o(n.get_child(!u))) {
-                    var f = s(n, u);
-                    r.set_child(d, f), (r = f);
+                    var _ = s(n, u);
+                    r.set_child(d, _), (r = _);
                 } else if (!o(n.get_child(!u))) {
                     var p = r.get_child(!d);
                     if (null !== p)

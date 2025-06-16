@@ -20,14 +20,14 @@ function c(e, t, n) {
 }
 let u = 30,
     d = 15,
-    _ = {},
     f = {},
+    _ = {},
     p = {};
 function h(e) {
     return 'packetsSent' in e;
 }
 function m(e, t, n, r, i) {
-    var a, o, s, l, c, u, d, _, f, p, m, g, E, b, y, O;
+    var a, o, s, l, c, u, d, f, _, p, m, g, E, b, y, O;
     let v = r.find((e) => 'video' === e.type);
     if (
         (null == n &&
@@ -48,7 +48,7 @@ function m(e, t, n, r, i) {
     let I = h(v) ? (null != (o = v.packetsSent) ? o : 0) : null != (s = v.packetsReceived) ? s : 0,
         T = h(v) ? (null != (l = v.packetsLost) ? l : 0) : null != (c = v.packetsLost) ? c : 0,
         S = h(v) ? (null != (u = v.frameRateEncode) ? u : 0) : null != (d = v.frameRateDecode) ? d : 0,
-        A = null != (_ = null == (a = v.resolution) ? void 0 : a.height) ? _ : 0;
+        A = null != (f = null == (a = v.resolution) ? void 0 : a.height) ? f : 0;
     (n.numDatapoints += 1), (n.frameRateAggregated += S), (n.resolutionAggregated += A);
     let N = null == i ? void 0 : i.find((e) => 'video' === e.type);
     if (null != N && t >= n.minVersion) {
@@ -56,7 +56,7 @@ function m(e, t, n, r, i) {
         let e = h(N) ? (null != (p = N.packetsSent) ? p : 0) : null != (m = N.packetsReceived) ? m : 0,
             t = h(N) ? (null != (g = N.packetsLost) ? g : 0) : null != (E = N.packetsLost) ? E : 0,
             r = h(N) ? (null != (b = N.frameRateEncode) ? b : 0) : null != (y = N.frameRateDecode) ? y : 0,
-            i = null != (O = null == (f = N.resolution) ? void 0 : f.height) ? O : 0;
+            i = null != (O = null == (_ = N.resolution) ? void 0 : _.height) ? O : 0;
         (n.frameRateAggregated -= r), (n.resolutionAggregated -= i), (n.packetsSentOrReceived = I - e), (n.packetsLost = T - t);
     } else (n.packetsSentOrReceived = I), (n.packetsLost = T);
     return (n.frameRate = n.frameRateAggregated / n.numDatapoints), (n.resolution = n.resolutionAggregated / n.numDatapoints), (n.packetLossRate = n.packetsLost / (n.packetsSentOrReceived + n.packetsLost)), n;
@@ -74,16 +74,16 @@ function E(e) {
         var r;
         let t,
             { mediaEngineConnectionId: i } = e;
-        0 !== i.length && ((n[i] = e), i in _ || (_[i] = []), _[i].push(e), _[i].length > u && (t = _[i].shift()), g(p, i, e, null != (r = I(i, d)) ? r : void 0), g(f, i, e, t));
+        0 !== i.length && ((n[i] = e), i in f || (f[i] = []), f[i].push(e), f[i].length > u && (t = f[i].shift()), g(p, i, e, null != (r = I(i, d)) ? r : void 0), g(_, i, e, t));
     }
 }
 function b(e, t) {
     var n, r;
-    (null == (n = f[e]) ? void 0 : n[t]) != null && delete f[e][t], (null == (r = p[e]) ? void 0 : r[t]) != null && delete p[e][t];
+    (null == (n = _[e]) ? void 0 : n[t]) != null && delete _[e][t], (null == (r = p[e]) ? void 0 : r[t]) != null && delete p[e][t];
 }
 function y(e) {
     let { mediaEngineConnectionId: t } = e;
-    null != t && (delete _[t], delete f[t], delete p[t]);
+    null != t && (delete f[t], delete _[t], delete p[t]);
 }
 function O(e) {
     let { userId: t, mediaEngineConnectionId: n } = e;
@@ -100,7 +100,7 @@ function v(e) {
 }
 function I(e, t) {
     if (null == e) return null;
-    let n = _[e];
+    let n = f[e];
     return null == n || n.length <= t ? null : n[n.length - t - 1];
 }
 class T extends (r = i.ZP.Store) {
@@ -112,11 +112,11 @@ class T extends (r = i.ZP.Store) {
     }
     getStatsHistory(e) {
         var t;
-        return null == e ? [] : null != (t = _[e]) ? t : [];
+        return null == e ? [] : null != (t = f[e]) ? t : [];
     }
     getAccumulatedPerformanceStats(e, t, n) {
         var r, i;
-        return null == e ? null : null != (i = null == (r = ('long' === n ? f : p)[e]) ? void 0 : r[t]) ? i : null;
+        return null == e ? null : null != (i = null == (r = ('long' === n ? _ : p)[e]) ? void 0 : r[t]) ? i : null;
     }
 }
 c(T, 'displayName', 'MediaEngineStatsStore');

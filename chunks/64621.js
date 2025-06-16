@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(605236),
     u = n(243778),
     d = n(970731),
-    _ = n(158776),
-    f = n(594174),
+    f = n(158776),
+    _ = n(594174),
     p = n(81570),
     h = n(652853),
     m = n(228168),
@@ -25,12 +25,12 @@ function S(e) {
     let { sourceType: t, children: n, user: S, targetElementRef: A } = e,
         { themeType: N } = (0, h.z)(),
         C = (0, p.T)({ location: 'UserProfilePopoutInteractionCoachmark' }),
-        R = (0, a.e7)([f.default], () => {
+        R = (0, a.e7)([_.default], () => {
             var e;
-            return (null == (e = f.default.getCurrentUser()) ? void 0 : e.id) === S.id;
+            return (null == (e = _.default.getCurrentUser()) ? void 0 : e.id) === S.id;
         }),
-        P = (0, a.e7)([_.Z], () =>
-            _.Z.findActivity(S.id, (e) => {
+        P = (0, a.e7)([f.Z], () =>
+            f.Z.findActivity(S.id, (e) => {
                 let { type: t } = e;
                 return t === g.IIU.CUSTOM_STATUS;
             })
@@ -40,8 +40,8 @@ function S(e) {
     (0, l.Z)(() => L(!0), w() ? v : null);
     let {
             asset: x,
-            assetClassName: M,
-            className: k,
+            assetClassName: k,
+            className: M,
             content: j,
             header: U,
             spacing: G,
@@ -81,11 +81,11 @@ function S(e) {
                     null == i || i(e);
                 },
                 children: (0, r.jsx)(d.ZP, {
-                    className: k,
+                    className: M,
                     asset: (0, r.jsx)('img', {
                         alt: '',
                         src: x,
-                        className: M
+                        className: k
                     }),
                     buttonCTA: E.intl.string(E.t['+IrDzM']),
                     buttonLayout: d._F.STACKED,

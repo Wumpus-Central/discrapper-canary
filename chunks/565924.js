@@ -18,6 +18,6 @@ function o(e, t) {
         u = a(t.record);
     if (c !== u) return c - u;
     let d = null != (o = null != (i = e.sortable) ? i : null == (n = e.comparator) ? void 0 : n.toLocaleLowerCase()) ? o : '',
-        _ = null != (l = null != (s = e.sortable) ? s : null == (r = t.comparator) ? void 0 : r.toLocaleLowerCase()) ? l : '';
-    return d < _ ? -1 : +(d > _);
+        f = null != (l = null != (s = e.sortable) ? s : null == (r = t.comparator) ? void 0 : r.toLocaleLowerCase()) ? l : '';
+    return d < f ? -1 : +(d > f);
 }

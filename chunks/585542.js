@@ -54,12 +54,12 @@ e.exports = function (e) {
                 e.C_BLOCK_COMMENT_MODE
             ]
         },
-        _ = {
+        f = {
             className: 'title',
             begin: t.optional(i) + e.IDENT_RE,
             relevance: 0
         },
-        f = t.optional(i) + e.IDENT_RE + '\\s*\\(',
+        _ = t.optional(i) + e.IDENT_RE + '\\s*\\(',
         p = {
             keyword: ['asm', 'auto', 'break', 'case', 'continue', 'default', 'do', 'else', 'enum', 'extern', 'for', 'fortran', 'goto', 'if', 'inline', 'register', 'restrict', 'return', 'sizeof', 'typeof', 'typeof_unqual', 'struct', 'switch', 'typedef', 'union', 'volatile', 'while', '_Alignas', '_Alignof', '_Atomic', '_Generic', '_Noreturn', '_Static_assert', '_Thread_local', 'alignas', 'alignof', 'noreturn', 'static_assert', 'thread_local', '_Pragma'],
             type: ['float', 'double', 'signed', 'unsigned', 'int', 'short', 'long', 'char', 'void', '_Bool', '_BitInt', '_Complex', '_Imaginary', '_Decimal32', '_Decimal64', '_Decimal96', '_Decimal128', '_Decimal64x', '_Decimal128x', '_Float16', '_Float32', '_Float64', '_Float128', '_Float32x', '_Float64x', '_Float128x', 'const', 'static', 'constexpr', 'complex', 'bool', 'imaginary'],
@@ -95,7 +95,7 @@ e.exports = function (e) {
             relevance: 0
         },
         g = {
-            begin: '(' + o + '[\\*&\\s]+)+' + f,
+            begin: '(' + o + '[\\*&\\s]+)+' + _,
             returnBegin: !0,
             end: /[{;=]/,
             excludeEnd: !0,
@@ -108,9 +108,9 @@ e.exports = function (e) {
                     relevance: 0
                 },
                 {
-                    begin: f,
+                    begin: _,
                     returnBegin: !0,
-                    contains: [e.inherit(_, { className: 'title.function' })],
+                    contains: [e.inherit(f, { className: 'title.function' })],
                     relevance: 0
                 },
                 {

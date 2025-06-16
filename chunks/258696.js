@@ -12,8 +12,8 @@ var r = n(255367),
     c = n(998698),
     u = n(211242),
     d = n(540059),
-    _ = n(576645),
-    f = n(599659),
+    f = n(576645),
+    _ = n(599659),
     p = n(286961),
     h = n(913663),
     m = n(117530),
@@ -30,7 +30,7 @@ var r = n(255367),
     N = n(302195);
 function C(e) {
     let { disabled: t, channel: n } = e,
-        { enabled: i } = f.O.useExperiment({ location: 'gift-button' }),
+        { enabled: i } = _.O.useExperiment({ location: 'gift-button' }),
         a = (0, p.Z)();
     return i
         ? (0, r.jsx)(O.Z, {
@@ -49,11 +49,11 @@ function C(e) {
             });
 }
 function R(e) {
-    var t, n, i, f, p, h, m;
+    var t, n, i, _, p, h, m;
     let { type: O, disabled: I, channel: T, handleSubmit: R, isEmpty: w, showAllButtons: D, children: L } = e,
         x = (0, o.e7)([l.Z], () => l.Z.isSubmitButtonEnabled),
-        M = P(T.id, O, w),
-        { activeCommand: k, activeCommandOption: j } = (0, o.cj)([c.Z], () => ({
+        k = P(T.id, O, w),
+        { activeCommand: M, activeCommandOption: j } = (0, o.cj)([c.Z], () => ({
             activeCommand: c.Z.getActiveCommand(T.id),
             activeCommandOption: c.Z.getActiveOption(T.id)
         })),
@@ -62,10 +62,10 @@ function R(e) {
         B = !T.isDM() || void 0 === T.recipients || T.recipients.length > 1,
         V = (0, o.e7)([g.default], () => (B ? null : g.default.getUser(T.recipients[0]))),
         F = (0, d.R6)('ChannelTextAreaButtons'),
-        Z = (0, _.Nt)() && (null == (t = O.confetti) ? void 0 : t.button) != null;
+        Z = (0, f.Nt)() && (null == (t = O.confetti) ? void 0 : t.button) != null;
     return (a.tq ||
         ((null == (p = O.gifts) ? void 0 : p.button) != null &&
-            null == k &&
+            null == M &&
             !U &&
             (null == V || E.ZP.isPremiumEligible(V)) &&
             G.push(
@@ -79,7 +79,7 @@ function R(e) {
                 )
             ),
         (null == (h = O.gifs) ? void 0 : h.button) != null &&
-            null == k &&
+            null == M &&
             D &&
             G.push(
                 (0, r.jsx)(
@@ -92,7 +92,7 @@ function R(e) {
                 )
             ),
         Z &&
-            null == k &&
+            null == M &&
             G.push(
                 (0, r.jsx)(
                     v.Z,
@@ -105,7 +105,7 @@ function R(e) {
             ),
         !Z &&
             (null == (m = O.stickers) ? void 0 : m.button) != null &&
-            null == k &&
+            null == M &&
             D &&
             G.push(
                 (0, r.jsx)(
@@ -118,7 +118,7 @@ function R(e) {
                 )
             )),
     (null == (n = O.emojis) ? void 0 : n.button) != null &&
-        (null == k || (null != j && j.type !== s.jw.ATTACHMENT)) &&
+        (null == M || (null != j && j.type !== s.jw.ATTACHMENT)) &&
         G.push(
             (0, r.jsx)(
                 b.Z,
@@ -131,14 +131,14 @@ function R(e) {
         ),
     F || null == L || G.push(L),
     (null == (i = O.submit) ? void 0 : i.button) != null &&
-        ((null == (f = O.submit) ? void 0 : f.ignorePreference) || x) &&
+        ((null == (_ = O.submit) ? void 0 : _.ignorePreference) || x) &&
         !F &&
         G.push(
             (0, r.jsx)(
                 S.Z,
                 {
                     onClick: R,
-                    disabled: I || M
+                    disabled: I || k
                 },
                 'submit'
             )

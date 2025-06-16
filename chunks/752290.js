@@ -20,24 +20,24 @@ let l = 100,
     c = 0.5,
     u = 500,
     d = (0, o.tu)('vibing_wumpus', 'vibing_wumpus', 0),
-    _ = 0,
     f = 0,
+    _ = 0,
     p = null;
 function h(e, t) {
     let n = Math.round(100 * e),
-        r = Math.round(100 * f),
-        a = Math.round(100 * _);
-    (n > 0 && a >= r) || (n < 0 && a <= r) ? (clearInterval(p), 0 === r && null != t && t()) : ((a += n), (_ = a / 100), (d.volume = i()(_, 0, c)));
+        r = Math.round(100 * _),
+        a = Math.round(100 * f);
+    (n > 0 && a >= r) || (n < 0 && a <= r) ? (clearInterval(p), 0 === r && null != t && t()) : ((a += n), (f = a / 100), (d.volume = i()(f, 0, c)));
 }
 function m(e) {
-    null != p && clearInterval(p), (f = 0);
+    null != p && clearInterval(p), (_ = 0);
     let t = y();
     p = setInterval(() => {
         h(t, e);
     }, l);
 }
 function g() {
-    null != p && clearInterval(p), d.loop(), (f = c);
+    null != p && clearInterval(p), d.loop(), (_ = c);
     let e = y();
     p = setInterval(() => h(e), l);
 }
@@ -48,7 +48,7 @@ function b() {
     m(d.stop.bind(d));
 }
 function y() {
-    return (l / u) * (f - _);
+    return (l / u) * (_ - f);
 }
 class O extends a.Z {
     constructor(...e) {

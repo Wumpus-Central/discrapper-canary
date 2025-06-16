@@ -8,37 +8,37 @@ function l(e) {
     for (var t = [], n = '', s = Object.keys(e), l = Object.keys(r.WN), u = 0; u < s.length; u++)
         if ('tzid' !== s[u] && (0, i.q9)(l, s[u])) {
             var d = s[u].toUpperCase(),
-                _ = e[s[u]],
-                f = '';
-            if (!(!(0, i.EN)(_) || ((0, i.kJ)(_) && !_.length))) {
+                f = e[s[u]],
+                _ = '';
+            if (!(!(0, i.EN)(f) || ((0, i.kJ)(f) && !f.length))) {
                 switch (d) {
                     case 'FREQ':
-                        f = r.Ci.FREQUENCIES[e.freq];
+                        _ = r.Ci.FREQUENCIES[e.freq];
                         break;
                     case 'WKST':
-                        f = (0, i.hj)(_) ? new a.O(_).toString() : _.toString();
+                        _ = (0, i.hj)(f) ? new a.O(f).toString() : f.toString();
                         break;
                     case 'BYWEEKDAY':
                         (d = 'BYDAY'),
-                            (f = (0, i.qo)(_)
+                            (_ = (0, i.qo)(f)
                                 .map(function (e) {
                                     return e instanceof a.O ? e : (0, i.kJ)(e) ? new a.O(e[0], e[1]) : new a.O(e);
                                 })
                                 .toString());
                         break;
                     case 'DTSTART':
-                        n = c(_, e.tzid);
+                        n = c(f, e.tzid);
                         break;
                     case 'UNTIL':
-                        f = (0, o.Od)(_, !e.tzid);
+                        _ = (0, o.Od)(f, !e.tzid);
                         break;
                     default:
-                        if ((0, i.kJ)(_)) {
-                            for (var p = [], h = 0; h < _.length; h++) p[h] = String(_[h]);
-                            f = p.toString();
-                        } else f = String(_);
+                        if ((0, i.kJ)(f)) {
+                            for (var p = [], h = 0; h < f.length; h++) p[h] = String(f[h]);
+                            _ = p.toString();
+                        } else _ = String(f);
                 }
-                f && t.push([d, f]);
+                _ && t.push([d, _]);
             }
         }
     var m = t

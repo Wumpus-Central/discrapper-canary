@@ -35,8 +35,8 @@ function d(e) {
     }
     return e;
 }
-let _ = c.QZA.CLOSED,
-    f = null,
+let f = c.QZA.CLOSED,
+    _ = null,
     p = null,
     h = {},
     m = {},
@@ -62,7 +62,7 @@ function C(e) {
         null != e.subsection && null != p && (h[p] = e.subsection),
         null != e.scrollPosition && null != p && (m[p] = e.scrollPosition),
         (O = !!e.openWithoutBackstack),
-        (_ = c.QZA.OPEN),
+        (f = c.QZA.OPEN),
         (g = {}),
         (b = d(
             {},
@@ -85,11 +85,11 @@ function C(e) {
         (A = null != (o = e.impressionSource) ? o : null);
 }
 function R() {
-    (_ = c.QZA.CLOSED), (y = !1), (E = null), (S = null), (b = null), (f = null), (p = null), (h = {}), (m = {}), (v = null), (I = null), (T = []), (A = null);
+    (f = c.QZA.CLOSED), (y = !1), (E = null), (S = null), (b = null), (_ = null), (p = null), (h = {}), (m = {}), (v = null), (I = null), (T = []), (A = null);
 }
 function P(e) {
     var t;
-    (f = p), (p = e.section), (I = null), (T = null != (t = e.analyticsLocations) ? t : []), null != e.subsection && (h[p] = e.subsection);
+    (_ = p), (p = e.section), (I = null), (T = null != (t = e.analyticsLocations) ? t : []), null != e.subsection && (h[p] = e.subsection);
 }
 function w(e) {
     let { forSection: t } = e;
@@ -106,11 +106,11 @@ function L(e) {
     b[c.oAB.ACCOUNT] = d({}, n, t);
 }
 function x() {
-    _ = c.QZA.SUBMITTING;
+    f = c.QZA.SUBMITTING;
 }
-function M() {
+function k() {
     let e = l.default.getCurrentUser();
-    k(),
+    M(),
         null != e &&
             (b = d(
                 {},
@@ -128,13 +128,13 @@ function M() {
                 })
             ));
 }
-function k() {
-    (_ = c.QZA.OPEN), (g = {});
+function M() {
+    (f = c.QZA.OPEN), (g = {});
 }
 function j(e) {
     var t;
-    if (_ !== c.QZA.SUBMITTING) return !1;
-    (_ = c.QZA.OPEN), (p = c.oAB.ACCOUNT), (g = null != (t = e.errors) ? t : {});
+    if (f !== c.QZA.SUBMITTING) return !1;
+    (f = c.QZA.OPEN), (p = c.oAB.ACCOUNT), (g = null != (t = e.errors) ? t : {});
 }
 class U extends (r = o.ZP.Store) {
     initialize() {
@@ -147,7 +147,7 @@ class U extends (r = o.ZP.Store) {
         return y;
     }
     getPreviousSection() {
-        return f;
+        return _;
     }
     getSection() {
         return p;
@@ -163,7 +163,7 @@ class U extends (r = o.ZP.Store) {
     }
     getProps() {
         return {
-            submitting: _ === c.QZA.SUBMITTING,
+            submitting: f === c.QZA.SUBMITTING,
             section: p,
             subsection: null != p ? h[p] : null,
             scrollPosition: null != p ? m[p] : null,
@@ -193,6 +193,6 @@ let G = new U(s.Z, {
     USER_SETTINGS_MODAL_CLEAR_SUBSECTION: w,
     USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: D,
     USER_SETTINGS_MODAL_UPDATE_ACCOUNT: L,
-    USER_SETTINGS_MODAL_SUBMIT_COMPLETE: k,
-    USER_SETTINGS_MODAL_RESET: M
+    USER_SETTINGS_MODAL_SUBMIT_COMPLETE: M,
+    USER_SETTINGS_MODAL_RESET: k
 });

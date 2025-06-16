@@ -3,7 +3,7 @@ n.d(t, {
     Ks: () => V,
     Ws: () => H,
     g2: () => U,
-    hf: () => k,
+    hf: () => M,
     k3: () => G,
     qN: () => Z,
     tP: () => j
@@ -18,8 +18,8 @@ var r = n(255367),
     c = n(335131),
     u = n(594190),
     d = n(98278),
-    _ = n(507808),
-    f = n(594174),
+    f = n(507808),
+    _ = n(594174),
     p = n(78839),
     h = n(617136),
     m = n(915750),
@@ -79,7 +79,7 @@ function x(e, t) {
     }
     return n;
 }
-function M(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -90,9 +90,9 @@ function M(e, t) {
         e
     );
 }
-function k(e) {
+function M(e) {
     let { quest: t, location: n, questContentPosition: r, questContentRowIndex: a } = e,
-        s = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
+        s = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
         l = null == s ? void 0 : s.hasVerifiedEmailOrPhone(),
         c = null == s ? void 0 : s.verified,
         u = (0, h.O5)();
@@ -193,7 +193,7 @@ function B(e) {
 }
 function V(e) {
     var t;
-    let { quest: n, progressState: r, isCollectibleQuest: a, location: o, questContentPosition: s, questContentRowIndex: u, inGiftInventory: f, isVideoQuest: p, inGameQuest: b } = e,
+    let { quest: n, progressState: r, isCollectibleQuest: a, location: o, questContentPosition: s, questContentRowIndex: u, inGiftInventory: _, isVideoQuest: p, inGameQuest: b } = e,
         v = C.dr.CONFLICT_CHECKS;
     switch (o) {
         case y.jn.QUEST_HOME_DESKTOP:
@@ -205,7 +205,7 @@ function V(e) {
         default:
             v = C.dr.CONFLICT_CHECKS;
     }
-    let I = k({
+    let I = M({
             quest: n,
             location: o,
             questContentPosition: s,
@@ -217,7 +217,7 @@ function V(e) {
             (0, d.$)();
         }, []),
         x = i.useCallback(() => {
-            (0, _.Y)({
+            (0, f.Y)({
                 pageType: R.ZY5.GLOBAL_DISCOVERY_QUESTS,
                 sectionType: R.jXE.QUEST_TILE_CTA,
                 ctaObject: R.qAy.CTA_TO_ORBS_SHOP
@@ -264,7 +264,7 @@ function V(e) {
                 );
             case E.OH.ACCEPTED:
             case E.OH.IN_PROGRESS:
-                if (S && f)
+                if (S && _)
                     return {
                         text: w.intl.string(w.t.Cfye4u),
                         tooltipText: null,
@@ -312,8 +312,8 @@ function V(e) {
                     tooltipText: null,
                     onClick: I
                 };
-                if (a) return M(L({}, i), { text: w.intl.string(w.t.MAS7uL) });
-                if ((0, O.vQ)(n.config)) return M(L({}, i), { text: w.intl.string(w.t.vTgCW1) });
+                if (a) return k(L({}, i), { text: w.intl.string(w.t.MAS7uL) });
+                if ((0, O.vQ)(n.config)) return k(L({}, i), { text: w.intl.string(w.t.vTgCW1) });
                 if ((0, O.Bg)(n.config))
                     return {
                         tooltipText: null,
@@ -326,9 +326,9 @@ function V(e) {
                         text: w.intl.string(w.t.WYchdX),
                         onClick: x
                     };
-                return M(L({}, i), { text: w.intl.string(w.t.bAGFz8) });
+                return k(L({}, i), { text: w.intl.string(w.t.bAGFz8) });
         }
-    }, [r, p, S, f, I, a, n, o, s, u, j, A, D, x, b, U, G]);
+    }, [r, p, S, _, I, a, n, o, s, u, j, A, D, x, b, U, G]);
 }
 function F() {
     return (0, o.e7)([b.Z], () => {
@@ -365,7 +365,7 @@ function Z(e) {
             };
     }
     let d = (null == (t = r.userStatus) ? void 0 : t.claimedAt) != null,
-        _ = !u && null != r.userStatus && (0, O.zE)(r.userStatus, y.jn.QUEST_BAR);
+        f = !u && null != r.userStatus && (0, O.zE)(r.userStatus, y.jn.QUEST_BAR);
     return d
         ? {
               isQuestBarVisible: !1,
@@ -377,7 +377,7 @@ function Z(e) {
                 reason: 'quest_expired'
             }
           : i
-            ? _
+            ? f
                 ? {
                       isQuestBarVisible: !1,
                       reason: 'quest_dismissed'

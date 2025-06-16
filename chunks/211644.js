@@ -66,8 +66,8 @@ function c(e, t) {
 }
 let u = new (n(499303).I)(),
     d = 300000,
-    _ = 3600000,
-    f = () => ({
+    f = 3600000,
+    _ = () => ({
         candidates: new Map(),
         shownFatigableCandidate: null,
         prevFatigableCandidate: null,
@@ -76,7 +76,7 @@ let u = new (n(499303).I)(),
         currentlyShownGroup: new Set(),
         lastWinnerTime: 0
     }),
-    p = (0, r.F)(f),
+    p = (0, r.F)(_),
     h = (e) =>
         c(s({}, e), {
             candidates: new Map(e.candidates),
@@ -119,7 +119,7 @@ let u = new (n(499303).I)(),
         if ((null != e.shownFatigableCandidate && !t) || u.scheduled()) return e;
         let n = new Date().getTime();
         return (
-            (null == e.shownFatigableCandidate && n - e.lastWinnerTime < _) ||
+            (null == e.shownFatigableCandidate && n - e.lastWinnerTime < f) ||
                 u.schedule(() => {
                     (0, i.j)(() => {
                         p.setState((e) => {
@@ -155,7 +155,7 @@ let u = new (n(499303).I)(),
         return [p.getState().currentlyShown.size, e];
     },
     P = () => {
-        (0, i.j)(() => p.setState(f)), u.unschedule();
+        (0, i.j)(() => p.setState(_)), u.unschedule();
     };
 function w(e, t) {
     return p(e, t);

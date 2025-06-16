@@ -123,7 +123,7 @@ class d {
         return this.lastState;
     }
     transaction(e, t) {
-        let n = new _(this);
+        let n = new f(this);
         return Promise.resolve(e(n)).then(() =>
             n.operations.length > 0
                 ? this.execute(
@@ -151,7 +151,7 @@ class d {
             }));
     }
 }
-class _ {
+class f {
     add(e) {
         this.operations.push(e);
     }

@@ -9,8 +9,8 @@ var i = n(120356),
     c = n(451478),
     u = n(648613),
     d = n(433390),
-    _ = n(474936),
-    f = n(163882);
+    f = n(474936),
+    _ = n(163882);
 function p(e, t, n) {
     return (
         t in e
@@ -87,12 +87,12 @@ let y = function (e) {
     var { subscriptionTier: t, onClick: n, size: i, className: p, textOptions: m, iconClassName: b, postSuccessGuild: y, onSubscribeModalClose: O, premiumModalAnalyticsLocation: v, showIcon: I = !0, disableShine: T, applicationId: S, shinyButtonClassName: A, showGradient: N = !1, confirmationFooter: C, paymentModalBanner: R, color: P, iconColor: w = 'currentColor', useExpressiveButton: D } = e,
         L = E(e, ['subscriptionTier', 'onClick', 'size', 'className', 'textOptions', 'iconClassName', 'postSuccessGuild', 'onSubscribeModalClose', 'premiumModalAnalyticsLocation', 'showIcon', 'disableShine', 'applicationId', 'shinyButtonClassName', 'showGradient', 'confirmationFooter', 'paymentModalBanner', 'color', 'iconColor', 'useExpressiveButton']);
     let x = (0, o.e7)([c.Z], () => c.Z.isFocused()),
-        M = (0, d.Z)({
+        k = (0, d.Z)({
             subscriptionTier: t,
             buttonTextOverride: null == m ? void 0 : m.textOverride,
             defaultTextOverride: null == m ? void 0 : m.subscribeText
         }),
-        k = {
+        M = {
             onClick: n,
             subscriptionTier: t,
             postSuccessGuild: y,
@@ -105,7 +105,7 @@ let y = function (e) {
     if (D && (null == m ? void 0 : m.expressiveButtonText) != null)
         return (0, r.jsx)(
             u.Z,
-            g(h({}, k), {
+            g(h({}, M), {
                 children: (e) => {
                     var t;
                     let { onClick: n } = e;
@@ -119,10 +119,10 @@ let y = function (e) {
             })
         );
     function j(e) {
-        let n = null != P ? P : t === _.Si.TIER_1 ? l.zxk.Colors.PRIMARY : l.zxk.Colors.GREEN;
+        let n = null != P ? P : t === f.Si.TIER_1 ? l.zxk.Colors.PRIMARY : l.zxk.Colors.GREEN;
         return (0, r.jsx)(
             u.Z,
-            g(h({}, k), {
+            g(h({}, M), {
                 children: (o) => {
                     let { onClick: s } = o;
                     return (0, r.jsxs)(
@@ -130,20 +130,20 @@ let y = function (e) {
                         g(
                             h(
                                 {
-                                    disabled: M.disabled,
+                                    disabled: k.disabled,
                                     onClick: s,
-                                    innerClassName: f.premiumSubscribeButton,
+                                    innerClassName: _.premiumSubscribeButton,
                                     color: n,
                                     size: i,
                                     className: A,
                                     wrapperClassName: a()(
                                         {
-                                            [f.tier2Gradient]: N && t === _.Si.TIER_2,
-                                            [f.tier1Gradient]: N && t === _.Si.TIER_1
+                                            [_.tier2Gradient]: N && t === f.Si.TIER_2,
+                                            [_.tier1Gradient]: N && t === f.Si.TIER_1
                                         },
                                         p
                                     ),
-                                    buttonShineClassName: 'buttonShineClassName' in L ? L.buttonShineClassName : n === l.Ttl.BRAND_INVERTED ? f.brandShine : void 0,
+                                    buttonShineClassName: 'buttonShineClassName' in L ? L.buttonShineClassName : n === l.Ttl.BRAND_INVERTED ? _.brandShine : void 0,
                                     pauseAnimation: !x || T
                                 },
                                 L,
@@ -155,11 +155,11 @@ let y = function (e) {
                                         (0, r.jsx)(l.SrA, {
                                             size: 'md',
                                             color: w,
-                                            className: a()(f.premiumIcon, b)
+                                            className: a()(_.premiumIcon, b)
                                         }),
                                     (0, r.jsx)('span', {
-                                        className: a()(f.buttonText, null == m ? void 0 : m.textClassName),
-                                        children: M.buttonText
+                                        className: a()(_.buttonText, null == m ? void 0 : m.textClassName),
+                                        children: k.buttonText
                                     })
                                 ]
                             }
@@ -169,9 +169,9 @@ let y = function (e) {
             })
         );
     }
-    return null != M.buttonTooltipText
+    return null != k.buttonTooltipText
         ? (0, r.jsx)(l.ua7, {
-              text: M.buttonTooltipText,
+              text: k.buttonTooltipText,
               children: j
           })
         : j();

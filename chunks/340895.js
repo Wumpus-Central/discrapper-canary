@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => k }), n(388685);
+n.d(t, { Z: () => M }), n(388685);
 var i,
     a = n(442837),
     o = n(433517),
@@ -8,8 +8,8 @@ var i,
     c = n(695346),
     u = n(581883),
     d = n(163612),
-    _ = n(314897),
-    f = n(592125),
+    f = n(314897),
+    _ = n(592125),
     p = n(885110),
     h = n(451478),
     m = n(981631);
@@ -60,9 +60,9 @@ function C(e) {
         }).enabled
     )
         return !1;
-    let r = n.includes(_.default.getId());
+    let r = n.includes(f.default.getId());
     if (!T.has(t) && r) {
-        let e = f.Z.getChannel(t);
+        let e = _.Z.getChannel(t);
         if (null == e) return !1;
         let n = y * T.size,
             { x: r, y: i } = A();
@@ -85,7 +85,7 @@ function R(e) {
                 guildId: e.guildId,
                 location: 'IncomingCallDelete'
             }).enabled &&
-                !!e.ringing.includes(_.default.getId()))) &&
+                !!e.ringing.includes(f.default.getId()))) &&
         N(t)
     );
 }
@@ -112,16 +112,16 @@ function L() {
     S = p.Z.getStatus() === m.Skl.DND || c.QZ.getSetting();
 }
 function x() {
-    let e = _.default.getId();
+    let e = f.default.getId();
     T.forEach((t) => {
         var n;
         let r = t;
-        null != (null == (n = f.Z.getChannel(r)) ? void 0 : n.guild_id) && (l.Z.getGuildRingingUsers(r).has(e) || N(r));
+        null != (null == (n = _.Z.getChannel(r)) ? void 0 : n.guild_id) && (l.Z.getGuildRingingUsers(r).has(e) || N(r));
     });
 }
-class M extends (i = a.ZP.Store) {
+class k extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(f.Z, p.Z), this.syncWith([p.Z], L), this.syncWith([u.Z], L), this.syncWith([l.Z], x);
+        this.waitFor(_.Z, p.Z), this.syncWith([p.Z], L), this.syncWith([u.Z], L), this.syncWith([l.Z], x);
     }
     getIncomingCalls() {
         return S ? v : Array.from(I.values());
@@ -136,8 +136,8 @@ class M extends (i = a.ZP.Store) {
         return !S && T.size > 0;
     }
 }
-g(M, 'displayName', 'IncomingCallStore');
-let k = new M(s.Z, {
+g(k, 'displayName', 'IncomingCallStore');
+let M = new k(s.Z, {
     CALL_CREATE: C,
     CALL_UPDATE: C,
     CALL_DELETE: R,

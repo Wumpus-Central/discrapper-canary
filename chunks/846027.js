@@ -8,8 +8,8 @@ var r = n(570140),
     c = n(463395),
     u = n(592125),
     d = n(131951),
-    _ = n(944486),
-    f = n(594174),
+    f = n(944486),
+    _ = n(594174),
     p = n(626135),
     h = n(557457),
     m = n(981631),
@@ -55,15 +55,15 @@ function I() {
 function T(e, t, n, r) {
     let { location: i, analyticsLocations: a } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
     if (t === n) return;
-    let o = _.Z.getVoiceChannelId(),
+    let o = f.Z.getVoiceChannelId(),
         s = null != o ? u.Z.getChannel(o) : null,
         l = e[t],
-        f = e[n],
+        _ = e[n],
         h = d.Z.getMediaEngine().getAudioSubsystem(),
         g = d.Z.getMediaEngine().getAudioLayer();
     p.default.track(m.rMx.MEDIA_DEVICE_CHANGED, {
         device_from_name: c.Z.getCertifiedDeviceName(t, null != l ? l.name : ''),
-        device_to_name: c.Z.getCertifiedDeviceName(n, null != f ? f.name : ''),
+        device_to_name: c.Z.getCertifiedDeviceName(n, null != _ ? _.name : ''),
         device_type: r,
         device_is_certified: c.Z.isCertified(n),
         location: i,
@@ -92,7 +92,7 @@ let S = {
                         location: o
                     }),
                     (a = a && !d.Z.hasActiveCallKitCall()),
-                    (null == (e = f.default.getCurrentUser()) ? void 0 : e.isStaff()) && O.info('Toggling self mute'),
+                    (null == (e = _.default.getCurrentUser()) ? void 0 : e.isStaff()) && O.info('Toggling self mute'),
                     d.Z.isEnabled())
                   ? r.Z.dispatch({
                         type: 'AUDIO_TOGGLE_SELF_MUTE',
@@ -107,7 +107,7 @@ let S = {
             let i = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
             N() ||
                 ((i = i && !d.Z.hasActiveCallKitCall()),
-                (null == (n = f.default.getCurrentUser()) ? void 0 : n.isStaff()) && O.info('Setting self mute', t),
+                (null == (n = _.default.getCurrentUser()) ? void 0 : n.isStaff()) && O.info('Setting self mute', t),
                 r.Z.dispatch({
                     type: 'AUDIO_SET_SELF_MUTE',
                     context: e,
@@ -118,7 +118,7 @@ let S = {
         setTemporarySelfMute(e) {
             var t;
             N() ||
-                ((null == (t = f.default.getCurrentUser()) ? void 0 : t.isStaff()) && O.info('Setting temporary self mute', e),
+                ((null == (t = _.default.getCurrentUser()) ? void 0 : t.isStaff()) && O.info('Setting temporary self mute', e),
                 r.Z.dispatch({
                     type: 'AUDIO_SET_TEMPORARY_SELF_MUTE',
                     mute: e
@@ -205,7 +205,7 @@ let S = {
             ) {
                 let t = d.Z.getMediaEngine().getAudioSubsystem(),
                     n = d.Z.getMediaEngine().getAudioLayer(),
-                    r = _.Z.getVoiceChannelId(),
+                    r = f.Z.getVoiceChannelId(),
                     a = null != r ? u.Z.getChannel(r) : null,
                     o = I();
                 p.default.track(m.rMx.VOICE_ACTIVATION_MODE_CHANGED, {
@@ -219,7 +219,7 @@ let S = {
             } else if (e === m.pM4.VOICE_ACTIVITY && o !== t) {
                 let e = d.Z.getMediaEngine().getAudioSubsystem(),
                     n = d.Z.getMediaEngine().getAudioLayer(),
-                    r = _.Z.getVoiceChannelId(),
+                    r = f.Z.getVoiceChannelId(),
                     a = null != r ? u.Z.getChannel(r) : null,
                     s = I();
                 p.default.track(m.rMx.VOICE_ACTIVITY_THRESHOLD_CHANGED, {
@@ -250,7 +250,7 @@ let S = {
                 type: 'AUDIO_SET_INPUT_VOLUME',
                 volume: e
             });
-            let n = _.Z.getVoiceChannelId(),
+            let n = f.Z.getVoiceChannelId(),
                 i = null != n ? u.Z.getChannel(n) : null;
             p.default.track(m.rMx.MEDIA_INPUT_VOLUME_CHANGED, {
                 volume: e,
@@ -265,7 +265,7 @@ let S = {
                 type: 'AUDIO_SET_OUTPUT_VOLUME',
                 volume: e
             });
-            let n = _.Z.getVoiceChannelId(),
+            let n = f.Z.getVoiceChannelId(),
                 i = null != n ? u.Z.getChannel(n) : null;
             p.default.track(m.rMx.MEDIA_OUTPUT_VOLUME_CHANGED, {
                 volume: e,

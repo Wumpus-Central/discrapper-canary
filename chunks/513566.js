@@ -8,8 +8,8 @@ var r = n(348327),
     c = n(287734),
     u = n(317770),
     d = n(829750),
-    _ = n(189771),
-    f = n(67844),
+    f = n(189771),
+    _ = n(67844),
     p = n(173507),
     h = n(592125),
     m = n(131951),
@@ -68,7 +68,7 @@ class I extends u.Z {
                         r = m.Z.isVideoEnabled(),
                         i = m.Z.isVideoAvailable(),
                         a = h.Z.getChannel(e),
-                        o = null == a || (0, _.y)(a),
+                        o = null == a || (0, f.y)(a),
                         { reachedLimit: s, limit: l } =
                             null != a
                                 ? (0, d.t)(a)
@@ -76,7 +76,7 @@ class I extends u.Z {
                                       reachedLimit: void 0,
                                       limit: void 0
                                   },
-                        c = (0, f.X)({
+                        c = (0, _.X)({
                             enabled: r,
                             join: !1,
                             channel: a,

@@ -15,7 +15,7 @@ n.d(t, {
     e$: () => J,
     iM: () => Q,
     pO: () => U,
-    xr: () => k,
+    xr: () => M,
     z2: () => $
 }),
     n(388685),
@@ -34,8 +34,8 @@ var r = n(278074),
     c = n(912788),
     u = n(594174),
     d = n(626135),
-    _ = n(823379),
-    f = n(74538),
+    f = n(823379),
+    _ = n(74538),
     p = n(226951),
     h = n(73346),
     m = n(981631),
@@ -88,8 +88,8 @@ let O = ['discordapp.com/gifts', 'discord.com/gifts'],
     D = 'WUMP-?',
     L = [R, P, w, '[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}'].join('|'),
     x = new RegExp('^('.concat(D, ')?(').concat(L, ')$')),
-    M = '-';
-var k = (function (e) {
+    k = '-';
+var M = (function (e) {
     return (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.CUSTOM_STYLE = 1)] = 'CUSTOM_STYLE'), (e[(e.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD = 2)] = 'CUSTOM_MESSAGE_EMOJI_SOUNDBOARD'), e;
 })({});
 let j = (e, t) => (i.tq || i.Em ? 0 : null != e || t ? 2 : 1),
@@ -263,14 +263,14 @@ function J(e, t, n, r, i) {
 function $(e, t, n) {
     let r = t.applicationId,
         i = e.length > 0 ? e : [r],
-        a = i.map((e) => n.getLibraryApplication(r, e, !0)).filter(_.lm);
+        a = i.map((e) => n.getLibraryApplication(r, e, !0)).filter(f.lm);
     return a.length === i.length ? a[0] : null;
 }
 function ee(e) {
     let t = e.trim().split('/').pop().match(x);
     if (null == t) return null;
     let [n, r, i] = t;
-    return null == i ? null : i.replace(RegExp(M, 'g'), '');
+    return null == i ? null : i.replace(RegExp(k, 'g'), '');
 }
 let et = (e, t) =>
     (0, a.e7)([c.Z], () => {
@@ -289,7 +289,7 @@ function en(e, t) {
         case m.evJ.UNKNOWN_GIFT_CODE:
             return E.intl.string(E.t.roztIi);
         case m.evJ.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE:
-            return E.intl.formatToPlainString(E.t['4YTHKy'], { planName: (0, f.M5)(t, g.p9.TIER_2) ? E.intl.string(E.t['lG6a5+']) : E.intl.string(E.t['FSOz7+']) });
+            return E.intl.formatToPlainString(E.t['4YTHKy'], { planName: (0, _.M5)(t, g.p9.TIER_2) ? E.intl.string(E.t['lG6a5+']) : E.intl.string(E.t['FSOz7+']) });
         case m.evJ.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_MANAGED:
             return E.intl.string(E.t['9i1J39']);
         case m.evJ.INVALID_GIFT_REDEMPTION_INVOICE_OPEN:

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => _ });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -9,16 +9,16 @@ var i = n(120356),
     c = n(533432),
     u = n(149203),
     d = n(185923),
-    _ = n(539490);
-let f = (e) => {
-    let { accessory: t, pickerIntention: n, headerClassName: i, emojiListRef: f, onKeyDown: p, onFocus: h, autoFocus: m, searchBarRef: g, hasTabWrapper: E, diversitySurrogate: b, isBurstReaction: y, onBurstReactionToggle: O, renderHeader: v } = e,
+    f = n(539490);
+let _ = (e) => {
+    let { accessory: t, pickerIntention: n, headerClassName: i, emojiListRef: _, onKeyDown: p, onFocus: h, autoFocus: m, searchBarRef: g, hasTabWrapper: E, diversitySurrogate: b, isBurstReaction: y, onBurstReactionToggle: O, renderHeader: v } = e,
         I = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(c.Z, {
-                    emojiListRef: f,
+                    emojiListRef: _,
                     gridNavigatorId: u.Vr,
                     onKeyDown: p,
-                    className: _.searchBar,
+                    className: f.searchBar,
                     ref: g,
                     isFullRow: !1,
                     onFocus: h,
@@ -27,7 +27,7 @@ let f = (e) => {
                 }),
                 n === d.Hz.REACTION
                     ? (0, r.jsx)('div', {
-                          className: _.burstToggle,
+                          className: f.burstToggle,
                           children: (0, r.jsx)(o.Z, {
                               checked: y,
                               onClick: O
@@ -38,14 +38,14 @@ let f = (e) => {
                     ? t
                     : (0, r.jsx)(l.Z, {
                           searchBarRef: g,
-                          className: _.diversitySelector,
+                          className: f.diversitySelector,
                           hasTabWrapper: E,
                           selectedSurrogate: b
                       })
             ]
         });
     return (0, r.jsx)('div', {
-        className: a()(_.header, i),
+        className: a()(f.header, i),
         children: null != v ? v(I) : I
     });
 };

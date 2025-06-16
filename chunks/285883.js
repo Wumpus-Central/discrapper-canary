@@ -1,6 +1,6 @@
 a.d(e, {
-    EN: () => E,
-    IQ: () => s,
+    EN: () => s,
+    IQ: () => E,
     bU: () => o
 });
 var r = a(176984),
@@ -9,7 +9,7 @@ var r = a(176984),
 let o = 'baggage',
     i = 'sentry-',
     c = /^sentry-/;
-function E(t) {
+function s(t) {
     let e = (function (t) {
         if (t && ((0, _.HD)(t) || Array.isArray(t)))
             return Array.isArray(t)
@@ -28,7 +28,7 @@ function E(t) {
     let a = Object.entries(e).reduce((t, [e, a]) => (e.match(c) && (t[e.slice(i.length)] = a), t), {});
     return Object.keys(a).length > 0 ? a : void 0;
 }
-function s(t) {
+function E(t) {
     if (t) {
         var e = Object.entries(t).reduce((t, [e, a]) => (a && (t[`${i}${e}`] = a), t), {});
         return 0 !== Object.keys(e).length

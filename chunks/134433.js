@@ -9,14 +9,14 @@ var i = n(120356),
     c = n(481060),
     u = n(607070),
     d = n(393951),
-    _ = n(181071);
-let f = l.Z.unsafe_rawColors.PRIMARY_300,
+    f = n(181071);
+let _ = l.Z.unsafe_rawColors.PRIMARY_300,
     p = l.Z.unsafe_rawColors.WHITE_500,
     h = l.Z.unsafe_rawColors.PRIMARY_630;
 function m(e) {
     let { color: t, size: n, forcedIconColor: i, className: l, iconClassName: m } = e,
         [g, E] = (0, s.Wu)([u.Z], () => [u.Z.desaturateUserColors, u.Z.saturation]),
-        b = (0, c.dQu)(f).hex(),
+        b = (0, c.dQu)(_).hex(),
         y = null != t ? t : b,
         O = (0, o.ho)((0, o._i)(y), !1, g ? E : null),
         v = (0, c.dQu)(p).hex(),
@@ -41,7 +41,7 @@ function m(e) {
         children: (0, r.jsx)(c.xPt, {
             size: 'custom',
             color: T,
-            className: a()(_.linkIcon, m),
+            className: a()(f.linkIcon, m),
             width: n - 2 * S,
             height: n - 2 * S,
             style: { margin: S }

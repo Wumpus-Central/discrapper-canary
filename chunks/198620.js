@@ -18,8 +18,8 @@ let u = (e) => (null == e ? void 0 : e.split(':')[0]);
 function d(e) {
     return 'localhost' === e || '127.0.0.1' === e;
 }
-let _ = new Set(['/attachments/', '/ephemeral-attachments/']),
-    f = new Set(['/external/']),
+let f = new Set(['/attachments/', '/ephemeral-attachments/']),
+    _ = new Set(['/external/']),
     p = +s.Z.Millis.HOUR,
     h = new Set([window.GLOBAL_ENV.CDN_HOST, null == (r = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) ? void 0 : r.substring(2)].map(u).filter(Boolean)),
     m = new Set(
@@ -33,14 +33,14 @@ let _ = new Set(['/attachments/', '/ephemeral-attachments/']),
 function b(e) {
     let t = h.has(e.hostname),
         n = g && d(e.hostname),
-        r = Array.from(_).some((t) => e.pathname.startsWith(t));
+        r = Array.from(f).some((t) => e.pathname.startsWith(t));
     return (t || n) && r;
 }
 function y(e) {
     var t;
     let n = m.has(e.hostname),
         r = E && d(null != (t = e.hostname) ? t : ''),
-        i = Array.from(f).some((t) => e.pathname.startsWith(t));
+        i = Array.from(_).some((t) => e.pathname.startsWith(t));
     return (n || r) && i;
 }
 function O(e) {

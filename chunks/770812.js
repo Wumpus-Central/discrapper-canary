@@ -9,8 +9,8 @@ var i = n(990547),
     c = n(100527),
     u = n(906732),
     d = n(213609),
-    _ = n(703656),
-    f = n(430824),
+    f = n(703656),
+    _ = n(430824),
     p = n(687476),
     h = n(761966),
     m = n(981631),
@@ -35,9 +35,9 @@ function O(e) {
         }
     });
     let v = () => {
-            (0, _.uL)(m.Z5c.CHANNEL(n, g.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: O });
+            (0, f.uL)(m.Z5c.CHANNEL(n, g.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: O });
         },
-        I = (0, a.e7)([f.Z], () => f.Z.getGuild(n)),
+        I = (0, a.e7)([_.Z], () => _.Z.getGuild(n)),
         T = (0, a.e7)([p.Z], () => null != n && p.Z.getUserSubscriptionRoles(n).size > 0),
         S = T ? E.intl.string(E.t['GoLM9/']) : E.intl.formatToPlainString(E.t['h0u/Hh'], { serverName: null == I ? void 0 : I.name }),
         A = T ? E.intl.string(E.t.PjZ7DQ) : E.intl.string(E.t.p8FG1N);

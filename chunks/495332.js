@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(73800),
     i = n(806966),
     a = n(697426),
@@ -56,11 +56,11 @@ function d(e, t) {
         e
     );
 }
-function _(e) {
-    let { descriptor: t, soundButtonProps: n, rowIndex: l, columnIndex: u, isUsingKeyboardNavigation: _, suppressPlaySound: f, getItemProps: p, onSelectItem: h, onItemMouseEnter: m, buttonOverlay: g, isNitroLocked: E, shouldShowUpsell: b, inExpressionPicker: y } = e,
+function f(e) {
+    let { descriptor: t, soundButtonProps: n, rowIndex: l, columnIndex: u, isUsingKeyboardNavigation: f, suppressPlaySound: _, getItemProps: p, onSelectItem: h, onItemMouseEnter: m, buttonOverlay: g, isNitroLocked: E, shouldShowUpsell: b, inExpressionPicker: y } = e,
         O = i.Wq.useStore((e) => e.inspectedExpressionPosition),
         v = ''.concat(l, '-').concat(u),
-        I = _ && O.rowIndex === l && O.columnIndex === u;
+        I = f && O.rowIndex === l && O.columnIndex === u;
     switch (t.item.type) {
         case a.vB.SOUND:
             return (0, r.createElement)(
@@ -68,7 +68,7 @@ function _(e) {
                 d(c({}, p(u), n), {
                     key: v,
                     sound: t.item.sound,
-                    suppressPlaySound: f,
+                    suppressPlaySound: _,
                     focused: I,
                     onMouseEnter: () => m(u),
                     onSelectItem: (e) => h(t, e),

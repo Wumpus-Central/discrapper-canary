@@ -35,7 +35,7 @@ function d(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,12 +47,12 @@ function _(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -70,7 +70,7 @@ function m(e, t, n) {
             location: u + ' auto off',
             autoTrackExposure: !1
         });
-    let _ = (0, i.e7)([o.Z], () => o.Z.hasLoadedExperiments),
+    let f = (0, i.e7)([o.Z], () => o.Z.hasLoadedExperiments),
         m = null == e ? void 0 : e.includeBundles,
         g = (0, c.hv)('useMaybeFetchCollectiblesCategoriesShared'),
         [E, b, y, O, v, I, T] = (0, i.Wu)([l.Z], () => {
@@ -79,10 +79,10 @@ function m(e, t, n) {
         });
     return (
         (0, r.useEffect)(() => {
-            if (!_ || E) return;
+            if (!f || E) return;
             let r = Date.now() - O < h;
             if (y && r) return;
-            let i = f(d({}, e), {
+            let i = _(d({}, e), {
                     includeBundles: m,
                     variantsReturnStyle: g,
                     skipNumCategories: T
@@ -90,13 +90,13 @@ function m(e, t, n) {
                 a = !(0, s.oc)(b, i),
                 o = Date.now() - v < p;
             (a || !o) && (0, s.F$)(i, t, n);
-        }, [_, E, b, v, e, y, m, O, g, t, n, T]),
+        }, [f, E, b, v, e, y, m, O, g, t, n, T]),
         {
             isFetching: E,
             categories: I,
             fetchCategoriesError: y,
             refreshCategories: (0, r.useCallback)(() => {
-                let t = f(d({}, e), {
+                let t = _(d({}, e), {
                     includeBundles: m,
                     skipNumCategories: T
                 });

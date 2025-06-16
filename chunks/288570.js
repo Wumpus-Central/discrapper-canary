@@ -5,14 +5,14 @@ var r = a(395848),
     o = a(896247),
     i = a(596308),
     c = a(662355);
-let E = [800, 1800],
-    s = (t) => {
-        r.m.document && r.m.document.prerendering ? (0, c.A)(() => s(t)) : r.m.document && 'complete' !== r.m.document.readyState ? addEventListener('load', () => s(t), !0) : setTimeout(t, 0);
+let s = [800, 1800],
+    E = (t) => {
+        r.m.document && r.m.document.prerendering ? (0, c.A)(() => E(t)) : r.m.document && 'complete' !== r.m.document.readyState ? addEventListener('load', () => E(t), !0) : setTimeout(t, 0);
     },
     l = (t, e = {}) => {
         let a = (0, i.I)('TTFB'),
-            r = (0, _._)(t, a, E, e.reportAllChanges);
-        s(() => {
+            r = (0, _._)(t, a, s, e.reportAllChanges);
+        E(() => {
             let t = (0, o.W)();
             if (t) {
                 let e = t.responseStart;

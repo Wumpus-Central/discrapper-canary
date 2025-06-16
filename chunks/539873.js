@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(570140),
     u = n(313201),
     d = n(540059),
-    _ = n(587446),
-    f = n(996073),
+    f = n(587446),
+    _ = n(996073),
     p = n(737604),
     h = n(401460),
     m = n(441319),
@@ -93,7 +93,7 @@ function N(e) {
     let { className: t, disabled: n, isEditor: a, renderCTAButtons: O } = e,
         [I] = (0, s.Wu)([p.Z], () => [p.Z.getCurrentDesktopIcon()]),
         A = i.useRef(null);
-    (0, f.Z)(A, g.h1.CUSTOM_APP_ICONS);
+    (0, _.Z)(A, g.h1.CUSTOM_APP_ICONS);
     let N = (0, u.Dt)(),
         C = (0, l.arW)({
             orientation: 'horizontal',
@@ -133,7 +133,7 @@ function N(e) {
                                                         variant: w ? 'text-lg/medium' : 'text-md/medium',
                                                         children: E.intl.string(E.t.NThqT0)
                                                     }),
-                                                    (0, r.jsx)(_.Z, { className: b.premiumIcon })
+                                                    (0, r.jsx)(f.Z, { className: b.premiumIcon })
                                                 ]
                                             }),
                                         (0, r.jsx)(l.X6q, {

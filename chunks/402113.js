@@ -21,7 +21,7 @@ function d(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function _(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,7 +54,7 @@ function p(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -82,7 +82,7 @@ function m(e, t) {
 }
 function g(e) {
     var { location: t, applicationId: n, centerButton: d = !1 } = e,
-        f = h(e, ['location', 'applicationId', 'centerButton']);
+        _ = h(e, ['location', 'applicationId', 'centerButton']);
     let { parentAnalyticsLocation: m } = (0, o.ZP)(),
         { changeLeaveCallAndActivityIcons: g } = (0, l.A)({ location: 'LeaveActivityButton' }),
         E = d ? c.d : c.Z,
@@ -96,7 +96,7 @@ function g(e) {
         };
     return (0, r.jsx)(
         E,
-        p(_({}, f), {
+        p(f({}, _), {
             isTrayButton: !1,
             onClick: b,
             iconComponent: g ? i.Dio : i.PBZ,

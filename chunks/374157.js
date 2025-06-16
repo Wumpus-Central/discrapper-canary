@@ -82,18 +82,18 @@ function u(e) {
                 let c = e.selection.anchor,
                     u = e.selection.focus,
                     d = a.bN.getParentInline(e, c),
-                    _ = a.bN.getParentInline(e, u);
-                if (null != d && null != _ && a.C0.equals(d[1], _[1])) return void s(t);
-                let f = a.M8.isForward(e.selection);
+                    f = a.bN.getParentInline(e, u);
+                if (null != d && null != f && a.C0.equals(d[1], f[1])) return void s(t);
+                let _ = a.M8.isForward(e.selection);
                 if (null != d) {
                     let [, t] = d,
                         [i, o] = a.bN.edges(e, t);
-                    f && a.Jz.equals(c, i) ? (c = null != (n = a.bN.before(e, i)) ? n : a.bN.start(e, [])) : !f && a.Jz.equals(c, o) && (c = null != (r = a.bN.after(e, o)) ? r : a.bN.end(e, []));
+                    _ && a.Jz.equals(c, i) ? (c = null != (n = a.bN.before(e, i)) ? n : a.bN.start(e, [])) : !_ && a.Jz.equals(c, o) && (c = null != (r = a.bN.after(e, o)) ? r : a.bN.end(e, []));
                 }
-                if (null != _) {
-                    let [, t] = _,
+                if (null != f) {
+                    let [, t] = f,
                         [n, r] = a.bN.edges(e, t);
-                    !f && a.Jz.equals(u, n) ? (u = null != (o = a.bN.before(e, n)) ? o : a.bN.start(e, [])) : f && a.Jz.equals(u, r) && (u = null != (l = a.bN.after(e, r)) ? l : a.bN.end(e, []));
+                    !_ && a.Jz.equals(u, n) ? (u = null != (o = a.bN.before(e, n)) ? o : a.bN.start(e, [])) : _ && a.Jz.equals(u, r) && (u = null != (l = a.bN.after(e, r)) ? l : a.bN.end(e, []));
                 }
                 return void i.Q.delete(e, {
                     at: {
@@ -106,7 +106,7 @@ function u(e) {
             }
             s(t);
         }),
-        (r.ML.positions = f),
+        (r.ML.positions = _),
         e
     );
 }
@@ -175,13 +175,13 @@ function d(e, t, n) {
         !0
     );
 }
-let _ = r.ML.positions;
-function* f(e) {
+let f = r.ML.positions;
+function* _(e) {
     var t, n, r, i, o, l, u, d;
-    let f = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        { at: p = e.selection, unit: h = 'offset', reverse: m = !1, voids: g = !1 } = null != f ? f : {};
+    let _ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        { at: p = e.selection, unit: h = 'offset', reverse: m = !1, voids: g = !1 } = null != _ ? _ : {};
     if ('word' !== h) {
-        for (let t of _(e, c(s({}, f), { voids: g || 'block' === h }))) yield t;
+        for (let t of f(e, c(s({}, _), { voids: g || 'block' === h }))) yield t;
         return;
     }
     if (null == p) return;
@@ -224,7 +224,7 @@ function* f(e) {
                         anchor: n,
                         focus: r
                     };
-                    for (let n of _(e, c(s({}, f), { at: t }))) yield n;
+                    for (let n of f(e, c(s({}, _), { at: t }))) yield n;
                 }
             if (h === p) break;
             h += v;

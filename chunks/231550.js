@@ -1,19 +1,19 @@
-a.d(e, { Y: () => T });
+a.d(e, { Y: () => N });
 var r = a(395848),
     _ = a(140955),
     n = a(596308),
     o = a(622574),
     i = a(433691),
     c = a(412828),
-    E = a(662355);
-let s = [200, 500],
+    s = a(662355);
+let E = [200, 500],
     l = () => (0, c.U)() - 0,
-    I = [],
-    u = {},
-    R = (t) => {
-        let e = I[I.length - 1],
-            a = u[t.interactionId];
-        if (a || I.length < 10 || (e && t.duration > e.latency)) {
+    u = [],
+    I = {},
+    d = (t) => {
+        let e = u[u.length - 1],
+            a = I[t.interactionId];
+        if (a || u.length < 10 || (e && t.duration > e.latency)) {
             if (a) a.entries.push(t), (a.latency = Math.max(a.latency, t.duration));
             else {
                 let e = {
@@ -21,41 +21,41 @@ let s = [200, 500],
                     latency: t.duration,
                     entries: [t]
                 };
-                (u[e.id] = e), I.push(e);
+                (I[e.id] = e), u.push(e);
             }
-            I.sort((t, e) => e.latency - t.latency),
-                I.splice(10).forEach((t) => {
-                    delete u[t.id];
+            u.sort((t, e) => e.latency - t.latency),
+                u.splice(10).forEach((t) => {
+                    delete I[t.id];
                 });
         }
     },
-    A = () => {
-        let t = Math.min(I.length - 1, Math.floor(l() / 50));
-        return I[t];
+    R = () => {
+        let t = Math.min(u.length - 1, Math.floor(l() / 50));
+        return u[t];
     },
-    T = (t, e = {}) => {
-        (0, E.A)(() => {
+    N = (t, e = {}) => {
+        (0, s.A)(() => {
             let a;
             (0, c.Y)();
-            let E = (0, n.I)('INP'),
-                u = (t) => {
+            let s = (0, n.I)('INP'),
+                I = (t) => {
                     t.forEach((t) => {
-                        t.interactionId && R(t), 'first-input' === t.entryType && (I.some((e) => e.entries.some((e) => t.duration === e.duration && t.startTime === e.startTime)) || R(t));
+                        t.interactionId && d(t), 'first-input' === t.entryType && (u.some((e) => e.entries.some((e) => t.duration === e.duration && t.startTime === e.startTime)) || d(t));
                     });
-                    let e = A();
-                    e && e.latency !== E.value && ((E.value = e.latency), (E.entries = e.entries), a());
+                    let e = R();
+                    e && e.latency !== s.value && ((s.value = e.latency), (s.entries = e.entries), a());
                 },
-                T = (0, o.N)('event', u, { durationThreshold: null != e.durationThreshold ? e.durationThreshold : 40 });
-            (a = (0, _._)(t, E, s, e.reportAllChanges)),
-                T &&
+                N = (0, o.N)('event', I, { durationThreshold: null != e.durationThreshold ? e.durationThreshold : 40 });
+            (a = (0, _._)(t, s, E, e.reportAllChanges)),
+                N &&
                     ('PerformanceEventTiming' in r.m &&
                         'interactionId' in PerformanceEventTiming.prototype &&
-                        T.observe({
+                        N.observe({
                             type: 'first-input',
                             buffered: !0
                         }),
                     (0, i.u)(() => {
-                        u(T.takeRecords()), E.value < 0 && l() > 0 && ((E.value = 0), (E.entries = [])), a(!0);
+                        I(N.takeRecords()), s.value < 0 && l() > 0 && ((s.value = 0), (s.entries = [])), a(!0);
                     }));
         });
     };

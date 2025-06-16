@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(803647),
     u = n(361291),
     d = n(131951),
-    _ = n(358085),
-    f = n(418469),
+    f = n(358085),
+    _ = n(418469),
     p = n(776031),
     h = n(981631),
     m = n(231338),
@@ -27,7 +27,7 @@ function b(e) {
         A = (0, a.e7)([d.Z], () => d.Z.supports(g.AN.SOUNDSHARE)),
         N = (0, a.e7)([d.Z], () => d.Z.supportsScreenSoundshare()),
         C = (0, p.Z)(t, v),
-        R = (0, f.Z)(t, v, m.Vq),
+        R = (0, _.Z)(t, v, m.Vq),
         P = null != I && A && (!I.startsWith('screen') || N),
         w = i.useCallback(() => {
             (null == I ? void 0 : I.startsWith('prepicked:'))
@@ -66,7 +66,7 @@ function b(e) {
             icon: o.hGI,
             action: n
         });
-    let L = _.isPlatformEmbedded
+    let L = f.isPlatformEmbedded
             ? (0, r.jsx)(o.sNh, {
                   id: 'stream-settings',
                   label: E.intl.string(E.t.ytAD9f),
@@ -81,7 +81,7 @@ function b(e) {
                   action: D
               })
             : null,
-        M =
+        k =
             S && !y
                 ? (0, r.jsx)(o.sNh, {
                       id: 'change-windows',
@@ -90,7 +90,7 @@ function b(e) {
                       action: w
                   })
                 : null,
-        k = (0, r.jsx)(o.sNh, {
+        M = (0, r.jsx)(o.sNh, {
             id: 'stop-streaming',
             label: E.intl.string(E.t.S5anIS),
             icon: o.g5r,
@@ -98,9 +98,9 @@ function b(e) {
         });
     return O
         ? (0, r.jsxs)(r.Fragment, {
-              children: [k, M, L, x]
+              children: [M, k, L, x]
           })
         : (0, r.jsxs)(r.Fragment, {
-              children: [L, b ? R : null, x, M, k]
+              children: [L, b ? R : null, x, k, M]
           });
 }

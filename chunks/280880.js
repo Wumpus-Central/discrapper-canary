@@ -9,7 +9,7 @@ var i = n(120356),
     c = n(388032),
     u = n(419718),
     d = n(675133);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,7 +33,7 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
@@ -83,7 +83,7 @@ function g(e, t) {
 }
 function E(e) {
     var { guild: t, focused: n, onSelectItem: i } = e,
-        _ = m(e, ['guild', 'focused', 'onSelectItem']);
+        f = m(e, ['guild', 'focused', 'onSelectItem']);
     let { canCreateExpressions: p } = (0, s.XJ)(t);
     return (0, r.jsx)(o.ua7, {
         text: c.intl.string(c.t['fHo+z8']),
@@ -91,10 +91,10 @@ function E(e) {
         children: (e) =>
             (0, r.jsx)(
                 'li',
-                h(f({ className: u.soundButtonWrapper }, e), {
+                h(_({ className: u.soundButtonWrapper }, e), {
                     children: (0, r.jsxs)(
                         o.kL8,
-                        h(f({}, _), {
+                        h(_({}, f), {
                             'aria-label': c.intl.formatToPlainString(c.t.c1qVYm, { guildName: t.name }),
                             className: a()(d.soundAddButton, {
                                 [d.focused]: n,

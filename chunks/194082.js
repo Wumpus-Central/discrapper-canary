@@ -1,7 +1,7 @@
 n.d(t, {
     OH: () => d,
     ZP: () => p,
-    eE: () => _,
+    eE: () => f,
     jZ: () => u
 });
 var r = n(255367);
@@ -19,29 +19,29 @@ let d = {
         LARGE: c.liveLarge,
         SMALL: c.liveSmall
     },
-    _ = {
+    f = {
         [s.Dv2.ROUND]: c.liveShapeRound,
         [s.Dv2.ROUND_LEFT]: c.liveShapeRoundLeft,
         [s.Dv2.ROUND_RIGHT]: c.liveShapeRoundRight,
         [s.Dv2.SQUARE]: ''
     };
-function f(e) {
-    let { className: t, style: n, shape: i = s.Dv2.ROUND, look: u = 'RED', size: f = d.LARGE } = e;
+function _(e) {
+    let { className: t, style: n, shape: i = s.Dv2.ROUND, look: u = 'RED', size: _ = d.LARGE } = e;
     return 'RED' === u
         ? (0, r.jsx)(s.IGR, {
               text: l.intl.string(l.t.dI3q4u),
-              className: a()(t, c.live, f),
+              className: a()(t, c.live, _),
               color: o.Z.unsafe_rawColors.RED_400.css,
-              shape: _[i],
+              shape: f[i],
               style: n
           })
         : (0, r.jsx)(s.IGR, {
               text: l.intl.string(l.t.dI3q4u),
-              className: a()(t, c.live, f, c.grey),
+              className: a()(t, c.live, _, c.grey),
               disableColor: !0,
-              shape: _[i],
+              shape: f[i],
               style: n
           });
 }
-(f.Looks = u), (f.Sizes = d);
-let p = f;
+(_.Looks = u), (_.Sizes = d);
+let p = _;

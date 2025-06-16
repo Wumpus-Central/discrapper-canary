@@ -19,8 +19,8 @@ var r = n(434179),
     c = n(19780),
     u = n(797258),
     d = n(626135),
-    _ = n(960048),
-    f = n(607214),
+    f = n(960048),
+    _ = n(607214),
     p = n(258609),
     h = n(893387),
     m = n(981631),
@@ -133,7 +133,7 @@ async function A() {
             })
         ).body.nonce;
     } catch (e) {
-        _.Z.captureException(e);
+        f.Z.captureException(e);
     }
     return e;
 }
@@ -253,7 +253,7 @@ async function w(e, t, n) {
     });
 }
 async function D(e, t, n) {
-    await f.Z.maybeShowPTTAlert(e), await O();
+    await _.Z.maybeShowPTTAlert(e), await O();
     let r = await A();
     await P(e, t, n, r), (0, h.Z)(n.id, e);
 }

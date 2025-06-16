@@ -1,11 +1,11 @@
 n.d(t, {
-    Dz: () => f,
-    SW: () => w,
+    Dz: () => p,
+    SW: () => D,
     T_: () => M,
-    _v: () => k,
-    jd: () => x,
-    pz: () => D,
-    s5: () => R
+    _v: () => j,
+    jd: () => k,
+    pz: () => L,
+    s5: () => P
 }),
     n(388685),
     n(467055),
@@ -17,9 +17,10 @@ var r = n(921738),
     i = n.n(r),
     a = n(259443),
     o = n(433517),
-    s = n(358085),
-    l = n(981631);
-function c(e, t, n) {
+    s = n(857192),
+    l = n(358085),
+    c = n(981631);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +33,7 @@ function c(e, t, n) {
         e
     );
 }
-function u(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,15 +44,15 @@ function u(e) {
                 })
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                u(e, t, n[t]);
             });
     }
     return e;
 }
-let d = new a.Yd('KeyboardLayoutMapUtils'),
-    _ = (0, s.isLinux)() ? l.HsE : (0, s.isMac)() ? l.REU : (0, s.isWindows)() || __OVERLAY__ ? l.iC$ : i().codes,
-    f = new Set([192, 220, 222, 223, 229]),
-    p = Object.freeze({
+let f = new a.Yd('KeyboardLayoutMapUtils'),
+    _ = (0, l.isLinux)() ? c.HsE : (0, l.isMac)() ? c.REU : (0, l.isWindows)() || __OVERLAY__ ? c.iC$ : i().codes,
+    p = new Set([192, 220, 222, 223, 229]),
+    h = Object.freeze({
         KeyA: 'a',
         KeyB: 'b',
         KeyC: 'c',
@@ -101,10 +102,10 @@ let d = new a.Yd('KeyboardLayoutMapUtils'),
         BracketRight: ']',
         IntlBackslash: '\xA7'
     });
-function h(e) {
+function m(e) {
     return null == e ? e : e.toLocaleLowerCase();
 }
-class m {
+class g {
     get(e) {
         return this.map.get(e);
     }
@@ -129,61 +130,61 @@ class m {
     _set(e, t) {
         this.map.set(e, t);
     }
-    constructor(e = p) {
-        c(this, 'map', void 0),
+    constructor(e = h) {
+        u(this, 'map', void 0),
             (this.map = new Map(
                 Object.entries(e).map((e) => {
                     let [t, n] = e;
-                    return [t, h(n)];
+                    return [t, m(n)];
                 })
             ));
     }
 }
-let g = new m();
-async function E() {
+let E = new g();
+async function b() {
     var e;
-    if (__OVERLAY__) return (g = new m()), !1;
+    if (__OVERLAY__) return (E = new g()), !1;
     if ((null == (e = navigator.keyboard) ? void 0 : e.getLayoutMap) != null)
         try {
             let e = await navigator.keyboard.getLayoutMap();
-            return (g = new m(Object.fromEntries(e.entries()))), !0;
+            return (E = new g(Object.fromEntries(e.entries()))), !0;
         } catch (e) {
-            g = new m();
+            E = new g();
         }
     return !1;
 }
-function b() {
-    return g;
+function y() {
+    return E;
 }
-function y(e) {
+function O(e) {
     let t = new Set(),
         n = {};
     for (let [r, i] of Object.entries(e)) {
-        let e = h(r);
+        let e = m(r);
         if (t.has(e) && null != n[e] && n[e] !== i) {
-            d.error('Seperate keyCode mappings found for: '.concat(e));
+            f.error('Seperate keyCode mappings found for: '.concat(e));
             continue;
         }
         t.add(e), (n[e] = i);
     }
     return n;
 }
-function O(e) {
+function v(e) {
     return {
         keyCode: e.keyCode,
-        key: null != e.key ? h(e.key) : void 0,
+        key: null != e.key ? m(e.key) : void 0,
         code: e.code
     };
 }
-let v = 'keyboard-layout-map';
-function I() {
+let I = 'keyboard-layout-map';
+function T() {
     var e;
-    return null != (e = o.K.get(v)) ? e : null;
+    return null != (e = o.K.get(I)) ? e : null;
 }
-function T(e) {
-    o.K.set(v, e);
+function S(e) {
+    o.K.set(I, e);
 }
-class S {
+class A {
     _setCachedKeyCodeMapEntries() {
         (this._cachedKeyCodeMapEntries = Object.entries(this.keyCodeMap).map((e) => {
             let [t, n] = e;
@@ -229,7 +230,7 @@ class S {
         return e;
     }
     _initializeInternalLayoutMap() {
-        let e = b();
+        let e = y();
         (this._internalKeyLayoutMap = new Map(Array.from(e.entries()))), this._setCachedKeyLayoutMapEntries();
     }
     _hasExactMatch(e) {
@@ -239,20 +240,20 @@ class S {
     }
     addEvent(e) {
         var t, n;
-        let r = O(e);
-        null == this._internalKeyLayoutMap && this._initializeInternalLayoutMap(), this._hasExactMatch(r) || (null != r.key && 'dead' !== r.key && (null == this.keyMap[r.key] ? (this.keyMap[r.key] = r.keyCode) : this.keyMap[r.key] !== r.keyCode && d.error('KeyboardMapper - Key code mismatch for key '.concat(r.key, ': ').concat(this.keyMap[r.key], ' !== ').concat(r.keyCode)), (this.keyCodeMap[r.keyCode] = null != (n = this.keyCodeMap[r.keyCode]) ? n : []), this.keyCodeMap[r.keyCode].push(r), null == (t = this._internalKeyLayoutMap) || t.set(r.code, r.key), this.updateCaches()));
+        let r = v(e);
+        null == this._internalKeyLayoutMap && this._initializeInternalLayoutMap(), this._hasExactMatch(r) || (null != r.key && 'dead' !== r.key && (null == this.keyMap[r.key] ? (this.keyMap[r.key] = r.keyCode) : this.keyMap[r.key] !== r.keyCode && s.default.logKeyboardMismatches && f.error('KeyboardMapper - Key code mismatch for key '.concat(r.key, ': ').concat(this.keyMap[r.key], ' !== ').concat(r.keyCode)), (this.keyCodeMap[r.keyCode] = null != (n = this.keyCodeMap[r.keyCode]) ? n : []), this.keyCodeMap[r.keyCode].push(r), null == (t = this._internalKeyLayoutMap) || t.set(r.code, r.key), this.updateCaches()));
     }
     updateCaches() {
         this._setCachedKeyCodeMapEntries(), this._setCachedKeyMapEntries(), this._setCachedKeyLayoutMapEntries();
     }
     reset() {
-        (this._internalKeyLayoutMap = null), (this.keyMap = y(u({}, this._defaultKeyMap))), this._initializeInternalLayoutMap(), (this.keyCodeMap = this._buildKeyCodeMapFromKeyMap()), this.updateCaches(), this.save();
+        (this._internalKeyLayoutMap = null), (this.keyMap = O(d({}, this._defaultKeyMap))), this._initializeInternalLayoutMap(), (this.keyCodeMap = this._buildKeyCodeMapFromKeyMap()), this.updateCaches(), this.save();
     }
     save() {
-        T(this.keyMap);
+        S(this.keyMap);
     }
     getLayoutMap() {
-        return null == this._internalKeyLayoutMap ? b() : this._internalKeyLayoutMap;
+        return null == this._internalKeyLayoutMap ? y() : this._internalKeyLayoutMap;
     }
     getKeyCode(e) {
         return this.keyMap[e];
@@ -261,8 +262,8 @@ class S {
         var t;
         let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             r = this.cachedKeyLayoutMapEntries;
-        n && (r = Array.from(b().entries()));
-        let i = h(e),
+        n && (r = Array.from(y().entries()));
+        let i = m(e),
             a =
                 null ==
                 (t = r.find((e) => {
@@ -274,12 +275,12 @@ class S {
         return null != a ? a : e;
     }
     constructor(e = {}) {
-        c(this, 'keyCodeMap', void 0), c(this, 'keyMap', void 0), c(this, '_internalKeyLayoutMap', null), c(this, '_defaultKeyMap', void 0), c(this, '_cachedKeyCodeMapEntries', []), c(this, '_cachedKeyMapEntries', []), c(this, '_cachedKeyLayoutMapEntries', []), c(this, '_cachedAllEvents', []), (this._defaultKeyMap = e);
-        let t = I();
-        null != t ? (this.keyMap = t) : (this.keyMap = y(u({}, e))), this._initializeInternalLayoutMap(), (this.keyCodeMap = this._buildKeyCodeMapFromKeyMap()), this.updateCaches(), this.save();
+        u(this, 'keyCodeMap', void 0), u(this, 'keyMap', void 0), u(this, '_internalKeyLayoutMap', null), u(this, '_defaultKeyMap', void 0), u(this, '_cachedKeyCodeMapEntries', []), u(this, '_cachedKeyMapEntries', []), u(this, '_cachedKeyLayoutMapEntries', []), u(this, '_cachedAllEvents', []), (this._defaultKeyMap = e);
+        let t = T();
+        null != t ? (this.keyMap = t) : (this.keyMap = O(d({}, e))), this._initializeInternalLayoutMap(), (this.keyCodeMap = this._buildKeyCodeMapFromKeyMap()), this.updateCaches(), this.save();
     }
 }
-class A extends S {
+class N extends A {
     getKeyString(e, t) {
         var n;
         let r = this.getKeyCodeMapItem(e);
@@ -308,17 +309,17 @@ class A extends S {
         );
     }
     findExactKeyboardEventMatch(e, t, n) {
-        let r = h(e);
+        let r = m(e);
         if ((null == t && (t = this.findCodeFromKeyboardLayoutMap(r)), null != n)) {
             let e = this.keyCodeMap[n];
             if (null != e) {
-                let n = e.find((e) => h(e.key) === r && e.code === t);
+                let n = e.find((e) => m(e.key) === r && e.code === t);
                 if (null != n) return n;
             }
         }
         if (null != n && null != t)
             return this.cachedAllEvents.find((e) => {
-                let i = h(e.key) === r,
+                let i = m(e.key) === r,
                     a = e.keyCode === n,
                     o = e.code === t;
                 return a && i && o;
@@ -327,7 +328,7 @@ class A extends S {
     getWeightedPossibleKeyStringMatches(e, t, n) {
         return this.cachedAllEvents
             .filter((r) => {
-                let i = h(r.key) === h(e),
+                let i = m(r.key) === m(e),
                     a = null == n || r.keyCode === n,
                     o = null == t || r.code === t;
                 return a && i && o;
@@ -335,18 +336,18 @@ class A extends S {
             .sort((r, i) => {
                 let a = (r) => {
                         let i = 0;
-                        return h(r.key) === h(e) && (i += 0.5), null != t && r.code === t && (i += 0.3), null != n && r.keyCode === n && (i += 0.2), i;
+                        return m(r.key) === m(e) && (i += 0.5), null != t && r.code === t && (i += 0.3), null != n && r.keyCode === n && (i += 0.2), i;
                     },
                     o = a(r);
                 return a(i) - o;
             });
     }
     findKeyboardEventByKey(e, t, n) {
-        let r = h(e);
+        let r = m(e);
         if ((null == t && (t = this.findCodeFromKeyboardLayoutMap(r)), null != n)) {
             let e = this.keyCodeMap[n];
             if (null != e) {
-                let n = e.find((e) => h(e.key) === r && e.code === t);
+                let n = e.find((e) => m(e.key) === r && e.code === t);
                 if (null != n) return n;
             }
         }
@@ -369,11 +370,11 @@ class A extends S {
         return null == n ? this.getDefaultKeyboardEventShape(void 0, e, t) : this.findKeyboardEventByKey(n, t, e);
     }
     getDefaultKeyboardEventShape(e, t, n) {
-        let r = null != e ? h(e) : void 0;
+        let r = null != e ? m(e) : void 0;
         if (null != r) {
             let e = this.keyMap[r];
             if (null == e) return;
-            return O({
+            return v({
                 keyCode: e,
                 key: r,
                 code: null != n ? n : this.findCodeFromKeyboardLayoutMap(r)
@@ -390,7 +391,7 @@ class A extends S {
                     ? void 0
                     : i[0];
             if (null == e) return;
-            return O({
+            return v({
                 keyCode: t,
                 key: e,
                 code: null != n ? n : this.findCodeFromKeyboardLayoutMap(e)
@@ -398,19 +399,19 @@ class A extends S {
         }
     }
 }
-let N = null,
-    C = null;
-function R() {
-    return null != C
-        ? C
-        : (C = new Promise(async (e) => {
-              await E(),
-                  (N = new A(_)),
+let C = null,
+    R = null;
+function P() {
+    return null != R
+        ? R
+        : (R = new Promise(async (e) => {
+              await b(),
+                  (C = new N(_)),
                   document.addEventListener('keydown', (e) => {
                       try {
-                          null == N || N.addEvent(e);
+                          null == C || C.addEvent(e);
                       } catch (t) {
-                          d.error('KeyboardMapper - Error adding event', {
+                          f.error('KeyboardMapper - Error adding event', {
                               event: e,
                               error: t
                           });
@@ -419,43 +420,43 @@ function R() {
                   e();
           }));
 }
-function P() {
-    return null == N ? (R(), null) : N;
+function w() {
+    return null == C ? (P(), null) : C;
 }
-async function w() {
+async function D() {
     var e;
-    await E(), null == (e = P()) || e.reset();
+    await b(), null == (e = w()) || e.reset();
 }
-function D() {
+function L() {
     var e, t;
     let n = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    return n ? b() : null != (t = null == (e = P()) ? void 0 : e.getLayoutMap()) ? t : b();
-}
-function L(e) {
-    var t, n;
-    let r = null != e ? h(e) : void 0;
-    if (null != r) return null != (n = null == (t = P()) ? void 0 : t.findCodeFromKeyboardLayoutMap(r)) ? n : void 0;
+    return n ? y() : null != (t = null == (e = w()) ? void 0 : e.getLayoutMap()) ? t : y();
 }
 function x(e) {
-    let t = O(e);
+    var t, n;
+    let r = null != e ? m(e) : void 0;
+    if (null != r) return null != (n = null == (t = w()) ? void 0 : t.findCodeFromKeyboardLayoutMap(r)) ? n : void 0;
+}
+function k(e) {
+    let t = v(e);
     if (null != t.key) {
         var n, r;
-        return null != (r = null == (n = P()) ? void 0 : n.findExactKeyboardEventMatch(t.key, t.code, t.keyCode)) ? r : null;
+        return null != (r = null == (n = w()) ? void 0 : n.findExactKeyboardEventMatch(t.key, t.code, t.keyCode)) ? r : null;
     }
     return null;
 }
 function M(e) {
     var t, n, r, i;
-    let a = null != e ? h(e) : void 0;
+    let a = null != e ? m(e) : void 0;
     if (null == a) return null;
-    let o = L(a),
-        s = null != (n = null == (t = P()) ? void 0 : t.findKeyboardEventByKey(a, o)) ? n : null;
+    let o = x(a),
+        s = null != (n = null == (t = w()) ? void 0 : t.findKeyboardEventByKey(a, o)) ? n : null;
     if (null != s) return s;
     try {
-        let e = null != (i = null == (r = P()) ? void 0 : r.getDefaultKeyboardEventShape(a, void 0, o)) ? i : null;
+        let e = null != (i = null == (r = w()) ? void 0 : r.getDefaultKeyboardEventShape(a, void 0, o)) ? i : null;
         if (null == e) return null;
         let t = new KeyboardEvent('keydown', e);
-        return O({
+        return v({
             keyCode: t.keyCode,
             key: t.key,
             code: t.code
@@ -464,15 +465,15 @@ function M(e) {
         return null;
     }
 }
-function k(e) {
+function j(e) {
     var t, n, r, i;
-    let a = null != (n = null == (t = P()) ? void 0 : t.findKeyboardEventByKeyCode(e)) ? n : null;
+    let a = null != (n = null == (t = w()) ? void 0 : t.findKeyboardEventByKeyCode(e)) ? n : null;
     if (null != a) return a;
     try {
-        let t = null != (i = null == (r = P()) ? void 0 : r.getDefaultKeyboardEventShape(void 0, e)) ? i : null;
+        let t = null != (i = null == (r = w()) ? void 0 : r.getDefaultKeyboardEventShape(void 0, e)) ? i : null;
         if (null == t) return null;
         let n = new KeyboardEvent('keydown', t);
-        return O({
+        return v({
             keyCode: n.keyCode,
             key: n.key,
             code: n.code

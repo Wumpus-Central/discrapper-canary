@@ -13,7 +13,7 @@ var i,
     c = n(70956),
     u = n(963838),
     d = n(354459);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function _(e, t, n) {
         e
     );
 }
-let f = [],
+let _ = [],
     p = {},
     h = [],
     m = (e) => {
@@ -75,7 +75,7 @@ let f = [],
     },
     T = (e) => {
         let { emoji: t } = e;
-        null != t && (f.unshift(t), (f = (0, a.uniqBy)(f, 'name')).length > d.e5 + 1 && f.pop());
+        null != t && (_.unshift(t), (_ = (0, a.uniqBy)(_, 'name')).length > d.e5 + 1 && _.pop());
     },
     S = (e) => {
         let { userId: t } = e;
@@ -83,7 +83,7 @@ let f = [],
     };
 class A extends (i = o.ZP.Store) {
     get recentlyUsedEmojis() {
-        return f;
+        return _;
     }
     get isOnCooldown() {
         return null != r && new Date() < r;
@@ -95,7 +95,7 @@ class A extends (i = o.ZP.Store) {
         return p[e];
     }
 }
-_(A, 'displayName', 'VoiceChannelEffectsStore');
+f(A, 'displayName', 'VoiceChannelEffectsStore');
 let N = new A(l.Z, {
     VOICE_CHANNEL_EFFECT_CLEAR: S,
     VOICE_CHANNEL_EFFECT_RECENT_EMOJI: T,

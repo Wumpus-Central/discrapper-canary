@@ -35,7 +35,7 @@ function d(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,12 +47,12 @@ function _(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -73,7 +73,7 @@ function I(e) {
     v(e.connectedAccounts.map((e) => new l.Z(e)));
 }
 function T(e) {
-    e.local && null != e.accounts ? v(e.accounts.map((e) => new l.Z(f(d({}, e), { integrations: e.integrations.map((e) => f(d({}, e), { guild: new c.ZP(e.guild) })) })))) : o.Z.fetch();
+    e.local && null != e.accounts ? v(e.accounts.map((e) => new l.Z(_(d({}, e), { integrations: e.integrations.map((e) => _(d({}, e), { guild: new c.ZP(e.guild) })) })))) : o.Z.fetch();
 }
 function S(e) {
     E[e.integrationId] = e.joining;

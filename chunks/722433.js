@@ -10,9 +10,9 @@ var i = r(n(715753)),
     c = n(133874),
     u = n(698091),
     d = r(n(117374)),
-    _ = /^--/;
-function f(e, t) {
-    return null == t || 'boolean' == typeof t || '' === t ? '' : 'number' != typeof t || 0 === t || _.test(e) || (m.hasOwnProperty(e) && m[e]) ? ('' + t).trim() : t + 'px';
+    f = /^--/;
+function _(e, t) {
+    return null == t || 'boolean' == typeof t || '' === t ? '' : 'number' != typeof t || 0 === t || f.test(e) || (m.hasOwnProperty(e) && m[e]) ? ('' + t).trim() : t + 'px';
 }
 var p = {};
 function h(e, t) {
@@ -36,8 +36,8 @@ function h(e, t) {
     u.Globals.frameLoop.onWrite(function () {
         for (var t in (void 0 !== o && (e.textContent = o), a))
             if (a.hasOwnProperty(t)) {
-                var n = f(t, a[t]);
-                'float' === t ? (t = 'cssFloat') : _.test(t) ? e.style.setProperty(t, n) : (e.style[t] = n);
+                var n = _(t, a[t]);
+                'float' === t ? (t = 'cssFloat') : f.test(t) ? e.style.setProperty(t, n) : (e.style[t] = n);
             }
         h.forEach(function (t, n) {
             e.setAttribute(t, d[n]);

@@ -11,7 +11,7 @@ var r = n(255367),
     c = n(726033),
     u = n(228168),
     d = n(231338);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,7 +35,7 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
@@ -96,7 +96,7 @@ let E = (0, o.pxk)(o.EFr.SIZE_80),
         position: void 0
     };
 function O(e) {
-    var { children: t, user: n, currentUser: a, guildId: s, channelId: d, messageId: _, roleId: p, disableUserProfileLink: g, newAnalyticsLocations: b, appContext: y, avatarUrl: O, preload: v, renderPopout: I, onRequestOpen: T, onRequestClose: S, onClosePopout: A, shouldShow: N, shouldPreload: C = !0 } = e,
+    var { children: t, user: n, currentUser: a, guildId: s, channelId: d, messageId: f, roleId: p, disableUserProfileLink: g, newAnalyticsLocations: b, appContext: y, avatarUrl: O, preload: v, renderPopout: I, onRequestOpen: T, onRequestClose: S, onClosePopout: A, shouldShow: N, shouldPreload: C = !0 } = e,
         R = m(e, ['children', 'user', 'currentUser', 'guildId', 'channelId', 'messageId', 'roleId', 'disableUserProfileLink', 'newAnalyticsLocations', 'appContext', 'avatarUrl', 'preload', 'renderPopout', 'onRequestOpen', 'onRequestClose', 'onClosePopout', 'shouldShow', 'shouldPreload']);
     let P = i.useRef(void 0),
         w = i.useCallback(
@@ -118,13 +118,13 @@ function O(e) {
                     ? I(e, P.current)
                     : (0, r.jsx)(
                           c.Z,
-                          h(f({}, e), {
+                          h(_({}, e), {
                               user: n,
                               currentUser: a,
                               guildId: s,
                               channelId: d,
                               roleId: p,
-                              messageId: _,
+                              messageId: f,
                               disableUserProfileLink: g,
                               newAnalyticsLocations: b,
                               appContext: y,
@@ -134,12 +134,12 @@ function O(e) {
                               }
                           })
                       ),
-            [n, a, I, s, d, p, _, g, b, y, A]
+            [n, a, I, s, d, p, f, g, b, y, A]
         );
     return (0, r.jsx)(
         o.yRy,
         h(
-            f(
+            _(
                 {
                     popoutKey: u.Tg,
                     shouldShow: N,
@@ -163,7 +163,7 @@ function v(e) {
         ? t(b, y)
         : (0, r.jsx)(
               O,
-              h(f({}, o), {
+              h(_({}, o), {
                   user: c,
                   currentUser: l,
                   children: t

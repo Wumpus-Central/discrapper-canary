@@ -35,7 +35,7 @@ function d(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,25 +47,25 @@ function _(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 function p(e) {
-    let { categories: t, collapsedCategories: n, containerWidth: u, store: _, onSelectItem: p, onSearchExpressions: h, hasSearchResults: m, defaultSearchPlaceholder: g, emptySearchPlaceholder: E, renderEmptyState: b, renderRow: y, renderSection: O, renderSectionHeader: v, renderSectionFooter: I, renderInspector: T, renderEmptySearchState: S, renderCategoryList: A, renderHeaderAccessories: N, rowHeight: C, sectionHeaderHeight: R, sectionFooterHeight: P, itemNodeWidth: w, listPaddingRight: D, itemNodeMargin: L, listPadding: x, gridNavigatorId: M, gridNotice: k, renderHeader: j, renderUpsell: U, setShowUpsell: G } = e,
+    let { categories: t, collapsedCategories: n, containerWidth: u, store: f, onSelectItem: p, onSearchExpressions: h, hasSearchResults: m, defaultSearchPlaceholder: g, emptySearchPlaceholder: E, renderEmptyState: b, renderRow: y, renderSection: O, renderSectionHeader: v, renderSectionFooter: I, renderInspector: T, renderEmptySearchState: S, renderCategoryList: A, renderHeaderAccessories: N, rowHeight: C, sectionHeaderHeight: R, sectionFooterHeight: P, itemNodeWidth: w, listPaddingRight: D, itemNodeMargin: L, listPadding: x, gridNavigatorId: k, gridNotice: M, renderHeader: j, renderUpsell: U, setShowUpsell: G } = e,
         B = i.useRef(null),
         V = i.useRef(null),
         F = i.useRef(null),
         Z = 0 === t.length,
         H = (0, a.Iu)((e) => e.searchQuery),
-        Y = _.useStore((e) => e.inspectedExpressionPosition),
+        Y = f.useStore((e) => e.inspectedExpressionPosition),
         W = (0, o.ep)({
             gridWrapperRef: B,
             containerWidth: u,
@@ -96,8 +96,8 @@ function p(e) {
             expressionsListRef: V,
             expressionsGrid: K,
             onSelectItem: p,
-            store: _,
-            gridNavigatorId: M
+            store: f,
+            gridNavigatorId: k
         }),
         er = i.useCallback(
             (e, t) =>
@@ -112,9 +112,9 @@ function p(e) {
                         sectionIndex: t.sectionIndex
                     },
                     (t) => J(e, t),
-                    (t) => _.setInspectedExpressionPosition(t, e)
+                    (t) => f.setInspectedExpressionPosition(t, e)
                 ),
-            [K, J, $, Q, en, y, _, z]
+            [K, J, $, Q, en, y, f, z]
         ),
         ei = i.useCallback((e) => (null == O ? void 0 : O(t[e])), [t, O]),
         ea = i.useCallback((e) => (null == v ? void 0 : v(t[e], e)), [t, v]),
@@ -128,9 +128,9 @@ function p(e) {
     }, [h, H]),
         i.useEffect(() => {
             var e, t;
-            _.setBottomPosition(null != (t = null == (e = B.current) ? void 0 : e.getBoundingClientRect().bottom) ? t : null);
+            f.setBottomPosition(null != (t = null == (e = B.current) ? void 0 : e.getBoundingClientRect().bottom) ? t : null);
         }),
-        i.useEffect(() => _.resetStoreState, [_.resetStoreState]),
+        i.useEffect(() => f.resetStoreState, [f.resetStoreState]),
         i.useLayoutEffect(() => {
             var e;
             null == (e = F.current) || e.focus();
@@ -139,11 +139,11 @@ function p(e) {
         children: [
             (0, r.jsx)(l.Z, {
                 ref: F,
-                store: _,
+                store: f,
                 hasSendableExpressions: !0,
                 onKeyDown: et,
                 expressionsListRef: V,
-                gridNavigatorId: M,
+                gridNavigatorId: k,
                 defaultSearchPlaceholder: g,
                 emptySearchPlaceholder: E
             }),
@@ -163,19 +163,19 @@ function p(e) {
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           A(V),
-                          null != k &&
+                          null != M &&
                               (0, r.jsx)('div', {
                                   className: c.gridNoticeWrapper,
-                                  children: k
+                                  children: M
                               }),
                           (0, r.jsx)(
                               'div',
-                              f(
+                              _(
                                   d(
                                       {
                                           ref: B,
                                           className: c.listWrapper,
-                                          id: M
+                                          id: k
                                       },
                                       ee
                                   ),
@@ -185,7 +185,7 @@ function p(e) {
                                               ? (0, r.jsx)(s.Z, {
                                                     categories: t,
                                                     ref: V,
-                                                    store: _,
+                                                    store: f,
                                                     hasSearchResults: m,
                                                     listPadding: x,
                                                     renderRow: er,

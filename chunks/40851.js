@@ -25,8 +25,8 @@ let u = new o.b(),
         windowDispatch: u,
         windowId: (0, s.UU)()
     }),
-    _ = new Map();
-function f(e, t) {
+    f = new Map();
+function _(e, t) {
     let [n, r] = i.useState((0, s.ZY)(t)),
         a = i.useMemo(() => new o.b(), []),
         l = i.useMemo(
@@ -48,9 +48,9 @@ function f(e, t) {
             return () => clearInterval(e);
         }, [t, n]),
         i.useEffect(() => {
-            _.set(n, l);
+            f.set(n, l);
             let e = () => {
-                _.delete(n);
+                f.delete(n);
             };
             return t.addEventListener('unload', e), () => t.removeEventListener('unload', e);
         }, [l, t, n]),
@@ -62,7 +62,7 @@ function p(e) {
     let n = e.ownerDocument.defaultView;
     if (null == n) return;
     let r = (0, s.ZY)(n);
-    return null == (t = _.get(r)) ? void 0 : t.windowDispatch;
+    return null == (t = f.get(r)) ? void 0 : t.windowDispatch;
 }
 function h(e) {
     var t;
@@ -71,10 +71,10 @@ function h(e) {
 function m() {
     var e;
     let t = (0, l.GR)();
-    return null == t ? null : null != (e = _.get(t)) ? e : null;
+    return null == t ? null : null != (e = f.get(t)) ? e : null;
 }
 function g(e) {
-    return _.get(e);
+    return f.get(e);
 }
 function E() {
     let e = m();
@@ -82,7 +82,7 @@ function E() {
 }
 function b(e) {
     let { appContext: t, renderWindow: n, children: i } = e,
-        a = f(t, n);
+        a = _(t, n);
     return (0, r.jsx)(d.Provider, {
         value: a,
         children: i

@@ -27,24 +27,24 @@ async function c(t) {
     if (!e) throw Error(`Cannot lazy load integration: ${t}`);
     let c = a[t];
     if ('function' == typeof c) return c;
-    let E = (function (t) {
+    let s = (function (t) {
             let e = (0, r.s3)(),
                 a = e && e.getOptions(),
                 n = (a && a.cdnBaseUrl) || 'https://browser.sentry-cdn.com';
             return new URL(`/${_.J}/${t}.min.js`, n).toString();
         })(e),
-        s = n.m9.document.createElement('script');
-    (s.src = E), (s.crossOrigin = 'anonymous'), (s.referrerPolicy = 'origin');
+        E = n.m9.document.createElement('script');
+    (E.src = s), (E.crossOrigin = 'anonymous'), (E.referrerPolicy = 'origin');
     let l = new Promise((t, e) => {
-        s.addEventListener('load', () => t()), s.addEventListener('error', e);
+        E.addEventListener('load', () => t()), E.addEventListener('error', e);
     });
-    n.m9.document.body.appendChild(s);
+    n.m9.document.body.appendChild(E);
     try {
         await l;
     } catch (e) {
         throw Error(`Error when loading integration: ${t}`);
     }
-    let I = a[t];
-    if ('function' != typeof I) throw Error(`Could not load integration: ${t}`);
-    return I;
+    let u = a[t];
+    if ('function' != typeof u) throw Error(`Could not load integration: ${t}`);
+    return u;
 }

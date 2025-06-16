@@ -7,18 +7,18 @@ var r = n(98405),
     c = n(568033),
     u = n(382698),
     d = n(573078),
-    _ = n(190289),
-    f = a.Symbol,
-    p = f && f.prototype;
-if (i && l(f) && (!('description' in p) || void 0 !== f().description)) {
+    f = n(190289),
+    _ = a.Symbol,
+    p = _ && _.prototype;
+if (i && l(_) && (!('description' in p) || void 0 !== _().description)) {
     var h = {},
         m = function () {
             var e = arguments.length < 1 || void 0 === arguments[0] ? void 0 : u(arguments[0]),
-                t = c(p, this) ? new f(e) : void 0 === e ? f() : f(e);
+                t = c(p, this) ? new _(e) : void 0 === e ? _() : _(e);
             return '' === e && (h[t] = !0), t;
         };
-    _(m, f), (m.prototype = p), (p.constructor = m);
-    var g = 'Symbol(description detection)' === String(f('description detection')),
+    f(m, _), (m.prototype = p), (p.constructor = m);
+    var g = 'Symbol(description detection)' === String(_('description detection')),
         E = o(p.valueOf),
         b = o(p.toString),
         y = /^Symbol\((.*)\)[^)]+$/,

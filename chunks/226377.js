@@ -1,63 +1,63 @@
-a.d(e, { q: () => A });
+a.d(e, { q: () => R });
 var r = a(899517),
     _ = a(622916),
     n = a(101284),
     o = a(263449),
     i = a(255768),
     c = a(696486),
-    E = a(152228),
-    s = a(366569),
+    s = a(152228),
+    E = a(366569),
     l = a(147498);
-function I(t, e) {
+function u(t, e) {
     let a = (0, r.Y)('globalMetricsAggregators', () => new WeakMap()),
         _ = a.get(t);
     if (_) return _;
     let n = new e(t);
     return t.on('flush', () => n.flush()), t.on('close', () => n.close()), a.set(t, n), n;
 }
-function u(t, e, a, r, n = {}) {
-    let E = n.client || (0, o.s3)();
-    if (!E) return;
-    let s = (0, c.HN)(),
-        l = s ? (0, c.Gx)(s) : void 0,
-        R = l && (0, c.XU)(l).description,
-        { unit: A, tags: T, timestamp: N } = n,
-        { release: d, environment: L } = E.getOptions(),
+function I(t, e, a, r, n = {}) {
+    let s = n.client || (0, o.s3)();
+    if (!s) return;
+    let E = (0, c.HN)(),
+        l = E ? (0, c.Gx)(E) : void 0,
+        d = l && (0, c.XU)(l).description,
+        { unit: R, tags: N, timestamp: f } = n,
+        { release: A, environment: T } = s.getOptions(),
         p = {};
-    d && (p.release = d),
-        L && (p.environment = L),
-        R && (p.transaction = R),
+    A && (p.release = A),
+        T && (p.environment = T),
+        d && (p.transaction = d),
         i.X && _.kg.log(`Adding value of ${r} to ${e} metric ${a}`),
-        I(E, t).add(
+        u(s, t).add(
             e,
             a,
             r,
-            A,
+            R,
             {
                 ...p,
-                ...T
+                ...N
             },
-            N
+            f
         );
 }
-function R(t, e, a, r) {
-    u(t, l.g_, e, T(a), r);
+function d(t, e, a, r) {
+    I(t, l.g_, e, N(a), r);
 }
-let A = {
+let R = {
     increment: function (t, e, a = 1, r) {
-        u(t, l.JM, e, T(a), r);
+        I(t, l.JM, e, N(a), r);
     },
-    distribution: R,
+    distribution: d,
     set: function (t, e, a, r) {
-        u(t, l.is, e, a, r);
+        I(t, l.is, e, a, r);
     },
     gauge: function (t, e, a, r) {
-        u(t, l.uG, e, T(a), r);
+        I(t, l.uG, e, N(a), r);
     },
     timing: function (t, e, a, r = 'second', _) {
         if ('function' == typeof a) {
             let r = (0, n.ph)();
-            return (0, E.V0)(
+            return (0, s.V0)(
                 {
                     op: 'metrics.timing',
                     name: e,
@@ -65,12 +65,12 @@ let A = {
                     onlyIfParent: !0
                 },
                 (o) =>
-                    (0, s.i)(
+                    (0, E.i)(
                         () => a(),
                         () => {},
                         () => {
                             let a = (0, n.ph)();
-                            R(t, e, a - r, {
+                            d(t, e, a - r, {
                                 ..._,
                                 unit: 'second'
                             }),
@@ -79,13 +79,13 @@ let A = {
                     )
             );
         }
-        R(t, e, a, {
+        d(t, e, a, {
             ..._,
             unit: r
         });
     },
-    getMetricsAggregatorForClient: I
+    getMetricsAggregatorForClient: u
 };
-function T(t) {
+function N(t) {
     return 'string' == typeof t ? parseInt(t) : t;
 }

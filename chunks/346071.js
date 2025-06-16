@@ -9,8 +9,8 @@ var i = n(481060),
     c = n(774945);
 function u(e) {
     let { fractionalPremiumInfo: t, variant: n = 'default', enablePremiumRebrandDesign: u = !1, style: d } = e,
-        _ = t.fractionalState === o.a$.FP_SUB_PAUSED,
-        f = (0, a.Z)(t.endsAt, _),
+        f = t.fractionalState === o.a$.FP_SUB_PAUSED,
+        _ = (0, a.Z)(t.endsAt, f),
         p = '',
         h = {
             trial: {
@@ -24,14 +24,14 @@ function u(e) {
                 hours: s.t['8Xm6uL']
             }
         };
-    return (f.days > 0 && f.hours > 0
+    return (_.days > 0 && _.hours > 0
         ? (p = s.intl.format(h[n].days_and_hours, {
-              days: f.days,
-              hours: f.hours
+              days: _.days,
+              hours: _.hours
           }))
-        : f.days > 0
-          ? (p = s.intl.format(h[n].days, { days: f.days }))
-          : f.hours > 0 && (p = s.intl.format(h[n].hours, { hours: f.hours })),
+        : _.days > 0
+          ? (p = s.intl.format(h[n].days, { days: _.days }))
+          : _.hours > 0 && (p = s.intl.format(h[n].hours, { hours: _.hours })),
     '' === p)
         ? null
         : u

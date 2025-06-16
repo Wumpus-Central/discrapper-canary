@@ -11,11 +11,11 @@ n.d(t, {
     Oi: () => m,
     Pi: () => y,
     Q2: () => O,
-    Q4: () => _,
+    Q4: () => f,
     Tv: () => h,
     Us: () => v,
     X: () => u,
-    Xr: () => f,
+    Xr: () => _,
     aV: () => ej,
     az: () => K,
     bE: () => ed,
@@ -27,10 +27,10 @@ n.d(t, {
     n9: () => S,
     nI: () => d,
     o8: () => w,
-    os: () => M,
+    os: () => k,
     p5: () => V,
     sf: () => ec,
-    tA: () => ef,
+    tA: () => e_,
     v_: () => $,
     yX: () => eL
 }),
@@ -63,10 +63,10 @@ var r = n(230367),
     d = (function (e) {
         return (e[(e.NO_GUILD_ONBOARDING = 0)] = 'NO_GUILD_ONBOARDING'), (e[(e.GUILD_NOTICE_SHOWN = 1)] = 'GUILD_NOTICE_SHOWN'), (e[(e.GUILD_NOTICE_CLEARED = 2)] = 'GUILD_NOTICE_CLEARED'), e;
     })({}),
-    _ = (function (e) {
+    f = (function (e) {
         return (e[(e.UNSET_EXPLICIT_CONTENT_REDACTION = 0)] = 'UNSET_EXPLICIT_CONTENT_REDACTION'), (e[(e.SHOW = 1)] = 'SHOW'), (e[(e.BLUR = 2)] = 'BLUR'), (e[(e.BLOCK = 3)] = 'BLOCK'), e;
     })({}),
-    f = (function (e) {
+    _ = (function (e) {
         return (e[(e.DEFAULT_UNSET = 0)] = 'DEFAULT_UNSET'), (e[(e.DISABLED = 1)] = 'DISABLED'), (e[(e.NON_FRIENDS = 2)] = 'NON_FRIENDS'), (e[(e.FRIENDS_AND_NON_FRIENDS = 3)] = 'FRIENDS_AND_NON_FRIENDS'), e;
     })({}),
     p = (function (e) {
@@ -142,7 +142,7 @@ class P extends o.C {
                     a.inbox = L.internalBinaryRead(e, e.uint32(), n, a.inbox);
                     break;
                 case 3:
-                    a.guilds = M.internalBinaryRead(e, e.uint32(), n, a.guilds);
+                    a.guilds = k.internalBinaryRead(e, e.uint32(), n, a.guilds);
                     break;
                 case 4:
                     a.userContent = K.internalBinaryRead(e, e.uint32(), n, a.userContent);
@@ -160,7 +160,7 @@ class P extends o.C {
                     a.privacy = ed.internalBinaryRead(e, e.uint32(), n, a.privacy);
                     break;
                 case 9:
-                    a.debug = ef.internalBinaryRead(e, e.uint32(), n, a.debug);
+                    a.debug = e_.internalBinaryRead(e, e.uint32(), n, a.debug);
                     break;
                 case 10:
                     a.gameLibrary = eh.internalBinaryRead(e, e.uint32(), n, a.gameLibrary);
@@ -178,7 +178,7 @@ class P extends o.C {
                     a.guildFolders = ew.internalBinaryRead(e, e.uint32(), n, a.guildFolders);
                     break;
                 case 15:
-                    a.favorites = eM.internalBinaryRead(e, e.uint32(), n, a.favorites);
+                    a.favorites = ek.internalBinaryRead(e, e.uint32(), n, a.favorites);
                     break;
                 case 16:
                     a.audioContextSettings = eV.internalBinaryRead(e, e.uint32(), n, a.audioContextSettings);
@@ -220,7 +220,7 @@ class P extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        e.versions && c.L.internalBinaryWrite(e.versions, t.tag(1, r.TD.LengthDelimited).fork(), n).join(), e.inbox && L.internalBinaryWrite(e.inbox, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), e.guilds && M.internalBinaryWrite(e.guilds, t.tag(3, r.TD.LengthDelimited).fork(), n).join(), e.userContent && K.internalBinaryWrite(e.userContent, t.tag(4, r.TD.LengthDelimited).fork(), n).join(), e.voiceAndVideo && $.internalBinaryWrite(e.voiceAndVideo, t.tag(5, r.TD.LengthDelimited).fork(), n).join(), e.textAndImages && es.internalBinaryWrite(e.textAndImages, t.tag(6, r.TD.LengthDelimited).fork(), n).join(), e.notifications && ec.internalBinaryWrite(e.notifications, t.tag(7, r.TD.LengthDelimited).fork(), n).join(), e.privacy && ed.internalBinaryWrite(e.privacy, t.tag(8, r.TD.LengthDelimited).fork(), n).join(), e.debug && ef.internalBinaryWrite(e.debug, t.tag(9, r.TD.LengthDelimited).fork(), n).join(), e.gameLibrary && eh.internalBinaryWrite(e.gameLibrary, t.tag(10, r.TD.LengthDelimited).fork(), n).join(), e.status && eg.internalBinaryWrite(e.status, t.tag(11, r.TD.LengthDelimited).fork(), n).join(), e.localization && eO.internalBinaryWrite(e.localization, t.tag(12, r.TD.LengthDelimited).fork(), n).join(), e.appearance && eS.internalBinaryWrite(e.appearance, t.tag(13, r.TD.LengthDelimited).fork(), n).join(), e.guildFolders && ew.internalBinaryWrite(e.guildFolders, t.tag(14, r.TD.LengthDelimited).fork(), n).join(), e.favorites && eM.internalBinaryWrite(e.favorites, t.tag(15, r.TD.LengthDelimited).fork(), n).join(), e.audioContextSettings && eV.internalBinaryWrite(e.audioContextSettings, t.tag(16, r.TD.LengthDelimited).fork(), n).join(), e.communities && eZ.internalBinaryWrite(e.communities, t.tag(17, r.TD.LengthDelimited).fork(), n).join(), e.broadcast && eq.internalBinaryWrite(e.broadcast, t.tag(18, r.TD.LengthDelimited).fork(), n).join(), e.clips && eQ.internalBinaryWrite(e.clips, t.tag(19, r.TD.LengthDelimited).fork(), n).join(), e.forLater && e1.internalBinaryWrite(e.forLater, t.tag(20, r.TD.LengthDelimited).fork(), n).join(), e.safetySettings && e$.internalBinaryWrite(e.safetySettings, t.tag(21, r.TD.LengthDelimited).fork(), n).join(), e.icymiSettings && e3.internalBinaryWrite(e.icymiSettings, t.tag(22, r.TD.LengthDelimited).fork(), n).join(), e.applications && e5.internalBinaryWrite(e.applications, t.tag(23, r.TD.LengthDelimited).fork(), n).join(), e.ads && tr.internalBinaryWrite(e.ads, t.tag(24, r.TD.LengthDelimited).fork(), n).join(), e.inAppFeedbackSettings && ts.internalBinaryWrite(e.inAppFeedbackSettings, t.tag(25, r.TD.LengthDelimited).fork(), n).join();
+        e.versions && c.L.internalBinaryWrite(e.versions, t.tag(1, r.TD.LengthDelimited).fork(), n).join(), e.inbox && L.internalBinaryWrite(e.inbox, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), e.guilds && k.internalBinaryWrite(e.guilds, t.tag(3, r.TD.LengthDelimited).fork(), n).join(), e.userContent && K.internalBinaryWrite(e.userContent, t.tag(4, r.TD.LengthDelimited).fork(), n).join(), e.voiceAndVideo && $.internalBinaryWrite(e.voiceAndVideo, t.tag(5, r.TD.LengthDelimited).fork(), n).join(), e.textAndImages && es.internalBinaryWrite(e.textAndImages, t.tag(6, r.TD.LengthDelimited).fork(), n).join(), e.notifications && ec.internalBinaryWrite(e.notifications, t.tag(7, r.TD.LengthDelimited).fork(), n).join(), e.privacy && ed.internalBinaryWrite(e.privacy, t.tag(8, r.TD.LengthDelimited).fork(), n).join(), e.debug && e_.internalBinaryWrite(e.debug, t.tag(9, r.TD.LengthDelimited).fork(), n).join(), e.gameLibrary && eh.internalBinaryWrite(e.gameLibrary, t.tag(10, r.TD.LengthDelimited).fork(), n).join(), e.status && eg.internalBinaryWrite(e.status, t.tag(11, r.TD.LengthDelimited).fork(), n).join(), e.localization && eO.internalBinaryWrite(e.localization, t.tag(12, r.TD.LengthDelimited).fork(), n).join(), e.appearance && eS.internalBinaryWrite(e.appearance, t.tag(13, r.TD.LengthDelimited).fork(), n).join(), e.guildFolders && ew.internalBinaryWrite(e.guildFolders, t.tag(14, r.TD.LengthDelimited).fork(), n).join(), e.favorites && ek.internalBinaryWrite(e.favorites, t.tag(15, r.TD.LengthDelimited).fork(), n).join(), e.audioContextSettings && eV.internalBinaryWrite(e.audioContextSettings, t.tag(16, r.TD.LengthDelimited).fork(), n).join(), e.communities && eZ.internalBinaryWrite(e.communities, t.tag(17, r.TD.LengthDelimited).fork(), n).join(), e.broadcast && eq.internalBinaryWrite(e.broadcast, t.tag(18, r.TD.LengthDelimited).fork(), n).join(), e.clips && eQ.internalBinaryWrite(e.clips, t.tag(19, r.TD.LengthDelimited).fork(), n).join(), e.forLater && e1.internalBinaryWrite(e.forLater, t.tag(20, r.TD.LengthDelimited).fork(), n).join(), e.safetySettings && e$.internalBinaryWrite(e.safetySettings, t.tag(21, r.TD.LengthDelimited).fork(), n).join(), e.icymiSettings && e3.internalBinaryWrite(e.icymiSettings, t.tag(22, r.TD.LengthDelimited).fork(), n).join(), e.applications && e5.internalBinaryWrite(e.applications, t.tag(23, r.TD.LengthDelimited).fork(), n).join(), e.ads && tr.internalBinaryWrite(e.ads, t.tag(24, r.TD.LengthDelimited).fork(), n).join(), e.inAppFeedbackSettings && ts.internalBinaryWrite(e.inAppFeedbackSettings, t.tag(25, r.TD.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t;
     }
@@ -242,7 +242,7 @@ class P extends o.C {
                 no: 3,
                 name: 'guilds',
                 kind: 'message',
-                T: () => M
+                T: () => k
             },
             {
                 no: 4,
@@ -278,7 +278,7 @@ class P extends o.C {
                 no: 9,
                 name: 'debug',
                 kind: 'message',
-                T: () => ef
+                T: () => e_
             },
             {
                 no: 10,
@@ -314,7 +314,7 @@ class P extends o.C {
                 no: 15,
                 name: 'favorites',
                 kind: 'message',
-                T: () => eM
+                T: () => ek
             },
             {
                 no: 16,
@@ -506,8 +506,8 @@ class x extends o.C {
         ]);
     }
 }
-let M = new x();
-class k extends o.C {
+let k = new x();
+class M extends o.C {
     create(e) {
         let t = {
             channels: {},
@@ -676,7 +676,7 @@ class k extends o.C {
         ]);
     }
 }
-let j = new k();
+let j = new M();
 class U extends o.C {
     create(e) {
         let t = {};
@@ -1343,19 +1343,19 @@ class ee extends o.C {
                 no: 1,
                 name: 'explicit_content_guilds',
                 kind: 'enum',
-                T: () => ['discord_protos.discord_users.v1.ExplicitContentRedaction', _]
+                T: () => ['discord_protos.discord_users.v1.ExplicitContentRedaction', f]
             },
             {
                 no: 2,
                 name: 'explicit_content_friend_dm',
                 kind: 'enum',
-                T: () => ['discord_protos.discord_users.v1.ExplicitContentRedaction', _]
+                T: () => ['discord_protos.discord_users.v1.ExplicitContentRedaction', f]
             },
             {
                 no: 3,
                 name: 'explicit_content_non_friend_dm',
                 kind: 'enum',
-                T: () => ['discord_protos.discord_users.v1.ExplicitContentRedaction', _]
+                T: () => ['discord_protos.discord_users.v1.ExplicitContentRedaction', f]
             }
         ]);
     }
@@ -1412,19 +1412,19 @@ class en extends o.C {
                 no: 1,
                 name: 'gore_content_guilds',
                 kind: 'enum',
-                T: () => ['discord_protos.discord_users.v1.ExplicitContentRedaction', _]
+                T: () => ['discord_protos.discord_users.v1.ExplicitContentRedaction', f]
             },
             {
                 no: 2,
                 name: 'gore_content_friend_dm',
                 kind: 'enum',
-                T: () => ['discord_protos.discord_users.v1.ExplicitContentRedaction', _]
+                T: () => ['discord_protos.discord_users.v1.ExplicitContentRedaction', f]
             },
             {
                 no: 3,
                 name: 'gore_content_non_friend_dm',
                 kind: 'enum',
-                T: () => ['discord_protos.discord_users.v1.ExplicitContentRedaction', _]
+                T: () => ['discord_protos.discord_users.v1.ExplicitContentRedaction', f]
             }
         ]);
     }
@@ -1789,7 +1789,7 @@ class eo extends o.C {
                 no: 27,
                 name: 'dm_spam_filter_v2',
                 kind: 'enum',
-                T: () => ['discord_protos.discord_users.v1.DmSpamFilterV2', f]
+                T: () => ['discord_protos.discord_users.v1.DmSpamFilterV2', _]
             },
             {
                 no: 28,
@@ -2260,7 +2260,7 @@ class eu extends o.C {
     }
 }
 let ed = new eu();
-class e_ extends o.C {
+class ef extends o.C {
     create(e) {
         let t = {};
         return (
@@ -2303,7 +2303,7 @@ class e_ extends o.C {
         ]);
     }
 }
-let ef = new e_();
+let e_ = new ef();
 class ep extends o.C {
     create(e) {
         let t = {};
@@ -3182,8 +3182,8 @@ class ex extends o.C {
         ]);
     }
 }
-let eM = new ex();
-class ek extends o.C {
+let ek = new ex();
+class eM extends o.C {
     create(e) {
         let t = {
             nickname: '',
@@ -3261,7 +3261,7 @@ class ek extends o.C {
         ]);
     }
 }
-let ej = new ek();
+let ej = new eM();
 class eU extends o.C {
     create(e) {
         let t = {

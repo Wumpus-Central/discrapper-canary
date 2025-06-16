@@ -17,7 +17,7 @@ let i = _.n,
                     if (!_ || !_.length) return t;
                     let c = a.documentElement.innerHTML;
                     if (!c) return t;
-                    let E = ['<!DOCTYPE html>', '<html>', ...c.split('\n'), '</html>'];
+                    let s = ['<!DOCTYPE html>', '<html>', ...c.split('\n'), '</html>'];
                     return (
                         _.forEach((t) => {
                             let a = t.stacktrace;
@@ -25,7 +25,7 @@ let i = _.n,
                                 a.frames &&
                                 (a.frames = a.frames.map((t) => {
                                     var a, _, n, i;
-                                    return (a = t), (_ = E), (n = r), (i = e), a.filename === n && a.lineno && _.length && (0, o.go)(_, a, i), a;
+                                    return (a = t), (_ = s), (n = r), (i = e), a.filename === n && a.lineno && _.length && (0, o.go)(_, a, i), a;
                                 }));
                         }),
                         t

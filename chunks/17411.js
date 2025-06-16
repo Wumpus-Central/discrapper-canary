@@ -1,15 +1,15 @@
-a.d(e, { y: () => s });
+a.d(e, { y: () => E });
 var r = a(263449),
     _ = a(233517),
     n = a(151122),
     o = a(899517),
     i = a(694043);
 let c = o.n,
-    E = new WeakMap(),
-    s = (0, n._I)((t = {}) => {
+    s = new WeakMap(),
+    E = (0, n._I)((t = {}) => {
         let e = t.types || ['crash', 'deprecation', 'intervention'];
         function a(t) {
-            if (E.has((0, r.s3)()))
+            if (s.has((0, r.s3)()))
                 for (let e of t)
                     (0, r.$e)((t) => {
                         t.setExtra('url', e.url);
@@ -36,7 +36,7 @@ let c = o.n,
                     }).observe();
             },
             setup(t) {
-                E.set(t, !0);
+                s.set(t, !0);
             }
         };
     });

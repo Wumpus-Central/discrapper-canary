@@ -1,7 +1,7 @@
 n.d(t, {
     eC: () => p,
-    gX: () => f,
-    uP: () => _
+    gX: () => _,
+    uP: () => f
 });
 var r = n(73800),
     i = n(442837),
@@ -25,7 +25,7 @@ let d = (e) => {
             restrictionsLoading: (0, i.e7)([s.Z], () => s.Z.getMonetizationRestrictionsFetchState(null != n ? n : u.lds) === s.M.FETCHING)
         };
     },
-    _ = (e) => {
+    f = (e) => {
         var t;
         let n = (0, i.e7)([l.Z], () => l.Z.getGuild(e), [e]),
             { restrictions: r, restrictionsLoading: a } = d(n);
@@ -34,7 +34,7 @@ let d = (e) => {
             restrictionsLoading: a
         };
     },
-    f = (e) => {
+    _ = (e) => {
         var t;
         let n = (0, i.e7)([l.Z], () => l.Z.getGuild(e), [e]),
             { restrictions: r, restrictionsLoading: a } = d(n),

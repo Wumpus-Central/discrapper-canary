@@ -23,7 +23,7 @@ function d(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function _(e) {
     }
     return e;
 }
-let f = 8;
+let _ = 8;
 var p = (function (e) {
     return (e.DARK = 'DARK'), (e.LIGHTBOX = 'LIGHTBOX'), (e.IMMERSIVE = 'IMMERSIVE'), (e.SUBTLE = 'SUBTLE'), (e.BLUR = 'BLUR'), (e.TOP_RADIAL = 'TOP_RADIAL'), e;
 })({});
@@ -59,7 +59,7 @@ let m = i.forwardRef(function (e, t) {
     let { backdropStyle: n = 'SUBTLE', backdropInstant: i = !1, zIndexBoost: a = 0, LayerComponent: d, isVisible: p, onClose: m } = e,
         g = h()[n],
         E = (0, l.dQu)(l.TVs.colors.BG_BACKDROP_NO_OPACITY).spring({ opacity: 0 }),
-        b = 'BLUR' === n ? f : 0,
+        b = 'BLUR' === n ? _ : 0,
         y = {
             background: E,
             backdropFilter: 'blur(0px)'
@@ -86,7 +86,7 @@ let m = i.forwardRef(function (e, t) {
             n
                 ? (0, r.jsx)(s.animated.div, {
                       className: u.backdrop,
-                      style: _({}, t, e),
+                      style: f({}, t, e),
                       onClick: m
                   })
                 : null

@@ -9,7 +9,7 @@ n.d(t, {
     MU: () => m,
     Qq: () => h,
     dc: () => u,
-    gU: () => _,
+    gU: () => f,
     o3: () => c,
     q5: () => g,
     t0: () => b,
@@ -73,8 +73,8 @@ function l(e, t) {
 let c = 0,
     u = 13,
     d = -1,
-    _ = -2,
-    f = -3;
+    f = -2,
+    _ = -3;
 var p = (function (e) {
         return (e.FEATURED = 'featured'), (e.GAMING = 'gaming'), (e.MUSIC = 'music'), (e.ENTERTAINMENT = 'entertainment'), (e.TECH = 'tech'), (e.EDUCATION = 'education'), (e.HUBS = 'hubs'), e;
     })({}),
@@ -88,7 +88,7 @@ let m = new Set(['hubs']),
     y = 'l',
     O = 10 * r.Z.Millis.MINUTE;
 var v = (function (e) {
-    return (e[(e.Clans = f)] = 'Clans'), (e[(e.Hub = _)] = 'Hub'), (e[(e.Communities = d)] = 'Communities'), (e[(e.Activity = 1)] = 'Activity'), (e[(e.Music = 2)] = 'Music'), (e[(e.Television = 3)] = 'Television'), (e[(e.Science = 5)] = 'Science'), (e[(e.Education = 6)] = 'Education'), e;
+    return (e[(e.Clans = _)] = 'Clans'), (e[(e.Hub = f)] = 'Hub'), (e[(e.Communities = d)] = 'Communities'), (e[(e.Activity = 1)] = 'Activity'), (e[(e.Music = 2)] = 'Music'), (e[(e.Television = 3)] = 'Television'), (e[(e.Science = 5)] = 'Science'), (e[(e.Education = 6)] = 'Education'), e;
 })({});
 let I = [1, 2, 3, 5, 6],
     T = ['en-GB'];

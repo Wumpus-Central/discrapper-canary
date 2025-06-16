@@ -9,8 +9,8 @@ var i = n(392711),
     c = n(998698),
     u = n(667204),
     d = n(588468),
-    _ = n(483360),
-    f = n(877565),
+    f = n(483360),
+    _ = n(877565),
     p = n(590921),
     h = n(689079),
     m = n(388032),
@@ -74,7 +74,7 @@ let S = {
             return null == a ? y : { results: { choices: a } };
         }
         return {
-            results: _.ZP.queryChoiceResults({
+            results: f.ZP.queryChoiceResults({
                 query: n,
                 choices: o.type === s.jw.BOOLEAN ? h.ak : null != (a = o.choices) ? a : []
             })
@@ -95,7 +95,7 @@ let S = {
                   className: g.noAutocompleteResults
               })
             : 0 !== t.length || n
-              ? (0, f.HI)({
+              ? (0, _.HI)({
                     query: s,
                     selectedIndex: a,
                     autocompletes: n ? O : t,

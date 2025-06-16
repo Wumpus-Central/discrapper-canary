@@ -31,28 +31,28 @@ function l(e, t, n) {
         c = e,
         u = t,
         d = [],
-        _ = d,
-        f = !1;
+        f = d,
+        _ = !1;
     function p() {
-        _ === d && (_ = d.slice());
+        f === d && (f = d.slice());
     }
     function h() {
-        if (f) throw Error(r(3));
+        if (_) throw Error(r(3));
         return u;
     }
     function m(e) {
         if ('function' != typeof e) throw Error(r(4));
-        if (f) throw Error(r(5));
+        if (_) throw Error(r(5));
         var t = !0;
         return (
             p(),
-            _.push(e),
+            f.push(e),
             function () {
                 if (t) {
-                    if (f) throw Error(r(6));
+                    if (_) throw Error(r(6));
                     (t = !1), p();
-                    var n = _.indexOf(e);
-                    _.splice(n, 1), (d = null);
+                    var n = f.indexOf(e);
+                    f.splice(n, 1), (d = null);
                 }
             }
         );
@@ -60,13 +60,13 @@ function l(e, t, n) {
     function g(e) {
         if (!s(e)) throw Error(r(7));
         if (void 0 === e.type) throw Error(r(8));
-        if (f) throw Error(r(9));
+        if (_) throw Error(r(9));
         try {
-            (f = !0), (u = c(u, e));
+            (_ = !0), (u = c(u, e));
         } finally {
-            f = !1;
+            _ = !1;
         }
-        for (var t = (d = _), n = 0; n < t.length; n++) (0, t[n])();
+        for (var t = (d = f), n = 0; n < t.length; n++) (0, t[n])();
         return e;
     }
     function E(e) {

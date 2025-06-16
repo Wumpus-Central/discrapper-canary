@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(321051),
     u = n(669079),
     d = n(479446),
-    _ = n(646476),
-    f = n(599659),
+    f = n(646476),
+    _ = n(599659),
     p = n(981632),
     h = n(96848),
     m = n(703926),
@@ -95,13 +95,13 @@ let A = (e) => {
         D = i.useRef(null),
         L = (0, s.arW)({ orientation: 'horizontal' }),
         { ref: x } = L,
-        M = T(L, ['ref']),
-        k = (0, u.MY)(y, t),
-        j = k === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        U = k !== u.xr.DEFAULT,
-        G = (0, _.rK)(),
-        { enabled: B } = _.ZP.useExperiment({ location: 'premiumGiftSelect_GiftAnimationOptions' }, { autoTrackExposure: G }),
-        { enabled: V } = f.O.useExperiment({ location: 'gift card' }),
+        k = T(L, ['ref']),
+        M = (0, u.MY)(y, t),
+        j = M === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+        U = M !== u.xr.DEFAULT,
+        G = (0, f.rK)(),
+        { enabled: B } = f.ZP.useExperiment({ location: 'premiumGiftSelect_GiftAnimationOptions' }, { autoTrackExposure: G }),
+        { enabled: V } = _.O.useExperiment({ location: 'gift card' }),
         F = null;
     U && (F = G && B ? g.kJ : g.QI), V && (F = g.RQ);
     let Z = (e) => {
@@ -158,7 +158,7 @@ let A = (e) => {
                             'aria-label': E.intl.string(E.t.v54NrK),
                             ref: x
                         },
-                        M
+                        k
                     ),
                     {
                         children:

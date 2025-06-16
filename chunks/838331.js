@@ -13,8 +13,8 @@ var r = n(255367),
     c = n(178940),
     u = n(1561),
     d = n(742746),
-    _ = n(326452),
-    f = n(993365),
+    f = n(326452),
+    _ = n(993365),
     p = n(481060),
     h = n(388032),
     m = n(953408);
@@ -121,8 +121,8 @@ function R(e) {
     let { placeholder: t, children: n, value: a, onChange: c, className: u, listClassName: g, 'aria-label': b, multiSelect: v = !1, autoFocus: S = !1, maxVisibleItems: A = 5, itemToString: R = N, showScrollbar: P = !1 } = e,
         [w, D] = i.useState(''),
         [L] = i.useState(!0),
-        [x, M] = i.useState(null),
-        k = i.useId(),
+        [x, k] = i.useState(null),
+        M = i.useId(),
         j = i.useRef(null);
     i.useLayoutEffect(() => {
         let e = document.querySelector('['.concat(I, '="').concat(x, '"]')),
@@ -156,7 +156,7 @@ function R(e) {
             []
         ),
         Z = i.useCallback((e, t) => {
-            M(t);
+            k(t);
             let n = document.querySelector(e),
                 r = j.current;
             null != r && null != n && r.scrollIntoViewNode({ node: n });
@@ -181,19 +181,19 @@ function R(e) {
                     role: 'combobox',
                     'aria-label': b,
                     'aria-expanded': L,
-                    'aria-controls': L ? k : void 0,
-                    'aria-owns': k,
+                    'aria-controls': L ? M : void 0,
+                    'aria-owns': M,
                     'aria-haspopup': 'listbox',
                     className: o()(m.combobox, u),
                     children: [
-                        (0, r.jsx)(_.E, {
+                        (0, r.jsx)(f.E, {
                             autoFocus: S,
-                            size: _.E.Sizes.MEDIUM,
+                            size: f.E.Sizes.MEDIUM,
                             placeholder: t,
                             query: w,
                             onChange: D,
                             onKeyDown: i,
-                            onBlur: () => M(null),
+                            onBlur: () => k(null),
                             onClear: () => D(''),
                             className: o()({ [m.searchWithScrollbar]: P }),
                             inputProps: {
@@ -212,7 +212,7 @@ function R(e) {
                                                   variant: 'heading-md/semibold',
                                                   children: h.intl.string(h.t['4o4z3d'])
                                               }),
-                                              (0, r.jsx)(f.x, {
+                                              (0, r.jsx)(_.x, {
                                                   color: 'text-muted',
                                                   variant: 'text-md/normal',
                                                   children: h.intl.string(h.t.QwSXv7)
@@ -231,7 +231,7 @@ function R(e) {
                                               y(E({}, s), {
                                                   style: { maxHeight: A * (T + 6) },
                                                   'aria-multiselectable': v,
-                                                  id: k,
+                                                  id: M,
                                                   ref: j,
                                                   className: o()(m.list, g, { [m.scroller]: P }),
                                                   sections: [U.length],
@@ -257,10 +257,10 @@ function w(e) {
     var t,
         { value: n, children: a, disabled: s = !1, selectedColor: c = S.STANDARD } = e,
         d = O(e, ['value', 'children', 'disabled', 'selectedColor']);
-    let { activeDescendant: _, selected: f, setSelected: p, itemToString: h } = i.useContext(C),
+    let { activeDescendant: f, selected: _, setSelected: p, itemToString: h } = i.useContext(C),
         g = h(n),
-        b = _ === g,
-        v = null != (t = null == d ? void 0 : d.selected) ? t : f.has(n),
+        b = f === g,
+        v = null != (t = null == d ? void 0 : d.selected) ? t : _.has(n),
         T = (0, l.JA)(g);
     return (0, r.jsx)(
         u.P,

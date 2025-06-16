@@ -1,8 +1,8 @@
 n.d(t, {
     B5: () => D,
     PI: () => C,
-    WD: () => M,
-    aM: () => k,
+    WD: () => k,
+    aM: () => M,
     ui: () => j
 }),
     n(388685),
@@ -17,8 +17,8 @@ var r = n(255367),
     c = n(110924),
     u = n(516796),
     d = n(186102),
-    _ = n(797614),
-    f = n(358085),
+    f = n(797614),
+    _ = n(358085),
     p = n(617136),
     h = n(113434),
     m = n(569984),
@@ -135,7 +135,7 @@ class w {
                             this.commonProperties(e)
                         ),
                         i = (0, u.S)();
-                    null != i && ((0, f.isIOS)() ? (r.apple_advertising_id = i.advertisingId) : (0, f.isAndroid)() && (r.android_advertising_id = i.advertisingId)),
+                    null != i && ((0, _.isIOS)() ? (r.apple_advertising_id = i.advertisingId) : (0, _.isAndroid)() && (r.android_advertising_id = i.advertisingId)),
                         (0, p.dA)({
                             questId: e.id,
                             event: O.rMx.QUEST_CONTENT_VIEWED,
@@ -214,7 +214,7 @@ class w {
                             });
                     }),
                     (0, E.a)('QuestImpressionTracker') &&
-                        _.Z.increment({
+                        f.Z.increment({
                             name: o.V.QUEST_CONTENT_IMPRESSION,
                             tags: ['quest_content:'.concat((0, p._b)(this.questContent))]
                         }),
@@ -252,31 +252,31 @@ let D = (e, t) => {
         return t !== n;
     },
     x = i.createContext(void 0);
-function M() {
+function k() {
     let e = i.useContext(x);
     return null == e ? void 0 : e.current;
 }
-function k() {
+function M() {
     var e;
-    return null == (e = M()) ? void 0 : e.getId();
+    return null == (e = k()) ? void 0 : e.getId();
 }
 function j(e) {
     let { visible: t, visibleChanged: n, focused: a, reference: o, focusedChanged: c } = e,
         u = L(e.questOrQuests),
         d = (0, h.KZ)(e.questContent),
-        _ = i.useRef(null),
-        f = (0, s.e7)([m.Z], () => null != m.Z.questEnrollmentBlockedUntil, []);
+        f = i.useRef(null),
+        _ = (0, s.e7)([m.Z], () => null != m.Z.questEnrollmentBlockedUntil, []);
     return (
         (0, l.ZP)(() => () => {
-            null != _.current && _.current.stop();
+            null != f.current && f.current.stop();
         }),
         i.useEffect(() => {
             let r = a && t,
                 i = (n || c || u) && r,
                 o = ((n || c) && !r) || u;
-            (i || o) && null != _.current && _.current.stop(),
+            (i || o) && null != f.current && f.current.stop(),
                 i &&
-                    ((_.current = new w({
+                    ((f.current = new w({
                         adDecisionData: d,
                         questOrQuests: e.questOrQuests,
                         questContent: e.questContent,
@@ -285,13 +285,13 @@ function j(e) {
                         triggeredByStatusChange: u,
                         trackGuildAndChannelMetadata: e.trackGuildAndChannelMetadata,
                         minViewTimeSeconds: e.minViewTimeSeconds,
-                        isQuestEnrollmentBlocked: f
+                        isQuestEnrollmentBlocked: _
                     })),
-                    _.current.start());
-        }, [a, t, c, n, e.questOrQuests, e.questContent, e.questContentPosition, e.questContentRowIndex, e.trackGuildAndChannelMetadata, u, e.minViewTimeSeconds, d, f]),
+                    f.current.start());
+        }, [a, t, c, n, e.questOrQuests, e.questContent, e.questContentPosition, e.questContentRowIndex, e.trackGuildAndChannelMetadata, u, e.minViewTimeSeconds, d, _]),
         (0, r.jsx)(x.Provider, {
-            value: _,
-            children: e.children(o, _)
+            value: f,
+            children: e.children(o, f)
         })
     );
 }

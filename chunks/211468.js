@@ -1,6 +1,6 @@
 n.d(t, {
     dO: () => l,
-    pq: () => f
+    pq: () => _
 }),
     n(388685);
 var r = n(688619),
@@ -29,8 +29,8 @@ function l(e, t, n) {
 let c = [1.3, 0.7],
     u = [0.98, 1],
     d = [0.75, 1.5],
-    _ = [1.45, 0.45];
-function f(e, t, n, r) {
+    f = [1.45, 0.45];
+function _(e, t, n, r) {
     switch (t) {
         case 'background':
         case 'border':
@@ -39,7 +39,7 @@ function f(e, t, n, r) {
                 .hex();
         case 'text':
             return i()(e)
-                .set('hsl.l', '*'.concat(a(s, 'light' === n ? _ : d, r)))
+                .set('hsl.l', '*'.concat(a(s, 'light' === n ? f : d, r)))
                 .hex();
         default:
             return e;

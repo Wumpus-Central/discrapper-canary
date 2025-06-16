@@ -9,8 +9,8 @@ var i = n(481060),
     c = n(359110),
     u = n(636449),
     d = n(566620),
-    _ = n(287545),
-    f = n(317381),
+    f = n(287545),
+    _ = n(317381),
     p = n(16609),
     h = n(318891),
     m = n(719296),
@@ -48,7 +48,7 @@ function O(e) {
 }
 let v = !1,
     I = !1;
-class T extends _.Z {
+class T extends f.Z {
     _initialize() {
         super._initialize(), s.Z.addChangeListener(this.handlePopoutWindowUpdate), a.Z.subscribe('POPOUT_WINDOW_OPEN', this.handlePopoutWindowOpen);
     }
@@ -121,7 +121,7 @@ class T extends _.Z {
             }),
             y(this, 'popInActivity', () => {
                 (I = !0), l.xv(E.KJ3.ACTIVITY_POPOUT);
-                let e = f.ZP.getCurrentEmbeddedActivity();
+                let e = _.ZP.getCurrentEmbeddedActivity();
                 if (null != e) {
                     let t = (0, p.p)(e.location);
                     null != t && (0, c.Kh)(t), (0, d.tg)(g.Ez.PANEL);
@@ -131,7 +131,7 @@ class T extends _.Z {
                 let e = v,
                     t = s.Z.getWindowOpen(E.KJ3.ACTIVITY_POPOUT);
                 if (e && !t && !I) {
-                    let e = f.ZP.getCurrentEmbeddedActivity();
+                    let e = _.ZP.getCurrentEmbeddedActivity();
                     null != e &&
                         this.leaveActivity({
                             location: e.location,

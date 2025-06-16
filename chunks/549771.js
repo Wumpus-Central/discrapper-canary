@@ -10,15 +10,15 @@ var r = n(73800),
 function d(e, t) {
     var n;
     let d = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
-        _ = null != (n = null == e ? void 0 : e.guild_id) ? n : c.lds,
-        f = (0, i.e7)([o.ZP], () => o.ZP.getFlattenedGuildIds()),
+        f = null != (n = null == e ? void 0 : e.guild_id) ? n : c.lds,
+        _ = (0, i.e7)([o.ZP], () => o.ZP.getFlattenedGuildIds()),
         p = (0, i.e7)([a.Z], () => null == e || null == e.guild_id || a.Z.can(u.Pl.USE_EXTERNAL_SOUNDS, e));
     return r.useMemo(() => {
         if ((l.ZP.canUseSoundboardEverywhere(d) || !t) && p) {
-            let e = '' !== _,
-                t = e ? f.filter((e) => e !== _) : f;
-            return e && t.unshift(_), t;
+            let e = '' !== f,
+                t = e ? _.filter((e) => e !== f) : _;
+            return e && t.unshift(f), t;
         }
-        return [_];
-    }, [d, t, _, f, p]);
+        return [f];
+    }, [d, t, f, _, p]);
 }

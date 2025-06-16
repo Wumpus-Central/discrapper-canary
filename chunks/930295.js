@@ -14,8 +14,8 @@ var r,
     c = n(374470),
     u = n(846519),
     d = n(302901),
-    _ = n(539907),
-    f = n(952265),
+    f = n(539907),
+    _ = n(952265),
     p = n(481060),
     h = n(40851),
     m = n(314910),
@@ -145,13 +145,13 @@ class N extends (r = a.Component) {
     }
     renderLayer() {
         if (!this.shouldShowPopout(this.props, this.state) || null == this.domElementRef.current) return null;
-        let { position: e, align: t, nudgeAlignIntoViewport: n, useRawTargetDimensions: r, spacing: a, autoInvert: o, fixed: s, positionKey: l, disablePointerEvents: c, layerContext: u, clickTrap: f = !1 } = this.props,
+        let { position: e, align: t, nudgeAlignIntoViewport: n, useRawTargetDimensions: r, spacing: a, autoInvert: o, fixed: s, positionKey: l, disablePointerEvents: c, layerContext: u, clickTrap: _ = !1 } = this.props,
             { resizeKey: p, isLoading: h, shouldShowLoadingState: g } = this.state;
         return h && !g
             ? null
             : (0, i.jsx)(d.mh, {
                   layerContext: null != u ? u : m.nz,
-                  children: (0, i.jsx)(_.j, {
+                  children: (0, i.jsx)(f.j, {
                       ref: this.layerRef,
                       onMount: this.handlePopoutShow,
                       onUnmount: this.handlePopoutHide,
@@ -167,7 +167,7 @@ class N extends (r = a.Component) {
                       positionKey: null != l ? l : String(p),
                       disablePointerEvents: c,
                       onPositionChange: this.handlePopoutPositionChange,
-                      clickTrap: f,
+                      clickTrap: _,
                       children: this.renderPopout
                   })
               });
@@ -262,7 +262,7 @@ class N extends (r = a.Component) {
                     n = e.target,
                     r = this.domElementRef.current;
                 if (null != r) {
-                    if ((0, _.t)(r, n) || g.Z.isOpen() || (t && (0, f.$s)())) return;
+                    if ((0, f.t)(r, n) || g.Z.isOpen() || (t && (0, _.$s)())) return;
                     this.isValidClickStart = !0;
                 }
             }),

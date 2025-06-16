@@ -7,8 +7,8 @@ var r,
     c = n(436207),
     u = n(77025),
     d = n(651144),
-    _ = n(661314),
-    f = n(485073),
+    f = n(661314),
+    _ = n(485073),
     p = 'Object already initialized',
     h = s.TypeError,
     m = s.WeakMap,
@@ -38,8 +38,8 @@ if (o || d.state) {
             return b.has(e);
         });
 } else {
-    var y = _('state');
-    (f[y] = !0),
+    var y = f('state');
+    (_[y] = !0),
         (r = function (e, t) {
             if (u(e, y)) throw new h(p);
             return (t.facade = e), c(e, y, t), t;

@@ -56,28 +56,28 @@ function u(e, t) {
     );
 }
 let d = new Map(),
-    _ = new Set(),
-    f = null,
+    f = new Set(),
+    _ = null,
     p = !1,
     h = !1;
 function m(e) {
     let { userId: t } = e;
-    _.add(t);
+    f.add(t);
 }
 function g(e) {
     let { outbox: t, userId: n } = e;
-    d.set(n, u(l({}, t), { lastFetched: Date.now() })), _.delete(n);
+    d.set(n, u(l({}, t), { lastFetched: Date.now() })), f.delete(n);
 }
 function E(e) {
     let { userId: t } = e;
-    _.delete(t);
+    f.delete(t);
 }
 function b() {
-    (f = null), (p = !0);
+    (_ = null), (p = !0);
 }
 function y(e) {
     let { entry: t, userId: n } = e;
-    f = null;
+    _ = null;
     let r = d.get(n);
     if (null == r) return !1;
     let i = r.entries.filter((e) => e.id !== t.id);
@@ -85,13 +85,13 @@ function y(e) {
 }
 function O(e) {
     let { error: t } = e;
-    (f = t), (p = !1);
+    (_ = t), (p = !1);
 }
 function v() {
-    (f = null), (p = !1);
+    (_ = null), (p = !1);
 }
 function I() {
-    (d = new Map()), (_ = new Set()), (f = null), (p = !1);
+    (d = new Map()), (f = new Set()), (_ = null), (p = !1);
 }
 function T() {
     I(), (h = !0);
@@ -109,10 +109,10 @@ class A extends (r = i.ZP.Store) {
         return d.get(e);
     }
     isFetchingUserOutbox(e) {
-        return _.has(e);
+        return f.has(e);
     }
     get deleteOutboxEntryError() {
-        return f;
+        return _;
     }
     get isDeletingEntryHistory() {
         return p;

@@ -8,7 +8,7 @@ var r = n(255367),
     c = n(464647),
     u = n(723776),
     d = n(248217);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,15 +32,15 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
 }
 function p(e) {
     let { profile: t, className: n } = e,
-        { gamesToDisplay: a, lastGameToDisplay: _, remainingGames: p } = (0, l.Z)(t),
-        h = i.useMemo(() => t.traits.map((e, t) => f({ key: 'trait-'.concat(t) }, e)).filter((e) => e.label.length > 0), [t]),
+        { gamesToDisplay: a, lastGameToDisplay: f, remainingGames: p } = (0, l.Z)(t),
+        h = i.useMemo(() => t.traits.map((e, t) => _({ key: 'trait-'.concat(t) }, e)).filter((e) => e.label.length > 0), [t]),
         m = t.description.length > 0;
     return m || a.length > 0 || h.length > 0
         ? (0, r.jsxs)('div', {
@@ -55,7 +55,7 @@ function p(e) {
                       : null,
                   (0, r.jsx)(c.Z, {
                       gamesToDisplay: a,
-                      lastGameToDisplay: _,
+                      lastGameToDisplay: f,
                       remainingGames: p,
                       activity: t.gameActivity
                   }),

@@ -57,9 +57,9 @@ function u(e, t) {
     );
 }
 function d(e, t) {
-    return 'type' in e && 'timestamp' === e.type ? (0, r.jsx)(_, u(l({}, t), { timestamp: e.parsed })) : null;
+    return 'type' in e && 'timestamp' === e.type ? (0, r.jsx)(f, u(l({}, t), { timestamp: e.parsed })) : null;
 }
-function _(e) {
+function f(e) {
     var t;
     let { timestamp: n, replace: s } = e,
         l = (e) => {

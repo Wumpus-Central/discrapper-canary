@@ -28,16 +28,16 @@ var d = (function (e) {
             return (0, s.X)(e, this._rrule, this._exrule, this._rdate, this._exdate, this.tzid());
         }),
         (t.prototype.rrule = function (e) {
-            _(e, this._rrule);
+            f(e, this._rrule);
         }),
         (t.prototype.exrule = function (e) {
-            _(e, this._exrule);
+            f(e, this._exrule);
         }),
         (t.prototype.rdate = function (e) {
-            f(e, this._rdate);
+            _(e, this._rdate);
         }),
         (t.prototype.exdate = function (e) {
-            f(e, this._exdate);
+            _(e, this._exdate);
         }),
         (t.prototype.rrules = function () {
             return this._rrule.map(function (e) {
@@ -108,11 +108,11 @@ var d = (function (e) {
         t
     );
 })(i.Ci);
-function _(e, t) {
+function f(e, t) {
     if (!(e instanceof i.Ci)) throw TypeError(String(e) + ' is not RRule instance');
     (0, o.q9)(t.map(String), String(e)) || t.push(e);
 }
-function f(e, t) {
+function _(e, t) {
     if (!(e instanceof Date)) throw TypeError(String(e) + ' is not Date instance');
     (0, o.q9)(t.map(Number), Number(e)) || (t.push(e), (0, a.DY)(t));
 }

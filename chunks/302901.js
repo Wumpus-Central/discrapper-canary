@@ -13,8 +13,8 @@ var r = n(255367),
     c = n(867309),
     u = n(251625),
     d = n(872801),
-    _ = n(36344);
-function f(e, t, n) {
+    f = n(36344);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,12 +38,12 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-let h = _.layerContainer;
+let h = f.layerContainer;
 class m extends i.Component {
     componentWillUnmount() {
         this.state.layerContainerElement = null;
@@ -58,11 +58,11 @@ class m extends i.Component {
     }
     constructor(...e) {
         super(...e),
-            f(this, 'state', { layerContainerElement: null }),
-            f(this, 'setLayerContainerElement', (e) => {
+            _(this, 'state', { layerContainerElement: null }),
+            _(this, 'setLayerContainerElement', (e) => {
                 this.setState({ layerContainerElement: e });
             }),
-            f(
+            _(
                 this,
                 'getContextValue',
                 (0, u.oH)((e) => [e, this.setLayerContainerElement])
@@ -84,7 +84,7 @@ let g = (e) => {
     });
 };
 function E(e) {
-    let t = (0, d.Z)(e, _.layerContainer);
+    let t = (0, d.Z)(e, f.layerContainer);
     return l()(null != t, 'Unexpected missing parent container'), t;
 }
 function b(e, t) {

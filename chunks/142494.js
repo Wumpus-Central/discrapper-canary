@@ -1,7 +1,7 @@
 let r, i;
 n.d(t, {
     FC: () => m,
-    _H: () => _,
+    _H: () => f,
     yR: () => h
 }),
     n(388685),
@@ -26,7 +26,7 @@ function d(e, t, n) {
         e
     );
 }
-class _ {
+class f {
     format(e) {
         if (!this.hasMarkdown) return this.intlMessage.format(e);
         let [t, n] = this.getContext(e);
@@ -53,7 +53,7 @@ class _ {
         d(this, 'message', void 0), d(this, 'hasMarkdown', void 0), d(this, 'intlMessage', void 0), (this.message = n ? e : e.replace(u.hN, '')), (this.hasMarkdown = n), (this.intlMessage = new (o())(this.message, t));
     }
 }
-function f(e, t) {
+function _(e, t) {
     let n = l().parserFor(t(e)),
         r = l().reactFor(l().ruleOutput(e, 'react'));
     return (e, t, i) => {
@@ -80,12 +80,12 @@ function p(e) {
         });
 }
 function h(e) {
-    (r = f(c.j, e)), (i = p(c.j));
+    (r = _(c.j, e)), (i = p(c.j));
 }
 function m(e, t) {
     if (null == e) return '';
     null == r && h(n(281071).Z), (e = e.replace(/^\n+|\n+$/g, ''));
     let i = u.aT.test(e),
         a = u.b9.test(e);
-    return i || a ? new _(e, t, a) : e;
+    return i || a ? new f(e, t, a) : e;
 }

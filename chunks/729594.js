@@ -9,8 +9,8 @@ var a = /^([a-z0-9.+-]+:)/i,
     c = ['%', '/', '?', ';', '#'].concat(l),
     u = ['/', '?', '#'],
     d = 255,
-    _ = /^[+a-z0-9A-Z_-]{0,63}$/,
-    f = /^([+a-z0-9A-Z_-]{0,63})(.*)$/,
+    f = /^[+a-z0-9A-Z_-]{0,63}$/,
+    _ = /^([+a-z0-9A-Z_-]{0,63})(.*)$/,
     p = {
         javascript: !0,
         'javascript:': !0
@@ -82,12 +82,12 @@ function O(e, t) {
         if (!P)
             for (var w = this.hostname.split(/\./), C = 0, D = w.length; C < D; C++) {
                 var L = w[C];
-                if (L && !L.match(_)) {
-                    for (var x = '', M = 0, k = L.length; M < k; M++) L.charCodeAt(M) > 127 ? (x += 'x') : (x += L[M]);
-                    if (!x.match(_)) {
+                if (L && !L.match(f)) {
+                    for (var x = '', k = 0, M = L.length; k < M; k++) L.charCodeAt(k) > 127 ? (x += 'x') : (x += L[k]);
+                    if (!x.match(f)) {
                         var j = w.slice(0, C),
                             U = w.slice(C + 1),
-                            G = L.match(f);
+                            G = L.match(_);
                         G && (j.push(G[1]), U.unshift(G[2])), U.length && (y = '/' + U.join('.') + y), (this.hostname = j.join('.'));
                         break;
                     }
@@ -170,15 +170,15 @@ function O(e, t) {
         if (e.protocol && e.protocol !== n.protocol) {
             if (!m[e.protocol]) {
                 for (var u = Object.keys(e), d = 0; d < u.length; d++) {
-                    var _ = u[d];
-                    n[_] = e[_];
+                    var f = u[d];
+                    n[f] = e[f];
                 }
                 return (n.href = n.format()), n;
             }
             if (((n.protocol = e.protocol), e.host || h[e.protocol])) n.pathname = e.pathname;
             else {
-                for (var f = (e.pathname || '').split('/'); f.length && !(e.host = f.shift()); );
-                e.host || (e.host = ''), e.hostname || (e.hostname = ''), '' !== f[0] && f.unshift(''), f.length < 2 && f.unshift(''), (n.pathname = f.join('/'));
+                for (var _ = (e.pathname || '').split('/'); _.length && !(e.host = _.shift()); );
+                e.host || (e.host = ''), e.hostname || (e.hostname = ''), '' !== _[0] && _.unshift(''), _.length < 2 && _.unshift(''), (n.pathname = _.join('/'));
             }
             if (((n.search = e.search), (n.query = e.query), (n.host = e.host || ''), (n.auth = e.auth), (n.hostname = e.hostname || e.host), (n.port = e.port), n.pathname || n.search)) {
                 var p = n.pathname || '',
@@ -192,10 +192,10 @@ function O(e, t) {
             y = b || E || (n.host && e.pathname),
             O = y,
             v = (n.pathname && n.pathname.split('/')) || [],
-            f = (e.pathname && e.pathname.split('/')) || [],
+            _ = (e.pathname && e.pathname.split('/')) || [],
             I = n.protocol && !m[n.protocol];
-        if ((I && ((n.hostname = ''), (n.port = null), n.host && ('' === v[0] ? (v[0] = n.host) : v.unshift(n.host)), (n.host = ''), e.protocol && ((e.hostname = null), (e.port = null), e.host && ('' === f[0] ? (f[0] = e.host) : f.unshift(e.host)), (e.host = null)), (y = y && ('' === f[0] || '' === v[0]))), b)) (n.host = e.host || '' === e.host ? e.host : n.host), (n.hostname = e.hostname || '' === e.hostname ? e.hostname : n.hostname), (n.search = e.search), (n.query = e.query), (v = f);
-        else if (f.length) v || (v = []), v.pop(), (v = v.concat(f)), (n.search = e.search), (n.query = e.query);
+        if ((I && ((n.hostname = ''), (n.port = null), n.host && ('' === v[0] ? (v[0] = n.host) : v.unshift(n.host)), (n.host = ''), e.protocol && ((e.hostname = null), (e.port = null), e.host && ('' === _[0] ? (_[0] = e.host) : _.unshift(e.host)), (e.host = null)), (y = y && ('' === _[0] || '' === v[0]))), b)) (n.host = e.host || '' === e.host ? e.host : n.host), (n.hostname = e.hostname || '' === e.hostname ? e.hostname : n.hostname), (n.search = e.search), (n.query = e.query), (v = _);
+        else if (_.length) v || (v = []), v.pop(), (v = v.concat(_)), (n.search = e.search), (n.query = e.query);
         else if (null != e.search) {
             if (I) {
                 (n.host = v.shift()), (n.hostname = n.host);

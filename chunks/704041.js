@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(814059),
     u = n(873128),
     d = n(428268),
-    _ = n(114201),
-    f = n(154658),
+    f = n(114201),
+    _ = n(154658),
     p = n(370611),
     h = n(981631),
     m = n(701488),
@@ -115,7 +115,7 @@ function v(e) {
                         )
                 })
             }),
-            (0, r.jsx)(_.Z, {
+            (0, r.jsx)(f.Z, {
                 guildId: t.guild_id,
                 leaderboardId: t.leaderboard_id
             })
@@ -124,7 +124,7 @@ function v(e) {
 }
 let I = (e) => {
     var t;
-    let { guildId: n, leaderboardId: s, previewMode: l = !1, source: c, trackRankingItemInteraction: _ } = e,
+    let { guildId: n, leaderboardId: s, previewMode: l = !1, source: c, trackRankingItemInteraction: f } = e,
         [h, m] = i.useState(l),
         g = i.useRef(null),
         I = (0, u.Z)({
@@ -161,14 +161,14 @@ let I = (e) => {
                               (0, r.jsx)(p.Z, {
                                   leaderboard: I,
                                   previewMode: h,
-                                  trackRankingItemInteraction: _
+                                  trackRankingItemInteraction: f
                               }),
                               h
                                   ? null
                                   : (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             null != T &&
-                                                (0, r.jsx)(f.Z, {
+                                                (0, r.jsx)(_.Z, {
                                                     className: b.previousChampion,
                                                     guildId: n,
                                                     leaderboard: T

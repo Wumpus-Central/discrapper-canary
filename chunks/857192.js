@@ -8,8 +8,8 @@ var r,
     c = n(570140),
     u = n(179658),
     d = n(70956),
-    _ = n(960048),
-    f = n(981631);
+    f = n(960048),
+    _ = n(981631);
 function p(e, t, n) {
     return (
         t in e
@@ -93,7 +93,8 @@ let m = (() => {
         onlyShowPreviewAppCollections: !1,
         disableAppCollectionsCache: !1,
         isStreamInfoOverlayEnabled: !1,
-        preventPopoutClose: !1
+        preventPopoutClose: !1,
+        logKeyboardMismatches: !1
     },
     b = h({}, E);
 function y(e) {
@@ -108,9 +109,9 @@ function v(e) {
 }
 function I(e) {
     var t;
-    let n = ((null != (t = e.user.flags) ? t : 0) & f.xW$.STAFF) === f.xW$.STAFF,
+    let n = ((null != (t = e.user.flags) ? t : 0) & _.xW$.STAFF) === _.xW$.STAFF,
         r = n || null != e.user.personal_connection_id;
-    n && m.set(b.sourceMapsEnabled), _.Z.setTags({ isStaff: r.toString() });
+    n && m.set(b.sourceMapsEnabled), f.Z.setTags({ isStaff: r.toString() });
 }
 class T extends (r = o.ZP.Store) {
     initialize() {
@@ -164,6 +165,9 @@ class T extends (r = o.ZP.Store) {
     }
     get preventPopoutClose() {
         return b.preventPopoutClose;
+    }
+    get logKeyboardMismatches() {
+        return b.logKeyboardMismatches;
     }
     getDebugOptionsHeaderValue() {
         return (

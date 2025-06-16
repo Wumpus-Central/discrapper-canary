@@ -35,7 +35,7 @@ function d(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,12 +47,12 @@ function _(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -79,7 +79,7 @@ function h(e, t) {
     return i;
 }
 let m = (e) => {
-    var { href: t, className: n, iconClassName: u, rel: _, target: h, mimeType: m, fileName: g, focusProps: E, onClick: b } = e,
+    var { href: t, className: n, iconClassName: u, rel: f, target: h, mimeType: m, fileName: g, focusProps: E, onClick: b } = e,
         y = p(e, ['href', 'className', 'iconClassName', 'rel', 'target', 'mimeType', 'fileName', 'focusProps', 'onClick']);
     let O = i.useMemo(() => a.X.getDefaultLinkInterceptor(t), [t]),
         v = i.useCallback(
@@ -96,13 +96,13 @@ let m = (e) => {
     return null != g
         ? (0, r.jsx)(
               o.eee,
-              f(
+              _(
                   d(
                       {
                           href: t,
                           onClick: v,
                           target: h,
-                          rel: _,
+                          rel: f,
                           className: n,
                           'aria-label': c.intl.string(c.t['1WjMbG']),
                           focusProps: E
@@ -114,13 +114,13 @@ let m = (e) => {
           )
         : (0, r.jsx)(
               o.eee,
-              f(
+              _(
                   d(
                       {
                           href: t,
                           onClick: v,
                           target: h,
-                          rel: _,
+                          rel: f,
                           className: n,
                           'aria-label': c.intl.string(c.t['1WjMbG']),
                           focusProps: E

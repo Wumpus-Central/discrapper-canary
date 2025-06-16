@@ -13,8 +13,8 @@ var r,
     c = n(692547),
     u = n(780384),
     d = n(481060),
-    _ = n(436774),
-    f = n(302221),
+    f = n(436774),
+    _ = n(302221),
     p = n(474936),
     h = n(970612);
 function m(e, t, n) {
@@ -122,7 +122,7 @@ class T extends (r = a.PureComponent) {
         let { flashColor: e } = this.props,
             t = v.FLASH_TIME_PERCENT,
             n = v.FLASH_DURATION_PERCENT,
-            r = (0, f.Cj)(e, 0);
+            r = (0, _.Cj)(e, 0);
         return {
             backgroundColor: this.animation.interpolate({
                 inputRange: [0, t, t, t + n, 1],
@@ -146,14 +146,14 @@ class T extends (r = a.PureComponent) {
         let { premiumType: e, type: t } = this.props;
         switch (t) {
             case 'GUILD_BOOST_APPLIED':
-                return _.Rj.PREMIUM_GUILD;
+                return f.Rj.PREMIUM_GUILD;
             case 'PREMIUM_ACTIVATED':
             case 'PREMIUM_PAYMENT_STARTED':
             case 'PREMIUM_UPGRADED':
             case 'PREMIUM_UPDATED':
-                if (e === p.p9.TIER_0) return _.Rj.PREMIUM_TIER_0;
-                if (e === p.p9.TIER_1) return _.Rj.PREMIUM_TIER_1;
-                return _.Rj.PREMIUM_TIER_2;
+                if (e === p.p9.TIER_0) return f.Rj.PREMIUM_TIER_0;
+                if (e === p.p9.TIER_1) return f.Rj.PREMIUM_TIER_1;
+                return f.Rj.PREMIUM_TIER_2;
             default:
                 throw Error('Unsupported ShineAnimation type specified');
         }

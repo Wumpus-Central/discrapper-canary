@@ -14,17 +14,17 @@ var r = n(73800),
     c = n(780384),
     u = n(210887),
     d = n(581883),
-    _ = n(233398),
-    f = n(514361),
+    f = n(233398),
+    _ = n(514361),
     p = n(629935),
     h = n(803038);
 let m = 'data-client-themes',
     g = 'custom-theme-background',
     E = () => {
-        let e = (0, l.e7)([f.Z], () => f.Z.gradientPreset);
+        let e = (0, l.e7)([_.Z], () => _.Z.gradientPreset);
         return r.useMemo(() => {
             if (null == e) return null;
-            let t = f.Z.getLinearGradient();
+            let t = _.Z.getLinearGradient();
             if (null == t) return null;
             let n = s.b[e.colors[0].token].hex,
                 r = s.b[e.colors[e.colors.length - 1].token].hex,
@@ -49,7 +49,7 @@ let m = 'data-client-themes',
     b = () => {
         let e = h.M.useExperiment({ location: 'RootThemeContextProvider' }).enabled,
             t = (0, l.e7)([u.Z], () => u.Z.theme),
-            { colors: n, chassisMixAmount: i, gradientAngle: s, setAll: f } = (0, _.I)(),
+            { colors: n, chassisMixAmount: i, gradientAngle: s, setAll: _ } = (0, f.I)(),
             m = (0, l.e7)([d.Z], () => {
                 var e, t;
                 return null == (t = d.Z.settings.appearance) || null == (e = t.clientThemeSettings) ? void 0 : e.customUserThemeSettings;
@@ -60,13 +60,13 @@ let m = 'data-client-themes',
                 if (!(0, o.isEqual)(m, E.current)) {
                     var e, t, n;
                     (E.current = m),
-                        f({
+                        _({
                             colors: null != (e = null == m ? void 0 : m.colors) ? e : [],
                             gradientAngle: null != (t = null == m ? void 0 : m.gradientAngle) ? t : 0,
-                            chassisMixAmount: null != (n = null == m ? void 0 : m.baseMix) ? n : _.B
+                            chassisMixAmount: null != (n = null == m ? void 0 : m.baseMix) ? n : f.B
                         });
                 }
-            }, [m, f]),
+            }, [m, _]),
             r.useMemo(() => {
                 if (!e || 0 === n.length) return null;
                 let r = n.slice();
@@ -78,8 +78,8 @@ let m = 'data-client-themes',
                     l = a()(n[o.indexOf(Math.min(...o))]),
                     u = a()(n[o.indexOf(Math.max(...o))]),
                     d = 'linear-gradient('.concat(s, 'deg, ').concat(r.join(', '), ')'),
-                    _ = (0, c.wj)(t),
-                    f = a()(u).set('hsl.s', 1).set('hsl.l', 0.9),
+                    f = (0, c.wj)(t),
+                    _ = a()(u).set('hsl.s', 1).set('hsl.l', 0.9),
                     h = a()(l).set('hsl.s', 1).set('hsl.l', 0.05),
                     m = 100 - i;
                 return '.'
@@ -87,11 +87,11 @@ let m = 'data-client-themes',
                     .concat(d, ';\n      --custom-bg-overlay-opacity-chat-base-light: 0.95;\n      --custom-bg-overlay-opacity-floating-base-light: 1.0;\n      --theme-bg-overlay-opacity-mix-amount: ')
                     .concat(((30 + 0.7 * m) / 100).toFixed(2), ';\n      ')
                     .concat(p.LN, ': ')
-                    .concat(_ ? (25 + 0.35 * m).toFixed(1) : (30 - 0.2 * i).toFixed(1), '%;\n      ')
+                    .concat(f ? (25 + 0.35 * m).toFixed(1) : (30 - 0.2 * i).toFixed(1), '%;\n      ')
                     .concat(p.Po, ': ')
-                    .concat(f.css(), ';\n      ')
+                    .concat(_.css(), ';\n      ')
                     .concat(p.ej, ': ')
-                    .concat((0, p.dw)(f), ';\n      ')
+                    .concat((0, p.dw)(_), ';\n      ')
                     .concat(p.jX, ': ')
                     .concat(h.css(), ';\n      ')
                     .concat(p.i4, ': ')
@@ -111,7 +111,7 @@ let m = 'data-client-themes',
                         ';\n      '
                     )
                     .concat(p.ld, ': ')
-                    .concat(_ ? 30 : 40, '%;\n      --bg-overlay-selected: unset;\n      --bg-overlay-hover: unset;\n      --bg-overlay-active: unset;\n    }');
+                    .concat(f ? 30 : 40, '%;\n      --bg-overlay-selected: unset;\n      --bg-overlay-hover: unset;\n      --bg-overlay-active: unset;\n    }');
             }, [n, i, s, e, t])
         );
     },

@@ -8,8 +8,8 @@ var r,
     c = n(141795),
     u = n(596956),
     d = n(703558),
-    _ = n(981631),
-    f = n(388032);
+    f = n(981631),
+    _ = n(388032);
 function p(e, t, n) {
     return (
         t in e
@@ -45,10 +45,10 @@ function y(e) {
 let O = (e) => {
     let { files: t, channelId: n, showLargeMessageDialog: r, draftType: i } = e,
         o = [...g(n, i)];
-    if (o.length + t.length > _.dN1 && i !== d.d.SlashCommand && i !== d.d.ApplicationLauncherCommand)
+    if (o.length + t.length > f.dN1 && i !== d.d.SlashCommand && i !== d.d.ApplicationLauncherCommand)
         return void l.Z.show({
-            title: f.intl.string(f.t.wOr6hI),
-            body: f.intl.formatToPlainString(f.t['qqyp/f'], { limit: _.dN1 })
+            title: _.intl.string(_.t.wOr6hI),
+            body: _.intl.formatToPlainString(_.t['qqyp/f'], { limit: f.dN1 })
         });
     a().forEach(t, (e) => {
         let t = new c.n(e, n, r, o.length);

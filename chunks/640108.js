@@ -13,8 +13,8 @@ var r,
     c = n(392711),
     u = n.n(c),
     d = n(748780),
-    _ = n(374470),
-    f = n(283693),
+    f = n(374470),
+    _ = n(283693),
     p = n(481060),
     h = n(70097),
     m = n(167080),
@@ -36,8 +36,8 @@ var r,
     D = n(981631),
     L = n(217702),
     x = n(388032),
-    M = n(480183),
-    k = n(893354);
+    k = n(480183),
+    M = n(893354);
 function j(e, t, n) {
     return (
         t in e
@@ -131,18 +131,18 @@ let q = (e) => {
     return (
         (r = r.padStart(i.length, '0')),
         (0, a.jsxs)('div', {
-            className: M.durationTimeWrapper,
+            className: k.durationTimeWrapper,
             children: [
                 (0, a.jsx)('span', {
-                    className: M.durationTimeDisplay,
+                    className: k.durationTimeDisplay,
                     children: r
                 }),
                 (0, a.jsx)('span', {
-                    className: M.durationTimeSeparator,
+                    className: k.durationTimeSeparator,
                     children: '/'
                 }),
                 (0, a.jsx)('span', {
-                    className: M.durationTimeDisplay,
+                    className: k.durationTimeDisplay,
                     children: i
                 })
             ]
@@ -184,7 +184,7 @@ class X extends (r = o.Component) {
         let { playing: e, currentTime: t, duration: n, onPause: r, onPlay: i, disabled: o } = this.props;
         return e
             ? (0, a.jsx)(p.P3F, {
-                  className: M.videoButton,
+                  className: k.videoButton,
                   onClick: r,
                   tabIndex: o ? -1 : 0,
                   'aria-label': x.intl.string(x.t.ZcgDJS),
@@ -193,21 +193,21 @@ class X extends (r = o.Component) {
                       {
                           size: 'xs',
                           color: 'currentColor',
-                          className: M.controlIcon
+                          className: k.controlIcon
                       },
                       'pause'
                   )
               })
             : null != t && t === n
               ? (0, a.jsx)(p.P3F, {
-                    className: M.videoButton,
+                    className: k.videoButton,
                     onClick: i,
                     tabIndex: o ? -1 : 0,
                     'aria-label': x.intl.string(x.t.hsvh0t),
-                    children: (0, a.jsx)(O.Z, { className: M.controlIcon }, 'replay')
+                    children: (0, a.jsx)(O.Z, { className: k.controlIcon }, 'replay')
                 })
               : (0, a.jsx)(p.P3F, {
-                    className: M.videoButton,
+                    className: k.videoButton,
                     onClick: i,
                     tabIndex: o ? -1 : 0,
                     'aria-label': x.intl.string(x.t.RscU7O),
@@ -216,17 +216,17 @@ class X extends (r = o.Component) {
                         {
                             size: 'xs',
                             color: 'currentColor',
-                            className: M.controlIcon
+                            className: k.controlIcon
                         },
                         'play'
                     )
                 });
     }
     render() {
-        let { buffers: e, children: t, currentTime: n, duration: r, muted: i, onDrag: o, onDragEnd: s, onDragStart: l, onToggleMuted: c, onVolumeShow: u, onVolumeHide: _, width: f, volume: p, type: h } = this.props,
-            m = 'string' == typeof f || f > 250;
+        let { buffers: e, children: t, currentTime: n, duration: r, muted: i, onDrag: o, onDragEnd: s, onDragStart: l, onToggleMuted: c, onVolumeShow: u, onVolumeHide: f, width: _, volume: p, type: h } = this.props,
+            m = 'string' == typeof _ || _ > 250;
         return (0, a.jsxs)(d.Z.div, {
-            className: h === Y.VIDEO ? M.videoControls : M.audioControls,
+            className: h === Y.VIDEO ? k.videoControls : k.audioControls,
             onClick: (e) => e.stopPropagation(),
             onDoubleClick: (e) => e.stopPropagation(),
             style: this.getAnimatedStyle(),
@@ -248,7 +248,7 @@ class X extends (r = o.Component) {
                     ref: this.setDurationRef
                 }),
                 (0, a.jsx)('div', {
-                    className: k.flex,
+                    className: M.flex,
                     children: (0, a.jsx)(w.Z, {
                         ref: this.setVolumeButtonRef,
                         muted: i,
@@ -259,10 +259,10 @@ class X extends (r = o.Component) {
                         onValueChange: (e) => o(e, N.Z.Types.VOLUME),
                         onToggleMute: c,
                         onVolumeShow: u,
-                        onVolumeHide: _,
-                        iconClassName: M.controlIcon,
+                        onVolumeHide: f,
+                        iconClassName: k.controlIcon,
                         iconColor: 'currentColor',
-                        sliderWrapperClassName: M.volumeSliderWrapper
+                        sliderWrapperClassName: k.volumeSliderWrapper
                     })
                 }),
                 t
@@ -285,22 +285,22 @@ class X extends (r = o.Component) {
 function Q(e) {
     let { fileName: t, fileSize: n, src: r, disabled: i, mimeType: o, hideDownloadButton: s } = e;
     return (0, a.jsxs)('div', {
-        className: M.audioMetadata,
+        className: k.audioMetadata,
         children: [
             (0, a.jsxs)('div', {
-                className: M.metadataContent,
+                className: k.metadataContent,
                 children: [
                     i
                         ? t
                         : (0, a.jsx)(m.Z, {
                               href: r,
-                              className: M.metadataDownload,
-                              iconClassName: M.metadataIcon,
+                              className: k.metadataDownload,
+                              iconClassName: k.metadataIcon,
                               mimeType: o,
                               fileName: t
                           }),
                     (0, a.jsx)('div', {
-                        className: M.metadataSize,
+                        className: k.metadataSize,
                         children: n
                     })
                 ]
@@ -308,8 +308,8 @@ function Q(e) {
             !s &&
                 (0, a.jsx)(m.Z, {
                     href: r,
-                    className: M.metadataDownload,
-                    iconClassName: M.metadataIcon,
+                    className: k.metadataDownload,
+                    iconClassName: k.metadataIcon,
                     mimeType: o
                 })
         ]
@@ -342,9 +342,9 @@ class J extends o.Component {
         let { play: e } = this.state,
             t = e ? p.o1U : p.fpf;
         return (0, a.jsx)(d.Z.div, {
-            className: M.playPausePop,
+            className: k.playPausePop,
             style: this.getAnimatedStyle(),
-            children: (0, a.jsx)(t, { className: M.playPausePopIcon })
+            children: (0, a.jsx)(t, { className: k.playPausePopIcon })
         });
     }
     constructor(...e) {
@@ -463,7 +463,7 @@ class ee {
                         this.moveToState('stalled');
                         break;
                     default:
-                        (0, f.UT)(this.currentState);
+                        (0, _.UT)(this.currentState);
                 }
             }),
             j(this, 'onSeeking', (e) => {
@@ -483,7 +483,7 @@ class ee {
                     case 'paused':
                         break;
                     default:
-                        (0, f.UT)(this.currentState);
+                        (0, _.UT)(this.currentState);
                 }
                 (this.seekCount += 1), this.moveToState('seeking');
             }),
@@ -501,7 +501,7 @@ class ee {
                     case 'paused':
                         break;
                     default:
-                        (0, f.UT)(this.currentState);
+                        (0, _.UT)(this.currentState);
                 }
             }),
             j(this, 'onPause', (e) => {
@@ -521,7 +521,7 @@ class ee {
                         (this.seekWaitingMs += this.timeInState()), (this.seekCount += 1);
                         break;
                     default:
-                        (0, f.UT)(this.currentState);
+                        (0, _.UT)(this.currentState);
                 }
             }),
             j(this, 'onError', (e) => {
@@ -547,7 +547,7 @@ class ee {
                     case 'seeking':
                         break;
                     default:
-                        (0, f.UT)(this.currentState);
+                        (0, _.UT)(this.currentState);
                 }
                 (this.playbackStartTime = e.currentTarget.currentTime), this.moveToState('playing');
             }),
@@ -564,7 +564,7 @@ class ee {
                     case 'seeking':
                         break;
                     default:
-                        (0, f.UT)(this.currentState);
+                        (0, _.UT)(this.currentState);
                 }
             }),
             j(this, 'onDragStart', (e) => {
@@ -601,8 +601,8 @@ class et extends (i = o.PureComponent) {
             { current: d } = this.playPausePopRef;
         if (null == u) return;
         a && !t.playing ? (this.play(), this.handleMouseMove(), this.handleUIUpdate(), t.hasClickedPlay && (null == d || d.pop(a))) : !a && t.playing && (u.pause(), null == d || d.pop(a), null == n || n()), a && null == this._analytics.metadata.hasValidFrame && this.checkVideoDecodability();
-        let _ = (0, S.fn)(u.parentNode, u);
-        o && !t.fullscreen && null != _ ? ((0, S.Dj)(_), _.addEventListener(S.NO, this.handleFullScreenExit)) : !o && t.fullscreen && null != _ && (_.removeEventListener(S.NO, this.handleFullScreenExit), (0, S.Pr)(_, _.ownerDocument)), l === N.Z.Types.DURATION && t.dragging !== N.Z.Types.DURATION && a ? u.pause() : l !== N.Z.Types.DURATION && t.dragging === N.Z.Types.DURATION && a && u.play(), s !== t.muted && ((u.muted = s), null == i || i(s)), c !== t.volume && ((u.volume = c), null == r || r(c));
+        let f = (0, S.fn)(u.parentNode, u);
+        o && !t.fullscreen && null != f ? ((0, S.Dj)(f), f.addEventListener(S.NO, this.handleFullScreenExit)) : !o && t.fullscreen && null != f && (f.removeEventListener(S.NO, this.handleFullScreenExit), (0, S.Pr)(f, f.ownerDocument)), l === N.Z.Types.DURATION && t.dragging !== N.Z.Types.DURATION && a ? u.pause() : l !== N.Z.Types.DURATION && t.dragging === N.Z.Types.DURATION && a && u.play(), s !== t.muted && ((u.muted = s), null == i || i(s)), c !== t.volume && ((u.volume = c), null == r || r(c));
     }
     componentWillUnmount() {
         this._unmounted = !0;
@@ -663,7 +663,7 @@ class et extends (i = o.PureComponent) {
             c = this.getHeight();
         return n
             ? (0, a.jsx)(h.Z, {
-                  className: M.video,
+                  className: k.video,
                   controls: !1,
                   height: c,
                   poster: t,
@@ -674,7 +674,7 @@ class et extends (i = o.PureComponent) {
                   autoPlay: o
               })
             : (0, a.jsx)(h.Z, {
-                  className: M.video,
+                  className: k.video,
                   controls: !1,
                   playsInline: !0,
                   autoPlay: o,
@@ -701,7 +701,7 @@ class et extends (i = o.PureComponent) {
     }
     renderAudio() {
         return (0, a.jsx)('audio', {
-            className: M.audio,
+            className: k.audio,
             controls: !1,
             onClick: this.handleVideoClick,
             onEnded: this.handleEnded,
@@ -716,16 +716,16 @@ class et extends (i = o.PureComponent) {
         let { current: e } = this.mediaRef,
             {
                 props: { type: t, autoPlay: n, playable: r = !0, onVolumeShow: i, onVolumeHide: o, onControlsHide: s, onControlsShow: l },
-                state: { buffers: c, currentTime: u, duration: d, hasClickedPlay: _, hideControls: f, muted: p, playing: h, fullscreen: m, volume: g, dragging: E }
+                state: { buffers: c, currentTime: u, duration: d, hasClickedPlay: f, hideControls: _, muted: p, playing: h, fullscreen: m, volume: g, dragging: E }
             } = this,
             y = this.getWidth();
-        return _ || n || t === Y.AUDIO
+        return f || n || t === Y.AUDIO
             ? (0, a.jsx)(X, {
                   buffers: c,
                   currentTime: u,
                   duration: d,
                   volume: (0, T.P)(g, 1),
-                  hide: t === Y.VIDEO && f,
+                  hide: t === Y.VIDEO && _,
                   muted: p,
                   autoPlay: n,
                   onDrag: this.handleDrag,
@@ -748,8 +748,8 @@ class et extends (i = o.PureComponent) {
                       t === Y.VIDEO
                           ? (0, a.jsx)(b.Z, {
                                 'aria-label': x.intl.string(x.t['2nM3Pj']),
-                                className: M.videoButton,
-                                iconClassName: M.controlIcon,
+                                className: k.videoButton,
+                                iconClassName: k.controlIcon,
                                 guestWindow: window,
                                 onClick: this.toggleFullscreen,
                                 node: (0, S.fn)(null == e ? void 0 : e.parentNode, e)
@@ -799,12 +799,12 @@ class et extends (i = o.PureComponent) {
     }
     render() {
         let { height: e, type: t, src: n, forceExternal: r, className: i, renderLinkComponent: o, responsive: s, mediaLayoutType: c, renderOverlayContent: u } = this.props,
-            { fullscreen: d, hideControls: _, playing: f } = this.state,
-            h = M.wrapperPaused;
-        if ((t === Y.AUDIO ? (h = M.wrapperAudio) : _ ? (h = M.wrapperControlsHidden) : f && (h = M.wrapperPlaying), r && t === Y.VIDEO)) {
+            { fullscreen: d, hideControls: f, playing: _ } = this.state,
+            h = k.wrapperPaused;
+        if ((t === Y.AUDIO ? (h = k.wrapperAudio) : f ? (h = k.wrapperControlsHidden) : _ && (h = k.wrapperPlaying), r && t === Y.VIDEO)) {
             let t = this.getWidth();
             return (0, a.jsxs)('div', {
-                className: l()(h, { [M.wrapperMediaMosaic]: c === L.hV.MOSAIC }),
+                className: l()(h, { [k.wrapperMediaMosaic]: c === L.hV.MOSAIC }),
                 style: s
                     ? void 0
                     : {
@@ -817,9 +817,9 @@ class et extends (i = o.PureComponent) {
                     this.renderMetadata(),
                     this.renderVideo(),
                     (0, a.jsx)('div', {
-                        className: M.playCenter,
+                        className: k.playCenter,
                         children: (0, a.jsx)(P.Z, {
-                            className: M.__invalid_playButton,
+                            className: k.__invalid_playButton,
                             externalURL: n,
                             renderLinkComponent: o
                         })
@@ -828,11 +828,11 @@ class et extends (i = o.PureComponent) {
             });
         }
         return (0, a.jsxs)('div', {
-            className: l()(h, M.newMosaicStyle, i, { [M.wrapperMediaMosaic]: c === L.hV.MOSAIC }),
+            className: l()(h, k.newMosaicStyle, i, { [k.wrapperMediaMosaic]: c === L.hV.MOSAIC }),
             'data-fullscreen': d,
             onMouseEnter: this.handleMouseEnter,
             onMouseLeave: this.handleMouseLeave,
-            onMouseMove: f ? this.handleMouseMove : void 0,
+            onMouseMove: _ ? this.handleMouseMove : void 0,
             onKeyDown: this.handleKeyDown,
             tabIndex: 0,
             style: this.getMediaStyle(),
@@ -850,7 +850,7 @@ class et extends (i = o.PureComponent) {
                 t === Y.VIDEO ? this.renderPlayPausePop() : null,
                 null != u
                     ? (0, a.jsx)('div', {
-                          className: l()({ [M.overlayContentHidden]: f || d }),
+                          className: l()({ [k.overlayContentHidden]: _ || d }),
                           children: u()
                       })
                     : null
@@ -859,7 +859,7 @@ class et extends (i = o.PureComponent) {
     }
     checkVideoDecodability() {
         let { current: e } = this.mediaRef;
-        if (null == e || !(0, _.k)(e, HTMLVideoElement)) return;
+        if (null == e || !(0, f.k)(e, HTMLVideoElement)) return;
         if (this.props.type !== Y.VIDEO) {
             this._analytics.metadata.hasValidFrame = !0;
             return;

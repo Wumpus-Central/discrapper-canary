@@ -14,7 +14,7 @@ n.d(t, {
     h1: () => u,
     ic: () => O,
     oX: () => r,
-    rP: () => _,
+    rP: () => f,
     u0: () => I,
     vY: () => i,
     vc: () => v,
@@ -35,10 +35,10 @@ var c = (function (e) {
     d = (function (e) {
         return (e.TRY_IT_OUT = 'try_it_out'), (e.GUILD_TAG = 'guild_tag'), e;
     })({}),
-    _ = (function (e) {
+    f = (function (e) {
         return (e.REDUCED_MOTION = 'reduced_motion'), (e.SYNC_PROFILE_THEME_WITH_USER_THEME = 'sync_profile_theme_with_user_theme'), (e.LEGACY_CHAT_INPUT = 'legacy_chat_input'), e;
     })({}),
-    f = (function (e) {
+    _ = (function (e) {
         return (e.HARDWARE_ACCELERATION = 'hardware_acceleration'), e;
     })({}),
     p = (function (e) {
@@ -46,8 +46,8 @@ var c = (function (e) {
     })({});
 let h = {
     ProfileCustomizationScrollPositions: d,
-    AccessibilityScrollPositions: _,
-    VoiceAndVideoScrollPositions: f,
+    AccessibilityScrollPositions: f,
+    VoiceAndVideoScrollPositions: _,
     AppearanceScrollPositions: u,
     ContentAndSocialScrollPositions: p
 };

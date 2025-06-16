@@ -1,7 +1,7 @@
 a.d(e, {
     Mq: () => c,
     Q3: () => i,
-    uE: () => E
+    uE: () => s
 });
 var r = a(617726),
     _ = a(967752),
@@ -24,24 +24,24 @@ function c(t, e, a, _) {
     (n = a && a.sdk) && ((t.sdk = t.sdk || {}), (t.sdk.name = t.sdk.name || n.name), (t.sdk.version = t.sdk.version || n.version), (t.sdk.integrations = [...(t.sdk.integrations || []), ...(n.integrations || [])]), (t.sdk.packages = [...(t.sdk.packages || []), ...(n.packages || [])]));
     let c = (0, r.Cd)(t, o, _, e);
     delete t.sdkProcessingMetadata;
-    let E = [{ type: i }, t];
-    return (0, r.Jd)(c, [E]);
+    let s = [{ type: i }, t];
+    return (0, r.Jd)(c, [s]);
 }
-function E(t, e) {
+function s(t, e) {
     let a = (0, n.jC)(t[0]),
         i = e && e.getDsn(),
         c = e && e.getOptions().tunnel,
-        E = {
+        s = {
             sent_at: new Date().toISOString(),
             ...(!!a.trace_id && !!a.public_key && { trace: a }),
             ...(!!c && i && { dsn: (0, _.RA)(i) })
         },
-        s = e && e.getOptions().beforeSendSpan,
-        l = s ? (t) => s((0, o.XU)(t)) : (t) => (0, o.XU)(t),
-        I = [];
+        E = e && e.getOptions().beforeSendSpan,
+        l = E ? (t) => E((0, o.XU)(t)) : (t) => (0, o.XU)(t),
+        u = [];
     for (let e of t) {
         let t = l(e);
-        t && I.push((0, r.KQ)(t));
+        t && u.push((0, r.KQ)(t));
     }
-    return (0, r.Jd)(E, I);
+    return (0, r.Jd)(s, u);
 }

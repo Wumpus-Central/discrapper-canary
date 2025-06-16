@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => _ });
 var r = n(588468),
     i = n(496675),
     a = n(483360),
@@ -8,10 +8,10 @@ var r = n(588468),
     c = n(981631),
     u = n(185923),
     d = n(388032);
-function _(e) {
+function f(e) {
     return ''.concat(l.a4).concat(e.name).concat(l.jp);
 }
-let f = {
+let _ = {
     sentinel: l.a4,
     matches(e, t, n, r, a) {
         var o, s;
@@ -58,6 +58,6 @@ let f = {
                 options: r
             } = e,
             i = t[n];
-        return r.sendMessage(_(i)), { type: s.z2.REACTION };
+        return r.sendMessage(f(i)), { type: s.z2.REACTION };
     }
 };

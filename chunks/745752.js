@@ -14,8 +14,8 @@ var r = n(544891),
     c = n(626135),
     u = n(630388),
     d = n(45966),
-    _ = n(290511),
-    f = n(981631),
+    f = n(290511),
+    _ = n(981631),
     p = n(372897);
 function h(e, t, n) {
     return (
@@ -71,7 +71,7 @@ function E(e, t) {
 }
 function b(e) {
     c.default.track(
-        f.rMx.GUILD_ONBOARDING_LOADED,
+        _.rMx.GUILD_ONBOARDING_LOADED,
         E(m({}, (0, a.hH)(e)), {
             has_new_prompts: !1,
             number_of_prompts: 0
@@ -86,13 +86,13 @@ function y(e) {
         }),
         r.tn
             .get({
-                url: f.ANM.GUILD_ONBOARDING(e),
+                url: _.ANM.GUILD_ONBOARDING(e),
                 rejectWithError: !1
             })
             .then(
                 (t) => {
                     let { body: n } = t,
-                        r = (0, _.cf)(n);
+                        r = (0, f.cf)(n);
                     return i.Z.dispatch(
                         m(
                             {
@@ -118,10 +118,10 @@ async function O(e) {
     let r = o.default.getId(),
         i = (0, u.yE)(null != (n = null == (t = s.ZP.getMember(e, r)) ? void 0 : t.flags) ? n : 0, p.q.COMPLETED_ONBOARDING),
         a = l.Z.getGuild(e);
-    if (null == a || !a.hasFeature(f.oNc.GUILD_ONBOARDING)) return Promise.resolve();
+    if (null == a || !a.hasFeature(_.oNc.GUILD_ONBOARDING)) return Promise.resolve();
     let c = d.Z.shouldFetchPrompts(e),
-        _ = d.Z.getOnboardingPrompts(e);
-    if (!c && _.length > 0) return _.every((e) => !e.inOnboarding) ? T(e) : i || v(e), Promise.resolve();
+        f = d.Z.getOnboardingPrompts(e);
+    if (!c && f.length > 0) return f.every((e) => !e.inOnboarding) ? T(e) : i || v(e), Promise.resolve();
     let h = await y(e);
     return Array.isArray(h) && h.every((e) => !e.inOnboarding) ? (T(e), Promise.resolve()) : (i || v(e), h);
 }
@@ -134,14 +134,14 @@ function v(e) {
 let I = -2;
 function T(e) {
     c.default.track(
-        f.rMx.GUILD_ONBOARDING_STEP_VIEWED,
+        _.rMx.GUILD_ONBOARDING_STEP_VIEWED,
         E(m({}, (0, a.hH)(e)), {
             step: I,
             required: !0
         })
     ),
         c.default.track(
-            f.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
+            _.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
             E(m({}, (0, a.hH)(e)), {
                 step: I,
                 skipped: !1,

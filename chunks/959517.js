@@ -1,7 +1,7 @@
 n.d(t, {
     D4: () => u,
     Eo: () => d,
-    R4: () => _,
+    R4: () => f,
     Y1: () => m,
     _j: () => p,
     c8: () => s,
@@ -9,7 +9,7 @@ n.d(t, {
     dy: () => E,
     fP: () => a,
     hs: () => g,
-    j1: () => f,
+    j1: () => _,
     kQ: () => c,
     pq: () => o,
     xi: () => h
@@ -36,8 +36,8 @@ let a = [0, 4, 8, 16, 24],
     c = 16,
     u = 16,
     d = 32,
-    _ = 64,
-    f = '---new-messages-bar',
+    f = 64,
+    _ = '---new-messages-bar',
     p = 'SPOILER_';
 var h = (function (e) {
     return (e.ERROR_SOURCE_UNKNOWN = 'ERROR_SOURCE_UNKNOWN'), (e.PRECOMPRESSION_SUM_TOO_LARGE = 'PRECOMPRESSION_SUM_TOO_LARGE'), (e.PRECOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE = 'PRECOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE'), (e.POSTCOMPRESSION_SUM_TOO_LARGE = 'POSTCOMPRESSION_SUM_TOO_LARGE'), (e.POSTCOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE = 'POSTCOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE'), (e.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR = 'UPLOAD_MESSAGE_ATTACHMENT_MAX_SIZE_ERROR'), (e.EXPLICIT_CONTENT = 'EXPLICIT_CONTENT'), e;

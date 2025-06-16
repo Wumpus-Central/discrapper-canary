@@ -13,7 +13,7 @@ var r = n(278074),
     c = n(135483),
     u = n(212161),
     d = n(981631);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
@@ -103,7 +103,7 @@ class y extends l.Z {
         var { type: t, premium_type: n, category_sku_id: r, prices: i, bundled_products: a, variants: l } = e,
             c = m(e, ['type', 'premium_type', 'category_sku_id', 'prices', 'bundled_products', 'variants']);
         return new y(
-            h(f({}, super.fromServer(c)), {
+            h(_({}, super.fromServer(c)), {
                 type: t,
                 premiumType: n === d.WND ? null : n,
                 categorySkuId: r,
@@ -116,7 +116,7 @@ class y extends l.Z {
         );
     }
     constructor(e) {
-        super(e), _(this, 'prices', void 0), _(this, 'type', void 0), _(this, 'premiumType', void 0), _(this, 'items', void 0), _(this, 'categorySkuId', void 0), _(this, 'bundledProducts', void 0), _(this, 'variants', void 0), _(this, 'variantGroupStoreListingId', void 0), _(this, 'googleSkuIds', void 0), (this.summary = e.summary), (this.type = e.type), (this.premiumType = e.premiumType), (this.items = e.items), (this.categorySkuId = e.categorySkuId), (this.prices = e.prices), (this.bundledProducts = e.bundledProducts), (this.googleSkuIds = e.googleSkuIds), (this.variants = e.variants);
+        super(e), f(this, 'prices', void 0), f(this, 'type', void 0), f(this, 'premiumType', void 0), f(this, 'items', void 0), f(this, 'categorySkuId', void 0), f(this, 'bundledProducts', void 0), f(this, 'variants', void 0), f(this, 'variantGroupStoreListingId', void 0), f(this, 'googleSkuIds', void 0), (this.summary = e.summary), (this.type = e.type), (this.premiumType = e.premiumType), (this.items = e.items), (this.categorySkuId = e.categorySkuId), (this.prices = e.prices), (this.bundledProducts = e.bundledProducts), (this.googleSkuIds = e.googleSkuIds), (this.variants = e.variants);
     }
 }
 class O extends y {
@@ -124,7 +124,7 @@ class O extends y {
         var { base_variant_name: t, base_variant_sku_id: n, variant_label: r, variant_value: i } = e,
             a = m(e, ['base_variant_name', 'base_variant_sku_id', 'variant_label', 'variant_value']);
         return new O(
-            h(f({}, super.fromServer(a)), {
+            h(_({}, super.fromServer(a)), {
                 baseVariantName: t,
                 baseVariantSkuId: n,
                 variantLabel: r,
@@ -133,6 +133,6 @@ class O extends y {
         );
     }
     constructor(e) {
-        super(e), _(this, 'baseVariantName', void 0), _(this, 'baseVariantSkuId', void 0), _(this, 'variantLabel', void 0), _(this, 'variantValue', void 0), (this.baseVariantName = e.baseVariantName), (this.baseVariantSkuId = e.baseVariantSkuId), (this.variantLabel = e.variantLabel), (this.variantValue = e.variantValue);
+        super(e), f(this, 'baseVariantName', void 0), f(this, 'baseVariantSkuId', void 0), f(this, 'variantLabel', void 0), f(this, 'variantValue', void 0), (this.baseVariantName = e.baseVariantName), (this.baseVariantSkuId = e.baseVariantSkuId), (this.variantLabel = e.variantLabel), (this.variantValue = e.variantValue);
     }
 }

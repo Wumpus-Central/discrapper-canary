@@ -20,7 +20,7 @@ function u(e, t, n) {
     );
 }
 let d = 20;
-class _ {
+class f {
     request(e) {
         this._pending.has(e) || this._fetched.has(e) || (this._pending.add(e), this._flushHandler.delay(!1));
     }
@@ -40,10 +40,10 @@ class _ {
         u(this, '_fetched', new Set()), u(this, '_pending', new Set()), u(this, '_flushHandler', new s.sW(0, () => this._flush()));
     }
 }
-let f = new _();
+let _ = new f();
 function p(e, t) {
     r.useEffect(() => {
-        null != e && f.request(e);
+        null != e && _.request(e);
     }, [e]);
     let n = r.useMemo(
         () =>

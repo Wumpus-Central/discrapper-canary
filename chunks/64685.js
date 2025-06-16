@@ -1,6 +1,6 @@
 a.d(e, {
-    Uf: () => E,
-    cf: () => s
+    Uf: () => s,
+    cf: () => E
 });
 var r = a(573736),
     _ = a(370336),
@@ -8,19 +8,19 @@ var r = a(573736),
     o = a(101284),
     i = a(899517),
     c = a(578346);
-function E(t, e) {
+function s(t, e) {
     let a = 'fetch';
     (0, c.Hj)(a, t), (0, c.D2)(a, () => l(void 0, e));
 }
-function s(t) {
+function E(t) {
     let e = 'fetch-body-resolved';
-    (0, c.Hj)(e, t), (0, c.D2)(e, () => l(I));
+    (0, c.Hj)(e, t), (0, c.D2)(e, () => l(u));
 }
 function l(t, e = !1) {
     (!e || (0, n.t$)()) &&
         (0, _.hl)(i.n, 'fetch', function (e) {
             return function (...a) {
-                let { method: n, url: E } = (function (t) {
+                let { method: n, url: s } = (function (t) {
                         if (0 === t.length)
                             return {
                                 method: 'GET',
@@ -29,32 +29,32 @@ function l(t, e = !1) {
                         if (2 === t.length) {
                             let [e, a] = t;
                             return {
-                                url: R(e),
-                                method: u(a, 'method') ? String(a.method).toUpperCase() : 'GET'
+                                url: d(e),
+                                method: I(a, 'method') ? String(a.method).toUpperCase() : 'GET'
                             };
                         }
                         let e = t[0];
                         return {
-                            url: R(e),
-                            method: u(e, 'method') ? String(e.method).toUpperCase() : 'GET'
+                            url: d(e),
+                            method: I(e, 'method') ? String(e.method).toUpperCase() : 'GET'
                         };
                     })(a),
-                    s = {
+                    E = {
                         args: a,
                         fetchData: {
                             method: n,
-                            url: E
+                            url: s
                         },
                         startTimestamp: 1000 * (0, o.ph)()
                     };
-                t || (0, c.rK)('fetch', { ...s });
+                t || (0, c.rK)('fetch', { ...E });
                 let l = Error().stack;
                 return e.apply(i.n, a).then(
                     async (e) => {
                         if (t) t(e);
                         else {
                             let t = {
-                                ...s,
+                                ...E,
                                 endTimestamp: 1000 * (0, o.ph)(),
                                 response: e
                             };
@@ -65,7 +65,7 @@ function l(t, e = !1) {
                     (e) => {
                         if (!t) {
                             let t = {
-                                ...s,
+                                ...E,
                                 endTimestamp: 1000 * (0, o.ph)(),
                                 error: e
                             };
@@ -76,7 +76,7 @@ function l(t, e = !1) {
             };
         });
 }
-async function I(t) {
+async function u(t) {
     let e;
     try {
         e = t.clone();
@@ -112,9 +112,9 @@ async function I(t) {
         });
     });
 }
-function u(t, e) {
+function I(t, e) {
     return !!t && 'object' == typeof t && !!t[e];
 }
-function R(t) {
-    return 'string' == typeof t ? t : t ? (u(t, 'url') ? t.url : t.toString ? t.toString() : '') : '';
+function d(t) {
+    return 'string' == typeof t ? t : t ? (I(t, 'url') ? t.url : t.toString ? t.toString() : '') : '';
 }

@@ -5,25 +5,25 @@ var r = a(140955),
     o = a(622574),
     i = a(433691),
     c = a(135813),
-    E = a(662355);
-let s = [100, 300],
+    s = a(662355);
+let E = [100, 300],
     l = (t, e = {}) => {
-        (0, E.A)(() => {
+        (0, s.A)(() => {
             let a,
-                E = (0, _.Y)(),
+                s = (0, _.Y)(),
                 l = (0, n.I)('FID'),
-                I = (t) => {
-                    t.startTime < E.firstHiddenTime && ((l.value = t.processingStart - t.startTime), l.entries.push(t), a(!0));
-                },
                 u = (t) => {
-                    t.forEach(I);
+                    t.startTime < s.firstHiddenTime && ((l.value = t.processingStart - t.startTime), l.entries.push(t), a(!0));
                 },
-                R = (0, o.N)('first-input', u);
-            (a = (0, r._)(t, l, s, e.reportAllChanges)),
-                R &&
+                I = (t) => {
+                    t.forEach(u);
+                },
+                d = (0, o.N)('first-input', I);
+            (a = (0, r._)(t, l, E, e.reportAllChanges)),
+                d &&
                     (0, i.u)(
                         (0, c.R)(() => {
-                            u(R.takeRecords()), R.disconnect();
+                            I(d.takeRecords()), d.disconnect();
                         })
                     );
         });

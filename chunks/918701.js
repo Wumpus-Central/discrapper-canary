@@ -3,7 +3,7 @@ n.d(t, {
     $J: () => e5,
     AV: () => ed,
     B2: () => ty,
-    B3: () => t_,
+    B3: () => tf,
     BM: () => e7,
     Bg: () => eg,
     Bz: () => e8,
@@ -14,7 +14,7 @@ n.d(t, {
     FI: () => th,
     FX: () => eh,
     Fs: () => tl,
-    GN: () => e_,
+    GN: () => ef,
     Gd: () => tp,
     HJ: () => e4,
     Jg: () => eS,
@@ -45,7 +45,7 @@ n.d(t, {
     b7: () => eK,
     bA: () => tb,
     f$: () => tu,
-    f2: () => ek,
+    f2: () => eM,
     fY: () => te,
     gI: () => tt,
     hF: () => tv,
@@ -53,7 +53,7 @@ n.d(t, {
     iQ: () => z,
     il: () => eW,
     lQ: () => W,
-    nc: () => eM,
+    nc: () => ek,
     o9: () => ex,
     oo: () => eA,
     pO: () => eP,
@@ -61,7 +61,7 @@ n.d(t, {
     q8: () => e1,
     qe: () => tO,
     t2: () => eu,
-    u7: () => tf,
+    u7: () => t_,
     vQ: () => ey,
     vR: () => eI,
     xN: () => eE,
@@ -69,7 +69,7 @@ n.d(t, {
     yH: () => tc,
     yI: () => er,
     ys: () => eT,
-    zE: () => ef,
+    zE: () => e_,
     zK: () => eL,
     zi: () => K
 }),
@@ -90,9 +90,9 @@ var r = n(991998),
     c = n(887003),
     u = n(570140),
     d = n(230711),
-    _ = n(782568);
+    f = n(782568);
 n(597688);
-var f = n(231757),
+var _ = n(231757),
     p = n(706454),
     h = n(866960),
     m = n(572004),
@@ -127,7 +127,7 @@ function x(e, t, n) {
         e
     );
 }
-function M(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -143,7 +143,7 @@ function M(e) {
     }
     return e;
 }
-function k(e, t) {
+function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -160,7 +160,7 @@ function j(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : M(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -395,11 +395,11 @@ function ed(e) {
     }
     return L.intl.formatToPlainString(L.t.EQa7oq, { questName: r.config.messages.questName });
 }
-function e_(e) {
+function ef(e) {
     return Object.keys(P.a_).includes(S.jn[e]);
 }
-function ef(e, t) {
-    if (!e_(t)) return !1;
+function e_(e, t) {
+    if (!ef(t)) return !1;
     let n = S.jn[t];
     return (0, b.yE)(e.dismissedQuestContent, P.a_[n]);
 }
@@ -456,7 +456,7 @@ function eI(e, t) {
     return e.targetedContent.includes(t);
 }
 function eT(e, t) {
-    O.Z.captureException(e, j(M({}, t), { tags: j(M({}, null == t ? void 0 : t.tags), { app_context: 'quests' }) }));
+    O.Z.captureException(e, j(k({}, t), { tags: j(k({}, null == t ? void 0 : t.tags), { app_context: 'quests' }) }));
 }
 function eS(e, t) {
     if (null == t || null == e) return null;
@@ -503,7 +503,7 @@ function ex(e) {
     let r = t.config.rewardsConfig.rewards[n];
     return r.type === c.w.REWARD_CODE ? r : null;
 }
-function eM(e, t) {
+function ek(e, t) {
     let n = C.r.build(e.config).application.link;
     (0, v._3)({
         questId: e.id,
@@ -513,9 +513,9 @@ function eM(e, t) {
         impressionId: t.impressionId
     }),
         g.S.dispatch(w.CkL.QUEST_GAME_LINK_OPENED),
-        (0, _.Z)(n);
+        (0, f.Z)(n);
 }
-let ek = (e, t) => {
+let eM = (e, t) => {
         (0, v._3)({
             questId: e,
             questContent: t.content,
@@ -687,7 +687,7 @@ function e8(e) {
     return null != e.userStatus && (e6(e.userStatus, o.X.PLAY_ON_XBOX) || e6(e.userStatus, o.X.PLAY_ON_PLAYSTATION));
 }
 function e7(e) {
-    return !!e1(e) && (0, n(952265).nf)(tf(e.id));
+    return !!e1(e) && (0, n(952265).nf)(t_(e.id));
 }
 function e9() {
     d.Z.open(w.oAB.CONNECTIONS);
@@ -700,7 +700,7 @@ function te(e, t) {
         questContentCTA: t.ctaContent,
         impressionId: t.impressionId
     }),
-        (0, f.Z)({
+        (0, _.Z)({
             platformType: n,
             location: t.ctaContent
         });
@@ -715,11 +715,11 @@ function tt(e, t) {
         questContentCTA: t.ctaContent,
         impressionId: t.impressionId
     });
-    let r = t_(n);
-    if (1 === r.length) return (0, f.Z)({ platformType: r.at(0) });
+    let r = tf(n);
+    if (1 === r.length) return (0, _.Z)({ platformType: r.at(0) });
     u.Z.dispatch({
         type: 'CONNECTIONS_GRID_MODAL_SHOW',
-        onComplete: (e) => (0, f.Z)({ platformType: e }),
+        onComplete: (e) => (0, _.Z)({ platformType: e }),
         includedPlatformTypes: new Set(r)
     });
 }
@@ -758,8 +758,8 @@ function ts(e) {
                   idx: null != (r = null == o ? void 0 : o.tier) ? r : null == (t = a.userStatus) ? void 0 : t.claimedTier
               })
             : null,
-        _ = null != (i = null == d || null == (n = d.messages) ? void 0 : n.redemptionInstructionsByPlatform) ? i : l.defaultRewardRedemptionInstructionsByPlatform;
-    return null != u ? _[u] : void 0;
+        f = null != (i = null == d || null == (n = d.messages) ? void 0 : n.redemptionInstructionsByPlatform) ? i : l.defaultRewardRedemptionInstructionsByPlatform;
+    return null != u ? f[u] : void 0;
 }
 function tl(e) {
     let { isTargetedDisclosure: t, gamePublisher: n, gameTitle: r, cosponsorName: i } = e;
@@ -790,7 +790,7 @@ function td(e) {
     var t;
     return tu(e) && (null == (t = ep(e)) ? void 0 : t.expirationMode) === l.n.PREMIUM_PERMANENT;
 }
-function t_(e) {
+function tf(e) {
     let t = Object.keys(e.config.taskConfigV2.tasks),
         n = [];
     for (let e of t)
@@ -803,7 +803,7 @@ function t_(e) {
         }
     return n;
 }
-function tf(e) {
+function t_(e) {
     return 'VIDEO-QUEST-'.concat(e);
 }
 function tp(e) {

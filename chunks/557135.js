@@ -9,8 +9,8 @@ var i = n(481060),
     c = n(452369),
     u = n(569471),
     d = n(346479),
-    _ = n(314897),
-    f = n(944486),
+    f = n(314897),
+    _ = n(944486),
     p = n(979651),
     h = n(626135),
     m = n(366297),
@@ -56,8 +56,8 @@ let v = {
         let { channel: t, connected: s, needSubscriptionToAccess: b, locked: v = !1, routeDirectlyToChannel: I = !1, bypassChangeModal: T, bypassBlockedWarningModal: S, bypassGuildIdCheck: A = !1 } = e;
         t.isThread() && (await d.Z.unarchiveThreadIfNecessary(t.id), u.Z.hasJoined(t.id) || (await d.Z.joinThread(t, 'Join Voice')));
         let N = o.Z.getRemoteSessionId(),
-            C = p.Z.getVoiceStateForSession(_.default.getId(), N),
-            R = (null == C ? void 0 : C.channelId) === t.id || f.Z.getChannelId() === p.Z.getCurrentClientVoiceChannelId(t.guild_id),
+            C = p.Z.getVoiceStateForSession(f.default.getId(), N),
+            R = (null == C ? void 0 : C.channelId) === t.id || _.Z.getChannelId() === p.Z.getCurrentClientVoiceChannelId(t.guild_id),
             P = c.Z.getBlockedUsersForVoiceChannel(t.id),
             w = c.Z.getIgnoredUsersForVoiceChannel(t.id);
         return ((0, l.B)(t.id) && (S = !0), S || v || s || (!(P.size > 0) && !(w.size > 0)))

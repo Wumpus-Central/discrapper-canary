@@ -21,12 +21,12 @@ function c(e, t, n) {
     }
     try {
         var d = i(e),
-            _ = i(t);
+            f = i(t);
     } catch (e) {
         return !1;
     }
-    if (d.length != _.length) return !1;
-    for (d.sort(), _.sort(), c = d.length - 1; c >= 0; c--) if (d[c] != _[c]) return !1;
+    if (d.length != f.length) return !1;
+    for (d.sort(), f.sort(), c = d.length - 1; c >= 0; c--) if (d[c] != f[c]) return !1;
     for (c = d.length - 1; c >= 0; c--) if (!o(e[(u = d[c])], t[u], n)) return !1;
     return typeof e == typeof t;
 }

@@ -7,8 +7,8 @@ var r = n(46015),
     c = 700,
     u = 72,
     d = 128,
-    _ = '-',
-    f = /[^\0-\u007E]/,
+    f = '-',
+    _ = /[^\0-\u007E]/,
     p = /[.\u3002\uFF0E\uFF61]/g,
     h = 'Overflow: input needs wider integers to process',
     m = 35,
@@ -46,30 +46,30 @@ var r = n(46015),
             r = [],
             l = (e = N(e)).length,
             c = d,
-            f = 0,
+            _ = 0,
             p = u;
         for (t = 0; t < e.length; t++) (n = e[t]) < 128 && I(r, y(n));
         var m = r.length,
             E = m;
-        for (m && I(r, _); E < l; ) {
+        for (m && I(r, f); E < l; ) {
             var O = i;
             for (t = 0; t < e.length; t++) (n = e[t]) >= c && n < O && (O = n);
             var T = E + 1;
-            if (O - c > b((i - f) / T)) throw new g(h);
-            for (f += (O - c) * T, c = O, t = 0; t < e.length; t++) {
-                if ((n = e[t]) < c && ++f > i) throw new g(h);
+            if (O - c > b((i - _) / T)) throw new g(h);
+            for (_ += (O - c) * T, c = O, t = 0; t < e.length; t++) {
+                if ((n = e[t]) < c && ++_ > i) throw new g(h);
                 if (n === c) {
-                    for (var S = f, A = a; ; ) {
+                    for (var S = _, A = a; ; ) {
                         var P = A <= p ? o : A >= p + s ? s : A - p;
                         if (S < P) break;
                         var w = S - P,
                             D = a - P;
                         I(r, y(C(P + (w % D)))), (S = b(w / D)), (A += a);
                     }
-                    I(r, y(C(S))), (p = R(f, T, E === m)), (f = 0), E++;
+                    I(r, y(C(S))), (p = R(_, T, E === m)), (_ = 0), E++;
                 }
             }
-            f++, c++;
+            _++, c++;
         }
         return v(r, '');
     };
@@ -78,6 +78,6 @@ e.exports = function (e) {
         n,
         r = [],
         i = S(T(A(e), p, '.'), '.');
-    for (t = 0; t < i.length; t++) I(r, E(f, (n = i[t])) ? 'xn--' + P(n) : n);
+    for (t = 0; t < i.length; t++) I(r, E(_, (n = i[t])) ? 'xn--' + P(n) : n);
     return v(r, '.');
 };

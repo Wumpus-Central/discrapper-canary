@@ -58,14 +58,14 @@ function d(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = f(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -74,12 +74,12 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let f = () => {
+let _ = () => {
     throw Error('updateModal has not been implemented.');
 };
 {
     let e = n(169480);
-    (r = e.showModal), (f = e.updateModalProps), (i = n(952265).Mr);
+    (r = e.showModal), (_ = e.updateModalProps), (i = n(952265).Mr);
 }
 let p = 60008;
 function h() {
@@ -99,7 +99,7 @@ function g(e) {
     function d() {
         null == s || s();
     }
-    function _(e) {
+    function f(e) {
         i(c), n(e);
     }
     function p(e) {
@@ -107,10 +107,10 @@ function g(e) {
     }
     function h(e) {
         return (
-            f(c, h, d, u(l({}, o), { isLoading: !0 })),
+            _(c, h, d, u(l({}, o), { isLoading: !0 })),
             E({
                 promiseFn: t,
-                resolve: _,
+                resolve: f,
                 reject: p,
                 code: e,
                 mfaCodeHandler: m,
@@ -120,7 +120,7 @@ function g(e) {
     }
     function m(e) {
         let { res: t } = e;
-        f(c, h, d, u(l({}, o), { error: t.body.message }));
+        _(c, h, d, u(l({}, o), { error: t.body.message }));
     }
 }
 function E(e) {

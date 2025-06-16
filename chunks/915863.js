@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -54,7 +54,7 @@ function d(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function _(e) {
+function f(e) {
     let { className: t, size: n } = e,
         i = u(e, ['className', 'size']);
     return (0, r.jsx)(

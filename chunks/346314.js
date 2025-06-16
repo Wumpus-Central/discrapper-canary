@@ -12,8 +12,8 @@ var r = n(255367),
     c = n(756715),
     u = n(573385),
     d = n(607070),
-    _ = n(865672),
-    f = n(109161),
+    f = n(865672),
+    _ = n(109161),
     p = n(827171);
 function h(e, t, n) {
     return (
@@ -105,14 +105,14 @@ function O(e) {
             gradientStyle: C,
             gradientClassname: R,
             gradientGlowClassname: P
-        } = (0, _.Ic)({
+        } = (0, f.Ic)({
             primaryColor: null == c ? void 0 : c.primaryColor,
             secondaryColor: null == c ? void 0 : c.secondaryColor,
             tertiaryColor: null == c ? void 0 : c.tertiaryColor,
             roleStyle: 'username',
             animateGradient: g || y || (null == b ? void 0 : b.animate)
         }),
-        w = (0, _.EJ)(n),
+        w = (0, f.EJ)(n),
         D = {
             className: o()(p.name, {
                 [p.username]: T,
@@ -125,7 +125,7 @@ function O(e) {
             children: n
         },
         x = S
-            ? (0, r.jsx)(f.F, {
+            ? (0, r.jsx)(_.F, {
                   color: a,
                   colors: A ? c : null,
                   name: l,
@@ -178,8 +178,8 @@ function O(e) {
     });
 }
 function v(e) {
-    let { name: t, color: n, roleName: i, dotAlignment: a, className: o, roleColors: s, animateRoleGradient: u, ref: _ } = e,
-        f = b(e, ['name', 'color', 'roleName', 'dotAlignment', 'className', 'roleColors', 'animateRoleGradient', 'ref']),
+    let { name: t, color: n, roleName: i, dotAlignment: a, className: o, roleColors: s, animateRoleGradient: u, ref: f } = e,
+        _ = b(e, ['name', 'color', 'roleName', 'dotAlignment', 'className', 'roleColors', 'animateRoleGradient', 'ref']),
         p = (0, l.e7)([d.Z], () => d.Z.roleStyle),
         h = 'username' === p,
         g = (0, r.jsx)(O, {
@@ -195,10 +195,10 @@ function v(e) {
         y = h ? { color: n } : void 0;
     return (0, r.jsx)(
         c.Anchor,
-        E(m({}, f), {
+        E(m({}, _), {
             children: g,
             style: y,
-            ref: _
+            ref: f
         })
     );
 }

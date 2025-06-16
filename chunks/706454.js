@@ -24,10 +24,10 @@ function d() {
     let n = null == (t = s.Z.settings.localization) || null == (e = t.locale) ? void 0 : e.value;
     return null != n && '' !== n && n !== u && ((u = n), (0, o._2)(u), !0);
 }
-function _(e) {
+function f(e) {
     (u = e.locale), (0, o._2)(u);
 }
-class f extends (r = i.ZP.Store) {
+class _ extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(s.Z), d(), (0, o._2)(u);
     }
@@ -38,11 +38,11 @@ class f extends (r = i.ZP.Store) {
         return l.systemLocale;
     }
 }
-c(f, 'displayName', 'LocaleStore');
-let p = new f(a.Z, {
+c(_, 'displayName', 'LocaleStore');
+let p = new _(a.Z, {
     OVERLAY_INITIALIZE: d,
     CACHE_LOADED: d,
     CONNECTION_OPEN: d,
     USER_SETTINGS_PROTO_UPDATE: d,
-    USER_SETTINGS_LOCALE_OVERRIDE: _
+    USER_SETTINGS_LOCALE_OVERRIDE: f
 });

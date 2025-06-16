@@ -7,8 +7,8 @@ var r = n(46015),
     c = function () {},
     u = s('Reflect', 'construct'),
     d = /^\s*(?:class|function)\b/,
-    _ = r(d.exec),
-    f = !d.test(c),
+    f = r(d.exec),
+    _ = !d.test(c),
     p = function (e) {
         if (!a(e)) return !1;
         try {
@@ -26,7 +26,7 @@ var r = n(46015),
                 return !1;
         }
         try {
-            return f || !!_(d, l(e));
+            return _ || !!f(d, l(e));
         } catch (e) {
             return !0;
         }

@@ -1,6 +1,6 @@
 n.d(t, {
-    KM: () => _,
-    R2: () => f,
+    KM: () => f,
+    R2: () => _,
     TG: () => p,
     Zc: () => d
 });
@@ -56,7 +56,7 @@ function d(e, t, n, i) {
         useSetting: u
     };
 }
-function _(e, t, n) {
+function f(e, t, n) {
     let o = () => {
         var r;
         let i = a.Z.getState()[t];
@@ -83,7 +83,7 @@ function _(e, t, n) {
         )
     };
 }
-function f(e, t, n, r) {
+function _(e, t, n, r) {
     let a = () => {
         var t;
         return null != (t = n()) ? t : e.getSetting();

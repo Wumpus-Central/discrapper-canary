@@ -9,11 +9,11 @@ var r = n(544891),
 n(358085);
 var u = n(960048),
     d = n(591759),
-    _ = n(303850),
-    f = n(105713),
+    f = n(303850),
+    _ = n(105713),
     p = n(981631);
 let h = ['https://cdn.discordapp.com/bad-domains/updated_hashes.json', 'https://cdn.discordapp.com/bad-domains/hashes.json'],
-    m = new _.R();
+    m = new f.R();
 function g(e) {
     let t = new URLSearchParams();
     t.append('query', '@http.x_client_trace_id:"'.concat(e, '"')), t.append('showAllSpans', 'true');
@@ -34,19 +34,19 @@ function b(e) {
             { default: c } = n(626135),
             { isPlatformEmbedded: d } = n(358085);
         if ('/' === e.url[0]) {
-            var _, p;
+            var f, p;
             (e.url = (0, r.K0)() + e.url), 'Authorization' in e.header || 'authorization' in e.header || e.set('Authorization', t.getToken()), (0, i.c)();
             let n = c.getSuperPropertiesBase64();
             null != n && e.set('X-Super-Properties', n);
             let a = t.getFingerprint();
             if ((null != a && '' !== a && e.set('X-Fingerprint', a), d)) {
                 let t = [];
-                null != navigator && (t = ((_ = [...navigator.languages]), _));
+                null != navigator && (t = ((f = [...navigator.languages]), f));
                 let n = b(t);
                 e.set('Accept-Language', n);
             }
             e.set('X-Discord-Locale', s.locale);
-            let u = (0, f.Z)();
+            let u = (0, _.Z)();
             null != u && e.set('X-Discord-Timezone', u);
             let h = o.getDebugOptionsHeaderValue();
             if ((null != h && '' !== h && e.set('X-Debug-Options', h), o.isTracingRequests)) {

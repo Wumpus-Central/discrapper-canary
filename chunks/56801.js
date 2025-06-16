@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(254494),
     u = n(895924),
     d = n(826298),
-    _ = n(700969);
-function f(e, t, n) {
+    f = n(700969);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -86,7 +86,7 @@ let b = [16, 8, 8, 8],
     O = 4,
     v = 8;
 function I(e) {
-    let { className: t, channel: n, sections: a, activeCategoryIndex: f, filteredSectionId: h, onSectionClick: E, applicationCommandListRef: I } = e,
+    let { className: t, channel: n, sections: a, activeCategoryIndex: _, filteredSectionId: h, onSectionClick: E, applicationCommandListRef: I } = e,
         T = i.useRef(null),
         S = i.useCallback(
             (e, t) => {
@@ -113,7 +113,7 @@ function I(e) {
                     b = (0, r.jsx)(o, {
                         channel: n,
                         section: i,
-                        isSelected: null != h ? i.id === h : f === t,
+                        isSelected: null != h ? i.id === h : _ === t,
                         padding: l,
                         width: c,
                         height: c,
@@ -123,7 +123,7 @@ function I(e) {
                 return (0, r.jsxs)(
                     'div',
                     {
-                        className: _.section,
+                        className: f.section,
                         children: [
                             (0, r.jsx)(s.ua7, {
                                 text: i.name,
@@ -148,24 +148,24 @@ function I(e) {
                                     );
                                 }
                             }),
-                            v ? (0, r.jsx)('hr', { className: _.builtInSeparator }) : null
+                            v ? (0, r.jsx)('hr', { className: f.builtInSeparator }) : null
                         ]
                     },
                     i.id
                 );
             },
-            [f, n, E, a, h]
+            [_, n, E, a, h]
         );
     return 0 === a.length
         ? null
         : (0, r.jsx)('div', {
-              className: o()(t, _.wrapper),
+              className: o()(t, f.wrapper),
               children: (0, r.jsx)(c.Z, {
                   categoryListRef: T,
                   expressionsListRef: I,
                   store: l.Xn,
                   categories: a,
-                  className: _.list,
+                  className: f.list,
                   renderCategoryListItem: N,
                   rowCount: a.length,
                   categoryHeight: S,

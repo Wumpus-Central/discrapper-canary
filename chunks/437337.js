@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(186325),
     u = n(84735),
     d = n(180035),
-    _ = n(481060),
-    f = n(540059),
+    f = n(481060),
+    _ = n(540059),
     p = n(333903);
 function h(e, t, n) {
     return (
@@ -113,10 +113,10 @@ let v = function (e) {
         { reducedMotion: I } = i.useContext(c.S),
         T = i.useRef(null),
         [S, A] = i.useState(!1),
-        N = (0, f.Q3)('Switch'),
+        N = (0, _.Q3)('Switch'),
         C = (0, d.d)(N ? l.Z.colors.INTERACTIVE_MUTED : l.Z.unsafe_rawColors.PRIMARY_400).spring(),
-        R = (0, d.d)(N ? l.Z.colors.REDESIGN_INPUT_CONTROL_SELECTED : l.Z.unsafe_rawColors.GREEN_360).spring(),
-        { state: P, opacity: w } = (0, _.q_F)(
+        R = (0, d.d)(N ? l.Z.colors.BG_BRAND : l.Z.unsafe_rawColors.GREEN_360).spring(),
+        { state: P, opacity: w } = (0, f.q_F)(
             {
                 config: b,
                 opacity: h ? (N ? 0.5 : 0.3) : 1,

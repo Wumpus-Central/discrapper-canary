@@ -13,8 +13,8 @@ var r = n(392711),
     c = n(697426),
     u = n(100986),
     d = n(944486),
-    _ = n(70956),
-    f = n(176354),
+    f = n(70956),
+    _ = n(176354),
     p = n(696900),
     h = n(456631),
     m = n(963838),
@@ -58,19 +58,19 @@ function v(e, t, n) {
 function I(e, t, n, r) {
     var a, o;
     let s = l.ZP.getCustomEmojiById(null != (a = t.emojiId) ? a : ''),
-        { abortController: d, onRequestProgress: _ } = O(e),
-        f = {
+        { abortController: d, onRequestProgress: f } = O(e),
+        _ = {
             sound_id: t.soundId,
             emoji_id: t.emojiId,
             emoji_name: null != (o = t.emojiName) ? o : null == s ? void 0 : s.name
         };
-    t.guildId !== b.X8 && (f.source_guild_id = t.guildId),
+    t.guildId !== b.X8 && (_.source_guild_id = t.guildId),
         i.tn
             .post({
                 url: E.ANM.SEND_SOUNDBOARD_SOUND(e),
-                body: f,
+                body: _,
                 signal: d.signal,
-                onRequestProgress: _,
+                onRequestProgress: f,
                 rejectWithError: !0
             })
             .then(E.VqG, () => {
@@ -106,7 +106,7 @@ let T = async (e) => {
                 a.Z.dispatch({ type: 'VOICE_CHANNEL_EFFECT_SENT_LOCAL' });
         } catch (e) {
             if (429 === e.status && null != e.body.retry_after) {
-                let t = e.body.retry_after * _.Z.Millis.SECOND;
+                let t = e.body.retry_after * f.Z.Millis.SECOND;
                 a.Z.dispatch({
                     type: 'VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP',
                     cooldownEndsAtMs: t
@@ -119,7 +119,7 @@ let T = async (e) => {
         [g.q.PREMIUM]: 'Premium'
     },
     A = (e, t, n, r) => {
-        let { unicode: i, custom: a, customExternal: o, managed: l, managedExternal: c, animated: u } = (0, f.sp)([t], e.getGuildId()),
+        let { unicode: i, custom: a, customExternal: o, managed: l, managedExternal: c, animated: u } = (0, _.sp)([t], e.getGuildId()),
             d = S[r];
         s.ZP.trackWithMetadata(E.rMx.VOICE_CHANNEL_EFFECT_SENT, {
             channel_id: e.id,

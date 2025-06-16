@@ -28,7 +28,7 @@ let v = (e) => {
                 s = (0, l.e7)([p.Z], () => p.Z.getLayers().includes(y.S9g.USER_SETTINGS)),
                 a = (0, l.e7)([f.Z], () => f.Z.getStatus()),
                 { isOpen: c } = (0, u.Z)();
-            if ((i || (!i && t)) && !s && !c && n) {
+            if ((i || (!i && t)) && !s && !c && !__OVERLAY__ && n) {
                 if (r && o && a !== y.Skl.INVISIBLE) return t ? b.N.Activity : null;
                 if (!o && a === y.Skl.INVISIBLE) return t ? b.N.ActivityAndStatus : b.N.ActivityAndStatusNux;
                 if (!o) return t ? b.N.Activity : b.N.ActivityNux;

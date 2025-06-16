@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(388685);
+n.d(t, { Z: () => k }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(570140),
     u = n(100527),
     d = n(906732),
-    _ = n(597688),
-    f = n(197831),
+    f = n(597688),
+    _ = n(197831),
     p = n(317951),
     h = n(987209),
     m = n(563132),
@@ -79,9 +79,9 @@ function x(e, t) {
         e
     );
 }
-function M(e) {
+function k(e) {
     var t;
-    let { onClose: n, onComplete: a, onStepChange: w, transitionState: L, loadId: M, skuId: k, isGift: j = !1, giftRecipient: U, giftMessage: G, giftingOrigin: B, analyticsLocations: V, returnRef: F } = e,
+    let { onClose: n, onComplete: a, onStepChange: w, transitionState: L, loadId: k, skuId: M, isGift: j = !1, giftRecipient: U, giftMessage: G, giftingOrigin: B, analyticsLocations: V, returnRef: F } = e,
         { analyticsLocations: Z } = (0, d.ZP)([...V, u.Z.COLLECTIBLES_PAYMENT_MODAL]),
         H = i.useRef(new s.qA()),
         [Y, W] = i.useState(null),
@@ -90,14 +90,14 @@ function M(e) {
             () =>
                 (0, N.UY)({
                     purchaseType: C.o8.FIAT,
-                    skuId: k
+                    skuId: M
                 }),
-            [k]
+            [M]
         ),
-        X = (0, l.Wu)([_.Z], () => _.Z.recommendedGiftSkuIds, []),
-        Q = null != k ? [k] : X,
+        X = (0, l.Wu)([f.Z], () => f.Z.recommendedGiftSkuIds, []),
+        Q = null != M ? [M] : X,
         J = null != (t = Q[0]) ? t : null,
-        $ = null != k && p.Rm.has(k),
+        $ = null != M && p.Rm.has(M),
         ee = i.useCallback(() => {
             z(!0), null == a || a();
         }, [a]),
@@ -157,12 +157,12 @@ function M(e) {
                 className: P.confettiCanvas,
                 environment: H.current
             }),
-            (0, r.jsx)(f.i, {
+            (0, r.jsx)(_.i, {
                 options: q,
                 className: o()(P.customConfetti, { [P.hidden]: !K })
             }),
             (0, r.jsx)(m.PaymentContextProvider, {
-                loadId: M,
+                loadId: k,
                 stepConfigs: er,
                 applicationId: A.XAJ,
                 skuIDs: Q,

@@ -11,8 +11,8 @@ var r = n(255367),
     c = n(895924),
     u = n(124072),
     d = n(665906),
-    _ = n(695346),
-    f = n(592125),
+    f = n(695346),
+    _ = n(592125),
     p = n(703558),
     h = n(496675),
     m = n(944486),
@@ -77,7 +77,7 @@ function A(e, t) {
 function N(e, t, n, i, a) {
     if (null == e) return;
     let u = () => {
-        let r = f.Z.getChannel(e);
+        let r = _.Z.getChannel(e);
         if (null == r) return;
         let { command: o, application: u } = l.Xq(
             {
@@ -88,7 +88,7 @@ function N(e, t, n, i, a) {
             a
         );
         if (null != o && o.untranslatedName === t) {
-            var d, _;
+            var d, f;
             g.S.dispatch(E.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
             let t =
                 null != u
@@ -96,7 +96,7 @@ function N(e, t, n, i, a) {
                           type: c.Qi.APPLICATION,
                           id: u.id,
                           icon: u.icon,
-                          name: null != (_ = null == u || null == (d = u.bot) ? void 0 : d.username) ? _ : u.name,
+                          name: null != (f = null == u || null == (d = u.bot) ? void 0 : d.username) ? f : u.name,
                           application: u
                       }
                     : null;
@@ -146,10 +146,10 @@ function C(e) {
     var t;
     let { node: n, output: s, state: p } = e,
         g = (0, a.e7)(
-            [f.Z, m.Z],
+            [_.Z, m.Z],
             () => {
                 var e;
-                return f.Z.getChannel(null != (e = n.channelId) ? e : m.Z.getChannelId());
+                return _.Z.getChannel(null != (e = n.channelId) ? e : m.Z.getChannelId());
             },
             [n.channelId]
         ),
@@ -165,7 +165,7 @@ function C(e) {
                   }
                 : { type: 'contextless' },
         { command: T } = l.YZ(I, null != (t = n.commandKey) ? t : ''),
-        S = _.dN.useSetting(),
+        S = f.dN.useSetting(),
         A = i.useMemo(() => {
             if (null == T || null == g || T.untranslatedName !== n.commandName || S) return !1;
             let e = g.isPrivate();

@@ -39,11 +39,11 @@ function l(e, t) {
         })(e, t);
 }
 function c(e) {
-    var t = _();
+    var t = f();
     return function () {
         var n,
-            r = f(e);
-        return (n = t ? Reflect.construct(r, arguments, f(this).constructor) : r.apply(this, arguments)), u(this, n);
+            r = _(e);
+        return (n = t ? Reflect.construct(r, arguments, _(this).constructor) : r.apply(this, arguments)), u(this, n);
     };
 }
 function u(e, t) {
@@ -53,7 +53,7 @@ function d(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
 }
-function _() {
+function f() {
     if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
     if ('function' == typeof Proxy) return !0;
     try {
@@ -62,8 +62,8 @@ function _() {
         return !1;
     }
 }
-function f(e) {
-    return (f = Object.setPrototypeOf
+function _(e) {
+    return (_ = Object.setPrototypeOf
         ? Object.getPrototypeOf
         : function (e) {
               return e.__proto__ || Object.getPrototypeOf(e);

@@ -6,14 +6,14 @@ n.d(t, {
     Dd: () => C,
     Ft: () => D,
     TK: () => B,
-    X0: () => k,
+    X0: () => M,
     XA: () => j,
     Z8: () => v,
     bD: () => P,
     nG: () => A,
     qJ: () => U,
     t0: () => G,
-    tI: () => M
+    tI: () => k
 }),
     n(388685),
     n(953529),
@@ -31,9 +31,9 @@ var r = n(654861),
     c = n(149765),
     u = n(911969),
     d = n(367907),
-    _ = n(399860);
+    f = n(399860);
 n(131704);
-var f = n(703558),
+var _ = n(703558),
     p = n(895924),
     h = n(689079),
     m = n(981631),
@@ -97,18 +97,18 @@ function v(e) {
     null != a.permissions &&
         a.permissions.length > 0 &&
         (d
-            ? (i = (0, _.tk)(a.permissions))
+            ? (i = (0, f.tk)(a.permissions))
             : ((i = {}),
               a.permissions.forEach((e) => {
                   i[e.id] = e;
               })));
-    let f = (null != l ? l : []).map((e) => e.name),
+    let _ = (null != l ? l : []).map((e) => e.name),
         m = (null != l ? l : []).map((e) => e.displayName);
     return {
         version: a.version,
         guildId: a.guild_id,
-        id: [a.id, ...f].join(h.oQ),
-        untranslatedName: [a.name, ...f].join(' '),
+        id: [a.id, ..._].join(h.oQ),
+        untranslatedName: [a.name, ..._].join(' '),
         serverLocalizedName: o.name_localized,
         applicationId: s,
         type: null != (t = a.type) ? t : u.yU.CHAT,
@@ -297,15 +297,15 @@ function D(e) {
     return ('boolean' != typeof l || !!l) && (null == o || (!c.fS(o, w) && t.can(o, n)));
 }
 function L(e, t, n) {
-    let r = n[(0, _.rE)(e.userId, p.Kw.USER)];
+    let r = n[(0, f.rE)(e.userId, p.Kw.USER)];
     if (null != r) return r.permission;
     let i = !1;
     for (let t of e.roles) {
-        let e = n[(0, _.rE)(t, p.Kw.ROLE)];
+        let e = n[(0, f.rE)(t, p.Kw.ROLE)];
         if (null != e && ((i = !0), e.permission)) return !0;
     }
     if (i) return !1;
-    let a = n[(0, _.rE)(t, p.Kw.ROLE)];
+    let a = n[(0, f.rE)(t, p.Kw.ROLE)];
     return null != a ? a.permission : null;
 }
 function x(e) {
@@ -327,16 +327,16 @@ function x(e) {
         case p.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON:
         case p.bB.IMAGE_RECS_MENU:
         case p.bB.IMAGE_RECS_SUBMENU:
-            return f.d.SlashCommand;
+            return _.d.SlashCommand;
     }
 }
-function M(e) {
+function k(e) {
     if (null != e)
         if (e.id === h.bi.BUILT_IN) return p.ub.BUILT_IN;
         else if (e.id === h.bi.FRECENCY) return p.ub.FRECENCY;
         else return p.ub.APP;
 }
-function k(e, t) {
+function M(e, t) {
     var n, r;
     return {
         type: p.Qi.APPLICATION,

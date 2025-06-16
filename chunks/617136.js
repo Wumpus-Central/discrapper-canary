@@ -1,9 +1,9 @@
 n.d(t, {
     Ic: () => x,
-    O5: () => k,
+    O5: () => M,
     Zk: () => j,
     _3: () => L,
-    _F: () => M,
+    _F: () => k,
     _b: () => N,
     dA: () => w,
     jZ: () => D,
@@ -20,8 +20,8 @@ var r = n(73800),
     c = n(857192),
     u = n(819640),
     d = n(626135),
-    _ = n(358085),
-    f = n(915750),
+    f = n(358085),
+    _ = n(915750),
     p = n(569984),
     h = n(497505),
     m = n(918701),
@@ -115,9 +115,9 @@ function w(e) {
     if (null == o || ((0, g.X7)({ location: b.dr.QUEST_PREVIEW_TOOL }) && u.Z.getLayers().includes(y.S9g.USER_SETTINGS))) return;
     let l = v({}, R(o, a), r);
     if ((c.default.isLoggingAnalyticsEvents && console.info('[Quest] AnalyticsUtils.track', n, l), o.preview)) return;
-    let _ = A.has(n);
-    if (i) return s.ZP.trackWithMetadata(n, l, _);
-    d.default.track(n, l, { flush: _ });
+    let f = A.has(n);
+    if (i) return s.ZP.trackWithMetadata(n, l, f);
+    d.default.track(n, l, { flush: f });
 }
 var D = (function (e) {
     return (e.LEARN_MORE = 'LEARN_MORE'), (e.SHOW_REWARD = 'SHOW_REWARD'), (e.CLAIM_REWARD = 'CLAIM_REWARD'), (e.GET_REWARD_CODE = 'GET_REWARD_CODE'), (e.COPY_REWARD_CODE = 'COPY_REWARD_CODE'), (e.ACCEPT_QUEST = 'ACCEPT_QUEST'), (e.COPY_QUEST_URL = 'COPY_QUEST_URL'), (e.MOBILE_SHARESHEET = 'MOBILE_SHARESHEET'), (e.TRACK_PROGRESS = 'TRACK_PROGRESS'), (e.CONNECT_CONSOLE = 'CONNECT_CONSOLE'), (e.CONNECT_CONSOLE_LINK = 'CONNECT_CONSOLE_LINK'), (e.VIEW_CONSOLE_CONNECTIONS = 'VIEW_CONSOLE_CONNECTION'), (e.VIEW_CONSOLE_CONNECTIONS_LINK = 'VIEW_CONSOLE_CONNECTIONS_LINK'), (e.VIEW_REQUIREMENTS = 'VIEW_REQUIREMENTS'), (e.SELECT_CONSOLE_PLATFORM = 'SELECT_CONSOLE_PLATFORM'), (e.SELECT_DESKTOP_PLATFORM = 'SELECT_DESKTOP_PLATFORM'), (e.DESELECT_PLATFORM = 'DESELECT_PLATFORM'), (e.DEFIBRILLATOR = 'DEFIBRILLATOR'), (e.DEFIBRILLATOR_RECONNECT_CONSOLE = 'DEFIBRILLATOR_RECONNECT_CONSOLE'), (e.OPEN_DISCLOSURE = 'OPEN_DISCLOSURE'), (e.WATCH_STREAM = 'WATCH_STREAM'), (e.WATCH_STREAM_CONFIRM = 'WATCH_STREAM_CONFIRM'), (e.REWARD_LEARN_MORE = 'REWARD_LEARN_MORE'), (e.OPEN_GAME_LINK = 'OPEN_GAME_LINK'), (e.OPEN_CONTEXT_MENU = 'OPEN_CONTEXT_MENU'), (e.OPEN_QUEST_HOME = 'OPEN_QUEST_HOME'), (e.QUEST_BAR_COPY_LINK = 'QUEST_BAR.COPY_LINK'), (e.CONTEXT_MENU_COPY_LINK = 'CONTEXT_MENU.COPY_LINK'), (e.CONTEXT_MENU_HIDE_CONTENT = 'CONTEXT_MENU.HIDE_CONTENT'), (e.CONTEXT_MENU_OPEN_GAME_LINK = 'CONTEXT_MENU.OPEN_GAME_LINK'), (e.CONTEXT_MENU_OPEN_DISCLOSURE = 'CONTEXT_MENU.OPEN_DISCLOSURE'), (e.CONTEXT_MENU_LEARN_MORE = 'CONTEXT_MENU.LEARN_MORE'), (e.HOW_TO_HELP_ARTICLE_XBOX = 'HOW_TO_HELP_ARTICLE_XBOX'), (e.HOW_TO_HELP_ARTICLE_PLAYSTATION = 'HOW_TO_HELP_ARTICLE_PLAYSTATION'), (e.VIEW_QUESTS = 'VIEW_QUESTS'), (e.EXPAND = 'EXPAND'), (e.COLLAPSE = 'COLLAPSE'), (e.START_QUEST = 'START_QUEST'), (e.TRANSCRIPT_ENABLE = 'TRANSCRIPT_ENABLE'), (e.TRANSCRIPT_DISABLE = 'TRANSCRIPT_DISABLE'), (e.CLOSED_CAPTIONING_ENABLE = 'CLOSED_CAPTIONING_ENABLE'), (e.CLOSED_CAPTIONING_DISABLE = 'CLOSED_CAPTIONING_DISABLE'), (e.SEEK_BACKWARD = 'SEEK_BACKWARD'), (e.SEEK_FORWARD = 'SEEK_FORWARD'), (e.WATCH_VIDEO = 'WATCH_VIDEO'), (e.REDEEM_REWARD = 'REDEEM_REWARD'), (e.VISIT_REDEMPTION_LINK = 'VISIT_REDEMPTION_LINK'), e;
@@ -125,16 +125,16 @@ var D = (function (e) {
 function L(e) {
     let { questId: t, questContent: n, questContentCTA: r, questContentPosition: o, questContentRowIndex: s, impressionId: c, trackGuildAndChannelMetadata: u = !1 } = e,
         d = (0, m.qe)(n),
-        f = p.Z.getQuest(t),
+        _ = p.Z.getQuest(t),
         h = (0, a.S)();
     w({
         questId: t,
         event: y.rMx.QUEST_CONTENT_CLICKED,
         properties: T(v({}, d, P(n, o, s), (0, l.Z)()), {
             cta_name: r,
-            quest_status: null != f ? C(f) : null,
+            quest_status: null != _ ? C(_) : null,
             impression_id: c,
-            android_advertising_id: null != h && (0, _.isAndroid)() ? h.advertisingId : null,
+            android_advertising_id: null != h && (0, f.isAndroid)() ? h.advertisingId : null,
             click_id: (0, i.Z)()
         }),
         trackGuildAndChannelMetadata: u,
@@ -152,8 +152,8 @@ function x(e) {
         })
     });
 }
-function M() {
-    let e = (0, f.WD)();
+function k() {
+    let e = (0, _.WD)();
     function t(t) {
         let { questId: n, event: r, properties: i, trackGuildAndChannelMetadata: a = !1, shouldExtendSession: o = !1 } = t;
         w({
@@ -166,13 +166,13 @@ function M() {
     }
     return r.useCallback(t, [e]);
 }
-function k() {
-    let e = M();
+function M() {
+    let e = k();
     return r.useCallback(
         (t) => {
             let { questId: n, questContent: r, questContentCTA: o, questContentPosition: s, questContentRowIndex: c, trackGuildAndChannelMetadata: u = !1 } = t,
                 d = p.Z.getQuest(n),
-                f = (0, a.S)();
+                _ = (0, a.S)();
             e({
                 questId: n,
                 event: y.rMx.QUEST_CONTENT_CLICKED,
@@ -180,7 +180,7 @@ function k() {
                     cta_name: o,
                     quest_status: null != d ? C(d) : null,
                     click_id: (0, i.Z)(),
-                    android_advertising_id: null != f && (0, _.isAndroid)() ? f.advertisingId : null
+                    android_advertising_id: null != _ && (0, f.isAndroid)() ? _.advertisingId : null
                 }),
                 trackGuildAndChannelMetadata: u,
                 shouldExtendSession: (0, m.VB)(r)

@@ -27,7 +27,7 @@ function d(e) {
     let { palette: t, shouldProcessMobileColors: n = !1 } = e;
     return t;
 }
-async function _(e) {
+async function f(e) {
     let t,
         { id: n, name: r } = e;
     t =
@@ -46,13 +46,13 @@ async function _(e) {
               return (0, a.vq)(t, n, r);
           });
 }
-function f(e) {
+function _(e) {
     let { channelId: t, messageId: n, emoji: r } = e;
 }
 let p = {
     getURL: s.Z.makeMemoizer(c),
     filterUnsupportedEmojis: u,
     applyPlatformToThemedEmojiColorPalette: d,
-    getEmojiColors: _,
-    triggerFullscreenAnimation: f
+    getEmojiColors: f,
+    triggerFullscreenAnimation: _
 };

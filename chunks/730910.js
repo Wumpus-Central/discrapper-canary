@@ -118,7 +118,7 @@ function M(e) {
             }
         );
     }, [W]);
-    let V = (0, m.dQu)(c.Z.colors.BACKGROUND_FLOATING).hex(),
+    let V = (0, m.dQu)(c.Z.colors.BACKGROUND_SURFACE_HIGH).hex(),
         Y = (0, m.dQu)(c.Z.unsafe_rawColors.PRIMARY_160).hex(),
         K = (0, u.wj)(F) ? V : Y,
         X = H.to({

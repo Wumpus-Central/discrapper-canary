@@ -8,8 +8,8 @@ var r = n(392711),
     c = n(601964),
     u = n(709302),
     d = n(592125),
-    _ = n(580005),
-    f = n(984933),
+    f = n(580005),
+    _ = n(984933),
     p = n(699516),
     h = n(594174),
     m = n(483360),
@@ -62,10 +62,10 @@ function w() {
 function D(e, t) {
     var n, r;
     if (!t.frecencyBoosters) return {};
-    let i = _.Z.getFrequentlyWithoutFetchingLatest(),
+    let i = f.Z.getFrequentlyWithoutFetchingLatest(),
         a = i.reduce((e, t) => {
             let { id: n } = t,
-                r = _.Z.getScoreWithoutFetchingLatest(n);
+                r = f.Z.getScoreWithoutFetchingLatest(n);
             return r > e ? r : e;
         }, 0),
         o = [];
@@ -88,7 +88,7 @@ function D(e, t) {
     let s = {};
     for (let t of o) {
         let { id: n } = t,
-            r = _.Z.getScoreWithoutFetchingLatest(n);
+            r = f.Z.getScoreWithoutFetchingLatest(n);
         if (e === O.h8.USER && t instanceof l.mn) {
             if (t.type === v.d4z.DM) s[(n = t.getRecipientId())] = 1 + r / a;
             else if (t.type === v.d4z.GROUP_DM) {
@@ -178,7 +178,7 @@ class L {
             guildId: n,
             limit: t,
             fuzzy: !0,
-            type: f.Zb,
+            type: _.Zb,
             boosters: r
         });
     }

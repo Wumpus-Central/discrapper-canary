@@ -17,7 +17,7 @@ function o() {
         }).apply(this, arguments);
 }
 function s(e, t) {
-    return _(e) || d(e, t) || c(e, t) || l();
+    return f(e) || d(e, t) || c(e, t) || l();
 }
 function l() {
     throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
@@ -55,10 +55,10 @@ function d(e, t) {
         return n;
     }
 }
-function _(e) {
+function f(e) {
     if (Array.isArray(e)) return e;
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -81,7 +81,7 @@ function p(e, t) {
 var h = (0, r.createContext)(null),
     m = function (e) {
         var t = e.portal,
-            n = f(e, ['portal']),
+            n = _(e, ['portal']),
             l = s((0, r.useState)(null), 2),
             c = l[0],
             u = l[1];

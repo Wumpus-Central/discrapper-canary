@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(179360),
     u = n(40851),
     d = n(906732),
-    _ = n(975298),
-    f = n(125529),
+    f = n(975298),
+    _ = n(125529),
     p = n(124570),
     h = n(404380),
     m = n(594174),
@@ -94,13 +94,13 @@ function P(e, t) {
     return i;
 }
 let w = (e) => {
-    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: S, targetBoostedGuildTier: N, onClose: P = () => {}, closeLayer: w = () => {}, pauseAnimation: D = !1, applicationId: L, handleSubscribeModalClose: x, withHighlight: M = !1, icon: k, intent: j } = e,
+    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: S, targetBoostedGuildTier: N, onClose: P = () => {}, closeLayer: w = () => {}, pauseAnimation: D = !1, applicationId: L, handleSubscribeModalClose: x, withHighlight: k = !1, icon: M, intent: j } = e,
         U = R(e, ['analyticsLocation', 'analyticsSourceLocation', 'guild', 'buttonText', 'targetBoostedGuildTier', 'onClose', 'closeLayer', 'pauseAnimation', 'applicationId', 'handleSubscribeModalClose', 'withHighlight', 'icon', 'intent']),
         { analyticsLocations: G } = (0, d.ZP)(),
         B = (0, u.bp)() === O.IlC.POPOUT,
         [V, F] = i.useState(!1),
         Z = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
-        { fractionalState: H } = (0, _.Z)(),
+        { fractionalState: H } = (0, f.Z)(),
         Y = (0, p.y)('guild_boosting_subscribe_button', Z, H),
         W = (0, s.e7)([g.Z], () => g.Z.hasFetched);
     i.useEffect(() => {
@@ -129,7 +129,7 @@ let w = (e) => {
         Q = E.ZP.getPremiumTypeSubscription(),
         J = (0, r.jsxs)('div', {
             className: T.button,
-            children: [k, null != S ? S : I.intl.string(I.t.gKmQ1N)]
+            children: [M, null != S ? S : I.intl.string(I.t.gKmQ1N)]
         }),
         $ = (0, h.o)('GuildBoostingSubscribeButton', Z, H),
         ee = !1;
@@ -147,7 +147,7 @@ let w = (e) => {
         })),
         (U.disabled = !0)),
     null != q)
-        ? (0, r.jsx)(f.Z, {
+        ? (0, r.jsx)(_.Z, {
               text: q,
               'aria-label': !1,
               children: (e) =>
@@ -169,7 +169,7 @@ let w = (e) => {
         : (0, r.jsx)(
               l.gtL,
               C(A({ size: l.zxk.Sizes.SMALL }, U), {
-                  className: o()(U.className, { [T.buttonHighlighted]: M }),
+                  className: o()(U.className, { [T.buttonHighlighted]: k }),
                   submitting: V,
                   onClick: X,
                   pauseAnimation: D,

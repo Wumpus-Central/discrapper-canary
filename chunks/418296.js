@@ -8,20 +8,20 @@ var r = n(425561),
 e.exports = function (e, t, n) {
     var u = -1,
         d = i,
-        _ = e.length,
-        f = !0,
+        f = e.length,
+        _ = !0,
         p = [],
         h = p;
-    if (n) (f = !1), (d = a);
-    else if (_ >= c) {
+    if (n) (_ = !1), (d = a);
+    else if (f >= c) {
         var m = t ? null : s(e);
         if (m) return l(m);
-        (f = !1), (d = o), (h = new r());
+        (_ = !1), (d = o), (h = new r());
     } else h = t ? [] : p;
-    n: for (; ++u < _; ) {
+    n: for (; ++u < f; ) {
         var g = e[u],
             E = t ? t(g) : g;
-        if (((g = n || 0 !== g ? g : 0), f && E == E)) {
+        if (((g = n || 0 !== g ? g : 0), _ && E == E)) {
             for (var b = h.length; b--; ) if (h[b] === E) continue n;
             t && h.push(E), p.push(g);
         } else d(h, E, n) || (h !== p && h.push(E), p.push(g));

@@ -20,7 +20,7 @@ function c(e, t, n) {
 }
 let u = new o.Z('DatabaseManager'),
     d = !1;
-class _ extends r.ZP.Store {
+class f extends r.ZP.Store {
     initialize() {
         this.waitFor(s.default), this.carefullySpeculativelyOpen(l.n()), this.handleAuthenticationStoreChanged(), s.default.addChangeListener(() => this.handleAuthenticationStoreChanged());
     }
@@ -93,7 +93,7 @@ class _ extends r.ZP.Store {
             c(this, 'preventWritingCachesAgainThisSession', !1);
     }
 }
-function f(e, t) {
+function _(e, t) {
     for (let n = 0; n < e; n++)
         try {
             return t();
@@ -109,7 +109,7 @@ function h(e) {
     if (d) {
         let t = 50,
             n = p(e);
-        return u.verbose('synchronously opening '.concat(n)), f(t, () => i.vo.openSyncUnsafe(n, { invalidateDisabledHandles: !0 }));
+        return u.verbose('synchronously opening '.concat(n)), _(t, () => i.vo.openSyncUnsafe(n, { invalidateDisabledHandles: !0 }));
     }
     return null;
 }
@@ -125,4 +125,4 @@ async function m(e) {
     }
     return null;
 }
-let g = new _();
+let g = new f();

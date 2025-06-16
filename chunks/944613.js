@@ -9,13 +9,13 @@ var i = n(658722),
     c = n(442837),
     u = n(481060),
     d = n(402235),
-    _ = n(430824),
-    f = n(981631),
+    f = n(430824),
+    _ = n(981631),
     p = n(388032),
     h = n(72903);
 let m = function (e) {
     let { className: t, guild: n, roleStyle: i, roleFilter: o, onSelect: m, onClose: g } = e,
-        E = (0, c.e7)([_.Z], () => _.Z.getRoles(n.id)),
+        E = (0, c.e7)([f.Z], () => f.Z.getRoles(n.id)),
         b = (0, d.Z)(n.id, 'AddRolesPopout'),
         y = (e) =>
             s()(E)
@@ -40,14 +40,14 @@ let m = function (e) {
                             'dot' === i
                                 ? (0, r.jsx)(u.FhE, {
                                       className: h.popoutRoleDot,
-                                      color: null != (t = e.colorString) ? t : (0, l.Rf)(f.p6O),
+                                      color: null != (t = e.colorString) ? t : (0, l.Rf)(_.p6O),
                                       colors: b ? e.colorStrings : null,
                                       background: !1,
                                       tooltip: !1
                                   })
                                 : (0, r.jsx)(u.xko, {
                                       className: h.popoutRoleCircle,
-                                      color: null != (n = e.colorString) ? n : (0, l.Rf)(f.p6O),
+                                      color: null != (n = e.colorString) ? n : (0, l.Rf)(_.p6O),
                                       colors: b ? e.colorStrings : null
                                   }),
                             (0, r.jsx)(u.lo1.Label, { children: e.name })

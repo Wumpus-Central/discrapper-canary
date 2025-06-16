@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => _ });
 var r = n(442837),
     i = n(40851),
     a = n(906732),
@@ -8,12 +8,12 @@ var r = n(442837),
     c = n(541716),
     u = n(592125),
     d = n(944486),
-    _ = n(981631);
-function f(e) {
+    f = n(981631);
+function _(e) {
     let { applicationId: t, onClose: n } = e,
-        { newestAnalyticsLocation: f } = (0, a.ZP)(),
+        { newestAnalyticsLocation: _ } = (0, a.ZP)(),
         p = (0, r.e7)([u.Z, d.Z], () => u.Z.getChannel(d.Z.getChannelId())),
-        h = (0, i.bp)() === _.IlC.POPOUT;
+        h = (0, i.bp)() === f.IlC.POPOUT;
     return () => {
         null == n || n(),
             null == p || (null == p ? void 0 : p.isVocal())
@@ -25,7 +25,7 @@ function f(e) {
                                     channel: p
                                 }
                               : { type: 'contextless' },
-                      analyticsLocation: f,
+                      analyticsLocation: _,
                       openInPopout: h,
                       initialState: { applicationId: t }
                   })

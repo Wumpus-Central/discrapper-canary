@@ -57,7 +57,7 @@ function d(...e) {
     }
     throw Error(`isMatching wasn't given the right number of arguments: expected 1 or 2, received ${e.length}.`);
 }
-function _(e) {
+function f(e) {
     return Object.assign(e, {
         optional: () => p(e),
         and: (t) => g(e, t),
@@ -65,7 +65,7 @@ function _(e) {
         select: (t) => (void 0 === t ? y(e) : y(t, e))
     });
 }
-function f(e) {
+function _(e) {
     let t;
     return Object.assign(
         Object.assign((t = e), {
@@ -74,13 +74,13 @@ function f(e) {
             }
         }),
         {
-            optional: () => f(p(e)),
-            select: (t) => f(void 0 === t ? y(e) : y(t, e))
+            optional: () => _(p(e)),
+            select: (t) => _(void 0 === t ? y(e) : y(t, e))
         }
     );
 }
 function p(e) {
-    return _({
+    return f({
         [r]: () => ({
             match: (t) => {
                 let n = {},
@@ -112,7 +112,7 @@ let h = (e, t) => {
         return !0;
     };
 function g(...e) {
-    return _({
+    return f({
         [r]: () => ({
             match: (t) => {
                 let n = {},
@@ -130,7 +130,7 @@ function g(...e) {
     });
 }
 function E(...e) {
-    return _({
+    return f({
         [r]: () => ({
             match: (t) => {
                 let n = {},
@@ -156,7 +156,7 @@ function b(e) {
 function y(...e) {
     let t = 'string' == typeof e[0] ? e[0] : void 0,
         n = 2 === e.length ? e[1] : 'string' == typeof e[0] ? void 0 : e[0];
-    return _({
+    return f({
         [r]: () => ({
             match: (e) => {
                 let r = { [null != t ? t : a]: e };
@@ -182,14 +182,14 @@ function v(e) {
 function I(e) {
     return 'bigint' == typeof e;
 }
-let T = _(
+let T = f(
         b(function (e) {
             return !0;
         })
     ),
     S = T,
     A = (e) =>
-        Object.assign(_(e), {
+        Object.assign(f(e), {
             startsWith: (t) => {
                 var n;
                 return A(g(e, ((n = t), b((e) => v(e) && e.startsWith(n)))));
@@ -223,10 +223,10 @@ let T = _(
     D = (e) => b((t) => O(t) && t >= e),
     L = () => b((e) => O(e) && Number.isInteger(e)),
     x = () => b((e) => O(e) && Number.isFinite(e)),
-    M = () => b((e) => O(e) && e > 0),
-    k = () => b((e) => O(e) && e < 0),
+    k = () => b((e) => O(e) && e > 0),
+    M = () => b((e) => O(e) && e < 0),
     j = (e) =>
-        Object.assign(_(e), {
+        Object.assign(f(e), {
             between: (t, n) => j(g(e, C(t, n))),
             lt: (t) => j(g(e, R(t))),
             gt: (t) => j(g(e, P(t))),
@@ -234,8 +234,8 @@ let T = _(
             gte: (t) => j(g(e, D(t))),
             int: () => j(g(e, L())),
             finite: () => j(g(e, x())),
-            positive: () => j(g(e, M())),
-            negative: () => j(g(e, k()))
+            positive: () => j(g(e, k())),
+            negative: () => j(g(e, M()))
         }),
     U = j(b(O)),
     G = (e, t) => b((n) => I(n) && e <= n && t >= n),
@@ -246,7 +246,7 @@ let T = _(
     H = () => b((e) => I(e) && e > 0),
     Y = () => b((e) => I(e) && e < 0),
     W = (e) =>
-        Object.assign(_(e), {
+        Object.assign(f(e), {
             between: (t, n) => W(g(e, G(t, n))),
             lt: (t) => W(g(e, B(t))),
             gt: (t) => W(g(e, V(t))),
@@ -256,17 +256,17 @@ let T = _(
             negative: () => W(g(e, Y()))
         }),
     K = W(b(I)),
-    z = _(
+    z = f(
         b(function (e) {
             return 'boolean' == typeof e;
         })
     ),
-    q = _(
+    q = f(
         b(function (e) {
             return 'symbol' == typeof e;
         })
     ),
-    X = _(
+    X = f(
         b(function (e) {
             return null == e;
         })
@@ -276,7 +276,7 @@ var Q = {
     matcher: r,
     optional: p,
     array: function (...e) {
-        return f({
+        return _({
             [r]: () => ({
                 match: (t) => {
                     if (!Array.isArray(t)) return { matched: !1 };
@@ -306,7 +306,7 @@ var Q = {
         });
     },
     set: function (...e) {
-        return _({
+        return f({
             [r]: () => ({
                 match: (t) => {
                     if (!(t instanceof Set)) return { matched: !1 };
@@ -331,7 +331,7 @@ var Q = {
         });
     },
     map: function (...e) {
-        return _({
+        return f({
             [r]: () => ({
                 match: (t) => {
                     var n;
@@ -364,7 +364,7 @@ var Q = {
     intersection: g,
     union: E,
     not: function (e) {
-        return _({
+        return f({
             [r]: () => ({
                 match: (t) => ({
                     matched: !l(e, t, () => {})
@@ -386,8 +386,8 @@ var Q = {
     gte: D,
     int: L,
     finite: x,
-    positive: M,
-    negative: k,
+    positive: k,
+    negative: M,
     number: U,
     betweenBigInt: G,
     ltBigInt: B,
@@ -401,7 +401,7 @@ var Q = {
     symbol: q,
     nullish: X,
     instanceOf: function (e) {
-        return _(
+        return f(
             b(
                 (function (e) {
                     return (t) => t instanceof e;
@@ -410,7 +410,7 @@ var Q = {
         );
     },
     shape: function (e) {
-        return _(b(d(e)));
+        return f(b(d(e)));
     }
 };
 let J = {

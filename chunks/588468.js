@@ -15,8 +15,8 @@ var r,
     c = n.n(l),
     u = n(91192),
     d = n(481060),
-    _ = n(607070),
-    f = n(895924),
+    f = n(607070),
+    _ = n(895924),
     p = n(237375),
     h = n(342687),
     m = n(933557),
@@ -50,7 +50,7 @@ function x(e, t, n) {
         e
     );
 }
-function M(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -66,7 +66,7 @@ function M(e) {
     }
     return e;
 }
-function k(e, t) {
+function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -83,7 +83,7 @@ function j(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : M(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -132,7 +132,7 @@ class Z extends a.PureComponent {
             l = this.isSelectable();
         return (0, i.jsx)(
             d.P3F,
-            j(M({}, e), {
+            j(k({}, e), {
                 className: s()(L.clickable, r, n),
                 id: null != (t = B(a)) ? t : void 0,
                 onClick: l ? this.handleClick : void 0,
@@ -261,19 +261,19 @@ class q extends Z {
     renderContent() {
         let { role: e, hideDescription: t, guildId: n } = this.props,
             { colorString: r, colorStrings: a } = e,
-            o = 'dot' === _.Z.roleStyle,
-            l = 'username' === _.Z.roleStyle && (null != r || null != a),
+            o = 'dot' === f.Z.roleStyle,
+            l = 'username' === f.Z.roleStyle && (null != r || null != a),
             c = (0, b.A)(n, a, 'AutocompleteRow'),
             u = null != c && l,
-            { gradientStyle: f, gradientClassname: p } = (0, d.JUn)({
+            { gradientStyle: _, gradientClassname: p } = (0, d.JUn)({
                 primaryColor: null == a ? void 0 : a.primaryColor,
                 secondaryColor: null == a ? void 0 : a.secondaryColor,
                 tertiaryColor: null == a ? void 0 : a.tertiaryColor,
-                useReducedMotion: _.Z.useReducedMotion,
+                useReducedMotion: f.Z.useReducedMotion,
                 roleStyle: 'username',
                 includeConvenienceGlow: !0
             }),
-            h = l ? M({}, u ? f : { color: null != r ? r : void 0 }) : void 0;
+            h = l ? k({}, u ? _ : { color: null != r ? r : void 0 }) : void 0;
         return (0, i.jsxs)(R.RX, {
             children: [
                 (0, i.jsx)(R.z5, {
@@ -330,13 +330,13 @@ class Q extends Z {
 }
 class J extends Z {
     isSelectable() {
-        return this.props.command.inputType !== f.iw.PLACEHOLDER;
+        return this.props.command.inputType !== _.iw.PLACEHOLDER;
     }
     renderContent() {
         let { command: e, channel: t, showImage: n, section: r, selected: a } = this.props,
             { hovered: o } = this.state,
             s = this.isSelectable();
-        return e.inputType === f.iw.PLACEHOLDER
+        return e.inputType === _.iw.PLACEHOLDER
             ? (0, i.jsx)(h.Z, {})
             : (0, i.jsx)(p.Z, {
                   command: e,
@@ -431,7 +431,7 @@ class en extends Z {
 }
 class er extends Z {
     renderContent() {
-        return (0, i.jsx)(y.Z, M({}, this.props));
+        return (0, i.jsx)(y.Z, k({}, this.props));
     }
 }
 class ei extends (r = a.PureComponent) {
@@ -444,7 +444,7 @@ class ei extends (r = a.PureComponent) {
                   value: { id: null != o ? o : '' },
                   children: (0, i.jsx)('div', {
                       className: s()(L.autocomplete, n),
-                      children: (0, i.jsx)('div', j(M({ className: s()(L.autocompleteInner, r) }, l), { children: t }))
+                      children: (0, i.jsx)('div', j(k({ className: s()(L.autocompleteInner, r) }, l), { children: t }))
                   })
               })
             : null;

@@ -14,19 +14,19 @@ function c(e) {
     return e < 400 ? 'small' : e < 1000 ? 'medium' : 'large';
 }
 function u(e) {
-    let { onCTAClick: t, callToAction: n, header: i, description: c, errorCodeMessage: u, size: d, className: _, artURL: f, noArt: p = !1, selected: h = !1 } = e;
+    let { onCTAClick: t, callToAction: n, header: i, description: c, errorCodeMessage: u, size: d, className: f, artURL: _, noArt: p = !1, selected: h = !1 } = e;
     return (0, r.jsxs)(s.Z, {
-        className: _,
+        className: f,
         justify: s.Z.Justify.CENTER,
         align: s.Z.Align.CENTER,
         direction: s.Z.Direction.VERTICAL,
         style: { padding: 4 },
         children: [
             !p &&
-                null != f &&
+                null != _ &&
                 (0, r.jsx)('div', {
                     className: a()(l.art, l[d]),
-                    style: { backgroundImage: 'url('.concat(f, ')') }
+                    style: { backgroundImage: 'url('.concat(_, ')') }
                 }),
             null != i
                 ? (0, r.jsx)(o.Text, {

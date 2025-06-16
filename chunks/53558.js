@@ -21,7 +21,7 @@ function d(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function _(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -59,12 +59,12 @@ function p(e, t) {
 }
 function h(e) {
     var { user: t, onClick: n } = e,
-        i = f(e, ['user', 'onClick']);
+        i = _(e, ['user', 'onClick']);
     return (
         (0, s.q)(t.id),
         (0, r.jsx)(
             c.tG,
-            _(
+            f(
                 {
                     action: 'PRESS_APP_STOREFRONT',
                     icon: a.EOn,
@@ -81,7 +81,7 @@ function h(e) {
 function m(e) {
     var t,
         { user: s, guildId: c } = e,
-        u = f(e, ['user', 'guildId']);
+        u = _(e, ['user', 'guildId']);
     let d = (0, i.e7)([l.Z], () => {
             var e;
             return null == (e = l.Z.getUserProfile(s.id)) ? void 0 : e.application;
@@ -94,7 +94,7 @@ function m(e) {
             return (t) =>
                 (0, r.jsx)(
                     e,
-                    _(
+                    f(
                         {
                             appId: d.id,
                             guildId: c
@@ -106,7 +106,7 @@ function m(e) {
     };
     return (0, r.jsx)(
         h,
-        _(
+        f(
             {
                 user: s,
                 guildId: c,

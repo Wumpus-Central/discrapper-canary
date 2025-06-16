@@ -11,8 +11,8 @@ var r = n(771356),
     c = n(629928),
     u = n(163033),
     d = n(466790),
-    _ = n(166660),
-    f = n(415345),
+    f = n(166660),
+    _ = n(415345),
     p = n(962770),
     h = n(909139),
     m = n(815291),
@@ -34,8 +34,8 @@ var r = n(771356),
     D = n(691545),
     L = n(58587),
     x = n(912609),
-    M = n(565792),
-    k = n(583498),
+    k = n(565792),
+    M = n(583498),
     j = n(442866),
     U = n(263984),
     G = n(591501),
@@ -120,7 +120,7 @@ let W = {
         },
         sebastien: {
             name: A.default.NmbfHx,
-            iconURL: k.Z,
+            iconURL: M.Z,
             splashGradient: 'radial-gradient(9% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(100% 555.56% at 0% 100%, rgba(92, 119, 31, 0.50) 0%, rgba(92, 119, 31, 0.00) 100%)',
             baseColor: '#25300D',
             styleKey: 'sebastien',
@@ -132,11 +132,11 @@ let W = {
             splashGradient: 'radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(230, 90, 205, 0.50) 0%, rgba(230, 90, 205, 0.00) 100%)',
             baseColor: '#35082D',
             styleKey: 'megaphone',
-            previewSoundURLs: [f.Z]
+            previewSoundURLs: [_.Z]
         },
         robot: {
             name: A.default.anBE8f,
-            iconURL: M.Z,
+            iconURL: k.Z,
             splashGradient: 'radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(61, 72, 79, 0.50) 0%, rgba(61, 72, 79, 0.00) 100%)',
             baseColor: '#1B1F23',
             styleKey: 'robot',
@@ -172,7 +172,7 @@ let W = {
             splashGradient: 'radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(100% 555.56% at 0% 100%, rgba(5, 86, 248, 0.50) 0%, rgba(5, 86, 248, 0.00) 100%)',
             baseColor: '#01153C',
             styleKey: 'justus',
-            previewSoundURLs: [_.Z]
+            previewSoundURLs: [f.Z]
         },
         harper: {
             name: A.default.vIrxZW,

@@ -13,7 +13,7 @@ let u = {
     [c.lY.SIDEBAR]: 13
 };
 function d(e) {
-    let { displayProfile: t, themeType: n, pendingLegacyUsernameDisabled: c, pendingBadges: d, onClose: _, shouldOpenBadgeTooltip: f, shouldGlowTenureBadge: p } = e,
+    let { displayProfile: t, themeType: n, pendingLegacyUsernameDisabled: c, pendingBadges: d, onClose: f, shouldOpenBadgeTooltip: _, shouldGlowTenureBadge: p } = e,
         h = (0, o.Z)(t, c),
         m = i.useMemo(() => {
             if (null == d) return (0, s.w)(h);
@@ -30,8 +30,8 @@ function d(e) {
                       {
                           badges: e,
                           displayProfile: t,
-                          onClose: _,
-                          shouldOpenBadgeTooltip: f,
+                          onClose: f,
+                          shouldOpenBadgeTooltip: _,
                           shouldGlowTenureBadge: p
                       },
                       e[0].id

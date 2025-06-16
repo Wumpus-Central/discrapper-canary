@@ -58,51 +58,51 @@ let u = !1,
         confettiCount: 5,
         warningSeen: !1
     },
-    _ = (0, i.cloneDeep)(d);
-function f(e) {
+    f = (0, i.cloneDeep)(d);
+function _(e) {
     let { settings: t } = e;
-    _ = c({}, _, t);
+    f = c({}, f, t);
 }
 function p() {
     u = !0;
 }
 class h extends (r = a.ZP.DeviceSettingsStore) {
     initialize(e) {
-        _ = c({}, _, e);
+        f = c({}, f, e);
     }
     getUserAgnosticState() {
-        return _;
+        return f;
     }
     get settingsVisible() {
-        return _.settingsVisible;
+        return f.settingsVisible;
     }
     isEnabled() {
         let { confettiLocation: e, shakeLocation: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            n = null == e || (_.confettiEnabled && _.confettiEnabledLocations[e]),
-            r = null == t || (_.screenshakeEnabled && _.screenshakeEnabledLocations[t]);
-        return this.settingsVisible && !u && _.enabled && n && r;
+            n = null == e || (f.confettiEnabled && f.confettiEnabledLocations[e]),
+            r = null == t || (f.screenshakeEnabled && f.screenshakeEnabledLocations[t]);
+        return this.settingsVisible && !u && f.enabled && n && r;
     }
     get shakeIntensity() {
-        return this.isEnabled() ? _.shakeIntensity : 0;
+        return this.isEnabled() ? f.shakeIntensity : 0;
     }
     get combosRequiredCount() {
-        return this.isEnabled() ? _.combosRequiredCount : 0;
+        return this.isEnabled() ? f.combosRequiredCount : 0;
     }
     get screenshakeEnabled() {
-        return _.screenshakeEnabled;
+        return f.screenshakeEnabled;
     }
     get screenshakeEnabledLocations() {
-        return _.screenshakeEnabledLocations;
+        return f.screenshakeEnabledLocations;
     }
     get combosEnabled() {
-        return _.combosEnabled;
+        return f.combosEnabled;
     }
     get comboSoundsEnabled() {
-        return _.comboSoundsEnabled;
+        return f.comboSoundsEnabled;
     }
 }
 l(h, 'displayName', 'PoggermodeSettingsStore'), l(h, 'persistKey', 'PoggermodeSettingsStore');
 let m = new h(o.Z, {
-    POGGERMODE_SETTINGS_UPDATE: f,
+    POGGERMODE_SETTINGS_UPDATE: _,
     POGGERMODE_TEMPORARILY_DISABLED: p
 });

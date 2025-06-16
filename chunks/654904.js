@@ -18,8 +18,8 @@ var l = n(51144),
     c = n(661543),
     u = n(200299),
     d = n(486324),
-    _ = n(388032);
-function f(e, t, n) {
+    f = n(388032);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,13 +43,13 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
 function h(e) {
-    let { uploadType: t, guildId: i, analyticsSource: s, filters: l, isTryItOutFlow: f = !1 } = e;
+    let { uploadType: t, guildId: i, analyticsSource: s, filters: l, isTryItOutFlow: _ = !1 } = e;
     (0, a.ZDy)(async () => {
         let { default: e } = await Promise.all([n.e('91689'), n.e('89289'), n.e('78701')]).then(n.bind(n, 28130));
         return (n) =>
@@ -59,7 +59,7 @@ function h(e) {
                     {
                         filters: l,
                         maxFileSizeBytes: u.B,
-                        imageSpecifications: t === d.pC.BANNER ? _.intl.string(_.t.IhzZlp) : void 0,
+                        imageSpecifications: t === d.pC.BANNER ? f.intl.string(f.t.IhzZlp) : void 0,
                         onComplete: (e) => {
                             let { assetOrigin: n, imageUri: r, file: a, originalAsset: l } = e,
                                 u = a.name.replace(/\.[^/.]+$/, ''),
@@ -67,19 +67,19 @@ function h(e) {
                                     filename: u,
                                     assetOrigin: n
                                 }),
-                                _ = (0, o.cN)({
+                                f = (0, o.cN)({
                                     assetOrigin: n,
                                     imageUri: r,
                                     description: d,
                                     originalAsset: l
                                 });
                             (0, c.j)({
-                                image: _,
+                                image: f,
                                 file: a,
                                 uploadType: t,
                                 guildId: i,
                                 analyticsSource: s,
-                                isTryItOutFlow: f
+                                isTryItOutFlow: _
                             });
                         },
                         uploadType: t,

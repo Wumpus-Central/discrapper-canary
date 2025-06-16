@@ -34,7 +34,7 @@ function d(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -46,12 +46,12 @@ function _(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -101,7 +101,7 @@ function y(e) {
     {
         let e = new Map();
         p.forEach((t, r) => {
-            e.set(r, f(d({}, t), { position: n }));
+            e.set(r, _(d({}, t), { position: n }));
         }),
             (p = e),
             (m = n);
@@ -121,7 +121,7 @@ function I(e) {
     {
         let e = p.get(t);
         if (null == e) return !1;
-        p.set(t, f(d({}, e), { hidden: !0 }));
+        p.set(t, _(d({}, e), { hidden: !0 }));
     }
 }
 function T(e) {
@@ -130,7 +130,7 @@ function T(e) {
     {
         let e = p.get(t);
         if (null == e) return !1;
-        p.set(t, f(d({}, e), { hidden: !1 }));
+        p.set(t, _(d({}, e), { hidden: !1 }));
     }
 }
 function S(e) {

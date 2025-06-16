@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(85235),
     u = n(367907),
     d = n(998698),
-    _ = n(895924),
-    f = n(588468),
+    f = n(895924),
+    _ = n(588468),
     p = n(600164),
     h = n(718745),
     m = n(590921),
@@ -68,7 +68,7 @@ let T = {
                 query: l,
                 options: c,
                 onHover: u,
-                onClick: _
+                onClick: f
             } = e,
             { command: h, query: g } = v(o, l, c);
         if (null == h || 0 === g.length) return null;
@@ -86,10 +86,10 @@ let T = {
                         return (
                             (e = !0),
                             (0, r.jsx)(
-                                f.ZP.GIFIntegration,
+                                _.ZP.GIFIntegration,
                                 {
                                     className: y.horizontalAutocomplete,
-                                    onClick: _,
+                                    onClick: f,
                                     onHover: u,
                                     selected: a === n,
                                     index: n,
@@ -117,7 +117,7 @@ let T = {
                 i.Fragment,
                 {
                     children: [
-                        (0, r.jsx)(f.ZP.Title, { title: l }),
+                        (0, r.jsx)(_.ZP.Title, { title: l }),
                         e
                             ? (0, r.jsx)(p.Z, {
                                   className: y.horizontalAutocompletes,
@@ -151,7 +151,7 @@ let T = {
             a.commands !== m.L8.OLD_BUILT_INS)
         ) {
             let e = d.Z.getActiveCommand(o.id);
-            (null == e ? void 0 : e.inputType) === _.iw.BUILT_IN_INTEGRATION &&
+            (null == e ? void 0 : e.inputType) === f.iw.BUILT_IN_INTEGRATION &&
                 (l.Z.dispatch({
                     type: 'APPLICATION_COMMAND_USED',
                     context: {
@@ -159,7 +159,7 @@ let T = {
                         guild: s
                     },
                     command: e,
-                    commandOrigin: _.bB.CHAT
+                    commandOrigin: f.bB.CHAT
                 }),
                 u.ZP.trackWithMetadata(E.rMx.APPLICATION_COMMAND_USED, {
                     command_id: e.id,

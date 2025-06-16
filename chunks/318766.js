@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => k,
+    Z: () => M,
     u: () => L
 }),
     n(388685);
@@ -12,8 +12,8 @@ var r = n(255367),
     c = n(704215),
     u = n(481060),
     d = n(607070),
-    _ = n(540059),
-    f = n(243778),
+    f = n(540059),
+    _ = n(243778),
     p = n(255963),
     h = n(140465),
     m = n(125900),
@@ -105,20 +105,20 @@ let R = 20,
             ]
         });
     };
-function M(e, t) {
+function k(e, t) {
     return {
         '--custom-emoji-sprite-size': ''.concat(t ? w : P, 'px'),
         '--custom-emoji-sprite-row': Math.floor(e / R),
         '--custom-emoji-sprite-col': e % R
     };
 }
-let k = function (e) {
-    let { tabIndex: t, className: n, renderButtonContents: a, active: S, onClick: N, 'aria-controls': R, focusProps: P, shouldShowSoundmojiCoachmark: w = !1, ref: k } = e,
+let M = function (e) {
+    let { tabIndex: t, className: n, renderButtonContents: a, active: S, onClick: N, 'aria-controls': R, focusProps: P, shouldShowSoundmojiCoachmark: w = !1, ref: M } = e,
         [j, U] = i.useState(!1),
         [G, B] = i.useState(50),
         V = j || S,
         F = (0, b.l)(T, 'emojiButton', V ? 'Hovered' : 'Normal'),
-        Z = M(G, (0, _.Q3)('EmojiButton')),
+        Z = k(G, (0, f.Q3)('EmojiButton')),
         H = i.useCallback(() => {
             if (V) return;
             let e = Math.floor(Math.random() * D);
@@ -129,17 +129,17 @@ let k = function (e) {
         }, [U]),
         W = i.useCallback(() => (0, p.x)(v.qR.EmojiButtonFocused), []),
         K = (0, h.B4)(),
-        [z, q] = (0, f.US)(K ? [c.z.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),
+        [z, q] = (0, _.US)(K ? [c.z.TRIAL_NUX_EMOJI_BUTTON] : [], void 0, !0),
         X = z === c.z.TRIAL_NUX_EMOJI_BUTTON,
         Q = !S && X,
         J = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         [$, ee] = i.useState(!1),
         [et, en] = i.useState(!1),
         er = (0, m.V2)({ location: 'EmojiButton' }),
-        [ei, ea] = (0, f.US)(w && er ? [c.z.SOUNDMOJI_COACHMARK] : []),
+        [ei, ea] = (0, _.US)(w && er ? [c.z.SOUNDMOJI_COACHMARK] : []),
         eo = !$ && ei === c.z.SOUNDMOJI_COACHMARK && !et,
         es = i.useRef(null),
-        el = null != k ? k : es;
+        el = null != M ? M : es;
     return (0, r.jsx)(u.yRy, {
         targetElementRef: el,
         renderPopout: () => (0, r.jsx)(g.Z, { markAsDismissed: ea }),

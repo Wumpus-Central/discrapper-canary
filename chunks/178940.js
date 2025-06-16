@@ -13,8 +13,8 @@ var r,
     c = n.n(l),
     u = n(866442),
     d = n(692547),
-    _ = n(84735),
-    f = n(481060),
+    f = n(84735),
+    _ = n(481060),
     p = n(540059),
     h = n(981631),
     m = n(883658);
@@ -84,7 +84,7 @@ let I = {
     };
 class S extends (r = a.PureComponent) {
     render() {
-        let { disabled: e, readOnly: t, value: n, align: r = 'center', className: a, innerClassName: o, children: l, size: c, reverse: u, displayOnly: d, type: f, onClick: p } = this.props,
+        let { disabled: e, readOnly: t, value: n, align: r = 'center', className: a, innerClassName: o, children: l, size: c, reverse: u, displayOnly: d, type: _, onClick: p } = this.props,
             g =
                 null != l
                     ? (0, i.jsx)('div', {
@@ -97,13 +97,13 @@ class S extends (r = a.PureComponent) {
             y = this.props.disabled ? m.inputDisabled : this.props.readOnly ? m.inputReadonly : m.inputDefault;
         return (0, i.jsxs)(b, {
             className: s()(e ? m.checkboxWrapperDisabled : m.checkboxWrapper, T[r], a, {
-                [m.row]: 'row' === f,
+                [m.row]: 'row' === _,
                 [m.checked]: n
             }),
             children: [
                 u ? g : null,
                 !d &&
-                    (0, i.jsx)(_.t, {
+                    (0, i.jsx)(f.t, {
                         children: (0, i.jsx)('input', {
                             className: s()(o, y),
                             type: 'checkbox',
@@ -166,13 +166,13 @@ function A(e, t) {
 }
 function N(e) {
     let t = (0, p.Q3)('Checkbox'),
-        { indicatorClassName: n, value: r, size: o, shape: l, checkboxColor: c, type: u, color: _, disabled: f } = e,
+        { indicatorClassName: n, value: r, size: o, shape: l, checkboxColor: c, type: u, color: f, disabled: _ } = e,
         h = A(e, t),
-        g = a.useMemo(() => (r ? (t || 'inverted' === u || 'row' === u ? d.Z.colors.WHITE.css : null != _ ? _ : d.Z.unsafe_rawColors.BRAND_500.css) : d.Z.unsafe_rawColors.TRANSPARENT.css), [r, u, _, t]);
+        g = a.useMemo(() => (r ? (t || 'inverted' === u || 'row' === u ? d.Z.colors.WHITE.css : null != f ? f : d.Z.unsafe_rawColors.BRAND_500.css) : d.Z.unsafe_rawColors.TRANSPARENT.css), [r, u, f, t]);
     return (0, i.jsx)('div', {
         className: s()(m.checkbox, l, n, {
             [m.checked]: r,
-            [m.checkboxDisabled]: f
+            [m.checkboxDisabled]: _
         }),
         style: E(
             {
@@ -193,7 +193,7 @@ function N(e) {
 function C(e) {
     var { isVisualRefreshEnabled: t } = e,
         n = b(e, ['isVisualRefreshEnabled']);
-    return t ? (0, i.jsx)(f.kSu, E({}, n)) : (0, i.jsx)(f.dz2, E({}, n));
+    return t ? (0, i.jsx)(_.kSu, E({}, n)) : (0, i.jsx)(_.dz2, E({}, n));
 }
 g(S, 'Types', O),
     g(S, 'Shapes', I),

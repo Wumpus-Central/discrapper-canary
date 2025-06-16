@@ -12,8 +12,8 @@ var i = n(772848),
     c = n(317770),
     u = n(100527),
     d = n(807169),
-    _ = n(728345),
-    f = n(358221),
+    f = n(728345),
+    _ = n(358221),
     p = n(75060),
     h = n(233764),
     m = n(375824),
@@ -35,8 +35,8 @@ var i = n(772848),
     D = n(317381),
     L = n(969345),
     x = n(155268),
-    M = n(148720),
-    k = n(122613),
+    k = n(148720),
+    M = n(122613),
     j = n(790920),
     U = n(16609),
     G = n(761122),
@@ -110,12 +110,12 @@ async function ee(e) {
         c = (0, U.p)(r),
         u = (0, U.j)(r),
         d = O.Z.getChannel(c),
-        _ = T.default.getCurrentUser();
-    if (null == l || null == _) return;
-    let f = D.ZP.getShelfActivities(u),
+        f = T.default.getCurrentUser();
+    if (null == l || null == f) return;
+    let _ = D.ZP.getShelfActivities(u),
         h = (0, L.Z)({
             applicationId: n,
-            activityConfigs: f
+            activityConfigs: _
         }),
         { releasePhase: m } = q(h),
         g = p.Z.getRawThermalState();
@@ -126,7 +126,7 @@ async function ee(e) {
         activity_session_id: l.activitySessionId,
         application_id: n,
         duration_ms: o,
-        user_premium_tier: _.premiumType,
+        user_premium_tier: f.premiumType,
         raw_thermal_state: g,
         release_phase: m,
         shelf_rank: null == h || null == (t = h.activity) ? void 0 : t.shelf_rank,
@@ -150,7 +150,7 @@ async function ee(e) {
 }
 function et(e) {
     var t, n;
-    let { applicationId: r, isFirstActivityInChannel: a, isStart: o, participants: l, embeddedActivity: c, location: u, inviterUserId: _ } = e,
+    let { applicationId: r, isFirstActivityInChannel: a, isStart: o, participants: l, embeddedActivity: c, location: u, inviterUserId: f } = e,
         h = y.default.getId(),
         m = l.find((e) => e.userId === h),
         g = (0, U.p)(u),
@@ -165,13 +165,13 @@ function et(e) {
         w = 'location' in c ? 2 : 1,
         x = T.default.getCurrentUser();
     if (null == x) return;
-    let M = D.ZP.getShelfActivities(E),
-        k = R.Z.getState().shelfOrder,
+    let k = D.ZP.getShelfActivities(E),
+        M = R.Z.getState().shelfOrder,
         j = (0, L.Z)({
             applicationId: r,
-            activityConfigs: M
+            activityConfigs: k
         }),
-        G = 1 + k.findIndex((e) => e === r),
+        G = 1 + M.findIndex((e) => e === r),
         { releasePhase: B } = q(j),
         V = p.Z.getRawThermalState(),
         Z = null != I ? [I] : [],
@@ -194,7 +194,7 @@ function et(e) {
             location_stack: null == Y ? void 0 : Y.locations,
             user_premium_tier: x.premiumType,
             raw_thermal_state: V,
-            n_participants: null != b ? f.Z.getUserParticipantCount(b.id) : null,
+            n_participants: null != b ? _.Z.getUserParticipantCount(b.id) : null,
             is_activity_start: o,
             release_phase: B,
             shelf_rank: null == j || null == (t = j.activity) ? void 0 : t.shelf_rank,
@@ -203,7 +203,7 @@ function et(e) {
             channel_type: null == b ? void 0 : b.type,
             source: null == Y ? void 0 : Y.source,
             command_context_type: null != b ? (0, d.Vh)(b, r) : null,
-            invite_inviter_id: _,
+            invite_inviter_id: f,
             interaction_id: null == Y ? void 0 : Y.interactionId,
             embedded_activity_location_kind: u.kind
         }),
@@ -283,47 +283,47 @@ class er extends c.Z {
                     r,
                     { error: i, nonce: a, channelId: o, guildId: s, applicationId: l, isStart: c, locationKind: u } = e,
                     d = Q(l, a),
-                    _ = Z.intl.string(Z.t['IOy+Iy']);
+                    f = Z.intl.string(Z.t['IOy+Iy']);
                 if (i instanceof h.Z) {
                     (t = 0), (r = i.reason);
                     let e = P.Z.getFetchState();
                     switch ((E.Sb.getSetting() && e !== P.O.LOADED && (await (0, w.$h)()), i.reason)) {
                         case h.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND:
-                            P.Z.inDevModeForApplication(l) && (_ = Z.intl.string(Z.t.hXRXf3));
+                            P.Z.inDevModeForApplication(l) && (f = Z.intl.string(Z.t.hXRXf3));
                             break;
                         case h.Z.Reasons.INVALID_CHANNEL:
-                            _ = Z.intl.string(Z.t.j29zCg);
+                            f = Z.intl.string(Z.t.j29zCg);
                             break;
                         case h.Z.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED:
                             n = i.detailCode;
                     }
                 } else if (i instanceof m.Z) {
-                    var f;
-                    (t = 1), (r = i.reason), (_ = null != (f = (0, g.A0)(i.reason, l)) ? f : _);
+                    var _;
+                    (t = 1), (r = i.reason), (f = null != (_ = (0, g.A0)(i.reason, l)) ? _ : f);
                 } else
                     switch (((t = 2), (n = i.status), (r = i.code), i.code)) {
                         case F.evJ.INVALID_ACTIVITY_LAUNCH_NO_ACCESS:
-                            _ = Z.intl.string(Z.t.Gyzcra);
+                            f = Z.intl.string(Z.t.Gyzcra);
                             break;
                         case F.evJ.INVALID_ACTIVITY_LAUNCH_PREMIUM_TIER:
-                            _ = Z.intl.string(Z.t.zxv7EB);
+                            f = Z.intl.string(Z.t.zxv7EB);
                             break;
                         case F.evJ.INVALID_PERMISSIONS:
-                            _ = Z.intl.string(Z.t.hHGrW1);
+                            f = Z.intl.string(Z.t.hHGrW1);
                             break;
                         case F.evJ.INVALID_ACTIVITY_LAUNCH_AFK_CHANNEL:
-                            _ = Z.intl.string(Z.t.j29zCg);
+                            f = Z.intl.string(Z.t.j29zCg);
                             break;
                         case F.evJ.INVALID_ACTIVITY_LAUNCH_AGE_GATED:
-                            _ = Z.intl.string(Z.t['4WuFRE']);
+                            f = Z.intl.string(Z.t['4WuFRE']);
                             break;
                         case F.evJ.INVALID_ACTIVITY_LAUNCH_DEV_PREVIEW_GUILD_SIZE:
-                            _ = Z.intl.string(Z.t.RvkXdX);
+                            f = Z.intl.string(Z.t.RvkXdX);
                             break;
                         case F.evJ.ACTIVITY_CONFIGURATION_DOES_NOT_SUPPORT_PLATFORM:
-                            _ = Z.intl.string(Z.t.uGDCc3);
+                            f = Z.intl.string(Z.t.uGDCc3);
                     }
-                this.showLaunchErrorModal(_);
+                this.showLaunchErrorModal(f);
                 let b = O.Z.getChannel(o),
                     y = p.Z.getRawThermalState();
                 S.default.track(F.rMx.ACTIVITY_SESSION_JOIN_FAILED, {
@@ -385,11 +385,11 @@ class er extends c.Z {
                 if (void 0 === c || (b.tx.has(null == c ? void 0 : c.type) && I.Z.getVoiceChannelId() !== i)) return;
                 let u = D.ZP.getSelfEmbeddedActivityForChannel(i);
                 if ((null == u ? void 0 : u.applicationId) === a) return;
-                let d = await _.ZP.fetchApplication(a);
+                let d = await f.ZP.fetchApplication(a);
                 if (!(0, j.a)()) return void this.showLaunchErrorModal(Z.intl.string(Z.t.UXoQTk));
                 if (!(0, B.Z)(null == d || null == (t = d.embedded_activity_config) ? void 0 : t.supported_platforms)) return void this.showLaunchErrorModal(Z.intl.string(Z.t.uGDCc3));
-                let f = null != (n = null == c ? void 0 : c.getGuildId()) ? n : void 0,
-                    { activityConfigs: p, applications: h } = await (0, w.w1)({ guildId: f });
+                let _ = null != (n = null == c ? void 0 : c.getGuildId()) ? n : void 0,
+                    { activityConfigs: p, applications: h } = await (0, w.w1)({ guildId: _ });
                 if (
                     null ==
                     (0, L.Z)({
@@ -399,7 +399,7 @@ class er extends c.Z {
                     })
                 ) {
                     let e = await (0, w.w1)({
-                        guildId: f,
+                        guildId: _,
                         force: !0
                     });
                     (0, L.Z)({
@@ -410,7 +410,7 @@ class er extends c.Z {
                 }
                 let m = D.ZP.getEmbeddedActivitiesForChannel(i).find((e) => e.applicationId === a);
                 (null != (r = null == m ? void 0 : m.userIds.size) ? r : 0) > 0
-                    ? await (0, M.k)({
+                    ? await (0, k.k)({
                           channelId: i,
                           applicationId: a,
                           launchId: null == m ? void 0 : m.launchId,
@@ -418,7 +418,7 @@ class er extends c.Z {
                           analyticsLocations: o,
                           inviterUserId: l
                       })
-                    : await (0, k.Z)({
+                    : await (0, M.Z)({
                           targetApplicationId: a,
                           channelId: i,
                           analyticsLocations: o,

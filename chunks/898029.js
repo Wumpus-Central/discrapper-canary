@@ -1,21 +1,21 @@
-a.d(e, { E: () => s });
+a.d(e, { E: () => E });
 var r = a(573736),
     _ = a(202811),
     n = a(370336),
     o = a(886115),
     i = a(622916),
     c = a(151122),
-    E = a(255768);
-let s = (0, c._I)((t = {}) => {
+    s = a(255768);
+let E = (0, c._I)((t = {}) => {
     let { depth: e = 3, captureErrorCause: a = !0 } = t;
     return {
         name: 'ExtraErrorData',
-        processEvent(t, c, s) {
-            let { maxValueLength: l = 250 } = s.getOptions();
-            return (function (t, e = {}, a, c, s) {
+        processEvent(t, c, E) {
+            let { maxValueLength: l = 250 } = E.getOptions();
+            return (function (t, e = {}, a, c, E) {
                 if (!e.originalException || !(0, r.VZ)(e.originalException)) return t;
                 let l = e.originalException.name || e.originalException.constructor.name,
-                    I = (function (t, e, a) {
+                    u = (function (t, e, a) {
                         try {
                             let _ = ['name', 'message', 'stack', 'line', 'column', 'fileName', 'lineNumber', 'columnNumber', 'toJSON'],
                                 n = {};
@@ -33,13 +33,13 @@ let s = (0, c._I)((t = {}) => {
                             }
                             return n;
                         } catch (t) {
-                            E.X && i.kg.error('Unable to extract extra data from the Error object:', t);
+                            s.X && i.kg.error('Unable to extract extra data from the Error object:', t);
                         }
                         return null;
-                    })(e.originalException, c, s);
-                if (I) {
+                    })(e.originalException, c, E);
+                if (u) {
                     let e = { ...t.contexts },
-                        o = (0, _.Fv)(I, a);
+                        o = (0, _.Fv)(u, a);
                     return (
                         (0, r.PO)(o) && ((0, n.xp)(o, '__sentry_skip_normalization__', !0), (e[l] = o)),
                         {

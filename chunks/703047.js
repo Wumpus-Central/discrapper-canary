@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r,
     i = n(442837),
     a = n(570140),
@@ -30,7 +30,7 @@ class d extends (r = i.ZP.Store) {
     }
 }
 s(d, 'displayName', 'CustomActivityLinksStore');
-let _ = new d(a.Z, {
+let f = new d(a.Z, {
     CUSTOM_ACTIVITY_LINK_FETCH_SUCCESS: c,
     LOGOUT: u
 });

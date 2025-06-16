@@ -1,6 +1,6 @@
 a.d(e, {
     QV: () => c,
-    XL: () => E,
+    XL: () => s,
     Y: () => i,
     nl: () => o
 });
@@ -26,6 +26,6 @@ function i(t, e, a, { ...n }) {
 function c() {
     return n.m && n.m.addEventListener && n.m.performance;
 }
-function E(t) {
+function s(t) {
     return t / 1000;
 }

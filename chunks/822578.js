@@ -1,6 +1,6 @@
 a.d(e, {
-    R: () => u,
-    U0: () => A
+    R: () => I,
+    U0: () => R
 });
 var r = a(394798),
     _ = a(101284),
@@ -8,37 +8,37 @@ var r = a(394798),
     o = a(899517),
     i = a(202811),
     c = a(559508),
-    E = a(263449),
-    s = a(574054),
+    s = a(263449),
+    E = a(574054),
     l = a(307854),
-    I = a(396234);
-function u(t, e, a, u, A, T) {
-    var N, d;
-    let { normalizeDepth: L = 3, normalizeMaxBreadth: p = 1000 } = t,
-        f = {
+    u = a(396234);
+function I(t, e, a, I, R, N) {
+    var f, A;
+    let { normalizeDepth: T = 3, normalizeMaxBreadth: p = 1000 } = t,
+        L = {
             ...e,
             event_id: e.event_id || a.event_id || (0, r.DM)(),
             timestamp: e.timestamp || (0, _.yW)()
         },
-        O = a.integrations || t.integrations.map((t) => t.name);
+        h = a.integrations || t.integrations.map((t) => t.name);
     (function (t, e) {
         let { environment: a, release: r, dist: _, maxValueLength: o = 250 } = e;
         'environment' in t || (t.environment = 'environment' in e ? a : c.J), void 0 === t.release && void 0 !== r && (t.release = r), void 0 === t.dist && void 0 !== _ && (t.dist = _), t.message && (t.message = (0, n.$G)(t.message, o));
         let i = t.exception && t.exception.values && t.exception.values[0];
         i && i.value && (i.value = (0, n.$G)(i.value, o));
-        let E = t.request;
-        E && E.url && (E.url = (0, n.$G)(E.url, o));
-    })(f, t),
-        (N = f),
-        (d = O).length > 0 && ((N.sdk = N.sdk || {}), (N.sdk.integrations = [...(N.sdk.integrations || []), ...d])),
-        A && A.emit('applyFrameMetadata', e),
+        let s = t.request;
+        s && s.url && (s.url = (0, n.$G)(s.url, o));
+    })(L, t),
+        (f = L),
+        (A = h).length > 0 && ((f.sdk = f.sdk || {}), (f.sdk.integrations = [...(f.sdk.integrations || []), ...A])),
+        R && R.emit('applyFrameMetadata', e),
         void 0 === e.type &&
             (function (t, e) {
                 let a,
                     r = o.n._sentryDebugIds;
                 if (!r) return;
-                let _ = R.get(e);
-                _ ? (a = _) : ((a = new Map()), R.set(e, a));
+                let _ = d.get(e);
+                _ ? (a = _) : ((a = new Map()), d.set(e, a));
                 let n = Object.entries(r).reduce((t, [r, _]) => {
                     let n,
                         o = a.get(r);
@@ -59,27 +59,27 @@ function u(t, e, a, u, A, T) {
                         });
                     });
                 } catch (t) {}
-            })(f, t.stackParser);
-    let h = (function (t, e) {
+            })(L, t.stackParser);
+    let O = (function (t, e) {
         if (!e) return t;
         let a = t ? t.clone() : new l.s();
         return a.update(e), a;
-    })(u, a.captureContext);
-    a.mechanism && (0, r.EG)(f, a.mechanism);
-    let D = A ? A.getEventProcessors() : [],
-        P = (0, E.lW)().getScopeData();
-    if (T) {
-        let t = T.getScopeData();
-        (0, I.yo)(P, t);
+    })(I, a.captureContext);
+    a.mechanism && (0, r.EG)(L, a.mechanism);
+    let P = R ? R.getEventProcessors() : [],
+        g = (0, s.lW)().getScopeData();
+    if (N) {
+        let t = N.getScopeData();
+        (0, u.yo)(g, t);
     }
-    if (h) {
-        let t = h.getScopeData();
-        (0, I.yo)(P, t);
+    if (O) {
+        let t = O.getScopeData();
+        (0, u.yo)(g, t);
     }
-    let g = [...(a.attachments || []), ...P.attachments];
-    g.length && (a.attachments = g), (0, I.gi)(f, P);
-    let C = [...D, ...P.eventProcessors];
-    return (0, s.R)(C, f, a).then((t) =>
+    let D = [...(a.attachments || []), ...g.attachments];
+    D.length && (a.attachments = D), (0, u.gi)(L, g);
+    let C = [...P, ...g.eventProcessors];
+    return (0, E.R)(C, L, a).then((t) =>
         (t &&
             (function (t) {
                 let e = {};
@@ -101,7 +101,7 @@ function u(t, e, a, u, A, T) {
                     });
                 });
             })(t),
-        'number' == typeof L && L > 0)
+        'number' == typeof T && T > 0)
             ? (function (t, e, a) {
                   if (!t) return null;
                   let r = {
@@ -125,15 +125,15 @@ function u(t, e, a, u, A, T) {
                           }))),
                       r
                   );
-              })(t, L, p)
+              })(t, T, p)
             : t
     );
 }
-let R = new WeakMap();
-function A(t) {
+let d = new WeakMap();
+function R(t) {
     if (t) {
         var e;
-        return (e = t) instanceof l.s || 'function' == typeof e || Object.keys(t).some((t) => T.includes(t)) ? { captureContext: t } : t;
+        return (e = t) instanceof l.s || 'function' == typeof e || Object.keys(t).some((t) => N.includes(t)) ? { captureContext: t } : t;
     }
 }
-let T = ['user', 'level', 'extra', 'contexts', 'tags', 'fingerprint', 'requestSession', 'propagationContext'];
+let N = ['user', 'level', 'extra', 'contexts', 'tags', 'fingerprint', 'requestSession', 'propagationContext'];

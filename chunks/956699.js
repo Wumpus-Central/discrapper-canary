@@ -882,7 +882,8 @@ function ec() {
             isIdleStatusIndicatorEnabled: s,
             onlyShowPreviewAppCollections: l,
             disableAppCollectionsCache: a,
-            preventPopoutClose: o
+            preventPopoutClose: o,
+            logKeyboardMismatches: c
         } = (0, d.cj)([w.default], () => ({
             isTracingRequests: w.default.isTracingRequests,
             isForcedCanary: w.default.isForcedCanary,
@@ -891,10 +892,11 @@ function ec() {
             isIdleStatusIndicatorEnabled: w.default.isIdleStatusIndicatorEnabled,
             onlyShowPreviewAppCollections: w.default.onlyShowPreviewAppCollections,
             disableAppCollectionsCache: w.default.disableAppCollectionsCache,
-            preventPopoutClose: w.default.preventPopoutClose
+            preventPopoutClose: w.default.preventPopoutClose,
+            logKeyboardMismatches: w.default.logKeyboardMismatches
         })),
-        c = (0, A.Z)('go_back_to_regular_input'),
-        u = G.zY.useSetting();
+        u = (0, A.Z)('go_back_to_regular_input'),
+        m = G.zY.useSetting();
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(Z.F, {
@@ -918,7 +920,7 @@ function ec() {
             (0, i.jsx)(Z.F, {
                 setting: Y.s6.DEVELOPER_OPTIONS_ALWAYS_DELIVER,
                 children: (0, i.jsx)(g.j7V, {
-                    value: u,
+                    value: m,
                     note: 'Make user targetable for all active ads',
                     onChange: (e) => G.zY.updateSetting(e),
                     children: 'Ads auto-targeting'
@@ -961,6 +963,15 @@ function ec() {
                 })
             }),
             (0, i.jsx)(Z.F, {
+                setting: Y.s6.DEVELOPER_OPTIONS_LOG_KEYBOARD_MISMATCHES,
+                children: (0, i.jsx)(g.j7V, {
+                    value: c,
+                    note: 'Logs mismatches in detected keyboard codes to the console',
+                    onChange: (e) => (0, f.y)({ logKeyboardMismatches: e }),
+                    children: 'Enable Logging of Keyboard Mismatches'
+                })
+            }),
+            (0, i.jsx)(Z.F, {
                 setting: Y.s6.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS,
                 children: (0, i.jsx)(g.j7V, {
                     value: l,
@@ -981,7 +992,7 @@ function ec() {
             (0, i.jsx)(Z.F, {
                 setting: Y.s6.DEVELOPER_OPTIONS_DISABLE_ALIGN_CHAT_INPUT,
                 children: (0, i.jsx)(g.j7V, {
-                    value: c,
+                    value: u,
                     note: 'Disable aligning chat input to the bottom of the screen',
                     onChange: (e) => {
                         B.default.track(W.rMx.GUILD_JOIN_FEEDBACK, {

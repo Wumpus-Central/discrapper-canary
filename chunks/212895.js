@@ -15,8 +15,8 @@ var r = n(73800),
     c = n(509545),
     u = n(74538),
     d = n(981631),
-    _ = n(474936);
-function f(e, t, n) {
+    f = n(474936);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,14 +40,14 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
 let h = 10027;
 function m(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [..._.YQ];
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [...f.YQ];
     return null == e || c.Z.hasPaymentSourceForSKUIds(e, t)
         ? Promise.resolve()
         : new Promise((e, n) => {
@@ -86,8 +86,8 @@ function b(e) {
                       loaded: !1
                   }
         ),
-        _ = (0, l.V)(o),
-        f = JSON.stringify(o),
+        f = (0, l.V)(o),
+        _ = JSON.stringify(o),
         E = r.useRef(o);
     r.useEffect(() => {
         E.current = o;
@@ -113,10 +113,10 @@ function b(e) {
                               loaded: !1
                           });
             })();
-        }, [i, f, n, a, _, s]);
-    let b = u.paymentSourceId !== i || null == n || !_ || !0 !== u.loaded;
+        }, [i, _, n, a, f, s]);
+    let b = u.paymentSourceId !== i || null == n || !f || !0 !== u.loaded;
     return {
-        hasFetchedSubscriptionPlans: _,
+        hasFetchedSubscriptionPlans: f,
         priceOptions: u,
         setCurrency: (e) => {
             d({ currency: e });

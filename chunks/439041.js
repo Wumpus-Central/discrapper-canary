@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => _ });
 var r,
     i = n(442837),
     a = n(570140);
@@ -28,7 +28,7 @@ function d(e) {
     let { component: t } = e;
     l = t;
 }
-class _ extends (r = i.ZP.Store) {
+class f extends (r = i.ZP.Store) {
     get client() {
         return s;
     }
@@ -36,8 +36,8 @@ class _ extends (r = i.ZP.Store) {
         return l;
     }
 }
-o(_, 'displayName', 'AdyenStore');
-let f = new _(a.Z, {
+o(f, 'displayName', 'AdyenStore');
+let _ = new f(a.Z, {
     ADYEN_CREATE_CLIENT_SUCCESS: c,
     ADYEN_TEARDOWN_CLIENT: u,
     ADYEN_CREATE_CASH_APP_PAY_COMPONENT_SUCCESS: d

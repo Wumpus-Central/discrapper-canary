@@ -122,7 +122,7 @@ e.exports = function (e) {
             ],
             relevance: 0
         },
-        _ = {
+        f = {
             begin: '(?!%\\})(' + e.RE_STARTERS_RE + '|\\n|\\b(case|if|select|unless|until|when|while)\\b)\\s*',
             keywords: 'case if select unless until when while',
             contains: [
@@ -143,7 +143,7 @@ e.exports = function (e) {
             ],
             relevance: 0
         },
-        f = [
+        _ = [
             l,
             u,
             d,
@@ -178,7 +178,7 @@ e.exports = function (e) {
                 ],
                 relevance: 0
             },
-            _,
+            f,
             {
                 className: 'meta',
                 begin: '@\\[',
@@ -249,13 +249,13 @@ e.exports = function (e) {
             }
         ];
     return (
-        (o.contains = f),
-        (l.contains = f.slice(1)),
+        (o.contains = _),
+        (l.contains = _.slice(1)),
         {
             name: 'Crystal',
             aliases: ['cr'],
             keywords: a,
-            contains: f
+            contains: _
         }
     );
 };

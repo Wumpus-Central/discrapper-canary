@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(134432),
     u = n(706454),
     d = n(314897),
-    _ = n(158776),
-    f = n(594174),
+    f = n(158776),
+    _ = n(594174),
     p = n(302221),
     h = n(5192),
     m = n(358085),
@@ -79,12 +79,12 @@ function L(e, t) {
     );
 }
 let x = 10,
-    M = 15,
-    k = 'leaderboard.png';
+    k = 15,
+    M = 'leaderboard.png';
 function j(e) {
     let { leaderboard: t, previewMode: n = !1, trackRankingItemInteraction: s } = e,
-        _ = (0, a.e7)([d.default], () => d.default.getId()),
-        f = (0, a.e7)([u.default], () => u.default.locale),
+        f = (0, a.e7)([d.default], () => d.default.getId()),
+        _ = (0, a.e7)([u.default], () => u.default.locale),
         { rankChanges: h } = (0, y.Z)({
             guildId: t.guild_id,
             leaderboardId: t.leaderboard_id,
@@ -111,10 +111,10 @@ function j(e) {
         { primaryColor: v } = (0, l.Z)(g),
         I = i.useMemo(() => {
             let e = (0, p.oo)(v),
-                t = L(w({}, (0, p.pz)(e.r, e.g, e.b)), { l: M });
+                t = L(w({}, (0, p.pz)(e.r, e.g, e.b)), { l: k });
             return (0, p.ZJ)(t.h, t.s, t.l);
         }, [v]),
-        S = i.useMemo(() => null == m.find((e) => e.userId === _) && m.length <= x, [m, _]);
+        S = i.useMemo(() => null == m.find((e) => e.userId === f) && m.length <= x, [m, f]);
     if (
         (i.useEffect(() => {
             T.M.forEach((e) => (0, c.po)(e));
@@ -170,7 +170,7 @@ function j(e) {
                                           L(w({}, e), {
                                               key: e.userId,
                                               guildId: t.guild_id,
-                                              locale: f,
+                                              locale: _,
                                               leaderboard: t,
                                               trackRankingItemInteraction: s
                                           })
@@ -208,15 +208,15 @@ function U(e) {
 }
 function G(e) {
     let { userId: t, rank: n, value: l, guildId: c, previousRank: u, locale: d, leaderboard: p, trackRankingItemInteraction: E } = e,
-        b = (0, a.e7)([f.default], () => f.default.getUser(t)),
+        b = (0, a.e7)([_.default], () => _.default.getUser(t)),
         y = h.ZP.getName(c, void 0, b),
         O = null != u && u > n,
         [v, P] = i.useState('default'),
-        D = (0, a.e7)([_.Z], () => {
-            let e = _.Z.getPrimaryActivity(t);
+        D = (0, a.e7)([f.Z], () => {
+            let e = f.Z.getPrimaryActivity(t);
             return (null == e ? void 0 : e.application_id) != null && A.T.includes(e.application_id);
         }),
-        { generatingImage: x, generateImage: M } = (0, s.d)({
+        { generatingImage: x, generateImage: k } = (0, s.d)({
             renderComponent: (e) =>
                 (0, r.jsx)(
                     T.Z,
@@ -230,8 +230,8 @@ function G(e) {
         }),
         j = async () => {
             try {
-                let e = await M();
-                await g.ZP.copyImageBlob(e, k), P('copied'), null == E || E(N.xP.COPIED_LEADERBOARD_ROW);
+                let e = await k();
+                await g.ZP.copyImageBlob(e, M), P('copied'), null == E || E(N.xP.COPIED_LEADERBOARD_ROW);
             } catch (e) {
                 P('error');
             }

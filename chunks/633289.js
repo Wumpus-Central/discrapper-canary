@@ -1,13 +1,14 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r,
     i = n(108131),
     a = n.n(i),
     o = n(442837),
     s = n(570140),
-    l = n(314897),
-    c = n(626135),
-    u = n(508825),
-    d = n(981631);
+    l = n(865427),
+    c = n(314897),
+    u = n(626135),
+    d = n(508825),
+    f = n(981631);
 function _(e, t, n) {
     return (
         t in e
@@ -21,28 +22,46 @@ function _(e, t, n) {
         e
     );
 }
-let f = [u.Cm.User],
-    p = {
+let p = [d.Cm.User],
+    h = {
         user: {},
         guild: {}
     },
-    h = {},
-    m = {};
-function g(e) {
-    let t = m[e];
-    return null == t && ((t = a().v3(e)), (m[e] = t)), t;
+    m = {},
+    g = {},
+    E = {},
+    b = {};
+function y(e) {
+    let t = b[e];
+    return null == t && ((t = a().v3(e)), (b[e] = t)), t;
 }
-class E extends (r = o.ZP.Store) {
-    initialize() {
-        this.waitFor(l.default);
+class O extends (r = o.ZP.PersistedStore) {
+    initialize(e) {
+        this.waitFor(c.default), null != e && 1 === e.version && ((g = e.clientOverrides), (h = e.evaluatedExperiments));
+        let t = (0, l._S)();
+        for (let e in ((E = {}), t)) {
+            let n = y(e);
+            E[n] = {
+                hashedId: n,
+                variantId: t[e],
+                isOverride: !0
+            };
+        }
+    }
+    getState() {
+        return {
+            version: 1,
+            evaluatedExperiments: h,
+            clientOverrides: g
+        };
     }
     processExperimentsMessage(e) {
         if (null == e) return !1;
-        for (let t of f) {
-            let n = u.Oz[t],
+        for (let t of p) {
+            let n = d.Oz[t],
                 r = e.assignments[t];
             if (null == r || null == n) continue;
-            let i = p[n];
+            let i = h[n];
             for (let e in r) {
                 let { evaluation_id: t, assignments: n } = r[e],
                     a = {
@@ -54,30 +73,49 @@ class E extends (r = o.ZP.Store) {
                         (a.assignments[t] = {
                             hashedId: t,
                             variantId: r,
-                            isServerOverride: (o & u.V8.IsOverride) != 0
+                            isOverride: (o & d.V8.IsOverride) != 0
                         });
             }
         }
     }
+    handleApexExperimentOverrideCreate(e) {
+        g[e.hashedId] = {
+            hashedId: e.hashedId,
+            variantId: e.variantId,
+            isOverride: !0
+        };
+    }
+    handleApexExperimentOverrideDelete(e) {
+        delete g[e.hashedId];
+    }
+    handleLogout(e) {
+        e.isSwitchingAccount || this.clearAllServerAssignments();
+    }
     registerExperiment(e) {
-        h[e.name] = e;
+        m[e.name] = e;
     }
     getAssignment(e, t, n) {
-        let r = g(n),
-            i = p[e][t];
-        if (null != i) return i.assignments[r];
+        var r;
+        let i = y(n),
+            a = null != (r = g[i]) ? r : E[i];
+        if (null != a) return a;
+        let o = h[e][t];
+        if (null != o) return o.assignments[i];
     }
     getEvaluation(e, t) {
         var n;
-        return null == (n = p[e][t]) ? void 0 : n.evaluationId;
+        return null == (n = h[e][t]) ? void 0 : n.evaluationId;
     }
     getEvaluationAndAssignment(e, t, n) {
-        let r = p[e][t];
-        return null == r ? [void 0, void 0] : [r.evaluationId, r.assignments[n]];
+        var r;
+        let i = null != (r = g[n]) ? r : E[n];
+        if (null != i) return [void 0, i];
+        let a = h[e][t];
+        return null == a ? [void 0, void 0] : [a.evaluationId, a.assignments[n]];
     }
     trackEvaluationExposure(e, t, n, r) {
         'user' === t &&
-            c.default.track(d.rMx.EXPERIMENT_USER_EVALUATION_EXPOSED, {
+            u.default.track(f.rMx.EXPERIMENT_USER_EVALUATION_EXPOSED, {
                 evaluation: e,
                 experiment: n,
                 exposure_location: r,
@@ -86,32 +124,40 @@ class E extends (r = o.ZP.Store) {
     }
     trackCommonTriggerPointExposures(e) {
         for (let t of this.evaluationIds('user'))
-            c.default.track(d.rMx.EXPERIMENT_USER_EVALUATION_EXPOSED, {
+            u.default.track(f.rMx.EXPERIMENT_USER_EVALUATION_EXPOSED, {
                 evaluation: t,
                 exposure_location: e,
                 unit_type: 'user'
             });
     }
     evaluationIds(e) {
-        return Object.values(p[e]).map((e) => e.evaluationId);
+        return Object.values(h[e]).map((e) => e.evaluationId);
     }
-    resetForTests() {
-        p = {
+    clearAllServerAssignments() {
+        h = {
             user: {},
             guild: {}
         };
+    }
+    clearAllOverrides() {
+        (g = {}), (E = {});
     }
     constructor() {
         super(
             s.Z,
             {
                 CONNECTION_OPEN: (e) => this.processExperimentsMessage(e.apexExperiments),
-                CONNECTION_OPEN_STATE_UPDATE: (e) => this.processExperimentsMessage(e.apexExperiments)
+                CONNECTION_OPEN_STATE_UPDATE: (e) => this.processExperimentsMessage(e.apexExperiments),
+                APEX_EXPERIMENT_OVERRIDE_CREATE: (e) => this.handleApexExperimentOverrideCreate(e),
+                APEX_EXPERIMENT_OVERRIDE_DELETE: (e) => this.handleApexExperimentOverrideDelete(e),
+                APEX_EXPERIMENT_OVERRIDE_CLEAR: () => this.clearAllOverrides(),
+                APEX_EXPERIMENT_CLEAR_SERVER_ASSIGNMENTS: () => this.clearAllServerAssignments(),
+                LOGOUT: (e) => this.handleLogout(e)
             },
             s.c.Early
         ),
-            _(this, 'getHash', g);
+            _(this, 'getHash', y);
     }
 }
-_(E, 'displayName', 'ApexExperimentStore');
-let b = new E();
+_(O, 'displayName', 'ApexExperimentStore'), _(O, 'persistKey', 'ApexExperimentStore');
+let v = new O();

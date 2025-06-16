@@ -8,13 +8,13 @@ function l(e) {
     let { value: t, onChange: n, hideValue: l, disabled: c = !1 } = e,
         u = i.useRef(null),
         d = i.useMemo(() => new o.tR(), []),
-        [_, f] = i.useState('');
+        [f, _] = i.useState('');
     function p(e) {
         null != t && n((0, o.rK)(t, d.selectValue(e)));
     }
     function h(e) {
         if ('Enter' === e.key) {
-            let e = (0, o.tj)(t, _);
+            let e = (0, o.tj)(t, f);
             if (null != e) {
                 var n;
                 p(e), null == (n = u.current) || n.close();
@@ -24,11 +24,11 @@ function l(e) {
     return (0, r.jsx)(a.V, {
         ref: u,
         className: s.select,
-        options: d.getOptions(_),
+        options: d.getOptions(f),
         value: l ? void 0 : d.lookupByValue(t),
         onChange: p,
         isDisabled: c,
-        onSearchChange: f,
+        onSearchChange: _,
         onKeyDown: h
     });
 }

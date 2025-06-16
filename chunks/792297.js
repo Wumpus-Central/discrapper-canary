@@ -12,13 +12,13 @@ var r = n(255367),
     c = n(212459),
     u = n(730606),
     d = n(179963);
-let _ = 24,
-    f = 36,
+let f = 24,
+    _ = 36,
     p = 76,
     h = 88,
     m = 272;
 function g(e, t) {
-    let n = window.innerWidth - (e ? p : _) * 2,
+    let n = window.innerWidth - (e ? p : f) * 2,
         r = window.innerHeight - 2 * h;
     if (!(0, l._H)(t))
         return {
@@ -27,7 +27,7 @@ function g(e, t) {
         };
     let { width: i, height: a } = t,
         o = window.innerWidth - 2 * m,
-        s = window.innerHeight - (e ? h : f) * 2,
+        s = window.innerHeight - (e ? h : _) * 2,
         c = (0, l.Tj)({
             width: i,
             height: a,
@@ -45,10 +45,10 @@ function g(e, t) {
 function E(e) {
     let { items: t, currentIndex: n, children: a } = e,
         { entering: l } = (0, c.Y)(),
-        _ = t[n],
-        f = g(t.length > 1, {
-            width: _.width,
-            height: _.height
+        f = t[n],
+        _ = g(t.length > 1, {
+            width: f.width,
+            height: f.height
         }),
         [p, h] = i.useState(0);
     return (
@@ -67,9 +67,9 @@ function E(e) {
             'div',
             {
                 className: o()(d.mediaArea, { [d.animated]: l }),
-                children: f.width > 0 && f.height > 0 && a(f.width, f.height)
+                children: _.width > 0 && _.height > 0 && a(_.width, _.height)
             },
-            _.url
+            f.url
         )
     );
 }

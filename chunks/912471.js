@@ -13,8 +13,8 @@ var r = n(772848),
     c = n(314897),
     u = n(517100),
     d = n(19780),
-    _ = n(626135),
-    f = n(70956),
+    f = n(626135),
+    _ = n(70956),
     p = n(960048),
     h = n(343420),
     m = n(127438),
@@ -51,8 +51,8 @@ function O(e) {
     return e;
 }
 let v = 22,
-    I = 15 * f.Z.Millis.MINUTE,
-    T = f.Z.Millis.SECOND,
+    I = 15 * _.Z.Millis.MINUTE,
+    T = _.Z.Millis.SECOND,
     S = 'LAST_CLIENT_HEARTBEAT_SESSION',
     A = 'user',
     N = new i.Yd('SessionHeartbeatScheduler'),
@@ -63,9 +63,9 @@ let v = 22,
     D = { state: 'uninitialized' },
     L = d.Z.getState(),
     x = (0, m.H)(),
-    M = c.default.isAuthenticated();
-function k() {
-    (L = d.Z.getState()), (x = (0, m.H)()), (M = c.default.isAuthenticated()), Y();
+    k = c.default.isAuthenticated();
+function M() {
+    (L = d.Z.getState()), (x = (0, m.H)()), (k = c.default.isAuthenticated()), Y();
 }
 function j() {
     if (null != C) return;
@@ -135,16 +135,16 @@ async function V() {
         (0, h.O)(),
         B()
     );
-    _.default.track(b.rMx.CLIENT_HEARTBEAT, r), (w = performance.now()), (0, l.Z)();
+    f.default.track(b.rMx.CLIENT_HEARTBEAT, r), (w = performance.now()), (0, l.Z)();
 }
 function F() {
-    if (!(M && (0, E.y)()) || performance.now() - w <= I) return;
+    if (!(k && (0, E.y)()) || performance.now() - w <= I) return;
     let e = { client_heartbeat_version: v };
-    _.default.track(b.rMx.CLIENT_HEARTBEAT_SKIPPED, e);
+    f.default.track(b.rMx.CLIENT_HEARTBEAT_SKIPPED, e);
 }
 function Z() {}
 function H() {
-    return M && (x || (L !== b.hes.DISCONNECTED && L !== b.hes.RTC_DISCONNECTED));
+    return k && (x || (L !== b.hes.DISCONNECTED && L !== b.hes.RTC_DISCONNECTED));
 }
 function Y() {
     H() ? j() : G();
@@ -181,10 +181,10 @@ function q() {
 }
 function X() {
     function e() {
-        (M = c.default.isAuthenticated()), Y();
+        (k = c.default.isAuthenticated()), Y();
     }
     function t() {
-        (M = !1), q();
+        (k = !1), q();
     }
     function n() {
         (L = d.Z.getState()), Y();
@@ -197,7 +197,7 @@ function X() {
         let { state: t } = e;
         (x = t === b.$7l.ACTIVE), Y();
     }
-    p.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), d.Z.addChangeListener(n), c.default.addChangeListener(e), s.Z.subscribe('WINDOW_FOCUS', r), s.Z.subscribe('APP_STATE_UPDATE', i), s.Z.subscribe('LOGOUT', t), Y(), W(), a.ZP.initialized.then(k);
+    p.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), d.Z.addChangeListener(n), c.default.addChangeListener(e), s.Z.subscribe('WINDOW_FOCUS', r), s.Z.subscribe('APP_STATE_UPDATE', i), s.Z.subscribe('LOGOUT', t), Y(), W(), a.ZP.initialized.then(M);
 }
 async function Q() {
     let e = null;

@@ -56,11 +56,11 @@ function u(e, t) {
     );
 }
 let d = {};
-function _(e) {
+function f(e) {
     let t = o.Z.getChannel(e);
     return null != t && !!t.isForumLikeChannel();
 }
-function f(e) {
+function _(e) {
     var t;
     let n =
         null != (t = d[e])
@@ -74,8 +74,8 @@ function f(e) {
 }
 function p(e) {
     let { channelId: t, query: n } = e;
-    if (!_(t)) return !1;
-    let r = f(t);
+    if (!f(t)) return !1;
+    let r = _(t);
     d[t] = u(l({}, r), {
         query: n,
         results: null
@@ -83,14 +83,14 @@ function p(e) {
 }
 function h(e) {
     let { channelId: t } = e;
-    if (!_(t)) return !1;
-    let n = f(t);
+    if (!f(t)) return !1;
+    let n = _(t);
     d[t] = u(l({}, n), { loading: !0 });
 }
 function m(e) {
     let { channelId: t, threadIds: n } = e;
-    if (!_(t)) return !1;
-    let r = f(t);
+    if (!f(t)) return !1;
+    let r = _(t);
     d[t] = u(l({}, r), {
         loading: !1,
         results: n
@@ -98,8 +98,8 @@ function m(e) {
 }
 function g(e) {
     let { channelId: t } = e;
-    if (!_(t)) return !1;
-    let n = f(t);
+    if (!f(t)) return !1;
+    let n = _(t);
     d[t] = u(l({}, n), {
         loading: !1,
         results: []
@@ -107,7 +107,7 @@ function g(e) {
 }
 function E(e) {
     let { channelId: t } = e;
-    return !!_(t) && delete d[t];
+    return !!f(t) && delete d[t];
 }
 function b(e) {
     var t;

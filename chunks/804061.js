@@ -7,8 +7,8 @@ var r = n(98405),
     c = n(933009),
     u = n(382698),
     d = n(3831),
-    _ = n(817282),
-    f = n(814559),
+    f = n(817282),
+    _ = n(814559),
     p = n(751736),
     h = n(511696),
     m = p('replace'),
@@ -37,11 +37,11 @@ r(
                 C = 0,
                 R = '';
             if (!l(e)) {
-                if ((n = c(e)) && !~E(u(o(_(e))), 'g')) throw new g('`.replaceAll` does not allow non-global regexes');
+                if ((n = c(e)) && !~E(u(o(f(e))), 'g')) throw new g('`.replaceAll` does not allow non-global regexes');
                 if ((r = d(e, m))) return i(r, e, N, t);
                 if (h && n) return b(u(N), e, t);
             }
-            for (a = u(N), p = u(e), (v = s(t)) || (t = u(t)), T = O(1, (I = p.length)), S = E(a, p); -1 !== S; ) (A = v ? u(t(p, S, a)) : f(p, a, S, [], void 0, t)), (R += y(a, C, S) + A), (C = S + I), (S = S + T > a.length ? -1 : E(a, p, S + T));
+            for (a = u(N), p = u(e), (v = s(t)) || (t = u(t)), T = O(1, (I = p.length)), S = E(a, p); -1 !== S; ) (A = v ? u(t(p, S, a)) : _(p, a, S, [], void 0, t)), (R += y(a, C, S) + A), (C = S + I), (S = S + T > a.length ? -1 : E(a, p, S + T));
             return C < a.length && (R += y(a, C)), R;
         }
     }

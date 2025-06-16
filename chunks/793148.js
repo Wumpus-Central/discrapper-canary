@@ -8,7 +8,7 @@ var r,
     c = n(540026),
     u = n(388032),
     d = n(24008);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function _(e, t, n) {
         e
     );
 }
-let f = 150;
+let _ = 150;
 class p extends (r = a.PureComponent) {
     componentDidMount() {
         this.updateMediaBar();
@@ -35,11 +35,11 @@ class p extends (r = a.PureComponent) {
         null != r && (e ? r.setGrabber(0) : r.setGrabber(t / n));
     }
     render() {
-        let { iconClassName: e, iconColor: t, className: n, sliderWrapperClassName: r, sliderClassName: a, currentWindow: o, muted: _, minValue: p, maxValue: h, value: m, onVolumeShow: g, onVolumeHide: E } = this.props,
+        let { iconClassName: e, iconColor: t, className: n, sliderWrapperClassName: r, sliderClassName: a, currentWindow: o, muted: f, minValue: p, maxValue: h, value: m, onVolumeShow: g, onVolumeHide: E } = this.props,
             { hovered: b, focused: y, dragging: O } = this.state,
             v = l.gj8;
         return (
-            _ || m === p ? (v = l.OyP) : m < h / 2 && (v = l.X2j),
+            f || m === p ? (v = l.OyP) : m < h / 2 && (v = l.X2j),
             (0, i.jsxs)('div', {
                 className: s()(n, d.container),
                 onMouseEnter: () => {
@@ -49,7 +49,7 @@ class p extends (r = a.PureComponent) {
                     clearTimeout(this._hoverTimeout),
                         (this._hoverTimeout = setTimeout(() => {
                             this.setState({ hovered: !1 }), null == E || E();
-                        }, f));
+                        }, _));
                 },
                 onFocus: () => this.setState({ focused: !0 }),
                 onBlur: () => this.setState({ focused: !1 }),
@@ -61,7 +61,7 @@ class p extends (r = a.PureComponent) {
                             clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 });
                         },
                         onMouseLeave: () => {
-                            clearTimeout(this._hoverTimeout), (this._hoverTimeout = setTimeout(() => this.setState({ hovered: !1 }), f));
+                            clearTimeout(this._hoverTimeout), (this._hoverTimeout = setTimeout(() => this.setState({ hovered: !1 }), _));
                         },
                         children: (0, i.jsx)(c.Z, {
                             sliderClassName: a,
@@ -91,23 +91,23 @@ class p extends (r = a.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            _(this, '_mediaBar', a.createRef()),
-            _(this, '_hoverTimeout', void 0),
-            _(this, 'state', {
+            f(this, '_mediaBar', a.createRef()),
+            f(this, '_hoverTimeout', void 0),
+            f(this, 'state', {
                 hovered: !1,
                 focused: !1,
                 dragging: !1
             }),
-            _(this, 'handleValueChange', (e) => {
+            f(this, 'handleValueChange', (e) => {
                 let { maxValue: t, onValueChange: n } = this.props,
                     r = e * t;
                 null == n || n(r);
             }),
-            _(this, 'handleToggleMute', () => {
+            f(this, 'handleToggleMute', () => {
                 let { onToggleMute: e } = this.props;
                 null == e || e();
             }),
-            _(this, 'handleKeyDown', (e) => {
+            f(this, 'handleKeyDown', (e) => {
                 let { minValue: t, value: n, maxValue: r, onValueChange: i } = this.props,
                     a = 0.05 * (r - t);
                 switch (e.key) {
@@ -118,18 +118,18 @@ class p extends (r = a.PureComponent) {
                         e.stopPropagation(), e.preventDefault(), null == i || i(Math.max(t, n - a));
                 }
             }),
-            _(this, 'handleDragStart', () => {
+            f(this, 'handleDragStart', () => {
                 this.setState({ dragging: !0 });
             }),
-            _(this, 'handleDragEnd', () => {
+            f(this, 'handleDragEnd', () => {
                 this.setState({ dragging: !1 });
             }),
-            _(this, 'blur', () => {
+            f(this, 'blur', () => {
                 this.setState({ focused: !1 });
             });
     }
 }
-_(p, 'defaultProps', {
+f(p, 'defaultProps', {
     minValue: 0,
     maxValue: 100,
     handleSize: 16

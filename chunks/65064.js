@@ -7,8 +7,8 @@ var r = n(135839),
     c = n(19235),
     u = '[object Map]',
     d = '[object Object]',
-    _ = '[object Promise]',
-    f = '[object Set]',
+    f = '[object Promise]',
+    _ = '[object Set]',
     p = '[object WeakMap]',
     h = '[object DataView]',
     m = c(r),
@@ -17,7 +17,7 @@ var r = n(135839),
     b = c(o),
     y = c(s),
     O = l;
-((r && O(new r(new ArrayBuffer(1))) != h) || (i && O(new i()) != u) || (a && O(a.resolve()) != _) || (o && O(new o()) != f) || (s && O(new s()) != p)) &&
+((r && O(new r(new ArrayBuffer(1))) != h) || (i && O(new i()) != u) || (a && O(a.resolve()) != f) || (o && O(new o()) != _) || (s && O(new s()) != p)) &&
     (O = function (e) {
         var t = l(e),
             n = t == d ? e.constructor : void 0,
@@ -29,9 +29,9 @@ var r = n(135839),
                 case g:
                     return u;
                 case E:
-                    return _;
-                case b:
                     return f;
+                case b:
+                    return _;
                 case y:
                     return p;
             }

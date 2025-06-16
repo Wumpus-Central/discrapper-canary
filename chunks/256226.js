@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(442837),
     u = n(692547),
     d = n(481060),
-    _ = n(239091),
-    f = n(607070),
+    f = n(239091),
+    _ = n(607070),
     p = n(134433),
     h = n(111028),
     m = n(91218),
@@ -94,18 +94,18 @@ let N = i.forwardRef(function (e, t) {
     let A,
         { canRemove: N, className: C, role: R, onRemove: P, guildId: w, disableBorderColor: D, onMouseDown: L } = e,
         x = (0, s.JA)(R.id),
-        { tabIndex: M } = x,
-        k = S(x, ['tabIndex']),
+        { tabIndex: k } = x,
+        M = S(x, ['tabIndex']),
         j = (0, g.p9)({
             roleId: R.id,
             size: 16,
             guildId: w
         }),
-        U = (0, c.e7)([f.Z], () => f.Z.roleStyle),
+        U = (0, c.e7)([_.Z], () => _.Z.roleStyle),
         G = (null == (a = R.tags) ? void 0 : a.guild_connections) === null,
         B = i.useCallback(
             (e) => {
-                (0, _.jW)(e, async () => {
+                (0, f.jW)(e, async () => {
                     let { default: e } = await n.e('5396').then(n.bind(n, 731646));
                     return (t) =>
                         (0, r.jsx)(
@@ -157,7 +157,7 @@ let N = i.forwardRef(function (e, t) {
                       children: (0, r.jsxs)(d.P3F, {
                           className: o()(y.roleRemoveButtonCanRemove, y.roleRemoveButton),
                           onClick: P,
-                          tabIndex: M,
+                          tabIndex: k,
                           focusProps: { focusClassName: y.roleRemoveIconFocused },
                           'aria-hidden': !1,
                           'aria-label': b.intl.formatToPlainString(b.t.QrxwhY, { roleName: R.name }),
@@ -192,9 +192,9 @@ let N = i.forwardRef(function (e, t) {
                         onContextMenu: B,
                         onMouseDown: L,
                         'aria-label': R.name,
-                        tabIndex: M
+                        tabIndex: k
                     },
-                    k
+                    M
                 ),
                 {
                     children: [

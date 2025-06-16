@@ -8,8 +8,8 @@ var r = n(544891),
     c = n(777639),
     u = n(895886),
     d = n(703656),
-    _ = n(359110),
-    f = n(131704),
+    f = n(359110),
+    _ = n(131704),
     p = n(592125),
     h = n(306680),
     m = n(626135),
@@ -106,7 +106,7 @@ let A = {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
             r = p.Z.getDMFromUserId(e),
             i = null != r ? p.Z.getChannel(r) : null;
-        return null == i ? null : (n && (null == t || t(), null != (0, c.D)() ? (0, _.Kh)(i.id, { navigationReplace: !0 }) : b.default.selectPrivateChannel(i.id)), i);
+        return null == i ? null : (n && (null == t || t(), null != (0, c.D)() ? (0, f.Kh)(i.id, { navigationReplace: !0 }) : b.default.selectPrivateChannel(i.id)), i);
     },
     async ensurePrivateChannel(e) {
         let t = this._getRecipients(e),
@@ -116,7 +116,7 @@ let A = {
                 oldFormErrors: !0,
                 rejectWithError: !1
             }),
-            i = (0, f.q_)(n.body);
+            i = (0, _.q_)(n.body);
         return (
             a.Z.dispatch({
                 type: 'CHANNEL_CREATE',
@@ -134,7 +134,7 @@ let A = {
                 url: y.ANM.DM_CHANNEL(e),
                 rejectWithError: !0
             }),
-            n = (0, f.q_)(t.body);
+            n = (0, _.q_)(t.body);
         return (
             a.Z.dispatch({
                 type: 'CHANNEL_CREATE',
@@ -145,13 +145,13 @@ let A = {
     },
     _getRecipients: (e) => (null != e ? (Array.isArray(e) ? e : [e]) : []),
     _openPrivateChannel(e) {
-        let t = (0, f.q_)(e);
+        let t = (0, _.q_)(e);
         return (
             a.Z.dispatch({
                 type: 'CHANNEL_CREATE',
                 channel: t
             }),
-            null != (0, c.D)() ? (0, _.Kh)(t.id, { navigationReplace: !0 }) : b.default.selectPrivateChannel(t.id),
+            null != (0, c.D)() ? (0, f.Kh)(t.id, { navigationReplace: !0 }) : b.default.selectPrivateChannel(t.id),
             t
         );
     },

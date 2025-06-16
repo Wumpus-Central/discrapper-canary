@@ -8,7 +8,7 @@ var r = n(255367),
     c = n(210887),
     u = n(5192),
     d = n(546059);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,7 +32,7 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
@@ -75,7 +75,7 @@ function m(e) {
                     onContextMenu: (t) => {
                         (0, o.jW)(t, async () => {
                             let { default: t } = await Promise.all([n.e('79695'), n.e('69220'), n.e('70686')]).then(n.bind(n, 881351));
-                            return (n) => (0, r.jsx)(t, h(f({}, n), { user: e }));
+                            return (n) => (0, r.jsx)(t, h(_({}, n), { user: e }));
                         });
                     }
                 },
@@ -87,13 +87,13 @@ function m(e) {
 function g(e) {
     let { children: t, participants: n, channel: o, onPopoutClosed: s, targetElementRef: u } = e,
         d = (0, i.e7)([c.Z], () => c.Z.theme),
-        _ = 1 === n.length ? n[0] : null;
-    return null != _
+        f = 1 === n.length ? n[0] : null;
+    return null != f
         ? (0, r.jsx)(a.ze6, {
               theme: d,
               children: (0, r.jsx)(l.Z, {
                   targetElementRef: u,
-                  user: _,
+                  user: f,
                   guildId: null == o ? void 0 : o.guild_id,
                   channelId: null == o ? void 0 : o.id,
                   onClosePopout: s,

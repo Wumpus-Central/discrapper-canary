@@ -1,6 +1,6 @@
 n.d(t, {
     E6: () => p,
-    HP: () => f,
+    HP: () => _,
     II: () => m,
     pL: () => h
 }),
@@ -17,12 +17,12 @@ n(569545), n(522474), n(199902), n(314897), n(355863);
 var u = n(293273);
 n(944486), n(808506);
 var d = n(145597);
-function _() {
+function f() {
     let [e = PopoutWindowStore] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [PopoutWindowStore];
     return e.getWindowVisible(OVERLAY_V3_KEY);
 }
 n(340101), n(757744), n(501787);
-function f(e, t) {
+function _(e, t) {
     if (e === t) return !0;
     if (e.length !== t.length) return !1;
     for (let n = 0; n < e.length; n++) if (e[n].widget !== t[n].widget) return !1;
@@ -40,13 +40,13 @@ function h() {
         r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.Z,
         i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.ZP,
         s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : l.Z,
-        _ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : (0, o.e)(),
-        f = i.getCurrentEmbeddedActivity(),
-        p = null == f ? void 0 : f.applicationId,
+        f = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : (0, o.e)(),
+        _ = i.getCurrentEmbeddedActivity(),
+        p = null == _ ? void 0 : _.applicationId,
         h = null == p ? void 0 : s.getApplication(p);
-    if (null != f && null != h && _)
+    if (null != _ && null != h && f)
         return {
-            id: f.applicationId,
+            id: _.applicationId,
             altId: void 0,
             name: h.name
         };

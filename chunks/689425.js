@@ -39,8 +39,8 @@ let d = (e, t) => {
             { x: i, y: a } = t;
         return Math.pow(n - i, 2) + Math.pow(r - a, 2);
     },
-    _ = 9;
-class f extends (r = a.PureComponent) {
+    f = 9;
+class _ extends (r = a.PureComponent) {
     componentDidMount() {
         let { initialX: e, initialY: t } = this.props;
         this.setPosition(e, t);
@@ -174,7 +174,7 @@ class f extends (r = a.PureComponent) {
                     d(this._dragStart, {
                         x: e.clientX,
                         y: e.clientY
-                    }) > _ &&
+                    }) > f &&
                     (i = !0),
                     i &&
                         (this.animateToPosition(
@@ -210,7 +210,7 @@ class f extends (r = a.PureComponent) {
         };
     }
 }
-c(f, 'defaultProps', {
+c(_, 'defaultProps', {
     maxX: 0,
     maxY: 0,
     initialX: 0,
@@ -218,4 +218,4 @@ c(f, 'defaultProps', {
     disabled: !1,
     dragAnywhere: !1
 });
-let p = f;
+let p = _;

@@ -8,7 +8,7 @@ var r = n(255367),
     c = n(359135),
     u = n(516817),
     d = n(241072);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,7 +32,7 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
@@ -82,7 +82,7 @@ function g(e, t) {
 }
 let E = function (e) {
     var t,
-        { ref: n, avatar: a, name: _, nameplate: p, children: g, subText: E, decorators: b, onClick: y, hovered: O, selected: v, muted: I, to: T, avatarClassName: S, selectedClassName: A, innerClassName: N, wrapContent: C, highlighted: R, focusProps: P } = e,
+        { ref: n, avatar: a, name: f, nameplate: p, children: g, subText: E, decorators: b, onClick: y, hovered: O, selected: v, muted: I, to: T, avatarClassName: S, selectedClassName: A, innerClassName: N, wrapContent: C, highlighted: R, focusProps: P } = e,
         w = m(e, ['ref', 'avatar', 'name', 'nameplate', 'children', 'subText', 'decorators', 'onClick', 'hovered', 'selected', 'muted', 'to', 'avatarClassName', 'selectedClassName', 'innerClassName', 'wrapContent', 'highlighted', 'focusProps']);
     (w.className = o()(w.className, d.container, {
         [d.selected]: v,
@@ -121,7 +121,7 @@ let E = function (e) {
                                     children: [
                                         (0, r.jsx)('div', {
                                             className: o()(d.name, { [d.wrappedName]: C }),
-                                            children: _
+                                            children: f
                                         }),
                                         b
                                     ]
@@ -147,11 +147,11 @@ let E = function (e) {
     return null != T
         ? (0, r.jsx)(
               l.tEY,
-              h(f({}, P), {
+              h(_({}, P), {
                   children: (0, r.jsx)(
                       s.rU,
                       h(
-                          f(
+                          _(
                               {
                                   to: T,
                                   onClick: y
@@ -171,7 +171,7 @@ let E = function (e) {
           ? (0, r.jsx)(
                 l.P3F,
                 h(
-                    f(
+                    _(
                         {
                             onClick: y,
                             focusProps: P
@@ -187,10 +187,10 @@ let E = function (e) {
             )
           : (0, r.jsx)(
                 l.tEY,
-                h(f({}, P), {
+                h(_({}, P), {
                     children: (0, r.jsx)(
                         'div',
-                        h(f({}, w), {
+                        h(_({}, w), {
                             role: 'listitem',
                             ref: n,
                             children: L

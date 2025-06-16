@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(911969),
     u = n(998698),
     d = n(703558),
-    _ = n(117530),
-    f = n(91313),
+    f = n(117530),
+    _ = n(91313),
     p = n(436660),
     h = n(887490),
     m = n(388032),
@@ -75,15 +75,15 @@ function v(e, t, n) {
                 c = 0;
             if (null != s && s.id === o.command.id) {
                 var d;
-                let t = f.cu(e);
+                let t = _.cu(e);
                 for (let e of null != (d = s.options) ? d : []) t.includes(e.name) ? c++ : l++;
             }
-            let _ = {};
+            let f = {};
             if (l > 0) {
                 let e;
-                (e = c > 0 ? m.intl.formatToPlainString(m.t.BP8N0N, { count: l }) : m.intl.formatToPlainString(m.t.lziVCw, { count: l })), (_['data-trailing-placeholder'] = e);
+                (e = c > 0 ? m.intl.formatToPlainString(m.t.BP8N0N, { count: l }) : m.intl.formatToPlainString(m.t.lziVCw, { count: l })), (f['data-trailing-placeholder'] = e);
             }
-            return (0, r.jsx)('div', O(b({ className: g.applicationCommand }, i, _), { children: a }));
+            return (0, r.jsx)('div', O(b({ className: g.applicationCommand }, i, f), { children: a }));
         case 'applicationCommandOption':
             return (0, r.jsx)(I, {
                 attributes: i,
@@ -97,7 +97,7 @@ function v(e, t, n) {
 }
 let I = (e) => {
     let t,
-        { channelId: n, element: a, attributes: f, children: E } = e,
+        { channelId: n, element: a, attributes: _, children: E } = e,
         y = (0, s.vt)(),
         v = (0, s.UE)(),
         I = (0, s._7)(),
@@ -112,7 +112,7 @@ let I = (e) => {
             },
             [n, a.optionName]
         ),
-        A = (0, l.e7)([_.Z], () => _.Z.getUpload(n, a.optionName, d.d.SlashCommand), [n, a.optionName]),
+        A = (0, l.e7)([f.Z], () => f.Z.getUpload(n, a.optionName, d.d.SlashCommand), [n, a.optionName]),
         N = a.children[a.children.length - 1],
         C = null != N && h.LC.isText(N) && N.text.endsWith('\n'),
         R = o()(g.inlineElement, g.optionPill, {
@@ -150,7 +150,7 @@ let I = (e) => {
                   })),
         (0, r.jsxs)(
             'span',
-            O(b({}, f), {
+            O(b({}, _), {
                 className: R,
                 children: [
                     (0, r.jsxs)('span', {

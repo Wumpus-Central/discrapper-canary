@@ -52,7 +52,7 @@ function s(e, t) {
         e
     );
 }
-let { newline: l, paragraph: c, url: u, link: d, strong: _, u: f, br: p, em: h, image: m, text: g } = r.defaultRules,
+let { newline: l, paragraph: c, url: u, link: d, strong: f, u: _, br: p, em: h, image: m, text: g } = r.defaultRules,
     E = {
         newline: l,
         paragraph: c,
@@ -63,8 +63,8 @@ let { newline: l, paragraph: c, url: u, link: d, strong: _, u: f, br: p, em: h, 
                 return (r.context = n.context), r;
             }
         }),
-        strong: _,
-        u: f,
+        strong: f,
+        u: _,
         br: p,
         em: h,
         image: m,

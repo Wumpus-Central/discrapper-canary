@@ -40,18 +40,18 @@ var r = n(288660),
         var n = { __proto__: null },
             d = t.ignoreQueryPrefix ? e.replace(/^\?/, '') : e;
         d = d.replace(/%5B/gi, '[').replace(/%5D/gi, ']');
-        var _ = t.parameterLimit === 1 / 0 ? void 0 : t.parameterLimit,
-            f = d.split(t.delimiter, t.throwOnLimitExceeded ? _ + 1 : _);
-        if (t.throwOnLimitExceeded && f.length > _) throw RangeError('Parameter limit exceeded. Only ' + _ + ' parameter' + (1 === _ ? '' : 's') + ' allowed.');
+        var f = t.parameterLimit === 1 / 0 ? void 0 : t.parameterLimit,
+            _ = d.split(t.delimiter, t.throwOnLimitExceeded ? f + 1 : f);
+        if (t.throwOnLimitExceeded && _.length > f) throw RangeError('Parameter limit exceeded. Only ' + f + ' parameter' + (1 === f ? '' : 's') + ' allowed.');
         var p = -1,
             h = t.charset;
-        if (t.charsetSentinel) for (m = 0; m < f.length; ++m) 0 === f[m].indexOf('utf8=') && (f[m] === u ? (h = 'utf-8') : f[m] === c && (h = 'iso-8859-1'), (p = m), (m = f.length));
-        for (m = 0; m < f.length; ++m)
+        if (t.charsetSentinel) for (m = 0; m < _.length; ++m) 0 === _[m].indexOf('utf8=') && (_[m] === u ? (h = 'utf-8') : _[m] === c && (h = 'iso-8859-1'), (p = m), (m = _.length));
+        for (m = 0; m < _.length; ++m)
             if (m !== p) {
                 var m,
                     g,
                     E,
-                    b = f[m],
+                    b = _[m],
                     y = b.indexOf(']='),
                     O = -1 === y ? b.indexOf('=') : y + 1;
                 -1 === O
@@ -67,7 +67,7 @@ var r = n(288660),
             }
         return n;
     },
-    _ = function (e, t, n, i) {
+    f = function (e, t, n, i) {
         var a = 0;
         if (e.length > 0 && '[]' === e[e.length - 1]) {
             var o = e.slice(0, -1).join('');
@@ -79,16 +79,16 @@ var r = n(288660),
             if ('[]' === d && n.parseArrays) u = n.allowEmptyArrays && ('' === s || (n.strictNullHandling && null === s)) ? [] : r.combine([], s);
             else {
                 u = n.plainObjects ? { __proto__: null } : {};
-                var _ = '[' === d.charAt(0) && ']' === d.charAt(d.length - 1) ? d.slice(1, -1) : d,
-                    f = n.decodeDotInKeys ? _.replace(/%2E/g, '.') : _,
-                    p = parseInt(f, 10);
-                n.parseArrays || '' !== f ? (!isNaN(p) && d !== f && String(p) === f && p >= 0 && n.parseArrays && p <= n.arrayLimit ? ((u = [])[p] = s) : '__proto__' !== f && (u[f] = s)) : (u = { 0: s });
+                var f = '[' === d.charAt(0) && ']' === d.charAt(d.length - 1) ? d.slice(1, -1) : d,
+                    _ = n.decodeDotInKeys ? f.replace(/%2E/g, '.') : f,
+                    p = parseInt(_, 10);
+                n.parseArrays || '' !== _ ? (!isNaN(p) && d !== _ && String(p) === _ && p >= 0 && n.parseArrays && p <= n.arrayLimit ? ((u = [])[p] = s) : '__proto__' !== _ && (u[_] = s)) : (u = { 0: s });
             }
             s = u;
         }
         return s;
     },
-    f = function (e, t, n, r) {
+    _ = function (e, t, n, r) {
         if (e) {
             var a = n.allowDots ? e.replace(/\.([^.[]+)/g, '[$1]') : e,
                 o = /(\[[^[\]]*])/,
@@ -108,7 +108,7 @@ var r = n(288660),
                 if (!0 === n.strictDepth) throw RangeError('Input depth exceeded depth option of ' + n.depth + ' and strictDepth is true');
                 u.push('[' + a.slice(l.index) + ']');
             }
-            return _(u, t, n, r);
+            return f(u, t, n, r);
         }
     },
     p = function (e) {
@@ -150,7 +150,7 @@ e.exports = function (e, t) {
     if ('' === e || null == e) return n.plainObjects ? { __proto__: null } : {};
     for (var i = 'string' == typeof e ? d(e, n) : e, a = n.plainObjects ? { __proto__: null } : {}, o = Object.keys(i), s = 0; s < o.length; ++s) {
         var l = o[s],
-            c = f(l, i[l], n, 'string' == typeof e);
+            c = _(l, i[l], n, 'string' == typeof e);
         a = r.merge(a, c, n);
     }
     return !0 === n.allowSparse ? a : r.compact(a);

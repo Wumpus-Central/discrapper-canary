@@ -13,8 +13,8 @@ var r = n(255367),
     c = n(271579),
     u = n(756647),
     d = n(442837),
-    _ = n(433517),
-    f = n(799656),
+    f = n(433517),
+    _ = n(799656),
     p = n(765717),
     h = n(663993),
     m = n(329816),
@@ -85,12 +85,12 @@ function x(e, t) {
     );
 }
 n(928518), n(972830), n(704806);
-let M = (0, h.Un)({
+let k = (0, h.Un)({
         createPromise: () => n.e('47620').then(n.bind(n, 576184)),
         webpackId: 576184,
         name: 'UnsupportedBrowser'
     }),
-    k = (0, h.Un)({
+    M = (0, h.Un)({
         createPromise: () => n.e('74023').then(n.bind(n, 431583)),
         webpackId: 431583,
         name: 'DownloadApps'
@@ -207,7 +207,7 @@ class ei extends i.Component {
                 n === g.P.IN_PROGRESS
                     ? null
                     : !P.KO || d
-                      ? (0, r.jsx)(o.rs, { children: (0, r.jsx)(p.Z, { component: M }) })
+                      ? (0, r.jsx)(o.rs, { children: (0, r.jsx)(p.Z, { component: k }) })
                       : A.isPlatformEmbedded
                         ? (0, r.jsxs)(o.rs, {
                               children: [
@@ -220,12 +220,12 @@ class ei extends i.Component {
                                   (0, r.jsx)(o.AW, {
                                       exact: !0,
                                       path: C.Z5c.INDEX,
-                                      render: () => (0, r.jsx)(f.Z, {})
+                                      render: () => (0, r.jsx)(_.Z, {})
                                   }),
                                   (0, r.jsx)(p.Z, {
                                       exact: !0,
                                       path: C.Z5c.APPS,
-                                      component: k
+                                      component: M
                                   }),
                                   (0, r.jsx)(o.AW, {
                                       path: er([C.Z5c.LOGIN, C.Z5c.REGISTER, C.Z5c.INVITE(':inviteCode'), C.Z5c.INVITE_LOGIN(':inviteCode'), C.Z5c.GIFT_CODE(':giftCode'), C.Z5c.GIFT_CODE_LOGIN(':giftCode'), C.Z5c.RESET], R.a),
@@ -251,7 +251,7 @@ class ei extends i.Component {
                                   (0, r.jsx)(p.Z, {
                                       exact: !0,
                                       path: C.Z5c.INDEX,
-                                      render: () => (0, r.jsx)(f.Z, {})
+                                      render: () => (0, r.jsx)(_.Z, {})
                                   }),
                                   (0, r.jsx)(o.AW, {
                                       path: er([C.Z5c.LOGIN, C.Z5c.LOGIN_HANDOFF, C.Z5c.REGISTER, C.Z5c.BILLING_PREFIX, C.Z5c.BILLING_PROMOTION_REDEMPTION(':code'), C.Z5c.INVITE(':inviteCode'), C.Z5c.INVITE_LOGIN(':inviteCode'), C.Z5c.GIFT_CODE(':giftCode'), C.Z5c.GIFT_CODE_LOGIN(':giftCode'), C.Z5c.GUILD_TEMPLATE(':guildTemplateCode'), C.Z5c.GUILD_TEMPLATE_LOGIN(':guildTemplateCode'), C.Z5c.DISABLE_EMAIL_NOTIFICATIONS, C.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, C.Z5c.RESET, C.Z5c.REPORT, C.Z5c.REPORT_SECOND_LOOK, C.Z5c.ACCOUNT_REVERT(':token')], R.a),
@@ -408,7 +408,7 @@ class ei extends i.Component {
                           })),
             (0, r.jsxs)(m.Z, {
                 skipsSettingDefaultPageTitle: i,
-                children: [e, A.isPlatformEmbedded && (n === g.P.NOT_STARTED || n === g.P.IN_PROGRESS) && !0 !== _.K.get(l.SV) ? (0, r.jsx)(E.Z, {}) : null]
+                children: [e, A.isPlatformEmbedded && (n === g.P.NOT_STARTED || n === g.P.IN_PROGRESS) && !0 !== f.K.get(l.SV) ? (0, r.jsx)(E.Z, {}) : null]
             })
         );
     }

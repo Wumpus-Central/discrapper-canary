@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(415506);
+n.d(t, { Z: () => f }), n(415506);
 var r = n(430198),
     i = n(557135),
     a = n(66999),
@@ -8,15 +8,15 @@ var r = n(430198),
     c = n(979651);
 let u = 10000;
 class d extends Error {}
-async function _(e) {
-    let { channelId: t, timeoutMs: n = u, bypassChangeModal: _ = !1 } = e,
-        f = o.Z.getChannel(t);
+async function f(e) {
+    let { channelId: t, timeoutMs: n = u, bypassChangeModal: f = !1 } = e,
+        _ = o.Z.getChannel(t);
     if (
-        null == f ||
+        null == _ ||
         !(await i.Z.handleVoiceConnect({
             bypassGuildIdCheck: !0,
-            bypassChangeModal: _,
-            channel: f,
+            bypassChangeModal: f,
+            channel: _,
             connected: c.Z.isInChannel(t),
             needSubscriptionToAccess: (0, a.$)(t, o.Z, r.Z, s.Z).needSubscriptionToAccess
         }))

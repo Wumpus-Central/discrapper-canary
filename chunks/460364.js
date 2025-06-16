@@ -46,7 +46,7 @@ function d(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,7 +57,7 @@ function _(e, t) {
         e
     );
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -84,7 +84,7 @@ function h(e) {
         b = i.useRef(null),
         y = i.useRef(null),
         { isUsingKeyboardNavigation: O, focusIndex: v } = c,
-        I = f(c, ['isUsingKeyboardNavigation', 'focusIndex']);
+        I = _(c, ['isUsingKeyboardNavigation', 'focusIndex']);
     i.useLayoutEffect(() => {
         var e;
         n && ((0, o.F)(g), null == (e = b.current) || e.focus());
@@ -117,7 +117,7 @@ function h(e) {
                               className: l.submenuPaddingContainer,
                               children: (0, r.jsx)(
                                   'div',
-                                  _(u({ className: l.submenu }, I), {
+                                  f(u({ className: l.submenu }, I), {
                                       ref: b,
                                       children: (0, r.jsx)(s.Z, {
                                           ref: y,

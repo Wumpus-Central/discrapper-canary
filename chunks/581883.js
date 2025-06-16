@@ -8,8 +8,8 @@ var r,
     c = n(377108),
     u = n(524437),
     d = n(835913),
-    _ = n(570140),
-    f = n(262847),
+    f = n(570140),
+    _ = n(262847),
     p = n(48481),
     h = n(526761);
 function m(e, t, n) {
@@ -61,7 +61,7 @@ let E = {
 function v(e) {
     let { userSettingsProto: t } = e;
     null != t && ((E.proto = t), a()('string' != typeof E.proto, 'UserSettingsProto cannot be a string'));
-    let { proto: n, isDirty: r, cleanupFuncs: i } = (0, p.xt)(E.proto, f.Z[h.yP.PRELOADED_USER_SETTINGS]);
+    let { proto: n, isDirty: r, cleanupFuncs: i } = (0, p.xt)(E.proto, _.Z[h.yP.PRELOADED_USER_SETTINGS]);
     r && A(E),
         (E.proto = n),
         a()('string' != typeof E.proto, 'UserSettingsProto cannot be a string'),
@@ -197,7 +197,7 @@ class D extends (r = l.ZP.PersistedStore) {
     }
 }
 m(D, 'displayName', 'UserSettingsProtoStore'), m(D, 'persistKey', 'UserSettingsProtoStore-Cache');
-let L = new D(_.Z, {
+let L = new D(f.Z, {
     CACHE_LOADED: P,
     USER_SETTINGS_PROTO_UPDATE: C,
     USER_SETTINGS_PROTO_ENQUEUE_UPDATE: C,

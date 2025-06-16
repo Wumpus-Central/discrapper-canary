@@ -6,8 +6,8 @@ n.r(t),
         openAppWithQuest: () => Z,
         openDisclosureModal: () => j,
         openQuestInGameRewardModal: () => x,
-        openQuestMinorEnrollmentBlockModal: () => k,
-        openQuestOrbsRewardModal: () => M,
+        openQuestMinorEnrollmentBlockModal: () => M,
+        openQuestOrbsRewardModal: () => k,
         openQuestsNitroRewardModal: () => L,
         openQuestsRewardCodeModal: () => D,
         openVideoQuestModal: () => V
@@ -22,8 +22,8 @@ var i = n(772848),
     c = n(836768),
     u = n(98278),
     d = n(703656),
-    _ = n(314897),
-    f = n(626135),
+    f = n(314897),
+    _ = n(626135),
     p = n(954824),
     h = n(617136),
     m = n(497505),
@@ -136,7 +136,7 @@ function x(e, t) {
             );
     });
 }
-function M(e, t) {
+function k(e, t) {
     (0, s.ZDy)(async () => {
         let { default: i } = await Promise.all([n.e('66317'), n.e('94784')]).then(n.bind(n, 383294));
         return (n) =>
@@ -149,7 +149,7 @@ function M(e, t) {
             );
     });
 }
-function k(e, t) {
+function M(e, t) {
     (0, s.ZDy)(async () => {
         let { default: i } = await n.e('58641').then(n.bind(n, 828664));
         return (n) =>
@@ -240,7 +240,7 @@ function F(e) {
     let n = null == (t = platform.os) ? void 0 : t.family,
         r = 'quest';
     if ('Android' === n || 'iOS' === n) {
-        let t = _.default.getFingerprint(),
+        let t = f.default.getFingerprint(),
             n = (0, a.WS)(),
             i = ''.concat(location.protocol, '//').concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT, '/quests/').concat(e);
         return (0, a.ZP)(i, {
@@ -255,7 +255,7 @@ function Z(e) {
     let t = F(e),
         n = (0, a.zS)(t);
     null != n &&
-        f.default.track(T.rMx.DEEP_LINK_CLICKED, {
+        _.default.track(T.rMx.DEEP_LINK_CLICKED, {
             fingerprint: (0, o.K)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource

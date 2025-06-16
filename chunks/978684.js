@@ -1,6 +1,6 @@
 n.d(t, {
     J: () => d,
-    Z: () => f
+    Z: () => _
 }),
     n(388685);
 var r = n(298444),
@@ -24,7 +24,7 @@ function u(e, t, n) {
     );
 }
 let d = 'guestInviteToAccept';
-class _ extends o.Z {
+class f extends o.Z {
     constructor(...e) {
         super(...e),
             u(this, 'actions', { POST_CONNECTION_OPEN: () => this.handleConnectionOpen() }),
@@ -46,4 +46,4 @@ class _ extends o.Z {
             });
     }
 }
-let f = new _();
+let _ = new f();

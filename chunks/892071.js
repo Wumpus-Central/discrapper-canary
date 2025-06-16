@@ -1,5 +1,5 @@
 n.d(t, {
-    cE: () => _,
+    cE: () => f,
     vP: () => d
 }),
     n(415506);
@@ -20,10 +20,10 @@ function d() {
     if (void 0 === e) throw Error('useRootElementContext must be used within a RootElementContextProvider');
     return e;
 }
-function _(e) {
-    let { rootClassName: t, lang: n, theme: a, density: d, focused: _, fontScale: f, fontScaleClass: p, mouseMode: h, keyboardModeEnabled: m, saturation: g, desaturateUserColors: E, useForcedColors: b, systemForcedColors: y, useReducedMotion: O, alwaysShowLinkDecorations: v, hardwareAccelerationEnabled: I, children: T } = e,
+function f(e) {
+    let { rootClassName: t, lang: n, theme: a, density: d, focused: f, fontScale: _, fontScaleClass: p, mouseMode: h, keyboardModeEnabled: m, saturation: g, desaturateUserColors: E, useForcedColors: b, systemForcedColors: y, useReducedMotion: O, alwaysShowLinkDecorations: v, hardwareAccelerationEnabled: I, children: T } = e,
         S = window.CSS.supports('selector(::-webkit-scrollbar)'),
-        A = 'font-size: '.concat(f, '%; --saturation-factor: ').concat(g, ';'),
+        A = 'font-size: '.concat(_, '%; --saturation-factor: ').concat(g, ';'),
         N = o()(
             (0, c.Z)(),
             (0, l.QeD)(a),
@@ -39,7 +39,7 @@ function _(e) {
                 'reduce-motion': O,
                 'full-motion': !O,
                 'is-mobile': s.tq,
-                'app-focused': _,
+                'app-focused': f,
                 'desaturate-user-colors': E,
                 'disable-forced-colors': !b && 'active' === y,
                 'enable-forced-colors': b,

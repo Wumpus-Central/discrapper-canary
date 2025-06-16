@@ -5,21 +5,21 @@ var r = a(448171),
     o = a(622916),
     i = a(454463),
     c = a(878719),
-    E = a(163162),
-    s = a(463461);
+    s = a(163162),
+    E = a(463461);
 class l extends r.W {
     constructor(t) {
         let e = {
                 parentSpanIsAlwaysRootSpan: !0,
                 ...t
             },
-            a = E.m9.SENTRY_SDK_SOURCE || (0, n.S)();
+            a = s.m9.SENTRY_SDK_SOURCE || (0, n.S)();
         (0, _.V)(e, 'browser', ['browser'], a),
             super(e),
             e.sendClientReports &&
-                E.m9.document &&
-                E.m9.document.addEventListener('visibilitychange', () => {
-                    'hidden' === E.m9.document.visibilityState && this._flushOutcomes();
+                s.m9.document &&
+                s.m9.document.addEventListener('visibilitychange', () => {
+                    'hidden' === s.m9.document.visibilityState && this._flushOutcomes();
                 });
     }
     eventFromException(t, e) {
@@ -33,7 +33,7 @@ class l extends r.W {
             i.X && o.kg.warn('SDK not enabled, will not capture user feedback.');
             return;
         }
-        let e = (0, s.r)(t, {
+        let e = (0, E.r)(t, {
             metadata: this.getSdkMetadata(),
             dsn: this.getDsn(),
             tunnel: this.getOptions().tunnel

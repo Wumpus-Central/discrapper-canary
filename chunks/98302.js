@@ -8,8 +8,8 @@ var r = n(846519),
     c = n(885110),
     u = n(606304),
     d = n(938475),
-    _ = n(70956),
-    f = n(367907),
+    f = n(70956),
+    _ = n(367907),
     p = n(981631);
 function h(e, t, n) {
     return (
@@ -40,7 +40,7 @@ function m(e) {
     }
     return e;
 }
-let g = +_.Z.Millis.MINUTE;
+let g = +f.Z.Millis.MINUTE;
 class E extends i.Z {
     _initialize() {
         __OVERLAY__ ? (this.stores = new Map()) : ((this.stores = new Map().set(u.Z, () => this._handleSpeakingStoreChanged()).set(l.Z, () => this._handleRTCConnectionStoreChanged())), this._reset());
@@ -52,7 +52,7 @@ class E extends i.Z {
         if (this._currentUserSpeaking) {
             let e = l.Z.getChannelId(),
                 t = l.Z.getGuildId();
-            (0, f.yw)(
+            (0, _.yw)(
                 p.rMx.START_SPEAKING,
                 m(
                     {
@@ -76,7 +76,7 @@ class E extends i.Z {
         if (s.Z.isDeaf() || !this._anyoneElseSpeaking) return;
         let e = l.Z.getChannelId(),
             t = l.Z.getGuildId();
-        (0, f.yw)(
+        (0, _.yw)(
             p.rMx.START_LISTENING,
             m(
                 {

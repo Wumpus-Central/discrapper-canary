@@ -7,12 +7,12 @@ var r = n(286233),
     c = a.apply(l()),
     u = n(340535),
     d = o('Array.prototype.slice'),
-    _ = function (e, t) {
+    f = function (e, t) {
         return i(e), c(e, d(arguments, 1));
     };
-r(_, {
+r(f, {
     getPolyfill: l,
     implementation: s,
     shim: u
 }),
-    (e.exports = _);
+    (e.exports = f);

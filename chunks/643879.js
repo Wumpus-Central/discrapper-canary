@@ -1,6 +1,6 @@
 n.d(t, {
     SD: () => g,
-    Z1: () => f,
+    Z1: () => _,
     cN: () => m,
     fD: () => d,
     mh: () => h
@@ -23,22 +23,22 @@ function u(e) {
 function d(e) {
     let { userId: t, avatarId: n, storageHash: a, canAnimate: o = !1, allowWebp: s = !0, size: c } = e,
         { CDN_HOST: d } = window.GLOBAL_ENV,
-        _ = null != d ? 'https://'.concat(d) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT,
-        f = u({
+        f = null != d ? 'https://'.concat(d) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT,
+        _ = u({
             storageHash: a,
             canAnimate: o,
             allowWebp: s
         }),
         p = '?'.concat(r.stringify({ size: (0, i.oO)(c * (0, i.x_)()) }));
     return ''
-        .concat(_)
-        .concat(l.ANM.ARCHIVED_AVATAR(t, n, a, f))
+        .concat(f)
+        .concat(l.ANM.ARCHIVED_AVATAR(t, n, a, _))
         .concat(p);
 }
-function _(e) {
+function f(e) {
     return null == e ? c.intl.string(c.t.lqaIxM) : e.split(',')[0];
 }
-function f(e) {
+function _(e) {
     let { filename: t, assetOrigin: n = s.q.NEW_ASSET } = null != e ? e : {};
     if (n === s.q.ARCHIVED_ASSET) return;
     let r = null != t ? t : c.intl.string(c.t.lqaIxM),
@@ -72,7 +72,7 @@ function h(e, t) {
             canAnimate: !0,
             allowWebp: !1
         }),
-        r = _(t);
+        r = f(t);
     return {
         filename: ''.concat(r, '.').concat(n),
         type: p(n)

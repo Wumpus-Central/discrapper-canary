@@ -66,7 +66,7 @@ e.exports = function (e) {
             className: 'doctag',
             variants: [{ begin: /\.(synopsis|description|example|inputs|outputs|notes|link|component|role|functionality)/ }, { begin: /\.(parameter|forwardhelptargetname|forwardhelpcategory|remotehelprunspace|externalhelp)\s+\S+/ }]
         },
-        _ = e.inherit(e.COMMENT(null, null), {
+        f = e.inherit(e.COMMENT(null, null), {
             variants: [
                 {
                     begin: /#/,
@@ -79,7 +79,7 @@ e.exports = function (e) {
             ],
             contains: [d]
         }),
-        f = {
+        _ = {
             className: 'built_in',
             variants: [{ begin: '('.concat(n, ')+(-)[\\w\\d]+') }]
         },
@@ -165,7 +165,7 @@ e.exports = function (e) {
                 e.inherit(e.TITLE_MODE, { endsParent: !0 })
             ]
         },
-        y = [b, _, o, e.NUMBER_MODE, c, u, f, s, l, E],
+        y = [b, f, o, e.NUMBER_MODE, c, u, _, s, l, E],
         O = {
             begin: /\[/,
             end: /\]/,

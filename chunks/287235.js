@@ -1,5 +1,5 @@
 n.d(t, {
-    JD: () => f,
+    JD: () => _,
     Wd: () => d,
     mF: () => u
 }),
@@ -19,26 +19,26 @@ function d(e) {
     let t = u();
     return e.children(t);
 }
-async function _(e) {
+async function f(e) {
     var t, n, r, c;
     if (e.key !== o.LT) return;
     let u = (0, a.uB)(e);
     if (null == u) return;
     let d = null,
-        _ = null,
-        f = e.target;
-    for (; null != f; ) {
-        if (f.hasAttribute(s)) {
-            (d = f.getAttribute(s)), (_ = f);
+        f = null,
+        _ = e.target;
+    for (; null != _; ) {
+        if (_.hasAttribute(s)) {
+            (d = _.getAttribute(s)), (f = _);
             break;
         }
-        f = f.parentElement;
+        _ = _.parentElement;
     }
     let p = (0, i.E)({
         getFocusableElements: () => Array.from(u.querySelectorAll('['.concat(s, '="').concat(null != d ? d : l, '"]'))),
         getActiveElement: () => u.activeElement
     });
-    if ((null == (t = (0, a.uB)(e)) ? void 0 : t.activeElement) == null || null == _) {
+    if ((null == (t = (0, a.uB)(e)) ? void 0 : t.activeElement) == null || null == f) {
         null == (n = p.getFirstFocusableElement()) || n.focus();
         return;
     }
@@ -46,21 +46,21 @@ async function _(e) {
         ? null ==
               (r = await p.getPreviousFocusableElement({
                   wrap: !0,
-                  from: _
+                  from: f
               })) || r.focus()
         : null ==
               (c = await p.getNextFocusableElement({
                   wrap: !0,
-                  from: _
+                  from: f
               })) || c.focus();
 }
-function f(e) {
+function _(e) {
     r.useEffect(() => {
         if (e)
             return (
-                window.addEventListener('keydown', _),
+                window.addEventListener('keydown', f),
                 () => {
-                    window.removeEventListener('keydown', _);
+                    window.removeEventListener('keydown', f);
                 }
             );
     }, [e]);

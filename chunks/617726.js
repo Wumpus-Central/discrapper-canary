@@ -1,15 +1,15 @@
 a.d(e, {
     BO: () => c,
-    Cd: () => L,
-    HY: () => d,
+    Cd: () => T,
+    HY: () => A,
     Jd: () => i,
-    KQ: () => R,
-    R: () => s,
-    V$: () => I,
-    f4: () => u,
-    gv: () => E,
-    mL: () => N,
-    zQ: () => A
+    KQ: () => d,
+    R: () => E,
+    V$: () => u,
+    f4: () => I,
+    gv: () => s,
+    mL: () => f,
+    zQ: () => R
 });
 var r = a(967752),
     _ = a(202811),
@@ -22,20 +22,20 @@ function c(t, e) {
     let [a, r] = t;
     return [a, [...r, e]];
 }
-function E(t, e) {
+function s(t, e) {
     for (let a of t[1]) {
         let t = a[0].type;
         if (e(a, t)) return !0;
     }
     return !1;
 }
-function s(t, e) {
-    return E(t, (t, a) => e.includes(a));
+function E(t, e) {
+    return s(t, (t, a) => e.includes(a));
 }
 function l(t) {
     return o.n.__SENTRY__ && o.n.__SENTRY__.encodePolyfill ? o.n.__SENTRY__.encodePolyfill(t) : new TextEncoder().encode(t);
 }
-function I(t) {
+function u(t) {
     let [e, a] = t,
         r = JSON.stringify(e);
     function n(t) {
@@ -69,7 +69,7 @@ ${JSON.stringify(e)}
               return e;
           })(r);
 }
-function u(t) {
+function I(t) {
     let e = 'string' == typeof t ? l(t) : t;
     function a(t) {
         let a = e.subarray(0, t);
@@ -89,10 +89,10 @@ function u(t) {
     }
     return [_, n];
 }
-function R(t) {
+function d(t) {
     return [{ type: 'span' }, t];
 }
-function A(t) {
+function R(t) {
     let e = 'string' == typeof t.data ? l(t.data) : t.data;
     return [
         (0, n.Jr)({
@@ -105,7 +105,7 @@ function A(t) {
         e
     ];
 }
-let T = {
+let N = {
     session: 'session',
     sessions: 'session',
     attachment: 'attachment',
@@ -122,10 +122,10 @@ let T = {
     span: 'span',
     statsd: 'metric_bucket'
 };
-function N(t) {
-    return T[t];
+function f(t) {
+    return N[t];
 }
-function d(t) {
+function A(t) {
     if (!t || !t.sdk) return;
     let { name: e, version: a } = t.sdk;
     return {
@@ -133,7 +133,7 @@ function d(t) {
         version: a
     };
 }
-function L(t, e, a, _) {
+function T(t, e, a, _) {
     let o = t.sdkProcessingMetadata && t.sdkProcessingMetadata.dynamicSamplingContext;
     return {
         event_id: t.event_id,

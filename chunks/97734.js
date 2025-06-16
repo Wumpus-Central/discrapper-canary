@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(35282), n(388685), n(413496), n(433524);
+n.d(t, { Z: () => _ }), n(35282), n(388685), n(413496), n(433524);
 var r = n(159635),
     i = n.n(r),
     a = n(339085),
@@ -46,7 +46,7 @@ function d(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,7 +57,7 @@ function _(e, t) {
         e
     );
 }
-let f = {
+let _ = {
     s: {
         requiredFirstCharacters: ['~'],
         match: i().inlineRegex(/^~~([\s\S]+?)~~(?!_)/)
@@ -145,7 +145,7 @@ let f = {
             });
         }
     },
-    looseEm: _(u({}, i().defaultRules.em), {
+    looseEm: f(u({}, i().defaultRules.em), {
         match: i().inlineRegex(RegExp('^\\*(?=\\S)((?:\\*\\*|\\\\[\\s\\S]|\\s+(?:\\\\[\\s\\S]|[^\\s\\*\\\\]|\\*\\*)|[^\\s\\*\\\\])+?) {1,2}\\*(?!\\*)')),
         parse: (e, t, n) => ({
             type: 'em',

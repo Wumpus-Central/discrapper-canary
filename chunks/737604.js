@@ -8,8 +8,8 @@ var r,
     c = n(74538),
     u = n(997945),
     d = n(981631),
-    _ = n(921944),
-    f = n(474936);
+    f = n(921944),
+    _ = n(474936);
 function p(e, t, n) {
     return (
         t in e
@@ -40,7 +40,7 @@ let h = 2,
             l.default.track(d.rMx.APP_ICON_UPDATED, {
                 icon_id: e,
                 user_premium_tier: null == (t = s.default.getCurrentUser()) ? void 0 : t.premiumType,
-                icon_premium_tier: e !== u.aH.DEFAULT ? f.p9.TIER_2 : null
+                icon_premium_tier: e !== u.aH.DEFAULT ? _.p9.TIER_2 : null
             });
         }
     };
@@ -57,7 +57,7 @@ function O() {
 }
 function v(e) {
     let { markAsDismissed: t } = e;
-    (m.client.coachmarkImpressions += 1), m.client.coachmarkImpressions >= h && (null == t || t(_.L.UNKNOWN), O(), (0, o.Ll)());
+    (m.client.coachmarkImpressions += 1), m.client.coachmarkImpressions >= h && (null == t || t(f.L.UNKNOWN), O(), (0, o.Ll)());
 }
 class I extends (r = i.ZP.PersistedStore) {
     initialize(e) {

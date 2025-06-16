@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(540059),
     u = n(28546),
     d = n(443603),
-    _ = n(957825),
-    f = n(388032),
+    f = n(957825),
+    _ = n(388032),
     p = n(302195);
 function h(e, t, n) {
     return (
@@ -67,17 +67,17 @@ function b(e, t) {
     let { disabled: n, type: a } = e,
         [h, g] = (0, u.Iu)((e) => [e.activeView, e.pickerId], s.X),
         b = !1,
-        y = h === _.X1.STICKER,
+        y = h === f.X1.STICKER,
         O = !1,
         v = i.useCallback(() => {
-            (0, u.RO)(_.X1.STICKER, a);
+            (0, u.RO)(f.X1.STICKER, a);
         }, [a]),
         { Component: I, events: T, play: S } = (0, l.z)(),
         A = (0, c.Q3)('ChannelStickerPickerButton');
     return n
         ? null
         : (0, r.jsx)('div', {
-              className: o()(_.CT, p.buttonContainer),
+              className: o()(f.CT, p.buttonContainer),
               ref: t,
               children: (0, r.jsx)(
                   d.Z,
@@ -86,7 +86,7 @@ function b(e, t) {
                           v(), S();
                       },
                       isActive: y,
-                      'aria-label': f.intl.string(f.t.rZpidX),
+                      'aria-label': _.intl.string(_.t.rZpidX),
                       'aria-expanded': y,
                       'aria-haspopup': 'dialog',
                       'aria-controls': g,

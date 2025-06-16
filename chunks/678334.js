@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(600164),
     u = n(717401),
     d = n(160913),
-    _ = n(311821),
-    f = n(459965),
+    f = n(311821),
+    _ = n(459965),
     p = n(858987),
     h = n(855775),
     m = n(669079),
@@ -23,20 +23,20 @@ var r = n(255367),
     T = n(981631),
     S = n(843856);
 function A(e) {
-    let { premiumSubscription: t, setPurchaseState: n, onBack: a, onNext: A, legalTermsNodeRef: N, flashLegalTerms: C, invoiceError: R, planError: P, onPurchaseError: w, baseAnalyticsData: D, flowStartTime: L, trialId: x, planGroup: M, analyticsLocation: k, purchaseTokenAuthState: j, openInvoiceId: U, metadata: G, backButtonEligible: B, disablePurchase: V, isTrial: F = !1, onPaymentSourceAdd: Z } = e,
+    let { premiumSubscription: t, setPurchaseState: n, onBack: a, onNext: A, legalTermsNodeRef: N, flashLegalTerms: C, invoiceError: R, planError: P, onPurchaseError: w, baseAnalyticsData: D, flowStartTime: L, trialId: x, planGroup: k, analyticsLocation: M, purchaseTokenAuthState: j, openInvoiceId: U, metadata: G, backButtonEligible: B, disablePurchase: V, isTrial: F = !1, onPaymentSourceAdd: Z } = e,
         { selectedPlan: H, priceOptions: Y, setHasAcceptedTerms: W, setPurchaseError: K, purchaseType: z, paymentSourceId: q, paymentSources: X, selectedSkuId: Q, skusById: J, skuPricePreviewsById: $, referralCode: ee, contextMetadata: et, invoicePreview: en, inReverseTrial: er, premiumRebrandBackgroundClassName: ei } = (0, b.JL)(),
         { isGift: ea, selectedGiftStyle: eo, customGiftMessage: es, emojiConfetti: el, soundEffect: ec, giftRecipient: eu, selectedGiftingPromotionReward: ed } = (0, E.wD)(),
-        e_ = (0, u.a5)(H),
-        ef = (0, m.MY)(eu),
+        ef = (0, u.a5)(H),
+        e_ = (0, m.MY)(eu),
         ep = {};
-    (ep.gift_style = eo), (ep.reward_sku_ids = e_ && (null == ed ? void 0 : ed.skuId) != null ? [null == ed ? void 0 : ed.skuId] : []), ef === m.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && (o()(null != eu, 'Gift recipient must be set at purchase review step for these gift options.'), (ep.recipient_id = eu.id), (ep.custom_message = es), (ep.emoji_id = null == el ? void 0 : el.id), (ep.emoji_name = (null == el ? void 0 : el.id) == null ? (null == el ? void 0 : el.surrogates) : void 0), (ep.sound_id = null == ec ? void 0 : ec.soundId));
+    (ep.gift_style = eo), (ep.reward_sku_ids = ef && (null == ed ? void 0 : ed.skuId) != null ? [null == ed ? void 0 : ed.skuId] : []), e_ === m.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && (o()(null != eu, 'Gift recipient must be set at purchase review step for these gift options.'), (ep.recipient_id = eu.id), (ep.custom_message = es), (ep.emoji_id = null == el ? void 0 : el.id), (ep.emoji_name = (null == el ? void 0 : el.id) == null ? (null == el ? void 0 : el.surrogates) : void 0), (ep.sound_id = null == ec ? void 0 : ec.soundId));
     let eh = null == H ? void 0 : H.id,
         em = (0, O.sE)(x, Y.paymentSourceId, eh),
         { analyticsLocations: eg } = (0, l.ZP)(),
         eE = (0, v.m)(X, q),
         [eb, ey] = i.useState(em),
         [eO, ev] = i.useState(!1),
-        { hasEntitlements: eI } = (0, f.H)(eh, ea),
+        { hasEntitlements: eI } = (0, _.H)(eh, ea),
         eT = (0, g.Ap)(Y.paymentSourceId),
         eS = eI || em,
         eA = (0, d.U)(),
@@ -59,11 +59,11 @@ function A(e) {
                 setHasRedirectURL: ev,
                 isGift: ea,
                 baseAnalyticsData: D,
-                analyticsLocation: k,
+                analyticsLocation: M,
                 analyticsLocations: eg,
                 flowStartTime: L,
                 subscriptionPlan: H,
-                planGroup: M,
+                planGroup: k,
                 trialId: x,
                 priceOptions: Y,
                 paymentSource: eE,
@@ -116,7 +116,7 @@ function A(e) {
                       isSubmitting: eb,
                       premiumSubscription: t,
                       isGift: ea,
-                      planGroup: M,
+                      planGroup: k,
                       isPrepaid: eT,
                       isTrial: F,
                       makePurchase: eP,
@@ -129,7 +129,7 @@ function A(e) {
                   B && !eL
                       ? (0, r.jsx)('div', {
                             className: S.back,
-                            children: (0, r.jsx)(_.Z, { onClick: a })
+                            children: (0, r.jsx)(f.Z, { onClick: a })
                         })
                       : null
               ]

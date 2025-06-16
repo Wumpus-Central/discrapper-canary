@@ -17,8 +17,8 @@ var r = n(255367),
     c = n(512722),
     u = n.n(c),
     d = n(97519),
-    _ = n(243814),
-    f = n(442837),
+    f = n(243814),
+    _ = n(442837),
     p = n(921072),
     h = n(524437),
     m = n(1561),
@@ -40,8 +40,8 @@ var r = n(255367),
     D = n(600164),
     L = n(726721),
     x = n(240991),
-    M = n(713938),
-    k = n(973616),
+    k = n(713938),
+    M = n(973616),
     j = n(881998),
     U = n(592125),
     G = n(944486),
@@ -94,7 +94,7 @@ function es(e) {
     }
     return e;
 }
-let el = f.ZP.connectStores([z.Z], () => ({ theme: z.Z.theme }))(E.ubH);
+let el = _.ZP.connectStores([z.Z], () => ({ theme: z.Z.theme }))(E.ubH);
 function ec(e) {
     let { className: t, text: n } = e;
     return (0, r.jsxs)('div', {
@@ -174,7 +174,7 @@ let eu = (e) => {
             )
         );
     },
-    e_ = (e) => {
+    ef = (e) => {
         let { application: t, isVisible: n } = e,
             i = () => {
                 null != t.terms_of_service_url &&
@@ -240,12 +240,12 @@ let eu = (e) => {
               })
             : null;
     },
-    ef = (e) => {
+    e_ = (e) => {
         let { scopes: t, application: a, selectedChannelId: s, selectedGuildId: l, onDelete: c, disclosures: d, locale: p, id: g } = e,
             b = a.id,
-            I = i.useMemo(() => k.ZP.createFromServer(a), [a]),
+            I = i.useMemo(() => M.ZP.createFromServer(a), [a]),
             T = (0, Z.yE)(I.flags, ee.udG.EMBEDDED),
-            S = (0, f.e7)(
+            S = (0, _.e7)(
                 [X.Z],
                 () => {
                     var e, t, n, r;
@@ -255,8 +255,8 @@ let eu = (e) => {
             ),
             A = C.w.useExperiment({ location: 'oauth2_authorize' }),
             P = a.bot,
-            j = (0, f.e7)([U.Z], () => U.Z.getDMFromUserId(null == P ? void 0 : P.id)),
-            { appDMChannelMuteConfig: G, dmChannelMuted: B } = (0, f.cj)([V.ZP], () =>
+            j = (0, _.e7)([U.Z], () => U.Z.getDMFromUserId(null == P ? void 0 : P.id)),
+            { appDMChannelMuteConfig: G, dmChannelMuted: B } = (0, _.cj)([V.ZP], () =>
                 null == j
                     ? {
                           appDMChannelMuteConfig: null,
@@ -272,7 +272,7 @@ let eu = (e) => {
             eo = L.Z.useExperiment({ location: 'Authorized Applications' }, { autoTrackExposure: !0 }).enabled,
             el = () => {
                 let e = [];
-                for (let n of t) e.push(...(0, M.CI)(n, t)), n === _.x.APPLICATIONS_COMMANDS && e.push(en.intl.string(en.t.Ls2XRk));
+                for (let n of t) e.push(...(0, k.CI)(n, t)), n === f.x.APPLICATIONS_COMMANDS && e.push(en.intl.string(en.t.Ls2XRk));
                 if (e.length > 0 || (null != d && d.length > 0))
                     return (0, r.jsx)(E.zF9, {
                         className: er.appDetailsSection,
@@ -345,7 +345,7 @@ let eu = (e) => {
                         }
                     });
             },
-            ef = i.useMemo(() => {
+            e_ = i.useMemo(() => {
                 if (null != a.description && '' !== a.description)
                     return (0, r.jsx)(E.Text, {
                         className: ei.markup,
@@ -364,9 +364,9 @@ let eu = (e) => {
                           collapsibleContent: (0, r.jsxs)('div', {
                               className: er.appDetailsContent,
                               children: [
-                                  e && ef,
+                                  e && e_,
                                   t &&
-                                      (0, r.jsx)(e_, {
+                                      (0, r.jsx)(ef, {
                                           application: a,
                                           isVisible: H
                                       })
@@ -576,11 +576,11 @@ let eu = (e) => {
     },
     ep = (0, d.U)(() => ({ searchQuery: '' })),
     eh = () => {
-        let e = (0, f.e7)([B.Z], () => B.Z.hidePersonalInformation),
-            t = (0, f.e7)([j.Z], () => j.Z.getNonChildrenApps()),
-            a = (0, f.e7)([K.default], () => K.default.locale),
-            o = (0, f.e7)([S.ZP], () => S.ZP.getSelfEmbeddedActivities()),
-            s = (0, f.e7)([U.Z, G.Z], () => U.Z.getChannel(G.Z.getChannelId())),
+        let e = (0, _.e7)([B.Z], () => B.Z.hidePersonalInformation),
+            t = (0, _.e7)([j.Z], () => j.Z.getNonChildrenApps()),
+            a = (0, _.e7)([K.default], () => K.default.locale),
+            o = (0, _.e7)([S.ZP], () => S.ZP.getSelfEmbeddedActivities()),
+            s = (0, _.e7)([U.Z, G.Z], () => U.Z.getChannel(G.Z.getChannelId())),
             c = null == s ? void 0 : s.getGuildId(),
             u = (0, g.C)('user-settings-authed-apps');
         i.useEffect(() => {
@@ -603,7 +603,7 @@ let eu = (e) => {
                         showFeedback: !1
                     });
             },
-            _ = ep((e) => e.searchQuery),
+            f = ep((e) => e.searchQuery),
             p = (e) => ep.setState({ searchQuery: e }),
             h = (e) => {
                 p(e);
@@ -616,7 +616,7 @@ let eu = (e) => {
                     className: er.searchContainer,
                     children: (0, r.jsx)(E.E1j, {
                         size: E.E1j.Sizes.MEDIUM,
-                        query: _,
+                        query: f,
                         onChange: h,
                         onClear: m,
                         placeholder: en.intl.string(en.t['5prvKS']),
@@ -641,9 +641,9 @@ let eu = (e) => {
                     ]
                 }),
             v = i.useMemo(() => {
-                let e = _.trim().toLowerCase();
+                let e = f.trim().toLowerCase();
                 return '' === e || null == t ? t : t.length < 100 ? t.filter((t) => l()(e, t.application.name.toLowerCase())) : t.filter((t) => t.application.name.toLowerCase().includes(e));
-            }, [t, _]),
+            }, [t, f]),
             T = () =>
                 null == t || null == v
                     ? (0, r.jsx)(E.$jN, {
@@ -663,7 +663,7 @@ let eu = (e) => {
                                       .sort((e, t) => Number(t.id) - Number(e.id))
                                       .map((e) =>
                                           (0, r.jsx)(
-                                              ef,
+                                              e_,
                                               es(
                                                   {
                                                       locale: a,

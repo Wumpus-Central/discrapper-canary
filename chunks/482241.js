@@ -8,28 +8,28 @@ var r = n(544891),
     c = n(73346),
     u = n(924301),
     d = n(236373),
-    _ = n(124165),
-    f = n(765305),
+    f = n(124165),
+    _ = n(765305),
     p = n(981631);
 let h = {
     startEvent: (e, t) =>
         r.tn.patch({
             url: p.ANM.GUILD_EVENT(t, e),
-            body: { status: f.p1.ACTIVE },
+            body: { status: _.p1.ACTIVE },
             rejectWithError: !1
         }),
     endEvent: (e, t) =>
         r.tn.patch({
             url: p.ANM.GUILD_EVENT(t, e),
-            body: { status: f.p1.COMPLETED },
+            body: { status: _.p1.COMPLETED },
             rejectWithError: !1
         }),
     joinVoiceEvent(e, t) {
         a.default.selectVoiceChannel(t), (0, o.uL)(p.Z5c.CHANNEL(e, t));
     },
     saveEvent(e, t, n, i) {
-        let a = f.pg.has(t.entityType) ? t.channelId : null,
-            o = f._U.has(t.entityType) ? t.entityMetadata : null,
+        let a = _.pg.has(t.entityType) ? t.channelId : null,
+            o = _._U.has(t.entityType) ? t.entityMetadata : null,
             s = null != t.image && !1 === /^data:/.test(t.image) ? void 0 : t.image,
             l = {
                 name: t.name,
@@ -124,7 +124,7 @@ let h = {
     cancelGuildEvent: (e, t) =>
         r.tn.patch({
             url: p.ANM.GUILD_EVENT(t, e),
-            body: { status: f.p1.CANCELED },
+            body: { status: _.p1.CANCELED },
             rejectWithError: !1
         }),
     deleteGuildEvent: (e, t) =>
@@ -210,7 +210,7 @@ let h = {
             }
     },
     async updateRsvp(e, t, n, r, i) {
-        if (null != (0, _.X2)(e, t))
+        if (null != (0, f.X2)(e, t))
             try {
                 await this.deleteRsvpForGuildEvent(e, t, n), null == i || i();
             } catch (e) {
@@ -224,7 +224,7 @@ let h = {
             }
     },
     async fetchUsersForGuildEvent(e, t, n) {
-        let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : f.rC;
+        let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : _.rC;
         if (null == e || null == n) return [];
         let o = await r.tn.get({
             url: p.ANM.GUILD_EVENT_USERS(n, e, t),

@@ -9,8 +9,8 @@ var i = n(780384),
     c = n(639119),
     u = n(767714),
     d = n(474936),
-    _ = n(388032),
-    f = n(136021);
+    f = n(388032),
+    _ = n(136021);
 function p(e, t, n) {
     return (
         t in e
@@ -63,17 +63,17 @@ function g(e, t) {
 let E = (e) => {
         let { showTrialCTA: t, subscriptionTier: n, trialDurationCopy: r, isPersistentCTA: i, shouldShowReferralTrialCopy: a, subscriptionTrial: o } = e;
         return t && a
-            ? _.intl.string(_.t.bXTClZ)
+            ? f.intl.string(f.t.bXTClZ)
             : t && (n === d.Si.TIER_2 || i)
               ? (0, s.Rt)({
                     intervalType: null == o ? void 0 : o.interval,
                     intervalCount: null == o ? void 0 : o.interval_count
                 })
               : t
-                ? _.intl.formatToPlainString(_.t.nTmm2t, { freeTrialText: r })
+                ? f.intl.formatToPlainString(f.t.nTmm2t, { freeTrialText: r })
                 : void 0;
     },
-    b = (e, t, n, r) => (t || n ? _.intl.string(_.t.fkPGam) : e === d.Si.TIER_2 ? _.intl.formatToPlainString(_.t.bkQ4bG, { percent: r }) : void 0),
+    b = (e, t, n, r) => (t || n ? f.intl.string(f.t.fkPGam) : e === d.Si.TIER_2 ? f.intl.formatToPlainString(f.t.bkQ4bG, { percent: r }) : void 0),
     y = (e) => {
         var { textOptions: t, subscriptionTier: n, hasActivePromotion: p = !1, isPersistentCTA: g = !1, useShorterCTA: y = !1, showGradient: O, confirmationFooter: v, paymentModalBanner: I, color: T } = e,
             S = m(e, ['textOptions', 'subscriptionTier', 'hasActivePromotion', 'isPersistentCTA', 'useShorterCTA', 'showGradient', 'confirmationFooter', 'paymentModalBanner', 'color']);
@@ -88,7 +88,7 @@ let E = (e) => {
             w = null != C && n === C.sku_id,
             D = (null == N ? void 0 : N.trial_id) === d.a7,
             L = p
-                ? _.intl.string(_.t.J61px8)
+                ? f.intl.string(f.t.J61px8)
                 : null != P
                   ? b(n, y, g, P.discount.amount)
                   : E({
@@ -108,7 +108,7 @@ let E = (e) => {
                     textOptions: h(
                         {
                             textOverride: L,
-                            textClassName: w ? f.freeTrialText : void 0
+                            textClassName: w ? _.freeTrialText : void 0
                         },
                         t
                     ),

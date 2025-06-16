@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(468026),
     u = n(269647),
     d = n(981631),
-    _ = n(388032);
-function f(e, t, n) {
+    f = n(388032);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -44,7 +44,7 @@ function h() {
     function n() {
         null !== t.current && ((0, o.Mr3)(t.current), (t.current = null));
     }
-    function f() {
+    function _() {
         l.Z.clearVADWarning();
     }
     return (
@@ -56,13 +56,13 @@ function h() {
                               c.default,
                               p(
                                   {
-                                      title: _.intl.string(_.t.NYklho),
-                                      body: _.intl.string(_.t.EJ26Oj),
-                                      onCancel: f,
-                                      cancelText: _.intl.string(_.t.UYW0d3),
-                                      confirmText: _.intl.string(_.t.E3Y7ND),
+                                      title: f.intl.string(f.t.NYklho),
+                                      body: f.intl.string(f.t.EJ26Oj),
+                                      onCancel: _,
+                                      cancelText: f.intl.string(f.t.UYW0d3),
+                                      confirmText: f.intl.string(f.t.E3Y7ND),
                                       onConfirm: () => {
-                                          s.Z.setMode(d.pM4.PUSH_TO_TALK), f();
+                                          s.Z.setMode(d.pM4.PUSH_TO_TALK), _();
                                       }
                                   },
                                   e

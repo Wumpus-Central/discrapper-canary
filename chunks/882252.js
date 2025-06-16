@@ -1,6 +1,6 @@
 n.d(t, {
     FS: () => u,
-    Uw: () => f,
+    Uw: () => _,
     nC: () => d,
     nU: () => p,
     yv: () => h
@@ -27,14 +27,14 @@ function d(e) {
     let l = n.getGuild(s.guild_id);
     return null == l ? null : u(s, l, [r]);
 }
-let _ = () => ({
+let f = () => ({
     minutes: c.t.nFt9cn,
     hours: c.t.jzCewc,
     days: c.t.U4I0s7,
     month: c.intl.string(c.t['nBNJ/P'])
 });
-function f(e, t) {
-    if (t === s.R6.POSTED_DURATION_AGO && e === r.z.CREATION_DATE) return _;
+function _(e, t) {
+    if (t === s.R6.POSTED_DURATION_AGO && e === r.z.CREATION_DATE) return f;
 }
 function p(e, t) {
     let [n] = t,

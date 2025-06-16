@@ -8,8 +8,8 @@ var r,
     c = n(19780),
     u = n(944486),
     d = n(981631),
-    _ = n(65154);
-function f(e, t, n) {
+    f = n(65154);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ let p = new Map(),
     m = null,
     g = null;
 function E() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.Yn.DEFAULT,
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : f.Yn.DEFAULT,
         t = p.get(e);
     return null == t && ((t = new Map()), p.set(e, t)), t;
 }
@@ -39,7 +39,7 @@ function b(e, t) {
 }
 function y(e, t, n) {
     var r, i, a;
-    return ((null != (a = null == (i = p.get(e)) || null == (r = i.get(t)) ? void 0 : r.flags) ? a : _.Dg.NONE) & n) === n;
+    return ((null != (a = null == (i = p.get(e)) || null == (r = i.get(t)) ? void 0 : r.flags) ? a : f.Dg.NONE) & n) === n;
 }
 function O(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -57,8 +57,8 @@ function v(e, t, n) {
     if (0 === n) a.delete(t), 0 === a.size && p.delete(e);
     else {
         let e = null != (i = null == o ? void 0 : o.since) ? i : null,
-            r = (s & _.Dg.VOICE) === _.Dg.VOICE,
-            l = (n & _.Dg.VOICE) === _.Dg.VOICE;
+            r = (s & f.Dg.VOICE) === f.Dg.VOICE,
+            l = (n & f.Dg.VOICE) === f.Dg.VOICE;
         r !== l && (e = l ? Date.now() : null),
             a.set(t, {
                 flags: n,
@@ -73,7 +73,7 @@ function I(e) {
 }
 function T(e) {
     let { context: t, userId: n, speakingFlags: r } = e;
-    if ((r & _.Dg.PRIORITY) === _.Dg.PRIORITY) {
+    if ((r & f.Dg.PRIORITY) === f.Dg.PRIORITY) {
         let e = s.Z.getChannel(u.Z.getVoiceChannelId());
         null != e &&
         o.BT({
@@ -82,9 +82,9 @@ function T(e) {
             context: e
         })
             ? l.Z.setCanHavePriority(n, !0)
-            : (l.Z.setCanHavePriority(n, !1), (r &= ~_.Dg.PRIORITY));
+            : (l.Z.setCanHavePriority(n, !1), (r &= ~f.Dg.PRIORITY));
     }
-    return (r & _.Dg.HIDDEN) === _.Dg.HIDDEN && (r = 0), v(t, n, r);
+    return (r & f.Dg.HIDDEN) === f.Dg.HIDDEN && (r = 0), v(t, n, r);
 }
 function S(e) {
     let { voiceStates: t } = e;
@@ -92,7 +92,7 @@ function S(e) {
         let { userId: n, channelId: r, sessionId: i } = t,
             a = !1,
             o = g;
-        return n === h && i === m && (g = null != r ? r : null), o !== g && (a = p.delete(_.Yn.DEFAULT) || a), null == r ? (a = n === h && i === m ? p.delete(_.Yn.DEFAULT) || a : b(_.Yn.DEFAULT, n) || a) : n === h && i !== m ? (a = p.delete(_.Yn.DEFAULT) || a) : n !== h && r !== c.Z.getChannelId() && (a = b(_.Yn.DEFAULT, n) || a), a || e;
+        return n === h && i === m && (g = null != r ? r : null), o !== g && (a = p.delete(f.Yn.DEFAULT) || a), null == r ? (a = n === h && i === m ? p.delete(f.Yn.DEFAULT) || a : b(f.Yn.DEFAULT, n) || a) : n === h && i !== m ? (a = p.delete(f.Yn.DEFAULT) || a) : n !== h && r !== c.Z.getChannelId() && (a = b(f.Yn.DEFAULT, n) || a), a || e;
     }, !1);
 }
 class A extends (r = i.ZP.Store) {
@@ -101,49 +101,49 @@ class A extends (r = i.ZP.Store) {
     }
     getSpeakingDuration(e, t) {
         var n, r;
-        let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _.Yn.DEFAULT,
+        let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : f.Yn.DEFAULT,
             a = null == (r = p.get(i)) || null == (n = r.get(e)) ? void 0 : n.since;
         return null != a ? t - a : 0;
     }
     getSpeakers() {
         var e, t;
-        let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.Yn.DEFAULT;
-        return Array.from(null != (t = null == (e = p.get(n)) ? void 0 : e.keys()) ? t : []).filter((e) => y(n, e, _.Dg.VOICE));
+        let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : f.Yn.DEFAULT;
+        return Array.from(null != (t = null == (e = p.get(n)) ? void 0 : e.keys()) ? t : []).filter((e) => y(n, e, f.Dg.VOICE));
     }
     isSpeaking(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.Yn.DEFAULT;
-        return y(t, e, _.Dg.VOICE);
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f.Yn.DEFAULT;
+        return y(t, e, f.Dg.VOICE);
     }
     isPrioritySpeaker(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.Yn.DEFAULT;
-        return y(t, e, _.Dg.PRIORITY);
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f.Yn.DEFAULT;
+        return y(t, e, f.Dg.PRIORITY);
     }
     isSoundSharing(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.Yn.DEFAULT;
-        return y(t, e, _.Dg.SOUNDSHARE);
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f.Yn.DEFAULT;
+        return y(t, e, f.Dg.SOUNDSHARE);
     }
     isAnyoneElseSpeaking() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.Yn.DEFAULT;
-        return O(e, _.Dg.VOICE, !0);
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : f.Yn.DEFAULT;
+        return O(e, f.Dg.VOICE, !0);
     }
     isCurrentUserSpeaking() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.Yn.DEFAULT;
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : f.Yn.DEFAULT;
         return null != h && this.isSpeaking(h, e);
     }
     isAnyonePrioritySpeaking() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.Yn.DEFAULT;
-        return O(e, _.Dg.VOICE | _.Dg.PRIORITY);
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : f.Yn.DEFAULT;
+        return O(e, f.Dg.VOICE | f.Dg.PRIORITY);
     }
     isCurrentUserPrioritySpeaker() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.Yn.DEFAULT;
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : f.Yn.DEFAULT;
         return null != h && this.isPrioritySpeaker(h, e);
     }
     isCurrentUserPrioritySpeaking() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.Yn.DEFAULT;
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : f.Yn.DEFAULT;
         return null != h && this.isPrioritySpeaker(h, e) && this.isSpeaking(h, e);
     }
 }
-f(A, 'displayName', 'SpeakingStore');
+_(A, 'displayName', 'SpeakingStore');
 let N = new A(a.Z, {
     CONNECTION_OPEN: I,
     OVERLAY_INITIALIZE: I,

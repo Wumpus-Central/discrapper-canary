@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => _ });
 var r = n(379649),
     i = n(846519),
     a = n(361291),
@@ -56,11 +56,11 @@ function u(e, t) {
     );
 }
 let d = 1000;
-function _(e) {
+function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
     return null != e ? Math.round(e) : t;
 }
-class f {
+class _ {
     start() {
         let { resolution: e, fps: t } = a.Z.getState();
         (this._targetResolution = e), (this._targetFPS = t), this._statInterval.start(d, this._sampleStats), (this._lastLayoutChanged = (0, r.zO)());
@@ -79,13 +79,13 @@ class f {
     getStats() {
         let e = {
             num_layout_changes: this._layoutChanges,
-            duration_layout_fullscreen: _(this._layoutBuckets[o.hVg.FULL_SCREEN]),
-            duration_layout_theatre: _(this._layoutBuckets[o.hVg.THEATRE]),
-            duration_layout_pip: _(this._layoutBuckets[o.hVg.PIP]),
-            duration_layout_popout: _(this._layoutBuckets[o.hVg.POPOUT]),
-            duration_layout_portrait: _(this._layoutBuckets[o.hVg.PORTRAIT]),
-            duration_layout_landscape: _(this._layoutBuckets[o.hVg.LANDSCAPE]),
-            duration_layout_minimized: _(this._layoutBuckets[o.hVg.MINIMIZED])
+            duration_layout_fullscreen: f(this._layoutBuckets[o.hVg.FULL_SCREEN]),
+            duration_layout_theatre: f(this._layoutBuckets[o.hVg.THEATRE]),
+            duration_layout_pip: f(this._layoutBuckets[o.hVg.PIP]),
+            duration_layout_popout: f(this._layoutBuckets[o.hVg.POPOUT]),
+            duration_layout_portrait: f(this._layoutBuckets[o.hVg.PORTRAIT]),
+            duration_layout_landscape: f(this._layoutBuckets[o.hVg.LANDSCAPE]),
+            duration_layout_minimized: f(this._layoutBuckets[o.hVg.MINIMIZED])
         };
         return this._isSender
             ? u(l({}, e), {

@@ -14,12 +14,12 @@ function o(e, t) {
         t.forEach((e) => {
             var t, i, a, o, s, l, c, u;
             let d = n[e.userId],
-                _ = null != (i = null != (t = e.joinSourceType) ? t : null == d ? void 0 : d.joinSourceType) ? i : null;
-            (null == _ || _ === r.gq.UNSPECIFIED) && null != e.sourceInviteCode && (_ = r.gq.INVITE),
+                f = null != (i = null != (t = e.joinSourceType) ? t : null == d ? void 0 : d.joinSourceType) ? i : null;
+            (null == f || f === r.gq.UNSPECIFIED) && null != e.sourceInviteCode && (f = r.gq.INVITE),
                 (n[e.userId] = {
                     userId: e.userId,
                     sourceInviteCode: null != (o = null != (a = e.sourceInviteCode) ? a : null == d ? void 0 : d.sourceInviteCode) ? o : null,
-                    joinSourceType: _,
+                    joinSourceType: f,
                     inviterId: null != (l = null != (s = e.inviterId) ? s : null == d ? void 0 : d.inviterId) ? l : null,
                     integrationType: null != (u = null != (c = e.integrationType) ? c : null == d ? void 0 : d.integrationType) ? u : null
                 });

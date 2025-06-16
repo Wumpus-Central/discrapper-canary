@@ -38,10 +38,10 @@ let c = (function () {
                 isWeekdays: -1 !== d.indexOf('MO') && -1 !== d.indexOf('TU') && -1 !== d.indexOf('WE') && -1 !== d.indexOf('TH') && -1 !== d.indexOf('FR') && -1 === d.indexOf('SA') && -1 === d.indexOf('SU'),
                 isEveryDay: -1 !== d.indexOf('MO') && -1 !== d.indexOf('TU') && -1 !== d.indexOf('WE') && -1 !== d.indexOf('TH') && -1 !== d.indexOf('FR') && -1 !== d.indexOf('SA') && -1 !== d.indexOf('SU')
             };
-            var _ = function (e, t) {
+            var f = function (e, t) {
                 return e.weekday - t.weekday;
             };
-            this.byweekday.allWeeks.sort(_), this.byweekday.someWeeks.sort(_), this.byweekday.allWeeks.length || (this.byweekday.allWeeks = null), this.byweekday.someWeeks.length || (this.byweekday.someWeeks = null);
+            this.byweekday.allWeeks.sort(f), this.byweekday.someWeeks.sort(f), this.byweekday.allWeeks.length || (this.byweekday.allWeeks = null), this.byweekday.someWeeks.length || (this.byweekday.someWeeks = null);
         } else this.byweekday = null;
     }
     return (

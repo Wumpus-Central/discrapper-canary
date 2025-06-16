@@ -19,7 +19,7 @@ function u(e) {
             }))
                 ? void 0
                 : t.name,
-        _ = Object.values(n).map((e) => {
+        f = Object.values(n).map((e) => {
             let { id: t, disabled: n, name: i } = e;
             return (0, r.jsx)(
                 a.k5B,
@@ -39,10 +39,10 @@ function u(e) {
               id: 'video-devices',
               label: c.intl.string(c.t.F122Gx),
               subtext: d,
-              children: _
+              children: f
           })
         : (0, r.jsx)(a.kSQ, {
               label: c.intl.string(c.t.F122Gx),
-              children: _
+              children: f
           });
 }

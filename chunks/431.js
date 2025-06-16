@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(388685), n(825670);
+n.d(t, { Z: () => k }), n(388685), n(825670);
 var r,
     i = n(442837),
     a = n(570140),
@@ -8,8 +8,8 @@ var r,
     c = n(579075),
     u = n(594174),
     d = n(580130),
-    _ = n(74538),
-    f = n(78839),
+    f = n(74538),
+    _ = n(78839),
     p = n(474936);
 function h(e, t, n) {
     return (
@@ -101,11 +101,11 @@ function R() {
 }
 let P = () => !0;
 function w() {
-    return null != f.ZP.getPremiumTypeSubscription() && ((v.userDiscountOffers = {}), (v.userTrialOffers = {}), !0);
+    return null != _.ZP.getPremiumTypeSubscription() && ((v.userDiscountOffers = {}), (v.userTrialOffers = {}), !0);
 }
 function D() {
     let e = u.default.getCurrentUser();
-    !(0, _.I5)(e) && Object.keys(v.userDiscountOffers).length > 0 && (0, s.T)('UserOfferStore', !0);
+    !(0, f.I5)(e) && Object.keys(v.userDiscountOffers).length > 0 && (0, s.T)('UserOfferStore', !0);
 }
 function L() {
     var e;
@@ -120,7 +120,7 @@ function L() {
 }
 class x extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (v = null != e ? e : O), this.waitFor(u.default), this.syncWith([u.default], P), this.syncWith([f.ZP], w), this.syncWith([o.Z], L);
+        (v = null != e ? e : O), this.waitFor(u.default), this.syncWith([u.default], P), this.syncWith([_.ZP], w), this.syncWith([o.Z], L);
     }
     getUserTrialOffer(e) {
         if (null !== e) return v.userTrialOffers[e];
@@ -155,20 +155,20 @@ class x extends (r = i.ZP.PersistedStore) {
     getAlmostExpiringTrialOffers(e) {
         let t = Object.values(p.nG).map((e) => e.id),
             n = u.default.getCurrentUser();
-        return (0, _.I5)(n) && !this.canFractionalPremiumUserUseOffer() ? [] : Object.values(v.userTrialOffers).filter((n) => t.includes(n.trial_id) && null != n.expires_at && null != n.subscription_trial && e.includes(n.subscription_trial.sku_id) && Date.parse(n.expires_at) < Date.now() + (0, _.xe)(n.trial_id));
+        return (0, f.I5)(n) && !this.canFractionalPremiumUserUseOffer() ? [] : Object.values(v.userTrialOffers).filter((n) => t.includes(n.trial_id) && null != n.expires_at && null != n.subscription_trial && e.includes(n.subscription_trial.sku_id) && Date.parse(n.expires_at) < Date.now() + (0, f.xe)(n.trial_id));
     }
     getAcknowledgedOffers(e) {
         let t = u.default.getCurrentUser();
-        return (0, _.I5)(t) && !this.canFractionalPremiumUserUseOffer() ? [] : Object.values(v.userTrialOffers).filter((t) => e.includes(t.trial_id) && null != t.expires_at);
+        return (0, f.I5)(t) && !this.canFractionalPremiumUserUseOffer() ? [] : Object.values(v.userTrialOffers).filter((t) => e.includes(t.trial_id) && null != t.expires_at);
     }
     getUnacknowledgedDiscountOffers() {
         var e;
         let t = u.default.getCurrentUser();
-        return (0, _.I5)(t) && !this.canFractionalPremiumUserUseOffer() ? [] : Object.values(null != (e = v.userDiscountOffers) ? e : {}).filter((e) => null == e.expires_at && !p.ee.includes(e.discount_id));
+        return (0, f.I5)(t) && !this.canFractionalPremiumUserUseOffer() ? [] : Object.values(null != (e = v.userDiscountOffers) ? e : {}).filter((e) => null == e.expires_at && !p.ee.includes(e.discount_id));
     }
     getUnacknowledgedOffers(e) {
         let t = u.default.getCurrentUser();
-        return (0, _.I5)(t) && !this.canFractionalPremiumUserUseOffer() ? [] : Object.values(v.userTrialOffers).filter((t) => e.includes(t.trial_id) && null == t.expires_at);
+        return (0, f.I5)(t) && !this.canFractionalPremiumUserUseOffer() ? [] : Object.values(v.userTrialOffers).filter((t) => e.includes(t.trial_id) && null == t.expires_at);
     }
     hasAnyUnexpiredOffer() {
         return Object.values(v.userTrialOffers).some((e) => null == e.expires_at || Date.parse(e.expires_at) > Date.now());
@@ -178,7 +178,7 @@ class x extends (r = i.ZP.PersistedStore) {
     }
     canFractionalPremiumUserUseOffer() {
         let e = u.default.getCurrentUser();
-        return (0, l.C)('user-offer-store', e) && d.Z.isFractionalPremiumActive({ excludeReverseTrial: !0 }) && null == f.ZP.getPremiumTypeSubscription();
+        return (0, l.C)('user-offer-store', e) && d.Z.isFractionalPremiumActive({ excludeReverseTrial: !0 }) && null == _.ZP.getPremiumTypeSubscription();
     }
     getReferrer(e) {
         var t;
@@ -208,7 +208,7 @@ h(x, 'displayName', 'UserOfferStore'),
             if (null != e) return (null == e ? void 0 : e.isFetching) == null ? E(m({}, e), { isFetching: !1 }) : e;
         }
     ]);
-let M = new x(a.Z, {
+let k = new x(a.Z, {
     BILLING_USER_OFFER_FETCH_START: I,
     BILLING_USER_TRIAL_OFFER_FETCH_SUCCESS: T,
     BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS: N,

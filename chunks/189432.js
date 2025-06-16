@@ -8,8 +8,8 @@ var r = n(100527),
     c = n(944486),
     u = n(545408),
     d = n(189357),
-    _ = n(50493),
-    f = n(981631),
+    f = n(50493),
+    _ = n(981631),
     p = n(176505);
 function h(e, t, n) {
     return (
@@ -65,15 +65,15 @@ function E(e, t) {
 }
 function b(e, t, n) {
     var h, g, b;
-    let y = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : { modViewPanel: _.k.INFO };
+    let y = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : { modViewPanel: f.k.INFO };
     if (!(0, d.Y)(e)) return Promise.resolve();
-    let O = null != (h = y.modViewPanel) ? h : _.k.INFO,
+    let O = null != (h = y.modViewPanel) ? h : f.k.INFO,
         v = null != (g = y.sourceLocation) ? g : r.Z.MEMBER_SAFETY_PAGE,
         I = c.Z.getCurrentlySelectedChannelId(),
         T = null != I ? s.Z.getChannel(I) : null;
     if (n !== p.oC.MEMBER_SAFETY && (null == T || T.getGuildId() !== e)) {
         let t = l.ZP.getDefaultChannel(e);
-        null == t || t.isNSFW() || (0, i.uL)(f.Z5c.CHANNEL(e, t.id));
+        null == t || t.isNSFW() || (0, i.uL)(_.Z5c.CHANNEL(e, t.id));
     }
     return (
         (0, u.q)(e, t, O, v),
@@ -90,7 +90,7 @@ function b(e, t, n) {
                     },
                     y
                 ),
-                { modViewPanel: null != (b = y.modViewPanel) ? b : _.k.INFO }
+                { modViewPanel: null != (b = y.modViewPanel) ? b : f.k.INFO }
             )
         })
     );

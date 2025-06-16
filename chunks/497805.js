@@ -24,7 +24,7 @@ function d(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function _(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -67,7 +67,7 @@ function m(e, t) {
 async function g(e) {
     var t,
         { userId: a, section: o, subsection: d, guildId: p, channelId: g, showGuildProfile: E = !0, appContext: b, customStatusPrompt: y } = e,
-        O = f(e, ['userId', 'section', 'subsection', 'guildId', 'channelId', 'showGuildProfile', 'appContext', 'customStatusPrompt']);
+        O = _(e, ['userId', 'section', 'subsection', 'guildId', 'channelId', 'showGuildProfile', 'appContext', 'customStatusPrompt']);
     let v = l.default.getUser(a);
     if (null == v) return;
     let I = l.default.getCurrentUser();
@@ -78,7 +78,7 @@ async function g(e) {
                 return (t) =>
                     (0, r.jsx)(
                         e,
-                        _(
+                        f(
                             {
                                 user: v,
                                 currentUser: I,

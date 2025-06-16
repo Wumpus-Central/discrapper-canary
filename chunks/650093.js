@@ -1,7 +1,7 @@
 a.d(e, {
     L2: () => c,
-    _6: () => E,
-    iK: () => s
+    _6: () => s,
+    iK: () => E
 });
 var r = a(694043),
     _ = a(622916),
@@ -25,9 +25,9 @@ function c(t) {
         }
     return a ? (i[t] = a.bind(o.m)) : a;
 }
-function E(t) {
+function s(t) {
     i[t] = void 0;
 }
-function s(...t) {
+function E(...t) {
     return c('setTimeout')(...t);
 }

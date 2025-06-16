@@ -1,4 +1,4 @@
-n.d(t, { c: () => f });
+n.d(t, { c: () => _ });
 var r = n(255367),
     i = n(73800),
     a = n(524979),
@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(607070),
     u = n(79320),
     d = n(388032),
-    _ = n(74927);
-function f() {
+    f = n(74927);
+function _() {
     let e = [
             {
                 keybinds: ['Spacebar', 'Enter'],
@@ -49,9 +49,9 @@ function f() {
     )((t, n) =>
         n
             ? (0, r.jsx)('div', {
-                  className: _.positioner,
+                  className: f.positioner,
                   children: (0, r.jsx)(a.animated.div, {
-                      className: _.container,
+                      className: f.container,
                       style: t,
                       children: e.map((t, n) => {
                           let { keybinds: a, name: o } = t;
@@ -61,7 +61,7 @@ function f() {
                                   children: [
                                       (0, r.jsx)(l.Text, {
                                           variant: 'text-md/semibold',
-                                          className: _.bindName,
+                                          className: f.bindName,
                                           children: o
                                       }),
                                       a.map((e) =>
@@ -69,12 +69,12 @@ function f() {
                                               s.M,
                                               {
                                                   shortcut: e,
-                                                  className: _.shortcut
+                                                  className: f.shortcut
                                               },
                                               e
                                           )
                                       ),
-                                      n < e.length - 1 ? (0, r.jsx)('span', { className: _.separator }) : null
+                                      n < e.length - 1 ? (0, r.jsx)('span', { className: f.separator }) : null
                                   ]
                               },
                               o

@@ -10,19 +10,19 @@ let s = (e) => {
     let c = (0, i.e7)([a.Z], () => a.Z.profileEffects),
         u = c.reduce((t, n, r) => (n.id === e && (t = r), t), 0),
         [, d] = r.useState(u),
-        _ = r.useRef(u);
+        f = r.useRef(u);
     return (
         r.useEffect(() => {
             n(e), l(a.Z.getProfileEffectById(e));
         }, [e, c]),
         {
             increment: () => {
-                let e = (_.current + 1) % c.length;
-                (_.current = e), d(e), n(c[e].id), l(c[e]);
+                let e = (f.current + 1) % c.length;
+                (f.current = e), d(e), n(c[e].id), l(c[e]);
             },
             decrement: () => {
-                let e = 0 === _.current ? c.length - 1 : _.current - 1;
-                (_.current = e), d(e), n(c[e].id), l(c[e]);
+                let e = 0 === f.current ? c.length - 1 : f.current - 1;
+                (f.current = e), d(e), n(c[e].id), l(c[e]);
             },
             id: t,
             preset: s

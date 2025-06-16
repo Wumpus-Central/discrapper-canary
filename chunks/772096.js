@@ -23,8 +23,8 @@ var s = n(159635),
     c = n(830121),
     u = n(823379),
     d = n(172244),
-    _ = n(571989);
-function f(e, t, n) {
+    f = n(571989);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -48,7 +48,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -81,8 +81,8 @@ function E(e) {
     let t = e,
         n = g.get(t);
     if (null != n) return n;
-    let r = (0, _.yx)(e),
-        i = (0, _.zq)(r),
+    let r = (0, f.yx)(e),
+        i = (0, f.zq)(r),
         a = {
             whitespaceSanitized: r,
             fullySanitized: i
@@ -157,9 +157,9 @@ function R(e) {
             r = null != (t = n.protocol) ? t : '';
         if (!b.includes(r.toLowerCase())) throw Error('Provided protocol is not allowed: ' + r);
         if (('http:' === r || 'https:' === r) && (null == n.hostname || 0 === n.hostname.length)) throw Error('no hostname');
-        let i = (0, _.MO)(n);
+        let i = (0, f.MO)(n);
         (n.username = ''), (n.password = '');
-        let a = (0, _.MO)(n);
+        let a = (0, f.MO)(n);
         return {
             target: i,
             displayTarget: a
@@ -177,11 +177,11 @@ let P = m(p({}, l().defaultRules.link), {
                 content: r
             });
         if (C(o)) return u();
-        let _ = E(o),
-            f = E(a),
+        let f = E(o),
+            _ = E(a),
             h = E(null != s ? s : ''),
-            g = _.whitespaceSanitized,
-            b = f.fullySanitized,
+            g = f.whitespaceSanitized,
+            b = _.fullySanitized,
             N = h.fullySanitized,
             P = b.trim();
         if (0 === g.trim().length || 0 === P.length) return u();
@@ -193,14 +193,14 @@ let P = m(p({}, l().defaultRules.link), {
                 allowEscape: !1,
                 parseInlineCodeChildContent: !0
             }),
-            M = n.allowEmojiLinks ? O : y,
-            k = [...M, ...v],
+            k = n.allowEmojiLinks ? O : y,
+            M = [...k, ...v],
             j = [...I, ...T],
-            U = S(t(b, x), k, [d.b.EMOJI]),
+            U = S(t(b, x), M, [d.b.EMOJI]),
             G = S(t(N, x), j);
         if (null == U || null == G || 0 === A(U).trim().length) return u();
-        let B = i().pick(t.rules, M),
-            V = l().parserFor(B)(f.whitespaceSanitized, x),
+        let B = i().pick(t.rules, k),
+            V = l().parserFor(B)(_.whitespaceSanitized, x),
             F = h.whitespaceSanitized,
             { target: Z } = w;
         return {

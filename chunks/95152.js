@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(990169),
     u = n(476326),
     d = n(752305),
-    _ = n(849522),
-    f = n(703558),
+    f = n(849522),
+    _ = n(703558),
     p = n(626135),
     h = n(358085),
     m = n(998502),
@@ -75,11 +75,11 @@ function N(e) {
     var t, n, a;
     let { file: s } = e,
         [l, u] = i.useState(),
-        [d, _] = i.useState(!1),
-        [f, p] = i.useState({}),
+        [d, f] = i.useState(!1),
+        [_, p] = i.useState({}),
         h = i.useRef(null);
     i.useEffect(() => {
-        if ((null != h.current && _(!1), null == s)) return;
+        if ((null != h.current && f(!1), null == s)) return;
         let e = URL.createObjectURL(s);
         return (
             u(e),
@@ -107,7 +107,7 @@ function N(e) {
                                 width: void 0,
                                 height: S / t
                             }),
-                        _(!0);
+                        f(!0);
                 });
         }, []);
     let m = (0, c.Z)(h),
@@ -119,11 +119,11 @@ function N(e) {
         'aria-hidden': !0,
         alt: '',
         style: {
-            width: null != (n = f.width) ? n : 'initial',
-            height: null != (a = f.height) ? a : S,
+            width: null != (n = _.width) ? n : 'initial',
+            height: null != (a = _.height) ? a : S,
             marginLeft: g,
             marginRight: g,
-            marginTop: null != f.height ? S - f.height - 33 : -33
+            marginTop: null != _.height ? S - _.height - 33 : -33
         }
     });
 }
@@ -282,7 +282,7 @@ class R extends i.Component {
                 }),
                     t();
             });
-        let s = e.ignoreDraft ? '' : f.Z.getDraft(this.props.channelId, e.draftType);
+        let s = e.ignoreDraft ? '' : _.Z.getDraft(this.props.channelId, e.draftType);
         this.state = T(v({}, (0, d.eK)(s)), {
             textFocused: !0,
             hasSpoiler: null != (i = null == (t = e.upload) ? void 0 : t.spoiler) && i,
@@ -293,7 +293,7 @@ class R extends i.Component {
     }
 }
 function P(e) {
-    let t = (0, _.Z)();
+    let t = (0, f.Z)();
     return e.upload.item.platform !== u.ow.WEB
         ? null
         : (0, r.jsx)(

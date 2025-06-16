@@ -144,12 +144,12 @@ e.exports = function (e) {
             ]
         },
         d = e.inherit(c, { contains: [] }),
-        _ = e.inherit(u, { contains: [] });
-    c.contains.push(_), u.contains.push(d);
-    let f = [n, l];
+        f = e.inherit(u, { contains: [] });
+    c.contains.push(f), u.contains.push(d);
+    let _ = [n, l];
     return (
-        [c, u, d, _].forEach((e) => {
-            e.contains = e.contains.concat(f);
+        [c, u, d, f].forEach((e) => {
+            e.contains = e.contains.concat(_);
         }),
         {
             name: 'Markdown',
@@ -161,7 +161,7 @@ e.exports = function (e) {
                         {
                             begin: '^#{1,6}',
                             end: '$',
-                            contains: (f = f.concat(c, u))
+                            contains: (_ = _.concat(c, u))
                         },
                         {
                             begin: '(?=^.+?\\n[=-]{2,}$)',
@@ -170,7 +170,7 @@ e.exports = function (e) {
                                 {
                                     begin: '^',
                                     end: '\\n',
-                                    contains: f
+                                    contains: _
                                 }
                             ]
                         }
@@ -183,7 +183,7 @@ e.exports = function (e) {
                 {
                     className: 'quote',
                     begin: '^>\\s+',
-                    contains: f,
+                    contains: _,
                     end: '$'
                 },
                 i,

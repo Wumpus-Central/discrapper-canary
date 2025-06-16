@@ -13,8 +13,8 @@ var i,
     c = n(442837),
     u = n(570140),
     d = n(344185),
-    _ = n(144140),
-    f = n(314897),
+    f = n(144140),
+    _ = n(314897),
     p = n(592125),
     h = n(306680),
     m = n(944486),
@@ -48,17 +48,17 @@ let O = [],
     D = o().chain(O),
     L = new Set(),
     x = new Set();
-function M(e) {
+function k(e) {
     var t;
     return null != (t = h.ZP.lastMessageId(e)) ? t : e;
 }
-function k(e) {
-    let t = _.Z.getCount(e);
+function M(e) {
+    let t = f.Z.getCount(e);
     return null === t || 0 === t;
 }
 function j(e) {
     return function (t, n) {
-        return (0, b.yv)(t) ? -1 : (0, b.yv)(n) ? 1 : e === l.z.LATEST_ACTIVITY ? E.default.compare(M(n), M(t)) : E.default.compare(n, t);
+        return (0, b.yv)(t) ? -1 : (0, b.yv)(n) ? 1 : e === l.z.LATEST_ACTIVITY ? E.default.compare(k(n), k(t)) : E.default.compare(n, t);
     };
 }
 function U(e, t) {
@@ -105,7 +105,7 @@ function F(e) {
         0 !== x.size && ((P = Array.from(new Set([...P, ...x]))), x.clear()),
         ((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) && ((D = o().chain(P).sort(j(l.z.LATEST_ACTIVITY))), (w = o().chain(P).sort(j(l.z.CREATION_DATE))));
     let n = (S === l.z.LATEST_ACTIVITY ? D : w).value(),
-        i = (C = 0 === T.size ? n : n.filter(U(T, A))).find((e) => k(e));
+        i = (C = 0 === T.size ? n : n.filter(U(T, A))).find((e) => M(e));
     r = null == i ? null : i;
 }
 function Z(e) {
@@ -128,7 +128,7 @@ function H(e) {
 function Y(e) {
     let { channel: t, isNewlyCreated: n } = e;
     if (null == t.parent_id || t.parent_id !== I || !n) return !1;
-    t.ownerId !== f.default.getId() ? N++ : (v = t.id);
+    t.ownerId !== _.default.getId() ? N++ : (v = t.id);
 }
 function W(e) {
     let { channel: t } = e;

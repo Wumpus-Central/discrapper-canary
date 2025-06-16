@@ -1,5 +1,5 @@
 n.d(t, {
-    Gb: () => f,
+    Gb: () => _,
     J1: () => l,
     KV: () => c,
     Ql: () => s,
@@ -66,19 +66,19 @@ function d(e) {
         isCanceled: e.is_canceled
     }));
 }
-function _(e) {
+function f(e) {
     return null != e && 'id' in e;
 }
-function f(e, t, n) {
-    let { name: i, description: a, privacyLevel: s, channelId: c, scheduledStartTime: d, scheduledEndTime: _, entityType: f, entityMetadata: p, image: h, recurrenceRule: m, eventExceptions: g } = e;
+function _(e, t, n) {
+    let { name: i, description: a, privacyLevel: s, channelId: c, scheduledStartTime: d, scheduledEndTime: f, entityType: _, entityMetadata: p, image: h, recurrenceRule: m, eventExceptions: g } = e;
     return {
         id: null != n ? n : o.Ku,
         name: i,
         description: null != a ? a : null,
         privacy_level: s,
         scheduled_start_time: d,
-        scheduled_end_time: _,
-        entity_type: f,
+        scheduled_end_time: f,
+        entity_type: _,
         entity_metadata: null != p ? p : null,
         image: null != h ? h : void 0,
         channel_id: c,
@@ -90,14 +90,14 @@ function f(e, t, n) {
     };
 }
 function p(e, t) {
-    var n, r, s, l, u, f, p;
+    var n, r, s, l, u, _, p;
     let h = {
         name: null != (n = null == e ? void 0 : e.name) ? n : '',
         privacyLevel: null != (r = null == e ? void 0 : e.privacy_level) ? r : o.j8.GUILD_ONLY,
         description: null != (s = null == e ? void 0 : e.description) ? s : '',
         scheduledStartTime: null != (l = null == e ? void 0 : e.scheduled_start_time) ? l : (0, a.ib)().toISOString(),
         entityType: null != (u = null == e ? void 0 : e.entity_type) ? u : o.WX.NONE,
-        entityMetadata: null != (f = null == e ? void 0 : e.entity_metadata) ? f : void 0,
+        entityMetadata: null != (_ = null == e ? void 0 : e.entity_metadata) ? _ : void 0,
         channelId: null == e ? void 0 : e.channel_id,
         creatorId: null == e ? void 0 : e.creator_id,
         image: null == e ? void 0 : e.image,
@@ -105,7 +105,7 @@ function p(e, t) {
         recurrenceRule: c(null == e ? void 0 : e.recurrence_rule),
         eventExceptions: d(null != (p = null == e ? void 0 : e.guild_scheduled_event_exceptions) ? p : [])
     };
-    if (_(e) && (null == e ? void 0 : e.entity_type) === o.WX.EXTERNAL) {
+    if (f(e) && (null == e ? void 0 : e.entity_type) === o.WX.EXTERNAL) {
         let t = (0, i.cS)(e);
         null != t && (h.entityMetadata = { location: t });
     } else null == h.channelId && null != t && ((h.channelId = t.id), t.isGuildStageVoice() ? (h.entityType = o.WX.STAGE_INSTANCE) : t.isGuildVoice() && (h.entityType = o.WX.VOICE));

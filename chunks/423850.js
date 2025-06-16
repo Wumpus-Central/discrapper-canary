@@ -1,6 +1,6 @@
 a.d(e, {
-    D: () => N,
-    N: () => A
+    D: () => f,
+    N: () => R
 });
 var r = a(263449),
     _ = a(696486),
@@ -8,61 +8,61 @@ var r = a(263449),
     o = a(152228),
     i = a(101284),
     c = a(467510),
-    E = a(370336),
-    s = a(395848),
+    s = a(370336),
+    E = a(395848),
     l = a(501684),
-    I = a(108185);
-let u = [],
-    R = new Map();
-function A() {
-    if ((0, I.QV)() && i.Z1) {
+    u = a(108185);
+let I = [],
+    d = new Map();
+function R() {
+    if ((0, u.QV)() && i.Z1) {
         let t = (0, l.YF)(({ metric: t }) => {
             let e,
                 a = (0, r.s3)();
             if (!a || void 0 == t.value) return;
-            let l = t.entries.find((e) => e.duration === t.value && T[e.name]);
+            let l = t.entries.find((e) => e.duration === t.value && N[e.name]);
             if (!l) return;
-            let { interactionId: u } = l,
-                A = T[l.name],
-                N = a.getOptions(),
-                d = (0, I.XL)(i.Z1 + l.startTime),
-                L = (0, I.XL)(t.value),
+            let { interactionId: I } = l,
+                R = N[l.name],
+                f = a.getOptions(),
+                A = (0, u.XL)(i.Z1 + l.startTime),
+                T = (0, u.XL)(t.value),
                 p = (0, r.nZ)(),
-                f = (0, _.HN)(),
-                O = f ? (0, _.Gx)(f) : void 0,
-                h = (null != u ? R.get(u) : void 0) || O,
-                D = h ? (0, _.XU)(h).description : p.getScopeData().transactionName,
-                P = p.getUser(),
-                g = a.getIntegrationByName('Replay'),
-                C = g && g.getReplayId(),
-                y = void 0 !== P ? P.email || P.id || P.ip_address : void 0;
+                L = (0, _.HN)(),
+                h = L ? (0, _.Gx)(L) : void 0,
+                O = (null != I ? d.get(I) : void 0) || h,
+                P = O ? (0, _.XU)(O).description : p.getScopeData().transactionName,
+                g = p.getUser(),
+                D = a.getIntegrationByName('Replay'),
+                C = D && D.getReplayId(),
+                m = void 0 !== g ? g.email || g.id || g.ip_address : void 0;
             try {
                 e = p.getScopeData().contexts.profile.profile_id;
             } catch (t) {}
-            let m = (0, c.Rt)(l.target),
-                v = (0, E.Jr)({
-                    release: N.release,
-                    environment: N.environment,
-                    transaction: D,
+            let v = (0, c.Rt)(l.target),
+                y = (0, s.Jr)({
+                    release: f.release,
+                    environment: f.environment,
+                    transaction: P,
                     [n.JQ]: t.value,
                     [n.S3]: 'auto.http.browser.inp',
-                    user: y || void 0,
+                    user: m || void 0,
                     profile_id: e || void 0,
                     replay_id: C || void 0,
-                    'user_agent.original': s.m.navigator && s.m.navigator.userAgent
+                    'user_agent.original': E.m.navigator && E.m.navigator.userAgent
                 }),
-                U = (0, o.qp)({
-                    name: m,
-                    op: `ui.interaction.${A}`,
-                    attributes: v,
-                    startTime: d,
+                S = (0, o.qp)({
+                    name: v,
+                    op: `ui.interaction.${R}`,
+                    attributes: y,
+                    startTime: A,
                     experimental: { standalone: !0 }
                 });
-            U.addEvent('inp', {
+            S.addEvent('inp', {
                 [n.E1]: 'millisecond',
                 [n.Wb]: t.value
             }),
-                U.end(d + L);
+                S.end(A + T);
         });
         return () => {
             t();
@@ -70,7 +70,7 @@ function A() {
     }
     return () => void 0;
 }
-let T = {
+let N = {
     click: 'click',
     pointerdown: 'click',
     pointerup: 'click',
@@ -98,19 +98,19 @@ let T = {
     keypress: 'press',
     input: 'press'
 };
-function N(t) {
+function f(t) {
     let e = ({ entries: t }) => {
         let e = (0, _.HN)(),
             a = e && (0, _.Gx)(e);
         t.forEach((t) => {
             if (!(0, l.cN)(t) || !a) return;
             let e = t.interactionId;
-            if (null != e && !R.has(e)) {
-                if (u.length > 10) {
-                    let t = u.shift();
-                    R.delete(t);
+            if (null != e && !d.has(e)) {
+                if (I.length > 10) {
+                    let t = I.shift();
+                    d.delete(t);
                 }
-                u.push(e), R.set(e, a);
+                I.push(e), d.set(e, a);
             }
         });
     };

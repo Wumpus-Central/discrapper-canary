@@ -1,9 +1,9 @@
 n.d(t, {
     AZ: () => u,
     RL: () => p,
-    cN: () => _,
+    cN: () => f,
     gr: () => d,
-    pB: () => f,
+    pB: () => _,
     vu: () => h
 }),
     n(388685);
@@ -24,11 +24,11 @@ function u(e) {
 function d(e) {
     return !!(0, a.y0)(e) && e.extra.application_id === c.sp;
 }
-function _(e, t) {
+function f(e, t) {
     let n = e.extra;
     return null != n && (('application_id' in t && t.application_id === n.application_id) || ('game_name' in n ? t.name === n.game_name : 'activity_name' in n && t.name === n.activity_name));
 }
-function f(e, t) {
+function _(e, t) {
     if (u(e)) {
         var n;
         return (0, l.Ps)(null == (n = t.party) ? void 0 : n.id);
@@ -40,5 +40,5 @@ function p(e, t) {
 }
 function h(e, t) {
     let n = e.filter(o.kr);
-    return t.type === s.IIU.PLAYING ? n.filter(a.dX).find((e) => _(e, t)) : t.type === s.IIU.LISTENING ? n.filter(a.dU).find((e) => f(e, t)) : t.type === s.IIU.WATCHING ? e.filter(a.y0).find((e) => p(e, t)) : void 0;
+    return t.type === s.IIU.PLAYING ? n.filter(a.dX).find((e) => f(e, t)) : t.type === s.IIU.LISTENING ? n.filter(a.dU).find((e) => _(e, t)) : t.type === s.IIU.WATCHING ? e.filter(a.y0).find((e) => p(e, t)) : void 0;
 }

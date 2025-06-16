@@ -20,13 +20,13 @@ function d(e, t, n) {
         e
     );
 }
-function _(e, t) {
+function f(e, t) {
     let n = 0,
         r = null;
     for (var [i, { min_version: a }] of Object.entries(e)) a <= t && a > n && ((n = a), (r = i));
     return r;
 }
-class f extends a.Z {
+class _ extends a.Z {
     constructor(...e) {
         super(...e),
             d(this, 'actions', { POST_CONNECTION_OPEN: (e) => this.handleConnectionOpen(e) }),
@@ -35,7 +35,7 @@ class f extends a.Z {
                     let e = await i.Z.fetchChangelogConfig(),
                         t = e.body,
                         n = (0, c.b)(),
-                        a = _(t, n);
+                        a = f(t, n);
                     if (
                         (r.Z.dispatch({
                             type: 'CHANGE_LOG_SET_CONFIG',
@@ -46,17 +46,17 @@ class f extends a.Z {
                     )
                         return;
                     let d = l.Z.lastSeenChangelogId(),
-                        f = l.Z.lastSeenChangelogDate();
+                        _ = l.Z.lastSeenChangelogDate();
                     if (null != d && 0 >= s.default.compare(a, d)) return;
                     let p = await i.Z.fetchChangelog(a, o.default.locale);
                     if (null == p) return;
-                    if (null == f || null == l.Z.lastSeenChangelogDate()) return void i.Z.markChangelogAsSeen(a, p.date);
+                    if (null == _ || null == l.Z.lastSeenChangelogDate()) return void i.Z.markChangelogAsSeen(a, p.date);
                     if (l.Z.isLocked()) return;
-                    new Date(p.date) > new Date(f) && (0, u.Z)();
+                    new Date(p.date) > new Date(_) && (0, u.Z)();
                 } finally {
                     r.Z.dispatch({ type: 'CHANGE_LOG_RESOLVED' });
                 }
             });
     }
 }
-let p = new f();
+let p = new _();

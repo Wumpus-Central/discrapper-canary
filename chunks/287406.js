@@ -7,8 +7,8 @@ var r = n(288537),
     c = 0,
     u = 4,
     d = 0,
-    _ = 1,
-    f = 2,
+    f = 1,
+    _ = 2,
     p = -1,
     h = 0,
     m = 8;
@@ -55,10 +55,10 @@ function y(e, t) {
     if (this.ended) return !1;
     (o = t === ~~t ? t : !0 === t ? u : c), 'string' == typeof e ? (s.input = a.string2buf(e)) : '[object ArrayBuffer]' === l.call(e) ? (s.input = new Uint8Array(e)) : (s.input = e), (s.next_in = 0), (s.avail_in = s.input.length);
     do {
-        if ((0 === s.avail_out && ((s.output = new i.Buf8(p)), (s.next_out = 0), (s.avail_out = p)), (n = r.deflate(s, o)) !== _ && n !== d)) return this.onEnd(n), (this.ended = !0), !1;
-        (0 === s.avail_out || (0 === s.avail_in && (o === u || o === f))) && ('string' === this.options.to ? this.onData(a.buf2binstring(i.shrinkBuf(s.output, s.next_out))) : this.onData(i.shrinkBuf(s.output, s.next_out)));
-    } while ((s.avail_in > 0 || 0 === s.avail_out) && n !== _);
-    return o === u ? ((n = r.deflateEnd(this.strm)), this.onEnd(n), (this.ended = !0), n === d) : (o === f && (this.onEnd(d), (s.avail_out = 0)), !0);
+        if ((0 === s.avail_out && ((s.output = new i.Buf8(p)), (s.next_out = 0), (s.avail_out = p)), (n = r.deflate(s, o)) !== f && n !== d)) return this.onEnd(n), (this.ended = !0), !1;
+        (0 === s.avail_out || (0 === s.avail_in && (o === u || o === _))) && ('string' === this.options.to ? this.onData(a.buf2binstring(i.shrinkBuf(s.output, s.next_out))) : this.onData(i.shrinkBuf(s.output, s.next_out)));
+    } while ((s.avail_in > 0 || 0 === s.avail_out) && n !== f);
+    return o === u ? ((n = r.deflateEnd(this.strm)), this.onEnd(n), (this.ended = !0), n === d) : (o === _ && (this.onEnd(d), (s.avail_out = 0)), !0);
 }),
     (g.prototype.onData = function (e) {
         this.chunks.push(e);

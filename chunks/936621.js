@@ -46,7 +46,7 @@ function d(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,7 +57,7 @@ function _(e, t) {
         e
     );
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -103,10 +103,10 @@ class h extends i.Component {
     render() {
         let e = this.props,
             { children: t } = e,
-            n = f(e, ['children']);
+            n = _(e, ['children']);
         return (0, r.jsx)(
             'div',
-            _(u({}, n), {
+            f(u({}, n), {
                 ref: this.ref,
                 children: t
             })

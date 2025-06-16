@@ -10,14 +10,14 @@ let l = {},
 function d() {
     (l = {}), (c = {});
 }
-function _() {
+function f() {
     d();
     let e = o.Z.getAllVoiceStates(),
         t = !1;
     for (let n of Object.values(e)) for (let e of Object.values(n)) null != e.channelId && (t = h(e.channelId, e.userId) || t);
     return t;
 }
-function f(e) {
+function _(e) {
     let { relationship: t } = e,
         n = o.Z.getVoiceStateForUser(t.id);
     return null != n && null != n.channelId && h(n.channelId, t.id);
@@ -62,9 +62,9 @@ class m extends r.ZP.Store {
 let g = new m(i.Z, {
     CONNECTION_OPEN: d,
     LOGOUT: d,
-    OVERLAY_INITIALIZE: _,
+    OVERLAY_INITIALIZE: f,
     VOICE_STATE_UPDATES: p,
-    RELATIONSHIP_ADD: f,
-    RELATIONSHIP_REMOVE: f,
-    RELATIONSHIP_UPDATE: f
+    RELATIONSHIP_ADD: _,
+    RELATIONSHIP_REMOVE: _,
+    RELATIONSHIP_UPDATE: _
 });

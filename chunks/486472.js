@@ -20,48 +20,48 @@ function u(e, t, n) {
     );
 }
 let d = new l.Z('GuildAvailabilityStore'),
-    _ = new Set();
-function f(e) {
-    (_ = new Set(e.unavailableGuilds)), e.unavailableGuilds.length > 0 && d.warn(''.concat(e.unavailableGuilds.length, ' guilds are unavailable on connection open: ').concat(e.unavailableGuilds));
+    f = new Set();
+function _(e) {
+    (f = new Set(e.unavailableGuilds)), e.unavailableGuilds.length > 0 && d.warn(''.concat(e.unavailableGuilds.length, ' guilds are unavailable on connection open: ').concat(e.unavailableGuilds));
 }
 function p(e) {
-    if (!_.has(e.guildId)) return !1;
-    _.delete(e.guildId);
+    if (!f.has(e.guildId)) return !1;
+    f.delete(e.guildId);
 }
 function h(e) {
-    if (_.has(e.guildId)) return !1;
+    if (f.has(e.guildId)) return !1;
     let t = c.Z.getGuild(e.guildId),
         n = '???';
-    null != t && null != t.name && (n = t.name), d.warn('Guild has gone unavailable: '.concat(e.guildId, ' (').concat(n, ')')), _.add(e.guildId);
+    null != t && null != t.name && (n = t.name), d.warn('Guild has gone unavailable: '.concat(e.guildId, ' (').concat(n, ')')), f.add(e.guildId);
 }
 function m(e) {
-    if (!_.has(e.guild.id)) return !1;
-    _.delete(e.guild.id), d.info('Guild has become available: '.concat(e.guild.id));
+    if (!f.has(e.guild.id)) return !1;
+    f.delete(e.guild.id), d.info('Guild has become available: '.concat(e.guild.id));
 }
 function g(e) {
-    !0 !== e.guild.unavailable && _.delete(e.guild.id);
+    !0 !== e.guild.unavailable && f.delete(e.guild.id);
 }
 class E extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(c.Z);
     }
     isUnavailable(e) {
-        return null != e && _.has(e);
+        return null != e && f.has(e);
     }
     get totalGuilds() {
-        return a().size(c.Z.getGuilds()) + _.size;
+        return a().size(c.Z.getGuilds()) + f.size;
     }
     get totalUnavailableGuilds() {
-        return _.size;
+        return f.size;
     }
     get unavailableGuilds() {
-        return Array.from(_);
+        return Array.from(f);
     }
 }
 u(E, 'displayName', 'GuildAvailabilityStore');
 let b = new E(s.Z, {
-    CONNECTION_OPEN: f,
-    OVERLAY_INITIALIZE: f,
+    CONNECTION_OPEN: _,
+    OVERLAY_INITIALIZE: _,
     GUILD_UNAVAILABLE: h,
     GUILD_DELETE: g,
     GUILD_CREATE: m,

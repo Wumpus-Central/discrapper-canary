@@ -7,11 +7,11 @@ var r = n(255367),
     l = n(409302),
     c = n(474936);
 function u(e) {
-    let { giftStyle: t, className: n, shouldAnimate: u = !0, defaultAnimationState: d, idleAnimationState: _ } = e,
-        f = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
+    let { giftStyle: t, className: n, shouldAnimate: u = !0, defaultAnimationState: d, idleAnimationState: f } = e,
+        _ = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
         [p, h] = i.useState(d),
         m = i.useRef((0, l._)(t, p)),
-        [g, E] = i.useState(null == _),
+        [g, E] = i.useState(null == f),
         [b, y] = i.useState(!1),
         [O, v] = i.useState(-1),
         I = () => {
@@ -21,11 +21,11 @@ function u(e) {
             E(!1), y(!0), v(-1), h(d);
         };
     i.useEffect(() => {
-        null == _ && h(d);
-    }, [_, d]);
+        null == f && h(d);
+    }, [f, d]);
     let S = {
             applyAnimation: I,
-            idleAnimationState: _,
+            idleAnimationState: f,
             isChanging: b,
             resetAnimation: T,
             versionKey: O
@@ -36,9 +36,9 @@ function u(e) {
     }),
         i.useEffect(() => {
             let { resetAnimation: e, versionKey: t, applyAnimation: n } = A.current;
-            if (null != _ && t >= 0) return void e();
+            if (null != f && t >= 0) return void e();
             n();
-        }, [t, _]),
+        }, [t, f]),
         i.useEffect(() => {
             let { applyAnimation: e, isChanging: t, idleAnimationState: n } = A.current;
             (t && null != n) || e();
@@ -48,15 +48,15 @@ function u(e) {
             b && (E(null == t), y(!1), e());
         }, [b]);
     let N = () => {
-        null != _ && (h(_), E(!0));
+        null != f && (h(f), E(!0));
     };
     if (!c.Cj.hasOwnProperty(t)) throw Error('Unexpected giftStyle '.concat(t));
     return (0, r.jsx)(o.Fmz, {
         importData: m.current,
-        shouldAnimate: !f && u,
+        shouldAnimate: !_ && u,
         className: n,
         versionKey: O,
-        onComplete: null != _ ? N : void 0,
+        onComplete: null != f ? N : void 0,
         loop: g
     });
 }

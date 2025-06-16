@@ -16,8 +16,8 @@ var r = n(913527),
     c = n(9156),
     u = n(626135),
     d = n(630388),
-    _ = n(621600),
-    f = n(709054),
+    f = n(621600),
+    _ = n(709054),
     p = n(569471),
     h = n(814391),
     m = n(124368),
@@ -114,12 +114,12 @@ function N(e, t) {
     if (null == i) return;
     let a = e.getGuildId(),
         o = e.parent_id,
-        l = (0, _.I)(a, o),
-        f = (e) => ((0, d.yE)(e, m.iN.ALL_MESSAGES) ? _.$R[g.bL.ALL_MESSAGES] : (0, d.yE)(e, m.iN.ONLY_MENTIONS) ? _.$R[g.bL.ONLY_MENTIONS] : (0, d.yE)(e, m.iN.NO_MESSAGES) ? _.$R[g.bL.NO_MESSAGES] : _.$R[g.bL.NULL]),
+        l = (0, f.I)(a, o),
+        _ = (e) => ((0, d.yE)(e, m.iN.ALL_MESSAGES) ? f.$R[g.bL.ALL_MESSAGES] : (0, d.yE)(e, m.iN.ONLY_MENTIONS) ? f.$R[g.bL.ONLY_MENTIONS] : (0, d.yE)(e, m.iN.NO_MESSAGES) ? f.$R[g.bL.NO_MESSAGES] : f.$R[g.bL.NULL]),
         h = null != (n = p.Z.flags(e.id)) ? n : 0,
-        E = f(h),
+        E = _(h),
         y = p.Z.isMuted(e.id),
-        I = (0, _.sK)(p.Z.getMuteConfig(e.id)),
+        I = (0, f.sK)(p.Z.getMuteConfig(e.id)),
         { can_send_message: T, parent_channel_type: S } = i,
         A = O(b({}, v(i, ['can_send_message', 'parent_channel_type'])), {
             channel_id: e.id,
@@ -129,20 +129,20 @@ function N(e, t) {
             has_interacted_with_thread: (h & m.iN.HAS_INTERACTED) != 0,
             parent_is_muted: c.ZP.isGuildOrCategoryOrChannelMuted(a, o),
             old_thread_notification_setting: E,
-            new_thread_notification_setting: null != t.flags ? f(t.flags) : E,
+            new_thread_notification_setting: null != t.flags ? _(t.flags) : E,
             parent_notification_setting: l.channel_message_notification_settings,
             old_thread_is_muted: y,
             new_thread_is_muted: null != (r = t.muted) ? r : y,
             old_thread_muted_until: I,
-            new_thread_muted_until: null != t.mute_config ? (0, _.sK)(t.mute_config) : I
+            new_thread_muted_until: null != t.mute_config ? (0, f.sK)(t.mute_config) : I
         });
     u.default.track(g.rMx.THREAD_NOTIFICATION_SETTINGS_UPDATED, A);
 }
 let C = (e) => {
     var t, n;
     let r = (0, a.e7)([l.ZP], () => l.ZP.lastMessageId(e.id)),
-        o = null != r ? f.default.extractTimestamp(r) : null,
+        o = null != r ? _.default.extractTimestamp(r) : null,
         s = null == (t = e.threadMetadata) ? void 0 : t.createTimestamp,
         c = null != s ? i()(s).valueOf() : null;
-    return null != (n = null != o ? o : c) ? n : f.default.extractTimestamp(e.id);
+    return null != (n = null != o ? o : c) ? n : _.default.extractTimestamp(e.id);
 };

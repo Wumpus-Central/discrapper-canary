@@ -46,7 +46,7 @@ function d(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,7 +57,7 @@ function _(e, t) {
         e
     );
 }
-let f = 'daily_cap',
+let _ = 'daily_cap',
     p = 3,
     h = {
         numberOfDCsShownToday: 0,
@@ -69,7 +69,7 @@ let f = 'daily_cap',
         lastDCDismissed: null
     };
 function m() {
-    h = _(u({}, h), {
+    h = f(u({}, h), {
         dismissibleContentSeenDuringSession: new Set(),
         renderedAtTimestamps: new Map()
     });
@@ -93,7 +93,7 @@ function b(e) {
         (h.numberOfDCsShownToday += 1),
             h.numberOfDCsShownToday > p &&
                 o.default.track(l.rMx.DCF_CAP_EXCEEDED, {
-                    cap_type: f,
+                    cap_type: _,
                     dismissible_content: t,
                     shown_dcs: h.numberOfDCsShownToday
                 });

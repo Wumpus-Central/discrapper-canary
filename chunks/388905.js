@@ -7,12 +7,12 @@ n.d(t, {
     II: () => R,
     MC: () => C,
     Vj: () => N,
-    ZP: () => k,
+    ZP: () => M,
     gO: () => P,
     i_: () => w,
     jQ: () => x,
     qE: () => A,
-    v6: () => M,
+    v6: () => k,
     zx: () => S
 }),
     n(953529),
@@ -28,8 +28,8 @@ var i = n(120356),
     c = n(600164),
     u = n(313201),
     d = n(565138),
-    _ = n(361207),
-    f = n(63063),
+    f = n(361207),
+    _ = n(63063),
     p = n(981631),
     h = n(388032),
     m = n(270313);
@@ -162,7 +162,7 @@ let C = (e) => {
 };
 C.Sizes = o.EFr;
 let R = (e) => {
-        let { label: t, error: n, placeholder: i, value: s, className: l, inputClassName: c, setRef: d, type: _ = 'text', onChange: f, autoComplete: p, autoFocus: h, maxLength: g, spellCheck: E, name: b, description: y, required: O, onFocus: v, onBlur: I } = e,
+        let { label: t, error: n, placeholder: i, value: s, className: l, inputClassName: c, setRef: d, type: f = 'text', onChange: _, autoComplete: p, autoFocus: h, maxLength: g, spellCheck: E, name: b, description: y, required: O, onFocus: v, onBlur: I } = e,
             T = (0, u.Dt)();
         return (0, r.jsxs)(o.xJW, {
             title: t,
@@ -174,13 +174,13 @@ let R = (e) => {
             children: [
                 (0, r.jsx)(o.oil, {
                     name: b,
-                    type: _,
+                    type: f,
                     value: s,
                     inputRef: d,
                     placeholder: i,
                     inputClassName: a()(c, { [m.inputError]: null != n }),
                     'aria-label': t,
-                    onChange: f,
+                    onChange: _,
                     autoComplete: p,
                     autoFocus: h,
                     maxLength: g,
@@ -293,23 +293,23 @@ let R = (e) => {
                   ]
               });
     },
-    M = (e) => {
+    k = (e) => {
         let { className: t } = e;
         return (0, r.jsxs)(P, {
             className: t,
             children: [
                 (0, r.jsx)(S, {
-                    onClick: () => window.open((0, _.t3)()),
-                    children: h.intl.format(h.t.JoS1i4, { platform: (0, _.DW)() })
+                    onClick: () => window.open((0, f.t3)()),
+                    children: h.intl.format(h.t.JoS1i4, { platform: (0, f.DW)() })
                 }),
                 (0, r.jsx)(w, {
                     className: m.downloadButtonSubtext,
-                    children: h.intl.format(h.t.wO1VBg, { supportedBrowserURL: f.Z.getArticleURL(p.BhN.SUPPORTED_BROWSERS) })
+                    children: h.intl.format(h.t.wO1VBg, { supportedBrowserURL: _.Z.getArticleURL(p.BhN.SUPPORTED_BROWSERS) })
                 })
             ]
         });
     },
-    k = (e) => {
+    M = (e) => {
         let { className: t, contentClassName: n, tag: i = 'section', onSubmit: s, children: l, expanded: c = !1, theme: u = p.BRd.DARK, style: d } = e;
         return (0, r.jsx)(o.f6W, {
             theme: u,

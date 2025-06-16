@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
-        CalendarPicker: () => _,
-        default: () => f
+        CalendarPicker: () => f,
+        default: () => _
     });
 var r = n(255367),
     i = n(73800),
@@ -13,8 +13,8 @@ var r = n(255367),
     u = n(706454);
 n(212932);
 var d = n(145606);
-function _(e) {
-    let { value: t = o()().local(), minDate: n, maxDate: a, onSelect: s, calendarClassName: _, autoFocus: f, onClickOutside: p } = e,
+function f(e) {
+    let { value: t = o()().local(), minDate: n, maxDate: a, onSelect: s, calendarClassName: f, autoFocus: _, onClickOutside: p } = e,
         h = i.useCallback(
             (e, t) => {
                 null == s || s(o()(e), t);
@@ -40,10 +40,10 @@ function _(e) {
         ref: y,
         className: d.calendarPicker,
         children: (0, r.jsx)(l(), {
-            calendarClassName: _,
+            calendarClassName: f,
             selected: m,
             onChange: h,
-            autoFocus: f,
+            autoFocus: _,
             fixedHeight: !0,
             inline: !0,
             locale: b,
@@ -54,4 +54,4 @@ function _(e) {
         })
     });
 }
-let f = _;
+let _ = f;

@@ -8,8 +8,8 @@ var r = n(87051),
     c = n(630388),
     u = n(621600),
     d = n(113449),
-    _ = n(981631),
-    f = n(526761);
+    f = n(981631),
+    _ = n(526761);
 function p(e, t, n) {
     return (
         t in e
@@ -28,12 +28,12 @@ class m extends i.Z {
     checkGuilds() {
         s.ZP.useNewNotifications &&
             Object.values(o.Z.getGuilds()).forEach((e) => {
-                if (null == e.joinedAt || Date.now() - e.joinedAt.getTime() > h || s.ZP.getMessageNotifications(e.id) === _.bL.ALL_MESSAGES) return;
-                for (let t of Object.values(s.ZP.getChannelOverrides(e.id))) if ((null != t.message_notifications && t.message_notifications !== _.bL.NULL) || (null != t.flags && (0, c.EB)(t.flags, f.ic.UNREADS_ALL_MESSAGES | f.ic.UNREADS_ONLY_MENTIONS))) return;
-                let t = Object.values(a.Z.getMutableBasicGuildChannelsForGuild(e.id)).filter((e) => e.type === _.d4z.GUILD_ANNOUNCEMENT);
+                if (null == e.joinedAt || Date.now() - e.joinedAt.getTime() > h || s.ZP.getMessageNotifications(e.id) === f.bL.ALL_MESSAGES) return;
+                for (let t of Object.values(s.ZP.getChannelOverrides(e.id))) if ((null != t.message_notifications && t.message_notifications !== f.bL.NULL) || (null != t.flags && (0, c.EB)(t.flags, _.ic.UNREADS_ALL_MESSAGES | _.ic.UNREADS_ONLY_MENTIONS))) return;
+                let t = Object.values(a.Z.getMutableBasicGuildChannelsForGuild(e.id)).filter((e) => e.type === f.d4z.GUILD_ANNOUNCEMENT);
                 if (0 === t.length) return;
                 let n = {};
-                for (let r of t) n[r.id] = { flags: (0, d.pq)(s.ZP.getChannelIdFlags(e.id, r.id), f.ic.UNREADS_ALL_MESSAGES) };
+                for (let r of t) n[r.id] = { flags: (0, d.pq)(s.ZP.getChannelIdFlags(e.id, r.id), _.ic.UNREADS_ALL_MESSAGES) };
                 r.Z.updateChannelOverrideSettingsBulk(e.id, n, u.ZB.AnnouncementAutoEnable);
             });
     }

@@ -6,7 +6,7 @@ n.d(t, {
     JQ: () => S,
     NE: () => E,
     RG: () => D,
-    Xb: () => M,
+    Xb: () => k,
     Xu: () => y,
     Y: () => j,
     cD: () => O,
@@ -25,8 +25,8 @@ var r = n(392711),
     c = n(901461),
     u = n(131704),
     d = n(314897),
-    _ = n(592125),
-    f = n(496675),
+    f = n(592125),
+    _ = n(496675),
     p = n(709054),
     h = n(601070),
     m = n(981631);
@@ -46,10 +46,10 @@ let g = (0, s.Z)({
 function E(e, t) {
     return v(
         (0, o.e7)(
-            [f.Z],
+            [_.Z],
             () => {
                 let t = e.isForumLikeChannel() ? m.Plq.SEND_MESSAGES : a.$e(m.Plq.CREATE_PUBLIC_THREADS, m.Plq.READ_MESSAGE_HISTORY);
-                return f.Z.can(t, e);
+                return _.Z.can(t, e);
             },
             [e]
         ),
@@ -59,10 +59,10 @@ function E(e, t) {
 }
 function b(e, t) {
     let n = e.isForumLikeChannel() ? m.Plq.SEND_MESSAGES : a.$e(m.Plq.CREATE_PUBLIC_THREADS, m.Plq.READ_MESSAGE_HISTORY);
-    return v(f.Z.can(n, e), e, t);
+    return v(_.Z.can(n, e), e, t);
 }
 function y(e) {
-    let t = (0, o.e7)([f.Z], () => f.Z.can(a.$e(m.Plq.CREATE_PRIVATE_THREADS), e), [e]);
+    let t = (0, o.e7)([_.Z], () => _.Z.can(a.$e(m.Plq.CREATE_PRIVATE_THREADS), e), [e]);
     return e.type === m.d4z.GUILD_TEXT && v(t, e);
 }
 function O(e) {
@@ -74,9 +74,9 @@ function v(e, t, n) {
     return !(__OVERLAY__ || !e || !u.uC.has(t.type) || (null != n && (n.hasFlag(m.iLy.HAS_THREAD) || (0, c.Z)(n)))) && !0;
 }
 function I(e) {
-    let t = (0, o.e7)([_.Z], () => _.Z.getChannel(p.default.castMessageIdAsChannelId(e.id)), [e]);
+    let t = (0, o.e7)([f.Z], () => f.Z.getChannel(p.default.castMessageIdAsChannelId(e.id)), [e]);
     return T(
-        (0, o.e7)([f.Z], () => f.Z.can(m.Plq.VIEW_CHANNEL, t), [t]),
+        (0, o.e7)([_.Z], () => _.Z.can(m.Plq.VIEW_CHANNEL, t), [t]),
         e,
         t
     );
@@ -85,13 +85,13 @@ function T(e, t, n) {
     return !!t.hasFlag(m.iLy.HAS_THREAD) && null != n && !!e;
 }
 function S(e) {
-    return (0, o.cj)([h.Z, f.Z], () => {
+    return (0, o.cj)([h.Z, _.Z], () => {
         let t = h.Z.getActiveJoinedThreadsForParent(e.guild_id, e.id),
             n = h.Z.getActiveJoinedRelevantThreadsForParent(e.guild_id, e.id),
             r = h.Z.getActiveUnjoinedThreadsForParent(e.guild_id, e.id),
-            a = i()(n).some((e) => f.Z.can(m.Plq.VIEW_CHANNEL, e.channel)),
-            o = i()(t).some((e) => !(e.channel.id in n) && f.Z.can(m.Plq.VIEW_CHANNEL, e.channel)),
-            s = i()(r).some((e) => f.Z.can(m.Plq.VIEW_CHANNEL, e));
+            a = i()(n).some((e) => _.Z.can(m.Plq.VIEW_CHANNEL, e.channel)),
+            o = i()(t).some((e) => !(e.channel.id in n) && _.Z.can(m.Plq.VIEW_CHANNEL, e.channel)),
+            s = i()(r).some((e) => _.Z.can(m.Plq.VIEW_CHANNEL, e));
         return {
             hasActiveThreads: a || o || s,
             hasMoreActiveThreads: s || o
@@ -99,8 +99,8 @@ function S(e) {
     });
 }
 function A(e) {
-    let t = (0, o.e7)([_.Z], () => _.Z.getChannel(null == e ? void 0 : e.parent_id)),
-        n = (0, o.e7)([f.Z], () => null != t && f.Z.can(m.Plq.MANAGE_THREADS, t), [t]),
+    let t = (0, o.e7)([f.Z], () => f.Z.getChannel(null == e ? void 0 : e.parent_id)),
+        n = (0, o.e7)([_.Z], () => null != t && _.Z.can(m.Plq.MANAGE_THREADS, t), [t]),
         r = (0, o.e7)([d.default], () => d.default.getId());
     return null != e && null != t && !!e.isThread() && (!!n || (!e.isLockedThread() && e.ownerId === r));
 }
@@ -112,40 +112,40 @@ function C(e, t, n) {
     return null != e && !!e.isThread() && ((null == (r = e.threadMetadata) ? void 0 : r.locked) ? n : t);
 }
 function R(e) {
-    let t = (0, o.e7)([f.Z], () => N(e, f.Z)),
-        n = M(e);
+    let t = (0, o.e7)([_.Z], () => N(e, _.Z)),
+        n = k(e);
     return C(e, t, n);
 }
 function P(e) {
-    let t = N(e, f.Z),
-        n = k(e);
+    let t = N(e, _.Z),
+        n = M(e);
     return C(e, t, n);
 }
 function w(e) {
     var t;
-    let n = (0, o.e7)([f.Z], () => null != e && f.Z.can(m.Plq.SEND_MESSAGES_IN_THREADS, e));
+    let n = (0, o.e7)([_.Z], () => null != e && _.Z.can(m.Plq.SEND_MESSAGES_IN_THREADS, e));
     return null != e && (!e.isThread() || e.isActiveThread() || (e.isArchivedThread() && (null == (t = e.threadMetadata) ? void 0 : t.locked) !== !0 && n));
 }
 function D(e) {
     var t;
-    return null != e && (!e.isThread() || e.isActiveThread() || (e.isArchivedThread() && (null == (t = e.threadMetadata) ? void 0 : t.locked) !== !0 && f.Z.can(m.Plq.SEND_MESSAGES_IN_THREADS, e)));
+    return null != e && (!e.isThread() || e.isActiveThread() || (e.isArchivedThread() && (null == (t = e.threadMetadata) ? void 0 : t.locked) !== !0 && _.Z.can(m.Plq.SEND_MESSAGES_IN_THREADS, e)));
 }
 function L(e) {
-    let t = f.Z.can(m.Plq.MANAGE_THREADS, e);
+    let t = _.Z.can(m.Plq.MANAGE_THREADS, e);
     return e.isArchivedLockedThread() && !t;
 }
 function x(e, t) {
     return null != e && t.can(m.Plq.MANAGE_THREADS, e);
 }
-function M(e) {
-    return (0, o.e7)([f.Z], () => x(e, f.Z));
-}
 function k(e) {
-    return x(e, f.Z);
+    return (0, o.e7)([_.Z], () => x(e, _.Z));
+}
+function M(e) {
+    return x(e, _.Z);
 }
 function j(e) {
     let t = (0, l.Z)(),
-        n = (0, o.e7)([f.Z], () => f.Z.can(m.Plq.CONNECT, e)),
+        n = (0, o.e7)([_.Z], () => _.Z.can(m.Plq.CONNECT, e)),
         r = w(e),
         i = g.useExperiment(
             {
@@ -157,6 +157,6 @@ function j(e) {
     return !t && e.isVocalThread() && i && n && r;
 }
 function U(e) {
-    let t = M(e);
+    let t = k(e);
     return e.isLockedThread() && !t;
 }

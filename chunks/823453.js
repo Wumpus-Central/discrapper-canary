@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(442837),
     u = n(316792),
     d = n(168551),
-    _ = n(19759),
-    f = n(522474),
+    f = n(19759),
+    _ = n(522474),
     p = n(892071),
     h = n(252618),
     m = n(587061),
@@ -21,7 +21,7 @@ function b(e) {
         s = (0, l.TH)(),
         u = i.useMemo(() => E.has(s.pathname), [s.pathname]);
     (0, m.Z)(window, u);
-    let d = (0, c.e7)([_.Z, f.Z], () => (f.Z.getWindowOpen(g.KJ3.DEVTOOLS_POPOUT) ? 0 : _.Z.sidebarWidth));
+    let d = (0, c.e7)([f.Z, _.Z], () => (_.Z.getWindowOpen(g.KJ3.DEVTOOLS_POPOUT) ? 0 : f.Z.sidebarWidth));
     return (0, r.jsx)('html', {
         lang: t,
         style: ''.concat(n, ' --devtools-sidebar-width: ').concat(d, 'px;'),

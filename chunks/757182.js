@@ -57,18 +57,18 @@ function d(e, t) {
         e
     );
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = f(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,9 +79,9 @@ function f(e, t) {
 }
 function p(e) {
     var { activity: t, onAction: n, ButtonComponent: l = o.Z } = e,
-        u = _(e, ['activity', 'onAction', 'ButtonComponent']);
+        u = f(e, ['activity', 'onAction', 'ButtonComponent']);
     if (!(0, a.Z)(t)) return null;
-    let f = () => {
+    let _ = () => {
         null == n || n();
         let e = (0, i.Z)(t);
         return window.open(null != e ? e : void 0);
@@ -91,7 +91,7 @@ function p(e) {
         d(
             c(
                 {
-                    onClick: f,
+                    onClick: _,
                     fullWidth: !0
                 },
                 u

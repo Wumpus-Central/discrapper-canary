@@ -8,8 +8,8 @@ var r = n(392711),
     c = n(339085),
     u = n(178106),
     d = n(822179),
-    _ = n(580005),
-    f = n(70956),
+    f = n(580005),
+    _ = n(70956),
     p = n(675478),
     h = n(581883),
     m = n(48481),
@@ -28,8 +28,8 @@ function b(e, t, n) {
         e
     );
 }
-let y = 10 + Math.random() * (10 * f.Z.Millis.SECOND),
-    O = 2 * f.Z.Millis.HOUR + Math.floor(Math.random() * (10 * f.Z.Millis.MINUTE)),
+let y = 10 + Math.random() * (10 * _.Z.Millis.SECOND),
+    O = 2 * _.Z.Millis.HOUR + Math.floor(Math.random() * (10 * _.Z.Millis.MINUTE)),
     v = null,
     I = !1;
 class T extends o.Z {
@@ -71,9 +71,9 @@ class T extends o.Z {
                 }
             }),
             p.DZ.beforeSendCallbacks.push({
-                hasChanges: () => _.Z.hasPendingUsage() && h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+                hasChanges: () => f.Z.hasPendingUsage() && h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS),
                 processProto: (e) => {
-                    _.Z.hasPendingUsage() && h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && ((e.guildAndChannelFrecency = a.lG.create()), (e.guildAndChannelFrecency.guildAndChannels = (0, m.tU)(_.Z.frecencyWithoutFetchingLatest.usageHistory, _.C)));
+                    f.Z.hasPendingUsage() && h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && ((e.guildAndChannelFrecency = a.lG.create()), (e.guildAndChannelFrecency.guildAndChannels = (0, m.tU)(f.Z.frecencyWithoutFetchingLatest.usageHistory, f.C)));
                 }
             });
     }
@@ -98,7 +98,7 @@ function N() {
 }
 async function C(e) {
     R(O, !1),
-        !h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (d.Z.hasPendingUsage() || c.ZP.hasPendingUsage() || s.ZP.hasPendingUsage() || l.Z.hasPendingUsage() || (_.Z.hasPendingUsage() && !e)) && ((0, p.T6)(), await p.DZ.loadIfNecessary()),
+        !h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (d.Z.hasPendingUsage() || c.ZP.hasPendingUsage() || s.ZP.hasPendingUsage() || l.Z.hasPendingUsage() || (f.Z.hasPendingUsage() && !e)) && ((0, p.T6)(), await p.DZ.loadIfNecessary()),
         i().forEach(p.aj, (e) => {
             e.markDirtyIfHasPendingChange();
         });

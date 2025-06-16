@@ -20,8 +20,8 @@ function u(e, t, n) {
     );
 }
 let d = +l.Z.Millis.SECOND,
-    _ = 30 * l.Z.Millis.SECOND,
-    f = 360,
+    f = 30 * l.Z.Millis.SECOND,
+    _ = 360,
     p = new a.Z('RTCLatencyTestManager');
 p.enableNativeLogger(!0);
 class h extends i.Z {
@@ -47,11 +47,11 @@ class h extends i.Z {
                 (0, r.J)()
                     .then((e) => this._handleTestRegionsResponse(e.body))
                     .catch((e) => p.warn(e)),
-                    (this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, f * l.Z.Millis.MINUTE));
+                    (this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, _ * l.Z.Millis.MINUTE));
             }),
             u(this, '_handleConnectionOpen', () => {
                 if (c.isPlatformEmbedded && !__OVERLAY__) {
-                    let e = Math.floor(d + Math.random() * _);
+                    let e = Math.floor(d + Math.random() * f);
                     null != this.refetchTimeout && clearTimeout(this.refetchTimeout), (this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, e));
                 }
             });

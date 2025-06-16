@@ -15,8 +15,8 @@ var i = n(853872),
     c = n(713316),
     u = n(710094),
     d = n(865921),
-    _ = n(388032);
-function f(e, t, n) {
+    f = n(388032);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +40,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -98,7 +98,7 @@ let g = {
     O = {
         key: a.h8.REVIEW,
         renderStep: (e) => (0, r.jsx)(u.l, p({}, e)),
-        options: { useBreadcrumbLabel: () => _.intl.string(_.t.QBnNHh) }
+        options: { useBreadcrumbLabel: () => f.intl.string(f.t.QBnNHh) }
     },
     v = {
         key: a.h8.CONFIRM,

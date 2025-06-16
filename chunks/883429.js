@@ -8,8 +8,8 @@ var r = n(544891),
     c = n(985518),
     u = n(228392),
     d = n(981631),
-    _ = n(388032);
-async function f(e, t, n) {
+    f = n(388032);
+async function _(e, t, n) {
     try {
         return await e();
     } catch (e) {
@@ -22,8 +22,8 @@ async function f(e, t, n) {
             : (null == (i = e.body) ? void 0 : i.code) === d.evJ.INVALID_FORM_BODY &&
               (null == (o = e.body) ? void 0 : o.errors.emoji) &&
               a.Z.show({
-                  title: _.intl.string(_.t.T8sBLC),
-                  body: _.intl.string(_.t.aHt1BQ)
+                  title: f.intl.string(f.t.T8sBLC),
+                  body: f.intl.string(f.t.aHt1BQ)
               });
     }
 }
@@ -56,14 +56,14 @@ let p = {
             },
             rejectWithError: !1
         });
-        f(() => n, _.intl.string(_.t.T8sBLC), _.intl.string(_.t.imcb5u));
+        _(() => n, f.intl.string(f.t.T8sBLC), f.intl.string(f.t.imcb5u));
     },
     deleteForumTag(e, t) {
         let n = r.tn.del({
             url: d.ANM.FORUM_TAG(e, t),
             rejectWithError: !1
         });
-        f(() => n, _.intl.string(_.t['0ZkNDQ']), _.intl.string(_.t.imcb5u));
+        _(() => n, f.intl.string(f.t['0ZkNDQ']), f.intl.string(f.t.imcb5u));
     },
     updateForumPostTags: async (e, t) => (
         await o.Z.unarchiveThreadIfNecessary(e),

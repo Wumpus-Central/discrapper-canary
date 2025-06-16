@@ -9,26 +9,26 @@ var i = n(120356),
     c = n(481060),
     u = n(211266),
     d = n(713938),
-    _ = n(388032),
-    f = n(965323);
+    f = n(388032),
+    _ = n(965323);
 function p(e) {
     let { text: t, error: n, isFake: i } = e;
     return (0, r.jsxs)('div', {
-        className: f.scope,
+        className: _.scope,
         children: [
             i
                 ? (0, r.jsx)(c.k$p, {
                       size: 'md',
                       color: 'currentColor',
-                      className: a()(f.icon, f.fakeScopeIcon)
+                      className: a()(_.icon, _.fakeScopeIcon)
                   })
                 : (0, r.jsx)(c.owK, {
                       size: 'md',
                       color: 'currentColor',
-                      className: a()(f.icon, f.scopeIcon)
+                      className: a()(_.icon, _.scopeIcon)
                   }),
             (0, r.jsxs)('div', {
-                className: f.scopeInner,
+                className: _.scopeInner,
                 children: [
                     (0, r.jsx)(l.x, {
                         variant: 'text-md/normal',
@@ -53,15 +53,15 @@ function h(e) {
         b = (0, u.Z)(() => d.ZW[Math.floor(Math.random() * d.ZW.length)]);
     if (0 === i.length) return null;
     let y = b(),
-        O = g ? _.t.PZpY9f : _.t['1Hz+Sk'],
+        O = g ? f.t.PZpY9f : f.t['1Hz+Sk'],
         v = h === o.Y.USER_INSTALL && l.includes(s.x.APPLICATIONS_COMMANDS);
     return (0, r.jsxs)('div', {
-        className: a()(f.scopes, E ? f.noDivider : void 0),
+        className: a()(_.scopes, E ? _.noDivider : void 0),
         children: [
             (0, r.jsx)(c.X6q, {
                 variant: 'heading-sm/normal',
-                className: f.sectionLabel,
-                children: _.intl.format(O, { application: null != (t = null == n ? void 0 : n.name) ? t : '' })
+                className: _.sectionLabel,
+                children: f.intl.format(O, { application: null != (t = null == n ? void 0 : n.name) ? t : '' })
             }),
             i
                 .map((e) =>
@@ -78,7 +78,7 @@ function h(e) {
                     })
                 )
                 .flat(),
-            v && (0, r.jsx)(p, { text: _.intl.string(_.t.Ls2XRk) }),
+            v && (0, r.jsx)(p, { text: f.intl.string(f.t.Ls2XRk) }),
             (0, r.jsx)(p, {
                 text: y,
                 isFake: !0

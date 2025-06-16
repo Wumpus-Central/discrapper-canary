@@ -1,7 +1,7 @@
 n.d(t, {
-    ZP: () => f,
+    ZP: () => _,
     nK: () => d,
-    uj: () => _
+    uj: () => f
 });
 var r = n(255367);
 n(73800);
@@ -29,7 +29,7 @@ function d(e) {
                 sourceUserId: void 0
             };
 }
-function _(e) {
+function f(e) {
     let { user: t, activity: n, entry: r } = e,
         { applicationId: i } = d({
             activity: n,
@@ -41,9 +41,9 @@ function _(e) {
         showOutdatedInfoOption: !1
     });
 }
-function f(e) {
-    let { user: t, activity: n, entry: a, onAction: l, isMenuOpen: c, appContext: _ } = e,
-        { applicationId: f, sourceUserId: p } = d({
+function _(e) {
+    let { user: t, activity: n, entry: a, onAction: l, isMenuOpen: c, appContext: f } = e,
+        { applicationId: _, sourceUserId: p } = d({
             activity: n,
             entry: a,
             user: t
@@ -52,9 +52,9 @@ function f(e) {
             location: 'UserProfileActivityContextMenu',
             source: o.m1.UserProfileCardContextMenu,
             trackEntryPointImpression: c,
-            applicationId: f,
+            applicationId: _,
             sourceUserId: p,
-            appContext: _
+            appContext: f
         });
     return null == h
         ? null

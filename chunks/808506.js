@@ -36,8 +36,8 @@ var i,
     c = n(26151),
     u = n(224706),
     d = n(765250),
-    _ = n(13245),
-    f = n(287734),
+    f = n(13245),
+    _ = n(287734),
     p = n(615287),
     h = n(579806),
     m = n(887278),
@@ -59,8 +59,8 @@ var i,
     D = n(671999),
     L = n(998502),
     x = n(145597),
-    M = n(372679),
-    k = n(981631),
+    k = n(372679),
+    M = n(981631),
     j = n(757744);
 function U(e, t, n) {
     return (
@@ -146,7 +146,7 @@ class ee {
                 if ((null != this.timeout && (clearTimeout(this.timeout), (this.timeout = null)), null != this.requestIdleCallback && (cancelIdleCallback(this.requestIdleCallback), (this.requestIdleCallback = null)), !W())) return void this.actionsToFlush.clear();
                 this.actionsToFlush.size > 0 &&
                     (g.lW({
-                        type: k.BmY.DISPATCH,
+                        type: M.BmY.DISPATCH,
                         pid: null,
                         token: null,
                         payloads: Array.from(this.actionsToFlush)
@@ -233,17 +233,17 @@ let eu = 'none',
                     success: !1
                 })
             ),
-                P.default.track(k.rMx.OVERLAY_HOOK_RESULT, es((0, x.getPID)()));
+                P.default.track(M.rMx.OVERLAY_HOOK_RESULT, es((0, x.getPID)()));
         },
         timeoutMs: 180000
     });
-function e_(e, t) {
+function ef(e, t) {
     return function () {
         for (var n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
         ed(() => t(...r), e);
     };
 }
-function ef() {
+function e_() {
     try {
         var e;
         let t = null === h.Z || void 0 === h.Z || null == (e = h.Z.fileManager) ? void 0 : e.uploadDiscordHookCrashes;
@@ -254,7 +254,7 @@ function ef() {
                     var t, n, r, i, a, o, s;
                     if (null == l) continue;
                     let e = null != l.processName ? C.Z.getGameByExecutable(l.processName) : null;
-                    P.default.track(k.rMx.OVERLAY_HOOK_CRASHED, {
+                    P.default.track(M.rMx.OVERLAY_HOOK_CRASHED, {
                         process_name: null == l ? void 0 : l.processName,
                         game_name: null != (t = null == e ? void 0 : e.name) ? t : null,
                         game_id: null != (n = null == e ? void 0 : e.id) ? n : null,
@@ -276,7 +276,7 @@ function ep(e, t) {
     (null === n || r === n) &&
         r !== t &&
         (null == t ? Y.delete(e) : Y.set(e, t),
-        (null == t || 'CRASHED' === t) && (_.Z.setFocusedPID(null), ef()),
+        (null == t || 'CRASHED' === t) && (f.Z.setFocusedPID(null), e_()),
         $.delete(e),
         ea.info(
             'pid='
@@ -288,7 +288,7 @@ function ep(e, t) {
 }
 async function eh(e) {
     try {
-        if (L.ZP.supportsFeature(k.eRX.CREATE_HOST_ON_ATTACH))
+        if (L.ZP.supportsFeature(M.eRX.CREATE_HOST_ON_ATTACH))
             if (Y.size > 0) {
                 eu = 'reconcile.getOverlayURL';
                 let t = await eO();
@@ -314,8 +314,8 @@ async function em(e) {
     el(e, { mounting_started_at: n });
     let r = Y.get(e);
     if (null != r) return void ea.warn('Trying to attach to pid='.concat(e, ', that is already in status: ').concat(r));
-    await _.Z.updateOverlayState(e, p.mM.WAITING_FOR_OVERLAY_OPEN), (eu = 'attach.getOverlayModule');
-    let i = await (0, M.K)();
+    await f.Z.updateOverlayState(e, p.mM.WAITING_FOR_OVERLAY_OPEN), (eu = 'attach.getOverlayModule');
+    let i = await (0, k.K)();
     if (null == i) return void ea.error('Trying to attach to pid='.concat(e, ', but overlay module failed loaded'));
     (eu = 'attach.transitionOverlayPIDStatus'), ep(e, 'ATTACHING'), (eu = 'attach.attachToProcess');
     let a = await m.YT(e);
@@ -326,7 +326,7 @@ async function eg(e) {
     ep(e, 'DISCONNECTING');
     try {
         eu = 'detach.getOverlayModule';
-        let t = await (0, M.K)();
+        let t = await (0, k.K)();
         if (null == t) return void ea.error('Trying to detach from pid='.concat(e, ', but overlay module failed loaded'));
         e !== x.DEV_PID && ((eu = 'detach.cancelAttachToProcess'), await m.pn(e), await (0, s._v)(16), (eu = 'detach.disconnectProcess'), await t.disconnectProcess(e)), (eu = 'detach.transitionOverlayPIDStatus'), ep(e, null), (eu = 'detach.reconcileHostProcess'), await eh(t);
     } catch (t) {
@@ -403,8 +403,8 @@ async function eE(e) {
     for (let t of e.removed) ea.verbose('updateIntendedOverlayPIDs: removedGame', t), await r(t), (i = !0);
     i && eQ.emitChange();
 }
-let eb = e_('updateIntendedOverlayPIDs', (e) => (ea.info('updateIntendedOverlayPIDs', e), eE(e))),
-    ey = e_('clearPID', (e) => {
+let eb = ef('updateIntendedOverlayPIDs', (e) => (ea.info('updateIntendedOverlayPIDs', e), eE(e))),
+    ey = ef('clearPID', (e) => {
         if (null == e) return (0, x.setPID)(x.UNSET_PID);
         S.ZP.isOverlayV3EnabledForPID(e) || (0, x.setPID)(x.UNSET_PID);
     });
@@ -415,16 +415,16 @@ function eO() {
         });
     });
 }
-let ev = e_('setOverlayEnabled', async (e) => {
+let ev = ef('setOverlayEnabled', async (e) => {
     if (!(0, x.supportsLegacy)()) return;
     if (K === e) return void ea.verbose('setOverlayEnabled: no change', { newOverlayEnabled: e });
     (K = e), eQ.emitChange();
-    let t = await (0, M.K)();
+    let t = await (0, k.K)();
     if (null == t) return void ea.error('setOverlayEnabled: overlay module failed loaded');
     K || (await eE(void 0)), Y.size > 0 && (await eh(t));
 });
 function eI(e) {
-    _.Z.setFocusedPID(0 === e ? null : e);
+    f.Z.setFocusedPID(0 === e ? null : e);
 }
 function eT(e, t, n) {
     var r;
@@ -444,16 +444,16 @@ function eT(e, t, n) {
             width: n.graphics_width,
             height: n.graphics_height
         }),
-        _.Z.updateOverlayState(e, p.mM.OVERLAY_RENDERING);
+        f.Z.updateOverlayState(e, p.mM.OVERLAY_RENDERING);
     let s = es(e);
-    P.default.track(k.rMx.OVERLAY_HOOK_RESULT, s), ea.info('Overlay connection to '.concat(e, ' ').concat(t ? 'succeeded' : 'failed'), s), t ? ep(e, 'CONNECTED', 'CONNECTING') : ep(e, 'CONNECT_FAILED', 'CONNECTING');
+    P.default.track(M.rMx.OVERLAY_HOOK_RESULT, s), ea.info('Overlay connection to '.concat(e, ' ').concat(t ? 'succeeded' : 'failed'), s), t ? ep(e, 'CONNECTED', 'CONNECTING') : ep(e, 'CONNECT_FAILED', 'CONNECTING');
 }
 function eS() {
     let e = N.default.getToken(),
         t = N.default.getId();
     null != e &&
         g.lW({
-            type: k.BmY.DISPATCH,
+            type: M.BmY.DISPATCH,
             pid: null,
             token: null,
             payloads: [
@@ -470,7 +470,7 @@ function eA(e) {
 }
 function eN(e) {
     switch ((ei && ea.info('[app data received]', e), e.type)) {
-        case k.BmY.CONNECT:
+        case M.BmY.CONNECT:
             let t = N.default.getToken();
             if (null == t) break;
             (0, d.te)(x.OVERLAY_LAYOUT_ID, R.Z.getDefaultLayout(x.OVERLAY_LAYOUT_ID), j.bv),
@@ -478,33 +478,33 @@ function eN(e) {
                     let [n, r] = t,
                         { pid: i, token: a } = e;
                     g.lW({
-                        type: k.BmY.STORAGE_SYNC,
+                        type: M.BmY.STORAGE_SYNC,
                         pid: i,
                         token: a,
                         states: r
                     }),
                         g.lW({
-                            type: k.BmY.DISPATCH,
+                            type: M.BmY.DISPATCH,
                             pid: i,
                             token: a,
                             payloads: [n]
                         }),
                         ep(i, 'READY'),
                         (0, x.setPID)(i),
-                        _.Z.overlayReady(i);
+                        f.Z.overlayReady(i);
                     let o = es(i);
                     el(i, V(G({}, o), { total_mount_time_ms: null != o.mounting_started_at ? new Date().getTime() - o.mounting_started_at : void 0 }));
                 });
             break;
-        case k.BmY.DISPATCH:
+        case M.BmY.DISPATCH:
             null != e.payloads && et.dispatchPayloads(e.payloads);
             break;
-        case k.BmY.LOG_MESSAGES:
+        case M.BmY.LOG_MESSAGES:
             ea.info('[overlay data received]', e.payload);
     }
 }
 async function eC(e, t) {
-    let n = await (0, M.K)();
+    let n = await (0, k.K)();
     if (null == n) return void ea.error('setInputLocked: overlay module failed loaded');
     let r = null != t ? t : X;
     if (null != r && 'DISCONNECTING' === Y.get(r)) return void ea.warn('Overlay module is no longer valid during input lock');
@@ -546,15 +546,15 @@ function ex(e) {
     let { port: t } = e;
     J = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
     let n = new URLSearchParams();
-    n.append('build_id', '6e0e064de108e366d2a385b2fcdfe7a5143d5fa8'), n.append('rpc', String(t)), n.append('rpc_auth_token', J), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
-}
-function eM(e) {
-    let { channelId: t, ring: n } = e;
-    setImmediate(() => {
-        f.default.selectPrivateChannel(t), c.Z.call(t, !1, !!n);
-    });
+    n.append('build_id', 'c92e974eb35f4594128bdcda5c03629dbd77ca80'), n.append('rpc', String(t)), n.append('rpc_auth_token', J), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
 }
 function ek(e) {
+    let { channelId: t, ring: n } = e;
+    setImmediate(() => {
+        _.default.selectPrivateChannel(t), c.Z.call(t, !1, !!n);
+    });
+}
+function eM(e) {
     let { pid: t } = e;
     X = t;
 }
@@ -573,7 +573,7 @@ function eU() {
     (q = !0), (H = !1), eK();
 }
 function eG() {
-    (q = !1), _.Z.setFocusedPID(null), eb(void 0), ea.verbose('OverlayBridgeStore: handleConnectionClosed');
+    (q = !1), f.Z.setFocusedPID(null), eb(void 0), ea.verbose('OverlayBridgeStore: handleConnectionClosed');
 }
 function eB() {
     return !0;
@@ -592,7 +592,7 @@ function eF(e) {
             channelId: i,
             messageId: a
         }),
-            null != X && _.Z.setInputLocked(!0, X);
+            null != X && f.Z.setInputLocked(!0, X);
     });
 }
 function eZ(e) {
@@ -711,12 +711,12 @@ let eQ = new eX(
                   RUNNING_GAME_TOGGLE_OVERLAY: eY,
                   RUNNING_GAMES_CHANGE: eH,
                   OVERLAY_SET_ENABLED: eV,
-                  OVERLAY_FOCUSED: ek,
+                  OVERLAY_FOCUSED: eM,
                   OVERLAY_SET_INPUT_LOCKED: ew,
                   OVERLAY_ACTIVATE_REGION: eD,
                   OVERLAY_DEACTIVATE_ALL_REGIONS: eL,
                   RPC_SERVER_READY: ex,
-                  OVERLAY_CALL_PRIVATE_CHANNEL: eM,
+                  OVERLAY_CALL_PRIVATE_CHANNEL: ek,
                   OVERLAY_JOIN_GAME: eF,
                   OVERLAY_CRASHED: ej,
                   OVERLAY_UPDATE_OVERLAY_METHOD: eW

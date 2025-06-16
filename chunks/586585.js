@@ -39,7 +39,7 @@ function d(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -51,12 +51,12 @@ function _(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -66,17 +66,17 @@ var p = (function (e) {
     return (e[(e.CONTINUE = 0)] = 'CONTINUE'), (e[(e.UPGRADE = 1)] = 'UPGRADE'), (e[(e.PURCHASE = 2)] = 'PURCHASE'), e;
 })({});
 let h = (e) => {
-    let { onBack: t, backText: n, primaryIcon: u, primaryCTA: _, primaryType: p, primaryText: h, primaryTooltip: m, primaryDisabled: g, primarySubmitting: E, onPrimary: b, secondaryText: y, onSecondary: O } = e,
+    let { onBack: t, backText: n, primaryIcon: u, primaryCTA: f, primaryType: p, primaryText: h, primaryTooltip: m, primaryDisabled: g, primarySubmitting: E, onPrimary: b, secondaryText: y, onSecondary: O } = e,
         { premiumRebrandBackgroundClassName: v } = (0, o.JL)(),
         I = () => {
-            if (null == _ || null == h) return null;
-            let e = 2 === _ ? i.gtL : i.zxk,
+            if (null == f || null == h) return null;
+            let e = 2 === f ? i.gtL : i.zxk,
                 t = {
                     innerClassName: c.button,
                     type: p,
                     disabled: g,
                     submitting: E,
-                    color: 0 === _ ? i.zxk.Colors.BRAND : i.zxk.Colors.GREEN,
+                    color: 0 === f ? i.zxk.Colors.BRAND : i.zxk.Colors.GREEN,
                     onClick: b
                 };
             return null != m
@@ -85,7 +85,7 @@ let h = (e) => {
                       children: (n) =>
                           (0, r.jsxs)(
                               e,
-                              f(d({}, n, t), {
+                              _(d({}, n, t), {
                                   children: [
                                       null == u
                                           ? null
@@ -100,7 +100,7 @@ let h = (e) => {
                   })
                 : (0, r.jsxs)(
                       e,
-                      f(d({}, t), {
+                      _(d({}, t), {
                           children: [
                               null == u
                                   ? null

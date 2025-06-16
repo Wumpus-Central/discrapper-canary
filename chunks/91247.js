@@ -65,18 +65,18 @@ function d(e, t) {
         e
     );
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = f(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -86,7 +86,7 @@ function f(e, t) {
     return i;
 }
 function p(e, t, n, a, l) {
-    var u, _, f;
+    var u, f, _;
     let p = h(t);
     null != a && r.Z.addDetail('payload_size(kb)', Math.round(a.uncompressed_byte_size / 1024)), r.Z.addDetail('server_time(ms)', null != (u = p.identify_total_server_duration_ms) ? u : 0);
     let m = d(c({}, a, p, y(t), l), {
@@ -98,8 +98,8 @@ function p(e, t, n, a, l) {
         did_force_clear_guild_hashes: e.didForceClearGuildHashes,
         identify_uncompressed_byte_size: e.identifyUncompressedByteSize,
         identify_compressed_byte_size: e.identifyCompressedByteSize,
-        had_cache_at_startup: null != (_ = e.analytics.hadCacheAtStartup) && _,
-        used_cache_at_startup: null != (f = e.analytics.usedCacheAtStartup) && f
+        had_cache_at_startup: null != (f = e.analytics.hadCacheAtStartup) && f,
+        used_cache_at_startup: null != (_ = e.analytics.usedCacheAtStartup) && _
     });
     i.Z.attachReadyPayloadProperties(m), o.default.track(s.rMx.READY_PAYLOAD_RECEIVED, m, { logEventProperties: !0 });
 }
@@ -169,8 +169,8 @@ function y(e) {
 function O(e) {
     var t, n;
     let r = Date.now(),
-        { guilds: i, merged_presences: a, merged_members: o, read_state: s, private_channels: l, user_guild_settings: c, user_settings: u, user_settings_proto: d, experiments: f, guild_experiments: p, relationships: h, users: m } = e,
-        g = _(e, ['guilds', 'merged_presences', 'merged_members', 'read_state', 'private_channels', 'user_guild_settings', 'user_settings', 'user_settings_proto', 'experiments', 'guild_experiments', 'relationships', 'users']),
+        { guilds: i, merged_presences: a, merged_members: o, read_state: s, private_channels: l, user_guild_settings: c, user_settings: u, user_settings_proto: d, experiments: _, guild_experiments: p, relationships: h, users: m } = e,
+        g = f(e, ['guilds', 'merged_presences', 'merged_members', 'read_state', 'private_channels', 'user_guild_settings', 'user_settings', 'user_settings_proto', 'experiments', 'guild_experiments', 'relationships', 'users']),
         E = [],
         b = [],
         y = [],
@@ -185,9 +185,9 @@ function O(e) {
             if (e.unavailable) return;
             let n = null != (t = e.properties) ? t : {},
                 { features: r } = n,
-                i = _(n, ['features']),
+                i = f(n, ['features']),
                 { threads: a, guild_scheduled_events: o } = e,
-                s = _(e, ['threads', 'guild_scheduled_events']);
+                s = f(e, ['threads', 'guild_scheduled_events']);
             E.push('partial' === e.data_mode ? e.partial_updates.channels : e.channels), b.push('partial' === e.data_mode ? e.partial_updates.roles : e.roles), y.push('partial' === e.data_mode ? e.partial_updates.emojis : e.emojis), O.push(a), v.push('partial' === e.data_mode ? e.partial_updates.stickers : e.stickers), I.push(r), T.push(o), S.push(s, i);
         }),
         {
@@ -196,7 +196,7 @@ function O(e) {
             read_states_size: JSON.stringify(s).length,
             private_channels_size: JSON.stringify(l).length,
             user_settings_size: JSON.stringify(null != u ? u : '').length + (null != d ? d : '').length,
-            experiments_size: JSON.stringify(null != f ? f : []).length + JSON.stringify(null != p ? p : []).length,
+            experiments_size: JSON.stringify(null != _ ? _ : []).length + JSON.stringify(null != p ? p : []).length,
             user_guild_settings_size: JSON.stringify(c).length,
             relationships_size: JSON.stringify(h).length,
             remaining_data_size: JSON.stringify(null != g ? g : {}).length,

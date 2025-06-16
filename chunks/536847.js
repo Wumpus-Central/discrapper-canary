@@ -9,19 +9,19 @@ var i = n(657707),
     c = n(695346),
     u = n(507962),
     d = n(469115),
-    _ = n(231338),
-    f = n(388032),
+    f = n(231338),
+    _ = n(388032),
     p = n(531864);
 function h() {
     let e = [
             {
-                name: f.intl.string(f.t.b8Cei4),
-                value: _.BR.DARK,
+                name: _.intl.string(_.t.b8Cei4),
+                value: f.BR.DARK,
                 icon: i.Z6G
             },
             {
-                name: f.intl.string(f.t.K2sFfn),
-                value: _.BR.LIGHT,
+                name: _.intl.string(_.t.K2sFfn),
+                value: f.BR.LIGHT,
                 icon: i.chG
             }
         ],

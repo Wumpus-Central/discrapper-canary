@@ -20,8 +20,8 @@ var r = n(73800),
     c = n(999923),
     u = n(729917),
     d = n(932019),
-    _ = n(442837),
-    f = n(592125),
+    f = n(442837),
+    _ = n(592125),
     p = n(496675);
 n(594174);
 var h = n(313889),
@@ -186,11 +186,11 @@ function x(e, t, n) {
         }
     }
 }
-function M(e, t) {
+function k(e, t) {
     var n;
     return t ? (null != (n = null == e ? void 0 : e.name) ? n : E.intl.string(E.t.J90oLS)) : E.intl.string(E.t['/YzI6+']);
 }
-function k(e, t, n) {
+function M(e, t, n) {
     let r = N(e, s.G.VOICE_CHANNEL_STATUS_OUTCOME);
     if (null == r) return null;
     let i = 'blocked' === r ? E.t.cLQrq6 : E.t.bma6cn;
@@ -207,22 +207,22 @@ function j(e, t) {
         c = w(e),
         u = L(e),
         d = P(e),
-        _ = R(e),
-        f = N(e, s.G.INTERACTION_CALLBACK_TYPE),
+        f = R(e),
+        _ = N(e, s.G.INTERACTION_CALLBACK_TYPE),
         h = N(e, s.G.APPLICATION_NAME);
     if (null != d) {
         let e = x(l, c, u);
         if (null != e) return e;
     }
     let m = p.Z.can(g.Plq.VIEW_CHANNEL, t),
-        b = M(t, m),
+        b = k(t, m),
         y = null != t && m ? n : g.VqG,
-        O = k(e, b, n);
+        O = M(e, b, n);
     return null != O
         ? O
         : null != h
-          ? f === o.y.MODAL && null != i
-              ? _ !== a.P.BLOCKED
+          ? _ === o.y.MODAL && null != i
+              ? f !== a.P.BLOCKED
                   ? E.intl.format(E.t['4xL9Sk'], {
                         applicationName: h,
                         interactionUserHook: i,
@@ -233,7 +233,7 @@ function j(e, t) {
                         interactionUserHook: i,
                         integrationOwnerHook: r
                     })
-              : _ !== a.P.BLOCKED
+              : f !== a.P.BLOCKED
                 ? E.intl.format(E.t.AXQufH, {
                       applicationName: h,
                       channelName: b,
@@ -246,7 +246,7 @@ function j(e, t) {
                       channelHook: y,
                       integrationOwnerHook: r
                   })
-          : _ !== a.P.BLOCKED
+          : f !== a.P.BLOCKED
             ? E.intl.format(E.t.IZg0VV, {
                   channelName: b,
                   channelHook: y
@@ -312,14 +312,14 @@ function V(e) {
         applicationName: N(e, s.G.APPLICATION_NAME),
         interactionUserId: N(e, s.G.INTERACTION_USER_ID),
         interactionCallbackType: N(e, s.G.INTERACTION_CALLBACK_TYPE),
-        embedChannel: f.Z.getChannel(t),
+        embedChannel: _.Z.getChannel(t),
         embedChannelId: t,
         alertActionsExecution: null != r ? r : void 0
     };
 }
 function F(e) {
     let t = r.useMemo(() => V(e), [e]),
-        n = (0, _.e7)([f.Z], () => f.Z.getChannel(t.embedChannelId), [t.embedChannelId]);
+        n = (0, f.e7)([_.Z], () => _.Z.getChannel(t.embedChannelId), [t.embedChannelId]);
     return v(y({}, t), { embedChannel: n });
 }
 function Z(e) {

@@ -8,8 +8,8 @@ var r = n(524437),
     c = n(94752);
 let u = c.E.NONE,
     d = window.matchMedia('(prefers-color-scheme: dark)'),
-    _ = window.matchMedia('(prefers-color-scheme: light)'),
-    f = window.matchMedia('(inverted-colors: inverted)'),
+    f = window.matchMedia('(prefers-color-scheme: light)'),
+    _ = window.matchMedia('(inverted-colors: inverted)'),
     p = window.matchMedia('(prefers-contrast: more)'),
     h = window.matchMedia('(forced-colors: active)');
 function m(e, t) {
@@ -17,7 +17,7 @@ function m(e, t) {
 }
 let g = {
     init() {
-        l.Z.addChangeListener(this.handleAccessibilityStoreChanged), i.Z.addChangeListener(this.handleAccessibilityStoreChanged), o.Z.addChangeListener(this.handleUiDensityChanged), d.addListener(this.handlePrefersColorSchemeDarkChanged), this.handlePrefersColorSchemeDarkChanged(d), _.addListener(this.handlePrefersColorSchemeLightChanged), this.handlePrefersColorSchemeLightChanged(_), p.addListener(this.handlePrefersMoreContrastChanged), this.handlePrefersMoreContrastChanged(p), h.addListener(this.handlePrefersForcedColorsChanged), this.handlePrefersForcedColorsChanged(h), f.addListener(this.handleInvertColorsChanged), this.handleInvertColorsChanged(f), s.default.setSystemAccessibilityFeatures(this.getActiveFeatures);
+        l.Z.addChangeListener(this.handleAccessibilityStoreChanged), i.Z.addChangeListener(this.handleAccessibilityStoreChanged), o.Z.addChangeListener(this.handleUiDensityChanged), d.addListener(this.handlePrefersColorSchemeDarkChanged), this.handlePrefersColorSchemeDarkChanged(d), f.addListener(this.handlePrefersColorSchemeLightChanged), this.handlePrefersColorSchemeLightChanged(f), p.addListener(this.handlePrefersMoreContrastChanged), this.handlePrefersMoreContrastChanged(p), h.addListener(this.handlePrefersForcedColorsChanged), this.handlePrefersForcedColorsChanged(h), _.addListener(this.handleInvertColorsChanged), this.handleInvertColorsChanged(_), s.default.setSystemAccessibilityFeatures(this.getActiveFeatures);
     },
     getActiveFeatures: () => u,
     handlePrefersColorSchemeDarkChanged(e) {

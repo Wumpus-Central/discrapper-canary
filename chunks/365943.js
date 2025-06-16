@@ -46,7 +46,7 @@ function d(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,7 +57,7 @@ function _(e, t) {
         e
     );
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,11 +79,11 @@ function p(e, t) {
 }
 let h = (e) => {
         var { sku_id: t } = e,
-            n = f(e, ['sku_id']);
+            n = _(e, ['sku_id']);
         return {
             id: n.id,
             skuId: t,
-            config: _(u({}, n), { skuId: t })
+            config: f(u({}, n), { skuId: t })
         };
     },
     m = async function () {

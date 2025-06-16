@@ -86,19 +86,19 @@ let c = (function (e, t) {
                 if (null == e.selection) return;
                 n = e.selection;
             }
-            let [d, _] = a.M8.isRange(n) ? a.M8.edges(n) : a.bN.edges(e, n);
+            let [d, f] = a.M8.isRange(n) ? a.M8.edges(n) : a.bN.edges(e, n);
             if (null != i || null != o) {
-                var f, p, h;
+                var _, p, h;
                 if (s) {
                     let t =
                         null !=
-                        (f = a.bN.before(e, d, {
+                        (_ = a.bN.before(e, d, {
                             distance: i,
                             unit: o
                         }))
-                            ? f
+                            ? _
                             : a.bN.start(e, []);
-                    if ('character' === o && (null != i ? i : 1) === 1 && a.C0.equals(d.path, _.path)) {
+                    if ('character' === o && (null != i ? i : 1) === 1 && a.C0.equals(d.path, f.path)) {
                         let n = a.bN.leaf(e, d.path),
                             r = null != n ? n[0].text : '';
                         r.length > 0 &&
@@ -114,9 +114,9 @@ let c = (function (e, t) {
                     }
                     d = t;
                 } else
-                    _ =
+                    f =
                         null !=
-                        (h = a.bN.after(e, _, {
+                        (h = a.bN.after(e, f, {
                             distance: i,
                             unit: o
                         }))
@@ -125,13 +125,13 @@ let c = (function (e, t) {
             }
             if (null != c) {
                 let [e, t] = a.M8.edges(c);
-                a.Jz.isBefore(d, e) && (d = e), a.Jz.isAfter(_, t) && (_ = t);
+                a.Jz.isBefore(d, e) && (d = e), a.Jz.isAfter(f, t) && (f = t);
             }
-            !a.Jz.equals(d, _) &&
+            !a.Jz.equals(d, f) &&
                 (r.YR.delete(e, {
                     at: {
                         anchor: d,
-                        focus: _
+                        focus: f
                     },
                     hanging: !0,
                     voids: u

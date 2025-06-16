@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(442837),
     u = n(481060),
     d = n(37234),
-    _ = n(194359),
-    f = n(700582),
+    f = n(194359),
+    _ = n(700582),
     p = n(925329),
     h = n(479446),
     m = n(717401),
@@ -31,10 +31,10 @@ var r = n(255367),
     D = n(136266);
 let L = 1500;
 function x(e) {
-    let { giftCode: t, application: n, sku: a, subscriptionPlan: s, selectedGiftStyle: l, onClose: d, hasSentMessage: _, giftRecipient: h, giftMessageError: E, isSendingMessage: b } = e,
+    let { giftCode: t, application: n, sku: a, subscriptionPlan: s, selectedGiftStyle: l, onClose: d, hasSentMessage: f, giftRecipient: h, giftMessageError: E, isSendingMessage: b } = e,
         [O, I] = i.useState(u.kO8.Modes.DEFAULT),
         x = (0, c.e7)([v.Z], () => v.Z.enabled),
-        k = _ || (null != l && null != h),
+        M = f || (null != l && null != h),
         j = (null == a ? void 0 : a.productLine) === R.POd.COLLECTIBLES,
         U = (0, g.Z)(),
         { selectedGiftingPromotionReward: G } = (0, C.wD)(),
@@ -48,13 +48,13 @@ function x(e) {
                 ? w.intl.string(w.t.qB8ayc)
                 : null == s
                   ? null
-                  : ((e = s.interval === P.rV.MONTH ? (k ? (F ? B.monthGiftText : w.t['4ZJ+7e']) : w.t['P+z55e']) : k ? (F ? B.yearGiftText : w.t.p0pZXF) : w.t.bXqk3t),
+                  : ((e = s.interval === P.rV.MONTH ? (M ? (F ? B.monthGiftText : w.t['4ZJ+7e']) : w.t['P+z55e']) : M ? (F ? B.yearGiftText : w.t.p0pZXF) : w.t.bXqk3t),
                     w.intl.format(e, {
                         skuName: (0, A.aq)(s.id),
                         intervalCount: s.intervalCount
                     }));
         },
-        Y = () => (null != h || (_ && null == E) ? w.intl.string(w.t.zOmK9P) : null != E ? w.intl.string(w.t.d1lrmZ) : w.intl.string(w.t['/s1xR0'])),
+        Y = () => (null != h || (f && null == E) ? w.intl.string(w.t.zOmK9P) : null != E ? w.intl.string(w.t.d1lrmZ) : w.intl.string(w.t['/s1xR0'])),
         W = (e, t) => {
             null != a &&
                 (0, S.dM)(
@@ -117,7 +117,7 @@ function x(e) {
                         children: H()
                     }),
                     null == E &&
-                        (0, r.jsx)(M, {
+                        (0, r.jsx)(k, {
                             giftCode: t,
                             onClose: d
                         }),
@@ -128,7 +128,7 @@ function x(e) {
         q = () =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(f.Z, {
+                    (0, r.jsx)(_.Z, {
                         user: h,
                         className: D.giftRecipient,
                         size: u.EFr.SIZE_80
@@ -182,14 +182,14 @@ function x(e) {
                       }),
                       children: Y()
                   }),
-                  (_ && null != h && null == E) || k ? q() : z()
+                  (f && null != h && null == E) || M ? q() : z()
               ]
           });
 }
-let M = (e) => {
+let k = (e) => {
     let { giftCode: t, onClose: n } = e;
     i.useEffect(() => {
-        _.Z.fetchRelationships(), (0, E._)();
+        f.Z.fetchRelationships(), (0, E._)();
     }, []);
     let [a, o] = i.useState(),
         [s, p] = i.useState(!1),
@@ -219,7 +219,7 @@ let M = (e) => {
                         renderOptionPrefix: (e) =>
                             (null == e ? void 0 : e.value) == null
                                 ? null
-                                : (0, r.jsx)(f.Z, {
+                                : (0, r.jsx)(_.Z, {
                                       user: e.value,
                                       size: u.EFr.SIZE_20
                                   }),

@@ -1,6 +1,6 @@
 n.d(t, {
-    ZP: () => f,
-    c7: () => _
+    ZP: () => _,
+    c7: () => f
 }),
     n(388685);
 var r = n(73800),
@@ -35,7 +35,7 @@ function d(e, t) {
     }
     return n;
 }
-function _() {
+function f() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = arguments.length > 1 ? arguments[1] : void 0,
         n = 'useFetchPurchases';
@@ -48,7 +48,7 @@ function _() {
             autoTrackExposure: !1
         });
     let c = (0, l.hv)('useFetchPurchases'),
-        [u, d, _, f, p, h] = (0, i.Wu)([s.Z], () => [s.Z.isFetching, s.Z.isClaiming, s.Z.fetchError, s.Z.claimError, s.Z.purchases, s.Z.hasPreviouslyFetched]),
+        [u, d, f, _, p, h] = (0, i.Wu)([s.Z], () => [s.Z.isFetching, s.Z.isClaiming, s.Z.fetchError, s.Z.claimError, s.Z.purchases, s.Z.hasPreviouslyFetched]),
         m = (0, r.useRef)(s.Z.hasPreviouslyFetched);
     (0, r.useEffect)(() => {
         m.current = h;
@@ -56,8 +56,8 @@ function _() {
     let g = (0, r.useRef)(s.Z.fetchError);
     return (
         (0, r.useEffect)(() => {
-            g.current = _;
-        }, [_]),
+            g.current = f;
+        }, [f]),
         (0, r.useEffect)(() => {
             (!0 === e && m.current && null == g.current) ||
                 (0, o.qg)({
@@ -67,15 +67,15 @@ function _() {
         }, [t, e, c]),
         {
             isClaiming: d,
-            fetchPurchasesError: _,
-            claimError: f,
+            fetchPurchasesError: f,
+            claimError: _,
             isFetching: u,
             purchases: p,
             hasPreviouslyFetched: h
         }
     );
 }
-function f(e, t) {
+function _(e, t) {
     let n = null == e ? void 0 : e.paymentGateway,
         r = 'useFetchCollectiblesCategoriesAndPurchases';
     (0, a.j)({
@@ -100,7 +100,7 @@ function f(e, t) {
             },
             t
         ),
-        { isClaiming: u, fetchPurchasesError: d, claimError: f, isFetching: p, purchases: h, hasPreviouslyFetched: m } = _(null == e ? void 0 : e.stalePurchasesOK, null == e ? void 0 : e.location);
+        { isClaiming: u, fetchPurchasesError: d, claimError: _, isFetching: p, purchases: h, hasPreviouslyFetched: m } = f(null == e ? void 0 : e.stalePurchasesOK, null == e ? void 0 : e.location);
     return {
         isFetching: i || p,
         isFetchingCategories: i,
@@ -110,7 +110,7 @@ function f(e, t) {
         purchases: h,
         fetchCategoriesError: s,
         fetchPurchasesError: d,
-        claimError: f,
+        claimError: _,
         refreshCategories: l,
         hasPreviouslyFetched: m
     };

@@ -9,8 +9,8 @@ var i = n(481060),
     c = n(475413),
     u = n(614716),
     d = n(228168),
-    _ = n(388032);
-function f(e, t, n) {
+    f = n(388032);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -63,7 +63,7 @@ function m(e, t) {
     );
 }
 function g(e) {
-    let { user: t, activity: n, onAction: f, onClose: h } = e,
+    let { user: t, activity: n, onAction: _, onClose: h } = e,
         { themeType: g } = (0, l.z)(),
         E = (0, u.Z)({
             applicationId: null == n ? void 0 : n.application_id,
@@ -80,12 +80,12 @@ function g(e) {
     if (null == b && null != n && (0, o.Z)(n))
         return (0, r.jsx)(c.tG, {
             icon: O,
-            text: _.intl.string(_.t.RscU7O),
+            text: f.intl.string(f.t.RscU7O),
             size: g === d.lY.MODAL_V2 ? i.PhG.TINY : void 0,
             fullWidth: g !== d.lY.MODAL_V2,
             themeColor: 'secondary',
             onClick: (e) => {
-                e.stopPropagation(), null == f || f({ action: 'PRESS_PLAY_BUTTON' }), E();
+                e.stopPropagation(), null == _ || _({ action: 'PRESS_PLAY_BUTTON' }), E();
             }
         });
     if (null == b) return null;
@@ -105,7 +105,7 @@ function g(e) {
                           fullWidth: g !== d.lY.MODAL_V2,
                           themeColor: 'secondary',
                           onClick: (e) => {
-                              e.stopPropagation(), null == f || f({ action: 'PRESS_JOIN_BUTTON' }), I();
+                              e.stopPropagation(), null == _ || _({ action: 'PRESS_JOIN_BUTTON' }), I();
                           }
                       })
                   )
@@ -124,7 +124,7 @@ function g(e) {
                           fullWidth: g !== d.lY.MODAL_V2,
                           themeColor: 'secondary',
                           onClick: (e) => {
-                              e.stopPropagation(), null == f || f({ action: 'PRESS_ASK_TO_JOIN_BUTTON' }), I();
+                              e.stopPropagation(), null == _ || _({ action: 'PRESS_ASK_TO_JOIN_BUTTON' }), I();
                           }
                       })
                   )

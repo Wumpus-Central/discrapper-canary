@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685), n(539854);
+n.d(t, { Z: () => M }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(996146),
     u = n(481060),
     d = n(100527),
-    _ = n(906732),
-    f = n(605236),
+    f = n(906732),
+    _ = n(605236),
     p = n(243778),
     h = n(963249),
     m = n(599659),
@@ -108,17 +108,17 @@ function x(e) {
         ]
     });
 }
-function M(e) {
+function k(e) {
     let { disabled: t, channel: n } = e,
-        { analyticsLocations: a } = (0, _.ZP)(d.Z.GIFT_BUTTON),
+        { analyticsLocations: a } = (0, f.ZP)(d.Z.GIFT_BUTTON),
         [o, u] = i.useState(!1),
         y = (0, s.e7)([E.Z], () => !(null === E.Z || void 0 === E.Z ? void 0 : E.Z.hasLayers())),
         R = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
         w = null != R ? O.default.age(R.id) : 0,
-        M = !t && y && w >= L,
-        { enabled: k } = m.O.useExperiment({ location: 'gift-button' }),
+        k = !t && y && w >= L,
+        { enabled: M } = m.O.useExperiment({ location: 'gift-button' }),
         j = [];
-    k && M && j.push(l.z.NITROWEEN_COACHMARKS);
+    M && k && j.push(l.z.NITROWEEN_COACHMARKS);
     let [U, G] = (0, p.US)(j),
         B = null != U,
         V = (0, v.Ft)(n),
@@ -163,7 +163,7 @@ function M(e) {
                             'aria-label': A.intl.string(A.t.Z1RnTk),
                             isActive: !1,
                             onClick: () => {
-                                H(), u(!1), (0, f.EW)(l.z.NITROWEEN_ANIMATED_GIFTING_ICON, { dismissAction: S.L.TAKE_ACTION }), Y();
+                                H(), u(!1), (0, _.EW)(l.z.NITROWEEN_ANIMATED_GIFTING_ICON, { dismissAction: S.L.TAKE_ACTION }), Y();
                             }
                         },
                         Z
@@ -180,4 +180,4 @@ function M(e) {
         ]
     });
 }
-let k = i.memo(M);
+let M = i.memo(k);

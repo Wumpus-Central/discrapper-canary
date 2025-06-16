@@ -15,8 +15,8 @@ var r = n(544891),
     c = n(592125),
     u = n(626135),
     d = n(709054),
-    _ = n(563534),
-    f = n(734893),
+    f = n(563534),
+    _ = n(734893),
     p = n(846121),
     h = n(981631);
 let m = async (e) => {
@@ -30,7 +30,7 @@ let m = async (e) => {
                     oldFormErrors: !0,
                     rejectWithError: !0
                 }),
-                n = (0, f.tB)(t.body);
+                n = (0, _.tB)(t.body);
             return (
                 i.Z.dispatch({
                     type: 'GUILD_HOME_SETTINGS_FETCH_SUCCESS',
@@ -58,7 +58,7 @@ let m = async (e) => {
                         oldFormErrors: !0,
                         rejectWithError: !0
                     }),
-                    n = (0, f.rk)(t.body);
+                    n = (0, _.rk)(t.body);
                 return (
                     i.Z.dispatch({
                         type: 'GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS',
@@ -87,11 +87,11 @@ let m = async (e) => {
         )
             return;
         let r = c.Z.getChannel(t),
-            f = _.Z.getResourceForChannel(e, t);
+            _ = f.Z.getResourceForChannel(e, t);
         null == e ||
             s.Z.isFullServerPreview(e) ||
             null == r ||
-            null == f ||
+            null == _ ||
             u.default.track(h.rMx.SERVER_GUIDE_CHANNEL_SELECTED, {
                 guild_id: e,
                 channel_id: r.id,
@@ -113,7 +113,7 @@ let m = async (e) => {
             channelId: t
         });
         let n = c.Z.getChannel(t),
-            r = _.Z.getActionForChannel(e, t);
+            r = f.Z.getActionForChannel(e, t);
         null == e ||
             s.Z.isFullServerPreview(e) ||
             null == n ||
@@ -137,11 +137,11 @@ let m = async (e) => {
         )
             return;
         let n = c.Z.getChannel(t),
-            a = _.Z.getActionForChannel(e, t);
+            a = f.Z.getActionForChannel(e, t);
         if (null != n && null != a) {
             var o, l;
             let t = d.default.keys(null != (o = p.Z.getCompletedActions(e)) ? o : {}),
-                r = null != (l = _.Z.getNewMemberActions(e)) ? l : [];
+                r = null != (l = f.Z.getNewMemberActions(e)) ? l : [];
             u.default.track(h.rMx.SERVER_GUIDE_ACTION_COMPLETED, {
                 guild_id: n.guild_id,
                 channel_id: n.id,

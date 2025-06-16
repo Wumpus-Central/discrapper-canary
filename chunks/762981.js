@@ -11,8 +11,8 @@ var r = n(255367),
     c = n(770278),
     u = n(724723),
     d = n(257465),
-    _ = n(574697);
-function f(e, t, n) {
+    f = n(574697);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -60,9 +60,9 @@ function m(e) {
         n
             ? (0, r.jsx)(s.animated.div, {
                   role: 'none',
-                  className: o()(_.scrim, {
-                      [_.lightbox]: 'lightbox' === t,
-                      [_.pointerEventsNone]: u
+                  className: o()(f.scrim, {
+                      [f.lightbox]: 'lightbox' === t,
+                      [f.pointerEventsNone]: u
                   }),
                   style: e,
                   onClick: c ? void 0 : i

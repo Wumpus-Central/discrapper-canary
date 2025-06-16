@@ -2,9 +2,9 @@ n.d(t, {
     L6: () => V,
     Rc: () => G,
     WH: () => R,
-    aP: () => k,
+    aP: () => M,
     dV: () => B,
-    g: () => M,
+    g: () => k,
     iV: () => x,
     n9: () => j,
     pR: () => L,
@@ -21,8 +21,8 @@ var r = n(512722),
     c = n(569545),
     u = n(525925),
     d = n(522474),
-    _ = n(543882),
-    f = n(199902),
+    f = n(543882),
+    _ = n(199902),
     p = n(314897),
     h = n(592125),
     m = n(430824),
@@ -100,7 +100,7 @@ function D(e, t) {
     let i = (0, c.V9)(e),
         a =
             (null == t ? void 0 : t.forceMultiple) ||
-            f.Z.getAllActiveStreamsForChannel(r).filter((e) => {
+            _.Z.getAllActiveStreamsForChannel(r).filter((e) => {
                 let { ownerId: t } = e;
                 return t !== p.default.getId();
             }).length >= C;
@@ -126,16 +126,16 @@ function x(e, t) {
         a = g.Z.getVoiceChannelId();
     (i && a === r) || (0, u.Z)(e);
 }
-function M(e) {
+function k(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    k(e, t),
+    M(e, t),
         s.Z.dispatch({
             type: 'STREAM_STOP',
             streamKey: e,
             appContext: __OVERLAY__ ? T.IlC.OVERLAY : T.IlC.APP
         });
 }
-function k(e) {
+function M(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     s.Z.dispatch({
         type: 'STREAM_CLOSE',
@@ -144,7 +144,7 @@ function k(e) {
     });
 }
 async function j(e, t, n) {
-    if (!_.Z.shouldFetchPreview(e, t, n)) return;
+    if (!f.Z.shouldFetchPreview(e, t, n)) return;
     let r = (0, c.V9)({
         streamType: null != e ? S.lo.GUILD : S.lo.CALL,
         guildId: e,
@@ -200,6 +200,6 @@ function B(e, t) {
 }
 function V() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-        t = f.Z.getCurrentUserActiveStream();
-    null != t && M((0, c.V9)(t), e);
+        t = _.Z.getCurrentUserActiveStream();
+    null != t && k((0, c.V9)(t), e);
 }

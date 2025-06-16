@@ -15,8 +15,8 @@ var i = n(120356),
     c = n(780384),
     u = n(481060),
     d = n(540059),
-    _ = n(210887),
-    f = n(47760),
+    f = n(210887),
+    _ = n(47760),
     p = n(981631),
     h = n(388032),
     m = n(239926);
@@ -85,7 +85,7 @@ function O() {
     });
 }
 function v(e) {
-    let { name: t, className: n, style: i, onSelect: o, isSelected: s = !1, tabIndex: l, children: c, showBadge: d, showLockedBadge: _, showSelectionCircle: f = !1 } = e,
+    let { name: t, className: n, style: i, onSelect: o, isSelected: s = !1, tabIndex: l, children: c, showBadge: d, showLockedBadge: f, showSelectionCircle: _ = !1 } = e,
         h = (0, u.xUy)({
             label: t,
             isSelected: s
@@ -106,9 +106,9 @@ function v(e) {
                             children: c
                         })
                     ),
-                    (s || f) && (0, r.jsx)(O, {}),
+                    (s || _) && (0, r.jsx)(O, {}),
                     !s && d && (0, r.jsx)('div', { className: m.redCircle }),
-                    _ &&
+                    f &&
                         (0, r.jsx)('div', {
                             className: m.lockedBadgeContainer,
                             children: (0, r.jsx)(u.mBM, {
@@ -122,9 +122,9 @@ function v(e) {
 }
 function I(e) {
     let { theme: t, isSelected: n, onSelect: i } = e,
-        l = (0, s.e7)([_.Z], () => _.Z.systemTheme),
-        c = _.Z.themePreferenceForSystemTheme(l),
-        f = (0, d.Q3)('DefaultThemeSelection'),
+        l = (0, s.e7)([f.Z], () => f.Z.systemTheme),
+        c = f.Z.themePreferenceForSystemTheme(l),
+        _ = (0, d.Q3)('DefaultThemeSelection'),
         g = (0, o.EQ)({
             theme: t,
             themePreferenceForSystemTheme: c
@@ -164,7 +164,7 @@ function I(e) {
             .otherwise(() => m.darkIcon),
         E = (0, o.EQ)(t)
             .with(p.BRd.LIGHT, () => h.intl.string(h.t.K2sFfn))
-            .with(p.BRd.DARK, () => (f ? h.intl.string(h.t.SMPT1t) : h.intl.string(h.t.b8Cei4)))
+            .with(p.BRd.DARK, () => (_ ? h.intl.string(h.t.SMPT1t) : h.intl.string(h.t.b8Cei4)))
             .with(p.BRd.DARKER, () => h.intl.string(h.t.b8Cei4))
             .with(p.BRd.MIDNIGHT, () => h.intl.string(h.t.Do4ZJy))
             .with('system', () => h.intl.string(h.t['7rOU6u']))
@@ -187,10 +187,10 @@ function I(e) {
 }
 function T(e) {
     let { preset: t, isSelected: n, disabled: i, tabIndex: o, onSelect: s, showBadge: l, showLockedBadge: u } = e,
-        { colors: d, angle: _, theme: p } = t,
-        h = (0, f.VK)({
+        { colors: d, angle: f, theme: p } = t,
+        h = (0, _.VK)({
             colors: d,
-            angle: _
+            angle: f
         });
     return (0, r.jsx)(v, {
         onSelect: i ? void 0 : s,

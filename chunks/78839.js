@@ -13,8 +13,8 @@ var r,
     c = n(314897),
     u = n(122289),
     d = n(981631),
-    _ = n(474936);
-function f(e, t, n) {
+    f = n(474936);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,7 +38,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
@@ -175,10 +175,10 @@ function x(e) {
         T = l.Q.createFromServer(t);
     }
 }
-function M() {
+function k() {
     A = !0;
 }
-function k(e) {
+function M(e) {
     let { eligible: t } = e;
     (N = t), (A = !1);
 }
@@ -241,7 +241,7 @@ class F extends (r = i.ZP.Store) {
     }
     inReverseTrial() {
         let e = V(d.NYc.PREMIUM, void 0, !0);
-        return null != e && null != e.trialId && !!_.h8.includes(e.trialId) && null == e.paymentSourceId;
+        return null != e && null != e.trialId && !!f.h8.includes(e.trialId) && null == e.paymentSourceId;
     }
     getSubscriptions() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
@@ -280,15 +280,15 @@ class F extends (r = i.ZP.Store) {
         return C;
     }
 }
-f(F, 'displayName', 'SubscriptionStore');
+_(F, 'displayName', 'SubscriptionStore');
 let Z = new F(a.Z, {
     BILLING_SUBSCRIPTION_FETCH_SUCCESS: P,
     BILLING_SUBSCRIPTION_UPDATE_SUCCESS: D,
     BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: L,
     BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: x,
     BILLING_SUBSCRIPTION_RESET: U,
-    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_START: M,
-    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_SUCCESS: k,
+    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_START: k,
+    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_SUCCESS: M,
     BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_FAILURE: j,
     LOGOUT: U
 });

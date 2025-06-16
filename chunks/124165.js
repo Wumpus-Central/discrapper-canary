@@ -1,8 +1,8 @@
 n.d(t, {
     KX: () => d,
     X2: () => u,
-    cg: () => f,
-    pF: () => _
+    cg: () => _,
+    pF: () => f
 });
 var r = n(314897),
     i = n(924301),
@@ -18,7 +18,7 @@ function u(e, t) {
 var d = (function (e) {
     return (e[(e.SERIES = 0)] = 'SERIES'), (e[(e.RECURRENCE = 1)] = 'RECURRENCE'), e;
 })({});
-function _() {
+function f() {
     return [
         {
             name: c.intl.string(c.t.uoorxs),
@@ -30,15 +30,15 @@ function _() {
         }
     ];
 }
-function f(e) {
-    let { eventId: t, recurrenceId: n, guildId: r, updateRsvp: c, openRsvpPicker: d, onRsvp: _ } = e,
-        f = i.ZP.getGuildScheduledEvent(t);
-    if (null == f) return;
+function _(e) {
+    let { eventId: t, recurrenceId: n, guildId: r, updateRsvp: c, openRsvpPicker: d, onRsvp: f } = e,
+        _ = i.ZP.getGuildScheduledEvent(t);
+    if (null == _) return;
     let p = (0, a.c)(n, t),
-        { startTime: h } = (0, o.Kq)(f, n),
-        m = (null == f ? void 0 : f.scheduled_start_time) != null ? (0, s.lh)(p, h, new Date(null == f ? void 0 : f.scheduled_start_time)) : null,
-        g = null != m && l.$I.has(m) ? null : null != n ? n : (0, s.DK)(f),
-        E = u(f.id),
-        b = u(f.id, g);
-    null == g ? (c(t, null, r, null != E ? l.gv.UNINTERESTED : l.gv.INTERESTED), null == _ || _()) : null != b ? (c(t, g, r, null != E ? l.gv.INTERESTED : l.gv.UNINTERESTED), null == _ || _()) : d(f, g);
+        { startTime: h } = (0, o.Kq)(_, n),
+        m = (null == _ ? void 0 : _.scheduled_start_time) != null ? (0, s.lh)(p, h, new Date(null == _ ? void 0 : _.scheduled_start_time)) : null,
+        g = null != m && l.$I.has(m) ? null : null != n ? n : (0, s.DK)(_),
+        E = u(_.id),
+        b = u(_.id, g);
+    null == g ? (c(t, null, r, null != E ? l.gv.UNINTERESTED : l.gv.INTERESTED), null == f || f()) : null != b ? (c(t, g, r, null != E ? l.gv.INTERESTED : l.gv.UNINTERESTED), null == f || f()) : d(_, g);
 }

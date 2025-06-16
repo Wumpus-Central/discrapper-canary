@@ -20,30 +20,30 @@ function d(e, t, n) {
         e
     );
 }
-let _ = new l.Z(u.ZP.isMember, (e, t) => {
+let f = new l.Z(u.ZP.isMember, (e, t) => {
     s.Z.dispatch({
         type: 'GUILD_MEMBERS_REQUEST',
         guildIds: [e],
         userIds: t
     });
 });
-function f() {
-    _.reset();
+function _() {
+    f.reset();
 }
 function p(e) {
     let { chunks: t } = e;
     for (let e of t)
         e.members.forEach((t) => {
-            _.acknowledge(e.guildId, t.user.id);
+            f.acknowledge(e.guildId, t.user.id);
         }),
-            null != e.notFound && e.notFound.forEach((t) => _.acknowledge(e.guildId, t));
+            null != e.notFound && e.notFound.forEach((t) => f.acknowledge(e.guildId, t));
     return !1;
 }
 function h() {
-    return _.requestUnacknowledged(), !1;
+    return f.requestUnacknowledged(), !1;
 }
 function m(e, t) {
-    return _.request(e, t), !1;
+    return f.request(e, t), !1;
 }
 function g(e, t) {
     return (
@@ -88,8 +88,8 @@ class O extends (r = o.ZP.Store) {
 }
 d(O, 'displayName', 'GuildMemberRequesterStore');
 let v = new O(s.Z, {
-    CONNECTION_CLOSED: f,
-    CONNECTION_OPEN: f,
+    CONNECTION_CLOSED: _,
+    CONNECTION_OPEN: _,
     CONNECTION_RESUMED: h,
     GUILD_MEMBERS_CHUNK_BATCH: p,
     SEARCH_FINISH: y,

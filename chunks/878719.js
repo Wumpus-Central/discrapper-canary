@@ -1,8 +1,8 @@
 a.d(e, {
-    GJ: () => E,
-    ME: () => A,
-    aB: () => R,
-    dr: () => u
+    GJ: () => s,
+    ME: () => R,
+    aB: () => d,
+    dr: () => I
 });
 var r = a(263449),
     _ = a(202811),
@@ -10,7 +10,7 @@ var r = a(263449),
     o = a(394798),
     i = a(928541),
     c = a(370336);
-function E(t, e) {
+function s(t, e) {
     let a = l(t, e),
         r = {
             type: e && e.name,
@@ -21,67 +21,67 @@ function E(t, e) {
         };
     return a.length && (r.stacktrace = { frames: a }), void 0 === r.type && '' === r.value && (r.value = 'Unrecoverable error caught'), r;
 }
-function s(t, e) {
-    return { exception: { values: [E(t, e)] } };
+function E(t, e) {
+    return { exception: { values: [s(t, e)] } };
 }
 function l(t, e) {
     var a, r;
     let _ = e.stacktrace || e.stack || '',
-        n = (a = e) && I.test(a.message) ? 1 : 0,
+        n = (a = e) && u.test(a.message) ? 1 : 0,
         o = 'number' == typeof (r = e).framesToPop ? r.framesToPop : 0;
     try {
         return t(_, n, o);
     } catch (t) {}
     return [];
 }
-let I = /Minified React error #\d+;/i;
-function u(t, e, a, r) {
-    let _ = A(t, e, (a && a.syntheticException) || void 0, r);
+let u = /Minified React error #\d+;/i;
+function I(t, e, a, r) {
+    let _ = R(t, e, (a && a.syntheticException) || void 0, r);
     return (0, o.EG)(_), (_.level = 'error'), a && a.event_id && (_.event_id = a.event_id), (0, i.WD)(_);
 }
-function R(t, e, a = 'info', r, _) {
-    let n = T(t, e, (r && r.syntheticException) || void 0, _);
+function d(t, e, a = 'info', r, _) {
+    let n = N(t, e, (r && r.syntheticException) || void 0, _);
     return (n.level = a), r && r.event_id && (n.event_id = r.event_id), (0, i.WD)(n);
 }
-function A(t, e, a, i, I) {
-    let u;
-    if ((0, n.VW)(e) && e.error) return s(t, e.error);
+function R(t, e, a, i, u) {
+    let I;
+    if ((0, n.VW)(e) && e.error) return E(t, e.error);
     if ((0, n.TX)(e) || (0, n.fm)(e)) {
-        if ('stack' in e) u = s(t, e);
+        if ('stack' in e) I = E(t, e);
         else {
             let r = e.name || ((0, n.TX)(e) ? 'DOMError' : 'DOMException'),
                 _ = e.message ? `${r}: ${e.message}` : r;
-            (u = T(t, _, a, i)), (0, o.Db)(u, _);
+            (I = N(t, _, a, i)), (0, o.Db)(I, _);
         }
         return (
             'code' in e &&
-                (u.tags = {
-                    ...u.tags,
+                (I.tags = {
+                    ...I.tags,
                     'DOMException.code': `${e.code}`
                 }),
-            u
+            I
         );
     }
     return (0, n.VZ)(e)
-        ? s(t, e)
+        ? E(t, e)
         : ((0, n.PO)(e) || (0, n.cO)(e)
-              ? (u = (function (t, e, a, o) {
+              ? (I = (function (t, e, a, o) {
                     let i = (0, r.s3)(),
-                        s = i && i.getOptions().normalizeDepth,
-                        I = (function (t) {
+                        E = i && i.getOptions().normalizeDepth,
+                        u = (function (t) {
                             for (let e in t)
                                 if (Object.prototype.hasOwnProperty.call(t, e)) {
                                     let a = t[e];
                                     if (a instanceof Error) return a;
                                 }
                         })(e),
-                        u = { __serialized__: (0, _.Qy)(e, s) };
-                    if (I)
+                        I = { __serialized__: (0, _.Qy)(e, E) };
+                    if (u)
                         return {
-                            exception: { values: [E(t, I)] },
-                            extra: u
+                            exception: { values: [s(t, u)] },
+                            extra: I
                         };
-                    let R = {
+                    let d = {
                         exception: {
                             values: [
                                 {
@@ -104,19 +104,19 @@ function A(t, e, a, i, I) {
                                 }
                             ]
                         },
-                        extra: u
+                        extra: I
                     };
                     if (a) {
                         let e = l(t, a);
-                        e.length && (R.exception.values[0].stacktrace = { frames: e });
+                        e.length && (d.exception.values[0].stacktrace = { frames: e });
                     }
-                    return R;
-                })(t, e, a, I))
-              : ((u = T(t, e, a, i)), (0, o.Db)(u, `${e}`, void 0)),
-          (0, o.EG)(u, { synthetic: !0 }),
-          u);
+                    return d;
+                })(t, e, a, u))
+              : ((I = N(t, e, a, i)), (0, o.Db)(I, `${e}`, void 0)),
+          (0, o.EG)(I, { synthetic: !0 }),
+          I);
 }
-function T(t, e, a, r) {
+function N(t, e, a, r) {
     let _ = {};
     if (r && a) {
         let r = l(t, a);

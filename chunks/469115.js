@@ -1,6 +1,6 @@
 n.d(t, {
-    Qf: () => f,
-    XV: () => _,
+    Qf: () => _,
+    XV: () => f,
     bV: () => p,
     qt: () => h
 }),
@@ -493,8 +493,8 @@ let s = [
         getName: () => o.intl.string(o.t.mFinbW),
         midpointPercentage: 50
     },
-    _ = [...s, ...c, u, d],
-    f = [u, ...c, ...s, d],
+    f = [...s, ...c, u, d],
+    _ = [u, ...c, ...s, d],
     p = [
         {
             theme: l,
@@ -513,4 +513,4 @@ let s = [
             getName: () => o.intl.string(o.t.zlvNOj)
         }
     ],
-    h = (0, r.keyBy)(_, 'id');
+    h = (0, r.keyBy)(f, 'id');

@@ -53,7 +53,7 @@ class i {
         if (n) return n;
         let r = this.options.loose,
             i = r ? u[d.HYPHENRANGELOOSE] : u[d.HYPHENRANGE];
-        l('hyphen replace', (e = e.replace(i, P(this.options.includePrerelease)))), l('comparator trim', (e = e.replace(u[d.COMPARATORTRIM], _))), l('tilde trim', (e = e.replace(u[d.TILDETRIM], f))), l('caret trim', (e = e.replace(u[d.CARETTRIM], p)));
+        l('hyphen replace', (e = e.replace(i, P(this.options.includePrerelease)))), l('comparator trim', (e = e.replace(u[d.COMPARATORTRIM], f))), l('tilde trim', (e = e.replace(u[d.TILDETRIM], _))), l('caret trim', (e = e.replace(u[d.CARETTRIM], p)));
         let o = e
             .split(' ')
             .map((e) => y(e, this.options))
@@ -92,7 +92,7 @@ let a = new (n(147567))(),
     s = n(721919),
     l = n(13556),
     c = n(40231),
-    { safeRe: u, t: d, comparatorTrimReplace: _, tildeTrimReplace: f, caretTrimReplace: p } = n(646664),
+    { safeRe: u, t: d, comparatorTrimReplace: f, tildeTrimReplace: _, caretTrimReplace: p } = n(646664),
     { FLAG_INCLUDE_PRERELEASE: h, FLAG_LOOSE: m } = n(942177),
     g = (e) => '<0.0.0-0' === e.value,
     E = (e) => '' === e.value,
@@ -148,13 +148,13 @@ let a = new (n(147567))(),
             let c = O(i),
                 u = c || O(a),
                 d = u || O(o),
-                _ = d;
-            return '=' === r && _ && (r = ''), (s = t.includePrerelease ? '-0' : ''), c ? (n = '>' === r || '<' === r ? '<0.0.0-0' : '*') : r && _ ? (u && (a = 0), (o = 0), '>' === r ? ((r = '>='), u ? ((i = +i + 1), (a = 0)) : (a = +a + 1), (o = 0)) : '<=' === r && ((r = '<'), u ? (i = +i + 1) : (a = +a + 1)), '<' === r && (s = '-0'), (n = `${r + i}.${a}.${o}${s}`)) : u ? (n = `>=${i}.0.0${s} <${+i + 1}.0.0-0`) : d && (n = `>=${i}.${a}.0${s} <${i}.${+a + 1}.0-0`), l('xRange return', n), n;
+                f = d;
+            return '=' === r && f && (r = ''), (s = t.includePrerelease ? '-0' : ''), c ? (n = '>' === r || '<' === r ? '<0.0.0-0' : '*') : r && f ? (u && (a = 0), (o = 0), '>' === r ? ((r = '>='), u ? ((i = +i + 1), (a = 0)) : (a = +a + 1), (o = 0)) : '<=' === r && ((r = '<'), u ? (i = +i + 1) : (a = +a + 1)), '<' === r && (s = '-0'), (n = `${r + i}.${a}.${o}${s}`)) : u ? (n = `>=${i}.0.0${s} <${+i + 1}.0.0-0`) : d && (n = `>=${i}.${a}.0${s} <${i}.${+a + 1}.0-0`), l('xRange return', n), n;
         });
     },
     C = (e, t) => (l('replaceStars', e, t), e.trim().replace(u[d.STAR], '')),
     R = (e, t) => (l('replaceGTE0', e, t), e.trim().replace(u[t.includePrerelease ? d.GTE0PRE : d.GTE0], '')),
-    P = (e) => (t, n, r, i, a, o, s, l, c, u, d, _) => ((n = O(r) ? '' : O(i) ? `>=${r}.0.0${e ? '-0' : ''}` : O(a) ? `>=${r}.${i}.0${e ? '-0' : ''}` : o ? `>=${n}` : `>=${n}${e ? '-0' : ''}`), (l = O(c) ? '' : O(u) ? `<${+c + 1}.0.0-0` : O(d) ? `<${c}.${+u + 1}.0-0` : _ ? `<=${c}.${u}.${d}-${_}` : e ? `<${c}.${u}.${+d + 1}-0` : `<=${l}`), `${n} ${l}`.trim()),
+    P = (e) => (t, n, r, i, a, o, s, l, c, u, d, f) => ((n = O(r) ? '' : O(i) ? `>=${r}.0.0${e ? '-0' : ''}` : O(a) ? `>=${r}.${i}.0${e ? '-0' : ''}` : o ? `>=${n}` : `>=${n}${e ? '-0' : ''}`), (l = O(c) ? '' : O(u) ? `<${+c + 1}.0.0-0` : O(d) ? `<${c}.${+u + 1}.0-0` : f ? `<=${c}.${u}.${d}-${f}` : e ? `<${c}.${u}.${+d + 1}-0` : `<=${l}`), `${n} ${l}`.trim()),
     w = (e, t, n) => {
         for (let n = 0; n < e.length; n++) if (!e[n].test(t)) return !1;
         if (t.prerelease.length && !n.includePrerelease) {

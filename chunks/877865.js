@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(866442),
     u = n(19602),
     d = n(490236),
-    _ = n(481060),
-    f = n(408886),
+    f = n(481060),
+    _ = n(408886),
     p = n(507962),
     h = n(671147),
     m = n(388032),
@@ -87,7 +87,7 @@ function S(e) {
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(
-                        _.P3F,
+                        f.P3F,
                         {
                             className: g.colorCircle,
                             style: {
@@ -116,7 +116,7 @@ function A(e) {
 }
 function N(e) {
     let { value: t, onChange: n, className: a, colors: o, setColors: s } = e,
-        E = (0, f.Z)(),
+        E = (0, _.Z)(),
         [y, T] = i.useState(0),
         [N, C] = i.useState(t);
     i.useEffect(() => {
@@ -163,32 +163,32 @@ function N(e) {
                 s(t), y >= t.length ? T(t.length - 1) : y > e && T(y - 1);
             }
         },
-        M = (e) => {
+        k = (e) => {
             T(e), (0, p.w8)();
         },
-        k = o.length > 1;
+        M = o.length > 1;
     return (0, r.jsxs)('div', {
         className: l()(g.container, a),
         children: [
             (0, r.jsxs)('div', {
                 className: g.headerContainer,
                 children: [
-                    (0, r.jsx)(_.Text, {
+                    (0, r.jsx)(f.Text, {
                         variant: 'text-sm/medium',
                         children: m.intl.string(h.default['8ZcEfn'])
                     }),
-                    (0, r.jsx)(_.ua7, {
+                    (0, r.jsx)(f.ua7, {
                         text: m.intl.string(h.default['61KGaW']),
                         shouldShow: o.length === I,
                         children: (e) =>
                             (0, r.jsx)(
-                                _.zxk,
+                                f.zxk,
                                 O(b({}, e), {
-                                    size: _.zxk.Sizes.ICON,
-                                    look: _.zxk.Looks.BLANK,
+                                    size: f.zxk.Sizes.ICON,
+                                    look: f.zxk.Looks.BLANK,
                                     disabled: o.length === I,
                                     onClick: L,
-                                    children: (0, r.jsx)(_.Text, {
+                                    children: (0, r.jsx)(f.Text, {
                                         variant: 'text-sm/medium',
                                         className: g.addColorButtonText,
                                         children: m.intl.string(h.default['+tTysr'])
@@ -198,11 +198,11 @@ function N(e) {
                     })
                 ]
             }),
-            k &&
+            M &&
                 (0, r.jsx)(S, {
                     colors: o,
                     selectedIndex: y,
-                    onColorSelect: M
+                    onColorSelect: k
                 }),
             (0, r.jsx)(i.Suspense, {
                 fallback: null,
@@ -227,17 +227,17 @@ function N(e) {
                         className: g.trailingIcons,
                         children: [
                             null != E &&
-                                (0, r.jsx)(_.ua7, {
+                                (0, r.jsx)(f.ua7, {
                                     text: m.intl.string(h.default['8QXO8v']),
                                     tooltipClassName: g.eyeDropperTooltip,
                                     children: (e) =>
                                         (0, r.jsx)(
-                                            _.zxk,
+                                            f.zxk,
                                             O(
                                                 b(
                                                     {
-                                                        size: _.zxk.Sizes.ICON,
-                                                        look: _.zxk.Looks.BLANK
+                                                        size: f.zxk.Sizes.ICON,
+                                                        look: f.zxk.Looks.BLANK
                                                     },
                                                     e
                                                 ),
@@ -252,15 +252,15 @@ function N(e) {
                                             )
                                         )
                                 }),
-                            k &&
-                                (0, r.jsx)(_.ua7, {
+                            M &&
+                                (0, r.jsx)(f.ua7, {
                                     text: m.intl.string(h.default['rTik5+']),
                                     children: (e) =>
                                         (0, r.jsx)(
-                                            _.zxk,
+                                            f.zxk,
                                             O(b({}, e), {
-                                                size: _.zxk.Sizes.ICON,
-                                                look: _.zxk.Looks.BLANK,
+                                                size: f.zxk.Sizes.ICON,
+                                                look: f.zxk.Looks.BLANK,
                                                 onClick: () => x(y),
                                                 className: g.iconButton,
                                                 children: (0, r.jsx)(d.X, {

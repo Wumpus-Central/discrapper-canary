@@ -8,7 +8,7 @@ var r = n(255367),
     c = n(981631),
     u = n(388032),
     d = n(388272);
-let _ = [
+let f = [
         {
             getQuestion: () => u.intl.string(u.t.C4J8UF),
             getAnswer: () => u.intl.string(u.t.nhkk6u)
@@ -26,8 +26,8 @@ let _ = [
             getAnswer: () => u.intl.string(u.t['+OURPj'])
         }
     ],
-    f = [
-        ..._,
+    _ = [
+        ...f,
         {
             getQuestion: () => u.intl.string(u.t['LsX/vb']),
             getAnswer: () => u.intl.string(u.t['3TeauL'])
@@ -52,7 +52,7 @@ let _ = [
     p = function (e) {
         let { className: t, isGuildPowerupsExperimentEnabled: n } = e,
             [a, l] = i.useState(null),
-            c = n ? f : _;
+            c = n ? _ : f;
         return (0, r.jsxs)('div', {
             className: o()(d.wrapper, t),
             children: [

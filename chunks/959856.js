@@ -8,8 +8,8 @@ var r = n(512722),
     c = n(174498),
     u = n.n(c),
     d = n(839548),
-    _ = n(46973),
-    f = n(734298),
+    f = n(46973),
+    _ = n(734298),
     p = n(970838),
     h = n(68721),
     m = n(997653),
@@ -37,7 +37,7 @@ function S(e, t, n) {
 let A = new s.Yd('MediaEngineWebRTC');
 class N extends l.Z {
     destroy() {
-        null != this.voiceActivityInput && (this.voiceActivityInput.destroy(), (this.voiceActivityInput = null)), this.eachConnection((e) => e.destroy()), this.emit(_.aB.Destroy), this.removeAllListeners();
+        null != this.voiceActivityInput && (this.voiceActivityInput.destroy(), (this.voiceActivityInput = null)), this.eachConnection((e) => e.destroy()), this.emit(f.aB.Destroy), this.removeAllListeners();
     }
     interact() {
         this.interacted || (document.createElement('audio').play(), (this.interacted = !0)), this.eachConnection((e) => e.interact());
@@ -99,7 +99,7 @@ class N extends l.Z {
     connect(e, t, n) {
         let { ssrc: r, address: i, port: a, modes: o, streamUserId: s, streamParameters: l } = n,
             c = (0, m.Q)(e, t, this.getAudioContext(), l);
-        return (c.streamUserId = s), c.setOutputVolume(this.outputVolume), c.setSinkId(this.sinkId), c.once(d.S.Destroy, (e) => this.connections.delete(e)), c.on(d.S.Silence, (e) => this.emit(_.aB.Silence, e)), c.on(d.S.DesktopSourceEnd, this.handleDesktopSourceEnd), c.on(d.S.AudioPermission, this.handleAudioPermission), c.on(d.S.VideoPermission, this.handleVideoPermission), this.interacted && c.interact(), e === I.Yn.DEFAULT && (c.setAudioSource(this.sourceId), this.enabled && c.input.enableAudioInput()), this.connections.add(c), this.emit(_.aB.Connection, c), c;
+        return (c.streamUserId = s), c.setOutputVolume(this.outputVolume), c.setSinkId(this.sinkId), c.once(d.S.Destroy, (e) => this.connections.delete(e)), c.on(d.S.Silence, (e) => this.emit(f.aB.Silence, e)), c.on(d.S.DesktopSourceEnd, this.handleDesktopSourceEnd), c.on(d.S.AudioPermission, this.handleAudioPermission), c.on(d.S.VideoPermission, this.handleVideoPermission), this.interacted && c.interact(), e === I.Yn.DEFAULT && (c.setAudioSource(this.sourceId), this.enabled && c.input.enableAudioInput()), this.connections.add(c), this.emit(f.aB.Connection, c), c;
     }
     findConnection(e) {
         return Array.from(this.connections).find((t) => null == e || t.context === e);
@@ -290,7 +290,7 @@ class N extends l.Z {
             }),
             S(this, 'handleNewListener', (e) => {
                 switch (e) {
-                    case _.aB.DeviceChange:
+                    case f.aB.DeviceChange:
                         null != navigator.mediaDevices &&
                             null == navigator.mediaDevices.ondevicechange &&
                             ((navigator.mediaDevices.ondevicechange = () => {
@@ -298,41 +298,41 @@ class N extends l.Z {
                             }),
                             this.handleDeviceChange());
                         break;
-                    case _.aB.VoiceActivity:
+                    case f.aB.VoiceActivity:
                         null == this.voiceActivityInput && ((this.voiceActivityInput = new h.Z(this.getAudioContext())), this.voiceActivityInput.setSource(this.sourceId), this.voiceActivityInput.on('voiceactivity', this.handleVoiceActivity), this.enabled && this.voiceActivityInput.enable());
                 }
             }),
             S(this, 'handleRemoveListener', (e) => {
                 switch (e) {
-                    case _.aB.DeviceChange:
+                    case f.aB.DeviceChange:
                         var t;
-                        (null == (t = navigator.mediaDevices) ? void 0 : t.ondevicechange) != null && 0 === this.listenerCount(_.aB.DeviceChange) && (navigator.mediaDevices.ondevicechange = null);
+                        (null == (t = navigator.mediaDevices) ? void 0 : t.ondevicechange) != null && 0 === this.listenerCount(f.aB.DeviceChange) && (navigator.mediaDevices.ondevicechange = null);
                         break;
-                    case _.aB.VoiceActivity:
-                        null != this.voiceActivityInput && 0 === this.listenerCount(_.aB.VoiceActivity) && (this.voiceActivityInput.destroy(), (this.voiceActivityInput = null));
+                    case f.aB.VoiceActivity:
+                        null != this.voiceActivityInput && 0 === this.listenerCount(f.aB.VoiceActivity) && (this.voiceActivityInput.destroy(), (this.voiceActivityInput = null));
                 }
             }),
             S(this, 'handleDeviceChange', () =>
                 (0, E.PW)().then((e) => {
                     let [t, n, r] = e;
-                    return this.emit(_.aB.DeviceChange, t, n, r);
+                    return this.emit(f.aB.DeviceChange, t, n, r);
                 })
             ),
             S(this, 'handleVoiceActivity', (e) => {
-                this.emit(_.aB.VoiceActivity, e, 0);
+                this.emit(f.aB.VoiceActivity, e, 0);
             }),
             S(this, 'handleDesktopSourceEnd', () => {
-                this.emit(_.aB.DesktopSourceEnd);
+                this.emit(f.aB.DesktopSourceEnd);
             }),
             S(this, 'handleAudioPermission', (e) => {
-                this.emit(_.aB.AudioPermission, e);
+                this.emit(f.aB.AudioPermission, e);
             }),
             S(this, 'handleVideoPermission', (e) => {
-                this.emit(_.aB.VideoPermission, e);
+                this.emit(f.aB.VideoPermission, e);
             }),
             this.on('newListener', this.handleNewListener),
             this.on('removeListener', this.handleRemoveListener),
             (0, p.px)(this.handleActiveSinksChange),
-            (0, f.Z)(this);
+            (0, _.Z)(this);
     }
 }

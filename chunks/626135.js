@@ -3,7 +3,7 @@ n.r(t),
         AnalyticEventConfigs: () => j,
         AnalyticsContext: () => T,
         AnalyticsSchema: () => d,
-        addExtraAnalyticsDecorator: () => k,
+        addExtraAnalyticsDecorator: () => M,
         clearAnalyticsEventsRecording: () => Q,
         debugLogEvent: () => Y,
         default: () => er,
@@ -27,8 +27,8 @@ var r = n(73800),
     c = n(97145),
     u = n(857192),
     d = n(747161),
-    _ = n(848479),
-    f = n(960048),
+    f = n(848479),
+    _ = n(960048),
     p = n(981631),
     h = n(94752),
     m = n(388032);
@@ -116,9 +116,9 @@ let I = { location: {} },
     D = 86400000,
     L = 0.001,
     x = performance.now(),
-    M = [];
-function k(e) {
-    M.push(e);
+    k = [];
+function M(e) {
+    k.push(e);
 }
 let j = {
     [p.rMx.APP_OPENED]: {
@@ -381,11 +381,11 @@ function H(e) {
         let { source: e } = a;
         a = E({}, O(a, ['source']), G(e));
     }
-    (a.client_performance_cpu = _.Z.getCurrentCPUUsagePercent()), (a.client_performance_memory = _.Z.getCurrentMemoryUsageKB()), (a.cpu_core_count = _.Z.getCPUCoreCount()), (a.accessibility_features = B()), (a.rendered_locale = m.intl.currentLocale), (a.uptime_app = Math.floor((performance.now() - x) / 1000));
-    let o = _.Z.getProcessUptime();
+    (a.client_performance_cpu = f.Z.getCurrentCPUUsagePercent()), (a.client_performance_memory = f.Z.getCurrentMemoryUsageKB()), (a.cpu_core_count = f.Z.getCPUCoreCount()), (a.accessibility_features = B()), (a.rendered_locale = m.intl.currentLocale), (a.uptime_app = Math.floor((performance.now() - x) / 1000));
+    let o = f.Z.getProcessUptime();
     null != o && (a.uptime_process_renderer = Math.floor(o));
     let { utmSource: s, utmMedium: l, utmCampaign: c, utmContent: u } = S;
-    return (a.utm_source = null != (t = a.utm_source) ? t : s), (a.utm_medium = null != (n = a.utm_medium) ? n : l), (a.utm_campaign = null != (r = a.utm_campaign) ? r : c), (a.utm_content = null != (i = a.utm_content) ? i : u), M.forEach((e) => e(a)), a;
+    return (a.utm_source = null != (t = a.utm_source) ? t : s), (a.utm_medium = null != (n = a.utm_medium) ? n : l), (a.utm_campaign = null != (r = a.utm_campaign) ? r : c), (a.utm_content = null != (i = a.utm_content) ? i : u), k.forEach((e) => e(a)), a;
 }
 function Y(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
@@ -415,7 +415,7 @@ function $(e, t) {
         r = String(e);
     if (
         (c.R.includes(r) ||
-            f.Z.addBreadcrumb({
+            _.Z.addBreadcrumb({
                 category: 'analytics',
                 message: ''.concat(r)
             }),

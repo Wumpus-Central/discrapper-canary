@@ -8,8 +8,8 @@ var r,
     c = n(570140),
     u = n(503438),
     d = n(768419),
-    _ = n(695346),
-    f = n(581883),
+    f = n(695346),
+    _ = n(581883),
     p = n(630388),
     h = n(780570),
     m = n(77498),
@@ -45,11 +45,11 @@ let T = !1,
 function x(e) {
     return (0, h.OT)(e, E.Z);
 }
-function M(e) {
-    let t = m.Z.getGameByName(e);
-    return null != t ? x(t.id) : _.G6.getSetting();
-}
 function k(e) {
+    let t = m.Z.getGameByName(e);
+    return null != t ? x(t.id) : f.G6.getSetting();
+}
+function M(e) {
     var t;
     if ((0, p.yE)(null != (t = e.flags) ? t : 0, v.xjy.CONTEXTLESS)) return !0;
     switch (e.type) {
@@ -58,7 +58,7 @@ function k(e) {
             if (null != e.application_id) return x(e.application_id);
             return !1;
         case v.IIU.PLAYING:
-            return null != e.application_id ? x(e.application_id) : M(e.name);
+            return null != e.application_id ? x(e.application_id) : k(e.name);
         case v.IIU.STREAMING:
         case v.IIU.WATCHING:
         default:
@@ -73,12 +73,12 @@ function U() {
     if (((N = null != (e = g.Z.getIdleSince()) ? e : 0), (R = g.Z.isAFK()), P)) S = A;
     else if (T) S = v.Skl.INVISIBLE;
     else {
-        let e = _.co.getSetting();
+        let e = f.co.getSetting();
         S = e !== v.Skl.UNKNOWN ? e : v.Skl.ONLINE;
     }
     S === v.Skl.ONLINE && N > 0 && (S = v.Skl.IDLE);
     let t = !1,
-        n = P || S === v.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(k);
+        n = P || S === v.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(M);
     a()(C, n) || ((C = n), (t = !0));
     let r = O.Z.getRemoteActivities();
     w !== r && ((w = r), (t = !0));
@@ -103,7 +103,7 @@ function F() {
 }
 class Z extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(g.Z, f.Z, b.Z, O.Z, E.Z, m.Z), this.syncWith([b.Z], U);
+        this.waitFor(g.Z, _.Z, b.Z, O.Z, E.Z, m.Z), this.syncWith([b.Z], U);
     }
     getLocalPresence() {
         return {

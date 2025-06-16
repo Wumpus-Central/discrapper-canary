@@ -20,12 +20,12 @@ function d(e, t, n) {
         e
     );
 }
-let _ = new i.Yd('Output'),
-    f = new o.Z();
+let f = new i.Yd('Output'),
+    _ = new o.Z();
 class p extends r.EventEmitter {
     destroy() {
         var e, t, n;
-        this.removeAllListeners(), null == (e = (t = this).cleanup) || e.call(t), this.reset(), null != this.stream && (f.release(this.stream), (this.stream = void 0)), null == (n = this._audioFilter) || n.dispose(), (this._audioFilter = void 0), (this.destroyed = !0);
+        this.removeAllListeners(), null == (e = (t = this).cleanup) || e.call(t), this.reset(), null != this.stream && (_.release(this.stream), (this.stream = void 0)), null == (n = this._audioFilter) || n.dispose(), (this._audioFilter = void 0), (this.destroyed = !0);
     }
     reset() {
         this.setSpeaking(!1);
@@ -76,7 +76,7 @@ class p extends r.EventEmitter {
         this._automaticGainControl !== e && ((this._automaticGainControl = e), null != this.stream && this.enable());
     }
     async enable() {
-        null != this.cleanup && (this.cleanup(), (this.cleanup = void 0)), null != this.stream && (f.release(this.stream), (this.stream = void 0));
+        null != this.cleanup && (this.cleanup(), (this.cleanup = void 0)), null != this.stream && (_.release(this.stream), (this.stream = void 0));
         let e = await (0, a.Hg)(),
             t = {
                 echoCancellation: this.echoCancellation,
@@ -85,8 +85,8 @@ class p extends r.EventEmitter {
             };
         e.some((e) => e.id === this.sourceId) && (t.deviceId = this.sourceId);
         try {
-            let e = await f.acquire({ audio: t });
-            if (this.destroyed) throw (f.release(e), Error('AudioInput: Already destroyed'));
+            let e = await _.acquire({ audio: t });
+            if (this.destroyed) throw (_.release(e), Error('AudioInput: Already destroyed'));
             if (this._noiseCancellation)
                 try {
                     let t = await (0, s.n)();
@@ -96,13 +96,13 @@ class p extends r.EventEmitter {
                             null == (t = this._audioFilter) || t.enable();
                         }),
                         this._audioFilter.addEventListener('dispose', (t) => {
-                            f.release(e);
+                            _.release(e);
                         });
                     let n = this.context.createMediaStreamSource(e),
                         r = this.context.createMediaStreamDestination();
                     n.connect(this._audioFilter), this._audioFilter.connect(r), (this.stream = r.stream);
                 } catch (t) {
-                    _.error('failure creating krisp node'), _.error(t), (this.stream = e);
+                    f.error('failure creating krisp node'), f.error(t), (this.stream = e);
                 }
             else this.stream = e;
             return this.updateMode(), this.updateAudioTracks(), this.emit('permission', !0), this.emit('stream', this.stream), e;

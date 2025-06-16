@@ -18,8 +18,8 @@ var r = n(392711),
     c = n(339085),
     u = n(633302),
     d = n(856985),
-    _ = n(38618),
-    f = n(675478),
+    f = n(38618),
+    _ = n(675478),
     p = n(486472),
     h = n(823379),
     m = n(668781),
@@ -27,7 +27,7 @@ var r = n(392711),
     E = n(526761),
     b = n(388032);
 function y(e) {
-    f.hW.updateAsync(
+    _.hW.updateAsync(
         'textAndImages',
         (t) => {
             (t.diversitySurrogate = o.Gm.create()), (t.diversitySurrogate.value = e);
@@ -125,7 +125,7 @@ async function T(e) {
     }
 }
 function S(e) {
-    if (p.Z.totalUnavailableGuilds > 0 || !_.Z.isConnected()) return e;
+    if (p.Z.totalUnavailableGuilds > 0 || !f.Z.isConnected()) return e;
     let t = e
         .map((e) => {
             var t;
@@ -141,7 +141,7 @@ function A(e) {
 function N(e) {
     let t = A(e);
     null != t &&
-        f.DZ.updateAsync(
+        _.DZ.updateAsync(
             'favoriteEmojis',
             (e) =>
                 ((e.emojis = S(e.emojis)), i().size(e.emojis) >= E.oX)
@@ -157,7 +157,7 @@ function N(e) {
 function C(e) {
     let t = A(e);
     null != t &&
-        f.DZ.updateAsync(
+        _.DZ.updateAsync(
             'favoriteEmojis',
             (e) => {
                 if (((e.emojis = S(e.emojis)), !e.emojis.includes(t))) return !1;

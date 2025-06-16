@@ -26,7 +26,7 @@ function u(e, t) {
 function d(e, t, n) {
     return t && u(e.prototype, t), n && u(e, n), e;
 }
-function _(e, t) {
+function f(e, t) {
     if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function');
     (e.prototype = Object.create(t && t.prototype, {
         constructor: {
@@ -35,10 +35,10 @@ function _(e, t) {
             configurable: !0
         }
     })),
-        t && f(e, t);
+        t && _(e, t);
 }
-function f(e, t) {
-    return (f =
+function _(e, t) {
+    return (_ =
         Object.setPrototypeOf ||
         function (e, t) {
             return (e.__proto__ = t), e;
@@ -89,7 +89,7 @@ function b(e, t, n) {
     );
 }
 var y = (function (e) {
-    _(n, e);
+    f(n, e);
     var t = p(n);
     function n() {
         var e;

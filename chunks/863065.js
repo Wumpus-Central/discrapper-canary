@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r = n(147913),
     i = n(626135),
     a = n(358085),
@@ -32,4 +32,4 @@ class d extends r.Z {
         super(...e), c(this, 'actions', { POST_CONNECTION_OPEN: this.handlePostConnectionOpen });
     }
 }
-let _ = new d();
+let f = new d();

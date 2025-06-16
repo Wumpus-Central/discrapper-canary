@@ -26,11 +26,11 @@ function d(e) {
         userId: e.user_id,
         scheduledMessageId: e.scheduled_message_id,
         sendAtTimestamp: e.send_at_timestamp,
-        scheduledMessage: _(e.scheduled_message),
+        scheduledMessage: f(e.scheduled_message),
         state: e.state
     };
 }
-function _(e) {
+function f(e) {
     return {
         channelId: e.channel_id,
         content: e.content,

@@ -1,6 +1,6 @@
 n.d(t, {
     KV: () => o.KV,
-    ZP: () => f
+    ZP: () => _
 }),
     n(388685);
 var r = n(392711),
@@ -39,10 +39,10 @@ function d(e) {
     }
     return e;
 }
-function _(e) {
+function f(e) {
     return null != e && 'null' !== e && e !== c.ME && 'undefined' !== e && e !== c.I_8;
 }
-class f {
+class _ {
     _enqueue(e, t) {
         (this._pending[e] = d({}, this._pending[e], t)), this._flush.delay();
     }
@@ -88,33 +88,33 @@ class f {
             (this._pending = {});
     }
     subscribeUser(e, t) {
-        _(e) && this._members.subscribe(e, t);
+        f(e) && this._members.subscribe(e, t);
     }
     unsubscribeUser(e, t) {
-        _(e) && this._members.unsubscribe(e, t);
+        f(e) && this._members.unsubscribe(e, t);
     }
     subscribeChannel(e, t, n) {
-        return !!_(e) && this._channels.subscribe(e, t, n);
+        return !!f(e) && this._channels.subscribe(e, t, n);
     }
     subscribeToMemberUpdates(e) {
-        if (!_(e)) return !1;
+        if (!f(e)) return !1;
         this._enqueue(e, { member_updates: !0 }), this._memberUpdates.add(e);
     }
     unsubscribeFromMemberUpdates(e) {
-        if (!_(e)) return !1;
+        if (!f(e)) return !1;
         this._enqueue(e, { member_updates: !1 });
     }
     subscribeThreadMemberList(e, t, n) {
-        return !!_(e) && this._threadMemberLists.subscribe(e, t, n);
+        return !!f(e) && this._threadMemberLists.subscribe(e, t, n);
     }
     unsubscribeThreadMemberList(e, t) {
-        return !!_(e) && this._threadMemberLists.unsubscribe(e, t);
+        return !!f(e) && this._threadMemberLists.unsubscribe(e, t);
     }
     subscribeToGuild(e) {
         this._subscribeToFeature(e, this._typing, { typing: !0 }), this._subscribeToFeature(e, this._activities, { activities: !0 }), this._subscribeToFeature(e, this._threads, { threads: !0 });
     }
     _subscribeToFeature(e, t, n) {
-        _(e) && (t.has(e) || (t.add(e), this._enqueue(e, n)));
+        f(e) && (t.has(e) || (t.add(e), this._enqueue(e, n)));
     }
     constructor(e) {
         u(this, '_members', new s.Z((e, t) => this._enqueue(e, { members: t }))), u(this, '_channels', new o.ZP((e, t) => this._enqueue(e, { channels: t }))), u(this, '_threadMemberLists', new l.Z((e, t) => this._enqueue(e, { thread_member_lists: t }))), u(this, '_typing', new Set()), u(this, '_threads', new Set()), u(this, '_activities', new Set()), u(this, '_memberUpdates', new Set()), u(this, '_subscribed', new Set()), u(this, '_pending', {}), u(this, '_flush', new a.sW(0, () => this.flush())), u(this, '_onChange', void 0), (this._onChange = e);

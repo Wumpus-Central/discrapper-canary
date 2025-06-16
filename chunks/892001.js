@@ -12,8 +12,8 @@ var r = n(259443),
     c = n(594174),
     u = n(9161),
     d = n(212321),
-    _ = n(484459);
-let f = (0, i.pxk)(i.EFr.SIZE_120),
+    f = n(484459);
+let _ = (0, i.pxk)(i.EFr.SIZE_120),
     p = new r.Yd('UserProfileModalActionCreators'),
     h = async (e) => {
         let t = l.default.getId() === e,
@@ -39,7 +39,7 @@ async function m(e) {
               withMutualGuilds: !0,
               joinRequestId: u
           })
-        : (0, _.Z)(v.id, v.getAvatarURL(void 0, f), {
+        : (0, f.Z)(v.id, v.getAvatarURL(void 0, _), {
               type: 'modal',
               guildId: g && null != n ? n : void 0,
               withMutualFriendsCount: !v.bot && I,

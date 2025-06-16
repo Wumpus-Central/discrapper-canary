@@ -12,8 +12,8 @@ var i = n(120356),
     c = n(481060),
     u = n(600164),
     d = n(528144),
-    _ = n(312956),
-    f = n(501967),
+    f = n(312956),
+    _ = n(501967),
     p = n(19780),
     h = n(540028),
     m = n(507675),
@@ -72,14 +72,14 @@ function I(e, t) {
 function T(e) {
     let { title: t, onJumpToChannel: n, onHide: i, idle: a, preventIdleComponent: l } = e,
         u = (0, o.e7)([p.Z], () => p.Z.getChannelId()),
-        f =
+        _ =
             null != u
                 ? (0, r.jsx)(h.Z, {
                       voiceChannelId: u,
                       idle: a
                   })
                 : null,
-        { enabled: m } = _.Z.useExperiment({ location: 'PictureInPicturePlayer' });
+        { enabled: m } = f.Z.useExperiment({ location: 'PictureInPicturePlayer' });
     return (0, r.jsxs)(l, {
         className: b.headerIdleContainer,
         children: [
@@ -109,12 +109,12 @@ function T(e) {
                       label: E.intl.string(E.t.BEuDEh)
                   })
                 : null,
-            f
+            _
         ]
     });
 }
 function S(e) {
-    var { children: t, idle: n, onJumpToChannel: i, onHide: o, backgroundKey: s, onActive: c, onForceIdle: d, renderBottomLeftControls: _, renderBottomRightControls: p, screenMessage: h, hideControls: g = !1, className: E, innerClassName: y, videoControlsClassName: I } = e,
+    var { children: t, idle: n, onJumpToChannel: i, onHide: o, backgroundKey: s, onActive: c, onForceIdle: d, renderBottomLeftControls: f, renderBottomRightControls: p, screenMessage: h, hideControls: g = !1, className: E, innerClassName: y, videoControlsClassName: I } = e,
         S = v(e, ['children', 'idle', 'onJumpToChannel', 'onHide', 'backgroundKey', 'onActive', 'onForceIdle', 'renderBottomLeftControls', 'renderBottomRightControls', 'screenMessage', 'hideControls', 'className', 'innerClassName', 'videoControlsClassName']);
     return (0, r.jsxs)('div', {
         onMouseMove: c,
@@ -125,7 +125,7 @@ function S(e) {
         children: [
             (0, r.jsx)(l.W, {
                 children: (0, r.jsx)(
-                    f.B,
+                    _.B,
                     {
                         className: y,
                         children: t
@@ -161,7 +161,7 @@ function S(e) {
                                     basis: '50%',
                                     align: u.Z.Align.CENTER,
                                     className: b.bottomLeftControls,
-                                    children: null == _ ? void 0 : _()
+                                    children: null == f ? void 0 : f()
                                 }),
                                 (0, r.jsx)(u.Z, {
                                     grow: 0,

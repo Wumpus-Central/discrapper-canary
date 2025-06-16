@@ -6,29 +6,29 @@ var r = n(73800),
     s = n(590921);
 function l(e) {
     var t, n, l;
-    let { navId: c, scrollerRef: u, state: d, onFocus: _ } = e,
-        { renderWindow: f } = r.useContext(o.ZP),
+    let { navId: c, scrollerRef: u, state: d, onFocus: f } = e,
+        { renderWindow: _ } = r.useContext(o.ZP),
         p = (e, t) => {
-            let n = f.document.querySelector(e);
+            let n = _.document.querySelector(e);
             if (null != n) {
                 var r;
                 null == (r = u.current) || r.scrollIntoViewNode({ node: n });
             }
-            null == _ || _(+t);
+            null == f || f(+t);
         },
         h = (e, t) => {
             var n;
             if ((null == (n = u.current) || n.scrollToTop(), e && null != d.query)) {
                 let e = d.query.typeInfo.focusMode,
                     n = e !== s.QZ.MANUAL && (e !== s.QZ.AUTO_WHEN_FILTERED || 0 !== d.query.queryText.length);
-                d.isVisible && (!0 !== t || !1 !== n) ? (g.setFocus('0'), null == _ || _(0)) : (g.setFocus(null), null == _ || _(null));
+                d.isVisible && (!0 !== t || !1 !== n) ? (g.setFocus('0'), null == f || f(0)) : (g.setFocus(null), null == f || f(null));
             }
         },
         m = (e) => {
             var t;
             if ((null == (t = u.current) || t.scrollToBottom(), e && null != d.query && d.query.resultCount > 0)) {
                 let e = d.query.resultCount - 1;
-                g.setFocus(e.toString()), null == _ || _(e);
+                g.setFocus(e.toString()), null == f || f(e);
             }
         },
         g = (0, i.ZP)({

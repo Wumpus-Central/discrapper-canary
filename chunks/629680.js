@@ -7,8 +7,8 @@ var r = n(127849),
     c = n(358932),
     u = n(635464),
     d = n(287353),
-    _ = n(920542),
-    f = l.aTypedArray,
+    f = n(920542),
+    _ = l.aTypedArray,
     p = l.exportTypedArrayMethod,
     h = r.Uint16Array,
     m = h && i(h.prototype.sort),
@@ -28,7 +28,7 @@ var r = n(127849),
             if (d) return d < 74;
             if (c) return c < 67;
             if (u) return !0;
-            if (_) return _ < 602;
+            if (f) return f < 602;
             var e,
                 t,
                 n = new h(516),
@@ -52,7 +52,7 @@ var r = n(127849),
 p(
     'sort',
     function (e) {
-        return (void 0 !== e && o(e), E) ? m(this, e) : s(f(this), b(e));
+        return (void 0 !== e && o(e), E) ? m(this, e) : s(_(this), b(e));
     },
     !E || g
 );

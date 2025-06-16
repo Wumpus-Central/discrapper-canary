@@ -20,8 +20,8 @@ function u(e, t, n) {
     );
 }
 let d = [],
-    _ = {},
-    f = null;
+    f = {},
+    _ = null;
 function p(e) {
     let t = new Set([...(null != e ? e : [])]);
     return [...d].reduce((e, n) => (t.has(n) ? e : h(n) || e), !1);
@@ -30,7 +30,7 @@ function h(e) {
     let t = d.indexOf(e);
     if (t > -1) {
         let n = [...d];
-        return n.splice(t, 1), (d = n), delete _[e], !0;
+        return n.splice(t, 1), (d = n), delete f[e], !0;
     }
     return !1;
 }
@@ -38,23 +38,23 @@ function m(e) {
     return !(e === c.ME || d.includes(e)) && ((d = [...d, e]), !0);
 }
 function g(e, t) {
-    null != t && (_[e] = t);
+    null != t && (f[e] = t);
 }
 function E(e) {
     let { guildId: t, lurker: n, source: r, directoryChannelId: i, loadId: a } = e;
     if (n) {
         switch ((m(t), g(t, a), r)) {
             case c.vtS.MOBILE_GUILD_DISCOVERY:
-                f = { type: c.vtS.MOBILE_GUILD_DISCOVERY };
+                _ = { type: c.vtS.MOBILE_GUILD_DISCOVERY };
                 break;
             case c.vtS.DIRECTORY_ENTRY:
-                f = {
+                _ = {
                     type: c.vtS.DIRECTORY_ENTRY,
                     directoryChannelId: i
                 };
                 break;
             default:
-                f = null;
+                _ = null;
         }
         return !0;
     }
@@ -62,27 +62,27 @@ function E(e) {
 }
 function b(e) {
     let { guild: t } = e;
-    return !!(null != t.joined_at && d.includes(t.id)) && (h(t.id), (f = null), !0);
+    return !!(null != t.joined_at && d.includes(t.id)) && (h(t.id), (_ = null), !0);
 }
 function y(e) {
     var t;
     let { guildId: n, joinedAt: r, user: i } = e,
         a = i.id === (null == (t = l.default.getCurrentUser()) ? void 0 : t.id),
         o = null == r;
-    return !!a && !o && !!d.includes(n) && (h(n), (f = null), !0);
+    return !!a && !o && !!d.includes(n) && (h(n), (_ = null), !0);
 }
 function O(e) {
     let { guild: t } = e;
-    return !!d.includes(t.id) && (h(t.id), (f = null), !0);
+    return !!d.includes(t.id) && (h(t.id), (_ = null), !0);
 }
 function v(e) {
     let { ignoredGuildIds: t } = e,
         n = p(t);
-    return n && (f = null), n;
+    return n && (_ = null), n;
 }
 function I(e) {
     let { lurkingGuildId: t, lurkingSource: n } = e;
-    return m(t), (f = n), !0;
+    return m(t), (_ = n), !0;
 }
 function T() {
     d = Object.values(s.Z.getGuilds()).reduce((e, t) => (t.isLurker() ? [...e, t.id] : e), []);
@@ -104,10 +104,10 @@ class S extends (r = i.ZP.Store) {
         return !!(!n && r);
     }
     getLurkingSource() {
-        return f;
+        return _;
     }
     getLoadId(e) {
-        return null != e ? _[e] : null;
+        return null != e ? f[e] : null;
     }
 }
 u(S, 'displayName', 'LurkingStore');

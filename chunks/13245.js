@@ -8,8 +8,8 @@ var r = n(772848),
     c = n(355863),
     u = n(449224),
     d = n(451478),
-    _ = n(434529),
-    f = n(145597),
+    f = n(434529),
+    _ = n(145597),
     p = n(765250),
     h = n(981631);
 function m(e, t, n) {
@@ -119,7 +119,7 @@ let y = new i.Yd('OverlayActionCreators'),
         },
         setInstanceLocked(e) {
             if (!__OVERLAY__) return void y.error('Attempting to start an overlay session outside of the overlay context');
-            O.setInputLocked(e, (0, f.getPID)());
+            O.setInputLocked(e, (0, _.getPID)());
         },
         setEnabled(e, t) {
             a.Z.dispatch({
@@ -239,7 +239,7 @@ let y = new i.Yd('OverlayActionCreators'),
             });
         },
         setPinChat(e) {
-            let t = f.OVERLAY_LAYOUT_ID,
+            let t = _.OVERLAY_LAYOUT_ID,
                 n = c.Z.getWidgetsForLayout(t),
                 i = c.Z.getWidgetConfig(h.Odu.GUILDS),
                 a = c.Z.getWidgetConfig(h.Odu.TEXT),
@@ -278,21 +278,21 @@ let y = new i.Yd('OverlayActionCreators'),
                     let { type: t, id: n, anchor: r, size: i } = e;
                     switch (t) {
                         case h.Odu.TEXT:
-                            (y = (0, _.w_)(i, E)), (0, p.E9)(n);
+                            (y = (0, f.w_)(i, E)), (0, p.E9)(n);
                             break;
                         case h.Odu.GUILDS:
-                            (O = (0, _.vS)(r, i, E)), (v = (0, _.w_)(i, E)), (0, p.E9)(n);
+                            (O = (0, f.vS)(r, i, E)), (v = (0, f.w_)(i, E)), (0, p.E9)(n);
                             break;
                         case h.Odu.GUILDS_TEXT:
-                            (I = (0, _.vS)(r, i, E)), (T = (0, _.w_)(i, E)), (0, p.E9)(n);
+                            (I = (0, f.vS)(r, i, E)), (T = (0, f.w_)(i, E)), (0, p.E9)(n);
                     }
                 }),
                 e)
             ) {
                 let e = 'auto' === T.width ? l.minSize.width : T.width;
                 e -= u.minSize.width;
-                let [n, i] = (0, _.o4)(I, b(g({}, T), { width: u.minSize.width }), E),
-                    [a, o] = (0, _.uq)(I, b(g({}, T), { width: e }), E, {
+                let [n, i] = (0, f.o4)(I, b(g({}, T), { width: u.minSize.width }), E),
+                    [a, o] = (0, f.uq)(I, b(g({}, T), { width: e }), E, {
                         x: 10,
                         y: 10
                     }),
@@ -321,7 +321,7 @@ let y = new i.Yd('OverlayActionCreators'),
             } else {
                 let e = 'auto' === y.width ? m.minSize.width : y.width;
                 e += u.minSize.width;
-                let [n, i] = (0, _.o4)(
+                let [n, i] = (0, f.o4)(
                         O,
                         {
                             height: v.height,

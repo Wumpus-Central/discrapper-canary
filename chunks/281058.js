@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r,
     i = n(442837),
     a = n(570140),
@@ -47,4 +47,4 @@ class d extends (r = i.ZP.DeviceSettingsStore) {
     }
 }
 c(d, 'displayName', 'NativePermissionStore'), c(d, 'persistKey', 'NativePermissionsStore');
-let _ = d;
+let f = d;

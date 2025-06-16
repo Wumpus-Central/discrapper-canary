@@ -9,7 +9,7 @@ var i = n(120356),
     c = n(227473),
     u = n(112360),
     d = n(73433);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,7 +33,7 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
@@ -63,7 +63,7 @@ function h(e, t) {
 }
 function m(e, t, n) {
     var i, l;
-    let { attributes: u, children: _, element: p, decorations: m } = e,
+    let { attributes: u, children: f, element: p, decorations: m } = e,
         b = E(null != (i = null == m ? void 0 : m[0]) ? i : {});
     switch (p.type) {
         case 'line':
@@ -71,29 +71,29 @@ function m(e, t, n) {
                 return (0, r.jsx)(
                     'div',
                     h(
-                        f(
+                        _(
                             {
                                 className: c.codeLine,
                                 spellCheck: null == p.codeBlockState || null == p.codeBlockState.lang
                             },
                             u
                         ),
-                        { children: _ }
+                        { children: f }
                     )
                 );
-            return (0, r.jsx)('div', h(f({}, u), { children: _ }));
+            return (0, r.jsx)('div', h(_({}, u), { children: f }));
         case 'blockQuote': {
             let e = a()(d.blockquoteContainer, d.slateBlockquoteContainer);
             return (0, r.jsxs)(
                 'div',
-                h(f({}, u), {
+                h(_({}, u), {
                     className: e,
                     children: [
                         (0, r.jsx)('span', {
                             contentEditable: !1,
                             className: d.blockquoteDivider
                         }),
-                        (0, r.jsx)('blockquote', { children: _ })
+                        (0, r.jsx)('blockquote', { children: f })
                     ]
                 })
             );
@@ -102,19 +102,19 @@ function m(e, t, n) {
             return (0, r.jsxs)(g, {
                 attributes: u,
                 className: b,
-                children: [(0, r.jsx)(s.dy, { emoji: p.emoji }), _]
+                children: [(0, r.jsx)(s.dy, { emoji: p.emoji }), f]
             });
         case 'customEmoji':
             return (0, r.jsxs)(g, {
                 attributes: u,
                 className: b,
-                children: [(0, r.jsx)(s.wP, { emoji: p.emoji }), _]
+                children: [(0, r.jsx)(s.wP, { emoji: p.emoji }), f]
             });
         case 'textMention':
             return (0, r.jsxs)(g, {
                 attributes: u,
                 className: b,
-                children: [(0, r.jsx)(s.Ox, { text: p.name }), _]
+                children: [(0, r.jsx)(s.Ox, { text: p.name }), f]
             });
         case 'userMention':
             return (0, r.jsxs)(g, {
@@ -126,7 +126,7 @@ function m(e, t, n) {
                         channelId: n,
                         guildId: t
                     }),
-                    _
+                    f
                 ]
             });
         case 'roleMention':
@@ -138,14 +138,14 @@ function m(e, t, n) {
                         id: p.roleId,
                         guildId: t
                     }),
-                    _
+                    f
                 ]
             });
         case 'channelMention':
             return (0, r.jsxs)(g, {
                 attributes: u,
                 className: b,
-                children: [(0, r.jsx)(s.Io, { id: p.channelId }), _]
+                children: [(0, r.jsx)(s.Io, { id: p.channelId }), f]
             });
         case 'staticRouteLink':
             return (0, r.jsxs)(g, {
@@ -157,14 +157,14 @@ function m(e, t, n) {
                         itemId: p.itemId,
                         guildId: t
                     }),
-                    _
+                    f
                 ]
             });
         case 'soundboard':
             return (0, r.jsxs)(g, {
                 attributes: u,
                 className: b,
-                children: [(0, r.jsx)(o.ku, { soundId: p.soundId }), _]
+                children: [(0, r.jsx)(o.ku, { soundId: p.soundId }), f]
             });
         case 'commandMention':
             return (0, r.jsxs)(g, {
@@ -175,14 +175,14 @@ function m(e, t, n) {
                         text: p.commandName,
                         id: p.commandId
                     }),
-                    _
+                    f
                 ]
             });
         case 'timestamp':
             return (0, r.jsxs)(g, {
                 attributes: u,
                 className: b,
-                children: [(0, r.jsx)(s.EK, { timestamp: p.parsed }), _]
+                children: [(0, r.jsx)(s.EK, { timestamp: p.parsed }), f]
             });
         default:
             return null;
@@ -193,7 +193,7 @@ let g = (e) => {
         o = a()(u.inlineElement, u.inlineVoid, t);
     return (0, r.jsx)(
         'span',
-        h(f({}, n), {
+        h(_({}, n), {
             className: o,
             contentEditable: !1,
             children: i

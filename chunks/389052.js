@@ -9,7 +9,7 @@ var i = n(442837),
     c = n(594174),
     u = n(981631),
     d = n(388032);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,7 +33,7 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
@@ -62,7 +62,7 @@ function h(e, t) {
     );
 }
 function m(e) {
-    let { user: t, guildId: _, channelId: p, onBlock: m, onIgnore: g, onUnblock: E, location: b = 'ContextMenu', appContext: y = u.IlC.APP } = e,
+    let { user: t, guildId: f, channelId: p, onBlock: m, onIgnore: g, onUnblock: E, location: b = 'ContextMenu', appContext: y = u.IlC.APP } = e,
         { id: O } = t,
         v = (0, i.e7)(
             [c.default],
@@ -91,9 +91,9 @@ function m(e) {
                                 return (n) =>
                                     (0, r.jsx)(
                                         e,
-                                        h(f({}, n), {
+                                        h(_({}, n), {
                                             user: t,
-                                            guildId: _,
+                                            guildId: f,
                                             channelId: p,
                                             onBlock: m,
                                             onIgnore: g,

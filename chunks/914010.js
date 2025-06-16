@@ -8,8 +8,8 @@ var r,
     c = n(703656),
     u = n(314897),
     d = n(896797),
-    _ = n(430824),
-    f = n(981631);
+    f = n(430824),
+    _ = n(981631);
 function p(e, t, n) {
     return (
         t in e
@@ -28,7 +28,7 @@ let h = -1,
     g = null,
     E = {};
 function b() {
-    null != m && null == _.Z.getGuild(m) && null == s.Z.getRequest(m) && (m = null), null != g && null == _.Z.getGuild(g) && null == s.Z.getRequest(g) && (g = null), O(m);
+    null != m && null == f.Z.getGuild(m) && null == s.Z.getRequest(m) && (m = null), null != g && null == f.Z.getGuild(g) && null == s.Z.getRequest(g) && (g = null), O(m);
 }
 function y(e) {
     (m = e.selectedGuildId), (g = void 0), b();
@@ -43,7 +43,7 @@ function v(e) {
 }
 function I(e) {
     let t = !1;
-    return delete E[e], g === e && ((g = null), (t = !0)), m === e && (Object.values(_.Z.getGuilds()).find((t) => t.id !== e), (m = null), (0, c.dL)(f.Z5c.ME), (t = !0)), t;
+    return delete E[e], g === e && ((g = null), (t = !0)), m === e && (Object.values(f.Z.getGuilds()).find((t) => t.id !== e), (m = null), (0, c.dL)(_.Z5c.ME), (t = !0)), t;
 }
 function T(e) {
     let {
@@ -61,9 +61,9 @@ function A() {
 class N extends (r = a.ZP.PersistedStore) {
     initialize(e) {
         var t, n, r, a;
-        this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type), this.waitFor(_.Z, u.default, d.Z), (E = null != (n = null == e ? void 0 : e.selectedGuildTimestampMillis) ? n : {}), (m = null != (r = null == e ? void 0 : e.selectedGuildId) ? r : null), (g = null != (a = null == e ? void 0 : e.lastSelectedGuildId) ? a : null);
+        this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type), this.waitFor(f.Z, u.default, d.Z), (E = null != (n = null == e ? void 0 : e.selectedGuildTimestampMillis) ? n : {}), (m = null != (r = null == e ? void 0 : e.selectedGuildId) ? r : null), (g = null != (a = null == e ? void 0 : e.lastSelectedGuildId) ? a : null);
         let o = d.Z.lastNonVoiceRoute,
-            s = (0, i.LX)(o, { path: f.Z5c.CHANNEL(l.Hw.guildId()) });
+            s = (0, i.LX)(o, { path: _.Z5c.CHANNEL(l.Hw.guildId()) });
         null == s || null == (t = s.params) || t.guildId;
     }
     getState() {

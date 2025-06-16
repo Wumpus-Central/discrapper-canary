@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(704215),
     u = n(481060),
     d = n(410030),
-    _ = n(44315),
-    f = n(605236),
+    f = n(44315),
+    _ = n(605236),
     p = n(243778),
     h = n(581883),
     m = n(583901),
@@ -62,7 +62,7 @@ function I(e) {
             return null == (t = h.Z.settings.appearance) || null == (e = t.clientThemeSettings) ? void 0 : e.customUserThemeSettings;
         }),
         [S, A] = (0, p.US)([c.z.CUSTOM_THEME_ENTRYPOINT_NEW_BADGE]),
-        N = (0, f.wE)(c.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
+        N = (0, _.wE)(c.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
         C = (0, d.ZP)(),
         R = null != T,
         P = (0, u.wjy)(C) ? O.darkOverlay : O.lightOverlay,
@@ -76,15 +76,15 @@ function I(e) {
             }
             return { background: 'var(--bg-overlay), '.concat(e) };
         }, [T, w]),
-        L = (0, _.Sl)(E.Il.WHITE).hex,
-        x = (0, _.Sl)(E.Il.RED_430).hex,
-        M = R ? L : void 0,
-        k = i.useCallback(() => {
+        L = (0, f.Sl)(E.Il.WHITE).hex,
+        x = (0, f.Sl)(E.Il.RED_430).hex,
+        k = R ? L : void 0,
+        M = i.useCallback(() => {
             S === c.z.CUSTOM_THEME_ENTRYPOINT_NEW_BADGE && A(g.L.TAKE_ACTION), null == I || I();
         }, [S, A, I]),
         j = S === c.z.CUSTOM_THEME_ENTRYPOINT_NEW_BADGE;
     return (0, r.jsxs)(m.S4, {
-        onSelect: a ? void 0 : k,
+        onSelect: a ? void 0 : M,
         isSelected: !1,
         showSelectionCircle: R,
         name: y.intl.string(b.default.KSBBpK),
@@ -96,7 +96,7 @@ function I(e) {
             !N && !R && (0, r.jsx)(v, {}),
             (0, r.jsx)('div', { className: O.borderOverlay }),
             (0, r.jsx)(s.V3v, {
-                color: M,
+                color: k,
                 className: O.paletteIcon
             }),
             j &&

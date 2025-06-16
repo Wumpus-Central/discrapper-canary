@@ -8,13 +8,13 @@ var r = n(255367),
     c = n(587446),
     u = n(504983),
     d = n(396032);
-function _(e) {
+function f(e) {
     return e.replace(/[0-9.,]+ ?kb/g, (e) => {
         let t = 1024 * parseInt(e, 10);
         return isNaN(t) ? e : (0, l.Ng)(t);
     });
 }
-function f(e) {
+function _(e) {
     let { errors: t } = e;
     return (0, r.jsx)(r.Fragment, {
         children: t.map((e, t) =>
@@ -24,7 +24,7 @@ function f(e) {
                     variant: 'text-xs/normal',
                     color: 'text-danger',
                     className: d.errorMessage,
-                    children: _(e)
+                    children: f(e)
                 },
                 t
             )
@@ -32,7 +32,7 @@ function f(e) {
     });
 }
 let p = i.forwardRef(function (e, t) {
-    let { title: n, titleIcon: i, titleId: a, description: l, children: _, className: p, errors: h, disabled: m = !1, hideDivider: g = !1, showBorder: E = !1, borderType: b, hasBackground: y = !1, forcedDivider: O = !1, showPremiumIcon: v = !1 } = e;
+    let { title: n, titleIcon: i, titleId: a, description: l, children: f, className: p, errors: h, disabled: m = !1, hideDivider: g = !1, showBorder: E = !1, borderType: b, hasBackground: y = !1, forcedDivider: O = !1, showPremiumIcon: v = !1 } = e;
     return (0, r.jsx)('div', {
         className: o()(d.customizationSection, p, {
             [d.disabled]: m,
@@ -60,8 +60,8 @@ let p = i.forwardRef(function (e, t) {
                           children: l
                       })
                     : null,
-                _,
-                null != h && (0, r.jsx)(f, { errors: h })
+                f,
+                null != h && (0, r.jsx)(_, { errors: h })
             ]
         })
     });

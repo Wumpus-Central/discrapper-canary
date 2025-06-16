@@ -14,8 +14,8 @@ var r = n(990547),
     c = n(336197),
     u = n(280837),
     d = n(895886),
-    _ = n(35225),
-    f = n(703656),
+    f = n(35225),
+    _ = n(703656),
     p = n(314897),
     h = n(664915),
     m = n(984933),
@@ -108,13 +108,13 @@ let x = (e) => {
             body: N.intl.formatToPlainString(N.t['VSd+Ag'], { quantity: e })
         });
     },
-    M = (e) => {
+    k = (e) => {
         o.Z.dispatch({
             type: 'GUILD_DELETE',
             guild: { id: e }
         });
     },
-    k = () => {
+    M = () => {
         S.Z.show({
             title: N.intl.string(N.t.ZZlox8),
             body: N.intl.string(N.t.ZUEGFh)
@@ -129,13 +129,13 @@ function j(e) {
     );
 }
 function U(e, t) {
-    return null != t ? t : (0, _.V)(e);
+    return null != t ? t : (0, f.V)(e);
 }
 let G = {
     joinGuild: async function (e) {
         var t, r, i, s, l;
         let c = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            { source: u, loadId: _, lurkLocation: h } = c,
+            { source: u, loadId: f, lurkLocation: h } = c,
             m = null != (t = c.lurker) && t,
             O = y.default.getCurrentUser();
         if (null != (r = null == O ? void 0 : O.hasFlag(A.xW$.QUARANTINED)) && r) return (0, d.default)(), new Promise((e, t) => t(Error()));
@@ -145,7 +145,7 @@ let G = {
                 guildId: e,
                 lurker: m,
                 source: u,
-                loadId: _
+                loadId: f
             })
         );
         try {
@@ -156,7 +156,7 @@ let G = {
                     query: {
                         lurker: m,
                         session_id: m ? p.default.getSessionId() : null,
-                        recommendation_load_id: _,
+                        recommendation_load_id: f,
                         location: m && null != h ? h : null
                     },
                     context: { source: u },
@@ -173,7 +173,7 @@ let G = {
                     }),
                 null == g.Z.getGuild(e) && i.body.show_verification_form)
             )
-                return (0, f.uL)(A.Z5c.GUILD_MEMBER_VERIFICATION(e)), i;
+                return (0, _.uL)(A.Z5c.GUILD_MEMBER_VERIFICATION(e)), i;
             if (
                 (null != i.body.welcome_screen &&
                     o.Z.dispatch({
@@ -201,7 +201,7 @@ let G = {
                 let e = y.default.getCurrentUser();
                 I.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? x(A.tHP) : x(A.DZw);
             }
-            throw ((null == (s = t.body) ? void 0 : s.code) === A.evJ.GUILD_AT_CAPACITY && k(), m && (null == (l = t.body) ? void 0 : l.code) === A.evJ.UNKNOWN_GUILD && M(e), t);
+            throw ((null == (s = t.body) ? void 0 : s.code) === A.evJ.GUILD_AT_CAPACITY && M(), m && (null == (l = t.body) ? void 0 : l.code) === A.evJ.UNKNOWN_GUILD && k(e), t);
         }
     },
     waitForGuild: j,
@@ -210,7 +210,7 @@ let G = {
             a = t;
         (null == t ? void 0 : t.hasOwnProperty('welcomeModalChannelId')) && null == t.welcomeModalChannelId && (a = w(R({}, t), { welcomeModalChannelId: null != i ? i : void 0 })), (0, c.Z)(A.Z5c.CHANNEL(e, i, r), a), await new Promise(setImmediate);
     },
-    deleteGuild: M,
+    deleteGuild: k,
     selectGuild(e) {
         (0, u.a)(e);
     },
@@ -508,13 +508,13 @@ let G = {
         });
     },
     nsfwReturnToSafety(e) {
-        if (null == e) return void (0, f.uL)(A.Z5c.FRIENDS);
+        if (null == e) return void (0, _.uL)(A.Z5c.FRIENDS);
         let t = m.ZP.getDefaultChannel(e);
-        null == t || t.isNSFW() ? (0, f.uL)(A.Z5c.FRIENDS) : (0, f.uL)(A.Z5c.CHANNEL(e, t.id));
+        null == t || t.isNSFW() ? (0, _.uL)(A.Z5c.FRIENDS) : (0, _.uL)(A.Z5c.CHANNEL(e, t.id));
     },
     escapeToDefaultChannel(e) {
         let t = m.ZP.getDefaultChannel(e);
-        null != t ? (0, f.uL)(A.Z5c.CHANNEL(e, t.id)) : (0, f.uL)(A.Z5c.FRIENDS);
+        null != t ? (0, _.uL)(A.Z5c.CHANNEL(e, t.id)) : (0, _.uL)(A.Z5c.FRIENDS);
     },
     async fetchApplications(e, t) {
         let n = {

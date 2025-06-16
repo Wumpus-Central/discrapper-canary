@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => _ });
 var r = n(255367),
     i = n(73800),
     a = n(442837),
@@ -35,7 +35,7 @@ function d(e) {
     }
     return e;
 }
-function _(e) {
+function f(e) {
     let { confettiSpawnRef: t, shouldFire: n } = e,
         r = (0, a.e7)([o.Z], () => o.Z.isFocused()),
         s = (0, c.Z)(),
@@ -47,9 +47,9 @@ function _(e) {
         null
     );
 }
-function f(e) {
+function _(e) {
     return (0, r.jsx)(s.Z, {
         confettiLocation: e.confettiLocation,
-        children: (0, r.jsx)(_, d({}, e))
+        children: (0, r.jsx)(f, d({}, e))
     });
 }

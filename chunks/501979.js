@@ -5,16 +5,16 @@ var r = n(425561),
     s = 2;
 e.exports = function (e, t, n, l, c, u) {
     var d = n & o,
-        _ = e.length,
-        f = t.length;
-    if (_ != f && !(d && f > _)) return !1;
+        f = e.length,
+        _ = t.length;
+    if (f != _ && !(d && _ > f)) return !1;
     var p = u.get(e),
         h = u.get(t);
     if (p && h) return p == t && h == e;
     var m = -1,
         g = !0,
         E = n & s ? new r() : void 0;
-    for (u.set(e, t), u.set(t, e); ++m < _; ) {
+    for (u.set(e, t), u.set(t, e); ++m < f; ) {
         var b = e[m],
             y = t[m];
         if (l) var O = d ? l(y, b, m, t, e, u) : l(b, y, m, e, t, u);

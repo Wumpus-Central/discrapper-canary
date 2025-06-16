@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(442837),
     u = n(377108),
     d = n(692547),
-    _ = n(481060),
-    f = n(68405),
+    f = n(481060),
+    _ = n(68405),
     p = n(527429),
     h = n(656733),
     m = n(251625),
@@ -79,14 +79,14 @@ function R(e) {
     return {
         type: O.wI2.FAVORITES,
         name: v.intl.string(v.t.y3LQCA),
-        icon: _.r7p,
+        icon: f.r7p,
         src: null != n ? n.src : 'https://media.giphy.com/media/1TOSaJsWtnhe0/giphy.gif',
         format: null != (t = null == n ? void 0 : n.format) ? t : u.EO.IMAGE
     };
 }
 class P extends i.PureComponent {
     componentDidMount() {
-        0 === this.props.trendingCategories.length && (0, f.Tg)();
+        0 === this.props.trendingCategories.length && (0, _.Tg)();
     }
     getData() {
         return this.memoizedData(this.state.favoritesTile, this.props.trendingCategories, this.props.hideFavoritesTile);
@@ -100,7 +100,7 @@ class P extends i.PureComponent {
                     className: I.categoryText,
                     children: [
                         n === O.wI2.TRENDING_GIFS
-                            ? (0, r.jsx)(_.IeX, {
+                            ? (0, r.jsx)(f.IeX, {
                                   className: I.categoryIcon,
                                   color: 'currentColor'
                               })
@@ -199,7 +199,7 @@ class P extends i.PureComponent {
                           width: t,
                           renderColumn: C
                       })
-                    : (0, r.jsx)(_.GMG, {
+                    : (0, r.jsx)(f.GMG, {
                           ref: this._masonryRef,
                           fade: !0,
                           className: o()(I.container, i),

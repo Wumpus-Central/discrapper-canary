@@ -20,8 +20,8 @@ var r = n(392711),
     c = n(502087),
     u = n(168232),
     d = n(598077),
-    _ = n(630388),
-    f = n(823379),
+    f = n(630388),
+    _ = n(823379),
     p = n(314897),
     h = n(750041),
     m = n(981631),
@@ -87,10 +87,10 @@ function S(e) {
     }
     let d = e.purchased_flags;
     void 0 !== d && ((e.purchasedFlags = d), delete e.purchased_flags);
-    let _ = e.premium_usage_flags;
-    void 0 !== _ && ((e.premiumUsageFlags = _), delete e.premium_usage_flags), null === e.banner_color && delete e.banner_color;
-    let f = e.avatar_decoration_data;
-    void 0 !== f && ((e.avatarDecorationData = (0, o.FG)(f)), delete e.avatar_decoration_data);
+    let f = e.premium_usage_flags;
+    void 0 !== f && ((e.premiumUsageFlags = f), delete e.premium_usage_flags), null === e.banner_color && delete e.banner_color;
+    let _ = e.avatar_decoration_data;
+    void 0 !== _ && ((e.avatarDecorationData = (0, o.FG)(_)), delete e.avatar_decoration_data);
     let p = e.collectibles;
     void 0 !== p && (delete e.collectibles, (e.collectibles = (0, s.Xm)(p)));
     let h = e.global_name;
@@ -209,11 +209,11 @@ function L(e) {
 function x(e) {
     if (null != e.users) for (let t of e.users) (t.id in b && L(t)) || (b[t.id] = new d.Z(t));
 }
-function M(e) {
+function k(e) {
     let { user: t } = e;
     t.id !== p.default.getId() && N(t);
 }
-function k(e) {
+function M(e) {
     let { user: t } = e;
     N(t);
 }
@@ -283,9 +283,9 @@ function K(e) {
 }
 function z(e) {
     let { message: t } = e;
-    if ((P(t, !0), null != t.flags && _.yE(t.flags, m.iLy.URGENT))) {
+    if ((P(t, !0), null != t.flags && f.yE(t.flags, m.iLy.URGENT))) {
         let e = b[p.default.getId()];
-        return null != e && ((b[p.default.getId()] = e.set('flags', _.mB(e.flags, m.xW$.HAS_UNREAD_URGENT_MESSAGES, !0))), !0);
+        return null != e && ((b[p.default.getId()] = e.set('flags', f.mB(e.flags, m.xW$.HAS_UNREAD_URGENT_MESSAGES, !0))), !0);
     }
     return !1;
 }
@@ -411,10 +411,10 @@ function eu(e) {
 function ed(e) {
     return N(e.relationship.user);
 }
-function e_(e) {
+function ef(e) {
     return N(e.gameRelationship.user);
 }
-function ef(e) {
+function e_(e) {
     let { relationships: t } = e;
     return t.reduce((e, t) => N(t.user) || e, !1);
 }
@@ -505,7 +505,7 @@ class eP extends h.Z {
         let e = this.getCurrentUser();
         return {
             version: eP.LATEST_SNAPSHOT_VERSION,
-            data: { users: [e].filter(f.lm) }
+            data: { users: [e].filter(_.lm) }
         };
     }
     handleLoadCache(e) {
@@ -555,8 +555,8 @@ class eP extends h.Z {
             UPDATE_CLIENT_PREMIUM_TYPE: j,
             OVERLAY_INITIALIZE: x,
             CACHE_LOADED: (e) => this.handleLoadCache(e),
-            USER_UPDATE: M,
-            CURRENT_USER_UPDATE: k,
+            USER_UPDATE: k,
+            CURRENT_USER_UPDATE: M,
             PRESENCE_UPDATES: J,
             SEARCH_FINISH: V,
             MOD_VIEW_SEARCH_FINISH: V,
@@ -585,8 +585,8 @@ class eP extends h.Z {
             CHANNEL_CREATE: q,
             CHANNEL_UPDATES: X,
             RELATIONSHIP_ADD: ed,
-            GAME_RELATIONSHIP_ADD: e_,
-            LOAD_RELATIONSHIPS_SUCCESS: ef,
+            GAME_RELATIONSHIP_ADD: ef,
+            LOAD_RELATIONSHIPS_SUCCESS: e_,
             FRIEND_SUGGESTION_CREATE: ep,
             LOAD_FRIEND_SUGGESTIONS_SUCCESS: eh,
             AUDIT_LOG_FETCH_SUCCESS: em,

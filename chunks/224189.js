@@ -10,11 +10,11 @@ async function c(e, t) {
     let c = r.Z.getApplication(e);
     if (u(c)) return c;
     let d = null == (n = o.Z.getChannel(t)) ? void 0 : n.guild_id,
-        { activityConfigs: _, applications: f } = await (0, s.w1)({ guildId: d }),
+        { activityConfigs: f, applications: _ } = await (0, s.w1)({ guildId: d }),
         p = (0, l.Z)({
             applicationId: e,
-            activityConfigs: _,
-            applications: f
+            activityConfigs: f,
+            applications: _
         });
     if (u(null == p ? void 0 : p.application)) return null == p ? void 0 : p.application;
     {

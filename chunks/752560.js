@@ -8,7 +8,7 @@ var r = n(392711),
     c = n(823596),
     u = n(993374),
     d = n(331551);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,7 +32,7 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
@@ -98,7 +98,7 @@ class g {
     }
     _getIsIncludedInSearch(e, t) {
         if (null == this._search || this._search.hasDefaultQuery) return [!1, !1];
-        let n = f({}, e, t),
+        let n = _({}, e, t),
             r = this._search.isMemberIncludedInSearchResults(n),
             i = r !== e.isIncludedInSearchResults;
         return [r, i];
@@ -158,9 +158,9 @@ class g {
         for (let a of e) {
             if (null == a.joinedAt) continue;
             let e = a;
-            if ((t && (e = h(f({}, e), { isIncludedInSearchResults: !0 })), n)) {
+            if ((t && (e = h(_({}, e), { isIncludedInSearchResults: !0 })), n)) {
                 let t = (0, s.Dw)(a.joinedAt);
-                e = h(f({}, e), {
+                e = h(_({}, e), {
                     isCurrentGuildMemberByTimestamp: t <= this._members.newMemberTimestamp,
                     refreshTimestamp: this.lastRefreshTimestamp
                 });
@@ -308,6 +308,6 @@ class g {
         return t.delete(e), this.updateSearchState({ selectedRoleIds: t });
     }
     constructor(e) {
-        _(this, 'guildId', void 0), _(this, 'lastRefreshTimestamp', 0), _(this, 'lastCursorTimestamp', Date.now()), _(this, '_initialized', void 0), _(this, '_pagination', void 0), _(this, '_search', void 0), _(this, '_members', void 0), _(this, '_lastRefreshTimer', null), _(this, '_defaultSearchTotalResultsCount', void 0), (this.guildId = e), (this._initialized = !1), (this._members = null), (this._pagination = null), (this._search = null);
+        f(this, 'guildId', void 0), f(this, 'lastRefreshTimestamp', 0), f(this, 'lastCursorTimestamp', Date.now()), f(this, '_initialized', void 0), f(this, '_pagination', void 0), f(this, '_search', void 0), f(this, '_members', void 0), f(this, '_lastRefreshTimer', null), f(this, '_defaultSearchTotalResultsCount', void 0), (this.guildId = e), (this._initialized = !1), (this._members = null), (this._pagination = null), (this._search = null);
     }
 }

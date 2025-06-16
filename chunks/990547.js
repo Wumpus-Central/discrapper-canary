@@ -34,9 +34,9 @@ var a,
     c = n.n(l),
     u = n(264344),
     d = n.n(u),
-    _ = n(772848);
+    f = n(772848);
 n(804098);
-var f = n(903772),
+var _ = n(903772),
     p = n(627420),
     h = n(433517),
     m = n(298444),
@@ -99,7 +99,7 @@ function S(e, t) {
 }
 let A = 'deviceProperties',
     N = 'referralProperties',
-    C = (0, _.Z)(),
+    C = (0, f.Z)(),
     R = {},
     P = {},
     w = window.DiscordNative;
@@ -135,7 +135,7 @@ if (null != w) {
             os_arch: o,
             app_arch: s,
             system_locale: c,
-            has_client_mods: (0, f.e)(),
+            has_client_mods: (0, _.e)(),
             client_launch_id: C
         }),
         (null == (a = d().name) ? void 0 : a.toLocaleLowerCase()) === 'electron' && ((r.browser_user_agent = d().ua || ''), (r.browser_version = d().version || '')),
@@ -162,14 +162,14 @@ function x(e) {
         t
     );
 }
-function M() {
+function k() {
     let e = document.referrer;
     return 0 === e.search('https?://(.*)google.([^/?]*)') ? 'google' : 0 === e.search('https?://(.*)bing.com') ? 'bing' : 0 === e.search('https?://(.*)yahoo.com') ? 'yahoo' : 0 === e.search('https?://(.*)duckduckgo.com') ? 'duckduckgo' : null;
 }
-function k() {
+function M() {
     let e = {},
         t = document.referrer,
-        n = M(),
+        n = k(),
         r = 'yahoo' !== n ? 'q' : 'p';
     if (null != n) {
         e.search_engine = n;
@@ -220,7 +220,7 @@ function B() {
 }
 function V() {
     let e = {};
-    return (e.os = U()), (e.browser = j()), (e.device = G()), (e.system_locale = (0, p.qf)()), (e.has_client_mods = (0, f.e)()), e;
+    return (e.os = U()), (e.browser = j()), (e.device = G()), (e.system_locale = (0, p.qf)()), (e.has_client_mods = (0, _.e)()), e;
 }
 function F() {
     var e, t;
@@ -237,7 +237,7 @@ function F() {
 }
 function Z() {
     let e = {};
-    return (e.referrer = document.referrer), (e.referring_domain = B()), (e = I({}, e, x(window.location.href), k()));
+    return (e.referrer = document.referrer), (e.referring_domain = B()), (e = I({}, e, x(window.location.href), M()));
 }
 function H(e, t) {
     let n = {};
@@ -262,10 +262,10 @@ function K() {
     let n = {},
         r = window.GLOBAL_ENV.RELEASE_CHANNEL;
     r && (null == n.release_channel || '' === n.release_channel) && (n.release_channel = r.split('-')[0]);
-    let i = parseInt('409987', 10);
+    let i = parseInt('410029', 10);
     isNaN(i) || (n.client_build_number = i);
     let a = null == w || null == (e = (t = w.remoteApp).getBuildNumber) ? void 0 : e.call(t);
-    return isNaN(a) || (n.native_build_number = a), (n.client_event_source = W()), (n.has_client_mods = (0, f.e)()), (n.client_launch_id = C), n;
+    return isNaN(a) || (n.native_build_number = a), (n.client_event_source = W()), (n.has_client_mods = (0, _.e)()), (n.client_launch_id = C), n;
 }
 function z(e) {
     return null != R[e] && R[e] > Date.now();

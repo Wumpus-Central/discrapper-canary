@@ -60,18 +60,18 @@ function d(e, t) {
         e
     );
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = f(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -96,8 +96,8 @@ let p = {
         SELECTABLE: 'modeSelectable'
     };
 function m(e) {
-    var { type: t = p.DEFAULT, className: n, disabled: i, selectable: l, children: u, style: f } = e,
-        m = _(e, ['type', 'className', 'disabled', 'selectable', 'children', 'style']);
+    var { type: t = p.DEFAULT, className: n, disabled: i, selectable: l, children: u, style: _ } = e,
+        m = f(e, ['type', 'className', 'disabled', 'selectable', 'children', 'style']);
     let g = h.DEFAULT;
     return (
         i ? (g = h.DISABLED) : l && (g = h.SELECTABLE),
@@ -107,7 +107,7 @@ function m(e) {
                 c(
                     {
                         className: a()(s[t], n, s[g]),
-                        style: f
+                        style: _
                     },
                     m
                 ),

@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(540059),
     u = n(963249),
     d = n(109213),
-    _ = n(51144),
-    f = n(443603),
+    f = n(51144),
+    _ = n(443603),
     p = n(981631),
     h = n(388032),
     m = n(302195);
@@ -68,7 +68,7 @@ function y(e, t) {
 function O(e) {
     let { disabled: t, channel: i } = e,
         { analyticsLocations: g } = (0, l.ZP)(s.Z.GIFT_BUTTON),
-        b = (0, _.Ft)(i),
+        b = (0, f.Ft)(i),
         { Component: O, events: v, play: I } = (0, a.$)(),
         { enabled: T } = d.G.useExperiment({ location: 'gift-button' }, { autoTrackExposure: !1 }),
         S = (0, c.Q3)('ChannelPremiumGiftButton'),
@@ -113,7 +113,7 @@ function O(e) {
         text: h.intl.string(h.t.sWtWDQ),
         children: (e) =>
             (0, r.jsx)(
-                f.Z,
+                _.Z,
                 y(
                     E(
                         y(E({}, e), {

@@ -1,6 +1,6 @@
 n.d(t, {
     V: () => p,
-    k: () => f
+    k: () => _
 });
 var r = n(255367);
 n(73800);
@@ -50,7 +50,7 @@ function d(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,11 +61,11 @@ function _(e, t) {
         e
     );
 }
-function f(e) {
+function _(e) {
     let { kind: t } = e;
     (0, i.ZDy)(async () => {
         let { default: e } = await n.e('7285').then(n.bind(n, 951269));
-        return (n) => (0, r.jsx)(e, _(u({}, n), { kind: t }));
+        return (n) => (0, r.jsx)(e, f(u({}, n), { kind: t }));
     });
 }
 function p() {
@@ -74,7 +74,7 @@ function p() {
         return (t) =>
             (0, r.jsx)(
                 e,
-                _(u({}, t), {
+                f(u({}, t), {
                     header: s.intl.string(l.default.odgSTk),
                     confirmText: s.intl.string(s.t.BddRzc),
                     confirmButtonColor: i.zxk.Colors.BRAND,

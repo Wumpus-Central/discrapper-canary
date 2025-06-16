@@ -35,35 +35,35 @@ function u(e) {
     return e;
 }
 let d = {},
-    _ = 0,
-    f = new Set(),
+    f = 0,
+    _ = new Set(),
     p = {},
     h = {};
 function m() {
-    _ = 1;
+    f = 1;
 }
 function g(e) {
     let { wallpapers: t } = e;
-    (_ = 2),
+    (f = 2),
         t.forEach((e) => {
             d[e.id] = e;
         });
 }
 function E() {
-    _ = 3;
+    f = 3;
 }
 function b() {
-    (d = {}), (_ = 0);
+    (d = {}), (f = 0);
 }
 function y(e) {
     let { channelId: t } = e,
-        n = new Set(f);
-    n.add(t), (f = n);
+        n = new Set(_);
+    n.add(t), (_ = n);
 }
 function O(e) {
     let { channelId: t } = e,
-        n = new Set(f);
-    n.delete(t), (f = n);
+        n = new Set(_);
+    n.delete(t), (_ = n);
 }
 function v(e) {
     var t, n;
@@ -86,16 +86,16 @@ function T(e) {
 }
 class S extends (r = a.ZP.Store) {
     get isFetchingWallpapers() {
-        return 1 === _;
+        return 1 === f;
     }
     get shouldFetchWallpapers() {
-        return 0 === _;
+        return 0 === f;
     }
     get hasFetchedWallpapers() {
-        return 2 === _;
+        return 2 === f;
     }
     get failedToFetchWallpapers() {
-        return 3 === _;
+        return 3 === f;
     }
     get wallpapers() {
         return Object.values(d);
@@ -105,7 +105,7 @@ class S extends (r = a.ZP.Store) {
         if (null != e && null != d[e]) return null != (t = h[e]) ? t : d[e];
     }
     isUpdatingChatWallpaperFlagForChannel(e) {
-        return f.has(e);
+        return _.has(e);
     }
     getLastSetWallpaperMessageIdForChannel(e) {
         return p[e];

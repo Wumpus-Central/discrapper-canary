@@ -1,7 +1,7 @@
 n.d(t, {
-    Mg: () => f,
+    Mg: () => _,
     eD: () => u,
-    g8: () => _,
+    g8: () => f,
     qQ: () => p
 }),
     n(388685),
@@ -68,7 +68,7 @@ var u = (function (e) {
 function d() {
     return Math.floor(4294967296 * Math.random());
 }
-class _ {
+class f {
     getSnapshot() {
         let e = {};
         for (let t in this.nodes) {
@@ -169,7 +169,7 @@ class _ {
             (this.version = 0);
     }
 }
-function f(e, t) {
+function _(e, t) {
     return {
         type: 'guild',
         id: e,

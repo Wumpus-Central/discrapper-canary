@@ -10,16 +10,16 @@ function s(e, t) {
         c = s.clientWidth,
         u = s.clientHeight,
         d = 0,
-        _ = 0;
+        f = 0;
     if (l) {
         (c = l.width), (u = l.height);
-        var f = (0, o.Z)();
-        (f || (!f && 'fixed' === t)) && ((d = l.offsetLeft), (_ = l.offsetTop));
+        var _ = (0, o.Z)();
+        (_ || (!_ && 'fixed' === t)) && ((d = l.offsetLeft), (f = l.offsetTop));
     }
     return {
         width: c,
         height: u,
         x: d + (0, a.Z)(e),
-        y: _
+        y: f
     };
 }

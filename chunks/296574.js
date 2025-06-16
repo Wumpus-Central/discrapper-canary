@@ -78,8 +78,8 @@ let o = (e) => (t) => {
             c = !1,
             u = new Set(),
             d = new Set(),
-            _ = l.storage;
-        if (!_)
+            f = l.storage;
+        if (!f)
             return e(
                 (...e) => {
                     console.warn(`[zustand persist middleware] Unable to update item '${l.name}', the given storage is currently unavailable.`), n(...e);
@@ -87,20 +87,20 @@ let o = (e) => (t) => {
                 r,
                 i
             );
-        let f = () => {
+        let _ = () => {
                 let e = l.partialize({ ...r() });
-                return _.setItem(l.name, {
+                return f.setItem(l.name, {
                     state: e,
                     version: l.version
                 });
             },
             p = i.setState;
         i.setState = (e, t) => {
-            p(e, t), f();
+            p(e, t), _();
         };
         let h = e(
             (...e) => {
-                n(...e), f();
+                n(...e), _();
             },
             r,
             i
@@ -108,14 +108,14 @@ let o = (e) => (t) => {
         i.getInitialState = () => h;
         let m = () => {
             var e, t;
-            if (!_) return;
+            if (!f) return;
             (c = !1),
                 u.forEach((e) => {
                     var t;
                     return e(null != (t = r()) ? t : h);
                 });
             let i = (null == (t = l.onRehydrateStorage) ? void 0 : t.call(l, null != (e = r()) ? e : h)) || void 0;
-            return o(_.getItem.bind(_))(l.name)
+            return o(f.getItem.bind(f))(l.name)
                 .then((e) => {
                     if (e)
                         if ('number' != typeof e.version || e.version === l.version) return [!1, e.state];
@@ -128,7 +128,7 @@ let o = (e) => (t) => {
                 .then((e) => {
                     var t;
                     let [i, a] = e;
-                    if ((n((s = l.merge(a, null != (t = r()) ? t : h)), !0), i)) return f();
+                    if ((n((s = l.merge(a, null != (t = r()) ? t : h)), !0), i)) return _();
                 })
                 .then(() => {
                     null == i || i(s, void 0), (s = r()), (c = !0), d.forEach((e) => e(s));
@@ -144,10 +144,10 @@ let o = (e) => (t) => {
                         ...l,
                         ...e
                     }),
-                        e.storage && (_ = e.storage);
+                        e.storage && (f = e.storage);
                 },
                 clearStorage: () => {
-                    null == _ || _.removeItem(l.name);
+                    null == f || f.removeItem(l.name);
                 },
                 getOptions: () => l,
                 rehydrate: () => m(),

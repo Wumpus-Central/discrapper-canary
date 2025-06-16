@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -9,17 +9,17 @@ var i = n(442837),
     c = n(594174),
     u = n(51144),
     d = n(388032);
-let _ = (e) => {
-    let { selectedSkuId: t, validateSelectedGift: n, className: _ } = e,
-        f = (0, i.Wu)([l.Z], () => l.Z.getFriendIDs()),
-        p = (0, i.Wu)([c.default], () => c.default.filter((e) => f.includes(e.id) && !e.bot), [f]),
+let f = (e) => {
+    let { selectedSkuId: t, validateSelectedGift: n, className: f } = e,
+        _ = (0, i.Wu)([l.Z], () => l.Z.getFriendIDs()),
+        p = (0, i.Wu)([c.default], () => c.default.filter((e) => _.includes(e.id) && !e.bot), [_]),
         { giftRecipient: h, setGiftRecipient: m } = (0, s.wD)();
     if (null == t) return null;
     let g = (e) => {
         n(e, t), m(e);
     };
     return (0, r.jsxs)('div', {
-        className: _,
+        className: f,
         children: [
             (0, r.jsx)(a.vwX, { children: d.intl.string(d.t.xFn72t) }),
             (0, r.jsx)(a.VcW, {

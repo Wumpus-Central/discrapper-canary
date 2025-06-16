@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(997841);
+n.d(t, { Z: () => _ }), n(997841);
 var r = n(255367),
     i = n(481060),
     a = n(783097),
@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,8 +36,8 @@ function _(e) {
     }
     return e;
 }
-function f(e) {
-    let { application: t, label: n, onSuccess: d, showIconFirst: f, focusedClassName: p } = e;
+function _(e) {
+    let { application: t, label: n, onSuccess: d, showIconFirst: _, focusedClassName: p } = e;
     if (__OVERLAY__ || !s.wS || null == t) return null;
     let h = o.default.getCurrentUser(),
         m = (0, a.Ow)(t);
@@ -49,7 +49,7 @@ function f(e) {
                   applicationId: t.id,
                   referrerId: null == h ? void 0 : h.id
               })
-            : (0, c.J)(_({ id: t.id }, m));
+            : (0, c.J)(f({ id: t.id }, m));
         null != n && (0, s.JG)(n, d);
     }
     let E = 'copy-app-link-'.concat(t.id);
@@ -59,8 +59,8 @@ function f(e) {
             id: E,
             label: n,
             action: g,
-            icon: f ? void 0 : i.xPt,
-            iconLeft: f ? i.xPt : void 0,
+            icon: _ ? void 0 : i.xPt,
+            iconLeft: _ ? i.xPt : void 0,
             focusedClassName: p
         },
         E

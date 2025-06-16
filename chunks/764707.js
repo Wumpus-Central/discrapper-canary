@@ -35,7 +35,7 @@ function c(e) {
 }
 let u = 50,
     d = 0.4,
-    _ = (e, t) => {
+    f = (e, t) => {
         let n = e.toRgb(),
             r = t.toRgb(),
             [a, o, l] = (0, s.J2)([n.r, n.g, n.b], [r.r, r.g, r.b], u);
@@ -45,7 +45,7 @@ let u = 50,
             b: l
         });
     },
-    f = (e, t) => {
+    _ = (e, t) => {
         if (0 !== t.length)
             return 1 === t.length
                 ? {
@@ -57,8 +57,8 @@ let u = 50,
                 : {
                       primary: t[0],
                       secondary: t[1],
-                      border: _(t[0], t[1]).setAlpha(d),
-                      label: _(t[0], t[1]).isLight() ? e.dark : e.light
+                      border: f(t[0], t[1]).setAlpha(d),
+                      label: f(t[0], t[1]).isLight() ? e.dark : e.light
                   };
     },
     p = (e, t) => {
@@ -72,7 +72,7 @@ let u = 50,
                 : {
                       primary: t[0],
                       secondary: t[1],
-                      text: _(t[0], t[1]).isLight() ? e.dark : e.light
+                      text: f(t[0], t[1]).isLight() ? e.dark : e.light
                   };
     },
     h = (e, t) => {
@@ -87,7 +87,7 @@ let u = 50,
         let n = (0, a.e7)([o.Z], () => o.Z.saturation);
         if (null == t) return {};
         let r = {
-            backgroundColors: f(e, t.backgroundColors),
+            backgroundColors: _(e, t.backgroundColors),
             buttonColors: p(e, t.buttonColors),
             confettiColors: t.confettiColors
         };

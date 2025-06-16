@@ -8,8 +8,8 @@ var r = n(147913),
     c = n(944486),
     u = n(246946),
     d = n(979651),
-    _ = n(938475),
-    f = n(358221);
+    f = n(938475),
+    _ = n(358221);
 function p(e, t) {
     if (t.has(e)) throw TypeError('Cannot initialize the same private elements twice on an object');
 }
@@ -55,7 +55,7 @@ let v = (0, i.uk)('call_calling', a.Z.getSoundpack());
 var I = new WeakMap();
 class T extends r.Z {
     _initialize() {
-        this.stores = new Map().set(o.Z, this.handleRingUpdate).set(l.Z, this.handleRingUpdate).set(u.Z, this.handleRingUpdate).set(d.Z, this.handleRingUpdate).set(f.Z, this.handleChannelRTCStoreChange).set(a.Z, this.handleSoundpackUpdate);
+        this.stores = new Map().set(o.Z, this.handleRingUpdate).set(l.Z, this.handleRingUpdate).set(u.Z, this.handleRingUpdate).set(d.Z, this.handleRingUpdate).set(_.Z, this.handleChannelRTCStoreChange).set(a.Z, this.handleSoundpackUpdate);
     }
     constructor(...e) {
         super(...e),
@@ -69,7 +69,7 @@ class T extends r.Z {
             }),
             O(this, '_handleRing', (e, t) => {
                 let n = d.Z.getCurrentClientVoiceChannelId(t),
-                    r = null != n && _.ZP.countVoiceStatesForChannel(n) >= 2;
+                    r = null != n && f.ZP.countVoiceStatesForChannel(n) >= 2;
                 null == n || r || !e || l.Z.isSoundDisabled('call_calling') || u.Z.disableSounds ? v.stop() : v.loop();
             }),
             O(this, 'handleSoundpackUpdate', () => {
@@ -105,7 +105,7 @@ class T extends r.Z {
                     return;
                 }
                 if (null == e) return;
-                let n = f.Z.getGuildRingingUsers(e),
+                let n = _.Z.getGuildRingingUsers(e),
                     r = new Set([...E(this, I)].filter((e) => !n.has(e)));
                 r.size > 0 &&
                     (r.forEach((e) => {

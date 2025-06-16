@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(11769),
     u = n(338390),
     d = n(496675),
-    _ = n(300429),
-    f = n(585483),
+    f = n(300429),
+    _ = n(585483),
     p = n(70956),
     h = n(981631),
     m = n(388032),
@@ -69,7 +69,7 @@ function O(e, t) {
 function v(e) {
     let t,
         { isEnabled: n, rateLimitPerUser: a, isBypassSlowmode: s, slowmodeCooldownGuess: d } = e,
-        [_, E] = i.useState(!1);
+        [f, E] = i.useState(!1);
     i.useEffect(() => {
         function e() {
             E(!0),
@@ -78,9 +78,9 @@ function v(e) {
                 }, 1000);
         }
         return (
-            f.S.subscribe(h.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, e),
+            _.S.subscribe(h.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, e),
             () => {
-                f.S.unsubscribe(h.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, e);
+                _.S.unsubscribe(h.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, e);
             }
         );
     }, []);
@@ -102,7 +102,7 @@ function v(e) {
         ? (0, r.jsxs)(l.Text, {
               className: g.cooldownText,
               variant: 'text-xs/medium',
-              color: _ ? 'text-danger' : 'text-muted',
+              color: f ? 'text-danger' : 'text-muted',
               tabularNumbers: !0,
               children: [
                   (0, r.jsx)(l.ANZ, {
@@ -116,7 +116,7 @@ function v(e) {
         : (0, r.jsxs)(l.Text, {
               className: g.cooldownText,
               variant: 'text-sm/medium',
-              color: _ ? 'text-danger' : 'text-muted',
+              color: f ? 'text-danger' : 'text-muted',
               tabularNumbers: !0,
               children: [
                   t,
@@ -134,7 +134,7 @@ function v(e) {
 }
 function I(e) {
     let { channel: t, isThreadCreation: n = !1 } = e,
-        i = (0, s.e7)([_.Z], () => _.Z.getSlowmodeCooldownGuess(t.id, n ? _.S.CreateThread : _.S.SendMessage)),
+        i = (0, s.e7)([f.Z], () => f.Z.getSlowmodeCooldownGuess(t.id, n ? f.S.CreateThread : f.S.SendMessage)),
         a = (0, s.e7)([d.Z], () => (n ? d.Z.can(h.Plq.MANAGE_THREADS, t) : d.Z.can(h.Plq.MANAGE_CHANNELS, t) || d.Z.can(h.Plq.MANAGE_MESSAGES, t))),
         { rateLimitPerUser: o } = t,
         l = o > 0;

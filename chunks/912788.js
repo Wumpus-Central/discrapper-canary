@@ -23,10 +23,10 @@ function d(e) {
     let { error: t } = e;
     l = t;
 }
-function _() {
+function f() {
     h();
 }
-function f(e) {
+function _(e) {
     let { message: t, code: n } = e;
     l = new o.HF(t, n);
 }
@@ -63,10 +63,10 @@ s(y, 'displayName', 'PremiumPaymentModalStore');
 let O = new y(a.Z, {
     PREMIUM_PAYMENT_SUBSCRIBE_FAIL: d,
     PREMIUM_PAYMENT_UPDATE_FAIL: d,
-    PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: _,
+    PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: f,
     PREMIUM_PAYMENT_UPDATE_SUCCESS: h,
     PREMIUM_PAYMENT_ERROR_CLEAR: h,
-    BRAINTREE_TOKENIZE_PAYPAL_FAIL: f,
+    BRAINTREE_TOKENIZE_PAYPAL_FAIL: _,
     BRAINTREE_TOKENIZE_VENMO_FAIL: p,
     SKU_PURCHASE_SUCCESS: m,
     SKU_PURCHASE_FAIL: E,

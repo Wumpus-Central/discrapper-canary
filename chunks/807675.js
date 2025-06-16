@@ -17,27 +17,27 @@ function u(e) {
 }
 function d(e) {
     var t, n, i, c, u, d;
-    let _ = (0, r.parse)(e, { arrayFormat: 'bracket' }),
-        f = l.Hn;
+    let f = (0, r.parse)(e, { arrayFormat: 'bracket' }),
+        _ = l.Hn;
     try {
-        f = a.vB(null != _.permissions && '' !== _.permissions ? _.permissions : '0');
+        _ = a.vB(null != f.permissions && '' !== f.permissions ? f.permissions : '0');
     } catch (e) {}
-    let p = _.channel_id,
-        h = null != (c = null != (i = null != (n = _.guild_id) ? n : null == (t = o.Z.getChannel(p)) ? void 0 : t.guild_id) ? i : s.Z.getGuildId()) ? c : void 0;
+    let p = f.channel_id,
+        h = null != (c = null != (i = null != (n = f.guild_id) ? n : null == (t = o.Z.getChannel(p)) ? void 0 : t.guild_id) ? i : s.Z.getGuildId()) ? c : void 0;
     return {
-        clientId: null != (u = _.client_id) ? u : '',
-        scopes: (null != (d = _.scope) ? d : '').split(' ').filter((e) => e.length > 0),
-        responseType: _.response_type,
-        redirectUri: _.redirect_uri,
-        codeChallenge: _.code_challenge,
-        codeChallengeMethod: _.code_challenge_method,
-        state: _.state,
-        permissions: f,
+        clientId: null != (u = f.client_id) ? u : '',
+        scopes: (null != (d = f.scope) ? d : '').split(' ').filter((e) => e.length > 0),
+        responseType: f.response_type,
+        redirectUri: f.redirect_uri,
+        codeChallenge: f.code_challenge,
+        codeChallengeMethod: f.code_challenge_method,
+        state: f.state,
+        permissions: _,
         channelId: p,
         guildId: h,
-        prompt: _.prompt,
-        disableGuildSelect: 'true' === _.disable_guild_select,
-        integrationType: null == _.integration_type ? void 0 : Number(_.integration_type),
-        nonce: _.nonce
+        prompt: f.prompt,
+        disableGuildSelect: 'true' === f.disable_guild_select,
+        integrationType: null == f.integration_type ? void 0 : Number(f.integration_type),
+        nonce: f.nonce
     };
 }

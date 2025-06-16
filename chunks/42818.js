@@ -1,5 +1,5 @@
 n.d(t, {
-    As: () => k,
+    As: () => M,
     By: () => j,
     Lu: () => U,
     e9: () => Y,
@@ -19,8 +19,8 @@ var r = n(255367),
     c = n(442837),
     u = n(481060),
     d = n(911969),
-    _ = n(100527),
-    f = n(906732),
+    f = n(100527),
+    _ = n(906732),
     p = n(509545),
     h = n(259580),
     m = n(63063),
@@ -132,11 +132,11 @@ function x(e, t, n, r) {
     }
     throw Error('Unexpected invoice plan: '.concat(e.subscriptionPlanId));
 }
-function M(e) {
+function k(e) {
     var t;
-    let { invoiceItem: n, overrideAmount: i, showGuildSubscriptionAdjustmentTooltip: a, currency: o, className: s, isPrepaidPaymentSource: d, referralTrialOfferId: _, inTrialPeriod: f } = e,
+    let { invoiceItem: n, overrideAmount: i, showGuildSubscriptionAdjustmentTooltip: a, currency: o, className: s, isPrepaidPaymentSource: d, referralTrialOfferId: f, inTrialPeriod: _ } = e,
         h = (0, c.e7)([p.Z], () => p.Z.get(n.subscriptionPlanId)),
-        m = null == (t = (0, O.N)(_)) ? void 0 : t.subscription_trial;
+        m = null == (t = (0, O.N)(f)) ? void 0 : t.subscription_trial;
     l()(null != h, 'Missing subscriptionPlan');
     let b = x(
         n,
@@ -186,10 +186,10 @@ function M(e) {
         intervalCount: h.intervalCount,
         currency: o,
         className: s,
-        inTrialPeriod: f
+        inTrialPeriod: _
     });
 }
-function k(e) {
+function M(e) {
     let { label: t, tooltipText: n, tooltipAriaLabel: i } = e;
     return (0, r.jsxs)('div', {
         className: N.invoiceItemLabelWithIcon,
@@ -230,7 +230,7 @@ function j(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             null != a
-                ? (0, r.jsx)(M, {
+                ? (0, r.jsx)(k, {
                       invoiceItem: a,
                       currency: t.currency,
                       isPrepaidPaymentSource: n
@@ -261,24 +261,24 @@ function U(e) {
     l()(null != s, 'Expected newPlanInvoiceItem');
     let c = o.find((e) => !(0, g.Z8)(e.subscriptionPlanId) && e.amount < 0),
         u = o.find((e) => null == e.subscriptionPlanId && null != e.discounts && e.discounts.find((e) => e.type === d.eW.PREMIUM_LEGACY_UPGRADE_PROMOTION)),
-        _ = D(s, d.eW.PREMIUM_TRIAL),
-        f = L(s, d.eW.SUBSCRIPTION_PLAN),
-        p = s.quantity * f,
+        f = D(s, d.eW.PREMIUM_TRIAL),
+        _ = L(s, d.eW.SUBSCRIPTION_PLAN),
+        p = s.quantity * _,
         h = s.amount + (null != c ? c.amount : 0) - p + (null != u ? u.amount : 0),
         m = o.filter((e) => e.subscriptionPlanId === T.Xh.PREMIUM_MONTH_GUILD || e.subscriptionPlanId === T.Xh.PREMIUM_YEAR_GUILD).reduce((e, t) => e + t.amount, 0);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(M, {
+            (0, r.jsx)(k, {
                 invoiceItem: s,
                 currency: t.currency,
                 overrideAmount: p,
                 isPrepaidPaymentSource: i,
                 referralTrialOfferId: a
             }),
-            0 === h || _
+            0 === h || f
                 ? null
                 : (0, r.jsx)(v.B1, {
-                      label: (0, r.jsx)(k, {
+                      label: (0, r.jsx)(M, {
                           label: A.intl.formatToPlainString(A.t.ZSVgeX, { planName: (0, g.PV)(n.id) ? (0, g.aq)(n.id) : n.name }),
                           tooltipText: A.intl.string(A.t.JmwQJC)
                       }),
@@ -286,7 +286,7 @@ function U(e) {
                   }),
             0 !== m
                 ? (0, r.jsx)(v.B1, {
-                      label: (0, r.jsx)(k, {
+                      label: (0, r.jsx)(M, {
                           label: A.intl.string(A.t['+as5ZW']),
                           tooltipText: A.intl.format(A.t.UDop9f, {}),
                           tooltipAriaLabel: A.intl.string(A.t.P68ePD)
@@ -346,7 +346,7 @@ function F(e) {
                           (0, r.jsx)(v.Z9, { children: A.intl.string(A.t.tuqjWV) }),
                           B(G((0, y.j)(n.invoiceItems))).map((e) =>
                               (0, r.jsx)(
-                                  M,
+                                  k,
                                   {
                                       invoiceItem: e,
                                       currency: n.currency,
@@ -363,7 +363,7 @@ function F(e) {
             B(G((0, y.j)(i.invoiceItems))).map((e) => {
                 let n = null != s && !s.some((t) => t.subscriptionPlanId === e.subscriptionPlanId && t.quantity === e.quantity);
                 return (0, r.jsx)(
-                    M,
+                    k,
                     {
                         invoiceItem: e,
                         currency: i.currency,
@@ -404,9 +404,9 @@ function Z(e) {
                   helpdeskArticle: m.Z.getArticleURL(S.BhN.PREMIUM_TRIAL)
               });
     }
-    let _ = i.taxInclusive ? A.t['hay+go'] : A.t.da0lkp;
+    let f = i.taxInclusive ? A.t['hay+go'] : A.t.da0lkp;
     return (0, r.jsx)(r.Fragment, {
-        children: A.intl.format(_, {
+        children: A.intl.format(f, {
             rate: (0, E.og)((0, E.T4)(i.subtotal, i.currency), u, d),
             renewalDate: null != s ? s : o ? (null != n ? n.subscriptionPeriodEnd : i.subscriptionPeriodStart) : i.subscriptionPeriodEnd,
             contactLink: S.EYA.CONTACT,
@@ -416,14 +416,14 @@ function Z(e) {
 }
 function H(e) {
     let { premiumSubscription: t, proratedInvoice: n, renewalInvoice: a, overrideRenewalDate: o, isUpdate: s = !1, isTrial: l = !1, priceOptions: c, isPrepaidPaymentSource: d = !1, trialFooterMessageOverride: p, hideSubscriptionDetails: m = !1 } = e,
-        { analyticsLocations: g } = (0, f.ZP)(),
+        { analyticsLocations: g } = (0, _.ZP)(),
         E = R(
             {
                 subscriptionId: null == t ? void 0 : t.id,
                 renewal: !0,
                 preventFetch: !s,
                 analyticsLocatinons: g,
-                analyticsLocation: _.Z.SUBSCRIPTION_INVOICE_FOOTER
+                analyticsLocation: f.Z.SUBSCRIPTION_INVOICE_FOOTER
             },
             c
         ),
@@ -474,10 +474,10 @@ function Y(e) {
     let t,
         { plan: n, className: i, isPrepaidPaymentSource: a = !1, isCustomGift: o = !1, invoicePreview: s } = e,
         { tax: l, taxInclusive: c, currency: d } = s,
-        _ = s.total,
-        f = _ - l,
-        p = (0, E.T4)(f, d),
-        h = (0, E.T4)(_, d);
+        f = s.total,
+        _ = f - l,
+        p = (0, E.T4)(_, d),
+        h = (0, E.T4)(f, d);
     return (
         (t = o ? (0, g.L7)(n.interval, !0, void 0, void 0, !0, (0, g.Rd)(n.id)) : A.intl.formatToPlainString(A.t.LQLxkZ, { planName: (0, g.Gf)(n.id, !1, a) })),
         (0, r.jsxs)('div', {

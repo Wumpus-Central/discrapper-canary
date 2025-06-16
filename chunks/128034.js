@@ -1,4 +1,4 @@
-n.d(t, { d: () => f });
+n.d(t, { d: () => _ });
 var r = n(255367);
 n(73800);
 var i = n(692547),
@@ -60,14 +60,14 @@ function d(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = f(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -76,14 +76,14 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let f = (e) => {
+let _ = (e) => {
     var t,
         n,
-        { size: s = 'md', width: c, height: _, secondaryColor: f = 'transparent', secondaryColorClass: p = '', color: h = i.Z.colors.INTERACTIVE_NORMAL, colorClass: m = '' } = e,
+        { size: s = 'md', width: c, height: f, secondaryColor: _ = 'transparent', secondaryColorClass: p = '', color: h = i.Z.colors.INTERACTIVE_NORMAL, colorClass: m = '' } = e,
         g = d(e, ['size', 'width', 'height', 'secondaryColor', 'secondaryColorClass', 'color', 'colorClass']);
     let E = (0, o.m)(s),
         b = null != (t = null == E ? void 0 : E.width) ? t : c,
-        y = null != (n = null == E ? void 0 : E.height) ? n : _;
+        y = null != (n = null == E ? void 0 : E.height) ? n : f;
     return (0, r.jsxs)(
         'svg',
         u(l({}, (0, a.Z)(g)), {
@@ -97,7 +97,7 @@ let f = (e) => {
                     cx: '12',
                     cy: '12',
                     r: '10',
-                    fill: 'string' == typeof f ? f : f.css,
+                    fill: 'string' == typeof _ ? _ : _.css,
                     className: p
                 }),
                 (0, r.jsx)('path', {

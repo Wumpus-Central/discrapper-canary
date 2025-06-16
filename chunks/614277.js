@@ -12,8 +12,8 @@ var r = n(255367),
     c = n(867309),
     u = n(481060),
     d = n(563132),
-    _ = n(409813),
-    f = n(249779);
+    f = n(409813),
+    _ = n(249779);
 function p(e, t) {
     if (null == e) return {};
     var n,
@@ -55,7 +55,7 @@ function g(e) {
         C = null == A || null == (n = A.options) ? void 0 : n.bodyClassName,
         R = null == A || null == (a = A.options) ? void 0 : a.sliderBodyClassName;
     return (
-        void 0 !== g && g && (R = f.sliderBodyLarge),
+        void 0 !== g && g && (R = _.sliderBodyLarge),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 null == (p = null == A || null == (s = A.options) ? void 0 : s.renderHeader) || p ? h : null,
@@ -65,12 +65,12 @@ function g(e) {
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(u.hzk, {
-                                  className: o()(C, f.body, f.noRoundedCorners, S, { [f.reviewStep]: b === _.h8.REVIEW }),
+                                  className: o()(C, _.body, _.noRoundedCorners, S, { [_.reviewStep]: b === f.h8.REVIEW }),
                                   children: (0, r.jsx)(u.MyZ, {
                                       activeSlide: b,
                                       centered: !1,
                                       onSlideReady: (e) => T(e),
-                                      width: b === _.h8.ADD_PAYMENT_STEPS ? 408 : void 0,
+                                      width: b === f.h8.ADD_PAYMENT_STEPS ? 408 : void 0,
                                       children: y
                                           .filter((e) => null != e.key)
                                           .map((e) =>
@@ -79,7 +79,7 @@ function g(e) {
                                                   {
                                                       id: e.key,
                                                       children: (0, r.jsx)('form', {
-                                                          className: o()(f.sliderBody, R),
+                                                          className: o()(_.sliderBody, R),
                                                           ref: (e) => {
                                                               O(e);
                                                           },

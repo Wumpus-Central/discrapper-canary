@@ -21,13 +21,13 @@ function o(t, e) {
                 );
         })(t),
         o = (0, r.EN)(e),
-        { traceId: i, parentSpanId: c, parentSampled: E } = a || {};
+        { traceId: i, parentSpanId: c, parentSampled: s } = a || {};
     return a
         ? {
               traceId: i || (0, _.DM)(),
               parentSpanId: c || (0, _.DM)().substring(16),
               spanId: (0, _.DM)().substring(16),
-              sampled: E,
+              sampled: s,
               dsc: o || {}
           }
         : {

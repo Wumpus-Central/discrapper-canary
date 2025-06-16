@@ -1,4 +1,4 @@
-n.d(t, { T: () => _ });
+n.d(t, { T: () => f });
 var r = n(255367),
     i = n(73800),
     a = n(670596),
@@ -56,10 +56,10 @@ function d(e, t) {
         e
     );
 }
-let _ = i.forwardRef(function (e, t) {
+let f = i.forwardRef(function (e, t) {
     let { onInteraction: l, onChange: u } = e,
-        _ = i.useRef(null);
-    function f(e, t) {
+        f = i.useRef(null);
+    function _(e, t) {
         (0, o.ZD)(async () => {
             let { default: i } = await Promise.all([n.e('91689'), n.e('59732'), n.e('48389')]).then(n.bind(n, 712451));
             return (n) =>
@@ -86,7 +86,7 @@ let _ = i.forwardRef(function (e, t) {
                 focus: () => null,
                 activate: () => {
                     var e;
-                    return null == l || l(a.U.IMAGE_UPLOAD), null == (e = _.current) || e.activateUploadDialogue(), !1;
+                    return null == l || l(a.U.IMAGE_UPLOAD), null == (e = f.current) || e.activateUploadDialogue(), !1;
                 }
             }),
             [l]
@@ -96,8 +96,8 @@ let _ = i.forwardRef(function (e, t) {
             children: (0, r.jsx)(
                 s.ZP,
                 d(c({}, e), {
-                    ref: _,
-                    onChange: f,
+                    ref: f,
+                    onChange: _,
                     onClick: p
                 })
             )

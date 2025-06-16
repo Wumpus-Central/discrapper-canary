@@ -49,11 +49,11 @@ function d(e) {
         }),
         u[n].count++;
 }
-function _(e) {
+function f(e) {
     let { application: t } = e;
     null != t.id && null != u[t.id] && (u[t.id].authenticated = !0);
 }
-function f(e) {
+function _(e) {
     let { application: t } = e;
     null != t.id && null != u[t.id] && (u[t.id].count--, 0 === u[t.id].count && delete u[t.id]);
 }
@@ -79,6 +79,6 @@ l(h, 'displayName', 'ConnectedAppsStore');
 let m = new h(s.Z, {
     OVERLAY_INITIALIZE: p,
     RPC_APP_CONNECTED: d,
-    RPC_APP_AUTHENTICATED: _,
-    RPC_APP_DISCONNECTED: f
+    RPC_APP_AUTHENTICATED: f,
+    RPC_APP_DISCONNECTED: _
 });

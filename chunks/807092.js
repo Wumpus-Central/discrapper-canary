@@ -56,8 +56,8 @@ function u(e, t) {
     );
 }
 let d = {},
-    _ = {},
-    f = {};
+    f = {},
+    _ = {};
 function p(e) {
     let { channel: t, message: n, shouldMention: r = !0, showMentionToggle: i = !0, source: a } = e;
     (d[t.id] = {
@@ -66,11 +66,11 @@ function p(e) {
         shouldMention: r,
         showMentionToggle: i
     }),
-        (f[t.id] = a);
+        (_[t.id] = a);
 }
 function h(e) {
     let { channel: t, messageId: n, shouldMention: r = !0, showMentionToggle: i = !0 } = e;
-    _[t.id] = {
+    f[t.id] = {
         channel: t,
         messageId: n,
         shouldMention: r,
@@ -79,24 +79,24 @@ function h(e) {
 }
 function m(e) {
     let { channelId: t, shouldMention: n } = e;
-    t in d && (d[t] = u(l({}, d[t]), { shouldMention: n })), t in _ && (_[t] = u(l({}, _[t]), { shouldMention: n }));
+    t in d && (d[t] = u(l({}, d[t]), { shouldMention: n })), t in f && (f[t] = u(l({}, f[t]), { shouldMention: n }));
 }
 function g(e) {
     let { channelId: t } = e;
-    delete d[t], delete _[t];
+    delete d[t], delete f[t];
 }
 function E(e) {
     var t, n, r;
     let { id: i, channelId: a } = e;
-    if ((null == (n = d[a]) || null == (t = n.message) ? void 0 : t.id) === i) delete d[a], delete f[a];
+    if ((null == (n = d[a]) || null == (t = n.message) ? void 0 : t.id) === i) delete d[a], delete _[a];
     else {
-        if ((null == (r = _[a]) ? void 0 : r.messageId) !== i) return !1;
-        delete _[a], delete f[a];
+        if ((null == (r = f[a]) ? void 0 : r.messageId) !== i) return !1;
+        delete f[a], delete _[a];
     }
 }
 function b(e) {
     if (null == e) return !1;
-    let t = _[e];
+    let t = f[e];
     if (null == t) return !1;
     let n = o.Z.getMessage(e, t.messageId);
     if (null == n) return !1;
@@ -106,7 +106,7 @@ function b(e) {
         shouldMention: t.shouldMention,
         showMentionToggle: t.showMentionToggle
     }),
-        delete _[e];
+        delete f[e];
 }
 function y(e) {
     let { channelId: t } = e;
@@ -117,7 +117,7 @@ function O(e) {
     b(t);
 }
 function v() {
-    (d = {}), (_ = {}), (f = {});
+    (d = {}), (f = {}), (_ = {});
 }
 class I extends (r = i.ZP.Store) {
     initialize() {
@@ -127,7 +127,7 @@ class I extends (r = i.ZP.Store) {
         return d[e];
     }
     getPendingReplyActionSource(e) {
-        return f[e];
+        return _[e];
     }
 }
 s(I, 'displayName', 'PendingReplyStore');

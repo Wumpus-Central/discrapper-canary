@@ -14,8 +14,8 @@ var r = n(255367),
     c = n(596454),
     u = n(100527),
     d = n(906732),
-    _ = n(605236),
-    f = n(688465),
+    f = n(605236),
+    _ = n(688465),
     p = n(333867),
     h = n(592125),
     m = n(63063),
@@ -85,14 +85,14 @@ function x(e, t) {
         e
     );
 }
-let M = 190,
-    k = 178,
+let k = 190,
+    M = 178,
     j = 'MESSAGE_CONFETTI_POTION_MODAL_KEY',
     U = (e) => {
         let { channelId: t, message: i, onRedeem: a, onClose: o, buttonUseState: c = 'activate', source: u } = e,
             d = h.Z.getChannel(t);
         null != d &&
-            ((0, _.EW)(s.z.CONFETTI_POTION_UPSELL, { dismissAction: N.L.INDIRECT_ACTION }),
+            ((0, f.EW)(s.z.CONFETTI_POTION_UPSELL, { dismissAction: N.L.INDIRECT_ACTION }),
             (0, l.ZDy)(
                 async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 135793));
@@ -136,8 +136,8 @@ function G(e) {
 function B(e) {
     let { channel: t, message: n, onRedeem: a, buttonUseState: s } = e,
         c = null != n,
-        _ = c && (0, I.Uw)(n),
-        f = (0, b.Qj)(t.id, c),
+        f = c && (0, I.Uw)(n),
+        _ = (0, b.Qj)(t.id, c),
         { price: h, fetchingPrice: m, error: g } = (0, S.R2)(O.D1),
         { entitlement: y, fetchedEntitlement: v, error: T } = (0, S.t6)(O.D1),
         N = g || T,
@@ -151,8 +151,8 @@ function B(e) {
         [N, c]
     );
     let w = (0, i.useCallback)(() => {
-            null != f && ((0, l.pTH)(), a(f));
-        }, [f, a]),
+            null != _ && ((0, l.pTH)(), a(_));
+        }, [_, a]),
         D = (0, i.useCallback)(() => {
             (0, p.Z)({
                 skuId: O.D1,
@@ -172,15 +172,15 @@ function B(e) {
             }
             return 0;
         }, [y, R, s]),
-        M = (0, i.useMemo)(() => (0 === x ? 1 : _ ? 2 : 3 * (null == f)), [_, f, x]);
+        k = (0, i.useMemo)(() => (0 === x ? 1 : f ? 2 : 3 * (null == _)), [f, _, x]);
     return (0, r.jsx)(V, {
         channel: t,
         buttonPurchaseState: x,
-        buttonDisabledState: M,
+        buttonDisabledState: k,
         price: h,
         onActionClick: L,
         loading: P,
-        selectedEmoji: null != f ? f : void 0,
+        selectedEmoji: null != _ ? _ : void 0,
         isReaction: c
     });
 }
@@ -245,7 +245,7 @@ let V = (e) => {
                                     variant: 'heading-lg/bold',
                                     children: C.intl.string(C.t['5/knv7'])
                                 }),
-                                (0, r.jsx)(f.Z, {})
+                                (0, r.jsx)(_.Z, {})
                             ]
                         }),
                         (0, r.jsx)(l.Text, {
@@ -284,7 +284,7 @@ let V = (e) => {
                 s(!1);
             }, []),
             d = (0, i.useCallback)((e) => (0, b.t0)(e, t.id, a), [a, t.id]),
-            { emojiName: _, selectionText: f } = (0, i.useMemo)(
+            { emojiName: f, selectionText: _ } = (0, i.useMemo)(
                 () =>
                     null == n
                         ? {
@@ -331,14 +331,14 @@ let V = (e) => {
                                                 : (0, r.jsx)(c.Z, {
                                                       animated: !1,
                                                       emojiId: n.id,
-                                                      emojiName: _,
+                                                      emojiName: f,
                                                       className: R.emojiIcon
                                                   })
                                     }),
                                     (0, r.jsx)(l.Text, {
                                         color: 'interactive-active',
                                         variant: 'text-sm/normal',
-                                        children: f
+                                        children: _
                                     })
                                 ]
                             }),
@@ -458,8 +458,8 @@ let V = (e) => {
                 children: [
                     (0, r.jsx)(l.Eep, {
                         src: P,
-                        width: k,
-                        height: M
+                        width: M,
+                        height: k
                     }),
                     (0, r.jsx)(l.Text, {
                         variant: 'text-md/normal',

@@ -21,9 +21,9 @@ let u = (e, t, n) => {
     d = (e) => {
         let { emojiId: t, refreshPositionKey: n } = e,
             { joinedEmojiSourceGuildRecord: s, emoji: d } = (0, i.cj)([o.ZP, a.Z], () => u(o.ZP, a.Z, t)),
-            _ = null != s,
-            f = null != s && s.hasFeature(c.oNc.DISCOVERABLE),
-            p = (!_ || f) && null != t,
+            f = null != s,
+            _ = null != s && s.hasFeature(c.oNc.DISCOVERABLE),
+            p = (!f || _) && null != t,
             [h, m] = r.useState(p),
             [g, E] = r.useState(null),
             b = null != s ? l.JO.createFromGuildRecord(s) : null,
@@ -58,7 +58,7 @@ let u = (e, t, n) => {
                 expressionSourceApplication: v,
                 sourceType: g,
                 joinedEmojiSourceGuildRecord: s,
-                hasJoinedEmojiSourceGuild: _,
+                hasJoinedEmojiSourceGuild: f,
                 emoji: d,
                 isFetching: h
             }

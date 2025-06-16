@@ -13,8 +13,8 @@ var r = n(442837),
     c = n(979651),
     u = n(565799),
     d = n(431328),
-    _ = n(501655),
-    f = n(427679),
+    f = n(501655),
+    _ = n(427679),
     p = n(754277);
 function h(e, t, n) {
     return (
@@ -47,7 +47,7 @@ function b() {
         (E.volume = m(s.Z.getOutputVolume())), E.loop(), (g = !0);
         return;
     }
-    if (f.Z.isLive(e)) {
+    if (_.Z.isLive(e)) {
         E.stop(), (g = !1);
         return;
     }
@@ -60,14 +60,14 @@ function b() {
 }
 function y(e) {
     let t = (0, r.e7)([l.Z], () => l.Z.getVoiceChannelId() === e),
-        n = null != (0, d.w8)(e, _.pV.SPEAKER).find((e) => !e.voiceState.isVoiceMuted()),
-        i = (0, r.e7)([f.Z], () => f.Z.getStageInstanceByChannel(e));
+        n = null != (0, d.w8)(e, f.pV.SPEAKER).find((e) => !e.voiceState.isVoiceMuted()),
+        i = (0, r.e7)([_.Z], () => _.Z.getStageInstanceByChannel(e));
     return t && null == i && !n;
 }
 function O(e) {
     let t = l.Z.getVoiceChannelId() === e,
-        n = null != u.Z.getMutableParticipants(e, _.pV.SPEAKER).find((e) => !e.voiceState.isVoiceMuted()),
-        r = f.Z.getStageInstanceByChannel(e);
+        n = null != u.Z.getMutableParticipants(e, f.pV.SPEAKER).find((e) => !e.voiceState.isVoiceMuted()),
+        r = _.Z.getStageInstanceByChannel(e);
     return t && null == r && !n;
 }
 class v extends i.Z {

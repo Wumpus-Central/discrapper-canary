@@ -9,8 +9,8 @@ var i = n(392711),
     c = n(687516),
     u = n(928518),
     d = n(314897),
-    _ = n(592125),
-    f = n(158776),
+    f = n(592125),
+    _ = n(158776),
     p = n(19780),
     h = n(959457),
     m = n(178635),
@@ -100,7 +100,7 @@ class I extends m.Z {
                 var t, i;
                 let { streamKey: o, canShowFeedback: s } = e,
                     u = (0, l.my)(o),
-                    _ = (0, c.L2)(u, f.Z),
+                    f = (0, c.L2)(u, _.Z),
                     p = null != (i = h.Z.getVideoStats(o)) ? i : {},
                     m = y(
                         {
@@ -123,7 +123,7 @@ class I extends m.Z {
                                         y(
                                             {
                                                 stream: u,
-                                                streamApplication: _,
+                                                streamApplication: f,
                                                 isStreamer: u.ownerId === d.default.getId()
                                             },
                                             t
@@ -147,7 +147,7 @@ class I extends m.Z {
                 let { applicationId: t, location: i, showFeedback: l } = e,
                     c = s.Z.getApplication(t),
                     d = (0, o.p)(i),
-                    f = _.Z.getChannel(d),
+                    _ = f.Z.getChannel(d),
                     h = {
                         rtc_connection_id: p.Z.getRTCConnectionId(),
                         media_session_id: p.Z.getMediaSessionId()
@@ -164,7 +164,7 @@ class I extends m.Z {
                                         e,
                                         v(y({}, t), {
                                             activityApplication: c,
-                                            channel: f,
+                                            channel: _,
                                             embeddedActivityLocation: i,
                                             analyticsData: h
                                         })

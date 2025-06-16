@@ -12,8 +12,8 @@ var r = n(73800),
     c = n(626135),
     u = n(514361),
     d = n(55358),
-    _ = n(981631),
-    f = n(474936),
+    f = n(981631),
+    _ = n(474936),
     p = n(874893);
 let h = () => {
         let e = (0, i.e7)([u.Z], () => u.Z.gradientPreset),
@@ -29,11 +29,11 @@ let h = () => {
         );
     },
     m = () => {
-        let { previewPaneVariant: e } = (0, i.cj)([u.Z], () => ({ previewPaneVariant: u.Z.isPreview ? f.h1.FREE : f.h1.PREMIUM_STANDARD })),
+        let { previewPaneVariant: e } = (0, i.cj)([u.Z], () => ({ previewPaneVariant: u.Z.isPreview ? _.h1.FREE : _.h1.PREMIUM_STANDARD })),
             t = (0, i.e7)([l.Z], () => {
                 var e;
                 let t = null == (e = l.Z.settings.appearance) ? void 0 : e.theme;
-                return 'default '.concat(t === a.Q2.LIGHT ? _.BRd.LIGHT : _.BRd.DARK);
+                return 'default '.concat(t === a.Q2.LIGHT ? f.BRd.LIGHT : f.BRd.DARK);
             });
         return (0, r.useCallback)(
             (n) => {

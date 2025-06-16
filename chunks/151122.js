@@ -1,10 +1,10 @@
 a.d(e, {
-    M5: () => I,
-    _I: () => u,
+    M5: () => u,
+    _I: () => I,
     m7: () => l,
     m8: () => c,
-    q4: () => E,
-    uf: () => s
+    q4: () => s,
+    uf: () => E
 });
 var r = a(394798),
     _ = a(622916),
@@ -36,7 +36,7 @@ function c(t) {
     }
     return n;
 }
-function E(t, e) {
+function s(t, e) {
     let a = {};
     return (
         e.forEach((e) => {
@@ -45,7 +45,7 @@ function E(t, e) {
         a
     );
 }
-function s(t, e) {
+function E(t, e) {
     for (let a of e) a && a.afterAllSetup && a.afterAllSetup(t);
 }
 function l(t, e, a) {
@@ -64,7 +64,7 @@ function l(t, e, a) {
     }
     o.X && _.kg.log(`Integration installed: ${e.name}`);
 }
-function I(t) {
+function u(t) {
     let e = (0, n.s3)();
     if (!e) {
         o.X && _.kg.warn(`Cannot add integration "${t.name}" because no SDK Client is available.`);
@@ -72,6 +72,6 @@ function I(t) {
     }
     e.addIntegration(t);
 }
-function u(t) {
+function I(t) {
     return t;
 }

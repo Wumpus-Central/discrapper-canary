@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(785717),
     u = n(892001),
     d = n(280885),
-    _ = n(388032),
-    f = n(383994);
+    f = n(388032),
+    _ = n(383994);
 function p(e, t, n) {
     return (
         t in e
@@ -91,7 +91,7 @@ let E = 57.75,
                   children: [
                       (0, r.jsx)('div', {
                           ref: A,
-                          className: o()(f.descriptionClamp, I && f.maxBioHeight),
+                          className: o()(_.descriptionClamp, I && _.maxBioHeight),
                           onBlur: C,
                           children: (0, r.jsx)(d.Z, {
                               userBio: a,
@@ -103,13 +103,13 @@ let E = 57.75,
                           (0, r.jsx)(s.zxk, {
                               look: s.zxk.Looks.BLANK,
                               size: s.zxk.Sizes.NONE,
-                              className: f.viewFullBio,
-                              color: o()(f.viewFullBioColor, m && f.viewFullBioDisabled),
+                              className: _.viewFullBio,
+                              color: o()(_.viewFullBioColor, m && _.viewFullBioDisabled),
                               onClick: N,
                               children: (0, r.jsx)(s.Text, {
                                   variant: 'text-xs/normal',
                                   color: 'none',
-                                  children: _.intl.string(_.t.YDiPq6)
+                                  children: f.intl.string(f.t.YDiPq6)
                               })
                           })
                   ]

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(467055);
+n.d(t, { Z: () => _ }), n(467055);
 var r = n(392711),
     i = n.n(r),
     a = n(768433),
@@ -20,7 +20,7 @@ function u(e, t, n) {
     );
 }
 let d = new o.Z('NonGuildVersions');
-class _ {
+class f {
     async getCommittedVersions() {
         try {
             let e = c.Z.nonGuildVersions();
@@ -65,4 +65,4 @@ class _ {
         );
     }
 }
-let f = new _();
+let _ = new f();

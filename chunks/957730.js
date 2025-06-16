@@ -8,8 +8,8 @@ var r = n(392711),
     c = n(633302),
     u = n(428595),
     d = n(594199),
-    _ = n(11637),
-    f = n(467798),
+    f = n(11637),
+    _ = n(467798),
     p = n(601070),
     h = n(695346),
     m = n(592125),
@@ -101,7 +101,7 @@ function x(e, t, n) {
         })
         .first();
 }
-function M(e, t, n) {
+function k(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
     if (t[0] !== e) return null;
     if ('"' !== t[1]) return x(e, t, n, r);
@@ -130,7 +130,7 @@ function M(e, t, n) {
         })
         .first();
 }
-function k(e) {
+function M(e) {
     return {
         order: e.order,
         match: e.match,
@@ -157,11 +157,11 @@ let U = u.Z.RULES,
     Z = /^<a?:(\w+):(\d+)>/,
     H = /(@everyone|@here|@Clyde)\b/,
     Y = {
-        link: k(o().defaultRules.link),
-        autolink: k(o().defaultRules.autolink),
-        url: k(o().defaultRules.url),
-        inlineCode: k(U.inlineCode),
-        codeBlock: k(U.codeBlock),
+        link: M(o().defaultRules.link),
+        autolink: M(o().defaultRules.autolink),
+        url: M(o().defaultRules.url),
+        inlineCode: M(U.inlineCode),
+        codeBlock: M(U.codeBlock),
         rawUserMention: j(B),
         rawRoleMention: j(V),
         rawChannelMention: j(F),
@@ -184,7 +184,7 @@ let U = u.Z.RULES,
                 let a = H.exec(e);
                 if (null != a && i[0].length <= a[0].length) return null;
                 if ('' === n) {
-                    let t = f.v.exec(e);
+                    let t = _.v.exec(e);
                     if (null != t && i[0].length <= t[0].length) return null;
                 }
                 return i;
@@ -202,7 +202,7 @@ let U = u.Z.RULES,
             }
         },
         channel: {
-            match: (e, t) => M('#', e, t.channels),
+            match: (e, t) => k('#', e, t.channels),
             parse: (e) => ({
                 type: 'text',
                 content: '<#'.concat(e[1], '>')
@@ -271,8 +271,8 @@ let U = u.Z.RULES,
         text: L(w({}, G), { match: (e, t) => ('string' == typeof t.textExclusions && '' !== t.textExclusions ? (0, d.T9)(t.textExclusions).exec(e) : null != G.match ? G.match(e, t, '') : null) })
     },
     W = {
-        inlineCode: k(U.inlineCode),
-        codeBlock: k(U.codeBlock),
+        inlineCode: M(U.inlineCode),
+        codeBlock: M(U.codeBlock),
         mention: {
             match: o().anyScopeRegex(B),
             parse(e, t, n) {
@@ -323,7 +323,7 @@ let U = u.Z.RULES,
             }
         },
         soundboard: {
-            match: o().anyScopeRegex(_.hf),
+            match: o().anyScopeRegex(f.hf),
             parse(e) {
                 let [t, n, r] = e;
                 return { content: '<sound:'.concat(n, ':').concat(r, '>') };
@@ -457,20 +457,20 @@ function J(e) {
             id: e.id,
             text: e.name
         })),
-        _ = l.ZP.getDisambiguatedEmojiContext(n),
-        f = _.getEscapedCustomEmoticonNames(),
-        h = _.getCustomEmoji(),
-        m = _.getCustomEmoticonRegex();
+        f = l.ZP.getDisambiguatedEmojiContext(n),
+        _ = f.getEscapedCustomEmoticonNames(),
+        h = f.getCustomEmoji(),
+        m = f.getCustomEmoticonRegex();
     return {
         inline: !0,
         mentionableRoles: s,
         guild: r,
         users: o,
         channels: c.concat(u).concat(d),
-        emojiContext: _,
+        emojiContext: f,
         customEmoticonsRegex: m,
         customEmoji: h,
-        textExclusions: f,
+        textExclusions: _,
         disableErrorGuards: !0
     };
 }
@@ -508,11 +508,11 @@ let ee = {
             l = n ? W : i().omit(W, ['spoiler', 'timestamp']),
             u = n ? $ : c.ZP.translateSurrogatesToInlineEmoji,
             d = o().parserFor(l),
-            _ = {
+            f = {
                 inline: !0,
                 guild: s,
                 isNotification: n
             };
-        return X(d(e, _), _, u);
+        return X(d(e, f), f, u);
     }
 };

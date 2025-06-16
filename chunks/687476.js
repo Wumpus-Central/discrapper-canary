@@ -8,7 +8,7 @@ var r,
     c = n(594174),
     u = n(973542),
     d = n(981631);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function _(e, t, n) {
         e
     );
 }
-let f = new Set(),
+let _ = new Set(),
     p = new Map(),
     h = new Map(),
     m = new Map(),
@@ -41,9 +41,9 @@ function y(e) {
         var o;
         let c = s.ZP.getMember(e, t.id),
             d = new Set(null != (o = null == c ? void 0 : c.roles) ? o : []),
-            _ = l.Z.getRoles(n.id);
-        for (let t in _) {
-            let n = _[t];
+            f = l.Z.getRoles(n.id);
+        for (let t in f) {
+            let n = f[t];
             (0, u.Z)(n) && (r.add(t), (0, u.h)(n) && (i.add(t), d.has(t) && a.add(t))), d.has(t) && b(n) && g.set(e, !0);
         }
     }
@@ -105,22 +105,22 @@ class N extends (r = a.ZP.Store) {
     }
     getSubscriptionRoles(e) {
         var t;
-        return this.buildRoles(e), null != (t = p.get(e)) ? t : f;
+        return this.buildRoles(e), null != (t = p.get(e)) ? t : _;
     }
     getPurchasableSubscriptionRoles(e) {
         var t;
-        return this.buildRoles(e), null != (t = h.get(e)) ? t : f;
+        return this.buildRoles(e), null != (t = h.get(e)) ? t : _;
     }
     getUserSubscriptionRoles(e) {
         var t;
-        return this.buildRoles(e), null != (t = m.get(e)) ? t : f;
+        return this.buildRoles(e), null != (t = m.get(e)) ? t : _;
     }
     getUserIsAdmin(e) {
         var t;
         return this.buildRoles(e), null != (t = g.get(e)) && t;
     }
 }
-_(N, 'displayName', 'SubscriptionRoleStore');
+f(N, 'displayName', 'SubscriptionRoleStore');
 let C = new N(o.Z, {
     CONNECTION_OPEN: v,
     LOGOUT: v,
