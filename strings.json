@@ -21148,6 +21148,7 @@
   "bAzBIS": "+!!{numServers}!! more {numServers, plural, one {server} other {servers} }",
   "TG0Qsb": "Servers I share with",
   "sa0cKy": "Servers you share with",
+  "EvzDfX": "{count, plural, one { server} other { servers} }",
   "xxI0/f": "Server settings ignored when not sharing",
   "Tx6dtL": "Select if you want to share what you’re playing with friends and server members.",
   "4BDZf3": "Share !!{name}!!",
