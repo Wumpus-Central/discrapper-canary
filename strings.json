@@ -4920,6 +4920,7 @@
   "/rjozM": "You must remove or replace the To Do in [Onboarding](Server Settings ) before this channel can be deleted.",
   "ajiBwM": "You must designate a replacement Default Channel in [Onboarding](Server Settings ) before this channel can be deleted.",
   "DwY2vL": "You must designate a replacement Default Channel in [Onboarding](Server Settings ) before this channel can be made private.",
+  "kB1f+/": "!!{reason}!! You must designate another inside [Overview](Server Settings ) before this channel can be deleted.",
   "uON9Ul": "Desktop App",
   "/0WClp": "Enable Desktop Notifications",
   "wF9ih4": "If you're looking for per-channel or per-server notifications, right-click the desired server icon and select Notification Settings.",
