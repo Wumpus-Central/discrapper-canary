@@ -10080,18 +10080,17 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
 }
 
 .controlIcon_cf09d8 {
-    color: var(--white);
+    color: var(--interactive-normal);
     cursor: pointer;
     display: block;
     flex: 0 0 auto;
     height: 24px;
-    opacity: .6;
     padding: 4px;
     width: 24px
 }
 
 .controlIcon_cf09d8:hover {
-    opacity: 1
+    color: var(--interactive-active)
 }
 
 .controlIcon_cf09d8:active {
