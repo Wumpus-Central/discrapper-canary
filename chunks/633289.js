@@ -1,14 +1,14 @@
-n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r,
     i = n(108131),
-    l = n.n(i),
-    a = n(442837),
-    o = n(570140),
-    s = n(314897),
+    a = n.n(i),
+    o = n(442837),
+    s = n(570140),
+    l = n(314897),
     c = n(626135),
     u = n(508825),
     d = n(981631);
-function p(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,84 +21,97 @@ function p(e, t, n) {
         e
     );
 }
-let h = [u.Cm.User],
-    f = {
+let f = [u.Cm.User],
+    p = {
         user: {},
         guild: {}
     },
-    g = {},
+    h = {},
     m = {};
-function b(e) {
+function g(e) {
     let t = m[e];
-    return null == t && ((t = l().v3(e)), (m[e] = t)), t;
+    return null == t && ((t = a().v3(e)), (m[e] = t)), t;
 }
-class _ extends (r = a.ZP.Store) {
+class E extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(s.default);
+        this.waitFor(l.default);
     }
     processExperimentsMessage(e) {
         if (null == e) return !1;
-        for (let t of h) {
+        for (let t of f) {
             let n = u.Oz[t],
                 r = e.assignments[t];
             if (null == r || null == n) continue;
-            let i = f[n];
+            let i = p[n];
             for (let e in r) {
                 let { evaluation_id: t, assignments: n } = r[e],
-                    l = {
+                    a = {
                         evaluationId: t,
                         assignments: {}
                     };
-                for (let [t, r, a] of ((i[e] = l), n))
-                    null != a || (a = 0),
-                        (l.assignments[t] = {
+                for (let [t, r, o] of ((i[e] = a), n))
+                    null != o || (o = 0),
+                        (a.assignments[t] = {
                             hashedId: t,
                             variantId: r,
-                            isServerOverride: (a & u.V8.IsOverride) != 0
+                            isServerOverride: (o & u.V8.IsOverride) != 0
                         });
             }
         }
     }
     registerExperiment(e) {
-        g[e.name] = e;
+        h[e.name] = e;
     }
     getAssignment(e, t, n) {
-        let r = b(n),
-            i = f[e][t];
+        let r = g(n),
+            i = p[e][t];
         if (null != i) return i.assignments[r];
     }
     getEvaluation(e, t) {
         var n;
-        return null == (n = f[e][t]) ? void 0 : n.evaluationId;
+        return null == (n = p[e][t]) ? void 0 : n.evaluationId;
     }
     getEvaluationAndAssignment(e, t, n) {
-        let r = f[e][t];
+        let r = p[e][t];
         return null == r ? [void 0, void 0] : [r.evaluationId, r.assignments[n]];
     }
     trackEvaluationExposure(e, t, n, r) {
-        c.default.track(d.rMx.EXPERIMENT_USER_EVALUATION_EXPOSED, {
-            evaluation: e,
-            experiment: n,
-            exposure_location: r,
-            unit_type: t
-        });
+        'user' === t &&
+            c.default.track(d.rMx.EXPERIMENT_USER_EVALUATION_EXPOSED, {
+                evaluation: e,
+                experiment: n,
+                exposure_location: r,
+                unit_type: t
+            });
+    }
+    trackCommonTriggerPointExposures(e) {
+        for (let t of this.evaluationIds('user'))
+            c.default.track(d.rMx.EXPERIMENT_USER_EVALUATION_EXPOSED, {
+                evaluation: t,
+                exposure_location: e,
+                unit_type: 'user'
+            });
+    }
+    evaluationIds(e) {
+        return Object.values(p[e]).map((e) => e.evaluationId);
     }
     resetForTests() {
-        f = {
+        p = {
             user: {},
             guild: {}
         };
     }
     constructor() {
         super(
-            o.Z,
+            s.Z,
             {
                 CONNECTION_OPEN: (e) => this.processExperimentsMessage(e.apexExperiments),
                 CONNECTION_OPEN_STATE_UPDATE: (e) => this.processExperimentsMessage(e.apexExperiments)
             },
-            o.c.Early
+            s.c.Early
         ),
-            p(this, 'getHash', b);
+            _(this, 'getHash', g);
     }
 }
-p(_, 'displayName', 'ApexExperimentStore'), new _();
+_(E, 'displayName', 'ApexExperimentStore');
+let b = new E();

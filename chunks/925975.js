@@ -35,19 +35,18 @@ let f = /\\([*?+/])/g,
             }
         },
         searchReplace: {
-            match: i().anyScopeRegex(/^s\/((?:.+?)[^\\]|.)\/(.*)/),
+            match: i().anyScopeRegex(/^s\/([^\/\\]*(?:\\.[^\/\\]*)*)\/([^\/\\]*(?:\\.[^\/\\]*)*)(?:\/([g]*))?$/),
             action(e, t) {
-                var n;
-                let { isEdit: r, channel: i } = t;
-                if (r) return;
-                let l = p.Z.getLastEditableMessage(i.id);
-                if (null == l || null == l.id) return { content: '' };
-                let [, o, s] = Array.from(null != (n = e.match(this.match.regex)) ? n : []);
-                o = o.replace(f, (e, t) => t);
-                let c = !1;
-                (s = s.replace(f, (e, t) => t)).endsWith('/g') && ((s = s.slice(0, -2)), (c = !0));
-                let u = c ? l.content.replaceAll(o, s) : l.content.replace(o, s);
-                return (null == u || '' === u) && 0 === l.attachments.length ? a.Z.deleteMessage(i.id, l.id) : e !== l.content && a.Z.editMessage(i.id, l.id, { content: u }), { content: '' };
+                var n, r;
+                let { isEdit: i, channel: l } = t;
+                if (i) return;
+                let o = p.Z.getLastEditableMessage(l.id);
+                if (null == o || null == o.id) return { content: '' };
+                let [s, c, u, d] = Array.from(null != (n = e.match(this.match.regex)) ? n : []),
+                    h = null != (r = null == d ? void 0 : d.split('')) ? r : [];
+                (c = c.replace(f, (e, t) => t)), (u = u.replace(f, (e, t) => t));
+                let m = h.includes('g') ? o.content.replaceAll(c, u) : o.content.replace(c, u);
+                return (null == m || '' === m.trim()) && 0 === o.attachments.length ? a.Z.deleteMessage(l.id, o.id) : m !== o.content && a.Z.editMessage(l.id, o.id, { content: m }), { content: '' };
             }
         },
         spoiler: { action: (e) => ({ content: (0, h.XmY)(e).trim() }) }

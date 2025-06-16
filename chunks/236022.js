@@ -1,5 +1,6 @@
 e.exports = {
     guildRow: 'guildRow__7db08',
+    guildsList: 'guildsList__7db08',
     guildRowTextContainer: 'guildRowTextContainer__7db08',
     memberDetailsContainer: 'memberDetailsContainer__7db08',
     infoDot: 'infoDot__7db08',

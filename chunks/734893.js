@@ -175,5 +175,5 @@ function N(e) {
     }
 }
 var C = (function (e) {
-    return (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.TODO = 1)] = 'TODO'), (e[(e.RESOURCE = 2)] = 'RESOURCE'), e;
+    return (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.TODO = 1)] = 'TODO'), (e[(e.RESOURCE = 2)] = 'RESOURCE'), (e[(e.RULES = 3)] = 'RULES'), (e[(e.UPDATES = 4)] = 'UPDATES'), e;
 })({});

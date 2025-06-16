@@ -1,7 +1,7 @@
 n.d(t, {
-    Kp: () => O,
-    u9: () => C,
-    xV: () => x
+    Kp: () => C,
+    u9: () => x,
+    xV: () => j
 }),
     n(413496),
     n(433524),
@@ -10,49 +10,49 @@ n.d(t, {
     n(539854),
     n(388685);
 var r = n(73800),
-    l = n(114858),
+    i = n(114858),
     a = n(442837),
-    i = n(607070),
-    o = n(100527),
-    s = n(906732),
+    l = n(607070),
+    s = n(100527),
+    o = n(906732),
     c = n(597688),
     u = n(328347),
     d = n(429368),
-    p = n(410127),
-    f = n(237031),
-    b = n(956472),
-    g = n(981631);
-let h = ''.concat('#').concat('itemSkuId', '='),
-    m = new RegExp('^'.concat(h, '(\\d+)$')),
-    _ = [g.Z5c.COLLECTIBLES_SHOP, g.Z5c.COLLECTIBLES_SHOP_FULLSCREEN],
-    C = (e) => {
-        let t = (0, l.TH)();
+    m = n(410127),
+    p = n(237031),
+    f = n(956472),
+    h = n(981631);
+let v = ''.concat('#').concat('itemSkuId', '='),
+    b = new RegExp('^'.concat(v, '(\\d+)$')),
+    P = [h.Z5c.COLLECTIBLES_SHOP, h.Z5c.COLLECTIBLES_SHOP_FULLSCREEN],
+    x = (e) => {
+        let t = (0, i.TH)();
         r.useEffect(() => {
-            if (null != e && _.includes(t.pathname))
+            if (null != e && P.includes(t.pathname))
                 return () => {
-                    window.location.hash.startsWith(h) && window.location.replace('#');
+                    window.location.hash.startsWith(v) && window.location.replace('#');
                 };
         }, [e, t.pathname]);
     },
-    v = (e) => {
-        let { productSkuId: t, analyticsLocations: n, analyticsSource: r, initialItemCardRef: l, reducedMotion: a = !1, tab: i } = e,
-            o = c.Z.getProduct(t),
-            s = c.Z.getCategoryForProduct(t);
-        if (null != o && null != s) {
+    g = (e) => {
+        let { productSkuId: t, analyticsLocations: n, analyticsSource: r, initialItemCardRef: i, reducedMotion: a = !1, tab: l } = e,
+            s = c.Z.getProduct(t),
+            o = c.Z.getCategoryForProduct(t);
+        if (null != s && null != o) {
             var u;
-            null == (u = l.current) ||
+            null == (u = i.current) ||
                 u.scrollIntoView({
                     behavior: a ? 'instant' : 'smooth',
                     block: 'center',
                     inline: 'center'
                 });
-            let e = o,
-                p = (0, b.oQ)({ product: o }),
-                g = setTimeout(
+            let e = s,
+                m = (0, f.oQ)({ product: s }),
+                h = setTimeout(
                     () => {
                         let a = document.getElementById('shop-item-'.concat(e.skuId));
-                        if ((a !== document.activeElement && (null == a || a.focus()), null != o.variantGroupStoreListingId)) {
-                            let n = c.Z.getProductByStoreListingId(o.variantGroupStoreListingId);
+                        if ((a !== document.activeElement && (null == a || a.focus()), null != s.variantGroupStoreListingId)) {
+                            let n = c.Z.getProductByStoreListingId(s.variantGroupStoreListingId);
                             if (null != n) {
                                 var u;
                                 e = n;
@@ -60,49 +60,49 @@ let h = ''.concat('#').concat('itemSkuId', '='),
                                 null != r && r > -1 && (0, d.$)(n, r);
                             }
                         }
-                        (0, f.T)({
+                        (0, p.T)({
                             product: e,
-                            category: s,
+                            category: o,
                             analyticsSource: r,
                             analyticsLocations: n,
-                            returnRef: l,
-                            tab: i,
-                            shouldCheckoutWithOrbs: p
+                            returnRef: i,
+                            tab: l,
+                            shouldCheckoutWithOrbs: m
                         });
                     },
-                    750 * (null != l.current)
+                    750 * (null != i.current)
                 );
-            return () => clearTimeout(g);
+            return () => clearTimeout(h);
         }
         return () => {};
     },
-    O = (e) => {
+    C = (e) => {
         let { isFetchingCategories: t, isLayer: n, initialItemCardRef: c } = e,
-            d = (0, a.e7)([i.Z], () => i.Z.useReducedMotion),
-            f = r.useRef(null),
-            b = (0, l.TH)(),
-            h = b.pathname === g.Z5c.COLLECTIBLES_SHOP ? o.Z.HOME_PAGE_SHOP_TAB : b.pathname === g.Z5c.COLLECTIBLES_SHOP_FULLSCREEN ? o.Z.COLLECTIBLES_SHOP_FULLSCREEN : o.Z.COLLECTIBLES_SHOP,
-            { analyticsLocations: _ } = (0, s.ZP)(h),
-            C = (0, p.Z)();
+            d = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
+            p = r.useRef(null),
+            f = (0, i.TH)(),
+            v = f.pathname === h.Z5c.COLLECTIBLES_SHOP ? s.Z.HOME_PAGE_SHOP_TAB : f.pathname === h.Z5c.COLLECTIBLES_SHOP_FULLSCREEN ? s.Z.COLLECTIBLES_SHOP_FULLSCREEN : s.Z.COLLECTIBLES_SHOP,
+            { analyticsLocations: P } = (0, o.ZP)(v),
+            x = (0, m.Z)();
         r.useEffect(() => {
             if (n) return;
-            let e = m.exec(b.hash);
-            null != e ? (f.current = e[1]) : (f.current = null);
-        }, [C, n, b.hash]);
-        let O = (0, a.e7)([u.Z], () => u.Z.initialProductSkuId);
+            let e = b.exec(f.hash);
+            null != e ? (p.current = e[1]) : (p.current = null);
+        }, [x, n, f.hash]);
+        let C = (0, a.e7)([u.Z], () => u.Z.initialProductSkuId);
         r.useEffect(() => {
             if (t) return;
             let e = null;
-            if (null != (e = n ? O : f.current)) {
+            if (null != (e = n ? C : p.current)) {
                 let t = [],
                     n = setTimeout(() => {
-                        let n = v({
+                        let n = g({
                             productSkuId: e,
-                            analyticsLocations: _,
-                            analyticsSource: h,
+                            analyticsLocations: P,
+                            analyticsSource: v,
                             initialItemCardRef: c,
                             reducedMotion: d,
-                            tab: C
+                            tab: x
                         });
                         t.push(n);
                     }, 250);
@@ -113,38 +113,38 @@ let h = ''.concat('#').concat('itemSkuId', '='),
                     }
                 );
             }
-        }, [n, _, h, t, O, c, d, C]);
+        }, [n, P, v, t, C, c, d, x]);
     },
-    x = (e) => {
+    j = (e) => {
         let t = r.useRef({}),
-            n = (0, a.e7)([i.Z], () => i.Z.useReducedMotion),
-            l = (0, a.e7)([c.Z], () => c.Z.isFetchingCategories),
-            [o, s] = r.useState(null),
+            n = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
+            i = (0, a.e7)([c.Z], () => c.Z.isFetchingCategories),
+            [s, o] = r.useState(null),
             u = r.useCallback((e, n) => {
                 t.current[e] = n;
             }, []),
             d = r.useCallback(
                 (r) => {
-                    l
-                        ? s(r)
+                    i
+                        ? o(r)
                         : setTimeout(() => {
-                              let l = t.current[r];
-                              null != l &&
+                              let i = t.current[r];
+                              null != i &&
                                   (null == e ||
                                       e.scrollIntoViewNode({
-                                          node: l,
+                                          node: i,
                                           padding: 12,
                                           animate: !n,
                                           shouldScrollToStart: !0
                                       }));
                           }, 100);
                 },
-                [e, n, l, s]
+                [e, n, i, o]
             );
         return (
             r.useEffect(() => {
-                l || null == o || (d(o), s(null));
-            }, [l, d, o, s]),
+                i || null == s || (d(s), o(null));
+            }, [i, d, s, o]),
             {
                 setCategoryRef: u,
                 handleScrollToCategory: d

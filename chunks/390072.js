@@ -2,15 +2,15 @@ n.d(t, { Z: () => d });
 var r = n(255367),
     i = n(73800),
     l = n(481060),
-    a = n(725436),
-    o = n(11868),
+    o = n(725436),
+    a = n(11868),
     s = n(217804),
     c = n(765305),
     u = n(244231);
 function d(e) {
     let { guildScheduledEvent: t, channel: n, onClose: d } = e,
         h = t.entity_type === c.WX.EXTERNAL,
-        g = i.useCallback((e) => (0, o.Qt)(t, d)(e), [t, d]),
+        g = i.useCallback((e) => (0, a.Qt)(t, d)(e), [t, d]),
         p = (0, s.u)(t, n);
     if (null == p) return null;
     let { IconComponent: m, locationName: f } = p,
@@ -28,7 +28,7 @@ function d(e) {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
                     className: u.locationText,
-                    children: (0, a.m)(f, !0)
+                    children: (0, o.m)(f, !0)
                 })
             ]
         });

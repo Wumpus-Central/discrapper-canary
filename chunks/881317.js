@@ -2,8 +2,8 @@ n.d(t, { Z: () => y }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(990547),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     s = n(893776),
     c = n(232567),
     u = n(388905),
@@ -60,7 +60,7 @@ function I(e, t) {
         e
     );
 }
-a.ZP.initialize();
+o.ZP.initialize();
 let O = {
         [h.BM.MESSAGE]: x.t.fuqnBA,
         [h.BM.USER]: x.t.F4jrRU,
@@ -68,8 +68,8 @@ let O = {
     },
     S = (e) => {
         let { title: t, menuType: i } = e,
-            a = () => {
-                (0, o.ZDy)(async () => {
+            o = () => {
+                (0, a.ZDy)(async () => {
                     let { default: e } = await n.e('93288').then(n.bind(n, 396410));
                     return (t) =>
                         (0, r.jsx)(
@@ -78,7 +78,7 @@ let O = {
                                 onSuccess: s,
                                 headerText: x.intl.string(x.t.ZLRYGR),
                                 confirmButtonText: x.intl.string(x.t.PDTjLC),
-                                confirmButtonColor: o.zxk.Colors.BRAND,
+                                confirmButtonColor: a.zxk.Colors.BRAND,
                                 impressionName: l.ImpressionNames.URF_ENTER_EMAIL
                             })
                         );
@@ -88,38 +88,38 @@ let O = {
                 let t = async () => {
                         await (0, p.yL)(i, e);
                     },
-                    a = async (t) => await (0, p.RV)(i, e, t),
+                    o = async (t) => await (0, p.RV)(i, e, t),
                     s = (e) => {
                         let t = null == e ? void 0 : e.token;
                         i === h.BM.MESSAGE ? (0, g.eE)(t) : i === h.BM.USER ? (0, g.JM)(t) : i === h.BM.GUILD && (0, g.FO)(t);
                     };
                 t(),
-                    (0, o.ZDy)(async () => {
+                    (0, a.ZDy)(async () => {
                         let { default: e } = await n.e('94566').then(n.bind(n, 965072));
                         return (n) =>
                             (0, r.jsx)(
                                 e,
                                 I(v({}, n), {
-                                    onFormSubmit: a,
+                                    onFormSubmit: o,
                                     onResend: t,
                                     onSuccess: s,
                                     headerText: x.intl.string(x.t.H3Q7U1),
                                     confirmButtonText: x.intl.string(x.t['13ofGh']),
-                                    confirmButtonColor: o.zxk.Colors.BRAND,
+                                    confirmButtonColor: a.zxk.Colors.BRAND,
                                     impressionName: l.ImpressionNames.URF_CONFIRM_EMAIL_CODE
                                 })
                             );
                     });
             };
-        return (0, r.jsxs)(o.P3F, {
+        return (0, r.jsxs)(a.P3F, {
             className: E.reportButton,
-            onClick: () => a(),
+            onClick: () => o(),
             children: [
-                (0, r.jsx)(o.Text, {
+                (0, r.jsx)(a.Text, {
                     variant: 'text-md/medium',
                     children: t
                 }),
-                (0, r.jsx)(o.LJT, {
+                (0, r.jsx)(a.LJT, {
                     size: 'sm',
                     color: 'currentColor'
                 })
@@ -129,8 +129,8 @@ let O = {
     y = () => {
         let [e, t] = i.useState(!0),
             [n, l] = i.useState([]),
-            h = (0, a.e7)([m.default], () => m.default.isAuthenticated()),
-            g = (0, a.e7)([d.Z], () => d.Z.hasLoadedExperiments),
+            h = (0, o.e7)([m.default], () => m.default.isAuthenticated()),
+            g = (0, o.e7)([d.Z], () => d.Z.hasLoadedExperiments),
             v = () => {
                 (0, p.Jj)()
                     .then((e) => {
@@ -159,7 +159,7 @@ let O = {
                 })();
             }, [g]),
             e || !g
-                ? (0, r.jsx)(u.ZP, { children: (0, r.jsx)(o.$jN, {}) })
+                ? (0, r.jsx)(u.ZP, { children: (0, r.jsx)(a.$jN, {}) })
                 : null != n &&
                   n.length > 0 &&
                   (0, r.jsxs)(u.ZP, {

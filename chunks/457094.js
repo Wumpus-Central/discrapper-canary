@@ -110,7 +110,7 @@ var r = n(255367),
     e8 = n(176505),
     e5 = n(701476),
     e4 = n(186901);
-function e2(e, t, n) {
+function e7(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -123,7 +123,7 @@ function e2(e, t, n) {
         e
     );
 }
-function e7(e) {
+function e2(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -134,7 +134,7 @@ function e7(e) {
                 })
             )),
             r.forEach(function (t) {
-                e2(e, t, n[t]);
+                e7(e, t, n[t]);
             });
     }
     return e;
@@ -330,7 +330,7 @@ let tl = [
                             var n, l;
                             return (0, r.jsx)(
                                 e,
-                                ((n = e7({}, t)),
+                                ((n = e2({}, t)),
                                 (l = l = { guildId: i }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
@@ -476,7 +476,7 @@ class ts extends i.PureComponent {
                 openModal: () =>
                     (0, s.ZDy)(async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 650233));
-                        return (t) => (0, r.jsx)(e, e7({}, t));
+                        return (t) => (0, r.jsx)(e, e2({}, t));
                     })
             }),
             U.Z.init(),
@@ -636,7 +636,7 @@ class ts extends i.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e), e2(this, 'historyUnlisten', () => {}), e2(this, 'rewriterUnlisten', () => {});
+        super(...e), e7(this, 'historyUnlisten', () => {}), e7(this, 'rewriterUnlisten', () => {});
     }
 }
 let tc = ts;

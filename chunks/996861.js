@@ -81,7 +81,7 @@ function A(e, t, n) {
         shouldMention: !n.shiftKey && !r,
         showMentionToggle: !i && !r
     }),
-        b.S.dispatchToLastSubscribed(j.CkL.TEXTAREA_FOCUS);
+        b.S.dispatch(j.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id });
 }
 function M(e, t) {
     (0, d.R6)(e, t, 'Message');

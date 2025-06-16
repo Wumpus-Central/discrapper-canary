@@ -2,8 +2,8 @@ n.d(t, { Z: () => _ }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(525654),
-    a = n.n(l),
-    o = n(442837),
+    o = n.n(l),
+    a = n(442837),
     s = n(893776),
     c = n(493773),
     u = n(129293),
@@ -15,9 +15,9 @@ var r = n(255367),
     f = n(20493);
 function _(e) {
     let { location: t, transitionTo: l = h.uL } = e,
-        [o, _] = i.useState('submitting');
+        [a, _] = i.useState('submitting');
     function x() {
-        return 'Android' === a().os.family || 'iOS' === a().os.family
+        return 'Android' === o().os.family || 'iOS' === o().os.family
             ? null
             : (0, r.jsx)(d.zx, {
                   onClick: () => l(p.Z5c.LOGIN, { source: 'authorizeIPAdress' }),
@@ -36,7 +36,7 @@ function _(e) {
             }
         })();
     }),
-    'failed' === o)
+    'failed' === a)
         ? (0, r.jsxs)(d.ZP, {
               children: [
                   (0, r.jsx)('img', {
@@ -55,7 +55,7 @@ function _(e) {
                   x()
               ]
           })
-        : 'succeeded' === o
+        : 'succeeded' === a
           ? (0, r.jsxs)(d.ZP, {
                 children: [
                     (0, r.jsx)('img', {
@@ -78,4 +78,4 @@ function _(e) {
                 children: [(0, r.jsx)(d.Hh, {}), (0, r.jsx)(d.Dx, { children: m.intl.string(m.t['9exy+f']) })]
             });
 }
-o.ZP.initialize();
+a.ZP.initialize();

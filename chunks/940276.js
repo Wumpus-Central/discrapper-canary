@@ -1,169 +1,189 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => f });
 var i = n(255367),
-    r = n(442837),
-    s = n(481060),
-    l = n(650774),
-    a = n(626135),
-    o = n(797670),
-    c = n(304432),
-    d = n(981631),
-    u = n(29953),
-    m = n(388032),
-    g = n(236022);
-function p(e) {
-    let { guild: t, isActivityRestricted: n, onToggleActivityRestrictedGuild: a } = e,
-        c = (0, r.e7)([l.Z], () => l.Z.getMemberCount(t.id));
-    return (0, i.jsx)(s.j7V, {
-        className: g.guildRowWrapper,
-        value: !n,
-        onChange: (e) =>
-            a({
-                checked: e,
-                guildId: t.id
-            }),
-        hideBorder: !0,
-        children: (0, i.jsxs)('div', {
-            className: g.guildRow,
-            children: [
-                (0, i.jsx)('div', {
-                    children: (0, i.jsx)(o.V, {
-                        guild: t,
-                        size: 48
-                    })
+    r = n(73800),
+    s = n(442837),
+    l = n(481060),
+    a = n(650774),
+    o = n(626135),
+    c = n(797670),
+    d = n(304432),
+    u = n(981631),
+    m = n(29953),
+    g = n(388032),
+    p = n(236022);
+function h(e) {
+    let { guild: t, isActivityRestricted: n, onToggleActivityRestrictedGuild: r } = e,
+        o = (0, s.e7)([a.Z], () => a.Z.getMemberCount(t.id));
+    return (0, i.jsx)('li', {
+        children: (0, i.jsx)(l.j7V, {
+            className: p.guildRowWrapper,
+            value: !n,
+            onChange: (e) =>
+                r({
+                    checked: e,
+                    guildId: t.id
                 }),
-                (0, i.jsxs)('div', {
-                    className: g.guildRowTextContainer,
-                    children: [
-                        (0, i.jsx)(s.Text, {
-                            variant: 'text-md/medium',
-                            lineClamp: 1,
-                            color: 'text-normal',
-                            children: t.toString()
-                        }),
-                        (0, i.jsxs)('div', {
-                            className: g.memberDetailsContainer,
-                            children: [
-                                (0, i.jsx)('div', { className: g.memberCountDot }),
-                                (0, i.jsx)(s.Text, {
-                                    variant: 'text-xs/normal',
-                                    color: 'text-secondary',
-                                    children: m.intl.format(m.t.zRl6XV, { count: c })
-                                })
-                            ]
+            hideBorder: !0,
+            children: (0, i.jsxs)('div', {
+                className: p.guildRow,
+                children: [
+                    (0, i.jsx)('div', {
+                        children: (0, i.jsx)(c.V, {
+                            guild: t,
+                            size: 48
                         })
-                    ]
-                })
-            ]
+                    }),
+                    (0, i.jsxs)('div', {
+                        className: p.guildRowTextContainer,
+                        children: [
+                            (0, i.jsx)(l.Text, {
+                                variant: 'text-md/medium',
+                                lineClamp: 1,
+                                color: 'text-normal',
+                                children: t.toString()
+                            }),
+                            (0, i.jsxs)('div', {
+                                className: p.memberDetailsContainer,
+                                children: [
+                                    (0, i.jsx)('div', { className: p.memberCountDot }),
+                                    (0, i.jsx)(l.Text, {
+                                        variant: 'text-xs/normal',
+                                        color: 'text-secondary',
+                                        children: g.intl.format(g.t.zRl6XV, { count: o })
+                                    })
+                                ]
+                            })
+                        ]
+                    })
+                ]
+            })
         })
     });
 }
-let h = function () {
-    let { guilds: e, searchQuery: t, setSearchQuery: n, sortOrder: r, setSortOrder: l, hasActivityRestrictedGuilds: o, onToggleAllActivityRestrictedGuilds: h, onToggleActivityRestrictedGuild: f, isActivityRestricted: b, numActivityRestrictedGuilds: _, numTotalGuilds: x } = (0, c.F)();
+let f = function () {
+    let { guilds: e, searchQuery: t, setSearchQuery: n, sortOrder: s, setSortOrder: a, hasActivityRestrictedGuilds: c, onToggleAllActivityRestrictedGuilds: f, onToggleActivityRestrictedGuild: b, isActivityRestricted: _, numActivityRestrictedGuilds: x, numTotalGuilds: E } = (0, d.F)(),
+        j = (0, r.useId)();
     return (0, i.jsxs)('div', {
-        className: g.wrapper,
+        className: p.wrapper,
         children: [
             (0, i.jsxs)('div', {
-                className: g.headerContainer,
+                className: p.headerContainer,
                 children: [
-                    (0, i.jsx)(s.E1j, {
-                        size: s.E1j.Sizes.MEDIUM,
+                    (0, i.jsx)(l.E1j, {
+                        size: l.E1j.Sizes.MEDIUM,
                         query: t,
                         onChange: n,
                         onClear: () => {
-                            a.default.track(d.rMx.ACTIVITY_SHARING_SETTINGS_INTERACTED, {
+                            o.default.track(u.rMx.ACTIVITY_SHARING_SETTINGS_INTERACTED, {
                                 interaction: 'search_cleared',
-                                sort_order: r,
-                                activity_restricted_guild_count: _,
-                                total_guild_count: x
+                                sort_order: s,
+                                activity_restricted_guild_count: x,
+                                total_guild_count: E
                             }),
                                 n('');
                         },
                         onFocus: () =>
-                            a.default.track(d.rMx.ACTIVITY_SHARING_SETTINGS_INTERACTED, {
+                            o.default.track(u.rMx.ACTIVITY_SHARING_SETTINGS_INTERACTED, {
                                 interaction: 'search_focused',
-                                sort_order: r,
-                                activity_restricted_guild_count: _,
-                                total_guild_count: x
+                                sort_order: s,
+                                activity_restricted_guild_count: x,
+                                total_guild_count: E
                             }),
                         onBlur: () =>
-                            a.default.track(d.rMx.ACTIVITY_SHARING_SETTINGS_INTERACTED, {
+                            o.default.track(u.rMx.ACTIVITY_SHARING_SETTINGS_INTERACTED, {
                                 interaction: 'search_blurred',
-                                sort_order: r,
-                                activity_restricted_guild_count: _,
-                                total_guild_count: x
+                                sort_order: s,
+                                activity_restricted_guild_count: x,
+                                total_guild_count: E
                             }),
-                        placeholder: m.intl.string(m.t['H+nRY2']),
-                        'aria-label': m.intl.string(m.t['5h0QOD'])
+                        placeholder: g.intl.string(g.t['H+nRY2']),
+                        'aria-label': g.intl.string(g.t['5h0QOD']),
+                        inputProps: {
+                            'aria-controls': j,
+                            'aria-expanded': !0
+                        }
                     }),
                     e.length > 0 &&
                         (0, i.jsxs)('div', {
-                            className: g.controlsContainer,
+                            className: p.controlsContainer,
                             children: [
-                                (0, i.jsx)(s.PhF, {
-                                    className: g.sortOrderSelect,
-                                    look: s.qQH.CUSTOM,
+                                (0, i.jsx)(l.PhF, {
+                                    className: p.sortOrderSelect,
+                                    look: l.qQH.CUSTOM,
                                     popoutWidth: 'auto',
                                     options: [
                                         {
-                                            label: m.intl.string(m.t.STMPJy),
-                                            value: c.W.SERVER_ORDER
+                                            label: g.intl.string(g.t.STMPJy),
+                                            value: d.W.SERVER_ORDER
                                         },
                                         {
-                                            label: m.intl.string(m.t.CbaapK),
-                                            value: c.W.RECENTLY_JOINED
+                                            label: g.intl.string(g.t.CbaapK),
+                                            value: d.W.RECENTLY_JOINED
                                         },
                                         {
-                                            label: m.intl.string(u.default.ZI51JS),
-                                            value: c.W.ACTIVITY_SHARING_ON
+                                            label: g.intl.string(m.default.ZI51JS),
+                                            value: d.W.ACTIVITY_SHARING_ON
                                         },
                                         {
-                                            label: m.intl.string(u.default['+kxafn']),
-                                            value: c.W.ACTIVITY_SHARING_OFF
+                                            label: g.intl.string(m.default['+kxafn']),
+                                            value: d.W.ACTIVITY_SHARING_OFF
                                         }
                                     ],
                                     select: (e) => {
-                                        a.default.track(d.rMx.ACTIVITY_SHARING_SETTINGS_INTERACTED, {
+                                        o.default.track(u.rMx.ACTIVITY_SHARING_SETTINGS_INTERACTED, {
                                             interaction: 'sort_order_changed',
                                             sort_order: e,
-                                            activity_restricted_guild_count: _,
-                                            total_guild_count: x
+                                            activity_restricted_guild_count: x,
+                                            total_guild_count: E
                                         }),
-                                            l(e);
+                                            a(e);
                                     },
-                                    isSelected: (e) => r === e,
+                                    isSelected: (e) => s === e,
                                     serialize: String
                                 }),
-                                (0, i.jsx)(s.zxk, {
-                                    className: g.toggleAllButton,
-                                    look: s.zxk.Looks.LINK,
-                                    color: s.zxk.Colors.LINK,
-                                    onClick: h,
-                                    children: o ? m.intl.string(m.t['7lxcLC']) : m.intl.string(m.t.zh6UEh)
+                                (0, i.jsx)(l.zxk, {
+                                    className: p.toggleAllButton,
+                                    look: l.zxk.Looks.LINK,
+                                    color: l.zxk.Colors.LINK,
+                                    onClick: f,
+                                    children: c ? g.intl.string(g.t['7lxcLC']) : g.intl.string(g.t.zh6UEh)
                                 })
                             ]
                         })
                 ]
             }),
-            0 === e.length &&
-                (0, i.jsx)('div', {
-                    className: g.noResultsContainer,
-                    children: (0, i.jsx)(s.Text, {
-                        className: g.noResultsText,
-                        variant: 'text-lg/medium',
-                        children: m.intl.string(m.t['Xe+fJC'])
-                    })
-                }),
-            e.map((e) =>
-                (0, i.jsx)(
-                    p,
-                    {
-                        guild: e,
-                        isActivityRestricted: b(e.id),
-                        onToggleActivityRestrictedGuild: f
-                    },
-                    e.id
-                )
-            )
+            (0, i.jsx)(l.nn4, {
+                'aria-live': 'polite',
+                role: 'region',
+                children: g.intl.format(m.default.EvzDfX, { count: e.length })
+            }),
+            (0, i.jsxs)('ul', {
+                className: p.guildsList,
+                id: j,
+                'aria-label': g.intl.string(g.t['7hB4kp']),
+                children: [
+                    0 === e.length &&
+                        (0, i.jsx)('div', {
+                            className: p.noResultsContainer,
+                            children: (0, i.jsx)(l.Text, {
+                                className: p.noResultsText,
+                                variant: 'text-lg/medium',
+                                children: g.intl.string(g.t['Xe+fJC'])
+                            })
+                        }),
+                    e.map((e) =>
+                        (0, i.jsx)(
+                            h,
+                            {
+                                guild: e,
+                                isActivityRestricted: _(e.id),
+                                onToggleActivityRestrictedGuild: b
+                            },
+                            e.id
+                        )
+                    )
+                ]
+            })
         ]
     });
 };

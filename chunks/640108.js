@@ -800,11 +800,11 @@ class et extends (i = o.PureComponent) {
     render() {
         let { height: e, type: t, src: n, forceExternal: r, className: i, renderLinkComponent: o, responsive: s, mediaLayoutType: c, renderOverlayContent: u } = this.props,
             { fullscreen: d, hideControls: _, playing: f } = this.state,
-            p = M.wrapperPaused;
-        if ((t === Y.AUDIO ? (p = M.wrapperAudio) : _ ? (p = M.wrapperControlsHidden) : f && (p = M.wrapperPlaying), r && t === Y.VIDEO)) {
+            h = M.wrapperPaused;
+        if ((t === Y.AUDIO ? (h = M.wrapperAudio) : _ ? (h = M.wrapperControlsHidden) : f && (h = M.wrapperPlaying), r && t === Y.VIDEO)) {
             let t = this.getWidth();
             return (0, a.jsxs)('div', {
-                className: l()(p, { [M.wrapperMediaMosaic]: c === L.hV.MOSAIC }),
+                className: l()(h, { [M.wrapperMediaMosaic]: c === L.hV.MOSAIC }),
                 style: s
                     ? void 0
                     : {
@@ -828,7 +828,7 @@ class et extends (i = o.PureComponent) {
             });
         }
         return (0, a.jsxs)('div', {
-            className: l()(p, M.newMosaicStyle, i, { [M.wrapperMediaMosaic]: c === L.hV.MOSAIC }),
+            className: l()(h, M.newMosaicStyle, i, { [M.wrapperMediaMosaic]: c === L.hV.MOSAIC }),
             'data-fullscreen': d,
             onMouseEnter: this.handleMouseEnter,
             onMouseLeave: this.handleMouseLeave,
@@ -839,7 +839,14 @@ class et extends (i = o.PureComponent) {
             children: [
                 this.renderMetadata(),
                 t === Y.AUDIO ? this.renderAudio() : this.renderVideo(),
-                this.renderControls(),
+                (0, a.jsx)(p.f6W, {
+                    theme: D.BRd.MIDNIGHT,
+                    children: (e) =>
+                        (0, a.jsx)('div', {
+                            className: e,
+                            children: this.renderControls()
+                        })
+                }),
                 t === Y.VIDEO ? this.renderPlayPausePop() : null,
                 null != u
                     ? (0, a.jsx)('div', {

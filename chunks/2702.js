@@ -77,15 +77,15 @@ function P(e) {
         j = (0, p.n)(),
         G = a.isPomelo() && j,
         F = (0, S.a)(C, G, !1, a.username),
-        D = r.useRef(null),
-        z = r.useMemo(() => {
+        z = r.useRef(null),
+        D = r.useMemo(() => {
             var e, t, n;
             return null != (n = null == Z || null == (e = Z.username) ? void 0 : e[0]) ? n : null == Z || null == (t = Z.discriminator) ? void 0 : t[0];
         }, [Z]);
     r.useEffect(() => {
         if (n === m.Dvm.ENTERED) {
             var e;
-            null == (e = D.current) || e.focus();
+            null == (e = z.current) || e.focus();
         }
     }, [n]);
     let B = N !== a.discriminator;
@@ -133,10 +133,10 @@ function P(e) {
                         children: [
                             (0, i.jsx)(m.xJW, {
                                 title: b.intl.string(b.t.TWzdWl),
-                                error: z,
+                                error: D,
                                 children: (0, i.jsxs)('div', {
                                     className: o()(M.input, y.multiInput, {
-                                        [M.error]: null != z,
+                                        [M.error]: null != D,
                                         [M.focused]: c
                                     }),
                                     children: [
@@ -148,7 +148,7 @@ function P(e) {
                                             onChange: R,
                                             onFocus: () => H(!0),
                                             onBlur: () => H(!1),
-                                            inputRef: D,
+                                            inputRef: z,
                                             className: y.multiInputFirst,
                                             inputClassName: o()(y.multiInputField, { [y.lowercase]: a.isPomelo() })
                                         }),

@@ -2,8 +2,8 @@ n.d(t, { Z: () => E }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    a = n(481060),
-    o = n(893776),
+    o = n(481060),
+    a = n(893776),
     s = n(232567),
     c = n(129293),
     u = n(388905),
@@ -54,7 +54,7 @@ let E = (e) => {
                 : j(!1);
         }, [n]),
         i.useEffect(() => {
-            E || b || o.Z.getExperiments();
+            E || b || a.Z.getExperiments();
         }, [E, b]),
         i.useEffect(() => {
             let e = async (e) => {
@@ -78,7 +78,7 @@ let E = (e) => {
                         className: x.marginBottom8,
                         children: O
                     }),
-                    v && (0, r.jsx)(a.$jN, {})
+                    v && (0, r.jsx)(o.$jN, {})
                 ]
             })
     );

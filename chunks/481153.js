@@ -2,8 +2,8 @@ n.d(t, { Z: () => S });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    a = n.n(l),
-    o = n(442837),
+    o = n.n(l),
+    a = n(442837),
     s = n(481060),
     c = n(812206),
     u = n(388905),
@@ -20,7 +20,7 @@ var r = n(255367),
     v = n(378027),
     I = n(893354),
     O = n(20493);
-let S = o.ZP.connectStores([f.Z, c.Z, m.Z, p.default], (e) => {
+let S = a.ZP.connectStores([f.Z, c.Z, m.Z, p.default], (e) => {
     let { giftCode: t } = e,
         n = f.Z.get(t.skuId),
         { subscriptionPlanId: r } = t;
@@ -31,13 +31,13 @@ let S = o.ZP.connectStores([f.Z, c.Z, m.Z, p.default], (e) => {
         gifter: p.default.getUser(t.userId)
     };
 })((e) => {
-    let { error: t, giftCode: n, gifter: l, sku: o, application: c, subscriptionPlan: p } = e,
+    let { error: t, giftCode: n, gifter: l, sku: a, application: c, subscriptionPlan: p } = e,
         m = null == l ? b.intl.string(b.t.lTGZAg) : b.intl.formatToPlainString(b.t.TjWdPT, { username: l.username }),
-        f = o.name;
+        f = a.name;
     return (
         null != p &&
             (f = b.intl.formatToPlainString(p.interval === E.rV.MONTH ? b.t.CTpcCQ : b.t.rgPWGx, {
-                skuName: o.name,
+                skuName: a.name,
                 intervalCount: p.intervalCount
             })),
         (0, r.jsxs)(i.Fragment, {
@@ -61,14 +61,14 @@ let S = o.ZP.connectStores([f.Z, c.Z, m.Z, p.default], (e) => {
                           children: [
                               (0, r.jsx)(u.DK, { children: m }),
                               (0, r.jsxs)(u.Dx, {
-                                  className: a()(O.marginTop8, I.flexCenter),
+                                  className: o()(O.marginTop8, I.flexCenter),
                                   children: [
-                                      o.productLine !== x.POd.COLLECTIBLES &&
+                                      a.productLine !== x.POd.COLLECTIBLES &&
                                           (0, r.jsx)(d.Z, {
                                               size: d.Z.Sizes.MEDIUM,
                                               className: v.applicationIcon,
                                               game: c,
-                                              skuId: o.id
+                                              skuId: a.id
                                           }),
                                       f
                                   ]
