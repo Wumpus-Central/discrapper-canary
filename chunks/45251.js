@@ -17,7 +17,7 @@ var r = n(544891),
 async function c(e) {
     if (0 === e.length) return;
     let t = (0, a.F)(),
-        n = await t.uploadFilesSimple(e);
+        n = await t.uploadFiles(e);
     if (t._aborted) throw Error('Upload aborted');
     return n.map((e, t) => (0, o.B)(e, t));
 }

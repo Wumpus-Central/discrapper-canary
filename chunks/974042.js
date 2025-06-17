@@ -109,7 +109,7 @@ class j {
     reset() {
         let e = new Set(),
             t = l().map(
-                _.Z.getRelationships(),
+                _.Z.getMutableRelationships(),
                 (t, n) => (
                     t === O.OGo.FRIEND && e.add(n),
                     new P(

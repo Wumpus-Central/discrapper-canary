@@ -75,7 +75,7 @@ async function x(e, t) {
         ed = I.default.getAnalyticsToken(),
         eg = z.Z.getGameForPID(t),
         eZ = _.Z.getMemberCounts(),
-        eS = C.Z.getRelationships(),
+        eS = C.Z.getMutableRelationships(),
         eE = Array.from(d.Z.getMessageRequestChannelIds()),
         eP = M.Z.getVoiceChannelId(),
         em = Y.default.getFocusedPID(),

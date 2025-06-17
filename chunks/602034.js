@@ -51,7 +51,7 @@ function g(e) {
 }
 async function b(e) {
     let t = new c.Z(),
-        n = await t.uploadFilesSimple(e);
+        n = await t.uploadFiles(e);
     return {
         uploaderFile: t._file,
         files: n

@@ -136,7 +136,7 @@ class U {
                     };
                 }),
             d = (0, u.F)(),
-            g = (await d.uploadFilesSimple(i)).map((e, t) => (0, p.B)(e, t)),
+            g = (await d.uploadFiles(i)).map((e, t) => (0, p.B)(e, t)),
             f = null != this.editSkuId ? a.tn.patch : a.tn.post,
             m = null != this.editSkuId ? v.ANM.GUILD_PRODUCT_LISTINGS(this.guildId, this.editSkuId) : v.ANM.GUILD_PRODUCTS(this.guildId),
             h = (

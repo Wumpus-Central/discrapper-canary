@@ -40,7 +40,7 @@ async function A(e) {
         E = null != x ? x.attachments : [];
     u(!0);
     try {
-        i = await v.uploadFilesSimple(o);
+        i = await v.uploadFiles(o);
     } catch (e) {
         u(!1);
         return;

@@ -303,7 +303,7 @@ class P {
             }),
             T(this, 'handlePresencesReplace', () => {
                 0 !== this.rpcServer.subscriptions.length &&
-                    i().forEach(f.Z.getRelationships(), (e, t) => {
+                    i().forEach(f.Z.getMutableRelationships(), (e, t) => {
                         if (e === C.OGo.NONE) return;
                         let n = m.default.getUser(t);
                         if (null == n) return;

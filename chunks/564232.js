@@ -1,4 +1,4 @@
-r.d(t, { default: () => S }), r(388685);
+r.d(t, { default: () => w });
 var n = r(255367),
     i = r(73800),
     s = r(392711),
@@ -8,17 +8,15 @@ var n = r(255367),
     d = r(239091),
     c = r(276264),
     a = r(600164),
-    f = r(313201),
-    m = r(670188),
+    m = r(313201),
+    f = r(670188),
     b = r(271383),
     g = r(699516),
     h = r(594174),
-    p = r(709054),
-    O = r(432496),
-    j = r(981631),
-    I = r(388032),
-    y = r(763147);
-function w(e) {
+    p = r(432496),
+    O = r(388032),
+    j = r(763147);
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -43,12 +41,12 @@ function w(e) {
     }
     return e;
 }
-function M(e) {
+function y(e) {
     let { guildId: t, guildOwnerId: s, member: l } = e,
         u = h.default.getUser(l.userId),
         o = i.useRef(null);
     return (0, n.jsx)(
-        m.Z,
+        f.Z,
         {
             targetElementRef: o,
             userId: l.userId,
@@ -59,10 +57,10 @@ function M(e) {
                 let { isShown: a } = i;
                 return (0, n.jsx)(
                     c.Z,
-                    w(
+                    I(
                         {
                             ref: o,
-                            className: y.member,
+                            className: j.member,
                             selected: a,
                             colorString: l.colorString,
                             colorStrings: l.colorStrings,
@@ -78,7 +76,7 @@ function M(e) {
                                         var i, s;
                                         return (0, n.jsx)(
                                             e,
-                                            ((i = w({}, r)),
+                                            ((i = I({}, r)),
                                             (s = s =
                                                 {
                                                     user: u,
@@ -112,20 +110,17 @@ function M(e) {
         u.id
     );
 }
-function S(e) {
+function w(e) {
     let { guild: t, transitionState: r, onClose: s } = e,
-        d = (0, f.Dt)(),
-        c = i.useMemo(() => {
-            let e = g.Z.getRelationships();
-            return p.default.keys(e).filter((t) => e[t] === j.OGo.FRIEND);
-        }, []);
+        d = (0, m.Dt)(),
+        c = i.useMemo(() => g.Z.getFriendIDs(), []);
     i.useEffect(() => {
-        O.Z.fetchFriendMembersIfNotFetched(t.id, c);
+        p.Z.fetchFriendMembersIfNotFetched(t.id, c);
     }, [t.id, c]);
-    let m = (0, u.e7)([b.ZP], () => b.ZP.getMembers(t.id)),
-        w = i.useMemo(
+    let f = (0, u.e7)([b.ZP], () => b.ZP.getMembers(t.id)),
+        I = i.useMemo(
             () =>
-                l()(m)
+                l()(f)
                     .filter((e) => !!c.includes(e.userId) && null != h.default.getUser(e.userId))
                     .sortBy((e) => {
                         var t;
@@ -134,7 +129,7 @@ function S(e) {
                     })
                     .map((e) =>
                         (0, n.jsx)(
-                            M,
+                            y,
                             {
                                 guildId: t.id,
                                 guildOwnerId: t.ownerId,
@@ -144,9 +139,9 @@ function S(e) {
                         )
                     )
                     .value(),
-            [c, t.id, t.ownerId, m]
+            [c, t.id, t.ownerId, f]
         ),
-        S = O.Z.isFetchingFriendsForGuild(t.id);
+        w = p.Z.isFetchingFriendsForGuild(t.id);
     return (0, n.jsxs)(o.Y0X, {
         transitionState: r,
         size: o.CgR.SMALL,
@@ -158,14 +153,14 @@ function S(e) {
                 justify: a.Z.Justify.BETWEEN,
                 children: [
                     (0, n.jsxs)('div', {
-                        className: y.heading,
+                        className: j.heading,
                         children: [
                             (0, n.jsx)('span', { children: (0, n.jsx)(o.iFz, {}) }),
                             (0, n.jsx)(o.X6q, {
                                 variant: 'heading-lg/semibold',
-                                children: I.intl.format(S ? I.t.EtQnZm : I.t.OgMdNT, {
+                                children: O.intl.format(w ? O.t.EtQnZm : O.t.OgMdNT, {
                                     guildName: t.name,
-                                    numFriends: w.length
+                                    numFriends: I.length
                                 })
                             })
                         ]
@@ -174,8 +169,8 @@ function S(e) {
                 ]
             }),
             (0, n.jsxs)(o.hzk, {
-                className: y.content,
-                children: [S && (0, n.jsx)(o.$jN, {}), (0, n.jsx)(o.Ttm, { children: w })]
+                className: j.content,
+                children: [w && (0, n.jsx)(o.$jN, {}), (0, n.jsx)(o.Ttm, { children: I })]
             })
         ]
     });

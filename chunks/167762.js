@@ -456,7 +456,7 @@ let et = l.memo(function (e) {
         y = (0, O.Z)('friends-popout', S),
         I = (function () {
             let e = (0, o.Wu)([U.Z, x.default, R.Z], () => {
-                    let e = U.Z.getRelationships(),
+                    let e = U.Z.getMutableRelationships(),
                         t = [];
                     for (let [n, i] of Object.entries(e)) {
                         if (i !== q.OGo.PENDING_INCOMING && i !== q.OGo.PENDING_OUTGOING) continue;

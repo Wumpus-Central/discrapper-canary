@@ -205,9 +205,13 @@ function et() {
     });
 }
 function en() {
-    c.Z.forEach((e) => {
-        c.Z.commit(e.reset(e.map((e) => e.set('blocked', C.Z.isBlockedForMessage(e)).set('ignored', C.Z.isIgnoredForMessage(e)))));
-    });
+    let e = !1;
+    return (
+        c.Z.forEach((t) => {
+            c.Z.commit(t.reset(t.map((t) => (t.blocked !== C.Z.isBlockedForMessage(t) && ((e = !0), (t = t.set('blocked', C.Z.isBlockedForMessage(t)))), t.ignored !== C.Z.isIgnoredForMessage(t) && ((e = !0), (t = t.set('ignored', C.Z.isIgnoredForMessage(t)))), t))));
+        }),
+        e
+    );
 }
 function er(e) {
     let { channelId: t, messageId: n } = e,

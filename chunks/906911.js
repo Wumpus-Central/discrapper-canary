@@ -38,7 +38,7 @@ let h = {
                             });
                     }
                     return e;
-                })({}, o.Z.getRelationships()),
+                })({}, o.Z.getMutableRelationships()),
                 (e) => e !== p.OGo.NONE
             );
             return {
