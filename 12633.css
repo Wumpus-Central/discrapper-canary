@@ -27385,6 +27385,46 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     top: -120px
 }
 
+.body_ceece4 {
+    margin: var(--spacing-16) 0;
+    padding: 0 4px
+}
+
+.addressElementContainer_ceece4 {
+    flex-direction: column
+}
+
+.visible_ceece4 {
+    transform: translateX(0)
+}
+
+.full-motion .visible_ceece4 {
+    transition: transform .4s ease-out
+}
+
+.hidden_ceece4 {
+    height: 0;
+    transform: translateX(-100%);
+    visibility: hidden
+}
+
+.full-motion .hidden_ceece4 {
+    transition: transform .4s ease-out
+}
+
+.cardElementContainer_ceece4.visible_ceece4 {
+    height: 236px
+}
+
+.addressElementContainer_ceece4.visible_ceece4 {
+    min-height: 500px
+}
+
+.addressElementContainer_ceece4.hidden_ceece4 {
+    height: 0;
+    min-height: 0
+}
+
 .shaker_e5f3a9 {
     align-items: center;
     display: flex;

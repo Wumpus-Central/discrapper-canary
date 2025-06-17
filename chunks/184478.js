@@ -1,0 +1,76 @@
+t.d(n, { Z: () => g });
+var r = t(255367);
+t(73800);
+var i = t(793030),
+    o = t(442837),
+    s = t(481060),
+    a = t(678558),
+    l = t(343649),
+    c = t(430824),
+    u = t(63063),
+    d = t(317169),
+    p = t(639660),
+    m = t(767218),
+    _ = t(981631),
+    x = t(93841),
+    f = t(388032),
+    v = t(466649);
+function g(e) {
+    let { guildId: n } = e,
+        t = (0, o.e7)([c.Z], () => c.Z.getGuild(n)),
+        { available: g, spent: j, total: b } = (0, d.Z)(n);
+    if (null != t)
+        return (0, r.jsxs)('div', {
+            className: v.container,
+            children: [
+                (0, r.jsxs)('div', {
+                    className: v.headerContainer,
+                    children: [
+                        (0, r.jsx)(i.xv, {
+                            variant: 'eyebrow',
+                            children: f.intl.string(x.default.hjvcLC)
+                        }),
+                        (0, r.jsx)(i.xv, {
+                            className: v.learnMore,
+                            variant: 'text-xs/semibold',
+                            children: f.intl.format(x.default.fXE30d, { helpDeskArticle: u.Z.getArticleURL(_.BhN.GUILD_BOOSTING_FAQ) })
+                        })
+                    ]
+                }),
+                (0, r.jsxs)('div', {
+                    className: v.contentContainer,
+                    children: [
+                        (0, r.jsx)(m.Z, {
+                            count: g,
+                            type: m.b.AVAILABLE
+                        }),
+                        (0, r.jsx)(m.Z, {
+                            count: j,
+                            type: m.b.SPENT
+                        }),
+                        (0, r.jsx)(m.Z, {
+                            count: b,
+                            type: m.b.TOTAL
+                        })
+                    ]
+                }),
+                (0, r.jsx)(a.Z, {
+                    className: v.boostButton,
+                    guild: t,
+                    analyticsLocation: {
+                        page: _.ZY5.GUILD_POWERUPS_OVERVIEW,
+                        section: _.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR
+                    },
+                    color: s.Ttl.CUSTOM,
+                    size: s.PhG.LARGE,
+                    intent: l.P.NONE,
+                    icon: (0, r.jsx)(s.$Eu, {
+                        className: v.boostButtonIcon,
+                        size: 'sm',
+                        color: s.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK
+                    })
+                }),
+                (0, r.jsx)(p.Z, { guildId: n })
+            ]
+        });
+}
