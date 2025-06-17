@@ -1,29 +1,29 @@
 n.d(t, {
-    Bo: () => l,
-    Ct: () => s,
-    LA: () => c,
+    Bo: () => c,
+    Ct: () => a,
+    LA: () => i,
     NB: () => o,
-    cP: () => i
+    cP: () => l
 });
 var r = n(570140);
-function i(e, t, n, i, c) {
+function l(e, t, n, l, i) {
     r.Z.dispatch({
         type: 'SPEAK_TEXT',
         text: e,
         interrupt: t,
         maxLength: n,
-        onStart: i,
-        onEnd: c
+        onStart: l,
+        onEnd: i
     });
 }
-function c(e, t) {
+function i(e, t) {
     r.Z.dispatch({
         type: 'SPEAK_MESSAGE',
         channel: e,
         message: t
     });
 }
-function l(e, t) {
+function c(e, t) {
     r.Z.dispatch({
         type: 'SPEAKING_MESSAGE',
         channelId: e,
@@ -33,7 +33,7 @@ function l(e, t) {
 function o() {
     r.Z.dispatch({ type: 'STOP_SPEAKING' });
 }
-function s(e) {
+function a(e) {
     r.Z.dispatch({
         type: 'SET_TTS_SPEECH_RATE',
         speechRate: e

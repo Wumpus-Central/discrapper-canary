@@ -34,7 +34,7 @@ function i(e, t) {
                 status: e.status
             };
         }
-    return {};
+    return { status: e.status };
 }
 n.d(t, { H: () => a }), n(415506);
 class a {

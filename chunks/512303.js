@@ -11,8 +11,8 @@ var i = n(255367),
     f = n(565138),
     g = n(892001),
     m = n(598077),
-    p = n(592125),
-    h = n(430824),
+    h = n(592125),
+    p = n(430824),
     b = n(594174),
     O = n(388032),
     E = n(274693);
@@ -23,8 +23,8 @@ function y(e) {
         _ = null == (n = e.interactionMetadata) ? void 0 : n.authorizing_integration_owners[l.Y.GUILD_INSTALL],
         P = null == (y = e.interactionMetadata) ? void 0 : y.user.id,
         N = (0, a.e7)([b.default], () => b.default.getUser(S)),
-        I = (0, a.e7)([h.Z], () => h.Z.getGuild(_)),
-        Z = p.Z.getChannel(e.channel_id),
+        I = (0, a.e7)([p.Z], () => p.Z.getGuild(_)),
+        Z = h.Z.getChannel(e.channel_id),
         x = null == Z ? void 0 : Z.getGuildId(),
         D = (0, a.e7)([b.default], () => b.default.getUser(P));
     if (

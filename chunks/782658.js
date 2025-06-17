@@ -164,22 +164,24 @@ function R(e) {
                         });
                         break;
                     }
-                    (0, h.P1)(M) &&
-                        (W = (0, r.jsx)(v.Z, {
+                    if ((0, h.P1)(M)) {
+                        W = (0, r.jsx)(v.Z, {
                             invite: M,
                             getAcceptInviteContext: R,
                             message: n
-                        })),
-                        F &&
-                            (0, p.l)(M) &&
-                            (W = (0, r.jsx)(I.Z, {
-                                onTransitionToInviteChannel: V,
-                                onAcceptInstantInvite: z,
-                                isMemberOfGuild: null != B,
-                                invite: M,
-                                message: n,
-                                currentUserId: G
-                            }));
+                        });
+                        break;
+                    }
+                    F &&
+                        (0, p.l)(M) &&
+                        (W = (0, r.jsx)(I.Z, {
+                            onTransitionToInviteChannel: V,
+                            onAcceptInstantInvite: z,
+                            isMemberOfGuild: null != B,
+                            invite: M,
+                            message: n,
+                            currentUserId: G
+                        }));
             }
     }
     return (0, r.jsx)(o.Z, {

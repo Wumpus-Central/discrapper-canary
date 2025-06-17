@@ -33,15 +33,14 @@ async function d(e, t, n, u, d) {
             skuId: e,
             subscriptionPlans: f.body
         });
-    } catch (t) {
-        throw (
-            (i.Z.dispatch({
-                type: 'SUBSCRIPTION_PLANS_FETCH_FAILURE',
-                skuId: e
-            }),
-            (0, s.q2)(t),
-            new a.Z('Failed to fetch subscription plans for SKU '.concat(e), t))
-        );
+    } catch (n) {
+        i.Z.dispatch({
+            type: 'SUBSCRIPTION_PLANS_FETCH_FAILURE',
+            skuId: e
+        }),
+            (0, s.q2)(n);
+        let t = new a.Z(n);
+        throw ((t.message = 'Failed to fetch subscription plans for SKU '.concat(e)), t);
     }
 }
 function f(e, t) {

@@ -12,7 +12,7 @@ var r = n(481060),
     f = n(36998),
     g = n(981631),
     m = n(388032);
-function p(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -37,17 +37,17 @@ function p(e) {
     }
     return e;
 }
-let h = /^(tel|sms|mailto):([^?;]+)/;
+let p = /^(tel|sms|mailto):([^?;]+)/;
 function b(e, t, n, b) {
     let O = (0, a.Z)(null == n ? void 0 : n.getChannelId());
     if (!u.isPlatformEmbedded || null == e || '' === e || O || (null == b ? void 0 : b.shouldHideMediaOptions) === !0 || !(0, l.Jj)(e)) return null;
     let E = (0, o.F)(e),
         y = (e) => {
-            s.default.track(g.rMx.CONTEXT_MENU_LINK_COPIED, p({ hostname: E }, (0, f.v)())), d.ZP.copy(e), (0, r.showToast)((0, r.createToast)(m.intl.string(m.t['L/PwZW']), r.ToastType.SUCCESS));
+            s.default.track(g.rMx.CONTEXT_MENU_LINK_COPIED, h({ hostname: E }, (0, f.v)())), d.ZP.copy(e), (0, r.showToast)((0, r.createToast)(m.intl.string(m.t['L/PwZW']), r.ToastType.SUCCESS));
         },
         v = (n, i) => {
             let r = !0 === i ? e.replace('tel:', 'sms:') : e;
-            s.default.track(g.rMx.CONTEXT_MENU_LINK_OPENED, p({ hostname: E }, (0, f.v)())),
+            s.default.track(g.rMx.CONTEXT_MENU_LINK_OPENED, h({ hostname: E }, (0, f.v)())),
                 (0, c.q)(
                     {
                         href: r,
@@ -58,7 +58,7 @@ function b(e, t, n, b) {
                 );
         },
         j = [],
-        S = e.match(h);
+        S = e.match(p);
     if (null != S) {
         let e = m.intl.string('mailto' === S[1] ? m.t.ZYLVKi : m.t['3zozoa']);
         j.push(

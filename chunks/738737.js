@@ -6,7 +6,7 @@ var i = n(481060),
     a = n(107998),
     s = n(981631);
 function o(e) {
-    let { initialPlanId: t, activeSubscription: o, trialId: c, trialFooterMessageOverride: d, onClose: u, analyticsObject: m, analyticsLocation: p, analyticsLocations: f, analyticsSubscriptionType: h, renderHeader: g, renderPurchaseConfirmation: C, planGroup: _, reviewWarningMessage: v, skuId: b } = e;
+    let { initialPlanId: t, activeSubscription: o, trialId: c, trialFooterMessageOverride: d, onClose: u, analyticsObject: m, analyticsLocation: p, analyticsLocations: f, analyticsSubscriptionType: h, renderHeader: g, renderPurchaseConfirmation: C, planGroup: v, reviewWarningMessage: b, skuId: _ } = e;
     (0, i.ZDy)(
         async () => {
             let { PaymentContextProvider: e } = await Promise.resolve().then(n.bind(n, 563132)),
@@ -15,8 +15,8 @@ function o(e) {
             return (n) => {
                 var j,
                     y,
-                    { onClose: E } = n,
-                    x = (function (e, t) {
+                    { onClose: x } = n,
+                    E = (function (e, t) {
                         if (null == e) return {};
                         var n,
                             r,
@@ -38,7 +38,7 @@ function o(e) {
                 return (0, r.jsx)(e, {
                     activeSubscription: o,
                     stepConfigs: s,
-                    skuIDs: [b],
+                    skuIDs: [_],
                     children: (0, r.jsx)(a.c1, {
                         children: (0, r.jsx)(l.KB, {
                             children: (0, r.jsx)(
@@ -67,24 +67,24 @@ function o(e) {
                                             });
                                     }
                                     return e;
-                                })({}, x)),
+                                })({}, E)),
                                 (y = y =
                                     {
                                         initialPlanId: t,
                                         onClose: (e) => {
-                                            E(), null == u || u(e);
+                                            x(), null == u || u(e);
                                         },
                                         analyticsLocations: f,
                                         analyticsObject: m,
                                         analyticsLocation: p,
                                         analyticsSubscriptionType: h,
-                                        skuId: b,
+                                        skuId: _,
                                         renderHeader: g,
                                         renderPurchaseConfirmation: C,
-                                        planGroup: _,
+                                        planGroup: v,
                                         trialId: c,
                                         trialFooterMessageOverride: d,
-                                        reviewWarningMessage: v
+                                        reviewWarningMessage: b
                                     }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(j, Object.getOwnPropertyDescriptors(y))

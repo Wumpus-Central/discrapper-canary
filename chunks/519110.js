@@ -11,8 +11,8 @@ var i = n(255367),
     f = n(691251),
     g = n(268350),
     m = n(217590),
-    p = n(453070),
-    h = n(926491),
+    h = n(453070),
+    p = n(926491),
     b = n(378233),
     O = n(981631),
     E = n(388032);
@@ -66,8 +66,8 @@ function S(e) {
     let { type: t, id: n, name: S, isInExpressionPicker: _ = !1 } = e,
         { location: P } = (0, s.O)(),
         N = r.useMemo(() => v(y({}, P), { section: _ ? O.jXE.EXPRESSION_PICKER : O.jXE.CONTEXT_MENU }), [P, _]),
-        I = (0, p.Go)(),
-        Z = (0, l.e7)([h.Z], () => (t === f.S.STICKER && null != n ? h.Z.getStickerById(n) : null)),
+        I = (0, h.Go)(),
+        Z = (0, l.e7)([p.Z], () => (t === f.S.STICKER && null != n ? p.Z.getStickerById(n) : null)),
         x = null != Z && I.includes(Z.id),
         D = (0, l.e7)([u.ZP], () => {
             if (t === f.S.EMOJI) {

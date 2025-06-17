@@ -99,12 +99,12 @@ function x(e) {
                             e,
                             f(p({}, t), {
                                 id: r,
-                                label: g.intl.string(g.t.sMsaLi)
+                                label: null == s ? g.intl.string(g.t['/AXYnJ']) : g.intl.string(g.t.sMsaLi)
                             })
                         );
                 });
             },
-            [r]
+            [r, s]
         );
     return b
         ? (0, i.jsx)('div', { className: m.dragged })
@@ -117,6 +117,7 @@ function x(e) {
               'aria-label': null != S ? ''.concat(w, ', ').concat(S) : w,
               children: (0, i.jsxs)('div', {
                   className: m.roleContent,
+                  onContextMenu: R,
                   children: [
                       'dot' === Z
                           ? (0, i.jsx)(o.FhE, {
@@ -152,7 +153,6 @@ function x(e) {
                       })(),
                       (0, i.jsx)('div', {
                           className: m.roleInner,
-                          onContextMenu: R,
                           children: x
                       }),
                       E && null != s

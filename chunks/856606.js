@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => $,
+    Z: () => Y,
     n: () => H
 }),
     n(539854),
@@ -460,7 +460,7 @@ function q() {
         })
     });
 }
-function $() {
+function Y() {
     let { channel: e, permissionOverwrites: t, selectedOverwriteId: n } = (0, o.cj)([S.Z], () => S.Z);
     if (null == (0, o.e7)([Z.Z], () => (null != e ? Z.Z.getGuild(e.getGuildId()) : null)) || null == e || null == t || null == n) return null;
     let l = t[n];

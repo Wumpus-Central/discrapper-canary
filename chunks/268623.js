@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => h,
+    Z: () => p,
     x: () => b
 }),
     n(388685);
@@ -15,8 +15,8 @@ var i = n(255367),
     f = n(175006),
     g = n(898150),
     m = n(70956),
-    p = n(388032);
-function h(e) {
+    h = n(388032);
+function p(e) {
     let { enabled: t } = s.Z.useExperiment({ location: 'LongPressMessageActionSheet' }),
         n = (0, l.e7)([d.Z], () => d.Z.getSavedMessage(e.channel_id, e.id)),
         r = b({
@@ -27,7 +27,7 @@ function h(e) {
         ? null != n || (0, f.Z)()
             ? (0, i.jsxs)(a.sNh, {
                   id: 'save-for-later',
-                  label: p.intl.string(p.t.tpxJtr),
+                  label: h.intl.string(h.t.tpxJtr),
                   action: () =>
                       null == n
                           ? (0, c.z)({
@@ -45,7 +45,7 @@ function h(e) {
                       null != n
                           ? (0, i.jsx)(a.sNh, {
                                 id: 'remove-from-for-later',
-                                label: p.intl.string(p.t.SvXS1d),
+                                label: h.intl.string(h.t.SvXS1d),
                                 icon: a.plf,
                                 action: () =>
                                     (0, c.x)({
@@ -57,7 +57,7 @@ function h(e) {
                             })
                           : (0, i.jsx)(a.sNh, {
                                 id: 'create-bookmark',
-                                label: p.intl.string(p.t['9p3D9v']),
+                                label: h.intl.string(h.t['9p3D9v']),
                                 icon: a.gt9,
                                 action: () =>
                                     (0, c.z)({
@@ -72,7 +72,7 @@ function h(e) {
               })
             : (0, i.jsx)(a.sNh, {
                   id: 'save-for-later-upsell',
-                  label: p.intl.string(p.t.tpxJtr),
+                  label: h.intl.string(h.t.tpxJtr),
                   icon: a.SrA,
                   iconProps: { color: o.JX.PREMIUM_TIER_2 },
                   action: () =>
@@ -111,7 +111,7 @@ function b(e) {
         });
     return (null == n ? void 0 : n.saveData.dueAt) == null
         ? (0, i.jsx)(a.kSQ, {
-              label: p.intl.string(p.t.roMu1N),
+              label: h.intl.string(h.t.roMu1N),
               children: d
           })
         : (0, i.jsxs)(a.kSQ, {
@@ -119,7 +119,7 @@ function b(e) {
               children: [
                   (0, i.jsx)(a.sNh, {
                       id: 'mark-complete',
-                      label: p.intl.string(p.t.yjGtdH),
+                      label: h.intl.string(h.t.yjGtdH),
                       icon: a.kmB,
                       action: () =>
                           (0, c.z)({
@@ -130,7 +130,7 @@ function b(e) {
                   }),
                   (0, i.jsx)(a.sNh, {
                       id: 'edit-reminder',
-                      label: p.intl.string(p.t.vrbqs7),
+                      label: h.intl.string(h.t.vrbqs7),
                       children: d
                   })
               ]

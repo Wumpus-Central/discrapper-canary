@@ -52,9 +52,9 @@ var i = n(255367),
     X = n(70956),
     J = n(630388),
     q = n(63063),
-    $ = n(129724),
-    Q = n(732335),
-    Y = n(296146),
+    Y = n(129724),
+    $ = n(732335),
+    Q = n(296146),
     K = n(564735),
     ee = n(981631),
     et = n(176505),
@@ -248,10 +248,10 @@ class ew extends l.PureComponent {
         return null == t ? void 0 : t[e];
     }
     getCooldownSliderMarker(e) {
-        return (0, $.A)(e, !0);
+        return (0, Y.A)(e, !0);
     }
     getAutoArchiveDurationSliderMarker(e) {
-        return (0, $.A)(e * X.Z.Seconds.MINUTE, !0);
+        return (0, Y.A)(e * X.Z.Seconds.MINUTE, !0);
     }
     renderChannelInfo(e, t) {
         var n, l, r, d, h, m;
@@ -456,7 +456,7 @@ class ew extends l.PureComponent {
                                           })
                                       ]
                                   }),
-                                  e.defaultForumLayout === a.X.GRID ? (0, i.jsx)(Y.Z, { className: es.defaultImageView }) : (0, i.jsx)(K.Z, { className: es.defaultImageView })
+                                  e.defaultForumLayout === a.X.GRID ? (0, i.jsx)(Q.Z, { className: es.defaultImageView }) : (0, i.jsx)(K.Z, { className: es.defaultImageView })
                               ]
                           }),
                           (0, i.jsx)(g.$i$, { className: s()(ea.marginTop40, ea.marginBottom40) })
@@ -543,7 +543,7 @@ class ew extends l.PureComponent {
                                         })
                                       : null,
                                   !0 === Z
-                                      ? (0, i.jsx)(Q.Z, {
+                                      ? (0, i.jsx)($.Z, {
                                             channel: e,
                                             onChange: this.handleChangeSlowmode
                                         })
@@ -618,7 +618,7 @@ class ew extends l.PureComponent {
                           ]
                       })
                     : null,
-            $ =
+            Y =
                 e.type === ee.d4z.PRIVATE_THREAD && null != e.threadMetadata
                     ? (0, i.jsx)('div', {
                           children: (0, i.jsx)(g.j7V, {
@@ -772,7 +772,7 @@ class ew extends l.PureComponent {
                     G,
                     U,
                     H,
-                    $,
+                    Y,
                     en,
                     eo,
                     ej,

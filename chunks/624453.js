@@ -16,8 +16,8 @@ var i,
     f = n(786761),
     g = n(706454),
     m = n(592125),
-    p = n(271383),
-    h = n(430824),
+    h = n(271383),
+    p = n(430824),
     b = n(375954),
     O = n(699516),
     E = n(594174),
@@ -38,7 +38,7 @@ function S() {
 }
 class _ extends (i = c.ZP.Store) {
     initialize() {
-        this.waitFor(m.Z, h.Z, p.ZP, b.Z, E.default, g.default);
+        this.waitFor(m.Z, p.Z, h.ZP, b.Z, E.default, g.default);
     }
     getPins(e) {
         return v[e];
