@@ -51584,7 +51584,8 @@ html.disable-forced-colors * {
 }
 
 .addColorButtonText_b29565 {
-    color: var(--text-brand)
+    color: var(--text-brand);
+    text-transform: capitalize
 }
 
 .gradientBar_b29565 {
