@@ -303,6 +303,10 @@ class ev extends d.Z {
         var r, i;
         null == (i = this._connection) || null == (r = i.setClipRecordUser) || r.call(i, e, t, n);
     }
+    setNoiseCancellationEnabled(e) {
+        var t;
+        this._numNoiseCancellationChanges++, null == (t = this._voiceDuration) || t.setNoiseCancellationEnabled(e);
+    }
     setSimulcastDebugOverride(e, t, n) {
         var r, i;
         t === this.context && (t === es.Yn.DEFAULT ? null == (r = this._localMediaSinkWantsManager) || r.setSimulcastDebugOverride(e, n) : null == (i = this._goLiveQualityManager) || i.setSimulcastDebugOverride(n));
@@ -495,6 +499,7 @@ class ev extends d.Z {
                         null == (T = this._systemResponsiveness) ? void 0 : T.getPttQueueLatencyStats()
                     ),
                     {
+                        num_noise_cancellation_changes: this._numNoiseCancellationChanges,
                         media_session_id: this.getMediaSessionId(),
                         channel_bitrate: null != a ? a.bitrate : null,
                         cloudflare_best_region: n,
@@ -549,7 +554,7 @@ class ev extends d.Z {
             }),
                 this._trackRemainingSecureFrameTransitions();
         }
-        if (((this._pingTimeouts = []), (this._pings = []), (this._connectCompletedTime = 0), (this._pingBadCount = 0), (this._inputDetected = !1), (this._mediaSessionId = null), null == (i = this._voiceQuality) || i.stop(), (this._voiceQuality = null), clearInterval(this._voiceQualityPeriodicStatsInterval), (this._voiceQualityPeriodicStatsInterval = null), (this._voiceQualityPeriodicStatsSequenceId = 0), (this._noiseCancellationError = 0), null == (a = this._voiceDuration) || a.stop(), (this._voiceDuration = null), null == (o = this._videoQuality) || o.stop(), (this._videoQuality = null), (this._videoHealthManager = null), null == (s = this._localMediaSinkWantsManager) || s.reset(), (this._secureFramesState = null), (this._userIds = new Set([this.userId])), this._secureFramesRosterMap.clear(), this._secureFramesTransitionStates.clear(), (this._secureFramesNextTransitionState = void 0), (this._secureFramesMaxConcurrentTransitions = 0), (this._secureFramesTransitionPrepareCount = 0), (this._secureFramesTransitionExecuteCount = 0), null != this._connection)) {
+        if (((this._pingTimeouts = []), (this._pings = []), (this._connectCompletedTime = 0), (this._pingBadCount = 0), (this._inputDetected = !1), (this._mediaSessionId = null), null == (i = this._voiceQuality) || i.stop(), (this._voiceQuality = null), clearInterval(this._voiceQualityPeriodicStatsInterval), (this._voiceQualityPeriodicStatsInterval = null), (this._voiceQualityPeriodicStatsSequenceId = 0), (this._noiseCancellationError = 0), (this._numNoiseCancellationChanges = 0), null == (a = this._voiceDuration) || a.stop(), (this._voiceDuration = null), null == (o = this._videoQuality) || o.stop(), (this._videoQuality = null), (this._videoHealthManager = null), null == (s = this._localMediaSinkWantsManager) || s.reset(), (this._secureFramesState = null), (this._userIds = new Set([this.userId])), this._secureFramesRosterMap.clear(), this._secureFramesTransitionStates.clear(), (this._secureFramesNextTransitionState = void 0), (this._secureFramesMaxConcurrentTransitions = 0), (this._secureFramesTransitionPrepareCount = 0), (this._secureFramesTransitionExecuteCount = 0), null != this._connection)) {
             let e = this._connection;
             (this._connection = null), e.destroy();
         }
@@ -1322,6 +1327,7 @@ class ev extends d.Z {
             el(this, '_secureFramesMaxConcurrentTransitions', 0),
             el(this, '_secureFramesTransitionPrepareCount', 0),
             el(this, '_secureFramesTransitionExecuteCount', 0),
+            el(this, '_numNoiseCancellationChanges', 0),
             el(this, '_lastSentSpeakingStatus', void 0),
             el(this, '_lastSentSSRC', void 0),
             el(this, 'powerMonitorListener', void 0),

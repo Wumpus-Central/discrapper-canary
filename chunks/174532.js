@@ -64,6 +64,7 @@ class u {
             this.participation.reset(),
             this.muted.reset(),
             this.connected.reset(),
+            this.noiseCancellation.reset(),
             this.voiceFilterSpeaking.clear(),
             this.timesUntilSpeakingDurationMilestonesMs.clear(),
             this.connected.start(),
@@ -116,11 +117,14 @@ class u {
                 this.timesUntilSpeakingDurationMilestonesMs.set(r, i);
             });
     }
+    setNoiseCancellationEnabled(e) {
+        this.noiseCancellation.value = e;
+    }
     stop() {
         let e = this.connected.lastStartTime,
             t = this.speaking.lastStartTime,
             n = this.speaking.lastElapsed;
-        this.speaking.stop(), this.listening.stop(), this.participation.stop(), this.connected.stop(), this.muted.stop(), this.voiceFilterSpeaking.forEach((e) => e.stop()), this.computeSpeakingDurationMilestones(e, t, n);
+        this.speaking.stop(), this.listening.stop(), this.participation.stop(), this.connected.stop(), this.muted.stop(), (this.noiseCancellation.value = !1), this.voiceFilterSpeaking.forEach((e) => e.stop()), this.computeSpeakingDurationMilestones(e, t, n);
     }
     getVoiceFilterSpeakingDurationMs() {
         return new Map(
@@ -141,6 +145,7 @@ class u {
                     duration_connected_ms: this.connected.elapsed().asMilliseconds(),
                     duration_muted_ms: this.muted.elapsed().asMilliseconds(),
                     duration_speaking_voice_filter_ids: [...this.voiceFilterSpeaking.keys()],
+                    duration_noise_cancellation_enabled_ms: this.noiseCancellation.totalDuration(),
                     duration_speaking_voice_filter_ms: [...this.voiceFilterSpeaking.values()].map((e) => e.elapsed().asMilliseconds())
                 },
                 c.filter((e) => this.timesUntilSpeakingDurationMilestonesMs.has(e)).reduce((e, t) => l(o({}, e), { ['time_to_first_'.concat(t, 'ms_speech_ms')]: this.timesUntilSpeakingDurationMilestonesMs.get(t) }), {})
@@ -148,6 +153,6 @@ class u {
         );
     }
     constructor(e, t, n = i.Z_) {
-        a(this, 'userId', void 0), a(this, 'connection', void 0), a(this, 'timestampProducer', void 0), a(this, 'listeningUsers', void 0), a(this, 'listening', void 0), a(this, 'speaking', void 0), a(this, 'participation', void 0), a(this, 'connected', void 0), a(this, 'muted', void 0), a(this, 'voiceFilterSpeaking', void 0), a(this, 'timesUntilSpeakingDurationMilestonesMs', void 0), (this.userId = e), (this.connection = t), (this.timestampProducer = n), (this.listeningUsers = new Set()), (this.timesUntilSpeakingDurationMilestonesMs = new Map()), (this.listening = new i.G9(this.timestampProducer)), (this.speaking = new i.G9(this.timestampProducer)), (this.participation = new i.G9(this.timestampProducer)), (this.connected = new i.G9(this.timestampProducer)), (this.muted = new i.G9(this.timestampProducer)), (this.voiceFilterSpeaking = new Map());
+        a(this, 'userId', void 0), a(this, 'connection', void 0), a(this, 'timestampProducer', void 0), a(this, 'listeningUsers', void 0), a(this, 'listening', void 0), a(this, 'speaking', void 0), a(this, 'participation', void 0), a(this, 'connected', void 0), a(this, 'muted', void 0), a(this, 'noiseCancellation', void 0), a(this, 'voiceFilterSpeaking', void 0), a(this, 'timesUntilSpeakingDurationMilestonesMs', void 0), (this.userId = e), (this.connection = t), (this.timestampProducer = n), (this.listeningUsers = new Set()), (this.timesUntilSpeakingDurationMilestonesMs = new Map()), (this.listening = new i.G9(this.timestampProducer)), (this.speaking = new i.G9(this.timestampProducer)), (this.participation = new i.G9(this.timestampProducer)), (this.connected = new i.G9(this.timestampProducer)), (this.muted = new i.G9(this.timestampProducer)), (this.noiseCancellation = new i.sX(t.getNoiseCancellation(), this.timestampProducer)), (this.voiceFilterSpeaking = new Map());
     }
 }

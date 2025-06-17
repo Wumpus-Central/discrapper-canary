@@ -43,19 +43,19 @@ function b(e) {
         O = l.useCallback(() => {
             C.getState().setTagFilter(t.id, new Set()), _ || n();
         }, [C, t.id, _, n]),
-        w = (0, i.ZP)({
+        S = (0, i.ZP)({
             id: ''.concat(t.id, '-all-tags-dropdown-navigator'),
             isEnabled: !0,
             wrap: !0,
             scrollToStart: p,
             scrollToEnd: p
         }),
-        S = l.useRef(null);
+        w = l.useRef(null);
     return (
         l.useEffect(() => {
             requestAnimationFrame(() => {
-                if (null != S.current) {
-                    let e = S.current.querySelector('.'.concat(x.tag));
+                if (null != w.current) {
+                    let e = w.current.querySelector('.'.concat(x.tag));
                     null != e && e.focus();
                 }
             });
@@ -92,7 +92,7 @@ function b(e) {
                     })
                 }),
                 (0, r.jsx)(a.bG, {
-                    navigator: w,
+                    navigator: S,
                     children: (0, r.jsx)(a.SJ, {
                         children: (e) => {
                             var t,
@@ -146,7 +146,7 @@ function b(e) {
                                 })(
                                     {
                                         ref: (e) => {
-                                            (l.current = e), (S.current = e);
+                                            (l.current = e), (w.current = e);
                                         }
                                     },
                                     i

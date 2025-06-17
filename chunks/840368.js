@@ -10,7 +10,7 @@ e.exports = {
     caret: 'caret_d332d2',
     messageNegative: 'messageNegative_d332d2',
     messagePositive: 'messagePositive_d332d2',
-    birthdayText: 'birthdayText_d332d2',
+    inviteBirthdayInput: 'inviteBirthdayInput_d332d2',
     consentBox: 'consentBox_d332d2',
     consentSubText: 'consentSubText_d332d2',
     birthdayInput: 'birthdayInput_d332d2'

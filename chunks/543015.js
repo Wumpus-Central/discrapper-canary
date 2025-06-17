@@ -21,8 +21,8 @@ var r = n(255367),
     _ = n(95398),
     y = n(247206),
     O = n(109434),
-    w = n(456269),
-    S = n(109590),
+    S = n(456269),
+    w = n(109590),
     N = n(368844),
     P = n(660189),
     T = n(73315),
@@ -97,7 +97,7 @@ let ec = l.memo(function (e) {
                 r = (0, h.e7)([W.Z], () => W.Z.getChannel(t));
             o()(null != r, 'the thread should not be null here, a store must have missed an update');
             let i = (0, h.e7)([q.ZP], () => q.ZP.getCurrentSidebarChannelId(r.parent_id) === r.id),
-                { firstMessage: a } = (0, S.cl)(r),
+                { firstMessage: a } = (0, w.cl)(r),
                 s = (function (e) {
                     let { firstMessage: t, formatInline: n = !0, noStyleAndInteraction: r = !0 } = e,
                         i = (0, M.p)(),
@@ -131,7 +131,7 @@ let ec = l.memo(function (e) {
                 })({ firstMessage: a }),
                 c = null == s ? void 0 : s.content,
                 d = null == s ? void 0 : s.firstMedia,
-                { messageCountText: u } = (0, w.nP)(r);
+                { messageCountText: u } = (0, S.nP)(r);
             return {
                 channel: r,
                 isOpen: i,
@@ -254,7 +254,7 @@ let ec = l.memo(function (e) {
 });
 function ed(e) {
     let { channel: t, firstMessage: n, content: l, hasMediaAttachment: i, originalAuthor: s } = e,
-        { hasUnreads: o } = (0, w.J$)(t);
+        { hasUnreads: o } = (0, S.J$)(t);
     return (0, r.jsxs)('div', {
         className: a()(ei.body, ea.body),
         children: [
@@ -336,7 +336,7 @@ let eu = l.memo(function (e) {
 });
 function em(e) {
     let { channel: t, facepileRef: n, firstMessage: l } = e,
-        { isNew: i } = (0, w.J$)(t),
+        { isNew: i } = (0, S.J$)(t),
         a = (0, C.Q)(t.id),
         s = (null == l ? void 0 : l.reactions) != null && l.reactions.length > 0;
     return (0, r.jsxs)('div', {
@@ -411,7 +411,7 @@ function em(e) {
 }
 function eh(e) {
     let { channel: t, iconSize: n, showReadState: l = !1 } = e,
-        { messageCountText: i, unreadCount: s } = (0, w.nP)(t);
+        { messageCountText: i, unreadCount: s } = (0, S.nP)(t);
     return (0, r.jsxs)('div', {
         className: a()(ea.messageCountBox, { [ea.hasRead]: l && null == s }),
         children: [
@@ -448,7 +448,7 @@ function eh(e) {
 function eg(e) {
     let { firstMessage: t, channel: n } = e,
         l = (0, h.e7)([W.Z], () => W.Z.getChannel(n.parent_id)),
-        i = (0, w.Bs)(l),
+        i = (0, S.Bs)(l),
         { disableReactionCreates: a, isLurking: s, isPendingMember: o } = (0, B.Z)(n);
     return null == i || a
         ? null
@@ -474,7 +474,7 @@ function ef(e) {
     var t;
     let { channel: n } = e,
         { sortOrder: l } = (0, O.H)(n.parent_id),
-        i = (0, w.xw)(n, l),
+        i = (0, S.xw)(n, l),
         a = null == (t = n.threadMetadata) ? void 0 : t.createTimestamp,
         s = null == a ? null : el.intl.formatToPlainString(el.t['13euCQ'], { timestamp: (0, $.vc)(d()(a), 'LLLL') });
     return (0, r.jsx)(g.ua7, {
@@ -512,7 +512,7 @@ function ef(e) {
 }
 function ex(e) {
     let { channel: t, userIds: n, facepileRef: l } = e,
-        i = (0, w.iM)(t, n);
+        i = (0, S.iM)(t, n);
     return (0, r.jsx)('div', {
         ref: l,
         children: (0, r.jsx)(p.Z, {

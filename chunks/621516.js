@@ -21,8 +21,8 @@ var r = n(255367),
     _ = n(981631),
     y = n(388032),
     O = n(461238),
-    w = n(906739),
-    S = n(965358),
+    S = n(906739),
+    w = n(965358),
     N = n(420196),
     P = n(433075);
 function T(e) {
@@ -283,7 +283,7 @@ let E = (e) => {
                                                               className: a()(O.previewEmbedImage, O.secondaryImage)
                                                           }),
                                                           (0, r.jsx)('img', {
-                                                              src: E ? w : S,
+                                                              src: E ? S : w,
                                                               alt: '',
                                                               className: O.previewEmbedImage
                                                           })

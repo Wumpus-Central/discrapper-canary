@@ -259,6 +259,7 @@ class E extends s.Z {
             h(this, 'setEchoCancellation', (e) => this.input.setEchoCancellation(e)),
             h(this, 'setNoiseSuppression', (e) => this.input.setNoiseSuppression(e)),
             h(this, 'setNoiseCancellation', (e) => this.input.setNoiseCancellation(e)),
+            h(this, 'getNoiseCancellation', () => this.input.getNoiseCancellation()),
             h(this, 'setAutomaticGainControl', (e) => this.input.setAutomaticGainControl(e)),
             h(this, 'setAudioSource', (e) => this.input.setAudioSource(e)),
             h(this, 'setVideoSource', (e) => this.input.setVideoSource(e)),

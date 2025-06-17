@@ -453,6 +453,9 @@ class L extends _.Z {
     setNoiseCancellation(e) {
         (this.noiseCancellation = e), (0, b.zS)().setTransportOptions({ noiseCancellation: this.noiseCancellation });
     }
+    getNoiseCancellation() {
+        return this.noiseCancellation;
+    }
     getVoiceFilterId() {
         return this.voiceFilterId;
     }

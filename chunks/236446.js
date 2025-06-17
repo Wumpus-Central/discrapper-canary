@@ -2,9 +2,9 @@ n.d(t, { Z: () => D }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    a = n.n(l),
-    o = n(512722),
-    s = n.n(o),
+    o = n.n(l),
+    a = n(512722),
+    s = n.n(a),
     c = n(442837),
     u = n(388905),
     d = n(362762),
@@ -73,7 +73,7 @@ class L extends i.PureComponent {
                     className: R.marginBottom8
                 }),
                 (0, r.jsx)(u.Dx, {
-                    className: a()(R.marginTop8, R.marginBottom8),
+                    className: o()(R.marginTop8, R.marginBottom8),
                     children: P.intl.string(P.t.C7ZRNz)
                 }),
                 (0, r.jsx)(u.DK, { children: P.intl.string(P.t.A6MwXF) }),

@@ -1,58 +1,58 @@
-n.d(t, { f: () => C }), n(388685), n(539854);
+n.d(t, { f: () => y }), n(388685), n(539854);
 var r = n(73800),
-    i = n(243814),
+    o = n(243814),
     l = n(442837),
-    a = n(384275),
-    s = n(911969),
-    o = n(10718),
-    c = n(812236),
-    d = n(148958),
-    u = n(881998);
+    i = n(384275),
+    c = n(911969),
+    a = n(10718),
+    u = n(812236),
+    s = n(148958),
+    p = n(881998);
 n(445392);
-var m = n(783097),
-    p = n(701488),
-    f = n(689079);
-let h = {
-        commandTypes: [s.yU.CHAT, s.yU.PRIMARY_ENTRY_POINT]
+var d = n(783097),
+    f = n(701488),
+    O = n(689079);
+let b = {
+        commandTypes: [c.yU.CHAT, c.yU.PRIMARY_ENTRY_POINT]
     },
-    g = {
+    m = {
         placeholderCount: 0,
-        limit: f.tn,
+        limit: O.tn,
         includeFrecency: !0
     };
-function C(e) {
-    let { context: t, onlyActivityApps: n, allowCommandFetch: s, includeAuthorizedAppsAndFetch: C } = e,
-        { sectionDescriptors: _, loading: v } = o.wi({
+function y(e) {
+    let { context: t, onlyActivityApps: n, allowCommandFetch: c, includeAuthorizedAppsAndFetch: y } = e,
+        { sectionDescriptors: g, loading: j } = a.wi({
             context: t,
-            filters: h,
-            options: g,
-            allowFetch: s
+            filters: b,
+            options: m,
+            allowFetch: c
         });
     return {
-        loading: v,
+        loading: j,
         frecentApps: (function (e) {
-            let { sectionDescriptors: t, context: n, onlyActivityApps: s, includeAuthorizedAppsAndFetch: o } = e,
-                h = (0, l.e7)([u.Z], () => u.Z.getFetchState());
+            let { sectionDescriptors: t, context: n, onlyActivityApps: c, includeAuthorizedAppsAndFetch: a } = e,
+                b = (0, l.e7)([p.Z], () => p.Z.getFetchState());
             r.useEffect(() => {
-                o && h === u.M.NOT_FETCHED && a.Z.fetch();
-            }, [o, h]);
-            let g = (0, l.Wu)([u.Z], () => {
+                a && b === p.M.NOT_FETCHED && i.Z.fetch();
+            }, [a, b]);
+            let m = (0, l.Wu)([p.Z], () => {
                     var e, t;
-                    return o && null != (t = null == (e = u.Z.getApps()) ? void 0 : e.filter((e) => e.scopes.includes(i.x.APPLICATIONS_COMMANDS))) ? t : [];
+                    return a && null != (t = null == (e = p.Z.getApps()) ? void 0 : e.filter((e) => e.scopes.includes(o.x.APPLICATIONS_COMMANDS))) ? t : [];
                 }),
-                C = t.filter((e) => e.id !== f.bi.FRECENCY && e.id !== f.bi.BUILT_IN),
-                _ = 'contextless' === n.type,
-                v = r.useMemo(() => {
+                y = t.filter((e) => e.id !== O.bi.FRECENCY && e.id !== O.bi.BUILT_IN),
+                g = 'contextless' === n.type,
+                j = r.useMemo(() => {
                     let e = [];
-                    return _ && e.push(p.jT), e;
-                }, [_]),
-                b = (0, d.h)(C, g);
-            return r.useMemo(() => (s ? b.filter((e) => null != e.application && (0, m.ye)(e.application) && null != (0, c.Xu)(n, e.id)).filter((e) => !v.includes(e.id)) : b.filter((e) => !v.includes(e.id))), [s, b, n, v]);
+                    return g && e.push(f.jT), e;
+                }, [g]),
+                h = (0, s.h)(y, m);
+            return r.useMemo(() => (c ? h.filter((e) => null != e.application && (0, d.ye)(e.application) && null != (0, u.Xu)(n, e.id)).filter((e) => !j.includes(e.id)) : h.filter((e) => !j.includes(e.id))), [c, h, n, j]);
         })({
-            sectionDescriptors: _,
+            sectionDescriptors: g,
             context: t,
             onlyActivityApps: n,
-            includeAuthorizedAppsAndFetch: C
+            includeAuthorizedAppsAndFetch: y
         })
     };
 }

@@ -2,8 +2,8 @@ n.d(t, { Z: () => x }), n(388685), n(35282);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    a = n.n(l),
-    o = n(442837),
+    o = n.n(l),
+    a = n(442837),
     s = n(481060),
     c = n(144114),
     u = n(742458),
@@ -21,7 +21,7 @@ let x = () => {
         [v, I] = i.useState(!1),
         [O, S] = i.useState(null),
         [y, j] = i.useState(null),
-        N = (0, o.e7)([d.Z], () => d.Z.getCountryCode()),
+        N = (0, a.e7)([d.Z], () => d.Z.getCountryCode()),
         C = N.code.split(' ')[0],
         T = async () => {
             try {
@@ -45,7 +45,7 @@ let x = () => {
             children: [
                 (0, r.jsx)(g.Ee, { src: n(292824) }),
                 (0, r.jsxs)(g.Dx, {
-                    className: a()(_.marginTop20, f.flex, f.justifyCenter, f.alignCenter),
+                    className: o()(_.marginTop20, f.flex, f.justifyCenter, f.alignCenter),
                     children: [
                         m.intl.string(m.t.WWzQtb),
                         (0, r.jsx)(s.owK, {

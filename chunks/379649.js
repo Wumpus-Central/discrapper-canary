@@ -90,6 +90,9 @@ class d {
     get value() {
         return this.state;
     }
+    reset() {
+        this.stopwatch.reset(), this.stopwatch.toggle(this.state);
+    }
     totalDuration() {
         return this.stopwatch.elapsed().asMilliseconds();
     }

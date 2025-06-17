@@ -124,7 +124,7 @@ let e$ = () => {
     },
     e8 = eZ.Z,
     e6 = (e) => {
-        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: j, impressionSource: N, numOfPendingFamilyRequests: D, isOverlaySupported: G, isClipsBetaTagShowing: e6 = !1, shouldMergeGameSettings: e2, isKeywordFilteringEnabled: e5, isStaff: e4, isInappropriateConversationWarningEnabled: e7, isInapproprateConversationsDefaultOn: e9, paymentsBlocked: te, isEligibleForQuests: tt, isStricterMessageRequestsEnabled: tn, hasLibraryApplication: ti, hasTOTPEnabled: tr, developerMode: ts, isAdultUser: tl, hasSecureFramesVerifiedUserIds: ta, hypeSquadRemoved: to, hasIgnoredUsers: tc, hasBlockedUsers: td, useRefreshedVoiceAndVideo: tu, isEligibleForSensitiveContentDefaults: tm, inputMode: tg, activeInputProfile: tp, isInputProfileCustom: th, isActivitySharingExperimentEnabled: tf, isGoreContentFilteringEnabled: tb } = e;
+        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: j, impressionSource: N, numOfPendingFamilyRequests: D, isOverlaySupported: G, isClipsBetaTagShowing: e6 = !1, shouldMergeGameSettings: e2, isKeywordFilteringEnabled: e5, isStaff: e4, isInappropriateConversationWarningEnabled: e7, isInapproprateConversationsDefaultOn: e9, paymentsBlocked: te, isEligibleForQuests: tt, isStricterMessageRequestsEnabled: tn, hasLibraryApplication: ti, hasTOTPEnabled: tr, developerMode: ts, isAdultUser: tl, hasSecureFramesVerifiedUserIds: ta, hypeSquadRemoved: to, hasIgnoredUsers: tc, hasBlockedUsers: td, useRefreshedVoiceAndVideo: tu, isEligibleForSensitiveContentDefaults: tm, inputMode: tg, activeInputProfile: tp, isInputProfileCustom: th, isGoreContentFilteringEnabled: tf } = e;
         return Object.freeze({
             [eH.s6.SEARCH_NO_RESULTS]: {
                 section: g.ID.CUSTOM,
@@ -398,19 +398,19 @@ let e$ = () => {
                 section: eY.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [eq.intl.string(eq.t['Hj/Bur']), eq.intl.string(eq.t['N/oRIy']), eq.intl.string(eq.t.QVdYsL), eq.intl.string(eq.t['aWD+tr']), eq.intl.string(eq.t['5mnTa2']), eq.intl.string(eq.t.K0OWPz)],
                 parent: eH.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-                predicate: () => tb
+                predicate: () => tf
             },
             [eH.s6.SEXUALLY_EXPLICIT_MEDIA_REDACTION]: {
                 section: eY.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [eq.intl.string(eq.t['Hj/Bur']), eq.intl.string(eq.t['N/oRIy']), eq.intl.string(eq.t.QVdYsL), eq.intl.string(eq.t['aWD+tr']), eq.intl.string(eq.t['5mnTa2'])],
                 parent: eH.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-                predicate: () => tb
+                predicate: () => tf
             },
             [eH.s6.GORE_MEDIA_REDACTION]: {
                 section: eY.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [eq.intl.string(eq.t['Hj/Bur']), eq.intl.string(eq.t['N/oRIy']), eq.intl.string(eq.t.QVdYsL), eq.intl.string(eq.t['aWD+tr']), eq.intl.string(eq.t.K0OWPz)],
                 parent: eH.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-                predicate: () => tb
+                predicate: () => tf
             },
             [eH.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER_V2]: {
                 section: eY.oAB.CONTENT_AND_SOCIAL,
@@ -1503,9 +1503,9 @@ let e$ = () => {
             },
             [eH.s6.ACTIVITY_PRIVACY]: {
                 section: eY.oAB.ACTIVITY_PRIVACY,
-                searchableTitles: tf ? [eq.intl.string(eq.t.Cq98yM), eq.intl.string(eq.t['6x5uWV'])] : [eq.intl.string(eq.t.Cq98yM)],
-                label: eq.intl.string(tf ? eq.t['6x5uWV'] : eq.t.Cq98yM),
-                ariaLabel: eq.intl.string(tf ? eq.t['6x5uWV'] : eq.t.Cq98yM),
+                searchableTitles: [eq.intl.string(eq.t.Cq98yM)],
+                label: eq.intl.string(eq.t.Cq98yM),
+                ariaLabel: eq.intl.string(eq.t.Cq98yM),
                 element: ec.Z,
                 predicate: () => !e2,
                 url: eY.Z5c.SETTINGS('activity-privacy')

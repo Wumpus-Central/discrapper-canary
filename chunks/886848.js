@@ -60,6 +60,9 @@ class l extends r.Z {
     setNoiseCancellation(e) {
         this.audio.noiseCancellation = e;
     }
+    getNoiseCancellation() {
+        return this.audio.noiseCancellation;
+    }
     setAutomaticGainControl(e) {
         this.audio.automaticGainControl = e;
     }

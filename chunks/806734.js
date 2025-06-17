@@ -12,6 +12,7 @@ e.exports = {
     banner: 'banner__08415',
     bannerImage: 'bannerImage__08415',
     responsiveHero: 'responsiveHero__08415',
+    bannerAsset: 'bannerAsset__08415',
     bannerVideoBackground: 'bannerVideoBackground__08415',
     bannerShadow: 'bannerShadow__08415',
     left: 'left__08415',
@@ -63,5 +64,7 @@ e.exports = {
     wideBannerBlockButton: 'wideBannerBlockButton__08415',
     wideBannerTextContainer: 'wideBannerTextContainer__08415',
     wideBannerContentContainer: 'wideBannerContentContainer__08415',
-    shelfBlockContainer: 'shelfBlockContainer__08415'
+    shelfBlockContainer: 'shelfBlockContainer__08415',
+    heroBannerSheenContainer: 'heroBannerSheenContainer__08415',
+    responsive: 'responsive__08415'
 };

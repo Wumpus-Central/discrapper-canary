@@ -21,8 +21,8 @@ var r = n(255367),
     _ = n(474366),
     y = n(430824),
     O = n(186523),
-    w = n(585483),
-    S = n(70956),
+    S = n(585483),
+    w = n(70956),
     N = n(709054),
     P = n(961675),
     T = n(883429),
@@ -176,7 +176,7 @@ let X = (e) => {
                   }
               }),
         clickHandler: () => {
-            q(L.ZI.CREATE_POST), w.S.dispatch(F.CkL.FOCUS_COMPOSER_TITLE);
+            q(L.ZI.CREATE_POST), S.S.dispatch(F.CkL.FOCUS_COMPOSER_TITLE);
         },
         isDone: e
     }),
@@ -198,7 +198,7 @@ let X = (e) => {
                     ? clearTimeout(i.current)
                     : (i.current = setTimeout(() => {
                           r();
-                      }, 60 * S.Z.Millis.SECOND)),
+                      }, 60 * w.Z.Millis.SECOND)),
                 () => clearTimeout(i.current)
             ),
             [e, t, r, n]
@@ -213,7 +213,7 @@ let X = (e) => {
         let { isAllDone: t, isVisible: n, canManageChannel: r, guildId: i, channel: a } = e,
             s = (0, h.e7)([y.Z], () => (null != i ? y.Z.getRoles(i) : void 0)),
             o = l.useCallback(() => {
-                w.S.dispatch(F.CkL.REMEASURE_TARGET);
+                S.S.dispatch(F.CkL.REMEASURE_TARGET);
             }, []);
         l.useEffect(() => {
             o();
@@ -396,9 +396,9 @@ let X = (e) => {
             { transitions: f, setVisible: x } = el(),
             b = ei(i),
             j = ec(),
-            w = Q(l.id, x),
+            S = Q(l.id, x),
             {
-                onboardingSteps: S,
+                onboardingSteps: w,
                 isDismissed: N,
                 isHidden: P,
                 isAllDone: T
@@ -406,13 +406,13 @@ let X = (e) => {
                 guild: o,
                 channel: l,
                 hasAnyThread: t,
-                handleHide: w
+                handleHide: S
             }),
             I = !P && !N,
             R = (0, A.AF)(),
             Z = l.isMediaChannel(),
             L = (e) => R.getState().setOnboardingExpanded(e);
-        return (en(T, I, w),
+        return (en(T, I, S),
         er({
             isAllDone: T,
             isVisible: I,
@@ -456,8 +456,8 @@ let X = (e) => {
                                                                 variant: 'heading-md/medium',
                                                                 className: z.header,
                                                                 children: D.intl.format(D.t['9L+8b2'], {
-                                                                    numCompleted: S.completedSteps.toString(),
-                                                                    numSteps: S.steps.length.toString()
+                                                                    numCompleted: w.completedSteps.toString(),
+                                                                    numSteps: w.steps.length.toString()
                                                                 })
                                                             }),
                                                             (0, r.jsxs)(g.Text, {
@@ -476,7 +476,7 @@ let X = (e) => {
                                                                 expanded: i,
                                                                 onClick: () => L(!i)
                                                             }),
-                                                            (0, r.jsx)(ed, { handleHide: w })
+                                                            (0, r.jsx)(ed, { handleHide: S })
                                                         ]
                                                     })
                                                 }),
@@ -487,7 +487,7 @@ let X = (e) => {
                                                               className: z.listContainer,
                                                               children: (0, r.jsx)('ol', {
                                                                   className: z.checklist,
-                                                                  children: S.getSteps().map((e) =>
+                                                                  children: w.getSteps().map((e) =>
                                                                       (0, r.jsxs)(
                                                                           g.P3F,
                                                                           {
