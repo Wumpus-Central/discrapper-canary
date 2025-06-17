@@ -1,27 +1,27 @@
 n.d(t, { Q: () => m });
 var r = n(255367);
 n(73800);
-var o = n(481060),
-    s = n(230711),
+var s = n(481060),
+    o = n(230711),
     a = n(617136),
     i = n(497505),
     l = n(981631),
     c = n(388032),
-    d = n(382845);
-function u(e) {
+    u = n(382845);
+function d(e) {
     let { text: t, quest: n } = e,
         c = (0, a.O5)();
-    return (0, r.jsx)(o.P3F, {
-        className: d.showConnectionsButton,
+    return (0, r.jsx)(s.P3F, {
+        className: u.showConnectionsButton,
         onClick: () => {
             c({
                 questId: n.id,
                 questContent: i.jn.QUEST_BAR_V2,
                 questContentCTA: a.jZ.VIEW_CONSOLE_CONNECTIONS_LINK
             }),
-                s.Z.open(l.oAB.CONNECTIONS);
+                o.Z.open(l.oAB.CONNECTIONS);
         },
-        children: (0, r.jsx)(o.Text, {
+        children: (0, r.jsx)(s.Text, {
             'aria-label': t,
             color: 'none',
             variant: 'text-xxs/normal',
@@ -32,7 +32,7 @@ function u(e) {
 function p(e) {
     let { xboxAndPlaystationAccounts: t, quest: n } = e;
     return t.length > 0
-        ? (0, r.jsx)(u, {
+        ? (0, r.jsx)(d, {
               text: c.intl.string(c.t['qiS+xs']),
               quest: n
           })
@@ -41,7 +41,7 @@ function p(e) {
 function m(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(o.Text, {
+            (0, r.jsx)(s.Text, {
                 color: 'text-muted',
                 variant: 'text-xs/medium',
                 children: c.intl.string(c.t.EJFSvL)

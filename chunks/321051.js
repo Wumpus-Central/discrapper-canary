@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(692547),
@@ -64,12 +64,13 @@ function f(e) {
         },
         children: () =>
             (0, r.jsx)(o.P3F, {
-                className: u.sound,
+                className: u.container,
                 onClick: () => _(!0),
                 innerRef: p,
                 children:
                     null == n
-                        ? (0, r.jsxs)(r.Fragment, {
+                        ? (0, r.jsxs)('div', {
+                              className: u.contentContainer,
                               children: [
                                   (0, r.jsx)(o.KY1, {
                                       size: 'custom',
@@ -81,11 +82,13 @@ function f(e) {
                                   (0, r.jsx)(o.Text, {
                                       className: u.text,
                                       variant: 'text-sm/semibold',
+                                      lineClamp: 1,
                                       children: c.intl.string(c.t.aThJz8)
                                   })
                               ]
                           })
-                        : (0, r.jsxs)(r.Fragment, {
+                        : (0, r.jsxs)('div', {
+                              className: u.contentContainer,
                               children: [
                                   (0, r.jsx)(o.Text, {
                                       className: u.textSelected,
@@ -95,20 +98,11 @@ function f(e) {
                                   (0, r.jsx)(o.Text, {
                                       className: u.text,
                                       variant: 'text-sm/semibold',
+                                      lineClamp: 1,
                                       children: n.name
                                   })
                               ]
                           })
             })
-    });
-}
-function _(e) {
-    let { sound: t, onSelect: n } = e;
-    return (0, r.jsx)('div', {
-        className: u.container,
-        children: (0, r.jsx)(f, {
-            onSelect: n,
-            sound: t
-        })
     });
 }

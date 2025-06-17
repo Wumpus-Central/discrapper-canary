@@ -1,14 +1,14 @@
 n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
-var o = n(120356),
-    s = n.n(o),
+var s = n(120356),
+    o = n.n(s),
     a = n(524979),
     i = n(481060),
     l = n(113434),
     c = n(497505),
-    d = n(685613),
-    u = n(340100),
+    u = n(685613),
+    d = n(340100),
     p = n(644646),
     m = n(788284),
     f = n(46140),
@@ -16,19 +16,19 @@ var o = n(120356),
     x = n(192214);
 let h = function (e) {
     var t;
-    let { className: n, expansionSpring: o, isExpanded: h, isExpansionAnimationComplete: b, quest: j, useReducedMotion: v } = e,
-        y = (null == (t = j.userStatus) ? void 0 : t.enrolledAt) != null,
-        { percentComplete: _ } = (0, l.Rf)(j),
-        C = (0, l.Jf)(j),
-        O = null != C ? C.percentComplete > 0 : _ > 0;
+    let { className: n, expansionSpring: s, isExpanded: h, isExpansionAnimationComplete: b, quest: j, useReducedMotion: v } = e,
+        _ = (null == (t = j.userStatus) ? void 0 : t.enrolledAt) != null,
+        { percentComplete: y } = (0, l.Rf)(j),
+        O = (0, l.Jf)(j),
+        C = null != O ? O.percentComplete > 0 : y > 0;
     return (0, r.jsxs)(a.animated.div, {
         'aria-hidden': h && b,
-        className: s()(n, x.contentCollapsed, {
+        className: o()(n, x.contentCollapsed, {
             [x.contentCollapsedExpanded]: h,
-            [x.contentCollapsedAccepted]: y
+            [x.contentCollapsedAccepted]: _
         }),
         style: {
-            opacity: o.to({
+            opacity: s.to({
                 range: [0, 1],
                 output: [1, 0]
             })
@@ -40,7 +40,7 @@ let h = function (e) {
             }),
             (0, r.jsx)('div', {
                 className: x.contentCollapsedWrapper,
-                children: y
+                children: _
                     ? (0, r.jsxs)('div', {
                           className: x.questProgressWrapper,
                           children: [
@@ -51,8 +51,8 @@ let h = function (e) {
                                   autoplay: !1,
                                   location: f.dr.QUESTS_BAR
                               }),
-                              O
-                                  ? (0, r.jsx)(u.Z, {
+                              C
+                                  ? (0, r.jsx)(d.Z, {
                                         className: x.questProgressBar,
                                         quest: j
                                     })
@@ -67,7 +67,7 @@ let h = function (e) {
                     : (0, r.jsxs)('div', {
                           className: x.brandingWrapper,
                           children: [
-                              (0, r.jsx)(d.ZP, {
+                              (0, r.jsx)(u.ZP, {
                                   className: x.partnerBranding,
                                   quest: j
                               }),

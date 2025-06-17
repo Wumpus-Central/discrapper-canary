@@ -1,78 +1,50 @@
-n.r(
-    (e.exports = {
-        'heading-sm/normal': 'heading-sm/normal__4ed1a',
-        fontScaling: 'fontScaling__4ed1a',
-        'heading-sm/medium': 'heading-sm/medium__4ed1a',
-        'heading-sm/semibold': 'heading-sm/semibold__4ed1a',
-        'heading-sm/bold': 'heading-sm/bold__4ed1a',
-        'heading-sm/extrabold': 'heading-sm/extrabold__4ed1a',
-        'heading-md/normal': 'heading-md/normal__4ed1a',
-        'heading-md/medium': 'heading-md/medium__4ed1a',
-        'heading-md/semibold': 'heading-md/semibold__4ed1a',
-        'heading-md/bold': 'heading-md/bold__4ed1a',
-        'heading-md/extrabold': 'heading-md/extrabold__4ed1a',
-        'heading-lg/normal': 'heading-lg/normal__4ed1a',
-        'heading-lg/medium': 'heading-lg/medium__4ed1a',
-        'heading-lg/semibold': 'heading-lg/semibold__4ed1a',
-        'heading-lg/bold': 'heading-lg/bold__4ed1a',
-        'heading-lg/extrabold': 'heading-lg/extrabold__4ed1a',
-        'heading-xl/normal': 'heading-xl/normal__4ed1a',
-        'heading-xl/medium': 'heading-xl/medium__4ed1a',
-        'heading-xl/semibold': 'heading-xl/semibold__4ed1a',
-        'heading-xl/bold': 'heading-xl/bold__4ed1a',
-        'heading-xl/extrabold': 'heading-xl/extrabold__4ed1a',
-        'heading-xxl/normal': 'heading-xxl/normal__4ed1a',
-        'heading-xxl/medium': 'heading-xxl/medium__4ed1a',
-        'heading-xxl/semibold': 'heading-xxl/semibold__4ed1a',
-        'heading-xxl/bold': 'heading-xxl/bold__4ed1a',
-        'heading-xxl/extrabold': 'heading-xxl/extrabold__4ed1a',
-        eyebrow: 'eyebrow__4ed1a',
-        'heading-deprecated-12/normal': 'heading-deprecated-12/normal__4ed1a',
-        'heading-deprecated-12/medium': 'heading-deprecated-12/medium__4ed1a',
-        'heading-deprecated-12/semibold': 'heading-deprecated-12/semibold__4ed1a',
-        'heading-deprecated-12/bold': 'heading-deprecated-12/bold__4ed1a',
-        'heading-deprecated-12/extrabold': 'heading-deprecated-12/extrabold__4ed1a',
-        'redesign/heading-18/bold': 'redesign/heading-18/bold__4ed1a',
-        'text-xxs/normal': 'text-xxs/normal__4ed1a',
-        'text-xxs/medium': 'text-xxs/medium__4ed1a',
-        'text-xxs/semibold': 'text-xxs/semibold__4ed1a',
-        'text-xxs/bold': 'text-xxs/bold__4ed1a',
-        'text-xs/normal': 'text-xs/normal__4ed1a',
-        'text-xs/medium': 'text-xs/medium__4ed1a',
-        'text-xs/semibold': 'text-xs/semibold__4ed1a',
-        'text-xs/bold': 'text-xs/bold__4ed1a',
-        'text-sm/normal': 'text-sm/normal__4ed1a',
-        'text-sm/medium': 'text-sm/medium__4ed1a',
-        'text-sm/semibold': 'text-sm/semibold__4ed1a',
-        'text-sm/bold': 'text-sm/bold__4ed1a',
-        'text-md/normal': 'text-md/normal__4ed1a',
-        'text-md/medium': 'text-md/medium__4ed1a',
-        'text-md/semibold': 'text-md/semibold__4ed1a',
-        'text-md/bold': 'text-md/bold__4ed1a',
-        'text-lg/normal': 'text-lg/normal__4ed1a',
-        'text-lg/medium': 'text-lg/medium__4ed1a',
-        'text-lg/semibold': 'text-lg/semibold__4ed1a',
-        'text-lg/bold': 'text-lg/bold__4ed1a',
-        'redesign/message-preview/normal': 'redesign/message-preview/normal__4ed1a',
-        'redesign/message-preview/medium': 'redesign/message-preview/medium__4ed1a',
-        'redesign/message-preview/semibold': 'redesign/message-preview/semibold__4ed1a',
-        'redesign/message-preview/bold': 'redesign/message-preview/bold__4ed1a',
-        'redesign/channel-title/normal': 'redesign/channel-title/normal__4ed1a',
-        'redesign/channel-title/medium': 'redesign/channel-title/medium__4ed1a',
-        'redesign/channel-title/semibold': 'redesign/channel-title/semibold__4ed1a',
-        'redesign/channel-title/bold': 'redesign/channel-title/bold__4ed1a',
-        'display-sm': 'display-sm__4ed1a',
-        'display-md': 'display-md__4ed1a',
-        'display-lg': 'display-lg__4ed1a',
-        code: 'code__4ed1a',
-        marketingBadgeTooltip: 'marketingBadgeTooltip__4ed1a',
-        marketingBadgeTooltipContent: 'marketingBadgeTooltipContent__4ed1a',
-        shopMarketingTooltipContent: 'shopMarketingTooltipContent__4ed1a',
-        shopMarketingTooltipText: 'shopMarketingTooltipText__4ed1a',
-        avatarContainer: 'avatarContainer__4ed1a',
-        avatar: 'avatar__4ed1a',
-        newBadge: 'newBadge__4ed1a eyebrow__4ed1a',
-        marketingButtonBackground: 'marketingButtonBackground__4ed1a',
-        marketingButtonBackgroundImage: 'marketingButtonBackgroundImage__4ed1a'
-    })
-);
+e.exports = function (e) {
+    let t = '[a-zA-Z-_][^\\n{]+\\{',
+        n = {
+            className: 'attribute',
+            begin: /[a-zA-Z-_]+/,
+            end: /\s*:/,
+            excludeEnd: !0,
+            starts: {
+                end: ';',
+                relevance: 0,
+                contains: [
+                    {
+                        className: 'variable',
+                        begin: /\.[a-zA-Z-_]+/
+                    },
+                    {
+                        className: 'keyword',
+                        begin: /\(optional\)/
+                    }
+                ]
+            }
+        };
+    return {
+        name: 'Roboconf',
+        aliases: ['graph', 'instances'],
+        case_insensitive: !0,
+        keywords: 'import',
+        contains: [
+            {
+                begin: '^facet ' + t,
+                end: /\}/,
+                keywords: 'facet',
+                contains: [n, e.HASH_COMMENT_MODE]
+            },
+            {
+                begin: '^\\s*instance of ' + t,
+                end: /\}/,
+                keywords: 'name count channels instance-data instance-state instance of',
+                illegal: /\S/,
+                contains: ['self', n, e.HASH_COMMENT_MODE]
+            },
+            {
+                begin: '^' + t,
+                end: /\}/,
+                contains: [n, e.HASH_COMMENT_MODE]
+            },
+            e.HASH_COMMENT_MODE
+        ]
+    };
+};

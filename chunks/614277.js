@@ -65,12 +65,12 @@ function g(e) {
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(u.hzk, {
-                                  className: o()(C, _.body, _.noRoundedCorners, S, { [_.reviewStep]: b === f.h8.REVIEW }),
+                                  className: o()(C, _.body, S, { [_.reviewStep]: b === f.h8.REVIEW }),
                                   children: (0, r.jsx)(u.MyZ, {
                                       activeSlide: b,
                                       centered: !1,
                                       onSlideReady: (e) => T(e),
-                                      width: b === f.h8.ADD_PAYMENT_STEPS ? 408 : void 0,
+                                      width: b === f.h8.ADD_PAYMENT_STEPS ? 408 : b === f.h8.REVIEW ? 392 : void 0,
                                       children: y
                                           .filter((e) => null != e.key)
                                           .map((e) =>

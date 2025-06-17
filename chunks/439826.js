@@ -1,13 +1,13 @@
 n.d(t, { Z: () => I }), n(784620), n(973216);
 var r = n(255367),
-    o = n(73800),
-    s = n(120356),
-    a = n.n(s),
+    s = n(73800),
+    o = n(120356),
+    a = n.n(o),
     i = n(524979),
     l = n(780384),
     c = n(481060),
-    d = n(393238),
-    u = n(410030),
+    u = n(393238),
+    d = n(410030),
     p = n(44315),
     m = n(617136),
     f = n(272008),
@@ -17,10 +17,10 @@ var r = n(255367),
     b = n(974390),
     j = n(475595),
     v = n(18578),
-    y = n(623249),
-    _ = n(685613),
-    C = n(670638),
-    O = n(341907),
+    _ = n(623249),
+    y = n(685613),
+    O = n(670638),
+    C = n(341907),
     w = n(251360),
     S = n(19148),
     E = n(46140),
@@ -73,21 +73,21 @@ function k(e, t) {
 }
 function B(e) {
     var t;
-    let { quest: n, errorHints: s, warningHints: a, isDarkTheme: l } = e,
-        { ref: u, height: m = 0 } = (0, d.ZP)([s]),
+    let { quest: n, errorHints: o, warningHints: a, isDarkTheme: l } = e,
+        { ref: d, height: m = 0 } = (0, u.ZP)([o]),
         f = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
         x = (0, g.z)(n),
-        { type: h, hints: b } = o.useMemo(
+        { type: h, hints: b } = s.useMemo(
             () =>
                 f || x
                     ? {
                           type: 2,
                           hints: []
                       }
-                    : s.length > 0
+                    : o.length > 0
                       ? {
                             type: 0,
-                            hints: s.map((e) => e.message)
+                            hints: o.map((e) => e.message)
                         }
                       : a.length > 0
                         ? {
@@ -98,7 +98,7 @@ function B(e) {
                               type: 2,
                               hints: []
                           },
-            [s, f, x, a]
+            [o, f, x, a]
         ),
         j = 2 !== h,
         v = (0, c.q_F)({
@@ -106,21 +106,21 @@ function B(e) {
             height: j ? m : 0,
             config: P.Y
         }),
-        _ = 0 === h ? c.P4T : c.d3s,
-        C = (0, p.Lq)(T.Ilk.RED_345),
-        O = 0 === h ? C : l ? c.TVs.colors.TEXT_NORMAL : c.TVs.colors.WHITE;
+        y = 0 === h ? c.P4T : c.d3s,
+        O = (0, p.Lq)(T.Ilk.RED_345),
+        C = 0 === h ? O : l ? c.TVs.colors.TEXT_NORMAL : c.TVs.colors.WHITE;
     return (0, r.jsx)(i.animated.div, {
         style: v,
         children: (0, r.jsxs)('div', {
-            ref: u,
+            ref: d,
             className: A.hints,
             children: [
                 (0, r.jsxs)('div', {
                     className: A.hintsContainer,
                     children: [
-                        (0, r.jsx)(_, {
+                        (0, r.jsx)(y, {
                             size: 'xs',
-                            color: O
+                            color: C
                         }),
                         (0, r.jsx)(c.Text, {
                             variant: 'text-xs/medium',
@@ -132,9 +132,9 @@ function B(e) {
                 0 === h &&
                     (0, r.jsx)(c.zxk, {
                         onClick: () =>
-                            (0, y.y)({
+                            (0, _.y)({
                                 questId: n.id,
-                                errorHints: s
+                                errorHints: o
                             }),
                         size: c.PhG.MIN,
                         look: c.iLD.LINK,
@@ -147,15 +147,15 @@ function B(e) {
     });
 }
 function q(e) {
-    let { quest: t, isHovering: n, showAssets: s } = e,
-        a = o.useMemo(() => (0, j.fh)(t, j.eC.HERO_IMAGE), [t]),
-        i = o.useMemo(() => (0, j.fh)(t, j.eC.HERO_VIDEO), [t]),
+    let { quest: t, isHovering: n, showAssets: o } = e,
+        a = s.useMemo(() => (0, j.fh)(t, j.eC.HERO_IMAGE), [t]),
+        i = s.useMemo(() => (0, j.fh)(t, j.eC.HERO_VIDEO), [t]),
         l = (0, b.h)(t, E.dr.QUEST_HOME_DESKTOP),
-        { onAssetLoadComplete: c } = o.useContext(w.k);
+        { onAssetLoadComplete: c } = s.useContext(w.k);
     return (0, r.jsx)('div', {
         className: A.heroAssetCont,
         children:
-            s &&
+            o &&
             (0, r.jsx)(v.K, {
                 imageAsset:
                     null != a
@@ -183,11 +183,11 @@ function q(e) {
     });
 }
 function I(e) {
-    var t, n, s, i, d;
-    let { quest: p, isHovering: b, errorHints: j, warningHints: v, isVisibleInViewport: y, onCtxMenuClose: E, onCtxMenuOpen: P, onCtxMenuSelect: I } = e,
+    var t, n, o, i, u;
+    let { quest: p, isHovering: b, errorHints: j, warningHints: v, isVisibleInViewport: _, onCtxMenuClose: E, onCtxMenuOpen: P, onCtxMenuSelect: I } = e,
         D = (0, h.PB)(p),
-        M = (0, u.ZP)(),
-        L = ((0, l.wj)(M) ? T.BRd.DARK : T.BRd.LIGHT) === T.BRd.DARK,
+        L = (0, d.ZP)(),
+        M = ((0, l.wj)(L) ? T.BRd.DARK : T.BRd.LIGHT) === T.BRd.DARK,
         V = (0, g.tP)(p),
         W = (null == (t = p.userStatus) ? void 0 : t.claimedAt) != null,
         Z = (0, g.B6)(p.config.expiresAt, {
@@ -195,9 +195,9 @@ function I(e) {
             day: 'numeric'
         }),
         Q = (null == (n = p.userStatus) ? void 0 : n.enrolledAt) != null,
-        U = (null == (s = p.userStatus) ? void 0 : s.completedAt) != null,
-        { onAssetLoadComplete: H } = o.useContext(w.k),
-        z = o.useCallback(() => {
+        H = (null == (o = p.userStatus) ? void 0 : o.completedAt) != null,
+        { onAssetLoadComplete: U } = s.useContext(w.k),
+        z = s.useCallback(() => {
             D &&
                 ((0, h.zi)(p) ||
                     Q ||
@@ -205,7 +205,7 @@ function I(e) {
                         questContent: x.jn.QUEST_HOME_DESKTOP,
                         questContentCTA: m.jZ.ACCEPT_QUEST
                     }),
-                (0, O.openVideoQuestModal)(p));
+                (0, C.openVideoQuestModal)(p));
         }, [D, p, Q]);
     return (0, r.jsxs)('div', {
         className: A.container,
@@ -215,13 +215,13 @@ function I(e) {
                 children: (0, r.jsx)(q, {
                     quest: p,
                     isHovering: b,
-                    showAssets: y
+                    showAssets: _
                 })
             }),
             (0, r.jsx)('div', {
                 className: a()(A.overlay, {
-                    [A.darkThemeGradient]: L,
-                    [A.lightThemeGradient]: !L
+                    [A.darkThemeGradient]: M,
+                    [A.lightThemeGradient]: !M
                 })
             }),
             (0, r.jsxs)('div', {
@@ -245,7 +245,7 @@ function I(e) {
                                         }),
                                     D &&
                                         (0, r.jsx)(c.ua7, {
-                                            text: U ? N.intl.string(N.t.YsCuyM) : Q ? N.intl.string(N.t['74Kqra']) : (0, h.zi)(p) ? N.intl.string(N.t['I6JG4+']) : N.intl.string(N.t.umdNio),
+                                            text: H ? N.intl.string(N.t.YsCuyM) : Q ? N.intl.string(N.t['74Kqra']) : (0, h.zi)(p) ? N.intl.string(N.t['I6JG4+']) : N.intl.string(N.t.umdNio),
                                             children: (e) =>
                                                 (0, r.jsx)(
                                                     c.P3F,
@@ -260,7 +260,7 @@ function I(e) {
                                                     })
                                                 )
                                         }),
-                                    (0, r.jsx)(C.r, {
+                                    (0, r.jsx)(O.r, {
                                         onOpen: P,
                                         onClose: E,
                                         onSelect: I,
@@ -286,17 +286,17 @@ function I(e) {
                                 ]
                             }),
                             (0, r.jsx)(S.E, {
-                                showPlaceholder: !y,
+                                showPlaceholder: !_,
                                 width: 100,
                                 height: 30,
                                 className: A.partnerBranding,
-                                children: (0, r.jsx)(_.ZP, {
+                                children: (0, r.jsx)(y.ZP, {
                                     className: A.partnerBranding,
                                     logotypeClassName: A.partnerLogotypes,
                                     quest: p,
-                                    separatorSpacing: _.US.MEDIUM,
+                                    separatorSpacing: y.US.MEDIUM,
                                     withGameTile: !1,
-                                    onLoadComplete: H
+                                    onLoadComplete: U
                                 })
                             }),
                             (0, r.jsxs)('div', {
@@ -304,14 +304,14 @@ function I(e) {
                                 children: [
                                     (0, r.jsx)(c.Text, {
                                         variant: 'text-sm/medium',
-                                        color: L ? 'text-muted' : 'always-white',
-                                        children: N.intl.format(N.t.buEvBw, { brandName: null != (d = null == (i = p.config.cosponsorMetadata) ? void 0 : i.name) ? d : p.config.messages.gamePublisher })
+                                        color: M ? 'text-muted' : 'always-white',
+                                        children: N.intl.format(N.t.buEvBw, { brandName: null != (u = null == (i = p.config.cosponsorMetadata) ? void 0 : i.name) ? u : p.config.messages.gamePublisher })
                                     }),
                                     V || W
                                         ? null
                                         : (0, r.jsx)(c.Text, {
                                               variant: 'text-sm/medium',
-                                              color: L ? 'text-muted' : 'always-white',
+                                              color: M ? 'text-muted' : 'always-white',
                                               children: N.intl.format(N.t['7D8r4O'], { expiryDate: Z })
                                           })
                                 ]
@@ -322,7 +322,7 @@ function I(e) {
                         quest: p,
                         errorHints: j,
                         warningHints: v,
-                        isDarkTheme: L
+                        isDarkTheme: M
                     })
                 ]
             })

@@ -1,13 +1,13 @@
 n.d(t, { Z: () => j });
 var r = n(255367),
-    o = n(73800),
-    s = n(120356),
-    a = n.n(s),
+    s = n(73800),
+    o = n(120356),
+    a = n.n(o),
     i = n(524979),
     l = n(481060),
     c = n(617136),
-    d = n(915750),
-    u = n(497505),
+    u = n(915750),
+    d = n(497505),
     p = n(918701),
     m = n(685613),
     f = n(670638),
@@ -16,22 +16,22 @@ var r = n(255367),
     h = n(388032),
     b = n(74783);
 let j = (e) => {
-    let { quest: t, expansionSpring: n, onCtxMenuSelect: s, onCtxMenuOpen: j, onCtxMenuClose: v, useReducedMotion: y, isExpanded: _, isExpansionAnimationComplete: C } = e,
-        O = (0, d.aM)(),
-        w = o.useCallback(() => {
+    let { quest: t, expansionSpring: n, onCtxMenuSelect: o, onCtxMenuOpen: j, onCtxMenuClose: v, useReducedMotion: _, isExpanded: y, isExpansionAnimationComplete: O } = e,
+        C = (0, u.aM)(),
+        w = s.useCallback(() => {
             (0, g.openDisclosureModal)(t, {
-                content: u.jn.QUEST_BAR_V2,
+                content: d.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_DISCLOSURE
             });
         }, [t]),
-        S = o.useCallback(() => {
+        S = s.useCallback(() => {
             (0, p.nc)(t, {
-                content: u.jn.QUEST_BAR_V2,
+                content: d.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_GAME_LINK,
-                impressionId: O
+                impressionId: C
             });
-        }, [O, t]),
-        E = _ && C,
+        }, [C, t]),
+        E = y && O,
         P = (0, r.jsx)(l.P3F, {
             onClick: S,
             className: a()(b.clickable, { [b.logo]: E }),
@@ -69,7 +69,7 @@ let j = (e) => {
                 expansionSpring: n,
                 isFullyExpanded: E,
                 partnerBranding: P,
-                useReducedMotion: y
+                useReducedMotion: _
             }),
             (0, r.jsxs)(i.animated.div, {
                 className: b.promotedBadgeWrapper,
@@ -98,8 +98,8 @@ let j = (e) => {
                     (0, r.jsx)(f.r, {
                         onOpen: j,
                         onClose: v,
-                        onSelect: s,
-                        questContent: u.jn.QUEST_BAR_V2,
+                        onSelect: o,
+                        questContent: d.jn.QUEST_BAR_V2,
                         quest: t,
                         shouldShowDisclosure: !0,
                         showShareLink: !0,

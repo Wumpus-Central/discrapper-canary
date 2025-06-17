@@ -1,65 +1,72 @@
-e.exports = function (e) {
-    let t = e.regex,
-        n = /[a-zA-Z_$][a-zA-Z0-9_$]*/,
-        r = t.concat(n, t.concat('(\\.', n, ')*')),
-        i = /([*]|[a-zA-Z_$][a-zA-Z0-9_$]*)/,
-        a = {
-            className: 'rest_arg',
-            begin: /[.]{3}/,
-            end: n,
-            relevance: 10
-        };
-    return {
-        name: 'ActionScript',
-        aliases: ['as'],
-        keywords: {
-            keyword: ['as', 'break', 'case', 'catch', 'class', 'const', 'continue', 'default', 'delete', 'do', 'dynamic', 'each', 'else', 'extends', 'final', 'finally', 'for', 'function', 'get', 'if', 'implements', 'import', 'in', 'include', 'instanceof', 'interface', 'internal', 'is', 'namespace', 'native', 'new', 'override', 'package', 'private', 'protected', 'public', 'return', 'set', 'static', 'super', 'switch', 'this', 'throw', 'try', 'typeof', 'use', 'var', 'void', 'while', 'with'],
-            literal: ['true', 'false', 'null', 'undefined']
-        },
-        contains: [
-            e.APOS_STRING_MODE,
-            e.QUOTE_STRING_MODE,
-            e.C_LINE_COMMENT_MODE,
-            e.C_BLOCK_COMMENT_MODE,
-            e.C_NUMBER_MODE,
-            {
-                match: [/\bpackage/, /\s+/, r],
-                className: {
-                    1: 'keyword',
-                    3: 'title.class'
-                }
+t.d(n, { I: () => d }), t(953529);
+var r = t(255367);
+t(73800);
+var i = t(120356),
+    l = t.n(i),
+    s = t(708816),
+    o = t(790472),
+    u = t(777207),
+    a = t(559554),
+    c = t(820468);
+function d(e) {
+    let { title: n, description: t, headerImage: i, onDetails: d, onPurchase: p, PurchaseButton: m, availabilityLabel: b } = e;
+    return (0, r.jsx)(s.tE, {
+        children: (0, r.jsxs)('div', {
+            className: l()(a.wrapper, c.hoverCard),
+            tabIndex: 0,
+            onClick: () => {
+                null != d ? d() : null != p && p();
             },
-            {
-                match: [/\b(?:class|interface|extends|implements)/, /\s+/, n],
-                className: {
-                    1: 'keyword',
-                    3: 'title.class'
-                }
+            onKeyUp: (e) => {
+                'Enter' === e.key && (e.stopPropagation(), e.preventDefault(), null != d ? d() : null != p && p());
             },
-            {
-                className: 'meta',
-                beginKeywords: 'import include',
-                end: /;/,
-                keywords: { keyword: 'import include' }
-            },
-            {
-                beginKeywords: 'function',
-                end: /[{;]/,
-                excludeEnd: !0,
-                illegal: /\S/,
-                contains: [
-                    e.inherit(e.TITLE_MODE, { className: 'title.function' }),
-                    {
-                        className: 'params',
-                        begin: /\(/,
-                        end: /\)/,
-                        contains: [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, a]
-                    },
-                    { begin: t.concat(/:\s*/, i) }
-                ]
-            },
-            e.METHOD_GUARD
-        ],
-        illegal: /#/
-    };
-};
+            children: [
+                (0, r.jsx)('div', {
+                    className: a.cardHeaderImg,
+                    style: null != i ? { backgroundImage: null != i ? 'url('.concat(i.toString(), ')') : void 0 } : void 0,
+                    children:
+                        null == i &&
+                        (0, r.jsx)(o.P, {
+                            color: 'white',
+                            size: 'custom',
+                            height: 80,
+                            width: 80
+                        })
+                }),
+                (0, r.jsxs)('div', {
+                    className: a.details,
+                    children: [
+                        (0, r.jsx)(u.x, {
+                            color: 'header-primary',
+                            variant: 'text-md/semibold',
+                            children: n
+                        }),
+                        null != t &&
+                            (0, r.jsx)(u.x, {
+                                className: a.description,
+                                color: 'text-muted',
+                                variant: 'text-sm/normal',
+                                children: t
+                            })
+                    ]
+                }),
+                null != m &&
+                    (0, r.jsxs)('div', {
+                        className: a.footer,
+                        children: [
+                            (0, r.jsx)(u.x, {
+                                color: 'interactive-normal',
+                                variant: 'text-sm/normal',
+                                children: b
+                            }),
+                            (0, r.jsx)(m, {
+                                onClick: (e) => {
+                                    e.stopPropagation(), null == p || p();
+                                }
+                            })
+                        ]
+                    })
+            ]
+        })
+    });
+}

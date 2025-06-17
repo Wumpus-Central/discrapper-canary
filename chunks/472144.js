@@ -1,51 +1,51 @@
 n.d(t, { Z: () => p });
 var r = n(255367),
-    o = n(73800),
-    s = n(120356),
-    a = n.n(s),
+    s = n(73800),
+    o = n(120356),
+    a = n.n(o),
     i = n(524979),
     l = n(481060),
     c = n(569379),
-    d = n(642145),
-    u = n(704247);
-let p = o.forwardRef((e, t) => {
-    let { quest: n, percentComplete: o, size: s = 42, strokeWidth: p = 3, glowBlur: m = 0.4, percentCompleteText: f, percentCompleteTextVariant: g = 'text-lg/medium', children: x } = e,
-        h = (0, c.E)(n, o > 0),
-        b = s / 2,
-        j = s / 2 - p / 2,
+    u = n(642145),
+    d = n(704247);
+let p = s.forwardRef((e, t) => {
+    let { quest: n, percentComplete: s, size: o = 42, strokeWidth: p = 3, glowBlur: m = 0.4, percentCompleteText: f, percentCompleteTextVariant: g = 'text-lg/medium', children: x } = e,
+        h = (0, c.E)(n, s > 0),
+        b = o / 2,
+        j = o / 2 - p / 2,
         v = 2 * Math.PI * j,
-        y = v - o * v,
-        _ = {
+        _ = v - s * v,
+        y = {
             strokeDasharray: ''.concat(v, ' ').concat(v),
-            strokeDashoffset: y
+            strokeDashoffset: _
         },
-        C = {
+        O = {
             strokeDasharray: ''.concat(v, ' ').concat(v),
-            strokeDashoffset: -o * v
+            strokeDashoffset: -s * v
         },
-        O = { boxShadow: '0 0 30px 0px '.concat(h.glow) },
+        C = { boxShadow: '0 0 30px 0px '.concat(h.glow) },
         { progressTextAnimation: w } = (0, l.q_F)({
-            progressTextAnimation: +(null != f && 1 !== o),
-            config: d.Y
+            progressTextAnimation: +(null != f && 1 !== s),
+            config: u.Y
         });
     return (0, r.jsxs)('div', {
-        className: u.outer,
+        className: d.outer,
         ref: t,
         children: [
             (0, r.jsxs)('div', {
-                className: u.inner,
-                style: O,
+                className: d.inner,
+                style: C,
                 children: [
                     x,
                     (0, r.jsxs)(i.animated.div, {
                         style: { opacity: w },
-                        className: a()(u.coverContent, u.progressTextWrapper),
+                        className: a()(d.coverContent, d.progressTextWrapper),
                         children: [
-                            (0, r.jsx)('div', { className: a()(u.coverContent, u.progressTextOverlay) }),
+                            (0, r.jsx)('div', { className: a()(d.coverContent, d.progressTextOverlay) }),
                             (0, r.jsx)(l.Text, {
                                 variant: g,
                                 color: 'text-primary',
-                                className: u.progressText,
+                                className: d.progressText,
                                 children: f
                             })
                         ]
@@ -53,9 +53,9 @@ let p = o.forwardRef((e, t) => {
                 ]
             }),
             (0, r.jsxs)('svg', {
-                className: u.progressBar,
-                height: s,
-                width: s,
+                className: d.progressBar,
+                height: o,
+                width: o,
                 children: [
                     (0, r.jsxs)('defs', {
                         children: [
@@ -91,24 +91,24 @@ let p = o.forwardRef((e, t) => {
                         ]
                     }),
                     (0, r.jsx)('circle', {
-                        className: u.progress,
+                        className: d.progress,
                         strokeWidth: p,
                         fill: 'transparent',
                         r: j,
                         cx: b,
                         cy: b,
                         stroke: 'url(#linear)',
-                        style: C
+                        style: O
                     }),
                     (0, r.jsx)('circle', {
-                        className: u.progress,
+                        className: d.progress,
                         strokeWidth: p,
                         fill: 'transparent',
                         r: j,
                         cx: b,
                         cy: b,
                         stroke: h.foreground,
-                        style: _
+                        style: y
                     })
                 ]
             })
