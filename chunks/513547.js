@@ -1,6 +1,6 @@
 r.d(t, {
     al: () => b,
-    ck: () => P
+    ck: () => j
 }),
     r(388685),
     r(539854),
@@ -254,7 +254,7 @@ let b = {
         }
     },
     C = (e) => e,
-    j = (e) => {
+    P = (e) => {
         let [t] = a.useState([]);
         return (
             t.push({
@@ -269,7 +269,7 @@ let b = {
             })
         );
     };
-function P(e) {
+function j(e) {
     var t, r, a;
     let { label: i, value: l, section: u } = e,
         m = null != (r = E[i]) ? r : C,
@@ -282,7 +282,7 @@ function P(e) {
                       height: 100
                   })
                 : 'number' == typeof l
-                  ? (0, n.jsx)(j, {
+                  ? (0, n.jsx)(P, {
                         value: l,
                         width: 300,
                         height: 100

@@ -10,9 +10,9 @@ var r = t(255367),
     d = t(690786),
     p = t(838968),
     m = t(262212),
-    x = t(279604),
-    f = t(981631),
-    _ = t(93841),
+    _ = t(279604),
+    x = t(981631),
+    f = t(93841),
     v = t(388032),
     g = t(568413),
     j = t(117172);
@@ -41,7 +41,7 @@ function h(e) {
         t = i.useMemo(() => {
             let e = c.C[n];
             if (null == e) return [];
-            let t = e.tier === f.Eu4.TIER_3 ? e.perks.slice(0, -1) : e.perks;
+            let t = e.tier === x.Eu4.TIER_3 ? e.perks.slice(0, -1) : e.perks;
             return null == t
                 ? void 0
                 : t.map((e, t) =>
@@ -75,7 +75,7 @@ function h(e) {
                 children: (0, r.jsx)(a.xv, {
                     color: 'text-muted',
                     variant: 'text-sm/medium',
-                    children: v.intl.string(_.default.nIj3LS)
+                    children: v.intl.string(f.default.nIj3LS)
                 })
             })
         ]
@@ -85,12 +85,12 @@ function C(e) {
     let n,
         { guildId: t, index: o, powerup: s, nextPowerup: l } = e,
         c = (0, u.Z)(t, s),
-        f = (0, u.Z)(t, l),
-        _ = null != (0, d.Z)(t, s) || c,
-        v = null != (0, d.Z)(t, l) || f,
-        [C, N] = i.useState(void 0);
+        x = (0, u.Z)(t, l),
+        f = null != (0, d.Z)(t, s) || c,
+        v = null != (0, d.Z)(t, l) || x,
+        [C, E] = i.useState(void 0);
     return (
-        (0, x.KT)(C),
+        (0, _.KT)(C),
         (n = 0 === o ? 'start' : null == l ? 'end' : 'middle'),
         (0, r.jsxs)(p.Z, {
             guildId: t,
@@ -99,7 +99,7 @@ function C(e) {
             children: [
                 (0, r.jsx)(b, {
                     position: n,
-                    active: _,
+                    active: f,
                     nextActive: null != l ? v : void 0
                 }),
                 (0, r.jsxs)('div', {
@@ -124,7 +124,7 @@ function C(e) {
                         children: (0, r.jsx)(m.ZP, {
                             guildId: t,
                             powerup: s,
-                            onError: N
+                            onError: E
                         })
                     })
             ]

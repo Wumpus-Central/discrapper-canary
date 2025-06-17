@@ -24,11 +24,11 @@ function h(e) {
                 connectedActivity: t,
                 activityPanelMode: o.ZP.getActivityPanelMode()
             };
-        });
+        }),
+        g = (0, i.e7)([l.Z], () => l.Z.getWindowOpen(p.KJ3.ACTIVITY_POPOUT));
     if (!(0, a.NX)(h)) return null;
-    let g = null == f ? void 0 : f.applicationId,
-        b = l.Z.getWindowOpen(p.KJ3.ACTIVITY_POPOUT);
-    return m !== d.Ez.PANEL || null == g || b || null == h || null == f || (0, c.Z)(h)
+    let b = null == f ? void 0 : f.applicationId;
+    return m !== d.Ez.PANEL || null == b || g || null == h || null == f || (0, c.Z)(h)
         ? null
         : (0, r.jsx)(u.Z, {
               maxHeight: t,

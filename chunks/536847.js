@@ -1,45 +1,36 @@
-n.d(t, { o: () => h });
+n.d(t, { o: () => _ });
 var r = n(255367);
 n(73800);
 var i = n(657707),
     a = n(442837),
     o = n(481060),
-    s = n(153867),
-    l = n(210887),
-    c = n(695346),
-    u = n(507962),
-    d = n(469115),
-    f = n(231338),
-    _ = n(388032),
-    p = n(531864);
-function h() {
+    s = n(210887),
+    l = n(866419),
+    c = n(507962),
+    u = n(231338),
+    d = n(388032),
+    f = n(531864);
+function _() {
     let e = [
             {
-                name: _.intl.string(_.t.b8Cei4),
-                value: f.BR.DARK,
+                name: d.intl.string(d.t.b8Cei4),
+                value: u.BR.DARK,
                 icon: i.Z6G
             },
             {
-                name: _.intl.string(_.t.K2sFfn),
-                value: f.BR.LIGHT,
+                name: d.intl.string(d.t.K2sFfn),
+                value: u.BR.LIGHT,
                 icon: i.chG
             }
         ],
-        t = (0, a.e7)([l.Z], () => l.Z.theme);
+        t = (0, a.e7)([s.Z], () => s.Z.theme);
     return (0, r.jsx)(o.sY7, {
-        className: p.themeSelector,
+        className: f.themeSelector,
         options: e,
-        value: t,
+        value: (0, o.wjy)(t) ? u.BR.DARK : u.BR.LIGHT,
         onChange: (e) => {
             let { value: t } = e;
-            (0, u.HV)();
-            let n = c.L1.getSetting(),
-                r = null != n.backgroundGradientPresetId && n.backgroundGradientPresetId in d.qt && d.qt[n.backgroundGradientPresetId].theme !== t;
-            (0, s.ZI)({
-                theme: t,
-                backgroundGradientPresetId: r ? void 0 : n.backgroundGradientPresetId,
-                customUserThemeSettings: n.customUserThemeSettings
-            });
+            (0, c.HV)(), (0, l.fc)(t);
         },
         look: 'pill'
     });

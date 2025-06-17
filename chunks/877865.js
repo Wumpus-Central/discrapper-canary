@@ -1,4 +1,4 @@
-n.d(t, { U: () => C }), n(388685);
+n.d(t, { U: () => R }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(688619),
@@ -11,11 +11,12 @@ var r = n(255367),
     f = n(481060),
     _ = n(408886),
     p = n(233398),
-    h = n(507962),
-    m = n(671147),
-    g = n(388032),
-    E = n(936631);
-function b(e, t, n) {
+    h = n(866419),
+    m = n(507962),
+    g = n(671147),
+    E = n(388032),
+    b = n(936631);
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +29,7 @@ function b(e, t, n) {
         e
     );
 }
-function y(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,12 +40,12 @@ function y(e) {
                 })
             )),
             r.forEach(function (t) {
-                b(e, t, n[t]);
+                y(e, t, n[t]);
             });
     }
     return e;
 }
-function O(e, t) {
+function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,31 +57,31 @@ function O(e, t) {
     }
     return n;
 }
-function v(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : O(Object(t)).forEach(function (n) {
+            : v(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let I = i.lazy(() => Promise.all([n.e('21153'), n.e('24530')]).then(n.bind(n, 932329))),
-    T = 5;
-function S(e, t) {
+let T = i.lazy(() => Promise.all([n.e('21153'), n.e('24530')]).then(n.bind(n, 932329))),
+    S = 5;
+function A(e, t) {
     return e.length < 1 ? 0 : (t / (e.length - 1)) * 80 + 10;
 }
-function A(e) {
+function N(e) {
     let { colors: t, selectedIndex: n, onColorSelect: a } = e,
         [o, s] = i.useMemo(() => {
-            let e = t.map((e, n) => S(t, n)),
+            let e = t.map((e, n) => A(t, n)),
                 n = t.map((t, n) => ''.concat(t, ' ').concat(e[n], '%')).join(', ');
             return [e, { background: 'linear-gradient(to right, '.concat(n, ')') }];
         }, [t]);
     return (0, r.jsx)('div', {
-        className: E.gradientBar,
+        className: b.gradientBar,
         style: s,
         children: t.map((e, t) => {
             let i = o[t],
@@ -90,19 +91,19 @@ function A(e) {
                     (0, r.jsx)(
                         f.P3F,
                         {
-                            className: E.colorCircle,
+                            className: b.colorCircle,
                             style: {
                                 left: ''.concat(i, '%'),
                                 backgroundColor: e
                             },
                             onClick: () => a(t),
-                            children: (0, r.jsx)('div', { className: E.colorCircleInner })
+                            children: (0, r.jsx)('div', { className: b.colorCircleInner })
                         },
                         t
                     ),
                     s &&
                         (0, r.jsx)('div', {
-                            className: E.colorCircleSelectedTriangle,
+                            className: b.colorCircleSelectedTriangle,
                             style: { left: ''.concat(i, '%') }
                         })
                 ]
@@ -110,132 +111,132 @@ function A(e) {
         })
     });
 }
-function N(e) {
+function C(e) {
     if (!(0, c.FX)(e)) return e;
     let t = o()(e);
     return t.set('hsl.h', (t.get('hsl.h') + 15) % 360).hex();
 }
-function C(e) {
+function R(e) {
     let { value: t, onChange: n, className: a, colors: o, setColors: s } = e,
-        b = (0, _.Z)(),
-        [O, S] = i.useState(0),
-        [C, R] = i.useState(t);
+        y = (0, _.Z)(),
+        [v, A] = i.useState(0),
+        [R, P] = i.useState(t);
     i.useEffect(() => {
-        if (o.length > 0 && O < o.length) {
-            let e = o[O];
-            (0, c.FX)(e) && (R(e), n(e));
+        if (o.length > 0 && v < o.length) {
+            let e = o[v];
+            (0, c.FX)(e) && (P(e), n(e));
         }
-        O >= o.length && S(0);
-    }, [O, o, n]);
-    let P = (e) => {
-            if ((R(e), (0, c.FX)(e) && ((0, h.zW)(), n(e), o.length > 0))) {
+        v >= o.length && A(0);
+    }, [v, o, n]);
+    let w = (e) => {
+            if ((P(e), (0, c.FX)(e) && ((0, m.zW)(), n(e), o.length > 0))) {
                 let t = [...o];
-                (t[O] = e), s(t);
+                (t[v] = e), s(t);
             }
         },
-        w = i.useCallback((e) => {
-            R(e.hex);
+        D = i.useCallback((e) => {
+            P(e.hex);
         }, []),
-        D = (e) => {
-            if (((0, h.P0)(), n(e.hex), o.length > 0)) {
+        L = (e) => {
+            if (((0, m.P0)(), n(e.hex), o.length > 0)) {
                 let t = [...o];
-                (t[O] = e.hex), s(t);
+                (t[v] = e.hex), s(t);
             }
         },
-        L = async () => {
-            if (null != b)
+        x = async () => {
+            if (null != y)
                 try {
-                    let { sRGBHex: e } = await b.open();
-                    (0, h.J4)(), P(e);
+                    let { sRGBHex: e } = await y.open();
+                    (0, m.J4)(), w(e);
                 } catch (e) {}
         },
-        x = () => {
-            if (o.length === T) return;
-            (0, h.gG)();
-            let e = o.length > 0 ? o[o.length - 1] : C,
-                t = o.length > 0 ? N(e) : e,
+        k = () => {
+            if (o.length === S) return;
+            0 === o.length && (0, h.IN)(), (0, m.gG)();
+            let e = o.length > 0 ? o[o.length - 1] : R,
+                t = o.length > 0 ? C(e) : e,
                 n = [...o, t];
-            s(n), S(n.length - 1);
-        },
-        k = (e) => {
-            if (o.length > 1) {
-                (0, h.JL)();
-                let t = o.filter((t, n) => n !== e);
-                s(t), O >= t.length ? S(t.length - 1) : O > e && S(O - 1);
-            }
+            s(n), A(n.length - 1);
         },
         M = (e) => {
-            S(e), (0, h.w8)();
+            if (o.length > 1) {
+                (0, m.JL)();
+                let t = o.filter((t, n) => n !== e);
+                s(t), v >= t.length ? A(t.length - 1) : v > e && A(v - 1);
+            }
         },
-        j = o.length > 1;
+        j = (e) => {
+            A(e), (0, m.w8)();
+        },
+        U = o.length > 1;
     return (0, r.jsxs)('div', {
-        className: l()(E.container, a),
+        className: l()(b.container, a),
         children: [
             (0, r.jsxs)('div', {
-                className: E.headerContainer,
+                className: b.headerContainer,
                 children: [
                     (0, r.jsx)(f.Text, {
                         variant: 'text-sm/medium',
-                        children: g.intl.string(m.default['8ZcEfn'])
+                        children: E.intl.string(g.default['8ZcEfn'])
                     }),
                     (0, r.jsx)(f.ua7, {
-                        text: g.intl.string(m.default['61KGaW']),
-                        shouldShow: o.length === T,
+                        text: E.intl.string(g.default['61KGaW']),
+                        shouldShow: o.length === S,
                         children: (e) =>
                             (0, r.jsx)(
                                 f.zxk,
-                                v(y({}, e), {
+                                I(O({}, e), {
                                     size: f.zxk.Sizes.ICON,
                                     look: f.zxk.Looks.BLANK,
-                                    disabled: o.length === T,
-                                    onClick: x,
+                                    disabled: o.length === S,
+                                    onClick: k,
                                     children: (0, r.jsx)(f.Text, {
                                         variant: 'text-sm/medium',
-                                        className: E.addColorButtonText,
-                                        children: g.intl.string(m.default['+tTysr'])
+                                        className: b.addColorButtonText,
+                                        children: E.intl.string(g.default['+tTysr'])
                                     })
                                 })
                             )
                     })
                 ]
             }),
-            j &&
-                (0, r.jsx)(A, {
+            U &&
+                (0, r.jsx)(N, {
                     colors: o,
-                    selectedIndex: O,
-                    onColorSelect: M
+                    selectedIndex: v,
+                    onColorSelect: j
                 }),
             (0, r.jsx)(i.Suspense, {
                 fallback: null,
-                children: (0, r.jsx)(I, {
-                    onChange: w,
-                    onChangeComplete: D,
-                    color: C
+                children: (0, r.jsx)(T, {
+                    onChange: D,
+                    onChangeComplete: L,
+                    color: R
                 })
             }),
             (0, r.jsxs)('div', {
-                className: E.hexInputContainer,
+                className: b.hexInputContainer,
                 children: [
                     (0, r.jsx)('input', {
-                        className: E.hexInput,
-                        value: C.toUpperCase(),
-                        onChange: (e) => P(e.target.value),
+                        className: b.hexInput,
+                        value: R.toUpperCase(),
+                        onChange: (e) => w(e.target.value),
                         maxLength: 7,
                         placeholder: p.Dp,
                         type: 'text'
                     }),
                     (0, r.jsxs)('div', {
-                        className: E.trailingIcons,
+                        className: b.trailingIcons,
                         children: [
-                            null != b &&
+                            null != y &&
                                 (0, r.jsx)(f.ua7, {
-                                    text: g.intl.string(m.default['8QXO8v']),
-                                    tooltipClassName: E.eyeDropperTooltip,
+                                    text: E.intl.string(g.default['8QXO8v']),
+                                    tooltipClassName: b.eyeDropperTooltip,
                                     children: (e) =>
                                         (0, r.jsx)(
                                             f.zxk,
-                                            v(
-                                                y(
+                                            I(
+                                                O(
                                                     {
                                                         size: f.zxk.Sizes.ICON,
                                                         look: f.zxk.Looks.BLANK
@@ -243,30 +244,30 @@ function C(e) {
                                                     e
                                                 ),
                                                 {
-                                                    onClick: L,
-                                                    className: E.iconButton,
+                                                    onClick: x,
+                                                    className: b.iconButton,
                                                     children: (0, r.jsx)(u.i, {
                                                         size: 'xs',
-                                                        colorClass: E.iconWithHover
+                                                        colorClass: b.iconWithHover
                                                     })
                                                 }
                                             )
                                         )
                                 }),
-                            j &&
+                            U &&
                                 (0, r.jsx)(f.ua7, {
-                                    text: g.intl.string(m.default['rTik5+']),
+                                    text: E.intl.string(g.default['rTik5+']),
                                     children: (e) =>
                                         (0, r.jsx)(
                                             f.zxk,
-                                            v(y({}, e), {
+                                            I(O({}, e), {
                                                 size: f.zxk.Sizes.ICON,
                                                 look: f.zxk.Looks.BLANK,
-                                                onClick: () => k(O),
-                                                className: E.iconButton,
+                                                onClick: () => M(v),
+                                                className: b.iconButton,
                                                 children: (0, r.jsx)(d.X, {
                                                     size: 'xs',
-                                                    colorClass: E.iconWithHover
+                                                    colorClass: b.iconWithHover
                                                 })
                                             })
                                         )

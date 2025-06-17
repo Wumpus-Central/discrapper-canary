@@ -378,7 +378,7 @@ function q(e) {
         [g]
     ),
     (0, f.ZP)(() => {
-        o || 0 !== b.length || P([k]);
+        o || (0, I.lT)(b, k, P);
     }),
     d)
         ? (0, r.jsx)('div', {
@@ -398,7 +398,7 @@ function q(e) {
                                   (0, r.jsx)(N.o, {}),
                                   (0, r.jsx)(A.U, {
                                       onChange: (e) => {
-                                          M(e), 0 === b.length && P([e]);
+                                          M(e), 0 === b.length && (0, I.lT)(b, e, P);
                                       },
                                       value: k,
                                       colors: b,
@@ -412,7 +412,7 @@ function q(e) {
                                   (0, r.jsx)(H, {
                                       chassisMixAmount: v,
                                       setChassisMixAmount: (e) => {
-                                          w(e), 0 === b.length && P([k]);
+                                          w(e), 0 === b.length && (0, I.lT)(b, k, P);
                                       }
                                   }),
                                   (0, r.jsxs)(c.zxk, {

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => L }), n(388685);
 var i = n(255367),
     r = n(73800),
-    o = n(392711),
-    l = n.n(o),
+    l = n(392711),
+    o = n.n(l),
     s = n(524979),
     c = n(818405),
     a = n(587158),
@@ -21,8 +21,8 @@ var i = n(255367),
     C = n(960048),
     j = n(145597),
     w = n(333031),
-    P = n(610394),
-    k = n(380736),
+    k = n(610394),
+    P = n(380736),
     Z = n(987650),
     E = n(981631),
     S = n(388032),
@@ -40,7 +40,7 @@ function N(e, t, n) {
         e
     );
 }
-let D = l().throttle(
+let D = o().throttle(
         () => {
             v.Z.increment(
                 {
@@ -56,7 +56,7 @@ let D = l().throttle(
     T = 10 * x.Z.Millis.SECOND;
 function M(e) {
     var t, n;
-    let { error: o, onLock: l, onReload: c, onDisable: a, onCrashDisabled: u } = e,
+    let { error: l, onLock: o, onReload: c, onDisable: a, onCrashDisabled: u } = e,
         p = r.useMemo(() => new s.SpringValue(1), []),
         b = r.useRef(null),
         [v, g] = r.useState(!1),
@@ -72,13 +72,13 @@ function M(e) {
         )
     );
     let w = r.useCallback(() => {
-            p.set(0), null != b.current && clearTimeout(b.current), (b.current = null), null == l || l(), null == u || u();
-        }, [p, l, u]),
+            p.set(0), null != b.current && clearTimeout(b.current), (b.current = null), null == o || o(), null == u || u();
+        }, [p, o, u]),
         N = r.useCallback(
             (e) => {
                 x ||
                     (C(!0),
-                    null == l || l(),
+                    null == o || o(),
                     m.Z.track(
                         E.rMx.NOTIFICATION_CLICKED,
                         {
@@ -90,7 +90,7 @@ function M(e) {
                     e.stopPropagation(),
                     setTimeout(() => (null == c ? void 0 : c()), 200));
             },
-            [l, c, x]
+            [o, c, x]
         ),
         D = r.useCallback(
             (e) => {
@@ -100,11 +100,11 @@ function M(e) {
         ),
         M = r.useCallback(
             (e) => {
-                e.stopPropagation(), null == l || l(), null == a || a();
+                e.stopPropagation(), null == o || o(), null == a || a();
             },
-            [a, l]
+            [a, o]
         ),
-        R = (0, d.e7)([P.ZP], () => P.ZP.getFocusedRunningGame()),
+        R = (0, d.e7)([k.ZP], () => k.ZP.getFocusedRunningGame()),
         L = v
             ? (0, i.jsxs)('div', {
                   children: [
@@ -119,14 +119,14 @@ function M(e) {
                               (0, i.jsx)(h.Text, {
                                   variant: 'text-sm/normal',
                                   color: 'text-secondary',
-                                  children: o.message
+                                  children: l.message
                               }),
                               (0, i.jsx)(h.Text, {
                                   variant: 'text-xxs/normal',
                                   color: 'text-secondary',
                                   children: (0, i.jsx)('code', {
                                       className: z.code,
-                                      children: (0, i.jsx)('pre', { children: o.stack })
+                                      children: (0, i.jsx)('pre', { children: l.stack })
                                   })
                               })
                           ]
@@ -136,7 +136,7 @@ function M(e) {
             : null,
         I = v ? null : S.intl.string(S.t.oEJEFh),
         W = (null != (t = null == j ? void 0 : j.isStaff()) && t) || (null != (n = null == j ? void 0 : j.isStaffPersonal()) && n);
-    return (0, i.jsx)(k.Y, {
+    return (0, i.jsx)(P.Y, {
         title: S.intl.string(S.t.U38qZm),
         body: L,
         hint: W ? I : void 0,
@@ -150,7 +150,7 @@ function M(e) {
         onNotificationClick: D,
         onConfirmClick: N,
         onCancelClick: null != R ? M : void 0,
-        onDismissClick: l,
+        onDismissClick: o,
         expand: !0,
         locked: !0,
         notificationId: 'overlay-crashed',
@@ -198,7 +198,7 @@ class R extends r.PureComponent {
                               m.Z.setInputLocked(!0, t), this.setState({ showError: !1 });
                           },
                           onDisable: () => {
-                              let e = P.ZP.getFocusedRunningGame();
+                              let e = k.ZP.getFocusedRunningGame();
                               null != e && p.Z.toggleOverlay(e, !1, !1);
                           },
                           onCrashDisabled: () => {

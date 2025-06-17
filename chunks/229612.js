@@ -1,4 +1,4 @@
-n.d(t, { default: () => h }), n(539854), n(388685);
+n.d(t, { default: () => g }), n(539854), n(388685);
 var l = n(255367),
     i = n(73800),
     r = n(120356),
@@ -7,76 +7,84 @@ var l = n(255367),
     s = n(367907),
     o = n(600164),
     b = n(313201),
-    c = n(257126),
-    d = n(731220),
-    f = n(981631),
-    O = n(531578),
-    v = n(388032),
-    _ = n(925126);
-function E(e) {
-    let { title: t, options: n, selectedOption: r, freeformText: s, isFreeformEnabled: o, selectOption: b, onFreeformTextChange: d } = e,
-        f = i.useMemo(() => n.map(c.Wo), [n]),
-        v = i.useCallback(
+    c = n(652399),
+    d = n(257126),
+    f = n(731220),
+    O = n(981631),
+    v = n(531578),
+    _ = n(388032),
+    E = n(925126);
+function h(e) {
+    let { title: t, options: n, selectedOption: r, freeformText: s, isFreeformEnabled: o, selectOption: b, onFreeformTextChange: c } = e,
+        f = i.useMemo(() => n.map(d.Wo), [n]),
+        O = i.useCallback(
             (e) => {
-                let t = (0, c.xx)(e, n);
+                let t = (0, d.xx)(e, n);
                 null != t && b(t);
             },
             [b, n]
         ),
-        E = i.useCallback(() => {
-            let e = n.find(c.A6);
+        _ = i.useCallback(() => {
+            let e = n.find(d.A6);
             null != e && b(e);
         }, [n, b]);
     return (0, l.jsxs)('div', {
-        className: _.question,
+        className: E.question,
         children: [
             (0, l.jsx)(u.X6q, {
                 variant: 'heading-lg/semibold',
                 color: 'text-primary',
-                className: _.questionTitle,
+                className: E.questionTitle,
                 children: t
             }),
             (0, l.jsx)(u.FXm, {
                 options: f,
                 value: null == r ? void 0 : r.value,
-                onChange: v
+                onChange: O
             }),
             (0, l.jsx)(u.Kx8, {
-                className: a()(_.freeformTextArea, { [_.freeformTextAreaDisabled]: !o }),
+                className: a()(E.freeformTextArea, { [E.freeformTextAreaDisabled]: !o }),
                 value: s,
-                maxLength: O.iF,
-                onChange: d,
-                onFocus: E
+                maxLength: v.iF,
+                onChange: c,
+                onFocus: _
             })
         ]
     });
 }
-let h = function (e) {
-    let { rating: t, transitionState: n, onClose: r } = e,
-        a = (0, b.Dt)(),
-        h = (0, d.e)({ getOptions: c.bM }),
-        g = (0, d.e)({ getOptions: c.cc }),
-        p = t === O.aZ.BAD,
-        { questionItems: S, questionTitles: T } = i.useMemo(() => {
+let g = function (e) {
+    let { searchId: t, searchType: n, rating: r, transitionState: a, onClose: g } = e,
+        p = (0, b.Dt)(),
+        S = (0, f.e)({ getOptions: d.bM }),
+        T = (0, f.e)({ getOptions: d.cc }),
+        m = r === v.aZ.BAD,
+        { questionItems: x, questionTitles: D } = i.useMemo(() => {
             let e = [],
                 t = [];
             return (
-                p && (e.push(h), t.push(v.intl.string(v.t.UyBQFx))),
-                e.push(g),
-                t.push(v.intl.string(v.t.LhMLCg)),
+                m && (e.push(S), t.push(_.intl.string(_.t.UyBQFx))),
+                e.push(T),
+                t.push(_.intl.string(_.t.LhMLCg)),
                 {
                     questionItems: e,
                     questionTitles: t
                 }
             );
-        }, [p, g, h]),
-        [m, x] = i.useState(0),
-        D = i.useMemo(() => m === S.length - 1, [m, S.length]),
-        I = i.useMemo(() => {
-            let e = S[m],
-                t = T[m];
+        }, [m, T, S]);
+    i.useEffect(() => {
+        (0, c.Yc)({
+            rating: r,
+            searchId: t,
+            searchType: n
+        });
+    }, [r, t, n]);
+    let [I, N] = i.useState(0),
+        y = i.useMemo(() => I === x.length - 1, [I, x.length]),
+        C = i.useMemo(() => {
+            let e = x[I],
+                t = D[I];
             return (0, l.jsx)(
-                E,
+                h,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -103,56 +111,56 @@ let h = function (e) {
                     return e;
                 })({ title: t }, e)
             );
-        }, [S, T, m]),
-        N = i.useMemo(() => S.every(c.cp), [S]),
-        y = i.useMemo(() => {
-            let e = S[m];
-            return (0, c.cp)(e);
-        }, [S, m]),
-        C = i.useCallback(() => {
-            N &&
-                (s.ZP.trackWithMetadata(f.rMx.SEARCH_RESULTS_FEEDBACK_SUBMITTED, {
-                    rating: t,
-                    unsatisfied_question_option: p ? (0, c.HO)(h) : null,
-                    unsatisfied_question_text: p ? (0, c.sG)(h) : null,
-                    describe_search_question_option: (0, c.HO)(g),
-                    describe_search_question_text: (0, c.sG)(g)
+        }, [x, D, I]),
+        k = i.useMemo(() => x.every(d.cp), [x]),
+        j = i.useMemo(() => {
+            let e = x[I];
+            return (0, d.cp)(e);
+        }, [x, I]),
+        R = i.useCallback(() => {
+            k &&
+                (s.ZP.trackWithMetadata(O.rMx.SEARCH_RESULTS_FEEDBACK_SUBMITTED, {
+                    rating: r,
+                    unsatisfied_question_option: m ? (0, d.HO)(S) : null,
+                    unsatisfied_question_text: m ? (0, d.sG)(S) : null,
+                    describe_search_question_option: (0, d.HO)(T),
+                    describe_search_question_text: (0, d.sG)(T)
                 }),
-                r());
-        }, [h, p, N, r, t, g]),
-        k = i.useCallback(() => {
-            if (0 === m) return void r();
-            x(m - 1);
-        }, [m, r]),
-        j = i.useCallback(() => {
-            x(m + 1);
-        }, [m]);
+                g());
+        }, [S, m, k, g, r, T]),
+        L = i.useCallback(() => {
+            if (0 === I) return void g();
+            N(I - 1);
+        }, [I, g]),
+        M = i.useCallback(() => {
+            N(I + 1);
+        }, [I]);
     return (0, l.jsxs)(u.Y0X, {
         size: u.CgR.MEDIUM,
-        transitionState: n,
-        'aria-labelledby': a,
+        transitionState: a,
+        'aria-labelledby': p,
         parentComponent: 'SearchResultsFeedbackModal',
         children: [
             (0, l.jsxs)(u.xBx, {
                 separator: !1,
-                className: _.header,
+                className: E.header,
                 children: [
                     (0, l.jsx)(u.X6q, {
-                        id: a,
+                        id: p,
                         variant: 'heading-xl/semibold',
                         color: 'text-primary',
-                        children: v.intl.string(v.t.LRGdV1)
+                        children: _.intl.string(_.t.LRGdV1)
                     }),
-                    (0, l.jsx)(u.olH, { onClick: r })
+                    (0, l.jsx)(u.olH, { onClick: g })
                 ]
             }),
             (0, l.jsx)(u.hzk, {
-                className: _.content,
-                children: I
+                className: E.content,
+                children: C
             }),
             (0, l.jsxs)(u.mzw, {
                 separator: !0,
-                className: _.footer,
+                className: E.footer,
                 direction: o.Z.Direction.HORIZONTAL,
                 justify: o.Z.Justify.END,
                 children: [
@@ -160,21 +168,21 @@ let h = function (e) {
                         size: u.zxk.Sizes.MEDIUM,
                         look: u.zxk.Looks.FILLED,
                         color: u.zxk.Colors.PRIMARY,
-                        onClick: k,
-                        children: v.intl.string(v.t['13/7kZ'])
+                        onClick: L,
+                        children: _.intl.string(_.t['13/7kZ'])
                     }),
-                    D
+                    y
                         ? (0, l.jsx)(u.zxk, {
                               size: u.zxk.Sizes.MEDIUM,
-                              onClick: C,
-                              disabled: !N,
-                              children: v.intl.string(v.t['4Zpxtr'])
+                              onClick: R,
+                              disabled: !k,
+                              children: _.intl.string(_.t['4Zpxtr'])
                           })
                         : (0, l.jsx)(u.zxk, {
                               size: u.zxk.Sizes.MEDIUM,
-                              onClick: j,
-                              disabled: !y,
-                              children: v.intl.string(v.t.PDTjLC)
+                              onClick: M,
+                              disabled: !j,
+                              children: _.intl.string(_.t.PDTjLC)
                           })
                 ]
             })

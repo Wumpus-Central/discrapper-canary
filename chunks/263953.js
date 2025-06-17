@@ -238,26 +238,26 @@ class E extends (i = o.Component) {
         (this.prevStep = e), (this.prevSteps = t);
     }
     render() {
-        let { step: e, className: t, innerClassName: n, animatedNodeClassName: r, staticClassName: i, sideMargin: o, verticalMargin: s, children: c, fillParent: d, animationMotionType: _ } = this.props;
+        let { overrideKey: e, step: t, className: n, innerClassName: r, animatedNodeClassName: i, staticClassName: o, sideMargin: s, verticalMargin: c, children: d, fillParent: _, animationMotionType: p } = this.props;
         return (0, a.jsx)(u.W, {
             component: 'div',
-            className: l()(f.transitionGroup, t),
+            className: l()(f.transitionGroup, n),
             children: (0, a.jsx)(
                 g,
                 {
-                    fillParent: d,
-                    sideMargin: o,
-                    animationMotionType: null != _ ? _ : 'slide',
-                    verticalMargin: s,
+                    fillParent: _,
+                    sideMargin: s,
+                    animationMotionType: null != p ? p : 'slide',
+                    verticalMargin: c,
                     getDirection: this.getDirection,
                     getBaseHeight: this.getBaseHeight,
-                    className: n,
-                    animatedNodeClassName: r,
-                    staticClassName: i,
+                    className: r,
+                    animatedNodeClassName: i,
+                    staticClassName: o,
                     setHeight: this.setHeight,
-                    children: c
+                    children: d
                 },
-                ''.concat(e)
+                null != e ? e : ''.concat(t)
             )
         });
     }
