@@ -655,7 +655,7 @@ function eN(e, t) {
     );
 }
 function eC(e) {
-    let t = L.r.build(e).defaultReward.messages.name,
+    let t = L.r.build(e).defaultRewardName,
         n = (0, R.Kr)(e),
         r = (0, R.FX)(e),
         i = (0, R._p)(e),

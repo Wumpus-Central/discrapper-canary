@@ -34,15 +34,15 @@ var i = n(255367),
     A = n(313201),
     _ = n(540059),
     y = n(318766),
-    L = n(907040),
-    T = n(906411),
+    T = n(907040),
+    L = n(906411),
     D = n(688465),
     P = n(456269),
     U = n(312146),
     R = n(703656),
     z = n(146085),
-    M = n(60222),
-    G = n(388131),
+    G = n(60222),
+    M = n(388131),
     w = n(131704),
     Z = n(592125),
     k = n(271383),
@@ -50,8 +50,8 @@ var i = n(255367),
     F = n(496675),
     H = n(699516),
     V = n(594174),
-    Y = n(934415),
-    X = n(823379),
+    X = n(934415),
+    Y = n(823379),
     W = n(63063),
     q = n(981631),
     K = n(71080),
@@ -160,7 +160,7 @@ function ea(e) {
         a = s.useCallback(
             (e) => {
                 let { closePopout: s } = e;
-                return (0, i.jsx)(L.Z, {
+                return (0, i.jsx)(T.Z, {
                     channel: null,
                     guildId: n,
                     pickerIntention: J.Hz.CHANNEL_NAME,
@@ -168,7 +168,7 @@ function ea(e) {
                     onNavigateAway: s,
                     onSelectEmoji: (e) => {
                         let { emoji: n, willClose: i } = e;
-                        null != n && n.type === T.B.UNICODE && t(n.surrogates), i && s();
+                        null != n && n.type === L.B.UNICODE && t(n.surrogates), i && s();
                     },
                     showOnlyUnicode: !0,
                     analyticsOverride: r
@@ -224,9 +224,9 @@ class eo extends s.PureComponent {
         return e.guildId;
     }
     canSubmit() {
-        let { canViewChannels: e, canConnect: t } = this.props,
-            { isPrivate: n, channelType: i, skuId: s, name: l } = this.state;
-        return '' !== l && '' !== l.trim() && (!n || !!(0, v.nT)(i, e, t)) && (i !== q.d4z.GUILD_STORE || null != s);
+        let { canViewChannels: e, canConnect: t, transitionState: n } = this.props,
+            { isPrivate: i, channelType: s, skuId: l, name: r, submitting: a } = this.state;
+        return !a && n !== m.Dvm.EXITING && '' !== r && '' !== r.trim() && (!i || !!(0, v.nT)(s, e, t)) && (s !== q.d4z.GUILD_STORE || null != l);
     }
     getIconComponent() {
         let { isPrivate: e, channelType: t } = this.state;
@@ -868,7 +868,7 @@ class eo extends s.PureComponent {
             en(this, 'handleNameChange', (e) => {
                 var t, n;
                 let { channelType: i } = this.state;
-                w.xL.has(i) && (e = (0, Y.Nj)(e));
+                w.xL.has(i) && (e = (0, X.Nj)(e));
                 let s = null != (n = null == (t = this._input) ? void 0 : t.selectionStart) ? n : 0;
                 this.setState({ name: e }, () => {
                     var e;
@@ -890,7 +890,7 @@ class eo extends s.PureComponent {
             en(this, 'handleTypeChange', (e) => {
                 let { value: t } = e,
                     { name: n } = this.state;
-                w.xL.has(t) && (n = (0, Y.Nj)(n)),
+                w.xL.has(t) && (n = (0, X.Nj)(n)),
                     t === q.d4z.GUILD_STAGE_VOICE && this.setState({ isPrivate: !1 }),
                     this.setState({
                         channelType: t,
@@ -926,23 +926,26 @@ class eo extends s.PureComponent {
                     I = this.getGuildId();
                 if (null != I) {
                     if (null != s) (t = c().values(s.permissionOverwrites)), (n = s.bitrate), (i = s.userLimit);
-                    else if (m === q.d4z.GUILD_ANNOUNCEMENT) t = (0, Y.rt)(I);
+                    else if (m === q.d4z.GUILD_ANNOUNCEMENT) t = (0, X.rt)(I);
                     else {
                         if (x) {
-                            t = (0, Y.oQ)(I, m, [], !0);
+                            t = (0, X.oQ)(I, m, [], !0);
                             let e = (0, v.Tj)(p, m);
                             e.length > 0 && (t = t.concat(e));
                             let n = null != h && r.id === h.id;
-                            t.some((e) => a.has(e.id)) || o || n || t.push((0, Y.jZ)(r.id, m));
+                            t.some((e) => a.has(e.id)) || o || n || t.push((0, X.jZ)(r.id, m));
                         }
                         m === q.d4z.GUILD_STAGE_VOICE &&
                             ((t = []),
                             Object.values(p).forEach((e) => {
                                 let { row: n } = e;
-                                null != n.id && '' !== n.id && (n.rowType === K.aC.ROLE ? t.push((0, G.A)(n.id, E.BN.ROLE)) : n.rowType === K.aC.MEMBER && t.push((0, G.A)(n.id, E.BN.MEMBER)));
+                                null != n.id && '' !== n.id && (n.rowType === K.aC.ROLE ? t.push((0, M.A)(n.id, E.BN.ROLE)) : n.rowType === K.aC.MEMBER && t.push((0, M.A)(n.id, E.BN.MEMBER)));
                             }));
                     }
-                    this.setState({ errors: {} });
+                    this.setState({
+                        errors: {},
+                        submitting: !0
+                    });
                     try {
                         let e = await g.Z.createChannel({
                             guildId: I,
@@ -955,11 +958,19 @@ class eo extends s.PureComponent {
                             skuId: C,
                             branchId: N
                         });
-                        if (null == e || 201 !== e.status) return;
+                        if (null == e || 201 !== e.status) return void this.setState({ submitting: !1 });
                         let s = e.body;
-                        w.xL.has(m) && (0, R.XU)(s.guild_id, s.id), d();
+                        w.xL.has(m) && (0, R.XU)(s.guild_id, s.id), this.setState({ submitting: !1 }), d();
                     } catch (e) {
-                        null != e.body && 'object' == typeof e.body ? this.setState({ errors: e.body }) : this.setState({ errors: { message: ee.intl.string(ee.t.fEptJC) } });
+                        null != e.body && 'object' == typeof e.body
+                            ? this.setState({
+                                  errors: e.body,
+                                  submitting: !1
+                              })
+                            : this.setState({
+                                  errors: { message: ee.intl.string(ee.t.fEptJC) },
+                                  submitting: !1
+                              });
                     }
                 }
             });
@@ -976,7 +987,8 @@ class eo extends s.PureComponent {
             showBranches: !1,
             hasBranches: !1,
             slide: 'CHANNEL_INFO',
-            errors: {}
+            errors: {},
+            submitting: !1
         }),
             (this.handlePermissionOverwriteChange = this.handlePermissionOverwriteChange.bind(this));
     }
@@ -1010,11 +1022,11 @@ let ed = s.forwardRef(function (e, t) {
         a = (0, p.Wu)([j.Z], () =>
             j.Z.getGuildApplicationIds(s)
                 .map((e) => j.Z.getApplication(e))
-                .filter(X.lm)
+                .filter(Y.lm)
         ),
         d = new Set(r.memberRoles),
         { canManageRoles: c, canManageChannels: h } = r,
-        u = (0, M.m)(s) && c && h,
+        u = (0, G.m)(s) && c && h,
         m = (0, P.W3)(s),
         g = (0, U.Ui)(null == r ? void 0 : r.guild),
         C = (0, _.Q3)('CreateChannel'),

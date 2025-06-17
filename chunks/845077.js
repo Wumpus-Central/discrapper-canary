@@ -7,12 +7,14 @@ var r = n(990547),
     a = n(981631);
 async function l() {
     return (
-        await i.Z.get({
-            url: a.ANM.SAFETY_FLOWS_TASK,
-            trackedActionData: { event: r.NetworkActionNames.USER_VERIFY },
-            rejectWithError: !1
-        })
-    ).body;
+        (
+            await i.Z.get({
+                url: a.ANM.SAFETY_FLOWS_TASK,
+                trackedActionData: { event: r.NetworkActionNames.USER_VERIFY },
+                rejectWithError: !1
+            })
+        ).body || null
+    );
 }
 async function c(e) {
     return (

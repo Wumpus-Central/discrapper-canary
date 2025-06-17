@@ -174,7 +174,7 @@ function K(e) {
                 className: Q.description,
                 tag: 'li',
                 variant: 'text-xs/normal',
-                children: Z.intl.formatToPlainString(Z.t['W8/b3d'], { rewardName: s.defaultReward.messages.name })
+                children: Z.intl.formatToPlainString(Z.t['W8/b3d'], { rewardName: s.defaultRewardName })
             })
         ]
     });

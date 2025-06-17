@@ -1,4 +1,4 @@
-n.d(t, { VJ: () => i });
+n.d(t, { bu: () => i });
 let r = (0, n(818083).B)({
     id: '2025-05_safety_flows',
     label: 'Safety Flows',

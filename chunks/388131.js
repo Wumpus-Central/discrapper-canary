@@ -37,7 +37,7 @@ function j(e) {
         [S, A] = s.useState(!1),
         [_, y] = s.useState(null);
     if (null == b || null == O) return null;
-    let L = async () => {
+    let T = async () => {
         A(!0);
         try {
             await (function (e, t) {
@@ -108,7 +108,7 @@ function j(e) {
             (0, i.jsxs)(r.mzw, {
                 children: [
                     (0, i.jsx)(r.zxk, {
-                        onClick: L,
+                        onClick: T,
                         submitting: S,
                         children: x.intl.string(x.t.OYkgVl)
                     }),

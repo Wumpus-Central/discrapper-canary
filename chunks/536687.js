@@ -107,7 +107,7 @@ function L(e) {
                 impressionId: Q
             });
         },
-        el = l.useMemo(() => h.r.build(T.config).defaultReward.messages.name, [T]),
+        el = l.useMemo(() => h.r.build(T.config).defaultRewardName, [T]),
         eo = k.intl.formatToPlainString(k.t['12IWPz'], { rewardName: el });
     return (0, r.jsx)(c.Y0X, {
         transitionState: v,

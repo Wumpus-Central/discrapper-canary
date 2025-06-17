@@ -1,8 +1,8 @@
-n.d(t, { Z: () => O }), n(539854), n(388685);
+n.d(t, { Z: () => N }), n(539854), n(388685);
 var r = n(255367);
 n(73800);
-var s = n(120356),
-    i = n.n(s),
+var i = n(120356),
+    s = n.n(i),
     o = n(959078),
     a = n(442837),
     l = n(481060),
@@ -11,38 +11,38 @@ var s = n(120356),
     d = n(358085),
     m = n(617136),
     x = n(915750),
-    g = n(111382),
-    p = n(113434),
-    h = n(918701),
+    p = n(111382),
+    h = n(113434),
+    g = n(918701),
     j = n(667105),
     f = n(388032),
     b = n(166246);
 let C = (e) => (0 === e.length ? b.warning : b.danger),
     v = (e, t) => (0 === e.length ? f.intl.formatToPlainString(f.t.gX0Qc3, { gameTitle: t }) : f.intl.formatToPlainString(f.t['28Ql29'], { gameTitle: t })),
     y = (e) => {
-        let { quest: t, location: n, errors: s, gameTitle: i, consoleHelpArticle: a, expiredCredentialsInteractable: c, impressionId: x } = e;
-        if (0 === s.length)
+        let { quest: t, location: n, errors: i, gameTitle: s, consoleHelpArticle: a, expiredCredentialsInteractable: c, impressionId: x } = e;
+        if (0 === i.length)
             return (0, r.jsx)(l.Text, {
                 variant: 'text-sm/medium',
                 color: 'text-muted',
-                children: f.intl.format(f.t.GXqvCw, { gameTitle: i })
+                children: f.intl.format(f.t.GXqvCw, { gameTitle: s })
             });
-        let g = [];
-        (0, h.Nj)({ quest: t }) && g.push((0, d.isWeb)() ? f.intl.string(f.t['0UTkPz']) : f.intl.string(f.t.XGRUho));
-        let p = [
-            ...g,
-            ...s.map((e) => {
+        let p = [];
+        (0, g.Nj)({ quest: t }) && p.push((0, d.isWeb)() ? f.intl.string(f.t['0UTkPz']) : f.intl.string(f.t.XGRUho));
+        let h = [
+            ...p,
+            ...i.map((e) => {
                 if (e.type !== o.K.EXPIRED_CREDENTIAL || !c) return e.message;
                 let r = u.Z.getAccount(e.connected_account_id, e.connected_account_type),
-                    s = (0, h.C9)(e),
-                    i = (0, h._j)(e);
-                return f.intl.format(s, {
+                    i = (0, g.C9)(e),
+                    s = (0, g._j)(e);
+                return f.intl.format(i, {
                     account_name: null == r ? void 0 : r.name,
                     onClick: () => {
-                        (0, h.fY)(
+                        (0, g.fY)(
                             {
                                 quest: t,
-                                platformType: i
+                                platformType: s
                             },
                             {
                                 content: n,
@@ -58,38 +58,38 @@ let C = (e) => (0 === e.length ? b.warning : b.danger),
         return (0, r.jsx)(l.Text, {
             variant: 'text-sm/medium',
             color: 'text-muted',
-            children: p.reduce((e, t) => [...e, t, ' '], [])
+            children: h.reduce((e, t) => [...e, t, ' '], [])
         });
     },
-    O = function (e) {
+    N = function (e) {
         let t = e.quest.config.messages.gameTitle,
             n = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
-            s = (0, j.k3)(e.quest.id, e.location),
-            o = (0, g.n)(),
+            i = (0, j.k3)(e.quest.id, e.location),
+            o = (0, p.n)(),
             u = (0, m.O5)(),
             d = (0, x.aM)(),
-            h = (0, j.g2)({
+            g = (0, j.g2)({
                 useReducedMotion: n,
                 className: b.refreshIcon
             }),
             {
-                errorHints: O,
-                startingConsoleQuest: T,
-                startConsoleQuest: N
-            } = (0, p.GI)({
+                errorHints: N,
+                startingConsoleQuest: O,
+                startConsoleQuest: T
+            } = (0, h.GI)({
                 questId: e.quest.id,
                 beforeRequest: () => {
-                    h.startAnimation(),
+                    g.startAnimation(),
                         u({
                             questId: e.quest.id,
                             questContent: e.location,
                             questContentCTA: m.jZ.DEFIBRILLATOR
                         });
                 },
-                afterRequest: h.stopAnimation
+                afterRequest: g.stopAnimation
             });
         return (0, r.jsxs)('div', {
-            className: i()(b.container, { [b.inFlight]: T }),
+            className: s()(b.container, { [b.inFlight]: O }),
             children: [
                 (0, r.jsxs)('div', {
                     className: b.info,
@@ -98,7 +98,7 @@ let C = (e) => (0 === e.length ? b.warning : b.danger),
                             className: b.header,
                             children: [
                                 (0, r.jsx)(l.P4T, {
-                                    className: i()(b.headerIcon, C(O)),
+                                    className: s()(b.headerIcon, C(N)),
                                     size: 'custom',
                                     color: 'currentColor',
                                     width: 16,
@@ -106,16 +106,16 @@ let C = (e) => (0 === e.length ? b.warning : b.danger),
                                 }),
                                 (0, r.jsx)(l.Text, {
                                     variant: 'text-sm/semibold',
-                                    children: v(O, t)
+                                    children: v(N, t)
                                 })
                             ]
                         }),
                         y({
                             quest: e.quest,
-                            errors: O,
+                            errors: N,
                             gameTitle: t,
                             location: e.location,
-                            consoleHelpArticle: s,
+                            consoleHelpArticle: i,
                             expiredCredentialsInteractable: o,
                             impressionId: d
                         })
@@ -125,11 +125,11 @@ let C = (e) => (0 === e.length ? b.warning : b.danger),
                     className: b.cta,
                     children: (0, r.jsx)(l.zxk, {
                         color: l.Ttl.PRIMARY,
-                        onClick: N,
-                        disabled: T,
+                        onClick: T,
+                        disabled: O,
                         children: (0, r.jsxs)('div', {
                             className: b.ctaInner,
-                            children: [h.render(), f.intl.string(f.t.nPThNT)]
+                            children: [g.render(), f.intl.string(f.t.nPThNT)]
                         })
                     })
                 })

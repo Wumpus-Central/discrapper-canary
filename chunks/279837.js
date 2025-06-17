@@ -1,11 +1,11 @@
-n.d(t, { Z: () => d }), n(388685), n(457542);
+n.d(t, { Z: () => u }), n(388685), n(457542);
 var s,
     i = n(255367),
     r = n(73800),
     o = n(481060),
     l = n(388032),
     a = n(460268);
-function h(e, t, n) {
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,11 +18,11 @@ function h(e, t, n) {
         e
     );
 }
-class c extends (s = r.PureComponent) {
+class h extends (s = r.PureComponent) {
     render() {
         let { title: e, actionText: t, children: n, transitionState: s } = this.props,
-            { error: h, isLoading: c, value: d } = this.state,
-            u =
+            { error: c, isLoading: h, value: u } = this.state,
+            d =
                 r.Children.count(n) > 0
                     ? (0, i.jsx)(o.Zbd, {
                           type: o.Zbd.Types.WARNING,
@@ -49,7 +49,7 @@ class c extends (s = r.PureComponent) {
                     }),
                     (0, i.jsxs)(o.hzk, {
                         children: [
-                            u,
+                            d,
                             (0, i.jsxs)(o.xJW, {
                                 title: l.intl.string(l.t['CIGa+/']),
                                 className: a.spacing,
@@ -58,15 +58,15 @@ class c extends (s = r.PureComponent) {
                                         type: 'password',
                                         autoComplete: 'off',
                                         autoFocus: !0,
-                                        value: d,
+                                        value: u,
                                         onChange: this.handlePasswordChange
                                     }),
-                                    null != h && '' !== h
+                                    null != c && '' !== c
                                         ? (0, i.jsxs)(o.Text, {
                                               variant: 'text-xs/normal',
                                               color: 'text-danger',
                                               className: a.error,
-                                              children: [' ', h, ' ']
+                                              children: [' ', c, ' ']
                                           })
                                         : null
                                 ]
@@ -77,7 +77,7 @@ class c extends (s = r.PureComponent) {
                         children: [
                             (0, i.jsx)(o.zxk, {
                                 type: 'submit',
-                                disabled: c || 0 === d.length,
+                                disabled: h || 0 === u.length,
                                 children: null != t ? t : l.intl.string(l.t['cY+Ooa'])
                             }),
                             (0, i.jsx)(o.zxk, {
@@ -94,12 +94,12 @@ class c extends (s = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            h(this, 'state', {
+            c(this, 'state', {
                 value: '',
                 error: null,
                 isLoading: !1
             }),
-            h(this, 'handleSubmit', (e) => {
+            c(this, 'handleSubmit', (e) => {
                 e.preventDefault();
                 let { value: t } = this.state,
                     { handleSubmit: n, onClose: s, onError: i } = this.props;
@@ -125,19 +125,19 @@ class c extends (s = r.PureComponent) {
                         )
                         .finally(() => this.setState({ isLoading: !1 }));
             }),
-            h(this, 'shouldSkipErrorMsgRender', (e) => {
+            c(this, 'shouldSkipErrorMsgRender', (e) => {
                 let { skipErrorMsgAbortCode: t } = this.props;
                 return null != t && (null == e ? void 0 : e.code) === t;
             }),
-            h(this, 'handleCancel', () => {
+            c(this, 'handleCancel', () => {
                 let { onClose: e } = this.props;
                 e();
             }),
-            h(this, 'handlePasswordChange', (e) => {
+            c(this, 'handlePasswordChange', (e) => {
                 let { onPasswordChange: t } = this.props;
                 null == t || t(e), this.setState({ value: e });
             });
     }
 }
-h(c, 'key', () => 'password-confirm-modal');
-let d = c;
+c(h, 'key', () => 'password-confirm-modal');
+let u = h;

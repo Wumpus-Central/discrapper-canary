@@ -1,65 +1,65 @@
 n.d(t, { Z: () => u });
-var i = n(255367),
-    r = n(73800),
-    o = n(481060),
-    a = n(493683),
-    l = n(699516),
+var r = n(255367),
+    i = n(73800),
+    a = n(481060),
+    l = n(493683),
+    o = n(699516),
     c = n(594174),
     s = n(933557),
-    f = n(388032);
+    d = n(388032);
 function u(e, t) {
-    let u = r.useCallback(() => {
-        let r = (0, s.F6)(e, c.default, l.Z),
-            u = f.intl.formatToPlainString(f.t.hJ5Ap6, { name: r }),
-            d = f.intl.format(f.t.SSIVOj, { name: r });
-        e.isManaged() && ((u = f.intl.formatToPlainString(f.t.hVGjER, { name: r })), (d = f.intl.format(f.t.IK1Qvr, { name: r })));
-        let b = function (n) {
-            let i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            a.Z.closePrivateChannel(e.id, t, i);
+    let u = i.useCallback(() => {
+        let i = (0, s.F6)(e, c.default, o.Z),
+            u = d.intl.formatToPlainString(d.t.hJ5Ap6, { name: i }),
+            f = d.intl.format(d.t.SSIVOj, { name: i });
+        e.isManaged() && ((u = d.intl.formatToPlainString(d.t.hVGjER, { name: i })), (f = d.intl.format(d.t.IK1Qvr, { name: i })));
+        let p = function (n) {
+            let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            l.Z.closePrivateChannel(e.id, t, r);
         };
-        (0, o.ZDy)(async () => {
+        (0, a.ZDy)(async () => {
             let { default: e } = await n.e('14604').then(n.bind(n, 960670));
             return (t) =>
-                (0, i.jsx)(
+                (0, r.jsx)(
                     e,
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
-                                i = Object.keys(n);
+                                r = Object.keys(n);
                             'function' == typeof Object.getOwnPropertySymbols &&
-                                (i = i.concat(
+                                (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                     })
                                 )),
-                                i.forEach(function (t) {
-                                    var i;
-                                    (i = n[t]),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
-                                                  value: i,
+                                                  value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = i);
+                                            : (e[t] = r);
                                 });
                         }
                         return e;
                     })(
                         {
                             header: u,
-                            body: d,
-                            onSubmit: b
+                            body: f,
+                            onSubmit: p
                         },
                         t
                     )
                 );
         });
     }, [e, t]);
-    return (0, i.jsx)(o.sNh, {
+    return (0, r.jsx)(a.sNh, {
         id: 'leave-channel',
-        label: f.intl.string(f.t['26C4oq']),
+        label: d.intl.string(d.t['26C4oq']),
         action: u,
         color: 'danger'
     });

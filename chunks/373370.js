@@ -78,7 +78,7 @@ function O(e, t, n) {
 function v(e) {
     let t,
         { quest: n, taskDetails: r, withoutMarkdown: i, hasNitro: a, collectibleRewardDuration: o } = e,
-        s = f.r.build(n.config).defaultReward.messages.nameWithArticle,
+        s = f.r.build(n.config).defaultRewardNameWithArticle,
         { targetMinutes: c } = r,
         u = n.config.messages.gameTitle,
         d = (0, l.f$)(n.config),
@@ -98,7 +98,7 @@ function v(e) {
 function I(e) {
     let t,
         { quest: n, taskDetails: r, withoutMarkdown: i, hasNitro: a, collectibleRewardDuration: o } = e,
-        s = f.r.build(n.config).defaultReward.messages.nameWithArticle,
+        s = f.r.build(n.config).defaultRewardNameWithArticle,
         { targetMinutes: c } = r,
         u = n.config.messages.gameTitle,
         d = (0, l.f$)(n.config),
@@ -118,7 +118,7 @@ function I(e) {
 function T(e) {
     let t,
         { quest: n, taskDetails: r, withoutMarkdown: i, hasNitro: a, collectibleRewardDuration: o } = e,
-        s = f.r.build(n.config).defaultReward.messages.nameWithArticle,
+        s = f.r.build(n.config).defaultRewardNameWithArticle,
         { targetMinutes: c } = r,
         u = n.config.messages.gameTitle,
         d = (0, l.f$)(n.config),
@@ -153,7 +153,7 @@ function A(e, t, n, r) {
     let a,
         o = f.r.build(e.config).defaultWatchVideoTask,
         s = null != (i = null == o ? void 0 : o.messages.videoTitle) ? i : 'video',
-        c = f.r.build(e.config).defaultReward.messages.nameWithArticle,
+        c = f.r.build(e.config).defaultRewardNameWithArticle,
         u = (0, l.f$)(e.config),
         d = (0, l._p)(e.config);
     return O(
@@ -169,7 +169,7 @@ function A(e, t, n, r) {
 function N(e) {
     let { quest: t, taskDetails: n, withoutMarkdown: r } = e,
         i = n.targetMinutes,
-        a = f.r.build(t.config).defaultReward.messages.nameWithArticle;
+        a = f.r.build(t.config).defaultRewardNameWithArticle;
     return O(
         h.t.VYwSSk,
         {
@@ -182,7 +182,7 @@ function N(e) {
 function C(e) {
     let t,
         { quest: n, taskDetails: r, withoutMarkdown: i, hasNitro: a, collectibleRewardDuration: o } = e,
-        s = f.r.build(n.config).defaultReward.messages.nameWithArticle,
+        s = f.r.build(n.config).defaultRewardNameWithArticle,
         { targetMinutes: c } = r,
         u = n.config.messages.gameTitle,
         d = (0, l.f$)(n.config),

@@ -52,7 +52,7 @@ function g(e) {
     let { quest: t } = e,
         { rewardName: n, rewardDuration: s } = o.useMemo(
             () => ({
-                rewardName: d.r.build(t.config).defaultReward.messages.name,
+                rewardName: d.r.build(t.config).defaultRewardName,
                 rewardDuration: (0, l.Kr)(t.config)
             }),
             [t.config]
