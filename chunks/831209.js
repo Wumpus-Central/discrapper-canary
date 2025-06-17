@@ -10,6 +10,7 @@ var r = (function (e) {
         (e.ANDROID_RIPPLE = 'var(--android-ripple)'),
         (e.APP_BACKGROUND_FRAME = 'var(--app-background-frame)'),
         (e.APP_BORDER_FRAME = 'var(--app-border-frame)'),
+        (e.APP_MESSAGE_EMBED_SECONDARY_TEXT = 'var(--app-message-embed-secondary-text)'),
         (e.AUTOCOMPLETE_BG = 'var(--autocomplete-bg)'),
         (e.BACKGROUND_ACCENT = 'var(--background-accent)'),
         (e.BACKGROUND_BASE_LOW = 'var(--background-base-low)'),

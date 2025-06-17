@@ -140,7 +140,7 @@ function ea(e) {
                 var t;
                 e.push({
                     label: null != (t = E.label) ? t : Q.intl.string(Q.t.VJlc0d),
-                    trackingArea: g.j_.PLAY,
+                    trackingArea: g.j_.SYNC,
                     onClick: () => {
                         E.onClick();
                     },
@@ -316,7 +316,7 @@ function ec(e) {
                               size: 'xs',
                               color: 'currentColor'
                           }),
-                          trackingArea: g.j_.PLAY,
+                          trackingArea: g.j_.CLOUD_PLAY,
                           onClick: () => {
                               (0, d.W)({
                                   appId: ep,
@@ -355,7 +355,7 @@ function ec(e) {
                 eg
                     ? {
                           label: Q.intl.string(Q.t.VJlc0d),
-                          trackingArea: g.j_.PLAY,
+                          trackingArea: g.j_.JOIN,
                           onClick: () => {
                               var e;
                               c.Z.join({

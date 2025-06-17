@@ -82,7 +82,7 @@ let L = () => {
         }
     },
     k = () => {
-        if (!u.Z.shouldSync('appearance') || (0, v.z)()) return !1;
+        if (!u.Z.shouldSync('appearance') || (0, v.zu)()) return !1;
         let e = p.L1.getSetting().backgroundGradientPresetId;
         if ((_.ZP.useSystemTheme === T.KW.ON && null != e && (0, d.hi)(T.KW.OFF), null == e)) {
             null != r && (r = void 0);

@@ -12,7 +12,7 @@ var r = n(626135),
         return (e.ACTIVITY = 'activity'), (e.APP_DISCOVERY = 'app_discovery'), (e.OAUTH = 'oauth'), (e.CUSTOM_ACTIVITY_LINK = 'custom_activity_link'), (e.ACTIVITY_INVITE = 'activity_invite'), (e.ACTIVITY_INSTANCE = 'activity_instance'), (e.RICH_PRESENCE_INVITE = 'rich_presence_invite'), (e.LEGACY_RICH_PRESENCE_INVITE = 'legacy_rich_presence_invite'), (e.UNKNOWN = 'unknown'), e;
     })({}),
     o = (function (e) {
-        return (e.VIEW = 'view'), (e.PLAY = 'play'), (e.ADD_APP = 'add_app'), (e.JOIN_SERVER = 'join_server'), (e.INVITE = 'invite'), (e.SYNC = 'sync'), e;
+        return (e.VIEW = 'view'), (e.PLAY = 'play'), (e.CLOUD_PLAY = 'cloud_play'), (e.JOIN = 'join'), (e.ADD_APP = 'add_app'), (e.JOIN_SERVER = 'join_server'), (e.INVITE = 'invite'), (e.SYNC = 'sync'), e;
     })({});
 function s(e, t, n, a, o) {
     r.default.track(i.rMx.APP_EMBED_CLICKED, {

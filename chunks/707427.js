@@ -147,6 +147,25 @@ let { Themes: r } = n(15202).V,
                     opacity: 0.07
                 }
             },
+            APP_MESSAGE_EMBED_SECONDARY_TEXT: {
+                category: 'text',
+                [r.DARK]: {
+                    raw: 'WHITE',
+                    opacity: 0.7
+                },
+                [r.LIGHT]: {
+                    raw: 'WHITE',
+                    opacity: 0.7
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'WHITE',
+                    opacity: 0.7
+                },
+                [r.DARKER]: {
+                    raw: 'WHITE',
+                    opacity: 0.7
+                }
+            },
             BACKGROUND_ACCENT: {
                 category: 'background',
                 [r.DARK]: {

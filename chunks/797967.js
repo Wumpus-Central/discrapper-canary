@@ -161,13 +161,13 @@ function m(e) {
             },
             [i, w]
         ),
-        R = o.useCallback(
+        N = o.useCallback(
             (e) => {
                 null == i || i(e), w(e);
             },
             [i, w]
         ),
-        N = o.useCallback(
+        R = o.useCallback(
             (e, t) => {
                 S({
                     start: e,
@@ -219,7 +219,7 @@ function m(e) {
                               position: m,
                               onRequestClose: () => B('showStart', !1),
                               onShowPopout: () => B('showStart', !0),
-                              onColorChange: (e) => N(e, k.end),
+                              onColorChange: (e) => R(e, k.end),
                               disabled: d
                           }),
                           (0, n.jsx)(_, {
@@ -232,20 +232,20 @@ function m(e) {
                               onShowPopout: () => B('showEnd', !0),
                               onColorChange: (e) => {
                                   var t;
-                                  return N(null != (t = k.start) ? t : c.p6O, e);
+                                  return R(null != (t = k.start) ? t : c.p6O, e);
                               },
                               disabled: d
                           })
                       ]
                   });
-        }, [m, d, k, I, N, B]),
+        }, [m, d, k, I, R, B]),
         Z = o.useCallback(
             () =>
                 (0, n.jsx)(s.Z$W, {
-                    onChange: R,
+                    onChange: N,
                     value: P
                 }),
-            [R, P]
+            [N, P]
         ),
         G = o.useCallback(
             (e) => {
@@ -267,7 +267,7 @@ function m(e) {
             },
             [m, d, Z]
         ),
-        A = o.useCallback(
+        L = o.useCallback(
             (e) => {
                 let t = (0, n.jsx)(s.AGO, f({}, e));
                 return d
@@ -283,12 +283,12 @@ function m(e) {
     return (0, n.jsx)(
         s.zH8,
         b(f({}, e), {
-            renderDefaultButton: A,
+            renderDefaultButton: L,
             renderCustomButton: G,
             renderGradientCustomButton: T,
             isGradient: O,
             customColor: P,
-            onChange: O ? N : D
+            onChange: O ? R : D
         })
     );
 }

@@ -1,4 +1,4 @@
-n.d(t, { q: () => y });
+n.d(t, { q: () => w });
 var r = n(255367),
     l = n(73800),
     i = n(120356),
@@ -11,50 +11,60 @@ var r = n(255367),
     m = n(745510),
     h = n(208049),
     g = n(763296),
-    f = n(326706),
-    x = n(675654),
-    p = n(710111),
-    b = n(130883),
-    j = n(388032),
-    v = n(773967);
-function C(e) {
-    let { className: t, sound: n, playSound: l, isPlaying: i, text: s } = e,
-        d = (null == n ? void 0 : n.emojiId) != null || (null == n ? void 0 : n.emojiName) != null,
-        u = j.intl.formatToPlainString(j.t.tuMUJy, {
+    f = n(914010),
+    x = n(626135),
+    p = n(326706),
+    b = n(981631),
+    j = n(675654),
+    v = n(710111),
+    C = n(130883),
+    _ = n(388032),
+    y = n(773967);
+function O(e) {
+    let { className: t, sound: n, playSound: i, isPlaying: s, text: d } = e,
+        u = (null == n ? void 0 : n.emojiId) != null || (null == n ? void 0 : n.emojiName) != null,
+        m = _.intl.formatToPlainString(_.t.tuMUJy, {
             emojiName: null == n ? void 0 : n.emojiName,
             soundName: null == n ? void 0 : n.name
-        });
+        }),
+        h = l.useCallback(() => {
+            x.default.track(b.rMx.MODERATOR_QUEUE_ACTION, {
+                guild_id: f.Z.getGuildId(),
+                action: 'airhorn'
+            }),
+                null != i && i();
+        }, [i]);
     return (0, r.jsxs)(o.P3F, {
-        'aria-label': u,
+        'aria-label': m,
         tag: 'span',
-        onClick: l,
-        className: a()(v.inlineContainer, v.inlineButton, { [v.playing]: !0 === i }, t),
+        onClick: h,
+        className: a()(y.inlineContainer, y.inlineButton, { [y.playing]: !0 === s }, t),
         children: [
-            d &&
+            u &&
                 (0, r.jsx)(c.Z, {
                     emojiId: null == n ? void 0 : n.emojiId,
                     emojiName: null == n ? void 0 : n.emojiName,
-                    className: v.soundmojiEmoji
+                    className: y.soundmojiEmoji
                 }),
-            (0, r.jsx)('span', { children: ' '.concat(s, ' ') })
+            (0, r.jsx)('span', { children: ' '.concat(d, ' ') })
         ]
     });
 }
-function _(e) {
+function S(e) {
     let { containerRef: t, text: n } = e,
         i = l.useRef(null),
         a = (0, s.e7)([g.Z], () => {
             var e;
-            return null == (e = g.Z.getSoundsForGuild(p.X8)) ? void 0 : e.find((e) => 'airhorn' === e.name);
+            return null == (e = g.Z.getSoundsForGuild(v.X8)) ? void 0 : e.find((e) => 'airhorn' === e.name);
         }),
         { createMultipleConfettiAt: o } = l.useContext(m.h),
         c = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
-        { isPlaying: b, playSound: j } = (0, f.W)(a);
+        { isPlaying: f, playSound: x } = (0, p.W)(a);
     (0, d.ZP)(() => {
         (0, h.w)();
     });
-    let v = l.useCallback(async () => {
-        if (await j()) {
+    let b = l.useCallback(async () => {
+        if (await x()) {
             var e;
             if ((null == (e = i.current) || e.addAnimation(), !c && (null == t ? void 0 : t.current) != null)) {
                 let e = t.current.getBoundingClientRect(),
@@ -62,7 +72,7 @@ function _(e) {
                         x: e.left + e.width / 2,
                         y: e.top + e.height / 3
                     },
-                    r = x.CA[Math.floor(Math.random() * x.CA.length)];
+                    r = j.CA[Math.floor(Math.random() * j.CA.length)];
                 o(
                     n.x,
                     n.y,
@@ -84,20 +94,20 @@ function _(e) {
                 );
             }
         }
-    }, [j, o, c, t]);
+    }, [x, o, c, t]);
     return void 0 === a
         ? null
-        : (0, r.jsx)(C, {
+        : (0, r.jsx)(O, {
               sound: a,
-              playSound: v,
-              isPlaying: b,
+              playSound: b,
+              isPlaying: f,
               text: n
           });
 }
-function y() {
+function w() {
     let e = l.useRef(null);
     return (0, r.jsxs)(o.Kqy, {
-        className: v.container,
+        className: y.container,
         direction: 'vertical',
         align: 'center',
         justify: 'center',
@@ -118,17 +128,17 @@ function y() {
                 justify: 'center',
                 children: [
                     (0, r.jsx)(o.X6q, {
-                        className: v.header,
+                        className: y.header,
                         variant: 'heading-md/medium',
-                        children: j.intl.string(b.default.h6QNk5)
+                        children: _.intl.string(C.default.h6QNk5)
                     }),
                     (0, r.jsx)(o.Text, {
-                        className: v.text,
+                        className: y.text,
                         variant: 'text-md/medium',
                         color: 'text-secondary',
-                        children: j.intl.format(b.default['8N4c5+'], {
+                        children: _.intl.format(C.default['8N4c5+'], {
                             airhornHook: (t) =>
-                                (0, r.jsx)(_, {
+                                (0, r.jsx)(S, {
                                     containerRef: e,
                                     text: t
                                 })

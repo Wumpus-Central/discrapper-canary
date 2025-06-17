@@ -4178,6 +4178,7 @@ var n_ = (function (e) {
             (e.GDM_EDIT_INTERACTED = 'gdm_edit_interacted'),
             (e.CAN_OPEN_URL_REQUESTED = 'can_open_url_requested'),
             (e.MODERATOR_REPORT_ORIGINAL_MESSAGE_LINK_CLICKED = 'moderator_report_original_message_link_clicked'),
+            (e.MODERATOR_QUEUE_ACTION = 'moderator_queue_action'),
             (e.NOTIFICATIONS_INBOX_OPENED = 'notifications_inbox_opened'),
             (e.NOTIFICATIONS_INBOX_ITEM_INTERACTED = 'notifications_inbox_item_interacted'),
             (e.NOTIFICATIONS_INBOX_SECTION_INTERACTED = 'notifications_inbox_section_interacted'),

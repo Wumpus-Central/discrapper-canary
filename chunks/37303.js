@@ -1,7 +1,7 @@
 n.d(t, { Z: () => p }), n(388685);
 var r = n(255367),
-    i = n(73800),
-    s = n(524979);
+    s = n(73800),
+    i = n(524979);
 n(442837);
 var o = n(113434);
 n(569984);
@@ -14,9 +14,9 @@ var a = n(497505),
     x = n(463910);
 function p(e) {
     let { quest: t, location: n, initiallyExpanded: p, contentPosition: h } = e,
-        [g, j] = i.useState(!1),
-        f = i.useCallback(() => j(!0), []),
-        b = i.useCallback(() => j(!1), []),
+        [g, j] = s.useState(!1),
+        f = s.useCallback(() => j(!0), []),
+        b = s.useCallback(() => j(!1), []),
         C = (0, o.tP)(t),
         { containerRef: v, size: y, height: N } = (0, m.h)(),
         {
@@ -39,7 +39,7 @@ function p(e) {
         questContentPosition: h,
         trackGuildAndChannelMetadata: n === a.jn.QUESTS_EMBED,
         children: (e) =>
-            (0, r.jsx)(s.animated.div, {
+            (0, r.jsx)(i.animated.div, {
                 style: {
                     maxHeight:
                         n === a.jn.QUESTS_EMBED

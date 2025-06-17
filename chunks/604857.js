@@ -1,32 +1,35 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => f });
 var r = n(255367),
     o = n(120356),
     a = n.n(o),
     i = n(481060),
     s = n(477415),
     l = n(690786),
-    c = n(262212),
-    u = n(388032),
-    d = n(737174);
-function p(e) {
-    let { className: t, guildId: n, powerup: o, onError: p, onClose: f } = e,
-        b = null == (0, l.Z)(n, o),
-        m = (0, s.Z)(n, o);
+    c = n(639777),
+    u = n(262212),
+    d = n(388032),
+    p = n(737174);
+function f(e) {
+    let { className: t, guildId: n, powerup: o, onError: f, onClose: b } = e,
+        m = (0, c.Z)(n),
+        O = null == (0, l.Z)(n, o) || !m,
+        j = (0, s.Z)(n, o);
     return (0, r.jsxs)('div', {
-        className: a()(d.container, { [d.disabled]: b }, t),
+        className: a()(p.container, { [p.disabled]: O }, t),
         children: [
-            !m &&
-                (0, r.jsx)(c.Nn, {
+            !j &&
+                m &&
+                (0, r.jsx)(u.Nn, {
                     guildId: n,
                     powerup: o,
-                    onError: p,
+                    onError: f,
                     grow: !1,
-                    compact: !b
+                    compact: !O
                 }),
             (0, r.jsx)(i.zxk, {
-                color: b ? i.Ttl.PRIMARY : i.Ttl.BRAND,
-                onClick: f,
-                children: u.intl.string(u.t.cpT0Cg)
+                color: O ? i.Ttl.PRIMARY : i.Ttl.BRAND,
+                onClick: b,
+                children: d.intl.string(d.t.cpT0Cg)
             })
         ]
     });

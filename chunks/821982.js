@@ -1,9 +1,9 @@
-n.d(e, { Z: () => i });
-var a = n(768581),
-    o = n(1585);
-let i = (t, e, n) =>
-    (0, a.NZ)({
-        avatarDecoration: { asset: t },
-        size: (0, o.y9)(e),
+n.d(t, { Z: () => l });
+var i = n(768581),
+    r = n(1585);
+let l = (e, t, n) =>
+    (0, i.NZ)({
+        avatarDecoration: { asset: e },
+        size: (0, r.y9)(t),
         canAnimate: n
     });

@@ -1,13 +1,15 @@
 n.d(t, {
-    B: () => a,
-    I: () => o
+    BH: () => o,
+    Dp: () => a,
+    Ig: () => s
 });
 var r = n(97519),
     i = n(731965);
-let a = 20,
-    o = (0, r.U)((e) => ({
+let a = '#4394D4',
+    o = 20,
+    s = (0, r.U)((e) => ({
         colors: [],
-        chassisMixAmount: a,
+        chassisMixAmount: o,
         gradientAngle: 0,
         setColors: (t) => {
             (0, i.j)(() => {

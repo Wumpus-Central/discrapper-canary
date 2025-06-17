@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
-var i = n(442837),
-    s = n(481060),
+var s = n(442837),
+    i = n(481060),
     o = n(204418),
     a = n(594174),
     l = n(113434),
@@ -10,12 +10,12 @@ var i = n(442837),
     u = n(723781);
 let d = (e) => {
         let { questConfig: t, fallback: n, isFocused: d } = e,
-            m = (0, i.e7)([a.default], () => a.default.getCurrentUser()),
+            m = (0, s.e7)([a.default], () => a.default.getCurrentUser()),
             { avatarDecoration: x, isFetching: p } = (0, l.DU)(t);
         return p
             ? (0, r.jsx)('div', {
                   className: u.questsCollectibleReward,
-                  children: (0, r.jsx)(s.$jN, {})
+                  children: (0, r.jsx)(i.$jN, {})
               })
             : null == m || null == x
               ? n

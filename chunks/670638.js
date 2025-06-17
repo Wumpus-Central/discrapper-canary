@@ -1,7 +1,7 @@
 n.d(t, { r: () => q });
 var r = n(255367),
-    i = n(73800),
-    s = n(442837),
+    s = n(73800),
+    i = n(442837),
     o = n(481060),
     a = n(239091),
     l = n(479531),
@@ -65,14 +65,14 @@ function T(e, t) {
 }
 function E(e) {
     var t;
-    let n = (0, s.e7)([g.Z], () => g.Z.questDeliveryOverride, []),
+    let n = (0, i.e7)([g.Z], () => g.Z.questDeliveryOverride, []),
         c = (0, f.GN)(e.questContent),
         O = [j.jn.QUEST_BAR_V2, j.jn.QUEST_BAR].includes(e.questContent),
         T = (0, m.O5)(),
         E = (0, x.aM)(),
         q = (0, h.Yj)(e.quest),
         { handleComplete: S, handleProgress: P, handleResetDismissibilityClick: w, handleResetStatusClick: R, handleOverrideDeliveryClick: _ } = (0, h.kJ)(e.quest.id),
-        D = i.useCallback(() => {
+        D = s.useCallback(() => {
             if (e.quest.id === C.V6) return void window.open(d.Z.getArticleURL(v.BhN.VIRTUAL_CURRENCY_LEARN_MORE));
             (0, f.nc)(e.quest, {
                 content: e.questContent,
@@ -80,7 +80,7 @@ function E(e) {
                 impressionId: E
             });
         }, [E, e.quest, e.questContent]),
-        I = i.useCallback(() => {
+        I = s.useCallback(() => {
             (0, f.f2)(e.quest.id, {
                 content: e.questContent,
                 position: e.questContentPosition,
@@ -91,7 +91,7 @@ function E(e) {
         }, [E, e.quest.id, e.questContent, e.questContentPosition]),
         M = (e) => (0, o.showToast)((0, o.createToast)(new l.Z(e, e.status).message, o.ToastType.FAILURE)),
         A = () => (0, p.is)(e.quest.id).catch(M),
-        k = i.useMemo(
+        k = s.useMemo(
             () =>
                 (0, r.jsx)(o.S89, {
                     id: 'delivery',
@@ -255,29 +255,29 @@ function E(e) {
     });
 }
 function q(e) {
-    let { children: t, onOpen: n, onClose: s, preventIdle: a, quest: l, questContent: u, questContentPosition: d } = e,
+    let { children: t, onOpen: n, onClose: i, preventIdle: a, quest: l, questContent: u, questContentPosition: d } = e,
         x = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                i = (function (e, t) {
+                s = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        i = {},
-                        s = Object.keys(e);
-                    for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                        s = {},
+                        i = Object.keys(e);
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (s[n] = e[n]);
+                    return s;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var s = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < s.length; r++) (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var i = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]);
             }
-            return i;
+            return s;
         })(e, ['children', 'onOpen', 'onClose', 'preventIdle', 'quest', 'questContent', 'questContentPosition']),
         p = (0, m.O5)(),
-        h = i.useRef(null),
-        g = i.useCallback(() => {
+        h = s.useRef(null),
+        g = s.useCallback(() => {
             p({
                 questId: l.id,
                 questContent: u,
@@ -289,7 +289,7 @@ function q(e) {
     return (0, r.jsx)(o.yRy, {
         targetElementRef: h,
         onRequestOpen: g,
-        onRequestClose: s,
+        onRequestClose: i,
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return a

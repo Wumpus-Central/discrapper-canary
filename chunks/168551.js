@@ -49,7 +49,7 @@ let m = 'data-client-themes',
     b = () => {
         let e = h.M.useExperiment({ location: 'RootThemeContextProvider' }).enabled,
             t = (0, l.e7)([u.Z], () => u.Z.theme),
-            { colors: n, chassisMixAmount: i, gradientAngle: s, setAll: _ } = (0, f.I)(),
+            { colors: n, chassisMixAmount: i, gradientAngle: s, setAll: _ } = (0, f.Ig)(),
             m = (0, l.e7)([d.Z], () => {
                 var e, t;
                 return null == (t = d.Z.settings.appearance) || null == (e = t.clientThemeSettings) ? void 0 : e.customUserThemeSettings;
@@ -63,7 +63,7 @@ let m = 'data-client-themes',
                         _({
                             colors: null != (e = null == m ? void 0 : m.colors) ? e : [],
                             gradientAngle: null != (t = null == m ? void 0 : m.gradientAngle) ? t : 0,
-                            chassisMixAmount: null != (n = null == m ? void 0 : m.baseMix) ? n : f.B
+                            chassisMixAmount: null != (n = null == m ? void 0 : m.baseMix) ? n : f.BH
                         });
                 }
             }, [m, _]),

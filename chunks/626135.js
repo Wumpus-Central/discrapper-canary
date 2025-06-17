@@ -334,7 +334,11 @@ let j = {
                   throttlePeriod: N,
                   throttleKeys: (e) => [e.type]
               }
-            : void 0
+            : void 0,
+    [p.rMx.MODERATOR_QUEUE_ACTION]: {
+        throttlePeriod: A,
+        throttleKeys: (e) => [e.guild_id]
+    }
 };
 function U(e) {
     return 'string' == typeof e

@@ -61,7 +61,6 @@ let p = [
             getStaticImageUrl: () => u.Z,
             title: () => c.intl.string(c.t.ydPofH),
             body: () => c.intl.string(c.t.iI74ho),
-            additionalTerm: () => c.intl.string(c.t.lapGDw),
             gradientConfig: m,
             textColor: r.Z.NEUTRAL_71
         },
