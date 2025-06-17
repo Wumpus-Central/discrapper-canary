@@ -27950,14 +27950,6 @@ body .headerAnimation_b54a5b {
     height: 100%
 }
 
-.body_c6f1a4.noRoundedCorners_c6f1a4 {
-    border-radius: 0
-}
-
-.body_c6f1a4.reviewStep_c6f1a4 {
-    padding: 0 16px
-}
-
 .sliderBody_c6f1a4 {
     box-sizing: border-box;
     flex-direction: row;
@@ -27976,6 +27968,10 @@ body .headerAnimation_b54a5b {
 .visual-refresh .body_c6f1a4 {
     border-radius: var(--radius-md);
     padding: 0 var(--space-16)
+}
+
+.visual-refresh .body_c6f1a4.reviewStep_c6f1a4 {
+    padding: 0 var(--modal-horizontal-padding)
 }
 
 .visual-refresh .sliderBody_c6f1a4 {
