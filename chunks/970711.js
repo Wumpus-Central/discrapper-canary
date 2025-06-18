@@ -113,9 +113,8 @@ n.d(t, {
     n(539854),
     n(980754),
     n(824928),
-    n(563775),
-    (e = n.hmd(e));
-let a = new ('undefined' == typeof TextDecoder ? (0, e.require)('util').TextDecoder : TextDecoder)('utf-8', {
+    n(563775);
+let a = new ('undefined' == typeof TextDecoder ? (0, module.require)('util').TextDecoder : TextDecoder)('utf-8', {
     ignoreBOM: !0,
     fatal: !0
 });
@@ -146,7 +145,7 @@ function f(e) {
     return null == e;
 }
 let _ = 0,
-    p = new ('undefined' == typeof TextEncoder ? (0, e.require)('util').TextEncoder : TextEncoder)('utf-8'),
+    p = new ('undefined' == typeof TextEncoder ? (0, module.require)('util').TextEncoder : TextEncoder)('utf-8'),
     h =
         'function' == typeof p.encodeInto
             ? function (e, t) {
@@ -630,7 +629,7 @@ function eF(e) {
     return e.signal;
 }
 function eZ() {
-    let e = void 0 === n.g ? null : n.g;
+    let e = 'undefined' == typeof global ? null : global;
     return f(e) ? 0 : c(e);
 }
 function eH() {
