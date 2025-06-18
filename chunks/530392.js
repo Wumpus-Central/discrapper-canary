@@ -1,68 +1,68 @@
 n.d(t, {
-    h: () => u,
-    m: () => h
+    h: () => d,
+    m: () => f
 }),
     n(388685);
 var r = n(255367),
-    l = n(73800),
-    i = n(120356),
-    a = n.n(i),
-    o = n(392711),
-    c = n(793030),
-    s = n(147479),
-    d = n(946598);
-function u(e) {
+    i = n(73800),
+    a = n(120356),
+    o = n.n(a),
+    s = n(392711),
+    l = n(793030),
+    c = n(147479),
+    u = n(946598);
+function d(e) {
     let { controls: t, children: n } = e,
-        [i, u] = l.useState(!1),
-        [h, x] = l.useState(!1),
-        m = l.useRef(null),
-        b = l.useRef(null),
-        p = (0, o.throttle)(() => {
+        [a, d] = i.useState(!1),
+        [f, _] = i.useState(!1),
+        p = i.useRef(null),
+        h = i.useRef(null),
+        m = (0, s.throttle)(() => {
             var e;
-            (null == m ? void 0 : m.current) != null && null != t && u((null == (e = m.current) ? void 0 : e.getDistanceFromTop()) > 12);
+            (null == p ? void 0 : p.current) != null && null != t && d((null == (e = p.current) ? void 0 : e.getDistanceFromTop()) > 12);
         }, 200);
-    return (l.useLayoutEffect(() => {
+    return (i.useLayoutEffect(() => {
         var e, t;
         let n = new ResizeObserver(() => {
                 var e, t;
-                let n = null != (t = null == m || null == (e = m.current) ? void 0 : e.getScrollerNode()) ? t : null;
-                if (null == n || (null == b ? void 0 : b.current) == null) return;
+                let n = null != (t = null == p || null == (e = p.current) ? void 0 : e.getScrollerNode()) ? t : null;
+                if (null == n || (null == h ? void 0 : h.current) == null) return;
                 let r = n.getBoundingClientRect();
-                x(b.current.getBoundingClientRect().height > r.height);
+                _(h.current.getBoundingClientRect().height > r.height);
             }),
-            r = null != (t = null == m || null == (e = m.current) ? void 0 : e.getScrollerNode()) ? t : null;
-        return null != r && n.observe(r), (null == b ? void 0 : b.current) != null && n.observe(b.current), () => n.disconnect();
+            r = null != (t = null == p || null == (e = p.current) ? void 0 : e.getScrollerNode()) ? t : null;
+        return null != r && n.observe(r), (null == h ? void 0 : h.current) != null && n.observe(h.current), () => n.disconnect();
     }, []),
     null == n && null == t)
         ? null
-        : (0, r.jsxs)(c.y5, {
+        : (0, r.jsxs)(l.y5, {
               children: [
-                  (0, r.jsx)('div', { className: a()(d.contentSpacerTop, { [d.contentSpacerTopBorder]: h && null == t }) }),
+                  (0, r.jsx)('div', { className: o()(u.contentSpacerTop, { [u.contentSpacerTopBorder]: f && null == t }) }),
                   null != t &&
                       (0, r.jsx)('header', {
-                          className: a()(d.contentControls, { [d.contentControlsWithFade]: i }),
+                          className: o()(u.contentControls, { [u.contentControlsWithFade]: a }),
                           children: t
                       }),
-                  (0, r.jsx)(s.yW, {
-                      ref: m,
-                      className: d.content,
-                      onScroll: p,
+                  (0, r.jsx)(c.yW, {
+                      ref: p,
+                      className: u.content,
+                      onScroll: m,
                       children: (0, r.jsx)('main', {
-                          ref: b,
-                          className: a()(d.contentInner, { [d.contentInnerShouldScroll]: h }),
+                          ref: h,
+                          className: o()(u.contentInner, { [u.contentInnerShouldScroll]: f }),
                           children: n
                       })
                   }),
-                  (0, r.jsx)('div', { className: a()(d.contentSpacerBottom, { [d.contentSpacerBottomBorder]: h }) })
+                  (0, r.jsx)('div', { className: o()(u.contentSpacerBottom, { [u.contentSpacerBottomBorder]: f }) })
               ]
           });
 }
-function h(e) {
+function f(e) {
     let { children: t } = e;
     return null == t
         ? null
         : (0, r.jsx)('footer', {
-              className: a()(d.footer, d.section),
+              className: o()(u.footer, u.section),
               children: t
           });
 }

@@ -252,8 +252,10 @@ class G extends (r = i.ZP.Store) {
     }
     getBlockedOrIgnoredIDs() {
         if (null == A.blockedOrIgnored) {
-            var e;
-            A.blockedOrIgnored = Array.from(E.union(null != (e = C.get(l.OGo.BLOCKED)) ? e : new Set()).values());
+            let e = new Set(E),
+                t = C.get(l.OGo.BLOCKED);
+            if (null != t) for (let n of t) e.add(n);
+            A.blockedOrIgnored = Array.from(e.values());
         }
         return A.blockedOrIgnored;
     }

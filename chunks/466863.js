@@ -77,19 +77,27 @@ let s = new (class {
         var t;
         return null == (t = this.getState(e)) ? void 0 : t.sessionId;
     }
+    refreshQueryId(e) {
+        let t = (0, l.Tm)(e);
+        this.searchQueryIds.set(t, (0, r.Z)());
+    }
+    getQueryId(e) {
+        let t = (0, l.Tm)(e);
+        return this.searchQueryIds.get(t);
+    }
     getSelectedSearchTab(e) {
         var t;
         return null == (t = this.getState(e)) ? void 0 : t.selectedSearchTab;
     }
     initialize(e, t) {
         let n = (0, l.Tm)(e);
-        this.sessions.has(n) || this.sessions.set(n, o(t));
+        this.sessions.has(n) || this.sessions.set(n, o(t)), this.searchQueryIds.has(n) || this.searchQueryIds.set(n, (0, r.Z)());
     }
     terminate(e) {
         let t = (0, l.Tm)(e);
-        this.sessions.delete(t);
+        this.sessions.delete(t), this.searchQueryIds.delete(t);
     }
     constructor() {
-        a(this, 'sessions', new Map());
+        a(this, 'sessions', new Map()), a(this, 'searchQueryIds', new Map());
     }
 })();

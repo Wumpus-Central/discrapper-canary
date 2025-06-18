@@ -24,8 +24,8 @@ var i = n(255367),
     E = n(699516),
     O = n(594174),
     Z = n(585483),
-    w = n(787263),
-    T = n(975316),
+    T = n(787263),
+    w = n(975316),
     R = n(428813),
     I = n(2147),
     _ = n(856606),
@@ -131,10 +131,10 @@ class M extends l.PureComponent {
                               section: P.CoT.INTEGRATIONS,
                               label: A.intl.string(A.t.s69NLC),
                               ariaLabel: A.intl.string(A.t.s69NLC),
-                              element: T.Z,
+                              element: w.Z,
                               notice: {
                                   stores: [v.Z],
-                                  element: T.B
+                                  element: w.B
                               },
                               predicate: () => !((!d && !h) || t.isModeratorReportChannel()) && b.Ti.has(t.type)
                           },
@@ -142,7 +142,7 @@ class M extends l.PureComponent {
                           {
                               section: P.CoT.DELETE,
                               onClick() {
-                                  (0, w.w)(t, function () {
+                                  (0, T.w)(t, function () {
                                       Z.S.subscribeOnce(P.CkL.LAYER_POP_COMPLETE, () => {
                                           (0, o.zz)(t.id);
                                       }),

@@ -9,7 +9,6 @@ n.d(t, {
     J2: () => B,
     Jf: () => ei,
     KX: () => ep,
-    KZ: () => eR,
     OH: () => eh,
     Qy: () => eC,
     Rf: () => er,
@@ -34,7 +33,7 @@ n.d(t, {
     vf: () => eA,
     z: () => et,
     z6: () => ed,
-    zB: () => eP
+    zB: () => eR
 }),
     n(388685),
     n(642613),
@@ -687,9 +686,6 @@ function eC(e) {
           });
 }
 function eR(e) {
-    return (0, u.cj)([N.Z], () => (0, R.qe)(e, N.Z));
-}
-function eP(e) {
     let t = (0, u.e7)([f.ZP], () => f.ZP.getCurrentEmbeddedActivity());
     return {
         launchInGameActivity: r.useCallback(() => {

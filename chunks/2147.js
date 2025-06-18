@@ -1,6 +1,6 @@
 n.d(t, {
     G: () => eO,
-    Z: () => eT
+    Z: () => ew
 }),
     n(997841),
     n(953529),
@@ -30,8 +30,8 @@ var i = n(255367),
     E = n(600164),
     O = n(313201),
     Z = n(318766),
-    w = n(907040),
-    T = n(906411),
+    T = n(907040),
+    w = n(906411),
     R = n(633302),
     I = n(109434),
     _ = n(162389),
@@ -185,7 +185,7 @@ function eZ(e) {
         a = l.useCallback(
             (e) => {
                 let { closePopout: l } = e;
-                return (0, i.jsx)(w.Z, {
+                return (0, i.jsx)(T.Z, {
                     channel: n,
                     guildId: r,
                     pickerIntention: en.Hz.CHANNEL_NAME,
@@ -193,7 +193,7 @@ function eZ(e) {
                     onNavigateAway: l,
                     onSelectEmoji: (e) => {
                         let { emoji: n, willClose: i } = e;
-                        null != n && n.type === T.B.UNICODE && t(n.surrogates), i && l();
+                        null != n && n.type === w.B.UNICODE && t(n.surrogates), i && l();
                     },
                     showOnlyUnicode: !0,
                     analyticsOverride: eS
@@ -229,7 +229,7 @@ function eZ(e) {
         }
     });
 }
-class ew extends l.PureComponent {
+class eT extends l.PureComponent {
     componentDidMount() {
         null == this.props.regions && null != this.props.guild && p.Z.fetchRegions(this.props.guild.id);
     }
@@ -258,17 +258,17 @@ class ew extends l.PureComponent {
         let p,
             j,
             { canManageChannels: x, canSendMessages: b, isThreadModerator: v, canManageThread: y, guild: N, isForumPost: E, isOwner: O, showAdvancedSlowModeSetting: Z } = this.props,
-            w = B.Ec.has(e.type),
-            T = e.isForumLikeChannel(),
-            I = T && (null == (n = e.availableTags) ? void 0 : n.every((e) => e.moderated)),
+            T = B.Ec.has(e.type),
+            w = e.isForumLikeChannel(),
+            I = w && (null == (n = e.availableTags) ? void 0 : n.every((e) => e.moderated)),
             L = (null == (l = F.default.getCurrentUser()) ? void 0 : l.isStaff()) === !0,
             D = B.TK.has(e.type)
                 ? (0, i.jsxs)('div', {
                       children: [
                           (0, i.jsx)(g.xJW, {
-                              title: T ? er.intl.string(er.t.yR6Hwc) : er.intl.string(er.t.X8jMDg),
+                              title: w ? er.intl.string(er.t.yR6Hwc) : er.intl.string(er.t.X8jMDg),
                               className: ea.marginTop20,
-                              children: T
+                              children: w
                                   ? (0, i.jsx)(S.Z, {
                                         innerClassName: es.forumGuidelines,
                                         characterCountClassName: es.forumGuidelinesCharacterCount,
@@ -305,7 +305,7 @@ class ew extends l.PureComponent {
                   })
                 : null,
             k =
-                T && L
+                w && L
                     ? (0, i.jsxs)('div', {
                           children: [
                               (0, i.jsx)(g.xJW, {
@@ -525,7 +525,7 @@ class ew extends l.PureComponent {
                       ]
                   })
                 : null,
-            z = w ? v : x,
+            z = T ? v : x,
             X = B.X_.has(e.type)
                 ? (0, i.jsxs)('div', {
                       children: [
@@ -536,7 +536,7 @@ class ew extends l.PureComponent {
                                       className: ea.marginBottom8,
                                       children: er.intl.string(er.t['tTHx9/'])
                                   }),
-                                  T
+                                  w
                                       ? (0, i.jsx)(g.vwX, {
                                             className: ea.marginTop20,
                                             children: er.intl.string(er.t.O1c02t)
@@ -562,9 +562,9 @@ class ew extends l.PureComponent {
                                   (0, i.jsx)(g.R94, {
                                       id: ep,
                                       type: g.R94.Types.DESCRIPTION,
-                                      children: T ? er.intl.string(er.t['a+1pdH']) : w ? er.intl.string(er.t.OMmNCg) : er.intl.string(er.t['HEA/DQ'])
+                                      children: w ? er.intl.string(er.t['a+1pdH']) : T ? er.intl.string(er.t.OMmNCg) : er.intl.string(er.t['HEA/DQ'])
                                   }),
-                                  T
+                                  w
                                       ? (0, i.jsxs)(i.Fragment, {
                                             children: [
                                                 (0, i.jsx)(g.vwX, {
@@ -597,7 +597,7 @@ class ew extends l.PureComponent {
                   })
                 : null,
             J =
-                w && null != e.threadMetadata
+                T && null != e.threadMetadata
                     ? (0, i.jsxs)('div', {
                           children: [
                               (0, i.jsx)(g.xJW, {
@@ -720,7 +720,7 @@ class ew extends l.PureComponent {
                   })
                 : null;
         return (
-            e.type === ee.d4z.GUILD_CATEGORY ? ((j = er.intl.string(er.t.OCAkGB)), (p = 'category-name')) : e.isForumPost() ? ((j = er.intl.string(er.t.uyVrTE)), (p = 'post-title')) : w ? ((j = er.intl.string(er.t.j3XWjI)), (p = 'thread-name')) : ((j = er.intl.string(er.t.PVbHDg)), (p = 'channel-name')),
+            e.type === ee.d4z.GUILD_CATEGORY ? ((j = er.intl.string(er.t.OCAkGB)), (p = 'category-name')) : e.isForumPost() ? ((j = er.intl.string(er.t.uyVrTE)), (p = 'post-title')) : T ? ((j = er.intl.string(er.t.j3XWjI)), (p = 'thread-name')) : ((j = er.intl.string(er.t.PVbHDg)), (p = 'channel-name')),
             (0, i.jsxs)('div', {
                 children: [
                     (0, i.jsx)(g.xJW, {
@@ -1001,7 +1001,7 @@ class ew extends l.PureComponent {
             eo(this, 'renderEmojiPicker', (e) => {
                 let { closePopout: t } = e,
                     { channel: n } = this.props;
-                return (0, i.jsx)(w.Z, {
+                return (0, i.jsx)(T.Z, {
                     guildId: null == n ? void 0 : n.guild_id,
                     closePopout: t,
                     onSelectEmoji: (e) => {
@@ -1154,7 +1154,7 @@ class ew extends l.PureComponent {
         };
     }
 }
-function eT() {
+function ew() {
     let { errors: e, channel: t, submitting: n, subsection: r } = (0, d.cj)([W.Z], () => W.Z.getProps()),
         s = (0, d.e7)([H.Z], () => {
             var e;
@@ -1187,7 +1187,7 @@ function eT() {
             },
             [j, f]
         );
-    return (0, i.jsx)(ew, {
+    return (0, i.jsx)(eT, {
         errors: e,
         channel: t,
         channelName: m,

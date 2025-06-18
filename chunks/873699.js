@@ -27,6 +27,7 @@ function p(e, t) {
                       title: h.intl.string(h.t['73GqT0']),
                       body: h.intl.string(h.t.dmy5bm),
                       confirmText: h.intl.string(h.t.p89ACg),
+                      confirmVariant: 'destructive-primary',
                       cancelText: h.intl.string(h.t.gm1Ven),
                       onConfirm: () => {
                           (0, c.$E)(t.id, e.id, i);

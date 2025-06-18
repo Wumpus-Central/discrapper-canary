@@ -1,4 +1,4 @@
-n.d(t, { o: () => b });
+n.d(t, { o: () => v });
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -15,38 +15,38 @@ var i = n(442837),
     h = n(474936),
     g = n(526761),
     C = n(388032),
-    v = n(435803);
-function b(e) {
+    _ = n(435803);
+function v(e) {
     var t;
-    let { onClose: n, markAsDismissed: b } = e,
-        _ = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
-        j = (t = null == _ ? void 0 : _.premiumType) === h.p9.TIER_2 ? C.intl.string(C.t.jqO5Qk) : null == t ? C.intl.string(C.t.f2qjw8) : C.intl.string(C.t.SblICQ),
-        y = m.ZP.canUseCustomCallSounds(_);
+    let { onClose: n, markAsDismissed: v } = e,
+        b = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
+        j = (t = null == b ? void 0 : b.premiumType) === h.p9.TIER_2 ? C.intl.string(C.t.jqO5Qk) : null == t ? C.intl.string(C.t.f2qjw8) : C.intl.string(C.t.SblICQ),
+        y = m.ZP.canUseCustomCallSounds(b);
     return (0, r.jsxs)(d.Z, {
         isShown: !0,
         type: d.Y.PREMIUM,
-        className: v.upsellOuter,
-        backgroundClassName: v.upsellInner,
+        className: _.upsellOuter,
+        backgroundClassName: _.upsellInner,
         children: [
-            null != b
+            null != v
                 ? (0, r.jsx)(s.P3F, {
-                      className: v.close,
-                      onClick: () => (null == b ? void 0 : b(f.L.DISMISS)),
+                      className: _.close,
+                      onClick: () => (null == v ? void 0 : v(f.L.DISMISS)),
                       'aria-label': C.intl.string(C.t.cpT0Cg),
                       children: (0, r.jsx)(s.Dio, {
                           size: 'xs',
                           color: 'currentColor',
-                          className: v.closeIcon
+                          className: _.closeIcon
                       })
                   })
                 : null,
             (0, r.jsxs)('div', {
-                className: v.upsellTitle,
+                className: _.upsellTitle,
                 children: [
                     (0, r.jsx)(s.SrA, {
                         size: 'sm',
                         color: 'currentColor',
-                        className: v.nitroWheel
+                        className: _.nitroWheel
                     }),
                     (0, r.jsx)(s.X6q, {
                         variant: 'heading-sm/bold',
@@ -61,7 +61,7 @@ function b(e) {
             y
                 ? (0, r.jsx)(l.zx, {
                       onClick: function () {
-                          o.Z.open(p.oAB.VOICE, g.GA), null == n || n(), null == b || b(f.L.PRIMARY);
+                          o.Z.open(p.oAB.VOICE, g.GA), null == n || n(), null == v || v(f.L.PRIMARY);
                       },
                       children: C.intl.string(C.t.RzWDqa)
                   })
@@ -73,7 +73,7 @@ function b(e) {
                           object: p.qAy.BUTTON_CTA
                       },
                       color: l.zx.Colors.GREEN,
-                      onSubscribeModalClose: () => (null == b ? void 0 : b(f.L.PRIMARY))
+                      onSubscribeModalClose: () => (null == v ? void 0 : v(f.L.PRIMARY))
                   })
         ]
     });

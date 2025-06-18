@@ -24,8 +24,8 @@ var i = n(255367),
     E = n(430824),
     O = n(496675),
     Z = n(594174),
-    w = n(903386),
-    T = n(700785),
+    T = n(903386),
+    w = n(700785),
     R = n(605436),
     I = n(27544),
     _ = n(415236),
@@ -300,8 +300,8 @@ function G(e) {
 function U(e) {
     let { guild: t, channel: l, isPrivateGuildChannel: r, roles: c, members: d } = e,
         u = (0, a.e7)([O.Z], () => O.Z.can(D.Pl.ADMINISTRATOR, t)),
-        h = T.Uu(D.Pl.VIEW_CHANNEL, t),
-        g = T.Uu(D.Pl.ADMINISTRATOR, t);
+        h = w.Uu(D.Pl.VIEW_CHANNEL, t),
+        g = w.Uu(D.Pl.ADMINISTRATOR, t);
     async function m() {
         let e = l.accessPermissions,
             s = Z.default.getCurrentUser();
@@ -468,7 +468,7 @@ let F = a.ZP.connectStores([N.Z, O.Z, S.ZP, E.Z], () => {
     };
 })(function (e) {
     let { canSyncChannel: t, category: r, channel: s, filteredMembers: a, filteredRoles: c, guild: d, isPrivateGuildChannel: h, locked: g, permissionUpdates: m } = e,
-        [p, f] = l.useState(!T.Uu(D.Pl.SEND_MESSAGES, s));
+        [p, f] = l.useState(!w.Uu(D.Pl.SEND_MESSAGES, s));
     if (null == s || null == d) return null;
     let x = {
         title: M.intl.string(M.t.BAZMBg),
@@ -493,7 +493,7 @@ let F = a.ZP.connectStores([N.Z, O.Z, S.ZP, E.Z], () => {
                         : (0, i.jsx)(P.Z, {
                               buttonText: M.intl.string(M.t.NVwuHh),
                               canSync: !0,
-                              icon: (0, o.GSL)(w.Z),
+                              icon: (0, o.GSL)(T.Z),
                               noticeText: M.intl.format(M.t.OIhm0N, { categoryName: r.name }),
                               onClick: function () {
                                   null != r &&
@@ -508,7 +508,7 @@ let F = a.ZP.connectStores([N.Z, O.Z, S.ZP, E.Z], () => {
                                                       onConfirm: async () => {
                                                           let { guild_id: e } = r,
                                                               t = B({}, r.permissionOverwrites);
-                                                          null != e && null == t[e] && (t[e] = T.we(e)), (await (0, j.u)(s, t[e].deny, t[e].allow)) && (0, u.wk)(s.id, { permissionOverwrites: Object.values(t) });
+                                                          null != e && null == t[e] && (t[e] = w.we(e)), (await (0, j.u)(s, t[e].deny, t[e].allow)) && (0, u.wk)(s.id, { permissionOverwrites: Object.values(t) });
                                                       }
                                                   })
                                               );

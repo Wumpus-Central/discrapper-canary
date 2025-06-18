@@ -29,8 +29,8 @@ var i = n(255367),
     E = n(388610),
     O = n(271383),
     Z = n(430824),
-    w = n(496675),
-    T = n(594174),
+    T = n(496675),
+    w = n(594174),
     R = n(823379),
     I = n(892880),
     _ = n(63063),
@@ -115,7 +115,7 @@ function F(e) {
             var e;
             if (null == Z.Z.getGuild(s) || null == r) return '';
             let t = r[m],
-                n = T.default.getUser(m),
+                n = w.default.getUser(m),
                 i = null != (e = null == n ? void 0 : n.username) ? e : '';
             return null != t ? t.name : i;
         },
@@ -130,7 +130,7 @@ function F(e) {
                     r = a.IH(r, e);
             }
             if (
-                w.Z.can(e, n, {
+                T.Z.can(e, n, {
                     [m]: U(G({}, t), {
                         allow: l,
                         deny: r
@@ -141,7 +141,7 @@ function F(e) {
             else {
                 let e;
                 if (t.type === j.BN.MEMBER) {
-                    let n = T.default.getUser(t.id);
+                    let n = w.default.getUser(t.id);
                     null != n && (e = D.ZP.getName(n));
                 } else if (t.type === j.BN.ROLE) {
                     let i = Z.Z.getGuild(n.getGuildId());
@@ -154,8 +154,8 @@ function F(e) {
             }
         },
         b = (e) => {
-            let t = w.Z.can(B.Plq.ADMINISTRATOR, l) || w.Z.can(B.Plq.MANAGE_ROLES, n, void 0, void 0, !0);
-            return n.isGuildStageVoice() && C.xS.has(e) ? V.intl.string(V.t.bTS5lZ) : !((!a.fS(e, B.Plq.MANAGE_ROLES) || t) && (null == e || w.Z.can(e, l) || t)) && V.intl.string(V.t.nOtPMD);
+            let t = T.Z.can(B.Plq.ADMINISTRATOR, l) || T.Z.can(B.Plq.MANAGE_ROLES, n, void 0, void 0, !0);
+            return n.isGuildStageVoice() && C.xS.has(e) ? V.intl.string(V.t.bTS5lZ) : !((!a.fS(e, B.Plq.MANAGE_ROLES) || t) && (null == e || T.Z.can(e, l) || t)) && V.intl.string(V.t.nOtPMD);
         },
         v = m === s,
         N = n.isForumLikeChannel() && a.e$(t.deny, B.Plq.SEND_MESSAGES),
@@ -291,7 +291,7 @@ function J(e) {
                       .sortBy((e) => -e.position)
                       .value()
                 : s()(u)
-                      .map(T.default.getUser)
+                      .map(w.default.getUser)
                       .filter(R.lm)
                       .filter((t) => null == l[t.id] && e(t.username.toLowerCase()))
                       .sortBy((e) => e.username.toLowerCase())
@@ -346,7 +346,7 @@ function q() {
             }).then(() => (0, g.Aj)(e));
         };
     null != r && null == r[p.id] && (r[p.id] = L.we(p.id));
-    let w = s()(r)
+    let T = s()(r)
             .filter((e) => e.type === j.BN.ROLE)
             .map((e) => f[e.id])
             .filter(R.lm)
@@ -368,7 +368,7 @@ function q() {
                 )
             )
             .value(),
-        T = s()(v)
+        w = s()(v)
             .sortBy((e) => e.username.toLowerCase())
             .map((e) => {
                 let t = e.getAvatarURL(p.id, 24);
@@ -415,6 +415,7 @@ function q() {
                         renderPopout: E,
                         position: 'bottom',
                         autoInvert: !1,
+                        clickTrap: !0,
                         children: (n) =>
                             (0, i.jsx)(
                                 d.njP.Header,
@@ -436,8 +437,8 @@ function q() {
                             )
                     });
                 })(),
-                w,
                 T,
+                w,
                 (0, i.jsxs)(l.Fragment, {
                     children: [
                         (0, i.jsx)(d.njP.Separator, {

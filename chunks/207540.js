@@ -1,230 +1,230 @@
-n.d(e, { default: () => b }), n(388685);
-var i = n(255367),
-    r = n(73800),
-    l = n(442837),
-    a = n(82659),
-    d = n(481060),
-    s = n(933557),
-    o = n(724723),
-    c = n(156699),
-    u = n(734893),
-    p = n(693196),
-    _ = n(66999),
-    g = n(575830),
-    m = n(554747),
-    h = n(434404),
-    E = n(144140),
-    T = n(314897),
-    I = n(430824),
-    y = n(496675),
-    f = n(981631),
-    O = n(388032),
-    C = n(356407);
-let b = (t) => {
-    let { channel: e, onClose: n, onConfirm: b, transitionState: U } = t,
-        L = (0, s.ZP)(e, !0),
-        D = e.id,
-        v = e.isForumPost(),
-        S = (0, l.e7)([I.Z], () => I.Z.getGuild(e.getGuildId())),
-        G = (0, m.u1)(D),
-        { isSubscriptionGated: j } = (0, _.Z)(e.id),
-        x = (0, g.Z)(S, e),
-        [z, A] = r.useState(),
-        N = (0, l.e7)([T.default], () => e.isOwner(T.default.getId()), [e]),
-        R = (0, o.q)('DeleteChannelConfirm'),
-        B = (0, l.e7)([y.Z], () => y.Z.can(e.isThread() ? f.Plq.MANAGE_THREADS : f.Plq.MANAGE_CHANNELS, e), [e]),
-        P = (0, l.e7)(
-            [E.Z],
+e.d(n, { default: () => y }), e(388685);
+var i = e(255367),
+    l = e(73800),
+    d = e(442837),
+    r = e(82659),
+    a = e(481060),
+    s = e(933557),
+    _ = e(724723),
+    o = e(156699),
+    p = e(734893),
+    E = e(693196),
+    T = e(66999),
+    I = e(575830),
+    u = e(554747),
+    c = e(434404),
+    g = e(144140),
+    m = e(314897),
+    U = e(430824),
+    C = e(496675),
+    L = e(981631),
+    D = e(388032),
+    G = e(356407);
+let y = (t) => {
+    let { channel: n, onClose: e, onConfirm: y, transitionState: O } = t,
+        z = (0, s.ZP)(n, !0),
+        S = n.id,
+        A = n.isForumPost(),
+        f = (0, d.e7)([U.Z], () => U.Z.getGuild(n.getGuildId())),
+        h = (0, u.u1)(S),
+        { isSubscriptionGated: v } = (0, T.Z)(n.id),
+        R = (0, I.Z)(f, n),
+        [N, H] = l.useState(),
+        x = (0, d.e7)([m.default], () => n.isOwner(m.default.getId()), [n]),
+        B = (0, _.q)('DeleteChannelConfirm'),
+        b = (0, d.e7)([C.Z], () => C.Z.can(n.isThread() ? L.Plq.MANAGE_THREADS : L.Plq.MANAGE_CHANNELS, n), [n]),
+        M = (0, d.e7)(
+            [g.Z],
             () => {
                 var t;
-                return null != (t = E.Z.getCount(e.id)) ? t : 0;
+                return null != (t = g.Z.getCount(n.id)) ? t : 0;
             },
-            [e.id]
+            [n.id]
         ),
-        w = v && (B || (N && P < 1)),
-        H = G.length > 0 && (e.type === f.d4z.GUILD_VOICE || e.type === f.d4z.GUILD_STAGE_VOICE);
+        P = A && (b || (x && M < 1)),
+        j = h.length > 0 && (n.type === L.d4z.GUILD_VOICE || n.type === L.d4z.GUILD_STAGE_VOICE);
     if (
-        (r.useEffect(() => {
+        (l.useEffect(() => {
             (async () => {
-                if (!(await (0, c.C)(e.getGuildId(), D))) return A(u.j.DEFAULT);
-                let t = await (0, p.T)(e.getGuildId(), D);
-                if (null != t) return A(t);
+                if (!(await (0, o.C)(n.getGuildId(), S))) return H(p.j.DEFAULT);
+                let t = await (0, E.T)(n.getGuildId(), S);
+                if (null != t) return H(t);
             })();
-        }, [e, D]),
-        r.useEffect(() => {
-            null != S && S.hasFeature(f.oNc.COMMUNITY) && (S.rulesChannelId === D ? A(u.j.RULES) : S.publicUpdatesChannelId === D && A(u.j.UPDATES));
-        }, [S, D]),
-        null == S)
+        }, [n, S]),
+        l.useEffect(() => {
+            null != f && f.hasFeature(L.oNc.COMMUNITY) && (f.rulesChannelId === S ? H(p.j.RULES) : f.publicUpdatesChannelId === S && H(p.j.UPDATES));
+        }, [f, S]),
+        null == f)
     )
         return null;
-    if (null != z) {
+    if (null != N) {
         let t,
-            e = async () => {
-                await h.Z.open(S.id, f.pNK.ONBOARDING), await n();
+            n = async () => {
+                await c.Z.open(f.id, L.pNK.ONBOARDING), await e();
             },
-            r = async () => {
-                await h.Z.open(S.id, f.pNK.COMMUNITY), await n();
+            l = async () => {
+                await c.Z.open(f.id, L.pNK.COMMUNITY), await e();
             };
-        switch (z) {
-            case u.j.DEFAULT:
-                t = O.intl.format(O.t.iWlB6u, { onClick: e });
+        switch (N) {
+            case p.j.DEFAULT:
+                t = D.intl.format(D.t.iWlB6u, { onClick: n });
                 break;
-            case u.j.TODO:
-                t = O.intl.format(O.t['/rjozM'], { onClick: e });
+            case p.j.TODO:
+                t = D.intl.format(D.t['/rjozM'], { onClick: n });
                 break;
-            case u.j.RESOURCE:
-                t = O.intl.format(O.t.Nf5pt7, { onClick: e });
+            case p.j.RESOURCE:
+                t = D.intl.format(D.t.Nf5pt7, { onClick: n });
                 break;
-            case u.j.RULES:
-                t = O.intl.format(O.t['kB1f+/'], {
-                    reason: O.intl.string(O.t.yjrZPj),
-                    onClick: r
+            case p.j.RULES:
+                t = D.intl.format(D.t['kB1f+/'], {
+                    reason: D.intl.string(D.t.yjrZPj),
+                    onClick: l
                 });
                 break;
-            case u.j.UPDATES:
-                t = O.intl.format(O.t['kB1f+/'], {
-                    reason: O.intl.string(O.t['1B1/ND']),
-                    onClick: r
+            case p.j.UPDATES:
+                t = D.intl.format(D.t['kB1f+/'], {
+                    reason: D.intl.string(D.t['1B1/ND']),
+                    onClick: l
                 });
         }
-        return R
-            ? (0, i.jsx)(a.u, {
-                  title: O.intl.string(O.t['TY/V+P']),
-                  onClose: n,
+        return B
+            ? (0, i.jsx)(r.u, {
+                  title: D.intl.string(D.t['TY/V+P']),
+                  onClose: e,
                   headerBody: t,
-                  transitionState: U,
+                  transitionState: O,
                   actions: [
                       {
-                          text: O.intl.string(O.t.BddRzc),
-                          onClick: n,
+                          text: D.intl.string(D.t.BddRzc),
+                          onClick: e,
                           variant: 'primary'
                       }
                   ]
               })
-            : (0, i.jsxs)(d.Y0X, {
-                  transitionState: U,
-                  'aria-label': O.intl.string(O.t['TY/V+P']),
+            : (0, i.jsxs)(a.Y0X, {
+                  transitionState: O,
+                  'aria-label': D.intl.string(D.t['TY/V+P']),
                   parentComponent: 'DeleteChannelConfirm',
                   children: [
-                      (0, i.jsx)(d.xBx, {
+                      (0, i.jsx)(a.xBx, {
                           separator: !1,
-                          children: (0, i.jsx)(d.X6q, {
+                          children: (0, i.jsx)(a.X6q, {
                               variant: 'heading-lg/semibold',
-                              children: O.intl.string(O.t['TY/V+P'])
+                              children: D.intl.string(D.t['TY/V+P'])
                           })
                       }),
-                      (0, i.jsx)(d.hzk, {
-                          children: (0, i.jsx)(d.Text, {
+                      (0, i.jsx)(a.hzk, {
+                          children: (0, i.jsx)(a.Text, {
                               variant: 'text-md/normal',
                               children: t
                           })
                       }),
-                      (0, i.jsx)(d.mzw, {
-                          children: (0, i.jsx)(d.zxk, {
-                              onClick: n,
-                              children: O.intl.string(O.t.BddRzc)
+                      (0, i.jsx)(a.mzw, {
+                          children: (0, i.jsx)(a.zxk, {
+                              onClick: e,
+                              children: D.intl.string(D.t.BddRzc)
                           })
                       })
                   ]
               });
     }
-    let { deleteText: M, deleteBody: k } =
-        e.type === f.d4z.GUILD_CATEGORY
+    let { deleteText: X, deleteBody: Y } =
+        n.type === L.d4z.GUILD_CATEGORY
             ? {
-                  deleteText: O.intl.string(O.t.ifbXnJ),
-                  deleteBody: O.intl.format(O.t.a6Gz9P, { channelName: L })
+                  deleteText: D.intl.string(D.t.ifbXnJ),
+                  deleteBody: D.intl.format(D.t.a6Gz9P, { channelName: z })
               }
-            : e.isForumPost()
+            : n.isForumPost()
               ? {
-                    deleteText: w ? O.intl.string(O.t.nEOg1N) : O.intl.string(O.t.xwMqDw),
-                    deleteBody: w && N && !B ? O.intl.format(O.t['6/pY29'], { postName: L }) : w ? O.intl.format(O.t.su3voK, { postName: L }) : O.intl.string(O.t.RUHcys)
+                    deleteText: P ? D.intl.string(D.t.nEOg1N) : D.intl.string(D.t.xwMqDw),
+                    deleteBody: P && x && !b ? D.intl.format(D.t['6/pY29'], { postName: z }) : P ? D.intl.format(D.t.su3voK, { postName: z }) : D.intl.string(D.t.RUHcys)
                 }
-              : e.isThread()
+              : n.isThread()
                 ? {
-                      deleteText: O.intl.string(O.t.H7vTe3),
-                      deleteBody: O.intl.format(O.t.a6Gz9P, { channelName: L })
+                      deleteText: D.intl.string(D.t.H7vTe3),
+                      deleteBody: D.intl.format(D.t.a6Gz9P, { channelName: z })
                   }
-                : j && x > 0
+                : v && R > 0
                   ? {
-                        deleteText: O.intl.string(O.t['8D8Rsb']),
-                        deleteBody: O.intl.format(O.t['+qkiT0'], {
-                            channelName: L,
-                            numGuildRoleSubscriptionMembers: x
+                        deleteText: D.intl.string(D.t['8D8Rsb']),
+                        deleteBody: D.intl.format(D.t['+qkiT0'], {
+                            channelName: z,
+                            numGuildRoleSubscriptionMembers: R
                         })
                     }
                   : {
-                        deleteText: O.intl.string(O.t['8D8Rsb']),
-                        deleteBody: O.intl.format(O.t.a6Gz9P, { channelName: L })
+                        deleteText: D.intl.string(D.t['8D8Rsb']),
+                        deleteBody: D.intl.format(D.t.a6Gz9P, { channelName: z })
                     };
-    return R
-        ? (0, i.jsx)(a.u, {
+    return B
+        ? (0, i.jsx)(r.u, {
               size: 'sm',
-              onClose: n,
-              transitionState: U,
-              title: M,
-              headerBody: k,
+              onClose: e,
+              transitionState: O,
+              title: X,
+              headerBody: Y,
               actions: [
                   {
-                      text: O.intl.string(O.t['ETE/oK']),
-                      onClick: n,
+                      text: D.intl.string(D.t['ETE/oK']),
+                      onClick: e,
                       variant: 'secondary'
                   },
                   {
-                      text: M,
-                      onClick: b,
+                      text: X,
+                      onClick: y,
                       variant: 'destructive-primary'
                   }
               ],
-              children: H
-                  ? (0, i.jsx)(d.Text, {
+              children: j
+                  ? (0, i.jsx)(a.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: O.intl.format(O.t.Ze005O, { count: G.length })
+                        children: D.intl.format(D.t.Ze005O, { count: h.length })
                     })
                   : null
           })
-        : (0, i.jsxs)(d.Y0X, {
-              transitionState: U,
-              'aria-label': M,
+        : (0, i.jsxs)(a.Y0X, {
+              transitionState: O,
+              'aria-label': X,
               parentComponent: 'DeleteChannelConfirm',
               children: [
-                  (0, i.jsx)(d.xBx, {
+                  (0, i.jsx)(a.xBx, {
                       separator: !1,
-                      children: (0, i.jsx)(d.X6q, {
+                      children: (0, i.jsx)(a.X6q, {
                           variant: 'heading-lg/semibold',
-                          children: M
+                          children: X
                       })
                   }),
-                  (0, i.jsxs)(d.hzk, {
-                      className: C.modalContent,
+                  (0, i.jsxs)(a.hzk, {
+                      className: G.modalContent,
                       children: [
-                          (0, i.jsx)(d.Text, {
+                          (0, i.jsx)(a.Text, {
                               variant: 'text-md/normal',
                               color: 'header-primary',
-                              children: k
+                              children: Y
                           }),
-                          H
-                              ? (0, i.jsx)(d.Text, {
+                          j
+                              ? (0, i.jsx)(a.Text, {
                                     variant: 'text-md/normal',
                                     color: 'header-secondary',
-                                    className: C.warningText,
-                                    children: O.intl.format(O.t.Ze005O, { count: G.length })
+                                    className: G.warningText,
+                                    children: D.intl.format(D.t.Ze005O, { count: h.length })
                                 })
                               : null
                       ]
                   }),
-                  (0, i.jsxs)(d.mzw, {
+                  (0, i.jsxs)(a.mzw, {
                       children: [
-                          (0, i.jsx)(d.zxk, {
-                              onClick: b,
-                              color: d.zxk.Colors.RED,
-                              children: M
+                          (0, i.jsx)(a.zxk, {
+                              onClick: y,
+                              color: a.zxk.Colors.RED,
+                              children: X
                           }),
-                          (0, i.jsx)(d.zxk, {
-                              onClick: n,
-                              look: d.zxk.Looks.LINK,
-                              color: d.zxk.Colors.PRIMARY,
-                              children: O.intl.string(O.t['ETE/oK'])
+                          (0, i.jsx)(a.zxk, {
+                              onClick: e,
+                              look: a.zxk.Looks.LINK,
+                              color: a.zxk.Colors.PRIMARY,
+                              children: D.intl.string(D.t['ETE/oK'])
                           })
                       ]
                   })
