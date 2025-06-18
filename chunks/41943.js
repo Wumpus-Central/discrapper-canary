@@ -1,1 +1,1 @@
-p.exports = JSON.parse('{"M6cPwM":"Cầu Tuyết"}');
+n.exports = JSON.parse('{"+utqa2":["Tùy chọn ảnh nền Quà tặng: ",[1,"giftStyle"]],"B9XqQk":"Hộp","AJ4iio":"Bánh Ngọt","P5keo6":"Rương","w84vER":"Cà Phê","6dCq/v":"Cốc","+HMF8v":"Nitroween","vd1fu7":"Hộp Ngày Lễ","aubYGR":"Bánh Ngày Lễ","vjxYqa":"Rương Ngày Lễ","bHuJLS":"Cà Phê Ngày Lễ","M6cPwM":"Cầu Tuyết","GzPel5":"Hộp"}');

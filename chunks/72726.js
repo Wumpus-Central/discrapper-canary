@@ -1,1 +1,1 @@
-p.exports = JSON.parse('{"M6cPwM":"Hógömb"}');
+e.exports = JSON.parse('{"+utqa2":["Ajándék hátterének beállítása: ",[1,"giftStyle"]],"B9XqQk":"Doboz","AJ4iio":"Torta","P5keo6":"Láda","w84vER":"Kávé","6dCq/v":"Csésze","+HMF8v":"Nitroween","vd1fu7":"Ünnepi doboz","aubYGR":"Ünnepi torta","vjxYqa":"Ünnepi láda","bHuJLS":"Ünnepi kávé","M6cPwM":"Hógömb","GzPel5":"Doboz"}');

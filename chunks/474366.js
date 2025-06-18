@@ -1,4 +1,4 @@
-n.d(t, { q: () => w });
+n.d(t, { q: () => S });
 var r = n(255367),
     l = n(73800),
     i = n(120356),
@@ -50,7 +50,7 @@ function O(e) {
         ]
     });
 }
-function S(e) {
+function w(e) {
     let { containerRef: t, text: n } = e,
         i = l.useRef(null),
         a = (0, s.e7)([g.Z], () => {
@@ -104,7 +104,7 @@ function S(e) {
               text: n
           });
 }
-function w() {
+function S() {
     let e = l.useRef(null);
     return (0, r.jsxs)(o.Kqy, {
         className: y.container,
@@ -138,7 +138,7 @@ function w() {
                         color: 'text-secondary',
                         children: _.intl.format(C.default['8N4c5+'], {
                             airhornHook: (t) =>
-                                (0, r.jsx)(S, {
+                                (0, r.jsx)(w, {
                                     containerRef: e,
                                     text: t
                                 })

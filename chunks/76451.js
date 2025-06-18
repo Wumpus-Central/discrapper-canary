@@ -31,11 +31,11 @@ let y = {
         scale: 1,
         opacity: 1
     },
-    S = {
+    w = {
         scale: 1,
         opacity: 1
     },
-    w = {
+    S = {
         tension: 2400,
         friction: 52
     };
@@ -86,8 +86,8 @@ function P(e) {
         f = (0, c.q_F)(
             {
                 from: d.enabled ? O : y,
-                to: S,
-                config: w
+                to: w,
+                config: S
             },
             'animate-always'
         ),

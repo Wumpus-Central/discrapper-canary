@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(997841);
+n.d(t, { Z: () => L }), n(997841);
 var i = n(255367),
     r = n(73800),
     l = n(120356),
@@ -11,23 +11,22 @@ var i = n(255367),
     p = n(311819),
     m = n(433534),
     f = n(299206),
-    h = n(726721),
-    b = n(726521),
-    _ = n(973616),
-    C = n(914010),
-    v = n(594174),
-    x = n(626135),
-    y = n(572004),
-    g = n(630388),
-    N = n(135431),
+    h = n(726521),
+    b = n(973616),
+    _ = n(914010),
+    C = n(594174),
+    v = n(626135),
+    x = n(572004),
+    y = n(630388),
+    g = n(135431),
     j = n(541099),
-    P = n(783097),
-    E = n(570949),
-    A = n(314734),
-    I = n(981631),
-    O = n(388032),
-    S = n(640724);
-function T(e) {
+    N = n(783097),
+    P = n(570949),
+    E = n(314734),
+    A = n(981631),
+    I = n(388032),
+    O = n(640724);
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -52,7 +51,7 @@ function T(e) {
     }
     return e;
 }
-function L(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -70,78 +69,77 @@ function L(e, t) {
         e
     );
 }
-function R(e) {
+function L(e) {
     var t;
-    let { application: l, context: R, className: w, sectionName: Z } = e,
-        k = r.useRef(null),
-        M = (0, a.e7)([j.Z], () => j.Z.entrypoint()),
-        D = (0, P.L1)(l),
-        U = (0, m.Eb)(D),
-        B = (0, d.R)(l.id),
-        H = (0, a.e7)(
-            [C.Z],
+    let { application: l, context: L, className: R, sectionName: w } = e,
+        Z = r.useRef(null),
+        k = (0, a.e7)([j.Z], () => j.Z.entrypoint()),
+        M = (0, N.L1)(l),
+        D = (0, m.Eb)(M),
+        U = (0, d.R)(l.id),
+        B = (0, a.e7)(
+            [_.Z],
             () => {
                 var e;
-                return null != (e = C.Z.getGuildId()) ? e : void 0;
+                return null != (e = _.Z.getGuildId()) ? e : void 0;
             },
             []
         ),
-        V = {
+        H = {
             location: u.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU,
             application_id: l.id,
-            section_name: Z,
+            section_name: w,
             source: j.Z.lastShownEntrypoint()
         },
-        W = v.default.getCurrentUser(),
-        F = h.Z.useExperiment({ location: u.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU }, { autoTrackExposure: !0 }).enabled,
-        z = (0, f.Z)({
+        V = C.default.getCurrentUser(),
+        W = (0, f.Z)({
             id: l.id,
-            label: O.intl.string(O.t['+NP/b2'])
+            label: I.intl.string(I.t['+NP/b2'])
         }),
-        G = (0, E.P)({ application: l }),
-        q = (0, g.yE)(null != (t = l.flags) ? t : 0, I.udG.EMBEDDED),
-        Y = 'channel' === R.type ? R.channel : void 0;
+        F = (0, P.P)({ application: l }),
+        z = (0, y.yE)(null != (t = l.flags) ? t : 0, A.udG.EMBEDDED),
+        G = 'channel' === L.type ? L.channel : void 0;
     return (0, i.jsxs)('div', {
-        className: S.container,
+        className: O.container,
         children: [
             (0, i.jsx)(c.P3F, {
                 onClick: () => {
-                    let e = q
+                    let e = z
                         ? (0, p.H)({
                               applicationId: l.id,
-                              referrerId: null == W ? void 0 : W.id
+                              referrerId: null == V ? void 0 : V.id
                           })
-                        : (0, p.J)(T({ id: l.id }, D));
-                    (0, y.JG)(e, () => (0, c.showToast)((0, c.createToast)(O.intl.string(O.t['L/PwZW']), c.ToastType.SUCCESS))),
-                        x.default.track(I.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
+                        : (0, p.J)(S({ id: l.id }, M));
+                    (0, x.JG)(e, () => (0, c.showToast)((0, c.createToast)(I.intl.string(I.t['L/PwZW']), c.ToastType.SUCCESS))),
+                        v.default.track(A.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
                             application_id: l.id,
-                            source: M
+                            source: k
                         });
                 },
-                className: o()(S.clickable, w),
-                'aria-label': O.intl.string(O.t.WqhZsr),
+                className: o()(O.clickable, R),
+                'aria-label': I.intl.string(I.t.WqhZsr),
                 children: (0, i.jsx)(c.xPt, {
                     size: 'sm',
                     color: c.TVs.colors.INTERACTIVE_ACTIVE
                 })
             }),
             (0, i.jsx)(c.yRy, {
-                targetElementRef: k,
+                targetElementRef: Z,
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (0, i.jsxs)(c.v2r, {
-                        className: A.NN,
+                        className: E.NN,
                         navId: 'app-details-more-menu',
                         onClose: t,
-                        'aria-label': O.intl.string(O.t.AXIHpa),
+                        'aria-label': I.intl.string(I.t.AXIHpa),
                         onSelect: void 0,
                         children: [
                             (0, i.jsxs)(c.kSQ, {
                                 children: [
-                                    B &&
+                                    U &&
                                         (0, i.jsx)(c.sNh, {
                                             id: 'open-storefront',
-                                            label: O.intl.string(O.t.kRvlKC),
+                                            label: I.intl.string(I.t.kRvlKC),
                                             action: () => {
                                                 (0, c.ZDy)(async () => {
                                                     let { default: e } = await Promise.all([n.e('74891'), n.e('77803'), n.e('53458')]).then(n.bind(n, 7225));
@@ -150,22 +148,22 @@ function R(e) {
                                                             transitionState: t.transitionState,
                                                             onClose: t.onClose,
                                                             appId: l.id,
-                                                            guildId: H
+                                                            guildId: B
                                                         });
                                                 });
                                             }
                                         }),
-                                    U
+                                    D
                                         ? (0, i.jsx)(c.sNh, {
                                               id: 'add-app',
-                                              label: O.intl.string(O.t.NgXl3N),
+                                              label: I.intl.string(I.t.NgXl3N),
                                               action: () => {
-                                                  null == D.customInstallUrl && (0, s.yw)(I.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, V),
-                                                      (0, N.L)(
-                                                          L(T({}, D), {
+                                                  null == M.customInstallUrl && (0, s.yw)(A.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, H),
+                                                      (0, g.L)(
+                                                          T(S({}, M), {
                                                               oauth2Callback: (e) => {
                                                                   let { location: t } = e;
-                                                                  null != t && (0, s.yw)(I.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, V);
+                                                                  null != t && (0, s.yw)(A.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, H);
                                                               },
                                                               source: 'app_launcher_app_details'
                                                           })
@@ -173,26 +171,26 @@ function R(e) {
                                               }
                                           })
                                         : null,
-                                    F && l instanceof _.ZP
+                                    l instanceof b.ZP
                                         ? (0, i.jsx)(c.sNh, {
                                               id: 'report-app',
                                               color: 'danger',
-                                              label: O.intl.string(O.t.jhJze3),
+                                              label: I.intl.string(I.t.jhJze3),
                                               action: () => {
                                                   var e;
-                                                  (0, b.uu)({
+                                                  (0, h.uu)({
                                                       application: l,
                                                       entrypoint: 'app_launcher',
-                                                      contextualGuildId: null != (e = null == Y ? void 0 : Y.getGuildId()) ? e : void 0,
-                                                      contextualChannelId: null == Y ? void 0 : Y.id
+                                                      contextualGuildId: null != (e = null == G ? void 0 : G.getGuildId()) ? e : void 0,
+                                                      contextualChannelId: null == G ? void 0 : G.id
                                                   });
                                               }
                                           })
                                         : null,
-                                    G
+                                    F
                                 ]
                             }),
-                            (0, i.jsx)(c.kSQ, { children: z })
+                            (0, i.jsx)(c.kSQ, { children: W })
                         ]
                     });
                 },
@@ -201,10 +199,10 @@ function R(e) {
                 children: (e) =>
                     (0, i.jsx)(
                         c.P3F,
-                        L(T({ innerRef: k }, e), {
+                        T(S({ innerRef: Z }, e), {
                             onClick: e.onClick,
-                            className: o()(S.clickable, w),
-                            'aria-label': O.intl.string(O.t.UKOtz8),
+                            className: o()(O.clickable, R),
+                            'aria-label': I.intl.string(I.t.UKOtz8),
                             children: (0, i.jsx)(c.xhG, {
                                 size: 'sm',
                                 color: c.TVs.colors.INTERACTIVE_ACTIVE

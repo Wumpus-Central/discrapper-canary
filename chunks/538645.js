@@ -171,6 +171,7 @@ function x() {
                                                     s({
                                                         id: e.id,
                                                         name: e.config.title,
+                                                        readonly: !0,
                                                         config: { effects: e.config.effects }
                                                     });
                                                 },
@@ -191,14 +192,7 @@ function x() {
                         })
                     ]
                 }),
-            null != n &&
-                (0, i.jsx)(p.Z, {
-                    skipStore: !0,
-                    effect: n,
-                    back: () => {
-                        s(void 0);
-                    }
-                })
+            null != n && (0, i.jsx)(p.Z, { effect: n })
         ]
     });
 }

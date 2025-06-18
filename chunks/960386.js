@@ -1,1 +1,1 @@
-s.exports = JSON.parse('{"M6cPwM":"Sniego rutulys"}');
+t.exports = JSON.parse('{"+utqa2":["Dovanos fono parinktis: ",[1,"giftStyle"]],"B9XqQk":"Dėžutė","AJ4iio":"Tortas","P5keo6":"Skrynia","w84vER":"Kava","6dCq/v":"Puodelis","+HMF8v":"Nitroween","vd1fu7":"Šventinė dėžutė","aubYGR":"Šventinis tortas","vjxYqa":"Šventinė skrynia","bHuJLS":"Šventinė kava","M6cPwM":"Sniego rutulys","GzPel5":"Dėžutė"}');

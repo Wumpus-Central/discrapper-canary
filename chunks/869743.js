@@ -60,8 +60,8 @@ function p(e, t) {
     );
 }
 let h = (e) => {
-        let { appRecord: t, closePopout: n, showAppReportingOption: i, selectedGuildId: l, selectedChannelId: u, children: d = null } = e,
-            f = (0, o.Z)({
+        let { appRecord: t, closePopout: n, selectedGuildId: i, selectedChannelId: l, children: u = null } = e,
+            d = (0, o.Z)({
                 id: t.id,
                 label: c.intl.string(c.t['+NP/b2'])
             });
@@ -71,33 +71,30 @@ let h = (e) => {
             'aria-label': c.intl.string(c.t.tKobzc),
             onSelect: void 0,
             children: [
-                i
-                    ? (0, r.jsx)(a.sNh, {
-                          id: 'report',
-                          label: c.intl.string(c.t['+78Pfn']),
-                          color: 'danger',
-                          action: () =>
-                              (0, s.uu)({
-                                  application: t,
-                                  entrypoint: 'authorized_apps_settings',
-                                  contextualGuildId: l,
-                                  contextualChannelId: u
-                              })
-                      })
-                    : null,
-                d,
-                f
+                (0, r.jsx)(a.sNh, {
+                    id: 'report',
+                    label: c.intl.string(c.t['+78Pfn']),
+                    color: 'danger',
+                    action: () =>
+                        (0, s.uu)({
+                            application: t,
+                            entrypoint: 'authorized_apps_settings',
+                            contextualGuildId: i,
+                            contextualChannelId: l
+                        })
+                }),
+                u,
+                d
             ]
         });
     },
     m = (e) => {
-        let { appRecord: t, botUser: n, closePopout: i, showAppReportingOption: a, selectedGuildId: o, selectedChannelId: s } = e;
+        let { appRecord: t, botUser: n, closePopout: i, selectedGuildId: a, selectedChannelId: o } = e;
         return (0, r.jsx)(h, {
             appRecord: t,
             closePopout: i,
-            showAppReportingOption: a,
-            selectedGuildId: o,
-            selectedChannelId: s,
+            selectedGuildId: a,
+            selectedChannelId: o,
             children: (0, l.Z)({
                 user: n,
                 location: 'UserSettingsAuthedApps',
@@ -106,27 +103,25 @@ let h = (e) => {
         });
     },
     g = (e) => {
-        let { appRecord: t, showAppReportingOption: n, selectedGuildId: o, selectedChannelId: s } = e,
-            l = i.useRef(null);
+        let { appRecord: t, selectedGuildId: n, selectedChannelId: o } = e,
+            s = i.useRef(null);
         return (0, r.jsx)(a.yRy, {
-            targetElementRef: l,
+            targetElementRef: s,
             renderPopout: (e) => {
                 let { closePopout: i } = e;
                 return null == t.bot
                     ? (0, r.jsx)(h, {
                           appRecord: t,
                           closePopout: i,
-                          showAppReportingOption: n,
-                          selectedGuildId: o,
-                          selectedChannelId: s
+                          selectedGuildId: n,
+                          selectedChannelId: o
                       })
                     : (0, r.jsx)(m, {
                           appRecord: t,
                           botUser: t.bot,
                           closePopout: i,
-                          showAppReportingOption: n,
-                          selectedGuildId: o,
-                          selectedChannelId: s
+                          selectedGuildId: n,
+                          selectedChannelId: o
                       });
             },
             align: 'right',
@@ -137,7 +132,7 @@ let h = (e) => {
                     p(
                         f(
                             {
-                                innerRef: l,
+                                innerRef: s,
                                 className: u.actionMenuButton,
                                 'aria-label': c.intl.string(c.t.UKOtz8)
                             },

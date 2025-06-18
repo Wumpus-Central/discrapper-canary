@@ -19,8 +19,8 @@ var i = n(255367),
     x = n(499254),
     y = n(541099),
     g = n(827498),
-    N = n(496158),
-    j = n(676161),
+    j = n(496158),
+    N = n(676161),
     P = n(660090),
     E = n(783097),
     A = n(176412),
@@ -149,7 +149,7 @@ function M() {
 function D(e) {
     let { context: t, command: n, sectionName: l } = e;
     (0, f.PL)(!0, !0), (0, f.em)(t, !0, !0);
-    let o = (0, N.D)(t),
+    let o = (0, j.D)(t),
         [a, s] = r.useState(!1),
         d = r.useCallback(
             async (e) => {
@@ -275,7 +275,7 @@ function B(e) {
     r.useEffect(() => {
         s(l.id);
     }, [l.id, s]);
-    let x = (0, j.Z)({
+    let x = (0, N.Z)({
         context: n,
         commands: C,
         limit: 5

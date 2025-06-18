@@ -273,7 +273,7 @@ function R(e, t, n) {
                 });
     });
     let C = null;
-    return null != T ? (b.Q.selectCommandOption(e, T.optionName), (C = T.optionName)) : null != A ? (b.Q.selectCommandOption(e, A.optionName, !1), (C = A.optionName)) : b.Q.resetSelectionToEnd(e), null == A && D(e, u), C;
+    return null != T ? (b.Q.selectCommandOption(e, T.optionName), (C = T.optionName)) : null != A ? (b.Q.selectCommandOption(e, A.optionName, !1), (C = A.optionName)) : b.Q.resetSelectionToEditorEnd(e), null == A && D(e, u), C;
 }
 function P(e, t, n, r) {
     let [i] = y.bN.blocks(e)[0],

@@ -1,38 +1,40 @@
 n.r(t),
     n.d(t, {
-        AnalyticEventConfigs: () => j,
-        AnalyticsContext: () => T,
-        AnalyticsSchema: () => d,
-        addExtraAnalyticsDecorator: () => M,
-        clearAnalyticsEventsRecording: () => Q,
-        debugLogEvent: () => Y,
-        default: () => er,
-        expandEventProperties: () => H,
-        expandLocation: () => U,
-        getAnalyticsEventsRecording: () => X,
-        getNewAnalyticsLoadId: () => en,
-        setUTMContext: () => Z,
-        startRecordingAnalyticsEvents: () => z,
-        stopRecordingAnalyticsEvents: () => q,
-        trackNetworkAction: () => et
+        AnalyticEventConfigs: () => B,
+        AnalyticsContext: () => A,
+        AnalyticsSchema: () => _,
+        addExtraAnalyticsDecorator: () => G,
+        clearAnalyticsEventsRecording: () => ee,
+        debugLogEvent: () => z,
+        default: () => eo,
+        expandEventProperties: () => K,
+        expandLocation: () => V,
+        getAnalyticsEventsRecording: () => $,
+        getNewAnalyticsLoadId: () => ea,
+        setUTMContext: () => W,
+        startRecordingAnalyticsEvents: () => Q,
+        stopRecordingAnalyticsEvents: () => J,
+        trackNetworkAction: () => ei
     }),
     n(539854),
     n(388685);
 var r = n(73800),
     i = n(772848),
     a = n(990547),
-    o = n(570140),
-    s = n(565384),
-    l = n(569611),
-    c = n(97145),
-    u = n(857192),
-    d = n(747161),
-    f = n(848479),
-    _ = n(960048),
-    p = n(981631),
-    h = n(94752),
-    m = n(388032);
-function g(e, t, n) {
+    o = n(548345),
+    s = n(668757),
+    l = n(570140),
+    c = n(565384),
+    u = n(569611),
+    d = n(97145),
+    f = n(857192),
+    _ = n(747161),
+    p = n(848479),
+    h = n(960048),
+    m = n(981631),
+    g = n(94752),
+    E = n(388032);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +47,7 @@ function g(e, t, n) {
         e
     );
 }
-function E(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,12 +58,12 @@ function E(e) {
                 })
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
 }
-function b(e, t) {
+function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -73,29 +75,29 @@ function b(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : O(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function O(e, t) {
+function I(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = v(e, t);
+        i = T(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function v(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -104,243 +106,244 @@ function v(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let I = { location: {} },
-    T = r.createContext(I),
-    S = {},
-    A = 10000,
-    N = 60000,
-    C = 120000,
-    R = 300000,
-    P = 900000,
-    w = 3600000,
-    D = 86400000,
-    L = 0.001,
-    x = performance.now(),
-    k = [];
-function M(e) {
-    k.push(e);
+let S = { location: {} },
+    A = r.createContext(S),
+    N = {},
+    C = 10000,
+    R = 60000,
+    P = 120000,
+    w = 300000,
+    D = 900000,
+    L = 3600000,
+    x = 86400000,
+    k = 0.001,
+    M = performance.now(),
+    j = (0, s.X6)() ? (0, s.Ub)((0, o.R)()) : null,
+    U = [];
+function G(e) {
+    U.push(e);
 }
-let j = {
-    [p.rMx.APP_OPENED]: {
-        throttlePeriod: R,
+let B = {
+    [m.rMx.APP_OPENED]: {
+        throttlePeriod: w,
         throttleKeys: () => []
     },
-    [p.rMx.APP_BACKGROUND]: {
-        throttlePeriod: C,
+    [m.rMx.APP_BACKGROUND]: {
+        throttlePeriod: P,
         throttleKeys: () => []
     },
-    [p.rMx.ACK_MESSAGES]: (e) =>
-        e.location_object_type === p.Qqv.ACK_MANUAL
+    [m.rMx.ACK_MESSAGES]: (e) =>
+        e.location_object_type === m.Qqv.ACK_MANUAL
             ? void 0
             : {
-                  throttlePeriod: P,
+                  throttlePeriod: D,
                   throttleKeys: (e) => [e.guild_id, e.channel_id, e.location_section]
               },
-    [p.rMx.GUILD_VIEWED]: {
-        throttlePeriod: P,
+    [m.rMx.GUILD_VIEWED]: {
+        throttlePeriod: D,
         throttleKeys: (e) => [e.guild_id, e.is_pending]
     },
-    [p.rMx.FRIENDS_LIST_VIEWED]: {
-        throttlePeriod: P,
+    [m.rMx.FRIENDS_LIST_VIEWED]: {
+        throttlePeriod: D,
         throttleKeys: (e) => [e.tab_opened]
     },
-    [p.rMx.NOW_PLAYING_CARD_HOVERED]: {
-        throttlePeriod: P,
+    [m.rMx.NOW_PLAYING_CARD_HOVERED]: {
+        throttlePeriod: D,
         throttleKeys: (e) => [e.tab_opened]
     },
-    [p.rMx.START_SPEAKING]: {
-        throttlePeriod: P,
+    [m.rMx.START_SPEAKING]: {
+        throttlePeriod: D,
         throttleKeys: (e) => [e.server]
     },
-    [p.rMx.START_LISTENING]: {
-        throttlePeriod: P,
+    [m.rMx.START_LISTENING]: {
+        throttlePeriod: D,
         throttleKeys: (e) => [e.server]
     },
-    [p.rMx.ACTIVITY_UPDATED]: {
-        throttlePeriod: N,
+    [m.rMx.ACTIVITY_UPDATED]: {
+        throttlePeriod: R,
         throttleKeys: (e) => [e.application_id],
         deduplicate: !0
     },
-    [p.rMx.CHANNEL_OPENED]: {
-        throttlePeriod: P,
+    [m.rMx.CHANNEL_OPENED]: {
+        throttlePeriod: D,
         throttleKeys: (e) => (null != e.channel_static_route ? [e.guild_id, e.channel_static_route, e.channel_view] : [e.channel_id, e.channel_view])
     },
-    [p.rMx.TEXT_IN_VOICE_OPENED]: {
+    [m.rMx.TEXT_IN_VOICE_OPENED]: {
+        throttlePeriod: x,
+        throttleKeys: (e) => [e.channel_id]
+    },
+    [m.rMx.NOTIFICATION_VIEWED]: {
+        throttlePeriod: D,
+        throttleKeys: (e) => [e.notif_type]
+    },
+    [m.rMx.MEMBER_LIST_VIEWED]: {
         throttlePeriod: D,
         throttleKeys: (e) => [e.channel_id]
     },
-    [p.rMx.NOTIFICATION_VIEWED]: {
-        throttlePeriod: P,
-        throttleKeys: (e) => [e.notif_type]
-    },
-    [p.rMx.MEMBER_LIST_VIEWED]: {
-        throttlePeriod: P,
+    [m.rMx.DM_LIST_VIEWED]: {
+        throttlePeriod: D,
         throttleKeys: (e) => [e.channel_id]
     },
-    [p.rMx.DM_LIST_VIEWED]: {
-        throttlePeriod: P,
-        throttleKeys: (e) => [e.channel_id]
-    },
-    [p.rMx.NAV_DRAWER_OPENED]: {
-        throttlePeriod: P,
+    [m.rMx.NAV_DRAWER_OPENED]: {
+        throttlePeriod: D,
         throttleKeys: () => []
     },
-    [p.rMx.KEYBOARD_SHORTCUT_USED]: {
-        throttlePeriod: C,
+    [m.rMx.KEYBOARD_SHORTCUT_USED]: {
+        throttlePeriod: P,
         throttleKeys: (e) => {
             var t;
             return [e.shortcut_name, e.location_object, ...(null != (t = e.source_class_list) ? t : [])];
         }
     },
-    [p.rMx.QUICKSWITCHER_OPENED]: {
-        throttlePeriod: A,
+    [m.rMx.QUICKSWITCHER_OPENED]: {
+        throttlePeriod: C,
         throttleKeys: () => []
     },
-    [p.rMx.CHAT_INPUT_COMPONENT_VIEWED]: {
-        throttlePeriod: P,
+    [m.rMx.CHAT_INPUT_COMPONENT_VIEWED]: {
+        throttlePeriod: D,
         throttleKeys: (e) => [e.type]
     },
-    [p.rMx.ROLE_PAGE_VIEWED]: {
-        throttlePeriod: C,
+    [m.rMx.ROLE_PAGE_VIEWED]: {
+        throttlePeriod: P,
         throttleKeys: (e) => [e.role_id, e.tab_opened]
     },
-    [p.rMx.VIDEO_INPUT_INITIALIZED]: {
-        throttlePeriod: R,
-        throttleKeys: () => []
-    },
-    [p.rMx.AUDIO_INPUT_INITIALIZED]: {
-        throttlePeriod: R,
-        throttleKeys: () => []
-    },
-    [p.rMx.HUB_ONBOARDING_CAROUSEL_SCROLLED]: {
-        throttlePeriod: P,
-        throttleKeys: () => []
-    },
-    [p.rMx.HUB_STUDENT_PROMPT_CLICKED]: {
-        throttlePeriod: P,
-        throttleKeys: () => []
-    },
-    [p.rMx.RPC_SERVER_ERROR_CAUGHT]: {
-        throttlePeriod: D,
-        throttleKeys: () => []
-    },
-    [p.rMx.RPC_COMMAND_SENT]: {
-        throttlePeriod: D,
-        throttleKeys: (e) => [e.application_id, e.command],
-        throttlePercent: L
-    },
-    [p.rMx.RPC_SUBSCRIPTION_REQUESTED]: {
-        throttlePeriod: D,
-        throttleKeys: (e) => [e.application_id, e.event],
-        throttlePercent: L
-    },
-    [p.rMx.ACTIVITY_HANDSHAKE]: {
-        throttlePeriod: D,
-        throttleKeys: (e) => [e.application_id]
-    },
-    [p.rMx.CHANNEL_BANNER_VIEWED]: {
-        throttlePeriod: D,
-        throttleKeys: (e) => [e.banner_type, e.channel_id]
-    },
-    [p.rMx.PREMIUM_UPSELL_VIEWED]: {
-        throttlePeriod: N,
-        throttleKeys: (e) => [e.type]
-    },
-    [p.rMx.FORUM_CHANNEL_SEARCHED]: {
-        throttlePeriod: N,
-        throttleKeys: (e) => [e.guild_id, e.channel_id]
-    },
-    [p.rMx.FORUM_CHANNEL_SCROLLED]: {
-        throttlePeriod: P,
-        throttleKeys: (e) => [e.guild_id, e.channel_id]
-    },
-    [p.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED]: {
-        throttlePeriod: N,
-        throttleKeys: (e) => [e.user_id]
-    },
-    [p.rMx.MEDIA_VIEWER_SESSION_COMPLETED]: {
-        throttlePeriod: N,
-        throttleKeys: () => []
-    },
-    [p.rMx.SUMMARIES_UNREAD_BAR_VIEWED]: {
-        throttlePeriod: R,
-        throttleKeys: (e) => [e.channel_id]
-    },
-    [p.rMx.ACTIVITY_CARDS_VIEWED]: {
-        throttlePeriod: P,
-        throttleKeys: (e) => [e.context, e.guild_id]
-    },
-    [p.rMx.GUILD_TOOLTIP_SHOWN]: {
-        throttlePeriod: P,
-        throttleKeys: (e) => [e.guild_id]
-    },
-    [p.rMx.ACK_COMMUNITY_MESSAGES]: {
-        throttlePeriod: P,
-        throttleKeys: (e) => [e.channel_id]
-    },
-    [p.rMx.REDESIGN_NAV_BAR_CLICKED]: {
-        throttlePeriod: P,
-        throttleKeys: (e) => [e.tab]
-    },
-    [p.rMx.CHANNEL_LIST_END_REACHED]: {
-        throttlePeriod: P,
-        throttleKeys: (e) => [e.guild_id]
-    },
-    [p.rMx.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED]: {
-        throttlePeriod: N,
-        throttleKeys: (e) => [e.guild_id, e.channel_id]
-    },
-    [p.rMx.LIVE_ACTIVITY_SETTINGS_UPDATED]: {
+    [m.rMx.VIDEO_INPUT_INITIALIZED]: {
         throttlePeriod: w,
         throttleKeys: () => []
     },
-    [p.rMx.KEYWORD_FILTER_MATCH]: {
-        throttlePeriod: P,
-        throttleKeys: (e) => [e.message_id]
+    [m.rMx.AUDIO_INPUT_INITIALIZED]: {
+        throttlePeriod: w,
+        throttleKeys: () => []
     },
-    [p.rMx.MEDIA_INPUT_VOLUME_CHANGED]: {
+    [m.rMx.HUB_ONBOARDING_CAROUSEL_SCROLLED]: {
+        throttlePeriod: D,
+        throttleKeys: () => []
+    },
+    [m.rMx.HUB_STUDENT_PROMPT_CLICKED]: {
+        throttlePeriod: D,
+        throttleKeys: () => []
+    },
+    [m.rMx.RPC_SERVER_ERROR_CAUGHT]: {
+        throttlePeriod: x,
+        throttleKeys: () => []
+    },
+    [m.rMx.RPC_COMMAND_SENT]: {
+        throttlePeriod: x,
+        throttleKeys: (e) => [e.application_id, e.command],
+        throttlePercent: k
+    },
+    [m.rMx.RPC_SUBSCRIPTION_REQUESTED]: {
+        throttlePeriod: x,
+        throttleKeys: (e) => [e.application_id, e.event],
+        throttlePercent: k
+    },
+    [m.rMx.ACTIVITY_HANDSHAKE]: {
+        throttlePeriod: x,
+        throttleKeys: (e) => [e.application_id]
+    },
+    [m.rMx.CHANNEL_BANNER_VIEWED]: {
+        throttlePeriod: x,
+        throttleKeys: (e) => [e.banner_type, e.channel_id]
+    },
+    [m.rMx.PREMIUM_UPSELL_VIEWED]: {
         throttlePeriod: R,
-        throttleKeys: (e) => [e.location_stack]
+        throttleKeys: (e) => [e.type]
     },
-    [p.rMx.MEDIA_OUTPUT_VOLUME_CHANGED]: {
+    [m.rMx.FORUM_CHANNEL_SEARCHED]: {
         throttlePeriod: R,
-        throttleKeys: (e) => [e.location_stack]
+        throttleKeys: (e) => [e.guild_id, e.channel_id]
     },
-    [p.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION]: {
-        throttlePeriod: P,
+    [m.rMx.FORUM_CHANNEL_SCROLLED]: {
+        throttlePeriod: D,
+        throttleKeys: (e) => [e.guild_id, e.channel_id]
+    },
+    [m.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED]: {
+        throttlePeriod: R,
+        throttleKeys: (e) => [e.user_id]
+    },
+    [m.rMx.MEDIA_VIEWER_SESSION_COMPLETED]: {
+        throttlePeriod: R,
+        throttleKeys: () => []
+    },
+    [m.rMx.SUMMARIES_UNREAD_BAR_VIEWED]: {
+        throttlePeriod: w,
         throttleKeys: (e) => [e.channel_id]
     },
-    [p.rMx.USER_VOICE_ACTIVITY_VIEWED]: {
+    [m.rMx.ACTIVITY_CARDS_VIEWED]: {
+        throttlePeriod: D,
+        throttleKeys: (e) => [e.context, e.guild_id]
+    },
+    [m.rMx.GUILD_TOOLTIP_SHOWN]: {
+        throttlePeriod: D,
+        throttleKeys: (e) => [e.guild_id]
+    },
+    [m.rMx.ACK_COMMUNITY_MESSAGES]: {
+        throttlePeriod: D,
+        throttleKeys: (e) => [e.channel_id]
+    },
+    [m.rMx.REDESIGN_NAV_BAR_CLICKED]: {
+        throttlePeriod: D,
+        throttleKeys: (e) => [e.tab]
+    },
+    [m.rMx.CHANNEL_LIST_END_REACHED]: {
+        throttlePeriod: D,
+        throttleKeys: (e) => [e.guild_id]
+    },
+    [m.rMx.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED]: {
         throttlePeriod: R,
+        throttleKeys: (e) => [e.guild_id, e.channel_id]
+    },
+    [m.rMx.LIVE_ACTIVITY_SETTINGS_UPDATED]: {
+        throttlePeriod: L,
+        throttleKeys: () => []
+    },
+    [m.rMx.KEYWORD_FILTER_MATCH]: {
+        throttlePeriod: D,
+        throttleKeys: (e) => [e.message_id]
+    },
+    [m.rMx.MEDIA_INPUT_VOLUME_CHANGED]: {
+        throttlePeriod: w,
+        throttleKeys: (e) => [e.location_stack]
+    },
+    [m.rMx.MEDIA_OUTPUT_VOLUME_CHANGED]: {
+        throttlePeriod: w,
+        throttleKeys: (e) => [e.location_stack]
+    },
+    [m.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION]: {
+        throttlePeriod: D,
+        throttleKeys: (e) => [e.channel_id]
+    },
+    [m.rMx.USER_VOICE_ACTIVITY_VIEWED]: {
+        throttlePeriod: w,
         throttleKeys: (e) => [e.activity_user_id, e.surface],
         deduplicate: !0
     },
-    [p.rMx.PARTY_VOICE_ACTIVITY_VIEWED]: {
-        throttlePeriod: R,
+    [m.rMx.PARTY_VOICE_ACTIVITY_VIEWED]: {
+        throttlePeriod: w,
         throttleKeys: (e) => [e.voice_channel_id],
         deduplicate: !0
     },
-    [p.rMx.MEMBER_LIST_SWIPE_PEEK]: {
+    [m.rMx.MEMBER_LIST_SWIPE_PEEK]: {
         throttlePeriod: 1000,
         throttleKeys: (e) => [e.channel_id]
     },
-    [p.rMx.REDACTABLE_MESSAGE_LOADED]: {
-        throttlePeriod: P,
+    [m.rMx.REDACTABLE_MESSAGE_LOADED]: {
+        throttlePeriod: D,
         throttleKeys: (e) => [e.channel_id, e.message_id]
     },
-    [p.rMx.OPEN_MODAL]: (e) =>
-        e.type === p.jXE.MEDIA_VIEWER
+    [m.rMx.OPEN_MODAL]: (e) =>
+        e.type === m.jXE.MEDIA_VIEWER
             ? {
-                  throttlePeriod: N,
+                  throttlePeriod: R,
                   throttleKeys: (e) => [e.type]
               }
             : void 0,
-    [p.rMx.MODERATOR_QUEUE_ACTION]: {
-        throttlePeriod: A,
+    [m.rMx.MODERATOR_QUEUE_ACTION]: {
+        throttlePeriod: C,
         throttleKeys: (e) => [e.guild_id]
     }
 };
-function U(e) {
+function V(e) {
     return 'string' == typeof e
         ? { location: e }
         : {
@@ -351,7 +354,7 @@ function U(e) {
               location_object_type: e.objectType
           };
 }
-function G(e) {
+function F(e) {
     return 'string' == typeof e
         ? { source: e }
         : {
@@ -362,95 +365,95 @@ function G(e) {
               source_promotion_id: e.promotionId
           };
 }
-let B = () => h.E.NONE;
-function V(e) {
-    B = e;
+let Z = () => g.E.NONE;
+function H(e) {
+    Z = e;
 }
-let F = (0, a.trackMaker)({
-    analyticEventConfigs: j,
-    dispatcher: o.Z,
+let Y = (0, a.trackMaker)({
+    analyticEventConfigs: B,
+    dispatcher: l.Z,
     TRACK_ACTION_NAME: 'TRACK'
 });
-function Z(e) {
-    return (S = e);
+function W(e) {
+    return (N = e);
 }
-function H(e) {
+function K(e) {
     var t, n, r, i;
     let a = null != e ? e : {};
     if (null != a.location) {
         let { location: e } = a;
-        a = E({}, O(a, ['location']), U(e));
+        a = y({}, I(a, ['location']), V(e));
     }
     if (null != a.source) {
         let { source: e } = a;
-        a = E({}, O(a, ['source']), G(e));
+        a = y({}, I(a, ['source']), F(e));
     }
-    (a.client_performance_cpu = f.Z.getCurrentCPUUsagePercent()), (a.client_performance_memory = f.Z.getCurrentMemoryUsageKB()), (a.cpu_core_count = f.Z.getCPUCoreCount()), (a.accessibility_features = B()), (a.rendered_locale = m.intl.currentLocale), (a.uptime_app = Math.floor((performance.now() - x) / 1000));
-    let o = f.Z.getProcessUptime();
+    (a.client_performance_cpu = p.Z.getCurrentCPUUsagePercent()), (a.client_performance_memory = p.Z.getCurrentMemoryUsageKB()), (a.cpu_core_count = p.Z.getCPUCoreCount()), (a.accessibility_features = Z()), (a.rendered_locale = E.intl.currentLocale), (a.uptime_app = Math.floor((performance.now() - M) / 1000));
+    let o = p.Z.getProcessUptime();
     null != o && (a.uptime_process_renderer = Math.floor(o));
-    let { utmSource: s, utmMedium: l, utmCampaign: c, utmContent: u } = S;
-    return (a.utm_source = null != (t = a.utm_source) ? t : s), (a.utm_medium = null != (n = a.utm_medium) ? n : l), (a.utm_campaign = null != (r = a.utm_campaign) ? r : c), (a.utm_content = null != (i = a.utm_content) ? i : u), k.forEach((e) => e(a)), a;
+    let { utmSource: s, utmMedium: l, utmCampaign: c, utmContent: u } = N;
+    return (a.utm_source = null != (t = a.utm_source) ? t : s), (a.utm_medium = null != (n = a.utm_medium) ? n : l), (a.utm_campaign = null != (r = a.utm_campaign) ? r : c), (a.utm_content = null != (i = a.utm_content) ? i : u), (a.launch_signature = j), U.forEach((e) => e(a)), a;
 }
-function Y(e, t) {
+function z(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    u.default.isLoggingAnalyticsEvents && console.info('AnalyticsUtils.track(...):', e, t), n ? l.Hj('Analytics', e, t) : l.Hj('Analytics', e);
+    f.default.isLoggingAnalyticsEvents && console.info('AnalyticsUtils.track(...):', e, t), n ? u.Hj('Analytics', e, t) : u.Hj('Analytics', e);
 }
-let W = !1,
-    K = {};
-function z() {
-    W = !0;
-}
-function q() {
-    W = !1;
-}
-function X() {
-    return K;
-}
+let q = !1,
+    X = {};
 function Q() {
-    Object.keys(K).forEach((e) => {
-        delete K[e];
+    q = !0;
+}
+function J() {
+    q = !1;
+}
+function $() {
+    return X;
+}
+function ee() {
+    Object.keys(X).forEach((e) => {
+        delete X[e];
     });
 }
-function J(e, t) {
-    return !!W && (null != t && (Array.isArray(K[e]) ? K[e].push(t) : (K[e] = [t])), !0);
+function et(e, t) {
+    return !!q && (null != t && (Array.isArray(X[e]) ? X[e].push(t) : (X[e] = [t])), !0);
 }
-function $(e, t) {
+function en(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         r = String(e);
     if (
-        (c.R.includes(r) ||
-            _.Z.addBreadcrumb({
+        (d.R.includes(r) ||
+            h.Z.addBreadcrumb({
                 category: 'analytics',
                 message: ''.concat(r)
             }),
-        J(e, t),
+        et(e, t),
         null != n.throttlePercent && Math.random() > n.throttlePercent)
     )
         return Promise.resolve();
-    let i = H(t);
+    let i = K(t);
     return (
-        Y(r, i, n.logEventProperties),
-        F(e, i, {
+        z(r, i, n.logEventProperties),
+        Y(e, i, {
             flush: n.flush,
             fingerprint: n.fingerprint
         })
     );
 }
-let ee = (0, a.trackMaker)({
-    analyticEventConfigs: j,
-    dispatcher: o.Z,
+let er = (0, a.trackMaker)({
+    analyticEventConfigs: B,
+    dispatcher: l.Z,
     TRACK_ACTION_NAME: 'TRACK'
 });
-function et(e, t) {
-    let n = H(E({ location: (0, s.k$)() }, t));
-    (0, s.dT)(e, E({ type: 'action' }, t)), Y(e, n), ee(e, n);
+function ei(e, t) {
+    let n = K(y({ location: (0, c.k$)() }, t));
+    (0, c.dT)(e, y({ type: 'action' }, t)), z(e, n), er(e, n);
 }
-function en() {
+function ea() {
     return (0, i.Z)();
 }
-let er = y(E({}, a), {
+let eo = v(y({}, a), {
     getCampaignParams: a.getCampaignParams,
-    setSystemAccessibilityFeatures: V,
-    expandEventProperties: H,
-    track: $
+    setSystemAccessibilityFeatures: H,
+    expandEventProperties: K,
+    track: en
 });

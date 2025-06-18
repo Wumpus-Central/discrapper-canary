@@ -15,9 +15,9 @@ function f(e) {
     let { windowKey: n } = e,
         f = (0, u.Z)(),
         { currentDocument: m, rootNode: b } = (0, d.Z)(),
-        v = (0, o.e7)([i.Z], () => (0, c.rB)(b, m), [b, m]);
+        O = (0, o.e7)([i.Z], () => (0, c.rB)(b, m), [b, m]);
     return (0, r.jsx)(l.Z, {
-        withTitleBar: a.isPlatformEmbedded && !v,
+        withTitleBar: a.isPlatformEmbedded && !O,
         windowKey: n,
         title: null != (t = null == f ? void 0 : f.name) ? t : p.intl.string(p.t.IC5Anp),
         children: (0, r.jsx)(s.Z, {})

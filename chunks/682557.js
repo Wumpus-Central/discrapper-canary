@@ -1,1 +1,1 @@
-p.exports = JSON.parse('{"M6cPwM":"Lumisadepallo"}');
+a.exports = JSON.parse('{"+utqa2":["Lahjan taustavalinta: ",[1,"giftStyle"]],"B9XqQk":"Rasia","AJ4iio":"Kakku","P5keo6":"Kirstu","w84vER":"Kahvi","6dCq/v":"Kuppi","+HMF8v":"Nitroween","vd1fu7":"Juhla-ajan rasia","aubYGR":"Juhla-ajan kakku","vjxYqa":"Juhla-ajan kirstu","bHuJLS":"Juhla-ajan kahvi","M6cPwM":"Lumisadepallo","GzPel5":"Rasia"}');

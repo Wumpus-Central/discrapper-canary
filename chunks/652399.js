@@ -8,6 +8,7 @@ n.d(t, {
     hM: () => g,
     sL: () => _,
     tI: () => O,
+    z4: () => S,
     zW: () => b
 }),
     n(781311);
@@ -199,6 +200,19 @@ function C(e) {
         search_id: null != t ? o.Z.getAnalyticsId(t) : null,
         search_type: n,
         search_session_id: m(t)
+    });
+}
+function S(e) {
+    let { rating: t, searchId: n, searchType: r, unsatisfiedQuestionOption: l, unsatisfiedQuestionText: a, describeSearchQuestionOption: s, describeSearchQuestionText: c } = e;
+    i.ZP.trackWithMetadata(u.rMx.SEARCH_RESULTS_FEEDBACK_SUBMITTED, {
+        search_id: null != n ? o.Z.getAnalyticsId(n) : null,
+        search_type: r,
+        search_session_id: m(n),
+        rating: t,
+        unsatisfied_question_option: l,
+        unsatisfied_question_text: a,
+        describe_search_question_option: s,
+        describe_search_question_text: c
     });
 }
 new l.Z('SearchTracking');

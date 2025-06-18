@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r = n(255367),
     o = n(73800),
     i = n(442837),
@@ -12,14 +12,14 @@ var r = n(255367),
     f = n(788983),
     m = n(546247),
     b = n(317381),
-    v = n(426419),
-    O = n(16609),
+    O = n(426419),
+    v = n(16609),
     j = n(781780),
     y = n(325749),
     h = n(981631),
     P = n(921944),
-    x = n(578809);
-function g(e) {
+    g = n(578809);
+function x(e) {
     let { children: t } = e,
         { showsNewUserExperience: i, openNewUserExperienceModal: c } = (function () {
             let e = [l.z.ACTIVITY_POPOUT_NUX_MODAL],
@@ -96,20 +96,20 @@ function g(e) {
     let { renderWindow: s } = o.useContext(u.ZP);
     return i
         ? (0, r.jsx)('div', {
-              className: x.nuxBackground,
+              className: g.nuxBackground,
               children: (0, r.jsx)(m.Z, { eventTargetRef: { current: s.document.body } })
           })
         : t;
 }
-function _() {
+function I() {
     let {
             embeddedActivity: e,
             channelId: t,
             guildId: n
         } = (0, i.cj)([b.ZP], () => {
             let e = b.ZP.getCurrentEmbeddedActivity(),
-                t = (0, O.p)(null == e ? void 0 : e.location),
-                n = (0, O.j)(null == e ? void 0 : e.location);
+                t = (0, v.p)(null == e ? void 0 : e.location),
+                n = (0, v.j)(null == e ? void 0 : e.location);
             return {
                 embeddedActivity: e,
                 channelId: t,
@@ -131,27 +131,27 @@ function _() {
             let t = null == e ? void 0 : e.applicationId;
             return null == t ? void 0 : s.Z.getApplication(t);
         }),
-        m = (0, v.P)();
+        m = (0, O.P)();
     return (0, r.jsx)('div', {
-        className: x.container,
+        className: g.container,
         children:
             null == e || null == d
-                ? (0, r.jsx)(a.$jN, { className: x.iframe })
+                ? (0, r.jsx)(a.$jN, { className: g.iframe })
                 : (0, r.jsx)('div', {
-                      className: x.loadedContentContainer,
+                      className: g.loadedContentContainer,
                       children: (0, r.jsxs)('div', {
-                          className: x.iframeAndHeaderContainer,
+                          className: g.iframeAndHeaderContainer,
                           children: [
                               (0, r.jsx)('div', {
-                                  className: x.headerContainer,
+                                  className: g.headerContainer,
                                   children: (0, r.jsx)(y.Z, {
                                       applicationId: d.id,
                                       channelId: t
                                   })
                               }),
                               (0, r.jsx)('div', {
-                                  className: x.iframeContainer,
-                                  children: (0, r.jsx)(g, {
+                                  className: g.iframeContainer,
+                                  children: (0, r.jsx)(x, {
                                       children: (0, r.jsx)(j.Z, {
                                           channelId: t,
                                           guildId: n,

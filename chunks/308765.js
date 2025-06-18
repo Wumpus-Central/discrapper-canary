@@ -449,6 +449,10 @@ let i = {
         actions: ['POST_CONNECTION_OPEN', 'CHANNEL_SELECT', 'CHANNEL_CREATE', 'CHANNEL_DELETE', 'CHANNEL_UPDATES', 'GUILD_CREATE', 'GUILD_UPDATE', 'GUILD_DELETE', 'LOGOUT', 'RELATIONSHIP_ADD', 'RELATIONSHIP_REMOVE', 'RELATIONSHIP_UPDATE', 'THREAD_CREATE', 'THREAD_DELETE', 'THREAD_UPDATE', 'USER_UPDATE'],
         inlineRequire: () => n(607841).Z,
         neverLoadBeforeConnectionOpen: !0
+    },
+    KrispExperimentManager: {
+        actions: ['POST_CONNECTION_OPEN', 'RTC_CONNECTION_STATE'],
+        inlineRequire: () => n(891812).Z
     }
 };
 (0, r.j)(i);

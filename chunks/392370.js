@@ -27,11 +27,11 @@ var i = n(73800),
     x = n(783097),
     y = n(689079),
     g = n(761652);
-function N(e, t) {
+function j(e, t) {
     let n = h.Z.getScoreWithoutLoadingLatest(e.id);
     return h.Z.getScoreWithoutLoadingLatest(t.id) - n;
 }
-function j(e, t) {
+function N(e, t) {
     let n = (0, x.$d)(e),
         i = (0, x.$d)(t);
     return (0, p.un)(n, i);
@@ -282,7 +282,7 @@ function E(e) {
                         return null != (n = null == i ? void 0 : i.includes(a.toLocaleLowerCase())) && n;
                     })
                 ],
-                sortComparers: [N, j]
+                sortComparers: [j, N]
             });
         }, [c, h, o, t, n, E, A]),
         T = O.length > 0,
@@ -372,7 +372,7 @@ function A(e) {
             let e = x.length;
             h === _.M.FETCHED && e === f.current && e > 0 && e < C && e < l && x[e - 1].length > 0 && (f.current++, m((e) => e + 1));
         }, [h, l, x, C]),
-        N = i.useCallback(
+        j = i.useCallback(
             (e) => {
                 let { query: t, page: n, guildId: i } = e;
                 b.yC({
@@ -394,12 +394,12 @@ function A(e) {
     return (
         i.useEffect(() => {
             r &&
-                N({
+                j({
                     query: n,
                     page: p,
                     guildId: d
                 });
-        }, [n, d, N, p, r]),
+        }, [n, d, j, p, r]),
         i.useEffect(() => {
             m(1);
         }, [d, n]),
