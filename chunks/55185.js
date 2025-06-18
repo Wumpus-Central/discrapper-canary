@@ -214,7 +214,7 @@ function I(e) {
         ]
     });
 }
-function w(e) {
+function N(e) {
     let { closePopout: t } = e;
     return (0, i.jsxs)(S, {
         children: [
@@ -233,7 +233,7 @@ function w(e) {
         ]
     });
 }
-function N(e) {
+function w(e) {
     let { closePopout: t } = e,
         n = u.G6.useSetting(),
         { showLinkToSettings: r } = (0, f.D)('popout');
@@ -273,9 +273,9 @@ function T(e) {
         case 3:
             return (0, i.jsx)(I, { closePopout: n });
         case 4:
-            return (0, i.jsx)(w, { closePopout: n });
-        case 5:
             return (0, i.jsx)(N, { closePopout: n });
+        case 5:
+            return (0, i.jsx)(w, { closePopout: n });
         default:
             return null;
     }

@@ -25,8 +25,8 @@ var r = n(255367),
     E = n(933557),
     P = n(194082),
     I = n(550532),
-    w = n(436774),
-    N = n(605236),
+    N = n(436774),
+    w = n(605236),
     Z = n(243778),
     T = n(594190),
     A = n(925329),
@@ -170,7 +170,7 @@ class eb extends i.PureComponent {
                                 children: [
                                     (0, r.jsx)(d.SrA, {
                                         size: 'xxs',
-                                        color: w.JX.PREMIUM_TIER_2
+                                        color: N.JX.PREMIUM_TIER_2
                                     }),
                                     (0, r.jsx)(B.Z, {
                                         className: eh.perksDemoText,
@@ -338,7 +338,7 @@ let ey = (0, m.Z)(function (e) {
         [j] = (0, S.Z)([null != (t = null != g && null != g.id ? g.id : null != s && null != s.id ? s.id : null != O ? O.applicationId : void 0) ? t : '']),
         x = (0, c.e7)([I.Z], () => I.Z.getFakeGameData()),
         P = (0, c.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
-        w = (0, v.Z)() && null != P && (0, y.R)(),
+        N = (0, v.Z)() && null != P && (0, y.R)(),
         A = (0, c.e7)([q.Z], () => (0, D.Z)(q.Z) && (0, er.isWindows)()),
         L = (0, c.e7)([X.Z], () => (null != o ? X.Z.findActivity(o, (e) => e.type === ea.IIU.PLAYING) : null)),
         M = null != f && f.ownerId === o && f.state !== ea.jm8.ENDED,
@@ -347,7 +347,7 @@ let ey = (0, m.Z)(function (e) {
         [V, H] = i.useState(!1),
         { showsActivityPopoutQuickRefocusNUX: ei, markActivityPopoutQuickRefocusNUXAsDismissed: el } = (function () {
             let e = [],
-                t = (0, N.wE)(u.z.ACTIVITY_POPOUT_NUX_MODAL),
+                t = (0, w.wE)(u.z.ACTIVITY_POPOUT_NUX_MODAL),
                 n = (0, c.e7)([en.Z], () => en.Z.isFocused());
             (0, y.R)() && t && n && e.push(u.z.ACTIVITY_POPOUT_NUX_QUICK_REFOCUS_TOOLTIP);
             let [r, i] = (0, Z.US)(e);
@@ -360,7 +360,7 @@ let ey = (0, m.Z)(function (e) {
         eb,
         eg(ef({}, l), {
             guildId: n,
-            canGoLive: A || w || void 0 !== x,
+            canGoLive: A || N || void 0 !== x,
             activity: L,
             embeddedActivity: O,
             userId: o,

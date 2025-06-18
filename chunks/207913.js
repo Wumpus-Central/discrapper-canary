@@ -25,8 +25,8 @@ var r = n(255367),
     E = n(25015),
     P = n(178480),
     I = n(703656),
-    w = n(518950),
-    N = n(592125),
+    N = n(518950),
+    w = n(592125),
     Z = n(720202),
     T = n(430824),
     A = n(538397),
@@ -88,14 +88,14 @@ function B(e) {
             avatarDecorationSrc: j,
             avatarSrc: E,
             eventHandlers: P
-        } = (0, w.Z)({
+        } = (0, N.Z)({
             user: t.author,
             size: u.EFr.SIZE_32,
             guildId: null == f ? void 0 : f.id,
             animateOnHover: !0
         }),
         I = n.type !== L.d4z.GUILD_ANNOUNCEMENT || null == f,
-        N = (0, S.x)({
+        w = (0, S.x)({
             channel: n,
             message: t,
             user: t.author,
@@ -182,7 +182,7 @@ function B(e) {
                                                           style: { color: O },
                                                           children: (0, r.jsx)(b.Z, { children: A })
                                                       }),
-                                                      N
+                                                      w
                                                   ]
                                               })
                                             : (0, r.jsx)(b.Z, {
@@ -380,7 +380,7 @@ let z = (0, i.memo)(
     function (e) {
         let { message: t, goToSidebar: i, groupedMessages: l, isUnread: s } = e,
             { params: f } = (0, a.$B)(),
-            g = (0, c.e7)([N.Z], () => N.Z.getChannel(t.channel_id));
+            g = (0, c.e7)([w.Z], () => w.Z.getChannel(t.channel_id));
         return null == t || null == g
             ? null
             : (0, r.jsx)(u.P3F, {

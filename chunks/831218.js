@@ -25,8 +25,8 @@ var r,
     E = n(518311),
     P = n(355298),
     I = n(869404),
-    w = n(333984),
-    N = n(210887),
+    N = n(333984),
+    w = n(210887),
     Z = n(592125),
     T = n(158776),
     A = n(55589),
@@ -476,17 +476,17 @@ let H = (e) => {
         y = Z.Z.getMutablePrivateChannels(),
         O = (0, I.k1)(y),
         _ = (0, u.Wu)(
-            [A.Z, P.Z, w.Z],
+            [A.Z, P.Z, N.Z],
             () => {
                 let e = A.Z.getPrivateChannelIds();
-                return (0, I.tU)(e, [P.Z, w.Z]);
+                return (0, I.tU)(e, [P.Z, N.Z]);
             },
             []
         );
     (0, x.z)(S.R);
     let { analyticsLocations: v } = (0, b.ZP)(g.Z.CONTACTS_LIST),
-        E = (0, u.cj)([f.Z, N.Z, Z.Z], () => ({
-            theme: N.Z.darkSidebar ? D.BRd.DARK : s,
+        E = (0, u.cj)([f.Z, w.Z, Z.Z], () => ({
+            theme: w.Z.darkSidebar ? D.BRd.DARK : s,
             keyboardModeEnabled: f.Z.keyboardModeEnabled,
             version: null != o ? ''.concat(o, ':').concat(Z.Z.getPrivateChannelsVersion()) : Z.Z.getPrivateChannelsVersion()
         })),

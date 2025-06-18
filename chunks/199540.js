@@ -108,12 +108,12 @@ function b(e) {
             }
             return i;
         })(e.treeItemProps, ['onFocus']),
-        [I, w] = i.useState(!1),
-        N = i.useCallback(() => {
-            s || w(!0), null == C || C(!0);
+        [I, N] = i.useState(!1),
+        w = i.useCallback(() => {
+            s || N(!0), null == C || C(!0);
         }, [s, C]),
         Z = i.useCallback(() => {
-            s || w(!1), null == C || C(!1);
+            s || N(!1), null == C || C(!1);
         }, [s, C]),
         T = o || null == u ? null : (0, h.Or)(u),
         A = !o && d > 0 ? (0, h.Ne)(d, g ? c.Z.BACKGROUND_ACCENT : c.Z.STATUS_DANGER) : null;
@@ -149,7 +149,7 @@ function b(e) {
                     className: f.folderButton,
                     onClick: _,
                     onContextMenu: v,
-                    onMouseEnter: N,
+                    onMouseEnter: w,
                     onMouseLeave: Z,
                     onKeyDown: j,
                     onFocus: S,

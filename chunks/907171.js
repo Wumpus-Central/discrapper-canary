@@ -10,5 +10,7 @@ e.exports = {
     unreadMentionsIndicatorTop: 'unreadMentionsIndicatorTop_ef3116',
     unreadMentionsBar: 'unreadMentionsBar_ef3116',
     unreadMentionsFixedFooter: 'unreadMentionsFixedFooter_ef3116',
-    discoveryIcon: 'discoveryIcon_ef3116'
+    discoveryIcon: 'discoveryIcon_ef3116',
+    bottomRailNotifCenterButton: 'bottomRailNotifCenterButton_ef3116',
+    unreadMentionsFixedFooterBottomNotifCenterEntrypoint: 'unreadMentionsFixedFooterBottomNotifCenterEntrypoint_ef3116'
 };

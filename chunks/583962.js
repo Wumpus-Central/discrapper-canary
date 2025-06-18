@@ -1,5 +1,5 @@
 n.d(t, {
-    PD: () => N,
+    PD: () => w,
     ZP: () => A,
     aR: () => Z
 }),
@@ -71,9 +71,9 @@ function I(e, t) {
         e
     );
 }
-let w = (0, y.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
-    N = 57,
-    Z = 57 + w,
+let N = (0, y.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
+    w = 57,
+    Z = 57 + N,
     T = {
         tension: 180,
         friction: 80
@@ -83,9 +83,9 @@ let w = (0, y.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
             l = (0, p.Q3)('GuildBoostingSidebarDisplay'),
             u = (0, b.Jh)(t.id),
             y = (0, f.Z)(t.id),
-            w = (0, b.FZ)(u),
-            N = null == w,
-            Z = null != w ? w : u,
+            N = (0, b.FZ)(u),
+            w = null == N,
+            Z = null != N ? N : u,
             A = (0, c.e7)([_.Z], () => {
                 var e;
                 return null != (e = _.Z.getCountForGuild(t.id)) ? e : 0;
@@ -94,7 +94,7 @@ let w = (0, y.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
         i.useEffect(() => {
             A !== y && (0, O.v)(t.id, y);
         }, [t.id, A, y]);
-        let D = N ? '100%' : ''.concat(Math.min(100, (y / j.oCV[Z]) * 100), '%'),
+        let D = w ? '100%' : ''.concat(Math.min(100, (y / j.oCV[Z]) * 100), '%'),
             { current: L } = i.useRef(D),
             [M] = (0, d.q_F)(
                 () => ({
@@ -112,11 +112,11 @@ let w = (0, y.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                 numBoosts: y,
                 numTotal: j.oCV[Z]
             });
-        N && ((G = (0, b.e9)(Z)), (B = S.intl.format(S.t.B2byER, { numBoosts: y }))), l && (G = G.toLocaleLowerCase());
+        w && ((G = (0, b.e9)(Z)), (B = S.intl.format(S.t.B2byER, { numBoosts: y }))), l && (G = G.toLocaleLowerCase());
         let V = (0, a.JA)('boosts-'.concat(t.id));
         return (0, r.jsx)('li', {
             children: (0, r.jsx)(d.ua7, {
-                text: k ? S.intl.formatToPlainString(x.default['9CtPjo'], { perk: (0, b.nW)(Z) }) : N ? S.intl.string(S.t['Y+V9go']) : S.intl.formatToPlainString(S.t.UyDKl5, { levelName: (0, b.nW)(Z) }),
+                text: k ? S.intl.formatToPlainString(x.default['9CtPjo'], { perk: (0, b.nW)(Z) }) : w ? S.intl.string(S.t['Y+V9go']) : S.intl.formatToPlainString(S.t.UyDKl5, { levelName: (0, b.nW)(Z) }),
                 color: d.ua7.Colors.BLACK,
                 position: 'top',
                 delay: 200,
@@ -174,13 +174,13 @@ let w = (0, y.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                                     ]
                                 }),
                                 (0, r.jsxs)('div', {
-                                    className: o()(E.progressBarContainer, { [E.progressBarContainerComplete]: N }),
+                                    className: o()(E.progressBarContainer, { [E.progressBarContainerComplete]: w }),
                                     children: [
                                         (0, r.jsx)(s.animated.div, {
                                             className: E.progressBar,
                                             style: M
                                         }),
-                                        N
+                                        w
                                             ? (0, r.jsx)('span', {
                                                   'aria-label': S.intl.string(S.t['7iL1q6']),
                                                   role: 'img',

@@ -1,6 +1,6 @@
 n.r(t),
     n.d(t, {
-        default: () => V,
+        default: () => B,
         useAppSidebarState: () => U
     });
 var r = n(255367),
@@ -130,7 +130,7 @@ function G() {
             })
     );
 }
-let V = i.memo(function () {
+let B = i.memo(function () {
     i.useLayoutEffect(() => {
         j.ZP.setMinimumSize(L.J, L.N);
     }, []);
@@ -142,7 +142,7 @@ let V = i.memo(function () {
     }, []);
     let l = (0, o.e7)([v.Z], () => (v.Z.darkSidebar ? x.BRd.DARK : void 0)),
         a = (0, o.e7)([P.Z, y.Z], () => (0, A.rB)()),
-        { notificationCenterVariant: h } = E.L.useExperiment({ location: 'AppTitleBar' });
+        { notificationCenterVariant: h } = E.Lk.useExperiment({ location: 'AppTitleBar' });
     return a
         ? null
         : (0, r.jsx)(s.Wdt, {
@@ -163,7 +163,7 @@ let V = i.memo(function () {
                                                   onClick: () => {
                                                       U.setState({ isOpen: !U.getState().isOpen });
                                                   },
-                                                  children: (0, r.jsx)(B, {})
+                                                  children: (0, r.jsx)(V, {})
                                               })
                                           ),
                                           (0, r.jsx)(s.P3F, {
@@ -195,7 +195,7 @@ let V = i.memo(function () {
                   })
           });
 });
-function B() {
+function V() {
     return (0, r.jsxs)('svg', {
         xmlns: 'http://www.w3.org/2000/svg',
         className: D.icon,

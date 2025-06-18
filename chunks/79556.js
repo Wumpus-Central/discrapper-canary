@@ -25,8 +25,8 @@ var r = n(255367),
     E = n(109446),
     P = n(98597),
     I = n(648501),
-    w = n(473403),
-    N = n(304471),
+    N = n(473403),
+    w = n(304471),
     Z = n(981631),
     T = n(647086),
     A = n(915887);
@@ -98,7 +98,7 @@ class M extends P.ZP {
             E = (0, b.jW)({ location: 'text_channel' }).entrypoints,
             P = x && null != C && C.length > 0,
             I = (0, g.D)(_),
-            N = (0, r.jsx)('li', {
+            w = (0, r.jsx)('li', {
                 className: o()(this.getClassName(), {
                     [A.disabled]: this.isDisabled(),
                     [A.selected]: n
@@ -114,7 +114,7 @@ class M extends P.ZP {
                     onRequestClose: this.handleClosePopout,
                     shouldShow: (c && this.state.shouldShowThreadsPopout) || (P && this.state.shouldShowActivities),
                     children: () =>
-                        (0, r.jsxs)(w.ZP, {
+                        (0, r.jsxs)(N.ZP, {
                             ref: this.channelItemRef,
                             className: A.iconVisibility,
                             channel: e,
@@ -159,7 +159,7 @@ class M extends P.ZP {
                         })
                 })
             });
-        return m ? d(h(N)) : N;
+        return m ? d(h(w)) : w;
     }
     constructor(...e) {
         super(...e),
@@ -204,7 +204,7 @@ class M extends P.ZP {
                 return t.isModeratorReportChannel()
                     ? null
                     : null != i && i.length > 0 && l && !n
-                      ? (0, r.jsx)(N.Z, {
+                      ? (0, r.jsx)(w.Z, {
                             onAction: this.handleActivitiesPopoutClose,
                             channel: t
                         })
@@ -282,7 +282,7 @@ function U(e) {
         b = (0, s.e7)([y.Z], () => y.Z.shouldIndicateNewChannel(n.id, t.id)),
         { needSubscriptionToAccess: v, isSubscriptionGated: E } = (0, m.Z)(t.id),
         P = (0, s.e7)([S.ZP], () => S.ZP.isFavorite(n.id, t.id)),
-        w = (0, s.e7)(
+        N = (0, s.e7)(
             [x.default],
             () => {
                 let e = x.default.getCurrentUser();
@@ -290,7 +290,7 @@ function U(e) {
             },
             [t]
         ),
-        N = (0, h.NX)(t.id),
+        w = (0, h.NX)(t.id),
         A = (0, I.Z)({
             channel: t,
             isChannelCollapsed: !1,
@@ -299,7 +299,7 @@ function U(e) {
             needSubscriptionToAccess: v,
             isNewChannel: b,
             muted: o,
-            enableActivities: N,
+            enableActivities: w,
             resolvedUnreadSetting: f
         }),
         R = (0, p.ZP)(t);
@@ -312,12 +312,12 @@ function U(e) {
             needSubscriptionToAccess: v,
             isNewChannel: b && e.canBeNewChannel,
             isFavoriteSuggestion: l && !P,
-            canShowThreadPreviewForUser: w,
+            canShowThreadPreviewForUser: N,
             channelInfo: A,
             embeddedApps: R,
             resolvedUnreadSetting: f,
             hasChannelInfo: null != A,
-            enableActivities: N
+            enableActivities: w
         })
     );
 }

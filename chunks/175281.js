@@ -55,11 +55,11 @@ function P(e) {
     }
 }
 let I = [g.Q2.MESSAGE, g.Q2.NAVIGATION, g.Q2.VOICE_AND_VIDEO, g.Q2.CHAT, g.Q2.MISCELLANEOUS];
-function w(e) {
+function N(e) {
     let { showBackdrop: t } = e;
     return (0, r.jsx)('div', { className: o()(S.backdrop, { [S.show]: t }) });
 }
-function N() {
+function w() {
     let e = i.useMemo(
         () =>
             u()((0, g.Rv)())
@@ -196,7 +196,7 @@ class Z extends i.PureComponent {
                 (0, r.jsx)(f.yWw, {
                     ref: this.scrollerRef,
                     fade: !0,
-                    children: (0, r.jsx)(f.y5t, { children: (0, r.jsx)(N, {}) })
+                    children: (0, r.jsx)(f.y5t, { children: (0, r.jsx)(w, {}) })
                 })
             ]
         });
@@ -313,7 +313,7 @@ function A(e) {
         }));
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(w, { showBackdrop: a }),
+            (0, r.jsx)(N, { showBackdrop: a }),
             (0, r.jsx)(f.Y0X, {
                 className: o()(S.noBackground, { [S.noShadow]: l }),
                 size: f.CgR.DYNAMIC,

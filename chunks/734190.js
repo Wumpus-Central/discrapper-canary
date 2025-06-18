@@ -25,8 +25,8 @@ var r = n(255367),
     E = n(388032),
     P = n(915887),
     I = n(768107),
-    w = n(995453);
-function N(e) {
+    N = n(995453);
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -72,7 +72,7 @@ function Z(e, t) {
 function T(e) {
     let { style: t, withGuildIcon: n, inverted: i } = e,
         l = {
-            className: o()(w.spine, { [w.spineWithGuildIcon]: n }, { [w.invertedSpine]: i }),
+            className: o()(N.spine, { [N.spineWithGuildIcon]: n }, { [N.invertedSpine]: i }),
             style: t
         },
         { density: s } = (0, c.TCT)();
@@ -80,7 +80,7 @@ function T(e) {
         case 'cozy':
             return (0, r.jsxs)(
                 'svg',
-                Z(N({}, l), {
+                Z(w({}, l), {
                     width: '10',
                     height: '20',
                     viewBox: '0 0 10 20',
@@ -101,7 +101,7 @@ function T(e) {
         case 'compact':
             return (0, r.jsxs)(
                 'svg',
-                Z(N({}, l), {
+                Z(w({}, l), {
                     width: '10',
                     height: '19',
                     viewBox: '0 0 10 19',
@@ -122,7 +122,7 @@ function T(e) {
         default:
             return (0, r.jsxs)(
                 'svg',
-                Z(N({}, l), {
+                Z(w({}, l), {
                     width: '10',
                     height: '19',
                     viewBox: '0 0 10 19',
@@ -145,7 +145,7 @@ function T(e) {
 function A(e) {
     let { style: t, withGuildIcon: n } = e;
     return (0, r.jsx)('svg', {
-        className: o()(w.spine, { [w.spineWithGuildIcon]: n }),
+        className: o()(N.spine, { [N.spineWithGuildIcon]: n }),
         width: '12',
         height: '11',
         viewBox: '0 0 12 11',
@@ -159,7 +159,7 @@ function A(e) {
     });
 }
 let R = i.memo(function (e) {
-    let { thread: t, isSelectedChannel: l, isSelectedVoice: w, isLast: R, withGuildIcon: D } = e,
+    let { thread: t, isSelectedChannel: l, isSelectedVoice: N, isLast: R, withGuildIcon: D } = e,
         L = (0, a.e7)([O.ZP], () => O.ZP.getVoiceStatesForChannel(t), [t]),
         M = (0, a.e7)([y.Z], () => y.Z.hasVideo(t.id)),
         {
@@ -187,7 +187,7 @@ let R = i.memo(function (e) {
                 null != i &&
                     (0, d.jW)(e, async () => {
                         let { default: e } = await n.e('40157').then(n.bind(n, 422200));
-                        return (t) => (0, r.jsx)(e, Z(N({}, t), { channel: i }));
+                        return (t) => (0, r.jsx)(e, Z(w({}, t), { channel: i }));
                     });
             },
             [t.id]
@@ -258,7 +258,7 @@ let R = i.memo(function (e) {
                         !k || B || l ? null : (0, r.jsx)('div', { className: o()(I.unread, I.unreadImportant) }),
                         (0, r.jsx)(
                             c.P3F,
-                            Z(N({}, Y), {
+                            Z(w({}, Y), {
                                 innerRef: q,
                                 className: I.link,
                                 onClick: V,
@@ -299,7 +299,7 @@ let R = i.memo(function (e) {
             }),
             (0, r.jsx)(j.Z, {
                 channel: t,
-                collapsed: !w,
+                collapsed: !N,
                 collapsedMax: 6,
                 voiceStates: L,
                 location: S.Sbl.GUILD_CHANNEL_LIST

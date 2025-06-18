@@ -70,7 +70,7 @@ function I(e, t) {
         e
     );
 }
-function w(e) {
+function N(e) {
     var t;
     let { isRefreshEnabled: n, guild: i, controller: l, guildBanner: c, animate: u } = e,
         { value: d } = l.springs,
@@ -103,7 +103,7 @@ function w(e) {
         })
     });
 }
-function N(e) {
+function w(e) {
     let { guild: t, controller: n, hasBanner: i, hasSubheader: l } = e,
         { value: a } = n.springs,
         c = t.hasFeature(C.oNc.DISCOVERABLE),
@@ -400,7 +400,7 @@ let M = i.memo(function (e) {
                                         children: X ? (0, r.jsx)(L, I(P({}, J), { children: x })) : (0, r.jsx)(R, I(P({}, J), { children: x }))
                                     }),
                                     U &&
-                                        (0, r.jsx)(N, {
+                                        (0, r.jsx)(w, {
                                             guild: v,
                                             controller: l,
                                             hasBanner: null != j,
@@ -409,7 +409,7 @@ let M = i.memo(function (e) {
                                 ]
                             }),
                             null != j
-                                ? (0, r.jsx)(w, {
+                                ? (0, r.jsx)(N, {
                                       guild: v,
                                       controller: l,
                                       guildBanner: j,

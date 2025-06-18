@@ -72,8 +72,8 @@ function S(e) {
         E = i.useMemo(() => S.some((e) => e.isOwner(x)), [S, x]),
         P = (0, o.s9z)((e) => (0, o.DEQ)(e, O.PU)),
         { analyticsLocations: I } = (0, a.ZP)(),
-        w = (0, u.Q3)('CreateJoinGuildButton'),
-        N = (0, r.jsx)(b.Z, {
+        N = (0, u.Q3)('CreateJoinGuildButton'),
+        w = (0, r.jsx)(b.Z, {
             showPill: !1,
             id: 'create-join-button',
             onClick: () => {
@@ -91,10 +91,10 @@ function S(e) {
             selected: P,
             onContextMenu: j,
             tooltip: _.intl.string(_.t.l5WIbW),
-            icon: w ? o.oFk : o.BRu
+            icon: N ? o.oFk : o.BRu
         });
     return t
-        ? N
+        ? w
         : (0, r.jsx)('div', {
               className: v.tutorialContainer,
               children: (0, r.jsxs)(p.Z, {
@@ -102,7 +102,7 @@ function S(e) {
                   inlineSpecs: C,
                   position: 'right',
                   children: [
-                      N,
+                      w,
                       null != n &&
                           (0, r.jsx)(m.ZP, {
                               name: _.intl.string(_.t['45xjMz']),

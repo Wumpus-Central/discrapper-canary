@@ -1,6 +1,6 @@
 n.d(t, {
     E: () => I,
-    Z: () => w
+    Z: () => N
 }),
     n(388685),
     n(539854);
@@ -234,7 +234,7 @@ function I(e, t) {
     }, []);
 }
 j(P, 'defaultProps', { strokeSize: h._3P.StrokeSizes.MEDIUM });
-let w = c.ZP.connectStores([b.Z, m.Z, p.Z], () => {
+let N = c.ZP.connectStores([b.Z, m.Z, p.Z], () => {
     let e = b.Z.activeItems,
         t = I(e, m.Z),
         { total: n, progress: r } = y.lK(t);

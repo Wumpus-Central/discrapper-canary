@@ -33,7 +33,7 @@ let P = i.memo(function (e) {
         l,
         u,
         P,
-        { stream: I, canGoLive: w, guildId: N, isStreaming: Z, channel: T, canStream: A, runningGame: R, embeddedActivity: D, activity: L, application: M, analyticsContext: k } = e,
+        { stream: I, canGoLive: N, guildId: w, isStreaming: Z, channel: T, canStream: A, runningGame: R, embeddedActivity: D, activity: L, application: M, analyticsContext: k } = e,
         { skipModalForGame: U, showRefreshedGoLiveModal: G } = (0, g.a)({
             location: 'Activity Panel',
             autoTrackExposure: !1
@@ -67,7 +67,7 @@ let P = i.memo(function (e) {
         }, [I]),
         K = i.useCallback(() => {
             let e = null != T && (0, y.vd)(T.type) ? T : null,
-                t = null != e ? e.getGuildId() : N;
+                t = null != e ? e.getGuildId() : w;
             if (U && null != R && null != O.Z.getVoiceChannelId()) {
                 (0, g.s)('Activity Panel'), (0, m.Z)(R.pid);
                 return;
@@ -126,9 +126,9 @@ let P = i.memo(function (e) {
                     );
                 };
             });
-        }, [T, N, R, G, U]),
+        }, [T, w, R, G, U]),
         Y =
-            (null != R || null == D || (0, c.R)()) && (Z || w)
+            (null != R || null == D || (0, c.R)()) && (Z || N)
                 ? (Z
                       ? ((t = !1),
                         (l = () => {
@@ -143,7 +143,7 @@ let P = i.memo(function (e) {
                           }),
                           (u = s.hGI),
                           (P = null != R ? S.intl.formatToPlainString(S.t.AB5gT0, { game: R.name }) : S.intl.string(S.t.FeUKeH)))
-                        : ((t = !0), (l = null), (u = s.hGI), (P = null != T && (0, y.vd)(T.type) ? S.intl.string(S.t.uQn9Bw) : null != N ? S.intl.string(S.t.fBXEoK) : S.intl.string(S.t.n3feND))),
+                        : ((t = !0), (l = null), (u = s.hGI), (P = null != T && (0, y.vd)(T.type) ? S.intl.string(S.t.uQn9Bw) : null != w ? S.intl.string(S.t.fBXEoK) : S.intl.string(S.t.n3feND))),
                   (0, r.jsx)('div', {
                       className: x.panelButtonContainer,
                       children: (0, r.jsx)(C.Z, {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => w }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -25,9 +25,9 @@ var r = n(255367),
     E = n(728492),
     P = n(335426);
 let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
-    w = (0, a.animated)(h.Kqy),
-    N = i.memo(function (e) {
-        let { folderNode: t, setNodeRef: n, selected: l, expanded: a, mediaState: d, mentionCount: m = 0, isMentionLowImportance: N, unread: Z = !1, defaultFolderName: T, draggable: A = !1, sorting: R = !1, onDragStart: D, onDragEnd: L, onExpandCollapse: M, onContextMenu: k, renderChildNode: U, folderButtonSize: G, folderButtonContent: B, 'aria-setsize': V, 'aria-posinset': H } = e,
+    N = (0, a.animated)(h.Kqy),
+    w = i.memo(function (e) {
+        let { folderNode: t, setNodeRef: n, selected: l, expanded: a, mediaState: d, mentionCount: m = 0, isMentionLowImportance: w, unread: Z = !1, defaultFolderName: T, draggable: A = !1, sorting: R = !1, onDragStart: D, onDragEnd: L, onExpandCollapse: M, onContextMenu: k, renderChildNode: U, folderButtonSize: G, folderButtonContent: B, 'aria-setsize': V, 'aria-posinset': H } = e,
             { id: F, name: z, children: W } = t,
             [K, Y] = i.useState(!1),
             [q, Q] = i.useState(!1),
@@ -108,7 +108,7 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                                       sorting: R,
                                       mediaState: d,
                                       mentionCount: m,
-                                      isMentionLowImportance: N,
+                                      isMentionLowImportance: w,
                                       tooltipName: er,
                                       folderGroupId: el,
                                       onClick: M,
@@ -149,7 +149,7 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                     return (
                         n &&
                         (0, r.jsx)(
-                            w,
+                            N,
                             {
                                 id: el,
                                 role: 'group',

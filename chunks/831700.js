@@ -25,8 +25,8 @@ var r = n(255367),
     E = n(378844),
     P = n(340541),
     I = n(335353),
-    w = n(896835),
-    N = n(359110),
+    N = n(896835),
+    w = n(359110),
     Z = n(155409),
     T = n(695346),
     A = n(447564),
@@ -162,7 +162,7 @@ class en extends H.ZP {
                       return (0, r.jsx)(c.P3F, {
                           className: o()(J.iconItem, J.alwaysShown),
                           onClick: () => {
-                              (0, w.X)('VoiceChannel') ? (0, A.k)(e, 'VoiceChannel') : window.open(V.Z.getArticleURL(q.BhN.HD_STREAMING_POTION), '_blank');
+                              (0, N.X)('VoiceChannel') ? (0, A.k)(e, 'VoiceChannel') : window.open(V.Z.getArticleURL(q.BhN.HD_STREAMING_POTION), '_blank');
                           },
                           'aria-label': X.intl.string(X.t.gpF6QU),
                           onMouseEnter: n,
@@ -180,8 +180,8 @@ class en extends H.ZP {
     }
     render() {
         let { channel: e, selected: t, connected: n, unread: i, resolvedUnreadSetting: l, mentionCount: s, locked: a, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: f, connectDragPreview: g, canReorderChannel: y, canMoveMembers: O, showTutorial: _, hasActiveEvent: v, embeddedApps: C, isSubscriptionGated: j, isFavoriteSuggestion: S, withGuildIcon: x } = this.props,
-            { shouldShowActivities: E, shouldShowGuildVerificationPopout: w } = this.state,
-            N = (0, P.jW)({ location: 'voice_channel' }).entrypoints,
+            { shouldShowActivities: E, shouldShowGuildVerificationPopout: N } = this.state,
+            w = (0, P.jW)({ location: 'voice_channel' }).entrypoints,
             T = this.getVoiceStatesCount(),
             A = (0, r.jsxs)('li', {
                 ref: this.ref,
@@ -197,7 +197,7 @@ class en extends H.ZP {
                             renderPopout: this.renderPopout,
                             spacing: 0,
                             onRequestClose: this.closeGuildVerificationPopout,
-                            shouldShow: (E && !u && !d && !w) || w,
+                            shouldShow: (E && !u && !d && !N) || N,
                             children: () =>
                                 (0, r.jsx)(c.ua7, {
                                     text: this.getTooltipText(),
@@ -273,7 +273,7 @@ class en extends H.ZP {
                                                                 }),
                                                             !S &&
                                                                 (0, r.jsxs)(r.Fragment, {
-                                                                    children: [this.renderOpenChatButton(), this.renderInviteButton(), N ? this.renderOptionsButton({ onContextMenu: this.handleContextMenu }) : this.renderEditButton(), this.renderChannelInfo(), this.renderHDSplashedIcon()]
+                                                                    children: [this.renderOpenChatButton(), this.renderInviteButton(), w ? this.renderOptionsButton({ onContextMenu: this.handleContextMenu }) : this.renderEditButton(), this.renderChannelInfo(), this.renderHDSplashedIcon()]
                                                                 })
                                                         ]
                                                     }
@@ -399,7 +399,7 @@ class en extends H.ZP {
                             return (0, r.jsx)(c.P3F, {
                                 className: o()(J.iconItem, n ? J.alwaysShown : null),
                                 onClick: () => {
-                                    u.Z.updateChatOpen(e.id, !0), (0, N.Kh)(e.id);
+                                    u.Z.updateChatOpen(e.id, !0), (0, w.Kh)(e.id);
                                 },
                                 'aria-label': X.intl.string(X.t.ZXxLQk),
                                 onMouseEnter: i,

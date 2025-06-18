@@ -1,30 +1,30 @@
-t.d(n, { Z: () => s });
-var r = t(255367);
-t(73800);
-var a = t(120356),
-    i = t.n(a),
-    o = t(481060),
-    l = t(388032),
-    c = t(449774);
+n.d(t, { Z: () => s });
+var r = n(255367);
+n(73800);
+var i = n(120356),
+    l = n.n(i),
+    a = n(481060),
+    o = n(388032),
+    c = n(449774);
 function s(e) {
-    let { guild: n, speakers: t, speakerCount: a, className: s } = e,
-        d = t.slice(0, 5),
+    let { guild: t, speakers: n, speakerCount: i, className: s } = e,
+        d = n.slice(0, 5),
         u = d.map((e) => {
-            var t, a;
+            var n, i;
             return (0, r.jsxs)(
                 'div',
                 {
                     className: c.speakerContainer,
                     children: [
-                        (0, r.jsx)(o.qEK, {
-                            src: null == e || null == (t = e.user) ? void 0 : t.getAvatarURL(n.id, 20),
-                            size: o.EFr.SIZE_20,
+                        (0, r.jsx)(a.qEK, {
+                            src: null == e || null == (n = e.user) ? void 0 : n.getAvatarURL(t.id, 20),
+                            size: a.EFr.SIZE_20,
                             className: c.avatar,
                             'aria-label': ''.concat(null == e ? void 0 : e.userNick, '-avatar')
                         }),
                         (0, r.jsx)('div', {
                             className: c.textInGridContainer,
-                            children: (0, r.jsx)(o.Text, {
+                            children: (0, r.jsx)(a.Text, {
                                 color: 'header-secondary',
                                 variant: 'text-sm/normal',
                                 className: c.textInGrid,
@@ -33,31 +33,31 @@ function s(e) {
                         })
                     ]
                 },
-                null == e || null == (a = e.user) ? void 0 : a.id
+                null == e || null == (i = e.user) ? void 0 : i.id
             );
         }),
-        _ = a - d.length;
+        h = i - d.length;
     return (0, r.jsxs)('div', {
-        className: i()(c.grid, s),
+        className: l()(c.grid, s),
         children: [
             u,
-            _ > 0 &&
+            h > 0 &&
                 (0, r.jsxs)('div', {
                     className: c.speakerContainer,
                     children: [
                         (0, r.jsx)('div', {
                             className: c.iconMicrophone,
-                            children: (0, r.jsx)(o.S6n, {
+                            children: (0, r.jsx)(a.S6n, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 height: 12
                             })
                         }),
-                        (0, r.jsx)(o.Text, {
+                        (0, r.jsx)(a.Text, {
                             color: 'header-secondary',
                             variant: 'text-sm/normal',
                             className: c.textInGrid,
-                            children: l.intl.format(l.t['185ggI'], { count: _ })
+                            children: o.intl.format(o.t['185ggI'], { count: h })
                         })
                     ]
                 })

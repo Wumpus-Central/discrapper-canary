@@ -23,7 +23,7 @@ let y = (0, c.B)(function (e) {
         E = (0, s.e7)([u.Z], () => u.Z.getChannel(null == x ? void 0 : x.parent_id)),
         P = l === (null == x ? void 0 : x.id),
         I = (0, s.e7)([h.Z], () => (null != E ? h.Z.can(g.Plq.MANAGE_CHANNELS, E) : null != t && h.Z.can(g.Plq.MANAGE_CHANNELS, t))),
-        w = i.useCallback(
+        N = i.useCallback(
             (e) => {
                 null != x &&
                     (0, a.jW)(e, async () => {
@@ -78,10 +78,10 @@ let y = (0, c.B)(function (e) {
             [x]
         );
     if (null == x) return null;
-    let N = (0, p.jo)(c, v),
+    let w = (0, p.jo)(c, v),
         Z = (0, p.CN)(x, O, _),
         T = (0, r.jsx)('div', {
-            className: o()(N, {
+            className: o()(w, {
                 [b.disabled]: Z,
                 [b.selected]: P
             }),
@@ -91,7 +91,7 @@ let y = (0, c.B)(function (e) {
                 channel: x,
                 guild: t,
                 selected: P,
-                onContextMenu: w,
+                onContextMenu: N,
                 forceInteractable: !0,
                 resolvedUnreadSetting: m.i.ONLY_MENTIONS,
                 children: [

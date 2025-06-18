@@ -1,68 +1,68 @@
-n.d(t, { Z: () => u }), n(388685);
-var l = n(255367);
+n.d(t, { Z: () => s }), n(388685);
+var i = n(255367);
 n(73800);
-var r = n(442837),
-    i = n(481060),
-    o = n(699516),
-    a = n(388032);
-function u(e) {
-    let { user: t, onAction: u, appContext: c } = e,
+var l = n(442837),
+    r = n(481060),
+    a = n(699516),
+    o = n(388032);
+function s(e) {
+    let { user: t, onAction: s, appContext: u } = e,
         d = t.id,
-        [s, f] = (0, r.Wu)(
-            [o.Z],
+        [c, g] = (0, l.Wu)(
+            [a.Z],
             () => {
                 var e;
-                return [o.Z.isFriend(d), null != (e = o.Z.getNickname(d)) ? e : null];
+                return [a.Z.isFriend(d), null != (e = a.Z.getNickname(d)) ? e : null];
             },
             [d]
         );
-    if (!s) return null;
-    let g = null == f ? a.intl.string(a.t.BGYkaG) : a.intl.string(a.t['8pOYUF']);
-    return (0, l.jsx)(i.sNh, {
-        id: null == f ? 'add-friend-nickname' : 'edit-friend-nickname',
-        label: g,
+    if (!c) return null;
+    let f = null == g ? o.intl.string(o.t.BGYkaG) : o.intl.string(o.t['8pOYUF']);
+    return (0, i.jsx)(r.sNh, {
+        id: null == g ? 'add-friend-nickname' : 'edit-friend-nickname',
+        label: f,
         action: () => {
-            null == u || u(),
-                (0, i.ZDy)(
+            null == s || s(),
+                (0, r.ZDy)(
                     async () => {
                         let { default: e } = await n.e('25070').then(n.bind(n, 670794));
                         return (n) =>
-                            (0, l.jsx)(
+                            (0, i.jsx)(
                                 e,
                                 (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
-                                            l = Object.keys(n);
+                                            i = Object.keys(n);
                                         'function' == typeof Object.getOwnPropertySymbols &&
-                                            (l = l.concat(
+                                            (i = i.concat(
                                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                                 })
                                             )),
-                                            l.forEach(function (t) {
-                                                var l;
-                                                (l = n[t]),
+                                            i.forEach(function (t) {
+                                                var i;
+                                                (i = n[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
-                                                              value: l,
+                                                              value: i,
                                                               enumerable: !0,
                                                               configurable: !0,
                                                               writable: !0
                                                           })
-                                                        : (e[t] = l);
+                                                        : (e[t] = i);
                                             });
                                     }
                                     return e;
                                 })(
                                     {
                                         user: t,
-                                        nickname: f
+                                        nickname: g
                                     },
                                     n
                                 )
                             );
                     },
-                    { contextKey: null != c ? (0, i.VnL)(c) : void 0 }
+                    { contextKey: null != u ? (0, r.VnL)(u) : void 0 }
                 );
         }
     });

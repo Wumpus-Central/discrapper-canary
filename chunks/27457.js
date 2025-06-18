@@ -29,8 +29,8 @@ var r = n(255367),
     E = n(210975),
     P = n(695346),
     I = n(937995),
-    w = n(456631),
-    N = n(274459),
+    N = n(456631),
+    w = n(274459),
     Z = n(314897),
     T = n(857192),
     A = n(77498),
@@ -104,8 +104,8 @@ let el = [X.fO.ACTIVITY],
     eo = i.memo((e) => {
         var t, n, l, a, k;
         let { participant: U, onDoubleClick: G, onContextMenu: Y, onClick: eo, onMouseDown: es, onKeyDown: ea, className: eu, style: ed, containerStyle: eh, channel: ep, width: ef, inPopout: eg, onVideoResize: em, inCall: eb = !1, selected: ey = !1, noBorder: eO = !1, noVideoRender: e_ = !1, focused: ev = !1, blocked: eC = !1, ignored: ej = !1, fit: eS = v.L.CONTAIN, paused: ex = !1, pulseSpeakingIndicator: eE = !1, forceIdle: eP = !1, inOverlayPopout: eI = !1 } = e,
-            ew = i.useContext(I.h9) || eP,
-            [eN, eZ] = i.useState(!1),
+            eN = i.useContext(I.h9) || eP,
+            [ew, eZ] = i.useState(!1),
             eT = P.Sb.useSetting(),
             eA = (0, s.e7)([T.default], () => T.default.isStreamInfoOverlayEnabled),
             [eR, eD] = i.useState(!1),
@@ -172,7 +172,7 @@ let el = [X.fO.ACTIVITY],
                 return () => clearTimeout(e);
             }
         }, [eY, eq, ep.hdStreamingUntil]);
-        let eQ = (0, s.e7)([w.Z], () => (U.type === X.fO.USER && null != ek ? w.Z.getEffectForUserId(ek) : null)),
+        let eQ = (0, s.e7)([N.Z], () => (U.type === X.fO.USER && null != ek ? N.Z.getEffectForUserId(ek) : null)),
             eX = (0, s.e7)([M.Z], () => M.Z.getVoicePlatformForChannel(ep.id, null != ek ? ek : Q.lds)),
             { showGameIcon: eJ } = y.ZP.useExperiment({ location: 'voice_users' }, { autoTrackExposure: !1 }),
             e$ = (0, s.e7)([D.Z], () => (eJ && null != ek ? D.Z.findActivity(ek, (e) => null != e.application_id && e.type === Q.IIU.PLAYING) : null), [eJ, ek]),
@@ -237,7 +237,7 @@ let el = [X.fO.ACTIVITY],
                         selected: ey,
                         width: ef,
                         focused: ev,
-                        idle: ew,
+                        idle: eN,
                         premiumIndicator: !1
                     })),
                     (ti = et.intl.formatToPlainString(et.t.gHPz3d, { streamerName: U.user.username }));
@@ -317,7 +317,7 @@ let el = [X.fO.ACTIVITY],
                                 className: o()(en.tile, {
                                     [en.noBorder]: eO,
                                     [en.noInteraction]: null == eo,
-                                    [en.idle]: ew
+                                    [en.idle]: eN
                                 }),
                                 noBorder: eO,
                                 style: ed,
@@ -333,9 +333,9 @@ let el = [X.fO.ACTIVITY],
                                     focusProps: { offset: 1 },
                                     children: [
                                         null != eQ && null != ek
-                                            ? (0, r.jsx)(N.Z, {
+                                            ? (0, r.jsx)(w.Z, {
                                                   voiceChannelEffect: eQ,
-                                                  onComplete: () => (0, w.H)(ek),
+                                                  onComplete: () => (0, N.H)(ek),
                                                   userId: ek
                                               })
                                             : null,
@@ -386,7 +386,7 @@ let el = [X.fO.ACTIVITY],
                                                           eK
                                                       ),
                                                       {
-                                                          idle: ew,
+                                                          idle: eN,
                                                           platform: eX,
                                                           title: (0, V.Z)(ep, U),
                                                           blocked: eC,
@@ -428,7 +428,7 @@ let el = [X.fO.ACTIVITY],
                                     participant: U
                                 }),
                             (0, r.jsx)(C.Z, {
-                                isFiring: eN,
+                                isFiring: ew,
                                 callTileRef: tl.current
                             })
                         ]
@@ -514,8 +514,8 @@ eo.displayName = 'CallTile';
 let ec = i.memo((e) => {
     let { idle: t, title: n, width: l, focused: u, videoToggleState: d, blocked: h, ignored: p, participantType: f, participantUserId: m, platform: b, secureFramesVerified: y, onContextMenu: O, muted: _, deafened: v, localMuted: C, serverMuted: j, serverDeafened: S, hasVideo: x, hideAudioIcon: E, onToggleMute: P } = e,
         I = (0, s.e7)([R.Z], () => null != m && R.Z.isLocalVideoAutoDisabled(m, (0, g.Z)(f)), [m, f]),
-        w = (0, Y.N)(l),
-        N = (0, Y.K)(l),
+        N = (0, Y.N)(l),
+        w = (0, Y.K)(l),
         [Z, T] = i.useState(!1);
     i.useEffect(() => {
         let e = !1,
@@ -524,7 +524,7 @@ let ec = i.memo((e) => {
             };
         return k.Z.addChangeListener(t), () => k.Z.removeChangeListener(t);
     }, []);
-    let A = !E && f === X.fO.STREAM && x && (!N || C),
+    let A = !E && f === X.fO.STREAM && x && (!w || C),
         D = (function (e) {
             let { localMuted: t, serverMuted: n, serverDeafened: r, deafened: i, muted: l } = e;
             return r ? c.Vm4 : n ? c.v0G : i ? c.wE8 : t ? c.v0G : l ? c.nRN : null;
@@ -536,7 +536,7 @@ let ec = i.memo((e) => {
             muted: _
         });
     return (0, r.jsxs)('div', {
-        className: o()(en.overlayContainer, { [en.compact]: N }),
+        className: o()(en.overlayContainer, { [en.compact]: w }),
         children: [
             (0, r.jsx)('div', {
                 className: o()(en.overlayTop, { [en.small]: l < 195 }),
@@ -569,19 +569,19 @@ let ec = i.memo((e) => {
                               })
                         : null
             }),
-            !w &&
+            !N &&
                 (0, r.jsxs)('div', {
                     className: o()(en.overlayBottom, { [en.small]: l < 195 }),
                     children: [
                         (0, r.jsxs)(c.Text, {
-                            className: o()(en.experimentOverlayTitle, { [en.compact]: N }),
+                            className: o()(en.experimentOverlayTitle, { [en.compact]: w }),
                             color: 'none',
-                            variant: N ? 'text-sm/normal' : 'text-md/normal',
+                            variant: w ? 'text-sm/normal' : 'text-md/normal',
                             children: [
                                 null != D &&
                                     f === X.fO.USER &&
                                     (0, r.jsx)(D, {
-                                        className: o()(en.experimentTitleIcon, { [en.compact]: N }),
+                                        className: o()(en.experimentTitleIcon, { [en.compact]: w }),
                                         size: 'xs',
                                         color: 'currentColor'
                                     }),
@@ -609,7 +609,7 @@ let ec = i.memo((e) => {
                                     : (0, r.jsx)(es, {
                                           participantType: f,
                                           platform: b,
-                                          className: o()(en.experimentTitleIcon, { [en.compact]: N })
+                                          className: o()(en.experimentTitleIcon, { [en.compact]: w })
                                       }),
                                 null == n || '' === n || t
                                     ? null
@@ -644,7 +644,7 @@ let ec = i.memo((e) => {
                                         tooltipText: et.intl.string(et.t['+1H47u']),
                                         icon: c.xhG,
                                         hideWhenInactive: !Z,
-                                        compact: N
+                                        compact: w
                                     }),
                                     A &&
                                         (0, r.jsx)(ea, {
@@ -652,7 +652,7 @@ let ec = i.memo((e) => {
                                             tooltipText: C ? et.intl.string(et.t.YqAjX1) : et.intl.string(et.t['w4m94+']),
                                             icon: C ? c.OyP : c.gj8,
                                             hideWhenInactive: !C && !Z,
-                                            compact: N
+                                            compact: w
                                         })
                                 ]
                             })

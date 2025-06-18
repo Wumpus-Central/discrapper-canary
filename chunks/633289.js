@@ -1,15 +1,18 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r,
     i = n(108131),
     a = n.n(i),
     o = n(442837),
-    s = n(570140),
-    l = n(865427),
-    c = n(314897),
-    u = n(626135),
-    d = n(508825),
-    f = n(981631);
-function _(e, t, n) {
+    s = n(433517),
+    l = n(570140),
+    c = n(865427),
+    u = n(710845),
+    d = n(314897),
+    f = n(626135),
+    _ = n(70956),
+    p = n(508825),
+    h = n(981631);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,129 +25,178 @@ function _(e, t, n) {
         e
     );
 }
-let p = [d.Cm.User],
-    h = {
+let g = new u.Z('ApexExperimentStore'),
+    E = [p.Cm.User],
+    b = {
         user: {},
         guild: {}
     },
-    m = {},
-    g = {},
-    E = {},
-    b = {};
-function y(e) {
-    let t = b[e];
-    return null == t && ((t = a().v3(e)), (b[e] = t)), t;
+    y = {},
+    O = {},
+    v = {},
+    I = 'apexTrackedExposures',
+    T = 1,
+    S = 7 * _.Z.Millis.DAY,
+    A = {},
+    N = {};
+function C(e) {
+    let t = N[e];
+    return null == t && ((t = a().v3(e)), (N[e] = t)), t;
 }
-class O extends (r = o.ZP.PersistedStore) {
+class R extends (r = o.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(c.default), null != e && 1 === e.version && ((g = e.clientOverrides), (h = e.evaluatedExperiments));
-        let t = (0, l._S)();
-        for (let e in ((E = {}), t)) {
-            let n = y(e);
-            E[n] = {
-                hashedId: n,
+        this.waitFor(d.default), null != e && 1 === e.version && ((O = e.clientOverrides), (b = e.evaluatedExperiments));
+        let t = (0, c._S)();
+        for (let e in ((v = {}), t)) {
+            let n = C(e);
+            v[n] = {
+                hashedName: n,
                 variantId: t[e],
                 isOverride: !0
             };
         }
+        A = this.loadTrackedExposures();
     }
     getState() {
         return {
             version: 1,
-            evaluatedExperiments: h,
-            clientOverrides: g
+            evaluatedExperiments: b,
+            clientOverrides: O
         };
     }
     processExperimentsMessage(e) {
         if (null == e) return !1;
-        for (let t of p) {
-            let n = d.Oz[t],
+        for (let t of E) {
+            let n = p.Oz[t],
                 r = e.assignments[t];
             if (null == r || null == n) continue;
-            let i = h[n];
+            let i = b[n];
             for (let e in r) {
                 let { evaluation_id: t, assignments: n } = r[e],
                     a = {
                         evaluationId: t,
                         assignments: {}
                     };
-                for (let [t, r, o] of ((i[e] = a), n))
+                for (let [t, r, o, s] of ((i[e] = a), n))
                     null != o || (o = 0),
                         (a.assignments[t] = {
-                            hashedId: t,
+                            hashedName: t,
                             variantId: r,
-                            isOverride: (o & d.V8.IsOverride) != 0
+                            isOverride: (o & p.V8.IsOverride) != 0,
+                            revision: s
                         });
             }
         }
     }
     handleApexExperimentOverrideCreate(e) {
-        g[e.hashedId] = {
-            hashedId: e.hashedId,
+        O[e.hashedName] = {
+            hashedName: e.hashedName,
             variantId: e.variantId,
             isOverride: !0
         };
     }
     handleApexExperimentOverrideDelete(e) {
-        delete g[e.hashedId];
+        delete O[e.hashedName];
     }
     handleLogout(e) {
-        e.isSwitchingAccount || this.clearAllServerAssignments();
+        e.isSwitchingAccount || this.clearAllServerAssignments(), s.K.remove(I), this.clearAllTrackedExposures();
     }
     registerExperiment(e) {
-        m[e.name] = e;
+        y[e.name] = e;
     }
     getAssignment(e, t, n) {
         var r;
-        let i = y(n),
-            a = null != (r = g[i]) ? r : E[i];
+        let i = C(n),
+            a = null != (r = O[i]) ? r : v[i];
         if (null != a) return a;
-        let o = h[e][t];
+        let o = b[e][t];
         if (null != o) return o.assignments[i];
     }
     getEvaluation(e, t) {
         var n;
-        return null == (n = h[e][t]) ? void 0 : n.evaluationId;
+        return null == (n = b[e][t]) ? void 0 : n.evaluationId;
     }
     getEvaluationAndAssignment(e, t, n) {
         var r;
-        let i = null != (r = g[n]) ? r : E[n];
+        let i = null != (r = O[n]) ? r : v[n];
         if (null != i) return [void 0, i];
-        let a = h[e][t];
+        let a = b[e][t];
         return null == a ? [void 0, void 0] : [a.evaluationId, a.assignments[n]];
     }
-    trackEvaluationExposure(e, t, n, r) {
-        'user' === t &&
-            u.default.track(f.rMx.EXPERIMENT_USER_EVALUATION_EXPOSED, {
+    trackExperimentExposure(e, t, n, r, i, a) {
+        let o = C(''.concat(t, '|').concat(i, '|').concat(a, '|').concat(n));
+        this.shouldTrackExposure(o) &&
+            'user' === r &&
+            (f.default.track(h.rMx.EXPERIMENT_USER_EVALUATION_EXPOSED, {
                 evaluation: e,
-                experiment: n,
-                exposure_location: r,
-                unit_type: t
-            });
+                experiment: t,
+                exposure_location: n,
+                unit_type: r
+            }),
+            (A[o] = Date.now()),
+            this.saveTrackedExposures(A));
     }
     trackCommonTriggerPointExposures(e) {
-        for (let t of this.evaluationIds('user'))
-            u.default.track(f.rMx.EXPERIMENT_USER_EVALUATION_EXPOSED, {
-                evaluation: t,
-                exposure_location: e,
-                unit_type: 'user'
-            });
+        for (let t of this.evaluationIds('user')) {
+            let n = C(''.concat(t, '|').concat(e));
+            this.shouldTrackExposure(n) &&
+                (f.default.track(h.rMx.EXPERIMENT_USER_EVALUATION_EXPOSED, {
+                    evaluation: t,
+                    exposure_location: e,
+                    unit_type: 'user'
+                }),
+                (A[n] = Date.now()),
+                this.saveTrackedExposures(A));
+        }
     }
     evaluationIds(e) {
-        return Object.values(h[e]).map((e) => e.evaluationId);
+        return Object.values(b[e]).map((e) => e.evaluationId);
+    }
+    shouldTrackExposure(e) {
+        let t = A[e];
+        return null == t || Date.now() - t > S;
+    }
+    loadTrackedExposures() {
+        let e = s.K.get(I);
+        if (null == e || e.version !== T) return {};
+        let t = e.exposures,
+            n = Date.now(),
+            r = !1;
+        for (let e in t) n - t[e] > S && (delete t[e], (r = !0));
+        return r && this.saveTrackedExposures(t), t;
+    }
+    saveTrackedExposures(e) {
+        try {
+            s.K.set(I, {
+                version: T,
+                exposures: e
+            });
+        } catch (e) {
+            g.error('Error saving tracked exposures', e),
+                f.default.track(h.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
+                    module: 'discord_app',
+                    call: 'ApexExperimentStore.saveTrackedExposures'
+                });
+        }
     }
     clearAllServerAssignments() {
-        h = {
+        b = {
             user: {},
             guild: {}
         };
     }
     clearAllOverrides() {
-        (g = {}), (E = {});
+        (O = {}), (v = {});
+    }
+    clearAllTrackedExposures() {
+        A = {};
+    }
+    getHash(e) {
+        return C(e);
     }
     constructor() {
         super(
-            s.Z,
+            l.Z,
             {
                 CONNECTION_OPEN: (e) => this.processExperimentsMessage(e.apexExperiments),
                 CONNECTION_OPEN_STATE_UPDATE: (e) => this.processExperimentsMessage(e.apexExperiments),
@@ -154,10 +206,9 @@ class O extends (r = o.ZP.PersistedStore) {
                 APEX_EXPERIMENT_CLEAR_SERVER_ASSIGNMENTS: () => this.clearAllServerAssignments(),
                 LOGOUT: (e) => this.handleLogout(e)
             },
-            s.c.Early
-        ),
-            _(this, 'getHash', y);
+            l.c.Early
+        );
     }
 }
-_(O, 'displayName', 'ApexExperimentStore'), _(O, 'persistKey', 'ApexExperimentStore');
-let v = new O();
+m(R, 'displayName', 'ApexExperimentStore'), m(R, 'persistKey', 'ApexExperimentStore');
+let P = new R();

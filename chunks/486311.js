@@ -74,13 +74,13 @@ let C = {
             }, [t, null == j ? void 0 : j.popout]),
             E = (0, a.s9z)(a.JQI),
             P = (0, s.e7)([d.Z], () => d.Z.hasLayers()),
-            [I, w] = i.useState(null),
-            N = null == I ? 'animation' : 'LOOP';
+            [I, N] = i.useState(null),
+            w = null == I ? 'animation' : 'LOOP';
         i.useEffect(() => {
-            (null == j ? void 0 : j.popout) == null && w(null);
+            (null == j ? void 0 : j.popout) == null && N(null);
         }, [null == j ? void 0 : j.popout]);
         let Z = i.useCallback((e) => {
-                w(e);
+                N(e);
             }, []),
             T = i.useRef(null);
         return (0, r.jsx)(a.yRy, {
@@ -111,7 +111,7 @@ let C = {
                                 (0, r.jsx)('div', {
                                     className: _.lottieContainer,
                                     children: (0, r.jsx)(a.kci, {
-                                        nextScene: N,
+                                        nextScene: w,
                                         className: _.lottie,
                                         sceneSegments: C,
                                         importData: () => n.e('50821').then(n.t.bind(n, 548421, 19)),

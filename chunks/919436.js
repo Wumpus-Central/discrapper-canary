@@ -25,8 +25,8 @@ var r,
     E = n(674552),
     P = n(981631),
     I = n(388032),
-    w = n(223203);
-function N(e, t, n) {
+    N = n(223203);
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -50,7 +50,7 @@ function Z(e) {
                 })
             )),
             r.forEach(function (t) {
-                N(e, t, n[t]);
+                w(e, t, n[t]);
             });
     }
     return e;
@@ -160,7 +160,7 @@ class D extends (r = l.PureComponent) {
                         hovered: !b && g,
                         selected: !b && n,
                         unread: !b && d,
-                        className: w.pill
+                        className: N.pill
                     }),
                     (0, i.jsx)(x.Z, {
                         text: null != t ? t : '',
@@ -215,7 +215,7 @@ class D extends (r = l.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            N(this, 'state', {
+            w(this, 'state', {
                 hovered: !1,
                 animating: !0,
                 controller: new o.Controller({
@@ -225,7 +225,7 @@ class D extends (r = l.PureComponent) {
                     config: R
                 })
             }),
-            N(this, 'handleContextMenu', (e) => {
+            w(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
                     r = t.type === P.d4z.DM ? v.default.getUser(t.getRecipientId()) : null;
                 null != r
@@ -254,7 +254,7 @@ class D extends (r = l.PureComponent) {
             });
     }
 }
-N(D, 'defaultProps', {
+w(D, 'defaultProps', {
     badge: 0,
     audio: !1,
     video: !1,

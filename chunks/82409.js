@@ -25,8 +25,8 @@ var r = n(255367),
     E = n(739340),
     P = n(207913),
     I = n(553984),
-    w = n(333834),
-    N = n(982183),
+    N = n(333834),
+    w = n(982183),
     Z = n(981631),
     T = n(388032),
     A = n(21678);
@@ -39,7 +39,7 @@ let R = {
     bannerVisible: !1,
     communityInfoVisible: !1,
     shouldShowSubscribeTooltip: !1,
-    bannerVisibleHeight: N.$J,
+    bannerVisibleHeight: w.$J,
     hasGuildSubheader: !1,
     disableBannerAnimation: !0
 };
@@ -60,8 +60,8 @@ function D(e) {
             roleFilter: b.Z.roleFilter,
             everyoneFilter: b.Z.everyoneFilter
         })),
-        [g, S] = i.useState(N.V5.ALL),
-        [x, P] = i.useState(N.xM.UNREAD),
+        [g, S] = i.useState(w.V5.ALL),
+        [x, P] = i.useState(w.xM.UNREAD),
         { messages: T, loadState: D, loadMore: V, hasLoadedEver: H } = (0, E.ZP)(),
         F = (function (e) {
             let [t, n] = (0, i.useState)(!0),
@@ -89,13 +89,13 @@ function D(e) {
         K = i.useMemo(() => {
             var e;
             if (!H) return null;
-            if (g === N.V5.BOOKMARKS)
+            if (g === w.V5.BOOKMARKS)
                 return W.flatMap((e) => {
                     let { message: t } = e;
                     return null != t
                         ? [
                               {
-                                  kind: N.fL.BOOKMARK,
+                                  kind: w.fL.BOOKMARK,
                                   message: t
                               }
                           ]
@@ -108,14 +108,14 @@ function D(e) {
                         null == a
                             ? void 0
                             : a.map((e) => ({
-                                  kind: N.fL.MENTION,
+                                  kind: w.fL.MENTION,
                                   message: e
                               })))
                         ? e
                         : []),
                     ...T.filter((e) => e.author.id !== (null == z ? void 0 : z.id)).map((e) => ({
                         message: e,
-                        kind: N.fL.ALL_MESSAGES_CHANNEL
+                        kind: w.fL.ALL_MESSAGES_CHANNEL
                     }))
                 ],
                 (e) => {
@@ -124,10 +124,10 @@ function D(e) {
                 }
             ).filter((e) => {
                 let { message: t } = e;
-                return t.author.id !== (null == z ? void 0 : z.id) && C.default.age(t.id) < N.ib;
+                return t.author.id !== (null == z ? void 0 : z.id) && C.default.age(t.id) < w.ib;
             });
-            if (g === N.V5.ALL) return t;
-            if (g === N.V5.ANNOUNCEMENTS)
+            if (g === w.V5.ALL) return t;
+            if (g === w.V5.ANNOUNCEMENTS)
                 return null == t
                     ? void 0
                     : t.filter((e) => {
@@ -135,7 +135,7 @@ function D(e) {
                               n = O.Z.getChannel(t.channel_id);
                           return (null == n ? void 0 : n.type) === Z.d4z.GUILD_ANNOUNCEMENT;
                       });
-            if (g === N.V5.MENTIONS)
+            if (g === w.V5.MENTIONS)
                 return null == t
                     ? void 0
                     : t.filter((e) => {
@@ -144,9 +144,9 @@ function D(e) {
                       });
             throw Error('Unknown filter: '.concat(g));
         }, [g, a, z, W, T, H]),
-        Y = x === N.xM.READ && !F,
-        { notificationCenterVariant: q } = j.L.useExperiment({ location: 'NotificationsInboxSidebar' }),
-        Q = 'sidebar' === q && g !== N.V5.ALL;
+        Y = x === w.xM.READ && !F,
+        { filterStyle: q } = j.Lk.useExperiment({ location: 'NotificationsInboxSidebar' }),
+        Q = q === j.v8.DROPDOWN && g !== w.V5.ALL;
     return (0, r.jsxs)('nav', {
         className: o()(A.container, { [A.panelSpacing]: l }),
         children: [
@@ -179,7 +179,7 @@ function D(e) {
                 })(
                     {
                         hasSubheader: !0,
-                        guild: N.F7
+                        guild: w.F7
                     },
                     R
                 )),
@@ -190,7 +190,7 @@ function D(e) {
                             gap: 4,
                             style: { marginRight: -4 },
                             children: [
-                                'sidebar' === q &&
+                                q === j.v8.DROPDOWN &&
                                     (0, r.jsx)(I.p, {
                                         selectedFilter: g,
                                         setSelectedFilter: S,
@@ -214,14 +214,14 @@ function D(e) {
                       }),
                 t)
             ),
-            'popout' === q &&
+            q === j.v8.TABS &&
                 (0, r.jsx)(I.Z, {
                     selectedFilter: g,
                     setSelectedFilter: S
                 }),
-            g === N.V5.ALL && (0, r.jsx)(U, { canShow: Y }),
+            g === w.V5.ALL && (0, r.jsx)(U, { canShow: Y }),
             Q && (0, r.jsx)(G, { filter: g }),
-            (0, r.jsx)(w.Z, {
+            (0, r.jsx)(N.Z, {
                 className: A.messageList,
                 renderMessageGroup: k,
                 messages: K,
@@ -230,11 +230,11 @@ function D(e) {
                 listName: 'notifications-inbox',
                 loadMore: function (e) {
                     let t = null != a && a.length > 0 ? a[a.length - 1].id : null;
-                    d && !p && L(null, t), D !== E.jd.Done && D !== E.jd.Loading && V(e);
+                    [w.V5.ALL, w.V5.MENTIONS, w.V5.ANNOUNCEMENTS].includes(g) && d && !p && L(null, t), [w.V5.ALL, w.V5.ANNOUNCEMENTS].includes(g) && D !== E.jd.Done && D !== E.jd.Loading && V(e);
                 },
                 renderLoadingState: M,
                 setInboxReadState: P,
-                ignoreGrouping: g !== N.V5.ALL
+                ignoreGrouping: g !== w.V5.ALL
             })
         ]
     });
@@ -297,7 +297,7 @@ function G(e) {
             color: 'text-primary',
             variant: 'text-sm/semibold',
             className: A.filterHeaderWrap,
-            children: N.by[t]
+            children: w.by[t]
         },
         'filter-header'
     );

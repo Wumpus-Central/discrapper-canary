@@ -85,10 +85,10 @@ function P() {
     });
 }
 function I(e) {
-    let { messages: t, loadingInitial: n, loadingMore: l, loadMore: s, renderLoadingState: h, renderMessageGroup: p, setInboxReadState: C, scrollerClassName: I, className: w, listName: N, ignoreGrouping: Z = !1 } = e,
+    let { messages: t, loadingInitial: n, loadingMore: l, loadMore: s, renderLoadingState: h, renderMessageGroup: p, setInboxReadState: C, scrollerClassName: I, className: N, listName: w, ignoreGrouping: Z = !1 } = e,
         T = i.useRef(null),
-        A = (0, d.Z)(N, T),
-        { notificationCenterVariant: R } = m.L.useExperiment({ location: 'NotificationsInboxSidebarList' }),
+        A = (0, d.Z)(w, T),
+        { notificationCenterVariant: R } = m.Lk.useExperiment({ location: 'NotificationsInboxSidebarList' }),
         { messageCategoryOpenStates: D, toggleOpenState: L } = (0, y.Z)();
     i.useEffect(() => {
         function e() {
@@ -163,7 +163,7 @@ function I(e) {
                         ? e.push(
                               ...t.map((e) => {
                                   let { message: t } = e;
-                                  return p([t], 'sidebar' === R, k(t.id) === _.KZ.UNREAD);
+                                  return p([t], R === m.jP.SIDEBAR, k(t.id) === _.KZ.UNREAD);
                               })
                           )
                         : null != U &&
@@ -183,7 +183,7 @@ function I(e) {
                                           }
                                       })
                                   ),
-                                  D[t] && e.push(...U[t].map((e) => p(e, 'sidebar' === R, k(e[0].id) === _.KZ.UNREAD))));
+                                  D[t] && e.push(...U[t].map((e) => p(e, R === m.jP.SIDEBAR, k(e[0].id) === _.KZ.UNREAD))));
                           }),
                 (null == t ? void 0 : t.length) !== 0 && e.push((0, r.jsx)(u.LZC, { size: 8 }, 'spacer')),
                 e
@@ -225,7 +225,7 @@ function I(e) {
             groupedUnreadMessages: null == U ? void 0 : U.UNREAD
         }),
         (0, r.jsx)('div', {
-            className: o()(w, j.messagesPopoutWrap),
+            className: o()(N, j.messagesPopoutWrap),
             onClick: S,
             onDoubleClick: S,
             'aria-label': e['aria-label'],

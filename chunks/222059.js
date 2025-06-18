@@ -25,8 +25,8 @@ var r = n(255367),
     E = n(682662),
     P = n(662146),
     I = n(674552),
-    w = n(981631),
-    N = n(474936),
+    N = n(981631),
+    w = n(474936),
     Z = n(871465),
     T = n(388032),
     A = n(823306);
@@ -48,7 +48,7 @@ function D(e) {
         [O, _] = i.useState(!1),
         [v, C] = i.useState(!1),
         [j, S] = i.useState(null),
-        [N, D] = i.useState(0),
+        [w, D] = i.useState(0),
         L = (0, l.Ie)('home'),
         M = (0, h.Q3)('DefaultHomeButton'),
         k = (0, d.oq)().activePanel === d.wh.APP_ICON,
@@ -57,7 +57,7 @@ function D(e) {
         };
     if (null == p) return null;
     let G = T.intl.string(T.t.YUU0RE);
-    v && (G = s.K.get(w.wli) ? T.intl.string(T.t.nkq1l5) : T.intl.string(T.t.Be8Q5O));
+    v && (G = s.K.get(N.wli) ? T.intl.string(T.t.nkq1l5) : T.intl.string(T.t.Be8Q5O));
     let B = null;
     !o &&
         y &&
@@ -102,10 +102,10 @@ function D(e) {
                         onMouseEnter: () => _(!0),
                         onMouseLeave: () => _(!1),
                         onClick: () => {
-                            if (!__OVERLAY__ && (null != j && clearTimeout(j), S(setTimeout(U, 500)), D(N + 1), 15 === N)) {
+                            if (!__OVERLAY__ && (null != j && clearTimeout(j), S(setTimeout(U, 500)), D(w + 1), 15 === w)) {
                                 U();
-                                let e = !s.K.get(w.wli);
-                                s.K.set(w.wli, e),
+                                let e = !s.K.get(N.wli);
+                                s.K.set(N.wli, e),
                                     e && s.K.set(Z.O5, !0),
                                     e ? (0, g.GN)('discodo') : (0, g.GN)('user_leave'),
                                     C(!0),
@@ -127,9 +127,9 @@ function D(e) {
                             pathname: b,
                             state: {
                                 analyticsSource: {
-                                    page: w.ZY5.GUILD_CHANNEL,
-                                    section: w.jXE.NAVIGATION,
-                                    object: w.qAy.BUTTON_HOME
+                                    page: N.ZY5.GUILD_CHANNEL,
+                                    section: N.jXE.NAVIGATION,
+                                    object: N.qAy.BUTTON_HOME
                                 }
                             }
                         },
@@ -184,7 +184,7 @@ function L() {
             return r > 0 && r < 100;
         }),
         n = (0, f.If)(),
-        i = Object.keys(N.nG),
+        i = Object.keys(w.nG),
         { unviewedTrialCount: l, unviewedDiscountCount: s } = (0, o.cj)([O.Z], () => ({
             unviewedTrialCount: O.Z.getUnacknowledgedOffers(i).length,
             unviewedDiscountCount: O.Z.getUnacknowledgedDiscountOffers().length
@@ -196,11 +196,11 @@ function L() {
         g = h === a && a > 0 && n + d === 0,
         m = _.Z.getHomeLink();
     return (
-        g && (m = w.Z5c.APPLICATION_STORE),
+        g && (m = N.Z5c.APPLICATION_STORE),
         (0, r.jsx)(D, {
             selected: e,
             user: u,
-            selectedChannelId: b.Z.getChannelId(w.ME),
+            selectedChannelId: b.Z.getChannelId(N.ME),
             badge: h,
             link: m,
             showProgressBadge: t

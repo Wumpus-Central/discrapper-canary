@@ -25,8 +25,8 @@ var r = n(255367),
     E = n(593214),
     P = n(919755),
     I = n(110977),
-    w = n(603274),
-    N = n(981631),
+    N = n(603274),
+    w = n(981631),
     Z = n(388032),
     T = n(940751);
 function A(e) {
@@ -56,9 +56,9 @@ function A(e) {
 }
 let R = {
     analyticsSource: {
-        page: N.ZY5.GUILD_CHANNEL,
-        section: N.jXE.CHANNEL_LIST,
-        object: N.qAy.CHANNEL
+        page: w.ZY5.GUILD_CHANNEL,
+        section: w.jXE.CHANNEL_LIST,
+        object: w.qAy.CHANNEL
     }
 };
 function D() {
@@ -70,9 +70,9 @@ function D() {
             favoriteChannels: x.Z.getFavoriteChannels(),
             favoriteServerMuted: x.Z.favoriteServerMuted
         })),
-        B = (0, a.e7)([C.Z], () => C.Z.getChannelId(N.I_8)),
+        B = (0, a.e7)([C.Z], () => C.Z.getChannelId(w.I_8)),
         V = (0, a.e7)([v.Z], () => v.Z.getChannel(B)),
-        H = (0, O.Z)((e) => e.guildId) === N.I_8,
+        H = (0, O.Z)((e) => e.guildId) === w.I_8,
         { badge: F, unread: z } = (0, P.Z)(G),
         W = (function (e) {
             let t = (0, a.e7)([C.Z], () => C.Z.getVoiceChannelId()),
@@ -122,7 +122,7 @@ function D() {
                 unread: z && !U,
                 className: T.pill
             }),
-            (0, r.jsx)(w.Z, {
+            (0, r.jsx)(N.Z, {
                 onShow: q,
                 children: (0, r.jsx)(I.S, {
                     children: (0, r.jsx)(c.aRk, {
@@ -140,7 +140,7 @@ function D() {
                                     }),
                                     'aria-selected': H,
                                     to: {
-                                        pathname: N.Z5c.CHANNEL(N.I_8, B),
+                                        pathname: w.Z5c.CHANNEL(w.I_8, B),
                                         state: R
                                     },
                                     selected: H || M,

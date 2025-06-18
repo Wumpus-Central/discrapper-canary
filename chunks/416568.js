@@ -25,8 +25,8 @@ var r = n(255367),
     E = n(41776),
     P = n(821020),
     I = n(770858),
-    w = n(905423),
-    N = n(822857),
+    N = n(905423),
+    w = n(822857),
     Z = n(931928),
     T = n(431286),
     A = n(796974),
@@ -238,9 +238,9 @@ function ed(e) {
         s = o.startsWith(et.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB('')),
         a = (0, h.Wu)([D.Z, R.ZP], () => k.default.keys(D.Z.getGuilds()).filter((e) => R.ZP.isCurrentUserGuest(e))),
         u = i.concat(a),
-        { notificationCenterVariant: d } = P.L.useExperiment({ location: 'GuildsBar' });
+        { entrypoint: d } = P.Lk.useExperiment({ location: 'GuildsBar' });
     return (0, r.jsxs)(r.Fragment, {
-        children: [(0, r.jsx)(K.u, {}), null !== d && (0, r.jsx)(I.Z, {}), l ? (0, r.jsx)(x.Z, {}) : null, (0, r.jsx)(Y.Z, { isOnHubVerificationRoute: s }), !t && (0, r.jsx)(V.Z, {}), u.map((e) => (0, r.jsx)(ee.Z, { guildId: e }, e)), (0, r.jsx)($.Z, { onActivate: n })]
+        children: [(0, r.jsx)(K.u, {}), d === P.u3.SERVER_RAIL_TOP && (0, r.jsx)(I.Z, {}), l ? (0, r.jsx)(x.Z, {}) : null, (0, r.jsx)(Y.Z, { isOnHubVerificationRoute: s }), !t && (0, r.jsx)(V.Z, {}), u.map((e) => (0, r.jsx)(ee.Z, { guildId: e }, e)), (0, r.jsx)($.Z, { onActivate: n })]
     });
 }
 function eh(e) {
@@ -293,29 +293,29 @@ function ep(e) {
         b = i.useMemo(() => (n ? [] : p), [p, n]),
         O = (0, h.e7)([C.Z], () => C.Z.isFullscreenInContext()),
         [S, x] = i.useState(!1),
-        P = i.useCallback(() => x(!0), []),
-        I = i.useCallback(() => x(!1), []),
-        R = i.useRef(!1),
-        [D] = i.useState(() => new f.V7()),
-        k = i.useRef(null),
-        V = i.useRef(null),
-        H = (0, u.OP)(),
-        { ref: F } = H,
-        z = es(H, ['ref']),
-        K = (0, m.mFp)(),
-        [Y, Q] = i.useState(!1),
+        R = i.useCallback(() => x(!0), []),
+        D = i.useCallback(() => x(!1), []),
+        k = i.useRef(!1),
+        [V] = i.useState(() => new f.V7()),
+        H = i.useRef(null),
+        F = i.useRef(null),
+        z = (0, u.OP)(),
+        { ref: K } = z,
+        Y = es(z, ['ref']),
+        Q = (0, m.mFp)(),
         [$, ee] = i.useState(!1),
-        et = (0, m.dQu)(g.Z.modules.guildbar.AVATAR_SIZE),
-        ei = (0, m.dQu)(g.Z.space.SPACE_XS),
-        ep = i.useMemo(
+        [et, ei] = i.useState(!1),
+        ep = (0, m.dQu)(g.Z.modules.guildbar.AVATAR_SIZE),
+        ef = (0, m.dQu)(g.Z.space.SPACE_XS),
+        eg = i.useMemo(
             () =>
                 new eu(
                     d,
-                    Q,
                     ee,
+                    ei,
                     () => {
                         var e, t;
-                        null == (e = k.current) || e.calculateState(), null == (t = V.current) || t.calculateState();
+                        null == (e = H.current) || e.calculateState(), null == (t = F.current) || t.calculateState();
                     },
                     (function (e, t, n) {
                         let r = t ? n : 8,
@@ -328,52 +328,52 @@ function ep(e) {
                             separatorSize: l,
                             heightBeforeIcons: ea + l
                         };
-                    })(et, a, ei)
+                    })(ep, a, ef)
                 ),
-            [et, ei, d, a]
+            [ep, ef, d, a]
         );
     i.useEffect(
         () => (
-            ep.setResizeObserver(),
+            eg.setResizeObserver(),
             () => {
-                ep.clearResizeObserver();
+                eg.clearResizeObserver();
             }
         ),
-        [ep]
+        [eg]
     );
-    let { analyticsLocations: ef } = (0, v.ZP)(_.Z.GUILDS_LIST),
-        { pathname: eg } = (0, c.TH)(),
-        em = ec(eg);
+    let { analyticsLocations: em } = (0, v.ZP)(_.Z.GUILDS_LIST),
+        { pathname: eb } = (0, c.TH)(),
+        ey = ec(eb);
     (0, y.Ng)(() => {
-        if (!R.current && 0 !== d.size) {
-            if (!em) {
+        if (!k.current && 0 !== d.size) {
+            if (!ey) {
                 let { scrollTop: e } = A.Z.getGuildListDimensions();
-                ep.scrollTo({
+                eg.scrollTo({
                     to: e,
                     animate: !1
                 });
             }
-            return (R.current = !0), () => D.stop();
+            return (k.current = !0), () => V.stop();
         }
     }),
         i.useEffect(() => {
-            if ((ep.setGuildsTree(d), R.current || 0 === d.size)) return;
-            let e = w.Z.getState().guildId;
-            ep.scrollToGuild(e, !1);
+            if ((eg.setGuildsTree(d), k.current || 0 === d.size)) return;
+            let e = N.Z.getState().guildId;
+            eg.scrollToGuild(e, !1);
             let t = null;
-            return w.Z.subscribe((e) => {
+            return N.Z.subscribe((e) => {
                 let { guildId: n } = e;
-                n !== t && ((t = n), ep.scrollToGuild(t, !1));
+                n !== t && ((t = n), eg.scrollToGuild(t, !1));
             });
-        }, [d, ep]);
-    let eb = i.useCallback(() => {
-        ep.scrollTo({
+        }, [d, eg]);
+    let eO = i.useCallback(() => {
+        eg.scrollTo({
             to: 0,
             animate: !1
         });
-    }, [ep]);
-    (0, G.Z)(ep.scrollToGuild);
-    let ey = i.useCallback(
+    }, [eg]);
+    (0, G.Z)(eg.scrollToGuild);
+    let e_ = i.useCallback(
             function e(t, n, i) {
                 switch (t.type) {
                     case U.eD.FOLDER:
@@ -381,11 +381,11 @@ function ep(e) {
                             X.Z,
                             {
                                 folderNode: t,
-                                setNodeRef: ep.setNodeRef,
+                                setNodeRef: eg.setNodeRef,
                                 draggable: !0,
                                 sorting: S,
-                                onDragStart: P,
-                                onDragEnd: I,
+                                onDragStart: R,
+                                onDragEnd: D,
                                 renderChildNode: e,
                                 'aria-setsize': i,
                                 'aria-posinset': void 0 !== n ? n + 1 : void 0
@@ -397,11 +397,11 @@ function ep(e) {
                             J.Z,
                             {
                                 guildNode: t,
-                                setRef: ep.setNodeRef,
+                                setRef: eg.setNodeRef,
                                 draggable: !0,
                                 sorting: S,
-                                onDragStart: P,
-                                onDragEnd: I,
+                                onDragStart: R,
+                                onDragEnd: D,
                                 'aria-setsize': i,
                                 'aria-posinset': void 0 !== n ? n + 1 : void 0
                             },
@@ -411,43 +411,45 @@ function ep(e) {
                         return null;
                 }
             },
-            [P, I, S, ep.setNodeRef]
+            [R, D, S, eg.setNodeRef]
         ),
-        { enabled: eO } = (0, N.WX)({ location: 'GuildsBar' });
+        { enabled: ev } = (0, w.WX)({ location: 'GuildsBar' });
     (0, T.t)();
-    let e_ = i.useRef(null),
-        ev = (0, Z.qp)({
-            isVirtualCurrencyEnabled: eO,
-            discoveryButtonRef: e_,
-            scrollToBottom: ep.scrollToBottom
+    let eC = i.useRef(null),
+        ej = (0, Z.qp)({
+            isVirtualCurrencyEnabled: ev,
+            discoveryButtonRef: eC,
+            scrollToBottom: eg.scrollToBottom
         }),
-        { shouldShow: eC, questId: ej, onDiscoveryButtonClick: eS } = ev,
-        ex = es(ev, ['shouldShow', 'questId', 'onDiscoveryButtonClick']),
-        eE = eO && eC,
-        eP = (0, r.jsx)(W.Z, {
-            ref: e_,
-            questId: eE ? ej : void 0,
-            selected: em,
+        { shouldShow: eS, questId: ex, onDiscoveryButtonClick: eE } = ej,
+        eP = es(ej, ['shouldShow', 'questId', 'onDiscoveryButtonClick']),
+        eI = ev && eS,
+        eN = (0, r.jsx)(W.Z, {
+            ref: eC,
+            questId: eI ? ex : void 0,
+            selected: ey,
             className: er.discoveryIcon,
-            onClick: eE ? eS : void 0
+            onClick: eI ? eE : void 0
         }),
-        eI = eE
+        ew = eI
             ? (0, r.jsx)(
                   Z.fO,
                   eo(
                       el(
                           {
-                              targetElementRef: e_,
-                              isGuildBarScrolling: Y
+                              targetElementRef: eC,
+                              isGuildBarScrolling: $
                           },
-                          ex
+                          eP
                       ),
-                      { children: eP }
+                      { children: eN }
                   )
               )
-            : eP;
+            : eN,
+        { entrypoint: eZ } = P.Lk.useExperiment({ location: 'GuildsBar' }),
+        eT = eZ === P.u3.SERVER_RAIL_BOTTOM;
     return (0, r.jsx)(v.Gt, {
-        value: ef,
+        value: em,
         children: (0, r.jsx)(m.f6W, {
             theme: s,
             children: (e) =>
@@ -456,53 +458,68 @@ function ep(e) {
                     'aria-label': en.intl.string(en.t.PjnF2t),
                     children: [
                         (0, r.jsx)(B.Z, {
-                            ref: k,
-                            isVisible: ep.isItemVisible,
-                            onJumpTo: ep.handleJumpToGuild,
+                            ref: H,
+                            isVisible: eg.isItemVisible,
+                            onJumpTo: eg.handleJumpToGuild,
                             className: er.unreadMentionsIndicatorTop,
                             barClassName: er.unreadMentionsBar
                         }),
                         (0, r.jsx)(
                             'ul',
-                            eo(el({ ref: F }, z, K), {
+                            eo(el({ ref: K }, Y, Q), {
                                 role: 'tree',
                                 className: er.tree,
-                                children: (0, r.jsx)('div', {
+                                children: (0, r.jsxs)('div', {
                                     className: er.itemsContainer,
-                                    children: (0, r.jsxs)(m.xVE, {
-                                        className: o()({
-                                            [er.scroller]: !0,
-                                            [er.scrolling]: Y,
-                                            [er.isScrolledToBottom]: $
-                                        }),
-                                        experimental_useStack: !0,
-                                        gap: 'xs',
-                                        ref: ep.scrollerRef,
-                                        onScroll: ep.handleScroll,
-                                        children: [
-                                            (0, r.jsx)(ed, {
-                                                scrollToTop: eb,
-                                                lurkingGuildIds: b
+                                    children: [
+                                        (0, r.jsxs)(m.xVE, {
+                                            className: o()({
+                                                [er.scroller]: !0,
+                                                [er.scrolling]: $,
+                                                [er.isScrolledToBottom]: et
                                             }),
-                                            (0, r.jsx)(q.Z, {}),
-                                            (0, r.jsx)(eh, {
-                                                guildDiscoveryButton: eI,
-                                                disableAppDownload: t,
-                                                isOverlay: n,
-                                                renderTreeNode: ey,
-                                                lurkingGuildIds: b
+                                            experimental_useStack: !0,
+                                            gap: 'xs',
+                                            ref: eg.scrollerRef,
+                                            onScroll: eg.handleScroll,
+                                            children: [
+                                                (0, r.jsx)(ed, {
+                                                    scrollToTop: eO,
+                                                    lurkingGuildIds: b
+                                                }),
+                                                (0, r.jsx)(q.Z, {}),
+                                                (0, r.jsx)(eh, {
+                                                    guildDiscoveryButton: ew,
+                                                    disableAppDownload: t,
+                                                    isOverlay: n,
+                                                    renderTreeNode: e_,
+                                                    lurkingGuildIds: b
+                                                })
+                                            ]
+                                        }),
+                                        eT &&
+                                            (0, r.jsxs)('div', {
+                                                children: [
+                                                    (0, r.jsx)(q.Z, { fullWidth: !0 }),
+                                                    (0, r.jsx)('div', {
+                                                        className: er.bottomRailNotifCenterButton,
+                                                        children: (0, r.jsx)(I.Z, {})
+                                                    })
+                                                ]
                                             })
-                                        ]
-                                    })
+                                    ]
                                 })
                             })
                         ),
                         (0, r.jsx)(B.Z, {
                             reverse: !0,
-                            ref: V,
-                            isVisible: ep.isItemVisible,
-                            onJumpTo: ep.handleJumpToGuild,
-                            className: o()(er.unreadMentionsIndicatorBottom, { [er.unreadMentionsFixedFooter]: !n }),
+                            ref: F,
+                            isVisible: eg.isItemVisible,
+                            onJumpTo: eg.handleJumpToGuild,
+                            className: o()(er.unreadMentionsIndicatorBottom, {
+                                [er.unreadMentionsFixedFooter]: !n && !eT,
+                                [er.unreadMentionsFixedFooterBottomNotifCenterEntrypoint]: !n && eT
+                            }),
                             barClassName: er.unreadMentionsBar
                         })
                     ]

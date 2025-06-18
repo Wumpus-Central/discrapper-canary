@@ -1,9 +1,9 @@
 n.d(t, {
-    CN: () => w,
+    CN: () => N,
     ZP: () => L,
     eP: () => A,
     hR: () => T,
-    jo: () => N
+    jo: () => w
 });
 var r,
     i = n(255367),
@@ -75,10 +75,10 @@ function I(e, t) {
         e
     );
 }
-function w(e, t, n) {
+function N(e, t, n) {
     return null != t && !!t && !(0, C.ig)(n, e.type);
 }
-function N(e, t) {
+function w(e, t) {
     return null == t ? x.containerDefault : e > t ? x.containerDragAfter : x.containerDragBefore;
 }
 function Z(e) {
@@ -138,12 +138,12 @@ function A(e) {
         { entrypoints: v } = (0, h._k)({ location: 'channel_base' }),
         C = (0, a.e7)([O.Z], () => O.Z.getGuild(t.getGuildId())),
         E = (0, a.e7)([g.Z], () => g.Z.getStageInstanceByChannel(t.id), [t.id]),
-        w = (0, a.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(t.id), [t.id]),
-        N = (0, a.e7)([_.Z], () => (0, p.b)(_.Z, C, t, E)),
+        N = (0, a.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(t.id), [t.id]),
+        w = (0, a.e7)([_.Z], () => (0, p.b)(_.Z, C, t, E)),
         Z = (0, a.e7)([_.Z], () => (_.Z.can(j.Plq.CREATE_INSTANT_INVITE, t) ? S.intl.string(S.t.zJrgTE) : S.intl.string(S.t.Sd8Ix8))),
         T = v ? S.intl.string(S.t['EE+P0N']) : Z,
         A = l.useRef(null);
-    if (o || !N || t.isModeratorReportChannel()) return null;
+    if (o || !w || t.isModeratorReportChannel()) return null;
     function R() {
         if (null != C) {
             let e = y.Z.getAllActiveStreams().filter((e) => e.state !== j.jm8.ENDED && e.channelId === t.id);
@@ -157,7 +157,7 @@ function A(e) {
                             channel: t,
                             streamUserId: 1 === e.length ? e[0].ownerId : null,
                             source: j.t4x.GUILD_CHANNELS,
-                            guildScheduledEvent: w
+                            guildScheduledEvent: N
                         })
                     );
             });
@@ -259,11 +259,11 @@ class L extends (r = l.PureComponent) {
     }
     getClassName() {
         let { position: e, sortingPosition: t } = this.props;
-        return N(e, t);
+        return w(e, t);
     }
     isDisabled() {
         let { channel: e, sorting: t, sortingType: n } = this.props;
-        return w(e, t, n);
+        return N(e, t, n);
     }
 }
 E(L, 'defaultProps', { isDefaultChannel: !1 });

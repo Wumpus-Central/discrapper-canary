@@ -25,8 +25,8 @@ var r,
     E = n(483360),
     P = n(585483),
     I = n(63063),
-    w = n(51596),
-    N = n(823385),
+    N = n(51596),
+    w = n(823385),
     Z = n(415795),
     T = n(670512),
     A = n(558631),
@@ -180,10 +180,10 @@ class q extends l.PureComponent {
                   }));
     }
     close() {
-        (0, w.Cp)();
+        (0, N.Cp)();
     }
     search(e) {
-        this.setState({ query: e }), (0, w.yC)(e);
+        this.setState({ query: e }), (0, N.yC)(e);
     }
     renderInput() {
         let { selectedIndex: e, results: t } = this.props,
@@ -290,10 +290,10 @@ class q extends l.PureComponent {
                 !1 !== e && this.setState({ mouseFocusDisabled: !1 });
             }),
             M(this, 'focusResult', (e) => {
-                this.state.mouseFocusDisabled || (0, w.tF)(this.props.results.indexOf(e));
+                this.state.mouseFocusDisabled || (0, N.tF)(this.props.results.indexOf(e));
             }),
             M(this, 'selectResult', (e) => {
-                (0, w.Se)(e, this.props.queryMode === f.h8.TEXT_CHANNEL);
+                (0, N.Se)(e, this.props.queryMode === f.h8.TEXT_CHANNEL);
             }),
             M(this, 'handleContextMenu', (e) => {
                 let t = this.props.results[this.props.selectedIndex];
@@ -306,7 +306,7 @@ class q extends l.PureComponent {
                                     e,
                                     U(k({}, n), {
                                         guild: t.record,
-                                        onSelect: w.Cp,
+                                        onSelect: N.Cp,
                                         hideSettings: !0
                                     })
                                 );
@@ -329,7 +329,7 @@ class q extends l.PureComponent {
                                             U(k({}, t), {
                                                 channel: r,
                                                 guild: l,
-                                                onSelect: w.Cp
+                                                onSelect: N.Cp
                                             })
                                         );
                                 });
@@ -343,7 +343,7 @@ class q extends l.PureComponent {
                                             U(k({}, t), {
                                                 channel: r,
                                                 guild: l,
-                                                onSelect: w.Cp
+                                                onSelect: N.Cp
                                             })
                                         );
                                 });
@@ -357,7 +357,7 @@ class q extends l.PureComponent {
                                             e,
                                             U(k({}, t), {
                                                 channel: r,
-                                                onSelect: w.Cp
+                                                onSelect: N.Cp
                                             })
                                         );
                                 });
@@ -370,7 +370,7 @@ class q extends l.PureComponent {
                                             U(k({}, t), {
                                                 channel: r,
                                                 guild: l,
-                                                onSelect: w.Cp
+                                                onSelect: N.Cp
                                             })
                                         );
                                 });
@@ -390,7 +390,7 @@ class q extends l.PureComponent {
                                     U(k({}, n), {
                                         channel: t.record,
                                         selected: S.Z.getChannelId() === t.record.id,
-                                        onSelect: w.Cp
+                                        onSelect: N.Cp
                                     })
                                 );
                         });
@@ -402,7 +402,7 @@ class q extends l.PureComponent {
                                     e,
                                     U(k({}, n), {
                                         user: t.record,
-                                        onSelect: w.Cp
+                                        onSelect: N.Cp
                                     })
                                 );
                         });
@@ -416,10 +416,10 @@ class q extends l.PureComponent {
                     { selectedIndex: l } = this.props;
                 switch (i) {
                     case 'escape':
-                        e.preventDefault(), e.stopPropagation(), n.length > 0 ? this.search('') : (0, w.Cp)();
+                        e.preventDefault(), e.stopPropagation(), n.length > 0 ? this.search('') : (0, N.Cp)();
                         return;
                     case 'k':
-                        (!0 === e.ctrlKey || !0 === e.metaKey) && (e.preventDefault(), e.stopPropagation(), (0, w.Cp)());
+                        (!0 === e.ctrlKey || !0 === e.metaKey) && (e.preventDefault(), e.stopPropagation(), (0, N.Cp)());
                         return;
                     case 'enter': {
                         if (-1 === l) return;
@@ -445,7 +445,7 @@ class q extends l.PureComponent {
                     default:
                         return;
                 }
-                e.preventDefault(), (0, w.tF)(l);
+                e.preventDefault(), (0, N.tF)(l);
             }),
             M(this, 'renderRow', (e) => {
                 let { row: t } = e,
@@ -587,7 +587,7 @@ class q extends l.PureComponent {
     }
 }
 function Q(e) {
-    let t = (0, c.cj)([N.Z], () => N.Z.getProps()),
+    let t = (0, c.cj)([w.Z], () => w.Z.getProps()),
         n = (0, O.Pt)(),
         r = A.Z.useExperiment({ location: 'QuickSwitcher' }).enabled,
         o = l.useMemo(
