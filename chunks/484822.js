@@ -9,6 +9,7 @@ e.exports = {
     content: 'content_ab8609',
     unclamped: 'unclamped_ab8609',
     clickable: 'clickable_ab8609',
+    singleLineTextClamp: 'singleLineTextClamp_ab8609',
     ring: 'ring_ab8609',
     statusText: 'statusText_ab8609',
     statusEmoji: 'statusEmoji_ab8609',

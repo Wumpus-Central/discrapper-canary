@@ -1,9 +1,11 @@
-n.d(t, { _: () => s });
+n.d(t, { z: () => u }), n(388685);
 var r = n(73800),
-    l = n(772848),
-    a = n(638730),
-    i = n(626135);
-let o = (e, t, n, r) => {
+    l = n(638730),
+    a = n(780475),
+    i = n(626135),
+    o = n(981631),
+    s = n(215023);
+let c = (e, t, n, r) => {
         let { scrollTop: l = 0, scrollOffset: a = 0, scrollHeight: o = 0, scrollWidth: s = 0 } = r;
         if (o > 0) {
             let r = (l + a) / o;
@@ -17,24 +19,27 @@ let o = (e, t, n, r) => {
                 });
         }
     },
-    s = (e, t) => {
-        let n = r.useRef(null),
-            i = r.useRef((0, l.Z)()),
-            s = (0, a.h)(o, 5000, [], { trailing: !0 }),
-            c = r.useCallback(() => {
-                var r;
-                let l = null == (r = n.current) ? void 0 : r.getScrollerNode();
-                null != l &&
-                    s(e, i.current, t, {
-                        scrollTop: l.scrollTop,
-                        scrollOffset: l.offsetHeight,
-                        scrollHeight: l.scrollHeight,
-                        scrollWidth: l.scrollWidth
-                    });
-            }, [s, e, t]);
+    u = (e, t, n, i) => {
+        let { analyticsSource: u } = (0, a.MV)(n),
+            [d, p] = r.useState(s.IV),
+            [b, f] = r.useState(!1),
+            g = (0, l.h)(c, 5000, [], { trailing: !0 });
         return {
-            scrollerRef: n,
-            scrollHandler: c,
-            sessionId: i.current
+            handleScroll: r.useCallback(() => {
+                if (null != e.current) {
+                    let n = e.current.getScrollerNode();
+                    null != n &&
+                        g(o.rMx.COLLECTIBLES_SHOP_SCROLLED, t, u, {
+                            scrollTop: n.scrollTop,
+                            scrollOffset: n.offsetHeight,
+                            scrollHeight: n.scrollHeight,
+                            scrollWidth: n.scrollWidth
+                        });
+                    let r = e.current.getDistanceFromBottom();
+                    d >= i ? f(r < 20) : r <= 200 && p((e) => e + s.IV);
+                }
+            }, [g, u, t, d, i]),
+            numVisibleItems: d,
+            scrollerAtBottom: b
         };
     };

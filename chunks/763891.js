@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(594174),
     d = n(381585),
     p = n(597688),
-    f = n(370039),
-    b = n(937510),
+    b = n(370039),
+    f = n(937510),
     g = n(303952),
     h = n(38900),
     m = n(709999),
@@ -53,7 +53,7 @@ function I(e) {
                     return [v.intl.string(v.t.FYFppq), V ? S.Z : x.Z, a.Z.BUNDLE];
             }
         }, [B, V]),
-        q = (0, f.a)(),
+        q = (0, b.a)(),
         K = l.useMemo(
             () =>
                 q(
@@ -64,7 +64,7 @@ function I(e) {
                 ),
             [F, z, q]
         ),
-        Y = (0, b.l)(K);
+        Y = (0, f.l)(K);
     return (l.useEffect(() => {
         (0, g.n)({
             sessionId: N,

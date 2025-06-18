@@ -1,25 +1,25 @@
-n.d(t, { x: () => g }), n(388685);
-var r = n(255367),
-    l = n(73800),
-    i = n(120356),
-    a = n.n(i),
-    o = n(197723),
-    c = n(793030),
-    s = n(84735),
-    d = n(766646),
+n.d(e, { x: () => T }), n(388685);
+var i = n(255367),
+    r = n(73800),
+    l = n(120356),
+    a = n.n(l),
+    d = n(197723),
+    s = n(793030),
+    o = n(84735),
+    c = n(766646),
     u = n(667137),
-    h = n(185033),
-    x = n(388032),
-    m = n(946598);
-function b() {
-    let { onClose: e } = (0, u.v)();
-    return (0, r.jsx)(s.t, {
-        children: (0, r.jsxs)('button', {
-            className: m.closeButton,
-            onClick: e,
+    p = n(185033),
+    _ = n(388032),
+    g = n(946598);
+function m() {
+    let { onClose: t } = (0, u.v)();
+    return (0, i.jsx)(o.t, {
+        children: (0, i.jsxs)('button', {
+            className: g.closeButton,
+            onClick: t,
             children: [
-                (0, r.jsx)(d.n, { children: x.intl.string(h.default.WfH9io) }),
-                (0, r.jsx)(o.D, {
+                (0, i.jsx)(c.n, { children: _.intl.string(p.default.WfH9io) }),
+                (0, i.jsx)(d.D, {
                     size: 'md',
                     color: 'currentColor',
                     'aria-hidden': !0
@@ -28,101 +28,101 @@ function b() {
         })
     });
 }
-function p(e) {
-    let { leading: t, trailing: n, children: l } = e;
-    return (0, r.jsxs)(r.Fragment, {
+function h(t) {
+    let { leading: e, trailing: n, children: r } = t;
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            null != t &&
-                (0, r.jsx)('div', {
-                    className: m.headerLeading,
-                    children: t
+            null != e &&
+                (0, i.jsx)('div', {
+                    className: g.headerLeading,
+                    children: e
                 }),
-            l,
-            (0, r.jsxs)('div', {
-                className: m.headerTrailing,
-                children: [null != n && n, (0, r.jsx)(b, {})]
+            r,
+            (0, i.jsxs)('div', {
+                className: g.headerTrailing,
+                children: [null != n && n, (0, i.jsx)(m, {})]
             })
         ]
     });
 }
-function f(e) {
-    let { leading: t, trailing: n, children: i } = e,
-        [o, c] = l.useState(24),
-        [s, d] = l.useState(24),
-        u = l.useRef(null),
-        h = l.useRef(null);
+function E(t) {
+    let { leading: e, trailing: n, children: l } = t,
+        [d, s] = r.useState(24),
+        [o, c] = r.useState(24),
+        u = r.useRef(null),
+        p = r.useRef(null);
     return (
-        l.useLayoutEffect(() => {
-            let e = new ResizeObserver(() => {
-                let e = 0,
-                    t = 0;
+        r.useLayoutEffect(() => {
+            let t = new ResizeObserver(() => {
+                let t = 0,
+                    e = 0;
                 if (null != u && null != u.current) {
                     let n = u.current.getBoundingClientRect();
-                    (e = Math.max(e, n.height)), (t = Math.max(t, n.width));
+                    (t = Math.max(t, n.height)), (e = Math.max(e, n.width));
                 }
-                if (null != h && null != h.current) {
-                    let n = h.current.getBoundingClientRect();
-                    (e = Math.max(e, n.height)), (t = Math.max(t, n.width));
+                if (null != p && null != p.current) {
+                    let n = p.current.getBoundingClientRect();
+                    (t = Math.max(t, n.height)), (e = Math.max(e, n.width));
                 }
-                d(Math.ceil(t)), c(Math.ceil(e));
+                c(Math.ceil(e)), s(Math.ceil(t));
             });
-            return null != u.current && e.observe(u.current), null != h.current && e.observe(h.current), () => e.disconnect();
+            return null != u.current && t.observe(u.current), null != p.current && t.observe(p.current), () => t.disconnect();
         }, []),
-        (0, r.jsxs)(r.Fragment, {
+        (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)('div', {
+                (0, i.jsx)('div', {
                     ref: u,
-                    className: a()(m.headerLeading, m.headerLeadingAbsolute),
-                    children: t
+                    className: a()(g.headerLeading, g.headerLeadingAbsolute),
+                    children: e
                 }),
-                (0, r.jsx)('div', {
-                    className: m.headerLeadingSpacer,
+                (0, i.jsx)('div', {
+                    className: g.headerLeadingSpacer,
                     style: {
-                        height: o,
-                        width: s
+                        height: d,
+                        width: o
                     }
                 }),
-                i,
-                (0, r.jsx)('div', {
-                    className: m.headerTrailingSpacer,
+                l,
+                (0, i.jsx)('div', {
+                    className: g.headerTrailingSpacer,
                     style: {
-                        height: o,
-                        width: s
+                        height: d,
+                        width: o
                     }
                 }),
-                (0, r.jsxs)('div', {
-                    ref: h,
-                    className: a()(m.headerTrailing, m.headerTrailingAbsolute),
-                    children: [null != n && n, (0, r.jsx)(b, {})]
+                (0, i.jsxs)('div', {
+                    ref: p,
+                    className: a()(g.headerTrailing, g.headerTrailingAbsolute),
+                    children: [null != n && n, (0, i.jsx)(m, {})]
                 })
             ]
         })
     );
 }
-function g(e) {
-    let { title: t, titleTextVariant: n, body: l, alignCenter: i = !1, leading: o, trailing: s } = e,
-        { headingId: d } = (0, u.v)();
-    return (0, r.jsx)('header', {
-        className: a()(m.header, m.section),
-        children: (0, r.jsx)(i ? f : p, {
-            leading: o,
-            trailing: s,
-            children: (0, r.jsxs)(c.Kq, {
+function T(t) {
+    let { title: e, titleTextVariant: n, body: r, alignCenter: l = !1, leading: d, trailing: o } = t,
+        { headingId: c } = (0, u.v)();
+    return (0, i.jsx)('header', {
+        className: a()(g.header, g.section),
+        children: (0, i.jsx)(l ? E : h, {
+            leading: d,
+            trailing: o,
+            children: (0, i.jsxs)(s.Kq, {
                 gap: 8,
-                className: a()(m.headerMain, { [m.headerMainCentered]: i }),
+                className: a()(g.headerMain, { [g.headerMainCentered]: l }),
                 children: [
-                    null != t &&
-                        (0, r.jsx)(c.X6, {
-                            id: d,
+                    null != e &&
+                        (0, i.jsx)(s.X6, {
+                            id: c,
                             variant: null != n ? n : 'heading-lg/semibold',
                             color: 'text-primary',
-                            children: t
+                            children: e
                         }),
-                    null != l &&
-                        (0, r.jsx)(c.xv, {
+                    null != r &&
+                        (0, i.jsx)(s.xv, {
                             variant: 'text-md/normal',
                             color: 'text-secondary',
-                            children: l
+                            children: r
                         })
                 ]
             })

@@ -384,7 +384,7 @@ let z = d().throttle(f.OQ, 1000),
                     autoTrackExposure: !0
                 }) && H > 0;
         i.useEffect(() => {
-            h && Q();
+            h && J();
         }, [h]),
             i.useEffect(() => {
                 z(e.id);
@@ -392,7 +392,17 @@ let z = d().throttle(f.OQ, 1000),
             i.useEffect(() => {
                 null != f && f < c && z(e.id);
             }, [c, f, e.id]);
-        let Y = async (n, r, i) => {
+        let Y = i.useCallback(
+                () =>
+                    (0, O.i)({
+                        analyticsLocation: {
+                            page: L.ZY5.GUILD_SETTINGS,
+                            section: L.jXE.GUILD_SETTINGS_EMOJI_ADD_BUTTON
+                        }
+                    }),
+                []
+            ),
+            q = async (n, r, i) => {
                 if (!V)
                     return await (0, C.G)({
                         data: n,
@@ -407,28 +417,32 @@ let z = d().throttle(f.OQ, 1000),
                         data: n,
                         file: r,
                         image: i
+                    },
+                    analyticsLocation: {
+                        page: L.ZY5.GUILD_SETTINGS,
+                        section: L.jXE.GUILD_SETTINGS_EMOJI_DRAG_DROP
                     }
                 });
             },
-            q = async (n) => {
+            Q = async (n) => {
                 l((0, u.Z)()),
                     T.default.track(L.rMx.EMOJI_UPLOAD_STARTED, {
                         guild_id: e.id,
                         upload_id: t
                     }),
-                    await (0, I._j)(n, Y),
+                    await (0, I._j)(n, q),
                     x(!0);
             },
-            Q = () => {
+            J = () => {
                 null !== w.current && ((0, g.Mr3)(w.current), (w.current = null));
             },
-            J = async (e) => {
+            $ = async (e) => {
                 w.current = await (0, g.ZDy)(async () => {
                     let { default: t } = await n.e('16169').then(n.bind(n, 935333));
-                    return (n) => (0, r.jsx)(t, F({ processFiles: () => q(e) }, n));
+                    return (n) => (0, r.jsx)(t, F({ processFiles: () => Q(e) }, n));
                 });
             },
-            $ = (0, _.l)(e);
+            ee = (0, _.l)(e);
         return (0, r.jsxs)('div', {
             className: U.emojiSettings,
             children: [
@@ -436,7 +450,7 @@ let z = d().throttle(f.OQ, 1000),
                     ? null
                     : (0, r.jsx)(b.Z, {
                           className: U.emojiUploadContainer,
-                          onDrop: J
+                          onDrop: $
                       }),
                 (0, r.jsxs)(g.hjN, {
                     tag: g.RB0.H1,
@@ -454,14 +468,14 @@ let z = d().throttle(f.OQ, 1000),
                                     type: g.geA.DESCRIPTION,
                                     children: G.intl.format(G.t.TA1BR0, { count: Z })
                                 }),
-                                $ &&
+                                ee &&
                                     (0, r.jsx)(g.R94, {
                                         type: g.geA.DESCRIPTION,
                                         children: G.intl.format(G.t.uMkfTk, { onClick: () => D.Z.open(e.id, L.pNK.ROLE_SUBSCRIPTIONS, void 0, L.KsC.ROLE_SUBSCRIPTION_EMOJI) })
                                     }),
                                 V
                                     ? (0, r.jsx)(g.zxk, {
-                                          onClick: () => (0, O.i)(),
+                                          onClick: Y,
                                           children: G.intl.string(G.t.DU0dy8)
                                       })
                                     : (0, r.jsxs)(r.Fragment, {
@@ -487,7 +501,7 @@ let z = d().throttle(f.OQ, 1000),
                                                           ? (0, r.jsx)(I.ZP, {
                                                                 disabled: y || 0 === H || !a,
                                                                 tabIndex: 0,
-                                                                onChange: Y,
+                                                                onChange: q,
                                                                 setLoading: P,
                                                                 multiple: !0
                                                             })

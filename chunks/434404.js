@@ -228,9 +228,9 @@ let R = new s.Z('GuildSettingsActionCreators'),
             );
         },
         saveGuild(e, t) {
-            let { name: n, description: r, icon: o, splash: s, banner: u, homeHeader: d, afkChannelId: f, afkTimeout: _, systemChannelId: p, verificationLevel: h, defaultMessageNotifications: m, explicitContentFilter: g, features: E, systemChannelFlags: b, preferredLocale: y, rulesChannelId: v, safetyAlertsChannelId: I, discoverySplash: S, publicUpdatesChannelId: N, premiumProgressBarEnabled: C, profile: P } = t,
-                w = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                D = A(
+            let { name: n, description: r, icon: o, splash: s, banner: u, homeHeader: d, afkChannelId: f, afkTimeout: _, systemChannelId: p, verificationLevel: h, defaultMessageNotifications: m, explicitContentFilter: g, features: E, systemChannelFlags: b, preferredLocale: y, rulesChannelId: v, safetyAlertsChannelId: I, discoverySplash: S, publicUpdatesChannelId: N, premiumProgressBarEnabled: C, profile: P, moderatorReportingEnabled: w } = t,
+                D = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                L = A(
                     T(
                         {
                             name: n,
@@ -255,15 +255,18 @@ let R = new s.Z('GuildSettingsActionCreators'),
                         },
                         null != C ? { premium_progress_bar_enabled: C } : null
                     ),
-                    { profile: null != P ? (0, l.n)(P) : P }
+                    {
+                        profile: null != P ? (0, l.n)(P) : P,
+                        moderator_reporting_enabled: w
+                    }
                 );
             return (
                 a.Z.dispatch({ type: 'GUILD_SETTINGS_SUBMIT' }),
                 i.tn
                     .patch({
                         url: O.ANM.GUILD(e),
-                        query: { for_discovery: w.isForDiscovery },
-                        body: D,
+                        query: { for_discovery: D.isForDiscovery },
+                        body: L,
                         oldFormErrors: !0,
                         rejectWithError: !1
                     })
@@ -282,7 +285,7 @@ let R = new s.Z('GuildSettingsActionCreators'),
                                     errors: e.body
                                 }),
                                 R.error('Failed to save guild settings', { errors: e.body }),
-                                w.throwErr)
+                                D.throwErr)
                             )
                                 throw e.body;
                         }

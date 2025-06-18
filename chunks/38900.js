@@ -1,6 +1,6 @@
 n.d(t, {
     K: () => p,
-    Z: () => f
+    Z: () => b
 });
 var r = n(255367);
 n(73800);
@@ -20,7 +20,7 @@ let u = () => 4 * Math.random() + 8,
                 children: [(0, r.jsx)('div', { className: s.cardAvatar }), (0, r.jsx)('div', { className: s.cardTitle }), (0, r.jsx)('div', { className: s.cardDescription }), (0, r.jsx)('div', { className: s.cardSummary })]
             })
         }),
-    f = () =>
+    b = () =>
         (0, r.jsx)('div', {
             className: i.skeletons,
             children: d.map((e) =>

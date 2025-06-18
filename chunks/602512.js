@@ -1,7 +1,7 @@
 e.exports = {
     container: 'container_faa96b',
-    isOpen: 'isOpen_faa96b',
     dots: 'dots_faa96b',
+    isOpen: 'isOpen_faa96b',
     focusTarget: 'focusTarget_faa96b',
     left: 'left_faa96b',
     body: 'body_faa96b',

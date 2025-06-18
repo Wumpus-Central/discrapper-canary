@@ -394,7 +394,13 @@ function et(e) {
                                                                     children: (0, r.jsx)(h.z, {
                                                                         variant: 'secondary',
                                                                         size: 'sm',
-                                                                        onClick: () => (0, S.i)(),
+                                                                        onClick: () =>
+                                                                            (0, S.i)({
+                                                                                analyticsLocation: {
+                                                                                    section: G.jXE.EXPRESSION_PICKER,
+                                                                                    page: (null == X ? void 0 : X.guild_id) != null ? G.ZY5.GUILD_CHANNEL : G.ZY5.DM_CHANNEL
+                                                                                }
+                                                                            }),
                                                                         icon: d.S,
                                                                         text: H.intl.string(H.t.iMJO39)
                                                                     })

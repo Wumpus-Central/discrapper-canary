@@ -92,8 +92,24 @@ function G(e) {
 function B(e) {
     let t = m.Z.getChannel(e.channel_id);
     if (null == t || t.type === I.d4z.DM) return !1;
-    let n = O.ZP.resolvedMessageNotifications(t);
-    return [I.bL.ALL_MESSAGES, I.bL.ONLY_MENTIONS].includes(n);
+    switch (O.ZP.resolvedMessageNotifications(t)) {
+        case I.bL.ALL_MESSAGES:
+            return !0;
+        case I.bL.ONLY_MENTIONS:
+            let n = O.ZP.isSuppressEveryoneEnabled(t.getGuildId()),
+                r = O.ZP.isSuppressRolesEnabled(t.getGuildId()),
+                i = v.default.getCurrentUser();
+            if (null == i) return !1;
+            return (0, d.ZP)({
+                message: e,
+                userId: i.id,
+                suppressEveryone: n,
+                suppressRoles: r
+            });
+        case I.bL.NO_MESSAGES:
+        default:
+            return !1;
+    }
 }
 function V(e) {
     let { hasMoreAfter: t, messages: n, isAfter: r } = e,

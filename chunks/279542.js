@@ -1,7 +1,7 @@
 n.d(t, {
-    ZP: () => D,
-    fp: () => w,
-    k0: () => P
+    ZP: () => L,
+    fp: () => R,
+    k0: () => w
 }),
     n(388685);
 var r = n(255367),
@@ -27,8 +27,9 @@ var r = n(255367),
     C = n(193544),
     y = n(981631),
     N = n(388032),
-    I = n(576583);
-function E(e) {
+    I = n(130883),
+    E = n(576583);
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,7 +54,7 @@ function E(e) {
     }
     return e;
 }
-function S(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,7 +72,7 @@ function S(e, t) {
         e
     );
 }
-function T(e) {
+function P(e) {
     let { guild: t } = e,
         n = (0, o.e7)([f.Z], () => null != t && f.Z.can(y.Plq.MANAGE_GUILD, t), [t]),
         l = i.useCallback(
@@ -86,15 +87,15 @@ function T(e) {
             [t]
         ),
         s = i.useMemo(() => {
-            let e = (0, j.IF)(null == t ? void 0 : t.hasFeature(y.oNc.COMMUNITY)).map((e) => S(E({}, e), { tooltipPosition: 'left' }));
+            let e = (0, j.IF)(null == t ? void 0 : t.hasFeature(y.oNc.COMMUNITY)).map((e) => T(S({}, e), { tooltipPosition: 'left' }));
             return (0, j.LJ)(e);
         }, [t]),
         a = i.useMemo(() => s.find((e) => e.value === (null == t ? void 0 : t.verificationLevel)), [t, s]);
     return (0, r.jsxs)('div', {
-        className: I.setupContainer,
+        className: E.setupContainer,
         children: [
             (0, r.jsxs)('div', {
-                className: I.switchItemTextContent,
+                className: E.switchItemTextContent,
                 children: [
                     (0, r.jsx)(c.Text, {
                         color: 'header-primary',
@@ -118,7 +119,7 @@ function T(e) {
         ]
     });
 }
-function P(e) {
+function w(e) {
     let { guild: t, className: n, withDivider: l = !0 } = e,
         a = (0, m.pn)('GuildExplicitContentFilter'),
         d = (0, o.e7)([f.Z], () => null != t && f.Z.can(y.Plq.MANAGE_GUILD, t), [t]),
@@ -134,18 +135,18 @@ function P(e) {
             [t.id]
         ),
         g = i.useMemo(() => {
-            let e = (0, j.MF)(null == t ? void 0 : t.hasFeature(y.oNc.COMMUNITY)).map((e) => S(E({}, e), { tooltipPosition: 'left' }));
+            let e = (0, j.MF)(null == t ? void 0 : t.hasFeature(y.oNc.COMMUNITY)).map((e) => T(S({}, e), { tooltipPosition: 'left' }));
             return (0, j.LJ)(e);
         }, [t]),
         p = i.useMemo(() => g.find((e) => e.value === (null == t ? void 0 : t.explicitContentFilter)), [t, g]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            l && (0, r.jsx)(c.$i$, { className: I.divider }),
+            l && (0, r.jsx)(c.$i$, { className: E.divider }),
             (0, r.jsxs)('div', {
-                className: s()(I.setupContainer, n),
+                className: s()(E.setupContainer, n),
                 children: [
                     (0, r.jsxs)('div', {
-                        className: I.switchItemTextContent,
+                        className: E.switchItemTextContent,
                         children: [
                             (0, r.jsx)(c.Text, {
                                 color: 'header-primary',
@@ -171,12 +172,15 @@ function P(e) {
         ]
     });
 }
-async function w(e, t) {
+async function R(e, t) {
     if (e.hasFeature(y.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) === t) return;
     let n = e.features;
     return t ? n.add(y.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) : n.delete(y.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY), await _.Z.saveGuild(e.id, { features: n });
 }
-function R(e) {
+async function Z(e, t) {
+    return await _.Z.saveGuild(e.id, { moderatorReportingEnabled: t });
+}
+function D(e) {
     let { guild: t } = e,
         n = (0, o.e7)([f.Z], () => null != t && f.Z.can(y.Plq.MANAGE_GUILD, t), [t]),
         l = t.hasFeature(y.oNc.COMMUNITY),
@@ -184,7 +188,7 @@ function R(e) {
         [a, d] = i.useState(t.hasFeature(y.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
         u = i.useCallback(
             async (e) => {
-                d(e), await w(t, e);
+                d(e), await R(t, e);
             },
             [t]
         );
@@ -193,21 +197,21 @@ function R(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsxs)('div', {
-                      className: I.setupContainer,
+                      className: E.setupContainer,
                       children: [
                           (0, r.jsx)(c.j7V, {
                               value: a,
                               onChange: u,
-                              className: I.switchItem,
+                              className: E.switchItem,
                               disabled: !n,
                               hideBorder: !0,
                               children: (0, r.jsxs)('div', {
-                                  className: I.switchItemTextContent,
+                                  className: E.switchItemTextContent,
                                   children: [
                                       (0, r.jsxs)(c.Text, {
                                           color: 'header-primary',
                                           variant: 'text-md/semibold',
-                                          children: [N.intl.string(N.t.jDarm5), (0, r.jsx)(g.Z, { className: I.betaTag })]
+                                          children: [N.intl.string(N.t.jDarm5), (0, r.jsx)(g.Z, { className: E.betaTag })]
                                       }),
                                       (0, r.jsx)(c.Text, {
                                           color: 'header-secondary',
@@ -224,11 +228,11 @@ function R(e) {
                           })
                       ]
                   }),
-                  (0, r.jsx)(c.$i$, { className: I.divider })
+                  (0, r.jsx)(c.$i$, { className: E.divider })
               ]
           });
 }
-function Z(e) {
+function k(e) {
     let { guild: t, mfaLevel: n } = e,
         l = (0, o.e7)([f.Z], () => null != t && f.Z.can(y.Plq.MANAGE_GUILD, t), [t]),
         s = (0, o.e7)([x.default], () => x.default.getCurrentUser()),
@@ -258,18 +262,18 @@ function Z(e) {
     return l
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(c.$i$, { className: I.divider }),
+                  (0, r.jsx)(c.$i$, { className: E.divider }),
                   (0, r.jsxs)('div', {
-                      className: I.setupContainer,
+                      className: E.setupContainer,
                       children: [
                           (0, r.jsx)(c.j7V, {
                               value: g,
                               onChange: p,
-                              className: I.switchItem,
+                              className: E.switchItem,
                               disabled: !u,
                               hideBorder: !0,
                               children: (0, r.jsxs)('div', {
-                                  className: I.switchItemTextContent,
+                                  className: E.switchItemTextContent,
                                   children: [
                                       (0, r.jsx)(c.Text, {
                                           color: 'header-primary',
@@ -300,7 +304,51 @@ function Z(e) {
           })
         : null;
 }
-function D() {
+function A(e) {
+    let { guild: t } = e,
+        n = (0, o.e7)([f.Z], () => null != t && f.Z.can(y.Plq.MANAGE_GUILD, t), [t]),
+        l = t.hasFeature(y.oNc.REPORT_TO_MOD_PILOT),
+        [s, a] = i.useState(t.getModeratorReportingEnabled() && l),
+        d = i.useCallback(
+            async (e) => {
+                a(e), await Z(t, e);
+            },
+            [t]
+        );
+    return l && n
+        ? (0, r.jsxs)(r.Fragment, {
+              children: [
+                  (0, r.jsx)('div', {
+                      className: E.setupContainer,
+                      children: (0, r.jsx)(c.j7V, {
+                          value: s,
+                          onChange: d,
+                          className: E.switchItem,
+                          disabled: !n,
+                          hideBorder: !0,
+                          children: (0, r.jsxs)('div', {
+                              className: E.switchItemTextContent,
+                              children: [
+                                  (0, r.jsxs)(c.Text, {
+                                      color: 'header-primary',
+                                      variant: 'text-md/semibold',
+                                      children: [N.intl.string(I.default['/xIz7O']), (0, r.jsx)(g.Z, { className: E.betaTag })]
+                                  }),
+                                  (0, r.jsx)(c.Text, {
+                                      color: 'header-secondary',
+                                      variant: 'text-sm/normal',
+                                      children: N.intl.string(I.default.uUMXys)
+                                  })
+                              ]
+                          })
+                      })
+                  }),
+                  (0, r.jsx)(c.$i$, { className: E.divider })
+              ]
+          })
+        : null;
+}
+function L() {
     let { guild: e, mfaLevel: t } = (0, o.cj)([v.Z], () => v.Z.getProps(), []),
         n = (0, o.e7)([h.Z], () => h.Z.enabled, []);
     return null == e
@@ -310,18 +358,19 @@ function D() {
           : (0, r.jsxs)(c.hjN, {
                 title: N.intl.string(N.t['suhY+f']),
                 tag: c.RB0.H1,
-                titleClassName: I.headerContainer,
+                titleClassName: E.headerContainer,
                 children: [
-                    (0, r.jsx)(R, { guild: e }),
-                    (0, r.jsx)(T, { guild: e }),
-                    (0, r.jsx)(Z, {
+                    (0, r.jsx)(A, { guild: e }),
+                    (0, r.jsx)(D, { guild: e }),
+                    (0, r.jsx)(P, { guild: e }),
+                    (0, r.jsx)(k, {
                         guild: e,
                         mfaLevel: t
                     }),
-                    (0, r.jsx)(P, { guild: e }),
-                    (0, r.jsx)(c.$i$, { className: I.divider }),
+                    (0, r.jsx)(w, { guild: e }),
+                    (0, r.jsx)(c.$i$, { className: E.divider }),
                     (0, r.jsx)('div', {
-                        className: I.setupContainer,
+                        className: E.setupContainer,
                         children: (0, r.jsx)(O.w, { guild: e })
                     })
                 ]

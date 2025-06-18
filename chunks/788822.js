@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(626135),
     d = n(381585),
     p = n(597688),
-    f = n(297651),
-    b = n(794324),
+    b = n(297651),
+    f = n(794324),
     g = n(981631),
     h = n(388032),
     m = n(806734);
@@ -20,8 +20,8 @@ let _ = (e) => {
         { category: v, subblock: O, badgeText: x, handleTransition: S } = e;
     null != O && (C = null == (t = p.Z.getCategoryByStoreListingId(null == O ? void 0 : O.categoryStoreListingId)) ? void 0 : t.skuId);
     let E = null != (n = null != C ? C : null == v ? void 0 : v.skuId) ? n : '',
-        { handleCardVisibilityChange: y } = (0, f.E)(E, 'home', 'marketing featured block'),
-        { featuredBlockBanner: j } = (0, b.YG)(v, O),
+        { handleCardVisibilityChange: y } = (0, b.E)(E, 'home', 'marketing featured block'),
+        { featuredBlockBanner: j } = (0, f.YG)(v, O),
         P = l.useRef(null),
         k = E === o.T.NAMEPLATES_V3,
         T = k ? 'NAMEPLATES VOL.3' : null,
