@@ -1,122 +1,122 @@
-n.d(t, { default: () => k }), n(388685), n(781311);
+n.d(t, { default: () => y }), n(388685), n(781311);
 var l = n(255367),
     r = n(73800),
     i = n(120356),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(481060),
     c = n(749210),
     u = n(910693),
     d = n(501517),
     m = n(592125),
     x = n(70956),
-    b = n(5192),
-    g = n(981631),
-    p = n(388032),
+    p = n(5192),
+    b = n(981631),
+    g = n(388032),
     h = n(130883),
     v = n(221166);
 function j() {
     return [
         {
             value: 0,
-            label: p.intl.string(p.t['4obaMT'])
+            label: g.intl.string(g.t['4obaMT'])
         },
         {
             value: +x.Z.Seconds.HOUR,
-            label: p.intl.string(p.t.RKpitb)
+            label: g.intl.string(g.t.RKpitb)
         },
         {
             value: 6 * x.Z.Seconds.HOUR,
-            label: p.intl.string(p.t['8WfJZ2'])
+            label: g.intl.string(g.t['8WfJZ2'])
         },
         {
             value: 12 * x.Z.Seconds.HOUR,
-            label: p.intl.string(p.t.p1up7u)
+            label: g.intl.string(g.t.p1up7u)
         },
         {
             value: +x.Z.Seconds.DAY,
-            label: p.intl.string(p.t.XuVkkJ)
+            label: g.intl.string(g.t.XuVkkJ)
         },
         {
             value: 3 * x.Z.Seconds.DAY,
-            label: p.intl.string(p.t.gMcDS0)
+            label: g.intl.string(g.t.gMcDS0)
         },
         {
             value: 7 * x.Z.Seconds.DAY,
-            label: p.intl.string(p.t.FA7IUl)
+            label: g.intl.string(g.t.FA7IUl)
         }
     ];
 }
 let f = j()[1].value,
-    y = j()[0].value;
-function k(e) {
-    let { guildId: t, user: n, location: i, userIds: x, onBanMultiple: k, transitionState: C, onClose: O, canBulkBan: S = !1, modReportId: _ } = e,
-        [P, w] = r.useState(null != _ ? y : f),
-        [Z, I] = r.useState(''),
-        [N, T] = r.useState(null),
-        z = (0, o.e7)([m.Z], () => {
+    O = j()[0].value;
+function y(e) {
+    let { guildId: t, user: n, location: i, userIds: x, onBanMultiple: y, transitionState: C, onClose: k, canBulkBan: _ = !1, modReportId: S } = e,
+        [P, T] = r.useState(null != S ? O : f),
+        [E, N] = r.useState(''),
+        [R, Z] = r.useState(null),
+        w = (0, a.e7)([m.Z], () => {
             var e;
-            return null == (e = m.Z.getChannel(_)) ? void 0 : e.isArchivedThread();
+            return null == (e = m.Z.getChannel(S)) ? void 0 : e.isArchivedThread();
         }),
-        [K, D] = r.useState(!1),
-        [Y, E] = r.useState(!1),
-        R = (0, u.sE)(t, {
+        [I, z] = r.useState(!1),
+        [M, D] = r.useState(!1),
+        A = (0, u.sE)(t, {
             location: i,
             targetUserId: null == n ? void 0 : n.id,
             targets: x
         }),
-        X = r.useCallback(() => {
-            let e = null != N ? N : Z;
-            if (null != k) {
-                if (!(null != x && (null == x ? void 0 : x.size) > 0 && S) || K) return;
-                if ('' === Z.trim() && !K) return void D(!0);
-                k(t, [...x], P, e);
+        K = r.useCallback(() => {
+            let e = null != R ? R : E;
+            if (null != y) {
+                if (!(null != x && (null == x ? void 0 : x.size) > 0 && _) || I) return;
+                if ('' === E.trim() && !I) return void z(!0);
+                y(t, [...x], P, e);
             } else {
                 if (null == n) return;
-                c.Z.banUser(t, null == n ? void 0 : n.id, P, e, _).then(() => {
-                    Y && null != _ && d.Z.resolveFlag(_);
+                c.Z.banUser(t, null == n ? void 0 : n.id, P, e, S).then(() => {
+                    M && null != S && d.Z.resolveFlag(S);
                 });
             }
-            R(u.jQ.BAN), O();
-        }, [N, Z, k, R, O, x, S, K, t, P, n, _, Y]),
-        A = r.useCallback((e) => {
-            w(e);
+            A(u.jQ.BAN), k();
+        }, [R, E, y, A, k, x, _, I, t, P, n, S, M]),
+        Y = r.useCallback((e) => {
+            T(e);
         }, []),
         L = r.useCallback((e) => {
             let { value: t } = e;
-            I(t), D(!1), T(null);
+            N(t), z(!1), Z(null);
         }, []),
-        M = r.useCallback(
+        X = r.useCallback(
             (e) => {
-                T(e), K && D(!1);
+                Z(e), I && z(!1);
             },
-            [K]
+            [I]
         ),
-        U = [
+        F = [
             {
-                name: p.intl.string(p.t.tamLhY),
-                value: p.intl.string(p.t.tamLhY)
+                name: g.intl.string(g.t.tamLhY),
+                value: g.intl.string(g.t.tamLhY)
             },
             {
-                name: p.intl.string(p.t.UmxjMj),
-                value: p.intl.string(p.t.UmxjMj)
+                name: g.intl.string(g.t.UmxjMj),
+                value: g.intl.string(g.t.UmxjMj)
             },
             {
-                name: p.intl.string(p.t.EXY1d3),
-                value: p.intl.string(p.t.EXY1d3)
+                name: g.intl.string(g.t.EXY1d3),
+                value: g.intl.string(g.t.EXY1d3)
             },
             {
-                name: p.intl.string(p.t.BcZTKi),
+                name: g.intl.string(g.t.BcZTKi),
                 value: 'other'
             }
         ],
-        B = (() => {
-            if (null != k && null != x) return p.intl.formatToPlainString(p.t.HVJexc, { count: null == x ? void 0 : x.size });
+        U = (() => {
+            if (null != y && null != x) return g.intl.formatToPlainString(g.t.HVJexc, { count: null == x ? void 0 : x.size });
             if (null == n) return '';
-            let e = b.ZP.getName(t, null, n);
-            return p.intl.formatToPlainString(null != _ ? p.t.WDR8XV : p.t.jeKpoq, { username: '@'.concat(e) });
+            let e = p.ZP.getName(t, null, n);
+            return g.intl.formatToPlainString(null != S ? g.t.WDR8XV : g.t.jeKpoq, { username: '@'.concat(e) });
         })(),
-        F = null == _ ? null : p.intl.string(p.t.pQjhIC);
+        B = null == S ? null : g.intl.string(g.t.pQjhIC);
     return (0, l.jsxs)(s.Y0X, {
         transitionState: C,
         parentComponent: 'BanConfirm',
@@ -125,7 +125,7 @@ function k(e) {
                 separator: !1,
                 children: (0, l.jsx)(s.olH, {
                     className: v.closeIcon,
-                    onClick: O
+                    onClick: k
                 })
             }),
             (0, l.jsx)(s.hzk, {
@@ -141,13 +141,13 @@ function k(e) {
                                 (0, l.jsx)(s.X6q, {
                                     variant: 'heading-lg/semibold',
                                     color: 'text-primary',
-                                    children: B
+                                    children: U
                                 }),
-                                null != F &&
+                                null != B &&
                                     (0, l.jsx)(s.Text, {
                                         variant: 'text-md/medium',
                                         color: 'text-secondary',
-                                        children: F
+                                        children: B
                                     })
                             ]
                         }),
@@ -160,18 +160,18 @@ function k(e) {
                                     title: (0, l.jsx)(s.Text, {
                                         variant: 'text-md/medium',
                                         color: 'text-primary',
-                                        children: p.intl.string(null != _ ? p.t['+KCLVl'] : p.t.w4Ivys)
+                                        children: g.intl.string(null != S ? g.t['+KCLVl'] : g.t.w4Ivys)
                                     }),
                                     children: [
-                                        K &&
+                                        I &&
                                             (0, l.jsx)(s.kzN, {
                                                 className: v.error,
-                                                children: p.intl.string(p.t.IrYX19)
+                                                children: g.intl.string(g.t.IrYX19)
                                             }),
                                         (0, l.jsx)(s.FXm, {
                                             className: v.radioGroup,
-                                            value: Z,
-                                            options: U.map((e) => {
+                                            value: E,
+                                            options: F.map((e) => {
                                                 var t, n;
                                                 return (
                                                     (t = (function (e) {
@@ -221,11 +221,11 @@ function k(e) {
                                     ]
                                 }),
                                 (0, l.jsx)('div', {
-                                    className: a()(v.reasonFreeText, { [v.hidden]: 'other' !== Z }),
+                                    className: o()(v.reasonFreeText, { [v.hidden]: 'other' !== E }),
                                     children: (0, l.jsx)(s.Kx8, {
-                                        maxLength: g.GNZ,
-                                        onChange: M,
-                                        value: null != N ? N : '',
+                                        maxLength: b.GNZ,
+                                        onChange: X,
+                                        value: null != R ? R : '',
                                         rows: 5,
                                         autoFocus: !0
                                     })
@@ -237,12 +237,12 @@ function k(e) {
                             title: (0, l.jsx)(s.Text, {
                                 variant: 'text-md/medium',
                                 color: 'text-primary',
-                                children: p.intl.string(null != _ ? p.t.ERSM8P : p.t['8l3W09'])
+                                children: g.intl.string(null != S ? g.t.ERSM8P : g.t['8l3W09'])
                             }),
                             children: (0, l.jsx)(s.q4e, {
                                 options: j(),
                                 value: P,
-                                onChange: A
+                                onChange: Y
                             })
                         })
                     ]
@@ -251,31 +251,31 @@ function k(e) {
             (0, l.jsxs)(s.mzw, {
                 className: v.footer,
                 children: [
-                    null != _ &&
-                        !z &&
+                    null != S &&
+                        !w &&
                         (0, l.jsx)(s.XZJ, {
-                            value: Y,
-                            onChange: (e, t) => E(t),
+                            value: M,
+                            onChange: (e, t) => D(t),
                             children: (0, l.jsx)(s.Text, {
                                 variant: 'text-md/normal',
                                 color: 'text-normal',
-                                children: p.intl.string(h.default['8yIKen'])
+                                children: g.intl.string(h.default['8yIKen'])
                             })
                         }),
-                    null == _ &&
+                    null == S &&
                         (0, l.jsx)(s.zxk, {
                             type: 'button',
                             look: s.zxk.Looks.LINK,
                             color: s.zxk.Colors.PRIMARY,
-                            onClick: O,
-                            children: p.intl.string(p.t['ETE/oK'])
+                            onClick: k,
+                            children: g.intl.string(g.t['ETE/oK'])
                         }),
                     (0, l.jsx)(s.zxk, {
                         type: 'submit',
                         color: s.zxk.Colors.RED,
                         size: s.zxk.Sizes.SMALL,
-                        onClick: X,
-                        children: p.intl.string(p.t['5MBJ5O'])
+                        onClick: K,
+                        children: g.intl.string(g.t['5MBJ5O'])
                     })
                 ]
             })

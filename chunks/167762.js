@@ -456,24 +456,23 @@ let et = l.memo(function (e) {
         y = (0, O.Z)('friends-popout', S),
         I = (function () {
             let e = (0, o.Wu)([U.Z, x.default, R.Z], () => {
-                    let e = U.Z.getMutableRelationships(),
-                        t = [];
-                    for (let [n, i] of Object.entries(e)) {
-                        if (i !== q.OGo.PENDING_INCOMING && i !== q.OGo.PENDING_OUTGOING) continue;
-                        let e = x.default.getUser(n);
-                        if (null != e) {
-                            let r = U.Z.getSince(n),
+                    let e = [];
+                    for (let [t, n] of U.Z.getMutableRelationships().entries()) {
+                        if (n !== q.OGo.PENDING_INCOMING && n !== q.OGo.PENDING_OUTGOING) continue;
+                        let i = x.default.getUser(t);
+                        if (null != i) {
+                            let r = U.Z.getSince(t),
                                 l = null != r ? new Date(r).getTime() : 0;
-                            t.push({
-                                user: e,
-                                activities: R.Z.getActivities(n),
+                            e.push({
+                                user: i,
+                                activities: R.Z.getActivities(t),
                                 timestamp: l,
-                                nickname: U.Z.getNickname(n),
-                                relationshipType: i
+                                nickname: U.Z.getNickname(t),
+                                relationshipType: n
                             });
                         }
                     }
-                    return t.sort((e, t) => t.timestamp - e.timestamp), t;
+                    return e.sort((e, t) => t.timestamp - e.timestamp), e;
                 }),
                 t = (0, o.Wu)(
                     [A.Z, x.default, R.Z, U.Z, F.Z],

@@ -192,7 +192,7 @@ function E(e) {
                           blockCount: 0,
                           ignoreCount: 0,
                           scrollTo: () => {},
-                          onChangePage: U
+                          onPageChange: U
                       })
                   })
               ]

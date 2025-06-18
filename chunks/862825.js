@@ -1,9 +1,8 @@
 n.d(t, {
     E2: () => a,
     SO: () => o,
-    m$: () => c,
     sR: () => s,
-    yY: () => u
+    yY: () => c
 }),
     n(388685);
 var r,
@@ -24,18 +23,11 @@ let a = {
     };
 var s = (((r = {}).RECENT = 'recent'), (r.MEMBERS = 'members'), (r.PEOPLE = 'people'), (r.MEDIA = 'media'), (r.PINS = 'pins'), (r.MESSAGES = 'messages'), (r.LINKS = 'links'), (r.FILES = 'files'), (r.GUILD_CHANNELS = 'guild_channels'), (r.THREADS = 'threads'), r);
 let c = {
-        media: 15,
-        messages: 15,
-        pins: 15,
-        links: 10,
-        files: 10
-    },
-    u = {
-        recent: 1,
-        media: 1,
-        pins: 4,
-        messages: 0,
-        links: 2,
-        files: 3
-    };
+    recent: 1,
+    media: 1,
+    pins: 4,
+    messages: 0,
+    links: 2,
+    files: 3
+};
 l.aib.THREAD, l.aib.CHANNEL, l.aib.GUILD_CHANNEL, l.aib.GUILD, l.aib.DMS, l.aib.FAVORITES, l.aib.THREAD, l.aib.CHANNEL, l.aib.GUILD_CHANNEL, l.aib.GUILD, l.aib.DMS, l.aib.FAVORITES, i.l.COZY;

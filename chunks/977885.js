@@ -9,31 +9,38 @@ var r = n(392711),
     u = n(981631);
 let d = {
     fetchMessages: function (e) {
-        let { searchContext: t, searchTabs: n, searchQueryString: r, getLimit: u, onFetchStart: d, onFetchSuccess: p } = e,
-            m = o.kG(r),
-            f = o.$G(m),
-            h = (0, c.s5)(t);
-        null != h && o.jW(f, h);
-        let g = s.Z.getSearchTabFetcher(t, f, r, n, u),
-            _ = n.map((e) => (0, c.jj)(t, e, r));
+        let { searchContext: t, searchTabs: n, searchQueryString: r, pagination: u, trackExactTotalHits: d, getLimit: p, onFetchStart: m, onFetchSuccess: f } = e,
+            h = o.kG(r),
+            g = o.$G(h),
+            _ = (0, c.s5)(t);
+        null != _ && o.jW(g, _);
+        let b = s.Z.getSearchTabFetcher({
+                searchContext: t,
+                searchQuery: g,
+                searchTabs: n,
+                getLimit: p,
+                pagination: u,
+                trackExactTotalHits: d
+            }),
+            E = n.map((e) => (0, c.jj)(t, e, r));
         return (
             l.Z.dispatch({
                 type: 'SEARCH_MESSAGES_START',
-                ids: _
+                ids: E
             }),
-            null == d ||
-                d({
+            null == m ||
+                m({
                     searchContext: t,
                     searchQueryString: r,
-                    searchQuery: f
+                    searchQuery: g
                 }),
-            g.fetch(
+            b.fetch(
                 (e) => {
                     let { body: n } = e,
                         o = Object.entries(n.tabs);
                     l.Z.dispatch({
                         type: 'SEARCH_MESSAGES_SUCCESS',
-                        guildId: h,
+                        guildId: _,
                         data: o.map((e) => {
                             var l, o, s;
                             let [u, d] = e,
@@ -71,8 +78,8 @@ let d = {
                                 documentsIndexed: n.documents_indexed
                             });
                         }),
-                        null == p ||
-                            p({
+                        null == f ||
+                            f({
                                 searchContext: t,
                                 tabEntries: o
                             });
@@ -80,13 +87,13 @@ let d = {
                 () => {
                     l.Z.dispatch({
                         type: 'SEARCH_MESSAGES_INDEXING',
-                        ids: _
+                        ids: E
                     });
                 },
                 (e) => {
                     l.Z.dispatch({
                         type: 'SEARCH_MESSAGES_FAILURE',
-                        ids: _,
+                        ids: E,
                         error: e
                     });
                 }

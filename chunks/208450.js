@@ -385,12 +385,14 @@ function H(e) {
                 searchContext: a,
                 searchTabs: [k.sR.MESSAGES],
                 searchQueryString: t,
-                getLimit: () => k.m$[k.sR.MESSAGES],
+                getLimit: () => R.vpv,
                 onFetchStart: (e) => {
                     let { searchContext: t, searchQueryString: n, searchQuery: r } = e,
                         i = (0, v.WJ)(t);
                     p.Vs(i, n, r);
-                }
+                },
+                pagination: { offset: 0 },
+                trackExactTotalHits: !1
             });
         },
         [a]

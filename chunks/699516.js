@@ -1,14 +1,13 @@
-n.d(t, { Z: () => V }), n(388685);
+n.d(t, { Z: () => G }), n(388685);
 var r,
     i = n(392711),
     a = n.n(i),
     o = n(442837),
     s = n(570140),
     l = n(23750),
-    c = n(709054),
-    u = n(594174),
-    d = n(981631);
-function f(e, t, n) {
+    c = n(594174),
+    u = n(981631);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +20,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,12 +31,12 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function p(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,97 +48,92 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let m = 300000,
+let h = 300000,
+    m = new Map(),
     g = {},
     E = {},
-    b = {},
+    b = new Set(),
     y = new Set(),
     O = new Set(),
-    v = new Set(),
-    I = {},
-    T = 0,
-    S = {},
+    v = {},
+    I = 0,
+    T = {},
+    S = 0,
     A = 0,
     N = 0,
     C = 0,
-    R = 0,
-    P = 0,
-    w = 0;
-function D() {
-    let e = Object.values(g);
-    R = e.length;
-    let { [d.OGo.PENDING_INCOMING]: t = 0, [d.OGo.PENDING_OUTGOING]: n = 0, [d.OGo.FRIEND]: r = 0 } = a().countBy(e, (e) => e);
-    (N = n), (C = r), (P = y.size), (w = v.size), (A = Math.max(t - P - w, 0)), T++;
+    R = 0;
+function P() {
+    let { [u.OGo.PENDING_INCOMING]: e = 0, [u.OGo.PENDING_OUTGOING]: t = 0, [u.OGo.FRIEND]: n = 0 } = a().countBy(Array.from(m.values()));
+    (A = t), (N = n), (C = b.size), (R = O.size), (S = Math.max(e - C - R, 0)), I++;
+}
+function w(e) {
+    m.clear(),
+        (g = {}),
+        (E = {}),
+        (y = new Set()),
+        (b = new Set()),
+        (O = new Set()),
+        (v = {}),
+        (T = {}),
+        e.relationships.forEach((e) => {
+            m.set(e.id, e.type), null != e.nickname && (g[e.id] = e.nickname), null != e.since && (E[e.id] = e.since), e.is_spam_request && b.add(e.id), null != e.origin_application_id && (v[e.id] = e.origin_application_id), e.user_ignored && (y.add(e.id), e.type === u.OGo.PENDING_INCOMING && O.add(e.id));
+        }),
+        P();
+}
+function D(e) {
+    (m = new Map(e.relationships)), P();
 }
 function L(e) {
-    (g = {}),
-        (E = {}),
-        (b = {}),
-        (O = new Set()),
-        (y = new Set()),
-        (v = new Set()),
-        (I = {}),
-        (S = {}),
-        e.relationships.forEach((e) => {
-            (g[e.id] = e.type), null != e.nickname && (E[e.id] = e.nickname), null != e.since && (b[e.id] = e.since), e.is_spam_request && y.add(e.id), null != e.origin_application_id && (I[e.id] = e.origin_application_id), e.user_ignored && (O.add(e.id), e.type === d.OGo.PENDING_INCOMING && v.add(e.id));
-        }),
-        D();
-}
-function x(e) {
-    (g = _({}, e.relationships)), D();
-}
-function k(e) {
-    let t = g[e.relationship.id];
-    (g[e.relationship.id] = e.relationship.type),
-        null != e.relationship.nickname && (E = h(_({}, E), { [e.relationship.id]: e.relationship.nickname })),
-        null != e.relationship.since && (b = h(_({}, b), { [e.relationship.id]: e.relationship.since })),
-        null != e.relationship.originApplicationId && (I = h(_({}, I), { [e.relationship.id]: e.relationship.originApplicationId })),
-        e.relationship.isSpamRequest ? y.add(e.relationship.id) : y.delete(e.relationship.id),
-        e.relationship.userIgnored ? (O.add(e.relationship.id), e.relationship.type === d.OGo.PENDING_INCOMING ? v.add(e.relationship.id) : e.relationship.type === d.OGo.FRIEND && v.delete(e.relationship.id)) : (O.delete(e.relationship.id), v.delete(e.relationship.id)),
-        D(),
-        e.relationship.type === d.OGo.FRIEND &&
-            t === d.OGo.PENDING_OUTGOING &&
+    let t = m.get(e.relationship.id);
+    m.set(e.relationship.id, e.relationship.type),
+        null != e.relationship.nickname && (g = p(f({}, g), { [e.relationship.id]: e.relationship.nickname })),
+        null != e.relationship.since && (E = p(f({}, E), { [e.relationship.id]: e.relationship.since })),
+        null != e.relationship.originApplicationId && (v = p(f({}, v), { [e.relationship.id]: e.relationship.originApplicationId })),
+        e.relationship.isSpamRequest ? b.add(e.relationship.id) : b.delete(e.relationship.id),
+        e.relationship.userIgnored ? (y.add(e.relationship.id), e.relationship.type === u.OGo.PENDING_INCOMING ? O.add(e.relationship.id) : e.relationship.type === u.OGo.FRIEND && O.delete(e.relationship.id)) : (y.delete(e.relationship.id), O.delete(e.relationship.id)),
+        P(),
+        e.relationship.type === u.OGo.FRIEND &&
+            t === u.OGo.PENDING_OUTGOING &&
             s.Z.dispatch({
                 type: 'FRIEND_REQUEST_ACCEPTED',
                 user: e.relationship.user
             });
 }
+function x(e) {
+    m.delete(e.relationship.id), null != g[e.relationship.id] && ((g = f({}, g)), delete g[e.relationship.id]), null != E[e.relationship.id] && ((E = f({}, E)), delete E[e.relationship.id]), null != v[e.relationship.id] && ((v = f({}, v)), delete v[e.relationship.id]), e.relationship.userIgnored || (y.delete(e.relationship.id), O.delete(e.relationship.id)), b.delete(e.relationship.id), P();
+}
+function k(e) {
+    let { relationship: t } = e;
+    m.set(t.id, t.type), null == t.since ? delete E[t.id] : (E[t.id] = t.since), null == t.nickname ? delete g[t.id] : (g[t.id] = t.nickname), t.isSpamRequest ? b.add(t.id) : b.delete(t.id), null != T[t.id] && delete T[t.id], null == t.originApplicationId ? delete v[t.id] : (v[t.id] = t.originApplicationId), t.userIgnored ? (y.add(t.id), t.type === u.OGo.PENDING_INCOMING && O.add(t.id)) : (y.delete(t.id), O.delete(t.id)), P();
+}
 function M(e) {
-    delete g[e.relationship.id], null != E[e.relationship.id] && ((E = _({}, E)), delete E[e.relationship.id]), null != b[e.relationship.id] && ((b = _({}, b)), delete b[e.relationship.id]), null != I[e.relationship.id] && ((I = _({}, I)), delete I[e.relationship.id]), e.relationship.userIgnored || (O.delete(e.relationship.id), v.delete(e.relationship.id)), y.delete(e.relationship.id), D();
+    for (let e of m.keys()) m.get(e) === u.OGo.PENDING_INCOMING && (m.delete(e), b.delete(e), O.delete(e), delete T[e]);
+    P();
 }
 function j(e) {
-    let { relationship: t } = e;
-    (g[t.id] = t.type), null == t.since ? delete b[t.id] : (b[t.id] = t.since), null == t.nickname ? delete E[t.id] : (E[t.id] = t.nickname), t.isSpamRequest ? y.add(t.id) : y.delete(t.id), null != S[t.id] && delete S[t.id], null == t.originApplicationId ? delete I[t.id] : (I[t.id] = t.originApplicationId), t.userIgnored ? (O.add(t.id), t.type === d.OGo.PENDING_INCOMING && v.add(t.id)) : (O.delete(t.id), v.delete(t.id)), D();
-}
-function U(e) {
-    c.default.keys(g).forEach((e) => {
-        g[e] === d.OGo.PENDING_INCOMING && (delete g[e], y.delete(e), v.delete(e), delete S[e]);
-    }),
-        D();
-}
-function G(e) {
-    S[e.userId] = {
-        expiry: Date.now() + m,
+    T[e.userId] = {
+        expiry: Date.now() + h,
         isStranger: e.isStranger
     };
 }
-class B extends (r = o.ZP.Store) {
+class U extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(u.default);
+        this.waitFor(c.default);
     }
     isFriend(e) {
-        return null != e && g[e] === d.OGo.FRIEND;
+        return null != e && m.get(e) === u.OGo.FRIEND;
     }
     isBlockedOrIgnored(e) {
         return this.isBlocked(e) || this.isIgnored(e);
@@ -148,18 +142,18 @@ class B extends (r = o.ZP.Store) {
         return this.isBlockedForMessage(e) || this.isIgnoredForMessage(e);
     }
     isBlocked(e) {
-        return null != e && g[e] === d.OGo.BLOCKED;
+        return null != e && m.get(e) === u.OGo.BLOCKED;
     }
     isBlockedForMessage(e) {
         var t, n, r, i;
-        if (null != e.author && g[e.author.id] === d.OGo.BLOCKED) return !0;
+        if (null != e.author && m.get(e.author.id) === u.OGo.BLOCKED) return !0;
         if (e instanceof l.ZP) {
             if (this.isBlocked(null == (i = e.interactionMetadata) || null == (r = i.user) ? void 0 : r.id)) return !0;
         } else if (this.isBlocked(null == (n = e.interaction_metadata) || null == (t = n.user) ? void 0 : t.id)) return !0;
         return !1;
     }
     isIgnored(e) {
-        return null != e && g[e] !== d.OGo.BLOCKED && O.has(e);
+        return null != e && m.get(e) !== u.OGo.BLOCKED && y.has(e);
     }
     isIgnoredForMessage(e) {
         var t, n, r, i;
@@ -170,74 +164,106 @@ class B extends (r = o.ZP.Store) {
         return !1;
     }
     isUnfilteredPendingIncoming(e) {
-        return g[e] === d.OGo.PENDING_INCOMING && !this.isSpam(e) && !this.isIgnored(e);
+        return m.get(e) === u.OGo.PENDING_INCOMING && !this.isSpam(e) && !this.isIgnored(e);
     }
     getPendingCount() {
-        return A;
+        return S;
     }
     getSpamCount() {
-        return P;
-    }
-    getPendingIgnoredCount() {
-        return w;
-    }
-    getOutgoingCount() {
-        return N;
-    }
-    getFriendCount() {
         return C;
     }
-    getRelationshipCount() {
+    getPendingIgnoredCount() {
         return R;
     }
+    getOutgoingCount() {
+        return A;
+    }
+    getFriendCount() {
+        return N;
+    }
+    getRelationshipCount() {
+        return m.size;
+    }
     getMutableRelationships() {
-        return g;
+        return m;
     }
     getVersion() {
-        return T;
+        return I;
     }
     isSpam(e) {
-        return y.has(e);
+        return b.has(e);
     }
     getRelationshipType(e) {
-        let t = g[e];
-        return null != t ? t : d.OGo.NONE;
+        let t = m.get(e);
+        return null != t ? t : u.OGo.NONE;
     }
     getNickname(e) {
-        return E[e];
+        return g[e];
     }
     getSince(e) {
-        return b[e];
+        return E[e];
     }
     getSinces() {
-        return b;
+        return E;
     }
     getFriendIDs() {
-        return c.default.keys(g).filter((e) => g[e] === d.OGo.FRIEND);
+        return Array.from(m.entries())
+            .filter((e) => {
+                let [t, n] = e;
+                return n === u.OGo.FRIEND;
+            })
+            .map((e) => {
+                let [t] = e;
+                return t;
+            });
     }
     getBlockedIDs() {
-        return c.default.keys(g).filter((e) => g[e] === d.OGo.BLOCKED);
+        return Array.from(m.entries())
+            .filter((e) => {
+                let [t, n] = e;
+                return n === u.OGo.BLOCKED;
+            })
+            .map((e) => {
+                let [t] = e;
+                return t;
+            });
     }
     getIgnoredIDs() {
-        return c.default.keys(g).filter((e) => this.isIgnored(e));
+        return Array.from(m.entries())
+            .filter((e) => {
+                let [t] = e;
+                return this.isIgnored(t);
+            })
+            .map((e) => {
+                let [t] = e;
+                return t;
+            });
     }
     getBlockedOrIgnoredIDs() {
-        return c.default.keys(g).filter((e) => this.isBlockedOrIgnored(e));
+        return Array.from(m.entries())
+            .filter((e) => {
+                let [t] = e;
+                return this.isBlockedOrIgnored(t);
+            })
+            .map((e) => {
+                let [t] = e;
+                return t;
+            });
     }
     getOriginApplicationId(e) {
-        return I[e];
+        return v[e];
     }
     isStranger(e) {
-        if (null != S[e]) return S[e].expiry < Date.now() ? void delete S[e] : S[e].isStranger;
+        if (null != T[e]) return T[e].expiry < Date.now() ? void delete T[e] : T[e].isStranger;
     }
 }
-f(B, 'displayName', 'RelationshipStore');
-let V = new B(s.Z, {
-    CONNECTION_OPEN: L,
-    OVERLAY_INITIALIZE: x,
-    RELATIONSHIP_ADD: k,
-    RELATIONSHIP_REMOVE: M,
-    RELATIONSHIP_UPDATE: j,
-    RELATIONSHIP_PENDING_INCOMING_REMOVED: U,
-    UPDATE_STRANGER_STATUS: G
+d(U, 'displayName', 'RelationshipStore');
+let G = new U(s.Z, {
+    CONNECTION_OPEN: w,
+    OVERLAY_INITIALIZE: D,
+    RELATIONSHIP_ADD: L,
+    RELATIONSHIP_REMOVE: x,
+    RELATIONSHIP_UPDATE: k,
+    RELATIONSHIP_PENDING_INCOMING_REMOVED: M,
+    UPDATE_STRANGER_STATUS: j
 });
