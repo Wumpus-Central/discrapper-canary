@@ -32718,13 +32718,17 @@ body .headerAnimation_b54a5b {
     color: #fff
 }
 
+.nitroIcon__3f9a4 {
+    margin-right: 8px;
+    position: relative
+}
+
 .textContainer__3f9a4 {
     height: 48px;
     justify-content: center;
     max-width: 408px;
     position: absolute;
     text-align: center;
-    text-transform: uppercase;
     top: 0;
     width: 408px
 }
@@ -32735,7 +32739,7 @@ body .headerAnimation_b54a5b {
     display: flex
 }
 
-.textHeaderWithGiftIcon__3f9a4 {
+.textHeaderWithIcon__3f9a4 {
     margin-left: 10px
 }
 
