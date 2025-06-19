@@ -2,8 +2,8 @@ t.d(n, { Z: () => d });
 var r = t(255367),
     i = t(793030),
     o = t(481060),
-    s = t(921944),
-    a = t(93841),
+    a = t(921944),
+    s = t(93841),
     l = t(388032),
     c = t(305063),
     u = t(719119);
@@ -20,18 +20,18 @@ function d(e) {
             (0, r.jsx)(i.xv, {
                 color: 'always-white',
                 variant: 'text-md/semibold',
-                children: l.intl.string(a.default.diMhWV)
+                children: l.intl.string(s.default.diMhWV)
             }),
             (0, r.jsx)(i.xv, {
                 color: 'always-white',
                 variant: 'text-sm/medium',
-                children: l.intl.string(a.default.pycxTk)
+                children: l.intl.string(s.default.pycxTk)
             }),
             (0, r.jsx)(o.olH, {
                 className: c.close,
                 innerClassName: c.innerClose,
                 onClick: () => {
-                    n(s.L.USER_DISMISS);
+                    n(a.L.USER_DISMISS);
                 }
             })
         ]

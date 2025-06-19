@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(677232),
     d = n(626135),
     p = n(381585),
-    b = n(884697),
-    f = n(228624),
+    f = n(884697),
+    b = n(228624),
     g = n(67409),
     h = n(981631),
     m = n(474936),
@@ -84,9 +84,9 @@ let O = {
             { analyticsLocations: P } = (0, s.ZP)(),
             k = l.useRef(null),
             T = (0, o.Z)(k),
-            I = (0, f.hv)('CollectiblesShopGiftButton'),
+            I = (0, b.hv)('CollectiblesShopGiftButton'),
             L = (0, p.sp)();
-        return (0, b.x6)(t)
+        return (0, f.x6)(t)
             ? null
             : (0, r.jsx)(i.ua7, {
                   text: C.intl.string(C.t['JCFN//']),

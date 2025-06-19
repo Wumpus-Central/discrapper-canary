@@ -6,8 +6,8 @@ var r,
     i = t(255367);
 t(73800);
 var o = t(657707),
-    s = t(793030),
-    a = t(692547),
+    a = t(793030),
+    s = t(692547),
     l = t(93841),
     c = t(388032),
     u = t(154142),
@@ -22,16 +22,16 @@ function p(e) {
                 children: [
                     (0, i.jsx)(o.$Eu, {
                         size: 'sm',
-                        color: 0 !== t ? a.Z.colors.HEADER_MUTED : a.Z.unsafe_rawColors.GUILD_BOOSTING_PINK
+                        color: 0 !== t ? s.Z.colors.HEADER_MUTED : s.Z.unsafe_rawColors.GUILD_BOOSTING_PINK
                     }),
-                    (0, i.jsx)(s.X6, {
+                    (0, i.jsx)(a.X6, {
                         color: 0 !== t ? 'header-muted' : 'header-primary',
                         variant: 'heading-lg/semibold',
                         children: n
                     })
                 ]
             }),
-            (0, i.jsx)(s.xv, {
+            (0, i.jsx)(a.xv, {
                 color: 'header-muted',
                 variant: 'text-sm/medium',
                 children: (() => {

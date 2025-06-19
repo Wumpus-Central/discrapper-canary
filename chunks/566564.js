@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(381585),
     d = n(139668),
     p = n(364111),
-    b = n(303952),
-    f = n(752053),
+    f = n(303952),
+    b = n(752053),
     g = n(81136),
     h = n(953655),
     m = n(548685),
@@ -28,9 +28,9 @@ let y = (e) => {
             S = (0, u.sp)(),
             y = null != (t = null == S ? void 0 : S.sessionId) ? t : '';
         l.useEffect(() => {
-            (0, b.n)({
+            (0, f.n)({
                 sessionId: y,
-                checkpoint: b.a.SHOP_MOUNTED,
+                checkpoint: f.a.SHOP_MOUNTED,
                 tab: c,
                 isFullScreen: d,
                 unpublishedCategoriesShown: x,
@@ -64,9 +64,9 @@ let y = (e) => {
                 null != P ||
                     j ||
                     0 === k.length ||
-                    (0, b.n)({
+                    (0, f.n)({
                         sessionId: y,
-                        checkpoint: b.a.SHOP_RENDERED,
+                        checkpoint: f.a.SHOP_RENDERED,
                         tab: c,
                         isFullScreen: d,
                         unpublishedCategoriesShown: x,
@@ -75,9 +75,9 @@ let y = (e) => {
             }, [P, j, k.length, x, O, y, c, d]),
             null != P)
         )
-            return (0, r.jsx)(f.Z, {
+            return (0, r.jsx)(b.Z, {
                 onRetry: I,
-                errorOrigin: f.i.SHOP_PAGE,
+                errorOrigin: b.i.SHOP_PAGE,
                 errorMessage: P.message
             });
         if (j || 0 === k.length)
@@ -182,7 +182,7 @@ let y = (e) => {
     j = (e) => {
         let { isFullScreen: t, handleTransition: n, numVisibleItems: l, tab: a, isFetchingCategories: o } = e,
             p = (0, d.R)('CollectiblesFeedShop'),
-            b = (0, u.sp)();
+            f = (0, u.sp)();
         return (0, r.jsx)('div', {
             className: E.shop,
             children: (0, r.jsxs)('div', {
@@ -209,9 +209,9 @@ let y = (e) => {
                                     onClick: () => {
                                         n('shop all button', void 0, !0),
                                             c.default.track(x.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                                collectibles_shop_session_id: null == b ? void 0 : b.sessionId,
+                                                collectibles_shop_session_id: null == f ? void 0 : f.sessionId,
                                                 page_type: a,
-                                                page_category: a === O.AW.HOME || null == b ? void 0 : b.pageCategory,
+                                                page_category: a === O.AW.HOME || null == f ? void 0 : f.pageCategory,
                                                 cta_name: 'shop the whole shop button'
                                             });
                                     },

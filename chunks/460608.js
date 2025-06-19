@@ -1,9 +1,9 @@
-t.d(n, { Z: () => x }), t(642613);
+t.d(n, { Z: () => f }), t(642613);
 var r = t(255367),
     i = t(73800),
     o = t(597312),
-    s = t(793030),
-    a = t(442837),
+    a = t(793030),
+    s = t(442837),
     l = t(179360),
     c = t(899667),
     u = t(430824),
@@ -11,9 +11,9 @@ var r = t(255367),
     p = t(659679),
     m = t(388032),
     _ = t(211886);
-function x(e) {
+function f(e) {
     let { guildId: n } = e,
-        t = (0, a.Wu)(
+        t = (0, s.Wu)(
             [c.Z],
             () => {
                 var e;
@@ -21,19 +21,19 @@ function x(e) {
             },
             [n]
         ),
-        x = i.useMemo(() => t.sort((e, n) => (d.default.extractTimestamp(e.id) < d.default.extractTimestamp(n.id) ? 1 : -1)), [t]),
-        f = (0, a.e7)([u.Z], () => {
+        f = i.useMemo(() => t.sort((e, n) => (d.default.extractTimestamp(e.id) < d.default.extractTimestamp(n.id) ? 1 : -1)), [t]),
+        x = (0, s.e7)([u.Z], () => {
             var e;
             return null == (e = u.Z.getGuild(n)) ? void 0 : e.premiumSubscriberCount;
         });
     return (i.useEffect(() => {
-        f !== t.length && (0, l.C0)(n);
-    }, [n, f, t.length]),
-    0 === x.length)
+        x !== t.length && (0, l.C0)(n);
+    }, [n, x, t.length]),
+    0 === f.length)
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(s.X6, {
+                  (0, r.jsx)(a.X6, {
                       className: _.header,
                       variant: 'eyebrow',
                       children: m.intl.string(m.t.yM9Krq)
@@ -41,7 +41,7 @@ function x(e) {
                   (0, r.jsx)(o.zJ, {
                       className: _.container,
                       fade: !0,
-                      children: x.map((e, n) => (0, r.jsx)(p.Z, { boost: e }, 'boost-activity-'.concat(n)))
+                      children: f.map((e, n) => (0, r.jsx)(p.Z, { boost: e }, 'boost-activity-'.concat(n)))
                   })
               ]
           });

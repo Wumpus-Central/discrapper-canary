@@ -9,11 +9,11 @@ var r = n(73800),
     u = n(884697),
     d = n(26931),
     p = n(370039),
-    b = n(937510),
-    f = n(981631),
+    f = n(937510),
+    b = n(981631),
     g = n(388032);
 let h = (e, t) => {
-    let n = (0, o.e7)([s.Z], () => s.Z.hasConsented(f.pjP.PERSONALIZATION)),
+    let n = (0, o.e7)([s.Z], () => s.Z.hasConsented(b.pjP.PERSONALIZATION)),
         l = r.useMemo(() => {
             var t;
             return null != (t = null == e ? void 0 : e[i.m.RECOMMENDED]) ? t : [];
@@ -52,7 +52,7 @@ let h = (e, t) => {
     return {
         sortType: _,
         setSortType: C,
-        sortedItems: (0, b.l)(y),
+        sortedItems: (0, f.l)(y),
         sortOptions: r.useMemo(() => {
             let e = [
                 {

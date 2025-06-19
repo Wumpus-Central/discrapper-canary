@@ -8,6 +8,6 @@ e.exports = {
     avatarContainer: 'avatarContainer__11014',
     avatar: 'avatar__11014',
     contentContainer: 'contentContainer__11014',
-    usernameContainer: 'usernameContainer__11014',
-    decorationsContainer: 'decorationsContainer__11014'
+    decorationsContainer: 'decorationsContainer__11014',
+    usernameContainer: 'usernameContainer__11014'
 };

@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(597688),
     d = n(297651),
     p = n(215023),
-    b = n(981631),
-    f = n(388032),
+    f = n(981631),
+    b = n(388032),
     g = n(806734);
 let h = (e) => {
     var t, n, a;
@@ -71,7 +71,7 @@ let h = (e) => {
                                 style: { color: null != (a = h.bannerTextColor) ? a : 'var(--text-muted)' },
                                 lineClamp: 2,
                                 variant: P ? 'text-md/medium' : 'text-sm/medium',
-                                children: P ? f.intl.format(f.t.SFFP7O, { helpdeskArticle: c.Z.getArticleURL(b.BhN.VIRTUAL_CURRENCY_LEARN_MORE) }) : h.body
+                                children: P ? b.intl.format(b.t.SFFP7O, { helpdeskArticle: c.Z.getArticleURL(f.BhN.VIRTUAL_CURRENCY_LEARN_MORE) }) : h.body
                             })
                         ]
                     })
@@ -81,7 +81,7 @@ let h = (e) => {
                         className: g.wideBannerBlockButton,
                         color: s.Ttl.PRIMARY,
                         onClick: () => m('shop wide banner', E),
-                        children: f.intl.string(f.t.jVcuVV)
+                        children: b.intl.string(b.t.jVcuVV)
                     })
             ]
         })

@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(37234),
     d = n(425493),
     p = n(410030),
-    b = n(857595),
-    f = n(607070),
+    f = n(857595),
+    b = n(607070),
     g = n(984370),
     h = n(341907),
     m = n(507808),
@@ -47,7 +47,7 @@ function I(e) {
                         s(e);
                     }, 100)
                 ),
-                e && (g.current = f.Z.keyboardModeEnabled);
+                e && (g.current = b.Z.keyboardModeEnabled);
         };
     return (0, r.jsx)('div', {
         className: k.tabWithMenuContainer,
@@ -61,7 +61,7 @@ function I(e) {
             onRequestOpen: () => h(!0),
             onRequestClose: () => {
                 var e;
-                g.current && !f.Z.keyboardModeEnabled && (0, b.Qj)(), h(!1), null == (e = u.current) || e.focus();
+                g.current && !b.Z.keyboardModeEnabled && (0, f.Qj)(), h(!1), null == (e = u.current) || e.focus();
             },
             renderPopout: (e) => {
                 let { closePopout: t } = e;
@@ -103,7 +103,7 @@ function I(e) {
     });
 }
 function L(e) {
-    let { isFullScreen: t, isLayer: n, onClose: a, selectedTab: b, handleTransition: f } = e,
+    let { isFullScreen: t, isLayer: n, onClose: a, selectedTab: f, handleTransition: b } = e,
         E = (0, p.ZP)(),
         L = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
         B = (null == L ? void 0 : L.isStaff()) || (null == L ? void 0 : L.isStaffPersonal()) || !1,
@@ -125,7 +125,7 @@ function L(e) {
             displayText: P.intl.string(P.t['KUYR+P'])
         });
     let R = n ? x.DR : a,
-        Z = b === y.AW.ORBS ? j.ZY5.SHOP_ORBS_TAB : j.ZY5.COLLECTIBLES_SHOP,
+        Z = f === y.AW.ORBS ? j.ZY5.SHOP_ORBS_TAB : j.ZY5.COLLECTIBLES_SHOP,
         F = l.useCallback(() => {
             t && (R(), (0, u.Ou)()),
                 (0, m.Y)({
@@ -145,7 +145,7 @@ function L(e) {
                 children: [
                     (0, r.jsxs)(c.P3F, {
                         className: k.shopHomeLink,
-                        onClick: () => f(y.AW.HOME),
+                        onClick: () => b(y.AW.HOME),
                         'aria-label': P.intl.string(P.t.pWG4zc) + ' home',
                         children: [(0, r.jsx)(O.Z, { className: k.discordLogo }), (0, r.jsx)(g.Z.Title, { children: P.intl.string(P.t.pWG4zc) })]
                     }),
@@ -158,9 +158,9 @@ function L(e) {
                                       I,
                                       {
                                           tab: t,
-                                          selected: (0, y.RE)(b) || b === t,
+                                          selected: (0, y.RE)(f) || f === t,
                                           displayText: n,
-                                          handleTransition: f
+                                          handleTransition: b
                                       },
                                       t
                                   )
@@ -169,8 +169,8 @@ function L(e) {
                                       {
                                           tab: t,
                                           displayText: n,
-                                          selected: b === t,
-                                          handleTransition: f
+                                          selected: f === t,
+                                          handleTransition: b
                                       },
                                       t
                                   );

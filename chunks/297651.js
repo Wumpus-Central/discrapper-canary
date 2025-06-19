@@ -11,13 +11,13 @@ var r = n(73800),
 function p(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'product',
         p = (0, o.sp)(),
-        b = (0, l.e7)([s.Z], () => s.Z.getProduct(e)),
-        f = (0, u.x)(),
-        g = i.ZP.canUseCollectibles(f),
+        f = (0, l.e7)([s.Z], () => s.Z.getProduct(e)),
+        b = (0, u.x)(),
+        g = i.ZP.canUseCollectibles(b),
         h = r.useRef(null),
         m = r.useCallback(() => {
-            let r = null != b ? (0, c.Vw)(b, g, !1) : null,
-                l = null != b ? (0, c.eu)(b, g, !1) : void 0;
+            let r = null != f ? (0, c.Vw)(f, g, !1) : null,
+                l = null != f ? (0, c.eu)(f, g, !1) : void 0;
             a.default.track(d.rMx.COLLECTIBLES_TILE_IMPRESSION, {
                 collectibles_shop_session_id: null == p ? void 0 : p.sessionId,
                 sku_id: e,
@@ -31,7 +31,7 @@ function p(e, t) {
                 type: n,
                 category_position: null == p ? void 0 : p.categoryPosition
             });
-        }, [null == p ? void 0 : p.sessionId, null == p ? void 0 : p.categoryPosition, null == p ? void 0 : p.pageCategory, null == p ? void 0 : p.pageSection, null == p ? void 0 : p.tilePosition, g, t, b, e, n]),
+        }, [null == p ? void 0 : p.sessionId, null == p ? void 0 : p.categoryPosition, null == p ? void 0 : p.pageCategory, null == p ? void 0 : p.pageSection, null == p ? void 0 : p.tilePosition, g, t, f, e, n]),
         _ = r.useCallback(
             (e) => {
                 e

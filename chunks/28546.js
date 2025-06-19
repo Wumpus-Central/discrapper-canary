@@ -22,7 +22,9 @@ let c = Object.freeze({
         pickerId: (function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'uid_';
             return i()(e);
-        })()
+        })(),
+        isNitroLockedSectionVisible: !1,
+        areOnlyNitroLockedSectionsVisible: !1
     }),
     u = (0, o.F)()(
         (0, a.tJ)((e, t) => c, {

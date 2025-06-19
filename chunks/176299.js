@@ -161,7 +161,7 @@ let eA = (0, u.Un)({
         renderLoader: eZ
     }),
     ek = (0, u.Un)({
-        createPromise: () => n.e('44799').then(n.bind(n, 393357)),
+        createPromise: () => Promise.all([n.e('55616'), n.e('44799')]).then(n.bind(n, 393357)),
         webpackId: 393357,
         name: 'GuildPowerupsPage',
         renderLoader: eZ

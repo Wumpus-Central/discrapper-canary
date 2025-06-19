@@ -13,10 +13,10 @@ e.exports = {
     box: 'box_f525d3',
     smallBox: 'smallBox_f525d3',
     round: 'round_f525d3',
+    checkboxDisabled: 'checkboxDisabled_f525d3',
     label: 'label_f525d3',
     labelClickable: 'labelClickable_f525d3',
     labelDisabled: 'labelDisabled_f525d3',
     labelForward: 'labelForward_f525d3',
-    labelReversed: 'labelReversed_f525d3',
-    checkboxDisabled: 'checkboxDisabled_f525d3'
+    labelReversed: 'labelReversed_f525d3'
 };

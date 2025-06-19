@@ -4,7 +4,7 @@ n(73800);
 var l = n(481060),
     a = n(215023);
 let i = (e) => {
-    let { product: t, analyticsLocations: i, overrideTitle: o, overrideDescription: s, shouldShowPromotionalExperience: c, shouldCheckoutWithOrbs: u, onCloseCallback: d, itemConsumed: p, purchaseType: b = a.o8.FIAT } = e;
+    let { product: t, analyticsLocations: i, overrideTitle: o, overrideDescription: s, shouldShowPromotionalExperience: c, shouldCheckoutWithOrbs: u, onCloseCallback: d, itemConsumed: p, purchaseType: f = a.o8.FIAT } = e;
     (0, l.ZDy)(
         async () => {
             let { default: e } = await Promise.resolve().then(n.bind(n, 331042));
@@ -44,7 +44,7 @@ let i = (e) => {
                             shouldShowPromotionalExperience: c,
                             shouldCheckoutWithOrbs: u,
                             itemConsumed: p,
-                            purchaseType: b
+                            purchaseType: f
                         },
                         n
                     )

@@ -67,8 +67,8 @@ let d = [
             ribbon: '#81C29F'
         }
     ],
-    b = 1 / 300,
-    f = (0, a.animated)(c.Z),
+    f = 1 / 300,
+    b = (0, a.animated)(c.Z),
     g = (0, a.animated)(u.Z),
     h = (0, a.animated)(o.OgN),
     m = l.memo(function (e) {
@@ -92,7 +92,7 @@ let d = [
                     }),
                     l.useEffect(() => {
                         if (e) return;
-                        let t = Math.random() <= b;
+                        let t = Math.random() <= f;
                         if ((n(t), !t)) {
                             let e;
                             do e = Math.floor(7 * Math.random());
@@ -122,7 +122,7 @@ let d = [
                     isDark: (0, i.wj)(u),
                     style: C
                 })
-              : (0, r.jsx)(f, {
+              : (0, r.jsx)(b, {
                     boxColor: O.box,
                     ribbonColor: O.ribbon,
                     style: C
