@@ -19,8 +19,8 @@ var r = n(255367),
     p = n(367907),
     m = n(906732),
     g = n(522651),
-    b = n(795318),
-    _ = n(194082),
+    _ = n(795318),
+    b = n(194082),
     v = n(925329),
     h = n(340044),
     y = n(880395),
@@ -71,9 +71,9 @@ let k = (e) => {
     });
 };
 function L(e) {
-    let { className: t, mute: n, localMute: i, localVideoDisabled: l, serverMute: o, deaf: c, serverDeaf: u, collapsed: p, video: m, isStreaming: g, disabled: b, isWatching: v, iconClassName: h, embeddedApplication: y, otherClientSessionType: O, voicePlatform: j, application: S, guildId: x, channelId: E, user: D, disconnected: k } = e,
+    let { className: t, mute: n, localMute: i, localVideoDisabled: l, serverMute: o, deaf: c, serverDeaf: u, collapsed: p, video: m, isStreaming: g, disabled: _, isWatching: v, iconClassName: h, embeddedApplication: y, otherClientSessionType: O, voicePlatform: j, application: S, guildId: x, channelId: E, user: D, disconnected: k } = e,
         { enabled: L } = d.c.getCurrentConfig({ location: 'VoiceUserIcons' }, { autoTrackExposure: !0 });
-    if (p || b) return null;
+    if (p || _) return null;
     let M = [],
         U = (0, r.jsx)(F, {
             iconClassName: h,
@@ -192,7 +192,7 @@ function L(e) {
                     'div',
                     {
                         className: a()(A.iconSpacing, A.liveIconSpacing),
-                        children: (0, r.jsx)(_.ZP, { size: _.ZP.Sizes.SMALL })
+                        children: (0, r.jsx)(b.ZP, { size: b.ZP.Sizes.SMALL })
                     },
                     'stream'
                 )
@@ -227,7 +227,7 @@ function L(e) {
 }
 let M = i.forwardRef(function (e, t) {
     var n,
-        { avatarContainerClass: l = A.avatarContainer, userNameClassName: c = A.usernameFont, size: d = w.ipw.SMALL, selected: f = !1, disabled: p = !1, isOverlay: _ = !1 } = e,
+        { avatarContainerClass: l = A.avatarContainer, userNameClassName: c = A.usernameFont, size: d = w.ipw.SMALL, selected: f = !1, disabled: p = !1, isOverlay: b = !1 } = e,
         v = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -247,7 +247,7 @@ let M = i.forwardRef(function (e, t) {
             }
             return i;
         })(e, ['avatarContainerClass', 'userNameClassName', 'size', 'selected', 'disabled', 'isOverlay']);
-    let { onClick: I, onKeyDown: P, onDoubleClick: C, onContextMenu: N, onMouseLeave: k, onMouseDown: M, priority: R, speaking: F, collapsed: U, mute: V, serverMute: B, guildId: Y, nick: W, isGuest: z, flipped: G, className: H, overlap: J, 'aria-label': X, ringing: q, user: K, channelId: Q } = v,
+    let { onClick: I, onKeyDown: P, onDoubleClick: C, onContextMenu: N, onMouseLeave: k, onMouseDown: M, priority: R, speaking: F, collapsed: U, mute: V, serverMute: B, guildId: Y, nick: z, isGuest: W, flipped: G, className: H, overlap: J, 'aria-label': X, ringing: q, user: K, channelId: Q } = v,
         { parentAnalyticsLocation: $ } = (0, m.ZP)(),
         ee = (0, u.bp)(),
         et = null != Q ? j.Z.getChannel(Q) : null,
@@ -289,7 +289,7 @@ let M = i.forwardRef(function (e, t) {
                 null == M || M(e, K);
             },
             onKeyDown: P,
-            'aria-label': null != (n = null != X ? X : W) ? n : K.username,
+            'aria-label': null != (n = null != X ? X : z) ? n : K.username,
             focusProps: { offset: { right: 4 } },
             children: (0, r.jsxs)('div', {
                 className: a()(A.content, { [A.flipped]: G }),
@@ -316,8 +316,8 @@ let M = i.forwardRef(function (e, t) {
                                     [A.usernameSpeaking]: !V && !B && F
                                 }),
                                 children: [
-                                    null != W ? W : E.ZP.getName(K),
-                                    z
+                                    null != z ? z : E.ZP.getName(K),
+                                    W
                                         ? (0, r.jsxs)('span', {
                                               className: A.guestSuffix,
                                               children: ['\xA0', Z.intl.string(Z.t['pFO/Pj'])]
@@ -329,12 +329,12 @@ let M = i.forwardRef(function (e, t) {
                                 primaryGuild: K.primaryGuild,
                                 userId: K.id,
                                 contextGuildId: Y,
-                                isOverlay: _,
+                                isOverlay: b,
                                 disableTooltip: !0,
-                                className: a()(A.clanTag, _ && A.isOverlay),
-                                profileViewedAnalytics: { source: _ ? w.jXE.OVERLAY : w.Sbl.VOICE_PANEL }
+                                className: a()(A.clanTag, b && A.isOverlay),
+                                profileViewedAnalytics: { source: b ? w.jXE.OVERLAY : w.Sbl.VOICE_PANEL }
                             };
-                        return !U || _
+                        return !U || b
                             ? (0, r.jsx)(
                                   h.Z,
                                   ((e = D({}, i)),
@@ -368,7 +368,7 @@ let M = i.forwardRef(function (e, t) {
                                           ((0, g.v)($, g.d.MORE),
                                           ei(!0),
                                           (0, y.D)(e, K, et, { context: ee }, (e, t) => {
-                                              (0, b.o)({
+                                              (0, _.o)({
                                                   menuName: e,
                                                   menuItemProps: t,
                                                   entrypoint: T.A5.THREE_DOT,

@@ -12,9 +12,9 @@ function n(e) {
             b = ((c >> 12) & 63) / 31.5 - 1,
             v = c >> 23,
             g = d >> 15,
-            O = u(3, g ? (v ? 5 : 7) : 7 & d),
-            h = u(3, g ? 7 & d : v ? 5 : 7),
-            m = v ? (15 & e[5]) / 15 : 1,
+            h = u(3, g ? (v ? 5 : 7) : 7 & d),
+            m = u(3, g ? 7 & d : v ? 5 : 7),
+            O = v ? (15 & e[5]) / 15 : 1,
             y = (e[5] >> 4) / 15,
             w = v ? 6 : 5,
             j = 0,
@@ -23,25 +23,25 @@ function n(e) {
                 for (let o = 0; o < r; o++) for (let i = +!o; i * r < t * (r - o); i++) l.push((((e[w + (j >> 1)] >> ((1 & j++) << 2)) & 15) / 7.5 - 1) * n);
                 return l;
             },
-            S = P(O, h, ((c >> 18) & 31) / 31),
+            S = P(h, m, ((c >> 18) & 31) / 31),
             D = P(3, 3, (((d >> 3) & 63) / 63) * 1.25),
             I = P(3, 3, (((d >> 9) & 63) / 63) * 1.25),
             E = v && P(5, 5, y),
-            k = ((r = (t = e)[3]), (n = 128 & t[2]), ((l = 128 & t[4]) ? (n ? 5 : 7) : 7 & r) / (l ? 7 & r : n ? 5 : 7)),
-            x = s(k > 1 ? 32 : 32 * k),
-            C = s(k > 1 ? 32 / k : 32),
-            Z = new Uint8Array(x * C * 4),
+            x = ((r = (t = e)[3]), (n = 128 & t[2]), ((l = 128 & t[4]) ? (n ? 5 : 7) : 7 & r) / (l ? 7 & r : n ? 5 : 7)),
+            k = s(x > 1 ? 32 : 32 * x),
+            C = s(x > 1 ? 32 / x : 32),
+            Z = new Uint8Array(k * C * 4),
             M = [],
             R = [];
         for (let e = 0, t = 0; e < C; e++)
-            for (let r = 0; r < x; r++, t += 4) {
+            for (let r = 0; r < k; r++, t += 4) {
                 let n = f,
                     l = p,
                     s = b,
-                    c = m;
-                for (let e = 0, t = u(O, v ? 5 : 3); e < t; e++) M[e] = a((o / x) * (r + 0.5) * e);
-                for (let t = 0, r = u(h, v ? 5 : 3); t < r; t++) R[t] = a((o / C) * (e + 0.5) * t);
-                for (let e = 0, t = 0; e < h; e++) for (let r = +!e, l = 2 * R[e]; r * h < O * (h - e); r++, t++) n += S[t] * M[r] * l;
+                    c = O;
+                for (let e = 0, t = u(h, v ? 5 : 3); e < t; e++) M[e] = a((o / k) * (r + 0.5) * e);
+                for (let t = 0, r = u(m, v ? 5 : 3); t < r; t++) R[t] = a((o / C) * (e + 0.5) * t);
+                for (let e = 0, t = 0; e < m; e++) for (let r = +!e, l = 2 * R[e]; r * m < h * (m - e); r++, t++) n += S[t] * M[r] * l;
                 for (let e = 0, t = 0; e < 3; e++)
                     for (let r = +!e, n = 2 * R[e]; r < 3 - e; r++, t++) {
                         let e = M[r] * n;
@@ -54,7 +54,7 @@ function n(e) {
                 (Z[t] = u(0, 255 * i(1, g))), (Z[t + 1] = u(0, 255 * i(1, y))), (Z[t + 2] = u(0, 255 * i(1, d))), (Z[t + 3] = u(0, 255 * i(1, c)));
             }
         return {
-            w: x,
+            w: k,
             h: C,
             rgba: Z
         };

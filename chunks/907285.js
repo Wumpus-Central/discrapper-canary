@@ -4,22 +4,22 @@ n(73800);
 var i = n(442837),
     a = n(481060),
     o = n(846027),
-    s = n(920321),
+    s = n(72897),
     l = n(131951),
     c = n(388032);
 function u(e) {
     var t;
-    let n = (0, s.Z)(),
+    let n = (0, s.kj)(),
         u = (0, i.e7)([l.Z], () => l.Z.getVideoDeviceId()),
         d =
             null ==
-            (t = Object.values(n).find((e) => {
+            (t = n.find((e) => {
                 let { id: t } = e;
                 return t === u;
             }))
                 ? void 0
                 : t.name,
-        f = Object.values(n).map((e) => {
+        f = n.map((e) => {
             let { id: t, disabled: n, name: i } = e;
             return (0, r.jsx)(
                 a.k5B,

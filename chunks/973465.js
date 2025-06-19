@@ -5,11 +5,11 @@ var i = n(255367),
     l = n(481060),
     a = n(846027),
     o = n(906732),
-    c = n(920321),
+    c = n(72897),
     d = n(131951),
     u = n(388032);
 function m() {
-    let e = (0, c.Z)(),
+    let e = (0, c.kj)(),
         { currentDeviceId: t, isVideoAvailable: n } = (0, s.cj)([d.Z], () => ({
             currentDeviceId: d.Z.getVideoDeviceId(),
             isVideoAvailable: d.Z.isVideoAvailable()
@@ -17,7 +17,7 @@ function m() {
         { analyticsLocations: m } = (0, o.ZP)(),
         g = r.useMemo(
             () =>
-                Object.values(e).map((e) => {
+                e.map((e) => {
                     let { id: t, name: n } = e;
                     return {
                         value: t,

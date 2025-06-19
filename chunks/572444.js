@@ -9,7 +9,7 @@ var a = n(255367),
     d = n(481060),
     u = n(846027),
     m = n(304809),
-    x = n(687058),
+    x = n(72897),
     p = n(131951),
     h = n(246992),
     b = n(203759),
@@ -83,7 +83,7 @@ function g(e) {
     });
 }
 function j() {
-    let e = (0, x.Z)(),
+    let e = (0, x.zX)(),
         [t, n] = r.useState(!1),
         [l, i] = r.useState([]),
         s = (0, c.e7)([p.Z], () => p.Z.getKrispSuppressionLevel()),
@@ -232,9 +232,9 @@ function j() {
                                           n(!0),
                                           u.Z.setLoopback('krisp_test', !0),
                                           p.Z.getMediaEngine().startRecordingRawSamples((t, a, r) => {
-                                              var l;
+                                              var l, o;
                                               n(!1), u.Z.setLoopback('krisp_test', !1);
-                                              let o = new AudioBuffer({
+                                              let c = new AudioBuffer({
                                                   length: t.length,
                                                   sampleRate: r,
                                                   numberOfChannels: a
@@ -242,14 +242,25 @@ function j() {
                                               for (let e = 0; e < a; e++) {
                                                   let n = new Float32Array(t.length / a);
                                                   for (let r = 0; r < t.length / a; r++) n[r] = t[r * a + e] / 32768;
-                                                  o.copyToChannel(n, e);
+                                                  c.copyToChannel(n, e);
                                               }
-                                              let c = null == (l = e[T]) ? void 0 : l.name;
+                                              let d =
+                                                  null !=
+                                                  (o =
+                                                      null ==
+                                                      (l = e.find((e) => {
+                                                          let { id: t } = e;
+                                                          return T === t;
+                                                      }))
+                                                          ? void 0
+                                                          : l.name)
+                                                      ? o
+                                                      : '';
                                               i((e) => [
                                                   ...e,
                                                   {
-                                                      inputName: c,
-                                                      audioBuffer: o,
+                                                      inputName: d,
+                                                      audioBuffer: c,
                                                       createdAt: Date.now(),
                                                       suppression: R,
                                                       echoCancellation: S,

@@ -12,8 +12,8 @@ var r = n(475179),
     p = n(268350),
     m = n(433355),
     g = n(592125),
-    b = n(703558),
-    _ = n(323873),
+    _ = n(703558),
+    b = n(323873),
     v = n(375954),
     h = n(306680),
     y = n(944486),
@@ -50,9 +50,9 @@ let P = {
 };
 function C(e) {
     if (null != e) {
-        if (_.Z.isEditingAny(e)) return i.Z.endEditMessage(e), !1;
+        if (b.Z.isEditingAny(e)) return i.Z.endEditMessage(e), !1;
         if (null != c.Z.getPendingReply(e)) return (0, s.A6)(e), !1;
-        if (null != f.Z.getStickerPreview(e, b.d.ChannelMessage)) return (0, p.qB)(e, b.d.ChannelMessage), !1;
+        if (null != f.Z.getStickerPreview(e, _.d.ChannelMessage)) return (0, p.qB)(e, _.d.ChannelMessage), !1;
     }
 }
 function E(e) {

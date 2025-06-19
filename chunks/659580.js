@@ -13,8 +13,8 @@ var i = n(990547),
     p = n(453925),
     m = n(967003),
     g = n(632304),
-    b = n(131951),
-    _ = n(358085),
+    _ = n(131951),
+    b = n(358085),
     v = n(947150),
     h = n(488021),
     y = n(822556),
@@ -33,14 +33,14 @@ function I(e) {
     let L = (0, y.Z)(A),
         M = (0, v.Z)(k, N),
         R = (0, h.Z)(k, N),
-        F = (0, l.e7)([b.Z], () => b.Z.getActiveInputProfile()),
+        F = (0, l.e7)([_.Z], () => _.Z.getActiveInputProfile()),
         U = (0, m.Z)(k),
         V = (0, f.Z)(k),
         B = (0, p.Z)(k),
         Y = (0, g.Z)(k),
-        W = a.Yn.DEFAULT,
-        z = b.Z.isSelfDeaf(W),
-        G = (0, l.e7)([b.Z], () => b.Z.getMode()),
+        z = a.Yn.DEFAULT,
+        W = _.Z.isSelfDeaf(z),
+        G = (0, l.e7)([_.Z], () => _.Z.getMode()),
         H = G === O.pM4.VOICE_ACTIVITY ? O.pM4.PUSH_TO_TALK : O.pM4.VOICE_ACTIVITY;
     return (0, r.jsx)(c.Z, {
         object: O.qAy.CONTEXT_MENU,
@@ -74,15 +74,15 @@ function I(e) {
                                       label: S.intl.string(S.t.wjcRFR),
                                       action: () =>
                                           s.Z.toggleSelfDeaf({
-                                              context: W,
+                                              context: z,
                                               location: 'AudioDeviceMenu'
                                           }),
-                                      checked: z
+                                      checked: W
                                   },
                                   'self-deafen'
                               )
                             : null,
-                        N && I && _.isPlatformEmbedded
+                        N && I && b.isPlatformEmbedded
                             ? (0, r.jsx)(o.S89, {
                                   checked: G === O.pM4.PUSH_TO_TALK,
                                   id: 'input-mode',

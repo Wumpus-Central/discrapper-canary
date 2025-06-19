@@ -17,8 +17,8 @@ var n = r(255367),
     v = r(594174),
     D = r(51144),
     b = r(189648),
-    E = r(775194),
-    C = r(499848),
+    C = r(775194),
+    E = r(499848),
     P = r(724392),
     j = r(442580),
     R = r(770800),
@@ -121,7 +121,7 @@ function k(e, t, r, n, a) {
                     onClick: () => {
                         c.zc(d);
                     },
-                    element: C.Z,
+                    element: E.Z,
                     elementProps: {
                         context: e,
                         index: r,
@@ -155,7 +155,7 @@ function B() {
         v = (0, s.e7)([p.Z], () => p.Z.theme),
         D = (0, s.e7)([p.Z], () => (p.Z.darkSidebar ? Z.BRd.DARK : void 0)),
         b = (0, s.e7)([g.ZP], () => g.ZP.getSection()),
-        C = (function (e) {
+        E = (function (e) {
             let { defaultStats: t, streamStats: r, videoStreams: a, screenshare: i, clips: l, channel: s, connectionState: c } = e,
                 d = t.flatMap((e, t) => k(N.Yn.DEFAULT, e, t, a, null == s ? void 0 : s.getGuildId())),
                 m = r.flatMap((e, t) => k(N.Yn.STREAM, e, t, a, null == s ? void 0 : s.getGuildId())),
@@ -176,7 +176,7 @@ function B() {
                     h.push({
                         section: Z._s_.CLIPS,
                         label: x.intl.string(x.t.MKrFKC),
-                        element: E.Z,
+                        element: C.Z,
                         elementProps: { clips: l }
                     })),
                 m.length > 0 && m.unshift(y),
@@ -232,7 +232,7 @@ function B() {
             sidebarTheme: D,
             section: b,
             onSetSection: c.zc,
-            sections: C
+            sections: E
         })
     );
 }

@@ -61,14 +61,14 @@ let D = {
     codec: 2
 };
 function b(e, t, r, a, b) {
-    return e.map((E, C) => {
+    return e.map((C, E) => {
         let P = [];
-        for (let e of Object.keys(E).sort((e, t) => {
+        for (let e of Object.keys(C).sort((e, t) => {
             let r = D[e],
                 n = D[t];
             return r !== n ? (void 0 === r ? 1 : void 0 === n ? -1 : r - n) : m.Pz[e] !== m.Pz[t] ? (m.Pz[e] ? 1 : -1) : e > t ? 1 : -1;
         })) {
-            let t = E[e];
+            let t = C[e];
             p.al[e] ||
                 void 0 === t ||
                 P.push(
@@ -87,10 +87,10 @@ function b(e, t, r, a, b) {
             l.hjN,
             {
                 className: f.marginBottom40,
-                title: E.type,
+                title: C.type,
                 titleClassName: y.sectionHeader,
                 children: [
-                    'video' === E.type &&
+                    'video' === C.type &&
                         null != r &&
                         null != a &&
                         null != b &&
@@ -108,10 +108,10 @@ function b(e, t, r, a, b) {
                                       })
                                   })
                                 : null;
-                        })(E, r, a, b),
+                        })(C, r, a, b),
                     v(P),
-                    'video' === E.type &&
-                        C === e.length - 1 &&
+                    'video' === C.type &&
+                        E === e.length - 1 &&
                         null != r &&
                         null != a &&
                         null != b &&
@@ -140,7 +140,7 @@ function b(e, t, r, a, b) {
                         })
                 ]
             },
-            ''.concat(E.type, ' + ').concat(E.ssrc)
+            ''.concat(C.type, ' + ').concat(C.ssrc)
         );
     });
 }

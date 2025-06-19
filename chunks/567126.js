@@ -1,6 +1,6 @@
 n.d(t, {
     Hu: () => Y,
-    oA: () => z,
+    oA: () => W,
     se: () => V
 }),
     n(388685),
@@ -69,12 +69,12 @@ function G(e) {
     }
     return e;
 }
-function W(e) {
+function z(e) {
     let t = (0, y.isWindows)() ? (0, T.Z)(x.ZP, C.Z) : null,
         n = x.ZP.getRunningGames();
     return null != t && (0, Z.Z)(e.id, t.windowHandle) ? 2 : +(null != n.find((t) => (0, Z.Z)(e.id, t.windowHandle)));
 }
-function z(e) {
+function W(e) {
     let { selectedSource: t, onChangeSelectedSource: n } = e,
         { enableGoLiveCaptureCard: l } = O.Z.useExperiment({ location: 'GoLive_Source_Select' }),
         o = b.Z.supports(D.AN.GO_LIVE_HARDWARE),
@@ -84,7 +84,7 @@ function z(e) {
         T = null != I && I.length > 0,
         [E, R] = i.useState(c.vA.WINDOW),
         [A, G] = i.useState(!1),
-        z = i.useRef(null),
+        W = i.useRef(null),
         F = i.useRef(new u.Xp()),
         H = (0, d.e7)([x.ZP], () => x.ZP.getRunningGames()),
         V = (function (e, t, n) {
@@ -109,7 +109,7 @@ function z(e) {
             H,
             C
         ),
-        Y = i.useMemo(() => (null == C ? null : [...C].sort((e, t) => ((null == V ? void 0 : V.source.id) === e.id ? -1 : (null == V ? void 0 : V.source.id) === t.id ? 1 : W(t) - W(e)))), [V, C]);
+        Y = i.useMemo(() => (null == C ? null : [...C].sort((e, t) => ((null == V ? void 0 : V.source.id) === e.id ? -1 : (null == V ? void 0 : V.source.id) === t.id ? 1 : z(t) - z(e)))), [V, C]);
     i.useEffect(() => {
         let e = F.current;
         return (
@@ -136,10 +136,10 @@ function z(e) {
             }
         );
     }, []);
-    let J = i.useCallback((e) => {
-            null !== e && ((z.current = e), G(!e.isScrolledToTop()));
+    let X = i.useCallback((e) => {
+            null !== e && ((W.current = e), G(!e.isScrolledToTop()));
         }, []),
-        [X, K] = i.useState(void 0);
+        [J, K] = i.useState(void 0);
     i.useEffect(() => {
         g.Z.hasPermission(M.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }).then(K);
     }, []);
@@ -154,7 +154,7 @@ function z(e) {
         }
     })(E);
     if (null == q)
-        return !1 === X
+        return !1 === J
             ? (0, r.jsxs)(f.Text, {
                   className: U.errorMessage,
                   variant: 'text-md/normal',
@@ -227,10 +227,10 @@ function z(e) {
                 ]
             }),
             (0, r.jsxs)(f.Den, {
-                ref: J,
+                ref: X,
                 className: U.sourceScroller,
                 onScroll: function () {
-                    let e = z.current;
+                    let e = W.current;
                     null != e && G(!e.isScrolledToTop());
                 },
                 children: [

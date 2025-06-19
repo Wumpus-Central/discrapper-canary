@@ -18,7 +18,7 @@ var i = n(255367),
     m = n(846027),
     g = n(579806),
     p = n(906732),
-    h = n(920321),
+    h = n(72897),
     f = n(921801),
     b = n(695346),
     _ = n(938117),
@@ -58,9 +58,9 @@ function N(e) {
             currentDeviceId: x.Z.getVideoDeviceId(),
             isVideoAvailable: x.Z.isVideoAvailable()
         })),
-        Z = (0, h.Z)(),
+        Z = (0, h.kj)(),
         w = b.qF.useSetting(),
-        k = Object.values(Z).map((e) => {
+        k = Z.map((e) => {
             let { id: t, name: n } = e;
             return {
                 value: t,

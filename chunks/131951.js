@@ -1,5 +1,5 @@
 let r, i, a, o, s, l, c;
-n.d(t, { Z: () => rm }), n(388685), n(953529), n(457542), n(539854), n(642613), n(49124), n(337869);
+n.d(t, { Z: () => rm }), n(388685), n(953529), n(825670), n(539854), n(457542), n(642613), n(49124), n(337869);
 var u,
     d = n(512722),
     f = n.n(d),
@@ -176,6 +176,8 @@ function eG() {
         inputDeviceId: eb.w5,
         outputDeviceId: eb.w5,
         videoDeviceId: eb.w5,
+        inputDeviceUsageTimes: {},
+        outputDeviceUsageTimes: {},
         qos: !1,
         qosMigrated: !1,
         videoHook: eV.supports(eb.AN.VIDEO_HOOK),
@@ -1129,11 +1131,27 @@ function nu(e) {
 }
 function nd(e) {
     let { id: t } = e;
-    (t = tq(ez, t)), (eK = performance.now()), tZ({ inputDeviceId: t }), eV.setAudioInputDevice(t);
+    (t = tq(ez, t)), (eK = performance.now());
+    let { inputDeviceUsageTimes: n } = tA();
+    Object.hasOwn(n, t) || (n[t] = []),
+        n[t].push(Date.now()),
+        tZ({
+            inputDeviceId: t,
+            inputDeviceUsageTimes: n
+        }),
+        eV.setAudioInputDevice(t);
 }
 function nf(e) {
     let { id: t } = e;
-    tZ({ outputDeviceId: (t = tq(eq, t)) }), eV.setAudioOutputDevice(t);
+    t = tq(eq, t);
+    let { outputDeviceUsageTimes: n } = tA();
+    Object.hasOwn(n, t) || (n[t] = []),
+        n[t].push(Date.now()),
+        tZ({
+            outputDeviceId: t,
+            outputDeviceUsageTimes: n
+        }),
+        eV.setAudioOutputDevice(t);
 }
 function n_(e) {
     let { id: t } = e;
@@ -1822,8 +1840,14 @@ class rp extends (u = E.ZP.Store) {
     getInputDevices() {
         return ez;
     }
+    getInputDeviceUsageTimes() {
+        return tA().inputDeviceUsageTimes;
+    }
     getOutputDevices() {
         return eq;
+    }
+    getOutputDeviceUsageTimes() {
+        return tA().outputDeviceUsageTimes;
     }
     getVideoDevices() {
         return eX;

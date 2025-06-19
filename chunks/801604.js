@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -6,126 +6,140 @@ var i = n(120356),
     s = n(268146),
     o = n(481060),
     a = n(925329),
-    c = n(687058),
-    d = n(668519),
-    u = n(672811),
-    f = n(891180),
-    m = n(556389),
-    h = n(615161),
-    p = n(396678),
-    x = n(37113),
-    g = n(676462),
-    _ = n(388032),
-    v = n(326879);
-function j() {
+    c = n(679613),
+    d = n(72897),
+    u = n(668519),
+    f = n(672811),
+    m = n(891180),
+    h = n(556389),
+    p = n(615161),
+    x = n(396678),
+    g = n(37113),
+    _ = n(676462),
+    v = n(388032),
+    j = n(326879);
+function S() {
     return (0, r.jsx)('span', {
-        className: v.ellipsis,
+        className: j.ellipsis,
         children: '\u2022'
     });
 }
-function S(e) {
+function b(e) {
     let { source: t } = e;
     return null == t
         ? (0, r.jsx)(o.hGI, {
-              className: v.screenArrowIcon,
+              className: j.screenArrowIcon,
               size: 'md',
               color: 'currentColor'
           })
-        : (0, m.T)(t)
+        : (0, h.T)(t)
           ? (0, r.jsx)(a.Z, {
                 game: null,
                 pid: t.pid
             })
           : null == t.icon || '' === t.icon
             ? (0, r.jsx)(o.hGI, {
-                  className: v.screenArrowIcon,
+                  className: j.screenArrowIcon,
                   size: 'md',
                   color: 'currentColor'
               })
             : (0, r.jsx)('img', {
                   src: t.icon,
                   alt: '',
-                  className: v.sourceIcon
+                  className: j.sourceIcon
               });
 }
-function b(e) {
+function C(e) {
     var t, n, i, a;
-    let { nativePickerEnabled: m } = e,
-        [{ preset: b, resolution: C, fps: y, muteStreamAudio: O, selectedSource: Z, sourceType: I, audioSourceId: w }] = (0, h.E_)(),
-        { twoClickVariant: N } = (0, d.a)({
+    let { nativePickerEnabled: h } = e,
+        [{ preset: C, resolution: y, fps: O, muteStreamAudio: Z, selectedSource: I, sourceType: w, audioSourceId: N }] = (0, p.E_)(),
+        { twoClickVariant: T } = (0, u.a)({
             location: 'go_live_modal_refresh',
             autoTrackExposure: !1
         }),
-        T = (0, c.Z)(),
-        [E, P] = null != (i = (0, p.Z)(b)) ? i : [C, y],
-        R = (0, u.L)(b),
-        k = (0, f.M)(E),
-        A = I === s.vA.CAMERA,
-        M = null != Z || (!!N && (!m || A)),
-        L = null != Z ? (null == Z || null == (t = Z.id) ? void 0 : t.startsWith(s.vA.CAMERA)) : A,
-        D = M ? void 0 : b === x.tI.PRESET_VIDEO ? _.intl.string(g.default.MuHUFR) : b === x.tI.PRESET_DOCUMENTS ? _.intl.string(g.default.y0JuYW) : void 0;
+        { sortDevicesByFrecency: E } = (0, c._)({ location: 'StreamSettingsSummary' }),
+        P = (0, d.zX)({ sortDevicesByFrecency: E }),
+        [R, k] = null != (i = (0, x.Z)(C)) ? i : [y, O],
+        A = (0, f.L)(C),
+        M = (0, m.M)(R),
+        L = w === s.vA.CAMERA,
+        D = null != I || (!!T && (!h || L)),
+        B = null != I ? (null == I || null == (t = I.id) ? void 0 : t.startsWith(s.vA.CAMERA)) : L,
+        U = D ? void 0 : C === g.tI.PRESET_VIDEO ? v.intl.string(_.default.MuHUFR) : C === g.tI.PRESET_DOCUMENTS ? v.intl.string(_.default.y0JuYW) : void 0;
     return (0, r.jsxs)('div', {
-        className: v.root,
+        className: j.root,
         children: [
-            M && (0, r.jsx)(S, { source: Z }),
+            D && (0, r.jsx)(b, { source: I }),
             (0, r.jsxs)('div', {
-                className: v.summary,
+                className: j.summary,
                 children: [
                     (0, r.jsx)(o.Text, {
-                        className: v.sourceOrPresetName,
+                        className: j.sourceOrPresetName,
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        children: M ? (null != (a = null == Z ? void 0 : Z.name) ? a : _.intl.string(g.default['hJMA+/'])) : R
+                        children: D ? (null != (a = null == I ? void 0 : I.name) ? a : v.intl.string(_.default['hJMA+/'])) : A
                     }),
                     (0, r.jsxs)(o.Text, {
-                        className: v.summaryDetail,
+                        className: j.summaryDetail,
                         variant: 'text-xs/medium',
                         color: 'text-muted',
                         children: [
-                            M &&
+                            D &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsxs)('span', {
-                                            className: v.iconSummaryContainer,
+                                            className: j.iconSummaryContainer,
                                             children: [
                                                 (0, r.jsx)(o.ewm, {
-                                                    className: v.icon,
+                                                    className: j.icon,
                                                     size: 'xxs',
                                                     color: 'currentColor'
                                                 }),
-                                                R
+                                                A
                                             ]
                                         }),
-                                        (0, r.jsx)(j, {})
+                                        (0, r.jsx)(S, {})
                                     ]
                                 }),
-                            null != D &&
+                            null != U &&
                                 (0, r.jsxs)(r.Fragment, {
-                                    children: [(0, r.jsx)('span', { children: D }), (0, r.jsx)(j, {})]
+                                    children: [(0, r.jsx)('span', { children: U }), (0, r.jsx)(S, {})]
                                 }),
-                            (0, r.jsx)('span', { children: k }),
-                            (0, r.jsx)(j, {}),
-                            (0, r.jsx)('span', { children: ''.concat(P, 'fps') }),
-                            O &&
+                            (0, r.jsx)('span', { children: M }),
+                            (0, r.jsx)(S, {}),
+                            (0, r.jsx)('span', { children: ''.concat(k, 'fps') }),
+                            Z &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
-                                        (0, r.jsx)(j, {}),
+                                        (0, r.jsx)(S, {}),
                                         (0, r.jsxs)('span', {
-                                            className: v.iconSummaryContainer,
+                                            className: j.iconSummaryContainer,
                                             children: [
                                                 (0, r.jsx)(o.OyP, {
-                                                    className: l()(v.icon, v.mutedIcon),
+                                                    className: l()(j.icon, j.mutedIcon),
                                                     size: 'xxs',
                                                     color: 'currentColor'
                                                 }),
-                                                _.intl.string(g.default.FzMGWV)
+                                                v.intl.string(_.default.FzMGWV)
                                             ]
                                         })
                                     ]
                                 }),
-                            L
+                            B
                                 ? (0, r.jsxs)(r.Fragment, {
-                                      children: [(0, r.jsx)(j, {}), (0, r.jsx)('span', { children: null == (n = T[null != w ? w : '']) ? void 0 : n.name })]
+                                      children: [
+                                          (0, r.jsx)(S, {}),
+                                          (0, r.jsx)('span', {
+                                              children:
+                                                  null ==
+                                                  (n = P.find((e) => {
+                                                      let { id: t } = e;
+                                                      return N === t;
+                                                  }))
+                                                      ? void 0
+                                                      : n.name
+                                          })
+                                      ]
                                   })
                                 : null
                         ]

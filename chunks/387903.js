@@ -17,8 +17,8 @@ var r,
     p = n(438139),
     m = n(410030),
     g = n(726542),
-    b = n(600164),
-    _ = n(686546),
+    _ = n(600164),
+    b = n(686546),
     v = n(111028),
     h = n(925329),
     y = n(810568),
@@ -72,12 +72,12 @@ function B(e) {
     return e;
 }
 var Y = (((i = {}).ACTIVITY_FEED = 'ActivityFeed'), (i.STREAM_PREVIEW = 'StreamPreview'), (i.VOICE_CHANNEL = 'VoiceChannel'), i);
-let W = {
+let z = {
         StreamPreview: [108, 60],
         VoiceChannel: [108, 60],
         ActivityFeed: [900, 500]
     },
-    z = (0, p.Z)(
+    W = (0, p.Z)(
         class extends a.PureComponent {
             render() {
                 return (0, l.jsx)('div', {
@@ -176,7 +176,7 @@ class H extends (r = a.PureComponent) {
             { type: c } = this.props,
             { assets: u, application_id: d } = e;
         if (null == u || (null == u.large_image && null == u.small_image)) return null;
-        (0, k.Z)(e) && (i = W[c]);
+        (0, k.Z)(e) && (i = z[c]);
         let p = (0, A.Z)(e),
             m =
                 null != u.large_image
@@ -197,8 +197,8 @@ class H extends (r = a.PureComponent) {
         else if ((0, I.dS)(e)) {
             let t = (0, I.rq)(e);
             if (null == t) return null;
-            m = (0, l.jsx)(_.ZP, {
-                mask: _.ZP.Masks.SQUIRCLE,
+            m = (0, l.jsx)(b.ZP, {
+                mask: b.ZP.Masks.SQUIRCLE,
                 width: M.Si.SMALL,
                 height: M.Si.SMALL,
                 children: (0, l.jsx)('img', {
@@ -416,7 +416,7 @@ class H extends (r = a.PureComponent) {
         return null == n
             ? null
             : (0, N.Z)(e)
-              ? (0, l.jsx)(z, { timestamps: n })
+              ? (0, l.jsx)(W, { timestamps: n })
               : (0, l.jsx)(S.ZP, {
                     start: n.start,
                     location: S.ZP.Locations.USER_ACTIVITY,
@@ -511,12 +511,12 @@ class H extends (r = a.PureComponent) {
         (0, D.Z)(c) ? ((e = this.renderXboxImage()), (p = !0)) : null == (e = this.renderImage(c)) && (p = null != (e = this.renderGameImage(c)));
         let m = this.renderName(c),
             g = this.renderDetails(c),
-            _ = this.renderState(c, i),
+            b = this.renderState(c, i),
             v = this.renderTimePlayed(c),
             h = this.renderChannelDetails(c),
             y = null != n ? n() : null,
             O = this.renderTimeBar(c),
-            j = ![e, m, g, _, v, O, y].some((e) => null != e);
+            j = ![e, m, g, b, v, O, y].some((e) => null != e);
         return (0, l.jsxs)('div', {
             className: s()(this.getTypeClass('activity'), r),
             children: [
@@ -529,7 +529,7 @@ class H extends (r = a.PureComponent) {
                             e,
                             this.isStreamerOnTypeActivityFeed()
                                 ? null
-                                : (0, l.jsxs)(b.Z.Child, {
+                                : (0, l.jsxs)(_.Z.Child, {
                                       className: s()((0, w.l)(U, 'content', p ? 'GameImage' : null != e ? 'Images' : 'NoImages', t)),
                                       children: [
                                           (0, l.jsxs)(f.P3F, {
@@ -540,7 +540,7 @@ class H extends (r = a.PureComponent) {
                                                             o(e), null == a || a();
                                                         }
                                                       : void 0,
-                                              children: [m, g, _, v]
+                                              children: [m, g, b, v]
                                           }),
                                           h,
                                           d ? null : O,
