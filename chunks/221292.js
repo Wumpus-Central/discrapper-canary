@@ -167,18 +167,21 @@ let v = (e) => {
     C = (e) => {
         if (!(0, _.E)({ location: 'UserProfileAnalyticsUtils' })) return;
         let { guildId: t, channelId: n, analyticsLocations: i, profileUi: a, viewStartedAt: o, fetchStartedAt: s, timeToInteractiveMs: l, timeToLoadMs: c, timeToFetchMs: d } = e;
-        u.default.track(
-            m.rMx.USER_PROFILE_UI_VIEWED,
-            O(b({}, (0, r.hH)(t), (0, r.JS)(n), S(e), A(e)), {
-                location_stack: i,
-                profile_ui: a,
-                view_started_at: o,
-                fetch_started_at: s,
-                time_to_interactive_ms: l,
-                time_to_load_ms: c,
-                time_to_fetch_ms: d
-            })
-        );
+        (null != l ? l : 0) <= 0 ||
+            (null != c ? c : 0) <= 0 ||
+            (null != d ? d : 0) <= 0 ||
+            u.default.track(
+                m.rMx.USER_PROFILE_UI_VIEWED,
+                O(b({}, (0, r.hH)(t), (0, r.JS)(n), S(e), A(e)), {
+                    location_stack: i,
+                    profile_ui: a,
+                    view_started_at: o,
+                    fetch_started_at: s,
+                    time_to_interactive_ms: l,
+                    time_to_load_ms: c,
+                    time_to_fetch_ms: d
+                })
+            );
     },
     R = (e) => {
         let { guildId: t, channelId: n, analyticsLocations: i, action: a, display: o, activity: s, stream: l, entry: c, outbox: d, voiceChannelId: f } = e;

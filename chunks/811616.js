@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => I });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -15,84 +15,98 @@ var i = n(120356),
     h = n(930153),
     m = n(74538),
     g = n(937615),
-    E = n(104494),
-    b = n(474936),
-    y = n(388032),
-    O = n(106981);
-function v(e) {
-    let { premiumSubscription: t, planId: n, selectPlan: i, selected: o, priceOptions: v, shouldShowUpdatedPaymentModal: I, isEligibleForDiscount: T, discountAmountOff: S, isEligibleForTrial: A } = e,
-        N = (0, l.e7)([f.default], () => f.default.locale),
-        C = (0, l.e7)([_.Z], () => _.Z.get(n)),
-        { isGift: R, giftRecipient: P } = (0, d.wD)(),
-        w = R && (0, p.pO)(P);
-    s()(null != C, 'Missing subscriptionPlan');
-    let D = null != t && t.planId === n,
-        L = D || (n === b.Xh.PREMIUM_MONTH_TIER_2 && null != t && [b.Xh.PREMIUM_YEAR_TIER_0, b.Xh.PREMIUM_YEAR_TIER_1].includes(t.planId)),
-        x = b.nH[n],
-        k = (0, m.aS)(n, !1, R, v),
-        M = (0, m.Ap)(v.paymentSourceId),
-        j = null != x && !I,
-        U = (0, E.Ng)(),
-        G = C.interval === b.rV.YEAR ? y.t.ECT4Aw : y.t.v9QeOD,
-        B = () =>
-            null != x &&
+    E = n(367074),
+    b = n(104494),
+    y = n(474936),
+    O = n(388032),
+    v = n(106981);
+function I(e) {
+    let { premiumSubscription: t, planId: n, selectPlan: i, selected: o, priceOptions: I, shouldShowUpdatedPaymentModal: T, isEligibleForDiscount: S, discountAmountOff: A, isEligibleForTrial: N } = e,
+        C = (0, l.e7)([f.default], () => f.default.locale),
+        R = (0, l.e7)([_.Z], () => _.Z.get(n)),
+        { isGift: P, giftRecipient: w } = (0, d.wD)(),
+        D = P && (0, p.pO)(w);
+    s()(null != R, 'Missing subscriptionPlan');
+    let L = null != t && t.planId === n,
+        x = L || (n === y.Xh.PREMIUM_MONTH_TIER_2 && null != t && [y.Xh.PREMIUM_YEAR_TIER_0, y.Xh.PREMIUM_YEAR_TIER_1].includes(t.planId)),
+        k = y.nH[n],
+        M = (0, m.aS)(n, !1, P, I),
+        j = (0, m.Ap)(I.paymentSourceId),
+        U = null != k && !T,
+        G = (0, b.Ng)(),
+        B = (0, E.Vi)(),
+        V = R.interval === y.rV.YEAR ? O.t.ECT4Aw : O.t.v9QeOD,
+        F = () =>
+            B &&
             (0, r.jsx)(u.Text, {
                 tag: 'span',
                 variant: 'eyebrow',
                 color: 'always-white',
-                className: O.planOptionDiscount,
-                children: y.intl.format(y.t.IAybsL, { discount: (0, h.T3)(N, x / 100) })
+                className: v.planOptionDiscount,
+                children: O.intl.string(O.t.iQTfW1)
             }),
-        V = () =>
-            (C.interval === b.rV.YEAR && null != t) || (j && !D)
-                ? C.interval === b.rV.YEAR && null != t
-                    ? (0, r.jsxs)('span', {
-                          className: O.planOptionMonthsFree,
-                          children: ['(', y.intl.string(y.t['122kWF']), ')']
-                      })
-                    : j && !D
-                      ? B()
-                      : void 0
-                : null,
-        F = () =>
+        Z = () =>
+            null != k &&
+            !B &&
+            (0, r.jsx)(u.Text, {
+                tag: 'span',
+                variant: 'eyebrow',
+                color: 'always-white',
+                className: v.planOptionDiscount,
+                children: O.intl.format(O.t.IAybsL, { discount: (0, h.T3)(C, k / 100) })
+            }),
+        H = () =>
+            n === y.Xh.PREMIUM_MONTH_TIER_2 && B
+                ? F()
+                : (R.interval === y.rV.YEAR && null != t) || (U && !L)
+                  ? R.interval === y.rV.YEAR && null != t
+                      ? (0, r.jsxs)('span', {
+                            className: v.planOptionMonthsFree,
+                            children: ['(', O.intl.string(O.t['122kWF']), ')']
+                        })
+                      : U && !L
+                        ? Z()
+                        : void 0
+                  : null,
+        Y = () =>
             (0, r.jsxs)('div', {
                 children: [
                     (0, r.jsxs)('div', {
-                        className: a()(O.planOptionInterval, {
-                            [O.optionSelected]: o || w,
-                            [O.updatedOptionSelected]: I && (o || w)
+                        className: a()(v.planOptionInterval, {
+                            [v.optionSelected]: o || D,
+                            [v.updatedOptionSelected]: T && (o || D)
                         }),
-                        children: [(0, m.L7)(C.interval, R, M, C.intervalCount, w, (0, m.Rd)(C.id)), w && V()]
+                        children: [(0, m.L7)(R.interval, P, j, R.intervalCount, D, (0, m.Rd)(R.id)), D && H()]
                     }),
-                    w &&
+                    D &&
                         (0, r.jsx)('div', {
-                            className: O.planOneTimeCost,
-                            children: y.intl.format(y.t.ori2Ji, { currencyAmount: (0, g.T4)(k.amount, k.currency) })
+                            className: v.planOneTimeCost,
+                            children: O.intl.format(O.t.ori2Ji, { currencyAmount: (0, g.T4)(M.amount, M.currency) })
                         })
                 ]
             }),
-        Z = () =>
-            T && null != S && C.interval === b.rV.MONTH
-                ? (0, g.T4)(k.amount - S, k.currency)
-                : A
-                  ? (0, g.T4)(0, k.currency, {
+        W = () =>
+            S && null != A && R.interval === y.rV.MONTH
+                ? (0, g.T4)(M.amount - A, M.currency)
+                : N
+                  ? (0, g.T4)(0, M.currency, {
                         minimumFractionDigits: 0,
                         maximumFractionDigits: 0
                     })
-                  : (0, g.T4)(k.amount, k.currency),
-        H = () => {
-            if (T && null != S && C.interval === b.rV.MONTH) {
+                  : (0, g.T4)(M.amount, M.currency),
+        K = () => {
+            if (S && null != A && R.interval === y.rV.MONTH) {
                 var e;
-                return y.intl.format(y.t['VeE/4O'], {
-                    numMonths: null != (e = null == U ? void 0 : U.discount.user_usage_limit) ? e : b.rt,
-                    discountedPrice: (0, g.T4)(k.amount - S, k.currency),
-                    regularPrice: (0, g.T4)(k.amount, k.currency)
+                return O.intl.format(O.t['VeE/4O'], {
+                    numMonths: null != (e = null == G ? void 0 : G.discount.user_usage_limit) ? e : y.rt,
+                    discountedPrice: (0, g.T4)(M.amount - A, M.currency),
+                    regularPrice: (0, g.T4)(M.amount, M.currency)
                 });
             }
-            return A ? y.intl.format(G, { price: (0, g.T4)(k.amount, k.currency) }) : C.interval === b.rV.YEAR ? y.intl.formatToPlainString(y.t.rtLTJC, { percent: x }) : null;
+            return N ? O.intl.format(V, { price: (0, g.T4)(M.amount, M.currency) }) : R.interval === y.rV.YEAR ? O.intl.formatToPlainString(O.t.rtLTJC, { percent: k }) : null;
         };
     return (0, r.jsxs)(u.P3F, {
-        role: w ? 'menuitem' : 'radio',
+        role: D ? 'menuitem' : 'radio',
         'aria-checked': o,
         tabIndex: o ? 0 : -1,
         focusProps: {
@@ -103,19 +117,19 @@ function v(e) {
                 bottom: 0
             }
         },
-        onClick: L ? void 0 : () => i(n),
-        className: a()(O.planOptionClickableContainer, {
-            [O.selectedPlan]: w && o,
-            [O.selectionBox]: w
+        onClick: x ? void 0 : () => i(n),
+        className: a()(v.planOptionClickableContainer, {
+            [v.selectedPlan]: D && o,
+            [v.selectionBox]: D
         }),
         children: [
             (0, r.jsxs)('div', {
-                className: a()(O.planOption, { [O.planOptionDisabled]: L }),
+                className: a()(v.planOption, { [v.planOptionDisabled]: x }),
                 children: [
                     (0, r.jsxs)('div', {
-                        className: O.planOptionClickable,
+                        className: v.planOptionClickable,
                         children: [
-                            !w &&
+                            !D &&
                                 (0, r.jsx)(u.XZJ, {
                                     readOnly: !0,
                                     displayOnly: !0,
@@ -123,36 +137,36 @@ function v(e) {
                                     shape: u.XZJ.Shapes.ROUND,
                                     color: c.Z.unsafe_rawColors.BRAND_500.css,
                                     type: u.XZJ.Types.INVERTED,
-                                    className: O.planOptionCheckbox
+                                    className: v.planOptionCheckbox
                                 }),
-                            F(),
-                            D &&
+                            Y(),
+                            L &&
                                 (0, r.jsxs)('span', {
-                                    className: O.planOptionCurrentPlan,
-                                    children: ['(', y.intl.string(y.t.ymSxh4), ')']
+                                    className: v.planOptionCurrentPlan,
+                                    children: ['(', O.intl.string(O.t.ymSxh4), ')']
                                 }),
-                            !w && V()
+                            !D && H()
                         ]
                     }),
-                    I
+                    T
                         ? (0, r.jsx)('div', {
-                              className: a()({ [O.optionPriceSelected]: o }),
-                              children: y.intl.format(y.t.hXcaLS, { price: Z() })
+                              className: a()({ [v.optionPriceSelected]: o }),
+                              children: O.intl.format(O.t.hXcaLS, { price: W() })
                           })
                         : (0, r.jsx)('div', {
-                              className: a()({ [O.optionSelected]: o || w }),
-                              children: (0, g.T4)(k.amount, k.currency)
+                              className: a()({ [v.optionSelected]: o || D }),
+                              children: (0, g.T4)(M.amount, M.currency)
                           })
                 ]
             }),
-            I &&
+            T &&
                 (0, r.jsx)('div', {
-                    className: O.planOptionSubtextContainer,
+                    className: v.planOptionSubtextContainer,
                     children: (0, r.jsx)(u.Text, {
                         variant: 'text-md/normal',
                         color: o ? 'text-normal' : 'interactive-normal',
-                        className: a()(O.planOptionSubtext, { [O.discountPlanOptionSubtext]: T }),
-                        children: H()
+                        className: a()(v.planOptionSubtext, { [v.discountPlanOptionSubtext]: S }),
+                        children: K()
                     })
                 })
         ]

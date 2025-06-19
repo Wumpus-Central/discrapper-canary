@@ -28,5 +28,6 @@ e.exports = {
     marketingPageHeading: 'marketingPageHeading__81281',
     premiumOfferPill: 'premiumOfferPill__81281',
     subButton: 'subButton__81281',
-    whiteSubButton: 'whiteSubButton__81281'
+    whiteSubButton: 'whiteSubButton__81281',
+    tier2Gradient: 'tier2Gradient__81281'
 };

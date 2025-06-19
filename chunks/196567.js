@@ -6,7 +6,7 @@ var i = n(120356),
     o = n(481060),
     s = n(314943);
 function l(e) {
-    let { className: t, copy: n, bannerImage: i, textColor: l = 'always-white', hideGiftIcon: c = !1 } = e;
+    let { className: t, copy: n, bannerImage: i, textColor: l = 'always-white', hideGiftIcon: c = !1, hideNitroIcon: u = !1 } = e;
     return (0, r.jsxs)('div', {
         className: a()(s.bannerContainer, t),
         children: [
@@ -26,10 +26,16 @@ function l(e) {
                             color: 'currentColor',
                             className: s.giftIcon
                         }),
+                    !1 === u &&
+                        (0, r.jsx)(o.SrA, {
+                            size: 'md',
+                            color: o.TVs.colors.TEXT_INVERT,
+                            className: s.nitroIcon
+                        }),
                     (0, r.jsx)(o.X6q, {
-                        className: a()(s.textHeader, { [s.textHeaderWithGiftIcon]: !c }),
+                        className: a()(s.textHeader, { [s.textHeaderWithIcon]: !c }),
                         color: l,
-                        variant: 'eyebrow',
+                        variant: 'heading-md/bold',
                         children: n
                     })
                 ]

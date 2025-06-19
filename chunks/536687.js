@@ -226,7 +226,8 @@ function L(e) {
                                             ctaLabel: et,
                                             onClick: () => {
                                                 ((0, b.xN)(T.config) || (0, b.Bg)(T.config)) && j();
-                                            }
+                                            },
+                                            location: g.jn.VIDEO_MODAL
                                         })
                                     ]
                                 })

@@ -7,7 +7,7 @@ function o(e) {
     var t,
         n,
         { isSelected: o } = e,
-        a = (function (e, t) {
+        l = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -26,7 +26,7 @@ function o(e) {
             }
             return i;
         })(e, ['isSelected']);
-    let l = (0, s.Dt)();
+    let a = (0, s.Dt)();
     return (0, r.jsxs)(
         'svg',
         ((t = (function (e) {
@@ -53,14 +53,14 @@ function o(e) {
                     });
             }
             return e;
-        })({}, a)),
+        })({}, l)),
         (n = n =
             {
                 width: '16',
                 height: '16',
                 viewBox: '0 0 16 16',
                 xmlns: 'http://www.w3.org/2000/svg',
-                fill: 'url(#'.concat(l, ')'),
+                fill: 'url(#'.concat(a, ')'),
                 children: [
                     (0, r.jsx)('path', {
                         d: 'M10 9.33332C10.7364 9.33332 11.3334 8.73637 11.3334 7.99999C11.3334 7.26361 10.7364 6.66666 10 6.66666C9.26364 6.66666 8.66669 7.26361 8.66669 7.99999C8.66669 8.73637 9.26364 9.33332 10 9.33332Z',

@@ -6,5 +6,6 @@ e.exports = {
     innerWrapperApplicationHome: 'innerWrapperApplicationHome__70f7f innerWrapperBase__70f7f',
     invisible: 'invisible__70f7f',
     button: 'button__70f7f',
-    subButton: 'subButton__70f7f'
+    subButton: 'subButton__70f7f',
+    tier2Gradient: 'tier2Gradient__70f7f'
 };

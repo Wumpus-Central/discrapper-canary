@@ -1,5 +1,5 @@
 n.d(t, {
-    W: () => l,
+    W: () => a,
     Z: () => c
 });
 var r = n(255367);
@@ -7,14 +7,14 @@ n(73800);
 var i = n(120356),
     s = n.n(i),
     o = n(481060),
-    a = n(956542);
-let l = {
-    RED: a.redMessageBlock,
-    YELLOW: a.yellowMessageBlock,
-    BROWN: a.brownMessageBlock
+    l = n(956542);
+let a = {
+    RED: l.redMessageBlock,
+    YELLOW: l.yellowMessageBlock,
+    BROWN: l.brownMessageBlock
 };
 function c(e) {
-    let { color: t, icon: n, children: i, className: l } = e;
+    let { color: t, icon: n, children: i, className: a } = e;
     return (0, r.jsx)(o.kzN, {
         icon: (e) =>
             (0, r.jsx)(
@@ -51,8 +51,8 @@ function c(e) {
                     e
                 )
             ),
-        iconClassName: a.messageBlockIcon,
-        className: s()(t, l),
+        iconClassName: l.messageBlockIcon,
+        className: s()(t, a),
         children: i
     });
 }

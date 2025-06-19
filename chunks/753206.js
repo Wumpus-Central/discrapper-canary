@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     s = n(120356),
     o = n.n(s),
-    a = n(628238),
-    l = n(750030),
+    l = n(628238),
+    a = n(750030),
     c = n(492593),
     u = n(25015),
     d = n(963550),
@@ -13,16 +13,16 @@ var r = n(255367),
 let g = i.memo(function (e) {
     var t;
     let { message: n, channel: s, compact: g, className: b, isGroupStart: m, hideSimpleEmbedContent: _ = !0, disableInteraction: v, previewGuildId: h, preview: O, author: y } = e,
-        j = null != h ? h : (0, l.k)(n),
-        x = (0, a.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
-        { content: C } = (0, u.Z)(n, {
+        j = null != h ? h : (0, a.k)(n),
+        x = (0, l.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
+        { content: S } = (0, u.Z)(n, {
             hideSimpleEmbedContent: _,
             allowList: x,
             allowHeading: x,
             allowLinks: !0,
             previewLinkTarget: !0
         }),
-        S = i.useMemo(() => {
+        C = i.useMemo(() => {
             var t, n;
             return (0, p.Z)(
                 ((t = (function (e) {
@@ -77,8 +77,8 @@ let g = i.memo(function (e) {
             [f.cozyMessage]: !g,
             [f.groupStart]: m
         }),
-        childrenHeader: S,
-        childrenMessageContent: (0, d.Z)(e, C),
+        childrenHeader: C,
+        childrenMessageContent: (0, d.Z)(e, S),
         disableInteraction: v,
         author: y,
         preview: O

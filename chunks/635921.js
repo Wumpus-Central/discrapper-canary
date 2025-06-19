@@ -29,16 +29,27 @@ var i = n(255367),
     v = n(388032),
     T = n(909176);
 let I = (e) => {
-        let { inOfferExperience: t, subscriptionTier: n, containerClassName: r, buttonClassName: s, isApplicationHome: a, isDarkMode: c } = e,
-            d = (0, i.jsx)(E.Z, {
-                color: c || !a ? o.Ttl.BRAND_INVERTED : void 0,
-                className: l()(T.button, T.subButton, s, {
-                    [T.extendedButton]: t && a,
-                    [T.whiteSubButton]: a && !c
-                }),
-                subscriptionTier: n
-            }),
-            u =
+        let { inOfferExperience: t, subscriptionTier: n, containerClassName: r, buttonClassName: s, isApplicationHome: a, isDarkMode: c, isEligibleForBogoPromotion: d } = e,
+            u = d
+                ? (0, i.jsx)(E.Z, {
+                      color: c ? o.Ttl.BRAND_INVERTED : void 0,
+                      className: l()(T.button, T.subButton, s, {
+                          [T.extendedButton]: t && a,
+                          [T.whiteSubButton]: a && !c
+                      }),
+                      shinyButtonClassName: c ? void 0 : T.tier2Gradient,
+                      subscriptionTier: n,
+                      hasActivePromotion: !0
+                  })
+                : (0, i.jsx)(E.Z, {
+                      color: c || !a ? o.Ttl.BRAND_INVERTED : void 0,
+                      className: l()(T.button, T.subButton, s, {
+                          [T.extendedButton]: t && a,
+                          [T.whiteSubButton]: a && !c
+                      }),
+                      subscriptionTier: n
+                  }),
+            m =
                 t && a
                     ? null
                     : (0, i.jsx)(x.Z, {
@@ -47,7 +58,7 @@ let I = (e) => {
                       });
         return (0, i.jsxs)('div', {
             className: l()(T.buttonContainer, r),
-            children: [d, ' ', u]
+            children: [u, ' ', m]
         });
     },
     N = (e) => {

@@ -4,8 +4,8 @@ n(73800);
 var i = n(120356),
     s = n.n(i),
     o = n(525059),
-    a = n(742795),
-    l = n(200289);
+    l = n(742795),
+    a = n(200289);
 function c(e) {
     let { Icon: t, className: n } = e;
     return (0, r.jsx)('div', {
@@ -14,7 +14,7 @@ function c(e) {
             className: o.innerContainer,
             children: [
                 (0, r.jsx)('img', {
-                    src: l,
+                    src: a,
                     alt: '',
                     className: o.star
                 }),
@@ -26,7 +26,7 @@ function c(e) {
                     })
                 }),
                 (0, r.jsx)('img', {
-                    src: a,
+                    src: l,
                     alt: '',
                     className: o.sparkle
                 })

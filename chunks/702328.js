@@ -252,7 +252,8 @@ let ea = (e) => {
                                                 subscriptionTier: eA,
                                                 isFullscreen: s || eL,
                                                 entrypoint: Z,
-                                                isDarkMode: eh
+                                                isDarkMode: eh,
+                                                isEligibleForBogoPromotion: eB
                                             })
                                           : (0, i.jsx)(L.ZP, {
                                                 ref: ed,
@@ -292,7 +293,7 @@ let ea = (e) => {
                           }),
                     (0, i.jsxs)('div', {
                         className: $.promoBannerContainer,
-                        children: [(0, i.jsx)(N.Z, { isFullScreen: s }), s && eR && (0, i.jsx)(A.Z, { localizedPricingPromo: eP })]
+                        children: [(0, i.jsx)(N.Z, { variant: k ? N.C.APPLICATION_NITRO_HOME : N.C.NITRO_SETTINGS }), s && eR && (0, i.jsx)(A.Z, { localizedPricingPromo: eP })]
                     }),
                     !k && eF,
                     Z === q.EZ.UserSettings &&
@@ -347,7 +348,8 @@ let ea = (e) => {
                         isVisible: !ef && !eE && !e_ && ev,
                         isFullscreen: s,
                         subscriptionTier: eA,
-                        isApplicationHome: k
+                        isApplicationHome: k,
+                        isEligibleForBogoPromotion: eB
                     }),
                     (0, i.jsx)(o.$, {
                         innerRef: eu,

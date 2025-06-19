@@ -118,8 +118,8 @@ let C = (e) => {
         var t,
             n,
             o,
-            { quest: u, useReducedMotion: d, isExpanded: p, className: h, ctaLabel: v, onClick: O } = e,
-            C = (function (e, t) {
+            { quest: u, useReducedMotion: d, isExpanded: p, className: h, ctaLabel: v, onClick: O, location: C = m.jn.QUEST_BAR_V2 } = e,
+            w = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -137,13 +137,13 @@ let C = (e) => {
                     for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]);
                 }
                 return s;
-            })(e, ['quest', 'useReducedMotion', 'isExpanded', 'className', 'ctaLabel', 'onClick']);
-        let w = (0, x.hf)({
+            })(e, ['quest', 'useReducedMotion', 'isExpanded', 'className', 'ctaLabel', 'onClick', 'location']);
+        let S = (0, x.hf)({
                 quest: u,
-                location: m.jn.QUEST_BAR_V2
+                location: C
             }),
-            S = (0, g.up)(b.dr.QUESTS_BAR),
-            E = s.useCallback(
+            E = (0, g.up)(b.dr.QUESTS_BAR),
+            P = s.useCallback(
                 (e) => {
                     var t;
                     null == O || O(e),
@@ -154,9 +154,9 @@ let C = (e) => {
                                   analyticsLocations: [],
                                   analyticsSource: l.Z.QUEST_HOME_PAGE
                               })
-                            : w();
+                            : S();
                 },
-                [O, u.config, null == (o = u.userStatus) ? void 0 : o.claimedAt, w]
+                [O, u.config, null == (o = u.userStatus) ? void 0 : o.claimedAt, S]
             );
         return (0, r.jsx)(
             i.gtL,
@@ -164,14 +164,14 @@ let C = (e) => {
                 {
                     fullWidth: !0,
                     size: i.zxk.Sizes.SMALL,
-                    onClick: E,
+                    onClick: P,
                     pauseAnimation: d || !p,
                     className: a()(_.cta, h),
                     buttonShineClassName: _.shine
                 },
-                C
+                w
             )),
-            (n = n = { children: null != v ? v : S }),
+            (n = n = { children: null != v ? v : E }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                 : (function (e, t) {
