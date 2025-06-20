@@ -127,26 +127,27 @@ let G = {
                     user_id: e.string().required(),
                     session_id: e.string().required(),
                     channel_id: e.string().required(),
-                    message_id: e.string().required()
+                    message_id: e.string().required(),
+                    application_id: e.string().optional()
                 }),
         handler(e) {
             let {
                     socket: t,
-                    args: { type: n, user_id: r, session_id: i, channel_id: l, message_id: a }
+                    args: { type: n, user_id: r, session_id: i, channel_id: l, message_id: a, application_id: o }
                 } = e,
-                o = t.application.id;
-            if (null == o) throw new A.Z({ errorCode: k.lTL.INVALID_COMMAND }, 'No application.');
-            let s = Promise.resolve(!1);
+                s = t.transport === D.He.IPC && null != o ? o : t.application.id;
+            if (null == s) throw new A.Z({ errorCode: k.lTL.INVALID_COMMAND }, 'No application.');
+            let u = Promise.resolve(!1);
             return (
                 n === k.mFx.JOIN &&
-                    (s = c.Z.join({
+                    (u = c.Z.join({
                         userId: r,
                         sessionId: i,
-                        applicationId: o,
+                        applicationId: s,
                         channelId: l,
                         messageId: a
                     })),
-                s.then((e) => {
+                u.then((e) => {
                     if (!e) throw new A.Z({ errorCode: k.lTL.INVALID_INVITE }, 'Invite is expired or invalid.');
                 })
             );

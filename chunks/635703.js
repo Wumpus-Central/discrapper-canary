@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         openCreateGuildModal: () => d,
-        updateCreateGuildModal: () => p
+        updateCreateGuildModal: () => m
     });
 var r = n(255367);
 n(73800);
@@ -86,7 +86,7 @@ let d = (e) => {
         let { initialSlide: t, location: n, onSuccess: r } = e;
         (0, i.h7j)((e) => _(e, t, n, r), { modalKey: s.PU });
     },
-    p = (e) => {
+    m = (e) => {
         let { slide: t, location: n } = e;
         (0, i.oav)(s.PU, (e) => _(e, t, n));
     };

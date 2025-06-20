@@ -5,8 +5,6 @@ e.exports = {
     inputForm: 'inputForm__991a0',
     formTitle: 'formTitle__991a0',
     error: 'error__991a0',
-    input: 'input__991a0',
-    inputInner: 'inputInner__991a0',
     examplesForm: 'examplesForm__991a0',
     sampleLink: 'sampleLink__991a0',
     footer: 'footer__991a0',

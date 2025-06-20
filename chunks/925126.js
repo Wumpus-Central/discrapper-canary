@@ -5,5 +5,6 @@ e.exports = {
     freeformTextArea: 'freeformTextArea__7ca6b',
     freeformTextAreaDisabled: 'freeformTextAreaDisabled__7ca6b',
     question: 'question__7ca6b',
-    questionTitle: 'questionTitle__7ca6b'
+    questionTitle: 'questionTitle__7ca6b',
+    textAreaTitle: 'textAreaTitle__7ca6b'
 };

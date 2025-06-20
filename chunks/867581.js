@@ -8,8 +8,8 @@ var l = n(255367),
     u = n(447543),
     _ = n(881052),
     d = n(600164),
-    p = n(313201),
-    m = n(703656),
+    m = n(313201),
+    p = n(703656),
     f = n(782605),
     I = n(981631),
     N = n(388032),
@@ -17,7 +17,7 @@ var l = n(255367),
     E = n(216019),
     S = n(286359);
 let C = 'hTKzmak',
-    O = (0, p.hQ)(),
+    O = (0, m.hQ)(),
     b = ((r = window.GLOBAL_ENV.INVITE_HOST), (i = ''), null == r && ((r = location.host), (i = I.Z5c.INVITE(''))), ''.concat(location.protocol, '//').concat(r).concat(i, '/')),
     g = [C, ''.concat(b).concat(C), ''.concat(b).concat('wumpus-friends')],
     L = (e) => {
@@ -25,7 +25,7 @@ let C = 'hTKzmak',
         return (0, l.jsxs)(c.P3F, {
             className: T.rowContainer,
             onClick: () => {
-                t(), (0, m.uL)(I.Z5c.GUILD_DISCOVERY);
+                t(), (0, p.uL)(I.Z5c.GUILD_DISCOVERY);
             },
             children: [
                 (0, l.jsx)('img', {
@@ -60,7 +60,7 @@ let C = 'hTKzmak',
 function D(e) {
     let { onBack: t, onClose: n, isSlideReady: r } = e,
         [i, a] = o.useState(''),
-        [p, m] = o.useState(!1),
+        [m, p] = o.useState(!1),
         [I, E] = o.useState(null),
         S = o.useRef(null);
     o.useEffect(() => {
@@ -71,13 +71,13 @@ function D(e) {
         e.preventDefault();
         let t = i.trim();
         if ('' === t) return void E(N.intl.string(N.t.IRq5am));
-        E(null), m(!0);
+        E(null), p(!0);
         let r = t.split('/'),
             l = r[r.length - 1];
         u.ZP.resolveInvite(l, 'Join Guild', { inputValue: t }).then(
             (e) => {
                 let { invite: t } = e;
-                if ((m(!1), null == t)) return void E(N.intl.string(N.t['GEYI+f']));
+                if ((p(!1), null == t)) return void E(N.intl.string(N.t['GEYI+f']));
                 if (null != t.channel) {
                     let e = u.ZP.getInviteContext('Join Guild', t);
                     u.ZP.acceptInvite({
@@ -95,7 +95,7 @@ function D(e) {
                 }
             },
             (e) => {
-                m(!1);
+                p(!1);
                 let t = new _.yZ(e);
                 E((0, f.O)(t.code));
             }
@@ -142,8 +142,6 @@ function D(e) {
                                 (0, l.jsx)(c.oil, {
                                     value: i,
                                     onChange: a,
-                                    className: T.input,
-                                    inputClassName: T.inputInner,
                                     placeholder: ''.concat(b).concat(C),
                                     inputRef: S,
                                     required: !0,
@@ -176,7 +174,7 @@ function D(e) {
                 children: [
                     (0, l.jsx)(c.zxk, {
                         color: c.zxk.Colors.BRAND,
-                        submitting: p,
+                        submitting: m,
                         onClick: D,
                         children: N.intl.string(N.t['Ts/9AQ'])
                     }),

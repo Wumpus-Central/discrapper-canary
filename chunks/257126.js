@@ -1,12 +1,11 @@
 n.d(t, {
-    A6: () => s,
     Ef: () => r,
-    HO: () => b,
+    HO: () => o,
     Wo: () => a,
-    bM: () => d,
-    cc: () => f,
-    cp: () => c,
-    sG: () => o,
+    bM: () => c,
+    cc: () => d,
+    cp: () => b,
+    sG: () => s,
     xx: () => u
 }),
     n(781311),
@@ -24,24 +23,23 @@ function u(e, t) {
     return t.find((t) => t.value === e.value);
 }
 function s(e) {
-    return (null == e ? void 0 : e.value) === r;
+    let t = e.freeformText.trim().slice(0, l.iF);
+    return t.length > 0 ? t : null;
 }
 function o(e) {
-    return s(e.selectedOption) ? e.freeformText.trim().slice(0, l.iF) : null;
-}
-function b(e) {
     var t;
     return null == (t = e.selectedOption) ? void 0 : t.value;
 }
-function c(e) {
-    if (null == b(e)) return !1;
-    if (s(e.selectedOption)) {
-        let t = o(e);
+function b(e) {
+    var t;
+    if (null == o(e)) return !1;
+    if ((null == (t = e.selectedOption) ? void 0 : t.value) === r) {
+        let t = s(e);
         return null != t && t.length > 0;
     }
     return !0;
 }
-function d() {
+function c() {
     return [
         {
             value: 'missing_expected_result',
@@ -77,7 +75,7 @@ function d() {
         }
     ];
 }
-function f() {
+function d() {
     return [
         {
             value: 'looking_for_known_answer',

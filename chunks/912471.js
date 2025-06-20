@@ -181,23 +181,21 @@ function q() {
 }
 function X() {
     function e() {
-        (k = c.default.isAuthenticated()), Y();
+        let e = c.default.isAuthenticated();
+        e !== k && ((k = e), q(), Y());
     }
     function t() {
-        (k = !1), q();
-    }
-    function n() {
         (L = d.Z.getState()), Y();
     }
-    function r(e) {
+    function n(e) {
         let { focused: t } = e;
         (x = t), Y();
     }
-    function i(e) {
+    function r(e) {
         let { state: t } = e;
         (x = t === b.$7l.ACTIVE), Y();
     }
-    p.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), d.Z.addChangeListener(n), c.default.addChangeListener(e), s.Z.subscribe('WINDOW_FOCUS', r), s.Z.subscribe('APP_STATE_UPDATE', i), s.Z.subscribe('LOGOUT', t), Y(), W(), a.ZP.initialized.then(M);
+    p.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), d.Z.addChangeListener(t), c.default.addChangeListener(e), s.Z.subscribe('WINDOW_FOCUS', n), s.Z.subscribe('APP_STATE_UPDATE', r), Y(), W(), a.ZP.initialized.then(M);
 }
 async function Q() {
     let e = null;

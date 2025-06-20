@@ -94,8 +94,7 @@ class f extends (r = o.PureComponent) {
 p(f, 'defaultProps', {
     basis: 232,
     grow: 0,
-    shrink: 0,
-    className: u.sidebar
+    shrink: 0
 });
 class h extends o.PureComponent {
     render() {
@@ -120,7 +119,6 @@ class x extends (i = o.PureComponent) {
     }
 }
 p(x, 'defaultProps', {
-    className: u.layout,
     direction: d.Z.Direction.HORIZONTAL,
     justify: d.Z.Justify.START,
     align: d.Z.Align.START,

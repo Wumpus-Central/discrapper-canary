@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(626135),
     _ = n(215292),
     d = n(382086),
-    p = n(996453),
-    m = n(446706),
+    m = n(996453),
+    p = n(446706),
     f = n(867581),
     I = n(675999),
     N = n(981631),
@@ -72,7 +72,7 @@ function E(e) {
                             id: I._m.GUILD_TEMPLATES,
                             impressionName: a.ImpressionNames.GUILD_ADD_LANDING,
                             impressionProperties: R,
-                            children: (0, r.jsx)(m.Z, {
+                            children: (0, r.jsx)(p.Z, {
                                 isNewUser: !1,
                                 onJoin: C ? j : void 0,
                                 onChooseTemplate: y,
@@ -93,7 +93,7 @@ function E(e) {
                             id: I._m.CUSTOMIZE_GUILD,
                             impressionName: a.ImpressionNames.GUILD_ADD_CUSTOMIZE,
                             impressionProperties: R,
-                            children: (0, r.jsx)(p.Z, {
+                            children: (0, r.jsx)(m.Z, {
                                 guildTemplate: h,
                                 onGuildCreated: M,
                                 onClose: E,
