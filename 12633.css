@@ -19083,6 +19083,12 @@ span.clanTag__5d473 {
     padding: 48px 36px 0 48px
 }
 
+@media (max-width:960px) {
+    .user-profile-modal-v2 .inner_c0bea0 {
+        padding: 48px 4px 0 16px
+    }
+}
+
 .user-profile-sidebar .inner_c0bea0 {
     border-radius: 0;
     height: 100%
