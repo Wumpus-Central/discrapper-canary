@@ -1,6 +1,6 @@
 n.d(t, {
-    UV: () => p,
-    _s: () => c,
+    UV: () => _,
+    _s: () => u,
     kW: () => d,
     km: () => s
 });
@@ -34,7 +34,7 @@ function a(e) {
     }
     return e;
 }
-function u(e, t) {
+function c(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -62,7 +62,7 @@ function s(e) {
                         var l;
                         return (0, r.jsx)(
                             i,
-                            u(
+                            c(
                                 a(
                                     {
                                         initialCustomMessage: null != (l = t.metadata.customMessage) ? l : '',
@@ -82,15 +82,15 @@ function s(e) {
             new Promise((s) => {
                 (0, i.ZDy)(async () => {
                     let { default: i } = await n.e('74543').then(n.bind(n, 643611)),
-                        c = t.actions.find((e) => e.type === l.jj.FLAG_TO_CHANNEL);
+                        u = t.actions.find((e) => e.type === l.jj.FLAG_TO_CHANNEL);
                     return (n) =>
                         (0, r.jsx)(
                             i,
-                            u(
+                            c(
                                 a(
                                     {
                                         action: o,
-                                        isEdit: null != c,
+                                        isEdit: null != u,
                                         triggerType: t.triggerType,
                                         guildId: e,
                                         onEditChannel: (e) => {
@@ -112,7 +112,7 @@ function s(e) {
                     return (n) =>
                         (0, r.jsx)(
                             i,
-                            u(
+                            c(
                                 a(
                                     {
                                         action: t,
@@ -131,13 +131,13 @@ function s(e) {
             })
     };
 }
-function c(e, t, l, o) {
+function u(e, t, l, o) {
     (0, i.ZDy)(async () => {
         let { default: i } = await n.e('37483').then(n.bind(n, 241046));
         return (n) =>
             (0, r.jsx)(
                 i,
-                u(a({}, n), {
+                c(a({}, n), {
                     automodDecision: {
                         messageId: e,
                         messageContent: t,
@@ -154,18 +154,18 @@ function d(e, t) {
         return (n) =>
             (0, r.jsx)(
                 i,
-                u(a({}, n), {
+                c(a({}, n), {
                     messageId: e,
                     guildId: t
                 })
             );
     });
 }
-function p(e) {
+function _(e) {
     (0, i.h7j)((t) =>
         (0, r.jsx)(
             i.ConfirmModal,
-            u(
+            c(
                 a(
                     {
                         header: o.intl.string(o.t.wLGrjI),

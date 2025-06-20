@@ -21,7 +21,6 @@ e.exports = {
     textAreaThreadCreation: 'textAreaThreadCreation__74017',
     profileBioInput: 'profileBioInput__74017',
     overlayInlineReply: 'overlayInlineReply__74017',
-    textAreaWithoutAttachmentButton: 'textAreaWithoutAttachmentButton__74017',
     textAreaForPostCreation: 'textAreaForPostCreation__74017',
     textAreaForOverlayInlineReply: 'textAreaForOverlayInlineReply__74017',
     textAreaForUserProfile: 'textAreaForUserProfile__74017',

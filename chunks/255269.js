@@ -1,23 +1,23 @@
 n.d(t, {
-    Z: () => o,
-    _: () => c
+    Z: () => a,
+    _: () => s
 });
-var a = n(399606),
+var r = n(399606),
     i = n(695346),
-    r = n(496675),
-    l = n(981631);
-function o(e, t) {
+    l = n(496675),
+    o = n(981631);
+function a(e, t) {
     switch (e) {
-        case l.A2N.ALWAYS:
+        case o.A2N.ALWAYS:
             return !0;
-        case l.A2N.IF_MODERATOR:
+        case o.A2N.IF_MODERATOR:
             return t;
-        case l.A2N.ON_CLICK:
+        case o.A2N.ON_CLICK:
         default:
             return !1;
     }
 }
-function c(e) {
-    let t = (0, a.e7)([r.Z], () => r.Z.can(l.Plq.MANAGE_MESSAGES, e));
-    return !o(i.cC.useSetting(), t);
+function s(e) {
+    let t = (0, r.e7)([l.Z], () => l.Z.can(o.Plq.MANAGE_MESSAGES, e));
+    return !a(i.cC.useSetting(), t);
 }

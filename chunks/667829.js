@@ -220,7 +220,6 @@ class M extends i.Component {
                 onKeyDown: _,
                 onSubmit: h,
                 textAreaPaddingClassName: o()({
-                    [P.textAreaWithoutAttachmentButton]: g !== v.Ie.NORMAL && g !== v.Ie.OVERLAY && g !== v.Ie.THREAD_CREATION && g !== v.Ie.SIDEBAR,
                     [P.textAreaForPostCreation]: g === v.Ie.CREATE_FORUM_POST,
                     [P.textAreaCustomGift]: g === v.Ie.CUSTOM_GIFT,
                     [P.textAreaForUserProfile]: g === v.Ie.USER_PROFILE,
