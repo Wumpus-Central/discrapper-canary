@@ -27257,31 +27257,35 @@ html:not(.visual-refresh) .root_e5f3a9 {
     width: 18px
 }
 
-.badgeContainer_fc0249 {
+.pill__18dd3 {
     align-items: center;
-    background: var(--background-primary);
     border: 1px solid var(--border-normal);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-lg);
     display: flex;
     justify-content: center;
-    margin-left: var(--space-16);
-    margin-top: var(--space-8);
     padding: var(--spacing-8) var(--spacing-12);
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content
 }
 
-.badgeContainer_fc0249.tier2_fc0249 {
-    background: linear-gradient(90deg, rgba(155, 29, 165, .34), rgba(30, 35, 83, .34) 120%)
+.pillGradient__18dd3 {
+    background: linear-gradient(90deg, rgba(155, 29, 165, .35) 0, rgba(30, 35, 83, .35) 120%), var(--background-base-lower)
 }
 
-.badgeContainer_fc0249.tier0_fc0249 {
-    background: linear-gradient(270deg, rgba(20, 20, 203, .3), rgba(33, 187, 99, .3))
+.theme-light .pillGradient__18dd3 {
+    background: linear-gradient(90deg, rgba(155, 29, 165, .1) 0, rgba(30, 35, 83, .1) 120%), var(--background-base-lower)
 }
 
-.badgeText_fc0249 {
+.pillText__18dd3 {
+    line-height: 1;
+    padding-top: .75px;
     text-transform: uppercase
+}
+
+.badgeContainer_fc0249 {
+    margin-left: var(--space-16);
+    margin-top: var(--space-8)
 }
 
 .container_c7bb69,
