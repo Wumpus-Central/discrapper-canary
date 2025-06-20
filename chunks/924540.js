@@ -7,8 +7,8 @@ var r = n(255367),
     i = n(73800),
     s = n(120356),
     o = n.n(s),
-    a = n(481060),
-    l = n(774078),
+    l = n(481060),
+    a = n(774078),
     c = n(55935),
     u = n(74538),
     d = n(639119),
@@ -17,10 +17,10 @@ var r = n(255367),
 function g(e) {
     let { isTabSelected: t, expiresAt: n, trialDuration: s, className: u } = e,
         d = i.useMemo(() => Date.parse(n), [n]),
-        g = (0, l.Z)(d, 60000);
+        g = (0, a.Z)(d, 60000);
     return Object.values(g).every((e) => 0 === e)
         ? null
-        : (0, r.jsx)(a.ua7, {
+        : (0, r.jsx)(l.ua7, {
               text: (0, c.QX)(g, {
                   days: p.t.qVGNkZ,
                   hours: p.t.wyg9a2,
@@ -59,14 +59,14 @@ function g(e) {
                           {
                               className: o()(f.premiumTrialBadge, f.premiumTrialAcknowledgedBadge, u, { [f.premiumTrialBadgeSelected]: t }),
                               children: [
-                                  (0, r.jsx)(a.T39, {
+                                  (0, r.jsx)(l.T39, {
                                       size: 'custom',
                                       width: 20,
                                       height: 20,
                                       color: 'currentColor',
                                       className: f.premiumTrialBadgeIcon
                                   }),
-                                  (0, r.jsxs)(a.Text, {
+                                  (0, r.jsxs)(l.Text, {
                                       variant: 'eyebrow',
                                       children: [' ', s, ' ']
                                   })
@@ -122,7 +122,7 @@ function _(e) {
           })
         : (0, r.jsx)('div', {
               className: o()(f.premiumTrialBadge, f.premiumOfferUnackedBadge),
-              children: (0, r.jsx)(a.Text, {
+              children: (0, r.jsx)(l.Text, {
                   variant: 'eyebrow',
                   className: f.premiumOfferBadgeCopy,
                   children: n

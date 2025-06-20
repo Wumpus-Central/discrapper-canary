@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var r = n(255367);
 n(73800);
 var l = n(120356),
@@ -9,7 +9,8 @@ var l = n(120356),
     c = n(788822),
     u = n(388032),
     d = n(806734);
-let p = (e) => {
+let p = ['1366494385738354769', '1385035256125591633'],
+    f = (e) => {
         let { handleTransition: t, featuredBlockRecord: n } = e;
         return (0, r.jsx)('div', {
             className: a()(d.col2, d.centeredSection),
@@ -18,7 +19,7 @@ let p = (e) => {
                     ? void 0
                     : n.subblocks.map((e, n) => {
                           if (e.type === i.O.CATEGORY) {
-                              let l = null != e.unpublishedAt ? u.intl.string(u.t['h/uBCQ']) : '1366494385738354769' === e.categoryStoreListingId ? u.intl.string(u.t['soka7+']) : void 0;
+                              let l = null != e.unpublishedAt ? u.intl.string(u.t['h/uBCQ']) : p.includes(e.categoryStoreListingId) ? u.intl.string(u.t['soka7+']) : void 0;
                               return (0, r.jsx)(
                                   s.k0,
                                   {
@@ -45,7 +46,7 @@ let p = (e) => {
                       })
         });
     },
-    f = (e) => {
+    b = (e) => {
         let { handleTransition: t, categories: n } = e;
         if (null == n || n.length < 2) return o.Z.captureMessage('Collectible Featured Block requires at least 2 categories'), null;
         let [l, i] = n,
@@ -76,7 +77,7 @@ let p = (e) => {
             })
         });
     },
-    b = (e) => {
+    g = (e) => {
         let { isLoading: t, handleTransition: n, categories: l, featuredBlockRecord: i } = e;
         return t
             ? (0, r.jsxs)('div', {
@@ -93,12 +94,12 @@ let p = (e) => {
                   ]
               })
             : null != i
-              ? (0, r.jsx)(p, {
+              ? (0, r.jsx)(f, {
                     featuredBlockRecord: i,
                     handleTransition: n,
                     isLoading: !1
                 })
-              : (0, r.jsx)(f, {
+              : (0, r.jsx)(b, {
                     categories: l,
                     handleTransition: n,
                     isLoading: !1

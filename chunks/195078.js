@@ -9,5 +9,6 @@ e.exports = {
     smallCloud: 'smallCloud__61870',
     divider: 'divider__61870',
     featureItem: 'featureItem__61870',
-    priceHeader: 'priceHeader__61870'
+    priceHeader: 'priceHeader__61870',
+    pill: 'pill__61870'
 };

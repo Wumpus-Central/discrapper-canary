@@ -8,9 +8,9 @@ e.exports = {
     cardWrapper: 'cardWrapper_aae012',
     completed: 'completed_aae012',
     cardTextContainer: 'cardTextContainer_aae012',
+    checkmark: 'checkmark_aae012',
     icon: 'icon_aae012',
     cardHeader: 'cardHeader_aae012',
-    checkmark: 'checkmark_aae012',
     animate: 'animate_aae012',
     arrow: 'arrow_aae012'
 };

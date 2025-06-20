@@ -8,8 +8,8 @@ var r,
 n(73800);
 var s = n(120356),
     o = n.n(s),
-    a = n(442837),
-    l = n(246946),
+    l = n(442837),
+    a = n(246946),
     c = n(91802),
     u = n(222727),
     d = n(981631),
@@ -103,7 +103,7 @@ let en = new Map([
 ]);
 function er(e) {
     let { entryPoint: t, className: n } = e,
-        r = (0, a.e7)([l.Z], () => l.Z.hidePersonalInformation),
+        r = (0, l.e7)([a.Z], () => a.Z.hidePersonalInformation),
         s = (0, c.n)(),
         f = null == s ? void 0 : s.countryCode;
     if (((0, u.U)(d.jXE.SETTINGS_PREMIUM, f), null == f || !en.has(f) || r)) return null;

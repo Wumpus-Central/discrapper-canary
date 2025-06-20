@@ -1,8 +1,8 @@
 t.d(n, { c: () => x });
 var i = t(255367),
     l = t(442837),
-    r = t(780384),
-    s = t(481060),
+    s = t(780384),
+    r = t(481060),
     a = t(410030),
     o = t(607070),
     C = t(987209),
@@ -14,7 +14,7 @@ function x() {
     var e;
     let n = (0, l.e7)([o.Z], () => o.Z.useReducedMotion),
         t = (0, a.ZP)(),
-        x = (0, r.wj)(t),
+        x = (0, s.wj)(t),
         h = (0, c.Z)(),
         j = null == h ? void 0 : h.planSelectionBanner,
         { claimableRewards: f } = (0, C.wD)();
@@ -34,9 +34,9 @@ function x() {
             (0, i.jsx)(u.Z, {
                 claimableRewards: f,
                 maxRewardImageSrc: j.getImageUrl(x, n),
-                size: s.EFr.SIZE_40
+                size: r.EFr.SIZE_40
             }),
-            (0, i.jsx)(s.Text, {
+            (0, i.jsx)(r.Text, {
                 variant: 'text-md/medium',
                 className: p.bannerText,
                 children: j.desktopBannerText(f.length)

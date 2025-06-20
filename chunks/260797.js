@@ -14,7 +14,6 @@ e.exports = {
     userUsername: 'userUsername_cdb2b0',
     content: 'content_cdb2b0',
     error: 'error_cdb2b0',
-    reasonHeader: 'reasonHeader_cdb2b0',
     container: 'container_cdb2b0',
     scrollerContainer: 'scrollerContainer_cdb2b0',
     bansSearchContainer: 'bansSearchContainer_cdb2b0',

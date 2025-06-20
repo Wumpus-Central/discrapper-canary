@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     s = n(120356),
     o = n.n(s),
-    a = n(442837),
-    l = n(704215),
+    l = n(442837),
+    a = n(704215),
     c = n(243778),
     u = n(367074),
     d = n(104494),
@@ -23,14 +23,14 @@ function y(e) {
         j = (0, p.N)(),
         x = (0, d.Ng)(),
         S = (0, u.Vi)(),
-        C = (0, a.e7)([m.Z], () => m.Z.isLocalizedPromoEnabled) && null == j && null == n,
+        C = (0, l.e7)([m.Z], () => m.Z.isLocalizedPromoEnabled) && null == j && null == n,
         E = (null == j ? void 0 : j.trial_id) === h.a7,
         P = [];
-    S && P.push(l.z.BOGO_2025_NITRO_TAB_BADGE);
+    S && P.push(a.z.BOGO_2025_NITRO_TAB_BADGE);
     let [w, T] = (0, c.US)(P, void 0, !0);
     return (
         i.useEffect(() => {
-            !0 === y && w === l.z.BOGO_2025_NITRO_TAB_BADGE && T(v.L.AUTO_DISMISS);
+            !0 === y && w === a.z.BOGO_2025_NITRO_TAB_BADGE && T(v.L.AUTO_DISMISS);
         }, [T, y, w]),
         (t = S
             ? (0, r.jsx)(f.Z, {})

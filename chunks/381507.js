@@ -2,8 +2,8 @@ t.d(n, { Z: () => h });
 var i = t(255367);
 t(73800);
 var l = t(780384),
-    r = t(481060),
-    s = t(410030),
+    s = t(481060),
+    r = t(410030),
     a = t(518950),
     o = t(51144),
     C = t(105759),
@@ -19,7 +19,7 @@ let h = () => {
             size: u.EF.SIZE_32,
             animateOnHover: !0
         }),
-        h = (0, s.Fg)(),
+        h = (0, r.Fg)(),
         j = (0, l.ap)(h),
         f = o.ZP.getName(e),
         _ = j ? d.Z : c.Z;
@@ -31,7 +31,7 @@ let h = () => {
                   (0, i.jsx)('div', {
                       className: x.avatarContainer,
                       children: (0, i.jsx)(
-                          r.qEK,
+                          s.qEK,
                           (function (e) {
                               for (var n = 1; n < arguments.length; n++) {
                                   var t = null != arguments[n] ? arguments[n] : {},
@@ -66,7 +66,7 @@ let h = () => {
                           )
                       )
                   }),
-                  (0, i.jsx)(r.Text, {
+                  (0, i.jsx)(s.Text, {
                       variant: 'text-xs/bold',
                       className: x.bannerHeader,
                       children: p.intl.format(p.t.oxhCOj, { userName: f })

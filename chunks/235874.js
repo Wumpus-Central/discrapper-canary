@@ -208,7 +208,7 @@ function O(e) {
                 ? t().then((e) => {
                       b(() => e), c((e) => e + 1);
                   })
-                : b(O.current);
+                : b(() => O.current);
         }, [t]),
         (0, i.jsx)(y, p(f({ ref: r }, n), { renderPopout: E }))
     );
