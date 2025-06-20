@@ -25581,10 +25581,6 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     padding-right: 0 !important
 }
 
-.textAreaWithoutAttachmentButton__74017 {
-    margin-left: 0
-}
-
 .textAreaForPostCreation__74017 {
     padding: 0 !important
 }
@@ -40595,8 +40591,7 @@ img.thumbnail__0f2e8 {
     align-items: center;
     border-right: none;
     cursor: pointer;
-    display: flex;
-    padding-right: var(--space-8)
+    display: flex
 }
 
 .visual-refresh-chat-input .shareToChannelButton_af3b89 {
