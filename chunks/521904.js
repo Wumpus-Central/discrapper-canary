@@ -576,234 +576,6 @@ let { Themes: r } = n(15202).V,
                     opacity: 0.0784313725490196
                 }
             },
-            BACKGROUND_MODAL_GRADIENT_BLUE_END: {
-                category: 'background',
-                [r.DARK]: {
-                    raw: 'ILLO_BLUE_6',
-                    opacity: 0.45
-                },
-                [r.LIGHT]: {
-                    raw: 'ILLO_BLUE_3',
-                    opacity: 0.8
-                },
-                [r.MIDNIGHT]: {
-                    raw: 'ILLO_BLUE_6',
-                    opacity: 0.25
-                },
-                [r.DARKER]: {
-                    raw: 'ILLO_BLUE_6',
-                    opacity: 0.3
-                }
-            },
-            BACKGROUND_MODAL_GRADIENT_BLUE_START: {
-                category: 'background',
-                [r.DARK]: {
-                    raw: 'ILLO_BLUE_4',
-                    opacity: 0.45
-                },
-                [r.LIGHT]: {
-                    raw: 'ILLO_BLUE_1',
-                    opacity: 0.8
-                },
-                [r.MIDNIGHT]: {
-                    raw: 'ILLO_BLUE_4',
-                    opacity: 0.25
-                },
-                [r.DARKER]: {
-                    raw: 'ILLO_BLUE_4',
-                    opacity: 0.3
-                }
-            },
-            BACKGROUND_MODAL_GRADIENT_GREEN_END: {
-                category: 'background',
-                [r.DARK]: {
-                    raw: 'ILLO_GREEN_7',
-                    opacity: 0.45
-                },
-                [r.LIGHT]: {
-                    raw: 'ILLO_GREEN_3',
-                    opacity: 0.8
-                },
-                [r.MIDNIGHT]: {
-                    raw: 'ILLO_GREEN_7',
-                    opacity: 0.25
-                },
-                [r.DARKER]: {
-                    raw: 'ILLO_GREEN_7',
-                    opacity: 0.3
-                }
-            },
-            BACKGROUND_MODAL_GRADIENT_GREEN_START: {
-                category: 'background',
-                [r.DARK]: {
-                    raw: 'ILLO_GREEN_5',
-                    opacity: 0.45
-                },
-                [r.LIGHT]: {
-                    raw: 'ILLO_GREEN_1',
-                    opacity: 0.8
-                },
-                [r.MIDNIGHT]: {
-                    raw: 'ILLO_GREEN_5',
-                    opacity: 0.25
-                },
-                [r.DARKER]: {
-                    raw: 'ILLO_GREEN_5',
-                    opacity: 0.3
-                }
-            },
-            BACKGROUND_MODAL_GRADIENT_NITRO_1_END: {
-                category: 'background',
-                [r.DARK]: {
-                    raw: 'ILLO_NITRO_BLUE',
-                    opacity: 0.5
-                },
-                [r.LIGHT]: {
-                    raw: 'ILLO_BLUE_4',
-                    opacity: 0.9
-                },
-                [r.MIDNIGHT]: {
-                    raw: 'ILLO_NITRO_BLUE',
-                    opacity: 0.3
-                },
-                [r.DARKER]: {
-                    raw: 'ILLO_NITRO_BLUE',
-                    opacity: 0.4
-                }
-            },
-            BACKGROUND_MODAL_GRADIENT_NITRO_1_START: {
-                category: 'background',
-                [r.DARK]: {
-                    raw: 'ILLO_PINK_6',
-                    opacity: 0.5
-                },
-                [r.LIGHT]: {
-                    raw: 'ILLO_PINK_3',
-                    opacity: 0.9
-                },
-                [r.MIDNIGHT]: {
-                    raw: 'ILLO_PINK_6',
-                    opacity: 0.3
-                },
-                [r.DARKER]: {
-                    raw: 'ILLO_PINK_6',
-                    opacity: 0.4
-                }
-            },
-            BACKGROUND_MODAL_GRADIENT_NITRO_2_END: {
-                category: 'background',
-                [r.DARK]: {
-                    raw: 'ILLO_NITRO_BLUE',
-                    opacity: 0.5
-                },
-                [r.LIGHT]: {
-                    raw: 'ILLO_BLUE_4',
-                    opacity: 0.9
-                },
-                [r.MIDNIGHT]: {
-                    raw: 'ILLO_NITRO_BLUE',
-                    opacity: 0.3
-                },
-                [r.DARKER]: {
-                    raw: 'ILLO_NITRO_BLUE',
-                    opacity: 0.4
-                }
-            },
-            BACKGROUND_MODAL_GRADIENT_NITRO_2_START: {
-                category: 'background',
-                [r.DARK]: {
-                    raw: 'ILLO_GREEN_5',
-                    opacity: 0.5
-                },
-                [r.LIGHT]: {
-                    raw: 'ILLO_GREEN_1',
-                    opacity: 0.9
-                },
-                [r.MIDNIGHT]: {
-                    raw: 'ILLO_GREEN_5',
-                    opacity: 0.3
-                },
-                [r.DARKER]: {
-                    raw: 'ILLO_GREEN_5',
-                    opacity: 0.4
-                }
-            },
-            BACKGROUND_MODAL_GRADIENT_PINK_END: {
-                category: 'background',
-                [r.DARK]: {
-                    raw: 'ILLO_PINK_7',
-                    opacity: 0.45
-                },
-                [r.LIGHT]: {
-                    raw: 'ILLO_PINK_3',
-                    opacity: 0.8
-                },
-                [r.MIDNIGHT]: {
-                    raw: 'ILLO_PINK_7',
-                    opacity: 0.25
-                },
-                [r.DARKER]: {
-                    raw: 'ILLO_PINK_7',
-                    opacity: 0.3
-                }
-            },
-            BACKGROUND_MODAL_GRADIENT_PINK_START: {
-                category: 'background',
-                [r.DARK]: {
-                    raw: 'ILLO_PINK_5',
-                    opacity: 0.45
-                },
-                [r.LIGHT]: {
-                    raw: 'ILLO_PINK_1',
-                    opacity: 0.8
-                },
-                [r.MIDNIGHT]: {
-                    raw: 'ILLO_PINK_5',
-                    opacity: 0.25
-                },
-                [r.DARKER]: {
-                    raw: 'ILLO_PINK_5',
-                    opacity: 0.3
-                }
-            },
-            BACKGROUND_MODAL_GRADIENT_PURPLE_END: {
-                category: 'background',
-                [r.DARK]: {
-                    raw: 'ILLO_PURPLE_6',
-                    opacity: 0.45
-                },
-                [r.LIGHT]: {
-                    raw: 'ILLO_PURPLE_3',
-                    opacity: 0.8
-                },
-                [r.MIDNIGHT]: {
-                    raw: 'ILLO_PURPLE_6',
-                    opacity: 0.25
-                },
-                [r.DARKER]: {
-                    raw: 'ILLO_PURPLE_6',
-                    opacity: 0.3
-                }
-            },
-            BACKGROUND_MODAL_GRADIENT_PURPLE_START: {
-                category: 'background',
-                [r.DARK]: {
-                    raw: 'ILLO_PURPLE_4',
-                    opacity: 0.45
-                },
-                [r.LIGHT]: {
-                    raw: 'ILLO_PURPLE_1',
-                    opacity: 0.8
-                },
-                [r.MIDNIGHT]: {
-                    raw: 'ILLO_PURPLE_4',
-                    opacity: 0.25
-                },
-                [r.DARKER]: {
-                    raw: 'ILLO_PURPLE_4',
-                    opacity: 0.3
-                }
-            },
             BACKGROUND_MODIFIER_ACCENT: {
                 category: 'background',
                 [r.DARK]: {
@@ -6516,6 +6288,234 @@ let { Themes: r } = n(15202).V,
                         color: 'gradient.end',
                         lightness: '*0.95'
                     }
+                }
+            },
+            EXPRESSIVE_GRADIENT_BLUE_END: {
+                category: 'generic',
+                [r.DARK]: {
+                    raw: 'ILLO_BLUE_6',
+                    opacity: 0.45
+                },
+                [r.LIGHT]: {
+                    raw: 'ILLO_BLUE_3',
+                    opacity: 0.8
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'ILLO_BLUE_6',
+                    opacity: 0.25
+                },
+                [r.DARKER]: {
+                    raw: 'ILLO_BLUE_6',
+                    opacity: 0.3
+                }
+            },
+            EXPRESSIVE_GRADIENT_BLUE_START: {
+                category: 'generic',
+                [r.DARK]: {
+                    raw: 'ILLO_BLUE_4',
+                    opacity: 0.45
+                },
+                [r.LIGHT]: {
+                    raw: 'ILLO_BLUE_1',
+                    opacity: 0.8
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'ILLO_BLUE_4',
+                    opacity: 0.25
+                },
+                [r.DARKER]: {
+                    raw: 'ILLO_BLUE_4',
+                    opacity: 0.3
+                }
+            },
+            EXPRESSIVE_GRADIENT_GREEN_END: {
+                category: 'generic',
+                [r.DARK]: {
+                    raw: 'ILLO_GREEN_7',
+                    opacity: 0.45
+                },
+                [r.LIGHT]: {
+                    raw: 'ILLO_GREEN_3',
+                    opacity: 0.8
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'ILLO_GREEN_7',
+                    opacity: 0.25
+                },
+                [r.DARKER]: {
+                    raw: 'ILLO_GREEN_7',
+                    opacity: 0.3
+                }
+            },
+            EXPRESSIVE_GRADIENT_GREEN_START: {
+                category: 'generic',
+                [r.DARK]: {
+                    raw: 'ILLO_GREEN_5',
+                    opacity: 0.45
+                },
+                [r.LIGHT]: {
+                    raw: 'ILLO_GREEN_1',
+                    opacity: 0.8
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'ILLO_GREEN_5',
+                    opacity: 0.25
+                },
+                [r.DARKER]: {
+                    raw: 'ILLO_GREEN_5',
+                    opacity: 0.3
+                }
+            },
+            EXPRESSIVE_GRADIENT_NITRO_GREEN_END: {
+                category: 'generic',
+                [r.DARK]: {
+                    raw: 'ILLO_NITRO_BLUE',
+                    opacity: 0.5
+                },
+                [r.LIGHT]: {
+                    raw: 'ILLO_BLUE_4',
+                    opacity: 0.9
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'ILLO_NITRO_BLUE',
+                    opacity: 0.3
+                },
+                [r.DARKER]: {
+                    raw: 'ILLO_NITRO_BLUE',
+                    opacity: 0.4
+                }
+            },
+            EXPRESSIVE_GRADIENT_NITRO_GREEN_START: {
+                category: 'generic',
+                [r.DARK]: {
+                    raw: 'ILLO_GREEN_5',
+                    opacity: 0.5
+                },
+                [r.LIGHT]: {
+                    raw: 'ILLO_GREEN_1',
+                    opacity: 0.9
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'ILLO_GREEN_5',
+                    opacity: 0.3
+                },
+                [r.DARKER]: {
+                    raw: 'ILLO_GREEN_5',
+                    opacity: 0.4
+                }
+            },
+            EXPRESSIVE_GRADIENT_NITRO_PINK_END: {
+                category: 'generic',
+                [r.DARK]: {
+                    raw: 'ILLO_NITRO_BLUE',
+                    opacity: 0.5
+                },
+                [r.LIGHT]: {
+                    raw: 'ILLO_BLUE_4',
+                    opacity: 0.9
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'ILLO_NITRO_BLUE',
+                    opacity: 0.3
+                },
+                [r.DARKER]: {
+                    raw: 'ILLO_NITRO_BLUE',
+                    opacity: 0.4
+                }
+            },
+            EXPRESSIVE_GRADIENT_NITRO_PINK_START: {
+                category: 'generic',
+                [r.DARK]: {
+                    raw: 'ILLO_PINK_6',
+                    opacity: 0.5
+                },
+                [r.LIGHT]: {
+                    raw: 'ILLO_PINK_3',
+                    opacity: 0.9
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'ILLO_PINK_6',
+                    opacity: 0.3
+                },
+                [r.DARKER]: {
+                    raw: 'ILLO_PINK_6',
+                    opacity: 0.4
+                }
+            },
+            EXPRESSIVE_GRADIENT_PINK_END: {
+                category: 'generic',
+                [r.DARK]: {
+                    raw: 'ILLO_PINK_7',
+                    opacity: 0.45
+                },
+                [r.LIGHT]: {
+                    raw: 'ILLO_PINK_3',
+                    opacity: 0.8
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'ILLO_PINK_7',
+                    opacity: 0.25
+                },
+                [r.DARKER]: {
+                    raw: 'ILLO_PINK_7',
+                    opacity: 0.3
+                }
+            },
+            EXPRESSIVE_GRADIENT_PINK_START: {
+                category: 'generic',
+                [r.DARK]: {
+                    raw: 'ILLO_PINK_5',
+                    opacity: 0.45
+                },
+                [r.LIGHT]: {
+                    raw: 'ILLO_PINK_1',
+                    opacity: 0.8
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'ILLO_PINK_5',
+                    opacity: 0.25
+                },
+                [r.DARKER]: {
+                    raw: 'ILLO_PINK_5',
+                    opacity: 0.3
+                }
+            },
+            EXPRESSIVE_GRADIENT_PURPLE_END: {
+                category: 'generic',
+                [r.DARK]: {
+                    raw: 'ILLO_PURPLE_6',
+                    opacity: 0.45
+                },
+                [r.LIGHT]: {
+                    raw: 'ILLO_PURPLE_3',
+                    opacity: 0.8
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'ILLO_PURPLE_6',
+                    opacity: 0.25
+                },
+                [r.DARKER]: {
+                    raw: 'ILLO_PURPLE_6',
+                    opacity: 0.3
+                }
+            },
+            EXPRESSIVE_GRADIENT_PURPLE_START: {
+                category: 'generic',
+                [r.DARK]: {
+                    raw: 'ILLO_PURPLE_4',
+                    opacity: 0.45
+                },
+                [r.LIGHT]: {
+                    raw: 'ILLO_PURPLE_1',
+                    opacity: 0.8
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'ILLO_PURPLE_4',
+                    opacity: 0.25
+                },
+                [r.DARKER]: {
+                    raw: 'ILLO_PURPLE_4',
+                    opacity: 0.3
                 }
             },
             FOCUS_PRIMARY: {

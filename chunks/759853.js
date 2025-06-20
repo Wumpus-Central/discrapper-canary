@@ -6,8 +6,8 @@ var r = n(255367),
     i = n(505266),
     l = n(867309),
     c = n(524979),
-    u = n(442837),
-    d = n(110924),
+    d = n(442837),
+    u = n(110924),
     p = n(607070),
     m = n(819640),
     f = n(569379),
@@ -21,19 +21,19 @@ let b = ['#51BC9D'],
             { completionSpring: y, startCompletionAnimation: O } = (0, f.G)(),
             C = (null == (t = j.userStatus) ? void 0 : t.completedAt) != null,
             w = s.useRef(!1),
-            S = (0, u.e7)([p.Z], () => p.Z.useReducedMotion),
+            S = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
             E = s.useRef(null),
-            P = (0, u.e7)([m.Z], () => m.Z.hasLayers()),
-            T = (0, d.Z)(P),
+            P = (0, d.e7)([m.Z], () => m.Z.hasLayers()),
+            T = (0, u.Z)(P),
             [N, A] = s.useState(null),
-            [R, k] = s.useState(null),
+            [k, R] = s.useState(null),
             B = s.useRef(
                 new i.qA({
                     gravity: 0,
                     wind: 0
                 })
             ),
-            q = (0, i.uR)(N, R),
+            q = (0, i.uR)(N, k),
             I = s.useCallback(() => {
                 if (S) return;
                 let e = v.current,
@@ -41,10 +41,10 @@ let b = ['#51BC9D'],
                 if (null != t && null != e && q.isReady) {
                     var n, r, s, o, a, i;
                     let { x: l, y: c } = e.getBoundingClientRect(),
-                        { x: u, y: d } = t.getBoundingClientRect();
+                        { x: d, y: u } = t.getBoundingClientRect();
                     q.createMultipleConfetti(
-                        ((n = l - u),
-                        (r = c - d),
+                        ((n = l - d),
+                        (r = c - u),
                         (s = e.clientHeight),
                         (o = e.clientWidth),
                         (a = (function (e) {
@@ -128,7 +128,7 @@ let b = ['#51BC9D'],
                     );
                 }
             }, [v, E, q, S]),
-            D = (0, d.Z)(_);
+            D = (0, u.Z)(_);
         return (s.useEffect(() => {
             C && _ && !D && (O(), I());
         }, [_, C, O, I, D]),
@@ -175,7 +175,7 @@ let b = ['#51BC9D'],
                                   environment: B.current
                               }),
                               (0, r.jsx)(i.Ji, {
-                                  ref: k,
+                                  ref: R,
                                   sprites: [h],
                                   colors: b,
                                   spriteWidth: g.Ko,

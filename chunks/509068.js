@@ -1,9 +1,9 @@
 a.d(e, {
-    Eg: () => m,
+    Eg: () => v,
     Jd: () => y,
     S1: () => D,
     jp: () => C,
-    lA: () => v,
+    lA: () => m,
     nV: () => g
 });
 var r = a(636361),
@@ -122,8 +122,8 @@ function C(t = {}) {
     let o = f.m9.document.head || f.m9.document.body;
     o ? o.appendChild(_) : N.X && l.kg.error('Not injecting report dialog. No injection point found in HTML');
 }
-function m() {}
-function v(t) {
+function v() {}
+function m(t) {
     t();
 }
 function y(t) {

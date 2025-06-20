@@ -1,12 +1,12 @@
 a.d(e, {
-    $X: () => m,
+    $X: () => v,
     AJ: () => O,
     Ei: () => C,
     GC: () => U,
     WU: () => D,
     db: () => h,
     dz: () => b,
-    nm: () => v,
+    nm: () => m,
     ph: () => S,
     x5: () => L
 });
@@ -80,7 +80,7 @@ function C() {
         l.X && (o.kg.log("[Profiling] Failed to initialize the Profiling constructor, this is likely due to a missing 'Document-Policy': 'js-profiling' header."), o.kg.log('[Profiling] Disabling profiling for current user session.')), (g = !0);
     }
 }
-function m(t) {
+function v(t) {
     if (g) return l.X && o.kg.log('[Profiling] Profiling has been disabled for the duration of the current user session.'), !1;
     if (!t.isRecording()) return l.X && o.kg.log('[Profiling] Discarding profile because transaction was not sampled.'), !1;
     let e = (0, n.s3)(),
@@ -89,7 +89,7 @@ function m(t) {
     let r = a.profilesSampleRate;
     return (('number' != typeof r && 'boolean' != typeof r) || ('number' == typeof r && isNaN(r)) ? (l.X && o.kg.warn(`[Profiling] Invalid sample rate. Sample rate must be a boolean or a number between 0 and 1. Got ${JSON.stringify(r)} of type ${JSON.stringify(typeof r)}.`), 1) : !0 !== r && !1 !== r && (r < 0 || r > 1) && (l.X && o.kg.warn(`[Profiling] Invalid sample rate. Sample rate must be between 0 and 1. Got ${r}.`), 1)) ? (l.X && o.kg.warn('[Profiling] Discarding profile because of invalid sample rate.'), !1) : r ? !!(!0 === r || Math.random() < r) || (l.X && o.kg.log(`[Profiling] Discarding profile because it's not included in the random sample (sampling rate = ${Number(r)})`), !1) : (l.X && o.kg.log('[Profiling] Discarding profile because a negative sampling decision was inherited or profileSampleRate is set to 0'), !1);
 }
-function v(t, e, a, _) {
+function m(t, e, a, _) {
     var s;
     if (!(a.samples.length < 2 ? (l.X && o.kg.log('[Profiling] Discarding profile because it contains less than 2 samples'), !1) : !!a.frames.length || (l.X && o.kg.log('[Profiling] Discarding profile because it contains no frames'), !1))) return null;
     if ('transaction' !== _.type) throw TypeError('Profiling events may only be attached to transactions, this should never occur.');

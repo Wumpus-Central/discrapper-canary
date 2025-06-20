@@ -149,13 +149,13 @@ var g = function (t) {
 let D = new Map(),
     C = (t, e, a) => {
         let r;
-        if (!t || !(v(t, e) || 'object' == typeof t)) return;
+        if (!t || !(m(t, e) || 'object' == typeof t)) return;
         let _ = t.constructor.name,
             n = ((r = D.get(a)) || ((r = new Map()), D.set(a, r)), r.has(_) || r.set(_, []), r.get(_)),
             o = n.indexOf(t);
         return -1 === o && ((o = n.length), n.push(t)), o;
     },
-    m = (t, e, a) =>
+    v = (t, e, a) =>
         t.map((t) =>
             (function t(e, a, r) {
                 if (e instanceof Array) return e.map((e) => t(e, a, r));
@@ -192,7 +192,7 @@ let D = new Map(),
                         rr_type: e.constructor.name,
                         args: [t(e.data, a, r), e.width, e.height]
                     };
-                else if (v(e, a) || 'object' == typeof e)
+                else if (m(e, a) || 'object' == typeof e)
                     return {
                         rr_type: e.constructor.name,
                         index: C(e, a, r)
@@ -200,7 +200,7 @@ let D = new Map(),
                 return e;
             })(t, e, a)
         ),
-    v = (t, e) => !!['WebGLActiveInfo', 'WebGLBuffer', 'WebGLFramebuffer', 'WebGLProgram', 'WebGLRenderbuffer', 'WebGLShader', 'WebGLShaderPrecisionFormat', 'WebGLTexture', 'WebGLUniformLocation', 'WebGLVertexArrayObject', 'WebGLVertexArrayObjectOES'].filter((t) => 'function' == typeof e[t]).find((a) => t instanceof e[a]);
+    m = (t, e) => !!['WebGLActiveInfo', 'WebGLBuffer', 'WebGLFramebuffer', 'WebGLProgram', 'WebGLRenderbuffer', 'WebGLShader', 'WebGLShaderPrecisionFormat', 'WebGLTexture', 'WebGLUniformLocation', 'WebGLVertexArrayObject', 'WebGLVertexArrayObjectOES'].filter((t) => 'function' == typeof e[t]).find((a) => t instanceof e[a]);
 function y(t, e, a, r, _) {
     let n = [];
     try {
@@ -235,7 +235,7 @@ function S(t, e, a, r, _, n, o, i) {
                     return function (...c) {
                         let s = t.apply(this, c);
                         if ((C(s, i, this), 'tagName' in this.canvas && !R(this.canvas, r, _, n, !0))) {
-                            let t = m(c, i, this),
+                            let t = v(c, i, this),
                                 r = {
                                     type: e,
                                     property: o,
@@ -408,7 +408,7 @@ class U {
                                 return (
                                     R(this.canvas, a, r, _, !0) ||
                                         T(() => {
-                                            let a = m(i, e, this);
+                                            let a = v(i, e, this);
                                             t(this.canvas, {
                                                 type: p['2D'],
                                                 property: o,

@@ -30,11 +30,9 @@ function f() {
             (0, r.jsx)('div', { children: g.intl.string(g.t['9Oq93t']) }),
             a &&
                 (0, r.jsx)(s.rgF, {
-                    size: 'custom',
+                    size: 'xs',
                     color: 'currentColor',
-                    className: p.linkIcon,
-                    width: 16,
-                    height: 16
+                    className: p.linkIcon
                 })
         ]
     });

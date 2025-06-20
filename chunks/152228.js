@@ -1,6 +1,6 @@
 a.d(e, {
     GK: () => O,
-    Iw: () => m,
+    Iw: () => v,
     V0: () => P,
     _d: () => C,
     qp: () => g,
@@ -38,7 +38,7 @@ function O(t, e) {
                 o =
                     t.onlyIfParent && !n
                         ? new A.b()
-                        : v({
+                        : m({
                               parentSpan: n,
                               spanArguments: r,
                               forceTransaction: _,
@@ -75,7 +75,7 @@ function P(t, e) {
                 o =
                     t.onlyIfParent && !n
                         ? new A.b()
-                        : v({
+                        : m({
                               parentSpan: n,
                               spanArguments: r,
                               forceTransaction: _,
@@ -112,7 +112,7 @@ function g(t) {
             _ = b(e);
         return t.onlyIfParent && !_
             ? new A.b()
-            : v({
+            : m({
                   parentSpan: _,
                   spanArguments: a,
                   forceTransaction: r,
@@ -129,10 +129,10 @@ function C(t, e) {
     let a = S();
     return a.withActiveSpan ? a.withActiveSpan(t, e) : (0, i.$e)((a) => ((0, I.D)(a, t || void 0), e(a)));
 }
-function m(t) {
+function v(t) {
     return (0, i.$e)((e) => (e.setPropagationContext((0, _.Q)()), s.X && n.kg.info(`Starting a new trace with id ${e.getPropagationContext().traceId}`), C(null, t)));
 }
-function v({ parentSpan: t, spanArguments: e, forceTransaction: a, scope: r }) {
+function m({ parentSpan: t, spanArguments: e, forceTransaction: a, scope: r }) {
     let _;
     if (!(0, u.z)()) return new A.b();
     let n = (0, i.aF)();

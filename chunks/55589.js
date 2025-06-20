@@ -1,8 +1,8 @@
 let r, i, s;
 n.d(t, { Z: () => N }), n(388685), n(539854);
 var o,
-    l,
     a,
+    l,
     c = n(913527),
     u = n.n(c),
     d = n(442837),
@@ -104,15 +104,15 @@ class T extends (o = d.ZP.Store) {
         );
     }
 }
-(a = 'PrivateChannelSortStore'),
-    (l = 'displayName') in T
-        ? Object.defineProperty(T, l, {
-              value: a,
+(l = 'PrivateChannelSortStore'),
+    (a = 'displayName') in T
+        ? Object.defineProperty(T, a, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (T[l] = a);
+        : (T[a] = l);
 let N = new T(f.Z, {
     CONNECTION_OPEN: E,
     CONNECTION_OPEN_SUPPLEMENTAL: E,

@@ -42,8 +42,8 @@ let L = {
                 beforeStartSpan: h,
                 idleTimeout: D,
                 finalTimeout: C,
-                childSpanTimeout: m,
-                markBackgroundSpan: v,
+                childSpanTimeout: v,
+                markBackgroundSpan: m,
                 traceFetch: y,
                 traceXHR: S,
                 shouldCreateSpanForRequest: U,
@@ -68,7 +68,7 @@ let L = {
             let i = (0, o.R)(_, {
                 idleTimeout: D,
                 finalTimeout: C,
-                childSpanTimeout: m,
+                childSpanTimeout: v,
                 disableAutoFinish: a,
                 beforeSpanEnd: (t) => {
                     w(), (0, r.f7)(t);
@@ -151,11 +151,11 @@ let L = {
                                         }
                                     }));
                             })),
-                    v && (0, T.j)(),
+                    m && (0, T.j)(),
                     N &&
                         ((a = D),
                         (r = C),
-                        (i = m),
+                        (i = v),
                         (R = M),
                         A.m9.document &&
                             addEventListener(

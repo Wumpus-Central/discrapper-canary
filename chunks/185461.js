@@ -49,8 +49,8 @@ let s = n.n,
                 });
         });
     },
-    m = 'undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__;
-function v(t, e) {
+    v = 'undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__;
+function m(t, e) {
     return {
         ...t,
         ...e,
@@ -278,9 +278,9 @@ ${
             tN = async (t) => {
                 let r = t.enableScreenshot && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(l.userAgent) || (/Macintosh/i.test(l.userAgent) && l.maxTouchPoints && l.maxTouchPoints > 1)) && !!isSecureContext,
                     [_, n] = await Promise.all([tR('FeedbackModal', e, 'feedbackModalIntegration'), r ? tR('FeedbackScreenshot', a, 'feedbackScreenshotIntegration') : void 0]);
-                if (!_) throw (m && i.kg.error('[Feedback] Missing feedback modal integration. Try using `feedbackSyncIntegration` in your `Sentry.init`.'), Error('[Feedback] Missing feedback modal integration!'));
+                if (!_) throw (v && i.kg.error('[Feedback] Missing feedback modal integration. Try using `feedbackSyncIntegration` in your `Sentry.init`.'), Error('[Feedback] Missing feedback modal integration!'));
                 return (
-                    r && !n && m && i.kg.error('[Feedback] Missing feedback screenshot integration. Proceeding without screenshots.'),
+                    r && !n && v && i.kg.error('[Feedback] Missing feedback screenshot integration. Proceeding without screenshots.'),
                     _.createDialog({
                         options: t,
                         screenshotIntegration: r ? n : void 0,
@@ -290,9 +290,9 @@ ${
                 );
             },
             tf = (t, e = {}) => {
-                let a = v(tl, e),
+                let a = m(tl, e),
                     r = 'string' == typeof t ? E.querySelector(t) : 'function' == typeof t.addEventListener ? t : null;
-                if (!r) throw (m && i.kg.error('[Feedback] Unable to attach to target element'), Error('Unable to attach to target element'));
+                if (!r) throw (v && i.kg.error('[Feedback] Unable to attach to target element'), Error('Unable to attach to target element'));
                 let _ = null,
                     n = async () => {
                         _ ||
@@ -315,7 +315,7 @@ ${
                 return tI.push(o), o;
             },
             tA = (t = {}) => {
-                let e = v(tl, t),
+                let e = m(tl, t),
                     a = td(e),
                     r = (function ({ triggerLabel: t, triggerAriaLabel: e, shadow: a }) {
                         let r = E.createElement('button');
@@ -456,10 +456,10 @@ ${
             },
             attachTo: tf,
             createWidget(t = {}) {
-                let e = tA(v(tl, t));
+                let e = tA(m(tl, t));
                 return e.appendToDom(), e;
             },
-            createForm: async (t = {}) => tN(v(tl, t)),
+            createForm: async (t = {}) => tN(m(tl, t)),
             remove() {
                 tu && (tu.parentElement && tu.parentElement.remove(), (tu = null)), tI.forEach((t) => t()), (tI = []);
             }
@@ -872,10 +872,10 @@ function tC(t, e) {
         });
     return t >= a.__.length && a.__.push({ __V: tT }), a.__[t];
 }
-function tm(t) {
-    return (tf = 1), tv(tB, t);
+function tv(t) {
+    return (tf = 1), tm(tB, t);
 }
-function tv(t, e, a) {
+function tm(t, e, a) {
     var r = tC(tI++, 2);
     if (
         ((r.t = t),
@@ -1066,7 +1066,7 @@ let tY = {
         },
         useErrorBoundary: function (t) {
             var e = tC(tI++, 10),
-                a = tm();
+                a = tv();
             return (
                 (e.__ = t),
                 td.componentDidCatch ||
@@ -1111,7 +1111,7 @@ let tY = {
         },
         useLayoutEffect: ty,
         useMemo: tS,
-        useReducer: tv,
+        useReducer: tm,
         useRef: function (t) {
             return (
                 (tf = 5),
@@ -1120,7 +1120,7 @@ let tY = {
                 }, [])
             );
         },
-        useState: tm
+        useState: tv
     },
     tH = '/home/runner/work/sentry-javascript/sentry-javascript/packages/feedback/src/modal/components/DialogHeader.tsx';
 function tK({ options: t }) {
@@ -1178,12 +1178,12 @@ function tx(t, e) {
 }
 function tF({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSubmit: _, onSubmitSuccess: n, onSubmitError: o, showEmail: c, showName: s, screenshotInput: E }) {
     let { tags: l, addScreenshotButtonLabel: u, removeScreenshotButtonLabel: I, cancelButtonLabel: d, emailLabel: R, emailPlaceholder: N, isEmailRequired: f, isNameRequired: A, messageLabel: T, messagePlaceholder: p, nameLabel: L, namePlaceholder: h, submitButtonLabel: O, isRequiredLabel: P } = t,
-        [g, D] = tm(null),
-        [C, v] = tm(!1),
+        [g, D] = tv(null),
+        [C, m] = tv(!1),
         y = E && E.input,
-        [S, U] = tm(null),
+        [S, U] = tv(null),
         b = tU((t) => {
-            U(t), v(!1);
+            U(t), m(!1);
         }, []),
         G = tU(
             (t) => {
@@ -1231,7 +1231,7 @@ function tF({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSub
                             ),
                                 n(r);
                         } catch (t) {
-                            m && i.kg.error(t), D(t), o(t);
+                            v && i.kg.error(t), D(t), o(t);
                         }
                     } catch (t) {}
                 },
@@ -1438,7 +1438,7 @@ function tF({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSub
                                   class: 'btn btn--default',
                                   type: 'button',
                                   onClick: () => {
-                                      U(null), v((t) => !t);
+                                      U(null), m((t) => !t);
                                   },
                                   __self: this,
                                   __source: {
@@ -1567,7 +1567,7 @@ function tX({ open: t, onFormSubmitted: e, ...a }) {
             }),
             []
         ),
-        [n, o] = tm(null),
+        [n, o] = tv(null),
         i = tU(() => {
             n && (clearTimeout(n), o(null)), e();
         }, [n]),

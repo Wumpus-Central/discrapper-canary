@@ -1,4 +1,4 @@
-n.d(t, { Z: () => d }), n(467055), n(388685);
+n.d(t, { Z: () => u }), n(467055), n(388685);
 var r = n(255367);
 n(73800);
 var s = n(754700),
@@ -48,7 +48,7 @@ function c(e, t) {
         e
     );
 }
-let u = [
+let d = [
         {
             value: 1,
             label: 'Stream Desktop'
@@ -74,8 +74,8 @@ let u = [
             label: 'Play Activity'
         }
     ],
-    d = function (e) {
-        let { onSelect: t, taskDuration: n = 10, taskConfigV2: d } = e;
+    u = function (e) {
+        let { onSelect: t, taskDuration: n = 10, taskConfigV2: u } = e;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)(o.xJW, {
@@ -88,7 +88,7 @@ let u = [
                             children: (0, r.jsx)(o.PhF, {
                                 className: i.taskPresetSelect,
                                 placeholder: 'Select Task Preset',
-                                options: u,
+                                options: d,
                                 renderOptionValue: (e) => e.map((e) => (0, r.jsx)('div', { children: e.label }, e.value)),
                                 renderOptionLabel: (e) => (0, r.jsx)('div', { children: e.label }),
                                 isSelected: (e) =>
@@ -100,10 +100,10 @@ let u = [
                                             o = s.X.WATCH_VIDEO in e,
                                             a = s.X.PLAY_ACTIVITY in e;
                                         return t && n ? 4 : t ? 3 : n ? 0 : r ? 1 : o ? 2 : a ? 5 : void 0;
-                                    })(d.tasks),
+                                    })(u.tasks),
                                 select: (e) => {
                                     t(
-                                        c(l({}, d), {
+                                        c(l({}, u), {
                                             tasks: (function (e, t) {
                                                 let n = {};
                                                 switch (e) {
@@ -185,12 +185,12 @@ let u = [
                                     if (isNaN(n)) return;
                                     n *= a.Z.Seconds.MINUTE;
                                     let r = Object.fromEntries(
-                                        Object.entries(d.tasks).map((e) => {
+                                        Object.entries(u.tasks).map((e) => {
                                             let [t, r] = e;
                                             return [t, c(l({}, r), { target: n })];
                                         })
                                     );
-                                    t(c(l({}, d), { tasks: r }));
+                                    t(c(l({}, u), { tasks: r }));
                                 }
                             })
                         })

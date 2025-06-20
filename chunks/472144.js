@@ -6,8 +6,8 @@ var r = n(255367),
     i = n(524979),
     l = n(481060),
     c = n(569379),
-    u = n(642145),
-    d = n(704247);
+    d = n(642145),
+    u = n(704247);
 let p = s.forwardRef((e, t) => {
     let { quest: n, percentComplete: s, size: o = 42, strokeWidth: p = 3, glowBlur: m = 0.4, percentCompleteText: f, percentCompleteTextVariant: g = 'text-lg/medium', children: x } = e,
         h = (0, c.E)(n, s > 0),
@@ -26,26 +26,26 @@ let p = s.forwardRef((e, t) => {
         C = { boxShadow: '0 0 30px 0px '.concat(h.glow) },
         { progressTextAnimation: w } = (0, l.q_F)({
             progressTextAnimation: +(null != f && 1 !== s),
-            config: u.Y
+            config: d.Y
         });
     return (0, r.jsxs)('div', {
-        className: d.outer,
+        className: u.outer,
         ref: t,
         children: [
             (0, r.jsxs)('div', {
-                className: d.inner,
+                className: u.inner,
                 style: C,
                 children: [
                     x,
                     (0, r.jsxs)(i.animated.div, {
                         style: { opacity: w },
-                        className: a()(d.coverContent, d.progressTextWrapper),
+                        className: a()(u.coverContent, u.progressTextWrapper),
                         children: [
-                            (0, r.jsx)('div', { className: a()(d.coverContent, d.progressTextOverlay) }),
+                            (0, r.jsx)('div', { className: a()(u.coverContent, u.progressTextOverlay) }),
                             (0, r.jsx)(l.Text, {
                                 variant: g,
                                 color: 'text-primary',
-                                className: d.progressText,
+                                className: u.progressText,
                                 children: f
                             })
                         ]
@@ -53,7 +53,7 @@ let p = s.forwardRef((e, t) => {
                 ]
             }),
             (0, r.jsxs)('svg', {
-                className: d.progressBar,
+                className: u.progressBar,
                 height: o,
                 width: o,
                 children: [
@@ -91,7 +91,7 @@ let p = s.forwardRef((e, t) => {
                         ]
                     }),
                     (0, r.jsx)('circle', {
-                        className: d.progress,
+                        className: u.progress,
                         strokeWidth: p,
                         fill: 'transparent',
                         r: j,
@@ -101,7 +101,7 @@ let p = s.forwardRef((e, t) => {
                         style: O
                     }),
                     (0, r.jsx)('circle', {
-                        className: d.progress,
+                        className: u.progress,
                         strokeWidth: p,
                         fill: 'transparent',
                         r: j,

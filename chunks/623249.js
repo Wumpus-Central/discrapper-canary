@@ -10,8 +10,8 @@ var r = n(255367),
     i = n(442837),
     l = n(780384),
     c = n(481060),
-    u = n(607070),
-    d = n(600164),
+    d = n(607070),
+    u = n(600164),
     p = n(210887),
     m = n(617136),
     f = n(915750),
@@ -56,9 +56,9 @@ function w(e) {
     null == P && E();
     let [T, N] = (0, s.useState)(o),
         A = (0, g.KX)(),
-        R = (0, m.O5)(),
-        k = null == (t = (0, f.WD)()) ? void 0 : t.getId(),
-        B = (0, i.e7)([u.Z], () => u.Z.useReducedMotion),
+        k = (0, m.O5)(),
+        R = null == (t = (0, f.WD)()) ? void 0 : t.getId(),
+        B = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
         q = (0, j.g2)({
             useReducedMotion: B,
             className: y.colorTransition
@@ -71,7 +71,7 @@ function w(e) {
             questId: P.id,
             beforeRequest: () => {
                 q.startAnimation(),
-                    R({
+                    k({
                         questId: P.id,
                         questContent: x.jn.CONNECTIONS_MODAL,
                         questContentCTA: m.jZ.DEFIBRILLATOR
@@ -88,7 +88,7 @@ function w(e) {
         parentComponent: 'QuestConsoleConnectionErrorsModal',
         children: [
             (0, r.jsxs)(c.xBx, {
-                direction: d.Z.Direction.VERTICAL,
+                direction: u.Z.Direction.VERTICAL,
                 separator: !1,
                 className: y.modalHeader,
                 children: [
@@ -228,7 +228,7 @@ function w(e) {
                                     {
                                         content: x.jn.CONNECTIONS_MODAL,
                                         ctaContent: m.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
-                                        impressionId: k
+                                        impressionId: R
                                     }
                                 );
                         },

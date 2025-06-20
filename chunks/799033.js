@@ -39,8 +39,8 @@ function P(t, e) {
             traceXHR: O.traceXHR,
             ...e
         },
-        m = 'function' == typeof N ? N : (t) => !0,
-        v = (t) =>
+        v = 'function' == typeof N ? N : (t) => !0,
+        m = (t) =>
             (function (t, e) {
                 let a = p.m9.location && p.m9.location.href;
                 if (a) {
@@ -80,7 +80,7 @@ function P(t, e) {
             }
         }),
         (0, d.Uf)((t) => {
-            let e = (0, n.m)(t, m, v, y);
+            let e = (0, n.m)(t, v, m, y);
             if ((t.response && t.fetchData.__span && L.set(t.response, t.fetchData.__span), e)) {
                 let a = C(t.fetchData.url),
                     r = a ? (0, R.en)(a).host : void 0;
@@ -150,7 +150,7 @@ function P(t, e) {
                             })(n, O, (0, i.z)() && L ? h : void 0),
                         h
                     );
-                })(t, m, v, y);
+                })(t, v, m, y);
                 P && e && g(e);
             });
 }

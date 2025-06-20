@@ -7,16 +7,16 @@ var s = n(524979),
     i = n(467628),
     l = n(644646),
     c = n(46140),
-    u = n(388032),
-    d = n(420444);
+    d = n(388032),
+    u = n(420444);
 let p = (e) => {
     let { quest: t, expansionSpring: n, isFullyExpanded: p, partnerBranding: m, useReducedMotion: f } = e,
         g = (0, i.j)({ location: c.dr.QUESTS_BAR });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)('div', { className: d.rewardTileSpacer }),
+            (0, r.jsx)('div', { className: u.rewardTileSpacer }),
             (0, r.jsx)(s.animated.div, {
-                className: d.rewardTileContainer,
+                className: u.rewardTileContainer,
                 style: {
                     transform: (0, s.to)(
                         [
@@ -45,7 +45,7 @@ let p = (e) => {
                 })
             }),
             (0, r.jsxs)(s.animated.div, {
-                className: d.rewardHighlightLogoCTA,
+                className: u.rewardHighlightLogoCTA,
                 style: {
                     transform: (0, s.to)(
                         [
@@ -63,11 +63,11 @@ let p = (e) => {
                 },
                 children: [
                     (0, r.jsx)('div', {
-                        className: d.partnerBranding,
+                        className: u.partnerBranding,
                         children: m
                     }),
                     (0, r.jsx)(s.animated.div, {
-                        className: d.rewardHighlightCTA,
+                        className: u.rewardHighlightCTA,
                         style: {
                             opacity: n.to({
                                 range: [0, 1],
@@ -77,7 +77,7 @@ let p = (e) => {
                         children: (0, r.jsx)(o.Text, {
                             color: 'always-white',
                             variant: 'text-xs/medium',
-                            children: u.intl.string(u.t['1Wvve3'])
+                            children: d.intl.string(d.t['1Wvve3'])
                         })
                     })
                 ]

@@ -6,8 +6,8 @@ var r = n(255367),
     i = n(617136),
     l = n(113434),
     c = n(497505),
-    u = n(918701),
-    d = n(602667),
+    d = n(918701),
+    u = n(602667),
     p = n(341907),
     m = n(672188),
     f = n(466962),
@@ -17,31 +17,31 @@ var r = n(255367),
     b = n(168989);
 function j(e) {
     var t, n;
-    let { quest: o, className: c, questContent: d, contentPosition: j, rowIndex: v, impressionRef: _ } = e,
+    let { quest: o, className: c, questContent: u, contentPosition: j, rowIndex: v, impressionRef: _ } = e,
         [y, O] = s.useState(!1),
         [C, w] = s.useState([]),
         S = (0, l.qb)(o),
-        E = s.useMemo(() => (0, u.q8)(o), [o]),
+        E = s.useMemo(() => (0, d.q8)(o), [o]),
         P = (0, i._F)(),
         T = s.useCallback(() => {
             O(!0),
                 P({
                     questId: o.id,
                     event: h.rMx.QUEST_HOVER,
-                    properties: (0, i.mH)(d)
+                    properties: (0, i.mH)(u)
                 }),
                 E && (0, p.loadVideoQuestModal)();
-        }, [P, o.id, d, E]),
+        }, [P, o.id, u, E]),
         N = s.useCallback(() => {
             O(!1),
                 P({
                     questId: o.id,
                     event: h.rMx.QUEST_HOVER_OFF,
-                    properties: (0, i.mH)(d)
+                    properties: (0, i.mH)(u)
                 });
-        }, [P, o.id, d]),
+        }, [P, o.id, u]),
         A = s.useContext(f.t),
-        { visibilityElementRef: R, almostVisibleInViewport: k } = (function (e) {
+        { visibilityElementRef: k, almostVisibleInViewport: R } = (function (e) {
             let [t, n] = s.useState(!1),
                 r = s.useCallback((e) => {
                     e.isIntersecting && n(!0);
@@ -62,7 +62,7 @@ function j(e) {
     return (0, r.jsxs)('div', {
         id: 'quest-tile-'.concat(o.id),
         ref: (e) => {
-            (_.current = e), (R.current = e);
+            (_.current = e), (k.current = e);
         },
         className: a()(b.container, c),
         onMouseEnter: T,
@@ -75,22 +75,22 @@ function j(e) {
                 isHovering: y,
                 errorHints: C,
                 warningHints: S,
-                isVisibleInViewport: k
+                isVisibleInViewport: R
             }),
             (0, r.jsx)(x.Z, {
                 quest: o,
-                questContent: d,
+                questContent: u,
                 isHovering: y,
                 contentPosition: j,
                 rowIndex: v,
                 onReceiveErrorHints: w,
-                isVisibleInViewport: k
+                isVisibleInViewport: R
             })
         ]
     });
 }
 function v(e) {
-    return (0, r.jsx)(d.A, {
+    return (0, r.jsx)(u.A, {
         questOrQuests: e.quest,
         questContent: e.questContent,
         questContentPosition: e.contentPosition,

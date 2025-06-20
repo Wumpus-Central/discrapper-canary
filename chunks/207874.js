@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     s = n(442837),
     o = n(461745),
-    l = n(663389),
-    a = n(5967),
+    a = n(663389),
+    l = n(5967),
     c = n(996733),
     u = n(388032);
 function d(e) {
@@ -17,13 +17,13 @@ function d(e) {
             (0, c.QH)(!1), (0, c.yN)('');
         }, []),
         f = i.useRef(null),
-        g = (0, s.e7)([l.Z], () => l.Z.getSection());
+        g = (0, s.e7)([a.Z], () => a.Z.getSection());
     return (
         i.useEffect(() => {
             let e = (e) => {
                 var t;
                 let n = f.current;
-                (null == (t = (0, a.uB)(e)) ? void 0 : t.activeElement) === document.body && (null == n || n.focus());
+                (null == (t = (0, l.uB)(e)) ? void 0 : t.activeElement) === document.body && (null == n || n.focus());
             };
             return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
         }, [g]),
@@ -37,6 +37,7 @@ function d(e) {
                 onQueryChange: c.yN,
                 placeholder: u.intl.string(u.t['5h0QOD']),
                 className: t,
+                preventEscapePropagation: !1,
                 inputProps: {
                     'aria-label': u.intl.string(u.t.pk9BWV),
                     'aria-expanded': !0,

@@ -17,22 +17,22 @@ var r = n(255367),
     h = n(946598);
 let m = 200;
 function g(e) {
-    let { transitionState: t, animationVariant: n = 'default', size: a = 'md', fullScreenOnMobile: g = !0, returnRef: E, role: b = 'dialog', 'aria-label': y, onClose: O, contentOutsideContainer: v, children: I } = e,
-        T = i.useId(),
-        S = i.useMemo(
+    let { transitionState: t, animationVariant: n = 'default', size: a = 'md', paddingSize: g = 'sm', fullScreenOnMobile: E = !0, returnRef: b, role: y = 'dialog', 'aria-label': O, onClose: v, contentOutsideContainer: I, children: T } = e,
+        S = i.useId(),
+        A = i.useMemo(
             () => ({
-                id: T,
-                headingId: 'heading-'.concat(T),
-                onClose: O
+                id: S,
+                headingId: 'heading-'.concat(S),
+                onClose: v
             }),
-            [T, O]
+            [S, v]
         ),
-        A = 0 === t || 1 === t,
-        { reducedMotion: N } = i.useContext(f.S),
-        C = (0, d.q)(
+        N = 0 === t || 1 === t,
+        { reducedMotion: C } = i.useContext(f.S),
+        R = (0, d.q)(
             {
-                opacity: +!!A,
-                transform: A || N.enabled || 'subtle' === n ? 'scale(1)' : 'scale(0.7)',
+                opacity: +!!N,
+                transform: N || C.enabled || 'subtle' === n ? 'scale(1)' : 'scale(0.7)',
                 config: {
                     duration: m,
                     easing: c.Z.Easing.out(c.Z.Easing.quad),
@@ -42,24 +42,24 @@ function g(e) {
             'animate-always'
         );
     return (0, r.jsx)(p.t.Provider, {
-        value: S,
+        value: A,
         children: (0, r.jsx)(_.V, {
-            id: T,
-            role: b,
-            'aria-label': y,
-            'aria-labelledby': null != y ? void 0 : S.headingId,
-            returnRef: E,
+            id: S,
+            role: y,
+            'aria-label': O,
+            'aria-labelledby': null != O ? void 0 : A.headingId,
+            returnRef: b,
             impressionType: l.ImpressionTypes.MODAL,
             children: (0, r.jsx)(u.y5, {
                 forceLevel: 1,
                 children: (0, r.jsxs)('div', {
-                    className: o()(h.outerContainer, { [h.fullScreenOnMobile]: g }),
+                    className: o()(h.outerContainer, { [h.fullScreenOnMobile]: E }),
                     children: [
-                        v,
+                        I,
                         (0, r.jsx)(s.animated.div, {
-                            className: o()(h.container, h['size-'.concat(a)]),
-                            style: C,
-                            children: I
+                            className: o()(h.container, h['size-'.concat(a)], h['padding-size-'.concat(g)]),
+                            style: R,
+                            children: T
                         })
                     ]
                 })

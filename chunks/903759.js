@@ -75,6 +75,7 @@ let p = (e) => {
                             }),
                             Promise.resolve(void 0)
                         ),
+                        multiple: !1,
                         title: ''
                     })
                 ]

@@ -15,6 +15,7 @@ e.exports = {
     assetBodyVideoPreviewVisible: 'assetBodyVideoPreviewVisible__636a2',
     heroAssetWrapper: 'heroAssetWrapper__636a2',
     legibilityGradient: 'legibilityGradient__636a2',
+    legibilityGradientDark: 'legibilityGradientDark__636a2',
     heroAsset: 'heroAsset__636a2',
     heroAssetTint: 'heroAssetTint__636a2',
     heroAssetDarken: 'heroAssetDarken__636a2',

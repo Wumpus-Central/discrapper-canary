@@ -259,12 +259,20 @@ function Y(e) {
 }
 function W(e) {
     let { onApply: t, disabled: n, className: i } = e;
-    return (0, r.jsx)(c.zxk, {
-        className: i,
-        size: c.zxk.Sizes.NONE,
-        onClick: t,
-        disabled: n,
-        children: D.intl.string(D.t['1Qm829'])
+    return (0, r.jsx)(c.ua7, {
+        text: D.intl.string(w.default.SFyHIC),
+        shouldShow: n,
+        children: (e) =>
+            (0, r.jsx)(
+                c.zxk,
+                j(k({}, e), {
+                    className: i,
+                    size: c.zxk.Sizes.NONE,
+                    onClick: t,
+                    disabled: n,
+                    children: D.intl.string(D.t['1Qm829'])
+                })
+            )
     });
 }
 function K(e) {
