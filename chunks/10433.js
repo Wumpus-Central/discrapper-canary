@@ -21,11 +21,11 @@ function b(e) {
             var e;
             return null != (e = d.Z.getGuildId()) ? e : void 0;
         }),
-        [O, j] = i.useState(!1),
-        C = i.useCallback((e) => {
-            e && j(!0);
+        [O, C] = i.useState(!1),
+        j = i.useCallback((e) => {
+            e && C(!0);
         }, []),
-        S = (0, o.O)(C),
+        S = (0, o.O)(j),
         I = i.useCallback(() => {
             p.default.track(h.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
                 application_id: t,

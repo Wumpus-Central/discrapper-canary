@@ -48,7 +48,7 @@ let O = [
             platformKey: 2
         }
     ],
-    j = [
+    C = [
         {
             getOs: () => x.intl.string(x.t.wCVyNT),
             icon: v.ios,
@@ -62,7 +62,7 @@ let O = [
             platformKey: 4
         }
     ],
-    C = (e) => {
+    j = (e) => {
         let { url: t, text: n, onClick: i } = e,
             l = (0, h.Q3)('DownloadButton'),
             o = (0, p.nYM)({ grow: !0 });
@@ -84,7 +84,7 @@ let O = [
             t = d.map((e, t) => {
                 let n = s ? e.url() : '';
                 return (0, r.jsx)(
-                    C,
+                    j,
                     {
                         url: n,
                         onClick: () => i(f),
@@ -95,7 +95,7 @@ let O = [
             });
         else {
             let e = s ? d() : void 0;
-            t = (0, r.jsx)(C, {
+            t = (0, r.jsx)(j, {
                 url: e,
                 onClick: () => i(f),
                 text: x.intl.string(x.t['1WjMbG'])
@@ -132,7 +132,7 @@ function I(e) {
     let { source: t, onClose: n, transitionState: l } = e,
         o = (0, d.e7)([_.default], () => _.default.getCurrentUser()),
         E = (0, d.e7)([g.default], () => g.default.getFingerprint()),
-        C = null == o || o.isClaimed(),
+        j = null == o || o.isClaimed(),
         [I, N] = i.useState(
             (function () {
                 var e;
@@ -163,11 +163,11 @@ function I(e) {
                 platform: e,
                 ptb: !1,
                 released: !0,
-                has_e_mail: C,
+                has_e_mail: j,
                 referring_location: t,
                 qr_code: !1
             }),
-            C || (n(), m.j());
+            j || (n(), m.j());
     }
     function P(e) {
         N(e);
@@ -221,7 +221,7 @@ function I(e) {
                                                         platform: e,
                                                         onClick: T,
                                                         onMouseEnter: P,
-                                                        claimed: C
+                                                        claimed: j
                                                     },
                                                     e.platformKey
                                                 )
@@ -240,7 +240,7 @@ function I(e) {
                                         }),
                                     (0, r.jsx)('ul', {
                                         className: v.platforms,
-                                        children: j.map((e) =>
+                                        children: C.map((e) =>
                                             (0, r.jsx)(
                                                 S,
                                                 {
@@ -248,7 +248,7 @@ function I(e) {
                                                     platform: e,
                                                     onClick: T,
                                                     onMouseEnter: P,
-                                                    claimed: C
+                                                    claimed: j
                                                 },
                                                 e.platformKey
                                             )

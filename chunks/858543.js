@@ -1,58 +1,58 @@
 n.d(t, {
-    DM: () => f,
-    ZP: () => g
+    DM: () => g,
+    ZP: () => f
 });
 var i = n(255367);
 n(73800);
 var r = n(120356),
-    o = n.n(r),
-    a = n(692547),
+    l = n.n(r),
+    o = n(692547),
     s = n(481060),
-    l = n(109434),
+    a = n(109434),
     c = n(456269),
     u = n(479099),
     d = n(176505),
     h = n(388032),
     p = n(602512),
     m = n(520069);
-function f(e) {
+function g(e) {
     let { channel: t, isNew: n } = e,
         i = (0, c.eV)(t),
         r = i.slice(void 0, 3),
-        o = i.slice(3),
-        a = i.length > 3 ? i.length - 3 : 0,
+        l = i.slice(3),
+        o = i.length > 3 ? i.length - 3 : 0,
         s = t.hasFlag(d.zZ.PINNED),
-        l = r.length > 0 || s || n;
+        a = r.length > 0 || s || n;
     return {
         shownTags: r,
-        remainingTags: o,
-        moreTagsCount: a,
+        remainingTags: l,
+        moreTagsCount: o,
         isPinned: s,
-        shouldRenderTagsRow: l,
+        shouldRenderTagsRow: a,
         forumPostContainsTags: i.length > 0
     };
 }
-function g(e) {
+function f(e) {
     let { channel: t, isNew: n, tagsClassName: r, className: c } = e,
         {
             shownTags: d,
-            remainingTags: g,
+            remainingTags: f,
             moreTagsCount: b,
             isPinned: j,
             shouldRenderTagsRow: v
-        } = f({
+        } = g({
             channel: t,
             isNew: n
         }),
-        { tagFilter: O } = (0, l.H)(t.id);
+        { tagFilter: O } = (0, a.H)(t.id);
     return v
         ? (0, i.jsxs)('div', {
-              className: o()(m.tags, c),
+              className: l()(m.tags, c),
               children: [
                   n
                       ? (0, i.jsx)(s.IGR, {
-                            className: o()(p.newBadge, p.inTagsRow),
-                            color: a.Z.unsafe_rawColors.BRAND_260.css,
+                            className: l()(p.newBadge, p.inTagsRow),
+                            color: o.Z.unsafe_rawColors.BRAND_260.css,
                             text: h.intl.string(h.t.y2b7CA)
                         })
                       : null,
@@ -119,14 +119,14 @@ function g(e) {
                           {
                               tag: e,
                               size: u.Z.Sizes.SMALL,
-                              className: o()(r, { [m.tagFiltered]: O.has(e.id) })
+                              className: l()(r, { [m.tagFiltered]: O.has(e.id) })
                           },
                           e.id
                       )
                   ),
                   b > 0
                       ? (0, i.jsx)(u.f, {
-                            tags: g,
+                            tags: f,
                             count: b,
                             size: u.Z.Sizes.SMALL
                         })

@@ -11,7 +11,6 @@ e.exports = {
     contentRowOne: 'contentRowOne_c6ad88',
     contentImageContainer: 'contentImageContainer_c6ad88',
     previewEmbedImage: 'previewEmbedImage_c6ad88',
-    secondaryImage: 'secondaryImage_c6ad88',
     serverSubPill: 'serverSubPill_c6ad88',
     addChannelButton: 'addChannelButton_c6ad88',
     contentRowTwo: 'contentRowTwo_c6ad88',
@@ -34,6 +33,5 @@ e.exports = {
     reactionBox: 'reactionBox_c6ad88',
     video: 'video_c6ad88',
     backgroundVideo: 'backgroundVideo_c6ad88',
-    secondaryVideo: 'secondaryVideo_c6ad88',
     highlightVideo: 'highlightVideo_c6ad88'
 };

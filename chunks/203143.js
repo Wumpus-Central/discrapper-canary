@@ -28,8 +28,8 @@ var r = n(512722),
     x = n(592125),
     v = n(703558),
     O = n(607744),
-    j = n(375954),
-    C = n(117530),
+    C = n(375954),
+    j = n(117530),
     S = n(553803),
     I = n(467531),
     N = n(798628),
@@ -116,7 +116,7 @@ function D(e) {
             title: A.intl.string(A.t['7LpysL']),
             body: A.intl.string(A.t['5sHHo6'])
         });
-    let l = j.Z.getMessage(t, n);
+    let l = C.Z.getMessage(t, n);
     if (null == l || null == l.poll || 0 === l.poll.answers.length) return;
     let a = null != r ? r : String(l.poll.answers[0].answer_id);
     S.A({
@@ -124,7 +124,7 @@ function D(e) {
         initialAnswerId: a
     });
 }
-function L(e) {
+function M(e) {
     let { channelId: t, messageId: n, isEditing: r } = e;
     (0, N.eu)(t, n, (e) => {
         var n;
@@ -137,14 +137,14 @@ function L(e) {
         };
     });
 }
-function M(e) {
+function L(e) {
     let { channelId: t, messageId: n } = e,
-        r = j.Z.getMessage(t, n);
+        r = C.Z.getMessage(t, n);
     return null == r ? [] : r.reactions.flatMap((e) => (!0 === e.me_vote ? e.emoji.name : []));
 }
 async function U(e) {
     let { channelId: t, messageId: n, answerIds: r } = e,
-        i = M({
+        i = L({
             channelId: t,
             messageId: n
         }),
@@ -197,7 +197,7 @@ async function F(e) {
         });
     let l = (0, N.fU)(t, n);
     i()(null != l, 'Must not be able to vote without existing state!');
-    let a = M({
+    let a = L({
         channelId: t,
         messageId: n
     });
@@ -287,7 +287,7 @@ async function G(e) {
             });
             break;
         case 'cancel':
-            L({
+            M({
                 channelId: t,
                 messageId: n,
                 isEditing: !1
@@ -299,7 +299,7 @@ async function G(e) {
                 (0, N.eu)(t, n, (e) => {
                     var r, i;
                     let l = null == e || !e.showResults,
-                        a = j.Z.getMessage(t, n),
+                        a = C.Z.getMessage(t, n),
                         o =
                             null != a
                                 ? a.reactions.reduce((e, t) => {
@@ -349,7 +349,7 @@ let H = {
                 message: o
             } = (function (e) {
                 let { channelId: t, messageId: n } = e,
-                    r = j.Z.getMessage(t, n);
+                    r = C.Z.getMessage(t, n);
                 if (null != r)
                     return {
                         message: r,
@@ -436,11 +436,11 @@ let H = {
         });
     },
     handlePollSubmitVote: F,
-    handleUpdateVoteEditingState: L,
+    handleUpdateVoteEditingState: M,
     handlePollActionTapped: G,
     createPoll: async function (e) {
         let { channel: t, question: n, answers: r, allowMultiSelect: i, duration: l, layout: a, onClose: s } = e,
-            c = C.Z.getUploads(t.id, v.d.Poll),
+            c = j.Z.getUploads(t.id, v.d.Poll),
             u = r.map((e) => {
                 var t, n;
                 let r = null == c ? void 0 : c.findIndex((t) => t.id === e.localCreationAnswerId),

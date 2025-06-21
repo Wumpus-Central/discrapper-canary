@@ -14,7 +14,7 @@ let d = {
         LEFT: 'left'
     },
     p = {
-        [d.UP]: s.up,
+        [d.UP]: '',
         [d.RIGHT]: s.right,
         [d.DOWN]: s.down,
         [d.LEFT]: s.left
@@ -25,7 +25,7 @@ class E extends (i = o.PureComponent) {
         return (0, l.jsx)(c.wj7, {
             size: 'md',
             color: 'currentColor',
-            className: u()(s.__invalid_arrow, t, { [p[e]]: !0 })
+            className: u()(t, { [p[e]]: !0 })
         });
     }
 }

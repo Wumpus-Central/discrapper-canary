@@ -27,8 +27,8 @@ var r = n(255367),
     x = n(626135),
     v = n(572004),
     O = n(601911),
-    j = n(504211),
-    C = n(970321),
+    C = n(504211),
+    j = n(970321),
     S = n(680005),
     I = n(981631),
     N = n(979007),
@@ -65,7 +65,7 @@ let A = (0, o.Kb)([E.Z, y.Z, _.Z], {
     });
 function Z(e) {
     let { appId: t, message: l } = e,
-        a = (0, C.R)(t),
+        a = (0, j.R)(t),
         [u, d, f, h, _, E, y] = (0, o.Wu)(
             [p.Z, b.Z, g.Z],
             () => {
@@ -115,7 +115,7 @@ function Z(e) {
         description: A,
         link: ''.concat(location.protocol, '//').concat(location.host).concat(I.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(u.id, N.GlobalDiscoveryAppsSections.STORE)),
         onLinkCopy: () => {
-            (0, j.X)(t, j.B.STORE_EMBED);
+            (0, C.X)(t, C.B.STORE_EMBED);
         },
         iconSrc: y,
         onIconClick: () => {
@@ -170,14 +170,14 @@ function R(e) {
             [u]
         ),
         v = i.useMemo(() => (null != E ? (0, O.y)(E, 45) : void 0), [E]),
-        Z = (0, C.R)(null != (l = null == E ? void 0 : E.id) ? l : ''),
+        Z = (0, j.R)(null != (l = null == E ? void 0 : E.id) ? l : ''),
         { openModal: R, subscriptionPurchaseButtonState: D } = (0, h.Z)({
             skuId: c,
             initialSubscribeForGuild: y
         });
     if (!Z || null == E || null == m) return null;
-    let L = m.type === I.epS.SUBSCRIPTION,
-        M = !!L && (0, f.KW)(m.flags),
+    let M = m.type === I.epS.SUBSCRIPTION,
+        L = !!M && (0, f.KW)(m.flags),
         U = () => {
             (0, s.ZDy)(async () => {
                 let { default: e } = await Promise.all([n.e('77803'), n.e('83372')]).then(n.bind(n, 7225));
@@ -192,8 +192,8 @@ function R(e) {
         },
         F = () => {
             (0, s.ZDy)(async () => {
-                let e = L ? (await Promise.resolve().then(n.bind(n, 519896))).SubscriptionDetailsModal : null,
-                    t = L ? null : (await Promise.resolve().then(n.bind(n, 147496))).ItemDetailsModal;
+                let e = M ? (await Promise.resolve().then(n.bind(n, 519896))).SubscriptionDetailsModal : null,
+                    t = M ? null : (await Promise.resolve().then(n.bind(n, 147496))).ItemDetailsModal;
                 return (n) => {
                     let i = () => {
                         n.onClose(), U();
@@ -204,7 +204,7 @@ function R(e) {
                               appId: E.id,
                               skuId: m.id,
                               guildId: y,
-                              subscriptionType: M ? 'user' : 'guild',
+                              subscriptionType: L ? 'user' : 'guild',
                               onClose: n.onClose,
                               onHeaderTitleClick: i
                           })
@@ -220,8 +220,8 @@ function R(e) {
                 };
             });
         },
-        B = L
-            ? M
+        B = M
+            ? L
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(s.tBG, {
@@ -261,7 +261,7 @@ function R(e) {
         description: B,
         link: ''.concat(location.protocol, '//').concat(location.host).concat(I.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(E.id, N.GlobalDiscoveryAppsSections.STORE)),
         onLinkCopy: () => {
-            (0, j.X)(E.id, j.B.SKU_EMBED, c);
+            (0, C.X)(E.id, C.B.SKU_EMBED, c);
         },
         iconSrc: v,
         onIconClick: () => {
@@ -288,12 +288,12 @@ function R(e) {
                     className: P.viewDetailsButton,
                     children: T.intl.string(T.t.DXYfjI)
                 }),
-                L
+                M
                     ? null != _
                         ? (0, r.jsx)(S.pV, {
                               onClick: R,
                               appId: E.id,
-                              subscriptionType: M ? 'user' : 'guild',
+                              subscriptionType: L ? 'user' : 'guild',
                               skuId: m.id,
                               icon: (0, r.jsx)(s.EOn, {
                                   size: 'xs',

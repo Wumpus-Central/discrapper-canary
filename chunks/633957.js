@@ -20,8 +20,8 @@ var r = n(255367),
     x = n(208444),
     v = n(429551),
     O = n(973616),
-    j = n(314897),
-    C = n(592125),
+    C = n(314897),
+    j = n(592125),
     S = n(158776),
     I = n(594174),
     N = n(626135),
@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(981631),
     k = n(701488),
     D = n(388032),
-    L = n(484608);
-let M = i.memo((e) => {
+    M = n(484608);
+let L = i.memo((e) => {
     let { start: t } = e,
         [n, r] = i.useState(0),
         o = (0, w.n)(),
@@ -53,16 +53,16 @@ let M = i.memo((e) => {
         (0, v.m)(n)
     );
 });
-M.displayName = 'ActivityRuntimeCounter';
+L.displayName = 'ActivityRuntimeCounter';
 let U = i.memo(function (e) {
     var t, n, a, c;
     let v,
         { application: P, channelId: w, guildId: U } = e,
         { analyticsLocations: F } = (0, h.ZP)(f.Z.ACTIVITY_INSTANCE_EMBED),
         B = (0, s.O)(),
-        G = (0, l.e7)([C.Z], () => C.Z.getChannel(w), [w]),
+        G = (0, l.e7)([j.Z], () => j.Z.getChannel(w), [w]),
         H = (null == G || null == (t = G.isThread) ? void 0 : t.call(G)) ? (null == G ? void 0 : G.parent_id) : w,
-        V = (0, l.e7)([j.default], () => j.default.getId()),
+        V = (0, l.e7)([C.default], () => C.default.getId()),
         {
             embeddedActivity: z,
             currentEmbeddedActivity: W,
@@ -181,7 +181,7 @@ let U = i.memo(function (e) {
                 referrerId: null == es ? void 0 : es.id
             }),
             info: (0, r.jsxs)('div', {
-                className: L.infoWrapper,
+                className: M.infoWrapper,
                 children: [
                     null != Q &&
                         (0, r.jsx)(o.Text, {
@@ -190,13 +190,13 @@ let U = i.memo(function (e) {
                             children:
                                 null != eu &&
                                 (0, r.jsxs)('div', {
-                                    className: L.activityTimer,
+                                    className: M.activityTimer,
                                     children: [
                                         (0, r.jsx)(ep.Icon, {
                                             size: 'xxs',
                                             color: 'currentColor'
                                         }),
-                                        (0, r.jsx)(M, { start: eu })
+                                        (0, r.jsx)(L, { start: eu })
                                     ]
                                 })
                         }),

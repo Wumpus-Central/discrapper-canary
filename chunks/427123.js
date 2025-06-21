@@ -20,7 +20,7 @@ let y = 'DetectedOffPlatformPremiumPerksStore',
     x = {},
     v = {},
     O = [];
-function j() {
+function C() {
     let e = !1;
     for (let { skuId: t, applicationId: n } of o().values(v)) {
         if (O.includes(t)) continue;
@@ -44,7 +44,7 @@ function j() {
     }
     return e;
 }
-class C extends (r = s.ZP.Store) {
+class j extends (r = s.ZP.Store) {
     initialize() {
         var e;
         this.waitFor(h.ZP, b.Z, _.Z), (O = null != (e = c.K.get(y)) ? e : O);
@@ -54,22 +54,22 @@ class C extends (r = s.ZP.Store) {
     }
 }
 (l = 'DetectedOffPlatformPremiumPerksStore'),
-    (i = 'displayName') in C
-        ? Object.defineProperty(C, i, {
+    (i = 'displayName') in j
+        ? Object.defineProperty(j, i, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (C[i] = l);
-let S = new C(u.Z, {
+        : (j[i] = l);
+let S = new j(u.Z, {
     LOGOUT: function () {
         (x = {}), (v = {});
     },
-    SKU_FETCH_SUCCESS: j,
-    ENTITLEMENT_FETCH_APPLICATION_SUCCESS: j,
-    ENTITLEMENT_CREATE: j,
-    APPLICATION_FETCH_SUCCESS: j,
+    SKU_FETCH_SUCCESS: C,
+    ENTITLEMENT_FETCH_APPLICATION_SUCCESS: C,
+    ENTITLEMENT_CREATE: C,
+    APPLICATION_FETCH_SUCCESS: C,
     DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS: function (e) {
         let { skuId: t } = e;
         if ((delete x[t], O.includes(t))) return !1;
@@ -89,6 +89,6 @@ let S = new C(u.Z, {
                                 applicationId: r
                             }),
                             (e = !0)));
-        return e && j(), e;
+        return e && C(), e;
     }
 });

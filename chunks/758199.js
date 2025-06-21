@@ -65,7 +65,7 @@ function x(e) {
 var v = (((r = {})[(r.BOT = 0)] = 'BOT'), (r[(r.ACTIVITY = 1)] = 'ACTIVITY'), r);
 function O(e) {
     var t, n, r, a;
-    let { title: v, header: O, info: j, staticBannerSrc: C, videoBannerSrc: S, bannerAspectRatio: I = 0, iconSrc: N, embedUrl: T, infoUrl: P, actions: A = [], trackingConfig: w } = e;
+    let { title: v, header: O, info: C, staticBannerSrc: j, videoBannerSrc: S, bannerAspectRatio: I = 0, iconSrc: N, embedUrl: T, infoUrl: P, actions: A = [], trackingConfig: w } = e;
     w = {
         id: null != (n = null == (t = w) ? void 0 : t.id) ? n : '0',
         linkType: null != (r = null == t ? void 0 : t.linkType) ? r : g.Un.UNKNOWN,
@@ -74,15 +74,15 @@ function O(e) {
         onView: null == t ? void 0 : t.onView,
         onLinkCopied: null == t ? void 0 : t.onLinkCopied
     };
-    let { primaryColor: Z, secondaryColor: R } = (0, p.Z)(null != N ? N : C),
+    let { primaryColor: Z, secondaryColor: R } = (0, p.Z)(null != N ? N : j),
         k = 'linear-gradient(45deg, '.concat(Z, ', ').concat(R, ')'),
         D = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
-        L = l.useRef(!1),
-        M = (0, u.O)(
+        M = l.useRef(!1),
+        L = (0, u.O)(
             (e) => {
-                if (!1 === L.current && e) {
+                if (!1 === M.current && e) {
                     var t;
-                    null == w || null == (t = w.onView) || t.call(w), (0, g.GF)(w.id, w.linkType, w.referrerId, w.activityCustomId), (L.current = !0);
+                    null == w || null == (t = w.onView) || t.call(w), (0, g.GF)(w.id, w.linkType, w.referrerId, w.activityCustomId), (M.current = !0);
                 }
             },
             void 0
@@ -115,7 +115,7 @@ function O(e) {
                       })
                   })
                 : null,
-        B = null != C,
+        B = null != j,
         G = null != S && !1 === D,
         H = B || G,
         V = 0 === I ? E.bannerAspectRatioBot : E.bannerAspectRatioActivity,
@@ -126,7 +126,7 @@ function O(e) {
         }, []),
         K = l.useMemo(() => !!G && new URL(S).pathname.endsWith('.gif'), [G, S]);
     return (0, i.jsxs)('div', {
-        ref: M,
+        ref: L,
         className: o()(E.embed, { [E.showVideoOnFocus]: G }),
         children: [
             H &&
@@ -150,7 +150,7 @@ function O(e) {
                         B &&
                             (0, i.jsx)('div', {
                                 className: E.staticBanner,
-                                style: { backgroundImage: 'url('.concat(C, ')') },
+                                style: { backgroundImage: 'url('.concat(j, ')') },
                                 onTransitionEnd: W
                             })
                     ]
@@ -188,7 +188,7 @@ function O(e) {
                                         lineClamp: 1,
                                         children: v
                                     }),
-                                    j
+                                    C
                                 ]
                             }),
                             null == O && (null != U ? U : F)

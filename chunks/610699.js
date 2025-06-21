@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(539854), n(361932), n(187205), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685);
+n.d(t, { Z: () => M }), n(539854), n(361932), n(187205), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -20,8 +20,8 @@ var r = n(255367),
     x = n(471445),
     v = n(111028),
     O = n(601964),
-    j = n(592125),
-    C = n(430824),
+    C = n(592125),
+    j = n(430824),
     S = n(496675),
     I = n(594174),
     N = n(626135),
@@ -120,7 +120,7 @@ function D(e) {
           })
         : null;
 }
-function L(e) {
+function M(e) {
     var t, n;
     let l,
         { invite: a, message: o, getAcceptInviteContext: u } = e,
@@ -133,7 +133,7 @@ function L(e) {
                 invite_inviter_id: null == (e = a.inviter) ? void 0 : e.id
             });
         }, [null == (t = a.inviter) ? void 0 : t.id, b.id]),
-        x = (0, c.e7)([C.Z], () => (null != a.guild ? C.Z.getGuild(a.guild.id) : null), [a]),
+        x = (0, c.e7)([j.Z], () => (null != a.guild ? j.Z.getGuild(a.guild.id) : null), [a]),
         v = (0, y.Z)([b.id])[0],
         T = (0, c.e7)([p.ZP], () => {
             var e;
@@ -146,9 +146,9 @@ function L(e) {
                 return b.id === t;
             });
         }),
-        k = j.Z.getChannel(null == (n = a.channel) ? void 0 : n.id),
+        k = C.Z.getChannel(null == (n = a.channel) ? void 0 : n.id),
         D = (0, c.e7)([S.Z], () => null != k && S.Z.can(A.Plq.USE_EMBEDDED_ACTIVITIES, k), [k]),
-        { analyticsLocations: L } = (0, f.ZP)(m.Z.INVITE_EMBED),
+        { analyticsLocations: M } = (0, f.ZP)(m.Z.INVITE_EMBED),
         U = (0, c.Wu)(
             [p.ZP],
             () =>
@@ -168,14 +168,14 @@ function L(e) {
                     inviter_id: o.author.id,
                     invite_message_id: o.id
                 },
-                L
+                M
             ),
                 d.ZP.acceptInviteAndTransitionToInviteChannel({
                     inviteKey: a.code,
                     context: u('Invite Button Embed'),
-                    analyticsLocations: L
+                    analyticsLocations: M
                 });
-        }, [a, o, L, u]),
+        }, [a, o, M, u]),
         G = a.state === A.r2o.ACCEPTING,
         H = null != x;
     if (null == x) {
@@ -186,8 +186,8 @@ function L(e) {
     return (H && T && (l = Z.intl.string(Z.t.wJNK8P)), D || (l = Z.intl.string(Z.t.hHGrW1)), null == a.code || '' === a.code || null == v)
         ? null
         : (0, r.jsx)(f.Gt, {
-              value: L,
-              children: (0, r.jsx)(M, {
+              value: M,
+              children: (0, r.jsx)(L, {
                   app: v,
                   invite: a,
                   activityUsers: F,
@@ -205,15 +205,15 @@ function L(e) {
               })
           });
 }
-function M(e) {
+function L(e) {
     var t, n;
     let { app: l, invite: a, activityUsers: o, isMember: s, channel: c, guild: u, members: d, membersOnline: p, isActivityActive: m, submitting: f, isDisabled: y, tooltip: x, handleAcceptInvite: v, onView: O } = e,
-        j = new URL(a.code, 'https://discord.gg').toString(),
-        { bot: C, icon: S } = l,
+        C = new URL(a.code, 'https://discord.gg').toString(),
+        { bot: j, icon: S } = l,
         I = T.ZP.getApplicationIconURL({
             id: l.id,
             icon: S,
-            bot: C
+            bot: j
         }),
         N = (0, E.z)(l),
         P = (0, b.E)(l),
@@ -261,7 +261,7 @@ function M(e) {
                 header: l.name,
                 title: Z.intl.string(Z.t['7vb6n5']),
                 iconSrc: I,
-                embedUrl: j
+                embedUrl: C
             },
             P
         )),

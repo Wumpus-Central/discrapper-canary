@@ -20,8 +20,8 @@ var r = n(255367),
     x = n(388032),
     v = n(510064);
 function O(e) {
-    var t, n, O, j;
-    let C,
+    var t, n, O, C;
+    let j,
         S,
         I,
         { message: N, channel: T, compact: P } = e,
@@ -32,15 +32,15 @@ function O(e) {
         k = (0, a.wjy)((0, o.ZP)()),
         {
             chatWallpaper: D,
-            isUpdatingChatWallpaperFlag: L,
-            lastSetMessageId: M
+            isUpdatingChatWallpaperFlag: M,
+            lastSetMessageId: L
         } = (0, l.cj)([f.Z], () => ({
             chatWallpaper: f.Z.getWallpaperById(A),
             isUpdatingChatWallpaperFlag: f.Z.isUpdatingChatWallpaperFlagForChannel(T.id),
             lastSetMessageId: f.Z.getLastSetWallpaperMessageIdForChannel(T.id)
         })),
         U = (0, _.Z)(T.id),
-        F = M === N.id,
+        F = L === N.id,
         B = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
         G = (null == B ? void 0 : B.id) === N.author.id,
         H = (0, c.m)(y.p9.TIER_2),
@@ -50,7 +50,7 @@ function O(e) {
     }, [D]),
     null == A)
         ? null
-        : ((C = G
+        : ((j = G
               ? x.intl.format(x.t.z847Tk, { wallpaper_name: null != (n = null == D ? void 0 : D.label) ? n : x.intl.string(x.t['UQMV/P']) })
               : x.intl.format(x.t['+lKndX'], {
                     username: null == R ? void 0 : R.nick,
@@ -59,7 +59,7 @@ function O(e) {
           w
               ? k || Z
                   ? V && F
-                      ? (S = x.intl.formatToPlainString(x.t.PzTpVV, { wallpaperName: null != (j = null == D ? void 0 : D.label) ? j : x.intl.string(x.t['UQMV/P']) }))
+                      ? (S = x.intl.formatToPlainString(x.t.PzTpVV, { wallpaperName: null != (C = null == D ? void 0 : D.label) ? C : x.intl.string(x.t['UQMV/P']) }))
                       : G ||
                         H ||
                         !F ||
@@ -83,12 +83,12 @@ function O(e) {
                           }
                       });
                   },
-                  submitting: L,
+                  submitting: M,
                   children: x.intl.string(V ? x.t.o6850d : x.t['/ubFp6'])
               })),
           (0, r.jsx)(b.Z, {
               channel: T,
-              content: C,
+              content: j,
               subtitle: S,
               action: I,
               compact: P,

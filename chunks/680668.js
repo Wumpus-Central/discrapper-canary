@@ -20,17 +20,17 @@ var r = n(255367),
 function x(e) {
     var t, x, v;
     let O,
-        j,
         C,
+        j,
         { onTransitionToInviteChannel: S, onAcceptInstantInvite: I, guild: N, invite: T, message: P, currentUserId: A } = e,
         w = A === P.author.id,
         { channel: Z, approximate_member_count: R, approximate_presence_count: k } = T,
         D = T.state === b.r2o.ACCEPTING,
-        L = null != Z ? (0, m.jD)(Z) : null,
-        M = null != N,
-        U = null != L,
-        F = null != L && L.isGuildVocal(),
-        B = null != L && L.isGuildStageVoice(),
+        M = null != Z ? (0, m.jD)(Z) : null,
+        L = null != N,
+        U = null != M,
+        F = null != M && M.isGuildVocal(),
+        B = null != M && M.isGuildStageVoice(),
         G = (0, f.yE)(null != (t = T.flags) ? t : 0, l.$.IS_GUEST_INVITE),
         H = null != (x = null == N ? void 0 : N.hasFeature(b.oNc.HUB)) && x,
         V = null == N ? void 0 : N.id,
@@ -43,7 +43,7 @@ function x(e) {
         }, [V, z]),
         Q = i.useCallback(() => {
             let e = 'noop';
-            M ? (S(), (e = 'transition')) : (I(), (e = 'accept')),
+            L ? (S(), (e = 'transition')) : (I(), (e = 'accept')),
                 (0, o.r$)(
                     {
                         invite: T,
@@ -53,7 +53,7 @@ function x(e) {
                     },
                     z
                 );
-        }, [T, P, z, M, S, I]);
+        }, [T, P, z, L, S, I]);
     if (null == N) {
         if (null == T.guild) return (0, r.jsx)(_.Z, {});
         (N = h.Qs(T.guild)).premiumTier = null != (v = T.guild.premium_tier) ? v : b.Eu4.NONE;
@@ -67,7 +67,7 @@ function x(e) {
         isStream: !1
     });
     return (
-        (j = (0, r.jsxs)('span', {
+        (C = (0, r.jsxs)('span', {
             className: y.infoTitle,
             children: [
                 (0, r.jsx)(u.Z, {
@@ -93,7 +93,7 @@ function x(e) {
             ]
         })),
         G &&
-            (C = (0, r.jsx)(a.DY3, {
+            (j = (0, r.jsx)(a.DY3, {
                 className: y.tooltipContainer,
                 text: E.intl.string(E.t['/FeTKy']),
                 children: (0, r.jsx)(a.d3s, {
@@ -103,7 +103,7 @@ function x(e) {
                 })
             })),
         F
-            ? ((j = (0, r.jsx)(p.Z.Channel, { channel: L })),
+            ? ((C = (0, r.jsx)(p.Z.Channel, { channel: M })),
               (O = (0, r.jsxs)('span', {
                   className: y.infoTitle,
                   children: [
@@ -124,7 +124,7 @@ function x(e) {
                 }))
               : U &&
                 (O = (0, r.jsx)(p.Z.Channel, {
-                    channel: L,
+                    channel: M,
                     guild: N
                 })),
         (0, r.jsxs)(p.Z, {
@@ -132,7 +132,7 @@ function x(e) {
                 (0, r.jsx)(p.Z.GuildSplash, { guild: N }),
                 (0, r.jsx)(p.Z.Header, {
                     text: J,
-                    extra: C
+                    extra: j
                 }),
                 (0, r.jsxs)(p.Z.Body, {
                     children: [
@@ -141,7 +141,7 @@ function x(e) {
                             children: [
                                 (0, r.jsx)(p.Z.Icon, { guild: N }),
                                 (0, r.jsx)(p.Z.Info, {
-                                    title: j,
+                                    title: C,
                                     onClick: q,
                                     children: O
                                 })
@@ -151,7 +151,7 @@ function x(e) {
                             onClick: Q,
                             submitting: D,
                             color: p.Z.Button.Colors.GREEN,
-                            children: F ? (B ? E.intl.string(E.t['7vb2cX']) : E.intl.string(E.t.gpqgam)) : M ? E.intl.string(E.t.cEnaW1) : E.intl.string(E.t.XpeFYm)
+                            children: F ? (B ? E.intl.string(E.t['7vb2cX']) : E.intl.string(E.t.gpqgam)) : L ? E.intl.string(E.t.cEnaW1) : E.intl.string(E.t.XpeFYm)
                         })
                     ]
                 }),

@@ -61,16 +61,16 @@ function O(e, t) {
         e
     );
 }
-let j = {
+let C = {
         tag: 'span',
         variant: 'text-md/normal',
         color: 'header-secondary'
     },
-    C = { className: a()('mention', x.mention) };
+    j = { className: a()('mention', x.mention) };
 function S(e) {
     return (0, r.jsx)(
         s.Text,
-        O(v({}, j), {
+        O(v({}, C), {
             color: 'header-primary',
             children: e
         })
@@ -108,7 +108,7 @@ let I = i.memo(function (e) {
                                 (0, r.jsxs)(
                                     i.Fragment,
                                     {
-                                        children: [' ', (0, r.jsx)(s.Text, O(v({}, j), { children: null != (l = null == w ? void 0 : w.name_localized) ? l : I.name }))]
+                                        children: [' ', (0, r.jsx)(s.Text, O(v({}, C), { children: null != (l = null == w ? void 0 : w.name_localized) ? l : I.name }))]
                                     },
                                     R
                                 )
@@ -138,7 +138,7 @@ let I = i.memo(function (e) {
                                     let e = (0, b.ij)(t, N);
                                     x = (0, r.jsxs)(
                                         m.Z,
-                                        O(v({}, C), {
+                                        O(v({}, j), {
                                             onClick: () =>
                                                 (0, f.openUserProfileModal)({
                                                     userId: t.id,
@@ -159,7 +159,7 @@ let I = i.memo(function (e) {
                                 null != t &&
                                     (x = (0, r.jsxs)(
                                         m.Z,
-                                        O(v({}, C), {
+                                        O(v({}, j), {
                                             children: [E.zy, t.name]
                                         })
                                     ));
@@ -171,7 +171,7 @@ let I = i.memo(function (e) {
                                 null != t &&
                                     (x = (0, r.jsxs)(
                                         m.Z,
-                                        O(v({}, C), {
+                                        O(v({}, j), {
                                             children: [E.ME, t.name]
                                         })
                                     ));
@@ -190,7 +190,7 @@ let I = i.memo(function (e) {
                                         let e = (0, b.ij)(t, N);
                                         x = (0, r.jsxs)(
                                             m.Z,
-                                            O(v({}, C), {
+                                            O(v({}, j), {
                                                 onClick: () =>
                                                     (0, f.openUserProfileModal)({
                                                         userId: t.id,
@@ -221,7 +221,7 @@ let I = i.memo(function (e) {
                                     children: [
                                         (0, r.jsxs)(
                                             s.Text,
-                                            O(v({}, j), {
+                                            O(v({}, C), {
                                                 children: [' ', null != (p = null == w ? void 0 : w.name_localized) ? p : I.name, ': ']
                                             })
                                         ),
@@ -246,7 +246,7 @@ let I = i.memo(function (e) {
             children: [
                 (0, r.jsxs)(
                     s.Text,
-                    O(v({}, j), {
+                    O(v({}, C), {
                         children: ['/', null != (N = null == (l = w.application_command) ? void 0 : l.name_localized) ? N : w.name]
                     })
                 ),

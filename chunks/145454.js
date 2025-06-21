@@ -1,9 +1,9 @@
-n.d(t, { Z: () => C }), n(388685), n(953529);
+n.d(t, { Z: () => f }), n(388685), n(953529);
 var s = n(255367),
     i = n(73800),
     r = n(120356),
-    o = n.n(r),
-    l = n(772848),
+    l = n.n(r),
+    o = n(772848),
     a = n(990547),
     c = n(481060),
     h = n(600164),
@@ -26,7 +26,7 @@ function I(e, t, n) {
         e
     );
 }
-class f extends i.PureComponent {
+class C extends i.PureComponent {
     async componentDidMount() {
         let [e, { default: t }] = await Promise.all([n.e('93198').then(n.t.bind(n, 140523, 19)), Promise.resolve().then(n.t.bind(n, 500923, 23))]);
         null != this._lottieRef &&
@@ -45,27 +45,27 @@ class f extends i.PureComponent {
         let e,
             t,
             n,
-            { error: i, working: r, transitionState: l, validPhone: I } = this.props;
+            { error: i, working: r, transitionState: o, validPhone: I } = this.props;
         return (
             (e =
                 null != i && '' !== i
                     ? (0, s.jsx)('div', {
-                          className: o()(p.description, p.error, m.marginBottom20),
+                          className: l()(p.description, p.error, m.marginBottom20),
                           children: i
                       })
                     : I
                       ? (0, s.jsx)('div', {
-                            className: o()(p.description, m.marginBottom20),
+                            className: l()(p.description, m.marginBottom20),
                             children: E.intl.string(E.t['4qMI6O'])
                         })
                       : (0, s.jsxs)(s.Fragment, {
                             children: [
                                 (0, s.jsx)('div', {
-                                    className: o()(p.description, m.marginBottom20),
+                                    className: l()(p.description, m.marginBottom20),
                                     children: E.intl.string(E.t.Vp9je3)
                                 }),
                                 (0, s.jsx)('div', {
-                                    className: o()(p.description, m.marginBottom20),
+                                    className: l()(p.description, m.marginBottom20),
                                     children: E.intl.format(E.t['3BTmqa'], {})
                                 })
                             ]
@@ -95,8 +95,8 @@ class f extends i.PureComponent {
             (n = I ? E.intl.string(E.t.Xclkxs) : E.intl.string(E.t.uR76s7)),
             (0, s.jsxs)(c.Y0X, {
                 impression: { impressionName: a.ImpressionNames.USER_VERIFY_PHONE },
-                transitionState: l,
-                className: o()(p.phoneVerificationModal, R.vertical, R.alignCenter, R.justifyCenter, m.marginTop60),
+                transitionState: o,
+                className: l()(p.phoneVerificationModal, R.vertical, R.alignCenter, R.justifyCenter, m.marginTop60),
                 'aria-labelledby': this.headerId,
                 parentComponent: 'PhoneVerificationModal',
                 children: [
@@ -105,7 +105,7 @@ class f extends i.PureComponent {
                         ref: this.setLottieRef
                     }),
                     (0, s.jsx)('div', {
-                        className: o()(p.title, m.marginBottom8),
+                        className: l()(p.title, m.marginBottom8),
                         id: this.headerId,
                         children: n
                     }),
@@ -119,7 +119,7 @@ class f extends i.PureComponent {
         super(e),
             I(this, '_animItem', null),
             I(this, '_lottieRef', void 0),
-            I(this, 'headerId', (0, l.Z)()),
+            I(this, 'headerId', (0, o.Z)()),
             I(this, 'setLottieRef', (e) => {
                 this._lottieRef = e;
             }),
@@ -148,4 +148,4 @@ class f extends i.PureComponent {
             });
     }
 }
-let C = f;
+let f = C;

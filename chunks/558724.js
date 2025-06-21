@@ -75,8 +75,8 @@ let b = {
     x = null,
     v = 86400000;
 var O = (((i = O || {}).IS_OWNER = 'is_owner'), (i.IS_ADMIN = 'is_admin'), (i.IS_COMMUNITY = 'is_community'), (i.GUILD_SIZE = 'guild_size'), (i.IS_HUB = 'is_hub'), (i.IS_VIEWING = 'is_viewing'), (i.GUILD_PERMISSIONS = 'guild_permissions'), (i.GUILD_SIZE_ALL = 'guild_size_all'), i);
-let j = new Set(Object.values(O));
-function C(e) {
+let C = new Set(Object.values(O));
+function j(e) {
     var t;
     return (
         (t = 0),
@@ -84,7 +84,7 @@ function C(e) {
         (function (e) {
             let { guild_requirements: t = [], guild_size: n = [null, null], guild_permissions: r = [] } = e;
             if (0 === t.length) return !0;
-            for (let e of t) if (!j.has(e)) return !1;
+            for (let e of t) if (!C.has(e)) return !1;
             let i = t.includes('guild_size_all'),
                 a = !0;
             for (let o of Object.values(u.Z.getGuilds())) {
@@ -125,14 +125,14 @@ function C(e) {
 function S(e) {
     let { survey: t } = e;
     if (((E.lastFetched = Date.now()), null == E.hiddenSurveys && (E.hiddenSurveys = {}), null != t && null == E.hiddenSurveys[t.key])) {
-        if (!C(t)) return;
+        if (!j(t)) return;
         x = t;
     }
 }
 function I() {
-    if (null != x && (C(x) || ((x = null), 0))) return !1;
+    if (null != x && (j(x) || ((x = null), 0))) return !1;
     let e = Object.values((y = null != y ? y : {}))[0];
-    null != e && C(e)
+    null != e && j(e)
         ? S({
               type: 'SURVEY_FETCHED',
               survey: e

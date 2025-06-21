@@ -938,7 +938,7 @@ class ev extends d.Z {
                 null == (o = this._videoHealthManager) || o.deleteUser(e));
         }
         let l = this._connection;
-        null != l && l.destroyUser(e), null == (t = this._localMediaSinkWantsManager) || t.destroyUser(e), this._userIds.delete(e), this.emit(z.z.ClientDisconnect, e), null == (n = this._goLiveQualityManager) || n.updateCallUserIds(this._userIds), null == (r = this._localMediaSinkWantsManager) || r.updateCallUserIds(this._userIds), null == (i = this._videoQuality) || i.updateCallUserIdsCount(this._userIds.size);
+        null != l && l.destroyUser(e), null == (t = this._localMediaSinkWantsManager) || t.destroyUser(e), this._userIds.delete(e), this.emit(z.z.ClientDisconnect, e), null == (n = this._goLiveQualityManager) || n.updateCallUserIds(this._userIds), null == (r = this._localMediaSinkWantsManager) || r.updateCallUserIds(this._userIds), null == (i = this._videoQuality) || i.updateCallUserIdsCount(this._userIds.size), 1 === this._userIds.size && (this._secureFramesLastBecameAloneTime = (0, _.zO)());
     }
     _handleCodecs(e, t) {
         let n = this._connection;
@@ -1005,18 +1005,18 @@ class ev extends d.Z {
                 duration_between_proposals: i(n.lastProposalsReceivedTime, n.firstProposalsReceivedTime),
                 total_proposals_size: n.totalProposalsSize,
                 total_commit_welcome_size: n.totalCommitWelcomeSize,
+                welcome_wait_duration: i(n.welcomeReceivedTime, n.initFinishedTime),
                 welcome_duration: i(n.welcomeFinishedTime, n.welcomeReceivedTime),
                 welcome_size: n.welcomeSize,
                 welcome_error: n.welcomeError,
-                welcome_wait_duration: i(n.welcomeReceivedTime, n.lastProposalsFinishedTime),
+                commit_wait_duration: i(n.commitReceivedTime, n.lastProposalsFinishedTime),
                 commit_duration: i(n.commitFinishedTime, n.commitReceivedTime),
                 commit_size: n.commitSize,
                 commit_error: n.commitError,
-                commit_wait_duration: i(n.commitReceivedTime, n.lastProposalsFinishedTime),
+                prepare_wait_duration: i(n.prepareReceivedTime, this._secureFramesLastBecameAloneTime),
                 prepare_duration: i(n.prepareFinishedTime, n.prepareReceivedTime),
-                prepare_wait_duration: i(n.prepareReceivedTime, n.lastProposalsFinishedTime),
-                execute_duration: i(n.executeFinishedTime, n.executeReceivedTime),
                 execute_wait_duration: i(n.executeReceivedTime, n.readyTime),
+                execute_duration: i(n.executeFinishedTime, n.executeReceivedTime),
                 execute_error: n.executeError,
                 incomplete: n.incomplete,
                 active_transition_count: r
@@ -1037,29 +1037,33 @@ class ev extends d.Z {
         this._secureFramesTransitionStates.set(e, ec({}, n, t)), (this._secureFramesMaxConcurrentTransitions = Math.max(this._secureFramesMaxConcurrentTransitions, this._secureFramesTransitionStates.size));
     }
     _handleSecureFramesInit(e) {
-        var t, n;
-        let r = (0, _.zO)();
+        var t, n, r;
+        let i = (0, _.zO)();
         e > 0
-            ? (this.logger.info('DAVE protocol init with protocol version: '.concat(e)), null == (t = this._connection) || t.prepareSecureFramesEpoch(eb, e, this.trueChannelId), this._sendMLSKeyPackage())
-            : null == (n = this._connection) ||
-              n.prepareSecureFramesTransition(ey, e, () => {
-                  let t = (0, _.zO)(),
-                      n = !1;
+            ? (this.logger.info('DAVE protocol init with protocol version: '.concat(e)),
+              null == (t = this._connection) || t.prepareSecureFramesEpoch(eb, e, this.trueChannelId),
+              this._sendMLSKeyPackage(),
+              (this._secureFramesNextTransitionState = ed(ec({}, null != (n = this._secureFramesNextTransitionState) ? n : {}), {
+                  initReceivedTime: i,
+                  initFinishedTime: (0, _.zO)(),
+                  protocolVersion: e
+              })))
+            : null == (r = this._connection) ||
+              r.prepareSecureFramesTransition(ey, e, () => {
+                  let t = !1;
                   try {
-                      var i;
-                      null == (i = this._connection) || i.executeSecureFramesTransition(ey);
+                      var n;
+                      null == (n = this._connection) || n.executeSecureFramesTransition(ey);
                   } catch (e) {
-                      (n = !0), H.Z.captureException(e);
+                      (t = !0), H.Z.captureException(e);
                   }
-                  e > 0 &&
-                      (this._storeSecureFrameTransitionData(ey, {
-                          initReceivedTime: r,
-                          initFinishedTime: t,
-                          protocolVersion: e,
-                          executeFinishedTime: (0, _.zO)(),
-                          executeError: n
-                      }),
-                      this._trackSecureFrameTransition(ey));
+                  this._storeSecureFrameTransitionData(ey, {
+                      initReceivedTime: i,
+                      initFinishedTime: (0, _.zO)(),
+                      protocolVersion: e,
+                      executeError: t
+                  }),
+                      this._trackSecureFrameTransition(ey);
               });
     }
     _handleSecureFramesRosterChange(e) {
@@ -1159,8 +1163,7 @@ class ev extends d.Z {
                         commitFinishedTime: (0, _.zO)(),
                         commitSize: t.byteLength,
                         commitError: !n
-                    }),
-                    e === ey && this._trackSecureFrameTransition(e);
+                    });
             });
     }
     _handleMLSWelcome(e, t) {
@@ -1176,8 +1179,7 @@ class ev extends d.Z {
                         welcomeFinishedTime: (0, _.zO)(),
                         welcomeSize: t.byteLength,
                         welcomeError: !n
-                    }),
-                    e === ey && this._trackSecureFrameTransition(e);
+                    });
             });
     }
     getMLSPairwiseFingerprint(e, t, n) {
@@ -1327,6 +1329,7 @@ class ev extends d.Z {
             el(this, '_secureFramesMaxConcurrentTransitions', 0),
             el(this, '_secureFramesTransitionPrepareCount', 0),
             el(this, '_secureFramesTransitionExecuteCount', 0),
+            el(this, '_secureFramesLastBecameAloneTime', void 0),
             el(this, '_numNoiseCancellationChanges', 0),
             el(this, '_lastSentSpeakingStatus', void 0),
             el(this, '_lastSentSSRC', void 0),

@@ -1,12 +1,11 @@
-n.d(t, { a: () => s });
+n.d(t, { Q: () => l });
 var i = n(818083),
-    r = n(987338);
+    r = n(984134);
 let s = (0, i.B)({
     kind: 'user',
     id: '2025-06_jump_to_voice_settings',
     label: 'Jump to Voice Settings',
     defaultConfig: { jumpToVoice: !1 },
-    commonTriggerPoint: r.$P.VOICE_CALL,
     treatments: [
         {
             id: 1,
@@ -15,3 +14,14 @@ let s = (0, i.B)({
         }
     ]
 });
+function l(e) {
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+        { isInHoldout: n } = r.h.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+    return s.getCurrentConfig(
+        { location: e },
+        {
+            disable: n,
+            autoTrackExposure: t
+        }
+    );
+}

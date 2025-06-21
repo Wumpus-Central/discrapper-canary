@@ -158,7 +158,7 @@ let E = (e) => {
                       className: O.container,
                       children: [
                           (0, r.jsxs)('div', {
-                              className: a()(O.__invalid_wrapper, O.headerRow),
+                              className: O.headerRow,
                               children: [
                                   (0, r.jsxs)(d.Text, {
                                       variant: 'text-xs/normal',
@@ -202,7 +202,7 @@ let E = (e) => {
                                                           messageCount: '34',
                                                           reactionCount: '84',
                                                           reaction: '\uD83D\uDC9E',
-                                                          classname: a()(O.backgroundVideo, O.secondaryVideo)
+                                                          classname: O.backgroundVideo
                                                       }),
                                                       (0, r.jsx)(I, {
                                                           username: y.intl.string(y.t.KIele3),
@@ -238,7 +238,6 @@ let E = (e) => {
                                                           (0, r.jsx)(d.Text, {
                                                               variant: 'text-sm/medium',
                                                               color: 'text-link',
-                                                              className: O.__invalid_helpCenterLinkText,
                                                               children: y.intl.string(y.t.OahzBQ)
                                                           }),
                                                           (0, r.jsx)(d.rgF, {
@@ -280,7 +279,7 @@ let E = (e) => {
                                                           (0, r.jsx)('img', {
                                                               src: E ? N : P,
                                                               alt: '',
-                                                              className: a()(O.previewEmbedImage, O.secondaryImage)
+                                                              className: O.previewEmbedImage
                                                           }),
                                                           (0, r.jsx)('img', {
                                                               src: E ? w : S,

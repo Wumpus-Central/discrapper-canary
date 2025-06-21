@@ -2,8 +2,8 @@ n.d(t, {
     I1: () => y,
     IZ: () => x,
     Qb: () => E,
-    Yc: () => j,
-    bo: () => C,
+    Yc: () => C,
+    bo: () => j,
     cy: () => v,
     hM: () => g,
     sL: () => _,
@@ -185,7 +185,7 @@ function O(e) {
             modifiers: d
         });
 }
-function j(e) {
+function C(e) {
     let { rating: t, searchId: n, searchType: r } = e;
     i.ZP.trackWithMetadata(u.rMx.SEARCH_RESULTS_FEEDBACK_MODAL_VIEWED, {
         rating: t,
@@ -194,7 +194,7 @@ function j(e) {
         search_session_id: m(n)
     });
 }
-function C(e) {
+function j(e) {
     let { searchId: t, searchType: n } = e;
     i.ZP.trackWithMetadata(u.rMx.SEARCH_RESULTS_FEEDBACK_ENTRYPOINT_VIEWED, {
         search_id: null != t ? o.Z.getAnalyticsId(t) : null,

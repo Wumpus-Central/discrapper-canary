@@ -66,9 +66,9 @@ function g(e) {
             guildId: i.guild_id,
             messageId: n.id
         })(v),
-        j = null != (t = m[g]) ? t : null;
-    if (null == j) return null;
-    let C = p.intl.format(j(), {
+        C = null != (t = m[g]) ? t : null;
+    if (null == C) return null;
+    let j = p.intl.format(C(), {
         actorName: _.nick,
         actorHook: x,
         targetName: null == v ? void 0 : v.nick,
@@ -78,7 +78,7 @@ function g(e) {
         iconNode: (0, r.jsx)(h, { type: g }),
         timestamp: n.timestamp,
         compact: a,
-        children: C
+        children: j
     });
 }
 function _(e) {

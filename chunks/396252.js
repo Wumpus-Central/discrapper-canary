@@ -22,11 +22,11 @@ function _(e) {
         x = _(y),
         {
             avatarSrc: v,
-            eventHandlers: { onMouseEnter: O, onMouseLeave: j }
+            eventHandlers: { onMouseEnter: O, onMouseLeave: C }
         } = (0, p.m)(!0);
     return (0, r.jsx)('div', {
         onMouseEnter: O,
-        onMouseLeave: j,
+        onMouseLeave: C,
         children: (0, r.jsx)(m.Z, {
             className: l()(g.mainContainer, { [g.compact]: i }),
             iconNode: i ? null : (0, r.jsx)(p.S, { src: v }),

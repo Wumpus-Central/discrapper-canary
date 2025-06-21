@@ -26,8 +26,8 @@ var r = n(255367),
     x = n(496675),
     v = n(933429),
     O = n(451478),
-    j = n(626135),
-    C = n(585483),
+    C = n(626135),
+    j = n(585483),
     S = n(981631),
     I = n(388032),
     N = n(555565);
@@ -148,7 +148,7 @@ function k(e) {
         k = (0, u.e7)([O.Z], () => O.Z.windowSize()),
         D = (0, h.Q3)('ItemsPopout');
     i.useEffect(() => {
-        j.default.track(S.rMx.OPEN_POPOUT, { type: t });
+        C.default.track(S.rMx.OPEN_POPOUT, { type: t });
     }, [t]),
         i.useEffect(() => {
             function e() {
@@ -160,22 +160,22 @@ function k(e) {
                 null == (e = w.current) || e.scrollPageDown({ animate: !0 });
             }
             return (
-                C.S.subscribe(S.CkL.SCROLL_PAGE_DOWN, t),
-                C.S.subscribe(S.CkL.SCROLL_PAGE_UP, e),
+                j.S.subscribe(S.CkL.SCROLL_PAGE_DOWN, t),
+                j.S.subscribe(S.CkL.SCROLL_PAGE_UP, e),
                 () => {
-                    C.S.unsubscribe(S.CkL.SCROLL_PAGE_DOWN, t), C.S.unsubscribe(S.CkL.SCROLL_PAGE_UP, e);
+                    j.S.unsubscribe(S.CkL.SCROLL_PAGE_DOWN, t), j.S.unsubscribe(S.CkL.SCROLL_PAGE_UP, e);
                 }
             );
         }, []);
-    let L = i.useCallback(() => {
+    let M = i.useCallback(() => {
             var e;
             let t = null == (e = w.current) ? void 0 : e.getScrollerState();
             null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < 250 && l && !o && (null == p || p());
         }, [l, p, o]),
-        M = [],
+        L = [],
         U = !0;
     null == n || (o && 0 === n.length)
-        ? (M = [
+        ? (L = [
               (0, r.jsx)(
                   'div',
                   {
@@ -186,11 +186,11 @@ function k(e) {
               )
           ])
         : 0 === n.length
-          ? M.push((0, r.jsx)(i.Fragment, { children: _() }, 'empty-state'))
+          ? L.push((0, r.jsx)(i.Fragment, { children: _() }, 'empty-state'))
           : ((U = !1),
-            (M = []),
+            (L = []),
             s().each(n, (e) => {
-                M.push(...b(e));
+                L.push(...b(e));
             }));
     let F = null;
     null != n &&
@@ -249,7 +249,7 @@ function k(e) {
             children: [
                 (0, r.jsxs)(d.Den, {
                     className: a()(N.messagesPopout, y),
-                    onScroll: V ? L : void 0,
+                    onScroll: V ? M : void 0,
                     ref: w,
                     children: [
                         (0, r.jsx)(c.bG, {
@@ -296,7 +296,7 @@ function k(e) {
                                             }
                                             return e;
                                         })({ ref: i }, l)),
-                                        (n = n = { children: M }),
+                                        (n = n = { children: L }),
                                         Object.getOwnPropertyDescriptors
                                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                                             : (function (e, t) {
@@ -323,7 +323,7 @@ function k(e) {
     });
 }
 function D(e) {
-    let { analyticsName: t, onFetch: n, channel: l, messages: a, hasMore: o, loading: s, loadMore: c, onJump: d, canCloseAllMessages: m = !1, renderHeader: f, renderEmptyState: h, renderMessage: x, getProTip: v, scrollerClassName: O, className: j, onCloseMessage: C, listName: I } = e,
+    let { analyticsName: t, onFetch: n, channel: l, messages: a, hasMore: o, loading: s, loadMore: c, onJump: d, canCloseAllMessages: m = !1, renderHeader: f, renderEmptyState: h, renderMessage: x, getProTip: v, scrollerClassName: O, className: C, onCloseMessage: j, listName: I } = e,
         T = (0, u.e7)([y.Z], () => {
             let e = null != l ? y.Z.getMessages(l.id) : null;
             return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
@@ -349,7 +349,7 @@ function D(e) {
         [a, l]
     );
     return (0, r.jsx)(k, {
-        className: j,
+        className: C,
         scrollerClassName: O,
         items: A,
         loading: s,
@@ -383,7 +383,7 @@ function D(e) {
                                       jumping: T,
                                       canCloseAllMessages: m,
                                       jumpTo: P,
-                                      onCloseMessage: C
+                                      onCloseMessage: j
                                   })
                               ]
                           },

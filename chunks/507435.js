@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(953529);
+n.d(t, { Z: () => j }), n(953529);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -138,7 +138,7 @@ function O(e) {
         children: t
     });
 }
-function j(e) {
+function C(e) {
     let { className: t, data: n, onClickPollLink: l } = e,
         o = i.useMemo(
             () =>
@@ -211,7 +211,7 @@ function j(e) {
         ]
     });
 }
-function C(e) {
+function j(e) {
     var t;
     let { message: n, channel: l, compact: a, disableInteraction: u = !1 } = e,
         d = n.embeds[0],
@@ -225,7 +225,7 @@ function C(e) {
             messageId: n.id
         }),
         O = n.messageReference,
-        C = i.useCallback(() => {
+        j = i.useCallback(() => {
             null != O &&
                 c.Z.jumpToMessage({
                     channelId: O.channel_id,
@@ -246,13 +246,13 @@ function C(e) {
                           username: x.nick,
                           usernameHook: v(x),
                           title: _,
-                          titleOnClick: C
+                          titleOnClick: j
                       })
                   }),
-                  (0, r.jsx)(j, {
+                  (0, r.jsx)(C, {
                       className: y.embed,
                       data: p,
-                      onClickPollLink: u ? void 0 : C
+                      onClickPollLink: u ? void 0 : j
                   })
               ]
           });

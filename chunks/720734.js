@@ -521,7 +521,7 @@ class tu extends r.PureComponent {
                 this.handleOpenSettings();
             }),
             tr(this, 'handleOpenSettings', function () {
-                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : e6.a.getCurrentConfig({ location: 'Account' }, { autoTrackExposure: !0 }).jumpToVoice && eV.Z.isConnected() ? e7.oAB.VOICE : e7.oAB.ACCOUNT,
+                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, e6.Q)('Account').jumpToVoice && eV.Z.isConnected() ? e7.oAB.VOICE : e7.oAB.ACCOUNT,
                     t = arguments.length > 1 ? arguments[1] : void 0,
                     n = arguments.length > 2 ? arguments[2] : void 0;
                 _.Z.open(e, t, n);

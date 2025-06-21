@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -20,7 +20,7 @@ var r = n(255367),
     x = n(981631),
     v = n(388032),
     O = n(28007);
-function j(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,7 +45,7 @@ function j(e) {
     }
     return e;
 }
-let C = i.memo(function (e) {
+let j = i.memo(function (e) {
         let { channel: t, deleteChannel: n } = e,
             l = i.useRef(null),
             [[a, s], u] = i.useState([0, 0]),
@@ -82,7 +82,7 @@ let C = i.memo(function (e) {
         return (0, r.jsx)(o.animated.div, {
             ref: l,
             style: f,
-            children: (0, r.jsx)(S, j({}, e))
+            children: (0, r.jsx)(S, C({}, e))
         });
     }),
     S = i.memo(function (e) {
@@ -129,7 +129,7 @@ let C = i.memo(function (e) {
                     mentionCount: t.mentionCount,
                     toggleCollapsed: a,
                     channelState: t,
-                    children: [(0, r.jsx)(_.Z, { channel: o }), (0, r.jsx)(I, j({}, e)), 'nsfw' === t.type ? null : (0, r.jsx)(N, j({}, e))]
+                    children: [(0, r.jsx)(_.Z, { channel: o }), (0, r.jsx)(I, C({}, e)), 'nsfw' === t.type ? null : (0, r.jsx)(N, C({}, e))]
                 }),
                 children: t.collapsed
                     ? null
@@ -193,7 +193,7 @@ function N(e) {
             var n, i;
             return (0, r.jsx)(
                 c.P3F,
-                ((n = j({}, e)),
+                ((n = C({}, e)),
                 (i = i =
                     {
                         className: a()(O.collapseButton, { [O.collapsed]: t.collapsed }),

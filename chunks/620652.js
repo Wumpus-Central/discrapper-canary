@@ -1,21 +1,21 @@
 n.d(t, {
-    M: () => g,
+    M: () => f,
     Z: () => j
 });
 var i,
     r = n(255367),
-    o = n(73800),
-    a = n(120356),
-    s = n.n(a),
-    l = n(500923),
-    c = n.n(l),
+    l = n(73800),
+    o = n(120356),
+    s = n.n(o),
+    a = n(500923),
+    c = n.n(a),
     u = n(570140),
     d = n(960020),
     h = n(831244),
     p = n(815605),
     m = n(981631),
-    f = n(872333),
-    g = (((i = {})[(i.NORMAL = 20)] = 'NORMAL'), (i[(i.LARGE = 32)] = 'LARGE'), i);
+    g = n(872333),
+    f = (((i = {})[(i.NORMAL = 20)] = 'NORMAL'), (i[(i.LARGE = 32)] = 'LARGE'), i);
 let b = async (e) => {
     var t;
     let { effect: n } = e,
@@ -24,20 +24,20 @@ let b = async (e) => {
     return (r.assets[0].p = n.url), r;
 };
 function j(e) {
-    let { className: t, effect: n, onComplete: i, emojiSize: a = 20 } = e,
-        l = o.useRef(null),
-        h = a * p.Vz,
-        m = (h + a) / 2;
+    let { className: t, effect: n, onComplete: i, emojiSize: o = 20 } = e,
+        a = l.useRef(null),
+        h = o * p.Vz,
+        m = (h + o) / 2;
     return (
-        o.useEffect(() => {
+        l.useEffect(() => {
             let e;
             if (null != n)
                 return (
                     !(async function () {
-                        if (null != l.current) {
+                        if (null != a.current) {
                             let t = await b({ effect: n });
                             (e = c().loadAnimation({
-                                container: l.current,
+                                container: a.current,
                                 renderer: 'svg',
                                 loop: !1,
                                 autoplay: !0,
@@ -62,17 +62,17 @@ function j(e) {
                         null != e && e.destroy();
                     }
                 );
-        }, [i, n, a]),
+        }, [i, n, o]),
         (0, r.jsx)('div', {
-            className: f.effectsWrapper,
+            className: g.effectsWrapper,
             children: (0, r.jsx)('div', {
-                className: s()(f.effect, t),
+                className: s()(g.effect, t),
                 style: {
                     transform: 'translateY('.concat(m, 'px)'),
                     height: h,
                     width: h
                 },
-                ref: l
+                ref: a
             })
         })
     );

@@ -26,7 +26,7 @@ function E(e, t) {
             var e;
             return null != (e = p.Z.getGuildId()) ? e : void 0;
         }),
-        j = (0, i.e7)(
+        C = (0, i.e7)(
             [c.Z, u.Z, d.Z],
             () => {
                 let e = c.Z.getChannel(d.Z.getChannelId());
@@ -34,8 +34,8 @@ function E(e, t) {
             },
             []
         ),
-        C = (0, l.PZ)(e, O) && j,
-        S = n || C;
+        j = (0, l.PZ)(e, O) && C,
+        S = n || j;
     return r.useMemo(
         () =>
             S
@@ -43,7 +43,7 @@ function E(e, t) {
                       label: b.intl.string(b.t['HO/oXl']),
                       trackingArea: h.j_.VIEW,
                       onClick() {
-                          if ((null == t || t(h.j_.VIEW), C)) return void (0, a.X)(e.id);
+                          if ((null == t || t(h.j_.VIEW), j)) return void (0, a.X)(e.id);
                           (0, o.transitionToGlobalDiscovery)({
                               tab: _.GlobalDiscoveryTab.APPS,
                               applicationId: e.id,
@@ -68,6 +68,6 @@ function E(e, t) {
                         }
                     }
                   : void 0,
-        [e.id, C, S, E, y, x, v, t, O]
+        [e.id, j, S, E, y, x, v, t, O]
     );
 }

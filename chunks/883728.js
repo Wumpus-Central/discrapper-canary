@@ -1,17 +1,17 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var i = n(255367);
 n(73800);
 var r = n(374470),
-    o = n(239091);
-let a = (e) => {
-    let { facepileRef: t, goToThread: a, channel: s } = e;
+    l = n(239091);
+let o = (e) => {
+    let { facepileRef: t, goToThread: o, channel: s } = e;
     return {
         handleLeftClick: (e) => {
             var n;
-            ((0, r.k)(e.target) && (null == (n = t.current) ? void 0 : n.contains(e.target))) || a(s, e.shiftKey);
+            ((0, r.k)(e.target) && (null == (n = t.current) ? void 0 : n.contains(e.target))) || o(s, e.shiftKey);
         },
         handleRightClick: (e) =>
-            (0, o.jW)(e, async () => {
+            (0, l.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('77564'), n.e('86797')]).then(n.bind(n, 422200));
                 return (t) => {
                     var n, r;

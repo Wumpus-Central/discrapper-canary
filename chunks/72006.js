@@ -1,10 +1,10 @@
 n.d(t, {
     FZ: () => A,
-    Hl: () => M,
+    Hl: () => L,
     NJ: () => R,
     R8: () => D,
     Sq: () => N,
-    Wg: () => L,
+    Wg: () => M,
     Zn: () => I,
     c2: () => w,
     eE: () => k,
@@ -13,7 +13,7 @@ n.d(t, {
     lv: () => T,
     nR: () => P,
     q0: () => l.a,
-    x0: () => C,
+    x0: () => j,
     xb: () => F,
     yd: () => S
 }),
@@ -40,7 +40,7 @@ var r = n(399834),
     x = n.n(y),
     v = n(655000),
     O = n.n(v);
-function j(e, t, n, i) {
+function C(e, t, n, i) {
     let l = i.getCurrentContent(),
         a = null;
     null != e && (a = (l = l.createEntity(...e)).getLastCreatedEntityKey());
@@ -53,7 +53,7 @@ function j(e, t, n, i) {
         });
     return (l = r.Modifier.applyEntity(l, s, a)), r.EditorState.set(i, { currentContent: l });
 }
-function C(e, t, n, i) {
+function j(e, t, n, i) {
     let l,
         a,
         s = t.getCurrentContent(),
@@ -131,16 +131,16 @@ function T(e, t) {
                 (a.forEach((n) => {
                     let { type: i, start: l, end: a } = e,
                         o = e.getFullMatch();
-                    !n.processed && (n.type === i && n.start === l && n.text === o ? ((n.processed = !0), (r = !0)) : ((l >= n.start && l < n.end) || (a > n.start && a <= n.end)) && ((n.processed = !0), (t = j(null, n.start, n.end, t))));
+                    !n.processed && (n.type === i && n.start === l && n.text === o ? ((n.processed = !0), (r = !0)) : ((l >= n.start && l < n.end) || (a > n.start && a <= n.end)) && ((n.processed = !0), (t = C(null, n.start, n.end, t))));
                 }),
                 r)
             )
                 return;
             let i = n[e.type];
-            t = j([e.type, null != i && i.mutable ? 'MUTABLE' : 'IMMUTABLE', { token: e }], e.start, e.end, t);
+            t = C([e.type, null != i && i.mutable ? 'MUTABLE' : 'IMMUTABLE', { token: e }], e.start, e.end, t);
         }),
         a.forEach((e) => {
-            e.processed || (t = j(null, e.start, e.end, t));
+            e.processed || (t = C(null, e.start, e.end, t));
         }),
         t
     );
@@ -155,7 +155,7 @@ function A(e) {
 }
 function w(e, t) {
     let n = N(t);
-    return C(e, t, 0, n.length);
+    return j(e, t, 0, n.length);
 }
 function Z(e, t) {
     let n = t.getSelection();
@@ -171,17 +171,17 @@ function D(e) {
     let t = e.getSelection();
     return (t = (t = t.set('focusOffset', 0)).set('isBackward', !0)), r.EditorState.forceSelection(e, t);
 }
-function L(e) {
+function M(e) {
     let t = N(e),
         n = e.getSelection();
     return (n = (n = n.set('focusOffset', t.length)).set('isBackward', !1)), r.EditorState.forceSelection(e, n);
 }
-function M(e) {
+function L(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 512,
         n = N(e);
     if (n.length > t) {
         let i = e.getSelection();
-        (e = C('', e, t, n.length)), i.getAnchorOffset() > t && (i = i.set('anchorOffset', t)), i.getFocusOffset() > t && (i = i.set('focusOffset', t)), (e = r.EditorState.forceSelection(e, i));
+        (e = j('', e, t, n.length)), i.getAnchorOffset() > t && (i = i.set('anchorOffset', t)), i.getFocusOffset() > t && (i = i.set('focusOffset', t)), (e = r.EditorState.forceSelection(e, i));
     }
     return e;
 }

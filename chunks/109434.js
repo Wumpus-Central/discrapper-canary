@@ -5,10 +5,10 @@ n.d(t, {
     n(388685);
 var i = n(512722),
     r = n.n(i),
-    o = n(97519),
-    a = n(313361),
+    l = n(97519),
+    o = n(313361),
     s = n(697988),
-    l = n(683860),
+    a = n(683860),
     c = n(731965),
     u = n(442837),
     d = n(592125),
@@ -42,11 +42,11 @@ function m(e) {
     }
     return e;
 }
-let f = new Set(),
-    g = {
-        layoutType: a.X.LIST,
-        sortOrder: l.z.CREATION_DATE,
-        tagFilter: f,
+let g = new Set(),
+    f = {
+        layoutType: o.X.LIST,
+        sortOrder: a.z.CREATION_DATE,
+        tagFilter: g,
         scrollPosition: 0,
         tagSetting: s.z.MATCH_SOME
     };
@@ -73,7 +73,7 @@ class b {
                 (r[e] = m({}, i, t)), (0, c.j)(() => this.set({ channelStates: r }));
             }),
             (this.getChannelState = (e) => {
-                if (null == e) return g;
+                if (null == e) return f;
                 let { channelStates: t } = this.get(),
                     n = t[e];
                 if (null == n) {
@@ -82,7 +82,7 @@ class b {
                         (n = {
                             layoutType: t.getDefaultLayout(),
                             sortOrder: t.getDefaultSortOrder(),
-                            tagFilter: f,
+                            tagFilter: g,
                             scrollPosition: 0,
                             tagSetting: t.getDefaultTagSetting()
                         });
@@ -110,9 +110,9 @@ class b {
             });
     }
 }
-let j = (0, o.U)((e, t) => new b(e, t)),
+let j = (0, l.U)((e, t) => new b(e, t)),
     v = (e) => {
         let t = j();
-        return null == (0, u.e7)([d.Z], () => d.Z.getChannel(e)) ? g : t.getChannelState(e);
+        return null == (0, u.e7)([d.Z], () => d.Z.getChannel(e)) ? f : t.getChannelState(e);
     },
     O = () => j;

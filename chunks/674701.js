@@ -23,8 +23,8 @@ var r,
     x = n(594174),
     v = n(626135),
     O = n(51144),
-    j = n(479446),
-    C = n(795448),
+    C = n(479446),
+    j = n(795448),
     S = n(441623),
     I = n(317271),
     N = n(474936),
@@ -35,7 +35,7 @@ var r,
     Z = n(587862),
     R = (((r = {}).SYSTEM_MESSAGE = 'system_message'), (r.COACHMARK = 'coachmark'), r);
 function k(e) {
-    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: r, onMouseEnter: a, onMouseLeave: R, popoutPosition: k, analyticsPage: D, analyticsSection: L, glow: M, giftIntentSecondaryAction: U } = e,
+    let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: r, onMouseEnter: a, onMouseLeave: R, popoutPosition: k, analyticsPage: D, analyticsSection: M, glow: L, giftIntentSecondaryAction: U } = e,
         F = (0, c.e7)([x.default], () => x.default.getCurrentUser()),
         { analyticsLocations: B } = (0, h.ZP)(),
         G = (0, c.e7)([S.Z], () => S.Z.getFriendAnniversaryYears(r.id));
@@ -50,7 +50,7 @@ function k(e) {
             }
         });
     }, [t, n]);
-    let H = () => (t === N.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t['L2s/Nz'], { numberOfYears: G }) : (0, j.Ou)(t)),
+    let H = () => (t === N.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t['L2s/Nz'], { numberOfYears: G }) : (0, C.Ou)(t)),
         V = 'coachmark' === n,
         z = V ? Z.innerContentCoachmark : Z.innerContent,
         W = V ? Z.recipientUserAvatarCoachmark : Z.recipientUserAvatar,
@@ -63,13 +63,13 @@ function k(e) {
         $ = V ? Z.buttonTextSecondaryCoachmark : Z.buttonTextSecondary;
     return (0, i.jsx)('div', {
         className: o()(Z.content, {
-            [Z.outerGlow]: M,
+            [Z.outerGlow]: L,
             [Z.contentCoachmark]: V
         }),
         onMouseEnter: a,
         onMouseLeave: R,
         children: (0, i.jsxs)('div', {
-            className: o()(z, { [Z.innerGlow]: M }),
+            className: o()(z, { [Z.innerGlow]: L }),
             children: [
                 (0, i.jsxs)('div', {
                     className: Z.subContent,
@@ -99,12 +99,12 @@ function k(e) {
                                     variant: 'text-md/medium',
                                     color: V ? 'header-primary' : 'always-white',
                                     lineClamp: 3,
-                                    children: t === N.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t.BWJvAA, { friendUserName: O.ZP.getName(r) }) : (0, j.Ou)(t)
+                                    children: t === N.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t.BWJvAA, { friendUserName: O.ZP.getName(r) }) : (0, C.Ou)(t)
                                 }),
                                 (0, i.jsx)(d.Text, {
                                     className: Y,
                                     variant: 'text-sm/normal',
-                                    children: t === N.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t.S3fdq6, { numberOfYears: G }) : (0, j.Ou)(t)
+                                    children: t === N.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t.S3fdq6, { numberOfYears: G }) : (0, C.Ou)(t)
                                 })
                             ]
                         })
@@ -125,7 +125,7 @@ function k(e) {
                                         U === N.X2.VIEW_ALL
                                             ? ((0, y.uL)(T.Z5c.FRIENDS), m.Z.setSection(T.pJs.ALL))
                                             : U === N.X2.SEND_MESSAGE &&
-                                              ((0, C.PV)(r.id),
+                                              ((0, j.PV)(r.id),
                                               p.Z.openPrivateChannel({ recipientIds: r.id }).then(() => {
                                                   setTimeout(() => {
                                                       (0, b.PG)(A.X1.GIF, _.Ie.NORMAL),
@@ -169,7 +169,7 @@ function k(e) {
                                     analyticsLocations: B,
                                     analyticsObject: {
                                         page: D,
-                                        section: L,
+                                        section: M,
                                         object: T.qAy.BUTTON_CTA,
                                         objectType: T.Qqv.GIFT
                                     },

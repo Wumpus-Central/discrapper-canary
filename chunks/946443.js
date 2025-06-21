@@ -24,18 +24,18 @@ var r = n(255367),
     x = n(240126),
     v = n(791914),
     O = n(147522),
-    j = n(809780),
-    C = n(981631),
+    C = n(809780),
+    j = n(981631),
     S = n(388032),
     I = n(128406);
 function N(e) {
     var t, n, l, o, N, P, A;
-    let { setTab: w, onJump: Z, showTutorial: R, setSeenTutorial: k, closePopout: D, badgeState: L } = e,
-        M = i.useRef(null),
-        [U, F] = (0, j.ZP)(M),
+    let { setTab: w, onJump: Z, showTutorial: R, setSeenTutorial: k, closePopout: D, badgeState: M } = e,
+        L = i.useRef(null),
+        [U, F] = (0, C.ZP)(L),
         { loadState: B, channels: G } = U,
         { maybeLoadMore: H, markAllRead: V } = F;
-    (t = M),
+    (t = L),
         (n = U),
         (l = F),
         i.useLayoutEffect(() => {
@@ -59,9 +59,9 @@ function N(e) {
                 null != e && N.markChannelRead(e);
             };
             return (
-                b.S.subscribe(C.CkL.MARK_TOP_INBOX_CHANNEL_READ, e),
+                b.S.subscribe(j.CkL.MARK_TOP_INBOX_CHANNEL_READ, e),
                 () => {
-                    b.S.unsubscribe(C.CkL.MARK_TOP_INBOX_CHANNEL_READ, e);
+                    b.S.unsubscribe(j.CkL.MARK_TOP_INBOX_CHANNEL_READ, e);
                 }
             );
         }, [N, o.channels]),
@@ -78,7 +78,7 @@ function N(e) {
             );
         }, [P]),
         i.useEffect(() => {
-            _.default.track(C.rMx.OPEN_POPOUT, { type: 'Inbox' });
+            _.default.track(j.rMx.OPEN_POPOUT, { type: 'Inbox' });
         }, []),
         i.useEffect(
             () => (
@@ -91,7 +91,7 @@ function N(e) {
         );
     let z = (0, u.e7)([f.Z], () => f.Z.messageGroupSpacing),
         W = (0, g.Us)({ location: 'Unreads' }),
-        K = (0, h.Z)('unreads', M);
+        K = (0, h.Z)('unreads', L);
     if (0 === G.length) {
         return (0, r.jsxs)('div', {
             className: a()(I.container, { [I.widerInbox]: W }),
@@ -99,7 +99,7 @@ function N(e) {
                 (0, r.jsx)(v.Z, {
                     tab: d.X.UNREADS,
                     setTab: w,
-                    badgeState: L,
+                    badgeState: M,
                     closePopout: D
                 }),
                 (0, r.jsx)(x.Z, {
@@ -117,7 +117,7 @@ function N(e) {
             (0, r.jsx)(v.Z, {
                 tab: d.X.UNREADS,
                 setTab: w,
-                badgeState: L,
+                badgeState: M,
                 closePopout: D,
                 children: (0, r.jsx)(y.Z, {
                     type: 'top-header',
@@ -180,16 +180,16 @@ function N(e) {
                                 {
                                     ref: (e) => {
                                         var t;
-                                        (M.current = e), (i.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
+                                        (L.current = e), (i.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
                                     }
                                 },
                                 l
                             )),
                             (n = n =
                                 {
-                                    onScroll: B === j.jd.Done ? void 0 : H,
+                                    onScroll: B === C.jd.Done ? void 0 : H,
                                     className: I.scroller,
-                                    children: [R ? (0, r.jsx)(T, { setSeenTutorial: k }) : null, (0, O.Z)(G, F, Z), B === j.jd.Done ? null : (0, r.jsx)(p.$jN, { className: I.spinner })]
+                                    children: [R ? (0, r.jsx)(T, { setSeenTutorial: k }) : null, (0, O.Z)(G, F, Z), B === C.jd.Done ? null : (0, r.jsx)(p.$jN, { className: I.spinner })]
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

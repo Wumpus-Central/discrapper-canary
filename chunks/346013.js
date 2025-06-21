@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(388685);
+n.d(t, { Z: () => L }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -20,8 +20,8 @@ var r = n(255367),
     x = n(884902),
     v = n(670188),
     O = n(695346),
-    j = n(271383),
-    C = n(594174),
+    C = n(271383),
+    j = n(594174),
     S = n(768581),
     I = n(900849),
     N = n(506071),
@@ -57,7 +57,7 @@ function D(e) {
     }
     return e;
 }
-function L(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -75,12 +75,12 @@ function L(e, t) {
         e
     );
 }
-function M(e) {
+function L(e) {
     var t, n, l;
-    let { embedUrl: M, message: U, channel: F } = e,
+    let { embedUrl: L, message: U, channel: F } = e,
         B = i.useRef(null),
         G = i.useRef(null),
-        H = (0, P.J)(M, U),
+        H = (0, P.J)(L, U),
         { setPopout: V } = (0, y.Z)(U.id, w.d$),
         z = (0, E.qo)(U, F, V, !0),
         W = O.QK.useSetting(),
@@ -89,14 +89,14 @@ function M(e) {
         [q, Q] = i.useState((null == H ? void 0 : H.coverImage) == null),
         J = (0, c.e7)([d.Z], () => d.Z.useReducedMotion),
         $ = (0, c.e7)(
-            [j.ZP, C.default],
+            [C.ZP, j.default],
             () => {
                 var e;
-                return j.ZP.isMember(null == H ? void 0 : H.guildId, null == (e = C.default.getCurrentUser()) ? void 0 : e.id);
+                return C.ZP.isMember(null == H ? void 0 : H.guildId, null == (e = j.default.getCurrentUser()) ? void 0 : e.id);
             },
             [H]
         ),
-        ee = (0, c.e7)([j.ZP], () => ((null == H ? void 0 : H.authorId) != null ? j.ZP.getMember(H.guildId, H.authorId) : null)),
+        ee = (0, c.e7)([C.ZP], () => ((null == H ? void 0 : H.authorId) != null ? C.ZP.getMember(H.guildId, H.authorId) : null)),
         et = (0, f.Z)((null == ee ? void 0 : ee.avatarDecoration) != null ? (null == ee ? void 0 : ee.avatarDecoration) : null == H || null == (t = H.user) ? void 0 : t.avatarDecoration),
         [en, er, ei] = i.useMemo(() => {
             var e;
@@ -221,7 +221,7 @@ function M(e) {
                                             onMouseLeave: ef,
                                             children: (0, r.jsx)(
                                                 u.qEK,
-                                                L(D({}, e), {
+                                                M(D({}, e), {
                                                     ref: G,
                                                     size: u.EFr.SIZE_40,
                                                     src: em,
@@ -283,7 +283,7 @@ function M(e) {
                                                                   children: (e) =>
                                                                       (0, r.jsx)(
                                                                           u.rz2,
-                                                                          L(D({}, e), {
+                                                                          M(D({}, e), {
                                                                               ref: B,
                                                                               name: H.authorName,
                                                                               color: en,

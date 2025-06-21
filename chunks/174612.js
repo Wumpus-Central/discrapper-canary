@@ -11,7 +11,6 @@ e.exports = {
     disabled: 'disabled_e4503a',
     firstChannel: 'firstChannel_e4503a',
     lastChannel: 'lastChannel_e4503a',
-    separator: 'separator_e4503a',
     channelInfo: 'channelInfo_e4503a',
     channelActions: 'channelActions_e4503a',
     channelSubtitles: 'channelSubtitles_e4503a',
@@ -19,6 +18,7 @@ e.exports = {
     subtitleSeparator: 'subtitleSeparator_e4503a',
     channelName: 'channelName_e4503a',
     topic: 'topic_e4503a',
+    separator: 'separator_e4503a',
     viewChannelButton: 'viewChannelButton_e4503a',
     checkboxInner: 'checkboxInner_e4503a',
     scrollerInner: 'scrollerInner_e4503a'

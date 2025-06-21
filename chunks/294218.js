@@ -20,8 +20,8 @@ var r = n(255367),
     x = n(689674),
     v = n(438075),
     O = n(963550),
-    j = n(845080),
-    C = n(295790),
+    C = n(845080),
+    j = n(295790),
     S = n(145807),
     I = n(56744),
     N = n(981631),
@@ -71,7 +71,7 @@ function A(e, t) {
 }
 let w = i.memo(function (e) {
     var t, n;
-    let { message: i, compact: l = !1, className: w, onContextMenu: Z, onClick: R, hideSimpleEmbedContent: k = !0, channel: D, isGroupStart: L, animateAvatar: M, subscribeToComponentDispatch: U, renderThreadAccessory: F, trackAnnouncementViews: B = !1 } = e,
+    let { message: i, compact: l = !1, className: w, onContextMenu: Z, onClick: R, hideSimpleEmbedContent: k = !0, channel: D, isGroupStart: M, animateAvatar: L, subscribeToComponentDispatch: U, renderThreadAccessory: F, trackAnnouncementViews: B = !1 } = e,
         G = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -131,7 +131,7 @@ let w = i.memo(function (e) {
                 disableInteraction: H,
                 childrenRepliedMessage: (0, I.Z)(i, D, Y, X, l),
                 childrenExecutedCommand: (0, S.Z)(i, D, l),
-                childrenHeader: (0, j.Z)(
+                childrenHeader: (0, C.Z)(
                     A(P({}, e), {
                         guildId: D.guild_id,
                         author: Q,
@@ -140,7 +140,7 @@ let w = i.memo(function (e) {
                 ),
                 childrenAccessories: e.hideAccessories ? void 0 : (0, v.Q)(e, K),
                 childrenMessageContent: (0, O.Z)(e, W),
-                childrenSystemMessage: (0, C.Z)(A(P({}, e), { disableInteraction: H })),
+                childrenSystemMessage: (0, j.Z)(A(P({}, e), { disableInteraction: H })),
                 onContextMenu: Z,
                 onClick: R,
                 hasThread: F && null != J && i.hasFlag(N.iLy.HAS_THREAD),

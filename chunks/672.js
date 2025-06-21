@@ -1,7 +1,6 @@
 e.exports = {
     barBase: 'barBase__0f481',
     barButtonBase: 'barButtonBase__0f481',
-    barButtonAlt: 'barButtonAlt__0f481 barButtonBase__0f481',
     barButtonIcon: 'barButtonIcon__0f481',
     barWithAppLauncherButton: 'barWithAppLauncherButton__0f481',
     barWithAppsDMsUI: 'barWithAppsDMsUI__0f481',
@@ -14,6 +13,7 @@ e.exports = {
     containerMarginTop: 'containerMarginTop__0f481',
     barButtonMain: 'barButtonMain__0f481 barButtonBase__0f481',
     span: 'span__0f481',
+    barButtonAlt: 'barButtonAlt__0f481 barButtonBase__0f481',
     tooltip: 'tooltip__0f481',
     tooltipEmojiName: 'tooltipEmojiName__0f481',
     imageContent: 'imageContent__0f481',

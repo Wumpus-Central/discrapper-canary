@@ -92,7 +92,7 @@ function O(e) {
             context: a
         });
     }, [t, n, a]);
-    let j = i.useMemo(() => (x ? _.intl.string(_.t['z4du/P']) : _.intl.string(_.t.gg5Dp6)), [x]);
+    let C = i.useMemo(() => (x ? _.intl.string(_.t['z4du/P']) : _.intl.string(_.t.gg5Dp6)), [x]);
     return (0, r.jsxs)(s.Y0X, {
         transitionState: p,
         'aria-labelledby': g,
@@ -116,7 +116,7 @@ function O(e) {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
                         className: b.subheader,
-                        children: j
+                        children: C
                     }),
                     null != o && (0, r.jsx)(E, { attachment: o }),
                     null != c && (0, r.jsx)(y, { embed: c })

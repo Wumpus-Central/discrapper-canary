@@ -20,7 +20,7 @@ var i = n(442837),
     y = n(388032);
 function x(e) {
     var t, n;
-    let { application: x, customId: v, customLink: O, embedUrl: j, referrerId: C } = e,
+    let { application: x, customId: v, customLink: O, embedUrl: C, referrerId: j } = e,
         S = null == x || null == (t = x.bot) ? void 0 : t.id,
         I = (0, c.ms)({
             context: { type: 'contextless' },
@@ -40,10 +40,10 @@ function x(e) {
         R = (0, i.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
         k = (0, b.Z)(),
         D = w === E.jy.CAN_LAUNCH,
-        L = null != v ? v : O.customId,
-        M = [];
+        M = null != v ? v : O.customId,
+        L = [];
     D &&
-        M.push({
+        L.push({
             label: null == Z ? y.intl.string(y.t.cnBQPD) : y.intl.string(y.t.VJlc0d),
             trackingArea: p.j_.PLAY,
             onClick() {
@@ -52,8 +52,8 @@ function x(e) {
                     applicationId: x.id,
                     isStart: null == Z,
                     embeddedActivitiesManager: k,
-                    customId: L,
-                    referrerId: C,
+                    customId: M,
+                    referrerId: j,
                     analyticsLocations: P
                 });
             },
@@ -61,7 +61,7 @@ function x(e) {
         }),
         T &&
             !D &&
-            M.push({
+            L.push({
                 label: y.intl.string(y.t.JeK1Wl),
                 trackingArea: p.j_.PLAY,
                 onClick() {
@@ -69,17 +69,17 @@ function x(e) {
                         appId: x.id,
                         botId: S,
                         analyticsLocations: P,
-                        customId: L,
-                        referrerId: C
+                        customId: M,
+                        referrerId: j
                     });
                 }
             });
     let U = (0, m.z)(x);
     return (
-        null != M && null != U && M.push(U),
+        null != L && null != U && L.push(U),
         (0, r.jsx)(d.W, {
-            actions: M,
-            embedUrl: j,
+            actions: L,
+            embedUrl: C,
             header: x.name,
             iconSrc: h.ZP.getApplicationIconURL({
                 id: x.id,
@@ -92,8 +92,8 @@ function x(e) {
             trackingConfig: {
                 id: x.id,
                 linkType: u.U.CUSTOM_ACTIVITY_LINK,
-                referrerId: C,
-                activityCustomId: L
+                referrerId: j,
+                activityCustomId: M
             }
         })
     );

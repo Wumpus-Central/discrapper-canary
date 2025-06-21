@@ -19,7 +19,7 @@ let p = (e) => {
                 items: x,
                 hasMore: v,
                 cursor: O,
-                errored: j
+                errored: C
             } = (0, i.cj)([c.Z], () => ({
                 initialized: c.Z.initialized,
                 loading: c.Z.loading,
@@ -28,7 +28,7 @@ let p = (e) => {
                 cursor: c.Z.cursor,
                 errored: c.Z.errored
             })),
-            { roleFilter: C, everyoneFilter: S } = (0, i.cj)([o.Z], () => ({
+            { roleFilter: j, everyoneFilter: S } = (0, i.cj)([o.Z], () => ({
                 everyoneFilter: o.Z.everyoneFilter,
                 roleFilter: o.Z.roleFilter
             }));
@@ -39,9 +39,9 @@ let p = (e) => {
         let I = (0, a.Z)();
         r.useEffect(
             () => () => {
-                p ? !I() && (j || x.length > 100) && (0, s.jF)() : n && x.length > 100 && (0, s.jF)();
+                p ? !I() && (C || x.length > 100) && (0, s.jF)() : n && x.length > 100 && (0, s.jF)();
             },
-            [n, x, p, I, j]
+            [n, x, p, I, C]
         ),
             r.useEffect(() => {
                 let e = h && t;
@@ -49,24 +49,24 @@ let p = (e) => {
                     (0, s.jk)({
                         limit: null != f ? f : m ? 8 : 20,
                         with_mentions: m,
-                        roles_filter: C,
+                        roles_filter: j,
                         everyone_filter: S
                     });
-            }, [E, h, t, m, C, S, f]);
+            }, [E, h, t, m, j, S, f]);
         let N = r.useCallback(
             async (e) => {
                 !g.current &&
                     E &&
                     v &&
                     null != O &&
-                    (e || !j) &&
+                    (e || !C) &&
                     ((g.current = !0),
                     b(!0),
                     await (0, s.jk)(
                         {
                             after: O,
                             with_mentions: m,
-                            roles_filter: C,
+                            roles_filter: j,
                             everyone_filter: S,
                             limit: m ? 8 : 20
                         },
@@ -76,7 +76,7 @@ let p = (e) => {
                     ),
                     b(!1));
             },
-            [E, v, O, j, m, C, S]
+            [E, v, O, C, m, j, S]
         );
         return {
             initialized: E,
@@ -88,7 +88,7 @@ let p = (e) => {
             setReadNotifItemToAcked: (e) => {
                 e.acked || (e.acked = !0);
             },
-            errored: j
+            errored: C
         };
     },
     m = () => {

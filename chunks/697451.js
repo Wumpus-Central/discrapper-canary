@@ -20,8 +20,8 @@ var r = n(255367),
     x = n(581364),
     v = n(592180),
     O = n(726033),
-    j = n(598077),
-    C = n(594174),
+    C = n(598077),
+    j = n(594174),
     S = n(768581),
     I = n(585483),
     N = n(55935),
@@ -57,7 +57,7 @@ function D(e) {
     }
     return e;
 }
-function L(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -75,7 +75,7 @@ function L(e, t) {
         e
     );
 }
-function M(e) {
+function L(e) {
     let { width: t = 6, height: n = 10, color: i = 'currentColor', className: l, foreground: a } = e;
     return (0, r.jsx)('svg', {
         className: l,
@@ -98,9 +98,9 @@ function U(e, t, n, i, l, o) {
     if ((m && null == d.activityInstance) || h || g)
         return (0, r.jsx)('div', {
             className: k.replyBadge,
-            children: (0, r.jsx)(M, { className: k.commandIcon })
+            children: (0, r.jsx)(L, { className: k.commandIcon })
         });
-    let j =
+    let C =
             null !=
             (u = S.ZP.getGuildMemberAvatarURL({
                 avatar: null != (s = i.guildMemberAvatar) ? s : void 0,
@@ -109,7 +109,7 @@ function U(e, t, n, i, l, o) {
             }))
                 ? u
                 : void 0,
-        C = () =>
+        j = () =>
             (function (e) {
                 let { user: t, guildId: n, guildAvatar: i, onClick: l, onContextMenu: o, onMouseDown: s, ref: c } = e;
                 return (0, r.jsx)('img', {
@@ -127,7 +127,7 @@ function U(e, t, n, i, l, o) {
             })({
                 user: t,
                 guildId: f.guild_id,
-                guildAvatar: j,
+                guildAvatar: C,
                 onClick: 1 === n ? x : E,
                 onContextMenu: 1 === n ? v : y,
                 ref: o
@@ -140,9 +140,9 @@ function U(e, t, n, i, l, o) {
               shouldShow: I,
               position: 'right',
               onRequestClose: O,
-              children: C
+              children: j
           })
-        : C();
+        : j();
 }
 function F(e, t, n, i, l) {
     let { message: a, channel: o, showUsernamePopout: s, showTargetUsernamePopout: c, onClickUsername: u, onUserContextMenu: d, onClickTargetUsername: p, onTargetUserContextMenu: m, onPopoutRequestClose: f } = e;
@@ -176,17 +176,17 @@ function H(e) {
     let n,
         { message: l, channel: o } = e,
         { analyticsLocations: c } = (0, E.ZP)(b.Z.EXECUTED_COMMAND),
-        f = (0, d.e7)([C.default], () => C.default.getCurrentUser()),
+        f = (0, d.e7)([j.default], () => j.default.getCurrentUser()),
         S = i.useRef(null),
         P = i.useRef(null),
-        M = i.useMemo(
+        L = i.useMemo(
             () => (e, t, n) => (
                 s()(null != t, 'ExecutedCommand: user cannot be undefined'),
                 s()(null != f, 'ExecutedCommand: currentUser cannot be undefined'),
                 s()(null != o, 'ExecutedCommand: channel cannot be undefined'),
                 (0, r.jsx)(
                     O.Z,
-                    L(D({}, e), {
+                    M(D({}, e), {
                         user: t,
                         currentUser: f,
                         guildId: o.guild_id,
@@ -203,7 +203,7 @@ function H(e) {
                 s()(null != o, 'ExecutedCommand: channel cannot be null'),
                 (0, r.jsx)(
                     A.Z,
-                    L(D({}, e), {
+                    M(D({}, e), {
                         channel: o,
                         messageId: l.id,
                         interactionData: l.interactionData
@@ -213,7 +213,7 @@ function H(e) {
             [o, l.id, l.interactionData]
         ),
         V = (0, x.t0)(l),
-        z = (null == V ? void 0 : V.type) === m.B8.APPLICATION_COMMAND && null != V.target_user ? new j.Z(V.target_user) : null,
+        z = (null == V ? void 0 : V.type) === m.B8.APPLICATION_COMMAND && null != V.target_user ? new C.Z(V.target_user) : null,
         W = (null == V ? void 0 : V.type) === m.B8.APPLICATION_COMMAND && null != l.messageReference && null != e.renderTargetMessage,
         K = (0, T.Sw)(null == (t = l.interaction) ? void 0 : t.user, o),
         Y = (0, T.Sw)(z, o),
@@ -222,8 +222,8 @@ function H(e) {
         Q = l.interaction;
     if (null == Q || null == K) return null;
     let J = () => {
-        let t = U(e, Q.user, 0, K, (e) => M(e, Q.user, [b.Z.AVATAR]), S),
-            n = F(e, Q.user, 0, K, (e) => M(e, Q.user));
+        let t = U(e, Q.user, 0, K, (e) => L(e, Q.user, [b.Z.AVATAR]), S),
+            n = F(e, Q.user, 0, K, (e) => L(e, Q.user));
         return (0, r.jsxs)(
             i.Fragment,
             {
@@ -272,7 +272,7 @@ function H(e) {
                             if (l.type === Z.uaV.CHAT_INPUT_COMMAND || l.type === Z.uaV.INTERACTION_PREMIUM_UPSELL)
                                 return (0, r.jsx)(
                                     p.P3F,
-                                    L(D({}, i), {
+                                    M(D({}, i), {
                                         tag: 'span',
                                         onClick: o,
                                         innerRef: n,
@@ -301,7 +301,7 @@ function H(e) {
                                 let e = (0, y.XZ)(c);
                                 return (0, r.jsx)(
                                     p.P3F,
-                                    L(D({}, i), {
+                                    M(D({}, i), {
                                         tag: 'span',
                                         onClick: () => {
                                             I.S.dispatchToLastSubscribed(Z.CkL.OPEN_APP_LAUNCHER, { applicationId: l.applicationId });
@@ -340,8 +340,8 @@ function H(e) {
                           (0, r.jsx)(B, {}),
                           (0, r.jsx)(() => {
                               if (null == z) return null;
-                              let t = U(e, z, 1, Y, (e) => M(e, z, [b.Z.AVATAR]), S),
-                                  n = F(e, z, 1, Y, (e) => M(e, z));
+                              let t = U(e, z, 1, Y, (e) => L(e, z, [b.Z.AVATAR]), S),
+                                  n = F(e, z, 1, Y, (e) => L(e, z));
                               return (0, r.jsxs)(
                                   i.Fragment,
                                   {

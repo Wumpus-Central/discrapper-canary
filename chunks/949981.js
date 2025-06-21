@@ -20,11 +20,11 @@ function y(e) {
     let t,
         { invite: n, message: l, currentUserId: y, onTransitionToInviteChannel: x, onAcceptInstantInvite: v } = e,
         O = y === l.author.id,
-        j = n.state === _.r2o.ACCEPTING,
-        C = (0, o.e7)([m.Z], () => (null != n.channel ? m.Z.getChannel(n.channel.id) : null), [n]);
-    a()(null == C || C.isPrivate(), 'must be a private channel');
+        C = n.state === _.r2o.ACCEPTING,
+        j = (0, o.e7)([m.Z], () => (null != n.channel ? m.Z.getChannel(n.channel.id) : null), [n]);
+    a()(null == j || j.isPrivate(), 'must be a private channel');
     let { analyticsLocations: S } = (0, u.ZP)(c.Z.INVITE_EMBED),
-        I = null != C,
+        I = null != j,
         N = i.useCallback(() => {
             let e = 'noop';
             I ? (x(), (e = 'transition')) : (v(), (e = 'accept')),
@@ -38,18 +38,18 @@ function y(e) {
                     S
                 );
         }, [n, l, S, I, x, v]);
-    if (null == C) {
+    if (null == j) {
         if (null == n.channel) return (0, r.jsx)(g.Z, {});
-        (C = (0, p.jD)(n.channel)), (t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []);
+        (j = (0, p.jD)(n.channel)), (t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []);
     } else {
-        t = C.recipients.reduce((e, t) => {
+        t = j.recipients.reduce((e, t) => {
             let n = f.default.getUser(t);
             return null != n && e.push(n), e;
         }, []);
         let e = f.default.getCurrentUser();
         I && null != e && t.push(e);
     }
-    let T = C.name;
+    let T = j.name;
     (null == T || '' === T) &&
         (T =
             t.length > 0
@@ -73,7 +73,7 @@ function y(e) {
                             className: E.headerLine,
                             children: [
                                 (0, r.jsx)(d.Z.Icon, {
-                                    channel: C,
+                                    channel: j,
                                     onClick: I ? N : void 0
                                 }),
                                 (0, r.jsx)(d.Z.Info, {
@@ -85,7 +85,7 @@ function y(e) {
                         }),
                         (0, r.jsx)(d.Z.Button, {
                             onClick: N,
-                            submitting: j,
+                            submitting: C,
                             isDisabled: I,
                             color: A,
                             children: P

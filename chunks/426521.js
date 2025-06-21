@@ -20,8 +20,8 @@ var r = n(255367),
     x = n(833592),
     v = n(497089),
     O = n(178480),
-    j = n(418316),
-    C = n(382865),
+    C = n(418316),
+    j = n(382865),
     S = n(526146),
     I = n(400565),
     N = n(148789),
@@ -69,7 +69,7 @@ function D(e) {
         })
     });
 }
-function L(e) {
+function M(e) {
     let { item: t } = e,
         n = R,
         i = A.intl.string(A.t.SJTHJS);
@@ -93,7 +93,7 @@ function L(e) {
         })
     );
 }
-function M(e) {
+function L(e) {
     let { applicationId: t } = e,
         n = (0, l.e7)([u.Z], () => u.Z.getApplication(t));
     return null == n ? (0, r.jsx)('div', {}) : (0, r.jsx)(m.Z, { application: n }, n.id);
@@ -172,9 +172,9 @@ let U = i.memo(function (e) {
                   applicationId: l.applicationId
               }));
         let _ = null != l.local_id,
-            C = (0, j.Z)({
+            j = (0, C.Z)({
                 item: l,
-                renderApplication: (e) => (0, r.jsx)(M, { applicationId: e })
+                renderApplication: (e) => (0, r.jsx)(L, { applicationId: e })
             }),
             { emoji_id: A, emoji_name: Z } = l,
             R =
@@ -191,7 +191,7 @@ let U = i.memo(function (e) {
                 (0, r.jsxs)(a.kL8, {
                     className: w.rowContent,
                     focusProps: { offset: 4 },
-                    'aria-label': C,
+                    'aria-label': j,
                     onClick: h,
                     children: [
                         m ? null : (0, r.jsx)('div', { className: w.unread }),
@@ -199,11 +199,11 @@ let U = i.memo(function (e) {
                         (0, r.jsxs)('div', {
                             className: w.body,
                             children: [
-                                'lifecycle_item' === l.type && null != l.item_enum && (0, r.jsx)(L, { item: l }),
+                                'lifecycle_item' === l.type && null != l.item_enum && (0, r.jsx)(M, { item: l }),
                                 (0, r.jsxs)(a.Text, {
                                     variant: 'text-md/normal',
                                     color: m ? 'text-muted' : 'text-normal',
-                                    children: ['string' != typeof C ? C : p.Z.parse(C), R]
+                                    children: ['string' != typeof j ? j : p.Z.parse(j), R]
                                 }),
                                 (null == (t = l.message) ? void 0 : t.content) != null ? (0, r.jsx)(k, { item: l }) : null,
                                 null != l.callout ? (0, r.jsx)(D, { item: l }) : null,
@@ -225,7 +225,7 @@ let U = i.memo(function (e) {
         let { items: t } = e,
             n = h.d$.useSetting();
         return (
-            (0, C.c)(t),
+            (0, j.c)(t),
             (0, r.jsx)(r.Fragment, {
                 children: t.map((e) =>
                     (0, r.jsx)(

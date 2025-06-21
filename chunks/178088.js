@@ -1,4 +1,4 @@
-n.d(t, { k: () => C }), n(388685);
+n.d(t, { k: () => j }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(740442),
@@ -20,9 +20,9 @@ var r = n(255367),
     x = n(946443),
     v = n(264233),
     O = n(981631),
-    j = n(388032);
-function C(e) {
-    let { onOpen: t, onClose: n, children: C, badgeState: S, popoutPosition: I, popoutAlign: N, targetElementRef: T, spacing: P, dialogClassName: A } = e,
+    C = n(388032);
+function j(e) {
+    let { onOpen: t, onClose: n, children: j, badgeState: S, popoutPosition: I, popoutAlign: N, targetElementRef: T, spacing: P, dialogClassName: A } = e,
         { analyticsLocations: w } = (0, u.ZP)(c.Z.NOTIFICATION_CENTER),
         [Z, R] = i.useState(!1),
         [k, D] = [
@@ -41,7 +41,7 @@ function C(e) {
                 );
             }, [])
         ],
-        { showTutorial: L, setSeenTutorial: M } = (function (e) {
+        { showTutorial: M, setSeenTutorial: L } = (function (e) {
             let t = (0, a.e7)([h.Z], () => {
                     var e, t;
                     return null != (t = null == (e = h.Z.settings.inbox) ? void 0 : e.viewedTutorial) && t;
@@ -91,7 +91,7 @@ function C(e) {
             onRequestClose: U,
             renderPopout: function () {
                 return (0, r.jsx)(s.VqE, {
-                    'aria-label': j.intl.string(j.t.GSmTKC),
+                    'aria-label': C.intl.string(C.t.GSmTKC),
                     className: A,
                     children:
                         k === o.X.FOR_YOU
@@ -133,8 +133,8 @@ function C(e) {
                                           children: (0, r.jsx)(x.Z, {
                                               setTab: D,
                                               onJump: z,
-                                              showTutorial: L,
-                                              setSeenTutorial: M,
+                                              showTutorial: M,
+                                              setSeenTutorial: L,
                                               closePopout: U,
                                               badgeState: S
                                           })
@@ -146,7 +146,7 @@ function C(e) {
             clickTrap: !0,
             children: (e, t) => {
                 let { isShown: n } = t;
-                return C(F, n, e, H);
+                return j(F, n, e, H);
             }
         })
     });

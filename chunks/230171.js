@@ -28,8 +28,8 @@ var r = n(255367),
     x = n(914010),
     v = n(594174),
     O = n(768581),
-    j = n(433534),
-    C = n(506895),
+    C = n(433534),
+    j = n(506895),
     S = n(758199),
     I = n(943762),
     N = n(914498),
@@ -48,10 +48,10 @@ function R(e) {
             icon: t.icon,
             bot: b
         }),
-        { staticBannerSrc: j, videoBannerSrc: I, bannerAspectRatio: Z } = (0, P.E)(t),
+        { staticBannerSrc: C, videoBannerSrc: I, bannerAspectRatio: Z } = (0, P.E)(t),
         R = (0, o.e7)([E.default], () => (null != s ? s : E.default.getId()), [s]),
-        { analyticsLocations: L } = (0, p.ZP)(d.Z.APP_MESSAGE_EMBED),
-        { currentChannelId: M, instanceId: U, isCurrentlyInInstance: F, canLaunchInChannel: B } = (0, C.c)(t.id),
+        { analyticsLocations: M } = (0, p.ZP)(d.Z.APP_MESSAGE_EMBED),
+        { currentChannelId: L, instanceId: U, isCurrentlyInInstance: F, canLaunchInChannel: B } = (0, j.c)(t.id),
         G = (0, u.Z)(),
         H = (0, h.ms)({
             context: { type: 'contextless' },
@@ -70,13 +70,13 @@ function R(e) {
                         trackingArea: N.j_.PLAY,
                         onClick() {
                             (0, c.G6)({
-                                channelId: null != M ? M : void 0,
+                                channelId: null != L ? L : void 0,
                                 applicationId: t.id,
                                 isStart: null == U,
                                 embeddedActivitiesManager: G,
                                 customId: a,
                                 referrerId: R,
-                                analyticsLocations: L
+                                analyticsLocations: M
                             });
                         },
                         disabledReason: F ? w.intl.string(w.t.wJNK8P) : void 0
@@ -90,7 +90,7 @@ function R(e) {
                             (0, m.W)({
                                 appId: t.id,
                                 botId: y,
-                                analyticsLocations: L,
+                                analyticsLocations: M,
                                 customId: a,
                                 referrerId: R
                             });
@@ -99,11 +99,11 @@ function R(e) {
                 null != W && e.push(W),
                 e
             );
-        }, [z, V, W, U, F, M, t.id, G, a, R, L, y]),
+        }, [z, V, W, U, F, L, t.id, G, a, R, M, y]),
         Y = x ? (0, r.jsx)(D, { app: t }) : (0, r.jsx)(k, { app: t });
     return (0, r.jsx)(S.W, {
         title: _,
-        staticBannerSrc: j,
+        staticBannerSrc: C,
         videoBannerSrc: I,
         bannerAspectRatio: Z,
         iconSrc: v,
@@ -123,7 +123,7 @@ function k(e) {
     var t, n, a;
     let { app: c } = e,
         u =
-            (0, j.Eb)({
+            (0, C.Eb)({
                 customInstallUrl: c.customInstallUrl,
                 installParams: c.installParams,
                 integrationTypesConfig: c.integrationTypesConfig

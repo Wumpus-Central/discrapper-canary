@@ -1,19 +1,19 @@
-n.d(t, { b: () => E });
+n.d(t, { b: () => d });
 var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(846027),
     o = n(468026),
     a = n(388032);
-let s = null;
-function c() {
-    null !== s && (0, i.Mr3)(s), (s = null);
+let c = null;
+function s() {
+    null !== c && (0, i.Mr3)(c), (c = null);
 }
 function u() {
     l.Z.setSilenceWarning(!1);
 }
-function E() {
-    s = (0, i.h7j)((e) =>
+function d() {
+    c = (0, i.h7j)((e) =>
         (0, r.jsx)(
             o.default,
             (function (e) {
@@ -46,7 +46,7 @@ function E() {
                     body: a.intl.string(a.t.K1gWXl),
                     secondaryConfirmText: a.intl.string(a.t.XAiAgI),
                     onConfirmSecondary: u,
-                    onConfirm: c,
+                    onConfirm: s,
                     confirmText: a.intl.string(a.t.BddRzc)
                 },
                 e

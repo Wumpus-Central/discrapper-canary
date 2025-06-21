@@ -16,13 +16,13 @@ e.exports = {
     buttonChevron: 'buttonChevron__37e49',
     micButtonWithMenu: 'micButtonWithMenu__37e49',
     hasColorGlow: 'hasColorGlow__37e49',
+    buttonChevronIcon: 'buttonChevronIcon__37e49',
     voiceFilterWarning: 'voiceFilterWarning__37e49',
     buttons: 'buttons__37e49',
     tooltipWithSubtext: 'tooltipWithSubtext__37e49',
     containerListenAlongVisible: 'containerListenAlongVisible__37e49',
     containerQuestBarVisible: 'containerQuestBarVisible__37e49',
     containerRtcOpened: 'containerRtcOpened__37e49',
-    buttonChevronIcon: 'buttonChevronIcon__37e49',
     iconForeground: 'iconForeground__37e49',
     plated: 'plated__37e49'
 };

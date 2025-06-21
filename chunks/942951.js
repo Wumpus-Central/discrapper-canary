@@ -1,10 +1,10 @@
 n.d(t, { l: () => p });
 var i = n(255367),
     r = n(73800),
-    o = n(481060),
-    a = n(100527),
+    l = n(481060),
+    o = n(100527),
     s = n(906732),
-    l = n(402235),
+    a = n(402235),
     c = n(670188),
     u = n(592125),
     d = n(91047);
@@ -34,10 +34,10 @@ function h(e) {
     return e;
 }
 function p(e) {
-    let { user: t, channelId: n, guildId: p, messageId: m, stopPropagation: f = !1, ariaLabel: g } = e,
+    let { user: t, channelId: n, guildId: p, messageId: m, stopPropagation: g = !1, ariaLabel: f } = e,
         b = r.useRef(null),
-        { analyticsLocations: j } = (0, s.ZP)(a.Z.USERNAME),
-        v = (0, l.Z)(p, 'useUsernameHook'),
+        { analyticsLocations: j } = (0, s.ZP)(o.Z.USERNAME),
+        v = (0, a.Z)(p, 'useUsernameHook'),
         O = r.useCallback(
             (e) => {
                 let i = u.Z.getChannel(n);
@@ -46,26 +46,26 @@ function p(e) {
             [t, n]
         );
     return r.useCallback(
-        (e) => (r, a) => {
-            let l = null == e ? void 0 : e.colorStrings,
-                u = v && null != l && null != l.primaryColor && null != l.secondaryColor,
+        (e) => (r, o) => {
+            let a = null == e ? void 0 : e.colorStrings,
+                u = v && null != a && null != a.primaryColor && null != a.secondaryColor,
                 d = (t) => {
-                    var n, a;
+                    var n, o;
                     return (0, i.jsx)(
-                        o.rz2,
+                        l.rz2,
                         ((n = h({}, null != t ? t : {})),
-                        (a = a =
+                        (o = o =
                             {
                                 ref: b,
                                 onContextMenu: O,
-                                name: (0, o.qgQ)(r),
+                                name: (0, l.qgQ)(r),
                                 color: null == e ? void 0 : e.colorString,
                                 roleName: null == e ? void 0 : e.colorRoleName,
-                                roleColors: u ? l : null,
-                                'aria-label': g
+                                roleColors: u ? a : null,
+                                'aria-label': f
                             }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
+                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(o))
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -73,14 +73,14 @@ function p(e) {
                                       n.push.apply(n, i);
                                   }
                                   return n;
-                              })(Object(a)).forEach(function (e) {
-                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
+                              })(Object(o)).forEach(function (e) {
+                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(o, e));
                               }),
                         n)
                     );
                 },
                 y = (e) => (t) => {
-                    f && null != t && t.stopPropagation(), e(t);
+                    g && null != t && t.stopPropagation(), e(t);
                 };
             return (0, i.jsx)(
                 s.Gt,
@@ -107,13 +107,13 @@ function p(e) {
                                                       var n,
                                                           i,
                                                           r = {},
-                                                          o = Object.keys(e);
-                                                      for (i = 0; i < o.length; i++) (n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                                                          l = Object.keys(e);
+                                                      for (i = 0; i < l.length; i++) (n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                                                       return r;
                                                   })(e, t);
                                               if (Object.getOwnPropertySymbols) {
-                                                  var o = Object.getOwnPropertySymbols(e);
-                                                  for (i = 0; i < o.length; i++) (n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                                                  var l = Object.getOwnPropertySymbols(e);
+                                                  for (i = 0; i < l.length; i++) (n = l[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
                                               }
                                               return r;
                                           })(e, ['onClick']);
@@ -122,9 +122,9 @@ function p(e) {
                               })
                             : d(void 0)
                 },
-                a
+                o
             );
         },
-        [j, t, n, p, m, O, f, g, v]
+        [j, t, n, p, m, O, g, f, v]
     );
 }

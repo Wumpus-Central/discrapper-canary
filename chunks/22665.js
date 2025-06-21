@@ -20,8 +20,8 @@ var r = n(255367),
 let x = (e) => {
     let { reportingUserId: t, guildId: n, compact: l, channel: o, messageId: x, reportedTimestamp: v } = e,
         O = f.default.getUser(t),
-        j = i.useMemo(() => (l ? (0, p.Z)((0, h.vc)(s()(), 'LT')) : null), [l]),
-        C = (0, m.l)({
+        C = i.useMemo(() => (l ? (0, p.Z)((0, h.vc)(s()(), 'LT')) : null), [l]),
+        j = (0, m.l)({
             user: O,
             channelId: o.id,
             guildId: n,
@@ -32,11 +32,11 @@ let x = (e) => {
             null != O
                 ? _.intl.format(g.default['+zqXZm'], {
                       username: O.username,
-                      onUserClick: C
+                      onUserClick: j
                   })
                 : _.intl.string(g.default.xpRjfX);
     return (0, r.jsxs)('div', {
-        className: a()(E.messageSpine, E.repliedMessage, j),
+        className: a()(E.messageSpine, E.repliedMessage, C),
         children: [
             (0, r.jsx)(c.qEK, {
                 src: S,
