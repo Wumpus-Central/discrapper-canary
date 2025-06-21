@@ -50643,6 +50643,10 @@ html.disable-forced-colors * {
     forced-color-adjust: none
 }
 
+.icon_b29565 {
+    display: block
+}
+
 .iconWithHover_b29565 {
     fill: var(--icon-tertiary)
 }
