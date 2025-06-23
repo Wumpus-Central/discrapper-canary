@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685), n(457542);
+n.d(t, { Z: () => A }), n(388685), n(457542);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -27,8 +27,8 @@ var r = n(255367),
     P = n(388032),
     F = n(916199),
     S = n(419851),
-    T = n(246403);
-let R = (e) => {
+    R = n(246403);
+let T = (e) => {
         let { headerId: t, email: n, password: i, setEmail: l, setPassword: s, emailError: a, passwordError: c, hasManualFormFields: u, isMember: d } = e;
         return (0, r.jsxs)('div', {
             className: F.content,
@@ -83,7 +83,7 @@ let R = (e) => {
             children: [
                 (0, r.jsx)('img', {
                     alt: P.intl.string(P.t.wNAbl5),
-                    src: T,
+                    src: R,
                     className: F.applicationIcon
                 }),
                 (0, r.jsx)(o.X6q, {
@@ -121,7 +121,7 @@ let R = (e) => {
             disableVerification: a
         });
     },
-    A = (e) => {
+    k = (e) => {
         let { guildId: t, headerId: n, formState: i, updateFormState: l, guildName: s, hasManualFormFields: a, disableVerification: c, isPreview: u = !1 } = e;
         return (0, r.jsxs)('div', {
             className: F.content,
@@ -147,18 +147,18 @@ let R = (e) => {
             ]
         });
     },
-    k = (e) => {
+    A = (e) => {
         var t, n, s, N;
-        let { verificationForm: S, headerId: T, guildId: M, onClose: k, onComplete: D, isPreview: L = !1 } = e,
+        let { verificationForm: S, headerId: R, guildId: M, onClose: A, onComplete: D, isPreview: L = !1 } = e,
             z = (0, C.N0)(M, null == S ? void 0 : S.guild, L),
             { guildProfile: q, fetchGuildProfile: Z } = (0, d.u)(M),
             B = (0, l.e7)([b.ZP, h.default], () => b.ZP.isMember(M, h.default.getId())),
-            [H, U] = i.useState(!1);
+            [U, H] = i.useState(!1);
         i.useEffect(() => {
-            B && !H && null == q && Z().finally(() => U(!0));
-        }, [Z, q, H, B]);
+            B && !U && null == q && Z().finally(() => H(!0));
+        }, [Z, q, U, B]);
         let G = null == S ? void 0 : S.formFields.some((e) => e.field_type !== _.QJ.TERMS),
-            [V, W] = i.useState(null != (s = null == S ? void 0 : S.formFields) ? s : []),
+            [W, V] = i.useState(null != (s = null == S ? void 0 : S.formFields) ? s : []),
             [J, K] = i.useState(!1),
             [Q, Y] = i.useState(null),
             [X, $] = i.useState(''),
@@ -173,7 +173,7 @@ let R = (e) => {
             ec = null != eo ? eo : null == S || null == (n = S.guild) ? void 0 : n.approximate_member_count,
             eu = null != G && G;
         i.useEffect(() => {
-            null != S && W(S.formFields);
+            null != S && V(S.formFields);
         }, [S]),
             i.useEffect(() => {
                 null != M &&
@@ -184,15 +184,15 @@ let R = (e) => {
             }, [M]);
         let ed = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
             { currentStep: em, setCurrentStep: ef } = (0, C.k3)(ed);
-        (0, C.lk)(V);
+        (0, C.lk)(W);
         let eh = null == ed ? void 0 : ed.verified,
             ep = null == ed ? void 0 : ed.isPhoneVerified(),
             { invalidFormFields: eb, hasInvalidTermsFormField: eg } = i.useMemo(
                 () => ({
-                    invalidFormFields: V.some((e) => !(0, O.OA)(e)),
-                    hasInvalidTermsFormField: V.some((e) => e.field_type === _.QJ.TERMS && !(0, O.OA)(e))
+                    invalidFormFields: W.some((e) => !(0, O.OA)(e)),
+                    hasInvalidTermsFormField: W.some((e) => e.field_type === _.QJ.TERMS && !(0, O.OA)(e))
                 }),
-                [V]
+                [W]
             ),
             ex = i.useMemo(() => {
                 if (null == D || eb) return !0;
@@ -220,13 +220,13 @@ let R = (e) => {
                                   size: 40
                               })
                             : void 0,
-                    n = (0, o.dQu)(o.TVs.colors.BG_BASE_SECONDARY).hex(),
-                    r = (0, o.dQu)(o.TVs.colors.BG_BASE_TERTIARY).hex(),
+                    n = (0, o.dQu)(o.TVs.colors.BACKGROUND_BASE_LOWER).hex(),
+                    r = (0, o.dQu)(o.TVs.colors.BACKGROUND_BASE_LOWEST).hex(),
                     [i, l, s] = (0, u.Cf)(t, n, !1);
                 return 'linear-gradient(-45deg, '.concat(i, ', ').concat(null != s ? s : r, ')');
             })(z),
             eO = (function (e) {
-                let t = (0, o.dQu)(o.TVs.colors.BACKGROUND_MODIFIER_ACCENT).hex();
+                let t = (0, o.dQu)(o.TVs.colors.BORDER_SUBTLE).hex();
                 return 'linear-gradient(-45deg, '.concat(t, ', ').concat(e, ')');
             })(null != (N = null == q ? void 0 : q.brandColorPrimary) ? N : '');
         if (null == z) return null;
@@ -251,7 +251,7 @@ let R = (e) => {
                 K(!0), Y(null);
                 let i = null != ed ? b.ZP.getMember(M, ed.id) : null;
                 if (null != i && !i.isPending) {
-                    null == k || k(!0);
+                    null == A || A(!0);
                     return;
                 }
                 try {
@@ -283,7 +283,7 @@ let R = (e) => {
                                   }
                                   return e;
                               })({}, null != S ? S : v.t)),
-                              (t = { formFields: V }),
+                              (t = { formFields: W }),
                               (t = null != t ? t : {}),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
@@ -299,7 +299,7 @@ let R = (e) => {
                                     }),
                               e)
                           )),
-                        null == k || k(!0);
+                        null == A || A(!0);
                 } catch (t) {
                     let e = null == t ? void 0 : t.body;
                     (null == e || null == (n = e.errors) ? void 0 : n.version) != null || (null == e || null == (r = e.errors) ? void 0 : r.form_fields) != null ? Y(P.intl.string(P.t.PD09Sk)) : Y(null == e ? void 0 : e.message);
@@ -353,8 +353,8 @@ let R = (e) => {
                                     children: (() => {
                                         switch (em) {
                                             case C.KJ.CLAIM_ACCOUNT:
-                                                return (0, r.jsx)(R, {
-                                                    headerId: T,
+                                                return (0, r.jsx)(T, {
+                                                    headerId: R,
                                                     email: X,
                                                     password: ee,
                                                     setEmail: $,
@@ -366,16 +366,16 @@ let R = (e) => {
                                                 });
                                             case C.KJ.EMAIL_CONFIRMATION:
                                                 return (0, r.jsx)(w, {
-                                                    headerId: T,
+                                                    headerId: R,
                                                     email: X
                                                 });
                                             case C.KJ.VERIFICATION_FORM:
-                                                return (0, r.jsx)(A, {
-                                                    headerId: T,
+                                                return (0, r.jsx)(k, {
+                                                    headerId: R,
                                                     guildId: M,
                                                     guildName: z.name,
-                                                    formState: V,
-                                                    updateFormState: W,
+                                                    formState: W,
+                                                    updateFormState: V,
                                                     isPreview: L,
                                                     useReducedMotion: ej,
                                                     hasManualFormFields: G,

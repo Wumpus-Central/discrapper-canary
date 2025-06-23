@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(933557),
     m = n(471445),
     b = n(111028),
-    y = n(978003),
-    O = n(245216),
+    O = n(978003),
+    y = n(245216),
     _ = n(172751),
     v = n(739566),
     C = n(930282),
@@ -83,7 +83,7 @@ function B(e) {
         h = (0, m.KS)(n, null),
         p = (0, g.ZP)(n, !1),
         f = (0, c.e7)([T.Z], () => T.Z.getGuild(n.getGuildId())),
-        { nick: y, colorString: O, primaryGuild: C } = (0, v.ZP)(t),
+        { nick: O, colorString: y, primaryGuild: C } = (0, v.ZP)(t),
         {
             avatarDecorationSrc: j,
             avatarSrc: E,
@@ -179,7 +179,7 @@ function B(e) {
                                                   children: [
                                                       (0, r.jsx)('div', {
                                                           className: k.username,
-                                                          style: { color: O },
+                                                          style: { color: y },
                                                           children: (0, r.jsx)(b.Z, { children: A })
                                                       }),
                                                       w
@@ -188,7 +188,7 @@ function B(e) {
                                             : (0, r.jsx)(b.Z, {
                                                   children: (0, r.jsx)(u.X6q, {
                                                       variant: 'text-md/semibold',
-                                                      style: { color: O },
+                                                      style: { color: y },
                                                       className: k.username,
                                                       children: f.name
                                                   })
@@ -230,7 +230,7 @@ function B(e) {
                                                 [k.unread]: a,
                                                 [k.selected]: s
                                             }),
-                                            children: [p, !I && ' \xB7 '.concat(y)]
+                                            children: [p, !I && ' \xB7 '.concat(O)]
                                         })
                                     ]
                                 }),
@@ -308,14 +308,14 @@ function F(e) {
                         let t = e.embeds.some((e) => e.type === L.hBH.GIFV);
                         return e.attachments.length + +!!t;
                     })(t),
-                    c = (0, y.Z)(t),
+                    c = (0, O.Z)(t),
                     d = t.stickerItems.length > 0,
                     h = t.isPoll(),
                     p = t.type === L.uaV.POLL_RESULT,
                     f = t.hasFlag(L.iLy.IS_VOICE_MESSAGE),
                     g = t.type === L.uaV.USER_JOIN,
                     m = null;
-                1 === a ? (m = u.XBm) : a > 1 ? (m = u.Ka2) : c ? (m = O.Z) : h || p ? (m = u.QDj) : d ? (m = u.SlE) : f && (m = u.gj8);
+                1 === a ? (m = u.XBm) : a > 1 ? (m = u.Ka2) : c ? (m = y.Z) : h || p ? (m = u.QDj) : d ? (m = u.SlE) : f && (m = u.gj8);
                 let b = !0,
                     _ = null;
                 if (e)

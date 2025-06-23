@@ -14,13 +14,13 @@ var r = n(255367),
     g = n(259580),
     m = n(639777),
     b = n(441536),
-    y = n(447908),
-    O = n(93841),
+    O = n(447908),
+    y = n(93841),
     _ = n(388032),
     v = n(27053);
 function C(e) {
     let { guild: t, withMargin: l } = e,
-        C = i.useMemo(() => (0, y.Z)(t), [t]),
+        C = i.useMemo(() => (0, O.Z)(t), [t]),
         j = (0, m.Z)(t.id),
         S = i.useCallback(() => {
             (0, b.Z)(t.id, h.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY);
@@ -130,7 +130,7 @@ function C(e) {
                                 (0, r.jsx)(a.xv, {
                                     className: v.text,
                                     variant: 'text-xs/semibold',
-                                    children: _.intl.string(O.default.NI6IhY)
+                                    children: _.intl.string(y.default.NI6IhY)
                                 }),
                                 t.premiumSubscriberCount >= C &&
                                     (0, r.jsx)(a.xv, {
@@ -147,8 +147,8 @@ function C(e) {
                                     className: v.text,
                                     variant: 'text-xs/semibold',
                                     children: N
-                                        ? _.intl.formatToPlainString(O.default['Ehpq+/'], { appliedBoostCount: x })
-                                        : _.intl.formatToPlainString(O.default['/rbPDg'], {
+                                        ? _.intl.formatToPlainString(y.default['Ehpq+/'], { appliedBoostCount: x })
+                                        : _.intl.formatToPlainString(y.default['/rbPDg'], {
                                               appliedBoostCount: x,
                                               maxBoostCount: C
                                           })

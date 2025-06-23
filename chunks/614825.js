@@ -137,7 +137,7 @@ class P extends i.Component {
         if (void 0 !== r.redeemed_at && !n && null !== i) return S.intl.formatToPlainString(S.t.nP0ivb, { date: (0, b.vc)(s()(i), 'LL') });
         if (e || void 0 === r.expires_at) return null;
         let l = s()(r.expires_at);
-        return t ? S.intl.formatToPlainString(S.t.PuSHfX, { date: (0, b.vc)(s()(l), 'LL') }) : (0, v.F)(l.valueOf());
+        return t ? S.intl.formatToPlainString(S.t.PuSHfX, { date: (0, b.vc)(s()(l), 'LL') }) : (0, v.F6)(l.valueOf());
     }
     renderMedia() {
         return (0, r.jsx)('div', { className: I.referral });

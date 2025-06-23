@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685), n(415506);
+n.d(t, { Z: () => O }), n(388685), n(415506);
 var r = n(255367),
     l = n(73800),
     i = n(392711),
@@ -107,8 +107,8 @@ let g = (e, t) => {
             y: Math.max(l * Math.sin((2 * Math.PI * r) / 360), 0)
         };
     },
-    y = l.memo(function (e) {
-        let { wheelWidth: t, wheelHeight: n, itemWidth: y, itemHeight: O, showDeadZoneIndicator: b, activeItem: N, onItemSelect: m, onItemAction: v, interactive: x = !0, onClose: E, children: C } = e,
+    O = l.memo(function (e) {
+        let { wheelWidth: t, wheelHeight: n, itemWidth: O, itemHeight: y, showDeadZoneIndicator: b, activeItem: N, onItemSelect: m, onItemAction: v, interactive: x = !0, onClose: E, children: C } = e,
             I = l.useRef(null),
             T = l.useRef([]),
             j = l.useRef(!1),
@@ -206,8 +206,8 @@ let g = (e, t) => {
                     R[P].map((e, l) => {
                         let i = f[l];
                         if (null == i) throw Error('Too many items supplied '.concat(C.length, ' expected max of ').concat(f.length));
-                        let o = p(i.x, t, y),
-                            a = p(i.y, n, O);
+                        let o = p(i.x, t, O),
+                            a = p(i.y, n, y);
                         return (0, r.jsx)(
                             'div',
                             {
@@ -216,15 +216,15 @@ let g = (e, t) => {
                                 style: {
                                     left: o,
                                     top: a,
-                                    width: y,
-                                    height: O
+                                    width: O,
+                                    height: y
                                 },
                                 children: e
                             },
                             l
                         );
                     }),
-                [R, P, t, y, n, O, C.length, D]
+                [R, P, t, O, n, y, C.length, D]
             );
         return (0, r.jsx)(a.P3F, {
             className: u.chatWheelMouseInput,

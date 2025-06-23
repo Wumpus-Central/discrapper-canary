@@ -1,6 +1,6 @@
 n.d(t, {
-    R: () => y,
-    Z: () => O
+    R: () => O,
+    Z: () => y
 });
 var r,
     i = n(255367);
@@ -42,10 +42,10 @@ function b(e) {
     }
     return e;
 }
-var y = (((r = {})[(r.VOICE = 0)] = 'VOICE'), r);
-let O = (e) => {
-    let { type: t, guildId: r, closePopout: y } = e,
-        O = (0, c.Dt)(),
+var O = (((r = {})[(r.VOICE = 0)] = 'VOICE'), r);
+let y = (e) => {
+    let { type: t, guildId: r, closePopout: O } = e,
+        y = (0, c.Dt)(),
         { notClaimed: _, notEmailVerified: v, notPhoneVerified: C, newAccount: j, newMember: S } = (0, l.e7)([d.Z], () => d.Z.getCheck(r), [r]),
         x = 0 === t ? g.intl.string(g.t['6zY8BA']) : null,
         E = null,
@@ -54,7 +54,7 @@ let O = (e) => {
         ? null
         : (0, i.jsxs)(o.VqE, {
               className: m.container,
-              'aria-labelledby': O,
+              'aria-labelledby': y,
               children: [
                   (0, i.jsx)('img', {
                       alt: '',
@@ -66,7 +66,7 @@ let O = (e) => {
                       children: [
                           (0, i.jsx)(o.X6q, {
                               variant: 'heading-md/semibold',
-                              id: O,
+                              id: y,
                               children: x
                           }),
                           (0, i.jsx)(o.Text, {
@@ -126,7 +126,7 @@ let O = (e) => {
                                                                 n)
                                                             );
                                                         })),
-                                                    y();
+                                                    O();
                                             },
                                             className: m.primaryButton,
                                             children: P
@@ -134,7 +134,7 @@ let O = (e) => {
                                       : null,
                                   _ || C || v
                                       ? (0, i.jsx)(o.zxk, {
-                                            onClick: y,
+                                            onClick: O,
                                             look: o.zxk.Looks.BLANK,
                                             className: m.cancel,
                                             children: g.intl.string(g.t.oEAioK)

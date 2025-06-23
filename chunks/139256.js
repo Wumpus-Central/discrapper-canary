@@ -327,7 +327,7 @@ function L(e) {
                 },
                 () => ({
                     color: d.Z.ICON_PRIMARY,
-                    backgroundColor: d.Z.BG_MOD_FAINT
+                    backgroundColor: d.Z.BACKGROUND_MOD_FAINT
                 })
             )
             .otherwise(() => ({

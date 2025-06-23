@@ -24,7 +24,7 @@ function g(e, t, n) {
         e
     );
 }
-function y(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function y(e) {
     }
     return e;
 }
-let O = {
+let y = {
         [h.IE4.UNKNOWN]: a.ua7.Colors.BLACK,
         [h.IE4.BAD]: a.ua7.Colors.RED,
         [h.IE4.AVERAGE]: a.ua7.Colors.YELLOW,
@@ -98,11 +98,11 @@ class m extends l.PureComponent {
             i === h.hes.RTC_CONNECTED &&
                 (e = (0, r.jsx)(a.ua7, {
                     text: t !== h.IE4.UNKNOWN && null != l ? ''.concat(l.toFixed(0), ' ms') : null,
-                    color: O[t],
+                    color: y[t],
                     children: (e) =>
                         (0, r.jsx)(
                             v,
-                            y(
+                            O(
                                 {
                                     quality: t,
                                     smallPing: !u && n,
@@ -137,7 +137,7 @@ class m extends l.PureComponent {
                 var n, l;
                 return (0, r.jsx)(
                     d.Z,
-                    ((n = y({}, t)),
+                    ((n = O({}, t)),
                     (l = l = { channelId: e }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
@@ -185,7 +185,7 @@ function v(e) {
     }[t];
     return (0, r.jsx)(
         s,
-        y(
+        O(
             {
                 className: o()(p.ping, {
                     [p.smallPing]: n,

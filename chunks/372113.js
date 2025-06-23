@@ -355,7 +355,7 @@ let Z = (e) => {
                     K &&
                         (0, r.jsx)(y.Z, {
                             className: _.gridProgressBar,
-                            color: G ? l.TVs.colors.TEXT_POSITIVE : l.TVs.colors.BG_BRAND,
+                            color: G ? l.TVs.colors.TEXT_FEEDBACK_POSITIVE : l.TVs.colors.BG_BRAND,
                             quest: n,
                             isInventory: X
                         })

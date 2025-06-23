@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(692547),
     m = n(481060),
     b = n(925549),
-    y = n(493773),
-    O = n(209613),
+    O = n(493773),
+    y = n(209613),
     _ = n(100527),
     v = n(906732),
     C = n(358221),
@@ -291,7 +291,7 @@ function ep(e) {
         }),
         p = (0, h.e7)([E.Z], () => E.Z.lurkingGuildIds()),
         b = i.useMemo(() => (n ? [] : p), [p, n]),
-        O = (0, h.e7)([C.Z], () => C.Z.isFullscreenInContext()),
+        y = (0, h.e7)([C.Z], () => C.Z.isFullscreenInContext()),
         [S, x] = i.useState(!1),
         R = i.useCallback(() => x(!0), []),
         D = i.useCallback(() => x(!1), []),
@@ -342,7 +342,7 @@ function ep(e) {
     let { analyticsLocations: eg } = (0, v.ZP)(_.Z.GUILDS_LIST),
         { pathname: em } = (0, c.TH)(),
         eb = ec(em);
-    (0, y.Ng)(() => {
+    (0, O.Ng)(() => {
         if (!k.current && 0 !== d.size) {
             if (!eb) {
                 let { scrollTop: e } = A.Z.getGuildListDimensions();
@@ -364,14 +364,14 @@ function ep(e) {
                 n !== t && ((t = n), ef.scrollToGuild(t, !1));
             });
         }, [d, ef]);
-    let ey = i.useCallback(() => {
+    let eO = i.useCallback(() => {
         ef.scrollTo({
             to: 0,
             animate: !1
         });
     }, [ef]);
     (0, G.Z)(ef.scrollToGuild);
-    let eO = i.useCallback(
+    let ey = i.useCallback(
             function e(t, n, i) {
                 switch (t.type) {
                     case U.eD.FOLDER:
@@ -452,7 +452,7 @@ function ep(e) {
             theme: s,
             children: (e) =>
                 (0, r.jsxs)('nav', {
-                    className: o()(er.wrapper, l, e, { [er.hidden]: O }),
+                    className: o()(er.wrapper, l, e, { [er.hidden]: y }),
                     'aria-label': en.intl.string(en.t.PjnF2t),
                     children: [
                         (0, r.jsx)(B.Z, {
@@ -481,7 +481,7 @@ function ep(e) {
                                             onScroll: ef.handleScroll,
                                             children: [
                                                 (0, r.jsx)(ed, {
-                                                    scrollToTop: ey,
+                                                    scrollToTop: eO,
                                                     lurkingGuildIds: b
                                                 }),
                                                 (0, r.jsx)(q.Z, {}),
@@ -489,7 +489,7 @@ function ep(e) {
                                                     guildDiscoveryButton: eN,
                                                     disableAppDownload: t,
                                                     isOverlay: n,
-                                                    renderTreeNode: eO,
+                                                    renderTreeNode: ey,
                                                     lurkingGuildIds: b
                                                 })
                                             ]
@@ -526,7 +526,7 @@ function ep(e) {
 }
 let ef = i.memo(
     function (e) {
-        let t = (0, O.Z)('guildsnav');
+        let t = (0, y.Z)('guildsnav');
         return (0, r.jsx)(u.bG, {
             navigator: t,
             children: (0, r.jsx)(ep, el({}, e))

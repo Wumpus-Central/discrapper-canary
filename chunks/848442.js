@@ -15,8 +15,8 @@ var i = n(120356),
     g = n(550951),
     m = n(886176),
     b = n(605236),
-    y = n(703656),
-    O = n(984933),
+    O = n(703656),
+    y = n(984933),
     _ = n(430824),
     v = n(626135),
     C = n(434479),
@@ -111,7 +111,7 @@ function w(e) {
                         onClick: (e) => {
                             if ((e.stopPropagation(), (0, b.EW)(s.z.SERVER_SHOP_PHANTOM_PREVIEW), v.default.track(j.rMx.GUILD_SHOP_PREVIEW_CLICK, N(I({}, (0, h.hH)(t)), { action_taken: x.mz.DISMISS_CHANNEL_ROW })), !u || !S)) {
                                 var n;
-                                (0, y.dL)(j.Z5c.CHANNEL(t, null == (n = O.ZP.getDefaultChannel(t)) ? void 0 : n.id));
+                                (0, O.dL)(j.Z5c.CHANNEL(t, null == (n = y.ZP.getDefaultChannel(t)) ? void 0 : n.id));
                             }
                         },
                         'aria-label': E.intl.string(E.t.cpT0Cg),
@@ -128,7 +128,7 @@ function Z(e) {
     let { guild: t, selected: i } = e,
         l = (0, g.g)(t, 'guild_shop_channel_row'),
         o = () => {
-            a.K.set(x.tM, 'true'), (0, y.uL)(j.Z5c.CHANNEL(t.id, S.oC.GUILD_SHOP));
+            a.K.set(x.tM, 'true'), (0, O.uL)(j.Z5c.CHANNEL(t.id, S.oC.GUILD_SHOP));
         };
     return l
         ? (0, r.jsx)(w, {

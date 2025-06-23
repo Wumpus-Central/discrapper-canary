@@ -18,8 +18,8 @@ var r,
     g = n(223730),
     m = n(981631),
     b = n(29953),
-    y = n(388032),
-    O = n(22275),
+    O = n(388032),
+    y = n(22275),
     _ = n(354810);
 async function v(e) {
     await d.hW.updateAsync(
@@ -33,7 +33,7 @@ async function v(e) {
 function C(e) {
     let { closePopout: t } = e;
     return (0, i.jsx)(c.zxk, {
-        className: O.goOnlineButton,
+        className: y.goOnlineButton,
         look: c.zxk.Looks.FILLED,
         size: c.zxk.Sizes.SMALL,
         color: c.zxk.Colors.BRAND,
@@ -41,7 +41,7 @@ function C(e) {
             t(), v(c.Skl.ONLINE);
         },
         fullWidth: !0,
-        children: y.intl.string(b.default.Poezn5)
+        children: O.intl.string(b.default.Poezn5)
     });
 }
 function j(e) {
@@ -49,19 +49,19 @@ function j(e) {
         o = (0, s.e7)([h.Z], () => h.Z.getStatus()),
         { showLinkToSettings: a } = (0, f.D)('popout');
     return (0, i.jsxs)('div', {
-        className: O.toggleContainer,
+        className: y.toggleContainer,
         children: [
             (0, i.jsxs)('div', {
-                className: O.toggleContainerText,
+                className: y.toggleContainerText,
                 children: [
                     (0, i.jsx)(c.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-primary',
-                        children: y.intl.string(y.t.KY0ilp)
+                        children: O.intl.string(O.t.KY0ilp)
                     }),
                     n &&
                         (0, i.jsxs)('div', {
-                            className: O.toggleContainerOnlineRow,
+                            className: y.toggleContainerOnlineRow,
                             children: [
                                 (0, i.jsx)(c.qbd, {
                                     status: c.Skl.ONLINE,
@@ -70,7 +70,7 @@ function j(e) {
                                 (0, i.jsx)(c.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'text-secondary',
-                                    children: o === c.Skl.INVISIBLE ? y.intl.string(b.default.a3AofX) : y.intl.string(y.t.WbGtnJ)
+                                    children: o === c.Skl.INVISIBLE ? O.intl.string(b.default.a3AofX) : O.intl.string(O.t.WbGtnJ)
                                 })
                             ]
                         }),
@@ -93,19 +93,19 @@ function S(e) {
     let a = u.G6.useSetting(),
         d = (0, s.e7)([h.Z], () => h.Z.getStatus()) === c.Skl.INVISIBLE && a;
     return (0, i.jsxs)('div', {
-        className: O.wrapper,
+        className: y.wrapper,
         ref: r,
         children: [
-            null != n && (0, i.jsx)('div', { className: O.gradient }),
+            null != n && (0, i.jsx)('div', { className: y.gradient }),
             (0, i.jsxs)('div', {
-                className: O.content,
+                className: y.content,
                 children: [
                     null != n &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(c.zxk, {
-                                    className: O.closeButton,
-                                    'aria-label': y.intl.string(y.t.cpT0Cg),
+                                    className: y.closeButton,
+                                    'aria-label': O.intl.string(O.t.cpT0Cg),
                                     look: c.zxk.Looks.BLANK,
                                     size: c.zxk.Sizes.NONE,
                                     onClick: n,
@@ -117,13 +117,13 @@ function S(e) {
                                 (0, i.jsx)('img', {
                                     alt: '',
                                     src: _.Z,
-                                    className: O.controllerImage
+                                    className: y.controllerImage
                                 }),
                                 (0, i.jsx)(o.X6, {
                                     variant: 'heading-md/bold',
                                     color: 'header-primary',
-                                    className: O.nuxTitle,
-                                    children: y.intl.string(d ? b.default.MkgMBw : y.t.PRjSRk)
+                                    className: y.nuxTitle,
+                                    children: O.intl.string(d ? b.default.MkgMBw : O.t.PRjSRk)
                                 })
                             ]
                         }),
@@ -142,11 +142,11 @@ function x(e) {
             (0, i.jsx)(c.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
-                className: O.nuxContent,
-                children: y.intl.format(b.default.nHDuwM, { learnMoreLink: p.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS) })
+                className: y.nuxContent,
+                children: O.intl.format(b.default.nHDuwM, { learnMoreLink: p.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS) })
             }),
             (0, i.jsx)('div', {
-                className: O.toggleContainerWrapper,
+                className: y.toggleContainerWrapper,
                 children: (0, i.jsx)(j, {
                     showCurrentGame: n,
                     shouldShowCustomizeLink: !0,
@@ -164,8 +164,8 @@ function E(e) {
             (0, i.jsx)(c.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
-                className: O.nuxContent,
-                children: y.intl.format(b.default['vtp/IS'], { learnMoreLink: p.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS) })
+                className: y.nuxContent,
+                children: O.intl.format(b.default['vtp/IS'], { learnMoreLink: p.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS) })
             }),
             (0, i.jsx)(C, { closePopout: t })
         ]
@@ -180,11 +180,11 @@ function P(e) {
             (0, i.jsx)(c.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
-                className: O.nuxContent,
-                children: y.intl.format(b.default.nHDuwM, { learnMoreLink: p.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS) })
+                className: y.nuxContent,
+                children: O.intl.format(b.default.nHDuwM, { learnMoreLink: p.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS) })
             }),
             (0, i.jsx)('div', {
-                className: O.toggleContainerWrapper,
+                className: y.toggleContainerWrapper,
                 children: (0, i.jsx)(j, {
                     showCurrentGame: n,
                     shouldShowStatus: !0,
@@ -204,11 +204,11 @@ function I(e) {
                 showCurrentGame: n,
                 closePopout: t
             }),
-            (0, i.jsx)(c.$i$, { className: O.divider }),
+            (0, i.jsx)(c.$i$, { className: y.divider }),
             (0, i.jsx)(c.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
-                children: y.intl.format(b.default.nHDuwM, { learnMoreLink: p.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS) })
+                children: O.intl.format(b.default.nHDuwM, { learnMoreLink: p.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS) })
             }),
             r && (0, i.jsx)(g.y, { onClosePopout: t })
         ]
@@ -221,13 +221,13 @@ function N(e) {
             (0, i.jsx)(o.X6, {
                 variant: 'heading-sm/semibold',
                 color: 'header-primary',
-                className: O.controlTitle,
-                children: y.intl.string(b.default.MkgMBw)
+                className: y.controlTitle,
+                children: O.intl.string(b.default.MkgMBw)
             }),
             (0, i.jsx)(c.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
-                children: y.intl.format(b.default['vtp/IS'], { learnMoreLink: p.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS) })
+                children: O.intl.format(b.default['vtp/IS'], { learnMoreLink: p.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS) })
             }),
             (0, i.jsx)(C, { closePopout: t })
         ]
@@ -244,11 +244,11 @@ function w(e) {
                 shouldShowStatus: !0,
                 closePopout: t
             }),
-            (0, i.jsx)(c.$i$, { className: O.divider }),
+            (0, i.jsx)(c.$i$, { className: y.divider }),
             (0, i.jsx)(c.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
-                children: y.intl.format(b.default.nHDuwM, { learnMoreLink: p.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS) })
+                children: O.intl.format(b.default.nHDuwM, { learnMoreLink: p.Z.getArticleURL(m.BhN.ACTIVITY_STATUS_SETTINGS) })
             }),
             r && (0, i.jsx)(g.y, { onClosePopout: t })
         ]

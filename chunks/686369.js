@@ -17,7 +17,7 @@ var r = n(73800),
 let f = 512;
 function _() {
     let e = (0, s.ZP)(),
-        t = (0, a.dQu)(a.TVs.colors.BG_BASE_TERTIARY),
+        t = (0, a.dQu)(a.TVs.colors.BACKGROUND_BASE_LOWEST),
         n = (0, a.dQu)(a.TVs.colors.BACKGROUND_ACCENT);
     return (0, a.wjy)(e) ? t : n;
 }

@@ -24,8 +24,8 @@ var r = n(255367),
     E = n(131085),
     S = n(388032),
     I = n(145870),
-    P = n(157092);
-function R(e) {
+    R = n(157092);
+function P(e) {
     let { icon: t, label: n, onClick: l, disabled: i } = e;
     return (0, r.jsxs)(d.P3F, {
         className: a()(I.actionButton, { [I.disabled]: i }),
@@ -60,11 +60,11 @@ function O(e) {
         className: I.infoContainer,
         children: [
             (0, r.jsxs)('div', {
-                className: P.memberNameContainer,
+                className: R.memberNameContainer,
                 children: [
                     (0, r.jsx)(d.P3F, {
                         onClick: o,
-                        className: a()(I.clickable, P.memberAvatar),
+                        className: a()(I.clickable, R.memberAvatar),
                         children: (0, r.jsx)(d.qEK, {
                             src: t.getAvatarURL(n, 48),
                             'aria-label': t.username,
@@ -72,10 +72,10 @@ function O(e) {
                         })
                     }),
                     (0, r.jsxs)('div', {
-                        className: P.memberNameAndTagContainer,
+                        className: R.memberNameAndTagContainer,
                         children: [
                             (0, r.jsxs)('div', {
-                                className: P.memberNameTextContainer,
+                                className: R.memberNameTextContainer,
                                 children: [
                                     (0, r.jsx)(d.P3F, {
                                         onClick: o,
@@ -91,8 +91,8 @@ function O(e) {
                                         contextGuildId: n,
                                         badgeSize: E.Gg.SIZE_16,
                                         textVariant: 'heading-md/semibold',
-                                        className: P.memberClanTag,
-                                        containerClassName: P.memberClanTagContainer
+                                        className: R.memberClanTag,
+                                        containerClassName: R.memberClanTagContainer
                                     })
                                 ]
                             }),
@@ -110,7 +110,7 @@ function O(e) {
                 ]
             }),
             (0, r.jsx)(d.P3F, {
-                className: P.closeAction,
+                className: R.closeAction,
                 onClick: () => x.Z.setSelectedGuildJoinRequest(n, null),
                 children: (0, r.jsx)(d.Dio, {
                     size: 'md',
@@ -126,19 +126,19 @@ function y(e) {
     return (0, r.jsxs)('div', {
         className: I.actionRow,
         children: [
-            (0, r.jsx)(R, {
+            (0, r.jsx)(P, {
                 icon: d.owK,
                 label: S.intl.string(S.t.BzjDQE),
                 onClick: i,
                 disabled: s
             }),
-            (0, r.jsx)(R, {
+            (0, r.jsx)(P, {
                 icon: d.k$p,
                 label: S.intl.string(S.t.hDtbs7),
                 onClick: a,
                 disabled: s
             }),
-            (0, r.jsx)(R, {
+            (0, r.jsx)(P, {
                 icon: d.kBi,
                 label: S.intl.string(S.t.KQeYoK),
                 onClick: o,
@@ -156,7 +156,7 @@ function w(e) {
         children: [
             (0, r.jsx)(d.k$p, {
                 size: 'lg',
-                color: d.TVs.colors.BG_BASE_SECONDARY,
+                color: d.TVs.colors.BACKGROUND_BASE_LOWER,
                 secondaryColor: d.TVs.colors.INTERACTIVE_NORMAL
             }),
             (0, r.jsxs)('div', {

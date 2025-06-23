@@ -8,7 +8,7 @@ function s(e) {
     let t = (0, l.useRef)(null),
         [n, s] = (0, l.useState)(null),
         [c] = (0, l.useState)(() => new i.TimelineDataSeries()),
-        u = (0, a.dQu)(o.Z.colors.BACKGROUND_PRIMARY).hsl(),
+        u = (0, a.dQu)(o.Z.colors.BACKGROUND_BASE_LOW).hsl(),
         d = (0, a.dQu)(o.Z.colors.TEXT_NORMAL).hsl(),
         f = (0, a.dQu)(o.Z.colors.BACKGROUND_ACCENT).hsl(),
         h = (0, a.dQu)(o.Z.unsafe_rawColors.BRAND_500).hsl();

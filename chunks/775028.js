@@ -151,7 +151,7 @@ let R = r.memo(function () {
             W = (e) => {
                 if (!M) return e.stopPropagation(), O(i.id, n.id, r.id), !0;
             },
-            F = (e) => {
+            z = (e) => {
                 n.isGuildVocal()
                     ? (0, u.jW)(e, async () => {
                           let { default: e } = await Promise.all([t.e('79695'), t.e('18320'), t.e('83331'), t.e('81070')]).then(t.bind(t, 213202));
@@ -176,7 +176,7 @@ let R = r.memo(function () {
                               );
                       });
             },
-            z = (function (e, n) {
+            F = (function (e, n) {
                 let t = [];
                 return (
                     Z.TPd.GUILD_THREADS_ONLY.has(e.type) &&
@@ -260,7 +260,7 @@ let R = r.memo(function () {
                                 ),
                                 {
                                     onClick: W,
-                                    onContextMenu: F,
+                                    onContextMenu: z,
                                     children: [
                                         (0, l.jsxs)('div', {
                                             className: E.channelInfo,
@@ -299,7 +299,7 @@ let R = r.memo(function () {
                                                 }),
                                                 (0, l.jsx)('div', {
                                                     className: E.channelSubtitles,
-                                                    children: z
+                                                    children: F
                                                 })
                                             ]
                                         }),

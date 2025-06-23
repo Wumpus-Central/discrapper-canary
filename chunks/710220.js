@@ -63,11 +63,13 @@ function d(e) {
                     ? (0, i.jsx)(r.X6q, {
                           variant: 'heading-lg/medium',
                           className: o.textContainer,
+                          color: 'header-primary',
                           children: a.intl.format(a.t.IqxblZ, { username: d(t) })
                       })
                     : (0, i.jsx)(r.Text, {
                           variant: 'text-sm/normal',
                           className: o.textContainer,
+                          color: 'header-primary',
                           children: a.intl.format(a.t.IqxblZ, { username: d(t) })
                       }),
                 !n &&

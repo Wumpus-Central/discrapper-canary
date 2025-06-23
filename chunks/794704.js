@@ -466,7 +466,7 @@ function eS(e) {
     (0, O.ZP)(() => {
         f.Z.getDetectableGames();
     });
-    let [en, ei] = r.useMemo(() => (Y ? ['text-muted', h.TVs.colors.TEXT_MUTED.css] : z && X ? ['text-warning', h.TVs.colors.TEXT_WARNING.css] : z && K ? ['text-positive', h.TVs.colors.TEXT_POSITIVE.css] : z && Q ? ['text-primary', h.TVs.colors.TEXT_PRIMARY.css] : ['interactive-normal', h.TVs.colors.INTERACTIVE_NORMAL.css]), [Y, z, X, K, Q]);
+    let [en, ei] = r.useMemo(() => (Y ? ['text-muted', h.TVs.colors.TEXT_MUTED.css] : z && X ? ['text-warning', h.TVs.colors.TEXT_FEEDBACK_WARNING.css] : z && K ? ['text-positive', h.TVs.colors.TEXT_FEEDBACK_POSITIVE.css] : z && Q ? ['text-primary', h.TVs.colors.TEXT_PRIMARY.css] : ['interactive-normal', h.TVs.colors.INTERACTIVE_NORMAL.css]), [Y, z, X, K, Q]);
     return null == l
         ? null
         : (0, i.jsxs)(ej, {
@@ -1094,7 +1094,7 @@ function eD() {
                             null != u && (e < 1 ? (0, _.zG)(u.id, { voiceStatesMaxShown: eo.Og }) : (0, _.zG)(u.id, { voiceStatesMaxShown: Math.floor(e) }));
                         },
                         markers: eb,
-                        barStyles: { background: h.TVs.colors.BG_MOD_STRONG.css },
+                        barStyles: { background: h.TVs.colors.BACKGROUND_MOD_STRONG.css },
                         fillStyles: { background: h.TVs.colors.BG_BRAND.css },
                         'aria-labelledby': ef,
                         onMarkerRender: (e) => (e < 1 ? ec.intl.string(ec.t.nrUzFB) : ''.concat(Math.floor(e)))

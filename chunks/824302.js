@@ -23,7 +23,6 @@ e.exports = {
     tierIconLocked: 'tierIconLocked_f15dca',
     tierTitle: 'tierTitle_f15dca',
     tierTitleActive: 'tierTitleActive_f15dca',
-    tierRequirement: 'tierRequirement_f15dca',
     tierLock: 'tierLock_f15dca',
     tierUnlocked: 'tierUnlocked_f15dca',
     tierClose: 'tierClose_f15dca',

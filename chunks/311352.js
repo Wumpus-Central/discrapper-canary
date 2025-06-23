@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(13140),
     m = n(924557),
     b = n(435064),
-    y = n(39604),
-    O = n(981631),
+    O = n(39604),
+    y = n(981631),
     _ = n(388032),
     v = n(856587);
 function C(e) {
@@ -115,7 +115,7 @@ let j = (e) => {
                 clipsEnabled: b.Z.getSettings().clipsEnabled,
                 isAtMaxSavingClipsOperations: b.Z.getIsAtMaxSaveClipOperations()
             })),
-            v = (0, l.e7)([f.ZP], () => f.ZP.getKeybindForAction(O.kg4.SAVE_CLIP));
+            v = (0, l.e7)([f.ZP], () => f.ZP.getKeybindForAction(y.kg4.SAVE_CLIP));
         if (!(o && a) || null == v || n) return null;
         let S = g.BB(v.shortcut, !0);
         return (0, r.jsx)(j, {
@@ -126,7 +126,7 @@ let j = (e) => {
                 disabled: d,
                 tooltipText: null != v ? _.intl.formatToPlainString(_.t.HIMcv7, { hotkey: g.BB(null == v ? void 0 : v.shortcut, !0) }) : _.intl.string(_.t.s52pjo),
                 onClick: () => {
-                    (0, y.C1)(), (0, u.v)(t, u.d.CLIP);
+                    (0, O.C1)(), (0, u.v)(t, u.d.CLIP);
                 },
                 onContextMenu: C,
                 icon: s.AlX

@@ -174,7 +174,7 @@ function U(e) {
     let { entry: t, hovered: n } = e,
         { defaultTextColor: i, defaultIconColor: a, location: o } = x(),
         s = (0, b.Jg)(t) && (0, h.Hi)(o, [0, 4, 7, 9]),
-        l = s ? f.TVs.colors.TEXT_POSITIVE : a,
+        l = s ? f.TVs.colors.TEXT_FEEDBACK_POSITIVE : a,
         c = s ? 'text-positive' : i,
         { streamPreviewUrl: u } = (0, E.Z)(t),
         { enabled: d } = _.c.useExperiment({ location: 'GameTimestampBadge' }, { autoTrackExposure: !0 }),
@@ -221,7 +221,7 @@ function B(e) {
     let { entry: t, hovered: n } = e,
         { defaultTextColor: i, defaultIconColor: a, location: o } = x(),
         s = (0, b.Jg)(t) && (0, h.Hi)(o, [0, 4]),
-        l = s ? f.TVs.colors.TEXT_POSITIVE : a,
+        l = s ? f.TVs.colors.TEXT_FEEDBACK_POSITIVE : a,
         c = s ? 'text-positive' : i;
     return (0, r.jsxs)('div', {
         className: T.badgeContainer,
@@ -349,7 +349,7 @@ function q(e) {
     let { entry: t, hovered: n } = e,
         { defaultTextColor: i, defaultIconColor: a, location: o } = x(),
         s = (0, b.Jg)(t) && 4 === o,
-        l = s ? f.TVs.colors.TEXT_POSITIVE : a,
+        l = s ? f.TVs.colors.TEXT_FEEDBACK_POSITIVE : a,
         c = s ? 'text-positive' : i;
     return (0, r.jsxs)('div', {
         className: T.badgeContainer,

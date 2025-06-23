@@ -527,7 +527,6 @@ function eL(e, t) {
                       ref: tX,
                       children: [
                           (0, r.jsxs)('div', {
-                              className: ef.accessoryBarLeft,
                               children: [
                                   null == ed ? void 0 : ed(),
                                   tB,
@@ -540,7 +539,6 @@ function eL(e, t) {
                               ]
                           }),
                           (0, r.jsxs)('div', {
-                              className: ef.accessoryBarRight,
                               children: [t$, tJ]
                           })
                       ]
@@ -659,7 +657,6 @@ function eL(e, t) {
                                         }),
                                         e$
                                             ? (0, r.jsxs)('div', {
-                                                  className: ef.rightAccessories,
                                                   children: [
                                                       tW ? (0, r.jsx)(A.Z, { channel: Z }) : null,
                                                       null != (O = null == en ? void 0 : en()) ? O : null,

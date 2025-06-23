@@ -72,12 +72,12 @@ function B(e) {
     return e;
 }
 var Y = (((i = {}).ACTIVITY_FEED = 'ActivityFeed'), (i.STREAM_PREVIEW = 'StreamPreview'), (i.VOICE_CHANNEL = 'VoiceChannel'), i);
-let z = {
+let W = {
         StreamPreview: [108, 60],
         VoiceChannel: [108, 60],
         ActivityFeed: [900, 500]
     },
-    W = (0, p.Z)(
+    z = (0, p.Z)(
         class extends a.PureComponent {
             render() {
                 return (0, l.jsx)('div', {
@@ -176,7 +176,7 @@ class H extends (r = a.PureComponent) {
             { type: c } = this.props,
             { assets: u, application_id: d } = e;
         if (null == u || (null == u.large_image && null == u.small_image)) return null;
-        (0, k.Z)(e) && (i = z[c]);
+        (0, k.Z)(e) && (i = W[c]);
         let p = (0, A.Z)(e),
             m =
                 null != u.large_image
@@ -416,7 +416,7 @@ class H extends (r = a.PureComponent) {
         return null == n
             ? null
             : (0, N.Z)(e)
-              ? (0, l.jsx)(W, { timestamps: n })
+              ? (0, l.jsx)(z, { timestamps: n })
               : (0, l.jsx)(S.ZP, {
                     start: n.start,
                     location: S.ZP.Locations.USER_ACTIVITY,

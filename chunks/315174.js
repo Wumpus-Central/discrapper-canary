@@ -18,8 +18,8 @@ var r = n(255367),
     g = n(340541),
     m = n(159300),
     b = n(210887),
-    y = n(695346),
-    O = n(496675),
+    O = n(695346),
+    y = n(496675),
     _ = n(768581),
     v = n(358555),
     C = n(981631),
@@ -74,7 +74,7 @@ function N(e) {
     var t;
     let { isRefreshEnabled: n, guild: i, controller: l, guildBanner: c, animate: u } = e,
         { value: d } = l.springs,
-        h = y.QK.getSetting();
+        h = O.QK.getSetting();
     return (0, r.jsx)(s.animated.div, {
         className: E.animatedContainer,
         style: {
@@ -226,9 +226,9 @@ function L(e) {
                 });
             };
         }, [l, p]),
-        y = (0, c.e7)([O.Z], () => (0, m.b)(O.Z, l)),
+        O = (0, c.e7)([y.Z], () => (0, m.b)(y.Z, l)),
         _ = i.useCallback(() => {
-            y
+            O
                 ? (0, u.ZDy)(async () => {
                       let { default: e } = await Promise.all([n.e('7654'), n.e('17439')]).then(n.bind(n, 560114));
                       return (t) =>
@@ -244,7 +244,7 @@ function L(e) {
                       let { default: e } = await n.e('88358').then(n.bind(n, 598402));
                       return (t) => (0, r.jsx)(e, P({}, t));
                   });
-        }, [y, l]);
+        }, [O, l]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(u.KeG, {
@@ -327,7 +327,7 @@ function L(e) {
     });
 }
 let M = i.memo(function (e) {
-    let { ref: t, bannerVisible: n, controller: l, className: s, onClick: c, onContextMenu: d, onMouseDown: f, disableBannerAnimation: m, 'aria-expanded': b, 'aria-controls': O, guild: v, guildBanner: j, animationOverlayHeight: S, children: x, headerClassName: Z, communityInfoVisible: T, hasSubheader: A } = e,
+    let { ref: t, bannerVisible: n, controller: l, className: s, onClick: c, onContextMenu: d, onMouseDown: f, disableBannerAnimation: m, 'aria-expanded': b, 'aria-controls': y, guild: v, guildBanner: j, animationOverlayHeight: S, children: x, headerClassName: Z, communityInfoVisible: T, hasSubheader: A } = e,
         D = v.hasFeature(C.oNc.ANIMATED_BANNER),
         M = (0, p.Z)(v),
         U = !M && v.hasCommunityInfoSubheader(),
@@ -338,7 +338,7 @@ let M = i.memo(function (e) {
         z = i.useRef(null),
         W = null != t ? t : z,
         K = i.useRef(void 0),
-        Y = y.QK.getSetting();
+        Y = O.QK.getSetting();
     i.useEffect(() => {
         if (B && n && !F.current && Y)
             return (
@@ -365,7 +365,7 @@ let M = i.memo(function (e) {
             guild: v,
             onClick: c,
             onContextMenu: d,
-            ariaControls: O,
+            ariaControls: y,
             ariaExpanded: b,
             guildHeaderRef: W
         };

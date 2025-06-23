@@ -105,7 +105,7 @@ function I(e) {
         })(),
         E = C ? c.Iy5 : c.X_q,
         w = i.useCallback(() => (0, m.v6)(null), []),
-        T = (0, c.dQu)(c.TVs.colors.BACKGROUND_SECONDARY).hex(),
+        T = (0, c.dQu)(c.TVs.colors.BACKGROUND_BASE_LOWER).hex(),
         N = (0, c.dQu)(c.TVs.colors.WHITE).hex(),
         Z = i.useRef(0),
         A = n !== l ? Z.current + 1 : Z.current;

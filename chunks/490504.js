@@ -13,7 +13,7 @@ let o = function (e) {
                 className: a.icon,
                 width: 20,
                 height: 20,
-                color: i.TVs.colors.TEXT_WARNING
+                color: i.TVs.colors.TEXT_FEEDBACK_WARNING
             }),
             (0, r.jsx)(i.Text, {
                 variant: 'text-sm/normal',

@@ -57,8 +57,8 @@ let L = (e) => {
                 return o()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e;
             }),
             Y = U === O.Y.STREAM_PREVIEW || null != a,
-            z = (0, h.Z)(t),
-            W = z || Y ? p.Z.Direction.HORIZONTAL : p.Z.Direction.VERTICAL;
+            W = (0, h.Z)(t),
+            z = W || Y ? p.Z.Direction.HORIZONTAL : p.Z.Direction.VERTICAL;
         if ((null == t ? void 0 : t.application_id) === Z.bO) {
             var G, H;
             return (
@@ -114,11 +114,11 @@ let L = (e) => {
                 })
             );
         }
-        let J = W === p.Z.Direction.VERTICAL;
+        let J = z === p.Z.Direction.VERTICAL;
         return (0, r.jsx)(p.Z, {
             grow: 0,
             align: p.Z.Align.STRETCH,
-            direction: W,
+            direction: z,
             wrap: J ? p.Z.Wrap.WRAP : p.Z.Wrap.NO_WRAP,
             className: l()(u, k.buttonsWrapper, J ? k.vertical : k.horizontal),
             children: (() => {
@@ -146,7 +146,7 @@ let L = (e) => {
                         },
                         'ConnectPlatformActivityButton'
                     );
-                if (z) {
+                if (W) {
                     let e = (0, r.jsx)(
                             E.Z,
                             {

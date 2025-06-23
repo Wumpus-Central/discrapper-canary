@@ -19,8 +19,8 @@ var r = n(255367),
     g = n(496675),
     m = n(259580),
     b = n(267642),
-    y = n(624138),
-    O = n(667815),
+    O = n(624138),
+    y = n(667815),
     _ = n(531572),
     v = n(651138),
     C = n(18857),
@@ -71,7 +71,7 @@ function I(e, t) {
         e
     );
 }
-let N = (0, y.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
+let N = (0, O.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
     w = 57,
     Z = 57 + N,
     T = {
@@ -82,7 +82,7 @@ let N = (0, y.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
         let { guild: t, withMargin: n } = e,
             l = (0, p.Q3)('GuildBoostingSidebarDisplay'),
             u = (0, b.Jh)(t.id),
-            y = (0, f.Z)(t.id),
+            O = (0, f.Z)(t.id),
             N = (0, b.FZ)(u),
             w = null == N,
             Z = null != N ? N : u,
@@ -92,27 +92,27 @@ let N = (0, y.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
             }),
             R = (0, c.e7)([g.Z], () => g.Z.can(j.Plq.MANAGE_GUILD, t));
         i.useEffect(() => {
-            A !== y && (0, O.v)(t.id, y);
-        }, [t.id, A, y]);
-        let D = w ? '100%' : ''.concat(Math.min(100, (y / j.oCV[Z]) * 100), '%'),
+            A !== O && (0, y.v)(t.id, O);
+        }, [t.id, A, O]);
+        let D = w ? '100%' : ''.concat(Math.min(100, (O / j.oCV[Z]) * 100), '%'),
             { current: L } = i.useRef(D),
             [M] = (0, d.q_F)(
                 () => ({
-                    from: { width: A === y ? L : '0%' },
+                    from: { width: A === O ? L : '0%' },
                     to: { width: D },
                     config: T
                 }),
                 'respect-motion-settings',
-                [A, y, L, D]
+                [A, O, L, D]
             ),
             k = t.premiumTier < Z && A >= j.oCV[Z],
             U = (0, C.Z)(t),
             G = S.intl.formatToPlainString(S.t['2oNfMT'], { levelName: (0, b.e9)(Z) }),
             B = S.intl.format(S.t.dhKnYm, {
-                numBoosts: y,
+                numBoosts: O,
                 numTotal: j.oCV[Z]
             });
-        w && ((G = (0, b.e9)(Z)), (B = S.intl.format(S.t.B2byER, { numBoosts: y }))), l && (G = G.toLocaleLowerCase());
+        w && ((G = (0, b.e9)(Z)), (B = S.intl.format(S.t.B2byER, { numBoosts: O }))), l && (G = G.toLocaleLowerCase());
         let V = (0, a.JA)('boosts-'.concat(t.id));
         return (0, r.jsx)('li', {
             children: (0, r.jsx)(d.ua7, {

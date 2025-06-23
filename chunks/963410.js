@@ -34,11 +34,11 @@ function T(e) {
 function C(e) {
     let { transitionState: t, userId: n, channelId: C, onClose: Z } = e,
         O = (0, i.e7)([o.default], () => o.default.getUser(n)),
-        j = (0, i.e7)([a.Z], () => {
+        A = (0, i.e7)([a.Z], () => {
             var e;
             return null == (e = a.Z.getChannel(C)) ? void 0 : e.getGuildId();
         }),
-        A = c.ZP.useName(j, null, O),
+        j = c.ZP.useName(A, null, O),
         { fingerprint: x, userKey: w } = (0, m.q)({ userId: n }),
         M = (0, y.W)({
             fingerprintBase64: x,
@@ -58,7 +58,7 @@ function C(e) {
     (0, g.i)({
         channelId: C,
         userId: n,
-        nickname: A,
+        nickname: j,
         onAlertOpen: Z
     });
     let { isCurrentUserKeyPersistent: P, isOtherUserKeyPersistent: D, loading: F } = (0, E.y)({ userId: n }),
@@ -74,11 +74,11 @@ function C(e) {
                 (0, f.kK)({
                     isCurrentUserKeyPersistent: P,
                     isOtherUserKeyPersistent: D,
-                    otherUserNickname: A
+                    otherUserNickname: j
                 }),
-            [P, D, A]
+            [P, D, j]
         ),
-        G = (0, S.P)({
+        B = (0, S.P)({
             userId: n,
             keyToOmit: w
         });
@@ -92,16 +92,16 @@ function C(e) {
         (0, r.jsxs)(b.Z, {
             transitionState: t,
             title: I.intl.string(I.t['/WPGnJ']),
-            subtitle: I.intl.format(I.t.oc2kcX, { username: A }),
+            subtitle: I.intl.format(I.t.oc2kcX, { username: j }),
             children: [
                 (0, r.jsxs)('div', {
                     className: v.verification,
                     children: [
-                        G > 0 &&
+                        B > 0 &&
                             (0, r.jsx)(u.Wn, {
                                 messageType: u.QYI.INFO,
                                 className: v.helpMessage,
-                                children: I.intl.format(I.t.uZDkz8, { count: G })
+                                children: I.intl.format(I.t.uZDkz8, { count: B })
                             }),
                         (0, r.jsxs)('div', {
                             className: v.header,

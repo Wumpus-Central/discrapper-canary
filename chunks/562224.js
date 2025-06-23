@@ -12,8 +12,8 @@ var r = n(268146),
     h = n(594174),
     p = n(358085),
     g = n(451467),
-    y = n(537413),
-    O = n(143135),
+    O = n(537413),
+    y = n(143135),
     b = n(37113),
     N = n(761274);
 async function m(e, t) {
@@ -29,18 +29,18 @@ async function m(e, t) {
     if (!d.Z.getUseSystemScreensharePicker() && !(await o.Z.hasPermission(N.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }))) return [!1, 'no permission'];
     let { preset: D, resolution: U, fps: k, soundshareEnabled: M } = s.Z.getState(),
         L = null != (v = null == t ? void 0 : t.preset) ? v : D,
-        [B, G] = null != (x = (0, y.Z)(L, P, w)) ? x : [],
+        [B, G] = null != (x = (0, O.Z)(L, P, w)) ? x : [],
         V = null != (E = null != B ? B : null == t ? void 0 : t.resolution) ? E : U,
         F = null != (C = null != G ? G : null == t ? void 0 : t.fps) ? C : k,
         W = null != (I = null == t ? void 0 : t.previewDisabled) ? I : a.I0.getSetting(),
-        Y = null != (T = null == t ? void 0 : t.soundshareEnabled) ? T : M;
+        K = null != (T = null == t ? void 0 : t.soundshareEnabled) ? T : M;
     return (
         (0, g.Z)(L, V, F, P, w, Z) || ((L = b.tI.PRESET_VIDEO), (V = b.LY.RESOLUTION_720), (F = b.ws.FPS_30)),
         (0, l.Rc)({
             preset: L,
             resolution: V,
             frameRate: F,
-            soundshareEnabled: Y
+            soundshareEnabled: K
         }),
         (0, l.WH)(
             A,
@@ -73,7 +73,7 @@ async function m(e, t) {
                 {},
                 (function (e) {
                     if (e.hasOwnProperty('pid')) return { pid: e.pid };
-                    let t = (0, O.Z)(void 0, e, i.ZP.getRunningGames()),
+                    let t = (0, y.Z)(void 0, e, i.ZP.getRunningGames()),
                         n = !(0, p.isWindows)() || null == t || (null == e ? void 0 : e.id.startsWith(r.vA.CAMERA)) || null == t ? null : t.pid;
                     return null != n
                         ? { pid: n }
@@ -87,7 +87,7 @@ async function m(e, t) {
             (S = S =
                 {
                     audioSourceId: (null == (m = R.id) ? void 0 : m.startsWith(r.vA.CAMERA)) ? (null == t ? void 0 : t.audioSourceId) : void 0,
-                    sound: Y,
+                    sound: K,
                     previewDisabled: W,
                     goLiveModalDurationMs: null == t ? void 0 : t.goLiveModalDurationMs
                 }),

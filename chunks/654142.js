@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(539854), n(388685);
+n.d(t, { Z: () => O }), n(539854), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -55,9 +55,9 @@ function b(e, t) {
         e
     );
 }
-let y = i.memo(function (e) {
+let O = i.memo(function (e) {
     var { folderNode: t } = e,
-        y = (function (e, t) {
+        O = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -76,10 +76,10 @@ let y = i.memo(function (e) {
             }
             return i;
         })(e, ['folderNode']);
-    let { id: O, name: _, color: v, children: C } = t,
+    let { id: y, name: _, color: v, children: C } = t,
         j = C.map((e) => e.id),
         S = (0, a.Z)((e) => e.guildId),
-        x = (0, l.e7)([c.Z], () => c.Z.isFolderExpanded(O)),
+        x = (0, l.e7)([c.Z], () => c.Z.isFolderExpanded(y)),
         E = (function (e) {
             let t = e.children
                     .map((e) => {
@@ -104,8 +104,8 @@ let y = i.memo(function (e) {
             unread: j.some((e) => u.default.hasUnread(e))
         })),
         Z = i.useCallback(() => {
-            s.Z.toggleGuildFolderExpand(O);
-        }, [O]),
+            s.Z.toggleGuildFolderExpand(y);
+        }, [y]),
         T = i.useCallback(
             (e) => {
                 (0, o.jW)(e, async () => {
@@ -114,7 +114,7 @@ let y = i.memo(function (e) {
                         (0, r.jsx)(
                             e,
                             b(m({}, t), {
-                                folderId: O,
+                                folderId: y,
                                 folderName: _,
                                 folderColor: v,
                                 unread: w || I > 0
@@ -122,11 +122,11 @@ let y = i.memo(function (e) {
                         );
                 });
             },
-            [O, _, v, w, I]
+            [y, _, v, w, I]
         );
     return (0, r.jsx)(
         p.Z,
-        b(m({}, y), {
+        b(m({}, O), {
             folderNode: t,
             expanded: x,
             selected: null != S && j.includes(S),

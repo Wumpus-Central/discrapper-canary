@@ -12,8 +12,8 @@ var r = n(255367),
     h = n(441894),
     p = n(160038),
     g = n(586646),
-    y = n(760373),
-    O = n(388032),
+    O = n(760373),
+    y = n(388032),
     b = n(935179);
 function N(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -96,7 +96,7 @@ function x(e) {
 }
 function E(e) {
     let { channelId: t, isOverlay: n, lobbyId: l, closePopout: i } = e,
-        o = (0, h.J)({ channelId: t }) ? O.intl.string(O.t['3BogKS']) : O.intl.string(O.t.ETIVvr);
+        o = (0, h.J)({ channelId: t }) ? y.intl.string(y.t['3BogKS']) : y.intl.string(y.t.ETIVvr);
     return n
         ? (0, r.jsx)(v, {
               lobbyId: l,
@@ -110,13 +110,13 @@ function E(e) {
 }
 function C(e) {
     let t = (0, i.e7)([c.Z], () => c.Z.hasVideo(e.channelId)),
-        [n, s] = l.useState(y.tu.RTC_DEBUG_PANEL),
+        [n, s] = l.useState(O.tu.RTC_DEBUG_PANEL),
         u = (0, a.Dt)(),
         h = l.useMemo(() => {
             switch (n) {
-                case y.tu.RTC_DEBUG_PANEL:
+                case O.tu.RTC_DEBUG_PANEL:
                     return (0, r.jsx)(E, N({}, e));
-                case y.tu.RTC_SECURE_FRAMES:
+                case O.tu.RTC_SECURE_FRAMES:
                     return (0, r.jsx)(g.Z, { channelId: e.channelId });
             }
         }, [e, n]);
@@ -129,7 +129,7 @@ function C(e) {
     let p = (0, f.r)();
     return (
         l.useEffect(() => {
-            p && s(y.tu.RTC_DEBUG_PANEL);
+            p && s(O.tu.RTC_DEBUG_PANEL);
         }, [p]),
         (0, r.jsxs)('div', {
             className: b.container,
@@ -138,7 +138,7 @@ function C(e) {
                     className: b.title,
                     variant: 'heading-lg/bold',
                     color: 'header-primary',
-                    children: t ? O.intl.string(O.t.IlHdW1) : O.intl.string(O.t.WsOisr)
+                    children: t ? y.intl.string(y.t.IlHdW1) : y.intl.string(y.t.WsOisr)
                 }),
                 (0, r.jsxs)(o.njP, {
                     className: b.tabs,
@@ -148,16 +148,16 @@ function C(e) {
                     onItemSelect: s,
                     children: [
                         (0, r.jsx)(o.njP.Item, {
-                            id: y.tu.RTC_DEBUG_PANEL,
+                            id: O.tu.RTC_DEBUG_PANEL,
                             className: b.tabBarItem,
-                            children: O.intl.string(O.t.MBY1Pj)
+                            children: y.intl.string(y.t.MBY1Pj)
                         }),
                         p
                             ? null
                             : (0, r.jsx)(o.njP.Item, {
-                                  id: y.tu.RTC_SECURE_FRAMES,
+                                  id: O.tu.RTC_SECURE_FRAMES,
                                   className: b.tabBarItem,
-                                  children: O.intl.string(O.t.zC6o3t)
+                                  children: y.intl.string(y.t.zC6o3t)
                               })
                     ]
                 }),

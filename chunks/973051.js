@@ -57,21 +57,21 @@ function g(e, t) {
 }
 function j(e) {
     var t;
-    let { guild: n, prompts: j, completeOnboarding: v, setCurrentStep: _, disableTracking: b, previousPromptIndex: N } = e,
+    let { guild: n, prompts: j, completeOnboarding: v, setCurrentStep: b, disableTracking: _, previousPromptIndex: N } = e,
         C = l.useRef(null),
-        O = (0, i.e7)([c.Z], () => c.Z.getRulesPrompt(n.id)),
-        [E, I] = l.useState(null != (t = null == O ? void 0 : O.response) && t),
+        E = (0, i.e7)([c.Z], () => c.Z.getRulesPrompt(n.id)),
+        [O, I] = l.useState(null != (t = null == E ? void 0 : E.response) && t),
         k = (0, i.e7)([c.Z], () => c.Z.get(n.id)),
         Z = l.useRef(null),
         y = l.useRef(null),
         P = l.useCallback(async () => {
-            if (null != k && null != O) {
+            if (null != k && null != E) {
                 try {
-                    await a.ZP.submitVerificationForm(n.id, g(x({}, k), { formFields: [g(x({}, O), { response: E })] }));
+                    await a.ZP.submitVerificationForm(n.id, g(x({}, k), { formFields: [g(x({}, E), { response: O })] }));
                 } catch (e) {}
                 v();
             }
-        }, [n.id, k, O, E, v]);
+        }, [n.id, k, E, O, v]);
     function w(e) {
         let [t] = e;
         t.isIntersecting && I(!0);
@@ -90,7 +90,7 @@ function j(e) {
             }
         );
     }, [y, Z]),
-    null == O)
+    null == E)
         ? null
         : (0, r.jsx)('div', {
               className: p.prompt,
@@ -114,7 +114,7 @@ function j(e) {
                               (0, r.jsx)('div', {
                                   className: p.termsFieldBody,
                                   ref: y,
-                                  children: O.values.map((e, t) =>
+                                  children: E.values.map((e, t) =>
                                       (0, r.jsxs)(
                                           'div',
                                           {
@@ -149,7 +149,7 @@ function j(e) {
                                       (0, r.jsxs)(o.zxk, {
                                           innerClassName: p.buttonInner,
                                           onClick: () => {
-                                              !b &&
+                                              !_ &&
                                                   (m.default.track(
                                                       f.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
                                                       g(x({}, (0, s.hH)(n.id)), {
@@ -169,7 +169,7 @@ function j(e) {
                                                               required: j[N].required
                                                           })
                                                       )),
-                                                  _(N);
+                                                  b(N);
                                           },
                                           size: o.zxk.Sizes.MEDIUM,
                                           look: o.zxk.Looks.OUTLINED,
@@ -191,12 +191,12 @@ function j(e) {
                                           className: p.helpText,
                                           variant: 'text-xs/normal',
                                           color: 'text-muted',
-                                          children: E ? h.intl.string(h.t.arAe3N) : h.intl.string(h.t.D0CVAQ)
+                                          children: O ? h.intl.string(h.t.arAe3N) : h.intl.string(h.t.D0CVAQ)
                                       }),
                                       (0, r.jsxs)(o.zxk, {
                                           innerClassName: p.buttonInner,
                                           onClick: P,
-                                          disabled: !E,
+                                          disabled: !O,
                                           size: o.zxk.Sizes.MEDIUM,
                                           look: o.zxk.Looks.FILLED,
                                           grow: !1,

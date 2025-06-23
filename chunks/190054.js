@@ -35,7 +35,7 @@ function d(e) {
                 p(!0), null == i || i();
             });
         }, [i, f]),
-        y = h ? a.owK : a.TIy;
+        O = h ? a.owK : a.TIy;
     return (0, r.jsx)(a.P3F, {
         className: o()(u.container, n),
         onClick: g,
@@ -44,7 +44,7 @@ function d(e) {
             children: (e) => {
                 var t, n;
                 return (0, r.jsx)(
-                    y,
+                    O,
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -73,7 +73,7 @@ function d(e) {
                     (n = n =
                         {
                             size: 'xxs',
-                            color: h ? a.TVs.colors.TEXT_POSITIVE : a.TVs.colors.INTERACTIVE_NORMAL
+                            color: h ? a.TVs.colors.TEXT_FEEDBACK_POSITIVE : a.TVs.colors.INTERACTIVE_NORMAL
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

@@ -235,6 +235,7 @@ class F extends i.PureComponent {
                 let { searchMode: e } = this.state,
                     { totalResults: t, isSearching: n, isHistoricalIndexing: i, documentsIndexed: l } = this.props.search;
                 return (0, r.jsx)(S.Z, {
+                    searchId: this.props.searchId,
                     searchMode: e,
                     searchByMode: this.searchByMode,
                     totalResults: t,

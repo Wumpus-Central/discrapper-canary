@@ -35,7 +35,7 @@ function p(e) {
             secondaryColor: l.Z.colors.BACKGROUND_ACCENT.css
         }),
         E = [(Math.min(u.X, v) / u.md) * 100, (Math.min(u.md, _) / u.md) * 100],
-        S = !O && C ? [l.Z.colors.TEXT_POSITIVE.css, l.Z.colors.TEXT_POSITIVE.css] : [l.Z.colors.TEXT_BRAND.css, l.Z.colors.TEXT_MUTED.css];
+        S = !O && C ? [l.Z.colors.TEXT_FEEDBACK_POSITIVE.css, l.Z.colors.TEXT_FEEDBACK_POSITIVE.css] : [l.Z.colors.TEXT_BRAND.css, l.Z.colors.TEXT_MUTED.css];
     return (0, r.jsxs)('div', {
         className: g.container,
         children: [

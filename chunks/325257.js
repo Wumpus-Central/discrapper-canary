@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(153867),
     m = n(377171),
     b = n(540059),
-    y = n(35225),
-    O = n(703656),
+    O = n(35225),
+    y = n(703656),
     _ = n(769654),
     v = n(271383),
     C = n(771845),
@@ -114,17 +114,17 @@ let k = i.memo(function (e) {
         ef = (0, c.Ie)(null != eo ? eo : Z.lds, null != es ? 2 : 1),
         [eg, em] = i.useState(!1),
         eb = !ee && eg,
-        [ey, eO] = i.useState(!1),
+        [eO, ey] = i.useState(!1),
         [e_, ev] = i.useState(!1),
         [eC] = i.useState(() => new d.sW(70, () => ev(!0)));
     i.useEffect(() => () => eC.cancel(), [eC]);
     let ej = i.useCallback(() => {
-            if (null != H) return void (0, O.uL)(H, { state: L });
+            if (null != H) return void (0, y.uL)(H, { state: L });
             (0, _.X)(eo, { state: L });
         }, [eo, H]),
         eS = i.useCallback(() => {
             if (null != H || null == F || q || !et) return;
-            let e = (0, y.V)(F.id);
+            let e = (0, O.V)(F.id);
             null != e && p.Z.preload(F.id, e);
         }, [H, F, q, et]),
         ex = (0, u.e7)([v.ZP], () => v.ZP.isCurrentUserGuest(eo)),
@@ -159,16 +159,16 @@ let k = i.memo(function (e) {
         ew = (0, h.dQu)(h.TVs.modules.guildbar.AVATAR_SIZE);
     if (null == F) return null;
     let eZ =
-            e_ || ey
+            e_ || eO
                 ? (0, r.jsx)(x.Z, {
                       guild: F,
                       show: e_,
                       active: W,
                       onAnimationStart: function () {
-                          eO(e_);
+                          ey(e_);
                       },
                       onAnimationRest: function () {
-                          e_ || eO(!1);
+                          e_ || ey(!1);
                       }
                   })
                 : (0, r.jsx)(

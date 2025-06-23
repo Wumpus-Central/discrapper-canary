@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(496675),
     m = n(158776),
     b = n(979651),
-    y = n(823379),
-    O = n(355363),
+    O = n(823379),
+    y = n(355363),
     _ = n(449932),
     v = n(561788),
     C = n(876548),
@@ -26,7 +26,7 @@ var r = n(255367),
     P = n(656855);
 function I(e) {
     var t, l;
-    let { channel: o, guild: p, onAction: f, voiceStates: g, isChannelSelected: b, shouldShowSettingNudge: O } = e,
+    let { channel: o, guild: p, onAction: f, voiceStates: g, isChannelSelected: b, shouldShowSettingNudge: y } = e,
         v = i.useMemo(() => {
             var e;
             return null == g || g.length > 50
@@ -45,7 +45,7 @@ function I(e) {
     (0, c.$)(v);
     let C = (0, u.ZP)(o),
         j = Array.from((0, u.uF)(C).values()),
-        P = null != (t = null == g ? void 0 : g.filter(y.lm)) ? t : [],
+        P = null != (t = null == g ? void 0 : g.filter(O.lm)) ? t : [],
         I = (e) => (t) => ([S.IIU.PLAYING, S.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === S.IIU.LISTENING,
         w = (0, s.e7)(
             [m.Z],
@@ -110,7 +110,7 @@ function I(e) {
                           t
                       );
                   }),
-                  O &&
+                  y &&
                       (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)('div', { className: E.headerDivider }),
@@ -182,7 +182,7 @@ function N(e) {
     let { channel: t, isChannelSelected: n, voiceStatesCount: i } = e,
         l = (0, s.e7)([g.Z], () => !g.Z.can(S.Plq.CONNECT, t)),
         a = (0, s.e7)([b.Z], () => b.Z.hasVideo(t.id)),
-        c = (0, O.ZP)({
+        c = (0, y.ZP)({
             channel: t,
             locked: l,
             video: a,

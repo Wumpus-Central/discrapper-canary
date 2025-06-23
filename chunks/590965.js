@@ -14,8 +14,8 @@ var i,
     g = n(594174),
     m = n(998502),
     b = n(981631),
-    y = n(176505);
-function O(e, t, n) {
+    O = n(176505);
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,7 +39,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                O(e, t, n[t]);
+                y(e, t, n[t]);
             });
     }
     return e;
@@ -67,7 +67,7 @@ class E extends (i = l.ZP.Store) {
         };
     }
 }
-O(E, 'displayName', 'InviteModalStore');
+y(E, 'displayName', 'InviteModalStore');
 let P = new E(o.Z, {
     OVERLAY_INITIALIZE: x,
     CONNECTION_OPEN: x,
@@ -86,7 +86,7 @@ let P = new E(o.Z, {
                 if (null == n) return !1;
                 if (null != h.Z.getGuild(n.id) && !(0, s.TY)(t)) {
                     let e = (function (e) {
-                        if ((0, s.W6)(e)) return y.oC.ROLE_SUBSCRIPTIONS;
+                        if ((0, s.W6)(e)) return O.oC.ROLE_SUBSCRIPTIONS;
                         let { channel: t } = e;
                         if (null != t) {
                             let e = d.Z.getChannel(t.id);

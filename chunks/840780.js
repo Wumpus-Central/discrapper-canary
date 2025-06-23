@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ey }), n(388685), n(539854);
+n.d(t, { Z: () => eO }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(438139),
     m = n(730749),
     b = n(607070),
-    y = n(636449),
-    O = n(566620),
+    O = n(636449),
+    y = n(566620),
     _ = n(317381),
     v = n(889441),
     C = n(736409),
@@ -190,10 +190,10 @@ class eb extends i.PureComponent {
             { application: n, embeddedActivity: i, channel: l, channelName: s, guildForConnectedChannel: a, showsActivityPopoutQuickRefocusNUX: c, markActivityPopoutQuickRefocusNUXAsDismissed: u, isForceShowSharingPopout: p, setIsForceShowSharingPopout: f } = this.props;
         if (null == i || null == n) return null;
         let g = { start: i.connectedSince },
-            m = (0, y.R)(),
+            m = (0, O.R)(),
             b = s;
         null != a && null != l ? ((e = ea.Z5c.CHANNEL(a.id, l.id)), (b = ''.concat(b, ' / ').concat(a.name))) : null != l && (e = ea.Z5c.CHANNEL(ea.ME, l.id));
-        let O = (0, r.jsx)(U.Z, {
+        let y = (0, r.jsx)(U.Z, {
             href: e,
             onClick: this.handleApplicationOrChannelLinkClick,
             children: (0, r.jsx)(ei.Z, {
@@ -223,7 +223,7 @@ class eb extends i.PureComponent {
                     setIsForceShowSharingPopout: f,
                     children: (0, r.jsxs)('div', {
                         className: eh.info,
-                        children: [t, null != l && (0, H.Qm)(l.type) ? O : (0, r.jsx)(em, { timestamps: g })]
+                        children: [t, null != l && (0, H.Qm)(l.type) ? y : (0, r.jsx)(em, { timestamps: g })]
                     })
                 })
             ]
@@ -290,7 +290,7 @@ class eb extends i.PureComponent {
                 a()(null != n, 'Activity cannot be null during navigation click'),
                     a()(null != t, 'Channel cannot be null during navigation click'),
                     f.Z.channelListScrollTo(null != (e = t.guild_id) ? e : ea.ME, t.id),
-                    !(0, y.R)() &&
+                    !(0, O.R)() &&
                         ((0, H.vd)(t.type) &&
                             p.Z.selectParticipant(
                                 t.id,
@@ -299,11 +299,11 @@ class eb extends i.PureComponent {
                                     instanceId: n.compositeInstanceId
                                 })
                             ),
-                        (0, H.Qm)(t.type) && (0, O.tg)(ec.Ez.PANEL));
+                        (0, H.Qm)(t.type) && (0, y.tg)(ec.Ez.PANEL));
             });
     }
 }
-let ey = (0, m.Z)(function (e) {
+let eO = (0, m.Z)(function (e) {
     var t,
         { guildId: n } = e,
         l = (function (e, t) {
@@ -333,12 +333,12 @@ let ey = (0, m.Z)(function (e) {
         p = (0, c.e7)([Y.Z], () => Y.Z.getGuild(null == h ? void 0 : h.guild_id)),
         [f, g] = (0, c.Wu)([F.Z], () => [F.Z.getCurrentUserActiveStream(), F.Z.getStreamerActiveStreamMetadata()]),
         m = (0, c.e7)([b.Z], () => b.Z.useReducedMotion),
-        O = (0, c.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
+        y = (0, c.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
         C = (0, c.e7)([Y.Z, Q.Z, K.ZP], () => (null != a ? R.JL(a, Y.Z, Q.Z, !1) : null != n && R.h_(K.ZP.getChannels(n), Y.Z, Q.Z).length > 0)),
-        [j] = (0, S.Z)([null != (t = null != g && null != g.id ? g.id : null != s && null != s.id ? s.id : null != O ? O.applicationId : void 0) ? t : '']),
+        [j] = (0, S.Z)([null != (t = null != g && null != g.id ? g.id : null != s && null != s.id ? s.id : null != y ? y.applicationId : void 0) ? t : '']),
         x = (0, c.e7)([I.Z], () => I.Z.getFakeGameData()),
         P = (0, c.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
-        N = (0, v.Z)() && null != P && (0, y.R)(),
+        N = (0, v.Z)() && null != P && (0, O.R)(),
         A = (0, c.e7)([q.Z], () => (0, D.Z)(q.Z) && (0, er.isWindows)()),
         L = (0, c.e7)([X.Z], () => (null != o ? X.Z.findActivity(o, (e) => e.type === ea.IIU.PLAYING) : null)),
         M = null != f && f.ownerId === o && f.state !== ea.jm8.ENDED,
@@ -349,7 +349,7 @@ let ey = (0, m.Z)(function (e) {
             let e = [],
                 t = (0, w.wE)(u.z.ACTIVITY_POPOUT_NUX_MODAL),
                 n = (0, c.e7)([en.Z], () => en.Z.isFocused());
-            (0, y.R)() && t && n && e.push(u.z.ACTIVITY_POPOUT_NUX_QUICK_REFOCUS_TOOLTIP);
+            (0, O.R)() && t && n && e.push(u.z.ACTIVITY_POPOUT_NUX_QUICK_REFOCUS_TOOLTIP);
             let [r, i] = (0, Z.US)(e);
             return {
                 showsActivityPopoutQuickRefocusNUX: r === u.z.ACTIVITY_POPOUT_NUX_QUICK_REFOCUS_TOOLTIP,
@@ -362,7 +362,7 @@ let ey = (0, m.Z)(function (e) {
             guildId: n,
             canGoLive: A || N || void 0 !== x,
             activity: L,
-            embeddedActivity: O,
+            embeddedActivity: y,
             userId: o,
             runningGame: null != x ? x : s,
             application: j,

@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(496675),
     m = n(98597),
     b = n(473403),
-    y = n(981631),
-    O = n(490897),
+    O = n(981631),
+    y = n(490897),
     _ = n(915887);
 function v(e, t, n) {
     return (
@@ -66,7 +66,7 @@ class S extends m.ZP {
                     onContextMenu: this.handleContextMenu,
                     connectDragPreview: s ? l : null,
                     'aria-label': (0, d.ZP)({ channel: e }),
-                    resolvedUnreadSetting: O.i.ONLY_MENTIONS,
+                    resolvedUnreadSetting: y.i.ONLY_MENTIONS,
                     children: [this.renderInviteButton(), this.renderEditButton()]
                 })
             });
@@ -110,12 +110,12 @@ class S extends m.ZP {
             v(this, 'handleClick', (e) => {
                 let t = e.getGuildId();
                 if (null == t) throw Error('TextChannel, transitionTo: Channel does not have a guildId');
-                (0, h.uL)(y.Z5c.CHANNEL(t, e.id), {
+                (0, h.uL)(O.Z5c.CHANNEL(t, e.id), {
                     state: {
                         analyticsSource: {
-                            page: y.ZY5.GUILD_CHANNEL,
-                            section: y.jXE.CHANNEL_LIST,
-                            object: y.qAy.CHANNEL
+                            page: O.ZY5.GUILD_CHANNEL,
+                            section: O.jXE.CHANNEL_LIST,
+                            object: O.qAy.CHANNEL
                         }
                     }
                 });
@@ -128,8 +128,8 @@ let x = (0, u.B)(S),
             l = (0, s.cj)([p.Z, g.Z], () => {
                 let e = p.Z.getChannel(t.parent_id);
                 return {
-                    canManageChannel: g.Z.can(y.Plq.MANAGE_CHANNELS, t),
-                    canReorderChannel: !0 !== i && null != e ? g.Z.can(y.Plq.MANAGE_CHANNELS, e) : g.Z.can(y.Plq.MANAGE_CHANNELS, n)
+                    canManageChannel: g.Z.can(O.Plq.MANAGE_CHANNELS, t),
+                    canReorderChannel: !0 !== i && null != e ? g.Z.can(O.Plq.MANAGE_CHANNELS, e) : g.Z.can(O.Plq.MANAGE_CHANNELS, n)
                 };
             });
         return (0, r.jsx)(x, C({}, l, e));

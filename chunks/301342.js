@@ -20,8 +20,8 @@ var r = n(255367),
     g = n(540059),
     m = n(680089),
     b = n(430824),
-    y = n(496675),
-    O = n(9156),
+    O = n(496675),
+    y = n(9156),
     _ = n(203818),
     v = n(438144),
     C = n(981631),
@@ -77,9 +77,9 @@ let I = i.memo(function (e) {
         let t,
             { channel: l, connectChannelDragSource: h, connectChannelDropTarget: _, disableManageChannels: v, position: I, sortingPosition: N, hideIcon: w, children: Z } = e,
             T = (0, g.Q3)('CategoryChannel'),
-            A = (0, a.e7)([O.ZP], () => O.ZP.isChannelMuted(l.getGuildId(), l.id)),
+            A = (0, a.e7)([y.ZP], () => y.ZP.isChannelMuted(l.getGuildId(), l.id)),
             R = (0, a.e7)([m.Z], () => m.Z.isCollapsed(l.id)),
-            D = (0, a.e7)([y.Z], () => y.Z.can(C.Plq.MANAGE_CHANNELS, l));
+            D = (0, a.e7)([O.Z], () => O.Z.can(C.Plq.MANAGE_CHANNELS, l));
         t = null != N ? (I > N ? S.containerDragAfter : S.containerDragBefore) : S.containerDefault;
         let L = i.useCallback(() => {
                 R ? (0, u.mJ)(l.id) : (0, u.c4)(l.id);

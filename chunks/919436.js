@@ -14,8 +14,8 @@ var r,
     g = n(93687),
     m = n(266076),
     b = n(199902),
-    y = n(19780),
-    O = n(306680),
+    O = n(19780),
+    y = n(306680),
     _ = n(944486),
     v = n(594174),
     C = n(451478),
@@ -151,7 +151,7 @@ class D extends (r = l.PureComponent) {
     render() {
         let { channel: e, channelName: t, selected: n, badge: r, audio: l, video: s, stream: a, isCurrentUserInThisDMCall: u, unread: d, isGDMFacepileEnabled: h, isVisualRefreshEnabled: p, treeItemProps: f } = this.props,
             { hovered: g, animating: b } = this.state,
-            y = e.isMultiUserDM() && null == e.icon && h;
+            O = e.isMultiUserDM() && null == e.icon && h;
         return (0, i.jsx)(o.animated.div, {
             style: this.getAnimatedStyle(),
             children: (0, i.jsxs)(S.H, {
@@ -192,9 +192,9 @@ class D extends (r = l.PureComponent) {
                                                   })
                                                 : '',
                                         onContextMenu: this.handleContextMenu,
-                                        icon: y ? void 0 : this.getChannelIcon(),
-                                        backgroundStyle: y ? 'on-hover' : 'always',
-                                        children: y
+                                        icon: O ? void 0 : this.getChannelIcon(),
+                                        backgroundStyle: O ? 'on-hover' : 'always',
+                                        children: O
                                             ? (0, i.jsx)(m.Z, {
                                                   channel: e,
                                                   size: c.EFr.SIZE_40,
@@ -264,11 +264,11 @@ let L = l.forwardRef(function (e, t) {
     let n = e.channel.id,
         r = (0, p.ZP)(e.channel),
         l = (0, s.Ie)(n, 2),
-        o = (0, a.e7)([y.Z], () => y.Z.getChannelId(), []),
+        o = (0, a.e7)([O.Z], () => O.Z.getChannelId(), []),
         u = (0, a.e7)([d.Z], () => (null != o ? d.Z.getMode(o) : P.WtW.VOICE), [o]),
         h = (0, a.e7)([b.Z], () => b.Z.getAllApplicationStreamsForChannel(n).length > 0),
         m = (0, a.e7)([_.Z], () => _.Z.getChannelId(), []),
-        v = (0, a.e7)([O.ZP], () => O.ZP.getMentionCount(n), [n]),
+        v = (0, a.e7)([y.ZP], () => y.ZP.getMentionCount(n), [n]),
         { isFacepileEnabled: C } = g.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
         j = o === n,
         S = !1,

@@ -174,7 +174,7 @@ function G(e) {
             children: [
                 (0, r.jsx)(f.bgT, {
                     size: 'xs',
-                    color: m.Z.colors.TEXT_POSITIVE.css
+                    color: m.Z.colors.TEXT_FEEDBACK_POSITIVE.css
                 }),
                 (0, r.jsx)(f.Text, {
                     variant: 'text-md/semibold',

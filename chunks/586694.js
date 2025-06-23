@@ -57,7 +57,7 @@ function f(e, t) {
     );
 }
 function g(e) {
-    let { children: t, size: n, onClick: l, onMouseDown: s, onKeyDown: u, onContextMenu: p, onMouseEnter: f, onMouseLeave: g, className: m, ariaHidden: b, avatarDecoration: y, specs: _, cornerIconUrl: v, cornerIconOffsetX: C, cornerIconOffsetY: j, ariaLabel: S } = e,
+    let { children: t, size: n, onClick: l, onMouseDown: s, onKeyDown: u, onContextMenu: p, onMouseEnter: f, onMouseLeave: g, className: m, ariaHidden: b, avatarDecoration: O, specs: _, cornerIconUrl: v, cornerIconOffsetX: C, cornerIconOffsetY: j, ariaLabel: S } = e,
         x = {
             width: (0, a.pxk)(n),
             height: (0, a.pxk)(n)
@@ -65,7 +65,7 @@ function g(e) {
         E = (0, i.useId)(),
         P = _.size * d.hs,
         I =
-            null != y &&
+            null != O &&
             (0, r.jsxs)('svg', {
                 width: P,
                 height: P,
@@ -93,7 +93,7 @@ function g(e) {
                                             x: s,
                                             y: a
                                         } = (function (e, t, n, r) {
-                                            let { height: i, width: l, x: o, y: s } = O(e, n, r),
+                                            let { height: i, width: l, x: o, y: s } = y(e, n, r),
                                                 a = (t - e.size) / 2;
                                             return {
                                                 width: l,
@@ -124,7 +124,7 @@ function g(e) {
                             className: h.avatarStack,
                             children: (0, r.jsx)('img', {
                                 className: h.avatar,
-                                src: y,
+                                src: O,
                                 alt: ' ',
                                 'aria-hidden': !0
                             })
@@ -187,7 +187,7 @@ function m(e) {
                             }),
                             null != m &&
                                 (function (e, t, n) {
-                                    let { height: i, width: l, x: o, y: s } = O(e, t, n);
+                                    let { height: i, width: l, x: o, y: s } = y(e, t, n);
                                     return (0, r.jsx)('rect', {
                                         mask: 'url(#'.concat(c.QS.SQUIRCLE, ')'),
                                         height: i,
@@ -214,7 +214,7 @@ function m(e) {
                     null != m &&
                         (0, r.jsx)(
                             'foreignObject',
-                            f(p({}, y(v, b, _)), {
+                            f(p({}, O(v, b, _)), {
                                 mask: 'url(#'.concat(c.QS.SQUIRCLE, ')'),
                                 children: (0, r.jsx)('img', {
                                     src: m,
@@ -236,8 +236,8 @@ function b(e) {
         v = (0, u.UC)(n),
         C = v.size + d,
         j = v.size + m,
-        S = O(v, d, m),
-        x = y(v, d, m);
+        S = y(v, d, m),
+        x = O(v, d, m);
     return (0, r.jsx)(
         g,
         f(p({}, e), {
@@ -317,7 +317,7 @@ function b(e) {
         })
     );
 }
-function y(e, t, n) {
+function O(e, t, n) {
     return {
         width: 16,
         height: 16,
@@ -325,8 +325,8 @@ function y(e, t, n) {
         y: e.size - 16 - e.offset + n
     };
 }
-function O(e, t, n) {
-    let r = y(e, t, n),
+function y(e, t, n) {
+    let r = O(e, t, n),
         i = r.x - 2,
         l = r.y - 2;
     return {

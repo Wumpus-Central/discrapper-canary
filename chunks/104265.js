@@ -36,7 +36,7 @@ function _(e) {
             },
             'animate-always'
         ),
-        T = (0, u.dQu)(c.Z.colors.BACKGROUND_MODIFIER_ACCENT),
+        T = (0, u.dQu)(c.Z.colors.BORDER_SUBTLE),
         B = (0, u.dQu)(c.Z.unsafe_rawColors.BRAND_500),
         k = (0, u.q_F)(
             {

@@ -2,7 +2,7 @@ n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    l = n(540059),
+    l = n(778877),
     a = n(63063),
     o = n(981631),
     s = n(388032),
@@ -112,28 +112,46 @@ function p(e) {
     });
 }
 function h(e) {
-    let { isSearching: t, isIndexing: n, totalResults: u } = e,
-        d = (0, l.Q3)('TotalResultsText') ? 'text-md/medium' : 'text-md/normal';
+    let { isSearching: t, isIndexing: n, totalResults: u, searchId: d } = e,
+        p = (0, l.U)({ location: 'TotalResultsText' });
     if (t)
         return (0, r.jsx)(i.Text, {
-            variant: d,
+            variant: 'text-md/medium',
             color: 'header-secondary',
             children: s.intl.string(s.t.uixzLS)
         });
-    {
-        if (n)
-            return (0, r.jsx)(i.Text, {
-                variant: d,
-                color: 'text-muted',
-                children: (0, r.jsx)(i.eee, {
-                    className: c.helpdeskLink,
-                    href: a.Z.getArticleURL(o.BhN.SEARCH_INDEXING),
-                    children: s.intl.string(s.t['G3EA+/'])
+    if (n)
+        return (0, r.jsx)(i.Text, {
+            variant: 'text-md/medium',
+            color: 'text-muted',
+            children: (0, r.jsx)(i.eee, {
+                className: c.helpdeskLink,
+                href: a.Z.getArticleURL(o.BhN.SEARCH_INDEXING),
+                children: s.intl.string(s.t['G3EA+/'])
+            })
+        });
+    if (d === o.aib.DMS && p) {
+        let e = u.toLocaleString();
+        return (0, r.jsxs)('div', {
+            className: c.totalResultsWithSubtitle,
+            children: [
+                (0, r.jsx)(i.Text, {
+                    variant: 'text-md/medium',
+                    color: 'header-primary',
+                    children: s.intl.format(s.t.ZGVL3t, { count: e })
+                }),
+                (0, r.jsx)(i.Text, {
+                    variant: 'text-xs/medium',
+                    color: 'text-secondary',
+                    children: s.intl.string(s.t.tc619f)
                 })
-            });
+            ]
+        });
+    }
+    {
         let e = u.toLocaleString();
         return (0, r.jsx)(i.Text, {
-            variant: d,
+            variant: 'text-md/medium',
             color: 'header-primary',
             children: s.intl.format(s.t.ZGVL3t, { count: e })
         });

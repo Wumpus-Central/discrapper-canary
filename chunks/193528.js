@@ -59,7 +59,7 @@ function _(e, t) {
 function x(e) {
     let { onChange: t, onClose: n, color: s, suggestedColors: x, disabled: E, label: j, colorPickerMiddle: C, colorPickerFooter: O, showEyeDropper: S } = e,
         v = r.useRef(null),
-        T = (0, d.dQu)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
+        T = (0, d.dQu)(c.Z.colors.BACKGROUND_BASE_LOW).hex(),
         I = c.Z.colors.BACKGROUND_ACCENT.css,
         N = (0, g.DP)(s),
         y = (0, o.Rf)(s),

@@ -8,12 +8,12 @@ var r = n(404905),
     o = n(981631),
     c = n(616257);
 let d = {
-    base00: l.Z.colors.BACKGROUND_SECONDARY.css,
-    base03: l.Z.colors.TEXT_WARNING.css,
+    base00: l.Z.colors.BACKGROUND_BASE_LOWER.css,
+    base03: l.Z.colors.TEXT_FEEDBACK_WARNING.css,
     base07: l.Z.colors.TEXT_NORMAL.css,
     base08: l.Z.colors.TEXT_MUTED.css,
-    base09: l.Z.colors.TEXT_POSITIVE.css,
-    base0B: l.Z.colors.TEXT_WARNING.css,
+    base09: l.Z.colors.TEXT_FEEDBACK_POSITIVE.css,
+    base0B: l.Z.colors.TEXT_FEEDBACK_WARNING.css,
     base0D: l.Z.colors.TEXT_BRAND.css
 };
 function u(e) {

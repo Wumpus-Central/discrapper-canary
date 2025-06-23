@@ -87,8 +87,8 @@ let P = (e) => {
         M = null == E ? void 0 : E.previewSoundURLs,
         [R, F] = i.useState(0),
         { isPlaying: U, playSound: V, stopSound: B, preloadSound: Y } = (0, d.Z)(null != M ? M[R] : null, { soundId: t.id }),
-        z = S[t.styleKey],
-        W = i.useCallback(() => {
+        W = S[t.styleKey],
+        z = i.useCallback(() => {
             n || !T ? ((0, m.v6)(P === t.id ? null : t.id, l), N && f.default.track(y.rMx.VOICE_FILTER_LIMITED_TIME_VOICE_SELECTED, x({ voice_filter_id: t.id }, (0, g.w)(l)))) : (0, u.i)();
         }, [n, T, P, t.id, l, N]),
         G = i.useCallback(() => {
@@ -101,7 +101,7 @@ let P = (e) => {
         }, [l, V, R, M, t.id]),
         H = null != E ? j.intl.string(E.name) : '';
     return (0, r.jsxs)('div', {
-        className: a()(S.filter, z, {
+        className: a()(S.filter, W, {
             [S.selected]: w,
             [S.locked]: T && !w
         }),
@@ -128,7 +128,7 @@ let P = (e) => {
                         I(x({ className: S.selector }, e), {
                             onClick: () => {
                                 var t;
-                                W(), null == e || null == (t = e.onClick) || t.call(e);
+                                z(), null == e || null == (t = e.onClick) || t.call(e);
                             },
                             onMouseEnter: () => {
                                 var t;

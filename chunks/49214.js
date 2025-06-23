@@ -6,7 +6,7 @@ var r = n(692547),
 function s(e) {
     if (!__OVERLAY__ && o.isPlatformEmbedded)
         try {
-            let t = r.Z.colors.BACKGROUND_TERTIARY.resolve({
+            let t = r.Z.colors.BACKGROUND_BASE_LOWEST.resolve({
                 theme: e,
                 saturation: i.Z.saturation
             }).hex();

@@ -45,7 +45,7 @@ function b(e) {
     }
     return e;
 }
-function y(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -63,7 +63,7 @@ function y(e, t) {
         e
     );
 }
-function O(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -120,7 +120,7 @@ function C(e) {
                             disableItemStyles: !0,
                             children: (0, r.jsx)(j, {
                                 setIsVisible: (t) => {
-                                    u((n) => y(b({}, n), { [e]: t }));
+                                    u((n) => O(b({}, n), { [e]: t }));
                                 },
                                 children: l[e]
                             })
@@ -162,10 +162,10 @@ function S(e) {
               onRequestOpen: () => c(!0),
               renderPopout: (e) => {
                   var { closePopout: i } = e,
-                      o = O(e, ['closePopout']);
+                      o = y(e, ['closePopout']);
                   return (0, r.jsx)(
                       a.v2r,
-                      y(
+                      O(
                           b(
                               {
                                   onSelect: () => {},
@@ -202,7 +202,7 @@ function S(e) {
               children: (e) =>
                   (0, r.jsx)(
                       a.P3F,
-                      y(b({}, e), {
+                      O(b({}, e), {
                           className: m.filterButton,
                           innerRef: o,
                           onMouseEnter: () => h(!0),
@@ -235,10 +235,10 @@ function x(e) {
               autoInvert: !1,
               renderPopout: (e) => {
                   var { closePopout: i } = e,
-                      l = O(e, ['closePopout']);
+                      l = y(e, ['closePopout']);
                   return (0, r.jsx)(
                       a.v2r,
-                      y(
+                      O(
                           b(
                               {
                                   onSelect: () => {},
@@ -282,7 +282,7 @@ function x(e) {
                       children: () =>
                           (0, r.jsx)(
                               a.P3F,
-                              y(b({}, e), {
+                              O(b({}, e), {
                                   className: l,
                                   innerRef: s,
                                   onClick: (t) => {

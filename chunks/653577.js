@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => O });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -14,12 +14,12 @@ var r = n(255367),
     g = n(388032),
     m = n(32066),
     b = n(73433);
-function y(e) {
-    let { channel: t, connected: n, hovered: l, subtitle: y, onClick: O } = e,
+function O(e) {
+    let { channel: t, connected: n, hovered: l, subtitle: O, onClick: y } = e,
         _ = (0, s.e7)([u.Z], () => u.Z.getChannelStatus(t)),
         v = null != _ && _.length > 0,
         C = (0, c.ZP)(t, !0),
-        j = null != y && y.length > 0;
+        j = null != O && O.length > 0;
     if (
         (i.useEffect(() => {
             v &&
@@ -35,7 +35,7 @@ function y(e) {
     return v
         ? (0, r.jsx)(a.P3F, {
               className: S,
-              onClick: C ? O : void 0,
+              onClick: C ? y : void 0,
               children: (0, r.jsx)(a.Text, {
                   variant: 'text-xs/medium',
                   className: o()(m.statusText, b.markup),
@@ -45,7 +45,7 @@ function y(e) {
         : n && C && (!j || l)
           ? (0, r.jsxs)(a.P3F, {
                 className: S,
-                onClick: O,
+                onClick: y,
                 children: [
                     (0, r.jsx)(a.Text, {
                         variant: 'text-xs/medium',
@@ -60,6 +60,6 @@ function y(e) {
                 ]
             })
           : j
-            ? (0, r.jsx)(d.Z, { children: y })
+            ? (0, r.jsx)(d.Z, { children: O })
             : null;
 }

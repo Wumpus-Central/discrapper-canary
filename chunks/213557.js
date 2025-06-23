@@ -80,8 +80,8 @@ function A(e) {
         U = (0, i.e7)([O.Z], () => O.Z.didAgree(null == L ? void 0 : L.guild_id)),
         G = (null == H ? void 0 : H.nsfwAllowed) === !0,
         W = (0, w.ZP)(L),
-        F = (0, i.e7)([C.Z], () => (null == M ? void 0 : M.id) != null && C.Z.isLurking(M.id), [M]),
-        z = (0, f.Z)(n),
+        z = (0, i.e7)([C.Z], () => (null == M ? void 0 : M.id) != null && C.Z.isLurking(M.id), [M]),
+        F = (0, f.Z)(n),
         q = (0, i.e7)([p.Z], () => {
             var e;
             return null == (e = p.Z.getResourceForChannel(null == M ? void 0 : M.id, n)) ? void 0 : e.title;
@@ -95,7 +95,7 @@ function A(e) {
     )
         return null;
     let V = [];
-    return (F || V.push((0, l.jsx)(x.Z, { channel: L }, 'notifications')),
+    return (z || V.push((0, l.jsx)(x.Z, { channel: L }, 'notifications')),
     V.push(
         (0, l.jsx)(
             g.ZP.Icon,
@@ -119,7 +119,7 @@ function A(e) {
                       'aria-label': S.intl.string(S.t.BIYAqa),
                       children: (0, _.ud)({
                           channel: L,
-                          channelName: z ? q : W,
+                          channelName: F ? q : W,
                           guild: M,
                           inSidebar: !0,
                           handleContextMenu: (e) => {

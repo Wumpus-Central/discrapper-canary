@@ -14,16 +14,16 @@ function f(e) {
         { channelId: h } = null != (t = (0, c.rq)(f)) ? t : {},
         p = (0, i.e7)([u.Z], () => u.Z.getStageInstanceByChannel(h), [h]),
         g = l.useRef(null),
-        y = l.useCallback(() => {
+        O = l.useCallback(() => {
             let e = a.Z.getChannel(h);
             null != e && s.Cq(e);
         }, [h]),
-        O = null != (n = null == p ? void 0 : p.topic) ? n : f.name,
-        b = d.intl.formatToPlainString(d.t['T+DNAA'], { channel: O });
+        y = null != (n = null == p ? void 0 : p.topic) ? n : f.name,
+        b = d.intl.formatToPlainString(d.t['T+DNAA'], { channel: y });
     return (0, r.jsx)('div', {
         ref: g,
         children: (0, r.jsx)(o.P3F, {
-            onClick: y,
+            onClick: O,
             focusProps: { ringTarget: g },
             children: (0, r.jsx)(o.X6q, {
                 variant: 'heading-sm/semibold',

@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(305325),
     m = n(281956),
     b = n(66999),
-    y = n(378844),
-    O = n(359110),
+    O = n(378844),
+    y = n(359110),
     _ = n(922482),
     v = n(431328),
     C = n(501655),
@@ -120,7 +120,7 @@ class K extends D.ZP {
         return this.props.channelInfo;
     }
     render() {
-        let { channel: e, selected: t, connected: n, locked: i, connectChannelDropTarget: l, connectChannelDragSource: s, connectUserDropTarget: c, connectDragPreview: u, canReorderChannel: d, canMoveMembers: h, stageInstance: f, isSubscriptionGated: g, needSubscriptionToAccess: m, unread: b, resolvedUnreadSetting: y, mentionCount: O, isFavoriteSuggestion: _ } = this.props,
+        let { channel: e, selected: t, connected: n, locked: i, connectChannelDropTarget: l, connectChannelDragSource: s, connectUserDropTarget: c, connectDragPreview: u, canReorderChannel: d, canMoveMembers: h, stageInstance: f, isSubscriptionGated: g, needSubscriptionToAccess: m, unread: b, resolvedUnreadSetting: O, mentionCount: y, isFavoriteSuggestion: _ } = this.props,
             { shouldShowGuildVerificationPopout: v } = this.state,
             C = this.getVoiceStatesCount(),
             j = (0, r.jsxs)('li', {
@@ -170,8 +170,8 @@ class K extends D.ZP {
                                                     selected: !_ && t,
                                                     connected: n,
                                                     unread: n ? b : void 0,
-                                                    resolvedUnreadSetting: y,
-                                                    mentionCount: O,
+                                                    resolvedUnreadSetting: O,
+                                                    mentionCount: y,
                                                     locked: i,
                                                     onClick: () => {
                                                         this.handleClick(), null == s || s();
@@ -185,7 +185,7 @@ class K extends D.ZP {
                                                     'aria-label': (0, p.ZP)({
                                                         channel: e,
                                                         unread: b,
-                                                        mentionCount: O,
+                                                        mentionCount: y,
                                                         userCount: C,
                                                         isSubscriptionGated: g,
                                                         needSubscriptionToAccess: m
@@ -216,11 +216,11 @@ class K extends D.ZP {
             F(this, 'handleClick', () => {
                 let { channel: e, locked: t, connected: n, unverifiedAccount: r } = this.props,
                     i = e.getGuildId();
-                null != i && (0, m.n)(i) && (0, g.hk)(i), r && this.setState({ shouldShowGuildVerificationPopout: !0 }), t || n || e.isRoleSubscriptionTemplatePreviewChannel() || (0, _.Cq)(e), __OVERLAY__ || (0, O.Kh)(e.id);
+                null != i && (0, m.n)(i) && (0, g.hk)(i), r && this.setState({ shouldShowGuildVerificationPopout: !0 }), t || n || e.isRoleSubscriptionTemplatePreviewChannel() || (0, _.Cq)(e), __OVERLAY__ || (0, y.Kh)(e.id);
             }),
             F(this, 'handleClickChat', () => {
                 let { channel: e, locked: t } = this.props;
-                __OVERLAY__ || t || (0, O.Kh)(e.id);
+                __OVERLAY__ || t || (0, y.Kh)(e.id);
             }),
             F(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
@@ -242,8 +242,8 @@ class K extends D.ZP {
                 let { channel: e } = this.props,
                     { shouldShowGuildVerificationPopout: t } = this.state;
                 if (t)
-                    return (0, r.jsx)(y.Z, {
-                        type: y.R.VOICE,
+                    return (0, r.jsx)(O.Z, {
+                        type: O.R.VOICE,
                         guildId: e.guild_id,
                         closePopout: this.closeGuildVerificationPopout
                     });
@@ -310,8 +310,8 @@ function q(e) {
         p = (0, x.ZP)(n.id),
         f = (0, s.e7)([j.Z], () => j.Z.getStageInstanceByChannel(n.id), [n.id]),
         g = (0, v.Rk)(n.id, C.pV.AUDIENCE),
-        { isSubscriptionGated: m, needSubscriptionToAccess: y } = (0, b.Z)(n.id),
-        O = (0, s.e7)([T.ZP], () => T.ZP.isFavorite(t.id, n.id)),
+        { isSubscriptionGated: m, needSubscriptionToAccess: O } = (0, b.Z)(n.id),
+        y = (0, s.e7)([T.ZP], () => T.ZP.isFavorite(t.id, n.id)),
         _ = (0, S.xJ)(n.id),
         I = (0, L.Z)({
             channel: n,
@@ -319,7 +319,7 @@ function q(e) {
             isChannelCollapsed: o,
             voiceStates: a,
             isSubscriptionGated: m,
-            needSubscriptionToAccess: y,
+            needSubscriptionToAccess: O,
             enableConnectedUserLimit: _ || (n.userLimit > 0 && n.userLimit < U.xGv)
         }),
         A = e.connected && null == I;
@@ -333,14 +333,14 @@ function q(e) {
                     numAudience: g,
                     stageInstance: f,
                     isSubscriptionGated: m,
-                    needSubscriptionToAccess: y
+                    needSubscriptionToAccess: O
                 },
                 c,
                 d,
                 e
             ),
             {
-                isFavoriteSuggestion: l && !O,
+                isFavoriteSuggestion: l && !y,
                 forceShowButtons: A,
                 channelInfo: I,
                 resolvedUnreadSetting: u

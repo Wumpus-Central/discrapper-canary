@@ -16,7 +16,7 @@ let m = function (e) {
     let t = (0, l.ZP)(),
         n = i.useRef(null),
         [m, g] = i.useState({}),
-        E = (0, s.dQu)(s.TVs.colors.BG_BASE_SECONDARY).hex();
+        E = (0, s.dQu)(s.TVs.colors.BACKGROUND_BASE_LOWER).hex();
     switch (
         (i.useLayoutEffect(() => {
             let { current: e } = n;

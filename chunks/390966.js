@@ -87,11 +87,11 @@ function O(e) {
 function j(e) {
     let { startTime: t, status: n, eventType: i, className: c, endTime: j, liveText: h, textVariant: x = 'text-sm/semibold', isNew: y, recurrenceRule: P, guildEventId: w, recurrenceId: E } = e,
         N = (0, u.dQu)(o.Z.colors.TEXT_BRAND).hex(),
-        S = (0, u.dQu)(o.Z.colors.TEXT_POSITIVE).hex(),
+        S = (0, u.dQu)(o.Z.colors.TEXT_FEEDBACK_POSITIVE).hex(),
         T = (0, u.dQu)(o.Z.colors.TEXT_DANGER).hex();
     null == h && (h = i === m.WX.EXTERNAL ? p.intl.string(p.t.IyZxjI) : p.intl.string(p.t['X2K3//']));
-    let Z = (0, d.Z)(E, w),
-        [{ startDateTimeString: D, endDateTimeString: I, currentOrPastEvent: _, upcomingEvent: L, diffMinutes: C }, k] = l.useState((0, f.ub)(t, j));
+    let D = (0, d.Z)(E, w),
+        [{ startDateTimeString: Z, endDateTimeString: I, currentOrPastEvent: _, upcomingEvent: C, diffMinutes: L }, k] = l.useState((0, f.ub)(t, j));
     l.useEffect(() => {
         k((0, f.ub)(t, j));
         let e = setInterval(() => k((0, f.ub)(t, j)), 1000);
@@ -99,14 +99,14 @@ function j(e) {
             clearInterval(e);
         };
     }, [t, j]);
-    let A = D;
+    let A = Z;
     null != I &&
         '' !== I &&
         (A = p.intl.formatToPlainString(p.t.tXbu7O, {
-            start: D,
+            start: Z,
             end: I
         }));
-    let R = l.useMemo(() => (n === m.p1.CANCELED || (null == Z ? void 0 : Z.is_canceled) ? 5 : n === m.p1.ACTIVE ? 3 : m.$I.has(n) ? 4 : _ ? 2 : +!!L), [n, null == Z ? void 0 : Z.is_canceled, _, L]),
+    let R = l.useMemo(() => (n === m.p1.CANCELED || (null == D ? void 0 : D.is_canceled) ? 5 : n === m.p1.ACTIVE ? 3 : m.$I.has(n) ? 4 : _ ? 2 : +!!C), [n, null == D ? void 0 : D.is_canceled, _, C]),
         z = (function (e, t, n, l, i) {
             switch (e) {
                 case 1:
@@ -132,7 +132,7 @@ function j(e) {
                 default:
                     return t;
             }
-        })(R, A, h, I, C),
+        })(R, A, h, I, L),
         {
             Icon: B,
             iconColor: K,
@@ -172,9 +172,9 @@ function j(e) {
                     textPositive: S,
                     textDanger: T,
                     endDateTimeString: I,
-                    startDateTimeString: D
+                    startDateTimeString: Z
                 }),
-            [R, N, S, T, I, D]
+            [R, N, S, T, I, Z]
         ),
         M = null;
     if (null != P) {

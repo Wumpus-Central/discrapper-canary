@@ -14,8 +14,8 @@ var r,
     g = n(815372),
     m = n(14429),
     b = n(576855),
-    y = n(313201),
-    O = n(991346),
+    O = n(313201),
+    y = n(991346),
     _ = n(592125),
     v = n(888369),
     C = n(430824),
@@ -276,7 +276,7 @@ class q extends l.PureComponent {
         super(...e),
             M(this, 'scrollerRef', l.createRef()),
             M(this, 'inputRef', l.createRef()),
-            M(this, '_listId', (0, y.hQ)()),
+            M(this, '_listId', (0, O.hQ)()),
             M(this, 'state', {
                 query: this.props.query,
                 mouseFocusDisabled: !0
@@ -588,7 +588,7 @@ class q extends l.PureComponent {
 }
 function Q(e) {
     let t = (0, c.cj)([w.Z], () => w.Z.getProps()),
-        n = (0, O.Pt)(),
+        n = (0, y.Pt)(),
         r = A.Z.useExperiment({ location: 'QuickSwitcher' }).enabled,
         o = l.useMemo(
             () =>

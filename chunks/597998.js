@@ -247,7 +247,7 @@ let M = i.forwardRef(function (e, t) {
             }
             return i;
         })(e, ['avatarContainerClass', 'userNameClassName', 'size', 'selected', 'disabled', 'isOverlay']);
-    let { onClick: I, onKeyDown: P, onDoubleClick: C, onContextMenu: N, onMouseLeave: k, onMouseDown: M, priority: R, speaking: F, collapsed: U, mute: V, serverMute: B, guildId: Y, nick: z, isGuest: W, flipped: G, className: H, overlap: J, 'aria-label': X, ringing: q, user: K, channelId: Q } = v,
+    let { onClick: I, onKeyDown: P, onDoubleClick: C, onContextMenu: N, onMouseLeave: k, onMouseDown: M, priority: R, speaking: F, collapsed: U, mute: V, serverMute: B, guildId: Y, nick: W, isGuest: z, flipped: G, className: H, overlap: J, 'aria-label': X, ringing: q, user: K, channelId: Q } = v,
         { parentAnalyticsLocation: $ } = (0, m.ZP)(),
         ee = (0, u.bp)(),
         et = null != Q ? j.Z.getChannel(Q) : null,
@@ -289,7 +289,7 @@ let M = i.forwardRef(function (e, t) {
                 null == M || M(e, K);
             },
             onKeyDown: P,
-            'aria-label': null != (n = null != X ? X : z) ? n : K.username,
+            'aria-label': null != (n = null != X ? X : W) ? n : K.username,
             focusProps: { offset: { right: 4 } },
             children: (0, r.jsxs)('div', {
                 className: a()(A.content, { [A.flipped]: G }),
@@ -316,8 +316,8 @@ let M = i.forwardRef(function (e, t) {
                                     [A.usernameSpeaking]: !V && !B && F
                                 }),
                                 children: [
-                                    null != z ? z : E.ZP.getName(K),
-                                    W
+                                    null != W ? W : E.ZP.getName(K),
+                                    z
                                         ? (0, r.jsxs)('span', {
                                               className: A.guestSuffix,
                                               children: ['\xA0', Z.intl.string(Z.t['pFO/Pj'])]

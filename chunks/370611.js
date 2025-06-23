@@ -319,7 +319,7 @@ function G(e) {
                     D &&
                         (0, r.jsx)(o.iWm, {
                             size: 'xs',
-                            color: o.TVs.colors.TEXT_POSITIVE,
+                            color: o.TVs.colors.TEXT_FEEDBACK_POSITIVE,
                             className: R.liveIcon
                         }),
                     m.isPlatformEmbedded &&

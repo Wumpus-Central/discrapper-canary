@@ -133,7 +133,7 @@ let T = (e) => [
             O = (0, u.KS)(m, y),
             v = (null == o ? void 0 : o.id) === n,
             E = v ? 'text-positive' : r ? 'interactive-active' : 'text-muted',
-            x = v ? s.TVs.colors.TEXT_POSITIVE : r ? s.TVs.colors.INTERACTIVE_ACTIVE : s.TVs.colors.ICON_MUTED;
+            x = v ? s.TVs.colors.TEXT_FEEDBACK_POSITIVE : r ? s.TVs.colors.INTERACTIVE_ACTIVE : s.TVs.colors.ICON_MUTED;
         return null == m
             ? null
             : (0, i.jsxs)(s.kL8, {

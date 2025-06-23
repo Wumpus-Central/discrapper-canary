@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(933104),
     m = n(332538),
     b = n(921944),
-    y = n(93841),
-    O = n(388032),
+    O = n(93841),
+    y = n(388032),
     _ = n(388298);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -121,7 +121,7 @@ let C = {
                                 }),
                             text: (0, r.jsx)('span', {
                                 className: o()({ [_.textImportant]: (null == j ? void 0 : j.showUnread) === !0 }),
-                                children: O.intl.string(y.default.yv3DJC)
+                                children: y.intl.string(O.default.yv3DJC)
                             }),
                             selected: l,
                             onClick: S,

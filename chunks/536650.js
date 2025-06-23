@@ -28,7 +28,7 @@ function _(e) {
         j = r.useRef(null),
         N = r.useRef(null),
         P = r.useRef(null),
-        E = (0, a.dQu)(a.TVs.colors.BG_BASE_PRIMARY).hex(),
+        E = (0, a.dQu)(a.TVs.colors.BACKGROUND_BASE_LOW).hex(),
         A = (0, s.ZP)('number' == typeof C ? '' : C, null != E ? E : ''),
         I = r.useMemo(() => {
             var e, t;

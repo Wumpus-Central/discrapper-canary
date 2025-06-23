@@ -55,16 +55,16 @@ function b(e, t) {
         e
     );
 }
-let y = {
+let O = {
         MENTION: ['BOOKMARK', 'SETTINGS'],
         REPLY: ['SETTINGS'],
         REACTION: ['SETTINGS'],
         ANNOUNCEMENT: ['SETTINGS'],
         MESSAGE: ['SETTINGS']
     },
-    O = (e, t) =>
+    y = (e, t) =>
         (0, i.useMemo)(() => {
-            let n = y[j(e)];
+            let n = O[j(e)];
             return t ? ['ACK', ...n] : n;
         }, [e, t]);
 function _(e) {
@@ -101,14 +101,14 @@ function v(e) {
     let { channel: t, message: n, label: l, Icon: s, Menu: a, interactionType: c } = e,
         [u, d] = (0, i.useState)(!1),
         [p, f] = (0, i.useState)(!1),
-        y = (0, i.useRef)(null);
+        O = (0, i.useRef)(null);
     return (0, r.jsx)(o.yRy, {
         shouldShow: p,
         animation: o.yRy.Animation.NONE,
         position: 'right',
         align: 'top',
         autoInvert: !1,
-        targetElementRef: y,
+        targetElementRef: O,
         onRequestClose: () => f(!1),
         renderPopout: (e) =>
             (0, r.jsx)(o.P3F, {
@@ -130,7 +130,7 @@ function v(e) {
                     (0, r.jsx)(
                         o.P3F,
                         b(m({}, t), {
-                            innerRef: y,
+                            innerRef: O,
                             className: g.action,
                             onClick: (e) => {
                                 (0, h.Qz)({
@@ -245,7 +245,7 @@ let C = {
     j = (e) => 'MENTION';
 function S(e) {
     let { message: t, channel: n, isUnread: i } = e,
-        l = O(t, i);
+        l = y(t, i);
     return (0, r.jsx)(o.Kqy, {
         direction: 'horizontal',
         gap: 4,

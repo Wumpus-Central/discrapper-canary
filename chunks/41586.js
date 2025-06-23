@@ -74,7 +74,7 @@ let w = l.forwardRef(function (e, t) {
         }, [n, N]),
         D = (0, u.e7)([j.Z], () => j.Z.getSearchStateByGuildId(n.id), [n.id], s()),
         Z = (0, f.gm)(n.id),
-        [R, L] = l.useState(D.query),
+        [L, R] = l.useState(D.query),
         P = null != D.selectedSort && D.selectedSort !== h.d$.ORDER_BY_GUILD_JOINED_AT_DESC && D.selectedSort !== h.d$.ORDER_BY_UNSPECIFIED,
         I = l.useCallback(
             (e) => {
@@ -86,17 +86,17 @@ let w = l.forwardRef(function (e, t) {
         M = l.useMemo(() => i()(I, 300), [I]),
         V = l.useCallback(
             (e) => {
-                L(e), M(e);
+                R(e), M(e);
             },
             [M]
         ),
         E = l.useCallback(() => {
-            L(''), I('');
+            R(''), I('');
         }, [I]);
     return (
         l.useImperativeHandle(t, () => ({
             resetSearchText() {
-                L('');
+                R('');
             }
         })),
         (0, r.jsxs)('div', {
@@ -120,7 +120,7 @@ let w = l.forwardRef(function (e, t) {
                         className: y.searchHeader,
                         children: (0, r.jsx)(C.E1j, {
                             className: y.searchBar,
-                            query: R,
+                            query: L,
                             placeholder: O.intl.string(O.t.NVoAMz),
                             onChange: V,
                             onClear: E,

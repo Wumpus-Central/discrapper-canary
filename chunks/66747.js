@@ -27,8 +27,8 @@ var r = n(255367),
     S = n(777288),
     D = n(5192),
     Z = n(709054),
-    R = n(51144),
-    L = n(815790),
+    L = n(51144),
+    R = n(815790),
     P = n(588215),
     I = n(241559),
     M = n(893966),
@@ -284,7 +284,7 @@ let G = l.memo(function (e) {
                               children: (0, r.jsx)(C.P3F, {
                                   onClick: a,
                                   tag: 'span',
-                                  children: R.ZP.getUserTag(o)
+                                  children: L.ZP.getUserTag(o)
                               })
                           })
                       })
@@ -293,8 +293,8 @@ let G = l.memo(function (e) {
     });
 function X(e) {
     return {
-        short: null == e ? null : (0, L.fv)(e, L.jq.JOINED_AT),
-        long: new Date(null != e ? e : 0).toLocaleDateString(U.intl.currentLocale, L.UG)
+        short: null == e ? null : (0, R.fv)(e, R.jq.JOINED_AT),
+        long: new Date(null != e ? e : 0).toLocaleDateString(U.intl.currentLocale, R.UG)
     };
 }
 function K(e) {
@@ -340,8 +340,8 @@ let J = l.memo(function (e) {
             { accountCreationDateShort: i, accountCreationDateLong: a } = l.useMemo(() => {
                 let e = Z.default.extractTimestamp(t.userId);
                 return {
-                    accountCreationDateShort: (0, L.fv)(e, L.jq.ACCOUNT_AGE),
-                    accountCreationDateLong: new Date(e).toLocaleDateString(U.intl.currentLocale, L.I)
+                    accountCreationDateShort: (0, R.fv)(e, R.jq.ACCOUNT_AGE),
+                    accountCreationDateLong: new Date(e).toLocaleDateString(U.intl.currentLocale, R.I)
                 };
             }, [t.userId]),
             s = o ? 'text-brand' : 'text-normal';

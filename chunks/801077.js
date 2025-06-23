@@ -12,8 +12,8 @@ var r,
     h = n(420660),
     p = n(728345),
     g = n(812206),
-    y = n(710845),
-    O = n(38618),
+    O = n(710845),
+    y = n(38618),
     b = n(656063),
     N = n(761282),
     m = n(752048),
@@ -85,8 +85,8 @@ let B = !1,
     V = [],
     F = [],
     W = {},
-    Y = {},
-    K = new Set(),
+    K = {},
+    Y = new Set(),
     H = new Set();
 function Q() {
     let e = A.Z.getFriendIDs();
@@ -99,10 +99,10 @@ function X(e) {
     return null == W[e] && (W = L(M({}, W), { [e]: new E.Z({ name: e }) })), W[e];
 }
 function J(e) {
-    return null == Y[e] && (Y = L(M({}, Y), { [e]: new x.Z({ url: e }) })), Y[e];
+    return null == K[e] && (K = L(M({}, K), { [e]: new x.Z({ url: e }) })), K[e];
 }
 function q(e) {
-    H.has(e) || K.add(e);
+    H.has(e) || Y.add(e);
 }
 function $(e) {
     if ((0, d.Z)(e)) return v.r9;
@@ -120,7 +120,7 @@ function en(e, t, n) {
     var r, l, o, a, d, f;
     let h,
         p = w.default.getCurrentUser(),
-        O = null != (r = null == p ? void 0 : p.nsfwAllowed) && r,
+        y = null != (r = null == p ? void 0 : p.nsfwAllowed) && r,
         m = t.map((e) => e.id),
         T = t.filter((t) => e.has(t.id)),
         A = !1,
@@ -131,7 +131,7 @@ function en(e, t, n) {
     for (let e of t) {
         let n = C.Z.getAnyStreamForUser(e.id),
             r = I.Z.getChannel(null == n ? void 0 : n.channelId);
-        if ((null == r ? void 0 : r.isNSFW()) && (!O || !S.Z.didAgree(null == r ? void 0 : r.getGuildId()))) continue;
+        if ((null == r ? void 0 : r.isNSFW()) && (!y || !S.Z.didAgree(null == r ? void 0 : r.getGuildId()))) continue;
         let f = z(e.id);
         if (
             (null != n &&
@@ -148,7 +148,7 @@ function en(e, t, n) {
         M = h === v.XB;
         let m = (function (e) {
             let t = g.Z.getApplication(e);
-            return null != t ? t : 'string' != typeof e ? (new y.Z('NowPlayingViewStore').error('Unknown type for applicationId: '.concat(typeof e, ', value: ').concat(e), { tags: { source: 'ACTIVITIES' } }), null) : e === v.XB ? v.r9 : e.startsWith(E.H) ? X(e.slice(E.H.length)) : e.startsWith(x._) ? J(e.slice(x._.length)) : (q(e), null);
+            return null != t ? t : 'string' != typeof e ? (new O.Z('NowPlayingViewStore').error('Unknown type for applicationId: '.concat(typeof e, ', value: ').concat(e), { tags: { source: 'ACTIVITIES' } }), null) : e === v.XB ? v.r9 : e.startsWith(E.H) ? X(e.slice(E.H.length)) : e.startsWith(x._) ? J(e.slice(x._.length)) : (q(e), null);
         })(h);
         if ((0, u.Z)(f)) {
             let t = (0, s.a)();
@@ -255,14 +255,14 @@ function er(e) {
     );
 }
 function el() {
-    return B && O.Z.isConnected();
+    return B && y.Z.isConnected();
 }
 let ei = i().throttle(() => {
     !(function () {
         var e;
         if (el()) {
             if (
-                (K.clear(),
+                (Y.clear(),
                 (F = (V = (function (e) {
                     let t = Q(),
                         n = en.bind(null, t);
@@ -296,10 +296,10 @@ let ei = i().throttle(() => {
                     type: U.GOo.USER,
                     party: e
                 }))),
-                K.size > 0)
+                Y.size > 0)
             ) {
-                let e = Array.from(K);
-                p.ZP.fetchApplications(e), e.forEach((e) => H.add(e)), K.clear();
+                let e = Array.from(Y);
+                p.ZP.fetchApplications(e), e.forEach((e) => H.add(e)), Y.clear();
             }
             G = !0;
         }
@@ -311,7 +311,7 @@ function eo() {
 }
 class ea extends (r = o.ZP.Store) {
     initialize() {
-        this.syncWith([w.default, g.Z, Z.Z, j.Z, R.Z, C.Z, A.Z, T.Z, m.Z], eo), this.waitFor(O.Z, P.Z, g.Z, w.default, m.Z);
+        this.syncWith([w.default, g.Z, Z.Z, j.Z, R.Z, C.Z, A.Z, T.Z, m.Z], eo), this.waitFor(y.Z, P.Z, g.Z, w.default, m.Z);
     }
     get currentActivityParties() {
         return V;
@@ -329,7 +329,7 @@ class ea extends (r = o.ZP.Store) {
 k(ea, 'displayName', 'NowPlayingViewStore');
 let es = new ea(a.Z, {
         LOGOUT: function () {
-            (B = !1), (V = []), (F = []), K.clear();
+            (B = !1), (V = []), (F = []), Y.clear();
         },
         NOW_PLAYING_MOUNTED: function () {
             (B = !0), ei();

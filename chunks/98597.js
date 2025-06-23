@@ -20,8 +20,8 @@ var r,
     g = n(427679),
     m = n(155409),
     b = n(131704),
-    y = n(199902),
-    O = n(430824),
+    O = n(199902),
+    y = n(430824),
     _ = n(496675),
     v = n(914010),
     C = n(281029),
@@ -136,7 +136,7 @@ function T(e) {
 function A(e) {
     let { channel: t, isDefaultChannel: r = !1, locked: o, tabIndex: u, forceShowButtons: f, hasChannelInfo: b = !1 } = e,
         { entrypoints: v } = (0, h._k)({ location: 'channel_base' }),
-        C = (0, a.e7)([O.Z], () => O.Z.getGuild(t.getGuildId())),
+        C = (0, a.e7)([y.Z], () => y.Z.getGuild(t.getGuildId())),
         E = (0, a.e7)([g.Z], () => g.Z.getStageInstanceByChannel(t.id), [t.id]),
         N = (0, a.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(t.id), [t.id]),
         w = (0, a.e7)([_.Z], () => (0, p.b)(_.Z, C, t, E)),
@@ -146,7 +146,7 @@ function A(e) {
     if (o || !w || t.isModeratorReportChannel()) return null;
     function R() {
         if (null != C) {
-            let e = y.Z.getAllActiveStreams().filter((e) => e.state !== j.jm8.ENDED && e.channelId === t.id);
+            let e = O.Z.getAllActiveStreams().filter((e) => e.state !== j.jm8.ENDED && e.channelId === t.id);
             (0, c.ZDy)(async () => {
                 let { default: r } = await Promise.all([n.e('7654'), n.e('17439')]).then(n.bind(n, 560114));
                 return (n) =>

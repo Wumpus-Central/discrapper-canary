@@ -14,23 +14,23 @@ var r = n(255367),
     g = n(13186),
     m = n(981631),
     b = n(921944),
-    y = n(474936),
-    O = n(388032),
+    O = n(474936),
+    y = n(388032),
     _ = n(706442),
     v = n(777091);
 let C = (e, t) => {
         let n = null != t && !t.isPreview;
         return e ? (e && !n ? 'no-wallpaper-nitro' : 'has-wallpaper-nitro') : 'non-nitro';
     },
-    j = (e) => ('has-wallpaper-nitro' === e ? O.intl.string(O.t.T9dXPj) : O.intl.string(O.t.zyvzQ0)),
+    j = (e) => ('has-wallpaper-nitro' === e ? y.intl.string(y.t.T9dXPj) : y.intl.string(y.t.zyvzQ0)),
     S = (e) => {
         switch (e) {
             case 'non-nitro':
-                return O.intl.string(O.t.VU8fxM);
+                return y.intl.string(y.t.VU8fxM);
             case 'no-wallpaper-nitro':
-                return O.intl.string(O.t.BQBNjY);
+                return y.intl.string(y.t.BQBNjY);
             case 'has-wallpaper-nitro':
-                return O.intl.string(O.t.eZMxlZ);
+                return y.intl.string(y.t.eZMxlZ);
         }
     },
     x = (e) => {
@@ -44,7 +44,7 @@ let C = (e, t) => {
             }),
             Z = w === h.FN.CONTEXT_MENU,
             [T, A] = (0, c.US)(E && Z && I && N && !P ? [o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : []),
-            R = (0, u.m)(y.p9.TIER_2),
+            R = (0, u.m)(O.p9.TIER_2),
             D = (0, f.Z)(n),
             L = T === o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK,
             M = (0, i.useRef)(null),
@@ -84,7 +84,7 @@ let C = (e, t) => {
                     (0, r.jsx)(g.Z, {
                         ref: U,
                         onClose: V,
-                        buttonText: O.intl.string(O.t['+IrDzM']),
+                        buttonText: y.intl.string(y.t['+IrDzM']),
                         header: F,
                         art: (0, r.jsx)('img', {
                             src: v.Z,
