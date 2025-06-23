@@ -5124,7 +5124,8 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 }
 
 .button__6af3a:disabled {
-    opacity: .5
+    opacity: .5;
+    pointer-events: none
 }
 
 .buttonChildrenWrapper__6af3a {
