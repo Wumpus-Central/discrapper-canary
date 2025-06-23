@@ -19813,8 +19813,10 @@ span.clanTag__5d473 {
 }
 
 .popover__2d0ab {
+    background-color: var(--user-profile-toolbar-background);
     border: 1px solid var(--user-profile-toolbar-border);
     border-radius: 100px;
+    box-shadow: var(--shadow-low);
     display: inline-flex;
     gap: 2px;
     height: unset;
@@ -19866,6 +19868,7 @@ span.clanTag__5d473 {
 }
 
 .activityPopover__2d0ab {
+    background-color: var(--user-profile-activity-toolbar-background);
     right: 8px
 }
 
@@ -36926,8 +36929,10 @@ div.popoutCloseButton__1e3f8:hover {
 }
 
 .popover_c97e55 {
+    background-color: var(--user-profile-toolbar-background);
     border: 1px solid var(--user-profile-toolbar-border);
     border-radius: 100px;
+    box-shadow: var(--shadow-low);
     display: inline-flex;
     gap: 2px;
     height: unset;
