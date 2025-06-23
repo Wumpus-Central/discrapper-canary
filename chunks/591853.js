@@ -263,110 +263,112 @@ function eE(e) {
                 }),
                 null == r || r(i, n);
         },
-        Y = null != p ? p : null != N ? N : null != P ? P : void 0;
-    return (
-        i.useEffect(() => {
-            x && (null == E || E.focus());
-        }, [E, m, x]),
-        (0, r.jsxs)('div', {
-            style: { pointerEvents: I ? 'none' : 'all' },
-            children: [
-                (0, r.jsx)(ei.Z, {
-                    sent: S,
-                    shown: I,
-                    className: el.toastContainer
-                }),
-                null != Y
-                    ? Y
-                    : (0, r.jsx)(en.Z, {
-                          children: (0, r.jsxs)('div', {
-                              className: el.emojiHotrailShareToChannel,
-                              children: [
-                                  (0, r.jsx)(eb, {
-                                      channel: t,
-                                      onClickSuggestion: V
-                                  }),
-                                  (0, r.jsx)(b.dE, { onSelectEmoji: V })
-                              ]
-                          })
-                      }),
-                (0, r.jsxs)('div', {
-                    className: x ? el.inputContainerShareToChannel : el.hiddenButRenderedInputField,
-                    children: [
-                        (0, r.jsx)(b.A7, {
-                            placeholder: G,
-                            onEnter: F,
-                            setEditorRef: (e) => y(e),
-                            channel: m ? t : void 0,
-                            showEmojiButton: null != Y,
-                            className: el.replyInput,
-                            renderAttachButton: O
-                                ? () =>
-                                      (0, r.jsx)(f.ua7, {
-                                          text: B,
-                                          children: (e) =>
-                                              (0, r.jsx)(
-                                                  f.P3F,
-                                                  ef(eu({}, e), {
-                                                      className: el.shareToChannelButton,
-                                                      onClick: () => g((e) => !e),
-                                                      children: m
-                                                          ? (0, r.jsx)(f.VL1, {
-                                                                size: 'custom',
-                                                                width: 20,
-                                                                height: 20
-                                                            })
-                                                          : (0, r.jsx)(f.lOy, {
-                                                                size: 'custom',
-                                                                width: 20,
-                                                                height: 20
-                                                            })
-                                                  })
-                                              )
-                                      })
-                                : void 0
-                        }),
-                        D &&
-                            (0, r.jsx)(f.P3F, {
-                                onClick: () => k(!1),
-                                className: el.primaryActionPopoutMessageCloseIcon,
-                                children: (0, r.jsx)(f.Dio, {
-                                    size: 'custom',
-                                    width: 20,
-                                    height: 20,
-                                    color: d.Z.colors.ICON_PRIMARY
-                                })
+        Y = null != p ? p : null != N ? N : null != P ? P : void 0,
+        K = () => {
+            g((e) => !e), x && (null == E || E.focus());
+        },
+        z = (e) => {
+            k(e), e && (null == E || E.focus());
+        };
+    return (0, r.jsxs)('div', {
+        style: { pointerEvents: I ? 'none' : 'all' },
+        children: [
+            (0, r.jsx)(ei.Z, {
+                sent: S,
+                shown: I,
+                className: el.toastContainer
+            }),
+            null != Y
+                ? Y
+                : (0, r.jsx)(en.Z, {
+                      children: (0, r.jsxs)('div', {
+                          className: el.emojiHotrailShareToChannel,
+                          children: [
+                              (0, r.jsx)(eb, {
+                                  channel: t,
+                                  onClickSuggestion: V
+                              }),
+                              (0, r.jsx)(b.dE, { onSelectEmoji: V })
+                          ]
+                      })
+                  }),
+            (0, r.jsxs)('div', {
+                className: x ? el.inputContainerShareToChannel : el.hiddenButRenderedInputField,
+                children: [
+                    (0, r.jsx)(b.A7, {
+                        placeholder: G,
+                        onEnter: F,
+                        setEditorRef: (e) => y(e),
+                        channel: m ? t : void 0,
+                        showEmojiButton: null != Y,
+                        className: el.replyInput,
+                        autoFocus: !1,
+                        renderAttachButton: O
+                            ? () =>
+                                  (0, r.jsx)(f.ua7, {
+                                      text: B,
+                                      children: (e) =>
+                                          (0, r.jsx)(
+                                              f.P3F,
+                                              ef(eu({}, e), {
+                                                  className: el.shareToChannelButton,
+                                                  onClick: K,
+                                                  children: m
+                                                      ? (0, r.jsx)(f.VL1, {
+                                                            size: 'custom',
+                                                            width: 20,
+                                                            height: 20
+                                                        })
+                                                      : (0, r.jsx)(f.lOy, {
+                                                            size: 'custom',
+                                                            width: 20,
+                                                            height: 20
+                                                        })
+                                              })
+                                          )
+                                  })
+                            : void 0
+                    }),
+                    D &&
+                        (0, r.jsx)(f.P3F, {
+                            onClick: () => z(!1),
+                            className: el.primaryActionPopoutMessageCloseIcon,
+                            children: (0, r.jsx)(f.Dio, {
+                                size: 'custom',
+                                width: 20,
+                                height: 20,
+                                color: d.Z.colors.ICON_PRIMARY
                             })
+                        })
+                ]
+            }),
+            !1 === x &&
+                (0, r.jsxs)('div', {
+                    className: el.primaryActionPopoutActionButtons,
+                    children: [
+                        (0, r.jsx)(
+                            f.zxk,
+                            {
+                                className: el.secondaryButton,
+                                color: f.zxk.Colors.PRIMARY,
+                                look: f.zxk.Looks.FILLED,
+                                onClick: () => z(!0),
+                                innerClassName: el.iconButton,
+                                size: L ? f.zxk.Sizes.MIN : f.zxk.Sizes.MEDIUM,
+                                children:
+                                    !L &&
+                                    (0, r.jsx)(f.Text, {
+                                        variant: 'text-md/semibold',
+                                        children: es.intl.string(es.t.OAJQlJ)
+                                    })
+                            },
+                            'toggleMessageMode'
+                        ),
+                        w
                     ]
-                }),
-                !1 === x &&
-                    (0, r.jsxs)('div', {
-                        className: el.primaryActionPopoutActionButtons,
-                        children: [
-                            (0, r.jsx)(
-                                f.zxk,
-                                {
-                                    className: el.secondaryButton,
-                                    color: f.zxk.Colors.PRIMARY,
-                                    look: f.zxk.Looks.FILLED,
-                                    onClick: () => k(!0),
-                                    innerClassName: el.iconButton,
-                                    size: L ? f.zxk.Sizes.MIN : f.zxk.Sizes.MEDIUM,
-                                    children:
-                                        !L &&
-                                        (0, r.jsx)(f.Text, {
-                                            variant: 'text-md/semibold',
-                                            children: es.intl.string(es.t.OAJQlJ)
-                                        })
-                                },
-                                'toggleMessageMode'
-                            ),
-                            w
-                        ]
-                    })
-            ]
-        })
-    );
+                })
+        ]
+    });
 }
 let eb = (e) => {
     let { channel: t, onClickSuggestion: n } = e,

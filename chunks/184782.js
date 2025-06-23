@@ -1,76 +1,76 @@
-a.d(n, { default: () => T }), a(953529), a(539854);
-var i = a(255367),
-    l = a(73800),
-    o = a(442837),
-    s = a(481060),
-    t = a(596454),
-    c = a(471445),
-    r = a(686546),
-    d = a(313201),
-    m = a(339085),
-    u = a(633302),
-    _ = a(565138),
-    h = a(372769),
-    p = a(703656),
-    j = a(592125),
-    x = a(430824),
-    N = a(496675),
-    C = a(259580),
-    g = a(626135),
-    b = a(524329),
-    k = a(995532),
-    E = a(845606),
-    Z = a(981631),
-    f = a(231338),
-    I = a(388032),
-    S = a(62311);
-let v = (e) => {
-        var n;
-        let { channelData: a, onClose: l, trackOptionClick: r } = e,
-            d = (0, o.e7)([j.Z], () => j.Z.getChannel(a.channel_id)),
-            _ = (0, o.e7)([N.Z], () => null != d && N.Z.can(f.Pl.VIEW_CHANNEL, d)),
-            h = (0, o.e7)([m.ZP], () => (null != a.emoji_id ? m.ZP.getCustomEmojiById(a.emoji_id) : null), [a.emoji_id]),
-            x = null != a.emoji_name ? u.ZP.getByName(u.ZP.convertSurrogateToName(a.emoji_name, !1)) : null,
-            g = null != (n = (0, c.KS)(d)) ? n : s.VL1;
-        return null != d && _
-            ? (0, i.jsxs)(s.P3F, {
+n.d(l, { default: () => L }), n(953529), n(539854);
+var a = n(255367),
+    i = n(73800),
+    s = n(442837),
+    o = n(481060),
+    t = n(596454),
+    c = n(471445),
+    r = n(686546),
+    d = n(313201),
+    m = n(339085),
+    u = n(633302),
+    h = n(565138),
+    j = n(372769),
+    x = n(703656),
+    p = n(592125),
+    N = n(430824),
+    _ = n(496675),
+    C = n(259580),
+    g = n(626135),
+    k = n(524329),
+    E = n(995532),
+    Z = n(845606),
+    f = n(981631),
+    v = n(231338),
+    I = n(388032),
+    S = n(62311);
+let P = (e) => {
+        var l;
+        let { channelData: n, onClose: i, trackOptionClick: r } = e,
+            d = (0, s.e7)([p.Z], () => p.Z.getChannel(n.channel_id)),
+            h = (0, s.e7)([_.Z], () => null != d && _.Z.can(v.Pl.VIEW_CHANNEL, d)),
+            j = (0, s.e7)([m.ZP], () => (null != n.emoji_id ? m.ZP.getCustomEmojiById(n.emoji_id) : null), [n.emoji_id]),
+            N = null != n.emoji_name ? u.ZP.getByName(u.ZP.convertSurrogateToName(n.emoji_name, !1)) : null,
+            g = null != (l = (0, c.KS)(d)) ? l : o.VL1;
+        return null != d && h
+            ? (0, a.jsxs)(o.P3F, {
                   className: S.optionContainer,
                   onClick: () => {
-                      r(), l(), (0, p.XU)(d.guild_id, d.id);
+                      r(), i(), (0, x.XU)(d.guild_id, d.id);
                   },
                   children: [
-                      null != h || null != x
-                          ? (0, i.jsx)(t.Z, {
-                                emojiName: null != a.emoji_id ? (null == h ? void 0 : h.name) : a.emoji_name,
-                                animated: null != h && h.animated,
-                                emojiId: null == h ? void 0 : h.id,
+                      null != j || null != N
+                          ? (0, a.jsx)(t.Z, {
+                                emojiName: null != n.emoji_id ? (null == j ? void 0 : j.name) : n.emoji_name,
+                                animated: null != j && j.animated,
+                                emojiId: null == j ? void 0 : j.id,
                                 autoplay: !0,
                                 className: S.optionEmoji
                             })
-                          : (0, i.jsx)(g, { className: S.channelIcon }),
-                      (0, i.jsxs)('div', {
+                          : (0, a.jsx)(g, { className: S.channelIcon }),
+                      (0, a.jsxs)('div', {
                           className: S.optionTextContainer,
                           children: [
-                              (0, i.jsx)(s.Text, {
+                              (0, a.jsx)(o.Text, {
                                   variant: 'text-md/normal',
                                   className: S.channelDescription,
-                                  children: a.description
+                                  children: n.description
                               }),
-                              (0, i.jsxs)(s.Text, {
+                              (0, a.jsxs)(o.Text, {
                                   variant: 'text-xs/normal',
                                   color: 'header-secondary',
                                   children: [
-                                      (0, i.jsx)(g, {
+                                      (0, a.jsx)(g, {
                                           className: S.channelTitleIcon,
                                           size: 'xxs',
                                           color: 'currentColor'
                                       }),
-                                      (0, i.jsx)('span', { children: d.name })
+                                      (0, a.jsx)('span', { children: d.name })
                                   ]
                               })
                           ]
                       }),
-                      (0, i.jsx)(C.Z, {
+                      (0, a.jsx)(C.Z, {
                           direction: C.Z.Directions.RIGHT,
                           className: S.optionArrow
                       })
@@ -78,152 +78,152 @@ let v = (e) => {
               })
             : null;
     },
-    T = (e) => {
-        var n;
-        let { onClose: a, transitionState: t, guildId: c, isPreview: m } = e,
-            u = (0, o.e7)([x.Z], () => x.Z.getGuild(c)),
+    L = (e) => {
+        var l;
+        let { onClose: n, transitionState: t, guildId: c, isPreview: m } = e,
+            u = (0, s.e7)([N.Z], () => N.Z.getGuild(c)),
             {
-                welcomeScreen: p,
-                fetching: j,
-                hasError: N
-            } = (0, o.cj)([k.Z], () => ({
-                welcomeScreen: k.Z.get(c),
-                fetching: k.Z.isFetching(),
-                hasError: k.Z.hasError()
+                welcomeScreen: x,
+                fetching: p,
+                hasError: _
+            } = (0, s.cj)([E.Z], () => ({
+                welcomeScreen: E.Z.get(c),
+                fetching: E.Z.isFetching(),
+                hasError: E.Z.hasError()
             })),
             C = (0, d.Dt)();
-        l.useEffect(() => {
-            null == p && (0, b.RM)(c);
-        }, [c, p]),
-            l.useEffect(() => {
-                !1 === j && !0 === N && null == p && a();
-            }, [j, N, a, p]),
-            l.useEffect(() => {
-                p === k.a && !1 === j && a();
-            }, [a, p, j]),
-            l.useEffect(() => {
+        i.useEffect(() => {
+            null == x && (0, k.RM)(c);
+        }, [c, x]),
+            i.useEffect(() => {
+                !1 === p && !0 === _ && null == x && n();
+            }, [p, _, n, x]),
+            i.useEffect(() => {
+                x === E.a && !1 === p && n();
+            }, [n, x, p]),
+            i.useEffect(() => {
                 !0 !== m &&
-                    g.default.track(Z.rMx.OPEN_MODAL, {
-                        type: E._,
+                    g.default.track(f.rMx.OPEN_MODAL, {
+                        type: Z._,
                         guild_id: c
                     });
             }, [c, m]);
-        let f = l.useCallback(
+        let v = i.useCallback(
             (e) => {
-                var n;
-                if (null == p || !0 === m) return;
-                let a = [],
-                    i = [],
-                    l = !1;
-                null == (n = p.welcome_channels) ||
-                    n.forEach((e) => {
-                        a.push(e.description), i.push(e.channel_id), null != e.emoji_id && (l = !0);
+                var l;
+                if (null == x || !0 === m) return;
+                let n = [],
+                    a = [],
+                    i = !1;
+                null == (l = x.welcome_channels) ||
+                    l.forEach((e) => {
+                        n.push(e.description), a.push(e.channel_id), null != e.emoji_id && (i = !0);
                     }),
-                    g.default.track(Z.rMx.GUILD_WELCOME_SCREEN_OPTION_SELECTED, {
+                    g.default.track(f.rMx.GUILD_WELCOME_SCREEN_OPTION_SELECTED, {
                         index: e,
                         guild_id: c,
-                        options: a,
-                        options_channel_ids: i,
-                        guild_description: p.description,
-                        has_custom_emojis: l
+                        options: n,
+                        options_channel_ids: a,
+                        guild_description: x.description,
+                        has_custom_emojis: i
                     });
             },
-            [c, m, p]
+            [c, m, x]
         );
         return null == u
             ? null
-            : null == p
-              ? (0, i.jsx)(s.Y0X, {
+            : null == x
+              ? (0, a.jsx)(o.Y0X, {
                     transitionState: t,
                     className: S.main,
                     'aria-label': I.intl.string(I.t.ZTNur6),
                     parentComponent: 'WelcomeScreenModal',
-                    children: (0, i.jsx)(s.$jN, { type: s.$jN.Type.SPINNING_CIRCLE })
+                    children: (0, a.jsx)(o.$jN, { type: o.$jN.Type.SPINNING_CIRCLE })
                 })
-              : (0, i.jsxs)(s.Y0X, {
+              : (0, a.jsxs)(o.Y0X, {
                     transitionState: t,
                     className: S.main,
                     'aria-labelledby': C,
                     parentComponent: 'WelcomeScreenModal',
                     children: [
-                        (0, i.jsx)(s.olH, {
-                            onClick: a,
+                        (0, a.jsx)(o.olH, {
+                            onClick: n,
                             className: S.close
                         }),
-                        (0, i.jsx)(r.ZP, {
+                        (0, a.jsx)(r.ZP, {
                             mask: r.ZP.Masks.SQUIRCLE,
                             width: 64,
                             height: 64,
                             className: S.guildIcon,
-                            children: (0, i.jsx)(_.Z, {
-                                size: _.Z.Sizes.LARGER,
+                            children: (0, a.jsx)(h.Z, {
+                                size: h.Z.Sizes.LARGER,
                                 guild: u,
                                 active: !0,
                                 animate: !0,
                                 tabIndex: -1
                             })
                         }),
-                        (0, i.jsx)(s.X6q, {
+                        (0, a.jsx)(o.X6q, {
                             variant: 'heading-xl/semibold',
                             className: S.header,
                             id: C,
                             children: I.intl.format(I.t['0aydCA'], {
                                 guildName: u.name,
-                                guildNameHook: (e, n) =>
-                                    (0, i.jsxs)(
+                                guildNameHook: (e, l) =>
+                                    (0, a.jsxs)(
                                         'span',
                                         {
                                             children: [
-                                                (0, i.jsx)(h.Z, {
+                                                (0, a.jsx)(j.Z, {
                                                     guild: u,
                                                     className: S.headerGuildBadge,
                                                     flowerStarClassName: S.flowerStar,
-                                                    tooltipColor: s.ua7.Colors.PRIMARY
+                                                    tooltipColor: o.ua7.Colors.PRIMARY
                                                 }),
-                                                (0, i.jsx)('strong', {
+                                                (0, a.jsx)('strong', {
                                                     className: S.headerGuildName,
                                                     children: e
                                                 })
                                             ]
                                         },
-                                        n
+                                        l
                                     )
                             })
                         }),
-                        null != p.description
-                            ? (0, i.jsx)(s.Text, {
+                        null != x.description
+                            ? (0, a.jsx)(o.Text, {
                                   variant: 'text-sm/normal',
                                   color: 'header-secondary',
                                   className: S.guildDescription,
-                                  children: p.description
+                                  children: x.description
                               })
                             : null,
-                        (0, i.jsx)(s.vwX, {
+                        (0, a.jsx)(o.vwX, {
                             className: S.choiceHeader,
                             children: I.intl.string(I.t['haj5+v'])
                         }),
-                        (0, i.jsx)('div', {
+                        (0, a.jsx)('div', {
                             className: S.options,
                             children:
-                                null == (n = p.welcome_channels)
+                                null == (l = x.welcome_channels)
                                     ? void 0
-                                    : n.map((e, n) =>
-                                          (0, i.jsx)(
-                                              v,
+                                    : l.map((e, l) =>
+                                          (0, a.jsx)(
+                                              P,
                                               {
                                                   channelData: e,
-                                                  trackOptionClick: () => f(n),
-                                                  onClose: a
+                                                  trackOptionClick: () => v(l),
+                                                  onClose: n
                                               },
-                                              ''.concat(e.channel_id, '-').concat(n)
+                                              ''.concat(e.channel_id, '-').concat(l)
                                           )
                                       )
                         }),
-                        (0, i.jsx)(s.zxk, {
-                            look: s.zxk.Looks.LINK,
+                        (0, a.jsx)(o.zxk, {
+                            look: o.zxk.Looks.LINK,
                             color: S.skipColor,
                             className: S.skip,
-                            onClick: a,
+                            onClick: n,
                             children: I.intl.string(I.t['jizr8/'])
                         })
                     ]
