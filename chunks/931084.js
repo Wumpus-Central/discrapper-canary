@@ -1,10 +1,11 @@
 n.d(t, {
-    I: () => a,
-    p: () => l
+    $u: () => s,
+    Ig: () => o,
+    p1: () => a
 });
 var r = n(818083),
     i = n(987338);
-let l = (0, r.B)({
+let a = (0, r.B)({
     kind: 'user',
     id: '2025-04_culture_creation_holdout',
     label: 'Culture Creation Holdout',
@@ -18,7 +19,11 @@ let l = (0, r.B)({
         }
     ]
 });
-function a(e) {
-    let { inHoldout: t } = l.useExperiment({ location: e }, { autoTrackExposure: !1 });
+function o(e) {
+    let { inHoldout: t } = a.useExperiment({ location: e }, { autoTrackExposure: !1 });
+    return t;
+}
+function s(e) {
+    let { inHoldout: t } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
     return t;
 }
