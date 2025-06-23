@@ -4,6 +4,7 @@ e.exports = {
     sparkle: 'sparkle__24af7',
     buttonWrapper: 'buttonWrapper__24af7',
     button: 'button__24af7',
+    noHover: 'noHover__24af7',
     iconMask: 'iconMask__24af7',
     buttonContent: 'buttonContent__24af7',
     icon: 'icon__24af7',

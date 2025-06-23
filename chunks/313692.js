@@ -32,8 +32,8 @@ function E(e) {
             addtionalQuery: A,
             shouldDispatch: !0
         }),
-        k = (0, s.e7)([_.default], () => _.default.getUser(l), [l]),
-        M = (0, s.e7)([b.ZP], () => b.ZP.getMember(E, l), [E, l]);
+        M = (0, s.e7)([_.default], () => _.default.getUser(l), [l]),
+        k = (0, s.e7)([b.ZP], () => b.ZP.getMember(E, l), [E, l]);
     (0, u.Ng)(() => {
         let e = null == N ? void 0 : N.details.scrollOffset;
         if (null != e) {
@@ -170,7 +170,7 @@ function E(e) {
                       showNoResultsAlt: !1
                   };
         }, [R.result, B]);
-    return null == k || null == M || null == G
+    return null == M || null == k || null == G
         ? null
         : (0, r.jsxs)('div', {
               className: a()(j.container, P),

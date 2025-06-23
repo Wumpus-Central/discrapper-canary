@@ -9,8 +9,7 @@ var i = n(120356),
     c = n(661475);
 function u(e) {
     let { className: t, iconContainerClassName: n, icon: i, color: u, title: d, description: p, userCount: h, onClick: f, highlight: m } = e,
-        g = (0, o.Q3)('GuildEventPrompt'),
-        b = (0, a._q$)('GuildEventPrompt');
+        g = (0, o.Q3)('GuildEventPrompt');
     return (0, r.jsxs)(a.P3F, {
         className: l()(c.container, t, null != m && { [c.pulse]: m }),
         onClick: f,
@@ -25,12 +24,12 @@ function u(e) {
                 children: [
                     (0, r.jsx)(a.X6q, {
                         variant: 'heading-md/semibold',
-                        color: b ? 'text-primary' : 'header-secondary',
+                        color: 'text-primary',
                         children: d
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: 'text-xs/normal',
-                        color: b ? 'text-primary' : 'header-secondary',
+                        color: 'text-primary',
                         className: c.inline,
                         children: p
                     }),
@@ -39,13 +38,13 @@ function u(e) {
                               children: [
                                   (0, r.jsx)(a.Text, {
                                       variant: 'text-xs/normal',
-                                      color: b ? 'text-primary' : 'header-secondary',
+                                      color: 'text-primary',
                                       className: c.dot,
                                       children: '\u2022'
                                   }),
                                   (0, r.jsx)(a.Text, {
                                       variant: 'text-xs/normal',
-                                      color: b ? 'text-primary' : 'header-secondary',
+                                      color: 'text-primary',
                                       className: c.inline,
                                       children: s.intl.format(s.t.NywdIi, { count: h })
                                   })

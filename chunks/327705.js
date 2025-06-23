@@ -57,6 +57,7 @@ function d(e, t) {
     );
 }
 let f = i.forwardRef(function (e, t) {
-    let { status: n, buffer: i } = (0, s.V)(a.Z);
-    return n === s.J.Loading ? null : (0, r.jsx)(o.v, d(c({ buffer: i }, e), { ref: t }));
+    let { status: n, buffer: i } = (0, s.VG)(a.Z);
+    return n === s.Jt.Loading ? null : (0, r.jsx)(o.v, d(c({ buffer: i }, e), { ref: t }));
 });
+f.riveSrc = a.Z;

@@ -56,8 +56,8 @@ function A(e) {
 function w(e) {
     let { user: t, currentUser: n, channel: w } = e,
         R = __OVERLAY__,
-        k = (0, m.ZP)(t.id),
-        M = (0, c.ZP)(),
+        M = (0, m.ZP)(t.id),
+        k = (0, c.ZP)(),
         L = i.useRef(Date.now()),
         { analyticsLocations: D } = (0, d.ZP)(u.Z.USER_PROFILE_SIDEBAR),
         U = (0, h.ZB)({
@@ -89,17 +89,17 @@ function w(e) {
         children: (0, r.jsx)(h.Mt, {
             value: U,
             openedAt: L.current,
-            fetchStartedAt: null == k ? void 0 : k.fetchStartedAt,
-            fetchEndedAt: null == k ? void 0 : k.fetchEndedAt,
-            isLoaded: null == k ? void 0 : k.isLoaded,
+            fetchStartedAt: null == M ? void 0 : M.fetchStartedAt,
+            fetchEndedAt: null == M ? void 0 : M.fetchEndedAt,
+            isLoaded: null == M ? void 0 : M.isLoaded,
             children: (0, r.jsx)(g.NJ, {
                 value: G,
                 children: (0, r.jsxs)(x.Z, {
                     ref: B,
                     user: t,
-                    displayProfile: k,
+                    displayProfile: M,
                     themeType: Z.lY.SIDEBAR,
-                    themeOverride: M,
+                    themeOverride: k,
                     children: [
                         null != G.interactionType &&
                             (0, r.jsx)(l.animated.div, {
@@ -128,7 +128,7 @@ function w(e) {
                                     children: [
                                         (0, r.jsx)(y.Z, {
                                             user: t,
-                                            displayProfile: k,
+                                            displayProfile: M,
                                             themeType: Z.lY.SIDEBAR,
                                             animateOnHover: !F,
                                             className: T.banner
@@ -140,7 +140,7 @@ function w(e) {
                                         (0, r.jsx)(_.Z, {
                                             location: 'UserProfileSiebar',
                                             user: t,
-                                            displayProfile: k,
+                                            displayProfile: M,
                                             channelId: w.id,
                                             themeType: Z.lY.SIDEBAR,
                                             onOpenProfile: R ? void 0 : V
@@ -157,7 +157,7 @@ function w(e) {
                                 (0, r.jsx)(P.Z, {
                                     user: t,
                                     currentUser: n,
-                                    displayProfile: k,
+                                    displayProfile: M,
                                     channel: w,
                                     isHovering: null == G.interactionType && F,
                                     onOpenProfile: R ? void 0 : V
@@ -191,9 +191,9 @@ function w(e) {
                                     children: N.intl.string(N.t['+Xp3ho'])
                                 })
                             }),
-                        (null == k ? void 0 : k.profileEffectId) != null &&
+                        (null == M ? void 0 : M.profileEffectId) != null &&
                             (0, r.jsx)(p.Z, {
-                                profileEffectId: null == k ? void 0 : k.profileEffectId,
+                                profileEffectId: null == M ? void 0 : M.profileEffectId,
                                 isHovering: F,
                                 urlQueryString: 'dmView'
                             })

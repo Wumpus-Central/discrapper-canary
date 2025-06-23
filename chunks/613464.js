@@ -29,8 +29,8 @@ function E(e) {
         [T, A] = i.useState(null == Z || null == N),
         w = (0, u.Z)(N),
         R = i.useRef(null),
-        { analyticsLocations: k } = (0, f.ZP)(h.Z.GUILD_MEMBER_MOD_VIEW),
-        M = (0, g.ZP)(t, n),
+        { analyticsLocations: M } = (0, f.ZP)(h.Z.GUILD_MEMBER_MOD_VIEW),
+        k = (0, g.ZP)(t, n),
         L = (0, d.ZP)();
     return (i.useEffect(() => {
         S || l();
@@ -75,13 +75,13 @@ function E(e) {
                   })
               })
             : (0, r.jsx)(f.Gt, {
-                  value: k,
+                  value: M,
                   children: (0, r.jsx)('div', {
                       className: a()(O.sidebarContainer, E),
                       style: P,
                       children: (0, r.jsx)(_.Z, {
                           user: Z,
-                          displayProfile: M,
+                          displayProfile: k,
                           themeType: null,
                           themeOverride: L,
                           forceShowPremium: !0,

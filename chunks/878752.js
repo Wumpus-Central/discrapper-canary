@@ -35,7 +35,7 @@ function v(e) {
         w = T === l.z.CONSUMABLE_HD_POTION_UPSELL;
     if (null == t || null != I) return null;
     let R = S && Z,
-        k = P && n;
+        M = P && n;
     return (0, r.jsxs)(o.Gt, {
         value: j,
         children: [
@@ -55,12 +55,12 @@ function v(e) {
                             channel: t,
                             glow: w
                         }),
-                    k && (0, r.jsx)(b.Z, {}),
-                    k && (0, r.jsx)(_.Z, { channel: t }),
-                    k && (0, r.jsx)(C.Z, {})
+                    M && (0, r.jsx)(b.Z, {}),
+                    M && (0, r.jsx)(_.Z, { channel: t }),
+                    M && (0, r.jsx)(C.Z, {})
                 ]
             }),
-            v && (R || w || O || k) && (0, r.jsx)('div', { className: x.divider })
+            v && (R || w || O || M) && (0, r.jsx)('div', { className: x.divider })
         ]
     });
 }

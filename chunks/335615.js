@@ -31,8 +31,8 @@ var r = n(255367),
     A = n(518738),
     w = n(570096),
     R = n(850020),
-    k = n(155409),
-    M = n(670188),
+    M = n(155409),
+    k = n(670188),
     L = n(706454),
     D = n(662594),
     U = n(430824),
@@ -175,7 +175,7 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                 },
                 [C]
             );
-        return (0, r.jsx)(M.Z, {
+        return (0, r.jsx)(k.Z, {
             targetElementRef: I,
             user: u,
             guildId: C,
@@ -400,7 +400,7 @@ class eo extends i.Component {
                 if (0 === t) {
                     let { key: e } = a;
                     return (0, r.jsx)(
-                        k.Z,
+                        M.Z,
                         {
                             tutorialId: 'whos-online',
                             position: 'left',

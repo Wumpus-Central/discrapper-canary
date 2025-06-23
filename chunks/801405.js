@@ -64,7 +64,7 @@ function v(e) {
             },
             [n, t]
         ),
-        k = i.useCallback(
+        M = i.useCallback(
             (e) => {
                 null != T &&
                     e === y.AEg.FULL_SCREEN &&
@@ -75,15 +75,15 @@ function v(e) {
             },
             [N, R, T]
         ),
-        M = i.useCallback(
+        k = i.useCallback(
             (e) => () => {
-                null != T && ((0, d.v)(j, d.d.FULL_SCREEN, e !== y.AEg.FULL_SCREEN), e !== y.AEg.FULL_SCREEN ? ((Z.current = e), R(e, y.AEg.FULL_SCREEN), (0, _.Dj)(T)) : k(e));
+                null != T && ((0, d.v)(j, d.d.FULL_SCREEN, e !== y.AEg.FULL_SCREEN), e !== y.AEg.FULL_SCREEN ? ((Z.current = e), R(e, y.AEg.FULL_SCREEN), (0, _.Dj)(T)) : M(e));
             },
-            [R, k, T, j]
+            [R, M, T, j]
         );
     i.useEffect(() => {
         let e = () => {
-            null != T && ((0, _.rB)(T, N) || I !== y.AEg.FULL_SCREEN || M(I)());
+            null != T && ((0, _.rB)(T, N) || I !== y.AEg.FULL_SCREEN || k(I)());
         };
         return (
             N.addEventListener(_.NO, e),
@@ -91,10 +91,10 @@ function v(e) {
                 N.removeEventListener(_.NO, e);
             }
         );
-    }, [N, I, M, T]);
+    }, [N, I, k, T]);
     let L = {
             channel: t,
-            maybeLeaveFullScreen: k
+            maybeLeaveFullScreen: M
         },
         D = i.useRef(L);
     return (i.useEffect(() => {
@@ -148,7 +148,7 @@ function v(e) {
               node: T,
               guestWindow: p,
               className: C.rightTrayIcon,
-              onClick: M(I)
+              onClick: k(I)
           })
         : null;
 }

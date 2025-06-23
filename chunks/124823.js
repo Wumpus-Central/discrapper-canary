@@ -57,8 +57,8 @@ function w(e) {
     let { user: t, channel: n } = e,
         w = __OVERLAY__ || !(0, d.Z)(t.id),
         R = (0, g.ZP)(t.id),
-        k = (0, s.ZP)(),
-        M = i.useRef(Date.now()),
+        M = (0, s.ZP)(),
+        k = i.useRef(Date.now()),
         { analyticsLocations: L } = (0, u.ZP)(c.Z.USER_PROFILE_SIDEBAR),
         D = (0, f.ZB)({
             layout: 'SIDEBAR',
@@ -83,7 +83,7 @@ function w(e) {
         value: L,
         children: (0, r.jsx)(f.Mt, {
             value: D,
-            openedAt: M.current,
+            openedAt: k.current,
             fetchStartedAt: null == R ? void 0 : R.fetchStartedAt,
             fetchEndedAt: null == R ? void 0 : R.fetchEndedAt,
             isLoaded: null == R ? void 0 : R.isLoaded,
@@ -92,7 +92,7 @@ function w(e) {
                 user: t,
                 displayProfile: R,
                 themeType: S.lY.SIDEBAR,
-                themeOverride: k,
+                themeOverride: M,
                 children: [
                     (0, r.jsxs)(l.u2, {
                         children: [

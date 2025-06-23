@@ -31,8 +31,8 @@ var r = n(255367),
     A = n(127654),
     w = n(316595),
     R = n(193910),
-    k = n(951211),
-    M = n(981631),
+    M = n(951211),
+    k = n(981631),
     L = n(356659),
     D = n(921944),
     U = n(388032),
@@ -99,7 +99,7 @@ let H = i.memo(function (e) {
         [es, ec] = i.useState(null),
         eu = (0, m.Go)() && ($ || eo),
         ed = V.isPrivate(),
-        ep = (0, o.e7)([S.Z], () => ed || (S.Z.can(M.Plq.ATTACH_FILES, V) && S.Z.can(M.Plq.SEND_MESSAGES, V))),
+        ep = (0, o.e7)([S.Z], () => ed || (S.Z.can(k.Plq.ATTACH_FILES, V) && S.Z.can(k.Plq.SEND_MESSAGES, V))),
         eh = (0, d.Z)(ee);
     (null == eh ? void 0 : eh.newClipIds.length) !== (null == ee ? void 0 : ee.newClipIds.length) && (null != (t = null == ee ? void 0 : ee.newClipIds.length) ? t : 0) > 0 && null == es && ei && en && !el && !er && !ea && ec('recentClips');
     let ef = (e, t, n) => {
@@ -109,7 +109,7 @@ let H = i.memo(function (e) {
                       requireConfirm: !0,
                       showLargeMessageDialog: n
                   }),
-                N.S.dispatchToLastSubscribed(M.CkL.TEXTAREA_FOCUS);
+                N.S.dispatchToLastSubscribed(k.CkL.TEXTAREA_FOCUS);
         },
         em = (0, o.e7)([P.Z], () => P.Z.hasCurrentUserSentMessageSinceAppStart());
     function eg() {
@@ -128,9 +128,9 @@ let H = i.memo(function (e) {
             return null == (e = X.current) ? void 0 : e.activateUploadDialogue();
         };
         return (
-            N.S.subscribe(M.CkL.UPLOAD_FILE, e),
+            N.S.subscribe(k.CkL.UPLOAD_FILE, e),
             () => {
-                N.S.unsubscribe(M.CkL.UPLOAD_FILE, e);
+                N.S.unsubscribe(k.CkL.UPLOAD_FILE, e);
             }
         );
     });
@@ -141,7 +141,7 @@ let H = i.memo(function (e) {
         ex = (0, h.qB)(),
         ev = (0, v.Us)({ location: 'ChannelAttachButton' }),
         ej = null != (l = null == et ? void 0 : et.length) ? l : 0,
-        eO = (0, k.Z)({
+        eO = (0, M.Z)({
             canAttachFiles: ep,
             canStartThreads: eb || e_,
             useSlate: ey,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k }), n(388685), n(539854);
+n.d(t, { Z: () => M }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(873546),
@@ -102,7 +102,7 @@ function w(e) {
                 c.Z.startTyping(o.id);
         },
         R = (0, m.K)({ user: t }),
-        [k, M] = i.useState(!1);
+        [M, k] = i.useState(!1);
     return (0, r.jsx)(g.Z, {
         targetElementRef: Z,
         user: t,
@@ -110,8 +110,8 @@ function w(e) {
         position: l.tq ? 'window_center' : 'left',
         spacing: 16,
         onShiftClick: w,
-        shouldShow: k,
-        onRequestClose: () => M(!1),
+        shouldShow: M,
+        onRequestClose: () => k(!1),
         children: (e) => {
             var { onClick: n, onMouseDown: i } = e,
                 l = (function (e, t) {
@@ -149,15 +149,15 @@ function w(e) {
                         applicationStream: E,
                         channel: o,
                         onContextMenu: T,
-                        selected: k,
+                        selected: M,
                         isMobile: x,
                         nick: j,
                         nameplate: R,
                         onClick: (e) => {
-                            e.shiftKey ? null == w || w() : M((e) => !e);
+                            e.shiftKey ? null == w || w() : k((e) => !e);
                         },
                         onMouseDown: (e) => {
-                            k ? e.stopPropagation() : null == i || i(e);
+                            M ? e.stopPropagation() : null == i || i(e);
                         }
                     },
                     l
@@ -176,7 +176,7 @@ function R(e, t) {
     }
     return !0;
 }
-function k(e) {
+function M(e) {
     let { channel: t } = e,
         n = C.default.getCurrentUser(),
         l = null == n ? void 0 : n.isStaff(),

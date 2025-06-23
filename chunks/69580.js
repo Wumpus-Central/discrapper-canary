@@ -158,31 +158,47 @@ function eh() {
         [o, c] = i.useState(!1),
         u = i.useRef(!1),
         [d, f] = i.useState(null),
-        _ = a && !l.tq && !o;
+        _ = !l.tq && !o;
     if (
         (i.useEffect(() => {
             if (l.eL && a) {
                 let t = new URL('discord://action/oauth2/authorize');
                 (t.search = e.search), window.open(t.toString(), '_self');
             } else
-                !a ||
-                    l.tq ||
+                l.tq ||
                     u.current ||
-                    (Promise.resolve()
+                    ((u.current = !0),
+                    Promise.resolve()
                         .then(n.bind(n, 536285))
                         .then((t) => {
                             let { default: n } = t;
-                            n.request(ei.Etm.DEEP_LINK, {
-                                type: ea.jE.OAUTH2,
-                                params: { search: e.search }
-                            })
-                                .then((e) => {
-                                    f(null != e && e);
+                            if (a)
+                                n.request(ei.Etm.DEEP_LINK, {
+                                    type: ea.jE.OAUTH2,
+                                    params: { search: e.search }
                                 })
-                                .catch(() => f(!1))
-                                .then(() => n.disconnect());
-                        }),
-                    (u.current = !0));
+                                    .then((e) => {
+                                        f(null != e && e);
+                                    })
+                                    .catch(() => f(!1))
+                                    .then(() => n.disconnect());
+                            else {
+                                f(!0);
+                                let t = new URLSearchParams(e.search);
+                                n.request(ei.Etm.AUTHORIZE, {
+                                    client_id: t.get('client_id'),
+                                    response_type: t.get('response_type'),
+                                    redirect_uri: t.get('redirect_uri'),
+                                    scope: t.get('scope')
+                                })
+                                    .then((e) => {
+                                        let { location: t } = e;
+                                        t && (window.location.href = t);
+                                    })
+                                    .catch(() => f(!1))
+                                    .then(() => n.disconnect());
+                            }
+                        }));
         }, [e.search, a]),
         _ && !1 !== d)
     ) {
@@ -193,7 +209,7 @@ function eh() {
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(R.Dx, { children: eo.intl.string(eo.t.csrAMD) }),
-                              (0, r.jsx)(R.DK, { children: eo.intl.string(eo.t['m1+IBg']) }),
+                              (0, r.jsx)(R.DK, { children: a ? eo.intl.string(eo.t['m1+IBg']) : eo.intl.string(eo.t.kRzrSE) }),
                               (0, r.jsx)(h.zx, {
                                   onClick: () => c(!0),
                                   color: h.zx.Colors.BRAND,
@@ -738,7 +754,7 @@ function eE(e) {
 }
 function eb(e, t) {
     var n, i;
-    if (null == t.location || (null != e && e(t))) return;
+    if (null == t.location || (null != e.callback && e.callback(t))) return;
     let { host: a, pathname: o, searchParams: s } = null != (n = B.Z.toURLSafe(t.location)) ? n : {},
         l = B.Z.isDiscordHostname(null != a ? a : null) || window.location.host === a;
     l && o === ei.Z5c.OAUTH2_AUTHORIZED
@@ -779,7 +795,7 @@ function eb(e, t) {
                     )
                 );
             })
-          : null == (i = window.open(t.location, '_blank')) || i.focus();
+          : null == e.redirectUri && (null == (i = window.open(t.location, '_blank')) || i.focus());
 }
 function ey(e, t) {
     if ((0, D.g)('create-guild-and-oauth2-modal')) return void P.Z.openCreateGuildModal({ onSuccess: (n) => eO(ed(ec({}, e), { guildId: n }), t) });
@@ -792,7 +808,7 @@ function eO(e, t) {
                 em,
                 ed(ec({}, t, e), {
                     cancelCompletesFlow: !1,
-                    callback: eb.bind(null, e.callback)
+                    callback: eb.bind(null, e)
                 })
             ),
         { onCloseCallback: t }

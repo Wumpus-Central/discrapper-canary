@@ -128,11 +128,11 @@ function w(e) {
 function R() {
     return null != r && (r.destroy(), (r = null)), c.Z.getSearchContext(w, 1000);
 }
-function k(e) {
+function M(e) {
     if (e.key !== C.vTt) return !1;
     (x = !0), T(), (r = R()), (P = null), Z('');
 }
-function M(e) {
+function k(e) {
     if (e.key !== C.vTt) return !1;
     L();
 }
@@ -184,13 +184,13 @@ let U = new D(s.Z, {
             let r = x;
             return S(), (x = r), (P = n), N();
         },
-        MODAL_PUSH: k,
-        SHOW_ACTION_SHEET: k,
+        MODAL_PUSH: M,
+        SHOW_ACTION_SHEET: M,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function (e) {
             (x = !0), T(), (r = R()), (P = e.channelId), Z('');
         },
-        MODAL_POP: M,
-        HIDE_ACTION_SHEET: M,
+        MODAL_POP: k,
+        HIDE_ACTION_SHEET: k,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: L,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_QUERY: function (e) {
             (P = e.channelId), Z(e.query);

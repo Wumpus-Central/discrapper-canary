@@ -94,10 +94,10 @@ let b = 24,
         }
     };
 function v(e) {
-    let { className: t, disabled: n = !1, innerClassName: i, childClassName: a, iconClassName: p, icon: m, children: E, onClick: v, isActive: I, onMouseEnter: T, onMouseLeave: S, onFocus: A, onBlur: N, pulse: C, sparkle: R, notification: P, 'aria-label': w, 'aria-expanded': D, 'aria-haspopup': L, 'aria-controls': x } = e,
-        k = (0, u.Q3)('ChannelTextAreaButton'),
-        M = (0, l.Yzy)(null != E, g(h({}, O), { keys: (e) => (e ? 'children' : 'icon') })),
-        j = (e) => {
+    let { className: t, disabled: n = !1, innerClassName: i, childClassName: a, iconClassName: p, icon: m, children: E, onClick: v, isActive: I, onMouseEnter: T, onMouseLeave: S, onFocus: A, onBlur: N, pulse: C, sparkle: R, notification: P, 'aria-label': w, 'aria-expanded': D, 'aria-haspopup': L, 'aria-controls': x, noHover: k } = e,
+        M = (0, u.Q3)('ChannelTextAreaButton'),
+        j = (0, l.Yzy)(null != E, g(h({}, O), { keys: (e) => (e ? 'children' : 'icon') })),
+        U = (e) => {
             let { component: t } = e;
             return null != P
                 ? (0, r.jsxs)('div', {
@@ -106,8 +106,8 @@ function v(e) {
                           (0, r.jsx)(c.ZP, {
                               className: _.iconMask,
                               mask: c.QS.CHAT_INPUT_BUTTON_NOTIFICATION,
-                              width: k ? y : b,
-                              height: k ? y : b,
+                              width: M ? y : b,
+                              height: M ? y : b,
                               children: t
                           }),
                           (0, r.jsx)('span', { className: _.notificationDot })
@@ -124,7 +124,10 @@ function v(e) {
         'aria-controls': x,
         disabled: n,
         className: o()(t, { [_.active]: I }),
-        innerClassName: o()(_.button, i, { [_.pulseButton]: C }),
+        innerClassName: o()(_.button, i, {
+            [_.pulseButton]: C,
+            [_.noHover]: k
+        }),
         onClick: v,
         onMouseEnter: T,
         onMouseLeave: S,
@@ -137,7 +140,7 @@ function v(e) {
             }
         },
         children: [
-            M((e, t, n) => {
+            j((e, t, n) => {
                 let { key: i } = n;
                 return t
                     ? (0, r.jsx)(
@@ -145,7 +148,7 @@ function v(e) {
                           {
                               style: e,
                               className: o()(_.buttonWrapper, a),
-                              children: j({ component: E })
+                              children: U({ component: E })
                           },
                           i
                       )
@@ -155,7 +158,7 @@ function v(e) {
                             {
                                 style: e,
                                 className: o()(_.buttonWrapper, a),
-                                children: j({
+                                children: U({
                                     component: (0, r.jsx)(m, {
                                         className: o()(_.icon, p, { [_.pulseIcon]: C }),
                                         color: 'currentColor'

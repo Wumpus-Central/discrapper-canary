@@ -32,8 +32,8 @@ var i = n(120356),
     A = n(339340),
     w = n(354459),
     R = n(981631),
-    k = n(231338),
-    M = n(388032),
+    M = n(231338),
+    k = n(388032),
     L = n(610633),
     D = n(73433);
 function U(e) {
@@ -188,14 +188,14 @@ function V(e) {
         b = (0, h.ZP)(t),
         _ = (0, f.KS)(t),
         [E] = (0, d.Z)((null == g ? void 0 : g.type) === w.fO.ACTIVITY ? [g.applicationId] : []),
-        I = M.intl.string(M.t.BVZqJi);
-    t.isDM() ? (I = M.intl.string(M.t.jN2DfX)) : t.isGroupDM() && (I = M.intl.string(M.t['e5y+go']));
+        I = k.intl.string(k.t.BVZqJi);
+    t.isDM() ? (I = k.intl.string(k.t.jN2DfX)) : t.isGroupDM() && (I = k.intl.string(k.t['e5y+go']));
     let Z = (0, a.e7)([p.Z], () => p.Z.getChannelStatus(t)),
         T = t.isGuildVoice() && c && null != Z && Z.length > 0,
         F = (0, S.ZP)(t),
         G = T
             ? (0, r.jsx)(o.ua7, {
-                  text: M.intl.string(M.t.Mgpxi4),
+                  text: k.intl.string(k.t.Mgpxi4),
                   delay: 500,
                   position: 'bottom',
                   shouldShow: F,
@@ -238,7 +238,7 @@ function V(e) {
         className: L.subtitleContainer,
         children: [
             (0, r.jsx)(o.f6W, {
-                theme: k.BR.DARK,
+                theme: M.BR.DARK,
                 children: (e) =>
                     (0, r.jsxs)(y.ZP, {
                         onDoubleClick: C.O,
@@ -267,13 +267,13 @@ function V(e) {
                                         b,
                                         z &&
                                             (0, r.jsx)(o.ua7, {
-                                                text: M.intl.string(M.t.QyZ4TU),
+                                                text: k.intl.string(k.t.QyZ4TU),
                                                 children: (e) =>
                                                     (0, r.jsx)(
                                                         o.tQf,
                                                         B(U({}, e), {
                                                             size: 'xs',
-                                                            'aria-label': M.intl.string(M.t.VHXh8f),
+                                                            'aria-label': k.intl.string(k.t.VHXh8f),
                                                             color: o.TVs.colors.INTERACTIVE_NORMAL,
                                                             className: L.secureFramesIcon
                                                         })

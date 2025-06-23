@@ -10,6 +10,5 @@ e.exports = {
     audienceSummary: 'audienceSummary__0b34e',
     summaryItem: 'summaryItem__0b34e',
     container: 'container__0b34e',
-    content: 'content__0b34e',
-    withRive: 'withRive__0b34e'
+    content: 'content__0b34e'
 };

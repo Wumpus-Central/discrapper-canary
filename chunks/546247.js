@@ -1,25 +1,16 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => o });
 var r = n(255367);
 n(73800);
-var i = n(120356),
-    l = n.n(i),
-    a = n(481060),
-    o = n(998502),
-    s = n(939630);
-let c = o.ZP.getEnableHardwareAcceleration()
+var i = n(481060),
+    l = n(998502),
+    a = n(939630);
+let o = l.ZP.getEnableHardwareAcceleration()
     ? function (e) {
           let { eventTargetRef: t } = e;
-          return (0, a._q$)('PulseGradient')
-              ? (0, r.jsx)(a.zLd, {
-                    className: s.pulseGradient,
-                    eventTargetRef: t
-                })
-              : (0, r.jsx)('div', {
-                    children: (0, r.jsxs)('div', {
-                        className: s.gradientBackground,
-                        children: [(0, r.jsx)('div', { className: l()(s.backgroundDark, s.sphere) }), (0, r.jsx)('div', { className: l()(s.backgroundLight, s.sphere) }), (0, r.jsx)('div', { className: l()(s.foregroundRing, s.sphere) }), (0, r.jsx)('div', { className: l()(s.foregroundBase, s.sphere) })]
-                    })
-                });
+          return (0, r.jsx)(i.zLd, {
+              className: a.pulseGradient,
+              eventTargetRef: t
+          });
       }
     : function () {
           return (0, r.jsxs)('svg', {

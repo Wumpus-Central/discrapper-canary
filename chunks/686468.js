@@ -83,13 +83,12 @@ function P(e) {
         { canCreateGuildEvent: p } = (0, g.XJ)(t),
         P = (0, x.Z)(t.id),
         { usersInSummary: S } = (0, C.Z)(t.id),
-        Z = (0, c._q$)('StartStageChannelCallView'),
-        N = i.useRef(null);
+        Z = i.useRef(null);
     return (0, r.jsxs)('div', {
-        className: a()(O.container, { [O.withRive]: Z }),
-        ref: N,
+        className: O.container,
+        ref: Z,
         children: [
-            s && (0, r.jsx)(b.Z, { eventTargetRef: N }),
+            s && (0, r.jsx)(b.Z, { eventTargetRef: Z }),
             (0, r.jsxs)('div', {
                 className: O.content,
                 children: [
