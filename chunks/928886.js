@@ -25,7 +25,7 @@ function I(e, t) {
 function T(e) {
     var t;
     let { renderHeader: n, referralTrialOfferId: a, handleClose: T } = e,
-        { selectedSkuId: S, step: A, selectedPlan: N, purchaseState: C, purchaseType: R, selectedSku: P, enablePremiumRebrandDesign: w } = (0, g.JL)(),
+        { selectedSkuId: S, step: A, selectedPlan: N, purchaseState: C, purchaseType: R, selectedSku: P, enablePremiumBrandRefresh: w } = (0, g.JL)(),
         { isGift: D, selectedGiftStyle: L, giftRecipient: x } = (0, m.wD)(),
         k = D && (0, h.pO)(x) && A === E.h8.CONFIRM && null != L && (null == P ? void 0 : P.productLine) !== b.POd.COLLECTIBLES,
         M = null != n && null != A,
@@ -78,7 +78,7 @@ function T(e) {
                           giftRecipient: x,
                           useWinterTheme: W,
                           isEligibleForTrial: B,
-                          enablePremiumRebrandDesign: w
+                          enablePremiumBrandRefresh: w
                       }))),
             e
         );

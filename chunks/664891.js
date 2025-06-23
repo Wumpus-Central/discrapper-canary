@@ -94,7 +94,7 @@ function W(e, t) {
 function K(e) {
     let t,
         { premiumSubscription: n, paymentSources: a, priceOptions: s, onPaymentSourceChange: m, onPaymentSourceAdd: g, planId: P, setHasAcceptedTerms: L, legalTermsNodeRef: j, hasLegalTermsFlash: U, onInvoiceError: V, planGroup: Z, currencies: H, onCurrencyChange: Y, hasOpenInvoice: W, purchaseState: K, handleClose: $ } = e,
-        { selectedSkuId: ee, defaultPlanId: et, isPremium: en, startedPaymentFlowWithPaymentSourcesRef: er, hasPaymentSources: ei, enablePremiumRebrandDesign: ea } = (0, y.JL)(),
+        { selectedSkuId: ee, defaultPlanId: et, isPremium: en, startedPaymentFlowWithPaymentSourcesRef: er, hasPaymentSources: ei, enablePremiumBrandRefresh: ea } = (0, y.JL)(),
         { isGift: eo } = (0, b.wD)(),
         es = s.paymentSourceId,
         el = (0, I.$)(a, es),
@@ -203,7 +203,7 @@ function K(e) {
                         hidePersonalInformation: eu,
                         disabled: e_,
                         paymentGatewayRestrictions: null == n ? void 0 : n.eligiblePaymentGateways,
-                        className: o()({ [F.premiumRebrandInputBackground]: ea })
+                        className: o()({ [F.premiumBrandRefreshInputBackground]: ea })
                     })
                 ]
             }),
@@ -296,7 +296,7 @@ function z(e) {
 function q(e) {
     let t,
         { premiumSubscription: n, newPlan: a, onInvoiceError: s, planGroup: l, priceOptions: c, fractionalPremiumInfo: u, preventFetch: f } = e,
-        { selectedSkuId: _, startedPaymentFlowWithPaymentSourcesRef: p, setInvoicePreview: h, premiumRebrandBackgroundClassName: m } = (0, y.JL)(),
+        { selectedSkuId: _, startedPaymentFlowWithPaymentSourcesRef: p, setInvoicePreview: h, premiumBrandRefreshBackgroundClassName: m } = (0, y.JL)(),
         { isGift: E } = (0, b.wD)(),
         { analyticsLocations: O } = (0, g.ZP)(),
         I = (0, C.al)(n, a.id, 1, new Set(l)),
@@ -415,7 +415,7 @@ function X(e) {
 }
 function Q(e) {
     let { premiumSubscription: t, priceOptions: n, preventFetch: a, onInvoiceError: s } = e,
-        { setInvoicePreview: l, premiumRebrandBackgroundClassName: c } = (0, y.JL)(),
+        { setInvoicePreview: l, premiumBrandRefreshBackgroundClassName: c } = (0, y.JL)(),
         { analyticsLocations: u } = (0, g.ZP)(),
         [f, _] = (0, P.ED)({
             subscriptionId: t.id,
@@ -477,7 +477,7 @@ function Q(e) {
 function J(e) {
     let t,
         { premiumSubscription: n, newPlan: a, planGroup: s, fractionalPremiumInfo: l, priceOptions: c, preventFetch: u } = e,
-        { setInvoicePreview: f, premiumRebrandBackgroundClassName: _ } = (0, y.JL)(),
+        { setInvoicePreview: f, premiumBrandRefreshBackgroundClassName: _ } = (0, y.JL)(),
         { analyticsLocations: p } = (0, g.ZP)(),
         [h, m] = (0, P.ED)({
             subscriptionId: n.id,

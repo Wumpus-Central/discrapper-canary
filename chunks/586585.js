@@ -67,7 +67,7 @@ var p = (function (e) {
 })({});
 let h = (e) => {
     let { onBack: t, backText: n, primaryIcon: u, primaryCTA: f, primaryType: p, primaryText: h, primaryTooltip: m, primaryDisabled: g, primarySubmitting: E, onPrimary: b, secondaryText: y, onSecondary: O } = e,
-        { premiumRebrandBackgroundClassName: v } = (0, o.JL)(),
+        { premiumBrandRefreshBackgroundClassName: v } = (0, o.JL)(),
         I = () => {
             if (null == f || null == h) return null;
             let e = 2 === f ? i.gtL : i.zxk,

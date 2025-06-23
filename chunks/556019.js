@@ -1,5 +1,6 @@
-n.d(t, { h: () => i });
-let r = (0, n(818083).B)({
+n.d(t, { h: () => a });
+var r = n(931084);
+let i = (0, n(818083).B)({
     kind: 'user',
     id: '2025-04_emoji_studio',
     label: 'Emoji Studio',
@@ -18,8 +19,15 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function i(e) {
+function a(e) {
     let { location: t, autoTrackExposure: n } = e,
-        { enabled: i } = r.getCurrentConfig({ location: t }, { autoTrackExposure: n });
-    return i;
+        a = (0, r.$u)(t),
+        { enabled: o } = i.getCurrentConfig(
+            { location: t },
+            {
+                autoTrackExposure: n,
+                disable: a
+            }
+        );
+    return o;
 }

@@ -74,7 +74,7 @@ function Q(e) {
     let W,
         Q,
         { selectedPlanId: J, planGroup: $, paymentSources: ee, priceOptions: et, currencies: en, onCurrencyChange: er, onPaymentSourceChange: ei, handlePaymentSourceAdd: ea, setHasAcceptedTerms: eo, legalTermsNodeRef: es, hasLegalTermsFlash: el, trialId: ec, trialFooterMessageOverride: eu, reviewWarningMessage: ed, metadata: ef, purchaseState: e_, hideSubscriptionDetails: ep, referralTrialOfferId: eh, isTrial: em = !1, isDiscount: eg = !1, handleClose: eE } = e,
-        { isEmbeddedIAP: eb, activeSubscription: ey, selectedSkuId: eO, defaultPlanId: ev, isPremium: eI, startedPaymentFlowWithPaymentSourcesRef: eT, setInvoicePreview: eS, contextMetadata: eA, inReverseTrial: eN, setPurchaseError: eC, hasPaymentSources: eR, enablePremiumRebrandDesign: eP, premiumRebrandBackgroundClassName: ew } = (0, b.JL)(),
+        { isEmbeddedIAP: eb, activeSubscription: ey, selectedSkuId: eO, defaultPlanId: ev, isPremium: eI, startedPaymentFlowWithPaymentSourcesRef: eT, setInvoicePreview: eS, contextMetadata: eA, inReverseTrial: eN, setPurchaseError: eC, hasPaymentSources: eR, enablePremiumBrandRefresh: eP, premiumBrandRefreshBackgroundClassName: ew } = (0, b.JL)(),
         { isGift: eD, giftRecipient: eL, selectedGiftStyle: ex } = (0, E.wD)(),
         ek = (0, x.Ng)(),
         eM = null == ek || null == (t = ek.discount) ? void 0 : t.plan_ids.some((e) => Y.GP[e].skuId === eO),
@@ -236,7 +236,7 @@ function Q(e) {
                     tt &&
                         (0, r.jsx)(j.n, {
                             fractionalPremiumInfo: te,
-                            enablePremiumRebrandDesign: eP
+                            enablePremiumBrandRefresh: eP
                         }),
                     (0, r.jsxs)(M.aO, {
                         className: o()(q.invoice, ew),
@@ -368,7 +368,7 @@ function Q(e) {
                               hidePersonalInformation: e0,
                               isTrial: em,
                               paymentGatewayRestrictions: eZ,
-                              className: o()({ [q.premiumRebrandInputBackground]: eP })
+                              className: o()({ [q.premiumBrandRefreshInputBackground]: eP })
                           }),
                           e3 && null == e1
                               ? (0, r.jsx)('div', {

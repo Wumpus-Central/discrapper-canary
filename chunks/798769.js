@@ -6,14 +6,14 @@ var i = n(442837),
     o = n(607070),
     s = n(409813),
     l = n(669079),
-    c = n(170579),
-    u = n(696515),
+    c = n(709093),
+    u = n(170579),
     d = n(616030),
     f = n(474936),
     _ = n(388032),
     p = n(451316);
 function h(e) {
-    let { currentStep: t, className: n, purchaseState: h, premiumType: m, useWinterTheme: g = !1, onClose: E, hideCloseButton: b, showTrialBadge: y, showDiscountBadge: O, isGift: v, giftRecipient: I, isEligibleForTrial: T, enablePremiumRebrandDesign: S } = e,
+    let { currentStep: t, className: n, purchaseState: h, premiumType: m, useWinterTheme: g = !1, onClose: E, hideCloseButton: b, showTrialBadge: y, showDiscountBadge: O, isGift: v, giftRecipient: I, isEligibleForTrial: T, enablePremiumBrandRefresh: S } = e,
         A = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
         N = g ? f.nL.WINTER : f.nL.DEFAULT,
         C = () => {
@@ -45,7 +45,7 @@ function h(e) {
               ]
           })
         : S
-          ? (0, r.jsx)(u.Z, {
+          ? (0, r.jsx)(c.Z, {
                 hideCloseOnFullScreen: !0,
                 hideCloseButton: b,
                 upgradeToPremiumType: m,
@@ -56,7 +56,7 @@ function h(e) {
             })
           : (0, r.jsx)('div', {
                 className: n,
-                children: (0, r.jsx)(c.Z, {
+                children: (0, r.jsx)(u.Z, {
                     hideCloseOnFullScreen: !0,
                     hideCloseButton: b,
                     shouldShowPrice: !0,

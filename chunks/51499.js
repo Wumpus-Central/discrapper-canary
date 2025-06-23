@@ -9,7 +9,7 @@ var i = n(120356),
     c = n(175531);
 function u(e) {
     let { className: t, isEligibleForTrial: n = !1 } = e,
-        { step: i, breadcrumbs: u, startedPaymentFlowWithPaymentSourcesRef: d, enablePremiumRebrandDesign: f } = (0, s.JL)();
+        { step: i, breadcrumbs: u, startedPaymentFlowWithPaymentSourcesRef: d, enablePremiumBrandRefresh: f } = (0, s.JL)();
     if (f || null == u || 0 === u.length) return null;
     let _ = u.flatMap((e) => {
         let t = e.useBreadcrumbLabel(n);

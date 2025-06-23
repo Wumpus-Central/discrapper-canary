@@ -12,7 +12,7 @@ var r = n(120356),
     m = n(474936),
     C = n(106112);
 let p = function (e) {
-    let { subscriptionTier: t, interval: n = m.rV.MONTH, className: r, isGift: p = !1, variant: g, priceOptions: x, isApplicationHome: f, enablePremiumRebrandDesign: h } = e,
+    let { subscriptionTier: t, interval: n = m.rV.MONTH, className: r, isGift: p = !1, variant: g, priceOptions: x, isApplicationHome: f, enablePremiumBrandRefresh: h } = e,
         I = (0, a.e7)([u.Z], () => u.Z.isLoadedForPremiumSKUs()),
         v = (0, s.ap)((0, c.ZP)());
     if (!I)

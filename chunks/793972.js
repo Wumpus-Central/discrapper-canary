@@ -1,27 +1,27 @@
-r.d(t, { R: () => u }), r(388685);
-var n = r(255367),
-    a = r(73800),
-    l = r(120356),
-    s = r.n(l),
-    i = r(481060),
-    o = r(192360),
-    c = r(954292);
+n.d(t, { R: () => u }), n(388685);
+var r = n(255367),
+    a = n(73800),
+    l = n(120356),
+    s = n.n(l),
+    i = n(481060),
+    o = n(192360),
+    c = n(954292);
 let u = (e) => {
-        let { onChange: t, value: r } = e,
+        let { onChange: t, value: n } = e,
             [l, u] = a.useState(!0);
-        return (0, n.jsxs)('div', {
+        return (0, r.jsxs)('div', {
             className: o.nameInput,
             children: [
-                (0, n.jsxs)('div', {
+                (0, r.jsxs)('div', {
                     className: s()(o.wrapInput, { [o.blur]: l }),
                     children: [
-                        (0, n.jsx)(d, {}),
-                        (0, n.jsx)(p, {
-                            value: r,
+                        (0, r.jsx)(d, {}),
+                        (0, r.jsx)(p, {
+                            value: n,
                             showPencilIcon: l
                         }),
-                        (0, n.jsx)('input', {
-                            value: r,
+                        (0, r.jsx)('input', {
+                            value: n,
                             onChange: (e) => {
                                 t(e.currentTarget.value);
                             },
@@ -32,7 +32,7 @@ let u = (e) => {
                         })
                     ]
                 }),
-                (0, n.jsx)(i.Text, {
+                (0, r.jsx)(i.Text, {
                     variant: 'text-xs/normal',
                     color: 'header-muted',
                     children: 'Min. 2 characters (letters, numbers & underscores only).'
@@ -41,26 +41,26 @@ let u = (e) => {
         });
     },
     d = () =>
-        (0, n.jsx)('span', {
+        (0, r.jsx)('span', {
             className: o.bookend,
             'aria-hidden': !0,
             children: ':'
         }),
     p = (e) => {
-        let { value: t, showPencilIcon: r } = e;
-        return (0, n.jsxs)(i.Text, {
+        let { value: t, showPencilIcon: n } = e;
+        return (0, r.jsxs)(i.Text, {
             variant: 'text-md/semibold',
             color: 'header-muted',
             className: o.ghost,
             'aria-hidden': !0,
             children: [
-                (0, n.jsx)(d, {}),
-                (0, n.jsx)('span', {
+                (0, r.jsx)(d, {}),
+                (0, r.jsx)('span', {
                     className: o.spacer,
                     children: '' === t ? 'emoji_name' : t
                 }),
-                (0, n.jsx)(d, {}),
-                r && (0, n.jsx)(i.vdY, { size: 'xs' })
+                (0, r.jsx)(d, {}),
+                n && (0, r.jsx)(i.vdY, { size: 'xs' })
             ]
         });
     };

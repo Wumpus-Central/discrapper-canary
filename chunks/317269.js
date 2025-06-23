@@ -80,7 +80,7 @@ function _(t) {
     let e,
         n,
         { planId: s, enableNoPaymentTrial: H, startingPremiumSubscriptionPlanId: u, onClose: M, followupSKUInfo: _, isDowngrade: p, hideClose: R, postSuccessGuild: j, paymentSourceType: k, startingFractionalPremiumEndsAt: v } = t,
-        { enablePremiumRebrandDesign: P } = (0, c.JL)(),
+        { enablePremiumBrandRefresh: P } = (0, c.JL)(),
         { theme: U } = (0, a.TCT)(),
         w = (0, r.e7)([o.Z], () => (null != _ ? o.Z.get(_.id) : null)),
         b = (0, g.qH)(v);

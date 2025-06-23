@@ -1,18 +1,18 @@
-r.d(t, {
+n.d(t, {
     H: () => c,
     z: () => d
 });
-var n = r(255367),
-    a = r(598117),
-    l = r(981631),
-    s = r(185923),
-    i = r(388032),
-    o = r(632261);
+var r = n(255367),
+    a = n(598117),
+    l = n(981631),
+    s = n(185923),
+    i = n(388032),
+    o = n(632261);
 let c = (e) => {
         let { error: t } = e;
-        return (0, n.jsx)('div', {
+        return (0, r.jsx)('div', {
             className: o.errorBanner,
-            children: (0, n.jsx)('p', { children: u(t) })
+            children: (0, r.jsx)('p', { children: u(t) })
         });
     },
     u = (e) => {

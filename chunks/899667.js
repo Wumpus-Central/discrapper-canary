@@ -3,8 +3,8 @@ var r,
     i,
     s,
     o = n(442837),
-    l = n(570140);
-let a = {},
+    a = n(570140);
+let l = {},
     c = null,
     u = [],
     d = !1,
@@ -16,10 +16,10 @@ function b() {
 }
 class m extends (r = o.ZP.Store) {
     getAppliedGuildBoostsForGuild(e) {
-        return null != a[e] ? a[e].subscriptions : null;
+        return null != l[e] ? l[e].subscriptions : null;
     }
     getLastFetchedAtForGuild(e) {
-        return null != a[e] ? a[e].lastFetchedAt : null;
+        return null != l[e] ? l[e].lastFetchedAt : null;
     }
     getCurrentUserAppliedBoosts() {
         return u;
@@ -52,10 +52,10 @@ class m extends (r = o.ZP.Store) {
               writable: !0
           })
         : (m[i] = s);
-let _ = new m(l.Z, {
+let _ = new m(a.Z, {
     GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: function (e) {
         let { guildId: t, appliedBoosts: n } = e;
-        a[t] = {
+        l[t] = {
             subscriptions: n,
             lastFetchedAt: Date.now()
         };

@@ -12,8 +12,8 @@ var r = n(255367),
     i = n(73800),
     s = n(990547),
     o = n(692547),
-    l = n(481060),
-    a = n(213609),
+    a = n(481060),
+    l = n(213609),
     c = n(252618),
     u = n(243778),
     d = n(126848),
@@ -82,8 +82,8 @@ let x = Object.freeze({
     E = 2;
 function P(e) {
     var t, n;
-    let { section: i, setPreventNavigation: o, scrollerRef: l } = e;
-    (0, a.Z)({
+    let { section: i, setPreventNavigation: o, scrollerRef: a } = e;
+    (0, l.Z)({
         type: s.ImpressionTypes.PANE,
         name: null == i ? void 0 : i.impressionName,
         properties: null == i ? void 0 : i.impressionProperties
@@ -96,7 +96,7 @@ function P(e) {
             c,
             j(y({}, u), {
                 setPreventNavigation: o,
-                refToScroller: l
+                refToScroller: a
             })
         )
     });
@@ -150,7 +150,7 @@ class w extends i.PureComponent {
             contentTypes: s,
             children: (t) => {
                 let { visibleContent: s } = t;
-                return (0, r.jsxs)(l.njP, {
+                return (0, r.jsxs)(a.njP, {
                     selectedItem: o,
                     onItemSelect: this.handleSetSection,
                     orientation: 'vertical',
@@ -161,9 +161,9 @@ class w extends i.PureComponent {
                             if (null != e.tabPredicate && !e.tabPredicate()) return null;
                             switch (e.section) {
                                 case m.ID.HEADER:
-                                    return (0, r.jsx)(l.njP.Header, { children: e.label }, t);
+                                    return (0, r.jsx)(a.njP.Header, { children: e.label }, t);
                                 case m.ID.DIVIDER:
-                                    return (0, r.jsx)(l.njP.Separator, {}, t);
+                                    return (0, r.jsx)(a.njP.Separator, {}, t);
                                 case m.ID.CUSTOM:
                                     var n;
                                     let i = null != (n = e.element) ? n : _.VqG;
@@ -186,10 +186,10 @@ class w extends i.PureComponent {
     render() {
         var e;
         let { sidebarTheme: t, section: n, title: i, onClose: s, hideSidebar: o } = this.props,
-            l = this.getPredicateSections(),
-            a = l.find((e) => e.section === n);
-        if (null == a || null == n) return null;
-        let u = null != (e = 'string' == typeof a.label ? a.label : a.ariaLabel) ? e : i;
+            a = this.getPredicateSections(),
+            l = a.find((e) => e.section === n);
+        if (null == l || null == n) return null;
+        let u = null != (e = 'string' == typeof l.label ? l.label : l.ariaLabel) ? e : i;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(c.yY, {
@@ -200,17 +200,17 @@ class w extends i.PureComponent {
                     sidebarTheme: t,
                     scrollerRef: this.scrollerRef,
                     section: n,
-                    sidebar: this.renderSidebar(l),
+                    sidebar: this.renderSidebar(a),
                     content: (0, r.jsx)(P, {
-                        section: a,
+                        section: l,
                         setPreventNavigation: this.setPreventNavigation,
                         scrollerRef: this.scrollerRef
                     }),
                     mobileSidebarOpen: this.state.sidebarOpen,
                     hideSidebar: o,
                     toggleSidebar: () => this.setState({ sidebarOpen: !0 }),
-                    contentType: a.type,
-                    notice: this.renderNotice(a),
+                    contentType: l.type,
+                    notice: this.renderNotice(l),
                     closeAction: null != s ? this.handleClose : void 0
                 })
             ]
@@ -262,26 +262,26 @@ class w extends i.PureComponent {
                 this._unmounted || ((this._intensity = S), this.forceUpdate());
             }),
             O(this, 'renderSettingsSectionTabBarItem', (e, t, n) => {
-                let { section: i, label: s = null, ariaLabel: a, onClick: c, variant: u, icon: p, className: f, newIndicator: g, newIndicatorDismissibleContentTypes: b, badgeCount: m } = e,
+                let { section: i, label: s = null, ariaLabel: l, onClick: c, variant: u, icon: p, className: f, newIndicator: g, newIndicatorDismissibleContentTypes: b, badgeCount: m } = e,
                     O = null;
                 i === _.oAB.ACCOUNT && this.props.isEligibleForPomelo
-                    ? (O = (0, r.jsx)(l.P4T, {
+                    ? (O = (0, r.jsx)(a.P4T, {
                           size: 'custom',
                           width: 20,
                           height: 20,
                           color: o.Z.colors.STATUS_WARNING.css
                       }))
                     : null != e.decoration
-                      ? (O = (0, r.jsx)(l.Text, {
+                      ? (O = (0, r.jsx)(a.Text, {
                             variant: 'text-md/normal',
                             color: 'text-muted',
                             children: e.decoration
                         }))
                       : null != n && (null == b ? void 0 : b.includes(n)) && !t
-                        ? (O = null != g ? g : (0, r.jsx)(l.IGR, { text: v.intl.string(v.t.y2b7CA) }))
+                        ? (O = null != g ? g : (0, r.jsx)(a.IGR, { text: v.intl.string(v.t.y2b7CA) }))
                         : null != p
                           ? (O = p)
-                          : null != m && m > 0 && (O = (0, r.jsx)(l.mAB, { count: m }));
+                          : null != m && m > 0 && (O = (0, r.jsx)(a.mAB, { count: m }));
                 let y =
                     i === _.oAB.PREMIUM
                         ? (0, r.jsx)(d.Z, {
@@ -296,13 +296,13 @@ class w extends i.PureComponent {
                                 children: [s, O]
                             });
                 return (0, r.jsx)(
-                    l.njP.Item,
+                    a.njP.Item,
                     {
                         variant: u,
                         id: i,
                         onClick: c,
                         className: f,
-                        'aria-label': a,
+                        'aria-label': l,
                         children: y
                     },
                     i

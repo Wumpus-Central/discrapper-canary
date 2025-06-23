@@ -6,6 +6,6 @@ e.exports = {
     modalSize: 'modalSize_e50a4d',
     close: 'close_e50a4d',
     closeInner: 'closeInner_e50a4d',
-    premiumRebrandHeader: 'premiumRebrandHeader_e50a4d',
-    premiumRebrandContent: 'premiumRebrandContent_e50a4d'
+    premiumBrandRefreshHeader: 'premiumBrandRefreshHeader_e50a4d',
+    premiumBrandRefreshContent: 'premiumBrandRefreshContent_e50a4d'
 };

@@ -1964,6 +1964,7 @@ var tC = (function (e) {
             (e.PUBLIC_GUILD = 'Public Guild'),
             (e.NSFW_CHANNEL = 'NSFW Channel'),
             (e.EXPRESSION_PICKER = 'Expression Picker'),
+            (e.EMOJI_STUDIO = 'Emoji Studio'),
             (e.CUSTOM_STATUS_MODAL = 'Custom Status Modal'),
             (e.CHANNEL_WELCOME_CREATE_MODAL = 'Channel Welcome Create Modal'),
             (e.GUILD_RULES_CREATE_MODAL = 'Guild Rules Create Modal'),

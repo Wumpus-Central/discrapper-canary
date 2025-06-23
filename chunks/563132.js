@@ -217,7 +217,7 @@ function X(e) {
         [tb, ty] = i.useState(null),
         tO = null != (o = null == Z ? void 0 : Z.inReverseTrial) && o && !X,
         tv = (0, E.Z)({ location: 'PaymentModal' }) && e9,
-        tI = tv ? F.premiumRebrandBackground : void 0,
+        tI = tv ? F.premiumBrandRefreshBackground : void 0,
         { enabled: tT } = (0, g.I9)({ location: 'PaymentModal' }),
         { elementsOptions: tS } = (0, g.ai)({ shouldGenerateSetupIntent: !1 });
     return (0, r.jsx)(K.Provider, {
@@ -307,8 +307,8 @@ function X(e) {
                 invoicePreview: tb,
                 setInvoicePreview: ty,
                 inReverseTrial: tO,
-                enablePremiumRebrandDesign: tv,
-                premiumRebrandBackgroundClassName: tI
+                enablePremiumBrandRefresh: tv,
+                premiumBrandRefreshBackgroundClassName: tI
             }
         ),
         children: (0, r.jsx)(a.Elements, {

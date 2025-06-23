@@ -4,6 +4,6 @@ e.exports = {
     nitroIconContainer: 'nitroIconContainer__0687d',
     iconFractional: 'iconFractional__0687d',
     iconFractionalDark: 'iconFractionalDark__0687d',
-    premiumRebrandContainer: 'premiumRebrandContainer__0687d',
-    premiumRebrandIcon: 'premiumRebrandIcon__0687d'
+    premiumBrandRefreshContainer: 'premiumBrandRefreshContainer__0687d',
+    premiumBrandRefreshIcon: 'premiumBrandRefreshIcon__0687d'
 };

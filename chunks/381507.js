@@ -1,9 +1,9 @@
 t.d(n, { Z: () => h });
-var i = t(255367);
+var l = t(255367);
 t(73800);
-var l = t(780384),
-    s = t(481060),
-    r = t(410030),
+var i = t(780384),
+    r = t(481060),
+    s = t(410030),
     a = t(518950),
     o = t(51144),
     C = t(105759),
@@ -19,40 +19,40 @@ let h = () => {
             size: u.EF.SIZE_32,
             animateOnHover: !0
         }),
-        h = (0, r.Fg)(),
-        j = (0, l.ap)(h),
-        f = o.ZP.getName(e),
-        _ = j ? d.Z : c.Z;
+        h = (0, s.Fg)(),
+        f = (0, i.ap)(h),
+        j = o.ZP.getName(e),
+        _ = f ? d.Z : c.Z;
     return null == e
         ? null
-        : (0, i.jsxs)('div', {
+        : (0, l.jsxs)('div', {
               className: x.attributionBannerContainer,
               children: [
-                  (0, i.jsx)('div', {
+                  (0, l.jsx)('div', {
                       className: x.avatarContainer,
-                      children: (0, i.jsx)(
-                          s.qEK,
+                      children: (0, l.jsx)(
+                          r.qEK,
                           (function (e) {
                               for (var n = 1; n < arguments.length; n++) {
                                   var t = null != arguments[n] ? arguments[n] : {},
-                                      i = Object.keys(t);
+                                      l = Object.keys(t);
                                   'function' == typeof Object.getOwnPropertySymbols &&
-                                      (i = i.concat(
+                                      (l = l.concat(
                                           Object.getOwnPropertySymbols(t).filter(function (e) {
                                               return Object.getOwnPropertyDescriptor(t, e).enumerable;
                                           })
                                       )),
-                                      i.forEach(function (n) {
-                                          var i;
-                                          (i = t[n]),
+                                      l.forEach(function (n) {
+                                          var l;
+                                          (l = t[n]),
                                               n in e
                                                   ? Object.defineProperty(e, n, {
-                                                        value: i,
+                                                        value: l,
                                                         enumerable: !0,
                                                         configurable: !0,
                                                         writable: !0
                                                     })
-                                                  : (e[n] = i);
+                                                  : (e[n] = l);
                                       });
                               }
                               return e;
@@ -66,12 +66,12 @@ let h = () => {
                           )
                       )
                   }),
-                  (0, i.jsx)(s.Text, {
+                  (0, l.jsx)(r.Text, {
                       variant: 'text-xs/bold',
                       className: x.bannerHeader,
-                      children: p.intl.format(p.t.oxhCOj, { userName: f })
+                      children: p.intl.format(p.t.oxhCOj, { userName: j })
                   }),
-                  (0, i.jsx)(_, { className: x.bannerIcon })
+                  (0, l.jsx)(_, { className: x.bannerIcon })
               ]
           });
 };

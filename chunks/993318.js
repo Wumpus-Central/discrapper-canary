@@ -51,7 +51,7 @@ let x = a(450390),
                     size: s.zxk.Sizes.NONE,
                     children: (0, r.jsx)('img', {
                         src: x,
-                        alt: 'Test',
+                        alt: 'Close Modal',
                         className: u.closeButtonIcon
                     })
                 }),

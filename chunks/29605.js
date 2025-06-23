@@ -410,7 +410,8 @@ let z = d().throttle(f.OQ, 1000),
                         image: i,
                         guildId: e.id,
                         uploadId: t,
-                        hideErrorModal: !0
+                        hideErrorModal: !0,
+                        analyticsLocation: { page: L.ZY5.GUILD_SETTINGS }
                     });
                 (0, O.i)({
                     userImage: {

@@ -57,13 +57,13 @@ function b(e, t, n) {
         [h, O] = r.useState(() => [(0, u.Uu)(), (0, u.Uu)()]),
         [j, y] = r.useState(''),
         [x, w] = r.useState(a.C.DEFAULT),
-        [v, P] = r.useState(!1),
-        [_, C] = r.useState(d.lc.ONE_DAY),
+        [v, _] = r.useState(!1),
+        [C, P] = r.useState(d.lc.ONE_DAY),
         [E, I] = r.useState({}),
-        [k, A] = r.useState(!1),
+        [A, k] = r.useState(!1),
         S = h.filter((e) => (0, u.cS)(e, x)),
-        D = h.filter((e) => (0, u.uY)(e, x)),
-        R = j.length > 0 && S.length >= d.gY && 0 === D.length,
+        R = h.filter((e) => (0, u.uY)(e, x)),
+        D = j.length > 0 && S.length >= d.gY && 0 === R.length,
         [N, { error: T, loading: L }] = (0, l.Z)(c.Z.createPoll),
         B = h.length < d.fw,
         Z = h.length > d.gY,
@@ -172,7 +172,7 @@ function b(e, t, n) {
                     (0, u.uY)(n, x) && ((e = !1), (t['answer-'.concat(n.localCreationAnswerId)] = f.intl.string(f.t['8Qqkc3'])));
                 }),
                 I(t),
-                A(!e),
+                k(!e),
                 e
             );
         }, [h, j, x]),
@@ -182,11 +182,11 @@ function b(e, t, n) {
                 question: j,
                 answers: S,
                 allowMultiSelect: v,
-                duration: _,
+                duration: C,
                 layout: x,
                 onClose: t
             });
-        }, [j, S, v, _, N, e, x, t]),
+        }, [j, S, v, C, N, e, x, t]),
         V = r.useCallback(() => {
             !L && J() && G();
         }, [G, L, J]);
@@ -197,10 +197,10 @@ function b(e, t, n) {
         selectedLayoutType: x,
         setSelectedLayoutType: w,
         allowMultiSelect: v,
-        setAllowMultiSelect: P,
-        duration: _,
-        setDuration: C,
-        canPost: R,
+        setAllowMultiSelect: _,
+        duration: C,
+        setDuration: P,
+        canPost: D,
         canAddMoreAnswers: B,
         canRemoveMoreAnswers: Z,
         handleQuestionChange: U,
@@ -216,8 +216,8 @@ function b(e, t, n) {
         handleSubmitPoll: V,
         submitting: L,
         createPollError: T,
-        shouldFocusOnInvalidField: k,
-        setShouldFocusOnInvalidField: A
+        shouldFocusOnInvalidField: A,
+        setShouldFocusOnInvalidField: k
     };
 }
 function g(e, t) {

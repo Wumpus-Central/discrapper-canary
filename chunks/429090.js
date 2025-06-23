@@ -1,7 +1,6 @@
-n.d(t, { a: () => a });
-var r = n(818083),
-    i = n(809362);
-let l = (0, r.B)({
+n.d(t, { a: () => l });
+var r = n(931084);
+let i = (0, n(818083).B)({
     kind: 'user',
     id: '2025-04_gdm_born_this_named',
     label: 'GDM Born This Named',
@@ -14,10 +13,10 @@ let l = (0, r.B)({
         }
     ]
 });
-function a(e, t) {
-    var n, r, a, o;
-    let s = (0, i.I)(e),
-        { enabled: c } = l.useExperiment(
+function l(e, t) {
+    var n, l, a, o;
+    let s = (0, r.Ig)(e),
+        { enabled: c } = i.useExperiment(
             { location: e },
             ((a = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -47,7 +46,7 @@ function a(e, t) {
             (o = o =
                 {
                     disable: s || (null != (n = null == t ? void 0 : t.disable) && n),
-                    autoTrackExposure: null == (r = null == t ? void 0 : t.autoTrackExposure) || r
+                    autoTrackExposure: null == (l = null == t ? void 0 : t.autoTrackExposure) || l
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(o))

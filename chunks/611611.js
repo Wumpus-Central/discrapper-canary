@@ -1,4 +1,4 @@
-n.d(t, { default: () => k }), n(388685);
+n.d(t, { default: () => A }), n(388685);
 var r = n(255367),
     a = n(73800),
     l = n(120356),
@@ -6,23 +6,23 @@ var r = n(255367),
     i = n(525769),
     s = n(263568),
     c = n(481060),
-    u = n(213609),
-    d = n(313201),
-    f = n(540059),
-    m = n(542383),
-    p = n(79390),
-    b = n(728076),
-    g = n(2466),
-    h = n(485168),
-    O = n(309081),
-    j = n(185306),
-    y = n(240521),
+    u = n(240872),
+    d = n(213609),
+    f = n(313201),
+    m = n(540059),
+    p = n(542383),
+    b = n(79390),
+    g = n(728076),
+    h = n(2466),
+    O = n(485168),
+    j = n(309081),
+    y = n(185306),
     x = n(489887),
     w = n(20281),
     v = n(388032),
-    P = n(735077);
-let _ = (0, d.hQ)(),
-    C = (0, d.hQ)();
+    _ = n(735077);
+let C = (0, f.hQ)(),
+    P = (0, f.hQ)();
 function E(e) {
     let { question: t, onChange: n, error: l, inputRef: i } = e,
         [s, u] = a.useState(!1);
@@ -30,15 +30,15 @@ function E(e) {
         children: [
             (0, r.jsx)(c.vwX, {
                 tag: c.RB0.LABEL,
-                htmlFor: C,
+                htmlFor: P,
                 children: v.intl.string(v.t.WBiKnJ)
             }),
             (0, r.jsx)(c.Kx8, {
                 inputRef: i,
-                id: C,
+                id: P,
                 placeholder: v.intl.string(v.t['/uQqJS']),
                 value: t,
-                className: o()(P.questionInput, { [P.hasError]: null != l }),
+                className: o()(_.questionInput, { [_.hasError]: null != l }),
                 onChange: n,
                 maxLength: x.Az,
                 error: l,
@@ -56,10 +56,10 @@ function E(e) {
 }
 function I(e) {
     let { selectedDuration: t, onSelect: n } = e,
-        a = (0, g.Z)(),
+        a = (0, h.Z)(),
         l = a[t];
     return (0, r.jsxs)('div', {
-        className: P.duration,
+        className: _.duration,
         children: [
             (0, r.jsx)(c.Text, {
                 variant: 'text-md/medium',
@@ -70,7 +70,7 @@ function I(e) {
             }),
             (0, r.jsx)(c.PhF, {
                 'aria-label': v.intl.formatToPlainString(v.t.nXNHND, { duration: l }),
-                className: P.durationSelect,
+                className: _.durationSelect,
                 options: Object.entries(a).map((e) => {
                     let [t, n] = e;
                     return {
@@ -91,26 +91,26 @@ function I(e) {
         ]
     });
 }
-function k(e) {
+function A(e) {
     let { channel: t, transitionState: n, onClose: l } = e,
-        d = (0, p._N)();
-    (0, u.Z)({
+        f = (0, b._N)();
+    (0, d.Z)({
         type: w.n.MODAL,
         name: i.z.POLL_EDITOR_VIEWED
     });
-    let g = a.useRef(null),
-        C = a.useRef([]),
-        A = a.useRef([]),
+    let h = a.useRef(null),
+        P = a.useRef([]),
+        k = a.useRef([]),
         S = a.useRef(null),
-        D = a.useRef([]),
-        R = a.useCallback((e) => {
+        R = a.useRef([]),
+        D = a.useCallback((e) => {
             var t, n, r, a;
             let { indexToRemove: l, numberOfAnswers: o } = e;
-            o === x.gY + 1 ? null == (n = S.current) || null == (t = n.ref) || t.focus() : null == (a = D.current[l === o - 1 ? l - 1 : l + 1]) || null == (r = a.ref) || r.focus();
+            o === x.gY + 1 ? null == (n = S.current) || null == (t = n.ref) || t.focus() : null == (a = R.current[l === o - 1 ? l - 1 : l + 1]) || null == (r = a.ref) || r.focus();
         }, []),
-        { answers: N, question: T, selectedLayoutType: L, setSelectedLayoutType: B, allowMultiSelect: Z, setAllowMultiSelect: U, duration: M, setDuration: z, handleQuestionChange: W, handleAnswerTextChange: H, handleEmojiSelect: Y, canAddMoreAnswers: F, handleRemoveAnswerImage: K, canRemoveMoreAnswers: q, handleAddAnswer: X, handleRemoveAnswer: J, createPollError: G, handleSubmitPoll: V, fieldErrors: Q, submitting: $, shouldFocusOnInvalidField: ee, setShouldFocusOnInvalidField: et } = (0, b.Z)(t, l, R),
-        { trackPollCreationCancelled: en } = (0, h.l)(N, Z, L),
-        er = (0, f.Q3)('PollCreationModal'),
+        { answers: N, question: T, selectedLayoutType: L, setSelectedLayoutType: B, allowMultiSelect: Z, setAllowMultiSelect: U, duration: M, setDuration: z, handleQuestionChange: W, handleAnswerTextChange: H, handleEmojiSelect: Y, canAddMoreAnswers: F, handleRemoveAnswerImage: K, canRemoveMoreAnswers: q, handleAddAnswer: X, handleRemoveAnswer: J, createPollError: G, handleSubmitPoll: V, fieldErrors: Q, submitting: $, shouldFocusOnInvalidField: ee, setShouldFocusOnInvalidField: et } = (0, g.Z)(t, l, D),
+        { trackPollCreationCancelled: en } = (0, O.l)(N, Z, L),
+        er = (0, m.Q3)('PollCreationModal'),
         ea = (0, c.dQu)(c.TVs.colors.INTERACTIVE_NORMAL).hex(),
         el = a.useRef(N.length),
         eo = L === s.C.DEFAULT,
@@ -118,12 +118,14 @@ function k(e) {
             en(), l();
         }, [l, en]),
         es = a.useCallback(() => {
-            if (!(0, p.D$)(T, N, L))
-                return void (0, y.Z)({
+            if (!(0, b.D$)(T, N, L))
+                return void u.Z.show({
                     title: v.intl.string(v.t.HMrgcn),
                     body: v.intl.string(v.t['Wxa/j4']),
-                    cta: v.intl.string(v.t.TzJA4u),
-                    closeLabel: v.intl.string(v.t['2BR5R0']),
+                    confirmColor: c.Ttl.RED,
+                    confirmText: v.intl.string(v.t.TzJA4u),
+                    confirmVariant: 'destructive-primary',
+                    cancelText: v.intl.string(v.t['2BR5R0']),
                     onConfirm: () => {
                         ei();
                     }
@@ -136,7 +138,7 @@ function k(e) {
             (e) => {
                 var n, a;
                 return (0, r.jsx)(
-                    k,
+                    A,
                     ((n = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -184,72 +186,72 @@ function k(e) {
         a.useEffect(() => {
             if (N.length > el.current) {
                 var e;
-                null == (e = A.current[N.length - 1]) || e.focus();
+                null == (e = k.current[N.length - 1]) || e.focus();
             }
             el.current = N.length;
         }, [N.length]),
         a.useEffect(() => {
             if (ee) {
                 var e, t;
-                if ((null == Q ? void 0 : Q.question) != null) null == (e = g.current) || e.focus();
+                if ((null == Q ? void 0 : Q.question) != null) null == (e = h.current) || e.focus();
                 else {
                     let e = N.findIndex((e) => Q['answer-'.concat(e.localCreationAnswerId)]);
-                    -1 !== e && (null == (t = A.current[e]) || t.focus());
+                    -1 !== e && (null == (t = k.current[e]) || t.focus());
                 }
                 et(!1);
             }
-        }, [Q, N, ee, et, A, C]);
+        }, [Q, N, ee, et, k, P]);
     let ec = () => {
             n === c.Dvm.ENTERED && V();
         },
-        eu = (0, m.Z)({
+        eu = (0, p.Z)({
             disabled: $,
             onSubmit: ec
         });
     return (0, r.jsxs)(c.Y0X, {
         size: c.CgR.MEDIUM,
-        className: P.container,
+        className: _.container,
         transitionState: n,
-        'aria-labelledby': _,
+        'aria-labelledby': C,
         parentComponent: 'PollCreationModal',
         children: [
             (0, r.jsxs)(c.xBx, {
-                className: P.header,
+                className: _.header,
                 separator: !1,
                 children: [
                     (0, r.jsx)(c.X6q, {
                         color: 'interactive-normal',
                         variant: 'text-lg/semibold',
-                        className: P.headerText,
-                        id: _,
+                        className: _.headerText,
+                        id: C,
                         children: v.intl.string(v.t['GD/8X1'])
                     }),
                     (0, r.jsx)(c.olH, { onClick: es })
                 ]
             }),
             (0, r.jsxs)(c.hzk, {
-                className: P.content,
+                className: _.content,
                 onKeyDown: eu,
                 children: [
                     null != G &&
                         (0, r.jsx)(c.kzN, {
-                            className: P.apiErrorBlock,
+                            className: _.apiErrorBlock,
                             children: G.getAnyErrorMessage()
                         }),
                     (0, r.jsx)(E, {
                         question: T,
                         onChange: W,
                         error: null == Q ? void 0 : Q.question,
-                        inputRef: g
+                        inputRef: h
                     }),
-                    d &&
-                        (0, r.jsx)(j.Z, {
+                    f &&
+                        (0, r.jsx)(y.Z, {
                             selectedLayoutType: L,
                             onSelectedLayoutType: B
                         }),
                     (0, r.jsx)(c.LZC, { size: 26 }),
                     (0, r.jsxs)('fieldset', {
-                        className: o()(P.answerInputsContainer, eo ? P.defaultContainer : P.imageOnlyContainer),
+                        className: o()(_.answerInputsContainer, eo ? _.defaultContainer : _.imageOnlyContainer),
                         children: [
                             (0, r.jsx)(c.vwX, {
                                 tag: c.RB0.LEGEND,
@@ -257,7 +259,7 @@ function k(e) {
                             }),
                             N.map((e, n) =>
                                 (0, r.jsx)(
-                                    O.Z,
+                                    j.Z,
                                     {
                                         answer: e,
                                         channelId: t.id,
@@ -270,17 +272,17 @@ function k(e) {
                                         onRemoveAnswer: J,
                                         addAnswer: X,
                                         submitPoll: ec,
-                                        answerTextInputRefs: A,
+                                        answerTextInputRefs: k,
                                         error: null == Q ? void 0 : Q['answer-'.concat(e.localCreationAnswerId)],
                                         canRemoveAnswer: q,
                                         ref: (e) => {
-                                            C.current[n] = e;
+                                            P.current[n] = e;
                                         },
                                         inputRef: (e) => {
-                                            A.current[n] = e;
+                                            k.current[n] = e;
                                         },
                                         deleteButtonRef: (e) => {
-                                            D.current[n] = e;
+                                            R.current[n] = e;
                                         }
                                     },
                                     e.localCreationAnswerId
@@ -288,7 +290,7 @@ function k(e) {
                             ),
                             F &&
                                 (0, r.jsxs)(c.P3F, {
-                                    className: o()(eo ? P.addAnswerButtonDefault : P.addAnswerButtonImageOnly, { [P.canRemoveMoreAnswers]: q }),
+                                    className: o()(eo ? _.addAnswerButtonDefault : _.addAnswerButtonImageOnly, { [_.canRemoveMoreAnswers]: q }),
                                     onClick: F ? X : void 0,
                                     'aria-label': v.intl.string(v.t.B2UvmZ),
                                     ref: S,
@@ -296,13 +298,13 @@ function k(e) {
                                         (0, r.jsx)(c.qJs, {
                                             size: 'md',
                                             color: 'currentColor',
-                                            className: eo ? P.addAnswerIconDefault : P.addAnswerIconImageOnly
+                                            className: eo ? _.addAnswerIconDefault : _.addAnswerIconImageOnly
                                         }),
                                         eo &&
                                             (0, r.jsx)(c.Text, {
                                                 variant: 'text-md/normal',
                                                 color: 'text-muted',
-                                                className: P.addAnswerButtonLabel,
+                                                className: _.addAnswerButtonLabel,
                                                 children: v.intl.string(v.t.B2UvmZ)
                                             })
                                     ]
@@ -317,10 +319,10 @@ function k(e) {
                 ]
             }),
             (0, r.jsxs)(c.mzw, {
-                className: P.footer,
+                className: _.footer,
                 children: [
                     (0, r.jsx)(c.XZJ, {
-                        className: P.checkbox,
+                        className: _.checkbox,
                         type: er ? void 0 : c.XZJ.Types.INVERTED,
                         size: 24,
                         value: Z,
@@ -335,12 +337,12 @@ function k(e) {
                     (0, r.jsx)(c.zxk, {
                         look: c.iLD.FILLED,
                         size: c.zxk.Sizes.MEDIUM,
-                        className: P.postButton,
+                        className: _.postButton,
                         onClick: ec,
                         submitting: $,
                         children: (0, r.jsx)(c.Text, {
                             variant: 'text-md/semibold',
-                            className: P.postButtonText,
+                            className: _.postButtonText,
                             children: v.intl.string(v.t.JOj8Zm)
                         })
                     })

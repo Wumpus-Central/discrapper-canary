@@ -2,7 +2,7 @@ e.exports = {
     stepBody: 'stepBody_e4d803',
     bodyText: 'bodyText_e4d803',
     invoice: 'invoice_e4d803',
-    premiumRebrandInputBackground: 'premiumRebrandInputBackground_e4d803',
+    premiumBrandRefreshInputBackground: 'premiumBrandRefreshInputBackground_e4d803',
     paymentSourceWrapper: 'paymentSourceWrapper_e4d803',
     paymentSourceOptionalWarning: 'paymentSourceOptionalWarning_e4d803',
     currencyWrapper: 'currencyWrapper_e4d803',

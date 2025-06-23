@@ -1,14 +1,14 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => l });
 var r = n(255367);
 n(73800);
 var i = n(120356),
     s = n.n(i),
     o = n(481060),
-    l = n(813197);
-function a(e) {
+    a = n(813197);
+function l(e) {
     var t,
         n,
-        { buttonCTA: i, onChange: a, onFileSizeError: c, 'aria-label': u, multiple: d = !1, disabled: p = !1, submitting: f = !1, maxFileSizeBytes: g, filters: b, className: m } = e,
+        { buttonCTA: i, onChange: l, onFileSizeError: c, 'aria-label': u, multiple: d = !1, disabled: p = !1, submitting: f = !1, maxFileSizeBytes: g, filters: b, className: m } = e,
         _ = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -86,9 +86,9 @@ function a(e) {
                     'aria-hidden': !0,
                     children: i
                 }),
-                (0, r.jsx)(l.ZP, {
+                (0, r.jsx)(a.ZP, {
                     tabIndex: 0,
-                    onChange: a,
+                    onChange: l,
                     onFileSizeError: c,
                     multiple: d,
                     maxFileSizeBytes: g,

@@ -45,7 +45,7 @@ function m(e) {
 function g(e) {
     var t, n, a, s, c, p;
     let { header: h, isLargeModal: g, stepProps: E } = m(e),
-        { step: b, stepConfigs: y, setBodyNode: O, setFooterNode: v, setModalOverlayNode: I, setReadySlideId: T, premiumRebrandBackgroundClassName: S } = (0, d.JL)(),
+        { step: b, stepConfigs: y, setBodyNode: O, setFooterNode: v, setModalOverlayNode: I, setReadySlideId: T, premiumBrandRefreshBackgroundClassName: S } = (0, d.JL)(),
         A = y.find((e) => e.key === b);
     i.useEffect(() => {
         I(null);

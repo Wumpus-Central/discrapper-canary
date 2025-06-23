@@ -61,7 +61,7 @@ function O(e) {
             );
 }
 function v(e) {
-    let { guildId: t, image: n, name: r, roles: i } = e;
+    let { guildId: t, image: n, name: r, roles: i, analyticsLocation: o } = e;
     return (
         s.Z.dispatch({
             type: 'EMOJI_UPLOAD_START',
@@ -75,6 +75,7 @@ function v(e) {
                     name: r,
                     roles: i
                 },
+                context: { client_event_source: null == o ? void 0 : o.page },
                 oldFormErrors: !0,
                 rejectWithError: !1
             })

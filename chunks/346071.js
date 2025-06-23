@@ -8,7 +8,7 @@ var i = n(481060),
     l = n(429680),
     c = n(774945);
 function u(e) {
-    let { fractionalPremiumInfo: t, variant: n = 'default', enablePremiumRebrandDesign: u = !1, style: d } = e,
+    let { fractionalPremiumInfo: t, variant: n = 'default', enablePremiumBrandRefresh: u = !1, style: d } = e,
         f = t.fractionalState === o.a$.FP_SUB_PAUSED,
         _ = (0, a.Z)(t.endsAt, f),
         p = '',
@@ -36,13 +36,13 @@ function u(e) {
         ? null
         : u
           ? (0, r.jsxs)('div', {
-                className: l.premiumRebrandContainer,
+                className: l.premiumBrandRefreshContainer,
                 style: d,
                 children: [
                     (0, r.jsx)('img', {
                         src: c,
                         alt: 'Nitro Icon',
-                        className: l.premiumRebrandIcon
+                        className: l.premiumBrandRefreshIcon
                     }),
                     (0, r.jsx)(i.Text, {
                         variant: 'text-sm/medium',

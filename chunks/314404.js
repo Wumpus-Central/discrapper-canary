@@ -169,7 +169,7 @@ function ee(e, t) {
 function et(e) {
     var t, n, a, s;
     let { premiumSubscription: g, skuId: b, selectedPlanId: U, setSelectedPlanId: G, planGroup: z, priceOptions: X, planOptions: $, eligibleForMultiMonthPlans: et, referralTrialOfferId: en, subscriptionPeriodEnd: er, showTotal: ei = !0, discountInvoiceItems: ea, useCompactGiftComponents: eo, handleClose: es } = e,
-        { activeSubscription: el, setSelectedPlanId: ec, selectedSkuId: eu, selectedPlan: ed, priceOptions: ef, enablePremiumRebrandDesign: e_ } = (0, m.JL)(),
+        { activeSubscription: el, setSelectedPlanId: ec, selectedSkuId: eu, selectedPlan: ed, priceOptions: ef, enablePremiumBrandRefresh: e_ } = (0, m.JL)(),
         { isGift: ep, giftRecipient: eh, selectedGiftStyle: em, customGiftMessage: eg, setCustomGiftMessage: eE, giftingOrigin: eb, claimableRewards: ey, setSelectedGiftingPromotionReward: eO } = (0, h.wD)(),
         ev = (0, y.MY)(eh),
         eI = ep && (0, y.pO)(eh),
@@ -326,7 +326,7 @@ function et(e) {
             e8 &&
                 (0, r.jsx)(k.n, {
                     fractionalPremiumInfo: ek,
-                    enablePremiumRebrandDesign: e_
+                    enablePremiumBrandRefresh: e_
                 }),
             (0, r.jsxs)('div', {
                 className: eI ? e1 : void 0,

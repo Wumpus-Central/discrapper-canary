@@ -25,8 +25,8 @@ var r = n(73800),
     i = n(512722),
     s = n.n(i),
     o = n(392711),
-    l = n(772848),
-    a = n(866442),
+    a = n(772848),
+    l = n(866442),
     c = n(731965),
     u = n(442837),
     d = n(80932),
@@ -170,7 +170,7 @@ function Z(e, t) {
             var t, r;
             (e.icon = null != (t = s.icon) ? t : ''), (e.unicodeEmoji = null != (r = s.unicodeEmoji) ? r : '');
         }
-        return void 0 !== i && ((e.color = i), (e.colorString = (0, a.Rf)(i))), e;
+        return void 0 !== i && ((e.color = i), (e.colorString = (0, l.Rf)(i))), e;
     }, [n, s, i]);
 }
 function M(e, t) {
@@ -270,20 +270,20 @@ async function ee(e) {
         r = h.Z.getSubscriptionListing(n);
     s()(null != r, 'listing doesnt exist');
     let i = r.role_id,
-        l = r.id,
-        a = C.n.getState().listings[n];
-    s()(null != a, 'edit state does not exist');
-    let { roleColor: c, roleIcon: u, trialLimit: f, trialInterval: b, tierEmojiIds: m } = a;
+        a = r.id,
+        l = C.n.getState().listings[n];
+    s()(null != l, 'edit state does not exist');
+    let { roleColor: c, roleIcon: u, trialLimit: f, trialInterval: b, tierEmojiIds: m } = l;
     (void 0 !== c || void 0 !== u) &&
         (await p.Z.updateRole(t, i, {
             color: c,
             icon: null == u ? void 0 : u.icon,
             unicodeEmoji: null == u ? void 0 : u.unicodeEmoji
         }));
-    let v = h.Z.getSubscriptionTrial(l);
+    let v = h.Z.getSubscriptionTrial(a);
     if (
         ((null != f || null != b || (null != v && null == b)) &&
-            (await _.I1(t, l, {
+            (await _.I1(t, a, {
                 trial: b,
                 max_num_active_trial_users: f
             })),
@@ -302,7 +302,7 @@ async function ee(e) {
                             roles: [...e.roles, i]
                         });
                 }),
-            l = r
+            a = r
                 .map((e) => g.ZP.getCustomEmojiById(e))
                 .map((e) => {
                     if (null == e) return;
@@ -315,15 +315,15 @@ async function ee(e) {
                           })
                         : (0, d.RE)(t, e.id);
                 });
-        await Promise.all([...s, ...l]);
+        await Promise.all([...s, ...a]);
     }
 }
 async function et(e) {
     let { guildId: t, editStateId: n, groupListingId: r, onBeforeDispatchNewListing: i } = e,
         o = C.n.getState().listings[n];
     s()(null != o, 'edit state does not exist');
-    let { name: l, description: a, channelBenefits: c, intangibleBenefits: u, priceTier: d, image: p, channelAccessFormat: f } = o;
-    s()(null != l, 'no name provided'), s()(null != a, 'no description provided'), s()(null != d, 'no priceTier provided'), s()(null != p, 'no image provided');
+    let { name: a, description: l, channelBenefits: c, intangibleBenefits: u, priceTier: d, image: p, channelAccessFormat: f } = o;
+    s()(null != a, 'no name provided'), s()(null != l, 'no description provided'), s()(null != d, 'no priceTier provided'), s()(null != p, 'no image provided');
     let g = f === C.I.ALL_CHANNELS_ACCESS,
         b = r;
     null == b && (b = (await _.uw(t, {})).id), null != c && c.length > 0 && (await (0, y.r4)(t, c));
@@ -335,8 +335,8 @@ async function et(e) {
         data: {
             can_access_all_channels: g,
             image: p,
-            name: l,
-            description: a,
+            name: a,
+            description: l,
             benefits: m,
             priceTier: d
         },
@@ -351,28 +351,28 @@ function en() {
         loading: e,
         error: n,
         handleCreateOrUpdateFromEditState: r.useCallback(async (e) => {
-            let { guildId: n, editStateId: r, groupListingId: l, onBeforeDispatchNewListing: a, onAfterDispatchNewListing: u } = e,
+            let { guildId: n, editStateId: r, groupListingId: a, onBeforeDispatchNewListing: l, onAfterDispatchNewListing: u } = e,
                 d = r,
                 p = h.Z.getSubscriptionListing(d);
             try {
                 if ((t(!0), i(void 0), null != p))
-                    s()(null != l, 'groupListingId is null'),
+                    s()(null != a, 'groupListingId is null'),
                         await (function (e) {
                             var t;
                             let { guildId: n, editStateId: r, groupListingId: i } = e,
-                                l = h.Z.getSubscriptionListing(r);
-                            s()(null != l, 'listing doesnt exist');
-                            let a = C.n.getState().listings[r];
-                            s()(null != a, 'edit state does not exist');
-                            let { name: c, description: u, channelBenefits: d, intangibleBenefits: p, priceTier: f, image: g, channelAccessFormat: b } = a,
+                                a = h.Z.getSubscriptionListing(r);
+                            s()(null != a, 'listing doesnt exist');
+                            let l = C.n.getState().listings[r];
+                            s()(null != l, 'edit state does not exist');
+                            let { name: c, description: u, channelBenefits: d, intangibleBenefits: p, priceTier: f, image: g, channelAccessFormat: b } = l,
                                 v = {};
-                            if ((c !== l.name && (v.name = c), u !== l.description && (v.description = u), f !== (null == (t = l.subscription_plans[0]) ? void 0 : t.price) && (v.priceTier = f), null != g && (v.image = g), null != b && (v.can_access_all_channels = b === C.I.ALL_CHANNELS_ACCESS), null != d || null != p)) {
-                                let e = l.role_benefits.benefits.filter(m.rC),
-                                    t = l.role_benefits.benefits.filter(m.lL);
+                            if ((c !== a.name && (v.name = c), u !== a.description && (v.description = u), f !== (null == (t = a.subscription_plans[0]) ? void 0 : t.price) && (v.priceTier = f), null != g && (v.image = g), null != b && (v.can_access_all_channels = b === C.I.ALL_CHANNELS_ACCESS), null != d || null != p)) {
+                                let e = a.role_benefits.benefits.filter(m.rC),
+                                    t = a.role_benefits.benefits.filter(m.lL);
                                 v.benefits = [...(null != d ? d : e), ...(null != p ? p : t)];
                             }
                             return (0, o.isEmpty)(v)
-                                ? l
+                                ? a
                                 : _.O0({
                                       guildId: n,
                                       groupListingId: i,
@@ -382,15 +382,15 @@ function en() {
                         })({
                             guildId: n,
                             editStateId: d,
-                            groupListingId: l
+                            groupListingId: a
                         });
                 else {
                     var f;
                     let e = await et({
                         guildId: n,
                         editStateId: d,
-                        groupListingId: l,
-                        onBeforeDispatchNewListing: a
+                        groupListingId: a,
+                        onBeforeDispatchNewListing: l
                     });
                     (d = e.id),
                         (f = d),
@@ -426,7 +426,7 @@ function er(e, t) {
         i = (0, v._k)(e, n),
         s = (0, C.n)((e) => e.editStateIdsForGroup[t]),
         o = (0, C.n)((e) => e.setEditStateIdsForGroup),
-        a = (0, C.n)((e) => e.setListing),
+        l = (0, C.n)((e) => e.setListing),
         c = r.useMemo(
             () => [
                 ...i.map((e) => {
@@ -438,7 +438,7 @@ function er(e, t) {
             [s, i]
         ),
         u = r.useCallback(() => {
-            let e = (0, l.Z)();
+            let e = (0, a.Z)();
             o(t, (t) => [...(null != t ? t : []), e]);
         }, [t, o]);
     return {
@@ -446,11 +446,11 @@ function er(e, t) {
         addNewEditStateId: u,
         addNewEditStateFromTemplate: r.useCallback(
             (e) => {
-                let n = (0, l.Z)();
+                let n = (0, a.Z)();
                 return (
                     o(t, (e) => [...(null != e ? e : []), n]),
                     e.listings.forEach((t) => {
-                        a(n, () => ({
+                        l(n, () => ({
                             name: t.name,
                             description: t.description,
                             priceTier: t.price_tier,
@@ -474,7 +474,7 @@ function er(e, t) {
                     n
                 );
             },
-            [t, o, a]
+            [t, o, l]
         ),
         removeEditStateId: r.useCallback(
             (e) => {
