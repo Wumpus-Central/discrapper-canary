@@ -1,20 +1,20 @@
 n.d(e, {
-    D0: () => c,
-    kY: () => l,
-    lE: () => i
+    D0: () => r,
+    kY: () => i,
+    lE: () => c
 });
-var r = n(570140);
-function l() {
-    r.Z.dispatch({ type: 'SPELLCHECK_TOGGLE' });
+var l = n(570140);
+function i() {
+    l.Z.dispatch({ type: 'SPELLCHECK_TOGGLE' });
 }
-function c(t) {
-    r.Z.dispatch({
+function r(t) {
+    l.Z.dispatch({
         type: 'SPELLCHECK_LEARN_WORD',
         word: t
     });
 }
-function i(t) {
-    r.Z.dispatch({
+function c(t) {
+    l.Z.dispatch({
         type: 'SPELLCHECK_UNLEARN_WORD',
         word: t
     });

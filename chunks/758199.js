@@ -111,7 +111,7 @@ function O(e) {
                       href: P,
                       children: (0, i.jsx)(c.d3s, {
                           size: 'xs',
-                          color: c.TVs.colors.WHITE.css
+                          color: c.TVs.colors.APP_MESSAGE_EMBED_SECONDARY_TEXT.css
                       })
                   })
                 : null,
@@ -164,7 +164,7 @@ function O(e) {
                             className: E.header,
                             children: [
                                 (0, i.jsx)(c.Text, {
-                                    variant: 'eyebrow',
+                                    variant: 'text-sm/semibold',
                                     color: 'none',
                                     children: O
                                 }),
@@ -188,7 +188,10 @@ function O(e) {
                                         lineClamp: 1,
                                         children: v
                                     }),
-                                    C
+                                    (0, i.jsx)('div', {
+                                        className: E.contentInfoWrapper,
+                                        children: C
+                                    })
                                 ]
                             }),
                             null == O && (null != U ? U : F)

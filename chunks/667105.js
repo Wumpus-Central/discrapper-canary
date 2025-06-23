@@ -250,7 +250,7 @@ function V(e) {
                     b && ({ text: e, questContentCTA: t } = B(n)),
                     {
                         text: e,
-                        tooltipText: e,
+                        tooltipText: null,
                         onClick: () => {
                             (0, g.AH)(n.id, {
                                 questContent: o,

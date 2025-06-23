@@ -40,29 +40,30 @@ function g(e) {
     );
 }
 let E = (e) => {
-        let { entry: t, inline: n = !1, textColor: a, hovered: s = !1, bold: l = !1, scaleFontToUserSetting: u = !1 } = e,
-            { now: d } = g(s),
-            f = i.useMemo(() => (0, h.T_)(t, d), [t, d]),
-            _ = i.useRef(f),
-            p = i.useRef(f);
+        let { entry: t, inline: n = !1, textColor: a, textTabularNumbers: s = !0, textFontCode: l = !0, hovered: u = !1, bold: d = !1, scaleFontToUserSetting: f = !1 } = e,
+            { now: _ } = g(u),
+            p = i.useMemo(() => (0, h.T_)(t, _), [t, _]),
+            E = i.useRef(p),
+            b = i.useRef(p);
         return (
             i.useEffect(() => {
-                p.current = f;
+                b.current = p;
             }),
             i.useEffect(() => {
-                _.current = p.current;
+                E.current = b.current;
             }, [t]),
             (0, r.jsx)(c.Text, {
-                className: o()(m.timestamp, {
-                    [m.inlineTimestamp]: n,
-                    [m.bold]: l
+                className: o()({
+                    [m.fontCode]: l,
+                    [m.bold]: d,
+                    [m.inlineTimestamp]: n
                 }),
                 variant: 'text-xs/medium',
-                tabularNumbers: !0,
+                tabularNumbers: s,
                 color: a,
-                scaleFontToUserSetting: u,
-                'aria-label': _.current,
-                children: f
+                scaleFontToUserSetting: f,
+                'aria-label': E.current,
+                children: p
             })
         );
     },
