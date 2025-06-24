@@ -1,15 +1,15 @@
-n.d(t, { Z: () => a });
-var r = n(73800),
-    o = n(442837),
-    i = n(522474),
-    l = n(981631);
+t.d(n, { Z: () => a });
+var r = t(73800),
+    o = t(442837),
+    i = t(522474),
+    l = t(981631);
 function a() {
     let e = (0, o.e7)([i.Z], () => i.Z.getWindow(l.KJ3.ACTIVITY_POPOUT)),
-        t = r.useMemo(() => (null == e ? void 0 : e.window.document), [e]),
-        n = r.useMemo(() => (null == t ? void 0 : t.getElementById('app-mount')), [t]);
+        n = r.useMemo(() => (null == e ? void 0 : e.window.document), [e]),
+        t = r.useMemo(() => (null == n ? void 0 : n.getElementById('app-mount')), [n]);
     return {
         popoutWindow: e,
-        currentDocument: t,
-        rootNode: n
+        currentDocument: n,
+        rootNode: t
     };
 }

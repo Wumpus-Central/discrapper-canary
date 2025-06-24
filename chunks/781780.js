@@ -1,15 +1,15 @@
-n.d(t, { Z: () => c });
-var r = n(255367),
-    o = n(963614),
-    i = n(208156),
-    l = n(701488),
-    a = n(839841);
+t.d(n, { Z: () => c });
+var r = t(255367),
+    o = t(963614),
+    i = t(208156),
+    l = t(701488),
+    a = t(839841);
 function c(e) {
-    var t, n, c;
+    var n, t, c;
     let { channelId: u, guildId: s, embeddedActivity: d, application: p } = e,
         f = {
-            instance_id: null != (c = null != (n = d.compositeInstanceId) ? n : d.launchId) ? c : '',
-            location_id: null == (t = d.location) ? void 0 : t.id,
+            instance_id: null != (c = null != (t = d.compositeInstanceId) ? t : d.launchId) ? c : '',
+            location_id: null == (n = d.location) ? void 0 : n.id,
             launch_id: d.launchId,
             referrer_id: d.referrerId,
             custom_id: d.customId

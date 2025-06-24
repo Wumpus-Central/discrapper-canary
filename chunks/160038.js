@@ -5,8 +5,8 @@ var r = n(255367),
     o = n.n(i),
     a = n(46973),
     s = n(481060),
-    c = n(304680),
-    u = n(706619),
+    u = n(304680),
+    c = n(706619),
     d = n(695346),
     f = n(131951),
     h = n(626135),
@@ -50,7 +50,7 @@ let v = () => {
         }, []);
         let t = (0, l.useCallback)(() => {
                 let { closePopout: t } = e;
-                null != t && t(), c.bA();
+                null != t && t(), u.bA();
             }, [e]),
             n = (0, l.useCallback)(() => {
                 let { hostname: t, averagePing: n, lastPing: i, outboundLossRate: a } = e,
@@ -62,7 +62,7 @@ let v = () => {
                                 children: [
                                     (0, r.jsx)('div', {
                                         className: m.graphContainer,
-                                        children: (0, r.jsx)(u.Z, {
+                                        children: (0, r.jsx)(c.Z, {
                                             dataPoints: e.pings,
                                             width: 258,
                                             height: 80

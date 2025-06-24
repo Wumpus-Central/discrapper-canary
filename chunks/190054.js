@@ -5,8 +5,8 @@ var r = n(255367),
     o = n.n(i),
     a = n(481060),
     s = n(572004),
-    c = n(388032),
-    u = n(798665);
+    u = n(388032),
+    c = n(798665);
 function d(e) {
     var { chunks: t, className: n, onCopy: i } = e,
         d = (function (e, t) {
@@ -37,10 +37,10 @@ function d(e) {
         }, [i, f]),
         O = h ? a.owK : a.TIy;
     return (0, r.jsx)(a.P3F, {
-        className: o()(u.container, n),
+        className: o()(c.container, n),
         onClick: g,
         children: (0, r.jsx)(a.ua7, {
-            text: h ? c.intl.string(c.t['t5VZ8/']) : c.intl.string(c.t.OpuAlJ),
+            text: h ? u.intl.string(u.t['t5VZ8/']) : u.intl.string(u.t.OpuAlJ),
             children: (e) => {
                 var t, n;
                 return (0, r.jsx)(

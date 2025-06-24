@@ -5,8 +5,8 @@ var r = n(268146),
     o = n(751571),
     a = n(695346),
     s = n(361291),
-    c = n(592125),
-    u = n(430824),
+    u = n(592125),
+    c = n(430824),
     d = n(131951),
     f = n(944486),
     h = n(594174),
@@ -20,9 +20,9 @@ async function m(e, t) {
     var n, m, v, x, E, C, I, T, j, S;
     let P = h.default.getCurrentUser(),
         _ = f.Z.getVoiceChannelId(),
-        Z = c.Z.getChannel(_),
+        Z = u.Z.getChannel(_),
         A = null == Z ? void 0 : Z.getGuildId(),
-        w = null == (n = u.Z.getGuild(A)) ? void 0 : n.premiumTier;
+        w = null == (n = c.Z.getGuild(A)) ? void 0 : n.premiumTier;
     if (null == P || null == Z || null == _) return [!1, 'no user or channel'];
     let R = null;
     if (null == (R = 'number' == typeof e ? i.ZP.getGameForPID(e) : e)) return [!1, 'no source'];

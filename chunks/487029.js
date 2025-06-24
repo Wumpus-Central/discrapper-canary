@@ -5,8 +5,8 @@ var r = n(255367),
     o = n(442837),
     a = n(100527),
     s = n(906732),
-    c = n(213609),
-    u = n(675478),
+    u = n(213609),
+    c = n(675478),
     d = n(19780),
     f = n(709054),
     h = n(208049),
@@ -47,7 +47,7 @@ function x(e) {
             [R, n.id, j]
         );
     l.useEffect(() => {
-        h.w(), u.DZ.loadIfNecessary();
+        h.w(), c.DZ.loadIfNecessary();
     }, []),
         l.useEffect(() => {
             0 === S.length && 0 === P.length && j();
@@ -59,7 +59,7 @@ function x(e) {
             },
             [C, D]
         ),
-        (0, c.Z)(
+        (0, u.Z)(
             {
                 type: i.ImpressionTypes.POPOUT,
                 name: i.ImpressionNames.SOUNDBOARD_POPOUT,

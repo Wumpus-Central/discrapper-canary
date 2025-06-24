@@ -7,8 +7,8 @@ var r = n(255367),
 function s(e) {
     let t = (0, l.useRef)(null),
         [n, s] = (0, l.useState)(null),
-        [c] = (0, l.useState)(() => new i.TimelineDataSeries()),
-        u = (0, a.dQu)(o.Z.colors.BACKGROUND_BASE_LOW).hsl(),
+        [u] = (0, l.useState)(() => new i.TimelineDataSeries()),
+        c = (0, a.dQu)(o.Z.colors.BACKGROUND_BASE_LOW).hsl(),
         d = (0, a.dQu)(o.Z.colors.TEXT_NORMAL).hsl(),
         f = (0, a.dQu)(o.Z.colors.BACKGROUND_ACCENT).hsl(),
         h = (0, a.dQu)(o.Z.unsafe_rawColors.BRAND_500).hsl();
@@ -17,9 +17,9 @@ function s(e) {
         let n = t.current;
         if (null == n) return;
         let r = new i.TimelineGraphView(n, null != (e = window.devicePixelRatio) ? e : 1);
-        (r.backgroundColor = u), (r.textColor = d), (r.gridColor = f), (r.timeOptions = { timeStyle: 'short' }), (r.fontFamily = 'gg sans'), (r.fontSize = 11), c.setColor(h), r.addDataSeries(c), r.updateEndDate(), s(r);
-    }, [t, u, h, f, d, c]),
-        c.setPoints(e.dataPoints),
+        (r.backgroundColor = c), (r.textColor = d), (r.gridColor = f), (r.timeOptions = { timeStyle: 'short' }), (r.fontFamily = 'gg sans'), (r.fontSize = 11), u.setColor(h), r.addDataSeries(u), r.updateEndDate(), s(r);
+    }, [t, c, h, f, d, u]),
+        u.setPoints(e.dataPoints),
         null == n || n.updateEndDate();
     let p = {
         width: e.width,

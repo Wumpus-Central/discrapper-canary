@@ -91,16 +91,17 @@ function C() {
         u = null != E.Z.getCurrentUserActiveStream(),
         d = l || (c && !u);
     if (null != o && null != o.name && !d) {
-        var g, v;
+        var g, v, T;
         e.push({
             type: O.IIU.PLAYING,
             name: o.name,
             application_id: null != (v = o.id) ? v : null == (g = y.Z.getGameByName(o.name)) ? void 0 : g.id,
+            metadata: { distributor: null != (T = o.distributor) ? T : void 0 },
             timestamps: { start: o.start }
         });
     }
-    let T = h.Z.getActivity();
-    null != T && e.push(I({ type: O.IIU.LISTENING }, T)), a()(A, e) || (A = e);
+    let S = h.Z.getActivity();
+    null != S && e.push(I({ type: O.IIU.LISTENING }, S)), a()(A, e) || (A = e);
 }
 function R() {
     (N = {}), C();

@@ -5,5 +5,5 @@ e.exports = {
     text: 'text__10651',
     badge: 'badge__10651',
     noTooltip: 'noTooltip__10651',
-    unselectable: 'unselectable__10651'
+    tagText: 'tagText__10651'
 };

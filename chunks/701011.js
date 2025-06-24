@@ -1,166 +1,77 @@
-n.d(t, { Z: () => I }), n(388685);
-var r = n(255367),
-    o = n(73800),
-    i = n(442837),
-    l = n(704215),
-    a = n(481060),
-    c = n(110924),
-    u = n(40851),
-    s = n(812206),
-    d = n(243778),
-    p = n(554370),
-    f = n(788983),
-    m = n(546247),
-    b = n(317381),
-    O = n(426419),
-    v = n(16609),
-    j = n(781780),
-    y = n(325749),
-    h = n(981631),
-    P = n(921944),
-    g = n(578809);
-function x(e) {
-    let { children: t } = e,
-        { showsNewUserExperience: i, openNewUserExperienceModal: c } = (function () {
-            let e = [l.z.ACTIVITY_POPOUT_NUX_MODAL],
-                [t, i] = (0, d.US)(e);
-            return {
-                showsNewUserExperience: t === l.z.ACTIVITY_POPOUT_NUX_MODAL,
-                openNewUserExperienceModal: o.useCallback(() => {
-                    (0, a.ZDy)(
-                        async () => {
-                            let { default: e } = await n.e('49077').then(n.bind(n, 97761));
-                            return (t) => {
-                                var n, o;
-                                return (0, r.jsx)(
-                                    e,
-                                    ((n = (function (e) {
-                                        for (var t = 1; t < arguments.length; t++) {
-                                            var n = null != arguments[t] ? arguments[t] : {},
-                                                r = Object.keys(n);
-                                            'function' == typeof Object.getOwnPropertySymbols &&
-                                                (r = r.concat(
-                                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                    })
-                                                )),
-                                                r.forEach(function (t) {
-                                                    var r;
-                                                    (r = n[t]),
-                                                        t in e
-                                                            ? Object.defineProperty(e, t, {
-                                                                  value: r,
-                                                                  enumerable: !0,
-                                                                  configurable: !0,
-                                                                  writable: !0
-                                                              })
-                                                            : (e[t] = r);
-                                                });
-                                        }
-                                        return e;
-                                    })({}, t)),
-                                    (o = o =
-                                        {
-                                            onClickButton: () => {
-                                                i(P.L.USER_DISMISS), t.onClose();
-                                            }
-                                        }),
-                                    Object.getOwnPropertyDescriptors
-                                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(o))
-                                        : (function (e, t) {
-                                              var n = Object.keys(e);
-                                              if (Object.getOwnPropertySymbols) {
-                                                  var r = Object.getOwnPropertySymbols(e);
-                                                  n.push.apply(n, r);
-                                              }
-                                              return n;
-                                          })(Object(o)).forEach(function (e) {
-                                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(o, e));
-                                          }),
-                                    n)
-                                );
-                            };
-                        },
-                        {
-                            contextKey: a.u1M,
-                            onCloseRequest: () => {},
-                            backdropStyle: a.fCB.SUBTLE
-                        }
-                    );
-                }, [i])
-            };
-        })();
-    o.useEffect(() => {
-        i && c();
-    }, [c, i]);
-    let { renderWindow: s } = o.useContext(u.ZP);
-    return i
-        ? (0, r.jsx)('div', {
-              className: g.nuxBackground,
-              children: (0, r.jsx)(m.Z, { eventTargetRef: { current: s.document.body } })
-          })
-        : t;
-}
-function I() {
+t.d(n, { Z: () => O });
+var r = t(255367),
+    o = t(73800),
+    i = t(442837),
+    l = t(481060),
+    a = t(110924),
+    c = t(812206),
+    u = t(554370),
+    s = t(788983),
+    d = t(317381),
+    p = t(426419),
+    f = t(16609),
+    m = t(781780),
+    v = t(325749),
+    b = t(981631),
+    h = t(578809);
+function O() {
     let {
             embeddedActivity: e,
-            channelId: t,
-            guildId: n
-        } = (0, i.cj)([b.ZP], () => {
-            let e = b.ZP.getCurrentEmbeddedActivity(),
-                t = (0, v.p)(null == e ? void 0 : e.location),
-                n = (0, v.j)(null == e ? void 0 : e.location);
+            channelId: n,
+            guildId: t
+        } = (0, i.cj)([d.ZP], () => {
+            let e = d.ZP.getCurrentEmbeddedActivity(),
+                n = (0, f.p)(null == e ? void 0 : e.location),
+                t = (0, f.j)(null == e ? void 0 : e.location);
             return {
                 embeddedActivity: e,
-                channelId: t,
-                guildId: n
+                channelId: n,
+                guildId: t
             };
         }),
-        l = o.useRef(null),
-        u = (0, c.Z)(e);
+        O = o.useRef(null),
+        j = (0, a.Z)(e);
     o.useEffect(() => {
         null != e
-            ? clearTimeout(l.current)
-            : null != u &&
+            ? clearTimeout(O.current)
+            : null != j &&
               null == e &&
-              (l.current = window.setTimeout(() => {
-                  (0, f.xv)(h.KJ3.ACTIVITY_POPOUT);
+              (O.current = window.setTimeout(() => {
+                  (0, s.xv)(b.KJ3.ACTIVITY_POPOUT);
               }, 5000));
-    }, [e, u]);
-    let d = (0, i.e7)([s.Z], () => {
-            let t = null == e ? void 0 : e.applicationId;
-            return null == t ? void 0 : s.Z.getApplication(t);
+    }, [e, j]);
+    let P = (0, i.e7)([c.Z], () => {
+            let n = null == e ? void 0 : e.applicationId;
+            return null == n ? void 0 : c.Z.getApplication(n);
         }),
-        m = (0, O.P)();
+        x = (0, p.P)();
     return (0, r.jsx)('div', {
-        className: g.container,
+        className: h.container,
         children:
-            null == e || null == d
-                ? (0, r.jsx)(a.$jN, { className: g.iframe })
+            null == e || null == P
+                ? (0, r.jsx)(l.$jN, { className: h.iframe })
                 : (0, r.jsx)('div', {
-                      className: g.loadedContentContainer,
+                      className: h.loadedContentContainer,
                       children: (0, r.jsxs)('div', {
-                          className: g.iframeAndHeaderContainer,
+                          className: h.iframeAndHeaderContainer,
                           children: [
                               (0, r.jsx)('div', {
-                                  className: g.headerContainer,
-                                  children: (0, r.jsx)(y.Z, {
-                                      applicationId: d.id,
-                                      channelId: t
+                                  className: h.headerContainer,
+                                  children: (0, r.jsx)(v.Z, {
+                                      applicationId: P.id,
+                                      channelId: n
                                   })
                               }),
                               (0, r.jsx)('div', {
-                                  className: g.iframeContainer,
-                                  children: (0, r.jsx)(x, {
-                                      children: (0, r.jsx)(j.Z, {
-                                          channelId: t,
-                                          guildId: n,
-                                          embeddedActivity: e,
-                                          application: d
-                                      })
+                                  className: h.iframeContainer,
+                                  children: (0, r.jsx)(m.Z, {
+                                      channelId: n,
+                                      guildId: t,
+                                      embeddedActivity: e,
+                                      application: P
                                   })
                               }),
-                              m ? (0, r.jsx)(p.Z, { isEmbeddedActivity: !0 }) : null
+                              x ? (0, r.jsx)(u.Z, { isEmbeddedActivity: !0 }) : null
                           ]
                       })
                   })
