@@ -44,11 +44,11 @@ var r = n(255367),
     G = n(981631),
     z = n(420212),
     q = n(484920);
-let K = (e) => {
+let Y = (e) => {
         let { isFullScreen: t, tab: n } = e;
         return !t && (n === U.AW.HOME || n === U.AW.ORBS);
     },
-    Y = (e) => {
+    K = (e) => {
         let { children: t, shouldAddEventListener: n, onClose: r } = e,
             a = (0, u.f9)();
         return (
@@ -177,7 +177,7 @@ let K = (e) => {
                     pageIndex: eI,
                     pageSize: U.kN
                 },
-                children: (0, r.jsxs)(Y, {
+                children: (0, r.jsxs)(K, {
                     onClose: ep,
                     shouldAddEventListener: n && !ed,
                     children: [
@@ -294,7 +294,7 @@ let K = (e) => {
                             })
                         }),
                         ex && (0, r.jsx)(F.Z, {}),
-                        K({
+                        Y({
                             isFullScreen: n,
                             tab: J
                         }) &&

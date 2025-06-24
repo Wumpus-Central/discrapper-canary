@@ -38,8 +38,8 @@ let k = (e) => {
         { animationPhase: U, startAnimation: G } = (0, x.y)(),
         z = (0, h.sp)(),
         q = null != (t = null == z ? void 0 : z.sessionId) ? t : '',
-        K = l.useRef(null),
-        Y = l.useCallback(
+        Y = l.useRef(null),
+        K = l.useCallback(
             (e) => {
                 G({
                     isShuffling: !1,
@@ -137,7 +137,7 @@ let k = (e) => {
                                               }),
                                               (0, r.jsx)(s.PhF, {
                                                   options: Z,
-                                                  select: Y,
+                                                  select: K,
                                                   className: P.sortSelect,
                                                   isSelected: (e) => e === N,
                                                   serialize: (e) => e
@@ -148,12 +148,12 @@ let k = (e) => {
                                       (w
                                           ? (0, r.jsx)(s.zxk, {
                                                 color: s.Ttl.PRIMARY,
-                                                buttonRef: K,
+                                                buttonRef: Y,
                                                 onClick: () => {
                                                     G({
                                                         isShuffling: !0,
                                                         onOutroComplete: F,
-                                                        returnRef: K
+                                                        returnRef: Y
                                                     }),
                                                         f.default.track(y.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, { page_session_id: q });
                                                 },

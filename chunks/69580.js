@@ -187,9 +187,19 @@ function eh() {
                                 let t = new URLSearchParams(e.search);
                                 n.request(ei.Etm.AUTHORIZE, {
                                     client_id: t.get('client_id'),
+                                    scope: t.get('scope'),
                                     response_type: t.get('response_type'),
                                     redirect_uri: t.get('redirect_uri'),
-                                    scope: t.get('scope')
+                                    code_challenge: t.get('code_challenge'),
+                                    code_challenge_method: t.get('code_challenge_method'),
+                                    state: t.get('state'),
+                                    permissions: t.get('permissions'),
+                                    guild_id: t.get('guild_id'),
+                                    channel_id: t.get('channel_id'),
+                                    prompt: t.get('prompt'),
+                                    disable_guild_select: t.get('disable_guild_select'),
+                                    integration_type: t.get('integration_type'),
+                                    nonce: t.get('nonce')
                                 })
                                     .then((e) => {
                                         let { location: t } = e;

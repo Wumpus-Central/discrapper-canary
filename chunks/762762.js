@@ -1,11 +1,11 @@
-t.d(n, { Z: () => l });
-var r = t(73800),
-    i = t(442837),
-    o = t(388032),
-    a = t(905128),
-    s = t(93841);
-function l(e, n, t) {
-    let l = (0, i.e7)([a.Z], () => a.Z.getStateForGuild(e));
+n.d(t, { Z: () => l });
+var r = n(73800),
+    o = n(442837),
+    a = n(388032),
+    i = n(905128),
+    s = n(93841);
+function l(e, t, n) {
+    let l = (0, o.e7)([i.Z], () => i.Z.getStateForGuild(e));
     return r.useMemo(() => {
         var e, r;
         if (null == l)
@@ -13,19 +13,19 @@ function l(e, n, t) {
                 disabled: !0,
                 reason: void 0
             };
-        let { allPowerups: i, unlockedPowerups: a } = l,
-            c = t
+        let { allPowerups: o, unlockedPowerups: i } = l,
+            c = n
                 ? null ==
-                  (e = Object.values(a).find((e) => {
-                      var t;
-                      return (null == (t = e.sku) ? void 0 : t.dependent_sku_id) === n.skuId;
+                  (e = Object.values(i).find((e) => {
+                      var n;
+                      return (null == (n = e.sku) ? void 0 : n.dependent_sku_id) === t.skuId;
                   }))
                     ? void 0
                     : e.sku_id
-                : n.dependencies.find((e) => null == a[e]);
+                : t.dependencies.find((e) => null == i[e]);
         return {
             disabled: null != c,
-            reason: null != c && null != i[c] ? o.intl.formatToPlainString(t ? s.default.vCEBiY : s.default['1B8AZm'], { perk: null == (r = i[c]) ? void 0 : r.title }) : void 0
+            reason: null != c && null != o[c] ? a.intl.formatToPlainString(n ? s.default.vCEBiY : s.default['1B8AZm'], { perk: null == (r = o[c]) ? void 0 : r.title }) : void 0
         };
-    }, [l, n.skuId, n.dependencies, t]);
+    }, [l, t.skuId, t.dependencies, n]);
 }

@@ -114,7 +114,7 @@ let d = [
                 }
             }),
             _ = o ? g : 0,
-            O = (0, l.wj)(null != t ? t : u) ? c.dark[_] : c.light[_];
+            y = (0, l.wj)(null != t ? t : u) ? c.dark[_] : c.light[_];
         return !r && o
             ? (0, n.jsx)(m, {})
             : o && h
@@ -123,8 +123,8 @@ let d = [
                     style: x
                 })
               : (0, n.jsx)(f, {
-                    boxColor: O.box,
-                    ribbonColor: O.ribbon,
+                    boxColor: y.box,
+                    ribbonColor: y.ribbon,
                     style: x
                 });
     });
