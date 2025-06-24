@@ -985,11 +985,11 @@ class ev extends d.Z {
         }
     }
     _trackSecureFrameTransition(e) {
-        var t;
-        let n = null != (t = this._secureFramesTransitionStates.get(e)) ? t : {},
-            r = this._secureFramesTransitionStates.size;
+        let t = this._secureFramesTransitionStates.get(e);
+        if (null == t) return;
+        let n = this._secureFramesTransitionStates.size;
         this._secureFramesTransitionStates.delete(e);
-        let i = (e, t) => (null != e && null != t ? e - t : void 0);
+        let r = (e, t) => (null != e && null != t ? e - t : void 0);
         G.default.track(
             eo.rMx.SECURE_FRAMES_TRANSITION,
             ed(ec({}, this._getAnalyticsProperties()), {
@@ -997,59 +997,60 @@ class ev extends d.Z {
                 parent_media_session_id: this.parentMediaSessionId,
                 sender_user_id: this.userId,
                 transition_id: e,
-                protocol_version: n.protocolVersion,
-                start_to_init_duration: i(n.initReceivedTime, this._connectStartTime),
-                init_duration: i(n.initFinishedTime, n.initReceivedTime),
-                first_proposals_duration: i(n.firstProposalsFinishedTime, n.firstProposalsReceivedTime),
-                last_proposals_duration: i(n.lastProposalsFinishedTime, n.lastProposalsReceivedTime),
-                duration_between_proposals: i(n.lastProposalsReceivedTime, n.firstProposalsReceivedTime),
-                total_proposals_size: n.totalProposalsSize,
-                total_commit_welcome_size: n.totalCommitWelcomeSize,
-                welcome_wait_duration: i(n.welcomeReceivedTime, n.initFinishedTime),
-                welcome_duration: i(n.welcomeFinishedTime, n.welcomeReceivedTime),
-                welcome_size: n.welcomeSize,
-                welcome_error: n.welcomeError,
-                commit_wait_duration: i(n.commitReceivedTime, n.lastProposalsFinishedTime),
-                commit_duration: i(n.commitFinishedTime, n.commitReceivedTime),
-                commit_size: n.commitSize,
-                commit_error: n.commitError,
-                prepare_wait_duration: i(n.prepareReceivedTime, this._secureFramesLastBecameAloneTime),
-                prepare_duration: i(n.prepareFinishedTime, n.prepareReceivedTime),
-                execute_wait_duration: i(n.executeReceivedTime, n.readyTime),
-                execute_duration: i(n.executeFinishedTime, n.executeReceivedTime),
-                execute_error: n.executeError,
-                incomplete: n.incomplete,
-                active_transition_count: r
+                protocol_version: t.protocolVersion,
+                start_to_init_duration: r(t.initReceivedTime, this._connectStartTime),
+                init_duration: r(t.initFinishedTime, t.initReceivedTime),
+                first_proposals_duration: r(t.firstProposalsFinishedTime, t.firstProposalsReceivedTime),
+                last_proposals_duration: r(t.lastProposalsFinishedTime, t.lastProposalsReceivedTime),
+                duration_between_proposals: r(t.lastProposalsReceivedTime, t.firstProposalsReceivedTime),
+                total_proposals_size: t.totalProposalsSize,
+                total_commit_welcome_size: t.totalCommitWelcomeSize,
+                welcome_wait_duration: r(t.welcomeReceivedTime, t.initFinishedTime),
+                welcome_duration: r(t.welcomeFinishedTime, t.welcomeReceivedTime),
+                welcome_size: t.welcomeSize,
+                welcome_error: t.welcomeError,
+                commit_wait_duration: r(t.commitReceivedTime, t.lastProposalsFinishedTime),
+                commit_duration: r(t.commitFinishedTime, t.commitReceivedTime),
+                commit_size: t.commitSize,
+                commit_error: t.commitError,
+                prepare_wait_duration: r(t.prepareReceivedTime, this._secureFramesLastBecameAloneTime),
+                prepare_duration: r(t.prepareFinishedTime, t.prepareReceivedTime),
+                execute_wait_duration: r(t.executeReceivedTime, t.readyTime),
+                execute_duration: r(t.executeFinishedTime, t.executeReceivedTime),
+                execute_error: t.executeError,
+                incomplete: t.incomplete,
+                active_transition_count: n,
+                time_since_creation: (0, _.zO)() - t.creationTime
             })
-        );
+        ),
+            e === ey && this._trackRemainingSecureFrameTransitions();
     }
     _trackRemainingSecureFrameTransitions() {
         this._secureFramesTransitionStates.forEach((e, t) => {
             (e.incomplete = !0), this._trackSecureFrameTransition(t);
         });
     }
+    _storeSecureFrameNextTransitionData(e) {
+        return null == this._secureFramesNextTransitionState && (this._secureFramesNextTransitionState = { creationTime: (0, _.zO)() }), (this._secureFramesNextTransitionState = ec({}, this._secureFramesNextTransitionState, e));
+    }
     _storeSecureFrameTransitionData(e, t) {
         let n = this._secureFramesTransitionStates.get(e);
-        if (null == n) {
-            var r;
-            (n = null != (r = this._secureFramesNextTransitionState) ? r : {}), (this._secureFramesNextTransitionState = void 0);
-        }
-        this._secureFramesTransitionStates.set(e, ec({}, n, t)), (this._secureFramesMaxConcurrentTransitions = Math.max(this._secureFramesMaxConcurrentTransitions, this._secureFramesTransitionStates.size));
+        null == n && ((n = this._storeSecureFrameNextTransitionData({})), (this._secureFramesNextTransitionState = void 0)), this._secureFramesTransitionStates.set(e, ec({}, n, t)), (this._secureFramesMaxConcurrentTransitions = Math.max(this._secureFramesMaxConcurrentTransitions, this._secureFramesTransitionStates.size));
     }
     _handleSecureFramesInit(e) {
-        var t, n, r;
-        let i = (0, _.zO)();
+        var t, n;
+        let r = (0, _.zO)();
         e > 0
             ? (this.logger.info('DAVE protocol init with protocol version: '.concat(e)),
               null == (t = this._connection) || t.prepareSecureFramesEpoch(eb, e, this.trueChannelId),
               this._sendMLSKeyPackage(),
-              (this._secureFramesNextTransitionState = ed(ec({}, null != (n = this._secureFramesNextTransitionState) ? n : {}), {
-                  initReceivedTime: i,
+              this._storeSecureFrameNextTransitionData({
+                  initReceivedTime: r,
                   initFinishedTime: (0, _.zO)(),
                   protocolVersion: e
-              })))
-            : null == (r = this._connection) ||
-              r.prepareSecureFramesTransition(ey, e, () => {
+              }))
+            : null == (n = this._connection) ||
+              n.prepareSecureFramesTransition(ey, e, () => {
                   let t = !1;
                   try {
                       var n;
@@ -1058,7 +1059,7 @@ class ev extends d.Z {
                       (t = !0), H.Z.captureException(e);
                   }
                   this._storeSecureFrameTransitionData(ey, {
-                      initReceivedTime: i,
+                      initReceivedTime: r,
                       initFinishedTime: (0, _.zO)(),
                       protocolVersion: e,
                       executeError: t
@@ -1135,19 +1136,17 @@ class ev extends d.Z {
         this.logger.info('Received MLS proposals'),
             null == (n = this._connection) ||
                 n.processMLSProposals(t, (n) => {
-                    var i, a;
-                    let o = (0, _.zO)();
-                    this.logger.info('Sending MLS commit welcome message'),
-                        e.sendMLSCommitWelcome(n),
-                        null == this._secureFramesNextTransitionState &&
-                            (this._secureFramesNextTransitionState = {
-                                firstProposalsReceivedTime: r,
-                                firstProposalsFinishedTime: o
-                            }),
-                        (this._secureFramesNextTransitionState.lastProposalsReceivedTime = r),
-                        (this._secureFramesNextTransitionState.lastProposalsFinishedTime = o),
-                        (this._secureFramesNextTransitionState.totalProposalsSize = (null != (i = this._secureFramesNextTransitionState.totalProposalsSize) ? i : 0) + t.byteLength),
-                        (this._secureFramesNextTransitionState.totalCommitWelcomeSize = (null != (a = this._secureFramesNextTransitionState.totalCommitWelcomeSize) ? a : 0) + n.byteLength);
+                    var i, a, o;
+                    let s = (0, _.zO)();
+                    this.logger.info('Sending MLS commit welcome message'), e.sendMLSCommitWelcome(n);
+                    let l =
+                        null != (i = this._secureFramesNextTransitionState)
+                            ? i
+                            : this._storeSecureFrameNextTransitionData({
+                                  firstProposalsReceivedTime: r,
+                                  firstProposalsFinishedTime: s
+                              });
+                    (l.lastProposalsReceivedTime = r), (l.lastProposalsFinishedTime = s), (l.totalProposalsSize = (null != (a = l.totalProposalsSize) ? a : 0) + t.byteLength), (l.totalCommitWelcomeSize = (null != (o = l.totalCommitWelcomeSize) ? o : 0) + n.byteLength);
                 });
     }
     _handleMLSPrepareCommitTransition(e, t) {

@@ -265,10 +265,10 @@ function B(e) {
             }
         ),
         X = i.useRef(null),
-        [J, Q] = i.useState(!1);
+        [Q, J] = i.useState(!1);
     i.useEffect(() => {
         let e = X.current;
-        null != e && null != e.offsetWidth && null != e.scrollWidth && Q(e.offsetWidth < e.scrollWidth);
+        null != e && null != e.offsetWidth && null != e.scrollWidth && J(e.offsetWidth < e.scrollWidth);
     }, []);
     let $ = [H, W, V].filter((e) => null != e).join(', ');
     return (0, r.jsx)(m.aQ.Provider, {
@@ -290,7 +290,7 @@ function B(e) {
                             }),
                             (0, r.jsx)(s.ua7, {
                                 text: H,
-                                shouldShow: J,
+                                shouldShow: Q,
                                 children: (e) =>
                                     (0, r.jsxs)(
                                         'span',

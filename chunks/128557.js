@@ -255,7 +255,7 @@ function R(e) {
             );
         })(W),
         [K, X] = i.useState([]),
-        J = K.length > 0;
+        Q = K.length > 0;
     if (
         (i.useEffect(() => {
             (async () => {
@@ -269,15 +269,15 @@ function R(e) {
         null == l)
     )
         return null;
-    let Q = [];
+    let J = [];
     p ||
         (R &&
-            Q.push(
+            J.push(
                 (0, r.jsx)(
                     o.Z.div,
                     {
                         className: N.cardWrapper,
-                        style: W ? { opacity: q[Q.length] } : {},
+                        style: W ? { opacity: q[J.length] } : {},
                         children: (0, r.jsx)(w, {
                             iconUrl: u.YvY,
                             header: Z.intl.string(Z.t.q9n0TU),
@@ -289,12 +289,12 @@ function R(e) {
                 )
             ),
         M &&
-            Q.push(
+            J.push(
                 (0, r.jsx)(
                     o.Z.div,
                     {
                         className: N.cardWrapper,
-                        style: W ? { opacity: q[Q.length] } : {},
+                        style: W ? { opacity: q[J.length] } : {},
                         children: (0, r.jsx)(w, {
                             iconUrl: u.$_T,
                             header: Z.intl.string(Z.t.c5kxPj),
@@ -306,12 +306,12 @@ function R(e) {
                 )
             ),
         k &&
-            Q.push(
+            J.push(
                 (0, r.jsx)(
                     o.Z.div,
                     {
                         className: N.cardWrapper,
-                        style: W ? { opacity: q[Q.length] } : {},
+                        style: W ? { opacity: q[J.length] } : {},
                         children: (0, r.jsx)(w, {
                             iconUrl: u.qMX,
                             header: Z.intl.string(Z.t['SoP7+v']),
@@ -323,12 +323,12 @@ function R(e) {
                 )
             ),
         (0, O.isWeb)() &&
-            Q.push(
+            J.push(
                 (0, r.jsx)(
                     o.Z.div,
                     {
                         className: N.cardWrapper,
-                        style: W ? { opacity: q[Q.length] } : {},
+                        style: W ? { opacity: q[J.length] } : {},
                         children: (0, r.jsx)(w, {
                             iconUrl: u.yIb,
                             header: Z.intl.string(Z.t.pGVNIy),
@@ -339,16 +339,16 @@ function R(e) {
                     'download'
                 )
             ),
-        Q.push(
+        J.push(
             (0, r.jsx)(
                 o.Z.div,
                 {
                     className: N.cardWrapper,
-                    style: W ? { opacity: q[Q.length] } : {},
+                    style: W ? { opacity: q[J.length] } : {},
                     children: (0, r.jsx)(w, {
                         iconUrl: u.Tg$,
                         header: Z.intl.string(Z.t.IhHDEB),
-                        completed: J,
+                        completed: Q,
                         onClick: z
                     })
                 },
@@ -377,14 +377,14 @@ function R(e) {
                                 color: 'header-secondary',
                                 className: a()({
                                     [N.subtitle]: !0,
-                                    [N.noChildren]: 0 === Q.length
+                                    [N.noChildren]: 0 === J.length
                                 }),
                                 variant: 'text-sm/normal',
-                                children: [$, ' ', Q.length > 0 ? Z.intl.format(Z.t.UOtD39, { guideURL: ee }) : null]
+                                children: [$, ' ', J.length > 0 ? Z.intl.format(Z.t.UOtD39, { guideURL: ee }) : null]
                             })
                         ]
                     }),
-                    Q
+                    J
                 ]
             })
         })

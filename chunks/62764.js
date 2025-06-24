@@ -134,7 +134,7 @@ function H(e) {
         Y = (0, o.e7)([Z.Z], () => Z.Z.getChannel(t), [t]),
         { firstMessage: q } = (0, w.cl)(Y),
         K = (0, o.e7)([S.Z], () => S.Z.hasJoined(t)),
-        { disableReactionUpdates: X, disableReactionCreates: J, isLurking: Q, isGuest: $, isPendingMember: ee } = (0, b.Z)(Y),
+        { disableReactionUpdates: X, disableReactionCreates: Q, isLurking: J, isGuest: $, isPendingMember: ee } = (0, b.Z)(Y),
         et = (0, E.nw)(Y),
         en = (0, o.e7)([Z.Z], () => Z.Z.getChannel(s)),
         er = (0, A.Bs)(en),
@@ -207,7 +207,7 @@ function H(e) {
                               className: a()(L.reactButtons, { [L.loading]: ea }),
                               children: [
                                   !es &&
-                                      !J &&
+                                      !Q &&
                                       null != er &&
                                       (0, r.jsx)('div', {
                                           className: U.reactions,
@@ -215,7 +215,7 @@ function H(e) {
                                               message: q,
                                               readOnly: !1,
                                               useChatFontScaling: !1,
-                                              isLurking: Q,
+                                              isLurking: J,
                                               isGuest: $,
                                               isPendingMember: ee,
                                               emoji: er,
@@ -233,7 +233,7 @@ function H(e) {
                                       channel: Y,
                                       disableReactionCreates: !0,
                                       disableReactionUpdates: X,
-                                      isLurking: Q,
+                                      isLurking: J,
                                       isGuest: $,
                                       isPendingMember: ee,
                                       maxReactions: O,
@@ -242,7 +242,7 @@ function H(e) {
                                       isForumToolbar: !0,
                                       forceHideReactionCreates: !0
                                   }),
-                                  !J &&
+                                  !Q &&
                                       (0, r.jsx)(_.X, {
                                           type: g.O.NORMAL,
                                           message: q,

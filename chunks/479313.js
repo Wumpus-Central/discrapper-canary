@@ -103,7 +103,7 @@ function T(e, t) {
 }
 function S(e, t) {
     l.Z.dispatch({
-        type: 'SET_GRAVITY_SELECTED_SUMMARY',
+        type: 'SET_ICYMI_SELECTED_SUMMARY',
         channelId: e,
         summaryId: null != t ? t : null
     });

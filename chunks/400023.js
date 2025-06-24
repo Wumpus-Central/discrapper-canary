@@ -144,9 +144,9 @@ let W = i.memo(
                     keyboardModeEnabled: Z,
                     hasMoreAfter: b.hasMoreAfter
                 }),
-                J = (0, c.e7)([x.Z], () => (P.Z.can(B.Plq.READ_MESSAGE_HISTORY, g) ? null : x.Z.getViewingRolesTimestamp(g.getGuildId()))),
+                Q = (0, c.e7)([x.Z], () => (P.Z.can(B.Plq.READ_MESSAGE_HISTORY, g) ? null : x.Z.getViewingRolesTimestamp(g.getGuildId()))),
                 {
-                    channelStreamMarkup: Q,
+                    channelStreamMarkup: J,
                     newMessagesBar: $,
                     jumpToPresentBar: ee,
                     forumPostActionBar: et,
@@ -162,7 +162,7 @@ let W = i.memo(
                     loadMore: K.loadMore,
                     scrollManager: K,
                     specs: q,
-                    filterAfterTimestamp: null != N ? N : J,
+                    filterAfterTimestamp: null != N ? N : Q,
                     showingQuarantineBanner: T,
                     hideSummaries: w,
                     jumpToPresent: () => {
@@ -266,7 +266,7 @@ let W = i.memo(
                                                                 'aria-hidden': !0,
                                                                 children: F.intl.string(F.t.Spb3s7)
                                                             }),
-                                                            Q,
+                                                            J,
                                                             (0, r.jsx)('div', {
                                                                 className: a()({
                                                                     [G.scrollerSpacer]: !T,

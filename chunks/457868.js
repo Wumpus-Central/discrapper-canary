@@ -1,4 +1,4 @@
-n.d(t, { Z: () => J }), n(388685), n(583741);
+n.d(t, { Z: () => Q }), n(388685), n(583741);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -153,7 +153,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             q = (0, j.K)({ user: b }),
             [K, X] = i.useState(!1);
         if (null == b) return null;
-        let J = null == h ? void 0 : h.premiumSince;
+        let Q = null == h ? void 0 : h.premiumSince;
         return (0, r.jsx)(I.Z, {
             targetElementRef: s,
             user: b,
@@ -206,7 +206,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                             isMobile: v,
                             selected: K,
                             applicationStream: R,
-                            premiumSince: null == J ? null : new Date(J),
+                            premiumSince: null == Q ? null : new Date(Q),
                             onClickPremiumGuildIcon: Y,
                             itemProps: M,
                             lostPermissionTooltipText: D ? void 0 : G.intl.string(G.t['/QcoT0']),
@@ -281,7 +281,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
               })
             : null;
     });
-function J(e) {
+function Q(e) {
     let { channel: t, guild: n } = e,
         l = 'members-'.concat(t.id),
         { analyticsLocations: o } = (0, _.ZP)(b.Z.MEMBER_LIST),
@@ -355,7 +355,7 @@ function J(e) {
         }, [t.guild_id, t.id, t.type]),
         x)
     )
-        return (0, r.jsx)(Q, { channel: t });
+        return (0, r.jsx)(J, { channel: t });
     let C = s().omit(m.containerProps, ['ref']),
         v = D.iJ(n);
     return (0, r.jsx)(_.Gt, {
@@ -420,7 +420,7 @@ function J(e) {
         })
     });
 }
-function Q(e) {
+function J(e) {
     let { channel: t } = e;
     return (0, r.jsxs)('div', {
         className: a()(V.membersWrap, V.hiddenMembers, V.members, H.emptyState),

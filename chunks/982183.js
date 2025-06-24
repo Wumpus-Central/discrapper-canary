@@ -27,14 +27,14 @@ var E = 12633 == e.j ? (((i = {}).UNREAD = 'UNREAD'), (i.TODAY = 'TODAY'), (i.YE
     I = 12633 == e.j ? (((l = {}).ALL = 'all'), (l.ANNOUNCEMENTS = 'announcements'), (l.MENTIONS = 'mentions'), (l.BOOKMARKS = 'bookmarks'), l) : null,
     c = 12633 == e.j ? (((r = {}).ALL_MESSAGES_CHANNEL = 'ALL_MESSAGES_CHANNEL'), (r.MENTION = 'MENTION'), (r.BOOKMARK = 'BOOKMARK'), r) : null;
 let T = {
-        UNREAD: s.t['f1tf/v'],
+        UNREAD: s.t.sRUdBw,
         TODAY: s.t.F4jZQk,
         YESTERDAY: s.t.gnv4pK,
         OLDER: s.t.exrPZm
     },
     g = {
-        all: s.intl.string(s.t.nsv3q6),
+        all: s.intl.string(s.t.iWyjNj),
         bookmarks: s.intl.string(s.t['+rlGYW']),
-        announcements: s.intl.string(s.t['2qyUOz']),
+        announcements: s.intl.string(s.t.jR39HB),
         mentions: s.intl.string(s.t['GRZF9/'])
     };

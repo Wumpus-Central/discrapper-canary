@@ -13,7 +13,7 @@ var r = n(255367),
     f = n(663924),
     m = n(533379),
     g = n(562129),
-    b = n(404295),
+    b = n(307508),
     _ = n(605236),
     y = n(291407),
     x = n(685006),
@@ -119,7 +119,7 @@ let I = i.forwardRef(function (e, t) {
                 chatInputType: n
             }),
             u = (0, C.Z)({ type: n }),
-            d = (0, b.h9)(t.id),
+            d = (0, b.Q)(t.id),
             h = (0, o.e7)([p.Z], () => p.Z.appDMChannelsWithFailedLoads().has(t.id)),
             { visible: g } = (0, x.xL)();
         return c

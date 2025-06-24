@@ -509,6 +509,10 @@ let eV = {
             let t = (0, f.F6)(e, F.default, G.Z).toLocaleLowerCase(),
                 n = (0, q._I)((0, q.Fv)(t)),
                 o = eP(n, l, r);
+            if ('' !== e.name) {
+                let t = (0, f.on)(e, F.default, G.Z).toLocaleLowerCase();
+                o = Math.max(o, eP((0, q._I)((0, q.Fv)(t)), l, r));
+            }
             o > 0 &&
                 u.push({
                     type: J.h8.GROUP_DM,

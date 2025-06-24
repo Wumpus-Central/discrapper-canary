@@ -47,8 +47,8 @@ var r = n(255367),
     q = n(921235),
     K = n(97352),
     X = n(226027),
-    J = n(959517),
-    Q = n(981631),
+    Q = n(959517),
+    J = n(981631),
     $ = n(134612),
     ee = n(388032);
 function et(e) {
@@ -77,7 +77,7 @@ function et(e) {
     return e;
 }
 function en(e) {
-    return null != e && e.type === Q.ys_.MESSAGE && e.content.id === e.groupId;
+    return null != e && e.type === J.ys_.MESSAGE && e.content.id === e.groupId;
 }
 let er = i.memo(function (e) {
     let { file: t, channel: n, user: i, isGroupStart: l, compact: a } = e;
@@ -88,7 +88,7 @@ let er = i.memo(function (e) {
         message: new Z.ZP({
             id: t.id,
             key: 'pending-upload-'.concat(t.id),
-            type: Q.uaV.DEFAULT,
+            type: J.uaV.DEFAULT,
             author: i,
             channel_id: n.id,
             customRenderedContent: {
@@ -149,7 +149,7 @@ function ei(e) {
     let eZ = null,
         eN = [],
         eT = eo.map((e, t) => {
-            if (e.type === Q.ys_.DIVIDER) {
+            if (e.type === J.ys_.DIVIDER) {
                 var n, i;
                 let l = null != e.unreadId;
                 return null != ed
@@ -166,13 +166,13 @@ function ei(e) {
                             {
                                 isUnread: l,
                                 isBeforeGroup: null == e.content && en(eo[t + 1]),
-                                id: l ? J.j1 : void 0,
+                                id: l ? Q.j1 : void 0,
                                 children: e.content
                             },
                             'divider-'.concat(null != (i = null != (n = e.contentKey) ? n : e.unreadId) ? i : t)
                         );
             }
-            if (e.type === Q.ys_.FORUM_POST_ACTION_BAR)
+            if (e.type === J.ys_.FORUM_POST_ACTION_BAR)
                 return (0, r.jsx)(
                     g.Z,
                     {
@@ -183,14 +183,14 @@ function ei(e) {
                     },
                     'forum-post-action-bar-'.concat(f.id)
                 );
-            if (e.type === Q.ys_.MESSAGE_GROUP_BLOCKED || e.type === Q.ys_.MESSAGE_GROUP_IGNORED || e.type === Q.ys_.MESSAGE_GROUP_SPAMMER) {
+            if (e.type === J.ys_.MESSAGE_GROUP_BLOCKED || e.type === J.ys_.MESSAGE_GROUP_IGNORED || e.type === J.ys_.MESSAGE_GROUP_SPAMMER) {
                 let t;
                 return (
-                    (t = e.type === Q.ys_.MESSAGE_GROUP_BLOCKED ? ee.t['+FcYMz'] : e.type === Q.ys_.MESSAGE_GROUP_IGNORED ? ee.t.VFWjc3 : ee.t.xfkfTE),
+                    (t = e.type === J.ys_.MESSAGE_GROUP_BLOCKED ? ee.t['+FcYMz'] : e.type === J.ys_.MESSAGE_GROUP_IGNORED ? ee.t.VFWjc3 : ee.t.xfkfTE),
                     (0, r.jsx)(
                         V.Z,
                         {
-                            unreadId: J.j1,
+                            unreadId: Q.j1,
                             messages: e,
                             channel: f,
                             compact: ea,
@@ -201,12 +201,12 @@ function ei(e) {
                 );
             }
             if (null != ed && ed > e.content.timestamp.getTime() * M.Z.Millis.SECOND) return;
-            let l = N.Z.can(Q.Plq.CREATE_INSTANT_INVITE, f);
+            let l = N.Z.can(J.Plq.CREATE_INSTANT_INVITE, f);
             if ((0, L.Z)(e.content, l)) return;
-            e.type === Q.ys_.MESSAGE && null == eZ && (eZ = e);
+            e.type === J.ys_.MESSAGE && null == eZ && (eZ = e);
             let a = e.groupId === (null == eZ ? void 0 : eZ.groupId) ? eZ.content.id : e.groupId,
                 o = eP && e.content.isFirstMessageInForumPost(f),
-                s = e.type === Q.ys_.THREAD_STARTER_MESSAGE ? H.Ru : H.ZP;
+                s = e.type === J.ys_.THREAD_STARTER_MESSAGE ? H.Ru : H.ZP;
             return (0, r.jsx)(
                 s,
                 {
@@ -233,7 +233,7 @@ function ei(e) {
                         f,
                         eA,
                         new Z.ZP({
-                            type: Q.uaV.DEFAULT,
+                            type: J.uaV.DEFAULT,
                             author: em
                         })
                     );
@@ -259,7 +259,7 @@ function ei(e) {
                     'div',
                     {
                         style: {
-                            height: J.D4,
+                            height: Q.D4,
                             flex: '0 0 auto'
                         }
                     },
@@ -294,7 +294,7 @@ function ei(e) {
             let n = T.ZP.ackMessageId(f.id),
                 o = (0, S.q)(f.id, T.ZP.getOldestUnreadMessageId(f.id));
             if (
-                ((0, d.yw)(Q.rMx.SUMMARIES_UNREAD_BAR_VIEWED, {
+                ((0, d.yw)(J.rMx.SUMMARIES_UNREAD_BAR_VIEWED, {
                     num_unread_summaries: o,
                     num_unread_messages: ei,
                     last_ack_message_id: n,
@@ -416,7 +416,7 @@ function ei(e) {
                     (e = f.id),
                     void o.Z.fetchMessages({
                         channelId: e,
-                        limit: Q.AQB,
+                        limit: J.AQB,
                         truncate: !0
                     })
                 );
@@ -443,7 +443,7 @@ function ei(e) {
                   : (0, r.jsx)(W.DR, {
                         onClick: () =>
                             (function (e) {
-                                o.Z.jumpToPresent(e.id, Q.AQB);
+                                o.Z.jumpToPresent(e.id, J.AQB);
                                 let t = A.Z.getChannelId();
                                 e.id === t && (0, x.Kh)(e.id);
                             })(f),

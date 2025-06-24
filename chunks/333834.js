@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(539854), n(583741), n(388685), n(642613);
+n.d(t, { Z: () => w }), n(539854), n(583741), n(388685), n(642613);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -19,16 +19,17 @@ var r = n(255367),
     y = n(334426),
     v = n(982183),
     C = n(981631),
-    j = n(388032),
-    E = n(709701);
-function S(e) {
+    j = n(144717),
+    E = n(388032),
+    S = n(709701);
+function x(e) {
     e.stopPropagation();
 }
-function x(e) {
+function I(e) {
     let { group: t, isOpen: n, toggleOpenedState: i } = e;
     return (0, r.jsx)(u.P3F, {
         onClick: i,
-        className: o()(E.messagesGroupHeaderWrap, { [E.collapsed]: !n }),
+        className: o()(S.messagesGroupHeaderWrap, { [S.collapsed]: !n }),
         children: (0, r.jsxs)(u.Kqy, {
             gap: 4,
             direction: 'horizontal',
@@ -37,22 +38,22 @@ function x(e) {
                 (0, r.jsx)(u.X6q, {
                     variant: 'text-sm/medium',
                     color: 'text-secondary',
-                    className: E.messagesGroupHeader,
-                    children: (0, s.capitalize)(j.intl.string(v.Vv[t]).toLowerCase())
+                    className: S.messagesGroupHeader,
+                    children: (0, s.capitalize)(E.intl.string(v.Vv[t]).toLowerCase())
                 }),
                 (0, r.jsx)(u.CJ0, {
                     size: 'xxs',
-                    className: E.chevron
+                    className: S.chevron
                 })
             ]
         })
     });
 }
-let I = [v.KZ.UNREAD, v.KZ.TODAY, v.KZ.YESTERDAY, v.KZ.OLDER];
-function P() {
+let P = [v.KZ.UNREAD, v.KZ.TODAY, v.KZ.YESTERDAY, v.KZ.OLDER];
+function N() {
     let { analyticsLocations: e } = (0, p.ZP)(h.Z.NOTIFICATIONS_INBOX);
     return (0, r.jsx)('div', {
-        className: E.emptyStateContainer,
+        className: S.emptyStateContainer,
         children: (0, r.jsxs)(u.Kqy, {
             gap: 24,
             align: 'center',
@@ -71,7 +72,7 @@ function P() {
                             variant: 'text-sm/medium',
                             color: C.tPk.TEXT_MUTED,
                             style: { textAlign: 'center' },
-                            children: j.intl.string(j.t['O+racX'])
+                            children: E.intl.string(j.default['O+racX'])
                         })
                     ]
                 }),
@@ -79,14 +80,14 @@ function P() {
                     onClick: () => (0, O.j4)(e),
                     color: u.zxk.Colors.PRIMARY,
                     style: { fontWeight: 600 },
-                    children: j.intl.string(j.t.klSpfn)
+                    children: E.intl.string(j.default.klSpfn)
                 })
             ]
         })
     });
 }
-function N(e) {
-    let { messages: t, loadingInitial: n, loadingMore: l, loadMore: s, renderLoadingState: h, renderMessageGroup: p, scrollerClassName: j, className: N, listName: w, ignoreGrouping: Z = !1 } = e,
+function w(e) {
+    let { messages: t, loadingInitial: n, loadingMore: l, loadMore: s, renderLoadingState: h, renderMessageGroup: p, scrollerClassName: j, className: E, listName: w, ignoreGrouping: Z = !1 } = e,
         T = i.useRef(null),
         A = (0, d.Z)(w, T),
         { notificationCenterVariant: R } = m.Lk.useExperiment({ location: 'NotificationsInboxSidebarList' }),
@@ -143,7 +144,7 @@ function N(e) {
                             l = k(t.id);
                         n === v.fL.MENTION ? r[l].push(t) : t.channel_id in i[l] ? i[l][t.channel_id].push(t) : (i[l][t.channel_id] = [t]);
                     }),
-                    a().each(I, (t) => {
+                    a().each(P, (t) => {
                         [...Object.values(i[t]).map((e) => e.reverse()), ...r[t].map((e) => [e])]
                             .sort((e, t) => g.default.compare(t[0].id, e[0].id))
                             .forEach((n) => {
@@ -159,7 +160,7 @@ function N(e) {
                 null == t || n
                     ? e.push(h())
                     : 0 === t.length
-                      ? e.push((0, r.jsx)(P, {}, 'empty-state'))
+                      ? e.push((0, r.jsx)(N, {}, 'empty-state'))
                       : Z
                         ? e.push(
                               ...t.map((e) => {
@@ -168,10 +169,10 @@ function N(e) {
                               })
                           )
                         : null != U &&
-                          a().each(I, (t) => {
+                          a().each(P, (t) => {
                               0 !== U[t].length &&
                                   (e.push(
-                                      (0, r.jsx)(x, {
+                                      (0, r.jsx)(I, {
                                           group: t,
                                           isOpen: D[t],
                                           toggleOpenedState: () => {
@@ -206,7 +207,7 @@ function N(e) {
             (B = (0, r.jsx)(
                 'div',
                 {
-                    className: E.loadingMore,
+                    className: S.loadingMore,
                     children: (0, r.jsx)(u.$jN, {})
                 },
                 'loading-more-after'
@@ -230,12 +231,12 @@ function N(e) {
             groupedUnreadMessages: null == U ? void 0 : U.UNREAD
         }),
         (0, r.jsx)('div', {
-            className: o()(N, E.messagesPopoutWrap),
-            onClick: S,
-            onDoubleClick: S,
+            className: o()(E, S.messagesPopoutWrap),
+            onClick: x,
+            onDoubleClick: x,
             'aria-label': e['aria-label'],
             children: (0, r.jsx)(u.Den, {
-                className: o()(E.messagesPopout, j),
+                className: o()(S.messagesPopout, j),
                 onScroll: M,
                 fade: !0,
                 ref: T,

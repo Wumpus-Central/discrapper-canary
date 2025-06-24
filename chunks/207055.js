@@ -59,8 +59,8 @@ let w = i.memo((e) => {
     let [Y, q] = (0, o.Wu)([b.Z], () => [b.Z.getStreamForUser(w, g.getGuildId()), b.Z.getActiveStreamForUser(w, g.getGuildId())], [g, w]),
         K = (0, o.e7)([O.Z], () => O.Z.getSessionById(C)),
         X = S.ZP.useName(s),
-        J = (0, o.e7)([I.Z], () => I.Z.getVoicePlatformForChannel(g.id, w), [g.id, w]),
-        Q = (0, m.Eu)(g.id, w);
+        Q = (0, o.e7)([I.Z], () => I.Z.getVoicePlatformForChannel(g.id, w), [g.id, w]),
+        J = (0, m.Eu)(g.id, w);
     return (0, r.jsx)(f.Z, {
         shakeLocation: T.oZ.VOICE_USER,
         isShaking: U,
@@ -96,14 +96,14 @@ let w = i.memo((e) => {
                     nick: null != A ? A : X,
                     canDrag: e.canDrag && !B,
                     otherClientSessionType: null == K || null == (t = K.clientInfo) ? void 0 : t.os,
-                    voicePlatform: J,
+                    voicePlatform: Q,
                     localMute: M && !R,
                     localVideoDisabled: D,
                     mute: l || M,
                     deaf: a || k,
                     speaking: U,
                     ringing: F,
-                    disconnected: Q,
+                    disconnected: J,
                     priority: L,
                     embeddedApplication: H[0],
                     isStreaming: null != Y && Y.channelId === g.id,

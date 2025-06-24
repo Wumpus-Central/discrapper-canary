@@ -75,25 +75,25 @@ function P(e) {
         [z, W] = i.useState(null),
         Y = (0, c.Z)(z),
         [q, K] = i.useState(!0),
-        [X, J] = i.useState(!1),
-        Q = M.type === C.fO.ACTIVITY,
-        $ = (0, u.Z)(Q ? M.applicationId : void 0),
-        ee = !Q && null != M.streamId,
+        [X, Q] = i.useState(!1),
+        J = M.type === C.fO.ACTIVITY,
+        $ = (0, u.Z)(J ? M.applicationId : void 0),
+        ee = !J && null != M.streamId,
         et = U <= 2 * S + 144,
         en = k && !et,
         er = (0, c.Z)(en),
         ei = B === x.AEg.MINIMUM || B === x.AEg.NORMAL,
-        el = !et && (!ei || Q),
+        el = !et && (!ei || J),
         ea = (0, m.Z)(el, 100),
         eo = (null != (t = (0, c.Z)(M.id)) ? t : M.id) !== M.id,
         es = 0;
-    (Q || en) && (es += 72), Q && !en && (el ? (es += 48) : (es += 8)), en && (es += 0.5 * S + 8);
-    let ec = i.useMemo(() => (Q && $ ? L / (U - 2 * es) : ee && null != z && z.width > 0 && z.height > 0 ? z.width / z.height : I), [ee, z, Q, L, U, es, $]),
+    (J || en) && (es += 72), J && !en && (el ? (es += 48) : (es += 8)), en && (es += 0.5 * S + 8);
+    let ec = i.useMemo(() => (J && $ ? L / (U - 2 * es) : ee && null != z && z.width > 0 && z.height > 0 ? z.width / z.height : I), [ee, z, J, L, U, es, $]),
         eu = U - 2 * es,
-        ed = Q && $ ? L : eu * ec,
+        ed = J && $ ? L : eu * ec,
         ep = Math.floor(Math.min(L, ed) / ec),
         eh = U > L / ec + 72 + S + 8;
-    (n = en || Q ? (en ? -16 : -8) : 40 + Math.max(0, 72 - (U - ep) / 2)),
+    (n = en || J ? (en ? -16 : -8) : 40 + Math.max(0, 72 - (U - ep) / 2)),
         i.useEffect(() => {
             let e = setTimeout(() => {
                 K(!1);
@@ -109,10 +109,10 @@ function P(e) {
                 value: +!!en,
                 delay: eh || !en ? 0 : 100,
                 config: E(O({}, o.config.stiff), { clamp: !0 }),
-                onStart: () => J(!0),
+                onStart: () => Q(!0),
                 onChange: () => f.S.dispatch(x.CkL.REMEASURE_TARGET),
                 onRest: () => {
-                    J(!1), f.S.dispatch(x.CkL.REMEASURE_TARGET);
+                    Q(!1), f.S.dispatch(x.CkL.REMEASURE_TARGET);
                 }
             },
             em

@@ -1,6 +1,6 @@
 n.d(t, {
     P: () => l,
-    W: () => c
+    W: () => o
 });
 var r = n(990547),
     i = n(573261),
@@ -16,7 +16,7 @@ async function l() {
         ).body || null
     );
 }
-async function c(e) {
+async function o(e) {
     return (
         await i.Z.post({
             url: a.ANM.SAFETY_FLOWS_TASK,

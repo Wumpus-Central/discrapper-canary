@@ -56,8 +56,8 @@ var r,
     q = n(572004),
     K = n(585483),
     X = n(823379),
-    J = n(709054),
-    Q = n(51144),
+    Q = n(709054),
+    J = n(51144),
     $ = n(73752),
     ee = n(665149),
     et = n(575464),
@@ -169,7 +169,7 @@ let eh = (e) => {
                     }),
                     (0, i.jsx)('span', {
                         className: ei.lastActiveTimestamp,
-                        children: u()(J.default.extractTimestamp(a)).fromNow()
+                        children: u()(Q.default.extractTimestamp(a)).fromNow()
                     })
                 ]
             })
@@ -210,7 +210,7 @@ let eh = (e) => {
                                     var n, r;
                                     let i = null != (n = e.lastMessageId) ? n : e.id,
                                         l = null != (r = t.lastMessageId) ? r : t.id;
-                                    return J.default.compare(l, i);
+                                    return Q.default.compare(l, i);
                                 })
                                 .map((e) =>
                                     (0, i.jsx)(
@@ -338,7 +338,7 @@ class em extends (r = l.PureComponent) {
         return (
             a.forEach((e) => {
                 let t = W.default.getUser(e);
-                null != t && o.push(Q.ZP.getName(t));
+                null != t && o.push(J.ZP.getName(t));
             }),
             (0, i.jsxs)('div', {
                 className: ei.searchBar,
@@ -546,7 +546,7 @@ class em extends (r = l.PureComponent) {
     handleAddFriend(e) {
         this.props.onClose(),
             x.Z.sendRequest({
-                discordTag: Q.ZP.getUserTag(e, { identifiable: 'always' }),
+                discordTag: J.ZP.getUserTag(e, { identifiable: 'always' }),
                 context: { location: 'Group DM' }
             });
     }

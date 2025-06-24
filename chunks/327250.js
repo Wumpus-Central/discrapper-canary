@@ -204,9 +204,10 @@ function M(e) {
         k = (0, a.e7)(
             [v.Z, b.Z],
             () => {
-                var e;
-                let t = v.Z.getChannelId(l);
-                return null != t && (null == (e = b.Z.getChannel(t)) ? void 0 : e.isModeratorReportChannel()) != null ? t : void 0;
+                let e = v.Z.getChannelId(l),
+                    t = null != e ? b.Z.getChannel(e) : null,
+                    n = null != t && t.isModeratorReportChannel() ? e : void 0;
+                return null != n ? n : void 0;
             },
             [l]
         );

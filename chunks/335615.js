@@ -47,7 +47,7 @@ var r = n(255367),
     q = n(981631),
     K = n(388032),
     X = n(11847);
-function J(e, t, n) {
+function Q(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -60,7 +60,7 @@ function J(e, t, n) {
         e
     );
 }
-function Q(e) {
+function J(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -71,7 +71,7 @@ function Q(e) {
                 })
             )),
             r.forEach(function (t) {
-                J(e, t, n[t]);
+                Q(e, t, n[t]);
             });
     }
     return e;
@@ -140,7 +140,7 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                $(Q({}, n), {
+                                $(J({}, n), {
                                     user: u,
                                     guildId: x,
                                     channel: y,
@@ -193,7 +193,7 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                     o = ee(e, ['onClick', 'onMouseDown']);
                 return (0, r.jsx)(
                     _.Z,
-                    Q(
+                    J(
                         {
                             ref: I,
                             className: X.member,
@@ -249,7 +249,7 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
             p = (0, R.K)({ user: l });
         return (0, r.jsx)(
             er,
-            $(Q({}, n, o), {
+            $(J({}, n, o), {
                 isTyping: s,
                 currentUser: u,
                 colorRoleName: d,
@@ -281,7 +281,7 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                       }),
                       (0, r.jsxs)('span', {
                           'aria-hidden': !0,
-                          children: [null != a ? (0, r.jsx)(Z.Z, Q({ className: X.roleIcon }, a)) : null, n, ' \u2014 ', o]
+                          children: [null != a ? (0, r.jsx)(Z.Z, J({ className: X.roleIcon }, a)) : null, n, ' \u2014 ', o]
                       })
                   ]
               });
@@ -353,7 +353,7 @@ class eo extends i.Component {
                                             c = ee(n, ['ref', 'role']);
                                         return (0, r.jsx)(
                                             f.aVo,
-                                            Q(
+                                            J(
                                                 {
                                                     innerRole: s,
                                                     innerAriaLabel: K.intl.string(K.t['9Oq93t']),
@@ -386,17 +386,17 @@ class eo extends i.Component {
     }
     constructor(...e) {
         super(...e),
-            J(this, '_list', null),
-            J(this, '_areActivitiesExperimentallyHidden', !1),
-            J(this, 'lastReportedAnalyticsChannel', void 0),
-            J(this, 'setList', (e) => {
+            Q(this, '_list', null),
+            Q(this, '_areActivitiesExperimentallyHidden', !1),
+            Q(this, 'lastReportedAnalyticsChannel', void 0),
+            Q(this, 'setList', (e) => {
                 (this._list = e), (this.props.listRef.current = e);
             }),
-            J(this, 'renderSection', (e) => {
+            Q(this, 'renderSection', (e) => {
                 let { section: t } = e,
                     { groups: n, channel: l } = this.props,
                     a = n[t];
-                if ((0, O.R)(a)) return (0, i.createElement)(O.Z, $(Q({}, a), { key: 'section-'.concat(t) }));
+                if ((0, O.R)(a)) return (0, i.createElement)(O.Z, $(J({}, a), { key: 'section-'.concat(t) }));
                 if (0 === t) {
                     let { key: e } = a;
                     return (0, r.jsx)(
@@ -407,7 +407,7 @@ class eo extends i.Component {
                             inlineSpecs: en,
                             children: (0, i.createElement)(
                                 el,
-                                $(Q({}, a), {
+                                $(J({}, a), {
                                     key: 'section-'.concat(e),
                                     guildId: l.guild_id
                                 })
@@ -418,20 +418,20 @@ class eo extends i.Component {
                 }
                 return (0, i.createElement)(
                     el,
-                    $(Q({}, a), {
+                    $(J({}, a), {
                         key: 'section-'.concat(t),
                         guildId: l.guild_id
                     })
                 );
             }),
-            J(this, 'getRowProps', (e) => {
+            Q(this, 'getRowProps', (e) => {
                 let { groups: t, rows: n } = this.props,
                     r = t[e.section];
                 if (null == r) return null;
                 let { index: i } = r;
                 return null == i || 'row' !== e.type ? null : n[i + 1 + e.row];
             }),
-            J(this, 'renderRow', (e) => {
+            Q(this, 'renderRow', (e) => {
                 let { section: t, row: n, rowIndex: i } = e,
                     { channel: l } = this.props,
                     a = this.getRowProps(e);
@@ -464,7 +464,7 @@ class eo extends i.Component {
                         null != a.entry.original_id && (e += '-'.concat(a.entry.original_id));
                         let t = (0, r.jsx)(
                             I.ZP,
-                            $(Q({}, a), {
+                            $(J({}, a), {
                                 channel: this.props.channel,
                                 index: i
                             }),
@@ -476,10 +476,10 @@ class eo extends i.Component {
                 }
                 return (0, r.jsx)(ea, { index: i }, 'placeholder-'.concat(t, ':').concat(n));
             }),
-            J(this, 'handleScroll', () => {
+            Q(this, 'handleScroll', () => {
                 this.updateSubscription(), this.updateMaxContentFeedRowSeen();
             }),
-            J(
+            Q(
                 this,
                 'updateMaxContentFeedRowSeen',
                 s().debounce(() => {
@@ -490,12 +490,12 @@ class eo extends i.Component {
                     this.props.updateMaxContentFeedRowSeen(r);
                 }, 50)
             ),
-            J(this, 'getContentFeedGroup', () => {
+            Q(this, 'getContentFeedGroup', () => {
                 let e = this.props.groups[S.T];
                 if ((0, O.R)(e)) return e;
             }),
-            J(this, 'hasContentFeed', () => null != this.getContentFeedGroup()),
-            J(this, 'getRowHeightComputer', () => {
+            Q(this, 'hasContentFeed', () => null != this.getContentFeedGroup()),
+            Q(this, 'getRowHeightComputer', () => {
                 let e = this.getContentFeedGroup(),
                     { rowHeight: t } = this.props;
                 if (null != e) {
@@ -511,11 +511,11 @@ class eo extends i.Component {
                 }
                 return t;
             }),
-            J(this, 'getContentFeedHeight', () => {
+            Q(this, 'getContentFeedHeight', () => {
                 let e = this.getContentFeedGroup();
                 return null != e ? e.feedHeight + this.props.sectionHeight : 0;
             }),
-            J(
+            Q(
                 this,
                 'updateSubscription',
                 s().debounce(() => {
@@ -531,7 +531,7 @@ class eo extends i.Component {
                     });
                 }, 50)
             ),
-            J(this, 'trackMemberListViewed', () => {
+            Q(this, 'trackMemberListViewed', () => {
                 var e;
                 if (this.lastReportedAnalyticsChannel === this.props.channel.id) return;
                 let t = null == (e = this._list) ? void 0 : e.getItems(),
@@ -557,7 +557,7 @@ class eo extends i.Component {
                         num_users_visible_with_nameplate: 0
                     }
                 );
-                (this.lastReportedAnalyticsChannel = this.props.channel.id), C.ZP.trackWithMetadata(q.rMx.MEMBER_LIST_VIEWED, Q({}, i));
+                (this.lastReportedAnalyticsChannel = this.props.channel.id), C.ZP.trackWithMetadata(q.rMx.MEMBER_LIST_VIEWED, J({}, i));
             });
     }
 }
@@ -635,7 +635,7 @@ function es(e) {
                 navigator: E,
                 children: (0, r.jsx)(
                     eo,
-                    $(Q({}, e, s), {
+                    $(J({}, e, s), {
                         version: m,
                         groups: p,
                         rows: d,

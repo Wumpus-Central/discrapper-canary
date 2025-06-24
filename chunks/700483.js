@@ -47,8 +47,8 @@ var r = n(255367),
     q = n(427679),
     K = n(368442),
     X = n(600518),
-    J = n(485287),
-    Q = n(754277),
+    Q = n(485287),
+    J = n(754277),
     $ = n(719100),
     ee = n(184805),
     et = n(643632),
@@ -214,9 +214,9 @@ function ed(e) {
 function ep(e) {
     let { channelId: t } = e,
         { parentAnalyticsLocation: n } = (0, p.ZP)(),
-        i = (0, o.e7)([Q.Z], () => Q.Z.isMuted()),
-        l = (0, J.pp)(t),
-        a = (0, o.e7)([Q.Z], () => Q.Z.shouldPlay());
+        i = (0, o.e7)([J.Z], () => J.Z.isMuted()),
+        l = (0, Q.pp)(t),
+        a = (0, o.e7)([J.Z], () => J.Z.shouldPlay());
     return l
         ? (0, r.jsx)(w.d, {
               isTrayButton: !0,

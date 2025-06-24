@@ -1,76 +1,76 @@
 n.d(t, { Z: () => b });
-var r = n(255367);
+var i = n(255367);
 n(73800);
-var i = n(442837),
-    o = n(481060),
-    l = n(846027),
-    c = n(131951),
-    a = n(594174),
+var l = n(442837),
+    r = n(481060),
+    o = n(846027),
+    a = n(131951),
+    s = n(594174),
     u = n(36703),
-    s = n(358085),
-    d = n(65154),
+    d = n(358085),
+    c = n(65154),
     f = n(388032);
 function b(e) {
     var t;
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.Yn.DEFAULT,
-        b = (0, i.e7)([c.Z], () => c.Z.getLocalVolume(e, n), [e, n]),
-        g = e === (null == (t = a.default.getCurrentUser()) ? void 0 : t.id),
-        O = n === d.Yn.STREAM;
-    return g
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.Yn.DEFAULT,
+        b = (0, l.e7)([a.Z], () => a.Z.getLocalVolume(e, n), [e, n]),
+        Z = e === (null == (t = s.default.getCurrentUser()) ? void 0 : t.id),
+        g = n === c.Yn.STREAM;
+    return Z
         ? null
-        : (0, r.jsx)(o.II_, {
+        : (0, i.jsx)(r.II_, {
               id: 'user-volume',
-              label: O ? f.intl.string(f.t.t4JBnJ) : f.intl.string(f.t.m7TNdH),
-              control: (t, i) => {
-                  var c, a;
-                  return (0, r.jsx)(
-                      o._wy,
-                      ((c = (function (e) {
+              label: g ? f.intl.string(f.t.t4JBnJ) : f.intl.string(f.t.m7TNdH),
+              control: (t, l) => {
+                  var a, s;
+                  return (0, i.jsx)(
+                      r._wy,
+                      ((a = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},
-                                  r = Object.keys(n);
+                                  i = Object.keys(n);
                               'function' == typeof Object.getOwnPropertySymbols &&
-                                  (r = r.concat(
+                                  (i = i.concat(
                                       Object.getOwnPropertySymbols(n).filter(function (e) {
                                           return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                       })
                                   )),
-                                  r.forEach(function (t) {
-                                      var r;
-                                      (r = n[t]),
+                                  i.forEach(function (t) {
+                                      var i;
+                                      (i = n[t]),
                                           t in e
                                               ? Object.defineProperty(e, t, {
-                                                    value: r,
+                                                    value: i,
                                                     enumerable: !0,
                                                     configurable: !0,
                                                     writable: !0
                                                 })
-                                              : (e[t] = r);
+                                              : (e[t] = i);
                                   });
                           }
                           return e;
                       })({}, t)),
-                      (a = a =
+                      (s = s =
                           {
-                              ref: i,
+                              ref: l,
                               value: (0, u.P)(b),
-                              maxValue: s.isPlatformEmbedded ? 200 : 100,
-                              onChange: (t) => l.Z.setLocalVolume(e, (0, u.A)(t), n),
-                              'aria-label': O ? f.intl.string(f.t.t4JBnJ) : f.intl.string(f.t.m7TNdH)
+                              maxValue: d.isPlatformEmbedded ? 200 : 100,
+                              onChange: (t) => o.Z.setLocalVolume(e, (0, u.A)(t), n),
+                              'aria-label': g ? f.intl.string(f.t.t4JBnJ) : f.intl.string(f.t.m7TNdH)
                           }),
                       Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(c, Object.getOwnPropertyDescriptors(a))
+                          ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(s))
                           : (function (e, t) {
                                 var n = Object.keys(e);
                                 if (Object.getOwnPropertySymbols) {
-                                    var r = Object.getOwnPropertySymbols(e);
-                                    n.push.apply(n, r);
+                                    var i = Object.getOwnPropertySymbols(e);
+                                    n.push.apply(n, i);
                                 }
                                 return n;
-                            })(Object(a)).forEach(function (e) {
-                                Object.defineProperty(c, e, Object.getOwnPropertyDescriptor(a, e));
+                            })(Object(s)).forEach(function (e) {
+                                Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(s, e));
                             }),
-                      c)
+                      a)
                   );
               }
           });

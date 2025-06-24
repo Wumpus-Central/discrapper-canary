@@ -51,8 +51,8 @@ var r = n(255367),
     q = n(302270),
     K = n(308177),
     X = n(700483),
-    J = n(686468),
-    Q = n(801405),
+    Q = n(686468),
+    J = n(801405),
     $ = n(903108),
     ee = n(981631),
     et = n(354459),
@@ -106,7 +106,7 @@ function ec(e) {
             var e;
             return null != (e = null == a ? void 0 : a.window) ? e : window;
         }, [a]),
-        x = (0, Q.Z)({
+        x = (0, J.Z)({
             channel: t,
             appContext: n,
             popoutOpen: l,
@@ -185,7 +185,7 @@ function ed(e) {
     return (
         w && (k = '0px'),
         (l = w
-            ? (0, r.jsx)(J.Z, {
+            ? (0, r.jsx)(Q.Z, {
                   channel: c,
                   onContinueClick: () => {
                       (0, z.Ku)(!1), O || (0, F.TM)(c);
