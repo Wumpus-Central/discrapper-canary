@@ -15546,12 +15546,7 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     display: inline-flex;
     line-height: 16px !important;
     padding: 0 4px;
-    transition: background .1s ease-in-out;
     vertical-align: middle
-}
-
-.chipletContainerInner__10651:hover {
-    background: var(--background-mod-faint)
 }
 
 .chipletContainerInline__10651 {
@@ -15559,7 +15554,12 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 }
 
 .clickable__10651 {
-    cursor: pointer
+    cursor: pointer;
+    transition: background .1s ease-in-out
+}
+
+.clickable__10651:hover {
+    background: var(--bg-mod-faint)
 }
 
 .text__10651 {
