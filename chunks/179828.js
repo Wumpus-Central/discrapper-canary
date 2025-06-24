@@ -85,15 +85,15 @@ function P(e) {
         h = f && null != c,
         P = r.useRef(null),
         E = r.useMemo(() => 'roles-'.concat((0, i.Z)()), []),
-        S = (0, o.ZP)({
+        T = (0, o.ZP)({
             id: E,
             isEnabled: !0,
             scrollToStart: b.Cyb,
             scrollToEnd: b.Cyb,
             wrap: !0
         }),
-        T = u.length,
-        N = 0 === T ? x.intl.string(x.t['vR7M+/']) : x.intl.formatToPlainString(x.t.PCs0oq, { numRoles: T }),
+        S = u.length,
+        N = 0 === S ? x.intl.string(x.t['vR7M+/']) : x.intl.formatToPlainString(x.t.PCs0oq, { numRoles: S }),
         A = u.map((e) => {
             var r;
             return (0, l.jsx)(
@@ -109,7 +109,7 @@ function P(e) {
             );
         });
     return (0, l.jsx)(s.bG, {
-        navigator: S,
+        navigator: T,
         children: (0, l.jsx)(s.SJ, {
             children: (e) => {
                 var { ref: n } = e,
@@ -133,7 +133,7 @@ function P(e) {
                                         buttonRef: P,
                                         guild: a,
                                         guildMember: c,
-                                        numRoles: T,
+                                        numRoles: S,
                                         highestRole: d,
                                         onAddRole: p
                                     })
@@ -152,7 +152,7 @@ function E(e) {
         [j, m] = (0, a.Wu)([f.Z], () => [f.Z.getGuild(i), f.Z.getRoles(i)]),
         O = (0, a.e7)([d.ZP], () => d.ZP.getMember(i, n.id)),
         E = null == O ? void 0 : O.roles,
-        S = r.useMemo(
+        T = r.useMemo(
             () =>
                 null == E || 0 === E.length
                     ? []
@@ -166,7 +166,7 @@ function E(e) {
                           }),
             [m, E]
         ),
-        [T] = (0, a.Wu)([p.Z], () => [p.Z.can(b.Plq.MANAGE_ROLES, j), p.Z.getGuildVersion(i)]),
+        [S] = (0, a.Wu)([p.Z], () => [p.Z.can(b.Plq.MANAGE_ROLES, j), p.Z.getGuildVersion(i)]),
         N = r.useCallback(
             (e) => {
                 var t, l;
@@ -185,8 +185,8 @@ function E(e) {
             [E, i, n.id, s]
         );
     if (null == j) return null;
-    let C = T && null != O;
-    return 0 !== S.length || C
+    let C = S && null != O;
+    return 0 !== T.length || C
         ? (0, l.jsx)(
               h.Z,
               Z(y({ heading: x.intl.string(x.t.LPJmLy) }, o), {
@@ -195,9 +195,9 @@ function E(e) {
                       currentUser: t,
                       guild: j,
                       guildMember: O,
-                      roles: S,
+                      roles: T,
                       highestRole: g.e9(j, t.id),
-                      canManageRoles: T,
+                      canManageRoles: S,
                       onAddRole: A,
                       onRemoveRole: N
                   })

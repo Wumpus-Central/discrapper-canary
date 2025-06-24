@@ -9,14 +9,14 @@ var c = t(444141),
     l = t(664794),
     s = t(228168);
 function u(e) {
-    let { user: n, guildId: t, channelId: u, displayProfile: f, onClose: _ } = e,
+    let { user: n, guildId: t, channelId: u, displayProfile: _, onClose: f } = e,
         { interactionType: p } = (0, i.Xo)(),
         m = (0, c.Z)({
             user: n,
             guildId: t,
             channelId: u,
-            displayProfile: f,
-            onClose: _
+            displayProfile: _,
+            onClose: f
         });
     return (0, o.jsxs)(a.Z, {
         children: [
@@ -25,7 +25,7 @@ function u(e) {
                 user: n,
                 guildId: t,
                 channelId: u,
-                onClose: _
+                onClose: f
             }),
             (0, o.jsx)(r.Z, {
                 shouldShowTooltip: null === p,

@@ -259,8 +259,9 @@ let x = {
     },
     [v.Odu.NOTIFICATIONS]: {
         renderWidget(e) {
-            let { locked: t, showEmpty: n } = e;
+            let { locked: t, showEmpty: n, widget: r } = e;
             return (0, i.jsx)(y.Z, {
+                pinned: r.pinned,
                 locked: t,
                 showEmpty: n
             });

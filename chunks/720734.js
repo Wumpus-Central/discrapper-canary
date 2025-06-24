@@ -110,8 +110,8 @@ var i = n(255367),
     eJ = n(823379),
     e$ = n(74538),
     e0 = n(374023),
-    e1 = n(51144),
-    e3 = n(998502),
+    e3 = n(51144),
+    e1 = n(998502),
     e8 = n(578817),
     e6 = n(870569),
     e2 = n(345243),
@@ -169,7 +169,7 @@ function ts(e, t) {
         e
     );
 }
-let tl = e3.ZP.getEnableHardwareAcceleration() ? f.Xo$ : f.qEK,
+let tl = e1.ZP.getEnableHardwareAcceleration() ? f.Xo$ : f.qEK,
     ta = 2 * eQ.Z.Millis.MINUTE,
     to = 3 * eQ.Z.Millis.SECOND;
 function tc(e) {
@@ -374,7 +374,7 @@ class td extends r.PureComponent {
               ? (0, i.jsx)(N.Z, {
                     hoverText: l,
                     forceHover: e,
-                    children: (0, i.jsx)(I.Z, { text: e1.ZP.humanizeStatus(s) })
+                    children: (0, i.jsx)(I.Z, { text: e3.ZP.humanizeStatus(s) })
                 })
               : l;
     }
@@ -598,7 +598,7 @@ class td extends r.PureComponent {
                     { shouldShowNametagTooltip: t, copiedStreak: n } = this.state;
                 if (null == e) return;
                 (0, eK.JG)(
-                    e1.ZP.getUserTag(e, {
+                    e3.ZP.getUserTag(e, {
                         decoration: 'never',
                         identifiable: 'always'
                     })
@@ -645,7 +645,7 @@ class td extends r.PureComponent {
                           children: [
                               (0, i.jsx)('div', {
                                   className: tn.panelTitleContainer,
-                                  children: (0, i.jsx)(e5.Z, { children: e1.ZP.getName(e) })
+                                  children: (0, i.jsx)(e5.Z, { children: e3.ZP.getName(e) })
                               }),
                               (0, i.jsx)('div', {
                                   className: tn.panelSubtextContainer,
@@ -723,7 +723,7 @@ function tm() {
         }),
         a = (0, d.e7)([eZ.Z], () => eZ.Z.getAnyStreamForUser(n)),
         c = (0, C.Z)({ userId: n }),
-        m = e1.ZP.useUserTag(t, { decoration: 'never' }),
+        m = e3.ZP.useUserTag(t, { decoration: 'never' }),
         g = (0, d.e7)([eF.Z], () => eF.Z.hidePersonalInformation),
         p = (0, d.e7)([eU.Z, ek.Z], () => {
             let e = eU.Z.getChannelId();

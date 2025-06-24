@@ -9,8 +9,8 @@ var c = t(442837),
     l = t(648052),
     s = t(537006),
     u = t(681837),
-    f = t(91433),
-    _ = t(944043),
+    _ = t(91433),
+    f = t(944043),
     p = t(502762),
     m = t(530),
     I = t(740628),
@@ -20,7 +20,7 @@ var c = t(442837),
     y = t(405666);
 function v(e) {
     var n;
-    let { user: t, currentUser: v, guildId: g, channelId: Z, displayProfile: j, initialSection: A, initialSubsection: N, onClose: O } = e,
+    let { user: t, currentUser: v, guildId: Z, channelId: g, displayProfile: j, initialSection: A, initialSubsection: O, onClose: N } = e,
         { relationshipType: C, originApplicationId: P } = (0, c.cj)([a.Z], () => ({
             relationshipType: a.Z.getRelationshipType(t.id),
             originApplicationId: a.Z.getOriginApplicationId(t.id)
@@ -28,12 +28,12 @@ function v(e) {
         T = (0, i.vh)(t.id),
         w = t.id === v.id,
         S = (0, d.I5)(v),
-        E = r.ZP.useName(null == j ? void 0 : j.guildId, Z, t),
+        E = r.ZP.useName(null == j ? void 0 : j.guildId, g, t),
         M = (0, h.Z)({
             user: t,
             currentUser: v,
-            guildId: g,
-            initialSubsection: N
+            guildId: Z,
+            initialSubsection: O
         });
     return (0, o.jsxs)('div', {
         className: y.body,
@@ -51,17 +51,17 @@ function v(e) {
                 tags: (0, o.jsx)(l.Z, {
                     displayProfile: j,
                     themeType: b.lY.MODAL,
-                    onClose: O
+                    onClose: N
                 })
             }),
             C === x.OGo.PENDING_INCOMING &&
                 (0, o.jsx)(p.Z.Overlay, {
                     className: y.bannerContainer,
-                    children: (0, o.jsx)(f.Z, {
+                    children: (0, o.jsx)(_.Z, {
                         user: t,
                         applicationId: P,
                         guildId: null != (n = null == j ? void 0 : j.guildId) ? n : void 0,
-                        channelId: Z,
+                        channelId: g,
                         className: y.friendRequestBanner
                     })
                 }),
@@ -71,10 +71,10 @@ function v(e) {
                     p.Z.Overlay,
                     {
                         className: y.bannerContainer,
-                        children: (0, o.jsx)(f.Z, {
+                        children: (0, o.jsx)(_.Z, {
                             user: t,
                             guildId: null != (n = null == j ? void 0 : j.guildId) ? n : void 0,
-                            channelId: Z,
+                            channelId: g,
                             isGameRelationship: !0,
                             applicationId: e.applicationId,
                             className: y.friendRequestBanner
@@ -83,7 +83,7 @@ function v(e) {
                     e.applicationId
                 );
             }),
-            (0, o.jsx)(_.Z, {
+            (0, o.jsx)(f.Z, {
                 user: t,
                 className: y.bannerContainer
             }),
@@ -91,18 +91,18 @@ function v(e) {
                 (0, o.jsx)(s.Z, {
                     className: y.bannerContainer,
                     isPremiumUser: S,
-                    onInteraction: O
+                    onInteraction: N
                 }),
             (0, o.jsx)(I.Z, {
                 user: t,
                 currentUser: v,
                 displayProfile: j,
-                guildId: g,
-                channelId: Z,
+                guildId: Z,
+                channelId: g,
                 items: M,
                 initialSection: A,
-                initialSubsection: N,
-                onClose: O
+                initialSubsection: O,
+                onClose: N
             })
         ]
     });

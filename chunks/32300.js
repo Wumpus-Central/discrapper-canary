@@ -4,7 +4,9 @@ n.d(t, {
     Rb: () => s,
     XE: () => c,
     Yo: () => u,
-    o4: () => o
+    dj: () => d,
+    o4: () => o,
+    td: () => f
 });
 var r = n(818083),
     i = n(987338);
@@ -78,4 +80,22 @@ function c(e) {
 }
 function u(e) {
     return s(e).allowNowPlaying;
+}
+let d = (0, r.B)({
+    kind: 'user',
+    id: '2025-06_overlay_raf_manager',
+    label: 'Overlay RAF Manager',
+    commonTriggerPoint: i.$P.CONNECTION_OPEN,
+    defaultConfig: { enabled: !1 },
+    treatments: [
+        {
+            id: 1,
+            label: 'Enable RAF Manager',
+            config: { enabled: !0 }
+        }
+    ]
+});
+function f(e) {
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+    return d.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }

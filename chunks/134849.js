@@ -19,13 +19,14 @@ function v(e) {
     return e.notification.id;
 }
 function b(e, t, n, r) {
-    let { index: o, notification: l, locked: a } = t;
+    let { index: o, notification: l, locked: a, pinned: s } = t;
     return (0, i.jsx)(
         p.Z,
         {
             index: o,
             notification: l,
             locked: a,
+            pinned: s,
             transitionState: n,
             cleanUp: r
         },
@@ -40,40 +41,41 @@ function E(e) {
 }
 let _ = (e) => r.useState(() => new h.AS(e))[0],
     x = r.memo(function (e) {
-        let { locked: t, showEmpty: n = !0 } = e,
-            p = (0, o.e7)(
+        let { locked: t, pinned: n, showEmpty: p = !0 } = e,
+            y = (0, o.e7)(
                 [f.Z, c.Z],
                 () => {
                     if (c.Z.isNotificationDisabled(a.OverlayNotificationDisabledSetting.TEXT_CHAT)) return O;
                     let e = [],
-                        n = 0;
-                    for (let i of f.Z.getNotifications()) {
-                        if (n > 4) break;
-                        (!t || i.status !== m._1z.TIMED_OUT) &&
+                        i = 0;
+                    for (let r of f.Z.getNotifications()) {
+                        if (i > 4) break;
+                        (!t || r.status !== m._1z.TIMED_OUT) &&
                             (e.push({
-                                index: n,
+                                index: i,
                                 locked: t,
-                                notification: i
+                                pinned: n,
+                                notification: r
                             }),
-                            n++);
+                            i++);
                     }
                     return e;
                 },
-                [t],
+                [t, n],
                 u.E6
             ),
-            y = _(t);
-        return (r.useLayoutEffect(() => y.updateState(p, t)), r.useLayoutEffect(() => (y.initialize((0, d.i)()), () => y.cleanUp()), [y]), 0 !== p.length || t)
+            x = _(t);
+        return (r.useLayoutEffect(() => x.updateState(y, t)), r.useLayoutEffect(() => (x.initialize((0, d.i)()), () => x.cleanUp()), [x]), 0 !== y.length || t)
             ? (0, i.jsx)(h.S4.Provider, {
-                  value: y,
+                  value: x,
                   children: (0, i.jsx)(l.W3x, {
-                      items: p,
+                      items: y,
                       renderItem: b,
                       getItemKey: v,
                       wrapChildren: E
                   })
               })
-            : n
+            : p
               ? t
                   ? null
                   : (0, i.jsx)(s.E, {

@@ -584,6 +584,9 @@ class eN extends (r = i.ZP.Store) {
     getForcedRenderMode() {
         return P;
     }
+    isAnyOverlayRendering() {
+        return Object.values(k).some((e) => e.state === l.mM.OVERLAY_RENDERING);
+    }
     getOverlayMethod(e) {
         var t, n;
         return null != (n = null == (t = Z(e)) ? void 0 : t.overlayMethod) ? n : l.gl.Disabled;

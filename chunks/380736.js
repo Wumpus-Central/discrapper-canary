@@ -198,44 +198,44 @@ function C(e) {
 }
 function j(e) {
     var t, n;
-    let { notification: l, index: o, locked: s, transitionState: c, cleanUp: a } = e,
+    let { notification: l, index: o, locked: s, pinned: c, transitionState: a, cleanUp: d } = e,
         {
-            id: d,
-            props: { onNotificationShow: h, onDismissClick: p, onNotificationClick: m, onConfirmClick: f, onCancelClick: v, renderFooter: g, animationWrapperClassName: y }
+            id: h,
+            props: { onNotificationShow: p, onDismissClick: m, onNotificationClick: f, onConfirmClick: v, onCancelClick: g, renderFooter: y, animationWrapperClassName: j }
         } = l,
-        j = r.useCallback(() => {
-            h(d);
-        }, [h, d]),
-        w = r.useCallback(
-            (e) => {
-                u.Z.updateNotificationStatus(d), null == p || p(e, d);
-            },
-            [d, p]
-        ),
+        w = r.useCallback(() => {
+            p(h);
+        }, [p, h]),
         k = r.useCallback(
             (e) => {
-                null == m || m(e, d);
+                u.Z.updateNotificationStatus(h), null == m || m(e, h);
             },
-            [m, d]
+            [h, m]
         ),
         P = r.useCallback(
             (e) => {
-                null == f || f(e, d);
+                null == f || f(e, h);
             },
-            [f, d]
+            [f, h]
         ),
         Z = r.useCallback(
             (e) => {
-                null == v || v(e, d);
+                null == v || v(e, h);
             },
-            [v, d]
+            [v, h]
         ),
-        E = r.useCallback((e, t) => (null == g ? void 0 : g(e, d, t)), [g, d]),
+        E = r.useCallback(
+            (e) => {
+                null == g || g(e, h);
+            },
+            [g, h]
+        ),
+        S = r.useCallback((e, t) => (null == y ? void 0 : y(e, h, t)), [y, h]),
         {
-            props: { onNotificationShow: S, onDismissClick: z, renderFooter: N, onNotificationClick: D, onConfirmClick: T, onCancelClick: M, disableClickableRegions: L = !1 },
-            status: R
+            props: { onNotificationShow: z, onDismissClick: N, renderFooter: D, onNotificationClick: T, onConfirmClick: M, onCancelClick: L, disableClickableRegions: R = !1 },
+            status: I
         } = l,
-        I = (function (e, t) {
+        W = (function (e, t) {
             if (null == e) return {};
             var n,
                 i,
@@ -254,15 +254,17 @@ function j(e) {
             }
             return r;
         })(l.props, ['onNotificationShow', 'onDismissClick', 'renderFooter', 'onNotificationClick', 'onConfirmClick', 'onCancelClick', 'disableClickableRegions']),
-        { ref: W, springs: _ } = (0, b.X4)(l.id, c, a);
+        _ = !c && s,
+        A = 0 === o && !R && !_,
+        { ref: U, springs: F } = (0, b.X4)(l.id, a, d);
     return (0, i.jsx)(x, {
-        transitionState: c,
-        springs: _,
+        transitionState: a,
+        springs: F,
         index: o,
         locked: s,
-        animationWrapperClassName: y,
+        animationWrapperClassName: j,
         children: (0, i.jsx)(C, {
-            observe: 0 === o && !L,
+            observe: A,
             children: (0, i.jsx)(
                 O,
                 ((t = (function (e) {
@@ -289,23 +291,23 @@ function j(e) {
                             });
                     }
                     return e;
-                })({}, I)),
+                })({}, W)),
                 (n = n =
                     {
-                        title: 'function' == typeof I.title ? I.title(w) : I.title,
-                        containerRef: W,
+                        title: 'function' == typeof W.title ? W.title(k) : W.title,
+                        containerRef: U,
                         notificationId: l.id,
-                        onNotificationShow: 0 === o ? j : void 0,
-                        onDismissClick: w,
-                        onNotificationClick: null != m ? k : void 0,
-                        onConfirmClick: null != f ? P : void 0,
-                        onCancelClick: null != v ? Z : void 0,
-                        renderFooter: E,
+                        onNotificationShow: 0 === o ? w : void 0,
+                        onDismissClick: k,
+                        onNotificationClick: null != f ? P : void 0,
+                        onConfirmClick: null != v ? Z : void 0,
+                        onCancelClick: null != g ? E : void 0,
+                        renderFooter: S,
                         expand: !1,
                         index: o,
                         locked: s,
-                        status: R,
-                        contentOpacity: _.contentOpacity
+                        status: I,
+                        contentOpacity: F.contentOpacity
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

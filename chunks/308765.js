@@ -187,6 +187,11 @@ let i = {
         inlineRequire: () => n(645644).Z,
         neverLoadBeforeConnectionOpen: !0
     },
+    OverlayWindowRAFManager: {
+        actions: ['OVERLAY_UPDATE_OVERLAY_STATE'],
+        inlineRequire: () => n(556809).Z,
+        neverLoadBeforeConnectionOpen: !0
+    },
     ParticipantFocusManager: {
         inlineRequire: () => n(14516).Z,
         hasStoreChangeListeners: !0

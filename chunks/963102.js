@@ -122,7 +122,7 @@ function L(e) {
     w &&
         A.push({
             tab: y.AW.ORBS,
-            displayText: P.intl.string(P.t['KUYR+P'])
+            displayText: P.intl.string(P.t.EBYkzs)
         });
     let R = n ? x.DR : a,
         Z = f === y.AW.ORBS ? j.ZY5.SHOP_ORBS_TAB : j.ZY5.COLLECTIBLES_SHOP,

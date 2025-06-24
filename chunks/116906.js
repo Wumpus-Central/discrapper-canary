@@ -22,8 +22,8 @@ var r = t(442837),
     y = t(316879),
     Z = t(301150);
 function I(e) {
-    let { user: n, currentUser: t, displayProfile: I, guildId: P, subsection: E, onClose: S } = e,
-        { voiceActivityStatusEnabled: T } = (0, o.U)({ location: 'UserProfileModalActivity' }),
+    let { user: n, currentUser: t, displayProfile: I, guildId: P, subsection: E, onClose: T } = e,
+        { voiceActivityStatusEnabled: S } = (0, o.U)({ location: 'UserProfileModalActivity' }),
         N = (0, d.b)({ location: 'UserProfileModalActivity' }),
         { live: A, recent: C, stream: w } = (0, f.Z)(n.id),
         { voiceChannel: _, voiceActivity: R } = (0, p.Z)({
@@ -37,15 +37,15 @@ function I(e) {
             return e === i.Skl.OFFLINE || e === i.Skl.INVISIBLE;
         }),
         D = A.length > 0 || null != w,
-        B = T && null == w && null == R && null != _,
-        G = !L && (D || B),
-        k = C.length > 0;
-    return G || k || !M
+        B = S && null == w && null == R && null != _,
+        k = !L && (D || B),
+        G = C.length > 0;
+    return k || G || !M
         ? (0, l.jsxs)(i.zJl, {
               className: y.scroller,
               fade: !0,
               children: [
-                  G
+                  k
                       ? (0, l.jsx)(g.Z, {
                             'aria-label': O.intl.string(O.t.J6STd3),
                             children: (0, l.jsxs)('ul', {
@@ -58,7 +58,7 @@ function I(e) {
                                                 user: n,
                                                 currentUser: t,
                                                 voiceChannel: _,
-                                                onClose: S
+                                                onClose: T
                                             })
                                         }),
                                     null != w &&
@@ -68,7 +68,7 @@ function I(e) {
                                                 user: n,
                                                 currentUser: t,
                                                 stream: w,
-                                                onClose: S,
+                                                onClose: T,
                                                 profileGuildId: null == I ? void 0 : I.guildId
                                             })
                                         }),
@@ -80,7 +80,7 @@ function I(e) {
                                                     user: n,
                                                     currentUser: t,
                                                     activity: e,
-                                                    onClose: S,
+                                                    onClose: T,
                                                     profileGuildId: null == I ? void 0 : I.guildId
                                                 })
                                             },
@@ -91,7 +91,7 @@ function I(e) {
                             })
                         })
                       : null,
-                  k
+                  G
                       ? (0, l.jsx)(g.Z, {
                             heading: O.intl.string(O.t.M0zgnZ),
                             introText: U
@@ -120,7 +120,7 @@ function I(e) {
                                                 currentUser: t,
                                                 entry: e,
                                                 profileGuildId: null == I ? void 0 : I.guildId,
-                                                onClose: S
+                                                onClose: T
                                             })
                                         },
                                         e.id

@@ -1,6 +1,7 @@
 n.d(t, {
     BH: () => s,
-    MH: () => o
+    MH: () => o,
+    nC: () => d
 });
 var a = n(442837),
     r = n(524437),
@@ -17,4 +18,7 @@ function o() {
 }
 function c(e, t) {
     return e === r.Tv.ACTIVITY_NOTIFICATIONS_UNSET ? (t ? r.Tv.ONLY_GAMES_PLAYED : r.Tv.ACTIVITY_NOTIFICATIONS_ENABLED) : e !== r.Tv.ONLY_GAMES_PLAYED || t ? e : r.Tv.ACTIVITY_NOTIFICATIONS_ENABLED;
+}
+function d() {
+    return i.Qq.useSetting();
 }
