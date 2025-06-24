@@ -15589,7 +15589,8 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     background: var(--background-mod-strong)
 }
 
-.unselectable__10651 {
+.tagText__10651 {
+    text-indent: 0;
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none
