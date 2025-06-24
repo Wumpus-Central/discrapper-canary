@@ -1282,7 +1282,7 @@ function $(e) {
         let { children: t } = e;
         return (0, i.jsx)('div', {
             className: A.modalOutlines,
-            style: { padding: '16px' },
+            style: { padding: '24px' },
             children: t
         });
     }
@@ -1469,13 +1469,9 @@ function ee(e) {
                 }),
             (0, i.jsx)(_.G, {
                 leading: C
-                    ? (0, i.jsx)(j.XZJ, {
+                    ? (0, i.jsx)(_.B, {
                           value: !1,
-                          onChange: () => {},
-                          children: (0, i.jsx)(j.Text, {
-                              variant: 'text-sm/normal',
-                              children: "Don't show this again?"
-                          })
+                          onChange: () => {}
                       })
                     : void 0,
                 actionsFullWidth: S,

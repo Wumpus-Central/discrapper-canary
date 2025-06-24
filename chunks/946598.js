@@ -20,7 +20,6 @@ var r = {
     headerTrailingAbsolute: 'headerTrailingAbsolute__53cea',
     headerMain: 'headerMain__53cea',
     headerMainCentered: 'headerMainCentered__53cea',
-    closeButton: 'closeButton__53cea',
     content: 'content__53cea',
     contentSpacerTop: 'contentSpacerTop__53cea',
     contentSpacerTopBorder: 'contentSpacerTopBorder__53cea',

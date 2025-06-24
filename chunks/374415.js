@@ -1,27 +1,27 @@
-n.d(t, { h: () => a });
-var i = n(255367),
-    r = n(73800),
-    s = n(793030),
-    l = n(974223);
-function a(e) {
-    let { size: t = 'md', direction: n = 'horizontal', justify: a, align: o, padding: c, className: d, children: u, fullWidth: m = !1 } = e,
-        g = r.useMemo(
+n.d(t, { h: () => s });
+var r = n(255367),
+    i = n(73800),
+    a = n(793030),
+    o = n(974223);
+function s(e) {
+    let { size: t = 'md', direction: n = 'horizontal', justify: s, align: l, padding: c, className: u, children: d, fullWidth: f = !1 } = e,
+        _ = i.useMemo(
             () => ({
                 size: t,
-                fullWidth: m
+                fullWidth: f
             }),
-            [t, m]
+            [t, f]
         );
-    return (0, i.jsx)(s.Kq, {
+    return (0, r.jsx)(a.Kq, {
         direction: n,
         gap: 8,
-        justify: a,
-        align: o,
+        justify: s,
+        align: l,
         padding: c,
-        className: d,
-        children: (0, i.jsx)(l.u.Provider, {
-            value: g,
-            children: u
+        className: u,
+        children: (0, r.jsx)(o.u.Provider, {
+            value: _,
+            children: d
         })
     });
 }

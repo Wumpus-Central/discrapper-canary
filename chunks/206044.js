@@ -145,16 +145,8 @@ let _ = (0, a.animated)(u.CJ0),
             X = (0, g.t5)(i, E.dr.QUESTS_CARD, c),
             Y = (null == (t = i.userStatus) ? void 0 : t.completedAt) != null,
             V = (0, h.O5)(),
-            K = (0, g.B6)(i.config.expiresAt, {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-            }),
-            J = (0, g.B6)(b.r.build(i.config).rewardsExpireAt, {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-            }),
+            K = (0, g.B6)(i.config.expiresAt),
+            J = (0, g.B6)(b.r.build(i.config).rewardsExpireAt),
             $ = s.useMemo(() => null != i.config.cosponsorMetadata, [i]),
             ee = (e) => {
                 e.stopPropagation(),

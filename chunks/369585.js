@@ -1,11 +1,19 @@
-n.d(t, { G: () => f });
+n.d(t, {
+    B: () => y,
+    G: () => b
+});
 var r = n(255367);
 n(73800);
 var i = n(120356),
     a = n.n(i),
-    o = n(680018),
-    s = n(946598);
-function l(e, t, n) {
+    o = n(793030),
+    s = n(178940),
+    l = n(680018),
+    c = n(374415),
+    u = n(185033),
+    d = n(388032),
+    f = n(946598);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +26,7 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,12 +37,12 @@ function c(e) {
                 })
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function u(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -46,45 +54,69 @@ function u(e, t) {
     }
     return n;
 }
-function d(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function f(e) {
+function g(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = E(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function E(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+function b(e) {
     let { leading: t, actions: n = [], actionsFullWidth: i = !1 } = e;
     return null == t && n.length < 1
         ? null
         : (0, r.jsxs)('footer', {
-              className: a()(s.actionBar, s.section),
+              className: a()(f.actionBar, f.section),
               children: [
                   null != t &&
                       (0, r.jsx)('div', {
-                          className: s.actionBarLeading,
+                          className: f.actionBarLeading,
                           children: t
                       }),
                   (0, r.jsx)('div', {
-                      className: a()(s.actionBarTrailing, { [s.actionBarTrailingFullWidth]: i }),
-                      children:
-                          null == n
-                              ? void 0
-                              : n.map((e, t) =>
-                                    (0, r.jsx)(
-                                        'div',
-                                        {
-                                            className: s.actionButtonWrapper,
-                                            children: (0, r.jsx)(o.z, d(c({}, e), { fullWidth: i }))
-                                        },
-                                        t
-                                    )
-                                )
+                      className: a()(f.actionBarTrailing, { [f.actionBarTrailingFullWidth]: i }),
+                      children: (0, r.jsx)(c.h, {
+                          fullWidth: i,
+                          children: null == n ? void 0 : n.map((e, t) => (0, r.jsx)(l.z, p({}, e), t))
+                      })
                   })
               ]
           });
+}
+function y(e) {
+    var { text: t } = e,
+        n = g(e, ['text']);
+    return (0, r.jsx)(
+        s.X,
+        m(p({}, n), {
+            children: (0, r.jsx)(o.xv, {
+                variant: 'text-sm/normal',
+                children: null != t ? t : d.intl.string(u.default.m3Vfcn)
+            })
+        })
+    );
 }

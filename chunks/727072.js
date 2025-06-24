@@ -105,7 +105,7 @@ let d = {},
                     let l = Number(t),
                         a = null != (r = i[l]) ? r : [];
                     return (e[l] = a.filter((e) => e.id !== n)), e;
-                }, i);
+                }, {});
             (0, a.j)(() => {
                 e({
                     rules: g(E({}, l), { [r]: u }),
