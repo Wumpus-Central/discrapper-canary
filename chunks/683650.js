@@ -5,8 +5,8 @@ n.d(t, {
 var r,
     s = n(255367);
 n(73800);
-var i = n(120356),
-    o = n.n(i),
+var o = n(120356),
+    i = n.n(o),
     a = n(481060),
     l = n(617136),
     c = n(497505),
@@ -32,28 +32,28 @@ function g() {
 var j = (((r = {}).NOT_FOUND = 'not_found'), (r.MOBILE_ONLY = 'mobile_only'), r);
 function f(e) {
     let { questId: t, reason: n = 'not_found' } = e,
-        { containerRef: r, size: i } = (0, u.h)();
+        { containerRef: r, size: o } = (0, u.h)();
     return (
         (0, l.Zk)(m.V_.UNKNOWN_QUEST, t),
         (0, s.jsxs)('div', {
             ref: (e) => {
                 r.current = e;
             },
-            className: o()(p.container, {
-                [p.wide]: 'lg' === i,
-                [p.tall]: 'lg' !== i
+            className: i()(p.container, {
+                [p.wide]: 'lg' === o,
+                [p.tall]: 'lg' !== o
             }),
             children: [
                 (0, s.jsxs)('div', {
                     className: p.contentContainer,
                     children: [
                         (0, s.jsx)(a.X6q, {
-                            variant: 'lg' === i ? 'heading-xl/bold' : 'heading-lg/bold',
+                            variant: 'lg' === o ? 'heading-xl/bold' : 'heading-lg/bold',
                             color: 'header-primary',
                             children: x.intl.string(x.t.vnP31d)
                         }),
                         (0, s.jsx)(a.Text, {
-                            variant: 'lg' === i ? 'text-sm/medium' : 'text-xs/medium',
+                            variant: 'lg' === o ? 'text-sm/medium' : 'text-xs/medium',
                             color: 'text-normal',
                             className: p.__invalid_mobileWebCopy,
                             children: x.intl.string('mobile_only' === n ? x.t.Pag1gY : x.t.CTn0yc)

@@ -15,7 +15,7 @@ var r = n(255367),
     m = n(981631),
     b = n(388032),
     _ = n(876733);
-function O(e, t, n) {
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ function O(e, t, n) {
         e
     );
 }
-function E(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function E(e) {
                 })
             )),
             r.forEach(function (t) {
-                O(e, t, n[t]);
+                E(e, t, n[t]);
             });
     }
     return e;
@@ -103,7 +103,7 @@ class I extends i.PureComponent {
         c.Pe.updateSetting(e);
     }
     trackRestoreApplication(e, t) {
-        d.default.track(m.rMx.APPLICATION_SETTINGS_UPDATED, E({ hidden_enabled: t }, e.getAnalyticsData()));
+        d.default.track(m.rMx.APPLICATION_SETTINGS_UPDATED, O({ hidden_enabled: t }, e.getAnalyticsData()));
     }
     renderBody() {
         let { hiddenLibraryApplicationViewItems: e, installShortcutDesktop: t, installShortcutStartMenu: n } = this.props;
@@ -149,7 +149,7 @@ class I extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            O(this, 'handleRestoreHiddenLibraryApplication', (e) => {
+            E(this, 'handleRestoreHiddenLibraryApplication', (e) => {
                 let t = p.x9(e.getFlags(), m.eHb.HIDDEN);
                 o.h(e.id, e.branchId, t), this.trackRestoreApplication(e, p.yE(t, m.eHb.HIDDEN));
             });
@@ -161,5 +161,5 @@ function v() {
         installShortcutStartMenu: c.Pe.useSetting(),
         hiddenLibraryApplicationViewItems: (0, l.e7)([u.Z], () => u.Z.hiddenLibraryApplicationViewItems)
     };
-    return (0, r.jsx)(I, E({}, e));
+    return (0, r.jsx)(I, O({}, e));
 }

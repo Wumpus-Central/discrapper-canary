@@ -23,7 +23,7 @@ class u extends (r = l.PureComponent) {
         var e, t;
         let n = this.props,
             { tag: r, children: l, hoverText: o, className: u, forceHover: d } = n,
-            p = (function (e, t) {
+            f = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -59,7 +59,7 @@ class u extends (r = l.PureComponent) {
                         });
                 }
                 return e;
-            })({}, p)),
+            })({}, f)),
             (t = t =
                 {
                     className: a()(u, s.hoverRoll, {

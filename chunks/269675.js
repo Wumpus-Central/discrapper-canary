@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(430824),
     b = n(351402),
     _ = n(730647),
-    O = n(772021),
-    E = n(396828),
+    E = n(772021),
+    O = n(396828),
     y = n(293423),
     I = n(20967),
     v = n(504762),
@@ -29,7 +29,7 @@ function P(e) {
         n = (0, a.e7)([m.Z], () => m.Z.getGuild(t), [t]),
         P = (0, a.e7)([f.Z], () => f.Z.isConnected()),
         j = (0, p.Z)(t),
-        A = (0, O.Z)(t),
+        A = (0, E.Z)(t),
         Z = (0, a.e7)([b.Z], () => b.Z.isSubscriptionFetching),
         x = (0, _.f)(),
         { shouldHideGuildPurchaseEntryPoints: w, restrictionsLoading: L } = (0, h.uP)(t),
@@ -60,7 +60,7 @@ function P(e) {
                 className: T.headerBar,
                 children: [
                     (0, r.jsx)(g.Z.Icon, {
-                        icon: (0, o.GSL)(E.Z),
+                        icon: (0, o.GSL)(O.Z),
                         'aria-hidden': !0
                     }),
                     (0, r.jsx)(g.Z.Title, { children: N.intl.string(N.t['KzCF//']) })

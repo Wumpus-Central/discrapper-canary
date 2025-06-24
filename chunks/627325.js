@@ -22,8 +22,8 @@ function j(e) {
     let { columns: t, handleScroll: n, voiceListRef: i, showSectionHeaders: l = !1, query: a } = e,
         o = x(),
         j = (0, s.e7)([f.default], () => (0, p.I5)(f.default.getCurrentUser())),
-        I = P(a, j),
-        C = Math.ceil(I.length / t),
+        I = C(a, j),
+        P = Math.ceil(I.length / t),
         {
             isNativeModuleLoaded: E,
             isNativeModuleLoading: w,
@@ -97,7 +97,7 @@ function j(e) {
                                           hasNitro: j,
                                           analyticsContext: {
                                               reason: m.W.USER_SELECTION,
-                                              gridRows: C,
+                                              gridRows: P,
                                               gridColumns: t,
                                               interactedRow: e,
                                               interactedColumn: i
@@ -121,7 +121,7 @@ function j(e) {
                                     children: v.intl.string(O[e])
                                 }),
                   sectionHeaderHeight: !1 === l ? void 0 : (e) => y[e],
-                  rowCount: C,
+                  rowCount: P,
                   rowHeight: 130,
                   onScroll: n,
                   ref: i,
@@ -155,7 +155,7 @@ let x = () =>
                   return a()(n, r);
               });
     },
-    P = (e, t) =>
+    C = (e, t) =>
         (0, s.Wu)(
             [g.Z],
             () => {

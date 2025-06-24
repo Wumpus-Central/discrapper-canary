@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => _ }), n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -6,8 +6,8 @@ var r = n(255367),
     i = n(617136),
     l = n(113434),
     c = n(497505),
-    d = n(918701),
-    u = n(602667),
+    u = n(918701),
+    d = n(602667),
     p = n(341907),
     m = n(672188),
     f = n(466962),
@@ -17,31 +17,33 @@ var r = n(255367),
     b = n(168989);
 function j(e) {
     var t, n;
-    let { quest: o, className: c, questContent: u, contentPosition: j, rowIndex: v, impressionRef: _ } = e,
-        [y, O] = s.useState(!1),
-        [C, w] = s.useState([]),
-        S = (0, l.qb)(o),
-        P = s.useMemo(() => (0, d.q8)(o), [o]),
-        E = (0, i._F)(),
-        T = s.useCallback(() => {
+    let { quest: o, className: c, questContent: d, contentPosition: j, rowIndex: _, impressionRef: v, sourceQuestContent: y } = e,
+        [C, O] = s.useState(!1),
+        [S, E] = s.useState([]),
+        w = (0, l.qb)(o),
+        T = s.useMemo(() => (0, u.q8)(o), [o]),
+        P = (0, i._F)(),
+        N = s.useCallback(() => {
             O(!0),
-                E({
+                P({
                     questId: o.id,
                     event: h.rMx.QUEST_HOVER,
-                    properties: (0, i.mH)(u)
+                    properties: (0, i.mH)(d),
+                    sourceQuestContent: y
                 }),
-                P && (0, p.loadVideoQuestModal)();
-        }, [E, o.id, u, P]),
-        N = s.useCallback(() => {
+                T && (0, p.loadVideoQuestModal)();
+        }, [P, o.id, d, T, y]),
+        A = s.useCallback(() => {
             O(!1),
-                E({
+                P({
                     questId: o.id,
                     event: h.rMx.QUEST_HOVER_OFF,
-                    properties: (0, i.mH)(u)
+                    properties: (0, i.mH)(d),
+                    sourceQuestContent: y
                 });
-        }, [E, o.id, u]),
-        A = s.useContext(f.t),
-        { visibilityElementRef: k, almostVisibleInViewport: R } = (function (e) {
+        }, [P, o.id, d, y]),
+        R = s.useContext(f.t),
+        { visibilityElementRef: k, almostVisibleInViewport: B } = (function (e) {
             let [t, n] = s.useState(!1),
                 r = s.useCallback((e) => {
                     e.isIntersecting && n(!0);
@@ -58,44 +60,47 @@ function j(e) {
                 ),
                 almostVisibleInViewport: t
             };
-        })(null != (n = null == A || null == (t = A.current) ? void 0 : t.getScrollerNode()) ? n : null);
+        })(null != (n = null == R || null == (t = R.current) ? void 0 : t.getScrollerNode()) ? n : null);
     return (0, r.jsxs)('div', {
         id: 'quest-tile-'.concat(o.id),
         ref: (e) => {
-            (_.current = e), (k.current = e);
+            (v.current = e), (k.current = e);
         },
         className: a()(b.container, c),
-        onMouseEnter: T,
-        onMouseLeave: N,
-        onFocus: T,
-        onBlur: N,
+        onMouseEnter: N,
+        onMouseLeave: A,
+        onFocus: N,
+        onBlur: A,
         children: [
             (0, r.jsx)(g.Z, {
                 quest: o,
-                isHovering: y,
-                errorHints: C,
-                warningHints: S,
-                isVisibleInViewport: R
+                isHovering: C,
+                errorHints: S,
+                warningHints: w,
+                isVisibleInViewport: B,
+                sourceQuestContent: y
             }),
             (0, r.jsx)(x.Z, {
                 quest: o,
-                questContent: u,
-                isHovering: y,
+                questContent: d,
+                isHovering: C,
                 contentPosition: j,
-                rowIndex: v,
-                onReceiveErrorHints: w,
-                isVisibleInViewport: R
+                rowIndex: _,
+                onReceiveErrorHints: E,
+                isVisibleInViewport: B,
+                sourceQuestContent: y
             })
         ]
     });
 }
-function v(e) {
-    return (0, r.jsx)(u.A, {
+function _(e) {
+    return (0, r.jsx)(d.A, {
         questOrQuests: e.quest,
         questContent: e.questContent,
         questContentPosition: e.contentPosition,
         questContentRowIndex: e.rowIndex,
         trackGuildAndChannelMetadata: e.questContent === c.jn.QUESTS_EMBED,
+        sourceQuestContent: e.sourceQuestContent,
         children: (t) => {
             var n, s;
             return (0, r.jsx)(

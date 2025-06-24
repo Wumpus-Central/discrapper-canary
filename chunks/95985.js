@@ -7,14 +7,19 @@ var s = n(481060),
     i = n(644646),
     l = n(613087),
     c = n(472144),
-    d = n(46140),
-    u = n(505939);
+    u = n(46140),
+    d = n(505939);
 let p = (e) => {
     let { contentLocation: t, quest: n, progressBarRef: p, isExpanded: m, percentComplete: f, activeScreen: g } = e,
         x = (0, o.eQ)(n),
-        h = (0, o.vf)(n, m, g);
+        h = (0, o.vf)({
+            quest: n,
+            isExpanded: m,
+            activeScreen: g,
+            sourceQuestContent: a.jn.QUEST_BAR_V2
+        });
     return (0, r.jsxs)('div', {
-        className: u.questProgressWrapper,
+        className: d.questProgressWrapper,
         children: [
             (0, r.jsx)(l.l7, {
                 inState: t,
@@ -28,16 +33,17 @@ let p = (e) => {
                         size: 42,
                         strokeWidth: 3,
                         children: (0, r.jsx)(i.Z, {
-                            className: u.questProgressRewardTile,
+                            className: d.questProgressRewardTile,
                             quest: n,
                             questContent: a.jn.QUEST_BAR_V2,
                             autoplay: !1,
-                            location: d.dr.QUESTS_BAR
+                            location: u.dr.QUESTS_BAR,
+                            sourceQuestContent: a.jn.QUEST_BAR_V2
                         })
                     })
             }),
             (0, r.jsxs)('div', {
-                className: u.questProgressCopy,
+                className: d.questProgressCopy,
                 children: [
                     (0, r.jsx)(l.l7, {
                         inState: t,
@@ -45,7 +51,7 @@ let p = (e) => {
                         children: (e) =>
                             (0, r.jsx)(s.Text, {
                                 ref: e,
-                                className: u.questProgressHint,
+                                className: d.questProgressHint,
                                 color: 'header-primary',
                                 variant: 'text-sm/semibold',
                                 children: x
@@ -58,7 +64,7 @@ let p = (e) => {
                         children: (e) =>
                             (0, r.jsx)(s.Text, {
                                 ref: e,
-                                className: u.questProgressHint,
+                                className: d.questProgressHint,
                                 color: 'text-muted',
                                 variant: 'text-xs/normal',
                                 children: h

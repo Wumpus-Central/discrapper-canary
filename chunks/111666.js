@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(594174),
     b = n(482798),
     _ = n(167762),
-    O = n(151459),
-    E = n(981631),
+    E = n(151459),
+    O = n(981631),
     y = n(388032),
     I = n(398435);
 function v(e) {
@@ -68,7 +68,7 @@ function S(e) {
         b = (0, o.dQu)(o.TVs.modules.chat.INPUT_ICON_SIZE),
         S = (function () {
             let [e, t] = i.useState(null),
-                { showActivityTicker: n } = (0, O.Z)(),
+                { showActivityTicker: n } = (0, E.Z)(),
                 r = i.useRef({}),
                 l = i.useRef(null);
             return (
@@ -93,18 +93,18 @@ function S(e) {
                             let b = m.default.getUser(t);
                             if (null == b) return !1;
                             let _ = !1,
-                                O = null;
+                                E = null;
                             if (null != n) {
                                 let i = n.type;
                                 if (
                                     null != i &&
                                     (function (e) {
                                         let t = e.type;
-                                        return (t === E.IIU.PLAYING && null != e.application_id) || t === E.IIU.LISTENING || t === E.IIU.WATCHING;
+                                        return (t === O.IIU.PLAYING && null != e.application_id) || t === O.IIU.LISTENING || t === O.IIU.WATCHING;
                                     })(n)
                                 ) {
                                     let l =
-                                        i === E.IIU.WATCHING || i === E.IIU.LISTENING
+                                        i === O.IIU.WATCHING || i === O.IIU.LISTENING
                                             ? ''
                                                   .concat(i, '-')
                                                   .concat(null != (c = n.name) ? c : '', '-')
@@ -114,7 +114,7 @@ function S(e) {
                                     (null == (s = r.current[t]) ? void 0 : s.presence) !== l &&
                                         ((_ = !0),
                                         e(t, 'presence', l),
-                                        (O = {
+                                        (E = {
                                             user: b,
                                             activity: n
                                         }));
@@ -127,13 +127,13 @@ function S(e) {
                                     (null == (f = r.current[t]) ? void 0 : f.voice) !== i &&
                                         ((_ = !0),
                                         e(t, 'voice', i),
-                                        (O = {
+                                        (E = {
                                             user: b,
                                             voiceChannel: n
                                         }));
                                 }
                             } else (null == (a = r.current[t]) ? void 0 : a.voice) != null && ((_ = !0), e(t, 'voice', null));
-                            return _ && null != O && i(O), _;
+                            return _ && null != E && i(E), _;
                         },
                         o = (e) => {
                             for (let t of e.updates) {

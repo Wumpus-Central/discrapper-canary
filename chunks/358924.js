@@ -15,8 +15,8 @@ var r,
     m = n(655922),
     b = n(122810),
     _ = n(833664),
-    O = n(503438),
-    E = n(420660),
+    E = n(503438),
+    O = n(420660),
     y = n(74433),
     I = n(906732),
     v = n(812206),
@@ -83,7 +83,7 @@ class $ extends l.Component {
         let e,
             { activity: t } = this.props,
             { timestamps: n } = t;
-        return null == n || !(0, _.Z)(t) || (0, O.Z)(t)
+        return null == n || !(0, _.Z)(t) || (0, E.Z)(t)
             ? null
             : X(
                   (0, b.Z)(t)
@@ -468,7 +468,7 @@ let er = (e) => {
         let t,
             { activity: r, user: l, getAssetImage: a, guildId: s } = e,
             { name: c, details: d, assets: p, application_id: h } = r;
-        if (null != p && (0, E.Z)(r)) {
+        if (null != p && (0, O.Z)(r)) {
             var g;
             t = (0, i.jsx)(N.Z, {
                 className: W.twitchSectionPreviewWrapper,
@@ -587,7 +587,7 @@ let er = (e) => {
         let b = v.Z.getApplication(d);
         if (null == b) return null;
         let _ = null != t.created_at && t.created_at > 0 ? { start: t.created_at } : void 0,
-            O = (0, G.xF)(b.id, o, 300);
+            E = (0, G.xF)(b.id, o, 300);
         return (0, i.jsxs)(J, {
             children: [
                 (0, i.jsxs)('div', {
@@ -620,9 +620,9 @@ let er = (e) => {
                 (0, i.jsxs)('div', {
                     className: W.embeddedActivityPlayerContainer,
                     children: [
-                        null != O
+                        null != E
                             ? (0, i.jsx)('img', {
-                                  src: O,
+                                  src: E,
                                   alt: b.name,
                                   className: W.embeddedActivityImage
                               })

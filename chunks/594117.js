@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => E });
 var r = n(255367);
 n(73800);
 var i = n(685072),
@@ -96,7 +96,7 @@ function _(e) {
         }
     });
 }
-function O(e) {
+function E(e) {
     let { channel: t } = e;
     return t.isGuildStageVoice() ? (0, r.jsx)(b, { channel: t }) : (0, r.jsx)(_, { channel: t });
 }

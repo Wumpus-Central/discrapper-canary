@@ -32,7 +32,8 @@ function m(e) {
                     c.Z,
                     {
                         quest: h,
-                        location: o.jn.QUESTS_EMBED
+                        location: o.jn.QUESTS_EMBED,
+                        sourceQuestContent: o.jn.QUESTS_EMBED
                     },
                     h.id
                 );

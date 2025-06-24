@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(706140),
     b = n(294629),
     _ = n(131951),
-    O = n(459273),
-    E = n(242291),
+    E = n(459273),
+    O = n(242291),
     y = n(792165),
     I = n(603074),
     v = n(981631),
@@ -93,7 +93,7 @@ function j(e) {
         w = A || Z || x,
         [L, R] = i.useState(!1),
         D = t.getGuildId(),
-        k = (0, E.sR)({ isSoundboardButtonDisabled: w }),
+        k = (0, O.sR)({ isSoundboardButtonDisabled: w }),
         [M, U] = (0, m.cv)(k),
         { analyticsLocations: G, parentAnalyticsLocation: B } = (0, h.ZP)(p.Z.SOUNDBOARD_BUTTON);
     function V(e) {
@@ -191,7 +191,7 @@ function j(e) {
             w || R(!L);
         }, [w, L]);
     return (
-        (0, O.yp)({
+        (0, E.yp)({
             event: v.CkL.TOGGLE_SOUNDBOARD,
             handler: K
         }),

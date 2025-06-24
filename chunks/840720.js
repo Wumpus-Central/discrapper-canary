@@ -9,13 +9,13 @@ var i = n(255367),
     d = n(131085),
     u = n(919563);
 function m(e) {
-    let { className: t, guildTag: n, guildBadge: s, onTagClick: m, guildId: g, guildName: p, guildIcon: h, guildIconSize: f } = e,
-        b = r.useRef(null),
-        [_, x] = r.useState(!1);
+    let { className: t, guildTag: n, guildBadge: s, guildId: m, guildName: g, guildIcon: p, guildIconSize: h } = e,
+        f = r.useRef(null),
+        [b, _] = r.useState(!1);
     return (
         r.useEffect(() => {
-            let e = b.current;
-            null != e && null != e.offsetWidth && null != e.scrollWidth && x(e.offsetWidth < e.scrollWidth);
+            let e = f.current;
+            null != e && null != e.offsetWidth && null != e.scrollWidth && _(e.offsetWidth < e.scrollWidth);
         }, []),
         (0, i.jsxs)('div', {
             className: l()(u.container, t),
@@ -24,19 +24,19 @@ function m(e) {
                     className: u.guildPrefixContainer,
                     children: [
                         (0, i.jsx)(o.Ft, {
-                            guildId: g,
-                            guildName: p,
-                            guildIcon: h,
-                            iconSize: f,
+                            guildId: m,
+                            guildName: g,
+                            guildIcon: p,
+                            iconSize: h,
                             className: u.guildPrefixIcon,
                             animate: !1
                         }),
                         (0, i.jsx)('div', {
                             className: u.details,
                             children: (0, i.jsx)(a.ua7, {
-                                text: p,
+                                text: g,
                                 color: a.ua7.Colors.PRIMARY,
-                                shouldShow: _,
+                                shouldShow: b,
                                 children: (e) => {
                                     var t, n;
                                     return (0, i.jsx)(
@@ -65,11 +65,11 @@ function m(e) {
                                                     });
                                             }
                                             return e;
-                                        })({ ref: b }, e)),
+                                        })({ ref: f }, e)),
                                         (n = n =
                                             {
                                                 className: u.guildName,
-                                                children: p
+                                                children: g
                                             }),
                                         Object.getOwnPropertyDescriptors
                                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -93,11 +93,10 @@ function m(e) {
                 (0, i.jsx)('div', {
                     className: u.tagContainer,
                     children: (0, i.jsx)(c.m0, {
-                        guildId: g,
+                        guildId: m,
                         className: u.tag,
                         guildTag: n,
                         guildBadge: s,
-                        onClick: m,
                         badgeSize: d.Gg.SIZE_16,
                         textColor: 'interactive-normal',
                         textVariant: 'text-sm/semibold',

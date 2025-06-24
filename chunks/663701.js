@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(529103),
     b = n(607070),
     _ = n(213609),
-    O = n(463119),
-    E = n(377171),
+    E = n(463119),
+    O = n(377171),
     y = n(243778),
     I = n(488634),
     v = n(899740),
@@ -128,7 +128,7 @@ let en = (e) => {
                     properties: { gift_intent_type: q.hX.FRIEND_ANNIVERSARY }
                 });
         }, [h]);
-        let [g, O] = i.useState(!1);
+        let [g, E] = i.useState(!1);
         return (0, r.jsxs)('div', {
             className: J.friendsButtonContainer,
             children: [
@@ -146,10 +146,10 @@ let en = (e) => {
                                 icon: f.iFz,
                                 text: X.intl.string(X.t.TdEu5e),
                                 onMouseEnter: () => {
-                                    O(!0);
+                                    E(!0);
                                 },
                                 onMouseLeave: () => {
-                                    O(!1);
+                                    E(!1);
                                 }
                             },
                             n,
@@ -284,7 +284,7 @@ let en = (e) => {
                         return t === p.z.FAMILY_CENTER_NEW_BADGE
                             ? (0, r.jsx)(f.IGR, {
                                   text: X.intl.string(X.t.y2b7CA),
-                                  color: E.Z.BG_BRAND
+                                  color: O.Z.BG_BRAND
                               })
                             : null;
                     }
@@ -367,7 +367,7 @@ let eu = i.memo(function (e) {
                               )
                             : null,
                         (0, r.jsx)(
-                            O.i,
+                            E.i,
                             {
                                 selected: h === Y.Z5c.COLLECTIBLES_SHOP || (null == l ? void 0 : l.startsWith(Y.Z5c.COLLECTIBLES_SHOP)),
                                 listItemRef: m,

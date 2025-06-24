@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(711237),
     b = n(532835),
     _ = n(347469),
-    O = n(169382),
-    E = n(290297),
+    E = n(169382),
+    O = n(290297),
     y = n(244317),
     I = n(765717),
     v = n(358221),
@@ -69,8 +69,8 @@ var r = n(255367),
     em = n(256638),
     eb = n(663701),
     e_ = n(697309),
-    eO = n(425369),
-    eE = n(715702),
+    eE = n(425369),
+    eO = n(715702),
     ey = n(981631),
     eI = n(176505),
     ev = n(215023),
@@ -149,7 +149,7 @@ let eP = (0, u.Un)({
     }),
     eD = (e) => {
         let { match: t } = e,
-            n = (0, O.l)(),
+            n = (0, E.l)(),
             i = (0, p.e7)([el.Z, ec.Z], () => {
                 let e = ec.Z.getChannelId();
                 return el.Z.getChannel(e);
@@ -268,8 +268,8 @@ let eP = (0, u.Un)({
               })
             : null;
     },
-    eH = () => (0, r.jsx)(eO.Z, {}),
-    eF = () => (0, r.jsx)(eE.Z, {}),
+    eH = () => (0, r.jsx)(eE.Z, {}),
+    eF = () => (0, r.jsx)(eO.Z, {}),
     ez = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         return function (t) {
@@ -351,13 +351,13 @@ function e$(e) {
     let u = 'app view user trigger debugging';
     m.R6.useExperiment({ location: u }, { autoTrackExposure: !1 }), m.R6.trackExposure({ location: u });
     let g = (0, p.e7)([v.Z], () => v.Z.isFullscreenInContext()),
-        O = (0, A.T)('ChannelSidebar'),
-        E = (0, T.useAppSidebarState)((e) => !e.isOpen) && O;
+        E = (0, A.T)('ChannelSidebar'),
+        O = (0, T.useAppSidebarState)((e) => !e.isOpen) && E;
     i.useLayoutEffect(() => {
-        if (O) {
+        if (E) {
             var e;
             let t = parseInt(null != (e = h.K.get(e_.nT)) ? e : '');
-            Number.isNaN(t) && (t = e_.qO), (t = Math.min(Math.max(t, e_.li), e_.zx)), !O && t <= e_.p8 && (t = e_.qO), eJ(t);
+            Number.isNaN(t) && (t = e_.qO), (t = Math.min(Math.max(t, e_.li), e_.zx)), !E && t <= e_.p8 && (t = e_.qO), eJ(t);
             let n = (e) => {
                 e.metaKey && 'b' === e.key && T.useAppSidebarState.setState((e) => ({ isOpen: !e.isOpen }));
             };
@@ -368,15 +368,15 @@ function e$(e) {
                 }
             );
         }
-    }, [O]),
+    }, [E]),
         i.useLayoutEffect(() => {
-            if (E) eJ(e_.p8);
+            if (O) eJ(e_.p8);
             else {
                 var e;
                 let t = parseInt(null != (e = h.K.get(e_.nT)) ? e : '');
                 Number.isNaN(t) && (t = e_.qO), eJ(t);
             }
-        }, [E]);
+        }, [O]);
     let y = i.useRef(null),
         I = i.useCallback(
             (e, t) => {
@@ -385,9 +385,9 @@ function e$(e) {
                 let r = t < e_.li / 3;
                 t <= e_.li ? document.body.classList.add(eN.draggingMin) : document.body.classList.remove(eN.draggingMin), t >= e_.zx ? document.body.classList.add(eN.draggingMax) : document.body.classList.remove(eN.draggingMax);
                 let i = t - e;
-                null == (n = y.current) || n.style.setProperty('--custom-overdrag', ''.concat(1 + Math.min(Math.abs(i / e_.p8), 0.25))), O && (T.useAppSidebarState.setState({ isOpen: !r }), r && eJ(e_.p8));
+                null == (n = y.current) || n.style.setProperty('--custom-overdrag', ''.concat(1 + Math.min(Math.abs(i / e_.p8), 0.25))), E && (T.useAppSidebarState.setState({ isOpen: !r }), r && eJ(e_.p8));
             },
-            [O]
+            [E]
         ),
         C = i.useCallback(() => {
             document.body.classList.add(eN.dragging);
@@ -411,8 +411,8 @@ function e$(e) {
         }, []);
     if (
         (i.useLayoutEffect(() => {
-            E && eJ(e_.p8);
-        }, [E]),
+            O && eJ(e_.p8);
+        }, [O]),
         l)
     )
         return null;
@@ -423,7 +423,7 @@ function e$(e) {
             var t, i;
             return (0, r.jsxs)('div', {
                 ref: y,
-                'data-collapsed': E,
+                'data-collapsed': O,
                 className: a()(eN.sidebar, e, {
                     [eN.fullWidth]: d.tq,
                     [eN.hidden]: g,
@@ -517,7 +517,7 @@ function e0() {
         m = (null == g || null == (e = g.params) ? void 0 : e.channelId) === eI.oC.GUILD_ONBOARDING,
         b = l || a || o || u || m,
         _ = i.useCallback(() => z.Z.openSidebar(), []),
-        O = (0, A.T)('AppView'),
+        E = (0, A.T)('AppView'),
         y = (0, T.useAppSidebarState)((e) => !e.isOpen),
         C = (0, p.e7)([v.Z], () => v.Z.isFullscreenInContext());
     return (0, r.jsx)('div', {
@@ -544,8 +544,8 @@ function e0() {
                             }),
                             (0, r.jsx)('div', {
                                 className: eN.page,
-                                'data-collapsed': !!O && y,
-                                children: (0, r.jsx)(E.Z.Provider, {
+                                'data-collapsed': !!E && y,
+                                children: (0, r.jsx)(O.Z.Provider, {
                                     value: _,
                                     children: (0, r.jsxs)(s.rs, {
                                         children: [

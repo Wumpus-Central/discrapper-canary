@@ -1,50 +1,50 @@
 n.d(e, { default: () => f });
 var r = n(255367);
 n(73800);
-var c = n(442837),
-    l = n(481060),
-    o = n(774078),
-    i = n(569984),
-    a = n(497505),
-    s = n(602667),
+var o = n(442837),
+    c = n(481060),
+    l = n(774078),
+    s = n(569984),
+    i = n(497505),
+    a = n(602667),
     u = n(388032),
     p = n(842054);
 function d(t) {
-    let { transitionState: e, onClose: n, questEnrollmentBlockedUntil: c } = t,
-        { hours: i, minutes: a, seconds: s } = (0, o.Z)(c),
-        d = String(i).padStart(2, '0'),
-        f = String(a).padStart(2, '0'),
-        b = String(s).padStart(2, '0'),
+    let { transitionState: e, onClose: n, questEnrollmentBlockedUntil: o } = t,
+        { hours: s, minutes: i, seconds: a } = (0, l.Z)(o),
+        d = String(s).padStart(2, '0'),
+        f = String(i).padStart(2, '0'),
+        b = String(a).padStart(2, '0'),
         O = ''.concat(d, ':').concat(f, ':').concat(b);
-    return (0, r.jsxs)(l.Y0X, {
+    return (0, r.jsxs)(c.Y0X, {
         transitionState: e,
-        size: l.CgR.DYNAMIC,
+        size: c.CgR.DYNAMIC,
         className: p.modal,
         parentComponent: 'QuestsMinorEnrollmentBlockModal',
         children: [
             (0, r.jsx)('div', {
                 className: p.header,
-                children: (0, r.jsx)(l.olH, {
+                children: (0, r.jsx)(c.olH, {
                     className: p.closeBtn,
                     onClick: n
                 })
             }),
-            (0, r.jsx)(l.X6q, {
+            (0, r.jsx)(c.X6q, {
                 variant: 'heading-lg/medium',
                 className: p.title,
                 children: u.intl.string(u.t['g+02d3'])
             }),
-            (0, r.jsx)(l.Text, {
+            (0, r.jsx)(c.Text, {
                 variant: 'text-md/normal',
                 className: p.subtext,
                 children: u.intl.string(u.t.XEHDT0)
             }),
-            (0, r.jsx)(l.Text, {
+            (0, r.jsx)(c.Text, {
                 variant: 'text-md/normal',
                 className: p.subtext,
                 children: u.intl.formatToPlainString(u.t['+5XVHx'], { countdownString: O })
             }),
-            (0, r.jsx)(l.zxk, {
+            (0, r.jsx)(c.zxk, {
                 className: p.ctaBtn,
                 onClick: n,
                 children: u.intl.string(u.t.cpT0Cg)
@@ -53,33 +53,34 @@ function d(t) {
     });
 }
 function f(t) {
-    var { onClose: e, quest: n } = t,
+    var { onClose: e, quest: n, sourceQuestContent: c } = t,
         l = (function (t, e) {
             if (null == t) return {};
             var n,
                 r,
-                c = (function (t, e) {
+                o = (function (t, e) {
                     if (null == t) return {};
                     var n,
                         r,
-                        c = {},
-                        l = Object.keys(t);
-                    for (r = 0; r < l.length; r++) (n = l[r]), e.indexOf(n) >= 0 || (c[n] = t[n]);
-                    return c;
+                        o = {},
+                        c = Object.keys(t);
+                    for (r = 0; r < c.length; r++) (n = c[r]), e.indexOf(n) >= 0 || (o[n] = t[n]);
+                    return o;
                 })(t, e);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(t);
-                for (r = 0; r < l.length; r++) (n = l[r]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (c[n] = t[n]);
+                var c = Object.getOwnPropertySymbols(t);
+                for (r = 0; r < c.length; r++) (n = c[r]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (o[n] = t[n]);
             }
-            return c;
-        })(t, ['onClose', 'quest']);
-    let o = (0, c.e7)([i.Z], () => i.Z.questEnrollmentBlockedUntil);
-    return null == o || null == n
+            return o;
+        })(t, ['onClose', 'quest', 'sourceQuestContent']);
+    let u = (0, o.e7)([s.Z], () => s.Z.questEnrollmentBlockedUntil);
+    return null == u || null == n
         ? null
-        : (0, r.jsx)(s.A, {
+        : (0, r.jsx)(a.A, {
               overrideVisibility: !0,
               questOrQuests: n,
-              questContent: a.jn.QUEST_ENROLLMENT_BLOCKED_MODAL,
+              questContent: i.jn.QUEST_ENROLLMENT_BLOCKED_MODAL,
+              sourceQuestContent: c,
               children: () => {
                   var t, n;
                   return (0, r.jsx)(
@@ -112,7 +113,7 @@ function f(t) {
                       (n = n =
                           {
                               onClose: e,
-                              questEnrollmentBlockedUntil: o
+                              questEnrollmentBlockedUntil: u
                           }),
                       Object.getOwnPropertyDescriptors
                           ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

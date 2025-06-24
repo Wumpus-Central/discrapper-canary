@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(626135),
     b = n(479446),
     _ = n(522558),
-    O = n(441623),
-    E = n(317271),
+    E = n(441623),
+    O = n(317271),
     y = n(674701),
     I = n(474936),
     v = n(981631),
@@ -60,7 +60,7 @@ function P(e) {
                     isGift: !0,
                     initialPlanId: null,
                     giftRecipient: t,
-                    analyticsLocation: (0, E.F)(n).actionButton,
+                    analyticsLocation: (0, O.F)(n).actionButton,
                     analyticsLocations: j,
                     analyticsObject: {
                         page: l,
@@ -71,7 +71,7 @@ function P(e) {
                     giftMessage: k()
                 });
         },
-        k = () => (n === I.hX.FRIEND_ANNIVERSARY ? C.intl.formatToPlainString(C.t['L2s/Nz'], { numberOfYears: O.Z.getFriendAnniversaryYears(t.id) }) : (0, b.Ou)(n)),
+        k = () => (n === I.hX.FRIEND_ANNIVERSARY ? C.intl.formatToPlainString(C.t['L2s/Nz'], { numberOfYears: E.Z.getFriendAnniversaryYears(t.id) }) : (0, b.Ou)(n)),
         M = () => (n === I.hX.FRIEND_ANNIVERSARY ? C.intl.string(C.t['4LohBA']) : (0, b.Ou)(n)),
         U = i.useRef(null),
         G = () =>

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685);
+n.d(t, { Z: () => O }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -57,7 +57,7 @@ function _(e, t) {
         e
     );
 }
-function O(e, t) {
+function E(e, t) {
     function n() {
         (0, i.Mr3)(e) &&
             (0, i.h7j)((e) =>
@@ -81,10 +81,10 @@ function O(e, t) {
         }
     );
 }
-let E = (0, h.Z)(
+let O = (0, h.Z)(
     (e) => {
         var t;
-        let { clientId: n, authorizations: u, scopes: d, parsedPermissions: h, responseType: E, redirectUri: y, codeChallenge: I, codeChallengeMethod: v, state: C, guildId: S, channelId: N, prompt: T, disableGuildSelect: P, disclosures: j, integrationType: A, pid: Z, signal: x } = e,
+        let { clientId: n, authorizations: u, scopes: d, parsedPermissions: h, responseType: O, redirectUri: y, codeChallenge: I, codeChallengeMethod: v, state: C, guildId: S, channelId: N, prompt: T, disableGuildSelect: P, disclosures: j, integrationType: A, pid: Z, signal: x } = e,
             w = 'OAuth2Authorize_'.concat(n, '_').concat(S, '_').concat(N),
             L = null != A ? (null == u ? void 0 : u.get(A)) : void 0,
             R = null != (t = null == L ? void 0 : L.application) ? t : a.Z.getApplication(n);
@@ -113,7 +113,7 @@ let E = (0, h.Z)(
                         }
                         if (null == new URL(u).searchParams.get('error')) {
                             let t = 'OAuth2AuthorizeExternalSuccess_'.concat(n, '_').concat(S, '_').concat(N),
-                                { cleanup: l } = O(t, x);
+                                { cleanup: l } = E(t, x);
                             (0, i.h7j)(
                                 (e) =>
                                     (0, r.jsx)(
@@ -137,7 +137,7 @@ let E = (0, h.Z)(
                             );
                         } else {
                             let t = 'OAuth2AuthorizeExternalError_'.concat(n, '_').concat(S, '_').concat(N),
-                                { cleanup: l } = O(t, x);
+                                { cleanup: l } = E(t, x);
                             (0, i.h7j)(
                                 (e) =>
                                     (0, r.jsx)(
@@ -162,7 +162,7 @@ let E = (0, h.Z)(
                         }
                     }
                 },
-                { cleanup: M } = O(w, x);
+                { cleanup: M } = E(w, x);
             (0, i.h7j)(
                 (e) =>
                     (0, r.jsx)(
@@ -173,7 +173,7 @@ let E = (0, h.Z)(
                             scopes: null != d ? d : [],
                             disclosures: null != j ? j : [],
                             callback: k,
-                            responseType: E,
+                            responseType: O,
                             redirectUri: y,
                             codeChallenge: I,
                             codeChallengeMethod: v,

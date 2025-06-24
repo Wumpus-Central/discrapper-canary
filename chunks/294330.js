@@ -21,8 +21,8 @@ var r = n(255367),
     m = n(372769),
     b = n(134432),
     _ = n(768581),
-    O = n(356164),
-    E = n(826946),
+    E = n(356164),
+    O = n(826946),
     y = n(981631),
     I = n(388032),
     v = n(727615),
@@ -32,7 +32,7 @@ var r = n(255367),
 function T(e) {
     let { guild: t, onClick: l, onView: o } = e,
         [f, g] = i.useState(!1),
-        [O, T] = i.useState(!1),
+        [E, T] = i.useState(!1),
         [P, j] = i.useState(!1),
         A = i.useRef(null),
         Z = i.useCallback(async () => {
@@ -131,7 +131,7 @@ function T(e) {
     return (0, r.jsxs)('div', {
         className: v.container,
         children: [
-            O &&
+            E &&
                 (0, r.jsx)('div', {
                     className: v.spinnerContainer,
                     children: (0, r.jsx)(c.$jN, {
@@ -148,7 +148,7 @@ function T(e) {
                     ref: A,
                     className: v.card,
                     onClick: Z,
-                    disabled: O,
+                    disabled: E,
                     onContextMenu: w,
                     'aria-label': I.intl.string(I.t['M9wQ+f']),
                     children: [
@@ -164,7 +164,7 @@ function T(e) {
                                         onLoad: () => j(!0)
                                     })
                                 }),
-                                (0, r.jsx)(E.Z, {
+                                (0, r.jsx)(O.Z, {
                                     className: v.maximizeIcon,
                                     guildId: t.id
                                 }),
@@ -256,7 +256,7 @@ function T(e) {
 }
 function P(e) {
     let { guildId: t, onClick: n, onView: i } = e,
-        l = (0, o.e7)([O.Z], () => O.Z.getGuild(t));
+        l = (0, o.e7)([E.Z], () => E.Z.getGuild(t));
     return null == l
         ? null
         : (0, r.jsx)(T, {

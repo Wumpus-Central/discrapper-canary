@@ -16,7 +16,7 @@ function p(e, t, n) {
     return n.left + (e / t) * n.width;
 }
 function v(e) {
-    let { percent: t, animate: n, interactionEnabled: o, backgroundColor: v, preloadedBuffers: g, duration: b, maxSeekableTime: E, onClick: O, onScrubBack: h, onScrubForward: C } = e,
+    let { percent: t, animate: n, interactionEnabled: o, backgroundColor: v, preloadedBuffers: g, duration: b, maxSeekableTime: E, onClick: O, onScrubBack: C, onScrubForward: h } = e,
         [S, j] = l.useState(null),
         [y, _] = l.useState(null),
         [x, D] = l.useState(null),
@@ -47,9 +47,9 @@ function v(e) {
         L = l.useCallback(
             (e) => {
                 let { key: t } = e;
-                t === d.mR.ArrowLeft && null != h ? (e.preventDefault(), e.stopPropagation(), h()) : t === d.mR.ArrowRight && null != C && (e.preventDefault(), e.stopPropagation(), C());
+                t === d.mR.ArrowLeft && null != C ? (e.preventDefault(), e.stopPropagation(), C()) : t === d.mR.ArrowRight && null != h && (e.preventDefault(), e.stopPropagation(), h());
             },
-            [h, C]
+            [C, h]
         ),
         R = null != y && null != S ? f(y, S, b) : 0,
         M = (0, u.yv)(R),

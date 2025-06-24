@@ -91,7 +91,7 @@ function R(e, t) {
 let P = 'in-app',
     w = 'Discord Widget';
 function D(e) {
-    let { questId: t, location: i, questContentPosition: a, preview: o = !1, previewQuest: l = null } = e;
+    let { questId: t, questContent: i, questContentPosition: a, preview: o = !1, previewQuest: l = null, sourceQuestContent: c } = e;
     (0, s.ZDy)(async () => {
         let { default: e } = await Promise.all([n.e('37447'), n.e('64838'), n.e('88622'), n.e('11186')]).then(n.bind(n, 985866));
         return (n) =>
@@ -100,9 +100,10 @@ function D(e) {
                 R(N({}, n), {
                     questId: t,
                     questContentPosition: a,
-                    location: i,
+                    questContent: i,
                     preview: o,
-                    previewQuest: l
+                    previewQuest: l,
+                    sourceQuestContent: c
                 })
             );
     });
@@ -123,15 +124,16 @@ function L(e, t) {
           })
         : (0, u.$)();
 }
-function x(e, t) {
+function x(e, t, i) {
     (0, s.ZDy)(async () => {
-        let { default: i } = await n.e('88938').then(n.bind(n, 390238));
+        let { default: a } = await n.e('88938').then(n.bind(n, 390238));
         return (n) =>
             (0, r.jsx)(
-                i,
+                a,
                 R(N({}, n), {
                     quest: e,
-                    location: t
+                    location: t,
+                    sourceQuestContent: i
                 })
             );
     });
@@ -149,15 +151,16 @@ function k(e, t) {
             );
     });
 }
-function M(e, t) {
+function M(e, t, i) {
     (0, s.ZDy)(async () => {
-        let { default: i } = await n.e('58641').then(n.bind(n, 828664));
+        let { default: a } = await n.e('58641').then(n.bind(n, 828664));
         return (n) =>
             (0, r.jsx)(
-                i,
+                a,
                 R(N({}, n), {
                     quest: e,
-                    location: t
+                    location: t,
+                    sourceQuestContent: i
                 })
             );
     });
@@ -168,7 +171,8 @@ function j(e, t) {
         questContent: t.content,
         questContentPosition: t.position,
         questContentCTA: t.ctaContent,
-        impressionId: t.impressionId
+        impressionId: t.impressionId,
+        sourceQuestContent: t.sourceQuestContent
     }),
         (0, s.ZDy)(async () => {
             let { default: i } = await n.e('4266').then(n.bind(n, 316210));
@@ -208,29 +212,31 @@ function B() {
     return Promise.all([n.e('66816'), n.e('32249'), n.e('58914')]).then(n.bind(n, 536687));
 }
 function V(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = (0, i.Z)();
+    let { quest: t, sourceQuestContent: n, autoplay: a = !0 } = e,
+        o = (0, i.Z)();
     (0, s.ZDy)(
         async () => {
-            let { default: i } = await B();
-            return (a) =>
+            let { default: e } = await B();
+            return (i) =>
                 (0, r.jsx)(
-                    i,
-                    R(N({}, a), {
+                    e,
+                    R(N({}, i), {
                         openStartClockTime: performance.now(),
-                        questId: e.id,
-                        autoplay: t,
-                        videoSessionId: n
+                        questId: t.id,
+                        autoplay: a,
+                        videoSessionId: o,
+                        sourceQuestContent: n
                     })
                 );
         },
         {
-            modalKey: (0, g.u7)(e.id),
+            modalKey: (0, g.u7)(t.id),
             backdropStyle: s.fCB.IMMERSIVE,
             onCloseCallback: () =>
                 (0, g.Mo)({
-                    questId: e.id,
-                    videoSessionId: n
+                    questId: t.id,
+                    sourceQuestContent: n,
+                    videoSessionId: o
                 })
         }
     );

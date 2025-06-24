@@ -70,14 +70,14 @@ function y(e) {
                 }).length > 0
         })),
         I = (0, i.e7)([f.Z], () => f.Z.getChannel(null == O ? void 0 : O.channelId)),
-        [P, C] = (0, u.wq)(I),
+        [C, P] = (0, u.wq)(I),
         E = (0, c.Aq)(),
         w = null != S && null != O && S.state !== g.jm8.ENDED && S.ownerId === O.ownerId,
         T = (e) => {
             null != O && (null == j || j(), o.default.selectVoiceChannel(O.channelId), w || (0, s.iV)(O, { forceMultiple: e }), E.dispatch(g.CkL.POPOUT_CLOSE), p.S.dispatch(g.CkL.MODAL_CLOSE), a.Z.popAll());
         };
     if (null == O) return null;
-    let N = (0, u.P9)(C);
+    let N = (0, u.P9)(P);
     t ? (N = _.intl.string(_.t.XvBdeX)) : w && (N = _.intl.string(_.t.JH1SJy));
     let Z = {
         color: n,
@@ -90,7 +90,7 @@ function y(e) {
                 h(
                     v(
                         {
-                            disabled: t || w || !P,
+                            disabled: t || w || !C,
                             onClick: () => T(!1)
                         },
                         Z

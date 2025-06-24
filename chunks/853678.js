@@ -15,8 +15,8 @@ var r = n(45792),
     m = n(996106),
     b = n(914946),
     _ = n(452426),
-    O = n(186901),
-    E = n(981631),
+    E = n(186901),
+    O = n(981631),
     y = n(701488),
     I = n(674563);
 let v = new Set([y.Fu, y.JT]),
@@ -45,9 +45,9 @@ let v = new Set([y.Fu, y.JT]),
         ]
     ]),
     N = {
-        [E.Etm.OPEN_EXTERNAL_LINK]: {
+        [O.Etm.OPEN_EXTERNAL_LINK]: {
             scope: {
-                [O.Gp.ANY]: [O.wE, O.b_]
+                [E.Gp.ANY]: [E.wE, E.b_]
             },
             validation: (e) => (0, _.Z)(e).required().keys({ url: e.string().required() }),
             handler(e) {
@@ -61,7 +61,7 @@ let v = new Set([y.Fu, y.JT]),
                     let e = new URL(n),
                         t = e.toString();
                     if (g.isPlatformEmbedded) {
-                        let e = (0, a.R)() ? E.KJ3.ACTIVITY_POPOUT : null;
+                        let e = (0, a.R)() ? O.KJ3.ACTIVITY_POPOUT : null;
                         p.Z.focus(e, !0);
                     }
                     let i = d.Z.getApplication(null == r ? void 0 : r.applicationId),
@@ -89,23 +89,23 @@ let v = new Set([y.Fu, y.JT]),
                         )
                     );
                 } catch (e) {
-                    throw new m.Z({ errorCode: E.lTL.INVALID_COMMAND }, 'Invalid URL: '.concat(n));
+                    throw new m.Z({ errorCode: O.lTL.INVALID_COMMAND }, 'Invalid URL: '.concat(n));
                 }
             }
         },
-        [E.Etm.NAVIGATE_TO_CONNECTIONS]: {
+        [O.Etm.NAVIGATE_TO_CONNECTIONS]: {
             validation: (e) => (0, _.Z)(e),
-            scope: { [O.Gp.ANY]: [O.wE] },
+            scope: { [E.Gp.ANY]: [E.wE] },
             handler(e) {
                 let { socket: t } = e;
                 (0, b.bu)(t.transport);
                 let n = (0, b._f)(t.application);
-                if (!v.has(n)) throw new m.Z({ errorCode: E.lTL.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
-                i.Z.open(E.oAB.CONNECTIONS);
+                if (!v.has(n)) throw new m.Z({ errorCode: O.lTL.UNAUTHORIZED_FOR_APPLICATION }, 'Command not available for this application');
+                i.Z.open(O.oAB.CONNECTIONS);
             }
         },
-        [E.Etm.SHARE_LINK]: (0, r.S)(E.Etm.SHARE_LINK, {
-            scope: { [O.Gp.ANY]: [O.wE] },
+        [O.Etm.SHARE_LINK]: (0, r.S)(O.Etm.SHARE_LINK, {
+            scope: { [E.Gp.ANY]: [E.wE] },
             handler(e) {
                 var t;
                 let {
@@ -114,8 +114,8 @@ let v = new Set([y.Fu, y.JT]),
                 } = e;
                 (0, b.bu)(n.transport);
                 let a = (0, b._f)(n.application);
-                if (null == a) throw new m.Z({ errorCode: E.lTL.INVALID_COMMAND }, 'No application.');
-                if (!(0, h.yE)(null != (t = n.application.flags) ? t : 0, E.udG.EMBEDDED)) throw new m.Z({ errorCode: E.lTL.INVALID_COMMAND }, 'This application cannot access this API');
+                if (null == a) throw new m.Z({ errorCode: O.lTL.INVALID_COMMAND }, 'No application.');
+                if (!(0, h.yE)(null != (t = n.application.flags) ? t : 0, O.udG.EMBEDDED)) throw new m.Z({ errorCode: O.lTL.INVALID_COMMAND }, 'This application cannot access this API');
                 return new Promise((e) => {
                     (0, c._)({
                         applicationId: a,

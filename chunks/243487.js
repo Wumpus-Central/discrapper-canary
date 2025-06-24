@@ -13,28 +13,28 @@ var r = n(255367),
     c = n(586902),
     u = n(835473),
     d = n(289823),
-    p = n(933557),
-    f = n(552282),
+    f = n(933557),
+    p = n(552282),
     g = n(763296),
-    O = n(565799),
-    m = n(501655),
+    m = n(565799),
+    O = n(501655),
     b = n(470956),
-    y = n(199902),
-    v = n(314897),
-    h = n(592125),
+    v = n(199902),
+    h = n(314897),
+    y = n(592125),
     j = n(944486),
     P = n(606304),
-    S = n(594174),
-    w = n(979651),
-    x = n(938475),
+    x = n(594174),
+    S = n(979651),
+    w = n(938475),
     I = n(237997),
     E = n(823379),
     Z = n(136015),
     C = n(426563),
     V = n(145597),
     k = n(444295),
-    D = n(804570),
-    N = n(388627),
+    N = n(804570),
+    D = n(388627),
     A = n(532658),
     _ = n(501787),
     M = n(981631),
@@ -90,33 +90,33 @@ let F = (e) => {
 };
 function U(e) {
     var t, n;
-    let { hiddenVoiceStates: i, voiceStateMap: l, size: c, locked: u, flipped: p } = e,
-        f = (0, A.e5)(c),
+    let { hiddenVoiceStates: i, voiceStateMap: l, size: c, locked: u, flipped: f } = e,
+        p = (0, A.e5)(c),
         g = (0, a.Wu)(
-            [S.default, h.Z],
+            [x.default, y.Z],
             () =>
                 i
                     .map((e) => {
                         var t;
-                        let n = S.default.getUser(e);
+                        let n = x.default.getUser(e);
                         if (null == n) return;
-                        let r = h.Z.getChannel(null == (t = l.get(e)) ? void 0 : t.voiceState.channelId);
-                        return n.getAvatarURL(null == r ? void 0 : r.getGuildId(), f, !1);
+                        let r = y.Z.getChannel(null == (t = l.get(e)) ? void 0 : t.voiceState.channelId);
+                        return n.getAvatarURL(null == r ? void 0 : r.getGuildId(), p, !1);
                     })
                     .filter(E.lm),
-            [i, l, f]
+            [i, l, p]
         ),
-        O = null != (t = g[0]) ? t : F(0),
-        m = null != (n = g[1]) ? n : F(1);
+        m = null != (t = g[0]) ? t : F(0),
+        O = null != (n = g[1]) ? n : F(1);
     return (0, r.jsxs)('div', {
-        className: o()(L.hiddenVoiceStates, u && L.locked, p && L.flipped),
+        className: o()(L.hiddenVoiceStates, u && L.locked, f && L.flipped),
         children: [
             (0, r.jsx)('div', {
                 className: L.hiddenVoiceStatesAvatar,
                 children: (0, r.jsx)(d.Z, {
                     size: c,
-                    backSrc: O,
-                    frontSrc: m,
+                    backSrc: m,
+                    frontSrc: O,
                     isTyping: !1
                 })
             }),
@@ -131,7 +131,7 @@ function U(e) {
     });
 }
 let z = i.memo(function (e) {
-    let { id: t, context: n = T.Yn.DEFAULT, channel: l, overlayVoiceStates: o, displayNameMode: c, displayUserMode: u, locked: d, pinned: p, guildId: f, showEmpty: g = !0, isPreviewingInGame: O, isSettingsPreview: m = !1, anchorLeft: b, avatarSizeMode: v, maxDisplayedVoiceStates: h = _.At } = e,
+    let { id: t, context: n = T.Yn.DEFAULT, channel: l, overlayVoiceStates: o, displayNameMode: c, displayUserMode: u, locked: d, pinned: f, guildId: p, showEmpty: g = !0, isPreviewingInGame: m, isSettingsPreview: O = !1, anchorLeft: b, avatarSizeMode: h, maxDisplayedVoiceStates: y = _.At } = e,
         j = (0, k.ee)(
             () =>
                 (function (e) {
@@ -140,31 +140,31 @@ let z = i.memo(function (e) {
                 })(o),
             [o]
         ),
-        [P, S] = o,
-        w = S.length > 0 && null != n && null != l && (!d || p),
-        x = (0, a.Wu)(
-            [y.Z],
+        [P, x] = o,
+        S = x.length > 0 && null != n && null != l && (!d || f),
+        w = (0, a.Wu)(
+            [v.Z],
             () =>
                 Array.from(j)
-                    .map((e) => y.Z.getStreamForUser(e, f))
+                    .map((e) => v.Z.getStreamForUser(e, p))
                     .filter(E.lm)
                     .map((e) => e.ownerId),
-            [f, j]
+            [p, j]
         );
     i.useEffect(() => {
-        w &&
+        S &&
             (0, k.zi)(M.Odu.VOICE_V3, {
                 locked: I.default.isInstanceLocked(),
                 shownUserIds: Array.from(j),
-                liveUserIds: x,
+                liveUserIds: w,
                 contentInventoryIds: []
             });
-    }, [j, x, w]);
-    let Z = h !== _.Og ? S.slice(0, h) : S,
-        C = h !== _.Og ? S.slice(h) : [],
+    }, [j, w, S]);
+    let Z = y !== _.Og ? x.slice(0, y) : x,
+        C = y !== _.Og ? x.slice(y) : [],
         V = P.get(C[0]),
-        N = u === M.OYC.ALWAYS && h !== _.Og;
-    return w
+        D = u === M.OYC.ALWAYS && y !== _.Og;
+    return S
         ? (0, r.jsxs)('div', {
               className: L.voiceUserContainer,
               children: [
@@ -179,10 +179,10 @@ let z = i.memo(function (e) {
                                     channel: l,
                                     widgetId: t,
                                     flipped: !b,
-                                    isPreviewingInGame: O,
-                                    isSettingsPreview: m,
+                                    isPreviewingInGame: m,
+                                    isSettingsPreview: O,
                                     context: n,
-                                    size: v,
+                                    size: h,
                                     displayNameMode: c,
                                     displayUserMode: u,
                                     locked: d
@@ -190,7 +190,7 @@ let z = i.memo(function (e) {
                                 e
                             );
                   }),
-                  N &&
+                  D &&
                       1 === C.length &&
                       null != V &&
                       (0, r.jsx)(
@@ -200,22 +200,22 @@ let z = i.memo(function (e) {
                               channel: l,
                               widgetId: t,
                               flipped: !b,
-                              isPreviewingInGame: O,
-                              isSettingsPreview: m,
+                              isPreviewingInGame: m,
+                              isSettingsPreview: O,
                               context: n,
-                              size: v,
+                              size: h,
                               displayNameMode: c,
                               displayUserMode: u,
                               locked: d
                           },
                           C[0]
                       ),
-                  N &&
+                  D &&
                       C.length > 1 &&
                       (0, r.jsx)(U, {
                           hiddenVoiceStates: C,
                           voiceStateMap: P,
-                          size: (0, A.px)(v),
+                          size: (0, A.px)(h),
                           locked: d,
                           flipped: !b
                       })
@@ -223,7 +223,7 @@ let z = i.memo(function (e) {
           })
         : d || !g
           ? null
-          : (0, r.jsx)(D.E, {
+          : (0, r.jsx)(N.E, {
                 emptyText: R.intl.string(R.t.hEh0l5),
                 icon: s.gj8
             });
@@ -231,26 +231,26 @@ let z = i.memo(function (e) {
 function Y(e) {
     var t;
     let { isSettingsPreview: n } = e,
-        l = (0, a.e7)([j.Z, h.Z], () => h.Z.getChannel(j.Z.getVoiceChannelId())),
-        o = (0, p.ZP)(l),
+        l = (0, a.e7)([j.Z, y.Z], () => y.Z.getChannel(j.Z.getVoiceChannelId())),
+        o = (0, f.ZP)(l),
         s = (function (e, t) {
-            let n = (0, a.e7)([j.Z, h.Z], () => h.Z.getChannel(j.Z.getVoiceChannelId())),
+            let n = (0, a.e7)([j.Z, y.Z], () => y.Z.getChannel(j.Z.getVoiceChannelId())),
                 [r] = (0, a.e7)(
-                    [x.ZP, O.Z, j.Z, h.Z],
+                    [w.ZP, m.Z, j.Z, y.Z],
                     () => {
-                        let e = h.Z.getChannel(j.Z.getVoiceChannelId());
-                        return null == e ? [[], -1] : e.isGuildStageVoice() ? [O.Z.getMutableParticipants(e.id, m.pV.SPEAKER), O.Z.getParticipantsVersion(e.id)] : [x.ZP.getVoiceStatesForChannel(e), x.ZP.getVoiceStateVersion(e.getGuildId())];
+                        let e = y.Z.getChannel(j.Z.getVoiceChannelId());
+                        return null == e ? [[], -1] : e.isGuildStageVoice() ? [m.Z.getMutableParticipants(e.id, O.pV.SPEAKER), m.Z.getParticipantsVersion(e.id)] : [w.ZP.getVoiceStatesForChannel(e), w.ZP.getVoiceStateVersion(e.getGuildId())];
                     },
                     [],
                     Z.Q
                 ),
                 l = (0, b.Es)(null == n ? void 0 : n.id, r),
                 o = i.useMemo(() => new Map(l.map((e) => [e.user.id, e])), [l]),
-                s = (0, a.e7)([v.default], () => v.default.getId());
+                s = (0, a.e7)([h.default], () => h.default.getId());
             return [
                 o,
                 (0, a.Wu)(
-                    [w.Z, j.Z, P.Z, g.Z],
+                    [S.Z, j.Z, P.Z, g.Z],
                     () => {
                         let n = Array.from(
                             l.map((e) => {
@@ -269,7 +269,7 @@ function Y(e) {
                                         checkIsMuted: !0,
                                         context: e
                                     },
-                                    [w.Z, j.Z, P.Z, g.Z]
+                                    [S.Z, j.Z, P.Z, g.Z]
                                 ),
                                 i = t === s;
                             (n || i) &&
@@ -297,16 +297,16 @@ function Y(e) {
                 )
             ];
         })(T.Yn.DEFAULT, e.maxDisplayedVoiceStates),
-        d = (0, a.e7)([y.Z], () => y.Z.getStreamerActiveStreamMetadata()),
-        S = (0, N.II)(),
-        E = (0, u.q)(null == S ? void 0 : S.id),
-        C = (0, a.cj)([y.Z, I.default], () => {
-            let e = y.Z.getCurrentUserActiveStream();
+        d = (0, a.e7)([v.Z], () => v.Z.getStreamerActiveStreamMetadata()),
+        x = (0, D.II)(),
+        E = (0, u.q)(null == x ? void 0 : x.id),
+        C = (0, a.cj)([v.Z, I.default], () => {
+            let e = v.Z.getCurrentUserActiveStream();
             return {
                 displayUserMode: I.default.getDisplayUserMode(),
                 displayNameMode: I.default.getDisplayNameMode(),
                 avatarSizeMode: I.default.getAvatarSizeMode(),
-                streamApplication: (null == d ? void 0 : d.pid) === (0, V.getPID)() ? (0, f.Z)(S) : null,
+                streamApplication: (null == d ? void 0 : d.pid) === (0, V.getPID)() ? (0, p.Z)(x) : null,
                 stream: e
             };
         });

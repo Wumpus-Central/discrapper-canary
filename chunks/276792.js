@@ -1,4 +1,4 @@
-n.d(t, { N: () => O });
+n.d(t, { N: () => E });
 var r = n(255367);
 n(73800);
 var i = n(704215),
@@ -57,15 +57,15 @@ function _(e, t) {
         e
     );
 }
-function O(e) {
-    var t, n, O, E;
+function E(e) {
+    var t, n, E, O;
     let y,
         { content: I, renderModalProps: v, analyticsLocations: C, analyticsLocation: S, isLightTheme: N } = e,
         T = 'AnnouncementModalVariant1_'.concat(i.z[Number(I.dismissKey)]),
         { onClose: P } = v,
-        j = null != (E = null == (t = I.button) ? void 0 : t.copy) ? E : f.intl.string(f.t.YScQSE),
+        j = null != (O = null == (t = I.button) ? void 0 : t.copy) ? O : f.intl.string(f.t.YScQSE),
         A = (null == (n = I.button) ? void 0 : n.buttonAction) === l.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button';
-    switch (null == (O = I.button) ? void 0 : O.buttonAction) {
+    switch (null == (E = I.button) ? void 0 : E.buttonAction) {
         case l.Wc.OPEN_MARKETING_PAGE:
             y = () => {
                 (0, s.uL)(h.Z5c.APPLICATION_STORE), P();

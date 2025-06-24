@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(699516),
     b = n(974042),
     _ = n(451478),
-    O = n(701861),
-    E = n(437314),
+    E = n(701861),
+    O = n(437314),
     y = n(696577),
     I = n(163417),
     v = n(830880),
@@ -85,7 +85,7 @@ function R(e) {
     return (0, r.jsx)('div', {
         className: j.emptyStateContainer,
         children: (0, r.jsx)(
-            E.Z,
+            O.Z,
             {
                 type: t,
                 onClick: l
@@ -138,7 +138,7 @@ let D = function (e) {
                     case T.pJs.ONLINE:
                     case T.pJs.ALL:
                     default:
-                        return (0, r.jsx)(O.Z, Z(A({}, n), { isFocused: w }), t);
+                        return (0, r.jsx)(E.Z, Z(A({}, n), { isFocused: w }), t);
                 }
             },
             [w, c]
@@ -292,7 +292,7 @@ let D = function (e) {
                 $ &&
                     (0, r.jsx)('div', {
                         className: j.emptyStateContainer,
-                        children: (0, r.jsx)(E.Z, { type: E.j.SECTION_NO_RESULTS }, c)
+                        children: (0, r.jsx)(O.Z, { type: O.j.SECTION_NO_RESULTS }, c)
                     })
             ]
         })

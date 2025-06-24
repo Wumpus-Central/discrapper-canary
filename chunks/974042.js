@@ -15,8 +15,8 @@ var r,
     m = n(430824),
     b = n(158776),
     _ = n(699516),
-    O = n(594174),
-    E = n(981631),
+    E = n(594174),
+    O = n(981631),
     y = n(474936);
 function I(e, t, n) {
     return (
@@ -66,7 +66,7 @@ function C(e, t) {
     );
 }
 function S(e) {
-    let t = O.default.getUser(e);
+    let t = E.default.getUser(e);
     return {
         user: t,
         usernameLower: null != t ? t.username.toLowerCase() : null
@@ -111,7 +111,7 @@ class j {
             t = Array.from(_.Z.getMutableRelationships().entries()).map((t) => {
                 let [n, r] = t;
                 return (
-                    r === E.OGo.FRIEND && e.add(n),
+                    r === O.OGo.FRIEND && e.add(n),
                     new P(
                         C(
                             v(
@@ -128,7 +128,7 @@ class j {
                             {
                                 spam: _.Z.isSpam(n),
                                 ignoredUser: _.Z.isIgnored(n),
-                                giftIntentType: r === E.OGo.FRIEND && h.Z.isTopAffinityFriendAnniversary({ userId: n }) ? y.hX.FRIEND_ANNIVERSARY : void 0,
+                                giftIntentType: r === O.OGo.FRIEND && h.Z.isTopAffinityFriendAnniversary({ userId: n }) ? y.hX.FRIEND_ANNIVERSARY : void 0,
                                 applicationId: _.Z.getOriginApplicationId(n)
                             }
                         )
@@ -140,9 +140,9 @@ class j {
             i = new Set();
         r.forEach((t) => {
             let { id: r, applicationId: l, type: a } = t;
-            !(a === E.OGo.FRIEND && e.has(r)) &&
-                ((a === E.OGo.FRIEND && i.has(r)) ||
-                    (a === E.OGo.FRIEND && i.add(r),
+            !(a === O.OGo.FRIEND && e.has(r)) &&
+                ((a === O.OGo.FRIEND && i.has(r)) ||
+                    (a === O.OGo.FRIEND && i.add(r),
                     n.push(
                         new P(
                             C(
@@ -210,19 +210,19 @@ class j {
             })
             .filter((t) => {
                 switch (e) {
-                    case E.pJs.ONLINE:
-                        return t.type === E.OGo.FRIEND && t.status !== E.Skl.OFFLINE;
-                    case E.pJs.PENDING:
-                        return (t.type === E.OGo.PENDING_INCOMING && !t.spam && !t.ignoredUser) || t.type === E.OGo.PENDING_OUTGOING;
-                    case E.pJs.SPAM:
-                        return t.type === E.OGo.PENDING_INCOMING && t.spam;
-                    case E.pJs.PENDING_IGNORED:
-                        return t.type === E.OGo.PENDING_INCOMING && t.ignoredUser;
-                    case E.pJs.SUGGESTIONS:
+                    case O.pJs.ONLINE:
+                        return t.type === O.OGo.FRIEND && t.status !== O.Skl.OFFLINE;
+                    case O.pJs.PENDING:
+                        return (t.type === O.OGo.PENDING_INCOMING && !t.spam && !t.ignoredUser) || t.type === O.OGo.PENDING_OUTGOING;
+                    case O.pJs.SPAM:
+                        return t.type === O.OGo.PENDING_INCOMING && t.spam;
+                    case O.pJs.PENDING_IGNORED:
+                        return t.type === O.OGo.PENDING_INCOMING && t.ignoredUser;
+                    case O.pJs.SUGGESTIONS:
                         return 99 === t.type;
-                    case E.pJs.ALL:
+                    case O.pJs.ALL:
                     default:
-                        return t.type === E.OGo.FRIEND;
+                        return t.type === O.OGo.FRIEND;
                 }
             })
             .sortBy((e) => e.comparator)
@@ -230,11 +230,11 @@ class j {
     }
     getRelationshipCounts() {
         let e = {
-            [E.OGo.FRIEND]: 0,
-            [E.OGo.PENDING_INCOMING]: 0,
-            [E.OGo.PENDING_OUTGOING]: 0,
+            [O.OGo.FRIEND]: 0,
+            [O.OGo.PENDING_INCOMING]: 0,
+            [O.OGo.PENDING_OUTGOING]: 0,
             99: 0,
-            [E.OGo.BLOCKED]: 0
+            [O.OGo.BLOCKED]: 0
         };
         return (
             this._rows.forEach((t) => {
@@ -249,18 +249,18 @@ class j {
 }
 let A = !0,
     Z = !1,
-    x = E.pJs.ONLINE,
+    x = O.pJs.ONLINE,
     w = new j(),
     L = !0,
     R = !1;
 function D() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    A && (e || (x !== E.pJs.ONLINE && x !== E.pJs.ADD_FRIEND)) && !Z && ((A = !1), (Z = !0), s.Z.fetchRelationships());
+    A && (e || (x !== O.pJs.ONLINE && x !== O.pJs.ADD_FRIEND)) && !Z && ((A = !1), (Z = !0), s.Z.fetchRelationships());
 }
 function k() {
     if (((A = !0), L ? (Z = !1) : D(), (w = w.reset()), R)) return;
     let e = w.getRelationshipCounts();
-    x = 0 === e[E.OGo.FRIEND] ? (0 !== e[E.OGo.PENDING_INCOMING] ? E.pJs.PENDING : E.pJs.ADD_FRIEND) : E.pJs.ONLINE;
+    x = 0 === e[O.OGo.FRIEND] ? (0 !== e[O.OGo.PENDING_INCOMING] ? O.pJs.PENDING : O.pJs.ADD_FRIEND) : O.pJs.ONLINE;
 }
 function M() {
     w = L ? new j() : w.reset();
@@ -272,7 +272,7 @@ function U(e) {
 }
 class G extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(_.Z, b.Z, O.default, m.Z, g.ZP, f.Z, d.Z, u.Z), this.syncWith([_.Z], M), this.syncWith([p.Z], M), this.syncWith([d.Z], M), this.syncWith([h.Z], M), this.syncWith([O.default], U(S)), this.syncWith([b.Z, f.Z], U(N)), k();
+        this.waitFor(_.Z, b.Z, E.default, m.Z, g.ZP, f.Z, d.Z, u.Z), this.syncWith([_.Z], M), this.syncWith([p.Z], M), this.syncWith([d.Z], M), this.syncWith([h.Z], M), this.syncWith([E.default], U(S)), this.syncWith([b.Z, f.Z], U(N)), k();
     }
     getState() {
         return {

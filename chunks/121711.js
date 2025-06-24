@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(114851),
     b = n(175307),
     _ = n(17845),
-    O = n(374939),
-    E = n(233374),
+    E = n(374939),
+    O = n(233374),
     y = n(611928),
     I = n(763433),
     v = n(283293),
@@ -180,7 +180,7 @@ let Y = function () {
                                   className: a()(V.bannerContainer, { [V.orbsContainer]: F }),
                                   children: [(0, r.jsx)('div', { className: a()(V.bannerGradient, { [V.orbsGradient]: F }) }), (0, r.jsx)(W, { onLoadComplete: T })]
                               }),
-                              (0, r.jsx)(O.Z, { children: e === j.e5.CLAIMED ? (0, r.jsx)(g, { onSelectTab: t }) : (0, r.jsx)(x.Z, {}) })
+                              (0, r.jsx)(E.Z, { children: e === j.e5.CLAIMED ? (0, r.jsx)(g, { onSelectTab: t }) : (0, r.jsx)(x.Z, {}) })
                           ]
                       })
                   })
@@ -206,11 +206,11 @@ let Y = function () {
                                           className: a()(V.bannerContainer, { [V.orbsContainer]: F }),
                                           children: [(0, r.jsx)('div', { className: a()(V.bannerGradient, { [V.orbsGradient]: F }) }), (0, r.jsx)(W, { onLoadComplete: T })]
                                       }),
-                                      (0, r.jsxs)(O.Z, {
+                                      (0, r.jsxs)(E.Z, {
                                           children: [
                                               (0, r.jsx)('div', {
                                                   className: V.tabs,
-                                                  children: (0, r.jsx)(E.Z, {
+                                                  children: (0, r.jsx)(O.Z, {
                                                       tabs: n,
                                                       selectedTab: e,
                                                       onTabSelect: t

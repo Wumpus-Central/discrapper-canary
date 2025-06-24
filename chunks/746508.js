@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(239091),
     b = n(925549),
     _ = n(284056),
-    O = n(730749),
-    E = n(911969),
+    E = n(730749),
+    O = n(911969),
     y = n(40851),
     I = n(317381),
     v = n(596040),
@@ -69,8 +69,8 @@ var r = n(255367),
     em = n(430824),
     eb = n(819640),
     e_ = n(131951),
-    eO = n(496675),
-    eE = n(19780),
+    eE = n(496675),
+    eO = n(19780),
     ey = n(699516),
     eI = n(594174),
     ev = n(979651),
@@ -246,10 +246,10 @@ function eY(e) {
         h = (0, u.e7)([I.ZP], () => null != I.ZP.getSelfEmbeddedActivityForLocation(I.ZP.getConnectedActivityLocation())),
         m = (0, K.Z)(t),
         { reachedLimit: b, limit: _ } = (0, el.Z)(t),
-        O = i.useCallback(() => {
+        E = i.useCallback(() => {
             (0, es.Z)();
         }, []),
-        E = (0, y.bp)(),
+        O = (0, y.bp)(),
         v = i.useCallback(
             (e) => {
                 if (e_.Z.isVideoEnabled() === e) return;
@@ -257,9 +257,9 @@ function eY(e) {
                     var n;
                     g.Z.setVideoEnabled(e), e && (0, W.uL)(ew.Z5c.CHANNEL(null != (n = t.getGuildId()) ? n : ew.ME, t.id));
                 };
-                (0, w.v)(s, w.d.CAMERA, e), e ? (0, ed.Z)(n, E) : n();
+                (0, w.v)(s, w.d.CAMERA, e), e ? (0, ed.Z)(n, O) : n();
             },
-            [t, E, s]
+            [t, O, s]
         ),
         C = h || n || m,
         { Component: S, play: N, events: T } = (0, p.o)(c.enabled ? 'disable' : 'enable');
@@ -271,7 +271,7 @@ function eY(e) {
                 eG(
                     {
                         onChange: v,
-                        onCameraUnavailable: O,
+                        onCameraUnavailable: E,
                         hasPermission: d,
                         channelLimit: _,
                         channelLimitReached: b
@@ -362,7 +362,7 @@ function eK(e) {
         c = (0, S.KF)(t.id),
         d = (0, S.g5)(c),
         { userInActivity: p } = (0, u.cj)([I.ZP], () => ({ userInActivity: null != I.ZP.getSelfEmbeddedActivityForChannel(t.id) })),
-        h = (0, C.a)({ surface: E.eR.VOICE_LAUNCHER }),
+        h = (0, C.a)({ surface: O.eR.VOICE_LAUNCHER }),
         g = c !== S.jy.CAN_LAUNCH,
         { Component: m, events: b, play: _ } = (0, Z.Z)('RTCConnection');
     return n
@@ -436,16 +436,16 @@ function eq(e) {
         m = (0, ea.Z)(n),
         b = n.getGuildId(),
         _ = (0, u.cj)([I.ZP], () => null != I.ZP.getSelfEmbeddedActivityForChannel(n.id)),
-        O = (0, K.Z)(n),
-        E = i.useCallback(() => {
+        E = (0, K.Z)(n),
+        O = i.useCallback(() => {
             (0, eu.Z)(b, n.id, ew.jXE.ACTIVITY_PANEL);
         }, [b, n.id]),
         y = g.find((e) => e.ownerId === (null == h ? void 0 : h.id)),
         v = (0, eo.E)(n, h, g);
-    t = null == y ? (l ? E : ec.Z) : () => (0, V.Z)(y);
+    t = null == y ? (l ? O : ec.Z) : () => (0, V.Z)(y);
     let C = null != y || v.length > 0,
         S = m ? eD.intl.string(eD.t.fjBNo6) : eD.intl.string(eD.t.uQn9Bw),
-        N = _ || o || O,
+        N = _ || o || E,
         T = null != y,
         { Component: P, events: j, play: Z } = (0, d.P)(T ? 'disable' : 'enable');
     i.useEffect(() => () => Z(), [Z, T]);
@@ -463,7 +463,7 @@ function eq(e) {
                 currentUser: h,
                 activeStreams: g,
                 onClose: t,
-                handleGoLive: l ? E : ec.Z,
+                handleGoLive: l ? O : ec.Z,
                 onInteraction: (0, L.u)('ManageStreamsMenu', p, { entrypoint: eL.A5.OTHER_BUTTON })
             });
         },
@@ -767,12 +767,12 @@ function eQ(e) {
         )
     );
 }
-let eJ = (0, O.Z)(function (e) {
+let eJ = (0, E.Z)(function (e) {
     let { isActivityButtonHidden: t, isSoundboardButtonHidden: n } = (0, eP.S)({ location: 'RTCConnection' }),
         l = (0, U.Z)(),
         a = (0, u.e7)([M.Z], () => M.Z.getAwaitingRemoteSessionInfo()),
         o = (0, u.e7)([eI.default], () => eI.default.getCurrentUser()),
-        s = (0, u.cj)([eE.Z], () =>
+        s = (0, u.cj)([eO.Z], () =>
             null != l
                 ? {
                       channelId: l.channelId,
@@ -781,10 +781,10 @@ let eJ = (0, O.Z)(function (e) {
                       rtcConnectionLastPing: 0
                   }
                 : {
-                      channelId: eE.Z.getChannelId(),
-                      rtcConnectionQuality: eE.Z.getQuality(),
-                      rtcConnectionState: eE.Z.getState(),
-                      rtcConnectionLastPing: eE.Z.getLastPing()
+                      channelId: eO.Z.getChannelId(),
+                      rtcConnectionQuality: eO.Z.getQuality(),
+                      rtcConnectionState: eO.Z.getState(),
+                      rtcConnectionLastPing: eO.Z.getLastPing()
                   }
         ),
         { channelId: c } = s,
@@ -800,10 +800,10 @@ let eJ = (0, O.Z)(function (e) {
         })),
         b = (0, u.e7)([e_.Z, F.Z], () => F.Z.hasHotspot(eR.v.VOICE_PANEL_INTRODUCTION) && (0, eT.EO)(o) && !e_.Z.isInteractionRequired() && !(null == p ? void 0 : p.isGuildStageVoice())),
         _ = (0, u.e7)([ev.Z], () => null != c && ev.Z.hasVideo(c), [c]),
-        O = (0, u.e7)([eh.Z], () => eh.Z.getCurrentUserActiveStream()),
-        E = (0, u.e7)([eb.Z], () => eb.Z.hasLayers()),
+        E = (0, u.e7)([eh.Z], () => eh.Z.getCurrentUserActiveStream()),
+        O = (0, u.e7)([eb.Z], () => eb.Z.hasLayers()),
         y = (0, u.e7)([z.Z], () => z.Z.isViewingRoles(h)),
-        I = (0, u.e7)([eO.Z], () => y && !eO.Z.can(ew.Plq.VIEW_CHANNEL, p), [y, p]),
+        I = (0, u.e7)([eE.Z], () => y && !eE.Z.can(ew.Plq.VIEW_CHANNEL, p), [y, p]),
         C = er.Fg.useSetting(),
         [S, T, P] = (0, u.Wu)([eC.ZP, X.Z], () => ((null == p ? void 0 : p.isGuildStageVoice()) ? [X.Z.getMutableParticipants(p.id, Q.pV.SPEAKER), X.Z.getParticipantsVersion(p.id), null] : [null, null, null != p ? eC.ZP.getVoiceStatesForChannel(p) : null]), [p]),
         Z = i.useMemo(() => {
@@ -854,8 +854,8 @@ let eJ = (0, O.Z)(function (e) {
                         guild: g,
                         channel: p,
                         hasVideo: _,
-                        selfStream: O,
-                        hasLayers: E,
+                        selfStream: E,
+                        hasLayers: O,
                         voiceStates: Z,
                         showVoiceStates: C,
                         shouldShowVoicePanelIntroduction: b,

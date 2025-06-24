@@ -15,8 +15,8 @@ var r = n(913527),
     m = n(271383),
     b = n(430824),
     _ = n(131951),
-    O = n(292959),
-    E = n(699516),
+    E = n(292959),
+    O = n(699516),
     y = n(944486),
     I = n(9156),
     v = n(594174),
@@ -46,7 +46,7 @@ function R(e, t, n, r) {
             })
             .replace(/<#(\d+)>/g, (e, t) => {
                 let n = g.Z.getChannel(t);
-                return null == n ? e : (0, s.F6)(n, v.default, E.Z);
+                return null == n ? e : (0, s.F6)(n, v.default, O.Z);
             })
             .replace(/<a?:(\w+):(\d+)>/g, (e, t) => ''.concat(j.intl.string(j.t.sMOuub), ' ').concat(t))
             .replace(/<\/([^\s]+?):(\d+)>/g, (e, t) => '/'.concat(t))
@@ -113,9 +113,9 @@ function V(e) {
         b = f.ZP.getCurrentSidebarChannelId(d),
         v = o === d || o === b,
         S = p.OW.getSetting() && s.tts && v,
-        N = O.Z.getTTSType(),
+        N = E.Z.getTTSType(),
         j = (null == (t = s.author) ? void 0 : t.id) !== h.default.getId() && (N === P.PrB.ALL_CHANNELS || (N === P.PrB.SELECTED_CHANNEL && v));
-    if ((S || j) && !E.Z.isBlockedOrIgnoredForMessage(s)) {
+    if ((S || j) && !O.Z.isBlockedOrIgnoredForMessage(s)) {
         if (A.indexOf(s.id) >= 0) return !1;
         A.unshift(s.id) > 10 && A.pop();
         let e = u.getGuildId();

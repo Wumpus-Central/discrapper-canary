@@ -6,8 +6,8 @@ var r = n(255367),
     i = n(524979),
     l = n(481060),
     c = n(617136),
-    d = n(915750),
-    u = n(497505),
+    u = n(915750),
+    d = n(497505),
     p = n(918701),
     m = n(685613),
     f = n(670638),
@@ -16,25 +16,27 @@ var r = n(255367),
     h = n(388032),
     b = n(74783);
 let j = (e) => {
-    let { quest: t, expansionSpring: n, onCtxMenuSelect: o, onCtxMenuOpen: j, onCtxMenuClose: v, useReducedMotion: _, isExpanded: y, isExpansionAnimationComplete: O } = e,
-        C = (0, d.aM)(),
-        w = s.useCallback(() => {
+    let { quest: t, expansionSpring: n, onCtxMenuSelect: o, onCtxMenuOpen: j, onCtxMenuClose: _, useReducedMotion: v, isExpanded: y, isExpansionAnimationComplete: C } = e,
+        O = (0, u.aM)(),
+        S = s.useCallback(() => {
             (0, g.openDisclosureModal)(t, {
-                content: u.jn.QUEST_BAR_V2,
-                ctaContent: c.jZ.OPEN_DISCLOSURE
+                content: d.jn.QUEST_BAR_V2,
+                ctaContent: c.jZ.OPEN_DISCLOSURE,
+                sourceQuestContent: d.jn.QUEST_BAR_V2
             });
         }, [t]),
-        S = s.useCallback(() => {
+        E = s.useCallback(() => {
             (0, p.nc)(t, {
-                content: u.jn.QUEST_BAR_V2,
+                content: d.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_GAME_LINK,
-                impressionId: C
+                impressionId: O,
+                sourceQuestContent: d.jn.QUEST_BAR_V2
             });
-        }, [C, t]),
-        P = y && O,
-        E = (0, r.jsx)(l.P3F, {
-            onClick: S,
-            className: a()(b.clickable, { [b.logo]: P }),
+        }, [O, t]),
+        w = y && C,
+        T = (0, r.jsx)(l.P3F, {
+            onClick: E,
+            className: a()(b.clickable, { [b.logo]: w }),
             children: (0, r.jsx)(m.ZP, {
                 quest: t,
                 logotypeClassName: b.rewardHighlightLogotype,
@@ -42,7 +44,7 @@ let j = (e) => {
             })
         });
     return (0, r.jsxs)(i.animated.div, {
-        className: a()(b.wrapper, b.rewardHighlightWrapper, { [b.interactable]: P }),
+        className: a()(b.wrapper, b.rewardHighlightWrapper, { [b.interactable]: w }),
         style: {
             transform: (0, i.to)(
                 [
@@ -67,9 +69,9 @@ let j = (e) => {
             (0, r.jsx)(x.Z, {
                 quest: t,
                 expansionSpring: n,
-                isFullyExpanded: P,
-                partnerBranding: E,
-                useReducedMotion: _
+                isFullyExpanded: w,
+                partnerBranding: T,
+                useReducedMotion: v
             }),
             (0, r.jsxs)(i.animated.div, {
                 className: b.promotedBadgeWrapper,
@@ -82,7 +84,7 @@ let j = (e) => {
                 children: [
                     (0, r.jsxs)(l.P3F, {
                         className: b.promotedBadge,
-                        onClick: w,
+                        onClick: S,
                         children: [
                             (0, r.jsx)(l.Text, {
                                 color: 'always-white',
@@ -97,12 +99,13 @@ let j = (e) => {
                     }),
                     (0, r.jsx)(f.r, {
                         onOpen: j,
-                        onClose: v,
+                        onClose: _,
                         onSelect: o,
-                        questContent: u.jn.QUEST_BAR_V2,
+                        questContent: d.jn.QUEST_BAR_V2,
                         quest: t,
                         shouldShowDisclosure: !0,
                         showShareLink: !0,
+                        sourceQuestContent: d.jn.QUEST_BAR_V2,
                         children: (e) => {
                             var t, n;
                             return (0, r.jsx)(

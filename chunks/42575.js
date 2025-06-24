@@ -24,10 +24,10 @@ function g(e) {
                     fromFriendSuggestion: !0
                 });
         },
-        O = (e) => {
+        E = (e) => {
             null == e || e.stopPropagation(), o.Z.ignore(t.id);
         },
-        E = g === p.Skl.OFFLINE ? p.Skl.UNKNOWN : g;
+        O = g === p.Skl.OFFLINE ? p.Skl.UNKNOWN : g;
     return (0, r.jsx)(u.Z, {
         isFocused: m,
         user: t,
@@ -50,7 +50,7 @@ function g(e) {
                         icon: i.Dio,
                         actionType: c.Z.ActionTypes.DENY,
                         tooltip: h.intl.string(h.t.xuio0N),
-                        onClick: O,
+                        onClick: E,
                         shouldHighlight: e
                     })
                 ]
@@ -61,7 +61,7 @@ function g(e) {
                     (0, r.jsx)(d.Z, {
                         user: t,
                         hovered: e,
-                        status: E,
+                        status: O,
                         subText: n,
                         className: f.__invalid_userInfo
                     }),

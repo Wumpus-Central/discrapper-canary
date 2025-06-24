@@ -227,7 +227,8 @@ async function D(e, t) {
                 questContent: t.questContent,
                 questContentCTA: t.questContentCTA,
                 questContentPosition: t.questContentPosition,
-                questContentRowIndex: t.questContentRowIndex
+                questContentRowIndex: t.questContentRowIndex,
+                sourceQuestContent: t.sourceQuestContent
             }),
         !p.Z.isEnrolling(e))
     ) {

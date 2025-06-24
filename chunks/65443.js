@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var r = n(255367),
     s = n(73800),
-    i = n(120356),
-    o = n.n(i),
+    o = n(120356),
+    i = n.n(o),
     a = n(481060),
     l = n(918701),
     c = n(467628),
@@ -12,11 +12,11 @@ var r = n(255367),
     x = n(388032),
     p = n(954353);
 function h(e) {
-    let { orientation: t = 'horizontal', headingColor: n = 'text-normal', textColor: i = 'text-normal', withRewardName: h = !1, withPremiumHighlight: g = !0, quest: j } = e,
+    let { orientation: t = 'horizontal', headingColor: n = 'text-normal', textColor: o = 'text-normal', withRewardName: h = !1, withPremiumHighlight: g = !0, quest: j } = e,
         f = (0, c.j)({ location: m.dr.QUESTS_BAR_MOBILE }),
-        b = s.useMemo(() => d.r.build(j.config), [j.config]),
-        C = b.defaultRewardName,
-        v = b.defaultRewardNameWithArticle,
+        C = s.useMemo(() => d.r.build(j.config), [j.config]),
+        b = C.defaultRewardName,
+        v = C.defaultRewardNameWithArticle,
         y = (0, l.Kr)(j.config),
         N = (0, u.mK)(j.config);
     return (0, r.jsxs)('div', {
@@ -25,27 +25,27 @@ function h(e) {
                 (0, r.jsx)(a.Text, {
                     color: n,
                     variant: 'text-sm/normal',
-                    children: x.intl.formatToPlainString(x.t['W8/b3d'], { rewardName: f ? C : v })
+                    children: x.intl.formatToPlainString(x.t['W8/b3d'], { rewardName: f ? b : v })
                 }),
             null != y &&
                 (0, r.jsxs)('ul', {
-                    className: o()(p.rewardsDisclosures, {
+                    className: i()(p.rewardsDisclosures, {
                         [p.rewardsDisclosuresHorizontal]: 'horizontal' === t,
                         [p.rewardsDisclosuresStack]: 'stack' === t
                     }),
                     children: [
                         (0, r.jsx)(a.Text, {
-                            className: o()({ [p.rewardsDisclosuresDurationPremiumExtendable]: null != N }),
-                            color: i,
+                            className: i()({ [p.rewardsDisclosuresDurationPremiumExtendable]: null != N }),
+                            color: o,
                             tag: 'li',
                             variant: 'text-xs/medium',
                             children: x.intl.formatToPlainString(x.t.coKAb2, { rewardsDuration: y })
                         }),
                         null != N &&
                             (0, r.jsx)(a.Text, {
-                                className: o()({ [p.rewardsDisclosuresItemPremiumHighlight]: g }),
+                                className: i()({ [p.rewardsDisclosuresItemPremiumHighlight]: g }),
                                 tag: 'li',
-                                color: g ? void 0 : i,
+                                color: g ? void 0 : o,
                                 variant: 'text-xs/medium',
                                 children: N
                             })

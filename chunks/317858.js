@@ -15,11 +15,11 @@ var r = n(73800),
     m = n(998502),
     b = n(252618),
     _ = n(981631),
-    O = n(388032);
-let E = new Set(['Blink', 'Gecko', 'WebKit']),
+    E = n(388032);
+let O = new Set(['Blink', 'Gecko', 'WebKit']),
     y = _.dG4;
 if (g.isPlatformEmbedded) y = (e) => m.ZP.setBadge(e);
-else if (E.has(o().layout)) {
+else if (O.has(o().layout)) {
     let e = new (l())({ animation: 'none' });
     y = (t) => {
         try {
@@ -41,7 +41,7 @@ function I() {
         if (!e) return;
         let t = m.ZP.bounceDock('critical'),
             n = (0, b.EM)({
-                messages: [O.intl.string(O.t['fk1/bW'])],
+                messages: [E.intl.string(E.t['fk1/bW'])],
                 count: 50
             });
         return () => {

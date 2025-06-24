@@ -7,17 +7,18 @@ var s = n(481060),
     i = n(497505),
     l = n(981631),
     c = n(388032),
-    d = n(382845);
-function u(e) {
-    let { text: t, quest: n } = e,
-        c = (0, a.O5)();
+    u = n(382845);
+function d(e) {
+    let { text: t, quest: n, sourceQuestContent: c } = e,
+        d = (0, a.O5)();
     return (0, r.jsx)(s.P3F, {
-        className: d.showConnectionsButton,
+        className: u.showConnectionsButton,
         onClick: () => {
-            c({
+            d({
                 questId: n.id,
                 questContent: i.jn.QUEST_BAR_V2,
-                questContentCTA: a.jZ.VIEW_CONSOLE_CONNECTIONS_LINK
+                questContentCTA: a.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
+                sourceQuestContent: c
             }),
                 o.Z.open(l.oAB.CONNECTIONS);
         },
@@ -30,11 +31,12 @@ function u(e) {
     });
 }
 function p(e) {
-    let { xboxAndPlaystationAccounts: t, quest: n } = e;
+    let { xboxAndPlaystationAccounts: t, quest: n, sourceQuestContent: s } = e;
     return t.length > 0
-        ? (0, r.jsx)(u, {
+        ? (0, r.jsx)(d, {
               text: c.intl.string(c.t['qiS+xs']),
-              quest: n
+              quest: n,
+              sourceQuestContent: s
           })
         : null;
 }

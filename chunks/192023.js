@@ -1,8 +1,8 @@
-l.d(t, { h: () => a });
-var n = l(73800),
-    r = l(818083);
-let s = new Date(Date.UTC(2025, 5, 16)),
-    i = (0, r.B)({
+n.d(t, { h: () => o });
+var l = n(73800),
+    s = n(818083);
+let r = new Date(Date.UTC(2025, 5, 16)),
+    i = (0, s.B)({
         id: '2025-06_quest_brand_color_removal',
         kind: 'user',
         label: 'Quest Brand Color Removal',
@@ -15,8 +15,8 @@ let s = new Date(Date.UTC(2025, 5, 16)),
             }
         ]
     });
-function a(e) {
-    let { questConfig: t, location: l } = e,
-        r = n.useMemo(() => new Date(t.startsAt), [t.startsAt]) >= s;
-    return i.useExperiment({ location: l }, { autoTrackExposure: r }).enabled && r;
+function o(e) {
+    let { questConfig: t, location: n } = e,
+        s = l.useMemo(() => new Date(t.startsAt), [t.startsAt]) >= r;
+    return i.useExperiment({ location: n }, { autoTrackExposure: s }).enabled && s;
 }

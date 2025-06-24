@@ -1,9 +1,9 @@
 n.d(t, { Z: () => p }), n(388685);
 var r = n(255367),
     s = n(73800),
-    i = n(524979);
+    o = n(524979);
 n(442837);
-var o = n(113434);
+var i = n(113434);
 n(569984);
 var a = n(497505),
     l = n(602667),
@@ -13,17 +13,17 @@ var a = n(497505),
     m = n(266843),
     x = n(463910);
 function p(e) {
-    let { quest: t, location: n, initiallyExpanded: p, contentPosition: h } = e,
-        [g, j] = s.useState(!1),
-        f = s.useCallback(() => j(!0), []),
-        b = s.useCallback(() => j(!1), []),
-        C = (0, o.tP)(t),
-        { containerRef: v, size: y, height: N } = (0, m.h)(),
+    let { quest: t, location: n, initiallyExpanded: p, contentPosition: h, sourceQuestContent: g } = e,
+        [j, f] = s.useState(!1),
+        C = s.useCallback(() => f(!0), []),
+        b = s.useCallback(() => f(!1), []),
+        v = (0, i.tP)(t),
+        { containerRef: y, size: N, height: O } = (0, m.h)(),
         {
-            expansionSpring: O,
-            isAnimating: T,
-            isExpanded: E,
-            toggleExpanded: q
+            expansionSpring: T,
+            isAnimating: E,
+            isExpanded: q,
+            toggleExpanded: S
         } = (0, m.O)({
             initiallyExpanded:
                 p ||
@@ -32,53 +32,56 @@ function p(e) {
                     quest: t
                 })
         }),
-        S = null != N ? N : c.U0;
+        P = null != O ? O : c.U0;
     return (0, r.jsx)(l.A, {
         questOrQuests: t,
         questContent: n,
         questContentPosition: h,
         trackGuildAndChannelMetadata: n === a.jn.QUESTS_EMBED,
+        sourceQuestContent: g,
         children: (e) =>
-            (0, r.jsx)(i.animated.div, {
+            (0, r.jsx)(o.animated.div, {
                 style: {
                     maxHeight:
                         n === a.jn.QUESTS_EMBED
                             ? void 0
-                            : O.to({
+                            : T.to({
                                   range: [0, 1],
-                                  output: [c.DJ, S]
+                                  output: [c.DJ, P]
                               })
                 },
                 className: x.questsCard,
-                onFocus: f,
-                onMouseEnter: f,
+                onFocus: C,
+                onMouseEnter: C,
                 onBlur: b,
                 onMouseLeave: b,
                 children: (0, r.jsxs)('div', {
                     ref: (t) => {
-                        (e.current = t), (v.current = t);
+                        (e.current = t), (y.current = t);
                     },
                     children: [
                         (0, r.jsx)(d.Z, {
-                            isQuestExpired: C,
+                            isQuestExpired: v,
                             location: n,
                             quest: t,
-                            size: y,
-                            expansionSpring: O,
-                            isAnimating: T,
-                            isExpanded: E,
+                            size: N,
+                            expansionSpring: T,
+                            isAnimating: E,
+                            isExpanded: q,
                             contentPosition: h,
-                            toggleExpanded: q
+                            toggleExpanded: S,
+                            sourceQuestContent: g
                         }),
                         (0, r.jsx)(u.Z, {
                             quest: t,
-                            isQuestExpired: C,
+                            isQuestExpired: v,
                             location: n,
-                            size: y,
-                            isFocused: g,
-                            isExpanded: E,
-                            isAnimating: T,
-                            contentPosition: h
+                            size: N,
+                            isFocused: j,
+                            isExpanded: q,
+                            isAnimating: E,
+                            contentPosition: h,
+                            sourceQuestContent: g
                         })
                     ]
                 })

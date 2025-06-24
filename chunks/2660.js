@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var s = n(442837),
-    i = n(481060),
-    o = n(204418),
+    o = n(481060),
+    i = n(204418),
     a = n(594174),
     l = n(113434),
     c = n(182294),
@@ -15,13 +15,13 @@ let d = (e) => {
         return p
             ? (0, r.jsx)('div', {
                   className: u.questsCollectibleReward,
-                  children: (0, r.jsx)(i.$jN, {})
+                  children: (0, r.jsx)(o.$jN, {})
               })
             : null == m || null == x
               ? n
               : (0, r.jsx)('div', {
                     className: u.questsCollectibleReward,
-                    children: (0, r.jsx)(o.Z, {
+                    children: (0, r.jsx)(i.Z, {
                         avatarSize: c.EF.SIZE_56,
                         user: m,
                         guildId: null,

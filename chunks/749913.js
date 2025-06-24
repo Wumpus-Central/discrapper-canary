@@ -296,7 +296,7 @@ function es(e) {
                             children: [
                                 S && I && (0, r.jsx)(_.Z, { parentChannel: t }),
                                 f &&
-                                    (0, r.jsx)(ef, {
+                                    (0, r.jsx)(ep, {
                                         className: er.horizontalPadding,
                                         parentChannel: t,
                                         canCreatePost: u
@@ -351,7 +351,7 @@ let eo = a.memo(function (e) {
             b = a.useMemo(
                 () =>
                     n && !i
-                        ? (0, r.jsx)(ej, {})
+                        ? (0, r.jsx)(eC, {})
                         : n || i || (0 !== o.textValue.trim().length && o.textValue.trim() !== h)
                           ? !i && (s.trim().length > 0 || (o.textValue.trim().length > 0 && o.textValue.trim() !== h) || L.Z.getUploads(t.id, M.d.FirstThreadMessage).length > 0) && d
                               ? (0, r.jsx)(g.vdY, {
@@ -508,7 +508,7 @@ let eo = a.memo(function (e) {
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(ed, { parentChannel: t }),
-                              (0, r.jsx)(ex, {
+                              (0, r.jsx)(eb, {
                                   parentChannel: t,
                                   canCreatePost: l
                               })
@@ -696,7 +696,26 @@ function eh() {
         })
     });
 }
-function eg() {
+function eg(e) {
+    let { textAreaState: t } = (0, K.xH)((e) => {
+            let { textAreaState: t } = e;
+            return { textAreaState: t };
+        }, c.X),
+        n = (0, h.Wu)([L.Z], () => L.Z.getUploads(e.id, M.d.FirstThreadMessage));
+    return a.useMemo(() => t.textValue.trim().length > 0 || n.length > 0, [t.textValue, n]);
+}
+function ef(e) {
+    let t = eg(e),
+        { appliedTags: n, name: r } = (0, K.xH)((e) => {
+            let { appliedTags: t, name: n } = e;
+            return {
+                appliedTags: t,
+                name: n
+            };
+        }, c.X);
+    return a.useMemo(() => e.hasFlag(et.zZ.REQUIRE_TAG) && 0 === n.size && r.length > 0 && t, [n, r, e, t]);
+}
+function ex() {
     let { previewing: e } = (0, K.xH)((e) => {
             let { previewing: t } = e;
             return { previewing: t };
@@ -738,38 +757,33 @@ function eg() {
             )
     });
 }
-let ef = a.memo(function (e) {
+let ep = a.memo(function (e) {
     let { parentChannel: t, canCreatePost: n, className: l } = e,
-        {
-            textAreaState: i,
-            appliedTags: s,
-            name: o
-        } = (0, K.xH)((e) => {
-            let { textAreaState: t, appliedTags: n, name: r } = e;
+        { textAreaState: i, name: s } = (0, K.xH)((e) => {
+            let { textAreaState: t, name: n } = e;
             return {
                 textAreaState: t,
-                appliedTags: n,
-                name: r
+                name: n
             };
         }, c.X),
-        { rateLimitPerUser: d } = t,
-        u = d > 0,
-        m = (0, h.e7)([A.Z], () => A.Z.getSlowmodeCooldownGuess(t.id, A.S.CreateThread)),
-        f = (0, h.e7)([Z.Z], () => Z.Z.can(ee.Plq.MANAGE_THREADS, t) || Z.Z.can(ee.Plq.MANAGE_CHANNELS, t)),
-        x = t.hasFlag(et.zZ.REQUIRE_TAG) && 0 === s.size && o.length > 0 && i.textValue.length > 0,
-        p = (0, K.AF)(),
-        j = a.useCallback(() => {
-            p.getState().setBodyFocused(!1);
-        }, [p]),
-        C = a.useMemo(() => '' !== o.trim() && '' !== i.textValue.trim(), [o, i.textValue]);
+        { rateLimitPerUser: o } = t,
+        d = o > 0,
+        u = (0, h.e7)([A.Z], () => A.Z.getSlowmodeCooldownGuess(t.id, A.S.CreateThread)),
+        m = (0, h.e7)([Z.Z], () => Z.Z.can(ee.Plq.MANAGE_THREADS, t) || Z.Z.can(ee.Plq.MANAGE_CHANNELS, t)),
+        f = ef(t),
+        x = (0, K.AF)(),
+        p = a.useCallback(() => {
+            x.getState().setBodyFocused(!1);
+        }, [x]),
+        j = a.useMemo(() => '' !== s.trim() && '' !== i.textValue.trim(), [s, i.textValue]);
     return (
         a.useEffect(() => {
-            C || p.getState().setPreviewing(!1);
-        }, [C, p]),
+            j || x.getState().setPreviewing(!1);
+        }, [j, x]),
         (0, r.jsxs)('div', {
             className: l,
             children: [
-                (0, r.jsx)(eb, { parentChannel: t }),
+                (0, r.jsx)(ev, { parentChannel: t }),
                 (0, r.jsx)('div', { className: er.tagsDivider }),
                 (0, r.jsxs)('div', {
                     className: er.controlsContainer,
@@ -785,22 +799,22 @@ let ef = a.memo(function (e) {
                                             textValue: i.textValue,
                                             className: er.characterCount
                                         }),
-                                        u &&
+                                        d &&
                                             (0, r.jsx)(Y.Z, {
-                                                rateLimitPerUser: d,
-                                                slowmodeCooldownGuess: m,
-                                                isBypassSlowmode: f,
+                                                rateLimitPerUser: o,
+                                                slowmodeCooldownGuess: u,
+                                                isBypassSlowmode: m,
                                                 leadingIcon: !0
                                             })
                                     ]
                                 }),
                                 (0, r.jsx)(ed, { parentChannel: t }),
-                                C && (0, r.jsx)(eg, {}),
-                                (0, r.jsx)(ex, {
+                                j && (0, r.jsx)(ex, {}),
+                                (0, r.jsx)(eb, {
                                     parentChannel: t,
                                     disableIfInvalid: !0,
                                     canCreatePost: n,
-                                    disabled: u && !f && m > 0
+                                    disabled: d && !m && u > 0
                                 })
                             ]
                         }),
@@ -809,13 +823,13 @@ let ef = a.memo(function (e) {
                             {
                                 type: ei,
                                 className: er.expressionPicker,
-                                onClick: j
+                                onClick: p
                             },
                             'expression'
                         )
                     ]
                 }),
-                x &&
+                f &&
                     (0, r.jsx)(g.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-danger',
@@ -826,31 +840,25 @@ let ef = a.memo(function (e) {
         })
     );
 });
-function ex(e) {
+function eb(e) {
     let { parentChannel: t, canCreatePost: n, disabled: a, disableIfInvalid: l = !1 } = e,
         i = (0, N.HL)(t),
         {
             submitting: s,
-            textAreaState: o,
-            name: d,
-            appliedTags: u,
-            formOpen: m
+            name: o,
+            formOpen: d
         } = (0, K.xH)((e) => {
-            let { submitting: t, textAreaState: n, name: r, appliedTags: a, formOpen: l } = e;
+            let { submitting: t, name: n, formOpen: r } = e;
             return {
                 submitting: t,
-                textAreaState: n,
-                name: r,
-                appliedTags: a,
-                formOpen: l
+                name: n,
+                formOpen: r
             };
         }, c.X),
-        f = t.hasFlag(et.zZ.REQUIRE_TAG) && 0 === u.size && d.length > 0 && o.textValue.length > 0,
-        x = (0, h.Wu)([L.Z], () => L.Z.getUploads(t.id, M.d.FirstThreadMessage)),
-        p = o.textValue.trim().length > 0 || x.length > 0,
-        b = !f && p && d.trim().length > 0;
+        u = eg(t),
+        m = !ef(t) && u && o.trim().length > 0;
     if (__OVERLAY__ || i) return null;
-    let j = function () {
+    let h = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         return (0, r.jsxs)(
             g.zxk,
@@ -860,7 +868,7 @@ function ex(e) {
                 innerClassName: er.submitButtonInner,
                 type: 'submit',
                 submitting: s,
-                disabled: (l && !b) || a || !n,
+                disabled: (l && !m) || a || !n,
                 children: [
                     (0, r.jsx)(g.kBi, {
                         size: 'xs',
@@ -870,23 +878,23 @@ function ex(e) {
                     (0, r.jsx)(g.Text, {
                         variant: 'text-md/semibold',
                         color: 'none',
-                        children: m ? en.intl.string(en.t.pIuQIy) : en.intl.string(en.t.TyAuoa)
+                        children: d ? en.intl.string(en.t.pIuQIy) : en.intl.string(en.t.TyAuoa)
                     })
                 ]
             })
         );
     };
     return n
-        ? j()
+        ? h()
         : (0, r.jsx)(g.ua7, {
               text: en.intl.string(en.t.iyzwnJ),
-              children: (e) => j(e)
+              children: (e) => h(e)
           });
 }
-function ep() {
+function ej() {
     return Promise.resolve();
 }
-function eb(e) {
+function ev(e) {
     let { parentChannel: t } = e,
         {
             appliedTags: n,
@@ -905,8 +913,8 @@ function eb(e) {
             id: ''.concat(t.id, '-post-form-tags-navigator'),
             isEnabled: !0,
             wrap: !0,
-            scrollToStart: ep,
-            scrollToEnd: ep,
+            scrollToStart: ej,
+            scrollToEnd: ej,
             orientation: m.hy.HORIZONTAL
         }),
         { containerRef: f, containerWidth: x } = (0, Q.Z)(),
@@ -1058,7 +1066,7 @@ function eb(e) {
               ]
           });
 }
-function ej(e) {
+function eC(e) {
     let { style: t, className: n } = e;
     return (0, r.jsx)('div', {
         className: n,

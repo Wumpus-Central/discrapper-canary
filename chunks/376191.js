@@ -16,8 +16,8 @@ var i = n(442837),
     m = n(998502),
     b = n(620924),
     _ = n(332712),
-    O = n(81471),
-    E = n(388032),
+    E = n(81471),
+    O = n(388032),
     y = n(818816);
 let I = (e) => {
         let { userId: t } = e,
@@ -27,7 +27,7 @@ let I = (e) => {
                   className: y.mutualGuilds,
                   variant: 'text-sm/normal',
                   color: 'text-muted',
-                  children: E.intl.string(E.t.jpY0X1)
+                  children: O.intl.string(O.t.jpY0X1)
               })
             : (0, r.jsxs)('div', {
                   className: y.mutualGuildsContainer,
@@ -42,7 +42,7 @@ let I = (e) => {
                           className: y.mutualGuilds,
                           variant: 'text-sm/normal',
                           color: 'text-muted',
-                          children: E.intl.format(E.t.eE3oen, { count: n.length })
+                          children: O.intl.format(O.t.eE3oen, { count: n.length })
                       })
                   ]
               });
@@ -67,7 +67,7 @@ function C(e) {
                 src: (0, p.x)(n, 40, C),
                 avatarDecoration: N,
                 size: l.EFr.SIZE_40,
-                'aria-label': null != (t = null == c ? void 0 : c.username) ? t : E.intl.string(E.t['30mdIy'])
+                'aria-label': null != (t = null == c ? void 0 : c.username) ? t : O.intl.string(O.t['30mdIy'])
             }),
             (0, r.jsxs)('div', {
                 className: y.userPreview,
@@ -92,7 +92,7 @@ function C(e) {
                         ]
                     }),
                     (0, r.jsx)(s.Z, {
-                        hoverText: (0, r.jsx)(O.Z, { channel: n }),
+                        hoverText: (0, r.jsx)(E.Z, { channel: n }),
                         forceHover: h,
                         children: (0, r.jsx)(I, { userId: c.id })
                     })

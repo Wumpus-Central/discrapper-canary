@@ -10,8 +10,8 @@ var r = n(255367),
     i = n(481060),
     l = n(918701),
     c = n(373370),
-    d = n(566078),
-    u = n(388032),
+    u = n(566078),
+    d = n(388032),
     p = n(141572);
 function m(e) {
     let { children: t, isComplete: n, hasNextStep: s } = e;
@@ -52,7 +52,7 @@ function g(e) {
     let { quest: t } = e,
         { rewardName: n, rewardDuration: o } = s.useMemo(
             () => ({
-                rewardName: d.r.build(t.config).defaultRewardName,
+                rewardName: u.r.build(t.config).defaultRewardName,
                 rewardDuration: (0, l.Kr)(t.config)
             }),
             [t.config]
@@ -64,7 +64,7 @@ function g(e) {
             (0, r.jsx)(i.X6q, {
                 color: 'header-primary',
                 variant: 'text-xs/semibold',
-                children: null == o ? u.intl.string(u.t['7Rdjmp']) : u.intl.formatToPlainString(u.t.coKAb2, { rewardsDuration: o })
+                children: null == o ? d.intl.string(d.t['7Rdjmp']) : d.intl.formatToPlainString(d.t.coKAb2, { rewardsDuration: o })
             }),
             (0, r.jsx)('ul', {
                 className: p.rewardsListBody,

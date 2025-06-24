@@ -20,12 +20,13 @@ function f(e) {
           });
 }
 function p(e) {
-    let { quest: t, asset: n } = e;
+    let { quest: t, asset: n, sourceQuestContent: l } = e;
     return null == n
         ? null
         : (0, r.jsx)(d.A, {
               questOrQuests: t,
               questContent: c.jn.VIDEO_MODAL_END_CARD,
+              sourceQuestContent: l,
               children: (e) =>
                   (0, r.jsx)('img', {
                       ref: (t) => {
@@ -103,18 +104,19 @@ function b(e) {
     });
 }
 let E = function (e) {
-    let { quest: t, ctaBtnLabel: n, title: o, subtitle: i, onCTAClick: s } = e,
-        c = l.useMemo(() => (0, u.z0)(t, a.X.WATCH_VIDEO, u.n1.VIDEO, u.O.THUMBNAIL), [t]);
+    let { quest: t, ctaBtnLabel: n, title: o, subtitle: i, onCTAClick: s, sourceQuestContent: c } = e,
+        d = l.useMemo(() => (0, u.z0)(t, a.X.WATCH_VIDEO, u.n1.VIDEO, u.O.THUMBNAIL), [t]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(f, { asset: c }),
+            (0, r.jsx)(f, { asset: d }),
             (0, r.jsx)('div', { className: m.endScreenOverlay }),
             (0, r.jsxs)('div', {
                 className: m.endScreenContainer,
                 children: [
                     (0, r.jsx)(p, {
                         quest: t,
-                        asset: c
+                        asset: d,
+                        sourceQuestContent: c
                     }),
                     (0, r.jsx)(v, {
                         title: o,

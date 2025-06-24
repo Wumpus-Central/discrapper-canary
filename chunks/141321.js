@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(388032),
     b = n(264634);
 function _(e) {
-    let { onOpen: t, onClose: n, className: _, 'data-jump-section': O } = e,
-        E = i.useRef(null),
+    let { onOpen: t, onClose: n, className: _, 'data-jump-section': E } = e,
+        O = i.useRef(null),
         y = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
         I = i.useRef(null),
         v = (0, l.e7)([d.ZP], () => (null == y ? void 0 : y.id) != null && d.ZP.getMentionCount(y.id, g.W.NOTIFICATION_CENTER) > 0),
@@ -43,7 +43,7 @@ function _(e) {
                         }),
                     (0, r.jsx)(u.U, {
                         location: 'inbox-button',
-                        targetElementRef: E,
+                        targetElementRef: O,
                         children: (0, r.jsx)(
                             c.JO,
                             ((l = (function (e) {
@@ -73,7 +73,7 @@ function _(e) {
                             })({}, n)),
                             (o = o =
                                 {
-                                    ref: E,
+                                    ref: O,
                                     className: _,
                                     onClick: e,
                                     icon: a.xx7,
@@ -82,7 +82,7 @@ function _(e) {
                                     tooltip: t ? null : m.intl.string(m.t.GSmTKC),
                                     selected: t,
                                     showBadge: v || S || i,
-                                    'data-jump-section': O
+                                    'data-jump-section': E
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))

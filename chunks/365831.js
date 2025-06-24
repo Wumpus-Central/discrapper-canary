@@ -81,7 +81,7 @@ function I(e) {
         { activeVoice: n } = (0, _.o)(),
         l = (0, d.Z)(n),
         I = (0, g.z)(n),
-        { toggleLoopback: P, isLoopbackEnabled: C } = (function () {
+        { toggleLoopback: C, isLoopbackEnabled: P } = (function () {
             let { activeVoice: e } = (0, _.o)(),
                 t = (0, s.e7)([p.Z], () => p.Z.getVoiceFilterPlaybackEnabled()),
                 n = i.useCallback(() => {
@@ -103,7 +103,7 @@ function I(e) {
                 }
             );
         })(),
-        E = C ? c.Iy5 : c.X_q,
+        E = P ? c.Iy5 : c.X_q,
         w = i.useCallback(() => (0, m.v6)(null), []),
         T = (0, c.dQu)(c.TVs.colors.BACKGROUND_BASE_LOWER).hex(),
         N = (0, c.dQu)(c.TVs.colors.WHITE).hex(),
@@ -113,8 +113,8 @@ function I(e) {
         Z.current = A;
     }, [A]);
     let D = null != n,
-        k = !D,
-        L = D && null != l,
+        L = !D,
+        k = D && null != l,
         M = null == n && null != l,
         R = (0, c.q_F)(
             {
@@ -129,7 +129,7 @@ function I(e) {
                               duration: 200
                           }
                         : j,
-                delay: 100 * !!L
+                delay: 100 * !!k
             },
             'respect-motion-settings'
         ),
@@ -143,15 +143,15 @@ function I(e) {
                 },
                 enter: {
                     opacity: 1,
-                    delay: L ? 100 : 50
+                    delay: k ? 100 : 50
                 },
                 leave: {
                     opacity: 0,
-                    delay: L ? 100 : 150
+                    delay: k ? 100 : 150
                 },
                 config: {
                     easing: O,
-                    duration: L ? 250 : 200
+                    duration: k ? 250 : 200
                 }
             },
             'respect-motion-settings'
@@ -159,7 +159,7 @@ function I(e) {
         [U] = (0, c.bYB)(
             2,
             (e) => ({
-                from: L
+                from: k
                     ? {
                           translateY: 0,
                           opacity: 1
@@ -174,7 +174,7 @@ function I(e) {
                               translateY: 16,
                               opacity: 0
                           }
-                        : L
+                        : k
                           ? null
                           : {
                                 translateY: 0,
@@ -199,7 +199,7 @@ function I(e) {
                 from: {
                     opacity: 0,
                     scale: 80 / 88,
-                    translateX: L ? -16 : 0
+                    translateX: k ? -16 : 0
                 },
                 enter: {
                     opacity: 1,
@@ -211,7 +211,7 @@ function I(e) {
                     opacity: 0,
                     scale: D ? 80 / 88 : 1,
                     translateX: 24 * !!D,
-                    delay: 150 * !L
+                    delay: 150 * !k
                 },
                 config: (e) =>
                     'opacity' === e
@@ -231,8 +231,8 @@ function I(e) {
                 key: A,
                 from: {
                     opacity: 0,
-                    scale: L ? 0.9 : 1,
-                    translateY: 16 * !L
+                    scale: k ? 0.9 : 1,
+                    translateY: 16 * !k
                 },
                 enter: {
                     opacity: 1,
@@ -246,7 +246,7 @@ function I(e) {
                                   easing: O,
                                   duration: 200
                               }
-                            : L
+                            : k
                               ? j
                               : S
                 },
@@ -261,17 +261,17 @@ function I(e) {
                                   easing: O,
                                   duration: 200
                               }
-                            : L
+                            : k
                               ? j
                               : S
                 }
             },
             'respect-motion-settings'
         ),
-        Y = b.intl.string(C ? b.t.esVyo6 : b.t.UQqFCA);
+        Y = b.intl.string(P ? b.t.esVyo6 : b.t.UQqFCA);
     return (0, r.jsxs)(o.animated.div, {
         className: v.voiceFilterHero,
-        'aria-hidden': k,
+        'aria-hidden': L,
         style: R,
         children: [
             (0, r.jsx)('div', {
@@ -339,7 +339,7 @@ function I(e) {
                                 (0, r.jsx)(c.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'header-muted',
-                                    children: b.intl.string(C ? b.t.Sg6cfn : b.t.ZKhtw8)
+                                    children: b.intl.string(P ? b.t.Sg6cfn : b.t.ZKhtw8)
                                 })
                             ]
                         }),
@@ -352,15 +352,15 @@ function I(e) {
                                     y(
                                         h(
                                             {
-                                                className: a()(v.button, { [v.loopbackEnabled]: C }),
-                                                'aria-hidden': k,
+                                                className: a()(v.button, { [v.loopbackEnabled]: P }),
+                                                'aria-hidden': L,
                                                 focusProps: { enabled: D },
                                                 tabIndex: D ? 0 : -1
                                             },
                                             e
                                         ),
                                         {
-                                            onClick: () => P(),
+                                            onClick: () => C(),
                                             children: (0, r.jsx)(E, {
                                                 size: 'custom',
                                                 width: 20,
@@ -385,7 +385,7 @@ function I(e) {
                                         h(
                                             {
                                                 className: v.button,
-                                                'aria-hidden': k,
+                                                'aria-hidden': L,
                                                 focusProps: { enabled: D },
                                                 tabIndex: D ? 0 : -1
                                             },

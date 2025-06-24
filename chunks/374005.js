@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(410575),
     b = n(981631),
     _ = n(388032),
-    O = n(128654);
-function E(e) {
+    E = n(128654);
+function O(e) {
     var t, n;
     let { analyticsLocations: i } = (0, s.ZP)(o.Z.ACTIVITY_PANEL),
         l = (0, f.Z)((e) => {
@@ -82,7 +82,7 @@ let y = i.memo(function () {
         ),
         (0, r.jsx)('section', {
             ref: e,
-            className: O.panels,
+            className: E.panels,
             'aria-label': _.intl.string(_.t.StREWF),
             children: (0, r.jsxs)(l.Jc, {
                 containerRef: e,
@@ -92,7 +92,7 @@ let y = i.memo(function () {
                     (0, r.jsx)(d.Z, {}),
                     (0, r.jsx)(m.Z, {
                         section: b.jXE.ACTIVITY_PANEL,
-                        children: (0, r.jsx)(E, { className: O.activityPanel })
+                        children: (0, r.jsx)(O, { className: E.activityPanel })
                     }),
                     (0, r.jsx)(m.Z, {
                         section: b.jXE.RTC_CONNECTION_PANEL,

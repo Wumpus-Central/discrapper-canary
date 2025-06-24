@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(785547),
     b = n(730749),
     _ = n(112724),
-    O = n(812206),
-    E = n(44315),
+    E = n(812206),
+    O = n(44315),
     y = n(600164),
     I = n(167533),
     v = n(925329),
@@ -246,8 +246,8 @@ class z extends i.PureComponent {
                 (0, r.jsx)(p.Exd, {
                     percent: t,
                     size: p.Exd.Sizes.SMALL,
-                    foregroundColor: (0, E.Lq)(n),
-                    foregroundGradientColor: null != i ? [(0, E.Lq)(i[0]), (0, E.Lq)(i[1])] : void 0,
+                    foregroundColor: (0, O.Lq)(n),
+                    foregroundGradientColor: null != i ? [(0, O.Lq)(i[0]), (0, O.Lq)(i[1])] : void 0,
                     animate: this.isFocused
                 }),
                 (0, r.jsx)('div', {
@@ -647,8 +647,8 @@ function J(e, t, n, r) {
     }, []);
 }
 let $ = (0, _.Z)(
-    c.ZP.connectStores([O.Z, T.Z, P.Z, S.Z, j.Z], () => ({
-        applications: [...J(P.Z.activeItems, !1, O.Z, T.Z), ...J(P.Z.finishedItems, !0, O.Z, T.Z)],
+    c.ZP.connectStores([E.Z, T.Z, P.Z, S.Z, j.Z], () => ({
+        applications: [...J(P.Z.activeItems, !1, E.Z, T.Z), ...J(P.Z.finishedItems, !0, E.Z, T.Z)],
         paused: P.Z.paused,
         isFocused: j.Z.isFocused(),
         theme: S.Z.theme

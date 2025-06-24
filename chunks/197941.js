@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(243814),
@@ -16,7 +16,7 @@ var i = n(243814),
     m = n(736045),
     b = n(186901),
     _ = n(981631);
-let O = {
+let E = {
     [_.Etm.TOGGLE_VIDEO]: {
         scope: {
             [b.Gp.ALL]: [i.x.RPC, i.x.RPC_VIDEO_WRITE]

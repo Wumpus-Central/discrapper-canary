@@ -37,7 +37,7 @@ function b(e, t) {
 function _(e) {
     return null != e.getHandshakeComplete ? e.getHandshakeComplete() : e._didHandshake;
 }
-function O(e) {
+function E(e) {
     return new Promise((t, n) => {
         'string' == typeof e && (e = f.net.createConnection(e));
         let r = new y(e, 'json');
@@ -46,7 +46,7 @@ function O(e) {
                 r.read(t);
             } catch (t) {
                 e.end(
-                    E(m.CLOSE, {
+                    O(m.CLOSE, {
                         code: 1003,
                         message: t.message
                     })
@@ -57,7 +57,7 @@ function O(e) {
         let i = () => {
                 try {
                     e.end(
-                        E(m.CLOSE, {
+                        O(m.CLOSE, {
                             code: p.$VG.CLOSE_NORMAL,
                             message: 'test client going away'
                         })
@@ -81,10 +81,10 @@ function O(e) {
                     throw (i(), e);
                 }
             );
-        return e.write(E(m.PING, a().uniqueId())), l.then(t, n);
+        return e.write(O(m.PING, a().uniqueId())), l.then(t, n);
     });
 }
-function E(e, t) {
+function O(e, t) {
     t = JSON.stringify(t);
     let n = r.Buffer.byteLength(t),
         i = r.Buffer.alloc(8 + n);
@@ -96,11 +96,11 @@ class y extends u.Z {
         return e.copy(i, 0, t, n), i;
     }
     send(e) {
-        g.info('Socket Emit: '.concat(this.id), (0, c.Z)(e)), this.socket.write(E(m.FRAME, e));
+        g.info('Socket Emit: '.concat(this.id), (0, c.Z)(e)), this.socket.write(O(m.FRAME, e));
     }
     close(e, t) {
         this.socket.end(
-            E(m.CLOSE, {
+            O(m.CLOSE, {
                 code: e,
                 message: t
             })
@@ -138,7 +138,7 @@ class y extends u.Z {
     dispatchMessage(e, t, n) {
         switch (t) {
             case m.PING:
-                e.emit('ping', n), e.write(E(m.PONG, n));
+                e.emit('ping', n), e.write(O(m.PONG, n));
                 break;
             case m.PONG:
                 e.emit('pong', n);
@@ -152,7 +152,7 @@ class y extends u.Z {
                 break;
             case m.CLOSE:
                 e.end(
-                    E(m.CLOSE, {
+                    O(m.CLOSE, {
                         code: p.$VG.CLOSE_NORMAL,
                         message: 'client disconnect'
                     })
@@ -181,7 +181,7 @@ class I extends i.EventEmitter {
                 } catch (t) {
                     g.error('Socket Error: '.concat(t.message)),
                         e.end(
-                            E(m.CLOSE, {
+                            O(m.CLOSE, {
                                 code: p.$VG.CLOSE_UNSUPPORTED,
                                 message: t.message
                             })
@@ -213,7 +213,7 @@ class I extends i.EventEmitter {
         super();
         let e = f.net.createServer((e) => this.handleConnection(e));
         e.on('error', (e) => g.error('Error: '.concat(e.message))),
-            f.getAvailableSocket(O).then((t) => {
+            f.getAvailableSocket(E).then((t) => {
                 e.listen(t, () => {
                     ('function' == typeof e.listening ? e.listening() : e.listening) && g.info('Starting on '.concat(e.address()));
                 });

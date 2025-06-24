@@ -1,7 +1,7 @@
 n.d(t, {
-    GY: () => O,
-    PI: () => f,
-    RT: () => m,
+    GY: () => m,
+    PI: () => p,
+    RT: () => O,
     ls: () => g
 });
 var r = n(255367);
@@ -38,7 +38,7 @@ function d(e) {
     }
     return e;
 }
-function p(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,7 +56,7 @@ function p(e, t) {
         e
     );
 }
-function f(e) {
+function p(e) {
     let { children: t } = e;
     return (0, r.jsx)('div', {
         className: u.titleWrapper,
@@ -76,7 +76,7 @@ function g(e) {
         children: (e) =>
             (0, r.jsx)(
                 a.P3F,
-                p(d({}, e), {
+                f(d({}, e), {
                     className: u.button,
                     onClick: t,
                     children: (0, r.jsx)(a.ewm, {
@@ -87,10 +87,10 @@ function g(e) {
             )
     });
 }
-function O(e) {
+function m(e) {
     let { widgetId: t, showAllStreams: n } = e,
         i = n ? c.intl.string(c.t.q2B3rq) : c.intl.string(c.t.JKGi6u),
-        f = () => {
+        p = () => {
             (0, s.zG)(t, { showAllStreams: !n });
         };
     return (0, r.jsx)(a.ua7, {
@@ -99,9 +99,9 @@ function O(e) {
         children: (e) =>
             (0, r.jsx)(
                 a.P3F,
-                p(d({}, e), {
+                f(d({}, e), {
                     className: l()(u.button, n && u.active),
-                    onClick: f,
+                    onClick: p,
                     children: (0, r.jsx)(a.pzj, {
                         size: 'xxs',
                         color: n ? o.Z.colors.BG_BRAND : o.Z.colors.INTERACTIVE_ACTIVE
@@ -110,7 +110,7 @@ function O(e) {
             )
     });
 }
-function m(e) {
+function O(e) {
     let { id: t, pinned: n } = e,
         i = n ? c.intl.string(c.t.cSu80t) : c.intl.string(c.t.cM8Vnp);
     return (0, r.jsx)(a.ua7, {
@@ -119,7 +119,7 @@ function m(e) {
         children: (e) =>
             (0, r.jsx)(
                 a.P3F,
-                p(d({}, e), {
+                f(d({}, e), {
                     className: l()(u.button, n && u.active),
                     onClick: () => (0, s.xh)(t),
                     children: (0, r.jsx)(a.k5M, {

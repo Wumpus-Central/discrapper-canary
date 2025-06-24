@@ -22,8 +22,8 @@ var r = n(255367),
     S = n(718805),
     x = n(871118),
     I = n(981631),
-    P = n(388032),
-    C = n(768780);
+    C = n(388032),
+    P = n(768780);
 class E extends i.PureComponent {
     componentDidMount() {
         let { user: e, streamApplication: t } = this.props;
@@ -40,19 +40,19 @@ class E extends i.PureComponent {
         let { onWatch: t, activeStream: n, currentUserId: i, canWatch: l, unavailableReason: a } = this.props;
         return (0, r.jsxs)(s.P3F, {
             onClick: t,
-            className: C.previewContainer,
+            className: P.previewContainer,
             children: [
                 (0, r.jsx)(x.Z, {
-                    className: C.previewImage,
+                    className: P.previewImage,
                     stream: e
                 }),
                 l
                     ? (0, r.jsx)('div', {
-                          className: C.previewHover,
+                          className: P.previewHover,
                           children: (0, r.jsx)(s.Text, {
                               variant: 'text-sm/normal',
                               color: 'none',
-                              className: C.white,
+                              className: P.white,
                               children: (0, S.Z)(e, n, i, a)
                           })
                       })
@@ -65,13 +65,13 @@ class E extends i.PureComponent {
         return null == n
             ? null
             : (0, r.jsx)('div', {
-                  className: a()(C.streamPreviewWrapper, { [C.mounted]: i }),
+                  className: a()(P.streamPreviewWrapper, { [P.mounted]: i }),
                   children: (0, r.jsxs)('div', {
-                      className: C.streamPreview,
+                      className: P.streamPreview,
                       children: [
                           this.renderPreview(n),
                           (0, r.jsxs)('div', {
-                              className: C.body,
+                              className: P.body,
                               children: [
                                   null != e
                                       ? (0, r.jsx)(c.Z, {
@@ -95,15 +95,15 @@ class E extends i.PureComponent {
                                             user: t,
                                             guildId: n.guildId,
                                             channelId: n.channelId,
-                                            className: C.activityActions,
-                                            color: C.watchButton,
+                                            className: P.activityActions,
+                                            color: P.watchButton,
                                             onAction: l
                                         }),
                                   !o &&
                                       (0, r.jsx)(f.Z, {
                                           type: f.Z.Types.INLINE,
-                                          className: C.protip,
-                                          children: __OVERLAY__ ? P.intl.string(P.t['YRdw7+']) : P.intl.string(P.t.CCTgbG)
+                                          className: P.protip,
+                                          children: __OVERLAY__ ? C.intl.string(C.t['YRdw7+']) : C.intl.string(C.t.CCTgbG)
                                       })
                               ]
                           })
@@ -141,9 +141,9 @@ function w(e) {
         S = (0, o.e7)([g.default], () => g.default.getId()),
         x = (0, j.Cf)(f),
         I = (0, o.e7)([v.Z], () => (0, j.Um)(f, v.Z)),
-        P = i.useMemo(() => ({ [a.guild_id]: [l.id] }), [a.guild_id, l.id]);
+        C = i.useMemo(() => ({ [a.guild_id]: [l.id] }), [a.guild_id, l.id]);
     return (
-        (0, u.$)(P),
+        (0, u.$)(C),
         (0, r.jsx)(
             E,
             ((t = (function (e) {

@@ -1,7 +1,7 @@
 n.d(t, {
     ZP: () => M,
-    eJ: () => k,
-    nm: () => L
+    eJ: () => L,
+    nm: () => k
 }),
     n(539854),
     n(997841),
@@ -29,8 +29,8 @@ var r = n(255367),
     S = n(979651),
     x = n(574254),
     I = n(374129),
-    P = n(639351),
-    C = n(630388),
+    C = n(639351),
+    P = n(630388),
     E = n(51144),
     w = n(981631),
     T = n(354459),
@@ -62,7 +62,7 @@ function D(e) {
     }
     return e;
 }
-let k = (e) => {
+let L = (e) => {
     let { children: t, collapsed: n = !1, className: i } = e;
     return (0, r.jsx)('div', {
         className: a()(i, A.list, n ? A.listCollapse : A.listDefault),
@@ -70,9 +70,9 @@ let k = (e) => {
         children: t
     });
 };
-function L(e) {
-    let { className: t, mute: n, localMute: i, localVideoDisabled: l, serverMute: o, deaf: c, serverDeaf: u, collapsed: p, video: m, isStreaming: g, disabled: _, isWatching: v, iconClassName: h, embeddedApplication: y, otherClientSessionType: O, voicePlatform: j, application: S, guildId: x, channelId: E, user: D, disconnected: k } = e,
-        { enabled: L } = d.c.getCurrentConfig({ location: 'VoiceUserIcons' }, { autoTrackExposure: !0 });
+function k(e) {
+    let { className: t, mute: n, localMute: i, localVideoDisabled: l, serverMute: o, deaf: c, serverDeaf: u, collapsed: p, video: m, isStreaming: g, disabled: _, isWatching: v, iconClassName: h, embeddedApplication: y, otherClientSessionType: O, voicePlatform: j, application: S, guildId: x, channelId: E, user: D, disconnected: L } = e,
+        { enabled: k } = d.c.getCurrentConfig({ location: 'VoiceUserIcons' }, { autoTrackExposure: !0 });
     if (p || _) return null;
     let M = [],
         U = (0, r.jsx)(F, {
@@ -116,7 +116,7 @@ function L(e) {
                       'video'
                   )
               )),
-        k &&
+        L &&
             M.push(
                 (0, r.jsx)(
                     s.DY3,
@@ -131,7 +131,7 @@ function L(e) {
                     'disconnected'
                 )
             );
-    let V = L ? s.iWm : s.nG3;
+    let V = k ? s.iWm : s.nG3;
     null != y &&
         M.push(
             (0, r.jsx)(
@@ -154,7 +154,7 @@ function L(e) {
                       'div',
                       {
                           className: A.iconSpacing,
-                          children: (0, r.jsx)(P.Z, { className: a()(A.icon, h) })
+                          children: (0, r.jsx)(C.Z, { className: a()(A.icon, h) })
                       },
                       'xbox'
                   )
@@ -197,7 +197,7 @@ function L(e) {
                     'stream'
                 )
             );
-    let B = null != S && !(0, C.yE)(S.flags, w.udG.EMBEDDED);
+    let B = null != S && !(0, P.yE)(S.flags, w.udG.EMBEDDED);
     return 0 !== M.length || null != U || B
         ? (0, r.jsxs)('div', {
               className: a()(A.icons, t),
@@ -247,7 +247,7 @@ let M = i.forwardRef(function (e, t) {
             }
             return i;
         })(e, ['avatarContainerClass', 'userNameClassName', 'size', 'selected', 'disabled', 'isOverlay']);
-    let { onClick: I, onKeyDown: P, onDoubleClick: C, onContextMenu: N, onMouseLeave: k, onMouseDown: M, priority: R, speaking: F, collapsed: U, mute: V, serverMute: B, guildId: Y, nick: W, isGuest: z, flipped: G, className: H, overlap: J, 'aria-label': X, ringing: q, user: K, channelId: Q } = v,
+    let { onClick: I, onKeyDown: C, onDoubleClick: P, onContextMenu: N, onMouseLeave: L, onMouseDown: M, priority: R, speaking: F, collapsed: U, mute: V, serverMute: B, guildId: Y, nick: W, isGuest: z, flipped: G, className: H, overlap: J, 'aria-label': X, ringing: q, user: K, channelId: Q } = v,
         { parentAnalyticsLocation: $ } = (0, m.ZP)(),
         ee = (0, u.bp)(),
         et = null != Q ? j.Z.getChannel(Q) : null,
@@ -277,18 +277,18 @@ let M = i.forwardRef(function (e, t) {
                 null == I || I(e, K);
             },
             onDoubleClick: (e) => {
-                null == C || C(e, K);
+                null == P || P(e, K);
             },
             onContextMenu: (e) => {
                 null == N || N(e, K);
             },
             onMouseLeave: (e) => {
-                null == k || k(e, K);
+                null == L || L(e, K);
             },
             onMouseDown: (e) => {
                 null == M || M(e, K);
             },
-            onKeyDown: P,
+            onKeyDown: C,
             'aria-label': null != (n = null != X ? X : W) ? n : K.username,
             focusProps: { offset: { right: 4 } },
             children: (0, r.jsxs)('div', {
@@ -355,7 +355,7 @@ let M = i.forwardRef(function (e, t) {
                               )
                             : null;
                     })(),
-                    (0, r.jsx)(L, D({ disabled: p }, v)),
+                    (0, r.jsx)(k, D({ disabled: p }, v)),
                     !U && en
                         ? (0, r.jsx)(s.DY3, {
                               text: Z.intl.string(Z.t['+1H47u']),

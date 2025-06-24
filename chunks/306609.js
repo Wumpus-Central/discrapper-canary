@@ -22,8 +22,8 @@ var r = n(255367),
     S = n(743498),
     x = n(967021),
     I = n(709706),
-    P = n(378441),
-    C = n(799143),
+    C = n(378441),
+    P = n(799143),
     E = n(358820),
     w = n(448697),
     T = n(946196),
@@ -31,8 +31,8 @@ var r = n(255367),
     Z = n(639539),
     A = n(627325),
     D = n(981631),
-    k = n(354459),
-    L = n(474936),
+    L = n(354459),
+    k = n(474936),
     M = n(48500),
     R = n(388032),
     F = n(130802);
@@ -97,7 +97,7 @@ function B(e) {
         q = (0, s.e7)([I.Z], () => I.Z.getCatalogUpdateTime()),
         [K, Q] = i.useState(!1),
         [$, ee] = i.useState(!1),
-        { activeVoice: et } = (0, P.o)(),
+        { activeVoice: et } = (0, C.o)(),
         en = (0, x.HM)({
             location: z[0],
             autoTrackExposure: !0
@@ -198,7 +198,7 @@ function B(e) {
                                     children: (0, r.jsx)(b.p, {
                                         showUpsell: !0,
                                         text: R.intl.format(R.t['XMDm8/'], {
-                                            nitroTierName: (0, j.Px)(L.p9.TIER_2),
+                                            nitroTierName: (0, j.Px)(k.p9.TIER_2),
                                             onClick: () => (0, v.i)()
                                         }),
                                         button: R.intl.string(R.t.cRCCJy),
@@ -220,8 +220,8 @@ function B(e) {
                 (0, r.jsxs)('div', {
                     className: a()(F.voiceFiltersFooter, { [F.hasActiveVoice]: null != et }),
                     children: [
-                        (0, r.jsx)(C.Y, {}),
-                        l && (0, r.jsx)(C.a, {}),
+                        (0, r.jsx)(P.Y, {}),
+                        l && (0, r.jsx)(P.a, {}),
                         (0, r.jsx)(c.yRy, {
                             targetElementRef: es,
                             position: 'top',
@@ -234,7 +234,7 @@ function B(e) {
                                     renderOutputDevices: l,
                                     renderOutputVolume: l,
                                     onClose: t,
-                                    onInteraction: (0, _.u)('AudioDeviceMenu', G, { entrypoint: k.A5.THREE_DOT }),
+                                    onInteraction: (0, _.u)('AudioDeviceMenu', G, { entrypoint: L.A5.THREE_DOT }),
                                     minimal: !0
                                 }),
                             children: (e) =>

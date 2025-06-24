@@ -15,7 +15,7 @@ var r = n(255367),
     m = n(981631),
     b = n(388032),
     _ = n(457755);
-function O(e, t, n) {
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ function O(e, t, n) {
         e
     );
 }
-function E(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function E(e) {
                 })
             )),
             r.forEach(function (t) {
-                O(e, t, n[t]);
+                E(e, t, n[t]);
             });
     }
     return e;
@@ -121,9 +121,9 @@ class v extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            O(this, 'partyMemberAvatarRef', i.createRef()),
-            O(this, 'partyMemberOverflowRef', i.createRef()),
-            O(this, 'renderPartyMember', (e, t) => {
+            E(this, 'partyMemberAvatarRef', i.createRef()),
+            E(this, 'partyMemberOverflowRef', i.createRef()),
+            E(this, 'renderPartyMember', (e, t) => {
                 let n;
                 if (null == e) return null;
                 let { host: l, onUserContextMenu: c } = this.props;
@@ -145,7 +145,7 @@ class v extends i.PureComponent {
                                         let { onMouseEnter: r, onMouseLeave: s } = n;
                                         return (0, i.createElement)(
                                             o.qEK,
-                                            y(E({}, l), {
+                                            y(O({}, l), {
                                                 key: e.id,
                                                 src: e.getAvatarURL(void 0, 24),
                                                 size: o.EFr.SIZE_24,
@@ -164,7 +164,7 @@ class v extends i.PureComponent {
                     )
                 );
             }),
-            O(this, 'renderPartyMemberOverflow', (e, t, n) => {
+            E(this, 'renderPartyMemberOverflow', (e, t, n) => {
                 let { renderOverflowPopout: i } = this.props;
                 return (0, r.jsx)(
                     o.yRy,
@@ -178,7 +178,7 @@ class v extends i.PureComponent {
                                     (0, r.jsx)(
                                         'div',
                                         y(
-                                            E(
+                                            O(
                                                 {
                                                     ref: this.partyMemberOverflowRef,
                                                     className: a()(_.overflow, t)

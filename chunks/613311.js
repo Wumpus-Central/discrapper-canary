@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(224336),
     b = n(730749),
     _ = n(666743),
-    O = n(115130),
-    E = n(812206),
+    E = n(115130),
+    O = n(812206),
     y = n(770146),
     I = n(600164),
     v = n(606081),
@@ -600,23 +600,23 @@ class ed extends i.PureComponent {
 }
 let ep = (0, b.Z)(
     (0, _.Z)(
-        o.ZP.connectStores([w.Z, j.Z, P.default, M.Z, D.Z, R.Z, k.Z, O.Z, E.Z, x.Z, A.Z, L.Z], (e) => {
+        o.ZP.connectStores([w.Z, j.Z, P.default, M.Z, D.Z, R.Z, k.Z, E.Z, O.Z, x.Z, A.Z, L.Z], (e) => {
             let t,
                 n,
                 r,
                 { inputSkuId: i, applicationId: l, storeListingId: a, isAuthenticated: o, channel: s } = e;
             if (null == l) {
                 if (null == i) throw Error('Needs applicationId or skuId');
-                (t = i), null != (l = null != (n = R.Z.get(i)) ? n.applicationId : null) && (r = E.Z.getApplication(l));
+                (t = i), null != (l = null != (n = R.Z.get(i)) ? n.applicationId : null) && (r = O.Z.getApplication(l));
             } else if (null == i) {
                 if (null == l) throw Error('Needs applicationId or skuId');
-                null != (r = E.Z.getApplication(l)) && (t = r.destinationSkuId), (n = null != t ? R.Z.get(t) : null);
+                null != (r = O.Z.getApplication(l)) && (t = r.destinationSkuId), (n = null != t ? R.Z.get(t) : null);
             }
             (null == n ? void 0 : n.flags) != null && (0, B.yE)(n.flags, ei.l4R.STICKER_PACK) && (n = null);
-            let c = null != l && (k.Z.inTestModeForApplication(l) || O.Z.inDevModeForApplication(l));
+            let c = null != l && (k.Z.inTestModeForApplication(l) || E.Z.inDevModeForApplication(l));
             return {
                 skuId: t,
-                application: null != l ? E.Z.getApplication(l) : null,
+                application: null != l ? O.Z.getApplication(l) : null,
                 isFetchingEntitlements: null != l && L.Z.applicationIdsFetching.has(l),
                 didFetchEntitlements: null != l && L.Z.applicationIdsFetched.has(l),
                 shouldFetchStatistics: o && null != l && x.Z.shouldFetchStatisticsForApplication(l),

@@ -6,8 +6,8 @@ var r = n(255367),
     i = n(505266),
     l = n(867309),
     c = n(524979),
-    d = n(442837),
-    u = n(110924),
+    u = n(442837),
+    d = n(110924),
     p = n(607070),
     m = n(819640),
     f = n(569379),
@@ -17,34 +17,34 @@ var r = n(255367),
 let b = ['#51BC9D'],
     j = (e) => {
         var t;
-        let { expansionSpring: n, overlayRef: o, quest: j, progressBarRef: v, isExpanded: _ } = e,
-            { completionSpring: y, startCompletionAnimation: O } = (0, f.G)(),
-            C = (null == (t = j.userStatus) ? void 0 : t.completedAt) != null,
-            w = s.useRef(!1),
-            S = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
-            P = s.useRef(null),
-            E = (0, d.e7)([m.Z], () => m.Z.hasLayers()),
-            T = (0, u.Z)(E),
+        let { expansionSpring: n, overlayRef: o, quest: j, progressBarRef: _, isExpanded: v } = e,
+            { completionSpring: y, startCompletionAnimation: C } = (0, f.G)(),
+            O = (null == (t = j.userStatus) ? void 0 : t.completedAt) != null,
+            S = s.useRef(!1),
+            E = (0, u.e7)([p.Z], () => p.Z.useReducedMotion),
+            w = s.useRef(null),
+            T = (0, u.e7)([m.Z], () => m.Z.hasLayers()),
+            P = (0, d.Z)(T),
             [N, A] = s.useState(null),
-            [k, R] = s.useState(null),
+            [R, k] = s.useState(null),
             B = s.useRef(
                 new i.qA({
                     gravity: 0,
                     wind: 0
                 })
             ),
-            q = (0, i.uR)(N, k),
+            q = (0, i.uR)(N, R),
             I = s.useCallback(() => {
-                if (S) return;
-                let e = v.current,
-                    t = P.current;
+                if (E) return;
+                let e = _.current,
+                    t = w.current;
                 if (null != t && null != e && q.isReady) {
                     var n, r, s, o, a, i;
                     let { x: l, y: c } = e.getBoundingClientRect(),
-                        { x: d, y: u } = t.getBoundingClientRect();
+                        { x: u, y: d } = t.getBoundingClientRect();
                     q.createMultipleConfetti(
-                        ((n = l - d),
-                        (r = c - u),
+                        ((n = l - u),
+                        (r = c - d),
                         (s = e.clientHeight),
                         (o = e.clientWidth),
                         (a = (function (e) {
@@ -127,28 +127,28 @@ let b = ['#51BC9D'],
                         100
                     );
                 }
-            }, [v, P, q, S]),
-            D = (0, u.Z)(_);
+            }, [_, w, q, E]),
+            D = (0, d.Z)(v);
         return (s.useEffect(() => {
-            C && _ && !D && (O(), I());
-        }, [_, C, O, I, D]),
+            O && v && !D && (C(), I());
+        }, [v, O, C, I, D]),
         s.useEffect(() => {
-            C &&
-                !E &&
-                T &&
+            O &&
+                !T &&
+                P &&
                 setTimeout(() => {
-                    O(), I();
+                    C(), I();
                 }, 200);
-        }, [C, T, E, O, I]),
+        }, [O, P, T, C, I]),
         s.useEffect(() => {
-            q.isReady && (!w.current && C && (O(), I()), (w.current = C));
-        }, [C, w, I, O, q]),
-        S)
+            q.isReady && (!S.current && O && (C(), I()), (S.current = O));
+        }, [O, S, I, C, q]),
+        E)
             ? null
             : (0, r.jsxs)('div', {
                   className: x.wrapper,
                   'aria-hidden': 'true',
-                  ref: P,
+                  ref: w,
                   children: [
                       (0, r.jsx)(c.animated.div, {
                           className: x.background,
@@ -175,7 +175,7 @@ let b = ['#51BC9D'],
                                   environment: B.current
                               }),
                               (0, r.jsx)(i.Ji, {
-                                  ref: R,
+                                  ref: k,
                                   sprites: [h],
                                   colors: b,
                                   spriteWidth: g.Ko,

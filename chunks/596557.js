@@ -17,14 +17,14 @@ function g(e) {
         m = f.$X.some((t) => (null == e ? void 0 : e.id) !== h._ && c.oz(t, e)),
         b = (null == e ? void 0 : e.defaultMessageNotifications) === d.bL.ALL_MESSAGES,
         _ = (0, u.FT)(l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null != (t = null == e ? void 0 : e.id) ? t : d.lds),
-        O = g && (m || b) && !_,
-        E = i.useCallback(() => {
+        E = g && (m || b) && !_,
+        O = i.useCallback(() => {
             var t;
             (0, u.Qd)(l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null != (t = null == e ? void 0 : e.id) ? t : d.lds, !0, p.L.DISMISS);
         }, [e]),
         y = i.useRef(!1);
     i.useEffect(() => {
-        if (O && !y.current) {
+        if (E && !y.current) {
             var t;
             (0, a.ZDy)(
                 async () => {
@@ -66,7 +66,7 @@ function g(e) {
                             )
                         );
                 },
-                { onCloseCallback: E }
+                { onCloseCallback: O }
             ),
                 s.default.track(d.rMx.DISMISSIBLE_CONTENT_SHOWN, {
                     type: l.C[l.C.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE],
@@ -74,5 +74,5 @@ function g(e) {
                 }),
                 (y.current = !0);
         }
-    }, [m, e, E, b, O]);
+    }, [m, e, O, b, E]);
 }

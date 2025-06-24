@@ -91,8 +91,8 @@ class R {
     getQuestContentPosition() {
         return this.questContentPosition;
     }
-    constructor({ questOrQuests: e, questContent: t, triggeredByStatusChange: n, trackGuildAndChannelMetadata: r, questContentPosition: i, questContentRowIndex: s, minViewTimeSeconds: l = S, isQuestEnrollmentBlocked: c }) {
-        var h = this;
+    constructor({ questOrQuests: e, questContent: t, triggeredByStatusChange: n, trackGuildAndChannelMetadata: r, questContentPosition: i, questContentRowIndex: s, minViewTimeSeconds: l = S, isQuestEnrollmentBlocked: c, sourceQuestContent: h }) {
+        var v = this;
         y(this, 'id', void 0),
             y(this, 'quests', void 0),
             y(this, 'questContent', void 0),
@@ -100,6 +100,7 @@ class R {
             y(this, 'trackGuildAndChannelMetadata', void 0),
             y(this, 'questContentPosition', void 0),
             y(this, 'questContentRowIndex', void 0),
+            y(this, 'sourceQuestContent', void 0),
             y(this, 'heartbeatTimeoutId', void 0),
             y(this, 'lastBeatTime', void 0),
             y(this, 'minViewTimeReachedTimeoutId', void 0),
@@ -138,21 +139,22 @@ class R {
                             event: b.rMx.QUEST_CONTENT_VIEWED,
                             trackGuildAndChannelMetadata: this.trackGuildAndChannelMetadata,
                             properties: r,
-                            shouldExtendSession: t
+                            shouldExtendSession: t,
+                            sourceQuestContent: this.sourceQuestContent
                         });
                 });
             }),
             y(this, 'beat', function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                h.quests.forEach((t) => {
-                    if (null != h.lastBeatTime) {
-                        let n = Math.round(Date.now() - h.lastBeatTime);
+                v.quests.forEach((t) => {
+                    if (null != v.lastBeatTime) {
+                        let n = Math.round(Date.now() - v.lastBeatTime);
                         (0, E.T)().info(
                             ''
                                 .concat(t.config.messages.questName, ' Quest impression ')
                                 .concat(e ? 'terminal ' : '', 'heartbeat: ')
                                 .concat(n, 'ms since last heartbeat'),
-                            { impressionId: h.id }
+                            { impressionId: v.id }
                         ),
                             (0, p.dA)({
                                 questId: t.id,
@@ -161,15 +163,16 @@ class R {
                                     {
                                         is_termination_beat: e,
                                         viewed_time_ms: n,
-                                        triggered_by_status_change: h.triggeredByStatusChange
+                                        triggered_by_status_change: v.triggeredByStatusChange
                                     },
-                                    h.commonProperties(t)
+                                    v.commonProperties(t)
                                 ),
-                                trackGuildAndChannelMetadata: h.trackGuildAndChannelMetadata
+                                trackGuildAndChannelMetadata: v.trackGuildAndChannelMetadata,
+                                sourceQuestContent: v.sourceQuestContent
                             });
                     }
                 }),
-                    (h.lastBeatTime = Date.now());
+                    (v.lastBeatTime = Date.now());
             }),
             y(this, 'commonProperties', (e) =>
                 O(
@@ -191,7 +194,8 @@ class R {
                         questContentPosition: this.questContentPosition,
                         trackGuildAndChannelMetadata: this.trackGuildAndChannelMetadata,
                         triggeredByStatusChange: t,
-                        isQuestEnrollmentBlocked: this.isQuestEnrollmentBlocked
+                        isQuestEnrollmentBlocked: this.isQuestEnrollmentBlocked,
+                        sourceQuestContent: this.sourceQuestContent
                     })
                 );
             }),
@@ -206,7 +210,8 @@ class R {
                                 questId: e.id,
                                 event: b.rMx.QUEST_CONTENT_LOADED,
                                 properties: O({ triggered_by_status_change: this.triggeredByStatusChange }, this.commonProperties(e)),
-                                trackGuildAndChannelMetadata: this.trackGuildAndChannelMetadata
+                                trackGuildAndChannelMetadata: this.trackGuildAndChannelMetadata,
+                                sourceQuestContent: this.sourceQuestContent
                             });
                     }),
                     (0, g.a)('QuestImpressionTracker') &&
@@ -218,7 +223,7 @@ class R {
             }),
             y(this, 'stop', function () {
                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-                e && h.beat(!0), (h.lastBeatTime = void 0), clearInterval(h.heartbeatTimeoutId), clearTimeout(h.minViewTimeReachedTimeoutId), (h.isRunning = !1);
+                e && v.beat(!0), (v.lastBeatTime = void 0), clearInterval(v.heartbeatTimeoutId), clearTimeout(v.minViewTimeReachedTimeoutId), (v.isRunning = !1);
             }),
             (this.id = (0, a.Z)()),
             (this.questContent = t),
@@ -229,7 +234,8 @@ class R {
             (this.trackGuildAndChannelMetadata = r),
             (this.triggeredByStatusChange = n),
             (this.questContentRowIndex = s),
-            (this.isQuestEnrollmentBlocked = c);
+            (this.isQuestEnrollmentBlocked = c),
+            (this.sourceQuestContent = h);
     }
 }
 let P = (e, t) => {
@@ -256,35 +262,36 @@ function x() {
     return null == (e = L()) ? void 0 : e.getId();
 }
 function k(e) {
-    let { visible: t, visibleChanged: n, focused: a, reference: o, focusedChanged: c } = e,
-        u = w(e.questOrQuests),
-        d = i.useRef(null),
-        f = (0, s.e7)([h.Z], () => null != h.Z.questEnrollmentBlockedUntil, []);
+    let { visible: t, visibleChanged: n, focused: a, reference: o, focusedChanged: c, sourceQuestContent: u } = e,
+        d = w(e.questOrQuests),
+        f = i.useRef(null),
+        _ = (0, s.e7)([h.Z], () => null != h.Z.questEnrollmentBlockedUntil, []);
     return (
         (0, l.ZP)(() => () => {
-            null != d.current && d.current.stop();
+            null != f.current && f.current.stop();
         }),
         i.useEffect(() => {
             let r = a && t,
-                i = (n || c || u) && r,
-                o = ((n || c) && !r) || u;
-            (i || o) && null != d.current && d.current.stop(),
+                i = (n || c || d) && r,
+                o = ((n || c) && !r) || d;
+            (i || o) && null != f.current && f.current.stop(),
                 i &&
-                    ((d.current = new R({
+                    ((f.current = new R({
                         questOrQuests: e.questOrQuests,
                         questContent: e.questContent,
                         questContentPosition: e.questContentPosition,
                         questContentRowIndex: e.questContentRowIndex,
-                        triggeredByStatusChange: u,
+                        triggeredByStatusChange: d,
                         trackGuildAndChannelMetadata: e.trackGuildAndChannelMetadata,
                         minViewTimeSeconds: e.minViewTimeSeconds,
-                        isQuestEnrollmentBlocked: f
+                        isQuestEnrollmentBlocked: _,
+                        sourceQuestContent: u
                     })),
-                    d.current.start());
-        }, [a, t, c, n, e.questOrQuests, e.questContent, e.questContentPosition, e.questContentRowIndex, e.trackGuildAndChannelMetadata, u, e.minViewTimeSeconds, f]),
+                    f.current.start());
+        }, [a, t, c, n, e.questOrQuests, e.questContent, e.questContentPosition, e.questContentRowIndex, e.trackGuildAndChannelMetadata, d, e.minViewTimeSeconds, _, u]),
         (0, r.jsx)(D.Provider, {
-            value: d,
-            children: e.children(o, d)
+            value: f,
+            children: e.children(o, f)
         })
     );
 }

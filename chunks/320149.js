@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(6025),
     b = n(433355),
     _ = n(933557),
-    O = n(287746),
-    E = n(388032),
+    E = n(287746),
+    O = n(388032),
     y = n(560460),
     I = n(46467);
 function v(e) {
@@ -31,7 +31,7 @@ function v(e) {
             m.Z.closeChannelSidebar(b.uZ), N && C && (0, g.Kh)(t.id), T && S && (0, g.Kh)(t.id);
         }, [t.id, T, S, N, C]),
         A = i.useCallback(() => {
-            (0, a.showToast)((0, a.createToast)(E.intl.string(E.t.pIQ3h4), a.ToastType.FAILURE));
+            (0, a.showToast)((0, a.createToast)(O.intl.string(O.t.pIQ3h4), a.ToastType.FAILURE));
         }, []),
         { markAsNotSpam: Z } = (0, h.m)({
             onAcceptSuccess: j,
@@ -43,7 +43,7 @@ function v(e) {
             s.ZP.Icon,
             {
                 icon: a.Dio,
-                tooltip: E.intl.string(E.t.cpT0Cg),
+                tooltip: O.intl.string(O.t.cpT0Cg),
                 onClick: () => m.Z.closeChannelSidebar(n)
             },
             'close'
@@ -53,7 +53,7 @@ function v(e) {
         children: [
             (0, r.jsx)(s.ZP, {
                 toolbar: x,
-                'aria-label': E.intl.string(E.t.BIYAqa),
+                'aria-label': O.intl.string(O.t.BIYAqa),
                 children: (0, c.ud)({
                     channel: t,
                     channelName: v,
@@ -67,20 +67,20 @@ function v(e) {
                         (0, r.jsx)(a.Text, {
                             className: I.__invalid_hamBannerText,
                             variant: 'text-sm/normal',
-                            children: E.intl.string(E.t.XVOKgo)
+                            children: O.intl.string(O.t.XVOKgo)
                         }),
                         (0, r.jsx)(a.zxk, {
                             className: I.hamBannerButton,
                             size: a.PhG.SMALL,
                             onClick: () => Z(t, P),
-                            children: E.intl.string(E.t.koqL3d)
+                            children: O.intl.string(O.t.koqL3d)
                         })
                     ]
                 }),
             (0, r.jsx)('div', {
                 className: y.chat,
                 children: (0, r.jsx)(
-                    O.Z,
+                    E.Z,
                     {
                         channel: t,
                         guild: null,
