@@ -57,7 +57,7 @@ let g = ['349134787773988865'],
                                     .min(1)
                                     .max(2),
                                 instance: e.boolean(),
-                                supported_platforms: e.array().items(e.string().min(1).max(32)).min(1).max(3),
+                                supported_platforms: e.array().items(e.string().min(1).max(32)).min(1).max(10),
                                 type: e.number().default(f.IIU.PLAYING).valid(f.IIU.PLAYING, f.IIU.LISTENING, f.IIU.WATCHING, f.IIU.COMPETING)
                             })
                             .allow(null)
@@ -84,8 +84,9 @@ let g = ['349134787773988865'],
                     );
                 let b = {};
                 (p.name = r.application.name), (p.application_id = r.application.id);
-                let _ = r.transport === h.He.POST_MESSAGE,
-                    O = (0, o.S5)(p, _);
+                let _ = r.transport === h.He.POST_MESSAGE;
+                p.platform = _ ? f.M7m.EMBEDDED : f.M7m.DESKTOP;
+                let O = (0, o.S5)(p, _);
                 O > 0 && (p.flags = O), delete p.instance, null == (t = p.party) || delete t.privacy;
                 let { assets: E, party: y, secrets: I, timestamps: v, buttons: C, type: S } = p;
                 if ((null == S && (p.type = f.IIU.PLAYING), null != I)) {

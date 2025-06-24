@@ -200,13 +200,13 @@ function O(e, t) {
             n = n.concat(
                 e.results.map((e) => {
                     let n = e.text;
-                    if (t === u.Sap.FILTER_ALL) {
+                    if (t.type === u.Sap.FILTER_ALL) {
                         var i;
                         r = null != (i = e.group) ? i : r;
                         let t = o.ZP[r];
                         (null == t ? void 0 : t.key) != null && (null == t ? void 0 : t.key) !== '' && (n = ''.concat(t.key, ' ').concat(n));
                     }
-                    return n;
+                    return t.type === u.Sap.FILTER && t.filter === u.dCx.FILTER_IN && null != e.channel && e.text.includes(' ') && (n = '"'.concat(n, '"')), n;
                 })
             );
         }),
