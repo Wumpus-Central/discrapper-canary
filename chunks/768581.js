@@ -93,7 +93,7 @@ let E = /^data:/,
 r.DEFAULT_GROUP_DM_AVATARS;
 let O = r.canUseWebp(),
     v = 5,
-    I = 240,
+    I = 360,
     T = 1096,
     S = (0, u.isAndroid)();
 function A(e) {

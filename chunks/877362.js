@@ -1,93 +1,81 @@
-t.d(n, { Z: () => S });
+t.d(n, { Z: () => P });
 var r = t(255367),
     i = t(120356),
     o = t.n(i),
-    a = t(866442),
-    s = t(793030),
-    l = t(442837),
-    c = t(481060),
-    u = t(99690),
-    d = t(607070),
-    p = t(623624),
-    m = t(678558),
-    _ = t(343649),
-    f = t(742409),
-    x = t(518950),
-    b = t(271383),
-    v = t(430824),
-    g = t(594174),
-    h = t(709586),
-    j = t(5192),
-    C = t(998502),
-    E = t(402235),
-    Z = t(981631),
-    N = t(93841),
-    w = t(388032),
-    I = t(302794),
-    P = t(183375),
-    O = t(350618);
-let y = C.ZP.getEnableHardwareAcceleration() ? c.Xo$ : u.Z;
-function S(e) {
-    var n, t, i, u, C;
-    let { guildId: S } = e,
-        T = (0, l.e7)([v.Z], () => v.Z.getGuild(S)),
-        R = (0, l.e7)([v.Z], () =>
-            Object.values(v.Z.getRoles(S)).find((e) => {
+    a = t(793030),
+    s = t(442837),
+    l = t(481060),
+    c = t(99690),
+    u = t(607070),
+    d = t(623624),
+    p = t(678558),
+    m = t(343649),
+    _ = t(742409),
+    f = t(518950),
+    x = t(271383),
+    b = t(430824),
+    v = t(594174),
+    g = t(709586),
+    h = t(5192),
+    j = t(998502),
+    C = t(981631),
+    E = t(93841),
+    Z = t(388032),
+    N = t(302794),
+    w = t(350618);
+let I = j.ZP.getEnableHardwareAcceleration() ? l.Xo$ : c.Z;
+function P(e) {
+    var n, t, i;
+    let { guildId: c } = e,
+        j = (0, s.e7)([b.Z], () => b.Z.getGuild(c)),
+        P = (0, s.e7)([b.Z], () =>
+            Object.values(b.Z.getRoles(c)).find((e) => {
                 var n;
                 return (null == e || null == (n = e.tags) ? void 0 : n.premium_subscriber) !== void 0;
             })
         ),
-        k = (0, E.Z)(S, 'GuildPowerupsBoostInfoContainerMember'),
-        { gradientStyle: L, gradientClassname: A } = (0, c.Icv)({
-            primaryColor: null == R || null == (n = R.colorStrings) ? void 0 : n.primaryColor,
-            secondaryColor: null == R || null == (t = R.colorStrings) ? void 0 : t.secondaryColor,
-            tertiaryColor: null == R || null == (i = R.colorStrings) ? void 0 : i.tertiaryColor,
-            roleStyle: 'username',
-            includeConvenienceGlow: !0,
-            animateGradient: !0
-        }),
-        U = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
-        M = null == U ? void 0 : U.id,
-        D = (0, l.e7)([b.ZP], () => (null != M ? b.ZP.getMember(S, M) : void 0), [M, S]),
-        G = (null == D ? void 0 : D.premiumSince) != null,
-        B = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
+        O = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
+        y = null == O ? void 0 : O.id,
+        S = (0, s.e7)([x.ZP], () => (null != y ? x.ZP.getMember(c, y) : void 0), [y, c]),
+        T = (null == S ? void 0 : S.premiumSince) != null,
+        R = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         {
-            avatarDecorationSrc: V,
-            avatarSrc: W,
-            eventHandlers: z
-        } = (0, x.Z)({
-            user: U,
-            guildId: S,
-            size: c.EFr.SIZE_40,
-            animateOnHover: !B
+            avatarDecorationSrc: k,
+            avatarSrc: L,
+            eventHandlers: A
+        } = (0, f.Z)({
+            user: O,
+            guildId: c,
+            size: l.EFr.SIZE_40,
+            animateOnHover: !R
         });
-    return null == T || null == D || null == U
+    return null == j || null == S || null == O
         ? null
         : (0, r.jsxs)('div', {
-              className: I.container,
+              className: N.container,
               children: [
-                  (0, r.jsx)('div', { className: I.background }),
+                  (0, r.jsx)('div', { className: N.background }),
                   (0, r.jsx)('img', {
                       alt: '',
-                      className: I.image,
-                      src: O
+                      className: N.image,
+                      src: w
                   }),
                   (0, r.jsxs)('div', {
-                      className: I.textContainer,
+                      className: N.textContainer,
                       children: [
-                          (0, r.jsx)(s.xv, {
+                          (0, r.jsx)(a.xv, {
                               variant: 'text-md/semibold',
-                              children: w.intl.string(G ? N.default.KSWK1d : N.default.XXXX5u)
+                              children: Z.intl.string(T ? E.default.KSWK1d : E.default.XXXX5u)
                           }),
-                          (0, r.jsx)(s.xv, {
+                          (0, r.jsx)(a.xv, {
                               variant: 'text-sm/medium',
-                              children: w.intl.format(G ? N.default['7fWTg4'] : N.default['7PXeeX'], {
+                              children: Z.intl.format(T ? E.default['7fWTg4'] : E.default['7PXeeX'], {
                                   onClick: () => {
-                                      (0, p.f)({
-                                          guildId: S,
+                                      (0, d.f)({
+                                          guildId: c,
                                           location: {
-                                              section: Z.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
-                                              object: Z.qAy.LEARN_MORE
+                                              section: C.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
+                                              object: C.qAy.LEARN_MORE
                                           }
                                       });
                                   }
@@ -95,12 +83,12 @@ function S(e) {
                           })
                       ]
                   }),
-                  null != R &&
-                      !G &&
-                      (0, r.jsx)(f.l, {
+                  null != P &&
+                      !T &&
+                      (0, r.jsx)(_.l, {
                           avatar: (0, r.jsx)(
-                              y,
-                              ((u = (function (e) {
+                              I,
+                              ((t = (function (e) {
                                   for (var n = 1; n < arguments.length; n++) {
                                       var t = null != arguments[n] ? arguments[n] : {},
                                           r = Object.keys(t);
@@ -124,18 +112,18 @@ function S(e) {
                                           });
                                   }
                                   return e;
-                              })({}, z)),
-                              (C = C =
+                              })({}, A)),
+                              (i = i =
                                   {
-                                      user: U,
-                                      src: W,
-                                      avatarDecoration: V,
-                                      size: c.EFr.SIZE_40,
+                                      user: O,
+                                      src: L,
+                                      avatarDecoration: k,
+                                      size: l.EFr.SIZE_40,
                                       'aria-hidden': !0,
                                       animate: !0
                                   }),
                               Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(u, Object.getOwnPropertyDescriptors(C))
+                                  ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
                                   : (function (e, n) {
                                         var t = Object.keys(e);
                                         if (Object.getOwnPropertySymbols) {
@@ -143,30 +131,33 @@ function S(e) {
                                             t.push.apply(t, r);
                                         }
                                         return t;
-                                    })(Object(C)).forEach(function (e) {
-                                        Object.defineProperty(u, e, Object.getOwnPropertyDescriptor(C, e));
+                                    })(Object(i)).forEach(function (e) {
+                                        Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e));
                                     }),
-                              u)
+                              t)
                           ),
-                          username: j.ZP.getName(S, null, U),
-                          usernameStyle: k ? L : { color: (0, a.Rf)(R.color) },
-                          usernameClassName: o()(k && A, P.animateGradient),
-                          className: o()(I.content, I.exampleMessage),
-                          message: w.intl.string(N.default.eTHkQU),
-                          decorations: (0, r.jsx)(h.Z, { className: I.boostIcon })
+                          username: (0, r.jsx)(l.PUh, {
+                              variant: 'text-md/semibold',
+                              name: h.ZP.getName(c, null, O),
+                              roleColors: null == P ? void 0 : P.colorStrings,
+                              color: null != (n = null == P ? void 0 : P.colorString) ? n : void 0
+                          }),
+                          className: o()(N.content, N.exampleMessage),
+                          message: Z.intl.string(E.default.eTHkQU),
+                          decorations: (0, r.jsx)(g.Z, { className: N.boostIcon })
                       }),
-                  (0, r.jsx)(m.Z, {
-                      guild: T,
-                      className: I.content,
+                  (0, r.jsx)(p.Z, {
+                      guild: j,
+                      className: N.content,
                       analyticsLocation: {
-                          page: Z.ZY5.GUILD_POWERUPS_OVERVIEW,
-                          section: Z.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR
+                          page: C.ZY5.GUILD_POWERUPS_OVERVIEW,
+                          section: C.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR
                       },
-                      color: c.Ttl.BRAND,
-                      size: c.PhG.MEDIUM,
-                      intent: _.P.NONE,
+                      color: l.Ttl.BRAND,
+                      size: l.PhG.MEDIUM,
+                      intent: m.P.NONE,
                       fullWidth: !0,
-                      icon: (0, r.jsx)(c.$Eu, {
+                      icon: (0, r.jsx)(l.$Eu, {
                           color: 'currentColor',
                           size: 'sm'
                       })

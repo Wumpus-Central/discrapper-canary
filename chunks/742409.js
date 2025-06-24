@@ -38,13 +38,15 @@ function M(A) {
                     (0, B.jsxs)('div', {
                         className: o.usernameContainer,
                         children: [
-                            (0, B.jsx)(C.Text, {
-                                'data-text': A.username,
-                                className: A.usernameClassName,
-                                variant: 'text-md/semibold',
-                                style: A.usernameStyle,
-                                children: A.username
-                            }),
+                            'string' == typeof A.username
+                                ? (0, B.jsx)(C.Text, {
+                                      'data-text': A.username,
+                                      className: A.usernameClassName,
+                                      variant: 'text-md/semibold',
+                                      style: A.usernameStyle,
+                                      children: A.username
+                                  })
+                                : A.username,
                             void 0 !== A.decorations &&
                                 (0, B.jsx)('div', {
                                     className: o.decorationsContainer,
