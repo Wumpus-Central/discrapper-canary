@@ -1,45 +1,45 @@
-n.d(t, { Z: () => x }), n(388685), n(35282), n(457542);
+n.d(t, { Z: () => E }), n(388685), n(35282), n(457542);
 var r = n(255367),
     i = n(73800),
     l = n(593473),
-    o = n(114858),
-    a = n(442837),
+    a = n(114858),
+    o = n(442837),
     s = n(893776),
     c = n(899742),
     u = n(493773),
     d = n(743142),
     h = n(893607),
-    g = n(703656),
-    p = n(314897),
+    p = n(703656),
+    g = n(314897),
     m = n(781428),
     f = n(981631),
     _ = n(176505);
-function x(e) {
+function E(e) {
     var t, n;
-    let x = i.useCallback(
+    let E = i.useCallback(
             (t) => {
                 if (
                     (function (e) {
                         var t;
-                        let n = (0, o.LX)(e, { path: f.Z5c.CHANNEL(h.Hw.guildId(), h.Hw.channelId()) });
+                        let n = (0, a.LX)(e, { path: f.Z5c.CHANNEL(h.Hw.guildId(), h.Hw.channelId()) });
                         return (null == n || null == (t = n.params) ? void 0 : t.channelId) === _.oC.ROLE_SUBSCRIPTIONS;
                     })(t)
                 )
-                    g.dL(t);
+                    p.dL(t);
                 else {
                     var n;
-                    (null != (n = e.transitionTo) ? n : g.uL)(t);
+                    (null != (n = e.transitionTo) ? n : p.uL)(t);
                 }
             },
             [e.transitionTo]
         ),
-        { isAuthenticated: E, loginStatus: b } = (0, a.cj)([p.default], () => ({
-            isAuthenticated: p.default.isAuthenticated(),
-            loginStatus: p.default.getLoginStatus()
+        { isAuthenticated: x, loginStatus: b } = (0, o.cj)([g.default], () => ({
+            isAuthenticated: g.default.isAuthenticated(),
+            loginStatus: g.default.getLoginStatus()
         })),
         { location: v, redirectTo: I } = e,
-        [O, S] = i.useState(E);
-    function y(e) {
+        [O, S] = i.useState(x);
+    function N(e) {
         let { handoffKey: t, handoffToken: n, handoffSource: r } = e;
         (0, c.Yz)({
             handoffKey: t,
@@ -55,13 +55,13 @@ function x(e) {
                 let n = null != I ? (0, d.L)(I) : void 0;
                 O
                     ? s.Z.logout('handoff', null).finally(() => {
-                          y({
+                          N({
                               handoffKey: e,
                               handoffToken: t,
                               handoffSource: n
                           });
                       })
-                    : y({
+                    : N({
                           handoffKey: e,
                           handoffToken: t,
                           handoffSource: n
@@ -98,7 +98,7 @@ function x(e) {
                   }
                   return e;
               })({}, e)),
-              (n = n = { transitionTo: x }),
+              (n = n = { transitionTo: E }),
               Object.getOwnPropertyDescriptors
                   ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                   : (function (e, t) {

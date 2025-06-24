@@ -1,21 +1,21 @@
 n.d(t, {
     AX: () => s,
     BR: () => d,
-    Bo: () => E,
+    Bo: () => g,
     Df: () => f,
     LT: () => h,
-    ZZ: () => p,
+    ZZ: () => m,
     cV: () => c,
-    fW: () => g,
-    gr: () => m,
-    oW: () => u
+    fW: () => E,
+    gr: () => p,
+    oW: () => o
 });
 var r = n(261470),
     l = n(544891),
     i = n(570140),
     a = n(984063),
-    o = n(981631);
-function u(e, t, n, r, l) {
+    u = n(981631);
+function o(e, t, n, r, l) {
     i.Z.dispatch({
         type: 'SHARED_CANVAS_DRAW_LINE_POINT',
         channelId: e,
@@ -27,7 +27,7 @@ function u(e, t, n, r, l) {
 }
 function s(e, t, n, r) {
     return l.tn.post({
-        url: o.ANM.SHARED_CANVAS_LINES(e, n),
+        url: u.ANM.SHARED_CANVAS_LINES(e, n),
         body: {
             line_id: t,
             points: r
@@ -46,19 +46,19 @@ function c(e, t, n, r) {
 }
 function d(e, t, n) {
     return l.tn.post({
-        url: o.ANM.SHARED_CANVAS_EMOJI_HOSES(e, t),
+        url: u.ANM.SHARED_CANVAS_EMOJI_HOSES(e, t),
         body: { emoji_hose: n },
         rejectWithError: !1
     });
 }
 function f(e, t, n) {
     l.tn.del({
-        url: o.ANM.SHARED_CANVAS_EMOJI_HOSE(e, t, n),
+        url: u.ANM.SHARED_CANVAS_EMOJI_HOSE(e, t, n),
         backoff: new r.Z(),
         rejectWithError: !0
     });
 }
-function p(e, t) {
+function m(e, t) {
     (t.state = a.f.STOP),
         i.Z.dispatch({
             type: 'SHARED_CANVAS_UPDATE_EMOJI_HOSE',
@@ -67,7 +67,7 @@ function p(e, t) {
             streamerId: e
         });
 }
-function m(e, t, n) {
+function p(e, t, n) {
     i.Z.dispatch({
         type: 'SHARED_CANVAS_UPDATE_EMOJI_HOSE',
         emojiHose: e,
@@ -75,14 +75,14 @@ function m(e, t, n) {
         streamerId: n
     });
 }
-function g(e, t) {
+function E(e, t) {
     i.Z.dispatch({
         type: 'SHARED_CANVAS_CLEAR_DRAWABLES',
         drawables: e,
         streamerId: t
     });
 }
-function E(e) {
+function g(e) {
     i.Z.dispatch({
         type: 'SHARED_CANVAS_SET_DRAW_MODE',
         drawMode: e

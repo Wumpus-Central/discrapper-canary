@@ -19,17 +19,17 @@ function y(e) {
     let { channel: t } = e,
         { parentAnalyticsLocation: n } = (0, o.ZP)(),
         y = (0, l.e7)([f.Z], () => f.Z.getSelectedParticipant(t.id)),
-        C = (null == y ? void 0 : y.type) === g.fO.STREAM,
-        x = (0, l.e7)([p.Z], () => (C ? p.Z.getActiveStreamForStreamKey(y.id) : null)),
+        x = (null == y ? void 0 : y.type) === g.fO.STREAM,
+        C = (0, l.e7)([p.Z], () => (x ? p.Z.getActiveStreamForStreamKey(y.id) : null)),
         { ignoreSenderPreference: v } = u.Z.useExperiment({ location: 'ActionBarClipsButton' }, { autoTrackExposure: !1 }),
         { viewerClippingAllowed: j, isAtMaxSavingClipOperations: O } = (0, l.cj)([s.Z], () => ({
-            viewerClippingAllowed: null != x && (s.Z.isViewerClippingAllowedForUser(x.ownerId) || v),
+            viewerClippingAllowed: null != C && (s.Z.isViewerClippingAllowedForUser(C.ownerId) || v),
             isAtMaxSavingClipOperations: s.Z.getIsAtMaxSaveClipOperations()
         })),
         E = s.Z.getSettings().clipsEnabled,
-        I = (null == x ? void 0 : x.ownerId) === h.default.getId(),
-        P = !E || !(I || j) || O || null == y,
-        S = i.useCallback((e) => {
+        I = (null == C ? void 0 : C.ownerId) === h.default.getId(),
+        S = !E || !(I || j) || O || null == y,
+        P = i.useCallback((e) => {
             var t, n;
             return (0, r.jsx)(
                 a.xmR,
@@ -77,11 +77,11 @@ function y(e) {
     return (0, r.jsx)(d.Z, {
         className: _.actionBarButton,
         onClick: () => {
-            P || ((0, m.v)(n, m.d.CLIP), I ? (0, c.C1)() : (0, c.C1)(y.id));
+            S || ((0, m.v)(n, m.d.CLIP), I ? (0, c.C1)() : (0, c.C1)(y.id));
         },
-        disabled: P,
-        iconComponent: S,
-        label: null == x ? b.intl.string(b.t.eg5qtb) : I || j ? (E ? (O ? void 0 : b.intl.string(b.t.U4URzM)) : b.intl.string(b.t.wSS1yM)) : b.intl.string(b.t.aRifJS),
+        disabled: S,
+        iconComponent: P,
+        label: null == C ? b.intl.string(b.t.eg5qtb) : I || j ? (E ? (O ? void 0 : b.intl.string(b.t.U4URzM)) : b.intl.string(b.t.wSS1yM)) : b.intl.string(b.t.aRifJS),
         grow: !1
     });
 }

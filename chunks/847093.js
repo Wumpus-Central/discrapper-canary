@@ -2,8 +2,8 @@ n.d(t, { Z: () => M }), n(388685), n(539854);
 var r = n(255367),
     s = n(73800),
     o = n(120356),
-    a = n.n(o),
-    i = n(392711),
+    i = n.n(o),
+    a = n(392711),
     c = n(524979),
     l = n(772848),
     u = n(442837),
@@ -22,7 +22,7 @@ var r = n(255367),
     N = n(603571),
     _ = n(388032),
     P = n(574554);
-function C(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,9 +47,9 @@ function C(e) {
     }
     return e;
 }
-let Z = n(874332),
-    w = n(225334),
-    E = function (e) {
+let C = n(874332),
+    Z = n(225334),
+    S = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
             r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
@@ -81,8 +81,8 @@ let Z = n(874332),
             }
         };
     },
-    S = () => [_.intl.string(N.default.TXLQ3d), _.intl.string(N.default.TC42mZ), _.intl.string(N.default.h3tura), _.intl.string(N.default['sAbI/v']), _.intl.string(N.default.NJ4o2t), _.intl.string(N.default.sUsj8f), _.intl.string(N.default.jMKjJC), _.intl.string(N.default.J6uWam)];
-function I(e) {
+    I = () => [_.intl.string(N.default.TXLQ3d), _.intl.string(N.default.TC42mZ), _.intl.string(N.default.h3tura), _.intl.string(N.default['sAbI/v']), _.intl.string(N.default.NJ4o2t), _.intl.string(N.default.sUsj8f), _.intl.string(N.default.jMKjJC), _.intl.string(N.default.J6uWam)];
+function E(e) {
     let { text: t, position: n } = e,
         o = (0, d.Yzy)(
             !0,
@@ -99,19 +99,19 @@ function I(e) {
             },
             'respect-motion-settings'
         ),
-        a = (0, s.useRef)(n);
+        i = (0, s.useRef)(n);
     return o((e, n) =>
         n
             ? (0, r.jsx)(c.animated.div, {
                   className: P.affirmation,
-                  style: C({}, a.current, e),
+                  style: w({}, i.current, e),
                   children: t
               })
             : null
     );
 }
 function k(e) {
-    let { isRainbow: t, pathData: n, width: s, height: o, gradientWidthScale: a, className: i } = e,
+    let { isRainbow: t, pathData: n, width: s, height: o, gradientWidthScale: i, className: a } = e,
         c = (0, p.Dt)(),
         l = (0, p.Dt)(),
         u = (0, r.jsx)('path', {
@@ -121,7 +121,7 @@ function k(e) {
             strokeLinecap: 'round'
         });
     return (0, r.jsx)('svg', {
-        className: i,
+        className: a,
         viewBox: '0 0 '.concat(s, ' ').concat(o),
         fill: 'none',
         xmlns: 'http://www.w3.org/2000/svg',
@@ -192,25 +192,25 @@ function k(e) {
                               (0, r.jsx)('rect', {
                                   x: -s,
                                   y: '0',
-                                  width: s * a,
+                                  width: s * i,
                                   height: o,
                                   fill: 'url(#'.concat(c, ')'),
                                   children: (0, r.jsx)('animate', {
                                       attributeName: 'x',
-                                      values: '0;'.concat(s * a),
+                                      values: '0;'.concat(s * i),
                                       dur: ''.concat(2, 's'),
                                       repeatCount: 'indefinite'
                                   })
                               }),
                               (0, r.jsx)('rect', {
-                                  x: '-'.concat(s * a),
+                                  x: '-'.concat(s * i),
                                   y: '0',
-                                  width: s * a,
+                                  width: s * i,
                                   height: o,
                                   fill: 'url(#'.concat(c, ')'),
                                   children: (0, r.jsx)('animate', {
                                       attributeName: 'x',
-                                      values: '-'.concat(s * a, ';0'),
+                                      values: '-'.concat(s * i, ';0'),
                                       dur: ''.concat(2, 's'),
                                       repeatCount: 'indefinite'
                                   })
@@ -229,27 +229,27 @@ function M(e) {
         [c, d] = (0, s.useState)([]),
         p = (0, s.useRef)([]),
         M = null != t[j.uv.CLICKER_BUTTON_RAINBOW],
-        R = g.Mq[j.yN.CLICKER_BUTTON],
-        A = (0, s.useMemo)(() => R.getPoints(t), [t, R]),
-        [T, L] = (0, s.useState)({}),
-        [B, D] = (0, y.Z)(j.yN.CLICKER_BUTTON),
-        F = (0, x.eR)(Z),
-        U = (0, x.eR)(w);
+        A = g.Mq[j.yN.CLICKER_BUTTON],
+        R = (0, s.useMemo)(() => A.getPoints(t), [t, A]),
+        [B, T] = (0, s.useState)({}),
+        [L, F] = (0, y.Z)(j.yN.CLICKER_BUTTON),
+        D = (0, x.eR)(C),
+        U = (0, x.eR)(Z);
     (0, s.useEffect)(() => {
-        M && !B.hasPlayedRainbowSound && (F(), D({ hasPlayedRainbowSound: !0 }));
-    }, [M, B, F, D]);
+        M && !L.hasPlayedRainbowSound && (D(), F({ hasPlayedRainbowSound: !0 }));
+    }, [M, L, D, F]);
     let W = (0, s.useCallback)(() => {
             var e, t, n;
             o &&
                 (c.push({
-                    text: null != (e = (0, i.sample)(S())) ? e : '',
+                    text: null != (e = (0, a.sample)(I())) ? e : '',
                     variation: 50 * Math.random()
                 }),
                 d([...c]),
                 0.05 > Math.random() && U()),
-                L(
-                    ((t = C({}, T)),
-                    (n = n = { [(0, l.Z)()]: A }),
+                T(
+                    ((t = w({}, B)),
+                    (n = n = { [(0, l.Z)()]: R }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                         : (function (e, t) {
@@ -264,13 +264,13 @@ function M(e) {
                           }),
                     t)
                 ),
-                (0, m.KH)(j.yN.CLICKER_BUTTON, A);
-        }, [c, o, U, A, T]),
+                (0, m.KH)(j.yN.CLICKER_BUTTON, R);
+        }, [c, o, U, R, B]),
         G = (0, s.useCallback)(
             (e) => {
-                delete T[e], L(C({}, T));
+                delete B[e], T(w({}, B));
             },
-            [T]
+            [B]
         );
     return (
         (0, s.useEffect)(() => {
@@ -297,7 +297,7 @@ function M(e) {
                     isGrass: !0,
                     innerRef: n,
                     onClick: W,
-                    className: a()(P.logo, { [P.logoGreen]: !M }),
+                    className: i()(P.logo, { [P.logoGreen]: !M }),
                     children: [
                         (0, r.jsx)(k, {
                             className: P.logoLeft,
@@ -310,14 +310,14 @@ function M(e) {
                         (0, r.jsxs)(v.Z, {
                             variant: 'text-lg/bold',
                             color: 'clicker-game-brand',
-                            className: a()(P.logoText, P.override, {
+                            className: i()(P.logoText, P.override, {
                                 [P.logoGreen]: !M,
                                 [P.rainbow]: M
                             }),
                             children: [
                                 _.intl.format(N.default['u5OO/f'], {}),
                                 (0, r.jsx)(O.Z, {
-                                    renderedPoints: T,
+                                    renderedPoints: B,
                                     onRemovePoint: G
                                 })
                             ]
@@ -333,12 +333,12 @@ function M(e) {
                     ]
                 }),
                 c.map((e, t) => {
-                    var s, o, a, i;
+                    var s, o, i, a;
                     return (0, r.jsx)(
-                        I,
+                        E,
                         {
                             text: e.text,
-                            position: C({}, E(e.variation, null == (s = n.current) ? void 0 : s.offsetTop, null == (o = n.current) ? void 0 : o.offsetLeft, null == (a = n.current) ? void 0 : a.offsetWidth, null == (i = n.current) ? void 0 : i.offsetHeight)[t % Object.keys(E(0)).length])
+                            position: w({}, S(e.variation, null == (s = n.current) ? void 0 : s.offsetTop, null == (o = n.current) ? void 0 : o.offsetLeft, null == (i = n.current) ? void 0 : i.offsetWidth, null == (a = n.current) ? void 0 : a.offsetHeight)[t % Object.keys(S(0)).length])
                         },
                         t
                     );

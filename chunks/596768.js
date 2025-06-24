@@ -9,15 +9,15 @@ var a = n(255367),
     d = n.n(c),
     u = n(442837),
     m = n(481060),
-    x = n(570140),
-    p = n(665149),
+    p = n(570140),
+    x = n(665149),
     h = n(55935),
     b = n(120816),
     f = n(31336),
     v = n(257785),
-    g = n(484036),
-    j = n(681619),
-    _ = n(621060),
+    _ = n(484036),
+    g = n(681619),
+    j = n(621060),
     y = n(388032),
     C = n(459100),
     N = n(616257);
@@ -51,7 +51,7 @@ let O = [
         {
             id: 'details',
             name: 'Details',
-            group: _.v0.NONE,
+            group: j.v0.NONE,
             render: (e) => {
                 let {
                         loggedTrigger: { experimentId: t, descriptor: n, exposureType: r, excluded: l, timestamp: s, location: o, previouslyTracked: c }
@@ -59,14 +59,14 @@ let O = [
                     u = d()(s);
                 return (0, a.jsxs)(a.Fragment, {
                     children: [
-                        (0, a.jsxs)(p.ZP, {
+                        (0, a.jsxs)(x.ZP, {
                             className: i()(N.headerBar, C.subPanelHeaderBar),
                             children: [
-                                (0, a.jsx)(p.ZP.Icon, {
+                                (0, a.jsx)(x.ZP.Icon, {
                                     icon: m.IeX,
                                     tooltip: t
                                 }),
-                                (0, a.jsx)(p.ZP.Title, { children: t })
+                                (0, a.jsx)(x.ZP.Title, { children: t })
                             ]
                         }),
                         (0, a.jsxs)(v.E, {
@@ -126,11 +126,11 @@ function T() {
         l = (0, u.Wu)([b.Z], () => b.Z.loggedTriggers),
         s = r.useMemo(() => l.filter((t) => 0 === e.length || o()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [l, e]),
         [c, d] = r.useState(void 0),
-        p = s.find((e) => e.key === c),
-        { TabBar: h, renderSelectedTab: v } = (0, _.ZP)({ tabs: E }, []),
+        x = s.find((e) => e.key === c),
+        { TabBar: h, renderSelectedTab: v } = (0, j.ZP)({ tabs: E }, []),
         T = (0, u.e7)([b.Z], () => b.Z.trackTriggers),
         S = r.useCallback((e) => {
-            x.Z.dispatch({
+            p.Z.dispatch({
                 type: 'SET_TRACK_TRIGGERS',
                 enabled: e
             });
@@ -174,18 +174,18 @@ function T() {
                     })
                 ]
             }),
-            (0, a.jsx)(j.Z, {
+            (0, a.jsx)(g.Z, {
                 columns: O,
                 data: s,
                 selectedRowKey: c,
                 onClickRow: (e) => d(e.key)
             }),
-            null != p &&
-                (0, a.jsxs)(g.Z, {
+            null != x &&
+                (0, a.jsxs)(_.Z, {
                     className: C.subPanel,
                     minHeight: 100,
                     initialHeight: null != n.current ? n.current.clientHeight / 2 : 300,
-                    children: [(0, a.jsx)(h, {}), v({ loggedTrigger: p })]
+                    children: [(0, a.jsx)(h, {}), v({ loggedTrigger: x })]
                 })
         ]
     });

@@ -1,9 +1,9 @@
 n.d(t, {
-    $f: () => h,
+    $f: () => m,
     C$: () => p,
     Dt: () => f,
     Hw: () => d,
-    wW: () => m
+    wW: () => h
 }),
     n(539854);
 var r = n(255367),
@@ -21,7 +21,7 @@ function d(e) {
 function p() {
     (0, o.showToast)((0, o.createToast)(u.intl.string(u.t['JF/LWl']), o.ToastType.SUCCESS));
 }
-function m(e) {
+function h(e) {
     (0, o.showToast)((0, o.createToast)(u.intl.formatToPlainString(u.t.sUvyW1, { error: e }), o.ToastType.FAILURE));
 }
 function f(e) {
@@ -67,7 +67,7 @@ function f(e) {
                         {
                             id: 'custom-time',
                             label: u.intl.string(u.t.stHooK),
-                            action: () => h({ channel: t })
+                            action: () => m({ channel: t })
                         },
                         'custom-time'
                     )
@@ -77,7 +77,7 @@ function f(e) {
         c
     );
 }
-function h(e) {
+function m(e) {
     let { channel: t, prefilledTime: i } = e;
     (0, o.ZDy)(
         async () => {

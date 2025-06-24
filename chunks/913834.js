@@ -1,7 +1,7 @@
 n.d(t, { Z: () => p }), n(388685);
 var r = n(255367),
-    o = n(73800),
-    l = n(481060),
+    l = n(73800),
+    o = n(481060),
     i = n(100527),
     s = n(873128),
     a = n(704041),
@@ -10,15 +10,15 @@ var r = n(255367),
     d = n(791644);
 function p(e) {
     let { guild: t, message: n } = e,
-        p = o.useRef(null),
-        [m, g] = o.useState(!1),
-        f = o.useRef(!1),
+        p = l.useRef(null),
+        [m, g] = l.useState(!1),
+        f = l.useRef(!1),
         b = (0, s.Z)({
             guildId: t.id,
             leaderboardId: u.z,
             intervalOffset: 0
         }),
-        h = o.useMemo(() => {
+        h = l.useMemo(() => {
             var e;
             if ((null == b || null == (e = b.guild_settings) ? void 0 : e.show_winner_crown) !== !0) return !1;
             let t = b.users[0];
@@ -36,9 +36,9 @@ function p(e) {
                           f.current || g(!1);
                       }, 100);
               },
-              children: (0, r.jsx)(l.yRy, {
+              children: (0, r.jsx)(o.yRy, {
                   targetElementRef: p,
-                  animation: l.yRy.Animation.TRANSLATE,
+                  animation: o.yRy.Animation.TRANSLATE,
                   align: 'center',
                   autoInvert: !0,
                   nudgeAlignIntoViewport: !0,

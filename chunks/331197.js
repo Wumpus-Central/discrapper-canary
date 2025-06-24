@@ -16,15 +16,15 @@ var r = n(255367),
     b = n(603074),
     _ = n(294629),
     y = n(131951),
-    C = n(390322),
-    x = n(871499),
+    x = n(390322),
+    C = n(871499),
     v = n(127379),
     j = n(388032);
 function O(e) {
     let { channel: t, themeable: O, whichPopoutIsOpen: E, setWhichPopoutIsOpen: I } = e,
-        { parentAnalyticsLocation: P } = (0, u.ZP)(),
+        { parentAnalyticsLocation: S } = (0, u.ZP)(),
         {
-            Component: S,
+            Component: P,
             play: Z,
             events: { onMouseEnter: N, onMouseLeave: T }
         } = (0, o.j)(),
@@ -32,8 +32,8 @@ function O(e) {
         { mute: w, suppress: R } = (0, _.Z)(t),
         M = (0, l.e7)([y.Z], () => y.Z.isDeaf()),
         k = w || R || M,
-        L = (0, m.sR)({ isSoundboardButtonDisabled: k }),
-        [D, U] = (0, h.cv)(L),
+        D = (0, m.sR)({ isSoundboardButtonDisabled: k }),
+        [L, U] = (0, h.cv)(D),
         { analyticsLocations: B } = (0, u.ZP)(),
         { isHovered: F, setIsHovered: G, onMouseEnter: H, onMouseLeave: V } = (0, f.Z)(200, 300);
     function z(e) {
@@ -75,7 +75,7 @@ function O(e) {
                             },
                             t
                         )),
-                        (i = i = { onInteraction: (0, p.u)('SoundboardContextMenu', P) }),
+                        (i = i = { onInteraction: (0, p.u)('SoundboardContextMenu', S) }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                             : (function (e, t) {
@@ -94,7 +94,7 @@ function O(e) {
             });
     }
     function W() {
-        (0, d.v)(P, d.d.SOUNDBOARD), E === v.D.SOUNDBOARD ? (null == I || I(void 0), V()) : (null != E ? (Z(), H()) : Z(), null == I || I(v.D.SOUNDBOARD));
+        (0, d.v)(S, d.d.SOUNDBOARD), E === v.D.SOUNDBOARD ? (null == I || I(void 0), V()) : (null != E ? (Z(), H()) : Z(), null == I || I(v.D.SOUNDBOARD));
     }
     let Y = i.useRef(null);
     return (0, r.jsx)(s.y, {
@@ -112,7 +112,7 @@ function O(e) {
             let { closePopout: n } = e;
             return k
                 ? null
-                : (0, r.jsx)(C.Z, {
+                : (0, r.jsx)(x.Z, {
                       children: (0, r.jsx)('div', {
                           onMouseEnter: H,
                           onMouseLeave: V,
@@ -121,7 +121,7 @@ function O(e) {
                               channel: t,
                               onClose: n,
                               gridNotice:
-                                  D === a.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
+                                  L === a.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
                                   (0, r.jsx)(g.o, {
                                       onClose: n,
                                       markAsDismissed: U
@@ -132,12 +132,12 @@ function O(e) {
                   });
         },
         children: () =>
-            (0, r.jsx)(x.d, {
+            (0, r.jsx)(C.d, {
                 ref: Y,
                 isTrayButton: !0,
                 themeable: O,
                 label: w ? j.intl.string(j.t['Ox4/zc']) : R ? j.intl.string(j.t['+YBKYG']) : M ? j.intl.string(j.t.X1lQlp) : void 0,
-                iconComponent: S,
+                iconComponent: P,
                 disabled: k,
                 onContextMenu: z,
                 onClick: W,

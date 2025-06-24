@@ -1,15 +1,15 @@
 n.d(t, {
     Cg: () => f,
-    Cp: () => T,
-    Cs: () => C,
+    Cp: () => N,
+    Cs: () => O,
     EY: () => v,
     I5: () => g,
     JQ: () => j,
     RY: () => y,
-    Sv: () => x,
-    TX: () => N,
-    ZW: () => O,
-    bK: () => E,
+    Sv: () => E,
+    TX: () => T,
+    ZW: () => C,
+    bK: () => x,
     n0: () => _,
     o6: () => P,
     oE: () => I,
@@ -57,12 +57,12 @@ Object.freeze({
     THANKS: d.jXE.APPEAL_INGESTION_THANKS,
     SPAM: d.jXE.APPEAL_INGESTION_SPAM
 });
-var E = (((a = {})[(a.DIDNT_VIOLATE_POLICY = 0)] = 'DIDNT_VIOLATE_POLICY'), (a[(a.TOO_STRICT_UNFAIR = 1)] = 'TOO_STRICT_UNFAIR'), (a[(a.DONT_AGREE_PENALTY = 2)] = 'DONT_AGREE_PENALTY'), (a[(a.SOMETHING_ELSE = 3)] = 'SOMETHING_ELSE'), a);
+var x = (((a = {})[(a.DIDNT_VIOLATE_POLICY = 0)] = 'DIDNT_VIOLATE_POLICY'), (a[(a.TOO_STRICT_UNFAIR = 1)] = 'TOO_STRICT_UNFAIR'), (a[(a.DONT_AGREE_PENALTY = 2)] = 'DONT_AGREE_PENALTY'), (a[(a.SOMETHING_ELSE = 3)] = 'SOMETHING_ELSE'), a);
 let y = [0, 1, 2, 3],
-    x = 372,
+    E = 372,
     v = 279,
-    O = { impression_group: u.ImpressionGroups.APPEAL_INGESTION };
-var C = (((o = {}).SPEED_BUMP = 'speed-bump'), (o.COLLECT_SIGNAL = 'collect-signal'), (o.CONFIRM_SUBMISSION = 'confirm-submission'), (o.REQUEST_SENT = 'request-sent'), (o.THANKS = 'thanks'), o);
+    C = { impression_group: u.ImpressionGroups.APPEAL_INGESTION };
+var O = (((o = {}).SPEED_BUMP = 'speed-bump'), (o.COLLECT_SIGNAL = 'collect-signal'), (o.CONFIRM_SUBMISSION = 'confirm-submission'), (o.REQUEST_SENT = 'request-sent'), (o.THANKS = 'thanks'), o);
 let j = {
     'speed-bump': {
         next: 'collect-signal',
@@ -83,6 +83,6 @@ let j = {
 };
 var S = (((s = {})[(s.USER = 1)] = 'USER'), (s[(s.GUILD_OWNER = 2)] = 'GUILD_OWNER'), (s[(s.GUILD_MEMBER = 3)] = 'GUILD_MEMBER'), s),
     I = (((c = {}).LOADING = 'loading'), (c.ERROR = 'error'), (c.SUCCESS = 'success'), (c.FAILURE = 'failure'), (c.NONE = 'none'), c);
-let N = 2000,
-    T = 15000,
+let T = 2000,
+    N = 15000,
     P = 5;

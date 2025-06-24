@@ -21,25 +21,25 @@ function j(e) {
         [y, O] = s.useState(!1),
         [C, w] = s.useState([]),
         S = (0, l.qb)(o),
-        E = s.useMemo(() => (0, d.q8)(o), [o]),
-        P = (0, i._F)(),
+        P = s.useMemo(() => (0, d.q8)(o), [o]),
+        E = (0, i._F)(),
         T = s.useCallback(() => {
             O(!0),
-                P({
+                E({
                     questId: o.id,
                     event: h.rMx.QUEST_HOVER,
                     properties: (0, i.mH)(u)
                 }),
-                E && (0, p.loadVideoQuestModal)();
-        }, [P, o.id, u, E]),
+                P && (0, p.loadVideoQuestModal)();
+        }, [E, o.id, u, P]),
         N = s.useCallback(() => {
             O(!1),
-                P({
+                E({
                     questId: o.id,
                     event: h.rMx.QUEST_HOVER_OFF,
                     properties: (0, i.mH)(u)
                 });
-        }, [P, o.id, u]),
+        }, [E, o.id, u]),
         A = s.useContext(f.t),
         { visibilityElementRef: k, almostVisibleInViewport: R } = (function (e) {
             let [t, n] = s.useState(!1),

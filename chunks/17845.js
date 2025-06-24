@@ -20,8 +20,8 @@ function p(e) {
 function m(e) {
     let { title: t, description: n, button: i, className: d, children: m, betaTag: h = !1 } = e,
         g = (0, c.ZP)(),
-        _ = (0, s.wj)(g),
-        f = a.useMemo(
+        f = (0, s.wj)(g),
+        _ = a.useMemo(
             () =>
                 Array.isArray(t)
                     ? t.map((e, t) =>
@@ -48,12 +48,12 @@ function m(e) {
                 children: (0, r.jsxs)('div', {
                     className: u.textContainer,
                     children: [
-                        f,
+                        _,
                         null != n &&
                             (0, r.jsx)(o.Text, {
                                 className: u.description,
                                 variant: 'text-md/medium',
-                                color: _ ? 'text-muted' : 'header-primary',
+                                color: f ? 'text-muted' : 'header-primary',
                                 children: n
                             }),
                         null != i &&

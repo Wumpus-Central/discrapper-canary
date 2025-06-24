@@ -6,9 +6,9 @@ n.r(t),
     n(35282),
     n(388685);
 var r = n(255367),
-    o = n(73800),
-    l = n(120356),
-    i = n.n(l),
+    l = n(73800),
+    o = n(120356),
+    i = n.n(o),
     s = n(159635),
     a = n.n(s),
     c = n(481060),
@@ -47,24 +47,24 @@ function h(e) {
 let O = a().defaultRules.link,
     y = { section: f.jXE.SETTINGS_CHANGELOG },
     j = (e) => {
-        let { level: t, children: n, className: r = null, styleSheet: l = {} } = e,
+        let { level: t, children: n, className: r = null, styleSheet: o = {} } = e,
             s = (0, c.xSt)(),
             a = parseInt(t, 10),
             u = isNaN(a) ? 1 : a;
-        return o.createElement('h'.concat(s + u - 1), { className: i()(...(null == r ? [] : r.split(' ').map((e) => l[e]))) }, n);
+        return l.createElement('h'.concat(s + u - 1), { className: i()(...(null == r ? [] : r.split(' ').map((e) => o[e]))) }, n);
     },
     v = null != p.Z ? p.Z.defaultRules : null,
     P = {
         link: {
             parse(e, t, n) {
-                var r, o;
-                let l,
+                var r, l;
+                let o,
                     i = e[2],
                     s = i.startsWith('https://discordapp.com/nitro') || i.startsWith('https://discord.com/nitro'),
                     a = i.startsWith('https://discordapp.com/hypesquad') || i.startsWith('https://discord.com/hypesquad'),
                     p = i.startsWith('/shop/fullscreen?source=1') || i.startsWith('/activities');
                 return (
-                    (l =
+                    (o =
                         s || a
                             ? (e) => {
                                   g.default.track(f.rMx.PREMIUM_PROMOTION_OPENED, { location: y }), s ? d.Z.open(f.oAB.PREMIUM) : a && d.Z.open(f.oAB.HYPESQUAD_ONLINE), n.changeLog.track(f.rMx.CHANGE_LOG_CTA_CLICKED, { cta_type: 'nitro' }), (0, c.Mr3)(b.Xd), e.preventDefault();
@@ -87,9 +87,9 @@ let O = a().defaultRules.link,
                                         );
                                 }),
                     (r = h({}, O.parse(e, t, n))),
-                    (o = o = { callToAction: l }),
+                    (l = l = { callToAction: o }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(o))
+                        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -97,8 +97,8 @@ let O = a().defaultRules.link,
                                   n.push.apply(n, r);
                               }
                               return n;
-                          })(Object(o)).forEach(function (e) {
-                              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(o, e));
+                          })(Object(l)).forEach(function (e) {
+                              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
                           }),
                     r
                 );
@@ -118,16 +118,16 @@ let O = a().defaultRules.link,
                 )
         },
         lheading: (e) => ({
-            react: (t, n, o) =>
+            react: (t, n, l) =>
                 (0, r.jsx)(
                     j,
                     {
                         level: t.level,
                         className: t.className,
                         styleSheet: e,
-                        children: n(t.content, o)
+                        children: n(t.content, l)
                     },
-                    o.key
+                    l.key
                 )
         }),
         heading: {
@@ -142,15 +142,15 @@ let O = a().defaultRules.link,
                 )
         },
         image: {
-            react(e, t, o) {
-                let l = n(595173)('./'.concat(e.target));
+            react(e, t, l) {
+                let o = n(595173)('./'.concat(e.target));
                 return (0, r.jsx)(
                     'img',
                     {
                         alt: e.alt,
-                        src: l
+                        src: o
                     },
-                    o.key
+                    l.key
                 );
             }
         },

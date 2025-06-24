@@ -1,9 +1,7 @@
 n.d(t, {
-    K2: () => l,
+    K2: () => s,
     KW: () => a,
-    Q5: () => c,
-    o5: () => s,
-    yW: () => u,
+    yW: () => l,
     zd: () => o
 });
 var r = n(524437),
@@ -14,29 +12,18 @@ var r = n(524437),
     o = (function (e) {
         return (e.DARK = 'dark'), (e.LIGHT = 'light'), (e.NO_PREFERENCE = 'unknown'), e;
     })({});
-i.BRd.DARKER, i.BRd.LIGHT, i.BRd.DARKER;
+i.BRd.DARKER, i.BRd.LIGHT, i.BRd.DARKER, i.BRd.DARK, i.BRd.LIGHT, i.BRd.DARK;
 let s = {
-        dark: i.BRd.DARK,
-        light: i.BRd.LIGHT,
-        unknown: i.BRd.DARK
-    },
-    l = {
-        dark: i.BRd.DARKER,
-        light: i.BRd.LIGHT,
-        unknown: i.BRd.DARKER
-    },
-    c = {
-        [r.Q2.UNSET]: i.BRd.DARK,
-        [r.Q2.DARK]: i.BRd.DARK,
-        [r.Q2.DARKER]: i.BRd.DARK,
-        [r.Q2.LIGHT]: i.BRd.LIGHT,
-        [r.Q2.MIDNIGHT]: i.BRd.DARK
-    },
-    u = {
-        [r.Q2.UNSET]: i.BRd.DARKER,
-        [r.Q2.DARK]: i.BRd.DARK,
-        [r.Q2.DARKER]: i.BRd.DARKER,
-        [r.Q2.LIGHT]: i.BRd.LIGHT,
-        [r.Q2.MIDNIGHT]: i.BRd.MIDNIGHT
-    };
+    dark: i.BRd.DARKER,
+    light: i.BRd.LIGHT,
+    unknown: i.BRd.DARKER
+};
+r.Q2.UNSET, i.BRd.DARK, r.Q2.DARK, i.BRd.DARK, r.Q2.DARKER, i.BRd.DARK, r.Q2.LIGHT, i.BRd.LIGHT, r.Q2.MIDNIGHT, i.BRd.DARK;
+let l = {
+    [r.Q2.UNSET]: i.BRd.DARKER,
+    [r.Q2.DARK]: i.BRd.DARK,
+    [r.Q2.DARKER]: i.BRd.DARKER,
+    [r.Q2.LIGHT]: i.BRd.LIGHT,
+    [r.Q2.MIDNIGHT]: i.BRd.MIDNIGHT
+};
 r.Q2.UNSET, i.BRd.DARKER, r.Q2.DARK, i.BRd.DARKER, r.Q2.DARKER, i.BRd.DARKER, r.Q2.LIGHT, i.BRd.LIGHT, r.Q2.MIDNIGHT, i.BRd.MIDNIGHT;

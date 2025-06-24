@@ -23,7 +23,7 @@ let a = (0, r.B)({
             id: 2,
             label: 'Test the performance of an upsell that is always sticky, even when the locked section is not in view.',
             config: {
-                moveDefaultToBottom: !1,
+                moveDefaultToBottom: !0,
                 alwaysStickyUpsell: !0
             }
         }

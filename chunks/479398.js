@@ -1,4 +1,4 @@
-n.d(t, { o: () => o });
+n.d(t, { o: () => l });
 let r = (0, n(818083).B)({
     id: '2025-04_native_markdown',
     kind: 'user',
@@ -17,7 +17,7 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function o(e) {
+function l(e) {
     let { location: t } = e;
     return r.useExperiment({ location: t });
 }

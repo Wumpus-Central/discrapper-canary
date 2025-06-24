@@ -1,4 +1,4 @@
-n.d(t, { L: () => p }), n(388685);
+n.d(t, { L: () => x }), n(388685);
 var a = n(255367),
     r = n(73800),
     l = n(120356),
@@ -51,22 +51,22 @@ let m = () => {
             { modalKey: c.A }
         );
     },
-    x = (e) => {
+    p = (e) => {
         e.stopPropagation(), e.preventDefault();
     },
-    p = (e) => {
+    x = (e) => {
         let { className: t, onDrop: n } = e,
-            [l, p] = r.useState(!1),
+            [l, x] = r.useState(!1),
             h = r.useRef(null),
             b = r.useCallback((e) => {
-                x(e), p(!0), (0, s.Mr3)(c.A);
+                p(e), x(!0), (0, s.Mr3)(c.A);
             }, []),
             f = r.useCallback((e) => {
-                x(e), p(!1);
+                p(e), x(!1);
             }, []),
             v = r.useCallback(
                 async (e) => {
-                    x(e), p(!1);
+                    p(e), x(!1);
                     let t = e.dataTransfer;
                     if (null == t) return void m();
                     let a = await Promise.all(

@@ -1,41 +1,27 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => p });
 var r = n(255367),
     i = n(73800),
     l = n(481060),
     a = n(115849),
-    o = n(540059),
-    s = n(645792),
-    c = n(787642),
-    u = n(437314),
-    d = n(981631),
-    p = n(388032),
-    h = n(383903);
-function f() {
-    let e = (0, o.Q3)('AddFriendHeader');
+    o = n(645792),
+    s = n(787642),
+    c = n(388032),
+    u = n(383903);
+function d() {
     return (0, r.jsxs)('header', {
-        className: h.header,
+        className: u.header,
         children: [
             (0, r.jsx)(l.vwX, {
-                tag: e ? 'h1' : 'h2',
-                className: h.title,
-                children: p.intl.string(p.t.w5uwoK)
+                tag: 'h1',
+                className: u.title,
+                children: c.intl.string(c.t.w5uwoK)
             }),
             (0, r.jsx)(a.Z, {})
         ]
     });
 }
-let g = function () {
-    let e = (0, o.Q3)('AddFriend');
+let p = function () {
     return (0, r.jsxs)(i.Fragment, {
-        children: [
-            (0, r.jsx)(f, {}),
-            (0, s.b)() && (0, r.jsx)(c.Z, {}),
-            e
-                ? null
-                : (0, r.jsx)('div', {
-                      className: h.emptyState,
-                      children: (0, r.jsx)(u.Z, { type: d.pJs.ADD_FRIEND })
-                  })
-        ]
+        children: [(0, r.jsx)(d, {}), (0, o.b)() && (0, r.jsx)(s.Z, {})]
     });
 };

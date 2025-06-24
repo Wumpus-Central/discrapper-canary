@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => x });
 var a = n(255367),
     r = n(73800),
     l = n(120356),
@@ -9,7 +9,7 @@ var a = n(255367),
     d = n(246992),
     u = n(616257),
     m = n(386);
-let x = [
+let p = [
     {
         label: 'Unset',
         value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET
@@ -27,7 +27,7 @@ let x = [
         value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE
     }
 ];
-function p() {
+function x() {
     let e = r.useRef(null),
         t = c.JG.useSetting();
     return (0, a.jsxs)('div', {
@@ -39,7 +39,7 @@ function p() {
                 children: 'Receive DMs In Game'
             }),
             (0, a.jsx)(o.PhF, {
-                options: x,
+                options: p,
                 isSelected: (e) => e === t,
                 select: c.JG.updateSetting,
                 popoutLayerContext: d.O$,

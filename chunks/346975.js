@@ -1,8 +1,8 @@
 n.r(t), n.d(t, { default: () => ej }), n(35282), n(388685), n(781311);
 var r = n(255367),
-    l = n(73800),
-    i = n(120356),
-    a = n.n(i),
+    a = n(73800),
+    l = n(120356),
+    i = n.n(l),
     s = n(196434),
     o = n.n(s),
     c = n(94171),
@@ -30,8 +30,8 @@ var r = n(255367),
     E = n(897473),
     R = n(344185),
     k = n(235449),
-    Z = n(665906),
-    M = n(488131),
+    M = n(665906),
+    Z = n(488131),
     A = n(433355),
     L = n(592125),
     F = n(703558),
@@ -54,9 +54,9 @@ var r = n(255367),
     et = n(404616),
     en = n(470623),
     er = n(749913),
-    el = n(219664),
-    ei = n(895932),
-    ea = n(479099),
+    ea = n(219664),
+    el = n(895932),
+    ei = n(479099),
     es = n(510060),
     eo = n(276357),
     ec = n(81490),
@@ -113,23 +113,23 @@ function eb(e, t) {
     if (null == e) return {};
     var n,
         r,
-        l = (function (e, t) {
+        a = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                l = {},
-                i = Object.keys(e);
-            for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
-            return l;
+                a = {},
+                l = Object.keys(e);
+            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (a[n] = e[n]);
+            return a;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
-        var i = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+        var l = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (a[n] = e[n]);
     }
-    return l;
+    return a;
 }
 function ej(e) {
-    let { channel: t, guild: n, sidebarState: l } = e;
+    let { channel: t, guild: n, sidebarState: a } = e;
     return (0, r.jsx)(
         en.oL,
         {
@@ -137,7 +137,7 @@ function ej(e) {
             children: (0, r.jsx)(eN, {
                 channel: t,
                 guild: n,
-                sidebarState: l
+                sidebarState: a
             })
         },
         t.id
@@ -153,11 +153,11 @@ function eC(e) {
 }
 let e_ = (e, t, n) => (0 === e ? 0 : (0, es.KW)(n));
 function ey(e) {
-    let { itemRole: t, coords: n, section: l } = e;
+    let { itemRole: t, coords: n, section: a } = e;
     return (0, r.jsx)(
         'div',
         {
-            className: a()(ef.card, ef.archivedDividerRow, ef.columnsSpan),
+            className: i()(ef.card, ef.archivedDividerRow, ef.columnsSpan),
             style: n,
             'data-item-role': t,
             children: (0, r.jsx)('div', {
@@ -165,7 +165,7 @@ function ey(e) {
                 children: (0, r.jsx)(x.X6q, {
                     variant: 'eyebrow',
                     className: ef.archivedDivider,
-                    id: eC(l),
+                    id: eC(a),
                     children: eg.intl.string(eg.t['3+LO19'])
                 })
             })
@@ -174,9 +174,9 @@ function ey(e) {
     );
 }
 function eO(e) {
-    let { section: t, coords: n, key: l, isShowingSearchResult: i, hasActiveThreads: a } = e;
+    let { section: t, coords: n, key: a, isShowingSearchResult: l, hasActiveThreads: i } = e;
     return () =>
-        2 === t && !i && a
+        2 === t && !l && i
             ? (0, r.jsx)(
                   ey,
                   {
@@ -184,7 +184,7 @@ function eO(e) {
                       coords: null == n ? void 0 : ep(ex({}, n), { position: 'absolute' }),
                       itemRole: 'section'
                   },
-                  l
+                  a
               )
             : null;
 }
@@ -201,18 +201,18 @@ function eS(e) {
 function eN(e) {
     let { channel: t, sidebarState: n } = e,
         {
-            editorHeight: i,
+            editorHeight: l,
             editorAdditionRowHeight: s,
             listViewCardHeights: o,
             formOpen: u
         } = (0, en.xH)((e) => {
-            let { editorHeight: t, editorAdditionRowHeight: n, listViewCardHeights: r, formOpen: l, cardHeightVersion: i } = e;
+            let { editorHeight: t, editorAdditionRowHeight: n, listViewCardHeights: r, formOpen: a, cardHeightVersion: l } = e;
             return {
                 editorHeight: t,
                 editorAdditionRowHeight: n,
                 listViewCardHeights: r,
-                formOpen: l,
-                cardHeightVersion: i
+                formOpen: a,
+                cardHeightVersion: l
             };
         }, c.X),
         {
@@ -224,35 +224,35 @@ function eN(e) {
             activeThreadsLoading: _,
             archivedThreadsLoading: y,
             loading: P,
-            isSearchLoading: Z,
+            isSearchLoading: M,
             layoutType: D
         } = (function (e) {
-            let { sortOrder: t, tagFilter: n, layoutType: r, tagSetting: l } = (0, W.H)(e.id),
-                i = (0, X.vP)({
+            let { sortOrder: t, tagFilter: n, layoutType: r, tagSetting: a } = (0, W.H)(e.id),
+                l = (0, X.vP)({
                     channel: e,
                     sortOrder: t,
                     tagFilter: n,
-                    tagSetting: l,
+                    tagSetting: a,
                     shouldAutomaticallyAck: !0
                 }),
-                a = (0, g.e7)([R.Z, O.Z], () => {
+                i = (0, g.e7)([R.Z, O.Z], () => {
                     let t = R.Z.hasLoaded(e.guild_id),
                         n = O.Z.isLurking(e.guild_id);
                     return !t && !n;
                 }),
-                { threadIds: s, canLoadMore: o, loadMore: c, loading: d } = (0, k.qQ)(e, t, n, l),
+                { threadIds: s, canLoadMore: o, loadMore: c, loading: d } = (0, k.qQ)(e, t, n, a),
                 { searchResults: u, isSearchLoading: m } = (0, X.XZ)({ channelId: e.id });
             return (
-                (0, X.ES)(e, t, n, l),
+                (0, X.ES)(e, t, n, a),
                 {
-                    activeThreadIds: i,
+                    activeThreadIds: l,
                     archivedThreadIds: s,
                     searchResults: u,
                     canLoadMore: o,
                     loadMore: c,
-                    loading: a || d || m,
+                    loading: i || d || m,
                     archivedThreadsLoading: d,
-                    activeThreadsLoading: a,
+                    activeThreadsLoading: i,
                     isSearchLoading: m,
                     layoutType: r
                 }
@@ -265,15 +265,15 @@ function eN(e) {
     (0, X.ku)(t, q, $, u);
     let ee = (0, X.jR)(t),
         er = (0, X.eZ)(t),
-        ei = l.useRef(null),
-        { observePostVisibilityAnalytics: ea } = (function (e) {
+        el = a.useRef(null),
+        { observePostVisibilityAnalytics: ei } = (function (e) {
             let { guildId: t, channelId: n, scrollerRef: r } = e;
             K.Z.useForumChannelSeenManager({
                 guildId: t,
                 channelId: n
             });
-            let i = l.useRef(null),
-                a = l.useCallback((e, t) => {
+            let l = a.useRef(null),
+                i = a.useCallback((e, t) => {
                     for (let n of t) {
                         let t = n.target.dataset.itemId;
                         if (null == t) return;
@@ -282,78 +282,78 @@ function eN(e) {
                     }
                 }, []);
             return (
-                l.useEffect(() => {
+                a.useEffect(() => {
                     var e;
                     let t = null == (e = r.current) ? void 0 : e.getScrollerNode();
                     if (null != t)
                         return (
-                            (i.current = new IntersectionObserver((e) => a(n, e), {
+                            (l.current = new IntersectionObserver((e) => i(n, e), {
                                 root: t,
                                 rootMargin: '0px 100000px 0px 100000px',
                                 threshold: 0.5
                             })),
                             () => {
                                 var e;
-                                null == (e = i.current) || e.disconnect(), (i.current = null);
+                                null == (e = l.current) || e.disconnect(), (l.current = null);
                             }
                         );
-                }, [n, a, r]),
+                }, [n, i, r]),
                 {
-                    observePostVisibilityAnalytics: l.useCallback(
+                    observePostVisibilityAnalytics: a.useCallback(
                         (e, t) => {
                             var r;
                             if (null == e) return void (0, J.Ct)(n, t, Date.now());
-                            null == (r = i.current) || r.observe(e);
+                            null == (r = l.current) || r.observe(e);
                         },
                         [n]
                     )
                 }
             );
         })({
-            scrollerRef: ei,
+            scrollerRef: el,
             channelId: t.id,
             guildId: t.guild_id
         }),
         eo = D === h.X.GRID,
         ej = null != b,
-        ey = l.useRef(null),
+        ey = a.useRef(null),
         { containerRef: eN, containerWidth: eE } = (0, ec.Z)();
-    l.useEffect(
+    a.useEffect(
         () => () => {
             null != t.id && G.Z.clearForumSearch(t.id);
         },
         [t.id]
     ),
-        l.useEffect(() => {
+        a.useEffect(() => {
             if (null == ey.current && null != t.id) {
                 let e = A.ZP.getSidebarState(t.id);
                 null != e && e.type === E.tI.VIEW_THREAD && (ey.current = e.channelId);
             }
         }, [t.id]);
-    let { columns: ek } = l.useMemo(() => (eo ? ev.getRenderOptions(eE) : es.eU), [eo, eE]),
-        eZ = l.useMemo(() => (P ? Math.round((window.innerHeight - 200) / 118) : 0), [P]),
-        eM = l.useMemo(() => {
+    let { columns: ek } = a.useMemo(() => (eo ? ev.getRenderOptions(eE) : es.eU), [eo, eE]),
+        eM = a.useMemo(() => (P ? Math.round((window.innerHeight - 200) / 118) : 0), [P]),
+        eZ = a.useMemo(() => {
             let e = Math.ceil(window.innerHeight / (0, es.KW)(ev.getWidth(eE))) * ek;
             return _ ? e : 0;
         }, [eE, ek, _]),
-        eA = l.useMemo(() => {
+        eA = a.useMemo(() => {
             let e = Math.ceil(window.innerHeight / (0, es.KW)(ev.getWidth(eE))) * ek;
             return y ? e : 0;
         }, [eE, ek, y]),
-        eL = l.useMemo(() => {
+        eL = a.useMemo(() => {
             let e = Math.ceil(window.innerHeight / (0, es.KW)(ev.getWidth(eE))) * ek;
-            return Z && ej ? e : 0;
-        }, [eE, ek, Z, ej]),
-        eF = l.useMemo(() => {
+            return M && ej ? e : 0;
+        }, [eE, ek, M, ej]),
+        eF = a.useMemo(() => {
             if (eo)
                 if (!ee && ej) return [1, 0];
-                else if (!er) return [1, m.length + eM, 0];
+                else if (!er) return [1, m.length + eZ, 0];
                 else if (ej) return [1, b.length + eL, 0];
-                else return [1, m.length + eM, f.length + eA];
-            return !ee && ej ? [1, 1] : er ? (ej ? [1, b.length, 0, eZ] : [1, m.length, f.length, eZ]) : [1, m.length, 1];
-        }, [eo, ej, m.length, f.length, ee, er, eZ, b, eM, eA, eL]),
-        eD = l.useMemo(() => (!ee && ej ? [[], []] : er ? (ej ? [[], b, [], []] : [[], m, f, []]) : [[], m, []]), [ej, ee, er, b, m, f]),
-        ez = l.useCallback(
+                else return [1, m.length + eZ, f.length + eA];
+            return !ee && ej ? [1, 1] : er ? (ej ? [1, b.length, 0, eM] : [1, m.length, f.length, eM]) : [1, m.length, 1];
+        }, [eo, ej, m.length, f.length, ee, er, eM, b, eZ, eA, eL]),
+        eD = a.useMemo(() => (!ee && ej ? [[], []] : er ? (ej ? [[], b, [], []] : [[], m, f, []]) : [[], m, []]), [ej, ee, er, b, m, f]),
+        ez = a.useCallback(
             (e, n) => {
                 (0, Y.B5)({
                     guildId: t.guild_id,
@@ -364,20 +364,20 @@ function eN(e) {
                         section: em.jXE.FORUM_CHANNEL_POST
                     }
                 }),
-                    n ? (0, I.ad)(e, { source: eh.on.BROWSER }) : ((ey.current = e.id), (0, M.ok)(e));
+                    n ? (0, I.ad)(e, { source: eh.on.BROWSER }) : ((ey.current = e.id), (0, Z.ok)(e));
             },
             [t.guild_id, t.id, ey]
         ),
-        [eB, eH] = l.useState(i + s - 24),
-        eU = l.useCallback(
-            (e, n, l) =>
+        [eB, eH] = a.useState(l + s - 24),
+        eU = a.useCallback(
+            (e, n, a) =>
                 0 === e
                     ? (0, r.jsx)(
                           eR,
                           {
                               channel: t,
                               isEmpty: !B,
-                              isSearchLoading: Z,
+                              isSearchLoading: M,
                               numResults: null == b ? void 0 : b.length,
                               coords: n,
                               onHeightChange: eH,
@@ -405,7 +405,7 @@ function eN(e) {
                                 },
                                 'archive-or-search-result'
                             )
-                          : l()
+                          : a()
                       : (0, r.jsx)(
                             eP,
                             {
@@ -414,23 +414,23 @@ function eN(e) {
                             },
                             'archived-missing-reading-history-perm'
                         ),
-            [ej, er, b, ee, t, B, Z, P, H]
+            [ej, er, b, ee, t, B, M, P, H]
         ),
         eV = (0, g.e7)([V.Z], () => V.Z.hasHidden(t.id)),
         eG = {
-            editorHeight: i,
+            editorHeight: l,
             isGridLayout: eo
         },
-        eq = l.useRef(eG);
-    l.useEffect(() => {
+        eq = a.useRef(eG);
+    a.useEffect(() => {
         eq.current = eG;
     }),
-        l.useEffect(() => {
+        a.useEffect(() => {
             var e, t;
             let { editorHeight: n, isGridLayout: r } = eq.current,
-                l = r ? eQ : ei,
-                i = null == (e = l.current) ? void 0 : e.getScrollerState();
-            null != i && !eV && i.scrollTop > n && (null == (t = l.current) || t.scrollTo({ to: 0 }));
+                a = r ? eQ : el,
+                l = null == (e = a.current) ? void 0 : e.getScrollerState();
+            null != l && !eV && l.scrollTop > n && (null == (t = a.current) || t.scrollTo({ to: 0 }));
         }, [eV]);
     let {
             updateListScrollerRef: eW,
@@ -439,16 +439,16 @@ function eN(e) {
             getListSectionHeight: eJ,
             getListItemHeight: eY
         } = (function (e) {
-            let { listRef: t, hasActiveThreads: n, threadIdsBySection: i, listViewCardHeights: s, editorHeight: o, editorAdditionRowHeight: c, renderSectionOrItem: d, goToThread: u, observePostVisibilityAnalytics: m, isShowingSearchResult: h } = e,
+            let { listRef: t, hasActiveThreads: n, threadIdsBySection: l, listViewCardHeights: s, editorHeight: o, editorAdditionRowHeight: c, renderSectionOrItem: d, goToThread: u, observePostVisibilityAnalytics: m, isShowingSearchResult: h } = e,
                 f = (0, g.e7)([z.Z], () => z.Z.getChannelId()),
-                p = l.useCallback(
+                p = a.useCallback(
                     (e) => (n) => {
                         var r;
                         (t.current = n), (e.current = null != (r = null == n ? void 0 : n.getScrollerNode()) ? r : null);
                     },
                     [t]
                 ),
-                b = l.useCallback(
+                b = a.useCallback(
                     (e) =>
                         eO({
                             section: e.section,
@@ -457,7 +457,7 @@ function eN(e) {
                         })(),
                     [n, h]
                 ),
-                j = l.useCallback(
+                j = a.useCallback(
                     (e) =>
                         d(e.section, void 0, () => {
                             if (3 === e.section)
@@ -467,11 +467,11 @@ function eN(e) {
                                           'div',
                                           {
                                               'data-item-role': 'item',
-                                              className: a()(ef.loadingCard, ef['loadingCard-'.concat(e.row % 3)])
+                                              className: i()(ef.loadingCard, ef['loadingCard-'.concat(e.row % 3)])
                                           },
                                           'loading-'.concat(e.row)
                                       );
-                            let t = i[e.section][e.row],
+                            let t = l[e.section][e.row],
                                 n = null != f && (0, N.UD)(f) ? T.ZP : et.ZP;
                             return (0, r.jsx)(
                                 'li',
@@ -490,64 +490,64 @@ function eN(e) {
                                 ''.concat(e.section, '-').concat(t)
                             );
                         }),
-                    [d, i, f, u, m]
+                    [d, l, f, u, m]
                 ),
-                v = l.useCallback(
+                v = a.useCallback(
                     (e, t) => {
                         if (0 === e) return o + c;
-                        let n = s[i[e][t]];
+                        let n = s[l[e][t]];
                         return null == n ? 104 : n + 8;
                     },
-                    [i, s, o, c]
+                    [l, s, o, c]
                 );
             return {
                 updateListScrollerRef: p,
                 renderListSection: b,
                 renderListItem: j,
-                getListSectionHeight: l.useCallback((e) => (2 === e && n ? 40 : 0), [n]),
+                getListSectionHeight: a.useCallback((e) => (2 === e && n ? 40 : 0), [n]),
                 getListItemHeight: v
             };
         })({
-            listRef: ei,
+            listRef: el,
             hasActiveThreads: B,
             threadIdsBySection: eD,
             listViewCardHeights: o,
-            editorHeight: i,
+            editorHeight: l,
             editorAdditionRowHeight: s,
             renderSectionOrItem: eU,
             goToThread: ez,
-            observePostVisibilityAnalytics: ea,
+            observePostVisibilityAnalytics: ei,
             isShowingSearchResult: ej
         }),
-        eQ = l.useRef(null),
+        eQ = a.useRef(null),
         {
             updateMasonryListScrollerRef: e$,
             getItemKey: e0,
             renderGridSection: e3,
-            renderGridItem: e1,
-            getGridSectionHeight: e6,
-            getSectionProps: e8,
-            handleGridFocus: e9
+            renderGridItem: e6,
+            getGridSectionHeight: e1,
+            getSectionProps: e9,
+            handleGridFocus: e8
         } = (function (e) {
-            let { masonryListScrollerRef: t, threadIdsBySection: n, goToThread: i, renderSectionOrItem: s, hasActiveThreads: o, isShowingSearchResult: c, canSearchForumPosts: d, canViewArchivedPosts: u, observePostVisibilityAnalytics: m, focusedThreadId: h, headerHeight: g } = e,
-                f = l.useRef(null),
-                x = l.useCallback(
+            let { masonryListScrollerRef: t, threadIdsBySection: n, goToThread: l, renderSectionOrItem: s, hasActiveThreads: o, isShowingSearchResult: c, canSearchForumPosts: d, canViewArchivedPosts: u, observePostVisibilityAnalytics: m, focusedThreadId: h, headerHeight: g } = e,
+                f = a.useRef(null),
+                x = a.useCallback(
                     (e) => {
                         (t.current = e), (f.current = null == e ? void 0 : e.getScrollerNode());
                     },
                     [t]
                 ),
-                p = l.useCallback(
+                p = a.useCallback(
                     (e, n) => {
                         let { current: r } = t;
                         if (null == r) return;
-                        let l = document.querySelector(e);
-                        if (null == l) return;
-                        let i = r.getCoordsMap()[n],
-                            a = null != i ? i.height + 20 : 200;
+                        let a = document.querySelector(e);
+                        if (null == a) return;
+                        let l = r.getCoordsMap()[n],
+                            i = null != l ? l.height + 20 : 200;
                         r.scrollIntoViewNode({
-                            node: l,
-                            padding: a,
+                            node: a,
+                            padding: i,
                             callback() {
                                 requestAnimationFrame(() => {
                                     var t;
@@ -559,16 +559,16 @@ function eN(e) {
                     },
                     [t, h]
                 ),
-                b = l.useCallback(
+                b = a.useCallback(
                     (e) => {
                         let t = eS(e);
                         if (null == t) return;
                         let n = L.Z.getChannel(t);
-                        null != n && i(n, !0);
+                        null != n && l(n, !0);
                     },
-                    [i]
+                    [l]
                 ),
-                j = l.useCallback(
+                j = a.useCallback(
                     function (e) {
                         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
                         if (0 === n[e].length) return 'section-'.concat(e, '-').concat(t);
@@ -579,7 +579,7 @@ function eN(e) {
                     },
                     [n]
                 ),
-                v = l.useCallback(
+                v = a.useCallback(
                     (e, t, n) =>
                         s(
                             e,
@@ -594,7 +594,7 @@ function eN(e) {
                         ),
                     [s, o, c]
                 ),
-                C = l.useCallback(
+                C = a.useCallback(
                     (e) =>
                         0 === e
                             ? {}
@@ -612,20 +612,20 @@ function eN(e) {
                 handleGridSelect: b,
                 getItemKey: j,
                 renderGridSection: v,
-                renderGridItem: l.useCallback(
-                    (e, t, l, s, o) => {
+                renderGridItem: a.useCallback(
+                    (e, t, a, s, o) => {
                         if (0 === e) return null;
                         let c = n[e][t];
                         return null != c
                             ? (0, r.jsx)(
-                                  el.Z,
+                                  ea.Z,
                                   {
                                       id: ''.concat(s),
                                       threadId: c,
-                                      className: a()(ef.card, ef.mainCard),
-                                      goToThread: i,
+                                      className: i()(ef.card, ef.mainCard),
+                                      goToThread: l,
                                       observePostVisibilityAnalytics: m,
-                                      coords: l,
+                                      coords: a,
                                       gridCoords: o.coordinates[s],
                                       gridSectionBoundaries: o.boundaries
                                   },
@@ -636,17 +636,17 @@ function eN(e) {
                               : (0, r.jsx)(
                                     'div',
                                     {
-                                        style: ex({}, l),
+                                        style: ex({}, a),
                                         'data-item-role': 'item',
-                                        className: a()(ef.loadingCard, ef['loadingCard-'.concat(t % 3)])
+                                        className: i()(ef.loadingCard, ef['loadingCard-'.concat(t % 3)])
                                     },
                                     s
                                 );
                     },
-                    [n, i, m]
+                    [n, l, m]
                 ),
                 getSectionProps: C,
-                getGridSectionHeight: l.useCallback((e) => (0 === e ? g - 8 - 24 : 2 === e ? (o || !u ? 40 : 0) : 1 === e && c && !d ? 40 : 0), [g, c, d, o, u])
+                getGridSectionHeight: a.useCallback((e) => (0 === e ? g - 8 - 24 : 2 === e ? (o || !u ? 40 : 0) : 1 === e && c && !d ? 40 : 0), [g, c, d, o, u])
             };
         })({
             masonryListScrollerRef: eQ,
@@ -657,33 +657,33 @@ function eN(e) {
             isShowingSearchResult: ej,
             canSearchForumPosts: ee,
             canViewArchivedPosts: er,
-            observePostVisibilityAnalytics: ea,
+            observePostVisibilityAnalytics: ei,
             focusedThreadId: ey,
             headerHeight: eB
         });
     !(function (e) {
-        let { masonryListScrollerRef: t, containerWidth: n, isGridLayout: r, threadIdsBySection: i, focusedThreadId: a, parentId: s } = e;
-        l.useEffect(() => {
+        let { masonryListScrollerRef: t, containerWidth: n, isGridLayout: r, threadIdsBySection: l, focusedThreadId: i, parentId: s } = e;
+        a.useEffect(() => {
             if (r) {
                 let e = setTimeout(() => {
-                    if (null == t.current || null == a.current) return;
-                    let e = a.current;
+                    if (null == t.current || null == i.current) return;
+                    let e = i.current;
                     if ('string' != typeof e) return;
-                    null == A.ZP.getSidebarState(s) && (a.current = null);
-                    let n = i.findIndex((t) => t.find((t) => t === e)),
+                    null == A.ZP.getSidebarState(s) && (i.current = null);
+                    let n = l.findIndex((t) => t.find((t) => t === e)),
                         r = t.current.getCoordsMap(),
-                        l = r['__section__'.concat(n)],
+                        a = r['__section__'.concat(n)],
                         o = r[ew(n, e)];
-                    null != l &&
+                    null != a &&
                         null != o &&
                         t.current.scrollIntoViewRect({
-                            start: l.top + o.top - 100,
-                            end: l.top + o.top + o.height + 50
+                            start: a.top + o.top - 100,
+                            end: a.top + o.top + o.height + 50
                         });
                 }, 0);
                 return () => clearTimeout(e);
             }
-        }, [s, n, r, i, a, t]);
+        }, [s, n, r, l, i, t]);
     })({
         masonryListScrollerRef: eQ,
         containerWidth: eE,
@@ -692,26 +692,26 @@ function eN(e) {
         parentId: t.id,
         focusedThreadId: ey
     });
-    let e4 = l.useCallback(() => {
+    let e4 = a.useCallback(() => {
             var e, n;
             if (ej) return;
-            let r = eo ? (null == (e = eQ.current) ? void 0 : e.getScrollerState()) : null == (n = ei.current) ? void 0 : n.getScrollerState();
+            let r = eo ? (null == (e = eQ.current) ? void 0 : e.getScrollerState()) : null == (n = el.current) ? void 0 : n.getScrollerState();
             if (null == r) return;
             (0, Y.ab)({
                 guildId: t.guild_id,
                 channelId: t.id
             });
-            let l = r.scrollTop + r.offsetHeight;
-            r.scrollHeight - l < (eo ? Math.max(200, (0, es.KW)(eE)) : 200) && C();
+            let a = r.scrollTop + r.offsetHeight;
+            r.scrollHeight - a < (eo ? Math.max(200, (0, es.KW)(eE)) : 200) && C();
         }, [ej, eo, t.guild_id, t.id, eE, C]),
         e5 = (0, g.e7)([j.Z], () => j.Z.keyboardModeEnabled),
         e2 = (0, ed.ZP)({
             id: 'forum-grid-view',
             isEnabled: eo && e5,
-            setFocus: e9
+            setFocus: e8
         }),
         e7 = (0, eu.Z)({
-            listRef: ei,
+            listRef: el,
             padding: 96,
             isEnabled: !eo && e5,
             channel: t
@@ -720,12 +720,12 @@ function eN(e) {
         { ref: tt } = te,
         tn = eb(te, ['ref']),
         tr = A.ZP.getSidebarState(t.id),
-        tl = null != tr && (0, A.D5)(tr),
-        ti = (0, g.e7)([A.ZP], () => A.ZP.getSection(t.id)) === em.ULH.MEMBERS;
+        ta = null != tr && (0, A.D5)(tr),
+        tl = (0, g.e7)([A.ZP], () => A.ZP.getSection(t.id)) === em.ULH.MEMBERS;
     return (0, r.jsx)('div', {
         className: ef.container,
         ref: eN,
-        'data-member-list-open': ti,
+        'data-member-list-open': tl,
         children: (0, r.jsx)(x.Wdt, {
             children: (e) =>
                 (0, r.jsxs)(r.Fragment, {
@@ -735,7 +735,7 @@ function eN(e) {
                                 channel: t,
                                 draftType: F.d.FirstThreadMessage,
                                 className: ef.uploadArea,
-                                style: { right: tl && (null == n ? void 0 : n.isThreadSidebarFloating) ? n.threadSidebarWidth : 0 }
+                                style: { right: ta && (null == n ? void 0 : n.isThreadSidebarFloating) ? n.threadSidebarWidth : 0 }
                             }),
                         (0, r.jsx)(eI, { channel: t }),
                         (0, r.jsx)(x.nn4, { children: (0, r.jsx)(x.H, { children: eg.intl.string(eg.t.B2panJ) }) }),
@@ -762,11 +762,11 @@ function eN(e) {
                                               columns: ek,
                                               sections: eF,
                                               getItemKey: e0,
-                                              getSectionHeight: e6,
+                                              getSectionHeight: e1,
                                               getItemHeight: e_,
                                               renderSection: e3,
-                                              renderItem: e1,
-                                              getSectionProps: e8,
+                                              renderItem: e6,
+                                              getSectionProps: e9,
                                               onScroll: v ? e4 : void 0,
                                               chunkSize: 350
                                           },
@@ -781,7 +781,7 @@ function eN(e) {
                                   children: (0, r.jsx)(d.SJ, {
                                       children: (t) => {
                                           var { ref: n } = t,
-                                              l = eb(t, ['ref']);
+                                              a = eb(t, ['ref']);
                                           return (0, r.jsx)(
                                               x._2F,
                                               ep(
@@ -798,7 +798,7 @@ function eN(e) {
                                                           onScroll: v ? e4 : void 0,
                                                           paddingBottom: 24
                                                       },
-                                                      l,
+                                                      a,
                                                       e
                                                   ),
                                                   { innerRole: 'list' }
@@ -815,37 +815,37 @@ function eN(e) {
 }
 function eP(e) {
     let { channel: t, coords: n } = e,
-        l = (0, v.ZP)(t);
+        a = (0, v.ZP)(t);
     return (0, r.jsx)('div', {
-        className: a()(ef.missingReadHistoryPermission, ef.columnsSpan),
+        className: i()(ef.missingReadHistoryPermission, ef.columnsSpan),
         style: n,
         children: (0, r.jsx)(x.Text, {
             color: 'text-muted',
             variant: 'text-md/normal',
-            children: eg.intl.format(eg.t.TycmzM, { channelName: l })
+            children: eg.intl.format(eg.t.TycmzM, { channelName: a })
         })
     });
 }
 function eT(e) {
     let { channel: t, coords: n } = e,
-        l = (0, v.ZP)(t);
+        a = (0, v.ZP)(t);
     return (0, r.jsx)('div', {
-        className: a()(ef.missingReadHistoryPermission, ef.columnsSpan),
+        className: i()(ef.missingReadHistoryPermission, ef.columnsSpan),
         style: n,
         children: (0, r.jsx)(x.Text, {
             color: 'text-muted',
             variant: 'text-md/normal',
-            children: eg.intl.format(eg.t.OWZJdX, { channelName: l })
+            children: eg.intl.format(eg.t.OWZJdX, { channelName: a })
         })
     });
 }
 function eI(e) {
     let { channel: t } = e,
-        n = l.useCallback(() => {
+        n = a.useCallback(() => {
             G.Z.resort(t.id);
         }, [t]),
-        i = (0, g.e7)([q.Z], () => q.Z.getNewThreadCount());
-    return 0 === i
+        l = (0, g.e7)([q.Z], () => q.Z.getNewThreadCount());
+    return 0 === l
         ? null
         : (0, r.jsx)(x.P3F, {
               className: ef.newPostsButton,
@@ -853,7 +853,7 @@ function eI(e) {
               children: (0, r.jsx)(x.Text, {
                   color: 'text-brand',
                   variant: 'text-md/medium',
-                  children: eg.intl.format(eg.t.ue1qfH, { count: i })
+                  children: eg.intl.format(eg.t.ue1qfH, { count: l })
               })
           });
 }
@@ -861,25 +861,25 @@ function eE() {
     return Promise.resolve();
 }
 function eR(e) {
-    var t, n, i;
+    var t, n, l;
     let { channel: s, isEmpty: p, isSearchLoading: v, numResults: O, children: w, coords: S, onHeightChange: T } = e,
         {
             name: I,
             formOpen: E,
             titleFocused: R,
             hasClickedForm: k,
-            textAreaState: M,
+            textAreaState: Z,
             onboardingExpanded: A,
             setEditorAdditionRowHeight: L
         } = (0, en.xH)((e) => {
-            let { name: t, formOpen: n, titleFocused: r, hasClickedForm: l, textAreaState: i, onboardingExpanded: a, setEditorAdditionRowHeight: s } = e;
+            let { name: t, formOpen: n, titleFocused: r, hasClickedForm: a, textAreaState: l, onboardingExpanded: i, setEditorAdditionRowHeight: s } = e;
             return {
                 name: t,
                 formOpen: n,
                 titleFocused: r,
-                hasClickedForm: l,
-                textAreaState: i,
-                onboardingExpanded: a,
+                hasClickedForm: a,
+                textAreaState: l,
+                onboardingExpanded: i,
                 setEditorAdditionRowHeight: s
             };
         }, c.X),
@@ -888,61 +888,61 @@ function eR(e) {
         K = (0, W.v)(),
         J = (0, g.e7)([D.Z], () => D.Z.canChatInGuild(s.guild_id)),
         Q = (0, X.r_)(s),
-        et = (0, Z.cD)(s),
-        [el, ei] = l.useState(et),
-        [, es] = (0, _.AB)(null != (i = s.getGuildId()) ? i : void 0),
+        et = (0, M.cD)(s),
+        [ea, el] = a.useState(et),
+        [, es] = (0, _.AB)(null != (l = s.getGuildId()) ? l : void 0),
         ec = (0, P.HL)(s),
-        ed = J && (et || (el && es)) && !ec,
+        ed = J && (et || (ea && es)) && !ec,
         eu = s.isMediaChannel();
-    l.useEffect(() => {
-        et && ei(!0);
+    a.useEffect(() => {
+        et && el(!0);
     }, [et]);
     let { ref: eh, height: ej } = (0, b.ZP)();
-    l.useEffect(() => {
+    a.useEffect(() => {
         null != ej && T(ej);
     }, [T, ej]);
-    let ev = l.useCallback(() => {
+    let ev = a.useCallback(() => {
         o()(() => {
             null != eh.current && q.getState().setEditorHeight(eh.current.offsetHeight);
         });
     }, [eh, q]);
-    l.useLayoutEffect(ev, [ev, p, ed, A]),
+    a.useLayoutEffect(ev, [ev, p, ed, A]),
         (0, U.yp)({
             event: em.CkL.REMEASURE_TARGET,
             handler: ev
         });
     let eC = (0, g.e7)([B.Z], () => B.Z.getUploads(s.id, F.d.FirstThreadMessage)),
         e_ = (0, X.ql)(s),
-        ey = l.useRef(null),
-        eO = l.useRef(null),
-        [ew, eS] = l.useState(0),
+        ey = a.useRef(null),
+        eO = a.useRef(null),
+        [ew, eS] = a.useState(0),
         { width: eN } = (0, g.e7)([H.Z], () => H.Z.windowSize()),
         eP = null == (n = ey.current) || null == (t = n.getBoundingClientRect()) ? void 0 : t.width,
-        eT = l.useRef(null),
-        eI = l.useRef(null);
-    l.useLayoutEffect(() => {
+        eT = a.useRef(null),
+        eI = a.useRef(null);
+    a.useLayoutEffect(() => {
         var e;
         let t = eO.current,
             n = null == t || null == (e = t.children) ? void 0 : e[0];
         if (null != ey.current && null != n && null != n.children) {
             let { left: e, top: t } = ey.current.getBoundingClientRect(),
                 r = 0;
-            for (let l of n.children) {
-                let { right: n, top: i, height: a } = l.getBoundingClientRect();
-                if (i - t > a) break;
+            for (let a of n.children) {
+                let { right: n, top: l, height: i } = a.getBoundingClientRect();
+                if (l - t > i) break;
                 n - e > r && (r = n - e);
             }
             eS(r);
         }
     }, [s.availableTags, eN, eP, z]);
     let eR = I.length > 0 && !E && (v || null != O),
-        eZ = !__OVERLAY__ && !k && !E && R && (0 === M.textValue.trim().length || M.textValue.trim() === e_) && 0 === eC.length && !ec;
-    l.useLayoutEffect(() => {
-        let e = eR || eZ;
+        eM = !__OVERLAY__ && !k && !E && R && (0 === Z.textValue.trim().length || Z.textValue.trim() === e_) && 0 === eC.length && !ec;
+    a.useLayoutEffect(() => {
+        let e = eR || eM;
         if (!e) return L(0);
         null != eT.current && L(e ? eT.current.clientHeight : 0);
-    }, [L, eR, eZ, eT]);
-    let eM = (e) => {
+    }, [L, eR, eM, eT]);
+    let eZ = (e) => {
             (0, Y.e7)({
                 guildId: s.guild_id,
                 channelId: s.id,
@@ -968,19 +968,19 @@ function eR(e) {
         eL = (0, d.JA)('forum-channel-header'),
         { role: eF, onFocus: eD } = eL,
         ez = eb(eL, ['role', 'onFocus']),
-        eB = l.useRef(null),
+        eB = a.useRef(null),
         eH = (function () {
-            let e = l.useRef(!1),
+            let e = a.useRef(!1),
                 t = (0, g.e7)([j.Z], () => j.Z.keyboardModeEnabled),
-                n = l.useCallback(
+                n = a.useCallback(
                     (t) => {
                         e.current = t.shiftKey;
                     },
                     [e]
                 );
-            return l.useLayoutEffect(() => (t ? window.addEventListener('keydown', n) : window.removeEventListener('keydown', n), () => window.removeEventListener('keydown', n)), [t, n]), e;
+            return a.useLayoutEffect(() => (t ? window.addEventListener('keydown', n) : window.removeEventListener('keydown', n), () => window.removeEventListener('keydown', n)), [t, n]), e;
         })(),
-        eU = l.useCallback(
+        eU = a.useCallback(
             (e) => {
                 if ((eD(), e.target === eh.current && !eH.current)) {
                     var t;
@@ -989,13 +989,13 @@ function eR(e) {
             },
             [eD, eh, eH]
         ),
-        eV = l.useMemo(() => (ec ? (0, N.iq)(s.availableTags) : s.availableTags), [s.availableTags, ec]);
+        eV = a.useMemo(() => (ec ? (0, N.iq)(s.availableTags) : s.availableTags), [s.availableTags, ec]);
     return (0, r.jsx)(
         'div',
         ep(
             ex(
                 {
-                    className: a()(ef.card, ef.headerRow, ef.columnsSpan),
+                    className: i()(ef.card, ef.headerRow, ef.columnsSpan),
                     ref: eh,
                     onFocus: eU
                 },
@@ -1010,13 +1010,13 @@ function eR(e) {
                     children: [
                         null != s.guild_id
                             ? (0, r.jsx)(y.Z, {
-                                  className: a()(ef.newMemberBanner, { [ef.gridViewBanner]: V === h.X.GRID }),
+                                  className: i()(ef.newMemberBanner, { [ef.gridViewBanner]: V === h.X.GRID }),
                                   guildId: s.guild_id,
                                   channel: s
                               })
                             : null,
                         (0, r.jsx)('div', {
-                            className: a()(ef.mainCard, ef.header, { [ef.headerWithMatchingPosts]: eR || eZ }),
+                            className: i()(ef.mainCard, ef.header, { [ef.headerWithMatchingPosts]: eR || eM }),
                             children: (0, r.jsx)(er.Z, {
                                 parentChannel: s,
                                 onChange: ev,
@@ -1026,7 +1026,7 @@ function eR(e) {
                                 inputRef: eB
                             })
                         }),
-                        (eR || eZ) &&
+                        (eR || eM) &&
                             (0, r.jsxs)('div', {
                                 className: ef.matchingPostsRow,
                                 ref: eT,
@@ -1067,7 +1067,7 @@ function eR(e) {
                                             ]
                                         }),
                                     (0, r.jsx)('div', { className: ef.tagsSpacer }),
-                                    eZ
+                                    eM
                                         ? ed
                                             ? (0, r.jsxs)('div', {
                                                   className: ef.startPostHelp,
@@ -1147,10 +1147,10 @@ function eR(e) {
                                                                       {
                                                                           children: eV.map((e) =>
                                                                               (0, r.jsx)(
-                                                                                  ea.Z,
+                                                                                  ei.Z,
                                                                                   {
                                                                                       tag: e,
-                                                                                      onClick: () => eM(e.id),
+                                                                                      onClick: () => eZ(e.id),
                                                                                       selected: z.has(e.id)
                                                                                   },
                                                                                   e.id
@@ -1183,7 +1183,7 @@ function eR(e) {
                                                               buttonRef: eI,
                                                               size: x.zxk.Sizes.MIN,
                                                               color: x.zxk.Colors.CUSTOM,
-                                                              className: a()(ef.tagsButton, { [ef.tagsButtonWithCount]: z.size > 0 }),
+                                                              className: i()(ef.tagsButton, { [ef.tagsButtonWithCount]: z.size > 0 }),
                                                               style: { left: ew },
                                                               innerClassName: ef.tagsButtonInner,
                                                               'aria-label': z.size > 0 ? eg.intl.string(eg.t.IkpM1d) : eg.intl.string(eg.t['9vKK/P']),
@@ -1218,7 +1218,7 @@ function eR(e) {
                                               (0, r.jsxs)(x.zxk, {
                                                   size: x.zxk.Sizes.MIN,
                                                   color: x.zxk.Colors.CUSTOM,
-                                                  className: a()(ef.tagsButton, ef.tagsButtonPlaceholder),
+                                                  className: i()(ef.tagsButton, ef.tagsButtonPlaceholder),
                                                   innerClassName: ef.tagsButtonInner,
                                                   'aria-label': eg.intl.string(eg.t.IkpM1d),
                                                   children: [
@@ -1266,12 +1266,12 @@ function eR(e) {
 function ek(e) {
     let { channel: t } = e,
         n = t.isMediaChannel(),
-        i = l.useRef(null);
+        l = a.useRef(null);
     return (0, r.jsx)(x.yRy, {
-        targetElementRef: i,
+        targetElementRef: l,
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return (0, r.jsx)(ei.Z, {
+            return (0, r.jsx)(el.Z, {
                 channel: t,
                 closePopout: n
             });
@@ -1279,11 +1279,11 @@ function ek(e) {
         position: 'bottom',
         align: 'left',
         children: (e, t) => {
-            let { isShown: l } = t;
+            let { isShown: a } = t;
             return (0, r.jsxs)(
                 x.zxk,
                 ep(ex({}, e), {
-                    buttonRef: i,
+                    buttonRef: l,
                     size: x.zxk.Sizes.MIN,
                     color: x.zxk.Colors.CUSTOM,
                     className: ef.sortDropdown,
@@ -1300,7 +1300,7 @@ function ek(e) {
                             color: 'interactive-normal',
                             children: n ? eg.intl.string(eg.t.JxU0ws) : eg.intl.string(eg.t.xyYt8P)
                         }),
-                        l
+                        a
                             ? (0, r.jsx)(x.u04, {
                                   size: 'custom',
                                   color: 'currentColor',

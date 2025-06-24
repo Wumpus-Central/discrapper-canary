@@ -2,8 +2,8 @@ n.d(t, { Z: () => _ }), n(539854);
 var r = n(255367),
     s = n(73800),
     o = n(392711),
-    a = n.n(o),
-    i = n(668826),
+    i = n.n(o),
+    a = n(668826),
     c = n(359013),
     l = n(115092),
     u = n(3072),
@@ -102,7 +102,7 @@ function _(e) {
         P = (0, s.useCallback)((e) => {
             (e.fillStyle = '#7f986a'), e.fillRect(0, 0, 422.4, 278.4), e.drawImage(N, 0, 0, 422.4, 278.4);
         }, []),
-        C = (0, s.useCallback)((e) => {
+        w = (0, s.useCallback)((e) => {
             m.current.forEach((t, n) => {
                 let r = (function (e, t) {
                     if (3 === e.type)
@@ -121,49 +121,49 @@ function _(e) {
                 e.drawImage(O, h[r], x[t.type], 16, 16, 16 * t.x + 19.2, 16 * t.y + 19.2, 16, 16);
             });
         }, []),
-        Z = (0, s.useCallback)((e) => {
+        C = (0, s.useCallback)((e) => {
             g.current.forEach((t) => {
                 e.drawImage(j, 16 * t.x + 19.2, 16 * t.y + 19.2, 16, 16);
             });
         }, []),
-        w = (0, s.useCallback)(() => {
+        Z = (0, s.useCallback)(() => {
             let e = {
                     x: m.current[0].x,
                     y: m.current[0].y
                 },
                 t = g.current.filter((t) => t.x !== e.x || t.y !== e.y),
                 n = g.current.length - t.length;
-            (g.current = t), n > 0 && (p(), (0, i.KH)(d.yN.SNEK, o.getPoints(n)));
+            (g.current = t), n > 0 && (p(), (0, a.KH)(d.yN.SNEK, o.getPoints(n)));
         }, [p, o]),
-        E = (0, s.useCallback)(() => {
+        S = (0, s.useCallback)(() => {
             var e;
             let t = null == (e = n.current) ? void 0 : e.getContext('2d');
-            null != t && (_(), w(), t.clearRect(0, 0, 422.4, 278.4), P(t), C(t), Z(t));
-        }, [w, P, Z, C, _]),
-        S = (0, s.useCallback)(() => {
+            null != t && (_(), Z(), t.clearRect(0, 0, 422.4, 278.4), P(t), w(t), C(t));
+        }, [Z, P, C, w, _]),
+        I = (0, s.useCallback)(() => {
             if (g.current.length < 10 && 0.2 > Math.random()) {
                 let e = (function e(t) {
                     let n = (function () {
-                        switch (a().sample(y)) {
+                        switch (i().sample(y)) {
                             case 0:
                                 return {
-                                    x: a().random(0, 23),
+                                    x: i().random(0, 23),
                                     y: 0
                                 };
                             case 2:
                                 return {
-                                    x: a().random(0, 23),
+                                    x: i().random(0, 23),
                                     y: 14
                                 };
                             case 3:
                                 return {
                                     x: 0,
-                                    y: a().random(0, 14)
+                                    y: i().random(0, 14)
                                 };
                             case 1:
                                 return {
                                     x: 23,
-                                    y: a().random(0, 14)
+                                    y: i().random(0, 14)
                                 };
                         }
                         return {
@@ -179,12 +179,12 @@ function _(e) {
     return (
         (0, l.Z)({
             isPaused: t,
-            onInterval: E,
+            onInterval: S,
             interval: 500
         }),
         (0, l.Z)({
             isPaused: t,
-            onInterval: S,
+            onInterval: I,
             interval: 1000
         }),
         (0, r.jsx)('canvas', {

@@ -1,113 +1,113 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => b });
 var r = n(255367);
 n(73800);
 var i = n(399606),
     l = n(524437),
-    a = n(481060),
-    o = n(494404),
-    s = n(377171),
+    o = n(481060),
+    s = n(494404),
+    a = n(377171),
     c = n(317632),
     u = n(602478),
     d = n(2818),
-    p = n(768943),
-    m = n(216789),
+    h = n(768943),
+    p = n(216789),
     f = n(818186),
-    h = n(388032),
-    g = n(413813);
-function _(e) {
-    let { tab: t, setTab: n, children: _, badgeState: b, closePopout: E } = e,
-        { enabled: y, inInbox: x } = d.Z.useExperiment({ location: 'RecentsPopout' }),
-        v = (0, m.Us)({ location: 'RecentsHeader' }),
-        { enabled: O } = u.Z.useExperiment({ location: 'RecentsHeader' }),
-        C = (0, i.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
-        j = (0, i.e7)([p.Z], () => p.Z.getOverdueMessageReminderCount());
-    return (0, r.jsxs)(o.h4, {
-        className: g.header,
+    g = n(388032),
+    m = n(413813);
+function b(e) {
+    let { tab: t, setTab: n, children: b, badgeState: _, closePopout: O } = e,
+        { enabled: y, inInbox: v } = d.Z.useExperiment({ location: 'RecentsPopout' }),
+        C = (0, p.Us)({ location: 'RecentsHeader' }),
+        { enabled: j } = u.Z.useExperiment({ location: 'RecentsHeader' }),
+        E = (0, i.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
+        S = (0, i.e7)([h.Z], () => h.Z.getOverdueMessageReminderCount());
+    return (0, r.jsxs)(s.h4, {
+        className: m.header,
         children: [
             (0, r.jsxs)('div', {
-                className: g.headerTitle,
+                className: m.headerTitle,
                 children: [
-                    (0, r.jsx)(a.xx7, {
+                    (0, r.jsx)(o.xx7, {
                         size: 'md',
                         color: 'currentColor',
-                        className: g.inboxIcon
+                        className: m.inboxIcon
                     }),
-                    (0, r.jsx)(a.Text, {
-                        className: g.inboxTitle,
+                    (0, r.jsx)(o.Text, {
+                        className: m.inboxTitle,
                         variant: 'text-lg/semibold',
                         color: 'interactive-active',
-                        children: h.intl.string(h.t.GSmTKC)
+                        children: g.intl.string(g.t.GSmTKC)
                     }),
                     (0, r.jsxs)('div', {
-                        className: g.controls,
-                        children: [_, (0, r.jsx)(f.Z, { closePopout: E })]
+                        className: m.controls,
+                        children: [b, (0, r.jsx)(f.Z, { closePopout: O })]
                     })
                 ]
             }),
             (0, r.jsx)('div', {
-                className: g.headerTabs,
-                children: (0, r.jsxs)(a.njP, {
+                className: m.headerTabs,
+                children: (0, r.jsxs)(o.njP, {
                     selectedItem: t,
                     type: 'top',
                     look: 'brand',
                     onItemSelect: n,
-                    className: g.tabBar,
+                    className: m.tabBar,
                     children: [
-                        (0, r.jsxs)(a.njP.Item, {
+                        (0, r.jsxs)(o.njP.Item, {
                             id: l.X.FOR_YOU,
-                            'aria-label': h.intl.string(h.t['En+D+v']),
-                            className: g.tab,
+                            'aria-label': g.intl.string(g.t['En+D+v']),
+                            className: m.tab,
                             children: [
-                                h.intl.string(h.t['En+D+v']),
-                                (null == b ? void 0 : b.badgeForYou)
-                                    ? (0, r.jsx)(a.fWl, {
-                                          color: s.Z.STATUS_DANGER,
-                                          className: g.iconBadge
+                                g.intl.string(g.t['En+D+v']),
+                                (null == _ ? void 0 : _.badgeForYou)
+                                    ? (0, r.jsx)(o.fWl, {
+                                          color: a.Z.STATUS_DANGER,
+                                          className: m.iconBadge
                                       })
                                     : null
                             ]
                         }),
-                        (0, r.jsx)(a.njP.Item, {
+                        (0, r.jsx)(o.njP.Item, {
                             id: l.X.UNREADS,
-                            className: g.tab,
-                            children: h.intl.string(h.t.sRUdBw)
+                            className: m.tab,
+                            children: g.intl.string(g.t.sRUdBw)
                         }),
-                        (0, r.jsx)(a.njP.Item, {
-                            'aria-label': h.intl.string(h.t['GRZF9/']),
+                        (0, r.jsx)(o.njP.Item, {
+                            'aria-label': g.intl.string(g.t['GRZF9/']),
                             id: l.X.MENTIONS,
-                            className: g.tab,
-                            children: h.intl.string(h.t['GRZF9/'])
+                            className: m.tab,
+                            children: g.intl.string(g.t['GRZF9/'])
                         }),
-                        O
-                            ? (0, r.jsxs)(a.njP.Item, {
+                        j
+                            ? (0, r.jsxs)(o.njP.Item, {
                                   'aria-label': 'game_invites',
                                   id: l.X.GAME_INVITES,
-                                  className: g.tab,
+                                  className: m.tab,
                                   children: [
-                                      h.intl.string(h.t.apq3cX),
-                                      C > 0
-                                          ? (0, r.jsx)(a.fWl, {
-                                                color: s.Z.STATUS_DANGER,
-                                                className: g.iconBadge
+                                      g.intl.string(g.t.apq3cX),
+                                      E > 0
+                                          ? (0, r.jsx)(o.fWl, {
+                                                color: a.Z.STATUS_DANGER,
+                                                className: m.iconBadge
                                             })
                                           : null
                                   ]
                               })
                             : null,
-                        y && x
-                            ? (0, r.jsx)(a.njP.Item, {
-                                  'aria-label': h.intl.string(h.t['2pAkDA']),
+                        y && v
+                            ? (0, r.jsx)(o.njP.Item, {
+                                  'aria-label': g.intl.string(g.t['2pAkDA']),
                                   id: l.X.BOOKMARKS,
-                                  className: g.tab,
-                                  children: 0 === j ? h.intl.string(h.t['2pAkDA']) : h.intl.formatToPlainString(h.t.I4fryM, { count: j })
+                                  className: m.tab,
+                                  children: 0 === S ? g.intl.string(g.t['2pAkDA']) : g.intl.formatToPlainString(g.t.I4fryM, { count: S })
                               })
                             : null,
-                        v
-                            ? (0, r.jsx)(a.njP.Item, {
+                        C
+                            ? (0, r.jsx)(o.njP.Item, {
                                   'aria-label': 'scheduled',
                                   id: l.X.SCHEDULED,
-                                  className: g.tab,
-                                  children: h.intl.string(h.t.Fn6Odn)
+                                  className: m.tab,
+                                  children: g.intl.string(g.t.Fn6Odn)
                               })
                             : null
                     ]

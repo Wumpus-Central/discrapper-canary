@@ -1,8 +1,8 @@
 l.d(t, { Z: () => d }), l(415506);
 var n = l(990547),
     r = l(283693),
-    s = l(570140),
-    a = l(408987),
+    a = l(570140),
+    s = l(408987),
     i = l(9156),
     o = l(621600),
     u = l(573261),
@@ -12,7 +12,7 @@ var n = l(990547),
 let d = {
     createChannel(e) {
         let { guildId: t, type: l, name: d, permissionOverwrites: g = [], bitrate: f, userLimit: y, parentId: E, skuId: v, branchId: b } = e;
-        s.Z.dispatch({
+        a.Z.dispatch({
             type: 'CREATE_CHANNEL_MODAL_SUBMIT',
             guildId: t,
             channelType: l
@@ -43,10 +43,10 @@ let d = {
             },
             rejectWithError: !1
         }).then(
-            (e) => (i.ZP.isOptInEnabled(t) && c.Z.updateChannelOverrideSettings(t, e.body.id, { flags: p.ic.OPT_IN_ENABLED }, o.ZB.OptedIn), a.Z.checkGuildTemplateDirty(t), e),
+            (e) => (i.ZP.isOptInEnabled(t) && c.Z.updateChannelOverrideSettings(t, e.body.id, { flags: p.ic.OPT_IN_ENABLED }, o.ZB.OptedIn), s.Z.checkGuildTemplateDirty(t), e),
             (e) => {
                 throw (
-                    (s.Z.dispatch({
+                    (a.Z.dispatch({
                         type: 'CREATE_CHANNEL_MODAL_SUBMIT_FAILURE',
                         errors: e.body
                     }),
@@ -55,13 +55,13 @@ let d = {
             }
         );
     },
-    createRoleSubscriptionTemplateChannel: (e, t, l, s) =>
+    createRoleSubscriptionTemplateChannel: (e, t, l, a) =>
         u.Z.post({
             url: h.ANM.GUILD_CHANNELS(e),
             body: {
                 name: t,
                 type: l,
-                topic: s
+                topic: a
             },
             oldFormErrors: !0,
             trackedActionData: {

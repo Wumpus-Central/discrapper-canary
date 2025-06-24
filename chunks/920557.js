@@ -15,9 +15,9 @@ var r = n(255367),
     g = n(839963),
     _ = n(139256),
     b = n(294608),
-    E = n(388032),
+    x = n(388032),
     y = n(709893);
-function x(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,14 +47,14 @@ function v(e) {
         s = (0, p.Dt)(),
         { channelId: c, messageId: u } = (0, b.pE)(),
         [g, _] = i.useState(''),
-        [E, v] = i.useState(!1),
-        O = '' !== g && E,
-        C = i.useCallback(() => {
+        [x, v] = i.useState(!1),
+        C = '' !== g && x,
+        O = i.useCallback(() => {
             _((0, h.e1)(u, c, a));
         }, [u, c, a]),
         j = i.useCallback(() => {
-            C(), v(!0);
-        }, [C]),
+            O(), v(!0);
+        }, [O]),
         S = i.useCallback(() => {
             v(!1);
         }, []),
@@ -66,15 +66,15 @@ function v(e) {
             });
         }, [c, u, a]);
     i.useEffect(() => {
-        if (E)
+        if (x)
             return (
-                m.Z.addReactChangeListener(C),
+                m.Z.addReactChangeListener(O),
                 () => {
-                    m.Z.removeReactChangeListener(C);
+                    m.Z.removeReactChangeListener(O);
                 }
             );
-    }, [E, C]);
-    let N = (0, r.jsx)(d.Text, {
+    }, [x, O]);
+    let T = (0, r.jsx)(d.Text, {
         variant: 'text-xs/semibold',
         color: 'none',
         className: y.voteCount,
@@ -94,13 +94,13 @@ function v(e) {
                                   scaleFontToUserSetting: !0,
                                   children: g
                               }),
-                              forceOpen: O,
+                              forceOpen: C,
                               'aria-label': !1,
                               children: (e) => {
                                   var t, n;
                                   return (0, r.jsx)(
                                       d.zxk,
-                                      ((t = x({}, e)),
+                                      ((t = E({}, e)),
                                       (n = n =
                                           {
                                               onMouseEnter: j,
@@ -109,10 +109,10 @@ function v(e) {
                                               onBlur: S,
                                               onClick: I,
                                               className: y.voteCountButton,
-                                              'aria-describedby': O ? s : void 0,
+                                              'aria-describedby': C ? s : void 0,
                                               look: d.zxk.Looks.BLANK,
                                               size: d.zxk.Sizes.NONE,
-                                              children: N
+                                              children: T
                                           }),
                                       Object.getOwnPropertyDescriptors
                                           ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -130,14 +130,14 @@ function v(e) {
                                   );
                               }
                           }),
-                          O &&
+                          C &&
                               (0, r.jsx)(o.T, {
                                   id: s,
                                   children: g
                               })
                       ]
                   })
-                : N,
+                : T,
             (0, r.jsxs)(d.Text, {
                 variant: 'text-md/bold',
                 color: 'none',
@@ -147,7 +147,7 @@ function v(e) {
         ]
     });
 }
-function O(e) {
+function C(e) {
     let { percentage: t, shouldAnimate: n } = e,
         i = (0, d.q_F)(
             {
@@ -166,7 +166,7 @@ function O(e) {
         'aria-hidden': !0
     });
 }
-function C(e) {
+function O(e) {
     let { answersInteraction: t, isSelected: n, didSelfVote: i, isVictor: l, isExpired: a, className: o } = e;
     return (0, c.EQ)({
         answersInteraction: t,
@@ -214,7 +214,7 @@ function j(e) {
         }),
         children: [
             l
-                ? (0, r.jsx)(O, {
+                ? (0, r.jsx)(C, {
                       percentage: t.votesPercentage,
                       shouldAnimate: m
                   })
@@ -231,7 +231,7 @@ function j(e) {
                 scaleFontToUserSetting: !0,
                 children: t.pollMedia.text
             }),
-            t.didSelfVote && (0, r.jsx)(o.T, { children: E.intl.string(E.t['8DAM+/']) }),
+            t.didSelfVote && (0, r.jsx)(o.T, { children: x.intl.string(x.t['8DAM+/']) }),
             l &&
                 (0, r.jsx)(v, {
                     percentage: t.votesPercentage,
@@ -239,7 +239,7 @@ function j(e) {
                     canShowVoterDetails: s,
                     answerId: t.answerId
                 }),
-            (0, r.jsx)(C, {
+            (0, r.jsx)(O, {
                 answersInteraction: i,
                 isSelected: c,
                 didSelfVote: u,
@@ -273,7 +273,7 @@ function S(e) {
         })(e, ['isExpired', 'answersInteraction', 'canShowVoteCounts', 'canTapAnswers']);
     return (0, r.jsx)(
         _.$e,
-        x(
+        E(
             {
                 className: y.answersContainer,
                 answerClassName: y.answer,

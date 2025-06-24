@@ -101,14 +101,14 @@ let g = (e) => {
     b = (e) => {
         var t;
         let { stageInstance: n, guild: l, isCard: m = !1, isEmbed: _ = !1, onClick: b } = e,
-            E = i.useMemo(() => (null == l ? null : l instanceof p.ZP ? l : new p.ZP(l)), [l]);
-        if (null == n || null == E) return null;
-        let { topic: y, speaker_count: x, participant_count: v } = n,
-            O = null != (t = n.members) ? t : [],
-            C = _ ? O.slice(0, 3) : O,
-            j = x - C.length;
+            x = i.useMemo(() => (null == l ? null : l instanceof p.ZP ? l : new p.ZP(l)), [l]);
+        if (null == n || null == x) return null;
+        let { topic: y, speaker_count: E, participant_count: v } = n,
+            C = null != (t = n.members) ? t : [],
+            O = _ ? C.slice(0, 3) : C,
+            j = E - O.length;
         return (
-            _ && (j += O.length - C.length),
+            _ && (j += C.length - O.length),
             (0, r.jsxs)('div', {
                 children: [
                     (0, r.jsxs)('div', {
@@ -159,7 +159,7 @@ let g = (e) => {
                                     width: 20,
                                     height: 20,
                                     children: (0, r.jsx)(d.Z, {
-                                        guild: E,
+                                        guild: x,
                                         size: d.Z.Sizes.MINI,
                                         active: !0
                                     })
@@ -168,7 +168,7 @@ let g = (e) => {
                                     color: 'header-secondary',
                                     className: h.__invalid_label,
                                     variant: 'text-sm/normal',
-                                    children: E.name
+                                    children: x.name
                                 })
                             ]
                         }),
@@ -180,16 +180,16 @@ let g = (e) => {
                     (0, r.jsxs)('div', {
                         className: a()(h.members, { [h.embed]: _ }),
                         children: [
-                            C.length > 0 &&
+                            O.length > 0 &&
                                 (0, r.jsxs)('div', {
                                     className: h.speakers,
                                     children: [
-                                        C.map((e) =>
+                                        O.map((e) =>
                                             (0, r.jsx)(
                                                 g,
                                                 {
                                                     speaker: e,
-                                                    guildId: E.id,
+                                                    guildId: x.id,
                                                     isEmbed: _
                                                 },
                                                 e.user.id

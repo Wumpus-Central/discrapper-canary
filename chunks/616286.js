@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(880831),
     _ = n(774168),
     y = n(871499),
-    C = n(981631),
-    x = n(388032);
+    x = n(981631),
+    C = n(388032);
 function v(e) {
     let t = (0, s.e7)([m.Z], () => !(0, o.isEmpty)(m.Z.getTypingUsers(e)), [e]),
         n = (0, s.e7)([f.Z], () => f.Z.getVoiceChannelId() === e, [e]),
@@ -71,8 +71,8 @@ function O(e) {
         })(e, ['channelId', 'className', 'showingClassName', 'onClick', 'inPopout', 'showRequestToSpeakSidebar', 'toggleRequestToSpeakSidebar']);
     let { parentAnalyticsLocation: E } = (0, u.ZP)(),
         { disabled: I } = O,
-        P = i.useRef(null),
-        S = (0, s.e7)([d.Z], () => d.Z.getChatOpen(n), [n]),
+        S = i.useRef(null),
+        P = (0, s.e7)([d.Z], () => d.Z.getChatOpen(n), [n]),
         {
             isShowing: Z,
             unreadCount: N,
@@ -98,8 +98,8 @@ function O(e) {
             );
         })(n),
         A = i.useCallback(() => {
-            (0, p.v)(E, p.d.CHAT, !S), null == h || h(), !S && m && (null == _ || _()), c.Z.updateChatOpen(n, !S);
-        }, [n, S, h, m, _, E]),
+            (0, p.v)(E, p.d.CHAT, !P), null == h || h(), !P && m && (null == _ || _()), c.Z.updateChatOpen(n, !P);
+        }, [n, P, h, m, _, E]),
         w = i.useCallback(
             (e) => {
                 let { className: t } = e;
@@ -112,19 +112,19 @@ function O(e) {
         ),
         R = i.useCallback(() => {
             var e;
-            null == (e = P.current) || e.focus();
+            null == (e = S.current) || e.focus();
         }, []);
     (0, g.yp)({
-        event: C.CkL.FOCUS_CHAT_BUTTON,
+        event: x.CkL.FOCUS_CHAT_BUTTON,
         handler: I ? null : R
     });
     let [M, k] = i.useState(!1),
-        L = i.useCallback(() => {
+        D = i.useCallback(() => {
             f && k(!0);
         }, [f]);
     (0, g.yp)({
-        event: C.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
-        handler: L
+        event: x.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
+        handler: D
     }),
         i.useEffect(() => {
             let e;
@@ -138,10 +138,10 @@ function O(e) {
                 }
             );
         }, [M]);
-    let D = [(t = f && I ? x.intl.string(x.t.DPgc5u) : S ? x.intl.string(x.t.nthdxM) : x.intl.string(x.t['5KxXrK']))];
+    let L = [(t = f && I ? C.intl.string(C.t.DPgc5u) : P ? C.intl.string(C.t.nthdxM) : C.intl.string(C.t['5KxXrK']))];
     return (
-        T > 0 && D.push(x.intl.formatToPlainString(x.t['3l1GOz'], { mentionCount: T })),
-        N > 0 && D.push(x.intl.string(x.t.x5zAGR)),
+        T > 0 && L.push(C.intl.formatToPlainString(C.t['3l1GOz'], { mentionCount: T })),
+        N > 0 && L.push(C.intl.string(C.t.x5zAGR)),
         (0, r.jsx)(
             y.Z,
             (function (e) {
@@ -170,10 +170,10 @@ function O(e) {
                 return e;
             })(
                 {
-                    buttonRef: P,
+                    buttonRef: S,
                     onClick: A,
                     label: t,
-                    'aria-label': D.join(', '),
+                    'aria-label': L.join(', '),
                     iconComponent: w,
                     tooltipPosition: 'bottom',
                     wrapperClassName: a()(l, null != o && { [o]: Z }),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r,
     i = n(442837),
     l = n(570140),
@@ -65,7 +65,7 @@ function b(e, t) {
     let r = t(n);
     return f.set(e, r), !0;
 }
-function E(e) {
+function x(e) {
     let { type: t, messageId: n, userId: r, emoji: i } = e;
     if (!(0, s.sm)(e)) return !1;
     let l = c.default.getId() === r;
@@ -119,7 +119,7 @@ class y extends (r = i.ZP.Store) {
     }
 }
 d(y, 'displayName', 'SearchMessageStore');
-let x = new y(l.Z, {
+let E = new y(l.Z, {
     SEARCH_MESSAGES_START: function (e) {
         e.ids.forEach((e) => {
             _(e).handleSearchStart();
@@ -158,13 +158,13 @@ let x = new y(l.Z, {
         let r = (0, o.wi)(n, e.message);
         f.set(t, r);
     },
-    MESSAGE_REACTION_ADD: E,
+    MESSAGE_REACTION_ADD: x,
     MESSAGE_REACTION_ADD_MANY: function (e) {
         let { messageId: t, reactions: n } = e,
             r = c.default.getId();
         return b(t, (e) => e.addReactionBatch(n, r));
     },
-    MESSAGE_REACTION_REMOVE: E,
+    MESSAGE_REACTION_REMOVE: x,
     MESSAGE_REACTION_REMOVE_ALL: function (e) {
         let { messageId: t } = e;
         return b(t, (e) => e.set('reactions', []));

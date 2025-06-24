@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(607070),
     d = n(210887),
     m = n(617136),
-    p = n(915750),
-    f = n(113434),
+    f = n(915750),
+    p = n(113434),
     v = n(569984),
     g = n(497505),
     b = n(918701),
@@ -76,15 +76,15 @@ function L(e) {
     var t, n, o;
     let { transitionState: v, onClose: j, quest: T, autoplay: L, videoSessionId: R, impressionRef: M, parentModalOpenStartClockTime: V } = e,
         B = (0, b.il)(T),
-        F = (0, f.tP)(T),
+        F = (0, p.tP)(T),
         Z = (0, a.e7)([d.Z], () => d.Z.getState().theme),
         q = (0, s.wj)(Z) ? N.BRd.DARK : N.BRd.LIGHT,
         U = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
-        Q = (0, p.aM)(),
+        Q = (0, f.aM)(),
         G = (0, E.up)(P.dr.VIDEO_MODAL),
         [Y, z] = l.useState(B.progressSeconds),
-        [H, W] = l.useState(!1),
-        { completedRatio: K, completedRatioDisplay: X } = (0, f.I)(T),
+        [H, K] = l.useState(!1),
+        { completedRatio: X, completedRatioDisplay: W } = (0, p.I)(T),
         [$, J] = (0, _.G6)(k.intl.string(k.t.RDE0SU), k.intl.string(k.t['+5kSoa']), 1700),
         ee = null != (0, b.LM)(T.config),
         et = (null == (t = T.userStatus) ? void 0 : t.claimedAt) != null ? (ee ? k.intl.string(k.t.WYchdX) : k.intl.string(k.t.vTgCW1)) : G,
@@ -159,10 +159,10 @@ function L(e) {
                                         position: 'left',
                                         text: eo,
                                         onTooltipShow: () => {
-                                            W(!0);
+                                            K(!0);
                                         },
                                         onTooltipHide: () => {
-                                            W(!1);
+                                            K(!1);
                                         },
                                         children: (e) =>
                                             (0, r.jsx)(
@@ -171,8 +171,8 @@ function L(e) {
                                                     children: (0, r.jsx)(S.Z, {
                                                         quest: T,
                                                         size: 48,
-                                                        percentComplete: K,
-                                                        percentCompleteText: H ? X : void 0,
+                                                        percentComplete: X,
+                                                        percentCompleteText: H ? W : void 0,
                                                         percentCompleteTextVariant: 'text-sm/medium',
                                                         children: (0, r.jsx)(y.Z, {
                                                             className: I.questProgressRewardTile,

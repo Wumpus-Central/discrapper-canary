@@ -9,9 +9,9 @@ var i = n(481060),
     c = n(124368);
 function u(e) {
     let { channel: t, closePopout: n, onSelect: u, navId: d, label: p } = e,
-        m = (0, l.Z)(t, 'Notifications Bell'),
+        h = (0, l.Z)(t, 'Notifications Bell'),
         f = (0, a.Z)(t),
-        h = (0, s.B)(t);
+        m = (0, s.B)(t);
     return (0, r.jsxs)(i.v2r, {
         navId: d,
         onClose: n,
@@ -19,7 +19,7 @@ function u(e) {
         onSelect: u,
         children: [
             (0, r.jsxs)(i.kSQ, {
-                children: [t.isForumPost() ? m : null, f]
+                children: [t.isForumPost() ? h : null, f]
             }),
             (0, r.jsx)(i.kSQ, {
                 children: (0, c.zb)().map((e) => {
@@ -31,7 +31,7 @@ function u(e) {
                             id: ''.concat(n),
                             label: l,
                             action: () => o.Z.setNotificationSettings(t, { flags: n }),
-                            checked: n === h
+                            checked: n === m
                         },
                         n
                     );

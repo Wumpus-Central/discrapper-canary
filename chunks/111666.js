@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685);
+n.d(t, { Z: () => N }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(524979),
@@ -7,20 +7,19 @@ var r = n(255367),
     s = n(570140),
     c = n(868781),
     u = n(122943),
-    d = n(540059),
-    p = n(665149),
-    h = n(670188),
-    f = n(592125),
-    g = n(158776),
-    m = n(699516),
-    b = n(594174),
-    _ = n(482798),
-    E = n(167762),
+    d = n(665149),
+    p = n(670188),
+    h = n(592125),
+    f = n(158776),
+    g = n(699516),
+    m = n(594174),
+    b = n(482798),
+    _ = n(167762),
     O = n(151459),
-    y = n(981631),
-    I = n(388032),
-    v = n(398435);
-function C(e) {
+    E = n(981631),
+    y = n(388032),
+    I = n(398435);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,7 +44,7 @@ function C(e) {
     }
     return e;
 }
-function S(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -63,12 +62,11 @@ function S(e, t) {
         e
     );
 }
-function N(e) {
+function S(e) {
     let { className: t } = e,
-        n = (0, a.e7)([m.Z], () => m.Z.getPendingCount() > 0),
-        _ = (0, d.Q3)('FriendsButton'),
-        N = (0, o.dQu)(o.TVs.modules.chat.INPUT_ICON_SIZE),
-        T = (function () {
+        n = (0, a.e7)([g.Z], () => g.Z.getPendingCount() > 0),
+        b = (0, o.dQu)(o.TVs.modules.chat.INPUT_ICON_SIZE),
+        S = (function () {
             let [e, t] = i.useState(null),
                 { showActivityTicker: n } = (0, O.Z)(),
                 r = i.useRef({}),
@@ -90,23 +88,23 @@ function N(e) {
                                 }, 10000));
                         },
                         a = (t, n, l) => {
-                            var a, o, s, c, u, d, p, h;
-                            if (!m.Z.isFriend(t)) return !1;
-                            let g = b.default.getUser(t);
-                            if (null == g) return !1;
+                            var a, o, s, c, u, d, p, f;
+                            if (!g.Z.isFriend(t)) return !1;
+                            let b = m.default.getUser(t);
+                            if (null == b) return !1;
                             let _ = !1,
-                                E = null;
+                                O = null;
                             if (null != n) {
                                 let i = n.type;
                                 if (
                                     null != i &&
                                     (function (e) {
                                         let t = e.type;
-                                        return (t === y.IIU.PLAYING && null != e.application_id) || t === y.IIU.LISTENING || t === y.IIU.WATCHING;
+                                        return (t === E.IIU.PLAYING && null != e.application_id) || t === E.IIU.LISTENING || t === E.IIU.WATCHING;
                                     })(n)
                                 ) {
                                     let l =
-                                        i === y.IIU.WATCHING || i === y.IIU.LISTENING
+                                        i === E.IIU.WATCHING || i === E.IIU.LISTENING
                                             ? ''
                                                   .concat(i, '-')
                                                   .concat(null != (c = n.name) ? c : '', '-')
@@ -116,31 +114,31 @@ function N(e) {
                                     (null == (s = r.current[t]) ? void 0 : s.presence) !== l &&
                                         ((_ = !0),
                                         e(t, 'presence', l),
-                                        (E = {
-                                            user: g,
+                                        (O = {
+                                            user: b,
                                             activity: n
                                         }));
                                 } else (null == (o = r.current[t]) ? void 0 : o.presence) != null && ((_ = !0), e(t, 'presence', null));
                             }
                             if (null != l) {
-                                let n = f.Z.getChannel(l);
+                                let n = h.Z.getChannel(l);
                                 if (null != n) {
                                     let i = 'voice-'.concat(n.id);
-                                    (null == (h = r.current[t]) ? void 0 : h.voice) !== i &&
+                                    (null == (f = r.current[t]) ? void 0 : f.voice) !== i &&
                                         ((_ = !0),
                                         e(t, 'voice', i),
-                                        (E = {
-                                            user: g,
+                                        (O = {
+                                            user: b,
                                             voiceChannel: n
                                         }));
                                 }
                             } else (null == (a = r.current[t]) ? void 0 : a.voice) != null && ((_ = !0), e(t, 'voice', null));
-                            return _ && null != E && i(E), _;
+                            return _ && null != O && i(O), _;
                         },
                         o = (e) => {
                             for (let t of e.updates) {
                                 let e = t.user.id,
-                                    n = g.Z.getPrimaryActivity(e);
+                                    n = f.Z.getPrimaryActivity(e);
                                 if (a(e, n)) break;
                             }
                         },
@@ -158,8 +156,8 @@ function N(e) {
                 e
             );
         })(),
-        P = i.useRef(null),
-        j = (0, o.Yzy)(T, {
+        N = i.useRef(null),
+        T = (0, o.Yzy)(S, {
             keys: (e) => {
                 var t, n, r;
                 return null != e
@@ -192,12 +190,12 @@ function N(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)('div', {
-                className: v.container,
-                children: j((e, t) =>
+                className: I.container,
+                children: T((e, t) =>
                     null == t
                         ? null
-                        : (0, r.jsx)(h.Z, {
-                              targetElementRef: P,
+                        : (0, r.jsx)(p.Z, {
+                              targetElementRef: N,
                               position: 'bottom',
                               align: 'left',
                               userId: t.user.id,
@@ -205,11 +203,11 @@ function N(e) {
                                   var i;
                                   return (0, r.jsxs)(
                                       l.animated.div,
-                                      S(
-                                          C(
+                                      C(
+                                          v(
                                               {
-                                                  ref: P,
-                                                  className: v.activityWrapper,
+                                                  ref: N,
+                                                  className: I.activityWrapper,
                                                   style: e
                                               },
                                               n
@@ -224,12 +222,12 @@ function N(e) {
                                                       ? (0, r.jsx)(u.Z, {
                                                             channel: t.voiceChannel,
                                                             textVariant: 'text-xs/medium',
-                                                            textClassName: v.statusText
+                                                            textClassName: I.statusText
                                                         })
                                                       : (0, r.jsx)(c.Z, {
                                                             activity: t.activity,
                                                             textVariant: 'text-xs/medium',
-                                                            textClassName: v.statusText
+                                                            textClassName: I.statusText
                                                         })
                                               ]
                                           }
@@ -239,20 +237,20 @@ function N(e) {
                           })
                 )
             }),
-            (0, r.jsx)(E.Or, {
+            (0, r.jsx)(_.Or, {
                 popoutPosition: 'bottom',
                 popoutAlign: 'left',
                 children: (e, i, l, a) =>
                     (0, r.jsx)(
-                        p.JO,
-                        S(C({}, l), {
+                        d.JO,
+                        C(v({}, l), {
                             ref: a,
                             className: t,
                             onClick: e,
                             icon: o.iFz,
-                            iconSize: _ ? N : void 0,
-                            'aria-label': I.intl.string(I.t.TdEu5e),
-                            tooltip: i ? null : I.intl.string(I.t.TdEu5e),
+                            iconSize: b,
+                            'aria-label': y.intl.string(y.t.TdEu5e),
+                            tooltip: i ? null : y.intl.string(y.t.TdEu5e),
                             selected: i,
                             showBadge: n
                         })
@@ -261,8 +259,8 @@ function N(e) {
         ]
     });
 }
-function T(e) {
+function N(e) {
     let { className: t } = e,
-        { enableTopNavButton: n } = (0, _.Cq)({ location: 'friends-button' });
-    return n ? (0, r.jsx)(N, { className: t }) : null;
+        { enableTopNavButton: n } = (0, b.Cq)({ location: 'friends-button' });
+    return n ? (0, r.jsx)(S, { className: t }) : null;
 }

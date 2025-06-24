@@ -2,8 +2,8 @@ n.d(t, { Z: () => x }), n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(668826),
-    a = n(18582),
-    i = n(3072),
+    i = n(18582),
+    a = n(3072),
     c = n(763283),
     l = n(892689),
     u = n(477839),
@@ -23,21 +23,21 @@ function x(e) {
         O = (0, s.useRef)(-1),
         [j, N] = (0, s.useState)(!1),
         _ = (0, s.useRef)(h()),
-        P = (0, i.eR)(y),
-        C = (e) => {
+        P = (0, a.eR)(y),
+        w = (e) => {
             var t;
             null == (t = v.current) || t.removeDrop(e), (_.current = h()), N(!1), clearTimeout(O.current);
         },
-        Z = (e) => {
+        C = (e) => {
             N(!0),
                 P(),
                 (0, o.KH)(u.yN.LOOTBOXES, _.current),
                 (O.current = setTimeout(() => {
-                    C(e);
+                    w(e);
                 }, 1000));
         };
     (0, s.useEffect)(() => () => clearTimeout(O.current), []);
-    let w = (e) =>
+    let Z = (e) =>
         j
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
@@ -62,8 +62,8 @@ function x(e) {
                       })
                   ]
               })
-            : (0, r.jsx)(a.Z, {
-                  onClick: () => Z(e),
+            : (0, r.jsx)(i.Z, {
+                  onClick: () => C(e),
                   children: (0, r.jsx)('img', {
                       src: g,
                       alt: f.intl.string(d.default.CwZfY2),
@@ -84,7 +84,7 @@ function x(e) {
         children: (e) =>
             (0, r.jsx)('div', {
                 className: p.lootbox,
-                children: w(e)
+                children: Z(e)
             })
     });
 }

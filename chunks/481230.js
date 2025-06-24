@@ -5,15 +5,15 @@ n.d(t, {
 var r = n(913527),
     i = n.n(r),
     l = n(990547),
-    o = n(570140),
-    a = n(479531),
+    a = n(570140),
+    o = n(479531),
     s = n(771308),
     c = n(314897),
     u = n(626135),
     d = n(573261),
     h = n(959776),
-    g = n(981631),
-    p = n(723359);
+    p = n(981631),
+    g = n(723359);
 function m(e) {
     var t,
         n,
@@ -86,18 +86,18 @@ function m(e) {
     );
 }
 function f(e) {
-    let { email: t, phoneToken: n, username: r, globalName: m, consent: f, password: _, guildTemplateCode: x, birthday: E, invite: b = null, giftCodeSKUId: v = null, promoEmailConsent: I = null, usedUsernameSuggestion: O = null } = e;
-    if ((o.Z.dispatch({ type: 'REGISTER' }), null != E)) {
-        (0, h.Z)(E, g.jXE.REGISTER),
-            u.default.track(g.rMx.AGE_GATE_ACTION, {
-                source: p.L0.REGISTER,
-                action: p.Al.AGE_GATE_SUBMITTED
+    let { email: t, phoneToken: n, username: r, globalName: m, consent: f, password: _, guildTemplateCode: E, birthday: x, invite: b = null, giftCodeSKUId: v = null, promoEmailConsent: I = null, usedUsernameSuggestion: O = null } = e;
+    if ((a.Z.dispatch({ type: 'REGISTER' }), null != x)) {
+        (0, h.Z)(x, p.jXE.REGISTER),
+            u.default.track(p.rMx.AGE_GATE_ACTION, {
+                source: g.L0.REGISTER,
+                action: g.Al.AGE_GATE_SUBMITTED
             });
-        let e = i()().diff(E, 'years');
-        e < 13 || u.default.track(g.rMx.USER_AGE_SUBMITTED, { age_bucket: e >= 13 && e <= 17 ? '13-17' : e >= 18 && e <= 22 ? '18-22' : '23+' });
+        let e = i()().diff(x, 'years');
+        e < 13 || u.default.track(p.rMx.USER_AGE_SUBMITTED, { age_bucket: e >= 13 && e <= 17 ? '13-17' : e >= 18 && e <= 22 ? '18-22' : '23+' });
     }
     return d.Z.post({
-        url: g.ANM.REGISTER,
+        url: p.ANM.REGISTER,
         body: {
             fingerprint: c.default.getFingerprint(),
             email: t,
@@ -107,9 +107,9 @@ function f(e) {
             invite: b,
             consent: f,
             phone_token: n,
-            date_of_birth: null == E ? void 0 : E.format('YYYY-MM-DD'),
+            date_of_birth: null == x ? void 0 : x.format('YYYY-MM-DD'),
             gift_code_sku_id: v,
-            guild_template_code: x,
+            guild_template_code: E,
             promotional_email_opt_in: null == I ? void 0 : I.checked
         },
         trackedActionData: {
@@ -125,20 +125,20 @@ function f(e) {
         rejectWithError: !1
     }).then(
         (e) => {
-            o.Z.dispatch({
+            a.Z.dispatch({
                 type: 'REGISTER_SUCCESS',
                 token: e.body.token
             }),
-                u.default.track(g.rMx.AGE_GATE_ACTION, {
-                    source: p.L0.REGISTER,
-                    action: p.Al.AGE_GATE_SUCCESS
+                u.default.track(p.rMx.AGE_GATE_ACTION, {
+                    source: g.L0.REGISTER,
+                    action: g.Al.AGE_GATE_SUCCESS
                 });
         },
         (e) => {
-            let t = new a.Z(e);
+            let t = new o.Z(e);
             throw (
-                (null != t.getFieldErrors('date_of_birth') && s.wE(p.L0.REGISTER),
-                u.default.track(g.rMx.REGISTER_SUBMIT_ERRORED, {
+                (null != t.getFieldErrors('date_of_birth') && s.wE(g.L0.REGISTER),
+                u.default.track(p.rMx.REGISTER_SUBMIT_ERRORED, {
                     is_unique_username_registration: !0,
                     email_error_reason: t.getFirstFieldErrorMessage('email'),
                     phone_error_reason: t.getFirstFieldErrorMessage('phone_token'),

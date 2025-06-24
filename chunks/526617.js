@@ -435,7 +435,7 @@ function eu(e) {
             () =>
                 eF
                     ? (0, r.jsx)(v.p, {
-                          showUpsell: eP.moveDefaultToBottom ? eG : eP.alwaysStickyUpsell || eM,
+                          showUpsell: eP.alwaysStickyUpsell || (eP.moveDefaultToBottom ? eG : eM),
                           text: e$(),
                           button: K.intl.string(K.t.pj0XBA),
                           buttonAnalyticsObject: { section: Y.jXE.SOUND_PICKER_FLOATING_UPSELL }

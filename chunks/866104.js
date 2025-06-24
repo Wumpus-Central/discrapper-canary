@@ -1,5 +1,5 @@
 n.d(t, {
-    C: () => N,
+    C: () => T,
     Z: () => I
 }),
     n(388685),
@@ -21,12 +21,12 @@ var r = n(255367),
     g = n(594174),
     _ = n(671533),
     b = n(51144),
-    E = n(506071),
+    x = n(506071),
     y = n(696014),
-    x = n(847033),
+    E = n(847033),
     v = n(544978),
-    O = n(893182),
-    C = n(388032),
+    C = n(893182),
+    O = n(388032),
     j = n(414521);
 function S(e) {
     let { onClick: t } = e;
@@ -37,7 +37,7 @@ function S(e) {
             (0, r.jsx)(s.Text, {
                 variant: 'text-sm/medium',
                 color: 'header-primary',
-                children: C.intl.string(C.t.J4cw1t)
+                children: O.intl.string(O.t.J4cw1t)
             }),
             (0, r.jsx)(s.LZC, {
                 size: 4,
@@ -53,7 +53,7 @@ function S(e) {
 function I(e) {
     let { coverImageAsset: t, isPreview: n = !1 } = e,
         i = f.QK.useSetting(),
-        l = (0, E.n)() && i,
+        l = (0, x.n)() && i,
         [a, o] = (0, m.Z)(t, l),
         s = l
             ? (0, r.jsx)(d.Z, {
@@ -82,7 +82,7 @@ function I(e) {
                   })
     });
 }
-function N(e) {
+function T(e) {
     var t, n;
     let { guild: l, subscriptionsSettings: d } = e,
         m = l.id,
@@ -100,16 +100,16 @@ function N(e) {
             },
             [m]
         ),
-        { isTruncated: E, ExpandableTextContainer: N } = (0, y.s)(),
-        T = (null != (n = null == d || null == (t = d.description) ? void 0 : t.trim().length) ? n : 0) > 0,
+        { isTruncated: x, ExpandableTextContainer: T } = (0, y.s)(),
+        N = (null != (n = null == d || null == (t = d.description) ? void 0 : t.trim().length) ? n : 0) > 0,
         [P, A] = i.useState(1),
         w = (0, c.Z)('(max-width: 1439px)'),
-        { selectedTab: Z, isPhantomPreview: R } = (0, x.m)(),
-        k = Z === v.y.GUILD_PRODUCTS_PREVIEW ? C.intl.string(C.t['LvXy/P']) : C.intl.string(C.t.XyqKh4),
-        D = T
+        { selectedTab: Z, isPhantomPreview: R } = (0, E.m)(),
+        k = Z === v.y.GUILD_PRODUCTS_PREVIEW ? O.intl.string(O.t['LvXy/P']) : O.intl.string(O.t.XyqKh4),
+        L = N
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)(N, {
+                      (0, r.jsx)(T, {
                           lineClamp: w || 2 === P ? 2 : 3,
                           children: (0, r.jsx)(s.Text, {
                               variant: 'text-sm/normal',
@@ -117,16 +117,16 @@ function N(e) {
                               children: null == d ? void 0 : d.description
                           })
                       }),
-                      E &&
+                      x &&
                           (0, r.jsxs)(r.Fragment, {
-                              children: [(0, r.jsx)(s.LZC, { size: 4 }), (0, r.jsx)(S, { onClick: () => (0, O.Z)({ guildId: m }) })]
+                              children: [(0, r.jsx)(s.LZC, { size: 4 }), (0, r.jsx)(S, { onClick: () => (0, C.Z)({ guildId: m }) })]
                           })
                   ]
               })
             : (0, r.jsx)(s.Text, {
                   variant: 'text-sm/normal',
                   color: 'text-normal',
-                  children: R ? k : C.intl.string(C.t['NY/FIS'])
+                  children: R ? k : O.intl.string(O.t['NY/FIS'])
               });
     return (0, r.jsxs)('div', {
         className: j.container,
@@ -155,14 +155,14 @@ function N(e) {
                                     variant: 'heading-xl/semibold',
                                     color: 'header-primary',
                                     lineClamp: 2,
-                                    children: R ? C.intl.string(C.t.rtgp7u) : C.intl.formatToPlainString(C.t.NZeik5, { guildName: l.name })
+                                    children: R ? O.intl.string(O.t.rtgp7u) : O.intl.formatToPlainString(O.t.NZeik5, { guildName: l.name })
                                 })
                             }),
                             (0, r.jsx)(s.LZC, { size: 8 }),
                             (0, r.jsx)(s.Text, {
                                 variant: 'text-md/normal',
                                 color: 'text-normal',
-                                children: C.intl.format(C.t['7JwrlJ'], {
+                                children: O.intl.format(O.t['7JwrlJ'], {
                                     username: f,
                                     usernameHook: function (e, t) {
                                         return (0, r.jsx)(
@@ -177,7 +177,7 @@ function N(e) {
                                 })
                             }),
                             (0, r.jsx)(s.LZC, { size: 9 }),
-                            D
+                            L
                         ]
                     })
                 ]

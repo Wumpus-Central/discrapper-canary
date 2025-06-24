@@ -23,21 +23,21 @@ function d(e) {
         g = p.type === i.d.GUILD_ANNOUNCEMENT && f,
         _ = !d.hasFlag(u.iLy.EPHEMERAL) && (h || g),
         b = h && null != d.messageReference ? d.messageReference.message_id : d.id,
-        E = h && null != d.messageReference ? d.messageReference.channel_id : p.id,
+        x = h && null != d.messageReference ? d.messageReference.channel_id : p.id,
         y = h && (null == (n = d.messageReference) ? void 0 : n.guild_id) != null ? d.messageReference.guild_id : p.guild_id,
-        x = r.useCallback(
+        E = r.useCallback(
             (e) => {
                 e
                     ? c.Z.handleMessageBecameVisible({
                           messageId: b,
                           channelId: p.id,
                           guildId: p.guild_id,
-                          sourceChannelId: E,
+                          sourceChannelId: x,
                           sourceGuildId: y
                       })
                     : c.Z.handleMessageLostVisibility(b);
             },
-            [b, p.id, p.guild_id, E, y]
+            [b, p.id, p.guild_id, x, y]
         ),
         v = s.Z.useExperiment(
             { location: '836a4b_1' },
@@ -46,7 +46,7 @@ function d(e) {
                 autoTrackExposure: !0
             }
         ).enabled,
-        O = (0, a.O)(x, 0, v);
+        C = (0, a.O)(E, 0, v);
     return (
         r.useEffect(
             () => () => {
@@ -54,6 +54,6 @@ function d(e) {
             },
             [b]
         ),
-        O
+        C
     );
 }

@@ -4,9 +4,9 @@ n.d(t, {
     st: () => O
 });
 var r = n(255367),
-    o = n(73800),
-    l = n(120356),
-    i = n.n(l),
+    l = n(73800),
+    o = n(120356),
+    i = n.n(o),
     s = n(710251),
     a = n(442837),
     c = n(481060),
@@ -38,25 +38,25 @@ function h(e) {
     };
 }
 function O(e) {
-    let { className: t, icon: n, text: o, color: l } = e;
+    let { className: t, icon: n, text: l, color: o } = e;
     return (0, r.jsxs)('div', {
         className: i()(f.wrapper, t),
         children: [
             n,
             (0, r.jsx)(c.Text, {
                 variant: 'text-md/normal',
-                color: l,
+                color: o,
                 scaleFontToUserSetting: !0,
-                children: o
+                children: l
             })
         ]
     });
 }
-let y = o.memo(function (e) {
-    let { message: t, className: n, component: l } = e,
+let y = l.memo(function (e) {
+    let { message: t, className: n, component: o } = e,
         i = (0, s.Z)(),
         c = (0, a.e7)([d.ZP], () => d.ZP.getInteraction(t), [t]);
-    o.useEffect(() => {
+    l.useEffect(() => {
         let e = null;
         if (t.hasFlag(m.iLy.LOADING) && null != c) {
             let n = (0, p.ow)(t.id) - Date.now();
@@ -67,7 +67,7 @@ let y = o.memo(function (e) {
         };
     }, [i, c, t]);
     let f = null;
-    if (null == l)
+    if (null == o)
         f = (function (e, t) {
             switch ((0, p.t$)(t, e)) {
                 case p.rQ.SENDING:
@@ -81,7 +81,7 @@ let y = o.memo(function (e) {
             }
         })(c, t);
     else {
-        let e = (0, u.SD)(c, t, l);
+        let e = (0, u.SD)(c, t, o);
         null != e && (f = h(e));
     }
     if (null == f) return null;

@@ -16,15 +16,15 @@ var r = n(255367),
     b = n(783097),
     _ = n(226026),
     y = n(397698),
-    C = n(895924),
-    x = n(471518),
+    x = n(895924),
+    C = n(471518),
     v = n(425986),
     j = n(216780),
     O = n(390322),
     E = n(857192),
     I = n(626135),
-    P = n(456100),
-    S = n(566620),
+    S = n(456100),
+    P = n(566620),
     Z = n(127255),
     N = n(5200),
     T = n(558317),
@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(388032),
     M = n(210408);
 let k = c.Y.APP_LAUNCHER_IN_VOICE_BANNER,
-    L = 'vc-activities-'.concat((0, o.Z)());
-function D(e) {
+    D = 'vc-activities-'.concat((0, o.Z)());
+function L(e) {
     var t;
     let n,
         { channel: l, openInPopout: a, onClick: o } = e,
@@ -42,7 +42,7 @@ function D(e) {
             let e = (0, d.e7)([E.default], () => E.default.onlyShowPreviewAppCollections) ? s.E.PREVIEW : s.E.ACTIVE;
             return (
                 i.useEffect(() => {
-                    (0, x.XK)({
+                    (0, C.XK)({
                         surface: k,
                         activeState: e
                     });
@@ -68,7 +68,7 @@ function D(e) {
             let e = null == h ? void 0 : h.application_directory_collection_items[0];
             return null == e ? null : e.type === u.C.APPLICATION_BANNER ? e : null;
         }, [null == h ? void 0 : h.application_directory_collection_items]),
-        { trackItemImpressionRef: C } = (0, _.Z)({
+        { trackItemImpressionRef: x } = (0, _.Z)({
             applicationId: null != (t = null == g ? void 0 : g.application.id) ? t : '',
             applicationFlags: null == g ? void 0 : g.application.flags,
             sectionName: 'app_launcher_in_voice_banner',
@@ -87,7 +87,7 @@ function D(e) {
               })),
           (0, r.jsxs)(p.P3F, {
               className: M.clickableBanner,
-              innerRef: C,
+              innerRef: x,
               onClick: () => {
                   o(),
                       (0, y.Z)({
@@ -114,13 +114,13 @@ let U = i.forwardRef(function (e, t) {
     var n;
     let { channel: l, isHovered: o, closePopout: s, onMouseEnter: c, onMouseLeave: u, onClick: b, className: _ } = e,
         y = (0, d.e7)([f.Z], () => f.Z.useReducedMotion),
-        { id: x, guild_id: v } = l;
+        { id: C, guild_id: v } = l;
     i.useEffect(() => {
         I.default.track(w.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
-            channel_id: x,
+            channel_id: C,
             guild_id: v
         });
-    }, [x, v]),
+    }, [C, v]),
         i.useEffect(() => {
             o || s();
         }, [s, o]);
@@ -129,10 +129,10 @@ let U = i.forwardRef(function (e, t) {
         k = j === w.IlC.POPOUT,
         U = ((n = l.getGuildId()), (0, Z.Z)({ guildId: n }).slice(0, 5));
     i.useEffect(() => {
-        let e = setTimeout(() => S.ux(), 1000);
+        let e = setTimeout(() => P.ux(), 1000);
         return () => clearTimeout(e);
     }, []);
-    let { enabled: B } = P.c.useExperiment({ location: 'ActivitiesMiniShelf' }, { autoTrackExposure: !0 }),
+    let { enabled: B } = S.c.useExperiment({ location: 'ActivitiesMiniShelf' }, { autoTrackExposure: !0 }),
         F = i.useCallback(() => {
             (0, A.Z)({
                 channel: l,
@@ -158,14 +158,14 @@ let U = i.forwardRef(function (e, t) {
         children: (0, r.jsx)(O.Z, {
             children: (0, r.jsxs)(p.VqE, {
                 ref: t,
-                'aria-labelledby': L,
+                'aria-labelledby': D,
                 className: _,
                 children: [
                     (0, r.jsx)(p.y5t, {
                         forceLevel: 2,
                         children: (0, r.jsx)(p.nn4, {
                             children: (0, r.jsx)(p.H, {
-                                id: L,
+                                id: D,
                                 children: R.intl.string(R.t['2lnYtL'])
                             })
                         })
@@ -211,7 +211,7 @@ let U = i.forwardRef(function (e, t) {
                                     })
                                 ]
                             }),
-                            (0, r.jsx)(D, {
+                            (0, r.jsx)(L, {
                                 openInPopout: k,
                                 channel: l,
                                 onClick: () => {
@@ -235,7 +235,7 @@ let U = i.forwardRef(function (e, t) {
                                                 },
                                                 aspectRatio: N.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
                                                 animatedDivClass: M.activitySuggestion,
-                                                commandOrigin: C.bB.MINI_SHELF
+                                                commandOrigin: x.bB.MINI_SHELF
                                             },
                                             e.application.id
                                         )

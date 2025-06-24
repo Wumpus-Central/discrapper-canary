@@ -2,8 +2,8 @@ n.d(t, { Z: () => y }), n(953529);
 var r = n(255367),
     s = n(120356),
     o = n.n(s),
-    a = n(702319),
-    i = n(144931),
+    i = n(702319),
+    a = n(144931),
     c = n(763283),
     l = n(944548),
     u = n(488701),
@@ -25,7 +25,7 @@ function b(e) {
                 0 !== o
                     ? p.intl.format(s, {
                           points: o,
-                          grassIconHook: a.Z
+                          grassIconHook: i.Z
                       })
                     : null
         }),
@@ -33,7 +33,7 @@ function b(e) {
         children: (e) => {
             var t, n;
             return (0, r.jsxs)(
-                i.Z,
+                a.Z,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},

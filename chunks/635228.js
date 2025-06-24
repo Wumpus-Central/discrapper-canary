@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(255367),
     s = n(359013),
     o = n(529942),
-    a = n(26141),
-    i = n(3072),
+    i = n(26141),
+    a = n(3072),
     c = n(401258),
     l = n(477839),
     u = n(364491),
@@ -25,7 +25,7 @@ function m(e) {
         imageSize: 80,
         isPaused: t,
         children: (e) =>
-            (0, r.jsx)(a.Z, {
+            (0, r.jsx)(i.Z, {
                 className: 'left' === e ? u.butterflyImageLeft : u.butterflyImageRight,
                 isPaused: t,
                 interval: 200,
@@ -37,7 +37,7 @@ function g(e) {
     let { isPaused: t, width: n } = e,
         o = s.Mq[l.yN.BUTTERFLY];
     return (
-        (0, i.is)(p, t),
+        (0, a.is)(p, t),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(c.Z, {

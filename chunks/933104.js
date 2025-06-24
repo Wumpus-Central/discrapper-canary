@@ -1,7 +1,7 @@
 n.d(t, {
-    $h: () => S,
+    $h: () => E,
     jG: () => j,
-    yI: () => x
+    yI: () => S
 });
 var r = n(255367);
 n(73800);
@@ -19,34 +19,34 @@ var i = n(120356),
     g = n(795338),
     m = n(279604),
     b = n(981631),
-    O = n(921944),
-    y = n(93841),
-    _ = n(388032),
+    _ = n(921944),
+    O = n(93841),
+    y = n(388032),
     v = n(423151),
     C = n(928381);
 function j(e) {
     let { guildId: t, powerup: n, markAsDismissed: i } = e;
-    return (0, r.jsx)(E, {
+    return (0, r.jsx)(x, {
         asset: (0, r.jsx)(g.g, { className: v.image }),
-        header: _.intl.formatToPlainString(y.default['Zg/m9P'], { perkName: n.title }),
-        content: _.intl.formatToPlainString(y.default['1EGXSE'], { perkName: n.title }),
-        buttonCTA: _.intl.string(_.t.RzWDqa),
+        header: y.intl.formatToPlainString(O.default['Zg/m9P'], { perkName: n.title }),
+        content: y.intl.formatToPlainString(O.default['1EGXSE'], { perkName: n.title }),
+        buttonCTA: y.intl.string(y.t.RzWDqa),
         onClick: () => (0, f.Z)(t, c.Z.GUILD_POWERUPS_COACHMARK_LEVEL_UP, n.skuId),
         markAsDismissed: i
     });
 }
-function S(e) {
+function E(e) {
     let { guildId: t, markAsDismissed: n } = e,
         i = (0, p.Z)(t);
-    return (0, r.jsx)(E, {
+    return (0, r.jsx)(x, {
         asset: (0, r.jsx)('img', {
             alt: '',
             src: C.Z,
             className: l()(v.image, v.newPerksImage)
         }),
-        header: _.intl.string(y.default.QpQBPT),
-        content: i ? _.intl.string(y.default['6hn0xM']) : _.intl.string(y.default.RDuvXl),
-        buttonCTA: _.intl.string(_.t.RzWDqa),
+        header: y.intl.string(O.default.QpQBPT),
+        content: i ? y.intl.string(O.default['6hn0xM']) : y.intl.string(O.default.RDuvXl),
+        buttonCTA: y.intl.string(y.t.RzWDqa),
         onClick: () =>
             i
                 ? (0, f.Z)(t, c.Z.GUILD_POWERUPS_COACHMARK_NEW_PERKS)
@@ -58,7 +58,7 @@ function S(e) {
         caretPosition: i ? d.DF.LEFT_TOP : d.DF.TOP_CENTER
     });
 }
-function x(e) {
+function S(e) {
     let { guildId: t, powerups: n, markAsDismissed: i } = e,
         l = (0, s.e7)([h.Z], () => {
             var e;
@@ -68,7 +68,7 @@ function x(e) {
     if (0 === n.length) return;
     let a = n.length > 1 ? ''.concat(n[0].title, ' & ').concat(n[1].title) : ''.concat(n[0].title),
         u = 1 === n.length;
-    return (0, r.jsx)(E, {
+    return (0, r.jsx)(x, {
         asset:
             1 === n.length
                 ? (0, r.jsx)(g.m, {
@@ -76,14 +76,14 @@ function x(e) {
                       powerup: n[0]
                   })
                 : (0, r.jsx)(g.g, { className: v.image }),
-        header: _.intl.formatToPlainString(y.default.LmpChI, { guildName: l }),
-        content: n.length > 1 ? _.intl.formatToPlainString(y.default.wcQOqK, { perks: a }) : _.intl.formatToPlainString(y.default.ZF8NT0, { perk: a }),
-        buttonCTA: u ? _.intl.string(y.default.gSxlHR) : _.intl.string(_.t.RzWDqa),
+        header: y.intl.formatToPlainString(O.default.LmpChI, { guildName: l }),
+        content: n.length > 1 ? y.intl.formatToPlainString(O.default.wcQOqK, { perks: a }) : y.intl.formatToPlainString(O.default.ZF8NT0, { perk: a }),
+        buttonCTA: u ? y.intl.string(O.default.gSxlHR) : y.intl.string(y.t.RzWDqa),
         onClick: (e) => (u ? o(e) : (0, f.Z)(t, c.Z.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS)),
         markAsDismissed: i
     });
 }
-function E(e) {
+function x(e) {
     var { asset: t, header: n, content: i, caretPosition: s, markAsDismissed: c } = e,
         u = (function (e, t) {
             if (null == e) return {};
@@ -140,7 +140,7 @@ function E(e) {
                         t,
                         (0, r.jsx)(a.olH, {
                             className: v.close,
-                            onClick: () => (null == c ? void 0 : c(O.L.USER_DISMISS))
+                            onClick: () => (null == c ? void 0 : c(_.L.USER_DISMISS))
                         })
                     ]
                 }),

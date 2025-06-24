@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => E });
 var r = n(255367),
     i = n(73800),
     l = n(399606),
@@ -14,9 +14,9 @@ var r = n(255367),
     g = n(13140),
     m = n(924557),
     b = n(435064),
-    O = n(39604),
-    y = n(981631),
-    _ = n(388032),
+    _ = n(39604),
+    O = n(981631),
+    y = n(388032),
     v = n(856587);
 function C(e) {
     (0, a.jW)(e, async () => {
@@ -72,7 +72,7 @@ let j = (e) => {
                     position: 'top',
                     header: (0, r.jsx)('div', {
                         className: v.header,
-                        children: _.intl.format(_.t['o+srEx'], {
+                        children: y.intl.format(y.t['o+srEx'], {
                             keybind: t,
                             keybindHook: () =>
                                 (0, r.jsx)('span', {
@@ -89,7 +89,7 @@ let j = (e) => {
                         variant: 'text-sm/normal',
                         color: 'always-white',
                         className: v.bodyText,
-                        children: _.intl.format(_.t.DWeRm5, {
+                        children: y.intl.format(y.t.DWeRm5, {
                             keybindHook: () =>
                                 (0, r.jsx)('div', {
                                     className: v.keyCombo,
@@ -106,7 +106,7 @@ let j = (e) => {
             children: () => n
         });
     },
-    S = () => {
+    E = () => {
         let e = i.useRef(null),
             { parentAnalyticsLocation: t } = (0, c.ZP)(),
             n = (0, l.e7)([p.Z], () => p.Z.hasLayers()),
@@ -115,18 +115,18 @@ let j = (e) => {
                 clipsEnabled: b.Z.getSettings().clipsEnabled,
                 isAtMaxSavingClipsOperations: b.Z.getIsAtMaxSaveClipOperations()
             })),
-            v = (0, l.e7)([f.ZP], () => f.ZP.getKeybindForAction(y.kg4.SAVE_CLIP));
+            v = (0, l.e7)([f.ZP], () => f.ZP.getKeybindForAction(O.kg4.SAVE_CLIP));
         if (!(o && a) || null == v || n) return null;
-        let S = g.BB(v.shortcut, !0);
+        let E = g.BB(v.shortcut, !0);
         return (0, r.jsx)(j, {
-            keybindString: S,
+            keybindString: E,
             targetElementRef: e,
             children: (0, r.jsx)(h.Z, {
                 ref: e,
                 disabled: d,
-                tooltipText: null != v ? _.intl.formatToPlainString(_.t.HIMcv7, { hotkey: g.BB(null == v ? void 0 : v.shortcut, !0) }) : _.intl.string(_.t.s52pjo),
+                tooltipText: null != v ? y.intl.formatToPlainString(y.t.HIMcv7, { hotkey: g.BB(null == v ? void 0 : v.shortcut, !0) }) : y.intl.string(y.t.s52pjo),
                 onClick: () => {
-                    (0, O.C1)(), (0, u.v)(t, u.d.CLIP);
+                    (0, _.C1)(), (0, u.v)(t, u.d.CLIP);
                 },
                 onContextMenu: C,
                 icon: s.AlX

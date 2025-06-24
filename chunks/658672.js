@@ -16,7 +16,6 @@ e.exports = {
     iconBadge: 'iconBadge__9293f',
     iconBadgeTop: 'iconBadgeTop__9293f',
     iconBadgeBottom: 'iconBadgeBottom__9293f',
-    divider: 'divider__9293f',
     dot: 'dot__9293f',
     caret: 'caret__9293f',
     themed: 'themed__9293f',

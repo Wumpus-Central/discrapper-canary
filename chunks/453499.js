@@ -12,8 +12,8 @@ var r,
     m = n(570140),
     h = n(578361),
     g = n(768762),
-    _ = n(259580),
-    f = n(585483),
+    f = n(259580),
+    _ = n(585483),
     b = n(981631),
     x = n(388032),
     v = n(523955);
@@ -37,10 +37,10 @@ let j = {
 };
 class y extends (r = l.PureComponent) {
     componentDidMount() {
-        f.S.subscribe(b.CkL.CAROUSEL_PREV, this.handlePrevious), f.S.subscribe(b.CkL.CAROUSEL_NEXT, this.handleNext);
+        _.S.subscribe(b.CkL.CAROUSEL_PREV, this.handlePrevious), _.S.subscribe(b.CkL.CAROUSEL_NEXT, this.handleNext);
     }
     componentWillUnmount() {
-        f.S.unsubscribe(b.CkL.CAROUSEL_PREV, this.handlePrevious), f.S.unsubscribe(b.CkL.CAROUSEL_NEXT, this.handleNext);
+        _.S.unsubscribe(b.CkL.CAROUSEL_PREV, this.handlePrevious), _.S.unsubscribe(b.CkL.CAROUSEL_NEXT, this.handleNext);
     }
     render() {
         let { current: e, count: t, includeHitboxPadding: n, arrowClassName: r, paginationDotClassName: a, paginationDotSelectedClassName: l, paginationArrowIconType: s = 'arrow' } = this.props,
@@ -55,9 +55,9 @@ class y extends (r = l.PureComponent) {
                     'aria-label': x.intl.string(x.t.vgfxaG),
                     children:
                         'caret' === s
-                            ? (0, i.jsx)(_.Z, {
+                            ? (0, i.jsx)(f.Z, {
                                   className: v.arrow,
-                                  direction: _.Z.Directions.LEFT
+                                  direction: f.Z.Directions.LEFT
                               })
                             : (0, i.jsx)(g.Z, {
                                   className: v.arrow,
@@ -87,9 +87,9 @@ class y extends (r = l.PureComponent) {
                     'aria-label': x.intl.string(x.t.XiOHRU),
                     children:
                         'caret' === s
-                            ? (0, i.jsx)(_.Z, {
+                            ? (0, i.jsx)(f.Z, {
                                   className: v.arrow,
-                                  direction: _.Z.Directions.RIGHT
+                                  direction: f.Z.Directions.RIGHT
                               })
                             : (0, i.jsx)(g.Z, {
                                   className: v.arrow,
@@ -155,19 +155,19 @@ class I extends (a = l.PureComponent) {
         );
     }
     render() {
-        let { items: e, renderItem: t, className: n, slideAnimatorClassName: r, slideAnimatorSpringSettings: a, slideAnimatorFadeInOut: l, paginationClassName: s, paginationArrowClassName: c, paginationArrowIconType: d, paginationDotClassName: u, paginationDotSelectedClassName: p, themedPagination: m, includeHitboxPadding: g, style: _, aspectRatio: f, children: b } = this.props,
+        let { items: e, renderItem: t, className: n, slideAnimatorClassName: r, slideAnimatorSpringSettings: a, slideAnimatorFadeInOut: l, paginationClassName: s, paginationArrowClassName: c, paginationArrowIconType: d, paginationDotClassName: u, paginationDotSelectedClassName: p, themedPagination: m, includeHitboxPadding: g, style: f, aspectRatio: _, children: b } = this.props,
             { visibleIndex: x } = this.state;
         return (0, i.jsxs)('div', {
             className: v.root,
             children: [
                 (0, i.jsxs)('div', {
                     className: o()(v.carouselContainer, n),
-                    style: _,
+                    style: f,
                     onMouseEnter: this.handleMouseEnter,
                     onMouseLeave: this.handleMouseLeave,
                     children: [
                         (0, i.jsx)('div', {
-                            style: { aspectRatio: f },
+                            style: { aspectRatio: _ },
                             children: (0, i.jsx)(h.Z, {
                                 className: o()(v.carousel, r),
                                 step: x,

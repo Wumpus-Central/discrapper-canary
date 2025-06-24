@@ -1,4 +1,4 @@
-n.d(t, { r: () => v }), n(388685);
+n.d(t, { r: () => O }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -9,9 +9,8 @@ var r = n(255367),
     u = n(84735),
     d = n(180035),
     f = n(481060),
-    _ = n(540059),
-    p = n(333903);
-function h(e, t, n) {
+    _ = n(333903);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +23,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,12 +34,12 @@ function m(e) {
                 })
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function g(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -52,22 +51,22 @@ function g(e, t) {
     }
     return n;
 }
-function E(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let b = {
+let E = {
         mass: 1,
         tension: 250
     },
-    y = {
+    b = {
         X: {
             TOP: 'M5.13231 6.72963L6.7233 5.13864L14.855 13.2704L13.264 14.8614L5.13231 6.72963Z',
             BOTTOM: 'M13.2704 5.13864L14.8614 6.72963L6.72963 14.8614L5.13864 13.2704L13.2704 5.13864Z'
@@ -81,12 +80,12 @@ let b = {
             BOTTOM: 'M4.08643 11.0903L5.67742 9.49929L9.4485 13.2704L7.85751 14.8614L4.08643 11.0903Z'
         }
     };
-function O(e, t, n, i) {
+function y(e, t, n, i) {
     let a = e.to({
             output: [t, n]
         }),
-        o = i ? [y.X.TOP, y.X.TOP, y.CHECK.TOP, y.CHECK.TOP] : [y.X.TOP, y.BAR.TOP, y.BAR.TOP, y.CHECK.TOP],
-        l = i ? [y.X.BOTTOM, y.X.BOTTOM, y.CHECK.BOTTOM, y.CHECK.BOTTOM] : [y.X.BOTTOM, y.BAR.BOTTOM, y.BAR.BOTTOM, y.CHECK.BOTTOM];
+        o = i ? [b.X.TOP, b.X.TOP, b.CHECK.TOP, b.CHECK.TOP] : [b.X.TOP, b.BAR.TOP, b.BAR.TOP, b.CHECK.TOP],
+        l = i ? [b.X.BOTTOM, b.X.BOTTOM, b.CHECK.BOTTOM, b.CHECK.BOTTOM] : [b.X.BOTTOM, b.BAR.BOTTOM, b.BAR.BOTTOM, b.CHECK.BOTTOM];
     return (0, r.jsxs)('svg', {
         viewBox: '0 0 20 20',
         fill: 'none',
@@ -108,100 +107,99 @@ function O(e, t, n, i) {
         ]
     });
 }
-let v = function (e) {
-    let { id: t, onChange: n, checked: a, disabled: h, className: g, focusProps: y, innerRef: v } = e,
-        { reducedMotion: I } = i.useContext(c.S),
-        T = i.useRef(null),
-        [S, A] = i.useState(!1),
-        N = (0, _.Q3)('Switch'),
-        C = (0, d.d)(N ? l.Z.colors.INTERACTIVE_MUTED : l.Z.unsafe_rawColors.PRIMARY_400).spring(),
-        R = (0, d.d)(N ? l.Z.colors.BG_BRAND : l.Z.unsafe_rawColors.GREEN_360).spring(),
-        { state: P, opacity: w } = (0, f.q_F)(
+let O = function (e) {
+    let { id: t, onChange: n, checked: a, disabled: p, className: m, focusProps: b, innerRef: O } = e,
+        { reducedMotion: v } = i.useContext(c.S),
+        I = i.useRef(null),
+        [T, S] = i.useState(!1),
+        A = (0, d.d)(l.Z.colors.INTERACTIVE_MUTED).spring(),
+        N = (0, d.d)(l.Z.colors.BG_BRAND).spring(),
+        { state: C, opacity: R } = (0, f.q_F)(
             {
-                config: b,
-                opacity: h ? (N ? 0.5 : 0.3) : 1,
-                state: S ? (a ? 0.7 : 0.3) : +!!a
+                config: E,
+                opacity: p ? 0.5 : 1,
+                state: T ? (a ? 0.7 : 0.3) : +!!a
             },
             'animate-always'
         );
+    function P(e) {
+        S(!1), null == n || n(e.currentTarget.checked, e);
+    }
+    function w(e) {
+        p || e.repeat || ((' ' === e.key || 'Enter' === e.key) && S(!0));
+    }
     function D(e) {
-        A(!1), null == n || n(e.currentTarget.checked, e);
-    }
-    function L(e) {
-        h || e.repeat || ((' ' === e.key || 'Enter' === e.key) && A(!0));
-    }
-    function x(e) {
         var t;
-        h || !S || e.repeat || (A(!1), 'Enter' === e.key && (null == (t = T.current) || t.click()));
+        p || !T || e.repeat || (S(!1), 'Enter' === e.key && (null == (t = I.current) || t.click()));
     }
     return (0, r.jsx)(
         u.t,
-        E(m({}, y), {
+        g(h({}, b), {
             within: !0,
             offset: -2,
             children: (0, r.jsxs)(s.animated.div, {
-                className: o()(p.container, g, {
-                    [p.checked]: a,
-                    [p.disabled]: h
+                className: o()(_.container, m, {
+                    [_.checked]: a,
+                    [_.disabled]: p
                 }),
-                onMouseDown: () => !h && A(!0),
-                onMouseUp: () => A(!1),
-                onMouseLeave: () => A(!1),
+                onMouseDown: () => !p && S(!0),
+                onMouseUp: () => S(!1),
+                onMouseLeave: () => S(!1),
                 style: {
-                    opacity: w,
-                    backgroundColor: P.to({
-                        output: [C, R]
+                    opacity: R,
+                    backgroundColor: C.to({
+                        output: [A, N]
                     })
                 },
                 children: [
                     (0, r.jsxs)(s.animated.svg, {
-                        className: p.slider,
+                        className: _.slider,
                         viewBox: '0 0 28 20',
                         preserveAspectRatio: 'xMinYMid meet',
                         style: {
-                            left: P.to({
+                            left: C.to({
                                 range: [0, 0.3, 0.7, 1],
-                                output: [N ? -4 : -3, 1, 8, 12]
+                                output: [-4, 1, 8, 12]
                             })
                         },
                         'aria-hidden': !0,
                         children: [
                             (0, r.jsx)(s.animated.rect, {
                                 fill: 'white',
-                                x: P.to({
+                                x: C.to({
                                     range: [0, 0.3, 0.7, 1],
                                     output: [4, 0, 0, 4]
                                 }),
-                                y: P.to({
+                                y: C.to({
                                     range: [0, 0.3, 0.7, 1],
                                     output: [0, 1, 1, 0]
                                 }),
-                                height: P.to({
+                                height: C.to({
                                     range: [0, 0.3, 0.7, 1],
                                     output: [20, 18, 18, 20]
                                 }),
-                                width: P.to({
+                                width: C.to({
                                     range: [0, 0.3, 0.7, 1],
                                     output: [20, 28, 28, 20]
                                 }),
                                 rx: '10'
                             }),
-                            O(P, C, R, I.enabled)
+                            y(C, A, N, v.enabled)
                         ]
                     }),
                     (0, r.jsx)('input', {
                         id: t,
                         type: 'checkbox',
                         ref: (e) => {
-                            (T.current = e), null != v && (v.current = e);
+                            (I.current = e), null != O && (O.current = e);
                         },
-                        className: p.input,
-                        tabIndex: h ? -1 : 0,
-                        onKeyDown: L,
-                        onKeyUp: x,
-                        onChange: D,
+                        className: _.input,
+                        tabIndex: p ? -1 : 0,
+                        onKeyDown: w,
+                        onKeyUp: D,
+                        onChange: P,
                         checked: a,
-                        disabled: h
+                        disabled: p
                     })
                 ]
             })

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -7,16 +7,15 @@ var r = n(255367),
     l = n(442837),
     c = n(114101),
     u = n(481060),
-    d = n(540059),
-    f = n(28546),
-    _ = n(581883),
-    p = n(459273),
-    h = n(443603),
-    m = n(981631),
-    g = n(957825),
-    E = n(388032),
-    b = n(302195);
-function y(e, t, n) {
+    d = n(28546),
+    f = n(581883),
+    _ = n(459273),
+    p = n(443603),
+    h = n(981631),
+    m = n(957825),
+    g = n(388032),
+    E = n(302195);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +28,7 @@ function y(e, t, n) {
         e
     );
 }
-function O(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,12 +39,12 @@ function O(e) {
                 })
             )),
             r.forEach(function (t) {
-                y(e, t, n[t]);
+                b(e, t, n[t]);
             });
     }
     return e;
 }
-function v(e, t) {
+function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -57,74 +56,73 @@ function v(e, t) {
     }
     return n;
 }
-function I(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : v(Object(t)).forEach(function (n) {
+            : O(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function T(e, t) {
+function I(e, t) {
     let { disabled: n, type: a } = e,
-        [y, v] = i.useState(!1),
-        T = (0, l.e7)([_.Z], () => {
+        [b, O] = i.useState(!1),
+        I = (0, l.e7)([f.Z], () => {
             var e, t;
-            return y && Object.values(null != (t = null == (e = _.Z.frecencyWithoutFetchingLatest.favoriteGifs) ? void 0 : e.gifs) ? t : {}).length <= 2;
+            return b && Object.values(null != (t = null == (e = f.Z.frecencyWithoutFetchingLatest.favoriteGifs) ? void 0 : e.gifs) ? t : {}).length <= 2;
         }),
-        [S, A, N] = (0, f.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], s.X),
-        C = i.useRef(0),
-        R = i.useCallback(() => {
-            v(!0),
-                clearTimeout(C.current),
-                (C.current = setTimeout(() => {
-                    v(!1), (C.current = 0);
+        [T, S, A] = (0, d.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], s.X),
+        N = i.useRef(0),
+        C = i.useCallback(() => {
+            O(!0),
+                clearTimeout(N.current),
+                (N.current = setTimeout(() => {
+                    O(!1), (N.current = 0);
                 }, 2000));
         }, []);
-    (0, p.yp)({
-        event: m.CkL.FAVORITE_GIF,
-        handler: R
+    (0, _.yp)({
+        event: h.CkL.FAVORITE_GIF,
+        handler: C
     });
-    let P = i.useCallback(() => {
-            (0, f.RO)(g.X1.GIF, a);
+    let R = i.useCallback(() => {
+            (0, d.RO)(m.X1.GIF, a);
         }, [a]),
-        { Component: w, events: D, play: L } = (0, c.V)(),
-        x = (0, d.Q3)('ChannelGIFPickerButton');
+        { Component: P, events: w, play: D } = (0, c.V)();
     if (n) return null;
-    let k = S === g.X1.GIF && A === a;
+    let L = T === m.X1.GIF && S === a;
     return (0, r.jsx)(u.ua7, {
-        text: T ? E.intl.string(E.t.mE2e8P) : null,
+        text: I ? g.intl.string(g.t.mE2e8P) : null,
         forceOpen: !0,
         children: (e) =>
             (0, r.jsx)(
                 'div',
-                I(
-                    O(
+                v(
+                    y(
                         {
                             ref: t,
-                            className: o()(g.CT, b.buttonContainer)
+                            className: o()(m.CT, E.buttonContainer)
                         },
                         e
                     ),
                     {
-                        children: (0, r.jsx)(h.Z, {
-                            innerClassName: b.button,
-                            onMouseEnter: D.onMouseEnter,
-                            onMouseLeave: D.onMouseLeave,
+                        children: (0, r.jsx)(p.Z, {
+                            innerClassName: E.button,
+                            onMouseEnter: w.onMouseEnter,
+                            onMouseLeave: w.onMouseLeave,
                             onClick: () => {
-                                P(), L();
+                                R(), D();
                             },
-                            isActive: k,
-                            pulse: y,
-                            'aria-label': E.intl.string(E.t.PtVpk5),
-                            'aria-expanded': k,
+                            isActive: L,
+                            pulse: b,
+                            'aria-label': g.intl.string(g.t.PtVpk5),
+                            'aria-expanded': L,
                             'aria-haspopup': 'dialog',
-                            'aria-controls': N,
-                            children: (0, r.jsx)(w, {
-                                size: x ? 'refresh_sm' : void 0,
+                            'aria-controls': A,
+                            children: (0, r.jsx)(P, {
+                                size: 'refresh_sm',
                                 color: 'currentColor'
                             })
                         })
@@ -133,4 +131,4 @@ function T(e, t) {
             )
     });
 }
-let S = i.memo(i.forwardRef(T));
+let T = i.memo(i.forwardRef(I));

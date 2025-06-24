@@ -9,7 +9,6 @@ e.exports = {
     platform: 'platform__4a98c',
     active: 'active__4a98c',
     icon: 'icon__4a98c',
-    downloadButton: 'downloadButton__4a98c',
     platformName: 'platformName__4a98c',
     iconWrap: 'iconWrap__4a98c',
     apple: 'apple__4a98c',

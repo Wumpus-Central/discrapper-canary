@@ -23,8 +23,8 @@ var r = n(255367),
     C = n(467628),
     w = n(373370),
     S = n(475595),
-    E = n(720293),
-    P = n(566078),
+    P = n(720293),
+    E = n(566078),
     T = n(65443),
     N = n(644646),
     A = n(78826),
@@ -91,7 +91,7 @@ function X(e) {
         [p, f] = s.useState(!1),
         x = s.useRef(null),
         h = (0, S.fh)(o, S.eC.QUEST_BAR_HERO_VIDEO),
-        b = (0, E.z0)(o, c.X.WATCH_VIDEO, E.n1.VIDEO, E.O.THUMBNAIL),
+        b = (0, P.z0)(o, c.X.WATCH_VIDEO, P.n1.VIDEO, P.O.THUMBNAIL),
         j = (0, y.km)((e) => e.getVideoProgressState);
     s.useEffect(() => {
         null != x.current && (d && (!l || p) ? ((x.current.currentTime = 0), x.current.play()) : x.current.pause());
@@ -158,7 +158,7 @@ function K(e) {
 }
 function Y(e) {
     let { quest: t, taskDetails: n } = e,
-        o = s.useMemo(() => P.r.build(t.config), [t.config]);
+        o = s.useMemo(() => E.r.build(t.config), [t.config]);
     return (0, r.jsxs)('ul', {
         children: [
             (0, r.jsx)(m.Text, {
@@ -201,8 +201,8 @@ function J(e) {
     s.useEffect(() => {
         null == y.current || c || (x ? ((y.current.currentTime = 0), y.current.play()) : y.current.pause());
     }, [c, x]);
-    let E = (0, C.j)({ location: Z.dr.QUESTS_BAR }),
-        P = (0, _.Kr)(t.config),
+    let P = (0, C.j)({ location: Z.dr.QUESTS_BAR }),
+        E = (0, _.Kr)(t.config),
         N = (0, w.mK)(t.config),
         k = (0, w.CR)({
             quest: t,
@@ -220,7 +220,7 @@ function J(e) {
         children: [
             (0, r.jsx)('div', {
                 children: (0, r.jsxs)('div', {
-                    className: a()(U.questPromoContent, { [U.questPromoContentWithCopySimplification]: E }),
+                    className: a()(U.questPromoContent, { [U.questPromoContentWithCopySimplification]: P }),
                     ref: u,
                     children: [
                         (0, r.jsxs)('div', {
@@ -233,7 +233,7 @@ function J(e) {
                                     variant: 'heading-md/medium',
                                     children: H.intl.format(H.t.EQa7oq, { questName: t.config.messages.questName })
                                 }),
-                                E
+                                P
                                     ? (0, r.jsx)(Y, {
                                           quest: t,
                                           taskDetails: n
@@ -245,16 +245,16 @@ function J(e) {
                             ]
                         }),
                         (0, r.jsx)(m.ua7, {
-                            'aria-label': ''.concat(H.intl.formatToPlainString(H.t.coKAb2, { rewardsDuration: P })).concat(null != N ? ' \u2022 '.concat(N) : ''),
+                            'aria-label': ''.concat(H.intl.formatToPlainString(H.t.coKAb2, { rewardsDuration: E })).concat(null != N ? ' \u2022 '.concat(N) : ''),
                             text:
-                                null != P &&
-                                E &&
+                                null != E &&
+                                P &&
                                 (0, r.jsx)(T.Z, {
                                     quest: t,
                                     orientation: 'stack',
                                     withPremiumHighlight: !1
                                 }),
-                            shouldShow: null != P && E,
+                            shouldShow: null != E && P,
                             children: (e) =>
                                 (0, r.jsx)(
                                     m.zxk,
@@ -354,8 +354,8 @@ function $(e) {
         j = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
         y = o.percentComplete > 0,
         O = (0, b.z)(n),
-        [w, S, E] = (0, b.me)(n, o),
-        P = s.useRef(null),
+        [w, S, P] = (0, b.me)(n, o),
+        E = s.useRef(null),
         T = (0, b.B6)(n.config.expiresAt),
         N = (0, b._s)({ quest: n }),
         A = (0, _.q8)(n),
@@ -417,14 +417,14 @@ function $(e) {
                     (0, r.jsx)(I.Z, {
                         expansionSpring: c,
                         overlayRef: d,
-                        progressBarRef: P,
+                        progressBarRef: E,
                         quest: n,
                         isExpanded: u
                     }),
                     (0, r.jsx)(V.Z, {
                         contentLocation: 'expanded',
                         quest: n,
-                        progressBarRef: P,
+                        progressBarRef: E,
                         isExpanded: !0,
                         percentComplete: J,
                         activeScreen: w
@@ -436,8 +436,8 @@ function $(e) {
                             (0, l.EQ)(w)
                                 .with(v.LI.SELECT, () =>
                                     (0, r.jsx)(W.Z, {
-                                        onConsole: () => E(Z.cd.CONSOLE),
-                                        onDesktop: () => E(Z.cd.DESKTOP)
+                                        onConsole: () => P(Z.cd.CONSOLE),
+                                        onDesktop: () => P(Z.cd.DESKTOP)
                                     })
                                 )
                                 .with(v.LI.DESKTOP, () =>
@@ -478,7 +478,7 @@ function $(e) {
                                 isProgressing: O,
                                 activeScreen: w,
                                 showBackButton: w !== v.LI.SELECT && S.length > 1 && !y && !O,
-                                onBack: () => E(null),
+                                onBack: () => P(null),
                                 taskDetails: o
                             })
                         ]
@@ -497,8 +497,8 @@ let ee = s.forwardRef(function (e, t) {
     let { children: o, className: l, collapsedHeight: c, isExpanded: d, isExpansionAnimationComplete: u, expansionSpring: p, onCtxMenuOpen: m, onCtxMenuClose: f, onCtxMenuSelect: g, overlayRef: j, quest: y, useReducedMotion: O, taskDetails: C } = e,
         w = (0, _.q8)(y),
         S = (0, _.Vl)(y),
-        { launchInGameActivity: E } = (0, b.zB)(y),
-        P = s.useCallback(() => {
+        { launchInGameActivity: P } = (0, b.zB)(y),
+        E = s.useCallback(() => {
             let e = y.config.features.includes(Z.S7.START_QUEST_CTA),
                 t = e ? x.jZ.START_QUEST : x.jZ.ACCEPT_QUEST;
             (0, h.AH)(y.id, {
@@ -506,8 +506,8 @@ let ee = s.forwardRef(function (e, t) {
                 questContentCTA: t
             }),
                 w && (0, R.openVideoQuestModal)(y),
-                S && e && E();
-        }, [y, w, S, E]),
+                S && e && P();
+        }, [y, w, S, P]),
         T = (null == (n = y.userStatus) ? void 0 : n.enrolledAt) != null,
         N = d && u;
     return (0, r.jsxs)(i.animated.div, {
@@ -556,7 +556,7 @@ let ee = s.forwardRef(function (e, t) {
                           reducedMotion: O,
                           containerRef: t,
                           isExpanded: d,
-                          onAcceptQuest: P
+                          onAcceptQuest: E
                       })
             })
         ]

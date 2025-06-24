@@ -21,8 +21,8 @@ var r = n(255367),
     m = n(663993),
     b = n(628123),
     _ = n(703656),
-    E = n(108427),
-    O = n(911314),
+    O = n(108427),
+    E = n(911314),
     y = n(429899),
     I = n(843445),
     v = n(981631),
@@ -59,7 +59,7 @@ class j extends i.PureComponent {
             g.Z.disable(),
             g.Z.setLayout(h.r),
             g.Z.enable(),
-            (0, E.e)('application_store');
+            (0, O.e)('application_store');
     }
     componentWillUnmount() {
         null != this.stopListeningToHistory && this.stopListeningToHistory(), g.Z.disable(), g.Z.setLayout(f.oT), g.Z.enable();
@@ -121,7 +121,7 @@ class j extends i.PureComponent {
                                 (0, r.jsx)(u.Z, {
                                     page: v.ZY5.STORE_DIRECTORY_HOME,
                                     root: !0,
-                                    children: (0, r.jsx)(O.Z, {})
+                                    children: (0, r.jsx)(E.Z, {})
                                 })
                         }),
                         (0, r.jsx)(a.AW, {

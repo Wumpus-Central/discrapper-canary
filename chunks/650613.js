@@ -9,8 +9,8 @@ var a = n(255367),
     d = n(71585),
     u = n(146282),
     m = n(897674),
-    x = n(561308),
-    p = n(206583),
+    p = n(561308),
+    x = n(206583),
     h = n(873289);
 function b(e) {
     let { id: t } = e,
@@ -33,7 +33,7 @@ function b(e) {
 }
 function f() {
     var e;
-    let t = (0, r.e7)([u.Z], () => u.Z.getFeed(p.YN.GLOBAL_FEED)),
+    let t = (0, r.e7)([u.Z], () => u.Z.getFeed(x.YN.GLOBAL_FEED)),
         n = (0, r.e7)([u.Z], () => u.Z.getFilters()),
         i = (0, r.cj)(
             [c.Z],
@@ -68,7 +68,7 @@ function f() {
                                       variant: 'text-md/normal',
                                       children: 'Expired or no matching presence'
                                   }),
-                              (0, x.n2)(t) &&
+                              (0, p.n2)(t) &&
                                   (0, a.jsxs)(l.Text, {
                                       variant: 'text-md/normal',
                                       children: ['Expired at ', t.expires_at]

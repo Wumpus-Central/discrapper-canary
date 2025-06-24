@@ -1,21 +1,21 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => N }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(990547),
-    o = n(442837),
-    a = n(481060),
+    a = n(442837),
+    o = n(481060),
     s = n(893776),
     c = n(232567),
     u = n(388905),
     d = n(353926),
     h = n(82554),
-    g = n(726521),
-    p = n(185625),
+    p = n(726521),
+    g = n(185625),
     m = n(314897),
     f = n(63063),
     _ = n(981631),
-    x = n(388032),
-    E = n(793613),
+    E = n(388032),
+    x = n(793613),
     b = n(20493);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -60,25 +60,25 @@ function I(e, t) {
         e
     );
 }
-o.ZP.initialize();
+a.ZP.initialize();
 let O = {
-        [h.BM.MESSAGE]: x.t.fuqnBA,
-        [h.BM.USER]: x.t.F4jrRU,
-        [h.BM.GUILD]: x.t.gH3aMj
+        [h.BM.MESSAGE]: E.t.fuqnBA,
+        [h.BM.USER]: E.t.F4jrRU,
+        [h.BM.GUILD]: E.t.gH3aMj
     },
     S = (e) => {
         let { title: t, menuType: i } = e,
-            o = () => {
-                (0, a.ZDy)(async () => {
+            a = () => {
+                (0, o.ZDy)(async () => {
                     let { default: e } = await n.e('93288').then(n.bind(n, 396410));
                     return (t) =>
                         (0, r.jsx)(
                             e,
                             I(v({}, t), {
                                 onSuccess: s,
-                                headerText: x.intl.string(x.t.ZLRYGR),
-                                confirmButtonText: x.intl.string(x.t.PDTjLC),
-                                confirmButtonColor: a.zxk.Colors.BRAND,
+                                headerText: E.intl.string(E.t.ZLRYGR),
+                                confirmButtonText: E.intl.string(E.t.PDTjLC),
+                                confirmButtonColor: o.zxk.Colors.BRAND,
                                 impressionName: l.ImpressionNames.URF_ENTER_EMAIL
                             })
                         );
@@ -86,53 +86,53 @@ let O = {
             },
             s = (e) => {
                 let t = async () => {
-                        await (0, p.yL)(i, e);
+                        await (0, g.yL)(i, e);
                     },
-                    o = async (t) => await (0, p.RV)(i, e, t),
+                    a = async (t) => await (0, g.RV)(i, e, t),
                     s = (e) => {
                         let t = null == e ? void 0 : e.token;
-                        i === h.BM.MESSAGE ? (0, g.eE)(t) : i === h.BM.USER ? (0, g.JM)(t) : i === h.BM.GUILD && (0, g.FO)(t);
+                        i === h.BM.MESSAGE ? (0, p.eE)(t) : i === h.BM.USER ? (0, p.JM)(t) : i === h.BM.GUILD && (0, p.FO)(t);
                     };
                 t(),
-                    (0, a.ZDy)(async () => {
+                    (0, o.ZDy)(async () => {
                         let { default: e } = await n.e('94566').then(n.bind(n, 965072));
                         return (n) =>
                             (0, r.jsx)(
                                 e,
                                 I(v({}, n), {
-                                    onFormSubmit: o,
+                                    onFormSubmit: a,
                                     onResend: t,
                                     onSuccess: s,
-                                    headerText: x.intl.string(x.t.H3Q7U1),
-                                    confirmButtonText: x.intl.string(x.t['13ofGh']),
-                                    confirmButtonColor: a.zxk.Colors.BRAND,
+                                    headerText: E.intl.string(E.t.H3Q7U1),
+                                    confirmButtonText: E.intl.string(E.t['13ofGh']),
+                                    confirmButtonColor: o.zxk.Colors.BRAND,
                                     impressionName: l.ImpressionNames.URF_CONFIRM_EMAIL_CODE
                                 })
                             );
                     });
             };
-        return (0, r.jsxs)(a.P3F, {
-            className: E.reportButton,
-            onClick: () => o(),
+        return (0, r.jsxs)(o.P3F, {
+            className: x.reportButton,
+            onClick: () => a(),
             children: [
-                (0, r.jsx)(a.Text, {
+                (0, r.jsx)(o.Text, {
                     variant: 'text-md/medium',
                     children: t
                 }),
-                (0, r.jsx)(a.LJT, {
+                (0, r.jsx)(o.LJT, {
                     size: 'sm',
                     color: 'currentColor'
                 })
             ]
         });
     },
-    y = () => {
+    N = () => {
         let [e, t] = i.useState(!0),
             [n, l] = i.useState([]),
-            h = (0, o.e7)([m.default], () => m.default.isAuthenticated()),
-            g = (0, o.e7)([d.Z], () => d.Z.hasLoadedExperiments),
+            h = (0, a.e7)([m.default], () => m.default.isAuthenticated()),
+            p = (0, a.e7)([d.Z], () => d.Z.hasLoadedExperiments),
             v = () => {
-                (0, p.Jj)()
+                (0, g.Jj)()
                     .then((e) => {
                         let {
                             body: { capabilities: n }
@@ -155,32 +155,32 @@ let O = {
             }, [h]),
             i.useEffect(() => {
                 (async () => {
-                    g || (await s.Z.getLocationMetadata(), s.Z.getExperiments());
+                    p || (await s.Z.getLocationMetadata(), s.Z.getExperiments());
                 })();
-            }, [g]),
-            e || !g
-                ? (0, r.jsx)(u.ZP, { children: (0, r.jsx)(a.$jN, {}) })
+            }, [p]),
+            e || !p
+                ? (0, r.jsx)(u.ZP, { children: (0, r.jsx)(o.$jN, {}) })
                 : null != n &&
                   n.length > 0 &&
                   (0, r.jsxs)(u.ZP, {
                       children: [
                           (0, r.jsx)(u.Dx, {
                               className: b.marginBottom8,
-                              children: x.intl.string(x.t.Z11w19)
+                              children: E.intl.string(E.t.Z11w19)
                           }),
                           (0, r.jsx)(u.DK, {
                               className: b.marginBottom8,
-                              children: x.intl.format(x.t['532l+v'], { supportURL: f.Z.getArticleURL(_.BhN.COPYRIGHT_AND_IP_POLICY) })
+                              children: E.intl.format(E.t['532l+v'], { supportURL: f.Z.getArticleURL(_.BhN.COPYRIGHT_AND_IP_POLICY) })
                           }),
                           (0, r.jsx)('div', {
-                              className: E.container,
+                              className: x.container,
                               children: n.map((e) =>
                                   null == O[e]
                                       ? null
                                       : (0, r.jsx)(
                                             S,
                                             {
-                                                title: x.intl.string(O[e]),
+                                                title: E.intl.string(O[e]),
                                                 menuType: e
                                             },
                                             e

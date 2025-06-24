@@ -1,9 +1,9 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => Z });
 var r = n(255367),
     s = n(73800),
     o = n(120356),
-    a = n.n(o),
-    i = n(442837),
+    i = n.n(o),
+    a = n(442837),
     c = n(393238),
     l = n(522474),
     u = n(451478),
@@ -22,7 +22,7 @@ var r = n(255367),
     N = n(981631),
     _ = n(412190);
 function P() {
-    let e = Math.floor((0, i.e7)([p.Z], () => p.Z.currentPoints)),
+    let e = Math.floor((0, a.e7)([p.Z], () => p.Z.currentPoints)),
         t = e.toString().length,
         n = '0'.repeat(Math.max(0, j.eg - t));
     return (0, r.jsxs)('div', {
@@ -39,9 +39,9 @@ function P() {
         ]
     });
 }
-function C(e) {
-    let { items: t, width: n, height: s, isPaused: o, windowKey: a } = e,
-        c = (0, i.e7)([p.Z], () => p.Z.purchasedItems);
+function w(e) {
+    let { items: t, width: n, height: s, isPaused: o, windowKey: i } = e,
+        c = (0, a.e7)([p.Z], () => p.Z.purchasedItems);
     return null == s || null == n
         ? null
         : (0, r.jsx)(r.Fragment, {
@@ -54,40 +54,40 @@ function C(e) {
                           isPaused: o,
                           width: n,
                           height: s,
-                          windowKey: a
+                          windowKey: i
                       },
                       e
                   );
               })
           });
 }
-function Z() {
+function C() {
     return (0, m.f)(), (0, g.Z)(), null;
 }
-function w(e) {
+function Z(e) {
     let { className: t, windowKey: n } = e,
         { ref: o, width: m, height: g } = (0, c.ZP)(),
-        { ref: j, height: w } = (0, c.ZP)(),
-        E = (0, i.e7)([p.Z], () => p.Z.lifetimePoints > 0),
-        S = (0, i.e7)([u.Z, l.Z], () => {
+        { ref: j, height: Z } = (0, c.ZP)(),
+        S = (0, a.e7)([p.Z], () => p.Z.lifetimePoints > 0),
+        I = (0, a.e7)([u.Z, l.Z], () => {
             let e = l.Z.getWindow(n);
             return null == e || !u.Z.isFocused((0, f.ZY)(e));
         });
     return (
         (0, s.useEffect)(() => {
-            d.default.track(N.rMx.CLICKER_GAME_LAUNCHED, { launch_type: E ? 'CONTINUE' : 'NEW' });
+            d.default.track(N.rMx.CLICKER_GAME_LAUNCHED, { launch_type: S ? 'CONTINUE' : 'NEW' });
         }, []),
         (0, r.jsxs)('div', {
             ref: o,
-            className: a()(t, _.container),
+            className: i()(t, _.container),
             children: [
                 (0, r.jsx)('div', {
                     className: _.fullscreenItems,
-                    children: (0, r.jsx)(C, {
+                    children: (0, r.jsx)(w, {
                         items: b.nw,
                         width: m,
                         height: g,
-                        isPaused: S,
+                        isPaused: I,
                         windowKey: n
                     })
                 }),
@@ -96,32 +96,32 @@ function w(e) {
                     children: [
                         (0, r.jsx)('div', {
                             className: _.fullscreenItems,
-                            children: (0, r.jsx)(C, {
+                            children: (0, r.jsx)(w, {
                                 items: b.uK,
                                 width: m,
                                 height: g,
-                                isPaused: S,
+                                isPaused: I,
                                 windowKey: n
                             })
                         }),
                         (0, r.jsxs)('div', {
                             className: _.buttonAndPoints,
                             children: [
-                                (0, r.jsx)(C, {
+                                (0, r.jsx)(w, {
                                     items: b.rQ,
                                     width: m,
                                     height: g,
-                                    isPaused: S,
+                                    isPaused: I,
                                     windowKey: n
                                 }),
                                 (0, r.jsx)(P, {}),
                                 (0, r.jsx)('div', {
                                     className: _.pointsItems,
-                                    children: (0, r.jsx)(C, {
+                                    children: (0, r.jsx)(w, {
                                         items: b.ci,
                                         width: m,
                                         height: g,
-                                        isPaused: S,
+                                        isPaused: I,
                                         windowKey: n
                                     })
                                 })
@@ -130,11 +130,11 @@ function w(e) {
                         (0, r.jsx)('div', {
                             className: _.fullscreenItems,
                             ref: j,
-                            children: (0, r.jsx)(C, {
+                            children: (0, r.jsx)(w, {
                                 items: b.Ou,
                                 width: m,
-                                height: w,
-                                isPaused: S,
+                                height: Z,
+                                isPaused: I,
                                 windowKey: n
                             })
                         })
@@ -150,11 +150,11 @@ function w(e) {
                             children: [
                                 (0, r.jsx)(v.Z, {}),
                                 (0, r.jsx)('div', { className: _.toolbarSpacer }),
-                                (0, r.jsx)(C, {
+                                (0, r.jsx)(w, {
                                     items: b.WY,
                                     width: m,
                                     height: g,
-                                    isPaused: S,
+                                    isPaused: I,
                                     windowKey: n
                                 })
                             ]
@@ -164,17 +164,17 @@ function w(e) {
                 (0, r.jsxs)('div', {
                     className: _.fullscreenItems,
                     children: [
-                        (0, r.jsx)(C, {
+                        (0, r.jsx)(w, {
                             items: b.wT,
                             width: m,
                             height: g,
-                            isPaused: S,
+                            isPaused: I,
                             windowKey: n
                         }),
                         (0, r.jsx)(O.Z, {})
                     ]
                 }),
-                (0, r.jsx)(Z, {}),
+                (0, r.jsx)(C, {}),
                 (0, r.jsx)(h.Z, {})
             ]
         })

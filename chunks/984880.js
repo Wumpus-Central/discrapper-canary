@@ -140,7 +140,7 @@ t.exports = (function (t) {
                     var J = [];
                     do J.push(x[V].block), V++;
                     while (V < x.length && x[V].wrapperTemplate === G.wrapperTemplate);
-                    var $ = u.cloneElement(
+                    var X = u.cloneElement(
                         G.wrapperTemplate,
                         {
                             key: G.key + '-wrap',
@@ -148,7 +148,7 @@ t.exports = (function (t) {
                         },
                         J
                     );
-                    W.push($);
+                    W.push(X);
                 } else W.push(G.block), V++;
             }
             return u.createElement('div', { 'data-contents': 'true' }, W);

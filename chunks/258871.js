@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => O });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -55,7 +55,7 @@ function b(e, t) {
         e
     );
 }
-let O = [
+let _ = [
         {
             key: 'EVENTS',
             renderIcon: (e) =>
@@ -127,7 +127,7 @@ let O = [
                 })
         }
     ],
-    y = (e) => {
+    O = (e) => {
         let { guild: t, channel: n } = e,
             o = (0, s.ZP)(t.id);
         i.useEffect(() => {
@@ -147,7 +147,7 @@ let O = [
             g = i.useMemo(() => ({ numEvents: o.length }), [o.length]),
             m = (0, p.t)(n);
         return (0, r.jsx)(r.Fragment, {
-            children: O.map((e) => {
+            children: _.map((e) => {
                 let { key: i, getName: l, handler: o, renderIcon: s } = e;
                 if (!u && 'EVENTS' === i) return null;
                 let d = ''.concat(i, '-').concat(t.id);

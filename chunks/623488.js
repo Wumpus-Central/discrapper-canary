@@ -72,12 +72,12 @@ function f(e) {
           });
 }
 function h(e) {
-    let { imageUrl: t, name: n, description: i, formattedPrice: c, role: h, ctaComponent: g, shouldShowFullDescriptionButton: _ = !0, onShowFullDescription: b, productType: E, onTapCard: y, actionMenu: x, showOpaqueBackground: v = !1, hideRoleTag: O = !1, lineClamp: C = 1, cardWidth: j = 332, cardHeight: S, thumbnailHeight: I = 187, descriptionTextVariant: N = 'text-sm/normal', isDraft: T = !1 } = e,
+    let { imageUrl: t, name: n, description: i, formattedPrice: c, role: h, ctaComponent: g, shouldShowFullDescriptionButton: _ = !0, onShowFullDescription: b, productType: x, onTapCard: y, actionMenu: E, showOpaqueBackground: v = !1, hideRoleTag: C = !1, lineClamp: O = 1, cardWidth: j = 332, cardHeight: S, thumbnailHeight: I = 187, descriptionTextVariant: T = 'text-sm/normal', isDraft: N = !1 } = e,
         P = (0, o.hQ)(),
         A = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(m, {
-                    showDraftBadge: T,
+                    showDraftBadge: N,
                     hidePurchaseToUnlockBadge: !0,
                     children: (0, r.jsx)('img', {
                         alt: '',
@@ -101,25 +101,25 @@ function h(e) {
                                 }),
                                 (0, r.jsx)(a.Rny, {
                                     children: (0, r.jsx)(s.Z, {
-                                        variant: N,
+                                        variant: T,
                                         color: 'text-muted',
-                                        lineClamp: C,
+                                        lineClamp: O,
                                         text: i
                                     })
                                 }),
                                 _ &&
                                     (0, r.jsx)(f, {
                                         onShowFullDescription: b,
-                                        variant: N
+                                        variant: T
                                     }),
-                                O || null == h || '' === h.name
+                                C || null == h || '' === h.name
                                     ? null
                                     : (0, r.jsxs)(r.Fragment, {
                                           children: [(0, r.jsx)(a.LZC, { size: 16 }), (0, r.jsx)(u.Z, { role: h })]
                                       })
                             ]
                         }),
-                        x
+                        E
                     ]
                 }),
                 (0, r.jsxs)('div', {
@@ -135,7 +135,7 @@ function h(e) {
                             variant: 'text-xxs/normal',
                             color: 'text-normal',
                             className: p.__invalid_productType,
-                            children: E
+                            children: x
                         }),
                         (0, r.jsx)('div', {
                             className: p.productActionButton,

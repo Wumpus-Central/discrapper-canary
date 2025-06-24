@@ -1,4 +1,4 @@
-n.d(t, { w: () => E });
+n.d(t, { w: () => x });
 var r = n(255367),
     i = n(73800),
     l = n(657707),
@@ -15,7 +15,7 @@ var r = n(255367),
     g = n(491350),
     _ = n(492764),
     b = n(235810);
-function E() {
+function x() {
     return (0, p.Z)()
         ? (0, r.jsx)('div', {
               className: g.emptyContainer,

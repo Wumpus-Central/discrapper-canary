@@ -1,14 +1,14 @@
 n.d(t, {
-    DT: () => m,
+    DT: () => R,
     Ef: () => y,
     HO: () => P,
-    NZ: () => D,
-    Pq: () => g,
+    NZ: () => b,
+    Pq: () => C,
     Q1: () => S,
-    RK: () => f,
-    _0: () => A,
-    hz: () => C,
-    yi: () => R
+    RK: () => m,
+    _0: () => f,
+    hz: () => g,
+    yi: () => A
 });
 var r = n(512722),
     i = n.n(r),
@@ -66,7 +66,7 @@ function S(e, t) {
         })
     );
 }
-function A(e, t) {
+function f(e, t) {
     let n = e.getGuildId();
     return (
         i()(null != n, 'This channel cannot be guildless.'),
@@ -81,7 +81,7 @@ function A(e, t) {
         })
     );
 }
-function f(e, t) {
+function m(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = null == e ? void 0 : e.getGuildId();
     i()(null != r, 'This channel cannot be guildless.');
@@ -102,7 +102,7 @@ function f(e, t) {
         })
     );
 }
-function R(e) {
+function A(e) {
     let t = null == e ? void 0 : e.getGuildId();
     return (
         i()(null != t, 'This channel cannot be guildless.'),
@@ -118,7 +118,7 @@ function R(e) {
         })
     );
 }
-function m(e, t, n) {
+function R(e, t, n) {
     let r = e.getGuildId();
     return (
         i()(null != r, 'This channel cannot be guildless.'),
@@ -132,12 +132,12 @@ function m(e, t, n) {
         })
     );
 }
-function C(e, t) {
+function g(e, t) {
     if (null == t || null == e) return;
     let n = t.getGuildId();
     return (
         i()(null != n, 'This channel cannot be guildless.'),
-        m(t, e.id, !0),
+        R(t, e.id, !0),
         o.tn.patch({
             url: p.ANM.UPDATE_VOICE_STATE(n, e.id),
             body: {
@@ -150,7 +150,7 @@ function C(e, t) {
         })
     );
 }
-function g(e, t, n) {
+function C(e, t, n) {
     let r = e.getGuildId();
     i()(null != r, 'Channel cannot be guildless');
     let o = e.permissionOverwrites[r],
@@ -169,11 +169,11 @@ async function P(e, t, n, r) {
     if ('' === t) return;
     u.Z.getVoiceChannelId() !== e.id && (0, E.TM)(e);
     let i = await (0, O.me)(e.id, t, n, r);
-    return f(e, !1, !0), i;
+    return m(e, !1, !0), i;
 }
 async function y(e, t, n) {
     if ('' !== t) return await (0, O.Dk)(e.id, t, n);
 }
-async function D(e) {
+async function b(e) {
     await (0, O.Ix)(e.id);
 }

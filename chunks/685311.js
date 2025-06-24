@@ -1,35 +1,35 @@
-n.d(t, { Z: () => g }), n(35282), n(388685);
+n.d(t, { Z: () => p }), n(35282), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(536285),
+    a = n.n(l),
+    o = n(536285),
     s = n(857458),
     c = n(388905),
     u = n(703656),
     d = n(388032),
     h = n(20493);
-let g = function (e) {
+let p = function (e) {
     let { match: t, location: n, attemptDeepLink: l } = e,
-        [g, p] = i.useState(0);
+        [p, g] = i.useState(0);
     i.useEffect(() => {
-        a.default.once('connected', () => {
-            p(1);
+        o.default.once('connected', () => {
+            g(1);
         }),
-            a.default.once('disconnected', () => {
+            o.default.once('disconnected', () => {
                 (0, u.uL)((0, s.M)());
             }),
-            a.default.connect();
+            o.default.connect();
     }, []),
         i.useEffect(() => {
-            if (0 !== g) return;
+            if (0 !== p) return;
             let e = setTimeout(() => (0, u.uL)((0, s.M)()), 3000);
             return () => clearTimeout(e);
-        }, [g]);
+        }, [p]);
     let m = i.useCallback(
         async (e, t) => {
             try {
-                p(2), await l(e, t), p(3);
+                g(2), await l(e, t), g(3);
             } catch (e) {
                 console.error('Error opening deeplink', e);
             }
@@ -37,7 +37,7 @@ let g = function (e) {
         [l]
     );
     if ((0, u.DB)()) return null;
-    switch (g) {
+    switch (p) {
         case 1:
             return (0, r.jsxs)(c.ZP, {
                 children: [
@@ -52,7 +52,7 @@ let g = function (e) {
                         children: d.intl.string(d.t.UQvCf3)
                     }),
                     (0, r.jsx)(c.zx, {
-                        className: o()(h.marginTop8, h.marginCenterHorz),
+                        className: a()(h.marginTop8, h.marginCenterHorz),
                         color: c.zx.Colors.LINK,
                         look: c.zx.Looks.LINK,
                         onClick: () => (0, u.uL)((0, s.M)()),

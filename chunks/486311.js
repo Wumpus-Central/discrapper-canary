@@ -14,9 +14,9 @@ var r = n(255367),
     g = n(933104),
     m = n(332538),
     b = n(921944),
-    O = n(93841),
-    y = n(388032),
-    _ = n(388298);
+    _ = n(93841),
+    O = n(388032),
+    y = n(388298);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -55,11 +55,11 @@ let C = {
     j = i.memo(function (e) {
         let { guildId: t, selected: l } = e,
             j = (0, m.ZP)(t),
-            S = i.useCallback(() => {
+            E = i.useCallback(() => {
                 var e;
                 (0, h.jd)(t), (0, f.Z)(t, c.Z.GUILD_POWERUPS_CHANNEL_LIST_ROW), null == j || null == (e = j.popout) || e.markAsDismissed(b.L.INDIRECT_ACTION);
             }, [t, j]),
-            x = i.useCallback(() => {
+            S = i.useCallback(() => {
                 var e;
                 switch (null == j || null == (e = j.popout) ? void 0 : e.type) {
                     case p.J.LEVEL_REACHED:
@@ -72,10 +72,10 @@ let C = {
                         return (0, r.jsx)('div', {});
                 }
             }, [t, null == j ? void 0 : j.popout]),
-            E = (0, a.s9z)(a.JQI),
-            P = (0, s.e7)([d.Z], () => d.Z.hasLayers()),
-            [I, N] = i.useState(null),
-            w = null == I ? 'animation' : 'LOOP';
+            x = (0, a.s9z)(a.JQI),
+            I = (0, s.e7)([d.Z], () => d.Z.hasLayers()),
+            [P, N] = i.useState(null),
+            w = null == P ? 'animation' : 'LOOP';
         i.useEffect(() => {
             (null == j ? void 0 : j.popout) == null && N(null);
         }, [null == j ? void 0 : j.popout]);
@@ -85,11 +85,11 @@ let C = {
             T = i.useRef(null);
         return (0, r.jsx)(a.yRy, {
             targetElementRef: T,
-            shouldShow: (null == j ? void 0 : j.popout) != null && !(E || P),
+            shouldShow: (null == j ? void 0 : j.popout) != null && !(x || I),
             nudgeAlignIntoViewport: !0,
             animationPosition: 'bottom',
             position: 'right',
-            renderPopout: x,
+            renderPopout: S,
             children: (e) => {
                 var i, s;
                 return (0, r.jsx)(
@@ -98,7 +98,7 @@ let C = {
                     (s = s =
                         {
                             ref: T,
-                            className: _.container,
+                            className: y.container,
                             id: 'skill-trees-'.concat(t),
                             renderIcon: (e) =>
                                 (0, r.jsx)(a.$Eu, {
@@ -109,10 +109,10 @@ let C = {
                             background:
                                 (null == j ? void 0 : j.popout) != null &&
                                 (0, r.jsx)('div', {
-                                    className: _.lottieContainer,
+                                    className: y.lottieContainer,
                                     children: (0, r.jsx)(a.kci, {
                                         nextScene: w,
-                                        className: _.lottie,
+                                        className: y.lottie,
                                         sceneSegments: C,
                                         importData: () => n.e('50821').then(n.t.bind(n, 548421, 19)),
                                         onScenePlay: Z,
@@ -120,11 +120,11 @@ let C = {
                                     })
                                 }),
                             text: (0, r.jsx)('span', {
-                                className: o()({ [_.textImportant]: (null == j ? void 0 : j.showUnread) === !0 }),
-                                children: y.intl.string(O.default.yv3DJC)
+                                className: o()({ [y.textImportant]: (null == j ? void 0 : j.showUnread) === !0 }),
+                                children: O.intl.string(_.default.yv3DJC)
                             }),
                             selected: l,
-                            onClick: S,
+                            onClick: E,
                             showUnread: (null == j ? void 0 : j.showUnread) === !0,
                             trailing: null == j ? void 0 : j.trailing
                         }),

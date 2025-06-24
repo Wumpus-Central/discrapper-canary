@@ -16,14 +16,14 @@ var r = n(255367),
     _ = n(280306);
 function b(e) {
     let { code: t, message: n, embedUrl: b } = e,
-        [E, y, x] = (0, a.Wu)([f.Z], () => [f.Z.getApplication(t), f.Z.isInvalidApplication(t), f.Z.getApplicationFetchState(t)], [t]),
+        [x, y, E] = (0, a.Wu)([f.Z], () => [f.Z.getApplication(t), f.Z.isInvalidApplication(t), f.Z.getApplicationFetchState(t)], [t]),
         v = (0, a.e7)([d.Z], () => {
             var e;
             return null != (e = d.Z.getGuildId()) ? e : void 0;
         }),
-        [O, C] = i.useState(!1),
+        [C, O] = i.useState(!1),
         j = i.useCallback((e) => {
-            e && C(!0);
+            e && O(!0);
         }, []),
         S = (0, o.O)(j),
         I = i.useCallback(() => {
@@ -39,10 +39,10 @@ function b(e) {
         (0, m.gZ)(t);
     }, [t]),
     i.useEffect(() => {
-        O && x === f.M.FETCHED && I();
-    }, [O, x, I]),
+        C && E === f.M.FETCHED && I();
+    }, [C, E, I]),
     i.useEffect(() => {
-        O &&
+        C &&
             y &&
             p.default.track(h.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
                 device_platform: l.tq ? 'mobile_web' : 'desktop_web',
@@ -50,7 +50,7 @@ function b(e) {
                 guild_id: v,
                 channel_id: n.channel_id
             });
-    }, [O, v, y, n.author.id, n.channel_id]),
+    }, [C, v, y, n.author.id, n.channel_id]),
     y)
         ? (0, r.jsxs)(c.Z, {
               containerRef: S,
@@ -71,13 +71,13 @@ function b(e) {
                   })
               ]
           })
-        : null == E || x === f.M.FETCHING
+        : null == x || E === f.M.FETCHING
           ? (0, r.jsxs)(c.Z, {
                 containerRef: S,
                 children: [(0, r.jsx)(c.Z.Header, { text: g.intl.string(g.t.m9hXGR) }), (0, r.jsx)(c.Z.Body, { resolving: !0 })]
             })
           : (0, r.jsx)(s.O, {
-                app: u.ZP.createFromServer(E),
+                app: u.ZP.createFromServer(x),
                 embedUrl: b,
                 linkType: s.U.APP_DISCOVERY,
                 onView: I

@@ -1,9 +1,9 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var r = n(544891),
     i = n(570140),
     l = n(893776),
-    o = n(899742),
-    a = n(743142),
+    a = n(899742),
+    o = n(743142),
     s = n(117240),
     c = n(626135),
     u = n(317770),
@@ -14,7 +14,7 @@ function h(e, t) {
         handoff_source: t
     });
 }
-class g extends u.Z {
+class p extends u.Z {
     _initialize() {
         i.Z.subscribe('BROWSER_HANDOFF_END', this.handleEnd), i.Z.subscribe('BROWSER_HANDOFF_FROM_APP', this.handleHandoff);
     }
@@ -36,10 +36,10 @@ class g extends u.Z {
                   .then(
                       (e) => {
                           let { body: t } = e;
-                          (0, o.Vb)(t.user), l.Z.loginToken(t.token, !1), h(!0, s);
+                          (0, a.Vb)(t.user), l.Z.loginToken(t.token, !1), h(!0, s);
                       },
                       (e) => {
-                          if ((null != i && h(!1, s), l.Z.setFingerprint(i), (0, o.lx)(), s === a.F.ROLE_SUBSCRIPTION)) {
+                          if ((null != i && h(!1, s), l.Z.setFingerprint(i), (0, a.lx)(), s === o.F.ROLE_SUBSCRIPTION)) {
                               var t;
                               c.default.track(d.rMx.MOBILE_WEB_HANDOFF_FAILURE, {
                                   reason: null != (t = e.message) ? t : e.text,
@@ -49,8 +49,8 @@ class g extends u.Z {
                       }
                   )
             : null != i
-              ? (l.Z.setFingerprint(i), h(!1, s), (0, o.lx)())
-              : (l.Z.setFingerprint(i), (0, o.by)());
+              ? (l.Z.setFingerprint(i), h(!1, s), (0, a.lx)())
+              : (l.Z.setFingerprint(i), (0, a.by)());
     }
     constructor(...e) {
         var t, n;
@@ -66,7 +66,7 @@ class g extends u.Z {
                           fingerprint: n,
                           handoffSource: void 0
                       })
-                    : (l.Z.setFingerprint(null), (0, o.by)());
+                    : (l.Z.setFingerprint(null), (0, a.by)());
             }),
             t in this
                 ? Object.defineProperty(this, t, {
@@ -78,4 +78,4 @@ class g extends u.Z {
                 : (this[t] = n);
     }
 }
-let p = new g();
+let g = new p();

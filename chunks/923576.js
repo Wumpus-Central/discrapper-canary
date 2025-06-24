@@ -9,8 +9,8 @@ var a = n(255367),
     d = n(848572),
     u = n(594174),
     m = n(78839),
-    x = n(709054),
-    p = n(246992),
+    p = n(709054),
+    x = n(246992),
     h = n(981631),
     b = n(474936);
 let f = [
@@ -54,10 +54,10 @@ let f = [
 function v() {
     var e, t;
     let [n, v] = r.useState(!1),
-        g = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
-        j = (0, d.kG)(),
-        _ = (0, l.e7)([m.ZP], () => m.ZP.getPremiumTypeSubscription()),
-        y = null != j && null != (t = null == (e = b.vK[j]) ? void 0 : e.tenureReqNumMonths) ? t : 0,
+        _ = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
+        g = (0, d.kG)(),
+        j = (0, l.e7)([m.ZP], () => m.ZP.getPremiumTypeSubscription()),
+        y = null != g && null != (t = null == (e = b.vK[g]) ? void 0 : e.tenureReqNumMonths) ? t : 0,
         C = r.useCallback(
             async (e) => {
                 let t = new Date();
@@ -65,28 +65,28 @@ function v() {
                 let n = {
                     subscription_status: h.O0b.ACTIVE,
                     endedAt: void 0,
-                    premium_streak_started_at: x.default.fromTimestamp(t.getTime())
+                    premium_streak_started_at: p.default.fromTimestamp(t.getTime())
                 };
                 v(!0),
                     await i.tn.patch({
-                        url: '/debug/subscriptions/'.concat(_.id),
+                        url: '/debug/subscriptions/'.concat(j.id),
                         body: n,
                         rejectWithError: !1
                     }),
-                    await (0, c.In)(g.id),
+                    await (0, c.In)(_.id),
                     await (0, o.jg)(),
                     v(!1);
             },
-            [_, g]
+            [j, _]
         );
-    if (null != g && null != _)
+    if (null != _ && null != j)
         return (0, a.jsx)(s.PhF, {
             isDisabled: n,
             serialize: (e) => ''.concat(e),
             isSelected: (e) => e === y,
             options: f,
             select: C,
-            popoutLayerContext: p.O$,
+            popoutLayerContext: x.O$,
             popoutWidth: 200
         });
 }

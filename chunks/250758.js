@@ -15,9 +15,9 @@ var r,
     g = n(246946),
     _ = n(594174),
     b = n(981631);
-let E = {},
+let x = {},
     y = {};
-function x(e) {
+function E(e) {
     let { searchId: t, query: n, mode: r, tokens: i, cursorScope: l, autocompletes: a } = e,
         o = y[t];
     return (
@@ -46,7 +46,7 @@ function x(e) {
 function v(e, t) {
     let { results: n } = t,
         r = y[e],
-        i = E[e];
+        i = x[e];
     if (null == r || null == i) return;
     let { type: l, filter: a } = i.mode;
     if (l === b.Sap.EMPTY || (l === b.Sap.FILTER && a !== b.dCx.FILTER_FROM && a !== b.dCx.FILTER_MENTIONS)) return;
@@ -73,7 +73,7 @@ function v(e, t) {
     let { query: s, mode: c, tokens: u, cursorScope: d } = i,
         { autocompletes: p } = i;
     (p = j(e, c)),
-        (E[e] = x({
+        (x[e] = E({
             searchId: e,
             query: s,
             mode: c,
@@ -83,7 +83,7 @@ function v(e, t) {
         })),
         P.emitChange();
 }
-function O(e, t, n) {
+function C(e, t, n) {
     var r, i, l;
     let a,
         o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 10;
@@ -126,7 +126,7 @@ function O(e, t, n) {
               results: a
           };
 }
-function C(e) {
+function O(e) {
     let t = (null != e ? e.getFullMatch() : '').trim(),
         n = {
             [b.dCx.FILTER_FROM]: !g.Z.hidePersonalInformation,
@@ -148,7 +148,7 @@ function j(e, t) {
     let n = [];
     return (
         t.type === b.Sap.FILTER
-            ? n.push(O(t.filter, t.token, e, 10))
+            ? n.push(C(t.filter, t.token, e, 10))
             : t.type === b.Sap.FILTER_ALL
               ? (n = (function (e, t) {
                     let n = (null != e ? e.getFullMatch() : '').trim(),
@@ -162,7 +162,7 @@ function j(e, t) {
                                 return g.Z.hidePersonalInformation || (n.push(b.dCx.FILTER_FROM), n.push(b.dCx.FILTER_MENTIONS)), t === b.aib.GUILD && n.push(b.dCx.FILTER_IN), n;
                             })(t).forEach((n) => {
                                 if (null == n) return;
-                                let i = O(n, e, t, 3);
+                                let i = C(n, e, t, 3);
                                 null != i && r.push(i);
                             }),
                             r.push(
@@ -182,12 +182,12 @@ function j(e, t) {
                                     }
                                 })(e, t)
                             )),
-                        5 > (0, p.BU)(r) && r.push(C(e)),
+                        5 > (0, p.BU)(r) && r.push(O(e)),
                         r
                     );
                 })(t.token, e))
               : t.type === b.Sap.EMPTY &&
-                (n.push(C(t.token)),
+                (n.push(O(t.token)),
                 n.push(
                     (function (e) {
                         if (g.Z.hidePersonalInformation) return null;
@@ -207,10 +207,10 @@ function S() {
     (0, p.WU)();
 }
 function I(e) {
-    let t = E[e];
+    let t = x[e];
     if (null == t) return;
     let { query: n, mode: r, tokens: i, cursorScope: l, autocompletes: a } = t;
-    E[e] = x({
+    x[e] = E({
         searchId: e,
         query: n,
         mode: r,
@@ -219,11 +219,11 @@ function I(e) {
         autocompletes: a.map((e) => ((null == e ? void 0 : e.group) === b.rtL.HISTORY ? null : e))
     });
 }
-function N() {
+function T() {
     let e = h.Z.getCurrentSearchId();
-    if (null == e || null == E[e]) return;
-    let { query: t, mode: n, tokens: r, cursorScope: i } = E[e];
-    E[e] = x({
+    if (null == e || null == x[e]) return;
+    let { query: t, mode: n, tokens: r, cursorScope: i } = x[e];
+    x[e] = E({
         searchId: e,
         query: t,
         mode: n,
@@ -232,32 +232,32 @@ function N() {
         autocompletes: j(e, n)
     });
 }
-class T extends (r = a.ZP.Store) {
+class N extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(f.ZP, g.Z);
     }
     getState(e) {
         var t;
-        return null != (t = E[e]) ? t : x({ searchId: e });
+        return null != (t = x[e]) ? t : E({ searchId: e });
     }
 }
 (l = 'SearchAutocompleteStore'),
-    (i = 'displayName') in T
-        ? Object.defineProperty(T, i, {
+    (i = 'displayName') in N
+        ? Object.defineProperty(N, i, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (T[i] = l);
-let P = new T(o.Z, {
+        : (N[i] = l);
+let P = new N(o.Z, {
         SEARCH_AUTOCOMPLETE_QUERY_UPDATE: function (e) {
             var t;
             let n,
                 { searchId: r, tokens: i, cursorScope: l } = e,
                 a = (0, p.cl)(i),
                 o = (0, p.qc)(l, i),
-                s = null != (t = E[r]) ? t : {},
+                s = null != (t = x[r]) ? t : {},
                 c = y[r],
                 u = !0;
             if (a === s.query && (null == s.mode || s.mode.filter === o.filter)) (n = s.autocompletes), (u = !1);
@@ -267,7 +267,7 @@ let P = new T(o.Z, {
                 null != e && e.getFullMatch().trim().length > 0 ? (d.Z.requestMembers(r, e.getFullMatch().trim(), 10), c.context.setQuery(e.getFullMatch().trim(), { guild: r }), (n = s.autocompletes), (u = !1)) : (c.context.clearQuery(), (n = j(r, o)));
             }
             return (
-                (E[r] = x({
+                (x[r] = E({
                     searchId: r,
                     query: a,
                     mode: o,
@@ -281,18 +281,18 @@ let P = new T(o.Z, {
         SEARCH_EDITOR_STATE_CLEAR: function (e) {
             let { searchId: t } = e,
                 n = y[t];
-            null != n && (n.context.destroy(), (n.results = []), delete y[t]), delete E[t];
+            null != n && (n.context.destroy(), (n.results = []), delete y[t]), delete x[t];
         },
         CHANNEL_CREATE: S,
         CHANNEL_DELETE: S,
-        STREAMER_MODE_UPDATE: N,
-        SEARCH_SCREEN_OPEN: N,
+        STREAMER_MODE_UPDATE: T,
+        SEARCH_SCREEN_OPEN: T,
         SEARCH_CLEAR_HISTORY: function (e) {
             let { searchId: t } = e;
-            null != t ? I(t) : Object.keys(E).forEach(I);
+            null != t ? I(t) : Object.keys(x).forEach(I);
         },
         LOGOUT: function () {
-            Object.keys(E).forEach(I);
+            Object.keys(x).forEach(I);
         }
     }),
     A = P;

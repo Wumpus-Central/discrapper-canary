@@ -1,7 +1,7 @@
 n.d(t, {
-    Es: () => c,
+    Es: () => u,
     RM: () => a,
-    VP: () => u,
+    VP: () => c,
     Xb: () => o,
     sm: () => E,
     y0: () => i
@@ -44,13 +44,13 @@ let i = function (e) {
     E = () => {
         l.Z.dispatch({ type: 'WELCOME_SCREEN_SETTINGS_CLEAR' });
     },
-    u = (e) => {
+    c = (e) => {
         l.Z.dispatch({
             type: 'WELCOME_SCREEN_SETTINGS_UPDATE',
             settings: e
         });
     },
-    c = async (e, t) => {
+    u = async (e, t) => {
         l.Z.dispatch({ type: 'WELCOME_SCREEN_SUBMIT' });
         try {
             let n = await r.tn.patch({

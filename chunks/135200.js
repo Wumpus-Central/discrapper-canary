@@ -1,9 +1,9 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => g });
 var r,
     i,
     l,
-    o = n(31775),
-    a = n.n(o),
+    a = n(31775),
+    o = n.n(a),
     s = n(442837),
     c = n(570140),
     u = n(70956);
@@ -13,7 +13,7 @@ let d = {
         rateLimited: !0
     },
     h = {
-        validations: new (a())({
+        validations: new (o())({
             max: 100,
             maxAge: 60000
         }),
@@ -32,7 +32,7 @@ let d = {
             }
         }
     };
-class g extends (l = s.ZP.Store) {
+class p extends (l = s.ZP.Store) {
     isRateLimited() {
         return null != h.retryAfterTime && Date.now() < h.retryAfterTime;
     }
@@ -60,15 +60,15 @@ class g extends (l = s.ZP.Store) {
     }
 }
 (i = 'PomeloStore'),
-    (r = 'displayName') in g
-        ? Object.defineProperty(g, r, {
+    (r = 'displayName') in p
+        ? Object.defineProperty(p, r, {
               value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (g[r] = i);
-let p = new g(c.Z, {
+        : (p[r] = i);
+let g = new p(c.Z, {
     POMELO_ATTEMPT_SUCCESS: function (e) {
         let { username: t, taken: n } = e;
         h.validations.set(t, { taken: n });

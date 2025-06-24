@@ -3,7 +3,6 @@ e.exports = {
     avatar: 'avatar__37e49',
     redIcon: 'redIcon__37e49',
     avatarWrapper: 'avatarWrapper__37e49',
-    experiment: 'experiment__37e49',
     nameTag: 'nameTag__37e49',
     canCopy: 'canCopy__37e49',
     panelTitleContainer: 'panelTitleContainer__37e49',

@@ -7,8 +7,8 @@ var a = n(255367),
     l = n(481060),
     s = n(607070),
     u = n(299206),
-    d = n(868643),
-    p = n(912332),
+    p = n(868643),
+    d = n(912332),
     m = n(296182),
     g = n(850908),
     y = n(695346),
@@ -80,7 +80,7 @@ function M(e, t) {
 function w() {
     (0, l.Mr3)(C.Q);
 }
-let D = r.forwardRef(function (e, t) {
+let I = r.forwardRef(function (e, t) {
     var { onClick: n, tooltipText: r, selected: o, icon: c } = e,
         s = (function (e, t) {
             if (null == e) return {};
@@ -140,9 +140,9 @@ let D = r.forwardRef(function (e, t) {
         }
     });
 });
-function I() {
+function D() {
     let { zoomed: e, setZoomed: t } = (0, v.Y)();
-    return (0, a.jsx)(D, {
+    return (0, a.jsx)(I, {
         onClick: () => {
             (0, S.yg)(e ? S.uG.ZOOM_OUT_BUTTON_PRESSED : S.uG.ZOOM_IN_BUTTON_PRESSED), t(!e);
         },
@@ -158,13 +158,13 @@ function A(e) {
         s = r.useCallback(() => {
             if (null != i && null != c) {
                 if (((0, S.yg)(S.uG.FORWARD_PRESSED), 'embed' === c.type))
-                    return void (0, p.l8)({
+                    return void (0, d.l8)({
                         message: i,
                         source: 'media-viewer',
                         forwardOptions: { onlyEmbedIndices: [c.embedIndex] },
                         onRequestSent: w
                     });
-                (0, p.l8)({
+                (0, d.l8)({
                     message: i,
                     source: 'media-viewer',
                     forwardOptions: { onlyAttachmentIds: [c.attachmentId] },
@@ -172,8 +172,8 @@ function A(e) {
                 });
             }
         }, [i, c]);
-    return null != i && null != c && (0, d.h)(i)
-        ? (0, a.jsx)(D, {
+    return null != i && null != c && (0, p.h)(i)
+        ? (0, a.jsx)(I, {
               onClick: s,
               tooltipText: T.intl.string(T.t.I3ltXF),
               icon: l.WZu
@@ -197,7 +197,7 @@ function L(e) {
             }
         }
     }
-    return (0, a.jsx)(D, {
+    return (0, a.jsx)(I, {
         onClick: c,
         tooltipText: T.intl.string('VIDEO' === t.type ? T.t.JVuuz8 : T.t['S/xNKS']),
         submitting: n,
@@ -209,7 +209,7 @@ function N(e) {
     let { item: n } = e;
     if (!(0, m.Jj)(n.url)) return null;
     let r = (0, m.s$)(null != (t = n.original) ? t : n.url, n.contentType);
-    return (0, a.jsx)(D, {
+    return (0, a.jsx)(I, {
         onClick: () => {
             (0, S.yg)(S.uG.OPEN_LINK_PRESSED), (0, O.q)({ href: r });
         },
@@ -220,9 +220,9 @@ function N(e) {
 function R(e) {
     var t, n;
     let { item: r, canCopyImage: o, canCopyLink: i, onClose: c, onSelect: s } = e,
-        d = (null == (n = r.sourceMetadata) || null == (t = n.identifier) ? void 0 : t.type) === 'attachment' ? r.sourceMetadata.identifier.attachmentId : null,
-        p = (0, u.Z)({
-            id: d,
+        p = (null == (n = r.sourceMetadata) || null == (t = n.identifier) ? void 0 : t.type) === 'attachment' ? r.sourceMetadata.identifier.attachmentId : null,
+        d = (0, u.Z)({
+            id: p,
             label: T.intl.string(T.t.nwg3lZ)
         }),
         y = (function (e) {
@@ -232,20 +232,20 @@ function R(e) {
                 s = k(T.intl.string(T.t['3Nf9u7']), 'size'),
                 u = k(T.intl.string(T.t.eOB2eX), 'alt', { subtextLineClamp: 2 });
             if ((null == r || null == (t = r.identifier) ? void 0 : t.type) !== 'attachment') return null;
-            let d = (0, g.Z)(r.identifier),
-                p = (0, b.BU)(r.identifier.size / 1000);
+            let p = (0, g.Z)(r.identifier),
+                d = (0, b.BU)(r.identifier.size / 1000);
             return (0, a.jsxs)(
                 l.sNh,
                 {
                     id: 'media-viewer-details',
                     label: T.intl.string(T.t.sqBLa2),
                     children: [
-                        c(d),
+                        c(p),
                         s(
                             T.intl.formatToPlainString(T.t.DTdonJ, {
                                 width: o,
                                 height: i,
-                                fileSize: p
+                                fileSize: d
                             })
                         ),
                         u(n)
@@ -301,7 +301,7 @@ function R(e) {
                 ]
             }),
             y,
-            p
+            d
         ]
     });
 }
@@ -338,9 +338,9 @@ function Z(e) {
         i = r.useRef(null),
         [c, s] = r.useState(!1),
         u = y.Sb.useSetting(),
-        d = 'IMAGE' === o.type && null == o.children && !o.animated && (0, m.Lz)(o.url, o.contentType),
-        p = (0, m.Jj)(o.url);
-    return u || d || p || (null == (n = o.sourceMetadata) || null == (t = n.identifier) ? void 0 : t.type) === 'attachment'
+        p = 'IMAGE' === o.type && null == o.children && !o.animated && (0, m.Lz)(o.url, o.contentType),
+        d = (0, m.Jj)(o.url);
+    return u || p || d || (null == (n = o.sourceMetadata) || null == (t = n.identifier) ? void 0 : t.type) === 'attachment'
         ? (0, a.jsx)(l.yRy, {
               targetElementRef: i,
               shouldShow: c,
@@ -352,13 +352,13 @@ function Z(e) {
               renderPopout: () =>
                   (0, a.jsx)(R, {
                       item: o,
-                      canCopyImage: d,
-                      canCopyLink: p,
+                      canCopyImage: p,
+                      canCopyLink: d,
                       onClose: () => s(!1)
                   }),
               children: (e) => {
                   let { onClick: t } = e;
-                  return (0, a.jsx)(D, {
+                  return (0, a.jsx)(I, {
                       ref: i,
                       tooltipText: T.intl.string(T.t.UKOtz8),
                       onClick: () => {
@@ -390,7 +390,7 @@ let B = r.memo(function (e) {
                     onClick: (e) => e.stopPropagation(),
                     onMouseLeave: u,
                     children: [
-                        'IMAGE' === t.type && (0, a.jsx)(I, {}),
+                        'IMAGE' === t.type && (0, a.jsx)(D, {}),
                         !n &&
                             (0, a.jsxs)(a.Fragment, {
                                 children: [(0, a.jsx)(A, { item: t }), (0, a.jsx)(L, { item: t }), (0, a.jsx)(N, { item: t }), (0, a.jsx)(Z, { item: t })]

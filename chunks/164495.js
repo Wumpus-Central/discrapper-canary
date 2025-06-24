@@ -1,5 +1,5 @@
 n.d(t, {
-    i0: () => E,
+    i0: () => P,
     yD: () => T
 });
 var r = n(255367),
@@ -114,7 +114,7 @@ let C = (e) => {
               })
             : null;
     },
-    E = (e) => {
+    P = (e) => {
         var t,
             n,
             o,
@@ -142,8 +142,8 @@ let C = (e) => {
                 quest: d,
                 location: C
             }),
-            E = (0, g.up)(b.dr.QUESTS_BAR),
-            P = s.useCallback(
+            P = (0, g.up)(b.dr.QUESTS_BAR),
+            E = s.useCallback(
                 (e) => {
                     var t;
                     null == O || O(e),
@@ -164,14 +164,14 @@ let C = (e) => {
                 {
                     fullWidth: !0,
                     size: i.zxk.Sizes.SMALL,
-                    onClick: P,
+                    onClick: E,
                     pauseAnimation: u || !p,
                     className: a()(_.cta, h),
                     buttonShineClassName: _.shine
                 },
                 w
             )),
-            (n = n = { children: null != v ? v : E }),
+            (n = n = { children: null != v ? v : P }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                 : (function (e, t) {
@@ -187,14 +187,14 @@ let C = (e) => {
             t)
         );
     },
-    P = (e) => {
+    E = (e) => {
         var t;
         let { quest: n, useReducedMotion: s, isExpanded: o, awaitingConsoleConnections: a, hasMadeProgress: i, isProgressing: l, activeScreen: c, taskDetails: d } = e,
             u = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
             p = (0, f.q8)(n),
             g = (0, f.Vl)(n);
         if (u)
-            return (0, r.jsx)(E, {
+            return (0, r.jsx)(P, {
                 quest: n,
                 useReducedMotion: s,
                 isExpanded: o
@@ -224,7 +224,7 @@ function T(e) {
                     onClick: e.onBack,
                     children: (0, r.jsx)(i.V7D, { className: _.backIcon })
                 }),
-            (0, r.jsx)(P, y({}, e))
+            (0, r.jsx)(E, y({}, e))
         ]
     });
 }

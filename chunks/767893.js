@@ -26,11 +26,11 @@ function b(e) {
         children: (0, r.jsxs)('div', {
             className: g.channelHeader,
             'data-recents-channel': t.id,
-            children: [(0, r.jsx)(E, { channel: t }), t.isPrivate() ? null : (0, r.jsx)(o.Fbu, { size: 'xxs' }), (0, r.jsx)(y, { channel: t }), n]
+            children: [(0, r.jsx)(x, { channel: t }), t.isPrivate() ? null : (0, r.jsx)(o.Fbu, { size: 'xxs' }), (0, r.jsx)(y, { channel: t }), n]
         })
     });
 }
-function E(e) {
+function x(e) {
     let { channel: t } = e,
         n = (0, s.e7)([f.Z], () => f.Z.getGuild(t.guild_id));
     return null != n

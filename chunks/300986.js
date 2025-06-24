@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -10,24 +10,24 @@ var i = n(442837),
     u = n(63063),
     d = n(51144),
     p = n(665149),
-    m = n(981631),
+    h = n(981631),
     f = n(388032);
-let h = new Set(['ko', 'ja']);
-function g(e) {
+let g = new Set(['ko', 'ja']);
+function m(e) {
     let { className: t } = e,
         n = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
-        g = (0, i.e7)([o.default], () => o.default.locale),
-        _ = (0, d.EO)(n);
+        m = (0, i.e7)([o.default], () => o.default.locale),
+        b = (0, d.EO)(n);
     return (0, r.jsx)(a.eee, {
         href: u.w,
         target: '_blank',
         tabIndex: -1,
         children: (0, r.jsx)(p.JO, {
-            color: _ ? l.Z.unsafe_rawColors.GREEN_360.css : 'currentColor',
+            color: b ? l.Z.unsafe_rawColors.GREEN_360.css : 'currentColor',
             className: t,
-            onClick: () => c.default.track(m.rMx.HELP_CLICKED, { highlighted: _ }),
+            onClick: () => c.default.track(h.rMx.HELP_CLICKED, { highlighted: b }),
             icon: a.idN,
-            tooltipPosition: h.has(g) ? 'left' : void 0,
+            tooltipPosition: g.has(m) ? 'left' : void 0,
             tooltip: f.intl.string(f.t.cqEoj4)
         })
     });

@@ -1,7 +1,7 @@
 n.d(t, {
     ZP: () => v,
-    jd: () => y,
-    wt: () => _
+    jd: () => O,
+    wt: () => y
 }),
     n(361932),
     n(187205),
@@ -23,9 +23,9 @@ var r,
     g = n(771845),
     m = n(9156),
     b = n(709054),
-    O = n(982183),
-    y = (((r = {}).Loading = 'loading'), (r.Loaded = 'loaded'), (r.Done = 'done'), r);
-function _() {
+    _ = n(982183),
+    O = (((r = {}).Loading = 'loading'), (r.Loaded = 'loaded'), (r.Done = 'done'), r);
+function y() {
     let e = (0, o.Wu)([g.ZP], () => g.ZP.getFlattenedGuildIds()),
         t = (0, o.Wu)([h.ZP], () => e.flatMap((e) => h.ZP.getSelectableChannelIds(e)), [e]),
         n = (0, o.cj)([u.Z], () => u.Z.getAllActiveJoinedThreads());
@@ -49,7 +49,7 @@ function _() {
                 .sort((e, t) => b.default.compare(f.ZP.lastMessageId(t), f.ZP.lastMessageId(e)))
                 .filter((e) => {
                     let t = f.ZP.lastMessageId(e);
-                    return null == t || b.default.age(t) < O.ib;
+                    return null == t || b.default.age(t) < _.ib;
                 });
         },
         [t, n]
@@ -58,7 +58,7 @@ function _() {
 function v() {
     let [e, t] = i.useState(!1),
         [n, r] = i.useState('loading'),
-        l = _(),
+        l = y(),
         u = (0, o.Wu)([p.Z], () => (0, c.K)(l.map((e) => p.Z.getMessages(e))), [l]),
         d = i.useCallback(
             async (e) => {

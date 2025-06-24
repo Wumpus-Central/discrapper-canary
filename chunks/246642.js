@@ -1,30 +1,30 @@
-n.d(t, { Z: () => u });
-var r = n(255367);
-n(73800);
-var i = n(481060),
-    a = n(44315),
-    o = n(641033),
-    s = n(989830),
-    l = n(388032),
-    c = n(931251);
-function u(e) {
-    let { channelId: t } = e,
-        n = (0, s.Z)(t);
-    if (!(null != n && (n.value > 0 || (null == n ? void 0 : n.multiplier) > 1))) return null;
-    let { multiplier: u } = n,
-        { color: d } = (0, o.yz)(u);
-    return (0, r.jsxs)('div', {
-        className: c.container,
+i.d(e, { Z: () => u });
+var n = i(255367);
+i(73800);
+var r = i(481060),
+    s = i(44315),
+    o = i(641033),
+    l = i(989830),
+    a = i(388032),
+    d = i(931251);
+function u(t) {
+    let { channelId: e } = t,
+        i = (0, l.Z)(e);
+    if (!(null != i && (i.value > 0 || (null == i ? void 0 : i.multiplier) > 1))) return null;
+    let { multiplier: u } = i,
+        { color: c } = (0, o.yz)(u);
+    return (0, n.jsxs)('div', {
+        className: d.container,
         children: [
-            (0, r.jsx)(i.Text, {
+            (0, n.jsx)(r.Text, {
                 variant: 'text-xs/normal',
-                children: l.intl.string(l.t.Jr2519)
+                children: a.intl.string(a.t.Jr2519)
             }),
-            (0, r.jsx)(i.Exd, {
-                foregroundColor: (0, a.Lq)(d),
-                className: c.progress,
-                size: i.Exd.Sizes.LARGE,
-                percent: 100 * (0, o.nc)(n),
+            (0, n.jsx)(r.Exd, {
+                foregroundColor: (0, s.Lq)(c),
+                className: d.progress,
+                size: r.Exd.Sizes.LARGE,
+                percent: 100 * (0, o.nc)(i),
                 animate: !0
             })
         ]

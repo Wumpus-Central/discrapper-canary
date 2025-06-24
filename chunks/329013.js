@@ -1,6 +1,6 @@
 n.d(t, {
-    g: () => Z,
-    i: () => R
+    g: () => D,
+    i: () => P
 });
 var i = n(255367),
     r = n(73800),
@@ -16,41 +16,39 @@ var i = n(255367),
     p = n(514361),
     h = n(705262),
     f = n(550385),
-    b = n(540059),
-    _ = n(605236),
-    x = n(104494),
-    E = n(639119),
-    j = n(767714),
-    C = n(165583),
-    O = n(504983),
-    S = n(626135),
-    v = n(210887),
-    T = n(981631),
-    I = n(921944),
-    N = n(474936),
-    y = n(388032),
-    A = n(967655);
-let P = () => {
-        (0, _.EW)(l.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
-            dismissAction: I.L.PRIMARY,
+    b = n(605236),
+    _ = n(104494),
+    x = n(639119),
+    E = n(767714),
+    j = n(165583),
+    C = n(504983),
+    O = n(626135),
+    S = n(210887),
+    v = n(981631),
+    T = n(921944),
+    I = n(474936),
+    N = n(388032),
+    y = n(967655);
+let A = () => {
+        (0, b.EW)(l.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
+            dismissAction: T.L.PRIMARY,
             forceTrack: !0
         }),
             (0, f.XO)(f.wh.CLIENT_THEMES),
             (0, c.xf)();
     },
-    R = () => {
+    P = () => {
         var e, t;
         let { analyticsLocations: n } = (0, g.ZP)(m.Z.USER_SETTINGS),
             l = (0, s.e7)([p.Z], () => p.Z.isPreview),
-            a = (null == (t = (0, E.N)()) || null == (e = t.subscription_trial) ? void 0 : e.sku_id) === N.Si.TIER_2,
-            c = (0, x.Ng)(),
-            d = (0, x.Wp)(c, N.Si.TIER_2),
-            u = (0, b.Q3)('UserSettingsAppearanceClientThemes');
+            a = (null == (t = (0, x.N)()) || null == (e = t.subscription_trial) ? void 0 : e.sku_id) === I.Si.TIER_2,
+            c = (0, _.Ng)(),
+            d = (0, _.Wp)(c, I.Si.TIER_2);
         return (
             r.useEffect(() => {
                 l &&
-                    S.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
-                        type: N.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
+                    O.default.track(v.rMx.PREMIUM_UPSELL_VIEWED, {
+                        type: I.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                         location_stack: n
                     });
             }, [l, n]),
@@ -59,12 +57,12 @@ let P = () => {
                     (0, i.jsxs)(h.ZP, {
                         type: h.yH.SETTINGS,
                         children: [
-                            (0, i.jsx)(h.ZP.Basic, { className: A.basicThemeSelectors }),
-                            u && (0, i.jsx)(D, {}),
-                            (0, i.jsxs)(O.Z, {
-                                className: A.featureBorder,
+                            (0, i.jsx)(h.ZP.Basic, { className: y.basicThemeSelectors }),
+                            (0, i.jsx)(R, {}),
+                            (0, i.jsxs)(C.Z, {
+                                className: y.featureBorder,
                                 isShown: l,
-                                type: O.Y.PREMIUM,
+                                type: C.Y.PREMIUM,
                                 children: [
                                     (0, i.jsx)(h.ZP.Gradient, {
                                         disabled: l,
@@ -72,19 +70,19 @@ let P = () => {
                                             !l || a
                                                 ? null
                                                 : (0, i.jsxs)('div', {
-                                                      className: A.tryItOutButtons,
+                                                      className: y.tryItOutButtons,
                                                       children: [
                                                           (0, i.jsx)(o.zxk, {
                                                               size: o.zxk.Sizes.MEDIUM,
                                                               color: o.zxk.Colors.PRIMARY,
-                                                              onClick: () => P(),
-                                                              children: y.intl.string(y.t['E+COuL'])
+                                                              onClick: () => A(),
+                                                              children: N.intl.string(N.t['E+COuL'])
                                                           }),
-                                                          (0, i.jsx)(j.Z, {
+                                                          (0, i.jsx)(E.Z, {
                                                               showGradient: !1,
-                                                              subscriptionTier: N.Si.TIER_2,
-                                                              textOptions: { textOverride: d ? y.intl.formatToPlainString(y.t.bkQ4bG, { percent: null == c ? void 0 : c.discount.amount }) : y.intl.string(y.t.mr4K7O) },
-                                                              className: A.premiumCta
+                                                              subscriptionTier: I.Si.TIER_2,
+                                                              textOptions: { textOverride: d ? N.intl.formatToPlainString(N.t.bkQ4bG, { percent: null == c ? void 0 : c.discount.amount }) : N.intl.string(N.t.mr4K7O) },
+                                                              className: y.premiumCta
                                                           })
                                                       ]
                                                   })
@@ -94,15 +92,15 @@ let P = () => {
                                         (0, i.jsxs)('div', {
                                             children: [
                                                 (0, i.jsx)(o.zxk, {
-                                                    className: A.previewThemeButtonWide,
+                                                    className: y.previewThemeButtonWide,
                                                     color: o.zxk.Colors.PRIMARY,
-                                                    onClick: () => P(),
-                                                    children: y.intl.string(y.t['E+COuL'])
+                                                    onClick: () => A(),
+                                                    children: N.intl.string(N.t['E+COuL'])
                                                 }),
-                                                (0, i.jsx)('div', { className: A.premiumTier2Divider }),
-                                                (0, i.jsx)(C.ZP, {
-                                                    type: N.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL,
-                                                    subscriptionTier: N.Si.TIER_2
+                                                (0, i.jsx)('div', { className: y.premiumTier2Divider }),
+                                                (0, i.jsx)(j.ZP, {
+                                                    type: I.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL,
+                                                    subscriptionTier: I.Si.TIER_2
                                                 })
                                             ]
                                         })
@@ -110,45 +108,42 @@ let P = () => {
                             })
                         ]
                     }),
-                    (0, i.jsx)(o.$i$, { className: A.divider })
+                    (0, i.jsx)(o.$i$, { className: y.divider })
                 ]
             })
         );
     };
-function D() {
+function R() {
     let {
         theme: e,
         useForcedColors: t,
         gradientPreset: n,
         darkSidebar: r
-    } = (0, s.cj)([v.Z, u.Z, p.Z], () => ({
-        theme: v.Z.theme,
+    } = (0, s.cj)([S.Z, u.Z, p.Z], () => ({
+        theme: S.Z.theme,
         useForcedColors: u.Z.useForcedColors,
-        darkSidebar: v.Z.darkSidebar,
+        darkSidebar: S.Z.darkSidebar,
         gradientPreset: p.Z.gradientPreset
     }));
-    return e !== T.BRd.LIGHT
+    return e !== v.BRd.LIGHT
         ? null
         : (0, i.jsx)(o.j7V, {
               hideBorder: !0,
               value: r && (0, a.ap)(e) && !t,
-              disabled: e !== T.BRd.LIGHT || t || null != n,
+              disabled: e !== v.BRd.LIGHT || t || null != n,
               onChange: d.lq,
-              className: A.darkSidebarToggle,
+              className: y.darkSidebarToggle,
               children: (0, i.jsx)('span', {
-                  className: A.title,
-                  children: y.intl.string(y.t.yF54Ki)
+                  className: y.title,
+                  children: N.intl.string(N.t.yF54Ki)
               })
           });
 }
-let Z = () => {
-    let e = (0, s.e7)([p.Z], () => p.Z.isPreview),
-        t = (0, b.Q3)('ClientThemesSidebarButton');
-    return e
+let D = () =>
+    (0, s.e7)([p.Z], () => p.Z.isPreview)
         ? null
         : (0, i.jsx)(o.zxk, {
-              size: t ? o.PhG.MEDIUM : o.PhG.SMALL,
-              onClick: P,
-              children: y.intl.string(y.t.qYXrkZ)
+              size: o.PhG.MEDIUM,
+              onClick: A,
+              children: N.intl.string(N.t.qYXrkZ)
           });
-};

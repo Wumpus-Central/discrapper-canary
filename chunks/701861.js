@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(51144),
     b = n(298213),
     _ = n(321488),
-    E = n(417183),
-    O = n(825682),
+    O = n(417183),
+    E = n(825682),
     y = n(170245),
     I = n(981631),
     v = n(65154),
@@ -117,22 +117,22 @@ function j(e) {
             );
         }, [h, l, t]),
         _ = (0, o.e7)([f.Z], () => f.Z.supports(v.AN.VIDEO)),
-        E = t.isProvisional,
-        O = l ? C.intl.string(C.t['RLcE6+']) : C.intl.string(C.t.cvSt1N);
+        O = t.isProvisional,
+        E = l ? C.intl.string(C.t['RLcE6+']) : C.intl.string(C.t.cvSt1N);
     return (0, r.jsxs)(s.v2r, {
         navId: 'friend-row',
         'aria-label': C.intl.string(C.t.liqwPD),
         onClose: u.Zy,
         onSelect: a,
         children: [
-            !E && _
+            !O && _
                 ? (0, r.jsx)(s.sNh, {
                       id: 'start-video-call',
                       label: C.intl.string(C.t.oCqlGB),
                       action: p
                   })
                 : null,
-            !E &&
+            !O &&
                 (0, r.jsx)(s.sNh, {
                     id: 'start-voice-call',
                     label: C.intl.string(C.t.focH1t),
@@ -140,7 +140,7 @@ function j(e) {
                 }),
             (0, r.jsx)(s.sNh, {
                 id: 'remove-friend',
-                label: O,
+                label: E,
                 action: g,
                 color: 'danger'
             })
@@ -157,7 +157,7 @@ class A extends i.PureComponent {
     render() {
         let { user: e, isFocused: t, activities: n, applicationStream: i, status: l, isMobile: a, isGameRelationship: o, giftIntentType: c } = this.props,
             { isActiveRow: p } = this.state;
-        return (0, r.jsx)(E.Z, {
+        return (0, r.jsx)(O.Z, {
             ref: this.peopleListItemRef,
             isFocused: t,
             isActive: p,
@@ -172,7 +172,7 @@ class A extends i.PureComponent {
                             user: e,
                             status: l,
                             isMobile: a,
-                            subText: (0, r.jsx)(O.Z, {
+                            subText: (0, r.jsx)(E.Z, {
                                 hovered: t,
                                 activities: n,
                                 applicationStream: i,

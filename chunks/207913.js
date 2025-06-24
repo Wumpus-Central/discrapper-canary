@@ -14,17 +14,17 @@ var r = n(255367),
     g = n(933557),
     m = n(471445),
     b = n(111028),
-    O = n(978003),
-    y = n(245216),
-    _ = n(172751),
+    _ = n(978003),
+    O = n(245216),
+    y = n(172751),
     v = n(739566),
     C = n(930282),
     j = n(318713),
-    S = n(47930),
-    x = n(123145),
-    E = n(25015),
-    P = n(178480),
-    I = n(703656),
+    E = n(47930),
+    S = n(123145),
+    x = n(25015),
+    I = n(178480),
+    P = n(703656),
     N = n(518950),
     w = n(592125),
     Z = n(720202),
@@ -83,19 +83,19 @@ function B(e) {
         h = (0, m.KS)(n, null),
         p = (0, g.ZP)(n, !1),
         f = (0, c.e7)([T.Z], () => T.Z.getGuild(n.getGuildId())),
-        { nick: O, colorString: y, primaryGuild: C } = (0, v.ZP)(t),
+        { nick: _, colorString: O, primaryGuild: C } = (0, v.ZP)(t),
         {
             avatarDecorationSrc: j,
-            avatarSrc: E,
-            eventHandlers: P
+            avatarSrc: x,
+            eventHandlers: I
         } = (0, N.Z)({
             user: t.author,
             size: u.EFr.SIZE_32,
             guildId: null == f ? void 0 : f.id,
             animateOnHover: !0
         }),
-        I = n.type !== L.d4z.GUILD_ANNOUNCEMENT || null == f,
-        w = (0, S.x)({
+        P = n.type !== L.d4z.GUILD_ANNOUNCEMENT || null == f,
+        w = (0, E.x)({
             channel: n,
             message: t,
             user: t.author,
@@ -105,7 +105,7 @@ function B(e) {
         A = (0, r.jsxs)('div', {
             className: k.usernameTagContainer,
             children: [
-                (0, r.jsx)(x.Z, {
+                (0, r.jsx)(S.Z, {
                     channel: n,
                     message: t,
                     hideGuildTag: !0,
@@ -113,7 +113,7 @@ function B(e) {
                     className: k.username
                 }),
                 null != C &&
-                    (0, r.jsx)(_.ZP, {
+                    (0, r.jsx)(y.ZP, {
                         primaryGuild: C,
                         userId: t.author.id,
                         inline: !0,
@@ -130,8 +130,8 @@ function B(e) {
             u.tEY,
             G(U({}, l), {
                 children: (0, r.jsxs)('div', {
-                    onMouseLeave: P.onMouseLeave,
-                    onMouseEnter: P.onMouseEnter,
+                    onMouseLeave: I.onMouseLeave,
+                    onMouseEnter: I.onMouseEnter,
                     className: k.messageContainer,
                     children: [
                         a && (0, r.jsx)('div', { className: k.unreadDot }),
@@ -141,10 +141,10 @@ function B(e) {
                                 width: 'fit-content',
                                 marginTop: '4px'
                             },
-                            children: I
+                            children: P
                                 ? (0, r.jsx)(D.q, {
                                       'aria-label': 'User Avatar',
-                                      src: E,
+                                      src: x,
                                       size: u.EFr.SIZE_32,
                                       cornerIconUrl: null != f ? f.getIconURL(24) : void 0,
                                       cornerIconOffsetX: 4,
@@ -173,13 +173,13 @@ function B(e) {
                                         justifyContent: 'space-between'
                                     },
                                     children: [
-                                        I
+                                        P
                                             ? (0, r.jsxs)('div', {
                                                   className: k.usernameOuterContainer,
                                                   children: [
                                                       (0, r.jsx)('div', {
                                                           className: k.username,
-                                                          style: { color: y },
+                                                          style: { color: O },
                                                           children: (0, r.jsx)(b.Z, { children: A })
                                                       }),
                                                       w
@@ -188,7 +188,7 @@ function B(e) {
                                             : (0, r.jsx)(b.Z, {
                                                   children: (0, r.jsx)(u.X6q, {
                                                       variant: 'text-md/semibold',
-                                                      style: { color: y },
+                                                      style: { color: O },
                                                       className: k.username,
                                                       children: f.name
                                                   })
@@ -204,7 +204,7 @@ function B(e) {
                                                     channel: n,
                                                     isUnread: a
                                                 }),
-                                                (0, r.jsx)(H, { message: t })
+                                                (0, r.jsx)(V, { message: t })
                                             ]
                                         })
                                     ]
@@ -230,11 +230,11 @@ function B(e) {
                                                 [k.unread]: a,
                                                 [k.selected]: s
                                             }),
-                                            children: [p, !I && ' \xB7 '.concat(O)]
+                                            children: [p, !P && ' \xB7 '.concat(_)]
                                         })
                                     ]
                                 }),
-                                (0, r.jsx)(F, {
+                                (0, r.jsx)(H, {
                                     message: t,
                                     isUnread: a,
                                     isSelected: s,
@@ -244,7 +244,7 @@ function B(e) {
                                     (0, r.jsx)(u.Kqy, {
                                         gap: 4,
                                         style: { minWidth: 0 },
-                                        children: (null == d ? void 0 : d.length) > 0 && (0, r.jsx)(V, { overflowMessages: d })
+                                        children: (null == d ? void 0 : d.length) > 0 && (0, r.jsx)(F, { overflowMessages: d })
                                     })
                             ]
                         })
@@ -254,7 +254,7 @@ function B(e) {
         )
     );
 }
-function V(e) {
+function F(e) {
     let { overflowMessages: t } = e,
         n = (0, s.uniqBy)(
             t.map((e) => e.author),
@@ -277,9 +277,9 @@ function V(e) {
         ]
     });
 }
-function H(e) {
+function V(e) {
     let { message: t } = e,
-        n = (0, P.a3)(t.timestamp.getTime());
+        n = (0, I.a3)(t.timestamp.getTime());
     return (0, r.jsx)(j.Z, {
         timestamp: t.timestamp,
         className: k.timestamp,
@@ -288,11 +288,11 @@ function H(e) {
         children: n
     });
 }
-function F(e) {
+function H(e) {
     let { message: t, channel: n, isUnread: l, isSelected: s } = e,
         { previewContent: a, Icon: c } = (function (e) {
             let { message: t, isUnread: n, isSelected: l } = e,
-                { content: s } = (0, E.Z)(t, {
+                { content: s } = (0, x.Z)(t, {
                     hideSimpleEmbedContent: !0,
                     allowList: !1,
                     allowHeading: !0,
@@ -308,25 +308,25 @@ function F(e) {
                         let t = e.embeds.some((e) => e.type === L.hBH.GIFV);
                         return e.attachments.length + +!!t;
                     })(t),
-                    c = (0, O.Z)(t),
+                    c = (0, _.Z)(t),
                     d = t.stickerItems.length > 0,
                     h = t.isPoll(),
                     p = t.type === L.uaV.POLL_RESULT,
                     f = t.hasFlag(L.iLy.IS_VOICE_MESSAGE),
                     g = t.type === L.uaV.USER_JOIN,
                     m = null;
-                1 === a ? (m = u.XBm) : a > 1 ? (m = u.Ka2) : c ? (m = y.Z) : h || p ? (m = u.QDj) : d ? (m = u.SlE) : f && (m = u.gj8);
+                1 === a ? (m = u.XBm) : a > 1 ? (m = u.Ka2) : c ? (m = O.Z) : h || p ? (m = u.QDj) : d ? (m = u.SlE) : f && (m = u.gj8);
                 let b = !0,
-                    _ = null;
+                    y = null;
                 if (e)
-                    if (c) _ = M.intl.string(M.t['9ddYKi']);
+                    if (c) y = M.intl.string(M.t['9ddYKi']);
                     else if (h) {
                         var v;
-                        (b = !1), (_ = null == (v = t.poll) ? void 0 : v.question.text);
-                    } else _ = p ? M.intl.string(M.t.sad2PD) : i ? M.intl.string(M.t.p0oZm5) : a > 1 ? M.intl.formatToPlainString(M.t.rtfTKi, { count: a }) : 1 === a ? M.intl.string(M.t.tCcq5u) : d ? M.intl.format(M.t.zY4v1N, { stickerName: t.stickerItems[0].name }) : f ? M.intl.string(M.t.slFYgo) : g ? M.intl.string(M.t.Yvvfw8) : M.intl.string(M.t.sDqZHB);
+                        (b = !1), (y = null == (v = t.poll) ? void 0 : v.question.text);
+                    } else y = p ? M.intl.string(M.t.sad2PD) : i ? M.intl.string(M.t.p0oZm5) : a > 1 ? M.intl.formatToPlainString(M.t.rtfTKi, { count: a }) : 1 === a ? M.intl.string(M.t.tCcq5u) : d ? M.intl.format(M.t.zY4v1N, { stickerName: t.stickerItems[0].name }) : f ? M.intl.string(M.t.slFYgo) : g ? M.intl.string(M.t.Yvvfw8) : M.intl.string(M.t.sDqZHB);
                 else
                     (b = !1),
-                        (_ = (0, r.jsx)(C.ZP, {
+                        (y = (0, r.jsx)(C.ZP, {
                             content: s,
                             message: t,
                             compact: !1,
@@ -337,16 +337,16 @@ function F(e) {
                         }));
                 return (
                     e &&
-                        (_ = (0, r.jsx)('div', {
+                        (y = (0, r.jsx)('div', {
                             className: o()(k.message, {
                                 [k.unread]: n,
                                 [k.selected]: l,
                                 [k.descriptionMessage]: b
                             }),
-                            children: _
+                            children: y
                         })),
                     {
-                        previewContent: _,
+                        previewContent: y,
                         Icon: m
                     }
                 );
@@ -404,7 +404,7 @@ let z = (0, i.memo)(
                                   t.id
                               );
                       let e = i ? L.Z5c.NOTIFICATIONS_INBOX(g.id, t.id) : L.Z5c.CHANNEL(g.guild_id, g.id, t.id);
-                      (0, I.uL)(e);
+                      (0, P.uL)(e);
                   },
                   onContextMenuCapture: (e) => {
                       e.preventDefault();

@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(351780),
     _ = n(843693),
     y = n(641033),
-    C = n(989830),
-    x = n(388032),
+    x = n(989830),
+    C = n(388032),
     v = n(837265);
 let j = i.memo(function (e) {
         let { channelId: t, width: n } = e,
@@ -78,7 +78,7 @@ let j = i.memo(function (e) {
                             className: v.comboMultiplier,
                             style: { color: u },
                             variant: 'text-sm/bold',
-                            children: x.intl.format(x.t['6bgVlp'], { multiplier: n })
+                            children: C.intl.format(C.t['6bgVlp'], { multiplier: n })
                         }),
                         o &&
                             (0, r.jsxs)(r.Fragment, {
@@ -116,7 +116,7 @@ let j = i.memo(function (e) {
                             (0, r.jsx)(c.Text, {
                                 className: v.tip,
                                 variant: 'text-sm/bold',
-                                children: x.intl.string(x.t.b5Cpoa)
+                                children: C.intl.string(C.t.b5Cpoa)
                             })
                     ]
                 })
@@ -131,7 +131,7 @@ let j = i.memo(function (e) {
             d = (0, s.e7)([_.ZP], () => _.ZP.isComboing(n, t), [t, n]),
             { ref: p, width: m = 0 } = (0, u.ZP)(),
             [g, y] = i.useState(!1),
-            x = (0, C.Z)(t),
+            C = (0, x.Z)(t),
             E = a && d && l;
         i.useEffect(() => {
             E && y(!0);
@@ -144,26 +144,26 @@ let j = i.memo(function (e) {
                 pointerEvents: 'none',
                 config: o.config.stiff
             }),
-            P = i.useMemo(
+            S = i.useMemo(
                 () =>
-                    null != x
-                        ? x
+                    null != C
+                        ? C
                         : {
                               value: 0,
                               multiplier: 1
                           },
-                [x]
+                [C]
             ),
-            S = i.useRef(P);
+            P = i.useRef(S);
         i.useEffect(() => {
-            (P.multiplier > 1 || P.value > 0) && (S.current = P);
-        }, [P]);
+            (S.multiplier > 1 || S.value > 0) && (P.current = S);
+        }, [S]);
         let { multiplier: Z, value: N } = i.useMemo(
             () => ({
-                value: E ? P.value : S.current.value,
-                multiplier: E ? P.multiplier : S.current.multiplier
+                value: E ? S.value : P.current.value,
+                multiplier: E ? S.multiplier : P.current.multiplier
             }),
-            [E, P, S]
+            [E, S, P]
         );
         return (0, r.jsxs)(r.Fragment, {
             children: [

@@ -16,19 +16,19 @@ var r = n(255367),
     b = n(271383),
     _ = n(594174),
     y = n(189432),
-    C = n(356778),
-    x = n(370595),
+    x = n(356778),
+    C = n(370595),
     v = n(50493),
     j = n(12740),
     O = n(450355);
 function E(e) {
     var t, n;
-    let { userId: l, guildId: E, location: I, className: P, onNavigate: S } = e,
+    let { userId: l, guildId: E, location: I, className: S, onNavigate: P } = e,
         Z = i.useRef(null),
         N = (0, s.e7)([g.ZP], () => g.ZP.getGuildSidebarState(E), [E]),
         T = i.useRef(0),
         [A, w] = i.useState(null != (t = null == N ? void 0 : N.details.additionalSearchQuery) ? t : {}),
-        R = (0, C.z0)(l, E, {
+        R = (0, x.z0)(l, E, {
             addtionalQuery: A,
             shouldDispatch: !0
         }),
@@ -45,7 +45,7 @@ function E(e) {
                 });
         }
     });
-    let L = i.useCallback(
+    let D = i.useCallback(
             (e) => {
                 null != N &&
                     ((T.current = e.target.scrollTop),
@@ -57,7 +57,7 @@ function E(e) {
             },
             [E, l, N, A]
         ),
-        D = (0, o.throttle)(L, 300),
+        L = (0, o.throttle)(D, 300),
         U = i.useCallback(
             (e) => {
                 var t, n;
@@ -173,17 +173,17 @@ function E(e) {
     return null == M || null == k || null == G
         ? null
         : (0, r.jsxs)('div', {
-              className: a()(j.container, P),
+              className: a()(j.container, S),
               children: [
-                  (0, r.jsx)(x.Z, {
+                  (0, r.jsx)(C.Z, {
                       guildId: E,
                       userId: l,
-                      onNavigate: S
+                      onNavigate: P
                   }),
                   (0, r.jsx)(c.Den, {
                       className: O.innerContainer,
                       ref: Z,
-                      onScroll: D,
+                      onScroll: L,
                       children: (0, r.jsx)(m.Z, {
                           searchResults: F,
                           search: G,

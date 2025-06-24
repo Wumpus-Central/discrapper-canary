@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => I,
-    j: () => E
+    Z: () => O,
+    j: () => g
 });
 var r = n(255367),
     i = n(73800),
@@ -9,11 +9,10 @@ var r = n(255367),
     s = n(524979),
     l = n(481060),
     c = n(686546),
-    u = n(540059),
-    d = n(855981),
-    f = n(55543),
-    _ = n(504684);
-function p(e, t, n) {
+    u = n(855981),
+    d = n(55543),
+    f = n(504684);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +25,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,12 +36,12 @@ function h(e) {
                 })
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,23 +53,22 @@ function m(e, t) {
     }
     return n;
 }
-function g(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-var E = (function (e) {
+var g = (function (e) {
     return (e[(e.UPDATE = 0)] = 'UPDATE'), (e[(e.NEW = 1)] = 'NEW'), e;
 })({});
-let b = 24,
-    y = 20,
-    O = {
+let E = 20,
+    b = {
         config: {
             friction: 26,
             tension: 700,
@@ -93,24 +91,23 @@ let b = 24,
             opacity: 0
         }
     };
-function v(e) {
-    let { className: t, disabled: n = !1, innerClassName: i, childClassName: a, iconClassName: p, icon: m, children: E, onClick: v, isActive: I, onMouseEnter: T, onMouseLeave: S, onFocus: A, onBlur: N, pulse: C, sparkle: R, notification: P, 'aria-label': w, 'aria-expanded': D, 'aria-haspopup': L, 'aria-controls': x, noHover: k } = e,
-        M = (0, u.Q3)('ChannelTextAreaButton'),
-        j = (0, l.Yzy)(null != E, g(h({}, O), { keys: (e) => (e ? 'children' : 'icon') })),
-        U = (e) => {
+function y(e) {
+    let { className: t, disabled: n = !1, innerClassName: i, childClassName: a, iconClassName: _, icon: h, children: g, onClick: y, isActive: O, onMouseEnter: v, onMouseLeave: I, onFocus: T, onBlur: S, pulse: A, sparkle: N, notification: C, 'aria-label': R, 'aria-expanded': P, 'aria-haspopup': w, 'aria-controls': D, noHover: L } = e,
+        x = (0, l.Yzy)(null != g, m(p({}, b), { keys: (e) => (e ? 'children' : 'icon') })),
+        k = (e) => {
             let { component: t } = e;
-            return null != P
+            return null != C
                 ? (0, r.jsxs)('div', {
-                      className: _.buttonContent,
+                      className: f.buttonContent,
                       children: [
                           (0, r.jsx)(c.ZP, {
-                              className: _.iconMask,
+                              className: f.iconMask,
                               mask: c.QS.CHAT_INPUT_BUTTON_NOTIFICATION,
-                              width: M ? y : b,
-                              height: M ? y : b,
+                              width: E,
+                              height: E,
                               children: t
                           }),
-                          (0, r.jsx)('span', { className: _.notificationDot })
+                          (0, r.jsx)('span', { className: f.notificationDot })
                       ]
                   })
                 : t;
@@ -118,21 +115,21 @@ function v(e) {
     return (0, r.jsxs)(l.zxk, {
         look: l.zxk.Looks.BLANK,
         size: l.zxk.Sizes.NONE,
-        'aria-label': w,
-        'aria-expanded': D,
-        'aria-haspopup': L,
-        'aria-controls': x,
+        'aria-label': R,
+        'aria-expanded': P,
+        'aria-haspopup': w,
+        'aria-controls': D,
         disabled: n,
-        className: o()(t, { [_.active]: I }),
-        innerClassName: o()(_.button, i, {
-            [_.pulseButton]: C,
-            [_.noHover]: k
+        className: o()(t, { [f.active]: O }),
+        innerClassName: o()(f.button, i, {
+            [f.pulseButton]: A,
+            [f.noHover]: L
         }),
-        onClick: v,
-        onMouseEnter: T,
-        onMouseLeave: S,
-        onFocus: A,
-        onBlur: N,
+        onClick: y,
+        onMouseEnter: v,
+        onMouseLeave: I,
+        onFocus: T,
+        onBlur: S,
         focusProps: {
             offset: {
                 top: 4,
@@ -140,27 +137,27 @@ function v(e) {
             }
         },
         children: [
-            j((e, t, n) => {
+            x((e, t, n) => {
                 let { key: i } = n;
                 return t
                     ? (0, r.jsx)(
                           s.animated.div,
                           {
                               style: e,
-                              className: o()(_.buttonWrapper, a),
-                              children: U({ component: E })
+                              className: o()(f.buttonWrapper, a),
+                              children: k({ component: g })
                           },
                           i
                       )
-                    : null != m
+                    : null != h
                       ? (0, r.jsx)(
                             s.animated.div,
                             {
                                 style: e,
-                                className: o()(_.buttonWrapper, a),
-                                children: U({
-                                    component: (0, r.jsx)(m, {
-                                        className: o()(_.icon, p, { [_.pulseIcon]: C }),
+                                className: o()(f.buttonWrapper, a),
+                                children: k({
+                                    component: (0, r.jsx)(h, {
+                                        className: o()(f.icon, _, { [f.pulseIcon]: A }),
                                         color: 'currentColor'
                                     })
                                 })
@@ -169,12 +166,12 @@ function v(e) {
                         )
                       : void 0;
             }),
-            R &&
+            N &&
                 (0, r.jsxs)('div', {
-                    className: _.sparkleContainer,
-                    children: [(0, r.jsx)(f.Z, { className: _.sparkleStar }), (0, r.jsx)(d.Z, { className: _.sparklePlus })]
+                    className: f.sparkleContainer,
+                    children: [(0, r.jsx)(d.Z, { className: f.sparkleStar }), (0, r.jsx)(u.Z, { className: f.sparklePlus })]
                 })
         ]
     });
 }
-let I = i.memo(v);
+let O = i.memo(y);

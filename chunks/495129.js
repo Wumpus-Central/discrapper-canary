@@ -1,4 +1,4 @@
-n.d(t, { H: () => O }), n(35282);
+n.d(t, { H: () => C }), n(35282);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -16,12 +16,12 @@ var i = n(120356),
     g = n(430824),
     _ = n(594174),
     b = n(938475),
-    E = n(5192),
+    x = n(5192),
     y = n(981631),
-    x = n(388032),
+    E = n(388032),
     v = n(653072);
-function O(e) {
-    var t, n, i, O, C, j, S, I, N, T;
+function C(e) {
+    var t, n, i, C, O, j, S, I, T, N;
     let { message: P, channel: A } = e,
         w =
             null == (i = P.embeds[0]) ||
@@ -35,29 +35,29 @@ function O(e) {
                 : t.rawValue,
         Z =
             null == (j = P.embeds[0]) ||
-            null == (C = j.fields) ||
+            null == (O = j.fields) ||
             null ==
-                (O = C.find((e) => {
+                (C = O.find((e) => {
                     let { rawName: t } = e;
                     return 'channel_id' === t;
                 }))
                 ? void 0
-                : O.rawValue,
+                : C.rawValue,
         R = (0, a.e7)([g.Z], () => g.Z.getGuild(w)),
         k = (0, a.e7)([h.Z], () => h.Z.getChannel(Z)),
-        D = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
-        M = (0, a.e7)([], () => P.author.id === (null == D ? void 0 : D.id)),
-        L = null == (S = A.recipients) ? void 0 : S.find((e) => e !== P.author.id),
-        U = (0, a.e7)([_.default], () => (null != L ? _.default.getUser(L) : null)),
+        L = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
+        D = (0, a.e7)([], () => P.author.id === (null == L ? void 0 : L.id)),
+        M = null == (S = A.recipients) ? void 0 : S.find((e) => e !== P.author.id),
+        U = (0, a.e7)([_.default], () => (null != M ? _.default.getUser(M) : null)),
         F = (0, d.ZP)(P),
-        B = (0, E._T)(A.getGuildId(), A.id, U),
+        B = (0, x._T)(A.getGuildId(), A.id, U),
         G = (0, a.Wu)([b.ZP], () => (null != k ? b.ZP.getVoiceStatesForChannel(k) : []), [k]),
-        H = G.some((e) => e.user.id === (null == D ? void 0 : D.id)),
+        H = G.some((e) => e.user.id === (null == L ? void 0 : L.id)),
         V =
-            null == (T = P.embeds[0]) ||
-            null == (N = T.fields) ||
+            null == (N = P.embeds[0]) ||
+            null == (T = N.fields) ||
             null ==
-                (I = N.find((e) => {
+                (I = T.find((e) => {
                     let { rawName: t } = e;
                     return 'voice_user_ids' === t;
                 }))
@@ -65,11 +65,11 @@ function O(e) {
                 : I.rawValue,
         z = null != V ? V.split(',') : [],
         W = (0, a.Wu)([_.default], () => z.map((e) => _.default.getUser(e)).filter(Boolean)),
-        K = M && null != U ? x.intl.formatToPlainString(x.t['er/cHx'], { username: B }) : x.intl.formatToPlainString(x.t.noNjkZ, { username: F.nick }),
+        K = D && null != U ? E.intl.formatToPlainString(E.t['er/cHx'], { username: B }) : E.intl.formatToPlainString(E.t.noNjkZ, { username: F.nick }),
         Y = null != R && null != k,
-        X = null;
-    (X = Y ? (M || H ? x.intl.format(x.t.CaLQqK, { channelHook: (e, t) => (0, r.jsx)(p.Z, { channel: null != k ? k : void 0 }, t) }) : x.intl.format(x.t.VugXpK, { channelHook: (e, t) => (0, r.jsx)(p.Z, { channel: null != k ? k : void 0 }, t) })) : x.intl.string(x.t['tHT/Vl'])), 0 === G.length && (X = M ? x.intl.string(x.t.IE2uZW) : x.intl.string(x.t.QVhmGx));
-    let q = M ? x.intl.string(x.t['00XIbm']) : x.intl.string(x.t['7CrE9/']);
+        q = null;
+    (q = Y ? (D || H ? E.intl.format(E.t.CaLQqK, { channelHook: (e, t) => (0, r.jsx)(p.Z, { channel: null != k ? k : void 0 }, t) }) : E.intl.format(E.t.VugXpK, { channelHook: (e, t) => (0, r.jsx)(p.Z, { channel: null != k ? k : void 0 }, t) })) : E.intl.string(E.t['tHT/Vl'])), 0 === G.length && (q = D ? E.intl.string(E.t.IE2uZW) : E.intl.string(E.t.QVhmGx));
+    let X = D ? E.intl.string(E.t['00XIbm']) : E.intl.string(E.t['7CrE9/']);
     return (0, r.jsxs)('div', {
         children: [
             (0, r.jsxs)('div', {
@@ -83,7 +83,7 @@ function O(e) {
                     (0, r.jsx)(o.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        children: X
+                        children: q
                     }),
                     G.length > 0
                         ? (0, r.jsx)('div', {
@@ -130,7 +130,7 @@ function O(e) {
                                 size: 'md',
                                 color: 'currentColor'
                             }),
-                            x.intl.string(x.t.zIeJq6)
+                            E.intl.string(E.t.zIeJq6)
                         ]
                     }),
                     (0, r.jsx)(o.zxk, {
@@ -139,7 +139,7 @@ function O(e) {
                             s.Z.sendMessage(A.id, u.ZP.parse(A, '\uD83D\uDC4B'));
                         },
                         className: v.button,
-                        children: q
+                        children: X
                     })
                 ]
             })

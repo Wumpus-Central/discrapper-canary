@@ -5,22 +5,20 @@ var i = e(255367),
     a = e.n(s),
     r = e(481060),
     d = e(600164),
-    c = e(540059),
-    o = e(539379),
-    C = e(109983),
+    c = e(539379),
+    o = e(109983),
     m = e(834891),
-    p = e(388032),
-    u = e(867562);
-function L(t) {
+    C = e(388032),
+    p = e(867562);
+function u(t) {
     let { guildTemplate: n, onClick: e, autoFocus: s } = t,
-        a = (0, c.Q3)('GuildTemplatesItem'),
-        r = l.useCallback(() => {
+        a = l.useCallback(() => {
             e(n);
         }, [n, e]);
-    return (0, i.jsx)(C.Z, {
-        icon: a ? o.U[n.id] : o.M[n.id],
+    return (0, i.jsx)(o.Z, {
+        icon: c.U[n.id],
         message: n.label,
-        onClick: r,
+        onClick: a,
         autoFocus: s
     });
 }
@@ -31,63 +29,63 @@ function _(t) {
         children: [
             (0, i.jsxs)(r.xBx, {
                 direction: d.Z.Direction.VERTICAL,
-                className: u.header,
+                className: p.header,
                 separator: !1,
                 children: [
                     (0, i.jsx)(r.X6q, {
-                        className: u.title,
+                        className: p.title,
                         variant: 'heading-xl/semibold',
-                        children: e ? p.intl.string(p.t['9U0b1t']) : p.intl.string(p.t['5HZu09'])
+                        children: e ? C.intl.string(C.t['9U0b1t']) : C.intl.string(C.t['5HZu09'])
                     }),
                     (0, i.jsx)(r.Text, {
-                        className: u.subtitle,
+                        className: p.subtitle,
                         color: 'header-secondary',
                         variant: 'text-md/normal',
-                        children: p.intl.string(p.t['wti/Hx'])
+                        children: C.intl.string(C.t['wti/Hx'])
                     }),
                     null != l &&
                         (0, i.jsx)(r.olH, {
-                            className: u.closeButton,
+                            className: p.closeButton,
                             onClick: l
                         })
                 ]
             }),
             (0, i.jsxs)(r.hzk, {
-                className: a()(u.templatesList, n),
+                className: a()(p.templatesList, n),
                 paddingFix: !1,
                 children: [
-                    (0, i.jsx)(L, {
+                    (0, i.jsx)(u, {
                         guildTemplate: o[m.l.CREATE],
                         onClick: s,
                         autoFocus: !0
                     }),
                     (0, i.jsx)(r.Text, {
-                        className: u.optionHeader,
+                        className: p.optionHeader,
                         color: 'header-secondary',
                         variant: 'text-xs/bold',
-                        children: p.intl.string(p.t.JGDkfn)
+                        children: C.intl.string(C.t.JGDkfn)
                     }),
-                    (0, i.jsx)(L, {
+                    (0, i.jsx)(u, {
                         guildTemplate: o[m.l.GAMING],
                         onClick: s
                     }),
-                    (0, i.jsx)(L, {
+                    (0, i.jsx)(u, {
                         guildTemplate: o[m.l.FRIENDS],
                         onClick: s
                     }),
-                    (0, i.jsx)(L, {
+                    (0, i.jsx)(u, {
                         guildTemplate: o[m.l.STUDY],
                         onClick: s
                     }),
-                    (0, i.jsx)(L, {
+                    (0, i.jsx)(u, {
                         guildTemplate: o[m.l.SCHOOL_CLUB],
                         onClick: s
                     }),
-                    (0, i.jsx)(L, {
+                    (0, i.jsx)(u, {
                         guildTemplate: o[m.l.LOCAL_COMMUNITY],
                         onClick: s
                     }),
-                    (0, i.jsx)(L, {
+                    (0, i.jsx)(u, {
                         guildTemplate: o[m.l.CREATORS],
                         onClick: s
                     })
@@ -95,18 +93,18 @@ function _(t) {
             }),
             null != c &&
                 (0, i.jsxs)(r.mzw, {
-                    className: u.footer,
+                    className: p.footer,
                     children: [
                         (0, i.jsx)(r.X6q, {
                             variant: 'heading-lg/semibold',
-                            className: u.footerTitle,
-                            children: p.intl.string(p.t['N+Mi/f'])
+                            className: p.footerTitle,
+                            children: C.intl.string(C.t['N+Mi/f'])
                         }),
                         (0, i.jsx)(r.zxk, {
-                            className: u.footerButton,
+                            className: p.footerButton,
                             color: r.zxk.Colors.PRIMARY,
                             onClick: c,
-                            children: p.intl.string(p.t.riOUtL)
+                            children: C.intl.string(C.t.riOUtL)
                         })
                     ]
                 })

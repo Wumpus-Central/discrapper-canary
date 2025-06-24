@@ -1,4 +1,4 @@
-n.d(t, { V: () => y }), n(388685);
+n.d(t, { V: () => O }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -26,17 +26,17 @@ function b(e) {
         })
     });
 }
-function O(e) {
+function _(e) {
     var t;
     let { onClick: n } = e,
         h = (0, l.e7)([s.Z], () => s.Z.getFakeGameData()),
         p = (0, l.e7)([u.ZP], () => u.ZP.getVisibleGame()),
         b = null != (t = null == h ? void 0 : h.start) ? t : null == p ? void 0 : p.start,
-        O = d.SE.useSetting().length > 0,
-        { now: y } = (0, a.tS)(),
-        _ = (0, i.useMemo)(() => (null == b ? null : (0, c.T_)({ start: b }, y)), [b, y]);
+        _ = d.SE.useSetting().length > 0,
+        { now: O } = (0, a.tS)(),
+        y = (0, i.useMemo)(() => (null == b ? null : (0, c.T_)({ start: b }, O)), [b, O]);
     if (null == b) return null;
-    let v = [...(O ? [g.intl.string(f.default.jfDsyM)] : []), g.intl.string(g.t.BMTj29), _];
+    let v = [...(_ ? [g.intl.string(f.default.jfDsyM)] : []), g.intl.string(g.t.BMTj29), y];
     return (0, r.jsx)(o.P3F, {
         className: m.container,
         onClick: n,
@@ -49,10 +49,10 @@ function O(e) {
         })
     });
 }
-function y(e) {
+function O(e) {
     let { onClick: t } = e,
         { isEnabled: n, showActivitySharingIndicatorWhenSharing: i } = (0, p.D)('not sharing link'),
         s = d.G6.useSetting(),
         a = (0, l.e7)([h.Z], () => h.Z.getStatus());
-    return !n || __OVERLAY__ ? null : s && a !== o.Skl.INVISIBLE ? (i ? (0, r.jsx)(O, { onClick: t }) : null) : (0, r.jsx)(b, { onClick: t });
+    return !n || __OVERLAY__ ? null : s && a !== o.Skl.INVISIBLE ? (i ? (0, r.jsx)(_, { onClick: t }) : null) : (0, r.jsx)(b, { onClick: t });
 }

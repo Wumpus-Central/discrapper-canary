@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => C });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -15,83 +15,83 @@ var r = n(255367),
     g = n(151480),
     _ = n(680783),
     b = n(66420),
-    E = n(981631),
+    x = n(981631),
     y = n(474936),
-    x = n(388032),
+    E = n(388032),
     v = n(510064);
-function O(e) {
-    var t, n, O, C;
+function C(e) {
+    var t, n, C, O;
     let j,
         S,
         I,
-        { message: N, channel: T, compact: P } = e,
-        A = null == (t = N.chatWallpaperInfo) ? void 0 : t.wallpaperId,
+        { message: T, channel: N, compact: P } = e,
+        A = null == (t = T.chatWallpaperInfo) ? void 0 : t.wallpaperId,
         { enabled: w } = (0, m.sX)({ location: 'ChatWallpaperSetSystemMessage' }),
         Z = m.qM.useExperiment({ location: 'ChatWallpaperSetSystemMessage' }).lightMode,
-        R = (0, s.ZP)(N),
+        R = (0, s.ZP)(T),
         k = (0, a.wjy)((0, o.ZP)()),
         {
-            chatWallpaper: D,
-            isUpdatingChatWallpaperFlag: M,
-            lastSetMessageId: L
+            chatWallpaper: L,
+            isUpdatingChatWallpaperFlag: D,
+            lastSetMessageId: M
         } = (0, l.cj)([f.Z], () => ({
             chatWallpaper: f.Z.getWallpaperById(A),
-            isUpdatingChatWallpaperFlag: f.Z.isUpdatingChatWallpaperFlagForChannel(T.id),
-            lastSetMessageId: f.Z.getLastSetWallpaperMessageIdForChannel(T.id)
+            isUpdatingChatWallpaperFlag: f.Z.isUpdatingChatWallpaperFlagForChannel(N.id),
+            lastSetMessageId: f.Z.getLastSetWallpaperMessageIdForChannel(N.id)
         })),
-        U = (0, _.Z)(T.id),
-        F = L === N.id,
+        U = (0, _.Z)(N.id),
+        F = M === T.id,
         B = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
-        G = (null == B ? void 0 : B.id) === N.author.id,
+        G = (null == B ? void 0 : B.id) === T.author.id,
         H = (0, c.m)(y.p9.TIER_2),
-        V = h.t(T);
+        V = h.t(N);
     return (i.useEffect(() => {
-        null == D && f.Z.shouldFetchWallpapers && g.k9();
-    }, [D]),
+        null == L && f.Z.shouldFetchWallpapers && g.k9();
+    }, [L]),
     null == A)
         ? null
         : ((j = G
-              ? x.intl.format(x.t.z847Tk, { wallpaper_name: null != (n = null == D ? void 0 : D.label) ? n : x.intl.string(x.t['UQMV/P']) })
-              : x.intl.format(x.t['+lKndX'], {
+              ? E.intl.format(E.t.z847Tk, { wallpaper_name: null != (n = null == L ? void 0 : L.label) ? n : E.intl.string(E.t['UQMV/P']) })
+              : E.intl.format(E.t['+lKndX'], {
                     username: null == R ? void 0 : R.nick,
-                    wallpaper_name: null != (O = null == D ? void 0 : D.label) ? O : x.intl.string(x.t['UQMV/P'])
+                    wallpaper_name: null != (C = null == L ? void 0 : L.label) ? C : E.intl.string(E.t['UQMV/P'])
                 })),
           w
               ? k || Z
                   ? V && F
-                      ? (S = x.intl.formatToPlainString(x.t.PzTpVV, { wallpaperName: null != (C = null == D ? void 0 : D.label) ? C : x.intl.string(x.t['UQMV/P']) }))
+                      ? (S = E.intl.formatToPlainString(E.t.PzTpVV, { wallpaperName: null != (O = null == L ? void 0 : L.label) ? O : E.intl.string(E.t['UQMV/P']) }))
                       : G ||
                         H ||
                         !F ||
-                        (S = x.intl.format(x.t.JwUhHh, {
+                        (S = E.intl.format(E.t.JwUhHh, {
                             onClickNitro: () => {
-                                (0, u.uL)(E.Z5c.NITRO_HOME);
+                                (0, u.uL)(x.Z5c.NITRO_HOME);
                             }
                         }))
-                  : (S = x.intl.format(x.t.dBxFsL, { learnMoreLink: p.Z.getArticleURL(E.BhN.DM_WALLPAPERS) }))
-              : (S = x.intl.string(x.t['6JSOu7'])),
+                  : (S = E.intl.format(E.t.dBxFsL, { learnMoreLink: p.Z.getArticleURL(x.BhN.DM_WALLPAPERS) }))
+              : (S = E.intl.string(E.t['6JSOu7'])),
           (null == U ? void 0 : U.isViewable) &&
               F &&
               !G &&
               (I = (0, r.jsx)(a.zxk, {
                   className: v.action,
                   onClick: () => {
-                      g.X(T, A, {
+                      g.X(N, A, {
                           shouldClear: !V,
                           onError: () => {
-                              (0, a.showToast)((0, a.createToast)(x.intl.string(x.t.F8FvU1), a.ToastType.FAILURE));
+                              (0, a.showToast)((0, a.createToast)(E.intl.string(E.t.F8FvU1), a.ToastType.FAILURE));
                           }
                       });
                   },
-                  submitting: M,
-                  children: x.intl.string(V ? x.t.o6850d : x.t['/ubFp6'])
+                  submitting: D,
+                  children: E.intl.string(V ? E.t.o6850d : E.t['/ubFp6'])
               })),
           (0, r.jsx)(b.Z, {
-              channel: T,
+              channel: N,
               content: j,
               subtitle: S,
               action: I,
               compact: P,
-              message: N
+              message: T
           }));
 }

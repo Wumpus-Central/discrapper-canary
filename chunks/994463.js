@@ -18,7 +18,7 @@ function E(e, t, n) {
         e
     );
 }
-function u(e) {
+function c(e) {
     let t = (e) =>
         e.interpolate({
             inputRange: [0, 1],
@@ -28,7 +28,7 @@ function u(e) {
         transform: [{ translateX: t(e.x) }, { translateY: t(e.y) }]
     };
 }
-class c extends l.Component {
+class u extends l.Component {
     componentDidMount() {
         this._isMounted = !0;
         let { x: e, y: t } = this.state;
@@ -84,7 +84,7 @@ class c extends l.Component {
                                             id: 'search-index-foreground-mask-b',
                                             fill: '#fff',
                                             children: (0, r.jsx)(a.Z.use, {
-                                                style: u(this.state),
+                                                style: c(this.state),
                                                 className: o.mask,
                                                 xlinkHref: '#search-index-foreground-mask-a'
                                             })
@@ -411,7 +411,7 @@ class c extends l.Component {
                                 }),
                                 (0, r.jsxs)(a.Z.g, {
                                     className: o.magnifyingGlass,
-                                    style: u(this.state),
+                                    style: c(this.state),
                                     children: [
                                         (0, r.jsx)('path', {
                                             fill: '#C9D2F0',
@@ -473,4 +473,4 @@ class c extends l.Component {
             E(this, 'shouldLoop', () => this._isMounted);
     }
 }
-let _ = c;
+let _ = u;

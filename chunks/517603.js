@@ -6,7 +6,6 @@ e.exports = {
     profile: 'profile__9c3be',
     profileHeader: 'profileHeader__9c3be',
     profileBody: 'profileBody__9c3be',
-    profileOverlay: 'profileOverlay__9c3be',
     profileBanner: 'profileBanner__9c3be',
     profileButtons: 'profileButtons__9c3be',
     profileRolesSection: 'profileRolesSection__9c3be',

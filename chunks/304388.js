@@ -65,27 +65,27 @@ function d(e) {
 }
 let p = i.forwardRef(function (e, t) {
     let { renderPopout: n, popoutTargetRef: p, children: h, align: f = 'left', isPopoutBlocked: m, onPopoutOpen: g, onPopoutClose: b, onRequestClose: _ } = e,
-        [y, C] = i.useState(!1),
-        { isHovered: x, setIsHovered: v, onMouseEnter: j, onMouseLeave: O, cancelTimers: E } = (0, o.Z)(200, 300);
+        [y, x] = i.useState(!1),
+        { isHovered: C, setIsHovered: v, onMouseEnter: j, onMouseLeave: O, cancelTimers: E } = (0, o.Z)(200, 300);
     function I(e) {
         'focus' === e.type || y || j();
     }
-    function P() {
+    function S() {
         y || O();
     }
-    function S(e) {
-        E(), C(!y), y ? null == b || b() : null == g || g(), (!x || y) && e();
+    function P(e) {
+        E(), x(!y), y ? null == b || b() : null == g || g(), (!C || y) && e();
     }
     i.useImperativeHandle(
         t,
         () => ({
             hidePopout() {
-                v(!1), C(!1);
+                v(!1), x(!1);
             }
         }),
-        [v, C]
+        [v, x]
     );
-    let Z = (x && !m) || y;
+    let Z = (C && !m) || y;
     return (0, r.jsx)(a.yRy, {
         targetElementRef: p,
         animation: a.yRy.Animation.FADE,
@@ -96,7 +96,7 @@ let p = i.forwardRef(function (e, t) {
         spacing: 16,
         onRequestClose: () => {
             if ((null == _ ? void 0 : _()) === l.F) return l.F;
-            v(!1), C(!1), null == b || b();
+            v(!1), x(!1), null == b || b();
         },
         renderPopout: (e) =>
             (0, r.jsx)(
@@ -104,9 +104,9 @@ let p = i.forwardRef(function (e, t) {
                 u(
                     {
                         isHovered: Z,
-                        onFocus: () => C(!0),
+                        onFocus: () => x(!0),
                         onMouseEnter: j,
-                        onMouseLeave: P,
+                        onMouseLeave: S,
                         renderPopout: n
                     },
                     e
@@ -116,13 +116,13 @@ let p = i.forwardRef(function (e, t) {
             let { onClick: t, onKeyDown: n } = e;
             return (0, r.jsx)(r.Fragment, {
                 children: h({
-                    onClick: (e) => S(() => t(e)),
+                    onClick: (e) => P(() => t(e)),
                     onKeyDown: (e) => {
-                        (e.key === s.vn.ENTER || e.key === s.vn.SPACE) && S(() => n(e));
+                        (e.key === s.vn.ENTER || e.key === s.vn.SPACE) && P(() => n(e));
                     },
                     className: c.actionBarButton,
                     onMouseEnter: I,
-                    onMouseLeave: P,
+                    onMouseLeave: S,
                     isActive: y
                 })
             });

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g }), n(388685);
 var r = n(255367),
-    o = n(73800),
-    l = n(120356),
-    i = n.n(l),
+    l = n(73800),
+    o = n(120356),
+    i = n.n(o),
     s = n(573385),
     a = n(481060),
     c = n(606318),
@@ -55,7 +55,7 @@ let g = function (e) {
     var {
             className: t,
             compact: n = !1,
-            contentOnly: l = !1,
+            contentOnly: o = !1,
             zalgo: g = !0,
             preview: f = !1,
             disableInteraction: b = !1,
@@ -76,42 +76,42 @@ let g = function (e) {
             hasThread: S,
             isSystemMessage: N,
             hasReply: E,
-            author: T,
-            onMouseEnter: R,
-            onMouseLeave: Z
+            author: Z,
+            onMouseEnter: T,
+            onMouseLeave: R
         } = e,
         _ = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                o = (function (e, t) {
+                l = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        o = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
-                    return o;
+                        l = {},
+                        o = Object.keys(e);
+                    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                    return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
+                var o = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
             }
-            return o;
+            return l;
         })(e, ['className', 'compact', 'contentOnly', 'zalgo', 'preview', 'disableInteraction', 'childrenRepliedMessage', 'childrenExecutedCommand', 'childrenHeader', 'childrenSystemMessage', 'childrenButtons', 'childrenMessageContent', 'childrenAccessories', 'messageRef', 'focusProps', 'hasThread', 'isSystemMessage', 'hasReply', 'author', 'onMouseEnter', 'onMouseLeave']);
-    let k = (0, u.Z)(null == T ? void 0 : T.guildId, 'BaseMessage') && (0, c.S2)(T),
-        [I, M] = o.useState(!1),
-        D = o.useCallback(
+    let k = (0, u.Z)(null == Z ? void 0 : Z.guildId, 'BaseMessage') && (0, c.S2)(Z),
+        [I, M] = l.useState(!1),
+        D = l.useCallback(
             (e) => {
-                M(!0), null == R || R(e);
+                M(!0), null == T || T(e);
+            },
+            [T]
+        ),
+        A = l.useCallback(
+            (e) => {
+                M(!1), null == R || R(e);
             },
             [R]
-        ),
-        A = o.useCallback(
-            (e) => {
-                M(!1), null == Z || Z(e);
-            },
-            [Z]
         ),
         L = (0, r.jsx)(s.d.Provider, {
             value: {
@@ -129,7 +129,7 @@ let g = function (e) {
                                     className: i()(t, {
                                         [d.gradient]: k,
                                         [d.wrapper]: !0,
-                                        [d.contentOnly]: l,
+                                        [d.contentOnly]: o,
                                         [d.compact]: n,
                                         [d.preview]: f,
                                         [d.cozy]: !n,

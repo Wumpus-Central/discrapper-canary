@@ -17,14 +17,14 @@ function j(e) {
     let { isEmptyBecauseQuery: t, closePopout: n } = e,
         a = (0, o.e7)([u.ZP], () => u.ZP.getKeybindForAction(m.kg4.SAVE_CLIP)),
         j = (0, o.e7)([p.Z], () => p.Z.getSettings().clipsEnabled),
-        h = t ? g.noSearchResultsImage : g.noClipsImage,
-        y = l.useCallback(() => {
+        y = t ? g.noSearchResultsImage : g.noClipsImage,
+        h = l.useCallback(() => {
             n(), (0, c.Z)(f.Z.CLIPS);
         }, [n]),
         x = (() => {
-            if (!j) return b.intl.format(b.t['3iveam'], { onClick: y });
+            if (!j) return b.intl.format(b.t['3iveam'], { onClick: h });
             if (t) return b.intl.string(b.t['xrEs6+']);
-            if (null == a) return b.intl.format(b.t.jpKk7e, { onClick: y });
+            if (null == a) return b.intl.format(b.t.jpKk7e, { onClick: h });
             {
                 let e = d.BB(a.shortcut, !0);
                 return b.intl.format(b.t['xY/8Ky'], {
@@ -45,7 +45,7 @@ function j(e) {
         children: (0, r.jsxs)('div', {
             className: g.content,
             children: [
-                (0, r.jsx)('div', { className: h }),
+                (0, r.jsx)('div', { className: y }),
                 (0, r.jsx)(s.Text, {
                     variant: 'text-md/medium',
                     className: i()(g.noClipsText, { [g.noSearchResultsText]: t }),

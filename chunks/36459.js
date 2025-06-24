@@ -1,11 +1,11 @@
 n.d(t, {
-    $Y: () => R,
+    $Y: () => A,
     JK: () => S,
-    Je: () => A,
-    T9: () => g,
-    UE: () => C,
-    Xx: () => m,
-    mm: () => f,
+    Je: () => f,
+    T9: () => C,
+    UE: () => g,
+    Xx: () => R,
+    mm: () => m,
     qY: () => N
 }),
     n(388685);
@@ -95,7 +95,7 @@ async function S(e) {
         )
     );
 }
-async function A(e) {
+async function f(e) {
     let t = O(e);
     return p(
         (
@@ -107,7 +107,7 @@ async function A(e) {
         ).body
     );
 }
-async function f(e, t) {
+async function m(e, t) {
     return (
         await r.tn.del({
             url: E.ANM.GUILD_AUTOMOD_RULE(t, e),
@@ -116,14 +116,14 @@ async function f(e, t) {
         !0
     );
 }
-async function R(e) {
+async function A(e) {
     let t = await r.tn.get({
         url: E.ANM.GUILD_AUTOMOD_RULES(e),
         rejectWithError: !1
     });
     return Array.isArray(t.body) ? t.body.map(p) : [];
 }
-async function m(e, t, n) {
+async function R(e, t, n) {
     a.Z.can(E.Plq.MANAGE_MESSAGES, t) &&
         (await r.tn.post({
             url: E.ANM.GUILD_AUTOMOD_ALERT_ACTION(t.guild_id),
@@ -135,7 +135,7 @@ async function m(e, t, n) {
             rejectWithError: !1
         }));
 }
-function C(e, t, n) {
+function g(e, t, n) {
     let i = o.Z.getGuild(e);
     null != i &&
         a.Z.can(E.Plq.MANAGE_GUILD, i) &&
@@ -151,7 +151,7 @@ function C(e, t, n) {
                 n();
         });
 }
-function g(e) {
+function C(e) {
     i.Z.dispatch({
         type: 'AUTO_MODERATION_MENTION_RAID_NOTICE_DISMISS',
         guildId: e

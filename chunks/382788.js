@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(255367),
     s = n(359013),
     o = n(529942),
-    a = n(26141),
-    i = n(3072),
+    i = n(26141),
+    a = n(3072),
     c = n(401258),
     l = n(477839),
     u = n(364491),
@@ -13,7 +13,7 @@ let p = n(281264);
 function m(e) {
     let { isPaused: t, width: n } = e;
     return (
-        (0, i.is)(p, t),
+        (0, a.is)(p, t),
         (0, r.jsx)(o.Z, {
             className: u.bee,
             width: n,
@@ -27,7 +27,7 @@ function m(e) {
             imageSize: 80,
             isPaused: t,
             children: (e) =>
-                (0, r.jsx)(a.Z, {
+                (0, r.jsx)(i.Z, {
                     className: 'left' === e ? u.imageFlipped : u.image,
                     isPaused: t,
                     interval: 150,

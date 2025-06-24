@@ -9,15 +9,15 @@ var a = n(255367),
     d = n(481060),
     u = n(129861),
     m = n(665149),
-    x = n(886118),
-    p = n(301801),
+    p = n(886118),
+    x = n(301801),
     h = n(594174),
     b = n(572004),
     f = n(55935),
     v = n(120816),
-    g = n(31336),
-    j = n(257785),
-    _ = n(484036),
+    _ = n(31336),
+    g = n(257785),
+    j = n(484036),
     y = n(681619),
     C = n(621060),
     N = n(388032),
@@ -95,7 +95,7 @@ let I = [
                         onClose: s
                     } = e,
                     c = h.default.getUser(l),
-                    x = o()(r);
+                    p = o()(r);
                 return (0, a.jsxs)('div', {
                     'data-mtctest-ignore': 'true',
                     children: [
@@ -173,25 +173,25 @@ let I = [
                                 })
                             ]
                         }),
-                        (0, a.jsxs)(j.E, {
+                        (0, a.jsxs)(g.E, {
                             className: O.commonProperties,
                             children: [
-                                (0, a.jsx)(j.Z9, {
+                                (0, a.jsx)(g.Z9, {
                                     name: 'Timestamp (local)',
                                     copyValue: r.toISOString(),
                                     children: (0, a.jsxs)('time', {
                                         dateTime: r.toISOString(),
-                                        title: (0, f.vc)(x, 'LLLL'),
-                                        children: ['(', o().locale(), ') ', (0, f.Y4)(x)]
+                                        title: (0, f.vc)(p, 'LLLL'),
+                                        children: ['(', o().locale(), ') ', (0, f.Y4)(p)]
                                     })
                                 }),
                                 null != c &&
-                                    (0, a.jsx)(j.Z9, {
+                                    (0, a.jsx)(g.Z9, {
                                         name: 'User',
                                         copyValue: c.id,
                                         children: (0, a.jsx)(u.Z, { user: c })
                                     }),
-                                (0, a.jsx)(j.Z9, {
+                                (0, a.jsx)(g.Z9, {
                                     name: 'Fingerprint',
                                     copyValue: l,
                                     children: (0, a.jsx)('code', { children: l })
@@ -252,7 +252,7 @@ let I = [
         }
     },
     k = {
-        searchType: x.S.REGEX,
+        searchType: p.S.REGEX,
         searchStringGenerator: (e) => {
             let { event: t, properties: n } = e;
             return null != n.location ? [t, n.location] : t;
@@ -265,16 +265,16 @@ function R() {
         l = (0, c.e7)([v.Z], () => v.Z.loggedEventsVersion),
         [s, o] = r.useState(() => Object.keys(w)),
         [u, m] = r.useState(v.Z.loggedEvents),
-        x = r.useCallback((e) => {
+        p = r.useCallback((e) => {
             m(e);
         }, []);
-    (0, p.BO)(t, v.Z.loggedEvents, x, k, [l]);
+    (0, x.BO)(t, v.Z.loggedEvents, p, k, [l]);
     let h = u.filter((e) => {
             for (let t of s) if (w[t].filter(e)) return !0;
             return !1;
         }),
         [b, f] = r.useState(void 0),
-        j = h.find((e) => e.key === b),
+        g = h.find((e) => e.key === b),
         { TabBar: S, renderSelectedTab: P } = (0, C.ZP)({ tabs: I }, []);
     return (0, a.jsxs)('div', {
         ref: e,
@@ -287,7 +287,7 @@ function R() {
                         className: O.toolbarButton,
                         look: d.zxk.Looks.BLANK,
                         size: d.zxk.Sizes.ICON,
-                        onClick: g.Zw,
+                        onClick: _.Zw,
                         children: (0, a.jsx)('span', {
                             title: N.intl.string(N.t.VkKicX),
                             children: (0, a.jsx)(d.XHJ, {
@@ -333,15 +333,15 @@ function R() {
                 selectedRowKey: b,
                 onClickRow: (e) => f(e.key)
             }),
-            null != j &&
-                (0, a.jsxs)(_.Z, {
+            null != g &&
+                (0, a.jsxs)(j.Z, {
                     className: O.subPanel,
                     minHeight: 100,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
                     children: [
                         (0, a.jsx)(S, {}),
                         P({
-                            loggedEvent: j,
+                            loggedEvent: g,
                             onClose: () => f(void 0)
                         })
                     ]

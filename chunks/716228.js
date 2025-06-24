@@ -1,9 +1,9 @@
-n.d(t, { Z: () => A }), n(388685);
+n.d(t, { Z: () => R }), n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(505266),
-    a = n(772848),
-    i = n(442837),
+    i = n(772848),
+    a = n(442837),
     c = n(522474),
     l = n(359013),
     u = n(115092),
@@ -22,7 +22,7 @@ var r = n(255367),
     N = n(332536),
     _ = n(225893),
     P = n(483586);
-function C(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,11 +47,11 @@ function C(e) {
     }
     return e;
 }
-let Z = n(97996),
-    w = n(675755),
-    E = [P],
-    S = [O, j, N],
-    I = [
+let C = n(97996),
+    Z = n(675755),
+    S = [P],
+    I = [O, j, N],
+    E = [
         {
             src: _,
             colorize: !1
@@ -59,28 +59,28 @@ let Z = n(97996),
     ],
     k = [],
     M = new o.qA(),
-    R = [x.FK.LAWNMOWER_1, x.FK.LAWNMOWER_2];
-function A(e) {
+    A = [x.FK.LAWNMOWER_1, x.FK.LAWNMOWER_2];
+function R(e) {
     var t, n, O;
     let { isPaused: j, width: N, windowKey: _ } = e,
-        [P, A] = (0, s.useState)(0),
-        T = (0, s.useRef)('right'),
-        [L, B] = (0, s.useState)(null),
-        [D, F] = (0, s.useState)(null),
+        [P, R] = (0, s.useState)(0),
+        B = (0, s.useRef)('right'),
+        [T, L] = (0, s.useState)(null),
+        [F, D] = (0, s.useState)(null),
         U = (0, s.useRef)(null),
-        W = (0, o.uR)(L, D),
+        W = (0, o.uR)(T, F),
         G = l.Mq[x.yN.LAWNMOWER],
         [K, V] = (0, s.useState)({}),
-        H = (0, i.e7)([c.Z], () => c.Z.getWindow(_)),
-        [q, z] = (0, d.Z)(x.yN.LAWNMOWER),
-        Y = null != (t = q.count) ? t : 0;
-    (0, b.is)(Z, j);
-    let X = (0, b.eR)(w);
-    (0, f.Z)(R, Y);
+        H = (0, a.e7)([c.Z], () => c.Z.getWindow(_)),
+        [z, q] = (0, d.Z)(x.yN.LAWNMOWER),
+        Y = null != (t = z.count) ? t : 0;
+    (0, b.is)(C, j);
+    let X = (0, b.eR)(Z);
+    (0, f.Z)(A, Y);
     let J = (0, s.useCallback)(() => {
             if (W.isReady && null != U.current) {
                 let { x: e, y: t } = U.current.getBoundingClientRect(),
-                    n = 'right' === T.current ? 45 : 25;
+                    n = 'right' === B.current ? 45 : 25;
                 W.createMultipleConfetti(
                     {
                         position: {
@@ -120,8 +120,8 @@ function A(e) {
             V((e) => {
                 var t, n, r;
                 return (
-                    (n = C({}, e)),
-                    (r = r = { [(0, a.Z)()]: null != (t = G.points) ? t : 0 }),
+                    (n = w({}, e)),
+                    (r = r = { [(0, i.Z)()]: null != (t = G.points) ? t : 0 }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                         : (function (e, t) {
@@ -139,13 +139,13 @@ function A(e) {
             });
         }, [W, G.points]),
         Q = (0, s.useCallback)(() => {
-            A(1), z({ count: Y + 1 }), X();
-        }, [Y, X, z]),
+            R(1), q({ count: Y + 1 }), X();
+        }, [Y, X, q]),
         $ = (0, s.useCallback)(() => {
-            1 === P && A(2);
+            1 === P && R(2);
         }, [P]),
         ee = (0, s.useCallback)(() => {
-            2 === P && 0.1 >= Math.random() && A(0);
+            2 === P && 0.1 >= Math.random() && R(0);
         }, [P]);
     (0, u.Z)({
         onInterval: ee,
@@ -154,7 +154,7 @@ function A(e) {
     });
     let et = (0, s.useCallback)(
         (e) => {
-            delete K[e], V(C({}, K));
+            delete K[e], V(w({}, K));
         },
         [K]
     );
@@ -163,8 +163,8 @@ function A(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(o.Ji, {
-                      ref: F,
-                      sprites: I,
+                      ref: D,
+                      sprites: E,
                       colors: k,
                       spriteWidth: 8,
                       spriteHeight: 8
@@ -187,7 +187,7 @@ function A(e) {
                           imageSize: 80,
                           isPaused: j || 0 !== P,
                           children: (e) => (
-                              (T.current = e),
+                              (B.current = e),
                               (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       (0, r.jsx)(h.Z, {
@@ -199,7 +199,7 @@ function A(e) {
                                           className: 'left' === e ? v.imageFlipped : v.image,
                                           isPaused: j,
                                           interval: 200,
-                                          sources: 0 === P ? E : S,
+                                          sources: 0 === P ? S : I,
                                           onLoopEnd: $
                                       })
                                   ]
@@ -210,7 +210,7 @@ function A(e) {
                   (0, r.jsx)(o.O_, {
                       className: v.confettiCanvas,
                       environment: M,
-                      ref: B,
+                      ref: L,
                       requestAnimationFrame: null != (n = null == H ? void 0 : H.requestAnimationFrame) ? n : requestAnimationFrame,
                       cancelAnimationFrame: null != (O = null == H ? void 0 : H.cancelAnimationFrame) ? O : cancelAnimationFrame
                   })

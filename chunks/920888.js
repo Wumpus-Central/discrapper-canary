@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685), n(539854);
+n.d(t, { Z: () => O }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -42,7 +42,7 @@ function b(e) {
     }
     return e;
 }
-function E(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,13 +61,13 @@ function E(e, t) {
     );
 }
 let y = (e, t) => (null == e && null == t) || e === t,
-    x = (e, t) => e.findIndex((e) => y(e.emoji.id, null == t ? void 0 : t.id) && y(e.emoji.name, null == t ? void 0 : t.name)),
+    E = (e, t) => e.findIndex((e) => y(e.emoji.id, null == t ? void 0 : t.id) && y(e.emoji.name, null == t ? void 0 : t.name)),
     v = (e, t) => {
         if (null == t) return e;
-        let n = x(e, t);
+        let n = E(e, t);
         return n < 0 ? e : [e[n], ...e.slice(0, n), ...e.slice(n + 1)];
     };
-class O extends i.PureComponent {
+class C extends i.PureComponent {
     static getDerivedStateFromProps(e, t) {
         let n = e.message.reactions.length;
         return 0 === t.reactionsCount && n > 0
@@ -80,16 +80,16 @@ class O extends i.PureComponent {
               : null;
     }
     render() {
-        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: i, isGuest: l, isPendingMember: _, isForumToolbar: b, channel: E, className: y, forceAddReactions: x, reactionClassName: v, useChatFontScaling: O, forceHideReactionCreates: C, remainingReactions: j, combinedReactions: S, visibleReactionsCount: I } = this.props,
-            { disableTransitionAppear: N } = this.state,
-            T = O ? g : h,
+        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: i, isGuest: l, isPendingMember: _, isForumToolbar: b, channel: x, className: y, forceAddReactions: E, reactionClassName: v, useChatFontScaling: C, forceHideReactionCreates: O, remainingReactions: j, combinedReactions: S, visibleReactionsCount: I } = this.props,
+            { disableTransitionAppear: T } = this.state,
+            N = C ? g : h,
             P = I > 0;
-        if (!P && !x) return null;
-        let A = x || P;
+        if (!P && !E) return null;
+        let A = E || P;
         return (0, r.jsxs)(o.W, {
             component: 'div',
-            className: a()(T.reactions, y),
-            transitionAppear: !N,
+            className: a()(N.reactions, y),
+            transitionAppear: !T,
             role: 'group',
             transitionLeave: !1,
             id: (0, d.bY)(e),
@@ -104,32 +104,32 @@ class O extends i.PureComponent {
                     isGuest: l,
                     isPendingMember: _,
                     isForumToolbar: b,
-                    useChatFontScaling: O,
+                    useChatFontScaling: C,
                     className: v
                 }),
                 j > 0 &&
                     (0, r.jsx)(s.P3F, {
                         onClick: (t) => {
-                            t.stopPropagation(), (0, m.op)(E, e);
+                            t.stopPropagation(), (0, m.op)(x, e);
                         },
-                        className: a()(T.reaction, v, T.remainingReactions),
+                        className: a()(N.reaction, v, N.remainingReactions),
                         'aria-label': f.intl.string(f.t.lfIHs7),
                         children: (0, r.jsxs)(s.Text, {
-                            className: T.reactionInner,
+                            className: N.reactionInner,
                             variant: 'text-sm/normal',
                             children: ['+', j]
                         })
                     }),
                 !t &&
-                    !C &&
+                    !O &&
                     (0, r.jsx)(u.X, {
                         tabIndex: A || this.state.isHovered ? 0 : -1,
                         type: c.O.NORMAL,
                         message: e,
-                        channel: E,
-                        useChatFontScaling: O,
+                        channel: x,
+                        useChatFontScaling: C,
                         isHovered: this.state.isHovered,
-                        className: a()({ [T.forceShow]: A })
+                        className: a()({ [N.forceShow]: A })
                     })
             ]
         });
@@ -143,7 +143,7 @@ class O extends i.PureComponent {
             });
     }
 }
-let C = (e) => {
+let O = (e) => {
     let { message: t, maxReactions: n, hoistReaction: l } = e,
         {
             combinedReactions: a,
@@ -157,7 +157,7 @@ let C = (e) => {
                 o = r.length;
             return (
                 i.forEach((t) => {
-                    t.burst_count > 0 && e.push(E(b({}, t), { type: c.O.BURST })), t.count > 0 && e.push(E(b({}, t), { type: c.O.NORMAL })), null != t.me_vote && --o;
+                    t.burst_count > 0 && e.push(x(b({}, t), { type: c.O.BURST })), t.count > 0 && e.push(x(b({}, t), { type: c.O.NORMAL })), null != t.me_vote && --o;
                 }),
                 {
                     combinedReactions: e,
@@ -167,8 +167,8 @@ let C = (e) => {
             );
         }, [l, n, t.reactions]);
     return (0, r.jsx)(
-        O,
-        E(b({}, e), {
+        C,
+        x(b({}, e), {
             visibleReactionsCount: s,
             combinedReactions: a,
             remainingReactions: o

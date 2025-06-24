@@ -2,25 +2,25 @@ n.d(t, { Z: () => S });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    o = n(442837),
     s = n(481060),
     c = n(812206),
     u = n(388905),
     d = n(925329),
     h = n(479446),
-    g = n(981632),
-    p = n(594174),
+    p = n(981632),
+    g = n(594174),
     m = n(509545),
     f = n(55563),
     _ = n(296848),
-    x = n(981631),
-    E = n(474936),
+    E = n(981631),
+    x = n(474936),
     b = n(388032),
     v = n(378027),
     I = n(893354),
     O = n(20493);
-let S = a.ZP.connectStores([f.Z, c.Z, m.Z, p.default], (e) => {
+let S = o.ZP.connectStores([f.Z, c.Z, m.Z, g.default], (e) => {
     let { giftCode: t } = e,
         n = f.Z.get(t.skuId),
         { subscriptionPlanId: r } = t;
@@ -28,22 +28,22 @@ let S = a.ZP.connectStores([f.Z, c.Z, m.Z, p.default], (e) => {
         sku: n,
         subscriptionPlan: null != r ? (0, _.oE)(r) : null,
         application: c.Z.getApplication(n.applicationId),
-        gifter: p.default.getUser(t.userId)
+        gifter: g.default.getUser(t.userId)
     };
 })((e) => {
-    let { error: t, giftCode: n, gifter: l, sku: a, application: c, subscriptionPlan: p } = e,
+    let { error: t, giftCode: n, gifter: l, sku: o, application: c, subscriptionPlan: g } = e,
         m = null == l ? b.intl.string(b.t.lTGZAg) : b.intl.formatToPlainString(b.t.TjWdPT, { username: l.username }),
-        f = a.name;
+        f = o.name;
     return (
-        null != p &&
-            (f = b.intl.formatToPlainString(p.interval === E.rV.MONTH ? b.t.CTpcCQ : b.t.rgPWGx, {
-                skuName: a.name,
-                intervalCount: p.intervalCount
+        null != g &&
+            (f = b.intl.formatToPlainString(g.interval === x.rV.MONTH ? b.t.CTpcCQ : b.t.rgPWGx, {
+                skuName: o.name,
+                intervalCount: g.intervalCount
             })),
         (0, r.jsxs)(i.Fragment, {
             children: [
                 null != n.giftStyle
-                    ? (0, r.jsx)(g.Z, {
+                    ? (0, r.jsx)(p.Z, {
                           defaultAnimationState: h.SR.LOOP,
                           giftStyle: n.giftStyle,
                           className: v.seasonalIcon
@@ -61,14 +61,14 @@ let S = a.ZP.connectStores([f.Z, c.Z, m.Z, p.default], (e) => {
                           children: [
                               (0, r.jsx)(u.DK, { children: m }),
                               (0, r.jsxs)(u.Dx, {
-                                  className: o()(O.marginTop8, I.flexCenter),
+                                  className: a()(O.marginTop8, I.flexCenter),
                                   children: [
-                                      a.productLine !== x.POd.COLLECTIBLES &&
+                                      o.productLine !== E.POd.COLLECTIBLES &&
                                           (0, r.jsx)(d.Z, {
                                               size: d.Z.Sizes.MEDIUM,
                                               className: v.applicationIcon,
                                               game: c,
-                                              skuId: a.id
+                                              skuId: o.id
                                           }),
                                       f
                                   ]

@@ -1,10 +1,10 @@
 n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
-var l = n(120356),
-    i = n.n(l),
-    a = n(913527),
-    s = n.n(a),
+var a = n(120356),
+    l = n.n(a),
+    i = n(913527),
+    s = n.n(i),
     o = n(481060),
     c = n(70956),
     d = n(388032),
@@ -12,26 +12,26 @@ var l = n(120356),
 let m = (e) => {
     let t,
         n,
-        { rateLimitPerUser: l, slowmodeCooldownGuess: a, isBypassSlowmode: m, leadingIcon: h = !1 } = e;
-    if (l >= c.Z.Seconds.HOUR) {
-        let e = Math.floor(l / c.Z.Seconds.HOUR),
-            t = Math.floor((l - e * c.Z.Seconds.HOUR) / c.Z.Seconds.MINUTE),
-            r = l - e * c.Z.Seconds.HOUR - t * c.Z.Seconds.MINUTE;
+        { rateLimitPerUser: a, slowmodeCooldownGuess: i, isBypassSlowmode: m, leadingIcon: h = !1 } = e;
+    if (a >= c.Z.Seconds.HOUR) {
+        let e = Math.floor(a / c.Z.Seconds.HOUR),
+            t = Math.floor((a - e * c.Z.Seconds.HOUR) / c.Z.Seconds.MINUTE),
+            r = a - e * c.Z.Seconds.HOUR - t * c.Z.Seconds.MINUTE;
         n = d.intl.formatToPlainString(d.t.oEwLe3, {
             hours: e,
             minutes: t,
             seconds: r
         });
-    } else if (l >= 60) {
-        let e = Math.floor(l / 60);
+    } else if (a >= 60) {
+        let e = Math.floor(a / 60);
         n = d.intl.formatToPlainString(d.t.DARKYm, {
             minutes: e,
-            seconds: l - 60 * e
+            seconds: a - 60 * e
         });
-    } else n = d.intl.formatToPlainString(d.t['9yE8GR'], { seconds: l });
-    if (!m && a > 0) {
-        let e = s().duration(a);
-        if (a > c.Z.Millis.HOUR) {
+    } else n = d.intl.formatToPlainString(d.t['9yE8GR'], { seconds: a });
+    if (!m && i > 0) {
+        let e = s().duration(i);
+        if (i > c.Z.Millis.HOUR) {
             let n = ''.concat(e.minutes()).padStart(2, '0'),
                 r = ''.concat(e.seconds()).padStart(2, '0');
             t = ''.concat(e.hours(), ':').concat(n, ':').concat(r);
@@ -48,7 +48,7 @@ let m = (e) => {
         f = (0, r.jsx)(o.ANZ, {
             size: 'xs',
             color: 'currentColor',
-            className: i()(u.slowModeIcon, { [u.leadingIcon]: h })
+            className: l()(u.slowModeIcon, { [u.leadingIcon]: h })
         });
     return (0, r.jsx)(o.ua7, {
         text: n,

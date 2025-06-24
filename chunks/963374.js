@@ -1,58 +1,58 @@
-n.d(t, { nC: () => d }), n(388685), n(704826), n(35282), n(539854);
-var i = n(392711),
-    r = n.n(i),
-    l = n(697741);
+i.d(e, { nC: () => c }), i(388685), i(704826), i(35282), i(539854);
+var n = i(392711),
+    r = i.n(n),
+    s = i(697741);
 let o = new Set(['a', 'an', 'and', 'are', 'as', 'at', 'be', 'but', 'by', 'for', 'if', 'in', 'into', 'is', 'it', 'no', 'not', 'of', 'on', 'or', 'such', 'that', 'the', 'their', 'then', 'there', 'these', 'they', 'this', 'to', 'was', 'will', 'with']);
-function s(e) {
-    return e.replace(/('|\u2019|\uFF07)(s|S)$/, '');
+function l(t) {
+    return t.replace(/('|\u2019|\uFF07)(s|S)$/, '');
 }
-function a(e) {
-    return e.toLowerCase();
+function a(t) {
+    return t.toLowerCase();
 }
-function c(e) {
-    return o.has(e);
+function d(t) {
+    return o.has(t);
 }
-function u(e) {
-    return 0 === e.length;
+function u(t) {
+    return 0 === t.length;
 }
-function d(e) {
-    let t = new Set(r()(e.split(/\W+/)).map(s).reject(u).map(a).reject(c).map(l.$).value());
-    return (e) =>
-        (function e(t, n) {
-            if (Array.isArray(t)) t.forEach((t) => e(t, n));
-            else if ('string' == typeof t.content && 'codeBlock' !== t.type) {
-                let e = [],
-                    i = '';
-                t.content.split(/(\W+)/g).forEach((t) => {
+function c(t) {
+    let e = new Set(r()(t.split(/\W+/)).map(l).reject(u).map(a).reject(d).map(s.$).value());
+    return (t) =>
+        (function t(e, i) {
+            if (Array.isArray(e)) e.forEach((e) => t(e, i));
+            else if ('string' == typeof e.content && 'codeBlock' !== e.type) {
+                let t = [],
+                    n = '';
+                e.content.split(/(\W+)/g).forEach((e) => {
                     var r;
-                    !u((r = a(s((r = t))))) && !c(r) && n.has((0, l.$)(r))
-                        ? (i.length > 0 &&
-                              e.push({
+                    !u((r = a(l((r = e))))) && !d(r) && i.has((0, s.$)(r))
+                        ? (n.length > 0 &&
+                              t.push({
                                   type: 'text',
-                                  content: i
+                                  content: n
                               }),
-                          e.push({
+                          t.push({
                               type: 'highlight',
-                              content: t
+                              content: e
                           }),
-                          (i = ''))
-                        : (i += t);
+                          (n = ''))
+                        : (n += e);
                 }),
-                    e.length > 0 &&
-                        (i.length > 0 &&
-                            e.push({
+                    t.length > 0 &&
+                        (n.length > 0 &&
+                            t.push({
                                 type: 'text',
-                                content: i
+                                content: n
                             }),
-                        'text' === t.type
-                            ? (t.content = e)
-                            : (t.content = [
+                        'text' === e.type
+                            ? (e.content = t)
+                            : (e.content = [
                                   {
                                       type: 'text',
-                                      content: e
+                                      content: t
                                   }
                               ]));
-            } else null != t.content && e(t.content, n);
-            return t;
-        })(e, t);
+            } else null != e.content && t(e.content, i);
+            return e;
+        })(t, e);
 }

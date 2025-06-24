@@ -1,25 +1,25 @@
-n.d(t, { Z: () => p }), n(388685);
-var i = n(442837),
-    r = n(715903),
-    l = n(71619),
-    o = n(41776),
-    s = n(665906),
-    a = n(271383),
-    c = n(607744),
-    u = n(496675),
-    d = n(432376),
-    h = n(981631);
-function p(e) {
-    var t, n;
-    let p = null == e ? void 0 : e.guild_id,
-        m = (0, i.e7)([c.Z], () => null == p || c.Z.canChatInGuild(p), [p]),
-        g = (0, i.e7)([o.Z], () => null != p && o.Z.isLurking(p), [p]),
-        f = (0, i.e7)([a.ZP], () => null != p && a.ZP.isCurrentUserGuest(p), [p]),
-        b = (0, i.e7)([u.Z], () => m && u.Z.can(h.Plq.ADD_REACTIONS, e), [m, e]),
-        j = (0, r.ux)(p),
-        [, v] = (0, l.AB)(p),
-        O = (0, s.$R)(e);
-    return null == e
+i.d(e, { Z: () => p }), i(388685);
+var n = i(442837),
+    r = i(715903),
+    s = i(71619),
+    o = i(41776),
+    l = i(665906),
+    a = i(271383),
+    d = i(607744),
+    u = i(496675),
+    c = i(432376),
+    h = i(981631);
+function p(t) {
+    var e, i;
+    let p = null == t ? void 0 : t.guild_id,
+        g = (0, n.e7)([d.Z], () => null == p || d.Z.canChatInGuild(p), [p]),
+        f = (0, n.e7)([o.Z], () => null != p && o.Z.isLurking(p), [p]),
+        m = (0, n.e7)([a.ZP], () => null != p && a.ZP.isCurrentUserGuest(p), [p]),
+        v = (0, n.e7)([u.Z], () => g && u.Z.can(h.Plq.ADD_REACTIONS, t), [g, t]),
+        O = (0, r.ux)(p),
+        [, b] = (0, s.AB)(p),
+        y = (0, l.$R)(t);
+    return null == t
         ? {
               disableReactionReads: !0,
               disableReactionCreates: !0,
@@ -28,61 +28,61 @@ function p(e) {
               isGuest: !1,
               isPendingMember: !1
           }
-        : ((t = (function (e) {
-              for (var t = 1; t < arguments.length; t++) {
-                  var n = null != arguments[t] ? arguments[t] : {},
-                      i = Object.keys(n);
+        : ((e = (function (t) {
+              for (var e = 1; e < arguments.length; e++) {
+                  var i = null != arguments[e] ? arguments[e] : {},
+                      n = Object.keys(i);
                   'function' == typeof Object.getOwnPropertySymbols &&
-                      (i = i.concat(
-                          Object.getOwnPropertySymbols(n).filter(function (e) {
-                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                      (n = n.concat(
+                          Object.getOwnPropertySymbols(i).filter(function (t) {
+                              return Object.getOwnPropertyDescriptor(i, t).enumerable;
                           })
                       )),
-                      i.forEach(function (t) {
-                          var i;
-                          (i = n[t]),
-                              t in e
-                                  ? Object.defineProperty(e, t, {
-                                        value: i,
+                      n.forEach(function (e) {
+                          var n;
+                          (n = i[e]),
+                              e in t
+                                  ? Object.defineProperty(t, e, {
+                                        value: n,
                                         enumerable: !0,
                                         configurable: !0,
                                         writable: !0
                                     })
-                                  : (e[t] = i);
+                                  : (t[e] = n);
                       });
               }
-              return e;
+              return t;
           })(
               {},
-              (0, d.Z)({
-                  channel: e,
-                  canChat: m,
+              (0, c.Z)({
+                  channel: t,
+                  canChat: g,
                   renderReactions: !0,
-                  canAddNewReactions: b,
-                  isLurking: g,
-                  isGuest: f,
-                  communicationDisabled: v,
-                  isActiveChannelOrUnarchivableThread: O,
-                  isAutomodQuarantined: j
+                  canAddNewReactions: v,
+                  isLurking: f,
+                  isGuest: m,
+                  communicationDisabled: b,
+                  isActiveChannelOrUnarchivableThread: y,
+                  isAutomodQuarantined: O
               })
           )),
-          (n = n =
+          (i = i =
               {
-                  isLurking: g,
-                  isGuest: f,
+                  isLurking: f,
+                  isGuest: m,
                   isPendingMember: !1
               }),
           Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-              : (function (e, t) {
-                    var n = Object.keys(e);
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(i))
+              : (function (t, e) {
+                    var i = Object.keys(t);
                     if (Object.getOwnPropertySymbols) {
-                        var i = Object.getOwnPropertySymbols(e);
-                        n.push.apply(n, i);
+                        var n = Object.getOwnPropertySymbols(t);
+                        i.push.apply(i, n);
                     }
-                    return n;
-                })(Object(n)).forEach(function (e) {
-                    Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                    return i;
+                })(Object(i)).forEach(function (t) {
+                    Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(i, t));
                 }),
-          t);
+          e);
 }

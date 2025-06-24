@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eO }), n(388685), n(539854);
+n.d(t, { Z: () => e_ }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -14,17 +14,17 @@ var r = n(255367),
     g = n(438139),
     m = n(730749),
     b = n(607070),
-    O = n(636449),
-    y = n(566620),
-    _ = n(317381),
+    _ = n(636449),
+    O = n(566620),
+    y = n(317381),
     v = n(889441),
     C = n(736409),
     j = n(367907),
-    S = n(835473),
-    x = n(413523),
-    E = n(933557),
-    P = n(194082),
-    I = n(550532),
+    E = n(835473),
+    S = n(413523),
+    x = n(933557),
+    I = n(194082),
+    P = n(550532),
     N = n(436774),
     w = n(605236),
     Z = n(243778),
@@ -38,16 +38,16 @@ var r = n(255367),
     U = n(690221),
     G = n(231664),
     B = n(759198),
-    V = n(970731),
-    H = n(131704),
-    F = n(199902),
+    F = n(970731),
+    V = n(131704),
+    H = n(199902),
     z = n(314897),
     W = n(592125),
     K = n(984933),
     Y = n(430824),
     q = n(131951),
-    Q = n(496675),
-    X = n(158776),
+    X = n(496675),
+    Q = n(158776),
     J = n(699516),
     $ = n(944486),
     ee = n(594174),
@@ -155,9 +155,9 @@ class eb extends i.PureComponent {
                           title: l,
                           icon: null == t ? void 0 : t.sourceIcon
                       })
-                    : (0, r.jsx)(P.ZP, {
-                          look: P.ZP.Looks.GRAY,
-                          size: P.ZP.Sizes.SMALL,
+                    : (0, r.jsx)(I.ZP, {
+                          look: I.ZP.Looks.GRAY,
+                          size: I.ZP.Sizes.SMALL,
                           className: eh.liveIndicator
                       }),
                 (0, r.jsxs)('div', {
@@ -190,10 +190,10 @@ class eb extends i.PureComponent {
             { application: n, embeddedActivity: i, channel: l, channelName: s, guildForConnectedChannel: a, showsActivityPopoutQuickRefocusNUX: c, markActivityPopoutQuickRefocusNUXAsDismissed: u, isForceShowSharingPopout: p, setIsForceShowSharingPopout: f } = this.props;
         if (null == i || null == n) return null;
         let g = { start: i.connectedSince },
-            m = (0, O.R)(),
+            m = (0, _.R)(),
             b = s;
         null != a && null != l ? ((e = ea.Z5c.CHANNEL(a.id, l.id)), (b = ''.concat(b, ' / ').concat(a.name))) : null != l && (e = ea.Z5c.CHANNEL(ea.ME, l.id));
-        let y = (0, r.jsx)(U.Z, {
+        let O = (0, r.jsx)(U.Z, {
             href: e,
             onClick: this.handleApplicationOrChannelLinkClick,
             children: (0, r.jsx)(ei.Z, {
@@ -211,7 +211,7 @@ class eb extends i.PureComponent {
                       children: n.name
                   })
               });
-        let _ = (0, r.jsxs)(r.Fragment, {
+        let y = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(A.Z, {
                     className: eh.gameIcon,
@@ -223,7 +223,7 @@ class eb extends i.PureComponent {
                     setIsForceShowSharingPopout: f,
                     children: (0, r.jsxs)('div', {
                         className: eh.info,
-                        children: [t, null != l && (0, H.Qm)(l.type) ? y : (0, r.jsx)(em, { timestamps: g })]
+                        children: [t, null != l && (0, V.Qm)(l.type) ? O : (0, r.jsx)(em, { timestamps: g })]
                     })
                 })
             ]
@@ -236,8 +236,8 @@ class eb extends i.PureComponent {
                   spacing: 16,
                   shouldShow: c,
                   renderPopout: () =>
-                      (0, r.jsx)(V.ZP, {
-                          color: V.BD.PRIMARY,
+                      (0, r.jsx)(F.ZP, {
+                          color: F.BD.PRIMARY,
                           header: ed.intl.string(ed.t.ON4pBg),
                           content: ed.intl.string(ed.t['8PAfND']),
                           buttonCTA: ed.intl.string(ed.t.WAI6xs),
@@ -249,7 +249,7 @@ class eb extends i.PureComponent {
                           onClick: () => {
                               u(eu.L.USER_DISMISS);
                           },
-                          caretPosition: V.DF.BOTTOM_CENTER
+                          caretPosition: F.DF.BOTTOM_CENTER
                       }),
                   children: (e) =>
                       (0, r.jsx)(
@@ -260,13 +260,13 @@ class eb extends i.PureComponent {
                               onClick: () => {
                                   h.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' }), c && u(eu.L.TAKE_ACTION), (0, j.yw)(ea.rMx.ACTIVITY_PANEL_GAME_CARD_ACTIVITY_POPOUT_REFOCUS_CLICKED);
                               },
-                              children: _
+                              children: y
                           })
                       )
               })
             : (0, r.jsx)('div', {
                   className: eh.gameWrapper,
-                  children: _
+                  children: y
               });
     }
     render() {
@@ -290,20 +290,20 @@ class eb extends i.PureComponent {
                 a()(null != n, 'Activity cannot be null during navigation click'),
                     a()(null != t, 'Channel cannot be null during navigation click'),
                     f.Z.channelListScrollTo(null != (e = t.guild_id) ? e : ea.ME, t.id),
-                    !(0, O.R)() &&
-                        ((0, H.vd)(t.type) &&
+                    !(0, _.R)() &&
+                        ((0, V.vd)(t.type) &&
                             p.Z.selectParticipant(
                                 t.id,
-                                (0, x.gN)({
+                                (0, S.gN)({
                                     applicationId: n.applicationId,
                                     instanceId: n.compositeInstanceId
                                 })
                             ),
-                        (0, H.Qm)(t.type) && (0, y.tg)(ec.Ez.PANEL));
+                        (0, V.Qm)(t.type) && (0, O.tg)(ec.Ez.PANEL));
             });
     }
 }
-let eO = (0, m.Z)(function (e) {
+let e_ = (0, m.Z)(function (e) {
     var t,
         { guildId: n } = e,
         l = (function (e, t) {
@@ -328,28 +328,28 @@ let eO = (0, m.Z)(function (e) {
     let o = (0, c.e7)([z.default], () => z.default.getId()),
         s = (0, c.e7)([T.ZP, et.Z], () => (0, k.Z)(T.ZP, et.Z)),
         a = (0, c.e7)([$.Z, W.Z], () => W.Z.getChannel($.Z.getVoiceChannelId())),
-        d = (0, c.e7)([_.ZP], () => _.ZP.getConnectedActivityChannelId()),
+        d = (0, c.e7)([y.ZP], () => y.ZP.getConnectedActivityChannelId()),
         h = (0, c.e7)([W.Z], () => W.Z.getChannel(d)),
         p = (0, c.e7)([Y.Z], () => Y.Z.getGuild(null == h ? void 0 : h.guild_id)),
-        [f, g] = (0, c.Wu)([F.Z], () => [F.Z.getCurrentUserActiveStream(), F.Z.getStreamerActiveStreamMetadata()]),
+        [f, g] = (0, c.Wu)([H.Z], () => [H.Z.getCurrentUserActiveStream(), H.Z.getStreamerActiveStreamMetadata()]),
         m = (0, c.e7)([b.Z], () => b.Z.useReducedMotion),
-        y = (0, c.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
-        C = (0, c.e7)([Y.Z, Q.Z, K.ZP], () => (null != a ? R.JL(a, Y.Z, Q.Z, !1) : null != n && R.h_(K.ZP.getChannels(n), Y.Z, Q.Z).length > 0)),
-        [j] = (0, S.Z)([null != (t = null != g && null != g.id ? g.id : null != s && null != s.id ? s.id : null != y ? y.applicationId : void 0) ? t : '']),
-        x = (0, c.e7)([I.Z], () => I.Z.getFakeGameData()),
-        P = (0, c.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
-        N = (0, v.Z)() && null != P && (0, O.R)(),
+        O = (0, c.e7)([y.ZP], () => y.ZP.getCurrentEmbeddedActivity()),
+        C = (0, c.e7)([Y.Z, X.Z, K.ZP], () => (null != a ? R.JL(a, Y.Z, X.Z, !1) : null != n && R.h_(K.ZP.getChannels(n), Y.Z, X.Z).length > 0)),
+        [j] = (0, E.Z)([null != (t = null != g && null != g.id ? g.id : null != s && null != s.id ? s.id : null != O ? O.applicationId : void 0) ? t : '']),
+        S = (0, c.e7)([P.Z], () => P.Z.getFakeGameData()),
+        I = (0, c.e7)([y.ZP], () => y.ZP.getCurrentEmbeddedActivity()),
+        N = (0, v.Z)() && null != I && (0, _.R)(),
         A = (0, c.e7)([q.Z], () => (0, D.Z)(q.Z) && (0, er.isWindows)()),
-        L = (0, c.e7)([X.Z], () => (null != o ? X.Z.findActivity(o, (e) => e.type === ea.IIU.PLAYING) : null)),
+        L = (0, c.e7)([Q.Z], () => (null != o ? Q.Z.findActivity(o, (e) => e.type === ea.IIU.PLAYING) : null)),
         M = null != f && f.ownerId === o && f.state !== ea.jm8.ENDED,
-        U = (0, c.e7)([ee.default, J.Z], () => (null != h ? (0, E.F6)(h, ee.default, J.Z) : void 0)),
+        U = (0, c.e7)([ee.default, J.Z], () => (null != h ? (0, x.F6)(h, ee.default, J.Z) : void 0)),
         B = (0, G.Z)(),
-        [V, H] = i.useState(!1),
+        [F, V] = i.useState(!1),
         { showsActivityPopoutQuickRefocusNUX: ei, markActivityPopoutQuickRefocusNUXAsDismissed: el } = (function () {
             let e = [],
                 t = (0, w.wE)(u.z.ACTIVITY_POPOUT_NUX_MODAL),
                 n = (0, c.e7)([en.Z], () => en.Z.isFocused());
-            (0, O.R)() && t && n && e.push(u.z.ACTIVITY_POPOUT_NUX_QUICK_REFOCUS_TOOLTIP);
+            (0, _.R)() && t && n && e.push(u.z.ACTIVITY_POPOUT_NUX_QUICK_REFOCUS_TOOLTIP);
             let [r, i] = (0, Z.US)(e);
             return {
                 showsActivityPopoutQuickRefocusNUX: r === u.z.ACTIVITY_POPOUT_NUX_QUICK_REFOCUS_TOOLTIP,
@@ -360,11 +360,11 @@ let eO = (0, m.Z)(function (e) {
         eb,
         eg(ef({}, l), {
             guildId: n,
-            canGoLive: A || N || void 0 !== x,
+            canGoLive: A || N || void 0 !== S,
             activity: L,
-            embeddedActivity: y,
+            embeddedActivity: O,
             userId: o,
-            runningGame: null != x ? x : s,
+            runningGame: null != S ? S : s,
             application: j,
             useReducedMotion: m,
             isStreaming: M,
@@ -375,8 +375,8 @@ let eO = (0, m.Z)(function (e) {
             channelName: U,
             guildForConnectedChannel: p,
             streamQualityIndicator: B,
-            isForceShowSharingPopout: V,
-            setIsForceShowSharingPopout: H,
+            isForceShowSharingPopout: F,
+            setIsForceShowSharingPopout: V,
             showsActivityPopoutQuickRefocusNUX: ei,
             markActivityPopoutQuickRefocusNUXAsDismissed: el
         })

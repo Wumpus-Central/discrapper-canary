@@ -1,26 +1,26 @@
-t.d(e, { Z: () => d });
-var i = t(255367);
-t(73800);
-var r = t(481060),
-    a = t(216572),
-    l = t(346479),
-    o = t(665906),
-    s = t(388032);
-function d(n) {
-    var e;
-    let t = (0, a.HL)(n),
-        d = (0, o.C7)(n),
-        u = (0, o.tc)(n);
-    if ((n.isArchivedThread() ? u : d) && !t)
-        return (null == (e = n.threadMetadata) ? void 0 : e.archived)
-            ? (0, i.jsx)(r.sNh, {
+n.d(t, { Z: () => c });
+var r = n(255367);
+n(73800);
+var i = n(481060),
+    l = n(216572),
+    a = n(346479),
+    o = n(665906),
+    s = n(388032);
+function c(e) {
+    var t;
+    let n = (0, l.HL)(e),
+        c = (0, o.C7)(e),
+        u = (0, o.tc)(e);
+    if ((e.isArchivedThread() ? u : c) && !n)
+        return (null == (t = e.threadMetadata) ? void 0 : t.archived)
+            ? (0, r.jsx)(i.sNh, {
                   id: 'unarchive-thread',
-                  label: n.isForumPost() ? s.intl.string(s.t.cnRubW) : s.intl.string(s.t.S9E4Gx),
-                  action: () => l.Z.unarchiveThread(n, !1)
+                  label: e.isForumPost() ? s.intl.string(s.t.cnRubW) : s.intl.string(s.t.S9E4Gx),
+                  action: () => a.Z.unarchiveThread(e, !1)
               })
-            : (0, i.jsx)(r.sNh, {
+            : (0, r.jsx)(i.sNh, {
                   id: 'archive-thread',
-                  label: n.isForumPost() ? s.intl.string(s.t.BTs4KS) : s.intl.string(s.t.wiIevb),
-                  action: () => l.Z.archiveThread(n, !1)
+                  label: e.isForumPost() ? s.intl.string(s.t.BTs4KS) : s.intl.string(s.t.wiIevb),
+                  action: () => a.Z.archiveThread(e, !1)
               });
 }

@@ -1,6 +1,6 @@
 n.d(t, {
-    F: () => N,
-    X: () => S
+    F: () => T,
+    X: () => v
 }),
     n(583741),
     n(388685);
@@ -15,10 +15,9 @@ var r,
     d = n(692547),
     f = n(84735),
     _ = n(481060),
-    p = n(540059),
-    h = n(981631),
-    m = n(883658);
-function g(e, t, n) {
+    p = n(981631),
+    h = n(883658);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +30,7 @@ function g(e, t, n) {
         e
     );
 }
-function E(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,73 +41,53 @@ function E(e) {
                 })
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
 }
-function b(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = y(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-function y(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
-}
-var O = (function (e) {
+var E = (function (e) {
         return (e.DEFAULT = 'default'), (e.INVERTED = 'inverted'), (e.GHOST = 'ghost'), (e.ROW = 'row'), e;
-    })(O || {}),
-    v = (function (e) {
+    })(E || {}),
+    b = (function (e) {
         return (e.TOP = 'top'), (e.CENTER = 'center'), e;
-    })(v || {});
-let I = {
-        BOX: m.box,
-        ROUND: m.round,
-        SMALL_BOX: m.smallBox
+    })(b || {});
+let y = {
+        BOX: h.box,
+        ROUND: h.round,
+        SMALL_BOX: h.smallBox
     },
-    T = {
-        top: m.alignTop,
-        center: m.alignCenter
+    O = {
+        top: h.alignTop,
+        center: h.alignCenter
     };
-class S extends (r = a.PureComponent) {
+class v extends (r = a.PureComponent) {
     render() {
-        let { disabled: e, readOnly: t, value: n, align: r = 'center', className: a, innerClassName: o, children: l, size: c, reverse: u, displayOnly: d, type: _, onClick: p } = this.props,
-            g =
+        let { disabled: e, readOnly: t, value: n, align: r = 'center', className: a, innerClassName: o, children: l, size: c, reverse: u, displayOnly: d, type: _, onClick: m } = this.props,
+            E =
                 null != l
                     ? (0, i.jsx)('div', {
-                          className: s()(m.label, e ? m.labelDisabled : m.labelClickable, u ? m.labelReversed : m.labelForward),
+                          className: s()(h.label, e ? h.labelDisabled : h.labelClickable, u ? h.labelReversed : h.labelForward),
                           style: { lineHeight: ''.concat(c, 'px') },
                           children: l
                       })
                     : null,
             b = d ? 'span' : 'label',
-            y = this.props.disabled ? m.inputDisabled : this.props.readOnly ? m.inputReadonly : m.inputDefault;
+            y = this.props.disabled ? h.inputDisabled : this.props.readOnly ? h.inputReadonly : h.inputDefault;
         return (0, i.jsxs)(b, {
-            className: s()(e ? m.checkboxWrapperDisabled : m.checkboxWrapper, T[r], a, {
-                [m.row]: 'row' === _,
-                [m.checked]: n
+            className: s()(e ? h.checkboxWrapperDisabled : h.checkboxWrapper, O[r], a, {
+                [h.row]: 'row' === _,
+                [h.checked]: n
             }),
             children: [
-                u ? g : null,
+                u ? E : null,
                 !d &&
                     (0, i.jsx)(f.t, {
                         children: (0, i.jsx)('input', {
                             className: s()(o, y),
                             type: 'checkbox',
-                            onClick: p,
-                            onChange: e || t ? h.dG4 : this.handleChange,
+                            onClick: m,
+                            onChange: e || t ? p.dG4 : this.handleChange,
                             checked: n,
                             style: {
                                 width: c,
@@ -116,97 +95,77 @@ class S extends (r = a.PureComponent) {
                             }
                         })
                     }),
-                (0, i.jsx)(N, E({}, this.props)),
-                u ? null : g
+                (0, i.jsx)(T, g({}, this.props)),
+                u ? null : E
             ]
         });
     }
     constructor(...e) {
         super(...e),
-            g(this, 'handleChange', (e) => {
+            m(this, 'handleChange', (e) => {
                 let { onChange: t } = this.props;
                 null == t || t(e, e.currentTarget.checked);
             });
     }
 }
-function A(e, t) {
-    var n;
-    let { value: r, type: i, color: a } = e,
-        o = null != (n = e.style) ? n : {};
-    if (!1 === r) return o;
-    if (((o = E({}, o)), null == a)) {
-        if (!t)
-            switch (i) {
-                case 'default':
-                    o.borderColor = 'var(--control-brand-foreground)';
-                    break;
-                case 'ghost':
-                    (o.borderColor = 'var(--brand-15a)'), (o.backgroundColor = 'var(--brand-15a)');
-                    break;
-                case 'row':
-                case 'inverted':
-                    (o.borderColor = 'var(--brand-400)'), (o.backgroundColor = 'var(--brand-500)');
-            }
-    } else
-        switch (i) {
+function I(e) {
+    var t;
+    let { value: n, type: r, color: i } = e,
+        a = null != (t = e.style) ? t : {};
+    if (!1 === n) return a;
+    if (((a = g({}, a)), null != i))
+        switch (r) {
             case 'default':
-                o.borderColor = a;
+                a.borderColor = i;
                 break;
             case 'ghost':
-                if (a.startsWith('var(--')) {
-                    let e = ''.concat(a.slice(0, -1), '-hsl)');
-                    (o.borderColor = 'rgba('.concat(e, ', 0.15)')), (o.backgroundColor = 'rgba('.concat(e, ', 0.15)'));
-                } else c()((0, u.FX)(a), 'Checkbox: '.concat(a, ' is not a valid hex color')), (o.borderColor = (0, u.wK)(a, 0.15)), (o.backgroundColor = (0, u.wK)(a, 0.15));
+                if (i.startsWith('var(--')) {
+                    let e = ''.concat(i.slice(0, -1), '-hsl)');
+                    (a.borderColor = 'rgba('.concat(e, ', 0.15)')), (a.backgroundColor = 'rgba('.concat(e, ', 0.15)'));
+                } else c()((0, u.FX)(i), 'Checkbox: '.concat(i, ' is not a valid hex color')), (a.borderColor = (0, u.wK)(i, 0.15)), (a.backgroundColor = (0, u.wK)(i, 0.15));
                 break;
             case 'row':
             case 'inverted':
-                (o.backgroundColor = a), (o.borderColor = a);
+                (a.backgroundColor = i), (a.borderColor = i);
         }
-    return o;
+    return a;
 }
-function N(e) {
-    let t = (0, p.Q3)('Checkbox'),
-        { indicatorClassName: n, value: r, size: o, shape: l, checkboxColor: c, type: u, color: f, disabled: _ } = e,
-        h = A(e, t),
-        g = a.useMemo(() => (r ? (t || 'inverted' === u || 'row' === u ? d.Z.colors.WHITE.css : null != f ? f : d.Z.unsafe_rawColors.BRAND_500.css) : d.Z.unsafe_rawColors.TRANSPARENT.css), [r, u, f, t]);
+function T(e) {
+    let { indicatorClassName: t, value: n, size: r, shape: o, checkboxColor: l, disabled: c } = e,
+        u = I(e),
+        f = a.useMemo(() => (n ? d.Z.colors.WHITE.css : d.Z.unsafe_rawColors.TRANSPARENT.css), [n]);
     return (0, i.jsx)('div', {
-        className: s()(m.checkbox, l, n, {
-            [m.checked]: r,
-            [m.checkboxDisabled]: _
+        className: s()(h.checkbox, o, t, {
+            [h.checked]: n,
+            [h.checkboxDisabled]: c
         }),
-        style: E(
+        style: g(
             {
-                width: o,
-                height: o,
-                borderColor: c
+                width: r,
+                height: r,
+                borderColor: l
             },
-            h
+            u
         ),
-        children: (0, i.jsx)(C, {
-            isVisualRefreshEnabled: t,
+        children: (0, i.jsx)(_.kSu, {
             size: 'sm',
-            color: g,
+            color: f,
             'aria-hidden': !0
         })
     });
 }
-function C(e) {
-    var { isVisualRefreshEnabled: t } = e,
-        n = b(e, ['isVisualRefreshEnabled']);
-    return t ? (0, i.jsx)(_.kSu, E({}, n)) : (0, i.jsx)(_.dz2, E({}, n));
-}
-g(S, 'Types', O),
-    g(S, 'Shapes', I),
-    g(S, 'Aligns', v),
-    g(S, 'defaultProps', {
+m(v, 'Types', E),
+    m(v, 'Shapes', y),
+    m(v, 'Aligns', b),
+    m(v, 'defaultProps', {
         size: 24,
         disabled: !1,
         readOnly: !1,
         displayOnly: !1,
         value: !1,
         type: 'default',
-        shape: I.BOX,
+        shape: y.BOX,
         align: 'center',
-        onChange: h.dG4,
+        onChange: p.dG4,
         reverse: !1
     });

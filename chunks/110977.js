@@ -1,30 +1,28 @@
-n.d(t, { S: () => m });
+n.d(t, { S: () => g });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
     s = n(481060),
-    a = n(540059),
-    c = n(593214),
-    u = n(981631),
-    d = n(388032),
-    h = n(761168),
-    p = n(714509),
-    f = n(375613);
-function g() {
+    a = n(593214),
+    c = n(981631),
+    u = n(388032),
+    d = n(761168),
+    h = n(714509),
+    p = n(375613);
+function f() {
     return (0, r.jsx)('div', {
-        className: o()(p.row, p.rowGuildName),
+        className: o()(h.row, h.rowGuildName),
         children: (0, r.jsx)('span', {
-            className: o()(p.guildNameText, p.guildNameTextLimitedSize, h.tooltipText),
-            children: d.intl.string(d.t['4tSWQk'])
+            className: o()(h.guildNameText, h.guildNameTextLimitedSize, d.tooltipText),
+            children: u.intl.string(u.t['4tSWQk'])
         })
     });
 }
-let m = i.memo(function (e) {
+let g = i.memo(function (e) {
     let { 'aria-label': t = !1, children: n } = e,
-        l = (0, a.Q3)('FavoritesAddedTooltip'),
-        o = (function () {
-            let { favoriteAdded: e, clearFavoriteAdded: t } = (0, c.up)();
+        l = (function () {
+            let { favoriteAdded: e, clearFavoriteAdded: t } = (0, a.up)();
             return (
                 i.useEffect(() => {
                     if (e) {
@@ -40,15 +38,15 @@ let m = i.memo(function (e) {
             );
         })();
     return (0, r.jsx)(s.ua7, {
-        forceOpen: o,
+        forceOpen: l,
         color: s.FGA.GREEN,
         hideOnClick: !0,
-        spacing: l ? 12 : 20,
+        spacing: 12,
         position: 'right',
         align: 'center',
-        text: (0, r.jsx)(g, {}),
+        text: (0, r.jsx)(f, {}),
         'aria-label': t,
-        tooltipClassName: f.listItemTooltip,
+        tooltipClassName: p.listItemTooltip,
         children: (e) => {
             var t, i;
             return (0, r.jsx)(
@@ -80,8 +78,8 @@ let m = i.memo(function (e) {
                 })({}, e)),
                 (i = i =
                     {
-                        onMouseEnter: u.dG4,
-                        onMouseLeave: u.dG4,
+                        onMouseEnter: c.dG4,
+                        onMouseLeave: c.dG4,
                         children: n
                     }),
                 Object.getOwnPropertyDescriptors

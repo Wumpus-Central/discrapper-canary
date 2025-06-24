@@ -1,10 +1,10 @@
-n.d(t, { Z: () => r }), n(388685);
-var i = n(73800);
-let r = (e) => {
-    let [t, n] = i.useState(!1);
+n.d(t, { Z: () => s }), n(388685);
+var r = n(73800);
+let s = (e) => {
+    let [t, n] = r.useState(!1);
     return {
         isFocused: t,
-        handleFocus: i.useCallback(
+        handleFocus: r.useCallback(
             (t) => {
                 e(t), n(!0);
             },

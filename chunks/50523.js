@@ -1,4 +1,4 @@
-n.d(t, { b: () => x }), n(539854), n(953529);
+n.d(t, { b: () => E }), n(539854), n(953529);
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -16,84 +16,84 @@ var i = n(442837),
     g = n(566620),
     _ = n(317381),
     b = n(574952),
-    E = n(374065),
+    x = n(374065),
     y = n(388032);
-function x(e) {
+function E(e) {
     var t, n;
-    let { application: x, customId: v, customLink: O, embedUrl: C, referrerId: j } = e,
-        S = null == x || null == (t = x.bot) ? void 0 : t.id,
+    let { application: E, customId: v, customLink: C, embedUrl: O, referrerId: j } = e,
+        S = null == E || null == (t = E.bot) ? void 0 : t.id,
         I = (0, c.ms)({
             context: { type: 'contextless' },
-            applicationId: x.id,
-            botUserId: null == x || null == (n = x.bot) ? void 0 : n.id
+            applicationId: E.id,
+            botUserId: null == E || null == (n = E.bot) ? void 0 : n.id
         }),
-        N = null != x && (0, s.ye)(x),
-        T = null != S && N && I,
+        T = null != E && (0, s.ye)(E),
+        N = null != S && T && I,
         { analyticsLocations: P } = (0, a.ZP)(l.Z.ACTIVITY_CUSTOM_LINK),
         A = (0, i.e7)([f.Z], () => f.Z.getChannelId()),
-        w = (0, E.KF)(A),
+        w = (0, x.KF)(A),
         Z = (0, i.e7)([_.ZP], () => {
             if (null == A) return;
-            let e = _.ZP.getEmbeddedActivitiesForChannel(A).filter((e) => e.applicationId === x.id);
+            let e = _.ZP.getEmbeddedActivitiesForChannel(A).filter((e) => e.applicationId === E.id);
             return e.length > 0 ? e[0].compositeInstanceId : void 0;
         }),
         R = (0, i.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
         k = (0, b.Z)(),
-        D = w === E.jy.CAN_LAUNCH,
-        M = null != v ? v : O.customId,
-        L = [];
-    D &&
-        L.push({
+        L = w === x.jy.CAN_LAUNCH,
+        D = null != v ? v : C.customId,
+        M = [];
+    L &&
+        M.push({
             label: null == Z ? y.intl.string(y.t.cnBQPD) : y.intl.string(y.t.VJlc0d),
             trackingArea: p.j_.PLAY,
             onClick() {
                 (0, g.G6)({
                     channelId: null != A ? A : void 0,
-                    applicationId: x.id,
+                    applicationId: E.id,
                     isStart: null == Z,
                     embeddedActivitiesManager: k,
-                    customId: M,
+                    customId: D,
                     referrerId: j,
                     analyticsLocations: P
                 });
             },
             disabledReason: null != Z && (null == R ? void 0 : R.compositeInstanceId) === Z ? y.intl.string(y.t.wJNK8P) : void 0
         }),
-        T &&
-            !D &&
-            L.push({
+        N &&
+            !L &&
+            M.push({
                 label: y.intl.string(y.t.JeK1Wl),
                 trackingArea: p.j_.PLAY,
                 onClick() {
                     (0, o.W)({
-                        appId: x.id,
+                        appId: E.id,
                         botId: S,
                         analyticsLocations: P,
-                        customId: M,
+                        customId: D,
                         referrerId: j
                     });
                 }
             });
-    let U = (0, m.z)(x);
+    let U = (0, m.z)(E);
     return (
-        null != L && null != U && L.push(U),
+        null != M && null != U && M.push(U),
         (0, r.jsx)(d.W, {
-            actions: L,
-            embedUrl: C,
-            header: x.name,
+            actions: M,
+            embedUrl: O,
+            header: E.name,
             iconSrc: h.ZP.getApplicationIconURL({
-                id: x.id,
-                icon: x.icon,
-                bot: x.bot
+                id: E.id,
+                icon: E.icon,
+                bot: E.bot
             }),
-            info: (0, r.jsx)('div', { children: O.description }),
-            staticBannerSrc: O.getAssetURL(),
-            title: O.title,
+            info: (0, r.jsx)('div', { children: C.description }),
+            staticBannerSrc: C.getAssetURL(),
+            title: C.title,
             trackingConfig: {
-                id: x.id,
+                id: E.id,
                 linkType: u.U.CUSTOM_ACTIVITY_LINK,
                 referrerId: j,
-                activityCustomId: M
+                activityCustomId: D
             }
         })
     );

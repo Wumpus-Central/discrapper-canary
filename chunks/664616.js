@@ -1,9 +1,9 @@
-n.d(t, { Z: () => Z }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(120356),
-    a = n.n(o),
-    i = n(668826),
+    i = n.n(o),
+    a = n(668826),
     c = n(359013),
     l = n(284539),
     u = n(26141),
@@ -28,22 +28,22 @@ let P = {
         3: [j, N, _],
         4: [m, g, b, y]
     },
-    C = { state: 2 };
-function Z(e) {
+    w = { state: 2 };
+function C(e) {
     var t;
     let { isPaused: n } = e,
         [o, m] = (0, l.Z)(f.yN.PET_WUMPUS),
-        g = null != (t = o.state) ? t : C.state,
+        g = null != (t = o.state) ? t : w.state,
         b = c.Mq[f.yN.PET_WUMPUS],
         y = P[g],
         h = (0, s.useCallback)(() => {
             0 === g && m({ state: 1 });
         }, [m, g]),
         x = (0, s.useCallback)(() => {
-            2 === g ? ((0, i.KH)(f.yN.PET_WUMPUS, b.points), m({ state: 3 })) : 3 === g ? (0.2 > Math.random() ? m({ state: 4 }) : m({ state: 2 })) : 1 === g ? m({ state: 2 }) : 4 === g && m({ state: 0 });
+            2 === g ? ((0, a.KH)(f.yN.PET_WUMPUS, b.points), m({ state: 3 })) : 3 === g ? (0.2 > Math.random() ? m({ state: 4 }) : m({ state: 2 })) : 1 === g ? m({ state: 2 }) : 4 === g && m({ state: 0 });
         }, [b.points, m, g]);
     return (0, r.jsx)(d.Z, {
-        className: a()(p.outer, { [p.clickable]: 0 === g }),
+        className: i()(p.outer, { [p.clickable]: 0 === g }),
         onClick: h,
         children: (0, r.jsx)(u.Z, {
             className: p.image,

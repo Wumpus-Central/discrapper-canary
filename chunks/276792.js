@@ -1,4 +1,4 @@
-n.d(t, { N: () => E });
+n.d(t, { N: () => O });
 var r = n(255367);
 n(73800);
 var i = n(704215),
@@ -57,15 +57,15 @@ function _(e, t) {
         e
     );
 }
-function E(e) {
-    var t, n, E, O;
+function O(e) {
+    var t, n, O, E;
     let y,
         { content: I, renderModalProps: v, analyticsLocations: C, analyticsLocation: S, isLightTheme: N } = e,
         T = 'AnnouncementModalVariant1_'.concat(i.z[Number(I.dismissKey)]),
         { onClose: P } = v,
-        j = null != (O = null == (t = I.button) ? void 0 : t.copy) ? O : f.intl.string(f.t.YScQSE),
+        j = null != (E = null == (t = I.button) ? void 0 : t.copy) ? E : f.intl.string(f.t.YScQSE),
         A = (null == (n = I.button) ? void 0 : n.buttonAction) === l.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button';
-    switch (null == (E = I.button) ? void 0 : E.buttonAction) {
+    switch (null == (O = I.button) ? void 0 : O.buttonAction) {
         case l.Wc.OPEN_MARKETING_PAGE:
             y = () => {
                 (0, s.uL)(h.Z5c.APPLICATION_STORE), P();
@@ -130,7 +130,7 @@ function E(e) {
                 type: 'image',
                 src: N ? I.heroArtImageLinkLightTheme : I.heroArtImageLinkDarkTheme
             });
-    let L =
+    let w =
         '' !== I.modalTopPill
             ? () =>
                   (0, r.jsx)(d.mn, {
@@ -141,7 +141,7 @@ function E(e) {
     return {
         renderModalProps: v,
         header: I.header,
-        modalTopExtra: L,
+        modalTopExtra: w,
         subHeader: I.subheader,
         subHeaderExtra: Z,
         body: I.body,

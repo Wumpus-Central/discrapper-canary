@@ -19,14 +19,14 @@ var r = n(255367),
     b = n(213609),
     _ = n(795318),
     y = n(670188),
-    C = n(314897),
-    x = n(271383),
+    x = n(314897),
+    C = n(271383),
     v = n(709586),
     j = n(5192),
     O = n(590415),
     E = n(354459),
     I = n(387147);
-function P(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function P(e) {
     }
     return e;
 }
-function S(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -143,14 +143,14 @@ let Z = i.memo(function (e) {
         let { participant: t, channel: l } = e,
             { user: o, blocked: d } = t,
             v = l.getGuildId(),
-            j = C.default.getId(),
+            j = x.default.getId(),
             { newestAnalyticsLocation: O } = (0, g.ZP)(m.Z.AUDIENCE_TILE),
             Z = (0, f.bp)(),
             T = (0, u.e7)(
-                [x.ZP],
+                [C.ZP],
                 () => {
                     var e;
-                    return null != v && (null == (e = x.ZP.getMember(v, o.id)) ? void 0 : e.premiumSince) != null;
+                    return null != v && (null == (e = C.ZP.getMember(v, o.id)) ? void 0 : e.premiumSince) != null;
                 },
                 [v, o.id]
             ),
@@ -174,7 +174,7 @@ let Z = i.memo(function (e) {
                             return (t) =>
                                 (0, r.jsx)(
                                     e,
-                                    S(P({}, t), {
+                                    P(S({}, t), {
                                         user: o,
                                         guildId: v,
                                         channel: l,
@@ -202,8 +202,8 @@ let Z = i.memo(function (e) {
             children: (e) =>
                 (0, r.jsx)(
                     p.P3F,
-                    S(
-                        P(
+                    P(
+                        S(
                             {
                                 innerRef: A,
                                 className: a()(I.tileContainer, {

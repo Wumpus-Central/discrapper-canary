@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => _ });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -9,21 +9,21 @@ var r = n(255367),
     u = n(131951),
     d = n(924557),
     p = n(435064),
-    m = n(779618),
+    h = n(779618),
     f = n(175470),
-    h = n(203259),
-    g = n(356659),
-    _ = n(388032);
-function b(e) {
-    let { canShowReminder: t = !1, className: b } = e,
-        E = (0, m.Z)(u.Z),
-        { showClipsHeaderEntrypoint: y } = d.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }),
+    g = n(203259),
+    m = n(356659),
+    b = n(388032);
+function _(e) {
+    let { canShowReminder: t = !1, className: _ } = e,
+        O = (0, h.Z)(u.Z),
+        { showClipsHeaderEntrypoint: E } = d.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }),
         {
-            hasClips: x,
-            hasNewClips: v,
-            lastClipsSession: O,
+            hasClips: y,
+            hasNewClips: I,
+            lastClipsSession: v,
             remindersEnabled: C,
-            hasAnyClipAnimations: j
+            hasAnyClipAnimations: S
         } = (0, l.cj)([p.Z], () => ({
             hasClips: p.Z.hasClips(),
             hasNewClips: p.Z.getNewClipIds().length > 0,
@@ -31,15 +31,15 @@ function b(e) {
             remindersEnabled: p.Z.getSettings().remindersEnabled,
             hasAnyClipAnimations: p.Z.hasAnyClipAnimations()
         })),
-        S = null != O && O.newClipIds.length > 0,
-        I = (0, f.n)((e) => e.clipsButtonRef),
-        N = (0, f.n)((e) => e.setClipsButtonRef),
-        T = (0, l.e7)([c.Z], () => c.Z.hasLayers()),
-        { preventIdle: P, allowIdle: A } = (0, s.Y)('animation');
-    function w() {
+        N = null != v && v.newClipIds.length > 0,
+        T = (0, f.n)((e) => e.clipsButtonRef),
+        P = (0, f.n)((e) => e.setClipsButtonRef),
+        j = (0, l.e7)([c.Z], () => c.Z.hasLayers()),
+        { preventIdle: A, allowIdle: Z } = (0, s.Y)('animation');
+    function x() {
         (0, a.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e('2668'), n.e('89129')]).then(n.bind(n, 542055));
+                let { default: e } = await Promise.all([n.e('2668'), n.e('71248')]).then(n.bind(n, 542055));
                 return (t) =>
                     (0, r.jsx)(
                         e,
@@ -70,31 +70,31 @@ function b(e) {
                         })({}, t)
                     );
             },
-            { modalKey: g.Qr }
+            { modalKey: m.Qr }
         );
     }
-    return (i.useEffect(() => (j ? P() : A(), () => A()), [j, P, A]), y && E && x)
+    return (i.useEffect(() => (S ? A() : Z(), () => Z()), [S, A, Z]), E && O && y)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  null != I &&
+                  null != T &&
                       t &&
                       C &&
-                      S &&
+                      N &&
                       !(0, a.$sL)() &&
-                      !T &&
-                      (0, r.jsx)(h.Z, {
-                          clipIconRef: I,
-                          lastClipsSession: O,
-                          onOpenClipsGallery: w
+                      !j &&
+                      (0, r.jsx)(g.Z, {
+                          clipIconRef: T,
+                          lastClipsSession: v,
+                          onOpenClipsGallery: x
                       }),
                   (0, r.jsx)('div', {
-                      ref: N,
+                      ref: P,
                       children: (0, r.jsx)(o.JO, {
-                          className: b,
+                          className: _,
                           icon: a.AlX,
-                          showBadge: v,
-                          tooltip: _.intl.string(_.t.MXaLEB),
-                          onClick: w
+                          showBadge: I,
+                          tooltip: b.intl.string(b.t.MXaLEB),
+                          onClick: x
                       })
                   })
               ]

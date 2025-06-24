@@ -62,7 +62,7 @@ function b(e) {
         })
     });
 }
-function E(e) {
+function x(e) {
     let { buttonLabel: t, secondaryLabel: n, handleClick: i, isInteractive: l, className: o } = e;
     return (0, r.jsxs)('div', {
         className: a()(h.detailsText, o),
@@ -131,7 +131,7 @@ function y(e) {
                   className: s,
                   children: t.label
               })
-            : (0, r.jsx)(E, {
+            : (0, r.jsx)(x, {
                   buttonLabel: t.label,
                   secondaryLabel: t.secondaryLabel,
                   handleClick: f,
@@ -139,7 +139,7 @@ function y(e) {
                   className: s
               });
 }
-function x(e) {
+function E(e) {
     let { message: t, poll: n, className: i } = e,
         l = (0, p.$B)(n.containerStyle),
         u = (function (e, t) {
@@ -212,7 +212,7 @@ function v(e) {
         message: t,
         poll: n,
         children: (0, r.jsx)(m.Pk, {
-            children: (0, r.jsx)(x, {
+            children: (0, r.jsx)(E, {
                 message: t,
                 poll: n,
                 className: i

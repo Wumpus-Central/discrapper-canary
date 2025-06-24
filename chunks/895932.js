@@ -1,9 +1,9 @@
 n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
-var l = n(313361),
-    i = n(697988),
-    a = n(683860),
+var a = n(313361),
+    l = n(697988),
+    i = n(683860),
     s = n(481060),
     o = n(109434),
     c = n(228392),
@@ -52,15 +52,15 @@ function m(e) {
                             id: 'sort-by-recent-activity',
                             group: 'sort-by',
                             label: d.intl.string(d.t.jOPmcH),
-                            action: () => p(a.z.LATEST_ACTIVITY),
-                            checked: m === a.z.LATEST_ACTIVITY
+                            action: () => p(i.z.LATEST_ACTIVITY),
+                            checked: m === i.z.LATEST_ACTIVITY
                         }),
                         (0, r.jsx)(s.k5B, {
                             id: 'sort-by-date-posted',
                             group: 'sort-by',
                             label: d.intl.string(d.t.UIltXV),
-                            action: () => p(a.z.CREATION_DATE),
-                            checked: m === a.z.CREATION_DATE
+                            action: () => p(i.z.CREATION_DATE),
+                            checked: m === i.z.CREATION_DATE
                         })
                     ]
                 }),
@@ -73,15 +73,15 @@ function m(e) {
                                   id: 'view-as-list',
                                   group: 'view-as',
                                   label: d.intl.string(d.t['NJFr+v']),
-                                  action: () => b(l.X.LIST),
-                                  checked: h === l.X.LIST
+                                  action: () => b(a.X.LIST),
+                                  checked: h === a.X.LIST
                               }),
                               (0, r.jsx)(s.k5B, {
                                   id: 'view-as-grid',
                                   group: 'view-as',
                                   label: d.intl.string(d.t.wKeggY),
-                                  action: () => b(l.X.GRID),
-                                  checked: h === l.X.GRID
+                                  action: () => b(a.X.GRID),
+                                  checked: h === a.X.GRID
                               })
                           ]
                       }),
@@ -93,15 +93,15 @@ function m(e) {
                                   id: 'match-some',
                                   group: 'tag-setting',
                                   label: d.intl.string(d.t.rQ0ctb),
-                                  action: () => j(i.z.MATCH_SOME),
-                                  checked: g === i.z.MATCH_SOME
+                                  action: () => j(l.z.MATCH_SOME),
+                                  checked: g === l.z.MATCH_SOME
                               }),
                               (0, r.jsx)(s.k5B, {
                                   id: 'match-all',
                                   group: 'tag-setting',
                                   label: d.intl.string(d.t.FCXUu7),
-                                  action: () => j(i.z.MATCH_ALL),
-                                  checked: g === i.z.MATCH_ALL
+                                  action: () => j(l.z.MATCH_ALL),
+                                  checked: g === l.z.MATCH_ALL
                               })
                           ]
                       })

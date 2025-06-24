@@ -16,15 +16,15 @@ var r = n(255367),
     b = n(488131),
     _ = n(375954),
     y = n(626135),
-    C = n(585483),
-    x = n(403182),
+    x = n(585483),
+    C = n(403182),
     v = n(127654),
     j = n(752305),
     O = n(951211),
     E = n(981631),
     I = n(921944),
-    P = n(489887),
-    S = n(388032),
+    S = n(489887),
+    P = n(388032),
     Z = n(725776);
 let N = RegExp('(.*)```(\\w+)\\n(.*)```(.*)', 's');
 function T() {
@@ -45,7 +45,7 @@ function T() {
                 let { visibleContent: t } = e;
                 return t === o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE
                     ? (0, r.jsx)(s.IGR, {
-                          text: S.intl.string(S.t.y2b7CA),
+                          text: P.intl.string(P.t.y2b7CA),
                           color: l.Z.BUTTON_DANGER_BACKGROUND
                       })
                     : null;
@@ -56,8 +56,8 @@ function T() {
 function A(e) {
     let { channel: t, options: a, onFileUpload: f, onClose: m, onSelect: _, draftType: A, editorTextContent: w, setValue: R, openClips: M } = e,
         { analyticsLocations: k } = (0, p.ZP)(),
-        L = (0, g.Dt)({ channel: t });
-    function D() {
+        D = (0, g.Dt)({ channel: t });
+    function L() {
         (0, b.R6)(t, void 0, 'Plus Button');
     }
     function U() {
@@ -117,7 +117,7 @@ function A(e) {
                         );
                     };
                 },
-                { modalKey: P.$z }
+                { modalKey: S.$z }
             );
     }
     function G() {
@@ -138,7 +138,7 @@ function A(e) {
             n = 'txt',
             r = '',
             i = w.match(N);
-        null != i && ((r = i[1]), (n = i[2]), (e = i[3]), (r += i[4])), (0, v.d)([(0, x.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n), 'text/plain')], t, A), C.S.dispatchToLastSubscribed(E.CkL.CLEAR_TEXT), '' !== r && C.S.dispatchToLastSubscribed(E.CkL.INSERT_TEXT, { plainText: r });
+        null != i && ((r = i[1]), (n = i[2]), (e = i[3]), (r += i[4])), (0, v.d)([(0, C.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n), 'text/plain')], t, A), x.S.dispatchToLastSubscribed(E.CkL.CLEAR_TEXT), '' !== r && x.S.dispatchToLastSubscribed(E.CkL.INSERT_TEXT, { plainText: r });
     }
     return (
         i.useEffect(() => {
@@ -152,7 +152,7 @@ function A(e) {
             onSelect: _,
             navId: 'channel-attach',
             onClose: m,
-            'aria-label': S.intl.string(S.t.Xm41aW),
+            'aria-label': P.intl.string(P.t.Xm41aW),
             className: Z.menu,
             children: a.map(function (e) {
                 var n;
@@ -287,7 +287,7 @@ function A(e) {
                             {
                                 id: 'THREAD',
                                 label: i,
-                                action: D
+                                action: L
                             },
                             'THREAD'
                         );
@@ -319,7 +319,7 @@ function A(e) {
                                 id: 'scheduled_message',
                                 label: i,
                                 action: () => (0, g.$f)({ channel: t }),
-                                children: L
+                                children: D
                             },
                             'scheduled_message'
                         );

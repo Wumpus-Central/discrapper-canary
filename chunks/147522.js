@@ -3,24 +3,24 @@ var r = n(255367);
 n(73800);
 var i = n(392711),
     l = n.n(i),
-    a = n(661824),
-    o = n(289481),
-    s = n(809780),
+    o = n(661824),
+    s = n(289481),
+    a = n(809780),
     c = n(388032),
     u = n(739910);
 function d(e, t, n) {
-    let { markChannelRead: i, markGuildRead: d, deleteChannel: p, toggle: m, getNumUnreadChannels: f } = t,
-        h = null;
+    let { markChannelRead: i, markGuildRead: d, deleteChannel: h, toggle: p, getNumUnreadChannels: f } = t,
+        g = null;
     return l().flatMap(e, (e) => {
-        let t = e.sortOrder !== h;
-        h = e.sortOrder;
+        let t = e.sortOrder !== g;
+        g = e.sortOrder;
         let l = [];
         return (
             t &&
-                (e.hasLoadedAnything && e.sortOrder === s.As.ReallyOldChannel
+                (e.hasLoadedAnything && e.sortOrder === a.As.ReallyOldChannel
                     ? l.push(
                           (0, r.jsx)(
-                              a.Z,
+                              o.Z,
                               {
                                   className: u.divider,
                                   contentClassName: u.dividerContent,
@@ -30,10 +30,10 @@ function d(e, t, n) {
                           )
                       )
                     : e.hasLoadedAnything &&
-                      e.sortOrder === s.As.NoNotifications &&
+                      e.sortOrder === a.As.NoNotifications &&
                       l.push(
                           (0, r.jsx)(
-                              a.Z,
+                              o.Z,
                               {
                                   className: u.divider,
                                   contentClassName: u.dividerContent,
@@ -44,13 +44,13 @@ function d(e, t, n) {
                       )),
             l.push(
                 (0, r.jsx)(
-                    o.Z,
+                    s.Z,
                     {
                         channel: e,
                         markChannelRead: i,
                         markGuildRead: d,
-                        toggle: m,
-                        deleteChannel: p,
+                        toggle: p,
+                        deleteChannel: h,
                         onJump: n,
                         getNumUnreadChannels: f
                     },

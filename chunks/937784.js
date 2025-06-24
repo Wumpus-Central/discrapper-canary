@@ -16,9 +16,9 @@ async function f(e, t) {
         j = a.Z.getChannel(f);
     if (null != j)
         try {
-            var h;
+            var y;
             let t = await (0, d.rO)(e, b),
-                n = null != (h = e.name) ? h : (0, p.yl)(s.default.extractTimestamp(e.id)),
+                n = null != (y = e.name) ? y : (0, p.yl)(s.default.extractTimestamp(e.id)),
                 r = (0, u.Z)(n);
             (0, c.d)([new File([t], ''.concat('' !== r ? r : 'clip', '.mp4'), { type: 'video/mp4' })], j, i.d.ChannelMessage, { filesMetadata: [{ clip: e }] }),
                 o.default.track(m.rMx.CLIP_SHARED, {
@@ -34,7 +34,7 @@ async function f(e, t) {
         }
     else
         (0, l.ZDy)(async () => {
-            let { default: t } = await Promise.all([n.e('2286'), n.e('62117'), n.e('99617')]).then(n.bind(n, 502801));
+            let { default: t } = await n.e('99617').then(n.bind(n, 502801));
             return (n) => {
                 var l, a;
                 return (0, r.jsx)(

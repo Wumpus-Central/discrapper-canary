@@ -33,7 +33,7 @@ function j(e) {
     let o = (0, h.Z)(),
         { sortDevicesByFrecency: a } = (0, u._)({ location: 'CaptureDeviceConfig' }),
         c = (0, f.zX)({ sortDevicesByFrecency: a }),
-        [j, S] = i.useState(v(t.id, o, c));
+        [j, b] = i.useState(v(t.id, o, c));
     return (
         null != j && l(j),
         (0, r.jsxs)(d.xJW, {
@@ -65,7 +65,7 @@ function j(e) {
                         value: j,
                         className: _.__invalid_marginaTop8,
                         onChange: (e) => {
-                            S(e), l(e);
+                            b(e), l(e);
                         },
                         options: c.map((e) => {
                             let { id: t, name: n } = e;

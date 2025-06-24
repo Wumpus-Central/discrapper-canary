@@ -1,6 +1,6 @@
 n.d(t, {
-    o: () => T,
-    p: () => I
+    o: () => I,
+    p: () => v
 });
 var r,
     i = n(255367),
@@ -12,10 +12,9 @@ var r,
     u = n(15127),
     d = n(481060),
     f = n(699682),
-    _ = n(540059),
-    p = n(388032),
-    h = n(953100);
-function m(e, t, n) {
+    _ = n(388032),
+    p = n(953100);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +27,7 @@ function m(e, t, n) {
         e
     );
 }
-function g(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,12 +38,12 @@ function g(e) {
                 })
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
 }
-function E(e, t) {
+function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,29 +55,29 @@ function E(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
+            : g(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function y(e, t) {
+function b(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = O(e, t);
+        i = y(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function O(e, t) {
+function y(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -87,14 +86,13 @@ function O(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let v = {
-    DEFAULT: h.inputDefault,
-    MINI: h.inputMini
+let O = {
+    DEFAULT: p.inputDefault,
+    MINI: p.inputMini
 };
-function I(e) {
+function v(e) {
     let { error: t } = e,
-        n = (0, _.Q3)('TextInputError'),
-        r = (0, d.Yzy)(t, {
+        n = (0, d.Yzy)(t, {
             config: {
                 tension: 250,
                 clamp: !0
@@ -106,7 +104,7 @@ function I(e) {
                 transform: 'translate3d(0, -100%, 0)'
             },
             enter: {
-                marginTop: n ? 8 : 4,
+                marginTop: 8,
                 height: 'auto',
                 opacity: 1,
                 transform: 'translate3d(0, -0px, 0)'
@@ -118,42 +116,40 @@ function I(e) {
                 transform: 'translate3d(0, -100%, 0)'
             }
         }),
-        a = (0, f.Z)(t);
+        r = (0, f.Z)(t);
     return (0, i.jsx)(i.Fragment, {
-        children: r((e, r, o) => {
-            let { key: s } = o,
-                { transform: c } = e,
-                u = y(e, ['transform']);
-            return null != r && '' !== r
+        children: n((e, n, a) => {
+            let { key: o } = a,
+                { transform: s } = e,
+                c = b(e, ['transform']);
+            return null != n && '' !== n
                 ? (0, i.jsx)(
                       l.animated.div,
                       {
-                          style: b(g({}, u), { overflow: 'hidden' }),
+                          style: E(m({}, c), { overflow: 'hidden' }),
                           children: (0, i.jsxs)(l.animated.div, {
-                              style: { transform: c },
-                              className: h.inputError,
+                              style: { transform: s },
+                              className: p.inputError,
                               children: [
-                                  n
-                                      ? (0, i.jsx)(d.P4T, {
-                                            size: 'xs',
-                                            color: d.TVs.colors.TEXT_DANGER.css
-                                        })
-                                      : null,
+                                  (0, i.jsx)(d.P4T, {
+                                      size: 'xs',
+                                      color: d.TVs.colors.TEXT_DANGER.css
+                                  }),
                                   (0, i.jsx)(d.Text, {
                                       color: 'text-danger',
-                                      variant: n ? 'text-sm/medium' : 'text-xs/normal',
-                                      children: null != t && '' !== t ? t : a
+                                      variant: 'text-sm/medium',
+                                      children: null != t && '' !== t ? t : r
                                   })
                               ]
                           })
                       },
-                      s
+                      o
                   )
                 : null;
         })
     });
 }
-class T extends (r = a.Component) {
+class I extends (r = a.Component) {
     componentDidMount() {
         var e, t, n, r;
         null == (e = (t = this.context).setHasValue) || e.call(t, (null != this.props.defaultValue && '' !== this.props.defaultValue) || (null != this.props.value && '' !== this.props.value)), null == (n = (r = this.context).setIsFocused) || n.call(r, !1);
@@ -167,39 +163,39 @@ class T extends (r = a.Component) {
     render() {
         var e, t;
         let n = this.props,
-            { className: r, inputClassName: a, inputPrefix: o, disabled: l, size: u, editable: d, inputRef: f, prefixElement: _, focusProps: p } = n,
-            m = y(n, ['className', 'inputClassName', 'inputPrefix', 'disabled', 'size', 'editable', 'inputRef', 'prefixElement', 'focusProps']),
-            E = null != (t = m['aria-labelledby']) ? t : null == (e = this.context) ? void 0 : e.titleId;
+            { className: r, inputClassName: a, inputPrefix: o, disabled: l, size: u, editable: d, inputRef: f, prefixElement: _, focusProps: h } = n,
+            g = b(n, ['className', 'inputClassName', 'inputPrefix', 'disabled', 'size', 'editable', 'inputRef', 'prefixElement', 'focusProps']),
+            y = null != (t = g['aria-labelledby']) ? t : null == (e = this.context) ? void 0 : e.titleId;
         return (0, i.jsxs)('div', {
-            className: s()(h.inputWrapper, r),
+            className: s()(p.inputWrapper, r),
             children: [
                 null != _ && _,
                 null != o
                     ? (0, i.jsx)('span', {
-                          className: h.inputPrefix,
+                          className: p.inputPrefix,
                           children: o
                       })
                     : null,
                 (0, i.jsx)(
                     c.t,
-                    b(g({}, p), {
+                    E(m({}, h), {
                         children: (0, i.jsx)(
                             'input',
-                            b(
-                                g(
+                            E(
+                                m(
                                     {
                                         className: s()(u, a, {
-                                            [h.error]: this.hasError(),
-                                            [h.disabled]: l,
-                                            [h.editable]: d
+                                            [p.error]: this.hasError(),
+                                            [p.disabled]: l,
+                                            [p.editable]: d
                                         }),
                                         disabled: l,
                                         readOnly: !1 === d || void 0
                                     },
-                                    m
+                                    g
                                 ),
                                 {
-                                    'aria-labelledby': E,
+                                    'aria-labelledby': y,
                                     onChange: this.onChange,
                                     onBlur: this.onBlur,
                                     onFocus: this.onFocus,
@@ -209,50 +205,50 @@ class T extends (r = a.Component) {
                         )
                     })
                 ),
-                (0, i.jsx)(I, { error: this.getError() })
+                (0, i.jsx)(v, { error: this.getError() })
             ]
         });
     }
     constructor(e) {
         var t;
         super(e),
-            m(this, 'hasError', () => (null != this.props.error && this.props.error.length > 0) || (!1 !== this.state.dirty && (this.getIsUnderFlowing() || this.getIsOverFlowing()))),
-            m(this, 'getError', () => {
+            h(this, 'hasError', () => (null != this.props.error && this.props.error.length > 0) || (!1 !== this.state.dirty && (this.getIsUnderFlowing() || this.getIsOverFlowing()))),
+            h(this, 'getError', () => {
                 let { error: e, minLength: t, maxLength: n } = this.props,
-                    r = this.getIsUnderFlowing() ? p.intl.formatToPlainString(p.t['62rk1N'], { minLength: t }) : null,
-                    i = this.getIsOverFlowing() ? p.intl.formatToPlainString(p.t.ICT5S0, { maxLength: n }) : null;
+                    r = this.getIsUnderFlowing() ? _.intl.formatToPlainString(_.t['62rk1N'], { minLength: t }) : null,
+                    i = this.getIsOverFlowing() ? _.intl.formatToPlainString(_.t.ICT5S0, { maxLength: n }) : null;
                 return (null != e && e.length < 1) || null === e ? null : null != e ? e : !1 === this.state.dirty ? null : null != r ? r : i;
             }),
-            m(this, 'getIsUnderFlowing', () => {
+            h(this, 'getIsUnderFlowing', () => {
                 var e;
                 let { value: t, minLength: n } = this.props;
                 return null != n && (null != (e = null == t ? void 0 : t.length) ? e : 0) < n;
             }),
-            m(this, 'getIsOverFlowing', () => {
+            h(this, 'getIsOverFlowing', () => {
                 var e;
                 let { value: t, maxLength: n } = this.props;
                 return null != n && (null != (e = null == t ? void 0 : t.length) ? e : 0) > n;
             }),
-            m(this, 'onChange', (e) => {
+            h(this, 'onChange', (e) => {
                 var t, n, r, i;
                 null == (t = (n = this.props).onChange) || t.call(n, e.currentTarget.value, this.props.name), this.setState({ dirty: !0 }), null == (r = (i = this.context).setHasValue) || r.call(i, '' !== e.currentTarget.value);
             }),
-            m(this, 'onFocus', (e) => {
+            h(this, 'onFocus', (e) => {
                 var t, n, r, i;
                 null == (t = (n = this.props).onFocus) || t.call(n, e, this.props.name), null == (r = (i = this.context).setIsFocused) || r.call(i, !0);
             }),
-            m(this, 'onBlur', (e) => {
+            h(this, 'onBlur', (e) => {
                 var t, n, r, i;
                 null == (t = (n = this.props).onBlur) || t.call(n, e, this.props.name), null == (r = (i = this.context).setIsFocused) || r.call(i, !1);
             }),
             (this.state = { dirty: null != (t = e.defaultDirty) && t });
     }
 }
-m(T, 'Sizes', v),
-    m(T, 'contextType', u.q3),
-    m(T, 'defaultProps', {
+h(I, 'Sizes', O),
+    h(I, 'contextType', u.q3),
+    h(I, 'defaultProps', {
         name: '',
-        size: v.DEFAULT,
+        size: O.DEFAULT,
         disabled: !1,
         type: 'text',
         placeholder: '',

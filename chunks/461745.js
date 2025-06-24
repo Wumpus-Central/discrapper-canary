@@ -7,8 +7,8 @@ l.d(t, {
     l(388685);
 var n,
     r,
-    s = l(255367),
-    a = l(73800),
+    a = l(255367),
+    s = l(73800),
     i = l(120356),
     o = l.n(i),
     u = l(481060),
@@ -36,12 +36,12 @@ let f = Object.freeze({
 });
 var y = (((r = {}).MEMBER = 'MEMBER'), (r.ROLE = 'ROLE'), (r.CHANNEL = 'CHANNEL'), (r.GUILD = 'GUILD'), (r.USER = 'USER'), r);
 let E = (e) => {
-    let { hasContent: t, onClear: l, className: n, themeOverride: r, size: a = f.SMALL } = e;
-    return (0, s.jsx)(u.f6W, {
+    let { hasContent: t, onClear: l, className: n, themeOverride: r, size: s = f.SMALL } = e;
+    return (0, a.jsx)(u.f6W, {
         theme: r,
         children: (e) =>
-            (0, s.jsx)(u.P3F, {
-                className: o()(n, d.iconLayout, a, e, { [d.clear]: t }),
+            (0, a.jsx)(u.P3F, {
+                className: o()(n, d.iconLayout, s, e, { [d.clear]: t }),
                 onClick: (e) => {
                     e.stopPropagation(), null != l && l(e);
                 },
@@ -52,10 +52,10 @@ let E = (e) => {
                 'aria-hidden': !t,
                 'aria-label': p.intl.string(p.t['78fJND']),
                 focusProps: { offset: 4 },
-                children: (0, s.jsxs)('div', {
+                children: (0, a.jsxs)('div', {
                     className: d.iconContainer,
                     children: [
-                        (0, s.jsx)(u._Ve, {
+                        (0, a.jsx)(u._Ve, {
                             size: 'md',
                             color: 'currentColor',
                             className: o()({
@@ -63,7 +63,7 @@ let E = (e) => {
                                 [d.visible]: !t
                             })
                         }),
-                        (0, s.jsx)(u.Dio, {
+                        (0, a.jsx)(u.Dio, {
                             size: 'md',
                             color: 'currentColor',
                             className: o()({
@@ -76,7 +76,7 @@ let E = (e) => {
             })
     });
 };
-class v extends (n = a.Component) {
+class v extends (n = s.Component) {
     componentDidMount() {
         let e = this.containerRef.current;
         null != e && (this.previousHeight = e.offsetHeight);
@@ -96,11 +96,11 @@ class v extends (n = a.Component) {
         }
     }
     handleKeyDownGrid(e) {
-        let { selectedRow: t, selectedColumn: l, sections: n, query: r, tags: s, onSelectionChange: a, onSelect: i, onRemoveTag: o, preventEscapePropagation: u } = this.props;
+        let { selectedRow: t, selectedColumn: l, sections: n, query: r, tags: a, onSelectionChange: s, onSelect: i, onRemoveTag: o, preventEscapePropagation: u } = this.props;
         if (0 !== n.length) {
             switch (e.keyCode) {
                 case h.yXg.BACKSPACE:
-                    (null == r || 0 === r.length) && null != s && s.length > 0 && (e.preventDefault(), e.stopPropagation(), null == o || o(s.length - 1));
+                    (null == r || 0 === r.length) && null != a && a.length > 0 && (e.preventDefault(), e.stopPropagation(), null == o || o(a.length - 1));
                     break;
                 case h.yXg.ARROW_DOWN:
                     e.preventDefault(), e.stopPropagation(), -1 === t ? ((t = 0), (l = 0)) : ((t += 1) >= n.length && (t = n.length - 1), l >= n[t] && (l = n[t] - 1));
@@ -124,25 +124,25 @@ class v extends (n = a.Component) {
                 default:
                     return;
             }
-            null != a && a(t, l);
+            null != s && s(t, l);
         }
     }
     handleKeyDownList(e) {
-        let { sections: t, selectedSection: l, selectedRow: n, onSelect: r, onSelectionChange: s, query: a, tags: i, preventEscapePropagation: o } = this.props,
+        let { sections: t, selectedSection: l, selectedRow: n, onSelect: r, onSelectionChange: a, query: s, tags: i, preventEscapePropagation: o } = this.props,
             { current: u } = this.ref;
         if (null != u)
             switch (e.keyCode) {
                 case h.yXg.BACKSPACE:
-                    if ((null == a || 0 === a.length) && null != i && i.length > 0) {
+                    if ((null == s || 0 === s.length) && null != i && i.length > 0) {
                         var c, p;
                         e.preventDefault(), e.stopPropagation(), null == (c = (p = this.props).onRemoveTag) || c.call(p, i.length - 1);
                     }
                     break;
                 case h.yXg.ARROW_DOWN:
-                    e.preventDefault(), e.stopPropagation(), t.length > l && ++n >= t[l] && (++l >= t.length && (l = 0), (n = 0)), null == s || s(l, n);
+                    e.preventDefault(), e.stopPropagation(), t.length > l && ++n >= t[l] && (++l >= t.length && (l = 0), (n = 0)), null == a || a(l, n);
                     break;
                 case h.yXg.ARROW_UP:
-                    e.preventDefault(), e.stopPropagation(), --n < 0 && (--l < 0 && (l = t.length - 1), (n = t[l] - 1)), null == s || s(l, n);
+                    e.preventDefault(), e.stopPropagation(), --n < 0 && (--l < 0 && (l = t.length - 1), (n = t[l] - 1)), null == a || a(l, n);
                     break;
                 case h.yXg.ENTER:
                     e.preventDefault(), e.stopPropagation(), t.length > l && t[l] > n && (null == r || r(l, n, e));
@@ -152,17 +152,17 @@ class v extends (n = a.Component) {
             }
     }
     render() {
-        let { autoFocus: e, query: t, placeholder: l = p.intl.string(p.t.LzcpeX), themeOverride: n, disabled: r, onClear: a, size: i, maxHeight: h, tags: f, onActivate: y, className: v, inputProps: b, focusAfterReady: C } = this.props,
-            R = null != t && t.length > 0,
-            m = !1,
-            N = [];
+        let { autoFocus: e, query: t, placeholder: l = p.intl.string(p.t.LzcpeX), themeOverride: n, disabled: r, onClear: s, size: i, maxHeight: h, tags: f, onActivate: y, className: v, inputProps: b, focusAfterReady: C } = this.props,
+            m = null != t && t.length > 0,
+            R = !1,
+            D = [];
         return (
             null != f &&
                 f.length > 0 &&
                 ('string' == typeof f[0]
                     ? f.forEach((e, t) =>
-                          N.push(
-                              (0, s.jsxs)(
+                          D.push(
+                              (0, a.jsxs)(
                                   u.eee,
                                   {
                                       focusProps: { offset: 4 },
@@ -170,7 +170,7 @@ class v extends (n = a.Component) {
                                       onClick: this.handleRemoveTag.bind(this, t),
                                       children: [
                                           e,
-                                          (0, s.jsx)(u.Dio, {
+                                          (0, a.jsx)(u.Dio, {
                                               size: 'md',
                                               color: 'currentColor',
                                               className: d.close,
@@ -182,10 +182,10 @@ class v extends (n = a.Component) {
                               )
                           )
                       )
-                    : ((m = !0),
+                    : ((R = !0),
                       f.forEach((e, t) =>
-                          N.push(
-                              (0, s.jsxs)(
+                          D.push(
+                              (0, a.jsxs)(
                                   u.eee,
                                   {
                                       className: o()(d.tag, d.richTag),
@@ -193,29 +193,29 @@ class v extends (n = a.Component) {
                                       children: [
                                           ('MEMBER' === e.type || 'USER' === e.type) &&
                                               null != e.avatar &&
-                                              (0, s.jsx)(u.qEK, {
+                                              (0, a.jsx)(u.qEK, {
                                                   src: e.avatar,
                                                   'aria-hidden': !0,
                                                   size: u.EFr.SIZE_16
                                               }),
                                           'ROLE' === e.type &&
                                               null != e.color &&
-                                              (0, s.jsx)('span', {
+                                              (0, a.jsx)('span', {
                                                   className: d.tagRoleColor,
                                                   style: { backgroundColor: e.color }
                                               }),
                                           'GUILD' === e.type &&
                                               null != e.guild &&
-                                              (0, s.jsx)(c.Z, {
+                                              (0, a.jsx)(c.Z, {
                                                   guild: e.guild,
                                                   active: !0,
                                                   size: c.Z.Sizes.SMOL
                                               }),
-                                          (0, s.jsx)('span', {
+                                          (0, a.jsx)('span', {
                                               className: d.tagLabel,
                                               children: e.label
                                           }),
-                                          (0, s.jsx)(u.Dio, {
+                                          (0, a.jsx)(u.Dio, {
                                               size: 'md',
                                               color: 'currentColor',
                                               className: d.close,
@@ -227,21 +227,21 @@ class v extends (n = a.Component) {
                               )
                           )
                       ))),
-            (0, s.jsx)(u.tEY, {
+            (0, a.jsx)(u.tEY, {
                 focusTarget: this.ref,
                 ringTarget: this.containerRef,
-                children: (0, s.jsx)(u.f6W, {
+                children: (0, a.jsx)(u.f6W, {
                     theme: n,
                     children: (c) =>
-                        (0, s.jsx)('div', {
+                        (0, a.jsx)('div', {
                             ref: this.containerRef,
                             className: o()(v, d.container, i, c, { [d.disabled]: r }),
-                            children: (0, s.jsxs)(u.zJl, {
+                            children: (0, a.jsxs)(u.zJl, {
                                 className: d.inner,
                                 style: { maxHeight: h },
                                 children: [
-                                    N,
-                                    (0, s.jsx)(
+                                    D,
+                                    (0, a.jsx)(
                                         'input',
                                         (function (e) {
                                             for (var t = 1; t < arguments.length; t++) {
@@ -260,7 +260,7 @@ class v extends (n = a.Component) {
                                             return e;
                                         })(
                                             {
-                                                className: o()(d.input, { [d.richTagInput]: m }),
+                                                className: o()(d.input, { [d.richTagInput]: R }),
                                                 type: 'text',
                                                 ref: this.ref,
                                                 spellCheck: 'false',
@@ -278,11 +278,11 @@ class v extends (n = a.Component) {
                                             b
                                         )
                                     ),
-                                    null != a
-                                        ? (0, s.jsx)(E, {
+                                    null != s
+                                        ? (0, a.jsx)(E, {
                                               size: i,
                                               themeOverride: n,
-                                              hasContent: R,
+                                              hasContent: m,
                                               onClear: this.handleClear
                                           })
                                         : null
@@ -300,19 +300,19 @@ class v extends (n = a.Component) {
                 'aria-haspopup': 'listbox',
                 'aria-autocomplete': 'list'
             }),
-            g(this, 'ref', a.createRef()),
-            g(this, 'containerRef', a.createRef()),
+            g(this, 'ref', s.createRef()),
+            g(this, 'containerRef', s.createRef()),
             g(this, 'previousHeight', 0),
             g(this, 'handleKeyDown', (e) => {
                 let { onActivate: t, onKeyDown: l, onQueryChange: n, useKeyboardNavigation: r } = this.props;
                 null != l && l(e);
-                let { current: s } = this.ref;
-                if (null == s || null != t) {
+                let { current: a } = this.ref;
+                if (null == a || null != t) {
                     e.keyCode !== h.yXg.TAB && null != t && t(e);
                     return;
                 }
-                if (e.keyCode === h.yXg.ESCAPE && null != s.value && '' !== s.value && s.value.length > 0) {
-                    (s.value = ''), null != n && n('');
+                if (e.keyCode === h.yXg.ESCAPE && null != a.value && '' !== a.value && a.value.length > 0) {
+                    (a.value = ''), null != n && n('');
                     return;
                 }
                 r && (this.props.gridResults ? this.handleKeyDownGrid(e) : this.handleKeyDownList(e));

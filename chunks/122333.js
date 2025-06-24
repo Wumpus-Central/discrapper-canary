@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => L }), n(388685), n(583741);
+n.d(t, { Z: () => w }), n(388685), n(583741);
 var i = n(255367);
 n(73800);
 var l = n(481060),
@@ -16,8 +16,8 @@ var l = n(481060),
     m = n(486472),
     b = n(430824),
     _ = n(914010),
-    E = n(594174),
-    O = n(823379),
+    O = n(594174),
+    E = n(823379),
     y = n(358085),
     I = n(929809),
     v = n(179645),
@@ -101,7 +101,7 @@ class x extends o.Z {
             null != e && (0, d.Dc)(e) && ((o = !0), (0, f.RM)(e.id));
         }
         let x = () => 0 === m.Z.totalGuilds && !y.isPlatformEmbedded,
-            L = s.bN();
+            w = s.bN();
         (e = [
             {
                 key: 'Unified NUF Modal',
@@ -132,7 +132,7 @@ class x extends o.Z {
                             case null:
                                 break;
                             default:
-                                O.vE(e);
+                                E.vE(e);
                         }
                     };
                     r = await (0, l.ZDy)(
@@ -152,14 +152,14 @@ class x extends o.Z {
             {
                 key: 'New User Age Gate',
                 open: c.i,
-                predicate: () => L && !x() && !T.a
+                predicate: () => w && !x() && !T.a
             },
             {
                 key: 'Claim Account Modal',
                 open: (e) => c.j(y.isPlatformEmbedded, e),
                 predicate: () => {
                     var e;
-                    return !o && null != E.default.getCurrentUser() && !(null == (e = E.default.getCurrentUser()) ? void 0 : e.isClaimed()) && !T.a && !(0, p.g)('new_user_manager');
+                    return !o && null != O.default.getCurrentUser() && !(null == (e = O.default.getCurrentUser()) ? void 0 : e.isClaimed()) && !T.a && !(0, p.g)('new_user_manager');
                 }
             },
             {
@@ -167,7 +167,7 @@ class x extends o.Z {
                 open: (e) => (0, u.hk)(Z, null != e ? e : void 0),
                 predicate: () => {
                     var e;
-                    return o && !(null == (e = E.default.getCurrentUser()) ? void 0 : e.isClaimed()) && !T.a;
+                    return o && !(null == (e = O.default.getCurrentUser()) ? void 0 : e.isClaimed()) && !T.a;
                 }
             },
             {
@@ -195,4 +195,4 @@ class x extends o.Z {
             t();
     }
 }
-let L = new x();
+let w = new x();

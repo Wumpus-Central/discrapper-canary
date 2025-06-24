@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => I });
 var r = n(255367),
     i = n(73800),
     l = n(374470),
@@ -6,77 +6,76 @@ var r = n(255367),
     o = n(481060),
     s = n(40851),
     c = n(896449),
-    u = n(540059),
-    d = n(314910),
-    p = n(574254),
-    h = n(585483),
-    f = n(5967),
-    m = n(499254),
-    g = n(827498),
-    b = n(421591),
-    _ = n(496977),
-    y = n(314734),
-    C = n(981631),
+    u = n(314910),
+    d = n(574254),
+    p = n(585483),
+    h = n(5967),
+    f = n(499254),
+    m = n(827498),
+    g = n(421591),
+    b = n(496977),
+    _ = n(314734),
+    y = n(981631),
     x = n(149203),
-    v = n(388032),
-    j = n(760420);
-let O = { height: y.lv };
-function E() {
-    m.yT(g.ti.DISMISSED);
+    C = n(388032),
+    v = n(760420);
+let j = { height: _.lv };
+function O() {
+    f.yT(m.ti.DISMISSED);
 }
-function I(e) {
+function E(e) {
     let { channel: t, closeOnModalOuterClick: n = !1, parentModalKey: u } = e,
-        d = i.useRef(null),
-        { renderWindow: m, windowDispatch: v } = i.useContext(s.ZP),
+        f = i.useRef(null),
+        { renderWindow: C, windowDispatch: v } = i.useContext(s.ZP),
         j = null != u,
-        O = (0, a.Jw)(null != u ? u : ''),
+        E = (0, a.Jw)(null != u ? u : ''),
         I = i.useCallback(
             (e) => {
                 var t;
-                if ((!j && (0, a.$s)()) || (j && !(O && n)) || p.Z.isOpen() || e.defaultPrevented) return;
+                if ((!j && (0, a.$s)()) || (j && !(E && n)) || d.Z.isOpen() || e.defaultPrevented) return;
                 let { target: r } = e;
-                if ((0, l.k)(r) && null != r.closest('.' + y.Jh)) return;
+                if ((0, l.k)(r) && null != r.closest('.' + _.Jh)) return;
                 for (; (0, l.k)(r); ) {
-                    if (r === d.current) return;
-                    if (r.classList.contains(y.t4) || r.classList.contains(y.Id)) return void e.preventDefault();
-                    if (r.classList.contains(y.NN)) return;
+                    if (r === f.current) return;
+                    if (r.classList.contains(_.t4) || r.classList.contains(_.Id)) return void e.preventDefault();
+                    if (r.classList.contains(_.NN)) return;
                     let t = [x.cZ, c.N];
-                    if (r.classList.contains(y.I4) || t.includes(r.id)) return;
+                    if (r.classList.contains(_.I4) || t.includes(r.id)) return;
                     r = r.parentNode;
                 }
-                E();
-                let i = null == (t = (0, f.uB)(e)) ? void 0 : t.activeElement;
-                (null == i || 'BODY' === i.tagName) && h.S.dispatchToLastSubscribed(C.CkL.TEXTAREA_FOCUS);
+                O();
+                let i = null == (t = (0, h.uB)(e)) ? void 0 : t.activeElement;
+                (null == i || 'BODY' === i.tagName) && p.S.dispatchToLastSubscribed(y.CkL.TEXTAREA_FOCUS);
             },
-            [n, O, j]
+            [n, E, j]
         );
     i.useLayoutEffect(
         () => (
-            m.addEventListener('mousedown', I),
-            m.addEventListener('contextmenu', I),
-            v.subscribe(C.CkL.POPOUT_CLOSE, E),
+            C.addEventListener('mousedown', I),
+            C.addEventListener('contextmenu', I),
+            v.subscribe(y.CkL.POPOUT_CLOSE, O),
             () => {
-                m.removeEventListener('mousedown', I), m.removeEventListener('contextmenu', I), v.unsubscribe(C.CkL.POPOUT_CLOSE, E);
+                C.removeEventListener('mousedown', I), C.removeEventListener('contextmenu', I), v.unsubscribe(y.CkL.POPOUT_CLOSE, O);
             }
         ),
-        [I, m, v]
+        [I, C, v]
     ),
-        (0, o.Tbt)(d),
+        (0, o.Tbt)(f),
         i.useEffect(() => {
-            ((!j && (0, a.$s)()) || (j && !O)) && E();
-        }, [O, j]);
-    let P = (0, _.Z)();
-    return (0, r.jsx)(b.Z, {
-        ref: d,
+            ((!j && (0, a.$s)()) || (j && !E)) && O();
+        }, [E, j]);
+    let S = (0, b.Z)();
+    return (0, r.jsx)(g.Z, {
+        ref: f,
         context: {
             channel: t,
             type: 'channel'
         },
-        entrypoint: g._b.TEXT,
-        initHistory: P
+        entrypoint: m._b.TEXT,
+        initHistory: S
     });
 }
-let P = i.memo(function (e) {
+let I = i.memo(function (e) {
     var { positionTargetRef: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
@@ -97,28 +96,27 @@ let P = i.memo(function (e) {
             }
             return i;
         })(e, ['positionTargetRef']);
-    let i = (0, u.Q3)('AppLauncherPopup');
     return (0, r.jsx)('span', {
-        style: y.u$,
-        children: (0, r.jsx)(d.W5, {
-            className: j.positionLayer,
+        style: _.u$,
+        children: (0, r.jsx)(u.W5, {
+            className: v.positionLayer,
             targetRef: t,
             position: 'top',
             align: 'right',
-            spacing: i ? 24 : 8,
+            spacing: 24,
             autoInvert: !0,
             clickTrap: !0,
             children: (e) => {
                 let { isPositioned: t } = e;
                 return (0, r.jsx)('section', {
-                    className: j.positionContainer,
+                    className: v.positionContainer,
                     role: 'dialog',
-                    style: O,
-                    'aria-label': v.intl.string(v.t['3CNGLC']),
+                    style: j,
+                    'aria-label': C.intl.string(C.t['3CNGLC']),
                     children:
                         t &&
                         (0, r.jsx)(
-                            I,
+                            E,
                             (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},

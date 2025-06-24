@@ -2,15 +2,15 @@ n.d(t, { Z: () => d });
 var r = n(255367),
     s = n(73800),
     o = n(70097),
-    a = n(359013),
-    i = n(401258),
+    i = n(359013),
+    a = n(401258),
     c = n(477839),
     l = n(6911),
     u = n(34768);
 function d(e) {
     let { isPaused: t } = e,
         n = (0, s.useRef)(null),
-        d = a.Mq[c.yN.POURING_WATER].points;
+        d = i.Mq[c.yN.POURING_WATER].points;
     return (
         (0, s.useEffect)(() => {
             var e, r;
@@ -27,7 +27,7 @@ function d(e) {
                     playsInline: !0,
                     autoPlay: !0
                 }),
-                (0, r.jsx)(i.Z, {
+                (0, r.jsx)(a.Z, {
                     itemId: c.yN.AT_SOMEONE,
                     pointsPerInterval: d,
                     interval: 1000,

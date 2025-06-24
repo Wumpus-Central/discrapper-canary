@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(246364),
     b = n(937111),
     _ = n(381416),
-    E = n(523924),
-    O = n(390500),
+    O = n(523924),
+    E = n(390500),
     y = n(981631),
     I = n(898625),
     v = n(388032),
@@ -139,8 +139,8 @@ let N = (e) => {
         x = async () => {
             await f.Z.resetGuildJoinRequest(t), (0, g.hk)(t);
         },
-        L = Z(v.intl.format(v.t['9ZezpK'], { name: null == j ? void 0 : j.name }), A),
-        w = Z(v.intl.format(v.t.fJwWVl, { name: null == j ? void 0 : j.name }), A);
+        w = Z(v.intl.format(v.t['9ZezpK'], { name: null == j ? void 0 : j.name }), A),
+        L = Z(v.intl.format(v.t.fJwWVl, { name: null == j ? void 0 : j.name }), A);
     return (0, r.jsxs)('div', {
         className: C.page,
         ref: n,
@@ -156,22 +156,22 @@ let N = (e) => {
                     if (null == N) return null;
                     switch (N.applicationStatus) {
                         case m.wB.SUBMITTED:
-                            return (0, r.jsx)(O.Z, {
-                                onWithdrawApplication: L,
+                            return (0, r.jsx)(E.Z, {
+                                onWithdrawApplication: w,
                                 guild: j
                             });
                         case m.wB.REJECTED:
-                            return (0, r.jsx)(E.Z, {
+                            return (0, r.jsx)(O.Z, {
                                 reapplyText: v.intl.string(v.t.I1LYVl),
                                 onReapply: x,
                                 confirmText: v.intl.string(v.t.g9tK0t),
-                                onWithdrawApplication: L,
+                                onWithdrawApplication: w,
                                 rejectionReason: N.rejectionReason,
                                 guild: j
                             });
                         default:
                             return (0, r.jsx)(_.s, {
-                                onDiscardApplication: w,
+                                onDiscardApplication: L,
                                 onContinueApplication: () => (0, g.hk)(t),
                                 guild: j
                             });

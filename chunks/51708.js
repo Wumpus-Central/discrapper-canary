@@ -19,17 +19,17 @@ function g(e) {
     let { onClose: _ } = e,
         { analyticsLocations: v } = (0, s.ZP)(l.Z.GO_LIVE_MODAL_V2),
         j = (0, c.N)(),
-        S = (0, a.Ng)(),
-        b = (null == j || null == (t = j.subscription_trial) ? void 0 : t.sku_id) === m.Si.TIER_2 || (0, a.Wp)(S, m.Si.TIER_2),
+        b = (0, a.Ng)(),
+        S = (null == j || null == (t = j.subscription_trial) ? void 0 : t.sku_id) === m.Si.TIER_2 || (0, a.Wp)(b, m.Si.TIER_2),
         C = p.intl.string(h.default['+f+cqq']);
     return (
-        b &&
+        S &&
             (null != j
                 ? (C = (0, u.Rt)({
                       intervalType: null == j || null == (n = j.subscription_trial) ? void 0 : n.interval,
                       intervalCount: null == j || null == (g = j.subscription_trial) ? void 0 : g.interval_count
                   }))
-                : null != S && (C = p.intl.formatToPlainString(p.t.bkQ4bG, { percent: S.discount.amount }))),
+                : null != b && (C = p.intl.formatToPlainString(p.t.bkQ4bG, { percent: b.discount.amount }))),
         (0, r.jsxs)('div', {
             className: x.root,
             children: [

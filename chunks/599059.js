@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u }), n(388685);
+n.d(t, { Z: () => c }), n(388685);
 var r = n(255367),
     l = n(73800),
     s = n(120356),
@@ -18,13 +18,13 @@ function E(e, t, n) {
         e
     );
 }
-class u extends l.Component {
+class c extends l.Component {
     componentDidUpdate(e, t) {
         if (t.focused !== this.state.focused && this.state.focused) {
             var n;
             null == (n = this.inputRef.current) || n.focus();
         }
-        null !== this.props.value && this.props.value !== e.value && this.props.value !== this.state.value && c(this.props.value, this.props, this.state) && this.setState({ value: this.props.value });
+        null !== this.props.value && this.props.value !== e.value && this.props.value !== this.state.value && u(this.props.value, this.props, this.state) && this.setState({ value: this.props.value });
     }
     render() {
         let e,
@@ -94,7 +94,7 @@ class u extends l.Component {
                     null == t || t(e);
             }),
             E(this, 'handleBlur', (e) => {
-                if (c('', this.props, this.state)) {
+                if (u('', this.props, this.state)) {
                     this.setState({ focused: !1 });
                     let { onBlur: t } = this.props;
                     null == t || t(e);
@@ -116,7 +116,7 @@ class u extends l.Component {
             });
     }
 }
-function c() {
+function u() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : '',
         t = arguments.length > 1 ? arguments[1] : void 0,
         n = arguments.length > 2 ? arguments[2] : void 0,

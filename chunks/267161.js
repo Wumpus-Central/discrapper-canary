@@ -19,8 +19,8 @@ var r = n(255367),
     m = n(300986),
     b = n(314451),
     _ = n(35583),
-    E = n(821020),
-    O = n(370774),
+    O = n(821020),
+    E = n(370774),
     y = n(522474),
     I = n(141321),
     v = n(210887),
@@ -33,8 +33,8 @@ var r = n(255367),
     A = n(228488),
     Z = n(950796),
     x = n(981631),
-    L = n(741764),
-    w = n(388032),
+    w = n(741764),
+    L = n(388032),
     R = n(916723),
     D = n(103609);
 function k(e) {
@@ -90,10 +90,10 @@ function G() {
         c = null != i ? i : null == a ? void 0 : a.guild_id,
         u = (0, o.e7)([S.Z], () => S.Z.getGuild(c), [c]),
         d = (0, h.Z)(),
-        p = (0, O.D)(),
+        p = (0, E.D)(),
         f = null;
     return (
-        p && ((e = w.intl.string(w.t.HcoRu7)), (f = (0, r.jsx)(s.Dkj, { size: 'xs' }))),
+        p && ((e = L.intl.string(L.t.HcoRu7)), (f = (0, r.jsx)(s.Dkj, { size: 'xs' }))),
         null != u
             ? ((f = d
                   ? (0, r.jsx)(s.r7p, { size: 'xs' })
@@ -105,16 +105,16 @@ function G() {
                     })),
               (e = u.name))
             : null != a && (a.isDM() || a.isGroupDM())
-              ? ((e = w.intl.string(w.t.YUU0RE)), (f = (0, r.jsx)(s.gw7, { size: 'xs' })))
+              ? ((e = L.intl.string(L.t.YUU0RE)), (f = (0, r.jsx)(s.gw7, { size: 'xs' })))
               : t.pathname.startsWith(x.Z5c.GLOBAL_DISCOVERY)
-                ? ((e = w.intl.string(w.t['4nEZLi'])), (f = (0, r.jsx)(s.Jmo, { size: 'xs' })))
+                ? ((e = L.intl.string(L.t['4nEZLi'])), (f = (0, r.jsx)(s.Jmo, { size: 'xs' })))
                 : t.pathname.startsWith(x.Z5c.NITRO_HOME)
-                  ? ((e = w.intl.string(w.t.Ipxkoq)), (f = (0, r.jsx)(s.SrA, { size: 'xs' })))
+                  ? ((e = L.intl.string(L.t.Ipxkoq)), (f = (0, r.jsx)(s.SrA, { size: 'xs' })))
                   : t.pathname.startsWith(x.Z5c.COLLECTIBLES_SHOP)
-                    ? ((e = w.intl.string(w.t.pWG4zc)), (f = (0, r.jsx)(s.EOn, { size: 'xs' })))
+                    ? ((e = L.intl.string(L.t.pWG4zc)), (f = (0, r.jsx)(s.EOn, { size: 'xs' })))
                     : t.pathname.startsWith(x.Z5c.FRIENDS)
-                      ? ((e = w.intl.string(w.t.TdEu5e)), (f = (0, r.jsx)(s.iFz, { size: 'xs' })))
-                      : t.pathname.startsWith(x.Z5c.FAMILY_CENTER) && ((e = w.intl.string(R.default.RZqaJi)), (f = (0, r.jsx)(s.BFJ, { size: 'xs' }))),
+                      ? ((e = L.intl.string(L.t.TdEu5e)), (f = (0, r.jsx)(s.iFz, { size: 'xs' })))
+                      : t.pathname.startsWith(x.Z5c.FAMILY_CENTER) && ((e = L.intl.string(R.default.RZqaJi)), (f = (0, r.jsx)(s.BFJ, { size: 'xs' }))),
         null != e &&
             '' !== e &&
             (0, r.jsxs)('div', {
@@ -132,17 +132,17 @@ function G() {
 }
 let B = i.memo(function () {
     i.useLayoutEffect(() => {
-        j.ZP.setMinimumSize(L.J, L.N);
+        j.ZP.setMinimumSize(w.J, w.N);
     }, []);
-    let e = (0, p.TH)('AppTitleBar'),
+    let e = (0, p.T)('AppTitleBar'),
         t = !U((e) => e.isOpen) && e,
         { hasBugReporterAccess: n } = u.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
     i.useLayoutEffect(() => {
-        j.ZP.setMinimumSize(L.J, L.N);
+        j.ZP.setMinimumSize(w.J, w.N);
     }, []);
     let l = (0, o.e7)([v.Z], () => (v.Z.darkSidebar ? x.BRd.DARK : void 0)),
         a = (0, o.e7)([P.Z, y.Z], () => (0, A.rB)()),
-        { notificationCenterVariant: h } = E.Lk.useExperiment({ location: 'AppTitleBar' });
+        { notificationCenterVariant: h } = O.Lk.useExperiment({ location: 'AppTitleBar' });
     return a
         ? null
         : (0, r.jsx)(s.Wdt, {

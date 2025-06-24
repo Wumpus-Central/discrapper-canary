@@ -3,13 +3,13 @@ var r = n(73800);
 function s(e, t) {
     let n = (0, r.useRef)(e),
         s = (0, r.useRef)(e),
-        [o, a] = (0, r.useState)(0),
-        i = (0, r.useRef)(0);
+        [o, i] = (0, r.useState)(0),
+        a = (0, r.useRef)(0);
     (0, r.useEffect)(() => {
         n.current = e;
     }, [e]);
     let c = (0, r.useCallback)(() => {
-        (i.current = (n.current - s.current) * 0.5 + 0.5 * i.current), (s.current = n.current), a(i.current);
+        (a.current = (n.current - s.current) * 0.5 + 0.5 * a.current), (s.current = n.current), i(a.current);
     }, []);
     return (
         (0, r.useEffect)(() => {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Q }), n(388685), n(583741);
+n.d(t, { Z: () => J }), n(388685), n(583741);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -16,15 +16,15 @@ var r = n(255367),
     b = n(100527),
     _ = n(906732),
     y = n(82295),
-    C = n(91218),
-    x = n(623624),
+    x = n(91218),
+    C = n(623624),
     v = n(518738),
     j = n(850020),
     O = n(965376),
     E = n(159299),
     I = n(670188),
-    P = n(199902),
-    S = n(271383),
+    S = n(199902),
+    P = n(271383),
     Z = n(430824),
     N = n(158776),
     T = n(885110),
@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(499033),
     M = n(626135),
     k = n(585483),
-    L = n(700785),
-    D = n(51144),
+    D = n(700785),
+    L = n(51144),
     U = n(998502),
     B = n(276264),
     F = n(981631),
@@ -72,7 +72,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
         let { channel: t, sectionId: l, userId: a, guildOwnerId: o } = e,
             s = i.useRef(null),
             u = (0, p.e7)([A.Z], () => A.Z.isTyping(t.id, a)),
-            h = (0, p.e7)([S.ZP], () => S.ZP.getMember(t.guild_id, a)),
+            h = (0, p.e7)([P.ZP], () => P.ZP.getMember(t.guild_id, a)),
             g = (0, p.e7)(
                 [Z.Z],
                 () => {
@@ -84,12 +84,12 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             b = (0, p.e7)([w.default], () => w.default.getUser(a)),
             _ = (0, p.e7)([w.default], () => w.default.getCurrentUser()),
             y = (null == b ? void 0 : b.id) === (null == _ ? void 0 : _.id),
-            C = (0, p.e7)([N.Z, T.Z], () => (y ? T.Z.getStatus() : N.Z.getStatus(a, t.guild_id))),
+            x = (0, p.e7)([N.Z, T.Z], () => (y ? T.Z.getStatus() : N.Z.getStatus(a, t.guild_id))),
             v = (0, p.e7)([N.Z], () => N.Z.isMobileOnline(a)),
             O = (0, p.e7)([N.Z, T.Z], () => (y ? T.Z.getActivities() : N.Z.getActivities(a, t.guild_id))),
-            R = (0, p.e7)([P.Z], () => P.Z.getAnyStreamForUser(a)),
+            R = (0, p.e7)([S.Z], () => S.Z.getAnyStreamForUser(a)),
             M = (0, c.JA)(a),
-            L = (0, p.e7)([E.Z], () => E.Z.canUserViewChannel(t.id, l, a)),
+            D = (0, p.e7)([E.Z], () => E.Z.canUserViewChannel(t.id, l, a)),
             U = (null == b ? void 0 : b.id) != null && b.id === o,
             H = i.useCallback(
                 (e) => {
@@ -128,7 +128,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             ),
             V = i.useCallback(() => {
                 if (null == b) return;
-                let e = '@'.concat(D.ZP.getUserTag(b, { decoration: 'never' })),
+                let e = '@'.concat(L.ZP.getUserTag(b, { decoration: 'never' })),
                     n = '<@'.concat(b.id, '>');
                 k.S.dispatch(F.CkL.TEXTAREA_FOCUS, { channelId: t.id }),
                     k.S.dispatchToLastSubscribed(F.CkL.INSERT_TEXT, {
@@ -140,7 +140,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             Y = i.useCallback(
                 (e) => {
                     e.stopPropagation(),
-                        (0, x.f)({
+                        (0, C.f)({
                             guildId: t.guild_id,
                             location: {
                                 section: F.jXE.THREAD_MEMBER_LIST,
@@ -153,7 +153,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
             q = (0, j.K)({ user: b }),
             [K, X] = i.useState(!1);
         if (null == b) return null;
-        let Q = null == h ? void 0 : h.premiumSince;
+        let J = null == h ? void 0 : h.premiumSince;
         return (0, r.jsx)(I.Z, {
             targetElementRef: s,
             user: b,
@@ -195,7 +195,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                             user: b,
                             currentUser: _,
                             nick: null == h ? void 0 : h.nick,
-                            status: C,
+                            status: x,
                             activities: O,
                             colorString: null == h ? void 0 : h.colorString,
                             colorStrings: null == h ? void 0 : h.colorStrings,
@@ -206,10 +206,10 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                             isMobile: v,
                             selected: K,
                             applicationStream: R,
-                            premiumSince: null == Q ? null : new Date(Q),
+                            premiumSince: null == J ? null : new Date(J),
                             onClickPremiumGuildIcon: Y,
                             itemProps: M,
-                            lostPermissionTooltipText: L ? void 0 : G.intl.string(G.t['/QcoT0']),
+                            lostPermissionTooltipText: D ? void 0 : G.intl.string(G.t['/QcoT0']),
                             isOwner: U,
                             nameplate: q,
                             onClick: (e) => {
@@ -244,7 +244,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
                       count: i
                   }),
                   children: [
-                      null != a ? (0, r.jsx)(C.Z, z({ className: V.roleIcon }, a)) : null,
+                      null != a ? (0, r.jsx)(x.Z, z({ className: V.roleIcon }, a)) : null,
                       (0, r.jsxs)('span', {
                           'aria-hidden': !0,
                           children: [n, ' \u2014 ', i]
@@ -281,7 +281,7 @@ let W = U.ZP.getEnableHardwareAcceleration(),
               })
             : null;
     });
-function Q(e) {
+function J(e) {
     let { channel: t, guild: n } = e,
         l = 'members-'.concat(t.id),
         { analyticsLocations: o } = (0, _.ZP)(b.Z.MEMBER_LIST),
@@ -344,7 +344,7 @@ function Q(e) {
                 listRef: r
             };
         })(l, Y),
-        C = 0 === d.length || d.every((e) => 0 === e.userIds.length);
+        x = 0 === d.length || d.every((e) => 0 === e.userIds.length);
     if (
         (i.useEffect(() => {
             M.default.track(F.rMx.MEMBER_LIST_VIEWED, {
@@ -353,11 +353,11 @@ function Q(e) {
                 guild_id: t.guild_id
             });
         }, [t.guild_id, t.id, t.type]),
-        C)
+        x)
     )
-        return (0, r.jsx)(J, { channel: t });
-    let x = s().omit(m.containerProps, ['ref']),
-        v = L.iJ(n);
+        return (0, r.jsx)(Q, { channel: t });
+    let C = s().omit(m.containerProps, ['ref']),
+        v = D.iJ(n);
     return (0, r.jsx)(_.Gt, {
         value: o,
         children: (0, r.jsx)(c.bG, {
@@ -410,7 +410,7 @@ function Q(e) {
                                     sections: d.map((e) => e.userIds.length),
                                     fade: !0
                                 },
-                                x,
+                                C,
                                 e
                             ),
                             l
@@ -420,7 +420,7 @@ function Q(e) {
         })
     });
 }
-function J(e) {
+function Q(e) {
     let { channel: t } = e;
     return (0, r.jsxs)('div', {
         className: a()(V.membersWrap, V.hiddenMembers, V.members, H.emptyState),

@@ -16,8 +16,8 @@ var i = n(243814),
     m = n(596223),
     b = n(838195),
     _ = n(333861),
-    E = n(928518),
-    O = n(23750),
+    O = n(928518),
+    E = n(23750),
     y = n(592125),
     I = n(293273),
     v = n(885110),
@@ -30,8 +30,8 @@ var i = n(243814),
     A = n(996106),
     Z = n(914946),
     x = n(452426),
-    L = n(561205),
-    w = n(600027),
+    w = n(561205),
+    L = n(600027),
     R = n(852926),
     D = n(186901),
     k = n(981631),
@@ -161,12 +161,12 @@ let G = {
             let { socket: t } = e,
                 i = t.application;
             if (null == i.id) throw new A.Z({ errorCode: k.lTL.INVALID_COMMAND }, 'No application.');
-            let { channel: l, guild: o } = (0, w.T)(),
+            let { channel: l, guild: o } = (0, L.T)(),
                 s = (0, g.ZP)({
                     application: t.application,
                     channelId: null == l ? void 0 : l.id
                 }),
-                c = null != s ? E.Z.getWindow(s) : void 0;
+                c = null != s ? O.Z.getWindow(s) : void 0;
             (null == c ? void 0 : c.closed) && (c = void 0);
             let u = null != c ? k.IlC.POPOUT : k.IlC.APP;
             (0, j.Pr)({}, null == c ? void 0 : c.document),
@@ -239,12 +239,12 @@ let G = {
             let { socket: n } = e,
                 r = n.application.id;
             if (null == r) throw new A.Z({ errorCode: k.lTL.INVALID_COMMAND }, 'No application.');
-            let i = null == (t = (0, L.Z)()) ? void 0 : t.id;
+            let i = null == (t = (0, w.Z)()) ? void 0 : t.id;
             if (null == i) throw new A.Z({ errorCode: k.lTL.UNKNOWN_ERROR }, 'Unable to find selected channel');
             return new Promise((e, t) => {
                 !(function (e, t) {
                     let n;
-                    if ((0, h.R)()) n = E.Z.getWindow(k.KJ3.ACTIVITY_POPOUT);
+                    if ((0, h.R)()) n = O.Z.getWindow(k.KJ3.ACTIVITY_POPOUT);
                     else {
                         var r;
                         let e = C.Z.getLastFocusedWindowId();
@@ -294,7 +294,7 @@ let G = {
             let i = n.application.id;
             if (null == i) throw new A.Z({ errorCode: k.lTL.INVALID_COMMAND }, 'No application.');
             if (!(0, S.yE)(null != (t = n.application.flags) ? t : 0, k.udG.EMBEDDED)) throw new A.Z({ errorCode: k.lTL.INVALID_COMMAND }, 'This application cannot access this API');
-            let l = (0, L.Z)();
+            let l = (0, w.Z)();
             if (null == l) throw new A.Z({ errorCode: k.lTL.INVALID_COMMAND }, 'No channel found');
             if (!P.Z.isDiscordCdnUrl(r)) throw new A.Z({ errorCode: k.lTL.INVALID_PAYLOAD }, 'mediaUrl must be a Discord CDN url');
             (0, b.Z)({
@@ -319,7 +319,7 @@ let G = {
             if (null == p) throw new A.Z({ errorCode: k.lTL.INVALID_COMMAND }, 'No application.');
             if (!M.Cr.includes(p)) throw new A.Z({ errorCode: k.lTL.INVALID_COMMAND }, 'Unsupported application.');
             if (!(0, S.yE)(null != (t = r.application.flags) ? t : 0, k.udG.EMBEDDED)) throw new A.Z({ errorCode: k.lTL.INVALID_COMMAND }, 'This application cannot access this API');
-            let h = (0, L.Z)();
+            let h = (0, w.Z)();
             if (null == h && s) throw new A.Z({ errorCode: k.lTL.INVALID_COMMAND }, 'No channel found');
             if (null !== l || null !== o || null !== c) {
                 let e = [];
@@ -335,7 +335,7 @@ let G = {
                             width: l.width
                         }
                     ]),
-                    (n = new O.ZP({
+                    (n = new E.ZP({
                         id: T.default.cast(T.default.fromTimestamp(Date.now())),
                         applicationId: p,
                         content: c,
@@ -347,7 +347,7 @@ let G = {
                 let t = !1,
                     r = (0, R.jU)(d),
                     l = a.z1l;
-                (E.Z.getWindowOpen(k.KJ3.ACTIVITY_POPOUT) || r.context === k.IlC.POPOUT) && (l = a.u1M),
+                (O.Z.getWindowOpen(k.KJ3.ACTIVITY_POPOUT) || r.context === k.IlC.POPOUT) && (l = a.u1M),
                     (0, _.M)({
                         applicationId: p,
                         channel: h,

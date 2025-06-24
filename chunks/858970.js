@@ -13,9 +13,9 @@ var r = n(442837),
     p = n(221292),
     m = n(687158),
     b = n(316027),
-    y = n(502762),
-    _ = n(848780),
-    x = n(907179),
+    x = n(502762),
+    y = n(848780),
+    _ = n(907179),
     h = n(228168),
     g = n(981631),
     j = n(388032),
@@ -85,7 +85,7 @@ function O(e) {
                 className: I.root,
                 'aria-label': k,
                 parentComponent: 'RestrictedUserProfileModalV2',
-                children: (0, o.jsxs)(y.Z, {
+                children: (0, o.jsxs)(x.Z, {
                     user: t,
                     displayProfile: D,
                     themeType: h.lY.MODAL_V2,
@@ -133,7 +133,7 @@ function O(e) {
                                 (0, o.jsxs)(i.Kqy, {
                                     align: 'center',
                                     children: [
-                                        (0, o.jsx)(x.Z, {
+                                        (0, o.jsx)(_.Z, {
                                             size: i.PhG.MEDIUM,
                                             isBlocked: S,
                                             onClick: () => {
@@ -149,7 +149,7 @@ function O(e) {
                                                     );
                                             }
                                         }),
-                                        (0, o.jsx)(_.Z, {
+                                        (0, o.jsx)(y.Z, {
                                             userId: t.id,
                                             onClick: () => {
                                                 Z(),

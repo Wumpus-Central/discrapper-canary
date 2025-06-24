@@ -1,18 +1,18 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => p });
 var r = n(255367),
     i = n(73800),
     l = n(990547),
-    a = n(91192),
-    o = n(481060),
-    s = n(724757),
+    o = n(91192),
+    s = n(481060),
+    a = n(724757),
     c = n(213609),
     u = n(441358),
     d = n(426521),
-    p = n(823123);
-function m(e) {
-    let { initialized: t, items: n, loading: m, loadMore: f } = e,
-        h = i.useRef(null),
-        g = (0, s.Z)('for-you', h);
+    h = n(823123);
+function p(e) {
+    let { initialized: t, items: n, loading: p, loadMore: f } = e,
+        g = i.useRef(null),
+        m = (0, a.Z)('for-you', g);
     (0, c.Z)(
         {
             type: l.ImpressionTypes.VIEW,
@@ -22,22 +22,22 @@ function m(e) {
         { disableTrack: !t },
         [t]
     );
-    let _ = () => {
+    let b = () => {
         var e;
-        let t = null == (e = h.current) ? void 0 : e.getScrollerState();
+        let t = null == (e = g.current) ? void 0 : e.getScrollerState();
         null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < 1500 && f();
     };
     return t
         ? 0 === n.length
             ? (0, r.jsx)(u.v, {})
-            : (0, r.jsx)(a.bG, {
-                  navigator: g,
-                  children: (0, r.jsx)(a.SJ, {
+            : (0, r.jsx)(o.bG, {
+                  navigator: m,
+                  children: (0, r.jsx)(o.SJ, {
                       children: (e) => {
                           var t,
                               i,
                               { ref: l } = e,
-                              a = (function (e, t) {
+                              o = (function (e, t) {
                                   if (null == e) return {};
                                   var n,
                                       r,
@@ -57,7 +57,7 @@ function m(e) {
                                   return i;
                               })(e, ['ref']);
                           return (0, r.jsxs)(
-                              o.Den,
+                              s.Den,
                               ((t = (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var n = null != arguments[t] ? arguments[t] : {},
@@ -84,18 +84,18 @@ function m(e) {
                                   return e;
                               })(
                                   {
-                                      className: p.container,
+                                      className: h.container,
                                       ref: (e) => {
                                           var t;
-                                          (h.current = e), (l.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
+                                          (g.current = e), (l.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
                                       }
                                   },
-                                  a
+                                  o
                               )),
                               (i = i =
                                   {
-                                      onScroll: _,
-                                      children: [(0, r.jsx)(d.U, { items: n }), m ? (0, r.jsx)(o.$jN, { className: p.spinner }) : null]
+                                      onScroll: b,
+                                      children: [(0, r.jsx)(d.U, { items: n }), p ? (0, r.jsx)(s.$jN, { className: h.spinner }) : null]
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
@@ -114,5 +114,5 @@ function m(e) {
                       }
                   })
               })
-        : (0, r.jsx)(o.$jN, { className: p.loadingPlaceholder });
+        : (0, r.jsx)(s.$jN, { className: h.loadingPlaceholder });
 }

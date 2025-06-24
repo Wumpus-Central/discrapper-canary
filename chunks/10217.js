@@ -14,8 +14,8 @@ var r = n(255367),
     b = n(70097),
     g = n(237617),
     j = n(318374),
-    h = n(717680),
-    y = n(594174),
+    y = n(717680),
+    h = n(594174),
     x = n(962399),
     v = n(626135),
     O = n(823379),
@@ -71,8 +71,8 @@ function D(e, t) {
 }
 let L = function (e) {
     var t, n, a;
-    let { clip: o, exporting: s, actionsDisabled: d, isNew: b, onDelete: h, onEdit: x, onShare: P } = e,
-        k = (0, c.Wu)([y.default], () => o.users.map((e) => y.default.getUser(e)).filter(O.lm)),
+    let { clip: o, exporting: s, actionsDisabled: d, isNew: b, onDelete: y, onEdit: x, onShare: P } = e,
+        k = (0, c.Wu)([h.default], () => o.users.map((e) => h.default.getUser(e)).filter(O.lm)),
         { analyticsLocations: S } = (0, f.ZP)(m.Z.CLIPS_GALLERY_ITEM),
         [Z, D] = l.useState(!1),
         L = l.useRef(null),
@@ -107,11 +107,11 @@ let L = function (e) {
         ),
         B = new Date(C.default.extractTimestamp(o.id)),
         F = B.toLocaleDateString(),
-        Y = B.toLocaleTimeString([], {
+        G = B.toLocaleTimeString([], {
             hour: '2-digit',
             minute: '2-digit'
         }),
-        G = ''.concat(F, ' \u2022 ').concat(Y);
+        Y = ''.concat(F, ' \u2022 ').concat(G);
     return (0, r.jsx)(f.Gt, {
         value: S,
         children: (0, r.jsxs)(p.kL8, {
@@ -151,7 +151,7 @@ let L = function (e) {
                             className: E.clipMetadata,
                             color: 'text-normal',
                             variant: 'text-md/medium',
-                            children: G
+                            children: Y
                         }),
                         (0, r.jsxs)('div', {
                             className: E.usersAndDelete,
@@ -172,7 +172,7 @@ let L = function (e) {
                                         actionsDisabled: d,
                                         exporting: s,
                                         onBeforeDelete: R,
-                                        onDelete: h,
+                                        onDelete: y,
                                         onEdit: x,
                                         onShare: P,
                                         onBlur: (e) => {
@@ -256,9 +256,9 @@ function T(e) {
         u = !n.name,
         [m, f] = l.useState(!1),
         [b, g] = l.useState(null != (t = n.name) ? t : ''),
-        [j, h] = l.useState(!1),
-        y = async () => {
-            h(!0), await (0, P.Tm)(n.id, { name: '' === b ? void 0 : b }), h(!1), f(!1);
+        [j, y] = l.useState(!1),
+        h = async () => {
+            y(!0), await (0, P.Tm)(n.id, { name: '' === b ? void 0 : b }), y(!1), f(!1);
         };
     return (l.useEffect(() => {
         if (s !== n.name) {
@@ -273,11 +273,11 @@ function T(e) {
               value: b,
               autoFocus: !0,
               onKeyDown: (e) => {
-                  'Enter' === e.key && y();
+                  'Enter' === e.key && h();
               },
               disabled: j,
               onChange: g,
-              onBlur: y
+              onBlur: h
           })
         : (0, r.jsxs)(p.P3F, {
               className: E.clipTitleInputPlaceholder,
@@ -337,7 +337,7 @@ function M(e) {
 }
 function _(e) {
     let { clip: t, exporting: n, actionsDisabled: a, onBeforeDelete: i, onDelete: o, onEdit: s, onShare: c, onBlur: u } = e,
-        d = (0, h.Z)(),
+        d = (0, y.Z)(),
         m = l.useCallback(
             (e) => {
                 e.stopPropagation(), e.shiftKey ? (i(), (0, P.sS)(t.filepath)) : o(t, i), v.default.track(w.rMx.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: 'delete' });

@@ -1,5 +1,5 @@
 n.d(t, {
-    Qt: () => k,
+    Qt: () => v,
     ZP: () => j
 }),
     n(953529);
@@ -20,16 +20,16 @@ var r = n(255367),
     p = n(15274),
     N = n(924301),
     S = n(725436),
-    A = n(978227),
-    f = n(236373),
-    R = n(854698),
-    m = n(405613),
-    C = n(95291),
-    g = n(742593),
+    f = n(978227),
+    m = n(236373),
+    A = n(854698),
+    R = n(405613),
+    g = n(95291),
+    C = n(742593),
     P = n(217804),
     y = n(139712),
-    D = n(765305),
-    b = n(388032),
+    b = n(765305),
+    D = n(388032),
     h = n(690606);
 let U = (e, t) => (n) => {
         n.stopPropagation(), u.default.selectVoiceChannel(e.channel_id, !1), null == t || t(n);
@@ -38,16 +38,16 @@ let U = (e, t) => (n) => {
         let r = O.Z.getChannel(e.channel_id);
         null != r && (n.stopPropagation(), (0, E.Cq)(r), null == t || t(n));
     },
-    k = (e, t) => {
+    v = (e, t) => {
         switch (null == e ? void 0 : e.entity_type) {
-            case D.WX.STAGE_INSTANCE:
+            case b.WX.STAGE_INSTANCE:
                 return M(e, t);
-            case D.WX.VOICE:
+            case b.WX.VOICE:
                 return U(e, t);
         }
         return () => {};
     },
-    v = (e, t) => t && [D.WX.STAGE_INSTANCE, D.WX.VOICE].includes(null == e ? void 0 : e.entity_type),
+    k = (e, t) => t && [b.WX.STAGE_INSTANCE, b.WX.VOICE].includes(null == e ? void 0 : e.entity_type),
     L = i.memo(function (e) {
         var t;
         let { guild: n, guildScheduledEvent: l, channel: o, isMember: u } = e,
@@ -68,16 +68,16 @@ let U = (e, t) => (n) => {
             ),
             N = i.useCallback(
                 (e) => {
-                    k(l)(e);
+                    v(l)(e);
                 },
                 [l]
             );
         if (null == E) return null;
-        let A = null == O ? void 0 : O.IconComponent,
-            f = (0, r.jsxs)(r.Fragment, {
+        let f = null == O ? void 0 : O.IconComponent,
+            m = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    null != A &&
-                        (0, r.jsx)(A, {
+                    null != f &&
+                        (0, r.jsx)(f, {
                             size: 'xs',
                             color: 'currentColor',
                             className: h.channelIcon
@@ -122,13 +122,13 @@ let U = (e, t) => (n) => {
                         }),
                         (0, r.jsx)('div', {
                             className: h.channelInfoContainer,
-                            children: v(l, u)
+                            children: k(l, u)
                                 ? (0, r.jsx)(c.P3F, {
                                       className: h.channelLocationLink,
                                       onClick: N,
-                                      children: f
+                                      children: m
                                   })
-                                : f
+                                : m
                         })
                     ]
                 })
@@ -150,7 +150,7 @@ let U = (e, t) => (n) => {
                           u || I(e);
                       },
                       color: u ? c.zxk.Colors.TRANSPARENT : c.zxk.Colors.GREEN,
-                      children: u ? b.intl.string(b.t.GoCQxc) : b.intl.string(b.t.XpeFYm)
+                      children: u ? D.intl.string(D.t.GoCQxc) : D.intl.string(D.t.XpeFYm)
                   })
                 : o
                   ? (0, r.jsx)(c.zxk, {
@@ -159,7 +159,7 @@ let U = (e, t) => (n) => {
                         disabled: !0,
                         color: c.zxk.Colors.PRIMARY,
                         look: c.zxk.Looks.OUTLINED,
-                        children: b.intl.string(b.t.Pj7Xrq)
+                        children: D.intl.string(D.t.Pj7Xrq)
                     })
                   : (0, r.jsxs)(c.zxk, {
                         className: h.button,
@@ -182,7 +182,7 @@ let U = (e, t) => (n) => {
                                       color: 'currentColor',
                                       className: h.buttonIcon
                                   }),
-                            b.intl.string(b.t.DlcqlZ)
+                            D.intl.string(D.t.DlcqlZ)
                         ]
                     })
             : (0, r.jsx)(c.zxk, {
@@ -190,15 +190,15 @@ let U = (e, t) => (n) => {
                   size: c.zxk.Sizes.SMALL,
                   onClick: I,
                   color: c.zxk.Colors.GREEN,
-                  children: b.intl.string(b.t.XpeFYm)
+                  children: D.intl.string(D.t.XpeFYm)
               });
     }),
     j = i.memo(function (e) {
         var t;
         let { guildScheduledEvent: n, guild: l, channel: a, isMember: s, recurrenceId: u, onAcceptInstantInvite: d, onTransitionToInviteChannel: E } = e,
-            I = null != u ? u : null != n ? (0, R.DK)(n) : null,
-            O = (null == n ? void 0 : n.recurrence_rule) == null || null == I || (0, R.Rp)((0, f.KV)(null == n ? void 0 : n.recurrence_rule), I),
-            T = (0, A.Z)(n),
+            I = null != u ? u : null != n ? (0, A.DK)(n) : null,
+            O = (null == n ? void 0 : n.recurrence_rule) == null || null == I || (0, A.Rp)((0, m.KV)(null == n ? void 0 : n.recurrence_rule), I),
+            T = (0, f.Z)(n),
             S = i.useCallback(() => {
                 s &&
                     null != n &&
@@ -210,18 +210,18 @@ let U = (e, t) => (n) => {
         if (null == n || !O) return null;
         let P = (0, N.xt)(n),
             y = (0, N.Z2)(n),
-            b = n.entity_type === D.WX.EXTERNAL;
+            D = n.entity_type === b.WX.EXTERNAL;
         return (0, r.jsx)(_.Z, {
             className: o()({ [h.clickable]: s }),
             children: (0, r.jsxs)(c.P3F, {
                 onClick: S,
                 children: [
                     null != n.image &&
-                        (0, r.jsx)(C.Z, {
-                            source: (0, m.Z)(n),
+                        (0, r.jsx)(g.Z, {
+                            source: (0, R.Z)(n),
                             className: h.banner
                         }),
-                    (0, r.jsx)(g.ZP, {
+                    (0, r.jsx)(C.ZP, {
                         name: n.name,
                         description: null != (t = n.description) ? t : void 0,
                         descriptionClassName: h.eventDescription,
@@ -249,7 +249,7 @@ let U = (e, t) => (n) => {
                                 recurrenceId: I,
                                 onAcceptInstantInvite: d,
                                 onTransitionToInviteChannel: E,
-                                isExternal: b
+                                isExternal: D
                             })
                         ]
                     })

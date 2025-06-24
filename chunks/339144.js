@@ -1,6 +1,6 @@
 n.d(t, {
-    J: () => P,
-    y: () => E
+    J: () => I,
+    y: () => x
 });
 var r = n(255367),
     i = n(73800),
@@ -17,34 +17,34 @@ var r = n(255367),
     g = n(668519),
     m = n(562224),
     b = n(803647),
-    O = n(131704),
-    y = n(944486),
-    _ = n(626135),
+    _ = n(131704),
+    O = n(944486),
+    y = n(626135),
     v = n(77880),
     C = n(870569),
     j = n(981631),
-    S = n(388032),
-    x = n(390648);
-function E(e, t, n) {
+    E = n(388032),
+    S = n(390648);
+function x(e, t, n) {
     return null != e && (null != n ? n.applicationId === e.id : null != t && t.application_id === e.id && t.type === j.IIU.PLAYING && (0, u.Z)(t, j.xjy.JOIN));
 }
-let P = i.memo(function (e) {
+let I = i.memo(function (e) {
     let t,
         l,
         u,
-        P,
-        { stream: I, canGoLive: N, guildId: w, isStreaming: Z, channel: T, canStream: A, runningGame: R, embeddedActivity: D, activity: L, application: M, analyticsContext: k } = e,
+        I,
+        { stream: P, canGoLive: N, guildId: w, isStreaming: Z, channel: T, canStream: A, runningGame: R, embeddedActivity: D, activity: L, application: M, analyticsContext: k } = e,
         { skipModalForGame: U, showRefreshedGoLiveModal: G } = (0, g.a)({
             location: 'Activity Panel',
             autoTrackExposure: !1
         }),
         { parentAnalyticsLocation: B } = (0, h.ZP)(),
-        { changeLeaveCallAndActivityIcons: V } = (0, v.A)({ location: 'Activity Actions' }),
-        H = E(M, L, D),
-        F = i.useCallback(() => {
+        { changeLeaveCallAndActivityIcons: F } = (0, v.A)({ location: 'Activity Actions' }),
+        V = x(M, L, D),
+        H = i.useCallback(() => {
             o()(null != L, 'Received null activity'),
                 (0, p.v)(B, p.d.INVITE),
-                _.default.track(j.rMx.OPEN_MODAL, {
+                y.default.track(j.rMx.OPEN_MODAL, {
                     type: 'Send Join Invite',
                     application_id: L.application_id,
                     location: k.location
@@ -63,12 +63,12 @@ let P = i.memo(function (e) {
             [B]
         ),
         W = i.useCallback(() => {
-            (0, b.Z)(I);
-        }, [I]),
+            (0, b.Z)(P);
+        }, [P]),
         K = i.useCallback(() => {
-            let e = null != T && (0, O.vd)(T.type) ? T : null,
+            let e = null != T && (0, _.vd)(T.type) ? T : null,
                 t = null != e ? e.getGuildId() : w;
-            if (U && null != R && null != y.Z.getVoiceChannelId()) {
+            if (U && null != R && null != O.Z.getVoiceChannelId()) {
                 (0, g.s)('Activity Panel'), (0, m.Z)(R.pid);
                 return;
             }
@@ -106,7 +106,7 @@ let P = i.memo(function (e) {
                         (l = l =
                             {
                                 sourcePID: null == R ? void 0 : R.pid,
-                                selectSource: !!G && null != y.Z.getVoiceChannelId(),
+                                selectSource: !!G && null != O.Z.getVoiceChannelId(),
                                 guildId: t,
                                 analyticsLocation: j.Sbl.ACTIVITY_PANEL
                             }),
@@ -135,19 +135,19 @@ let P = i.memo(function (e) {
                             W(), (0, p.v)(B, p.d.STREAM, !1);
                         }),
                         (u = s.g5r),
-                        (P = S.intl.string(S.t.S5anIS)))
+                        (I = E.intl.string(E.t.S5anIS)))
                       : A
                         ? ((t = !1),
                           (l = () => {
                               K(), (0, p.v)(B, p.d.STREAM, !0);
                           }),
                           (u = s.hGI),
-                          (P = null != R ? S.intl.formatToPlainString(S.t.AB5gT0, { game: R.name }) : S.intl.string(S.t.FeUKeH)))
-                        : ((t = !0), (l = null), (u = s.hGI), (P = null != T && (0, O.vd)(T.type) ? S.intl.string(S.t.uQn9Bw) : null != w ? S.intl.string(S.t.fBXEoK) : S.intl.string(S.t.n3feND))),
+                          (I = null != R ? E.intl.formatToPlainString(E.t.AB5gT0, { game: R.name }) : E.intl.string(E.t.FeUKeH)))
+                        : ((t = !0), (l = null), (u = s.hGI), (I = null != T && (0, _.vd)(T.type) ? E.intl.string(E.t.uQn9Bw) : null != w ? E.intl.string(E.t.fBXEoK) : E.intl.string(E.t.n3feND))),
                   (0, r.jsx)('div', {
-                      className: x.panelButtonContainer,
+                      className: S.panelButtonContainer,
                       children: (0, r.jsx)(C.Z, {
-                          tooltipText: P,
+                          tooltipText: I,
                           disabled: t,
                           onClick: l,
                           icon: u
@@ -155,26 +155,26 @@ let P = i.memo(function (e) {
                   }))
                 : null,
         q =
-            H && null == D
+            V && null == D
                 ? (0, r.jsx)(C.Z, {
-                      tooltipText: S.intl.string(S.t['hC/Ze3']),
-                      onClick: F,
+                      tooltipText: E.intl.string(E.t['hC/Ze3']),
+                      onClick: H,
                       icon: s.ejJ
                   })
                 : null,
-        Q =
+        X =
             null == D
                 ? null
                 : (0, r.jsx)(C.Z, {
-                      tooltipText: S.intl.string(S.t['R/FK4O']),
+                      tooltipText: E.intl.string(E.t['R/FK4O']),
                       onClick: z(D.applicationId, D.location),
-                      icon: V ? s.Dio : s.PBZ
+                      icon: F ? s.Dio : s.PBZ
                   }),
-        X = null == I ? null : (0, r.jsx)(f.Z, {});
-    return null == Y && null == q && null == Q
+        Q = null == P ? null : (0, r.jsx)(f.Z, {});
+    return null == Y && null == q && null == X
         ? null
         : (0, r.jsxs)('div', {
-              className: x.actions,
-              children: [Y, q, null != Q ? Q : X]
+              className: S.actions,
+              children: [Y, q, null != X ? X : Q]
           });
 });

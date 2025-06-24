@@ -1,19 +1,18 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => O });
 var r = n(255367),
     i = n(73800),
     a = n(996146),
     o = n(481060),
     s = n(100527),
     l = n(906732),
-    c = n(540059),
-    u = n(963249),
-    d = n(109213),
-    f = n(51144),
-    _ = n(443603),
-    p = n(981631),
-    h = n(388032),
-    m = n(302195);
-function g(e, t, n) {
+    c = n(963249),
+    u = n(109213),
+    d = n(51144),
+    f = n(443603),
+    _ = n(981631),
+    p = n(388032),
+    h = n(302195);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +25,7 @@ function g(e, t, n) {
         e
     );
 }
-function E(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,12 +36,12 @@ function E(e) {
                 })
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
 }
-function b(e, t) {
+function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,82 +53,81 @@ function b(e, t) {
     }
     return n;
 }
-function y(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : b(Object(t)).forEach(function (n) {
+            : E(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function O(e) {
+function y(e) {
     let { disabled: t, channel: i } = e,
-        { analyticsLocations: g } = (0, l.ZP)(s.Z.GIFT_BUTTON),
-        b = (0, f.Ft)(i),
-        { Component: O, events: v, play: I } = (0, a.$)(),
-        { enabled: T } = d.G.useExperiment({ location: 'gift-button' }, { autoTrackExposure: !1 }),
-        S = (0, c.Q3)('ChannelPremiumGiftButton'),
-        A = i.type === p.d4z.DM;
+        { analyticsLocations: m } = (0, l.ZP)(s.Z.GIFT_BUTTON),
+        E = (0, d.Ft)(i),
+        { Component: y, events: O, play: v } = (0, a.$)(),
+        { enabled: I } = u.G.useExperiment({ location: 'gift-button' }, { autoTrackExposure: !1 }),
+        T = i.type === _.d4z.DM;
     if (t) return null;
-    let N = () => {
-        T && A && null != b
+    let S = () => {
+        I && T && null != E
             ? (0, o.ZDy)(async () => {
                   let { default: e } = await n.e('59207').then(n.bind(n, 435626));
                   return (t) =>
                       (0, r.jsx)(
                           e,
-                          E(
+                          g(
                               {
                                   analyticsObject: {
-                                      page: p.ZY5.DM_CHANNEL,
-                                      section: p.jXE.CHANNEL_TEXT_AREA,
-                                      object: p.qAy.BUTTON_ICON,
-                                      objectType: p.Qqv.GIFT
+                                      page: _.ZY5.DM_CHANNEL,
+                                      section: _.jXE.CHANNEL_TEXT_AREA,
+                                      object: _.qAy.BUTTON_ICON,
+                                      objectType: _.Qqv.GIFT
                                   },
-                                  analyticsLocations: g,
-                                  giftRecipient: b
+                                  analyticsLocations: m,
+                                  giftRecipient: E
                               },
                               t
                           )
                       );
               })
-            : (0, u.Z)({
+            : (0, c.Z)({
                   isGift: !0,
-                  giftRecipient: null === b ? void 0 : b,
+                  giftRecipient: null === E ? void 0 : E,
                   initialPlanId: null,
-                  analyticsLocations: g,
+                  analyticsLocations: m,
                   analyticsObject: {
-                      page: i.isPrivate() ? p.ZY5.DM_CHANNEL : p.ZY5.GUILD_CHANNEL,
-                      section: p.jXE.CHANNEL_TEXT_AREA,
-                      object: p.qAy.BUTTON_ICON,
-                      objectType: p.Qqv.GIFT
+                      page: i.isPrivate() ? _.ZY5.DM_CHANNEL : _.ZY5.GUILD_CHANNEL,
+                      section: _.jXE.CHANNEL_TEXT_AREA,
+                      object: _.qAy.BUTTON_ICON,
+                      objectType: _.Qqv.GIFT
                   }
               });
     };
     return (0, r.jsx)(o.ua7, {
-        text: h.intl.string(h.t.sWtWDQ),
+        text: p.intl.string(p.t.sWtWDQ),
         children: (e) =>
             (0, r.jsx)(
-                _.Z,
-                y(
-                    E(
-                        y(E({}, e), {
-                            innerClassName: m.button,
+                f.Z,
+                b(
+                    g(
+                        b(g({}, e), {
+                            innerClassName: h.button,
                             isActive: !1,
-                            'aria-label': h.intl.string(h.t.Z1RnTk),
+                            'aria-label': p.intl.string(p.t.Z1RnTk),
                             'aria-haspopup': 'dialog',
                             onClick: () => {
-                                N(), I();
+                                S(), v();
                             }
                         }),
-                        v
+                        O
                     ),
                     {
-                        children: (0, r.jsx)(O, {
-                            size: S ? 'refresh_sm' : void 0,
+                        children: (0, r.jsx)(y, {
+                            size: 'refresh_sm',
                             color: 'currentColor'
                         })
                     }
@@ -137,4 +135,4 @@ function O(e) {
             )
     });
 }
-let v = i.memo(O);
+let O = i.memo(y);

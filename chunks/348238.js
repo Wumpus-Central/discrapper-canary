@@ -2,19 +2,19 @@ n.d(t, {
     $3: () => V,
     Go: () => B,
     JC: () => w,
-    NU: () => D,
+    NU: () => L,
     Nk: () => A,
     R9: () => R,
     RN: () => U,
     Wl: () => P,
-    XO: () => T,
+    XO: () => N,
     Xn: () => z,
     bb: () => H,
-    qo: () => M,
+    qo: () => D,
     rY: () => k,
     sR: () => F,
     tn: () => G,
-    wq: () => L
+    wq: () => M
 }),
     n(997841),
     n(388685);
@@ -34,12 +34,12 @@ var r = n(255367),
     g = n(375954),
     _ = n(594174),
     b = n(585483),
-    E = n(5967),
+    x = n(5967),
     y = n(630388),
-    x = n(358085),
+    E = n(358085),
     v = n(51144),
-    O = n(91047),
-    C = n(50284),
+    C = n(91047),
+    O = n(50284),
     j = n(804063),
     S = n(981631);
 function I(e, t, n) {
@@ -47,7 +47,7 @@ function I(e, t, n) {
         n({ [e]: !t });
     }, [e, n, t]);
 }
-function N(e, t, n) {
+function T(e, t, n) {
     return i.useCallback(
         (r) => {
             let i = _.default.getUser(e);
@@ -64,21 +64,21 @@ function N(e, t, n) {
         [e, t, n]
     );
 }
-function T(e, t, n, r) {
+function N(e, t, n, r) {
     let i = I('usernameProfile', n, r);
-    return N(e.author.id, t.id, i);
+    return T(e.author.id, t.id, i);
 }
 function P(e, t, n, r) {
     let i = I('referencedUsernameProfile', n, r);
-    return N(null == e ? void 0 : e.author.id, t.id, i);
+    return T(null == e ? void 0 : e.author.id, t.id, i);
 }
 function A(e, t, n, r) {
     let i = I('interactionUsernameProfile', n, r);
-    return N(null == e ? void 0 : e.user.id, t.id, i);
+    return T(null == e ? void 0 : e.user.id, t.id, i);
 }
 function w(e, t, n, r) {
     let i = I('referencedUsernameProfile', n, r);
-    return N(e, t.id, i);
+    return T(e, t.id, i);
 }
 function Z(e) {
     return i.useCallback(
@@ -94,10 +94,10 @@ function R(e, t) {
 function k(e, t) {
     return Z(I('referencedAvatarProfile', e, t));
 }
-function D(e, t) {
+function L(e, t) {
     return Z(I('interactionAvatarProfile', e, t));
 }
-function M(e, t, a, o) {
+function D(e, t, a, o) {
     let { id: c } = t,
         { id: u, flags: d } = e,
         p = (0, y.yE)(d, S.iLy.EPHEMERAL),
@@ -105,7 +105,7 @@ function M(e, t, a, o) {
     return i.useCallback(
         (e, t) => {
             if (p) return;
-            if (!x.isPlatformEmbedded) {
+            if (!E.isPlatformEmbedded) {
                 let t = e.target;
                 if (('A' === t.tagName && '' !== t.textContent) || null == window.getSelection) return;
                 let n = window.getSelection();
@@ -183,12 +183,12 @@ function M(e, t, a, o) {
         [p, c, u, a, m, o]
     );
 }
-function L(e, t) {
+function M(e, t) {
     return i.useCallback(
         (n) => {
             let r = _.default.getUser(e),
                 i = f.Z.getChannel(t);
-            null != r && null != i && (n.stopPropagation(), (0, O.Pv)(n, r, i));
+            null != r && null != i && (n.stopPropagation(), (0, C.Pv)(n, r, i));
         },
         [e, t]
     );
@@ -201,7 +201,7 @@ function U(e, t, n) {
             null != i &&
                 null != l &&
                 (r.stopPropagation(),
-                (0, O._j)(r, {
+                (0, C._j)(r, {
                     user: i,
                     channel: l,
                     moderationAlertId: n
@@ -215,7 +215,7 @@ function F(e, t) {
         (n) => {
             let r = _.default.getUser(e),
                 i = f.Z.getChannel(t);
-            null != r && null != i && (n.stopPropagation(), (0, O.xS)(n, r, i.guild_id));
+            null != r && null != i && (n.stopPropagation(), (0, C.xS)(n, r, i.guild_id));
         },
         [e, t]
     );
@@ -225,7 +225,7 @@ function B(e, t) {
         { id: r } = t;
     return i.useCallback(
         (e) => {
-            e.altKey && (e.preventDefault(), (0, C.Z)(r, n));
+            e.altKey && (e.preventDefault(), (0, O.Z)(r, n));
         },
         [r, n]
     );
@@ -261,21 +261,21 @@ function G(e) {
                 },
                 [t, n]
             )),
-        [E, y] = i.useState(a);
-    g.current = E || g.current;
-    let x = i.useCallback(
+        [x, y] = i.useState(a);
+    g.current = x || g.current;
+    let E = i.useCallback(
             (e) => {
-                s && (0, m.T6)(), E || (b.S.dispatchKeyed(S.LPv.ANIMATE_CHAT_AVATAR, h, !0), _(e), y(!0));
+                s && (0, m.T6)(), x || (b.S.dispatchKeyed(S.LPv.ANIMATE_CHAT_AVATAR, h, !0), _(e), y(!0));
             },
-            [E, h, s, _]
+            [x, h, s, _]
         ),
         v = i.useCallback(() => {
             b.S.dispatchKeyed(S.LPv.ANIMATE_CHAT_AVATAR, h, !1), y(!1);
         }, [h]);
     return {
         hasHovered: g.current,
-        isHovered: E,
-        handleMouseEnter: x,
+        isHovered: x,
+        handleMouseEnter: E,
         handleMouseLeave: v
     };
 }
@@ -286,7 +286,7 @@ function H(e, t) {
         handleFocus: i.useCallback(
             (t) => {
                 var n, i;
-                let l = null != (i = null == (n = (0, E.uB)(t)) ? void 0 : n.activeElement) ? i : null;
+                let l = null != (i = null == (n = (0, x.uB)(t)) ? void 0 : n.activeElement) ? i : null;
                 (t.target === t.currentTarget || t.currentTarget.contains(l)) && (a(!0), r(!0)), null != e && e(t);
             },
             [e]
@@ -294,7 +294,7 @@ function H(e, t) {
         handleBlur: i.useCallback(
             (e) => {
                 var n, i;
-                let l = null != (i = null == (n = (0, E.uB)(e)) ? void 0 : n.activeElement) ? i : null;
+                let l = null != (i = null == (n = (0, x.uB)(e)) ? void 0 : n.activeElement) ? i : null;
                 (e.target !== e.currentTarget && e.currentTarget.contains(l)) || r(!1), null != t && t(e);
             },
             [t]

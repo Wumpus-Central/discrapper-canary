@@ -1,4 +1,4 @@
-e.d(n, { Z: () => O });
+e.d(n, { Z: () => D });
 var i = e(255367);
 e(73800);
 var l = e(399606),
@@ -8,12 +8,12 @@ var l = e(399606),
     s = e(19780),
     _ = e(979651),
     u = e(951206),
-    o = e(446226),
-    p = e(937393),
+    p = e(446226),
+    o = e(937393),
     E = e(721351),
-    g = e(981631),
+    I = e(981631),
     c = e(388032);
-function I(t) {
+function T(t) {
     for (var n = 1; n < arguments.length; n++) {
         var e = null != arguments[n] ? arguments[n] : {},
             i = Object.keys(e);
@@ -38,7 +38,7 @@ function I(t) {
     }
     return t;
 }
-function T(t, n) {
+function g(t, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -56,45 +56,45 @@ function T(t, n) {
         t
     );
 }
-function O(t) {
+function D(t) {
     let n = (0, l.e7)([s.Z], () => s.Z.getChannelId() === t.id),
-        O = (0, o.Z)(),
-        D = (null == O ? void 0 : O.channelId) === t.id,
-        L = (0, a.V)(t) && !t.isPrivate(),
-        m = (0, a.Z)(t),
-        U = (!(0, l.e7)([_.Z], () => _.Z.isInChannel(t.id)) && m) || L,
-        A = (0, p.Z)();
-    if (!D && 0 === A.length) return null;
-    let S = (n) => {
+        D = (0, p.Z)(),
+        m = (null == D ? void 0 : D.channelId) === t.id,
+        O = (0, a.V)(t) && !t.isPrivate(),
+        L = (0, a.Z)(t),
+        U = (!(0, l.e7)([_.Z], () => _.Z.isInChannel(t.id)) && L) || O,
+        A = (0, o.Z)();
+    if (!m && 0 === A.length) return null;
+    let y = (n) => {
         if (!n.twoWayLink || n.revoked)
             return void (0, d.Z)({
                 platformType: n.type,
                 location: 'Console Transfer Item'
             });
-        n.type === g.ABu.XBOX
+        n.type === I.ABu.XBOX
             ? (0, r.ZDy)(async () => {
                   let { default: n } = await Promise.all([e.e('36160'), e.e('522')]).then(e.bind(e, 200623));
-                  return (e) => (0, i.jsx)(n, T(I({}, e), { channel: t }));
+                  return (e) => (0, i.jsx)(n, g(T({}, e), { channel: t }));
               })
-            : (n.type === g.ABu.PLAYSTATION || n.type === g.ABu.PLAYSTATION_STAGING) &&
+            : (n.type === I.ABu.PLAYSTATION || n.type === I.ABu.PLAYSTATION_STAGING) &&
               (0, r.ZDy)(async () => {
                   let { default: l } = await e.e('638').then(e.bind(e, 543974));
                   return (e) =>
                       (0, i.jsx)(
                           l,
-                          T(I({}, e), {
+                          g(T({}, e), {
                               platform: n.type,
                               channel: t
                           })
                       );
               });
     };
-    return D
+    return m
         ? (0, i.jsx)(r.sNh, {
               label: c.intl.string(c.t.PlwgdX),
               id: 'handoff',
               action: () => {
-                  (0, u.F)(O);
+                  (0, u.F)(D);
               },
               icon: (0, E.Z)(void 0),
               disabled: U
@@ -105,8 +105,8 @@ function O(t) {
                   r.sNh,
                   {
                       id: 'transfer-'.concat(t.type, '-').concat(t.id),
-                      label: ((e = t.type), (l = n), e === g.ABu.XBOX ? (l ? c.intl.string(c.t['qVE/VF']) : c.intl.string(c.t.E8euSk)) : e === g.ABu.PLAYSTATION ? (l ? c.intl.string(c.t.vzfxmZ) : c.intl.string(c.t.QxEYDg)) : e === g.ABu.PLAYSTATION_STAGING ? (l ? c.intl.string(c.t.BDiXtb) : c.intl.string(c.t['bhdB9/'])) : void 0),
-                      action: () => S(t),
+                      label: ((e = t.type), (l = n), e === I.ABu.XBOX ? (l ? c.intl.string(c.t['qVE/VF']) : c.intl.string(c.t.E8euSk)) : e === I.ABu.PLAYSTATION ? (l ? c.intl.string(c.t.vzfxmZ) : c.intl.string(c.t.QxEYDg)) : e === I.ABu.PLAYSTATION_STAGING ? (l ? c.intl.string(c.t.BDiXtb) : c.intl.string(c.t['bhdB9/'])) : void 0),
+                      action: () => y(t),
                       icon: (0, E.Z)(t.type),
                       disabled: U
                   },

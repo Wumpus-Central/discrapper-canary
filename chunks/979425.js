@@ -4,14 +4,14 @@ n(73800);
 var l = n(120356),
     i = n.n(l),
     a = n(481060),
-    o = n(871118),
-    u = n(388032),
+    u = n(871118),
+    o = n(388032),
     s = n(519417);
 function c(e) {
     let { stream: t, isSmall: n, selected: l, isSelfStream: c } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(o.Z, {
+            (0, r.jsx)(u.Z, {
                 className: i()(s.absoluteFill, s.streamPreviewOpacity),
                 stream: t,
                 noText: !0
@@ -24,10 +24,10 @@ function c(e) {
                             className: s.streamUnavailableText,
                             color: 'always-white',
                             variant: n ? 'text-sm/semibold' : 'text-md/semibold',
-                            children: c ? u.intl.string(u.t.UeEwj4) : u.intl.string(u.t['1i3tSU'])
+                            children: c ? o.intl.string(o.t.UeEwj4) : o.intl.string(o.t['1i3tSU'])
                         }),
                         (0, r.jsx)(a.DY3, {
-                            text: c ? u.intl.string(u.t['ro/HNz']) : u.intl.string(u.t.UPf6ZG),
+                            text: c ? o.intl.string(o.t['ro/HNz']) : o.intl.string(o.t.UPf6ZG),
                             className: s.darkCircle,
                             children: (0, r.jsx)('div', {
                                 children: (0, r.jsx)(a.o8v, {

@@ -79,17 +79,17 @@ function b(e) {
             mentionCount: d = 0,
             isMentionLowImportance: g,
             tooltipName: b,
-            folderGroupId: O,
-            folderButtonContent: y,
-            onClick: _,
+            folderGroupId: _,
+            folderButtonContent: O,
+            onClick: y,
             onContextMenu: v,
             onHoverChange: C,
             onKeyDown: j,
-            treeItemProps: { onFocus: S },
-            'aria-setsize': x,
-            'aria-posinset': E
+            treeItemProps: { onFocus: E },
+            'aria-setsize': S,
+            'aria-posinset': x
         } = e,
-        P = (function (e, t) {
+        I = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -108,7 +108,7 @@ function b(e) {
             }
             return i;
         })(e.treeItemProps, ['onFocus']),
-        [I, N] = i.useState(!1),
+        [P, N] = i.useState(!1),
         w = i.useCallback(() => {
             s || N(!0), null == C || C(!0);
         }, [s, C]),
@@ -147,23 +147,23 @@ function b(e) {
             })(
                 {
                     className: f.folderButton,
-                    onClick: _,
+                    onClick: y,
                     onContextMenu: v,
                     onMouseEnter: w,
                     onMouseLeave: Z,
                     onKeyDown: j,
-                    onFocus: S,
+                    onFocus: E,
                     focusProps: { enabled: !1 }
                 },
-                P
+                I
             )),
             (n = n =
                 {
                     role: 'treeitem',
-                    'aria-setsize': x,
-                    'aria-posinset': E,
+                    'aria-setsize': S,
+                    'aria-posinset': x,
                     'aria-expanded': o,
-                    'aria-owns': O,
+                    'aria-owns': _,
                     children: (0, r.jsxs)(a.aRk, {
                         isFolder: !0,
                         upperBadge: T,
@@ -179,14 +179,14 @@ function b(e) {
                             (0, r.jsx)('div', {
                                 className: f.folderButtonInner,
                                 children:
-                                    null != y
+                                    null != O
                                         ? (0, r.jsx)('div', {
                                               className: f.folderIconWrapper,
-                                              children: y
+                                              children: O
                                           })
                                         : (0, r.jsx)(m, {
                                               folderNode: l,
-                                              hovered: I,
+                                              hovered: P,
                                               sorting: s
                                           })
                             })

@@ -17,18 +17,18 @@ function g(e) {
         m = null != (n = (0, u.DR)()) ? n : [],
         { analyticsLocations: b } = (0, s.ZP)([...m, o.Z.ACTIVITY_DETAIL_PAGE]),
         { applicationId: _ } = g.params,
-        [E] = (0, c.Z)([_]),
-        O = null == E || null == (t = E.bot) ? void 0 : t.id,
+        [O] = (0, c.Z)([_]),
+        E = null == O || null == (t = O.bot) ? void 0 : t.id,
         y = (0, i.e7)([d.default], () => d.default.getCurrentUser());
     return (
         r.useEffect(() => {
-            null != O &&
+            null != E &&
                 null != y &&
                 (async () => {
                     try {
                         var e;
                         let t = new URL(location.href),
-                            n = await a.Z.openPrivateChannel({ recipientIds: O }),
+                            n = await a.Z.openPrivateChannel({ recipientIds: E }),
                             r = null != (e = t.searchParams.get('referrer_id')) ? e : void 0,
                             { customId: i } = await (0, h.ur)(_, t.searchParams.get('link_id'), t.searchParams.get('custom_id'));
                         await (0, p.Z)({
@@ -40,10 +40,10 @@ function g(e) {
                         });
                     } catch (e) {}
                 })();
-        }, [b, _, O, y]),
+        }, [b, _, E, y]),
         r.useEffect(() => {
             let e = setTimeout(() => {
-                null == O &&
+                null == E &&
                     l.Z.show({
                         title: f.intl.string(f.t.PtobXV),
                         body: f.intl.string(f.t['IOy+Iy'])
@@ -52,7 +52,7 @@ function g(e) {
             return () => {
                 clearTimeout(e);
             };
-        }, [O]),
+        }, [E]),
         null
     );
 }

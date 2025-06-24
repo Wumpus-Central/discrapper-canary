@@ -14,8 +14,8 @@ var r = n(255367),
     b = n(213609),
     g = n(709054),
     j = n(435064),
-    h = n(39604),
-    y = n(680056),
+    y = n(39604),
+    h = n(680056),
     x = n(10217),
     v = n(410426),
     O = n(207346),
@@ -88,9 +88,9 @@ function N(e) {
     ),
         l.useEffect(
             () => (
-                (0, h.eL)(),
+                (0, y.eL)(),
                 () => {
-                    (0, h.eL)(), (0, h.zq)();
+                    (0, y.eL)(), (0, y.zq)();
                 }
             ),
             []
@@ -112,7 +112,7 @@ function N(e) {
         !(async function () {
             L(!0);
             try {
-                await h.jv(R);
+                await y.jv(R);
             } finally {
                 L(!1);
             }
@@ -137,11 +137,11 @@ function N(e) {
             },
             [t]
         ),
-        { onShareClick: Y } = (0, y.Z)({
+        { onShareClick: G } = (0, h.Z)({
             channelId: t,
             setExporting: T
         }),
-        G = l.useCallback((e, t) => {
+        Y = l.useCallback((e, t) => {
             (0, p.ZDy)(async () => {
                 let { default: l } = await n.e('15915').then(n.bind(n, 799677));
                 return (n) =>
@@ -170,10 +170,10 @@ function N(e) {
                                     actionsDisabled: null != I || t,
                                     exporting: I === e.id,
                                     isNew: A.includes(e.id),
-                                    onDelete: G,
+                                    onDelete: Y,
                                     onEdit: F,
                                     onShare: (e) =>
-                                        Y({
+                                        G({
                                             clip: e,
                                             onShareComplete: () => d.Mr(C.Qr)
                                         }),
@@ -186,7 +186,7 @@ function N(e) {
                     'clips-gallery-'.concat(t)
                 );
             },
-            [B, A, I, Y, G, F]
+            [B, A, I, G, Y, F]
         ),
         U =
             D || 0 !== B.length

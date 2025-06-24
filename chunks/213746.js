@@ -12,8 +12,8 @@ var r = n(255367),
     m = n(171246),
     h = n(55563),
     g = n(881294),
-    _ = n(133743),
-    f = n(979007),
+    f = n(133743),
+    _ = n(979007),
     b = n(981631),
     x = n(388032),
     v = n(789362);
@@ -73,7 +73,7 @@ function y(e) {
                                         appId: t.id,
                                         listing: e,
                                         subscriptionType: n,
-                                        onDetails: () => (0, _.Gp)(b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t.id, e.skuId))
+                                        onDetails: () => (0, f.Gp)(b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t.id, e.skuId))
                                     },
                                     e.id
                                 );
@@ -98,7 +98,7 @@ function y(e) {
                                     {
                                         skuId: e.skuId,
                                         appId: t.id,
-                                        onDetails: () => (0, _.Gp)(b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t.id, e.skuId))
+                                        onDetails: () => (0, f.Gp)(b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t.id, e.skuId))
                                     },
                                     e.id
                                 )
@@ -123,7 +123,7 @@ function I(e) {
         o = (0, l.e7)([h.Z], () => h.Z.get(i), [i]),
         c = (0, l.e7)([h.Z], () => (null != i ? h.Z.getParentSKU(i) : void 0), [i]),
         d = a.useId(),
-        u = a.useCallback(() => (0, _.Gp)(b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, f.GlobalDiscoveryAppsSections.STORE)), [t]);
+        u = a.useCallback(() => (0, f.Gp)(b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, _.GlobalDiscoveryAppsSections.STORE)), [t]);
     return (
         a.useLayoutEffect(() => {
             var e;
@@ -148,7 +148,7 @@ function I(e) {
                         {
                             modalKey: d,
                             onCloseCallback: () => {
-                                P() || (0, _.Gp)(b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, f.GlobalDiscoveryAppsSections.STORE));
+                                S() || (0, f.Gp)(b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, _.GlobalDiscoveryAppsSections.STORE));
                             }
                         }
                     );
@@ -176,7 +176,7 @@ function I(e) {
                             {
                                 modalKey: d,
                                 onCloseCallback: () => {
-                                    P() || (0, _.Gp)(b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, f.GlobalDiscoveryAppsSections.STORE));
+                                    S() || (0, f.Gp)(b.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t, _.GlobalDiscoveryAppsSections.STORE));
                                 }
                             }
                         )
@@ -223,6 +223,6 @@ function O(e) {
         })
     });
 }
-function P() {
+function S() {
     return window.location.pathname.startsWith('/login');
 }

@@ -12,8 +12,8 @@ var r = n(255367),
     m = n(314897),
     h = n(471518),
     g = n(493646),
-    _ = n(370210),
-    f = n(678694),
+    f = n(370210),
+    _ = n(678694),
     b = n(177653),
     x = n(216780),
     v = n(881294),
@@ -22,8 +22,8 @@ var r = n(255367),
     y = n(258971),
     I = n(133743),
     O = n(120549),
-    P = n(188607),
-    S = n(979007),
+    S = n(188607),
+    P = n(979007),
     E = n(981631),
     N = n(709929);
 function T(e) {
@@ -45,10 +45,10 @@ function T(e) {
             return {
                 query: null != (e = n.get('q')) ? e : '',
                 page: a,
-                categoryId: null != (t = Number(n.get('category_id'))) ? t : S.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID
+                categoryId: null != (t = Number(n.get('category_id'))) ? t : P.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID
             };
         }, [R.search]),
-        M = (0, o.e7)([f.Z], () => f.Z.getCategories()),
+        M = (0, o.e7)([_.Z], () => _.Z.getCategories()),
         G = a.useMemo(() => (null == M ? void 0 : M.find((e) => e.id === D)), [M, D]),
         z = a.useCallback(
             (e) => {
@@ -77,7 +77,7 @@ function T(e) {
                 options: {
                     categoryId: D,
                     page: w,
-                    pageSize: S.PAGE_SIZE,
+                    pageSize: P.PAGE_SIZE,
                     source: s.F.APP_DIRECTORY
                 },
                 onSuccessCallback: z
@@ -88,14 +88,14 @@ function T(e) {
                 query: k,
                 categoryId: D,
                 page: w,
-                pageSize: S.PAGE_SIZE,
+                pageSize: P.PAGE_SIZE,
                 source: s.F.APP_DIRECTORY
             }),
             searchResults: b.Z.getSearchResults({
                 query: k,
                 categoryId: D,
                 page: w,
-                pageSize: S.PAGE_SIZE,
+                pageSize: P.PAGE_SIZE,
                 source: s.F.APP_DIRECTORY
             })
         })),
@@ -133,7 +133,7 @@ function T(e) {
                 : {};
         }),
         V = (0, d.Z)(U),
-        H = a.useMemo(() => (B === _.M.FETCHING ? V : U), [B, V, U]),
+        H = a.useMemo(() => (B === f.M.FETCHING ? V : U), [B, V, U]),
         Y = a.useCallback(
             (e) => {
                 (0, I.pR)({
@@ -195,10 +195,10 @@ function T(e) {
                                         })
                                     }),
                                     (0, r.jsx)(C.Z, {
-                                        loading: B === _.M.FETCHING,
+                                        loading: B === f.M.FETCHING,
                                         children:
-                                            B === _.M.FETCHED && (null == H || (null == H ? void 0 : H.results.length) === 0)
-                                                ? (0, r.jsx)(P.Z, {
+                                            B === f.M.FETCHED && (null == H || (null == H ? void 0 : H.results.length) === 0)
+                                                ? (0, r.jsx)(S.Z, {
                                                       selectedCategoryId: null != D ? D : K.id,
                                                       searchAllCategories: () => W(K)
                                                   })
@@ -226,8 +226,8 @@ function T(e) {
                                     }),
                                     (0, r.jsx)(c.DsT, {
                                         className: N.paginationInput,
-                                        totalCount: Math.min((null != (t = null == H ? void 0 : H.totalPages) ? t : 0) * S.PAGE_SIZE, S.MAX_PAGES * S.PAGE_SIZE),
-                                        pageSize: S.PAGE_SIZE,
+                                        totalCount: Math.min((null != (t = null == H ? void 0 : H.totalPages) ? t : 0) * P.PAGE_SIZE, P.MAX_PAGES * P.PAGE_SIZE),
+                                        pageSize: P.PAGE_SIZE,
                                         disablePaginationGap: !0,
                                         hideMaxPage: !0,
                                         currentPage: w,

@@ -37,7 +37,7 @@ function p(e) {
     var t,
         n,
         { message: i, channel: p, content: m, className: f, compact: h, popoutProps: g, hideTimestamp: _ = !1, withFooter: b = !1 } = e,
-        E = (function (e, t) {
+        x = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -61,7 +61,7 @@ function p(e) {
         className: l()({ [u.withFooter]: b }, u.embedCard, { [u.compact]: h }, f),
         children: (0, r.jsx)(
             o.Z,
-            ((t = d({}, E)),
+            ((t = d({}, x)),
             (n = n =
                 {
                     className: l()(u.messageContainer, { [u.compact]: h }),

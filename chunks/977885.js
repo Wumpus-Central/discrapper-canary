@@ -22,11 +22,11 @@ let d = {
                 pagination: u,
                 trackExactTotalHits: d
             }),
-            E = n.map((e) => (0, c.jj)(t, e, r));
+            x = n.map((e) => (0, c.jj)(t, e, r));
         return (
             l.Z.dispatch({
                 type: 'SEARCH_MESSAGES_START',
-                ids: E
+                ids: x
             }),
             null == m ||
                 m({
@@ -87,13 +87,13 @@ let d = {
                 () => {
                     l.Z.dispatch({
                         type: 'SEARCH_MESSAGES_INDEXING',
-                        ids: E
+                        ids: x
                     });
                 },
                 (e) => {
                     l.Z.dispatch({
                         type: 'SEARCH_MESSAGES_FAILURE',
-                        ids: E,
+                        ids: x,
                         error: e
                     });
                 }

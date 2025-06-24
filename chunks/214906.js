@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(913527),
@@ -10,9 +10,9 @@ var i = n(913527),
     u = n(346479),
     d = n(776568),
     p = n(388032);
-function m(e) {
+function h(e) {
     let [t, n, i] = (0, a.Wu)([c.Z], () => [c.Z.isMuted(e.id), c.Z.getMuteConfig(e.id), c.Z.hasJoined(e.id)]),
-        m = (0, s.U)(n);
+        h = (0, s.U)(n);
     function f(t) {
         u.Z.setNotificationSettings(e, { muted: t });
     }
@@ -21,7 +21,7 @@ function m(e) {
             ? (0, r.jsx)(o.sNh, {
                   id: 'unmute-channel',
                   label: e.isForumPost() ? p.intl.string(p.t['0JQfsL']) : p.intl.string(p.t['Cq/TzM']),
-                  subtext: m,
+                  subtext: h,
                   action: () => f(!1)
               })
             : (0, r.jsx)(o.sNh, {

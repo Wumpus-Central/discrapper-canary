@@ -52,27 +52,27 @@ function p(e, t) {
     );
 }
 function m(e) {
-    let { application: t, fullWidth: n = !1, size: m = l.zxk.Sizes.LARGE, color: f, customDisabledColor: h, hideNotLaunchable: g, tooltipPosition: _, onClick: b, className: E, source: y, hover: x, innerClassName: v } = e,
-        O = {
+    let { application: t, fullWidth: n = !1, size: m = l.zxk.Sizes.LARGE, color: f, customDisabledColor: h, hideNotLaunchable: g, tooltipPosition: _, onClick: b, className: x, source: y, hover: E, innerClassName: v } = e,
+        C = {
             fullWidth: n,
             size: m,
             color: f,
             customDisabledColor: h,
             tooltipPosition: _,
             onClick: b,
-            className: E,
-            hover: x,
+            className: x,
+            hover: E,
             innerClassName: v
         },
-        C = (0, i.e7)([a.Z], () => a.Z.getActiveLibraryApplication(t.id)),
-        j = null != C ? C.sku.id : null,
+        O = (0, i.e7)([a.Z], () => a.Z.getActiveLibraryApplication(t.id)),
+        j = null != O ? O.sku.id : null,
         S = null != j ? j : t.primarySkuId,
         I = (0, i.e7)([o.Z], () => null != S && !o.Z.didFetchingSkuFail(S));
-    return null != C && (0, s.Je)(C)
+    return null != O && (0, s.Je)(O)
         ? (0, r.jsx)(
               u.Z,
-              p(d({}, O), {
-                  libraryApplication: C,
+              p(d({}, C), {
+                  libraryApplication: O,
                   source: y
               })
           )
@@ -80,7 +80,7 @@ function m(e) {
           ? (0, r.jsx)('div', { children: 'deprecated!' })
           : (0, r.jsx)(
                 c.Z,
-                p(d({}, O), {
+                p(d({}, C), {
                     hideNotLaunchable: g,
                     applicationId: t.id
                 })

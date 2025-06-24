@@ -1,147 +1,138 @@
-n.d(t, { Z: () => I }), n(388685);
-var r = n(255367),
-    i = n(73800),
-    a = n(913527),
-    o = n.n(a),
-    s = n(442837),
-    l = n(481060),
-    c = n(11769),
-    u = n(338390),
-    d = n(496675),
-    f = n(300429),
-    _ = n(585483),
-    p = n(70956),
-    h = n(981631),
-    m = n(388032),
-    g = n(873007);
-function E(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function b(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
-            )),
-            r.forEach(function (t) {
-                E(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function y(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function O(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : y(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function v(e) {
-    let t,
-        { isEnabled: n, rateLimitPerUser: a, isBypassSlowmode: s, slowmodeCooldownGuess: d } = e,
-        [f, E] = i.useState(!1);
-    i.useEffect(() => {
-        function e() {
-            E(!0),
+i.d(e, { Z: () => b }), i(388685);
+var n = i(255367),
+    r = i(73800),
+    s = i(913527),
+    o = i.n(s),
+    l = i(442837),
+    a = i(481060),
+    d = i(11769),
+    u = i(338390),
+    c = i(496675),
+    h = i(300429),
+    p = i(585483),
+    g = i(70956),
+    f = i(981631),
+    m = i(388032),
+    v = i(873007);
+function O(t) {
+    let e,
+        { isEnabled: i, rateLimitPerUser: s, isBypassSlowmode: l, slowmodeCooldownGuess: c } = t,
+        [h, O] = r.useState(!1);
+    r.useEffect(() => {
+        function t() {
+            O(!0),
                 setTimeout(() => {
-                    E(!1);
+                    O(!1);
                 }, 1000);
         }
         return (
-            _.S.subscribe(h.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, e),
+            p.S.subscribe(f.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, t),
             () => {
-                _.S.unsubscribe(h.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, e);
+                p.S.unsubscribe(f.CkL.EMPHASIZE_SLOWMODE_COOLDOWN, t);
             }
         );
     }, []);
-    let y = (0, u.Z)('SlowmodeIndicator');
-    if (!n) return null;
-    let v = (0, c.k)(a);
-    if (!s && d > 0) {
-        let e = o().duration(d);
-        if (d > p.Z.Millis.HOUR) {
-            let n = ''.concat(e.minutes()).padStart(2, '0'),
-                r = ''.concat(e.seconds()).padStart(2, '0');
-            t = ''.concat(e.hours(), ':').concat(n, ':').concat(r);
+    let b = (0, u.Z)('SlowmodeIndicator');
+    if (!i) return null;
+    let y = (0, d.k)(s);
+    if (!l && c > 0) {
+        let t = o().duration(c);
+        if (c > g.Z.Millis.HOUR) {
+            let i = ''.concat(t.minutes()).padStart(2, '0'),
+                n = ''.concat(t.seconds()).padStart(2, '0');
+            e = ''.concat(t.hours(), ':').concat(i, ':').concat(n);
         } else {
-            let n = ''.concat(e.seconds()).padStart(2, '0');
-            t = ''.concat(e.minutes(), ':').concat(n);
+            let i = ''.concat(t.seconds()).padStart(2, '0');
+            e = ''.concat(t.minutes(), ':').concat(i);
         }
-    } else t = s ? (y ? m.intl.string(m.t['8+NidX']) : m.intl.string(m.t.SSzXvb)) : m.intl.string(m.t.Icu3bW);
-    let I = y
-        ? (0, r.jsxs)(l.Text, {
-              className: g.cooldownText,
+    } else e = l ? (b ? m.intl.string(m.t['8+NidX']) : m.intl.string(m.t.SSzXvb)) : m.intl.string(m.t.Icu3bW);
+    let S = b
+        ? (0, n.jsxs)(a.Text, {
+              className: v.cooldownText,
               variant: 'text-xs/medium',
-              color: f ? 'text-danger' : 'text-muted',
+              color: h ? 'text-danger' : 'text-muted',
               tabularNumbers: !0,
               children: [
-                  (0, r.jsx)(l.ANZ, {
+                  (0, n.jsx)(a.ANZ, {
                       size: 'xxs',
                       color: 'currentColor',
-                      className: g.slowModeIcon
+                      className: v.slowModeIcon
                   }),
-                  t
+                  e
               ]
           })
-        : (0, r.jsxs)(l.Text, {
-              className: g.cooldownText,
+        : (0, n.jsxs)(a.Text, {
+              className: v.cooldownText,
               variant: 'text-sm/medium',
-              color: f ? 'text-danger' : 'text-muted',
+              color: h ? 'text-danger' : 'text-muted',
               tabularNumbers: !0,
               children: [
-                  t,
-                  (0, r.jsx)(l.ANZ, {
+                  e,
+                  (0, n.jsx)(a.ANZ, {
                       size: 'xs',
                       color: 'currentColor',
-                      className: g.slowModeIcon
+                      className: v.slowModeIcon
                   })
               ]
           });
-    return (0, r.jsx)(l.ua7, {
-        text: v,
-        children: (e) => (0, r.jsx)('div', O(b({ className: g.cooldownWrapper }, e), { children: I }))
+    return (0, n.jsx)(a.ua7, {
+        text: y,
+        children: (t) => {
+            var e, i;
+            return (0, n.jsx)(
+                'div',
+                ((e = (function (t) {
+                    for (var e = 1; e < arguments.length; e++) {
+                        var i = null != arguments[e] ? arguments[e] : {},
+                            n = Object.keys(i);
+                        'function' == typeof Object.getOwnPropertySymbols &&
+                            (n = n.concat(
+                                Object.getOwnPropertySymbols(i).filter(function (t) {
+                                    return Object.getOwnPropertyDescriptor(i, t).enumerable;
+                                })
+                            )),
+                            n.forEach(function (e) {
+                                var n;
+                                (n = i[e]),
+                                    e in t
+                                        ? Object.defineProperty(t, e, {
+                                              value: n,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0
+                                          })
+                                        : (t[e] = n);
+                            });
+                    }
+                    return t;
+                })({ className: v.cooldownWrapper }, t)),
+                (i = i = { children: S }),
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(i))
+                    : (function (t, e) {
+                          var i = Object.keys(t);
+                          if (Object.getOwnPropertySymbols) {
+                              var n = Object.getOwnPropertySymbols(t);
+                              i.push.apply(i, n);
+                          }
+                          return i;
+                      })(Object(i)).forEach(function (t) {
+                          Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(i, t));
+                      }),
+                e)
+            );
+        }
     });
 }
-function I(e) {
-    let { channel: t, isThreadCreation: n = !1 } = e,
-        i = (0, s.e7)([f.Z], () => f.Z.getSlowmodeCooldownGuess(t.id, n ? f.S.CreateThread : f.S.SendMessage)),
-        a = (0, s.e7)([d.Z], () => (n ? d.Z.can(h.Plq.MANAGE_THREADS, t) : d.Z.can(h.Plq.MANAGE_CHANNELS, t) || d.Z.can(h.Plq.MANAGE_MESSAGES, t))),
-        { rateLimitPerUser: o } = t,
-        l = o > 0;
-    return (0, r.jsx)(v, {
-        isEnabled: l,
+function b(t) {
+    let { channel: e, isThreadCreation: i = !1 } = t,
+        r = (0, l.e7)([h.Z], () => h.Z.getSlowmodeCooldownGuess(e.id, i ? h.S.CreateThread : h.S.SendMessage)),
+        s = (0, l.e7)([c.Z], () => (i ? c.Z.can(f.Plq.MANAGE_THREADS, e) : c.Z.can(f.Plq.MANAGE_CHANNELS, e) || c.Z.can(f.Plq.MANAGE_MESSAGES, e))),
+        { rateLimitPerUser: o } = e;
+    return (0, n.jsx)(O, {
+        isEnabled: o > 0,
         rateLimitPerUser: o,
-        isBypassSlowmode: a,
-        slowmodeCooldownGuess: i
+        isBypassSlowmode: s,
+        slowmodeCooldownGuess: r
     });
 }

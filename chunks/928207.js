@@ -16,14 +16,14 @@ var i = n(120356),
     m = n(906732),
     b = n(600164),
     _ = n(984370),
-    E = n(299657),
-    O = n(594174),
+    O = n(299657),
+    E = n(594174),
     y = n(74538),
     I = n(981631),
     v = n(474936),
     C = n(388032),
     S = n(881207);
-let N = s.ZP.connectStores([O.default], () => ({ user: O.default.getCurrentUser() }))(
+let N = s.ZP.connectStores([E.default], () => ({ user: E.default.getCurrentUser() }))(
     (0, h.Z)(
         (0, p.Z)((e) => {
             let { isAuthenticated: t, user: n } = e,
@@ -66,7 +66,7 @@ let N = s.ZP.connectStores([O.default], () => ({ user: O.default.getCurrentUser(
                                             justify: b.Z.Justify.CENTER,
                                             children: (0, r.jsx)(u.$jN, { className: S.spinner })
                                         })
-                                      : (0, r.jsx)(E.Z, { entrypoint: v.EZ.ApplicationStoreHome })
+                                      : (0, r.jsx)(O.Z, { entrypoint: v.EZ.ApplicationStoreHome })
                           })
                       ]
                   })

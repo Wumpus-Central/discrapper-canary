@@ -1,4 +1,4 @@
-n.d(t, { s: () => x }), n(388685);
+n.d(t, { s: () => S }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -14,37 +14,37 @@ var r = n(255367),
     g = n(13186),
     m = n(981631),
     b = n(921944),
-    O = n(474936),
-    y = n(388032),
-    _ = n(706442),
+    _ = n(474936),
+    O = n(388032),
+    y = n(706442),
     v = n(777091);
 let C = (e, t) => {
         let n = null != t && !t.isPreview;
         return e ? (e && !n ? 'no-wallpaper-nitro' : 'has-wallpaper-nitro') : 'non-nitro';
     },
-    j = (e) => ('has-wallpaper-nitro' === e ? y.intl.string(y.t.T9dXPj) : y.intl.string(y.t.zyvzQ0)),
-    S = (e) => {
+    j = (e) => ('has-wallpaper-nitro' === e ? O.intl.string(O.t.T9dXPj) : O.intl.string(O.t.zyvzQ0)),
+    E = (e) => {
         switch (e) {
             case 'non-nitro':
-                return y.intl.string(y.t.VU8fxM);
+                return O.intl.string(O.t.VU8fxM);
             case 'no-wallpaper-nitro':
-                return y.intl.string(y.t.BQBNjY);
+                return O.intl.string(O.t.BQBNjY);
             case 'has-wallpaper-nitro':
-                return y.intl.string(y.t.eZMxlZ);
+                return O.intl.string(O.t.eZMxlZ);
         }
     },
-    x = (e) => {
-        let { children: t, channelId: n, selectedChannelId: x } = e,
-            E = (0, a.wE)(o.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
-            P = (0, l.e7)([d.Z], () => d.Z.getLayers().includes(m.S9g.USER_SETTINGS)),
-            I = x === n,
+    S = (e) => {
+        let { children: t, channelId: n, selectedChannelId: S } = e,
+            x = (0, a.wE)(o.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
+            I = (0, l.e7)([d.Z], () => d.Z.getLayers().includes(m.S9g.USER_SETTINGS)),
+            P = S === n,
             { canAccessPicker: N, entryPoint: w } = (0, p.m)({
                 location: 'ChatWallpaperDMListCoachmark',
-                selectedChannelId: x
+                selectedChannelId: S
             }),
             Z = w === h.FN.CONTEXT_MENU,
-            [T, A] = (0, c.US)(E && Z && I && N && !P ? [o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : []),
-            R = (0, u.m)(O.p9.TIER_2),
+            [T, A] = (0, c.US)(x && Z && P && N && !I ? [o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : []),
+            R = (0, u.m)(_.p9.TIER_2),
             D = (0, f.Z)(n),
             L = T === o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK,
             M = (0, i.useRef)(null),
@@ -66,12 +66,12 @@ let C = (e, t) => {
             !L)
         )
             return t;
-        let V = () => {
+        let F = () => {
                 A(b.L.USER_DISMISS);
             },
-            H = C(R, null != D ? D : null),
-            F = j(H),
-            z = S(H);
+            V = C(R, null != D ? D : null),
+            H = j(V),
+            z = E(V);
         return (0, r.jsx)('div', {
             ref: M,
             children: (0, r.jsx)(s.yRy, {
@@ -79,17 +79,17 @@ let C = (e, t) => {
                 align: G,
                 position: 'right',
                 shouldShow: L,
-                onRequestClose: V,
+                onRequestClose: F,
                 renderPopout: () =>
                     (0, r.jsx)(g.Z, {
                         ref: U,
-                        onClose: V,
-                        buttonText: y.intl.string(y.t['+IrDzM']),
-                        header: F,
+                        onClose: F,
+                        buttonText: O.intl.string(O.t['+IrDzM']),
+                        header: H,
                         art: (0, r.jsx)('img', {
                             src: v.Z,
                             alt: '',
-                            className: _.chatWallpaperDMListCoachmarkArt
+                            className: y.chatWallpaperDMListCoachmarkArt
                         }),
                         body: z,
                         align: G

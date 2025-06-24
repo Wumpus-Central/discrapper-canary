@@ -22,8 +22,8 @@ function h(e) {
             messageId: n.id
         })(g),
         b = (0, a.j)('HDStreamingUpgradedMessage'),
-        E = () => (0, o.k)(h, 'HDStreamingUpgradedMessage'),
-        y = b ? E : s.Z.getArticleURL(p.BhN.HD_STREAMING_POTION);
+        x = () => (0, o.k)(h, 'HDStreamingUpgradedMessage'),
+        y = b ? x : s.Z.getArticleURL(p.BhN.HD_STREAMING_POTION);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)('div', {
@@ -40,7 +40,7 @@ function h(e) {
             }),
             (0, r.jsxs)(i.P3F, {
                 onClick: () => {
-                    b ? E() : window.open(s.Z.getArticleURL(p.BhN.HD_STREAMING_POTION), '_blank');
+                    b ? x() : window.open(s.Z.getArticleURL(p.BhN.HD_STREAMING_POTION), '_blank');
                 },
                 className: f.embed,
                 children: [

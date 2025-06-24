@@ -14,8 +14,8 @@ var l = n(836560),
     m = n(852926),
     b = n(186901),
     _ = n(981631),
-    E = n(413135).Buffer;
-function O(e, t, n) {
+    O = n(413135).Buffer;
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -72,7 +72,7 @@ function T(e, t, n) {
                 : {};
     (n = n ? JSON.stringify(n) : ''),
         (r = 200 === r && 0 === n.length ? 204 : r),
-        t.setHeader('Content-Length', E.byteLength(n).toString()),
+        t.setHeader('Content-Length', O.byteLength(n).toString()),
         t.setHeader('Content-Type', 'application/json'),
         t.writeHead(
             r,
@@ -87,7 +87,7 @@ function T(e, t, n) {
                             })
                         )),
                         r.forEach(function (t) {
-                            O(e, t, n[t]);
+                            E(e, t, n[t]);
                         });
                 }
                 return e;
@@ -115,7 +115,7 @@ class j extends g.Z {
         this._socket.close(e, t);
     }
     constructor(e, t, n) {
-        if ((super('ws', t, n), O(this, '_socket', void 0), -1 === ['etf', 'json'].indexOf(n))) throw new h.Z({ closeCode: _.$VG.INVALID_ENCODING }, 'Invalid Encoding: '.concat(n));
+        if ((super('ws', t, n), E(this, '_socket', void 0), -1 === ['etf', 'json'].indexOf(n))) throw new h.Z({ closeCode: _.$VG.INVALID_ENCODING }, 'Invalid Encoding: '.concat(n));
         if ('etf' === n && null == r) throw new h.Z({ closeCode: _.$VG.INVALID_ENCODING }, 'Erlpack cannot be used on this client');
         this._socket = e;
     }
@@ -128,7 +128,7 @@ class A extends g.Z {
         this._closeCallback(t, e);
     }
     constructor(e, t, n, r) {
-        if ((super('http', n, r), O(this, '_sendCallback', void 0), O(this, '_closeCallback', void 0), 'json' !== r)) throw new h.Z({ closeCode: _.$VG.INVALID_ENCODING }, 'Invalid Encoding: '.concat(r));
+        if ((super('http', n, r), E(this, '_sendCallback', void 0), E(this, '_closeCallback', void 0), 'json' !== r)) throw new h.Z({ closeCode: _.$VG.INVALID_ENCODING }, 'Invalid Encoding: '.concat(r));
         (this._sendCallback = e), (this._closeCallback = t);
     }
 }

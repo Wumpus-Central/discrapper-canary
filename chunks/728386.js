@@ -1,17 +1,16 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(120356),
     o = n.n(a),
     s = n(94171),
     l = n(532772),
-    c = n(540059),
-    u = n(28546),
-    d = n(443603),
-    f = n(957825),
-    _ = n(388032),
-    p = n(302195);
-function h(e, t, n) {
+    c = n(28546),
+    u = n(443603),
+    d = n(957825),
+    f = n(388032),
+    _ = n(302195);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +23,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,12 +34,12 @@ function m(e) {
                 })
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function g(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -52,52 +51,51 @@ function g(e, t) {
     }
     return n;
 }
-function E(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function b(e, t) {
+function E(e, t) {
     let { disabled: n, type: a } = e,
-        [h, g] = (0, u.Iu)((e) => [e.activeView, e.pickerId], s.X),
-        b = !1,
-        y = h === f.X1.STICKER,
-        O = !1,
-        v = i.useCallback(() => {
-            (0, u.RO)(f.X1.STICKER, a);
+        [p, m] = (0, c.Iu)((e) => [e.activeView, e.pickerId], s.X),
+        E = !1,
+        b = p === d.X1.STICKER,
+        y = !1,
+        O = i.useCallback(() => {
+            (0, c.RO)(d.X1.STICKER, a);
         }, [a]),
-        { Component: I, events: T, play: S } = (0, l.z)(),
-        A = (0, c.Q3)('ChannelStickerPickerButton');
+        { Component: v, events: I, play: T } = (0, l.z)();
     return n
         ? null
         : (0, r.jsx)('div', {
-              className: o()(f.CT, p.buttonContainer),
+              className: o()(d.CT, _.buttonContainer),
               ref: t,
               children: (0, r.jsx)(
-                  d.Z,
-                  E(m({ innerClassName: o()(p.button, p.stickerButton) }, T), {
+                  u.Z,
+                  g(h({ innerClassName: o()(_.button, _.stickerButton) }, I), {
                       onClick: () => {
-                          v(), S();
+                          O(), T();
                       },
-                      isActive: y,
-                      'aria-label': _.intl.string(_.t.rZpidX),
-                      'aria-expanded': y,
+                      isActive: b,
+                      'aria-label': f.intl.string(f.t.rZpidX),
+                      'aria-expanded': b,
                       'aria-haspopup': 'dialog',
-                      'aria-controls': g,
-                      sparkle: b,
-                      notification: O ? d.j.UPDATE : null,
-                      children: (0, r.jsx)(I, {
-                          size: A ? 'refresh_sm' : void 0,
+                      'aria-controls': m,
+                      sparkle: E,
+                      notification: y ? u.j.UPDATE : null,
+                      children: (0, r.jsx)(v, {
+                          size: 'refresh_sm',
                           color: 'currentColor'
                       })
                   })
               )
           });
 }
-let y = i.memo(i.forwardRef(b));
+let b = i.memo(i.forwardRef(E));

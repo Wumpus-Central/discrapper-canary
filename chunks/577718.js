@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(933104),
     b = n(276645),
     _ = n(970731),
-    E = n(626135),
-    O = n(267642),
+    O = n(626135),
+    E = n(267642),
     y = n(337721),
     I = n(981631),
     v = n(921944),
@@ -29,12 +29,12 @@ var r = n(255367),
     A = n(829972),
     Z = n(31932),
     x = n(642301);
-function L(e) {
+function w(e) {
     null != e && h.Z.open(e.id, I.pNK.BOOST_PERKS, { section: I.jXE.PREMIUM_GUILD_PROGRESS_BAR });
 }
-function w(e, t) {
+function L(e, t) {
     null != t &&
-        ((0, O.f2)(t, I.Eu4.TIER_1)
+        ((0, E.f2)(t, I.Eu4.TIER_1)
             ? h.Z.open(t.id, I.pNK.BOOST_PERKS, { section: I.jXE.PREMIUM_GUILD_INVITE_SPLASH })
             : (0, u.Z)({
                   analyticsLocations: e,
@@ -68,13 +68,13 @@ let D = i.memo(function (e) {
     let { contentTypes: t, theme: n, guild: i, renderGuildHeaderDropdownButton: o } = e,
         { analyticsLocations: u } = (0, s.ZP)(),
         C = () => {
-            E.default.track(I.rMx.TOOLTIP_VIEWED, {
+            O.default.track(I.rMx.TOOLTIP_VIEWED, {
                 type: S.cd.PREMIUM_PROGRESS_BAR,
                 location: { page: I.ZY5.GUILD_CHANNEL }
             });
         },
         D = () => {
-            E.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
+            O.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: S.cd.INVITE_SPLASH_UPSELL,
                 location: { page: I.ZY5.GUILD_CHANNEL },
                 location_stack: u
@@ -114,8 +114,8 @@ let D = i.memo(function (e) {
                             content: N.intl.format(N.t.ujItEh, {}),
                             buttonCTA: N.intl.string(N.t.UzVPra),
                             secondaryButtonCTA: N.intl.string(N.t['KkK/aG']),
-                            onSecondaryClick: () => L(),
-                            onClick: () => L(i),
+                            onSecondaryClick: () => w(),
+                            onClick: () => w(i),
                             markAsDismissed: U
                         }),
                         renderGuildHeaderDropdownButton: o
@@ -133,8 +133,8 @@ let D = i.memo(function (e) {
                             content: N.intl.format(N.t.zK1hpq, {}),
                             buttonCTA: N.intl.string(N.t.UzVPra),
                             secondaryButtonCTA: N.intl.string(N.t['KkK/aG']),
-                            onSecondaryClick: () => L(),
-                            onClick: () => L(i),
+                            onSecondaryClick: () => w(),
+                            onClick: () => w(i),
                             markAsDismissed: U
                         }),
                         renderGuildHeaderDropdownButton: o
@@ -156,8 +156,8 @@ let D = i.memo(function (e) {
                         renderGuildHeaderDropdownButton: o
                     });
                 case l.z.GUILD_HEADER_INVITE_SPLASH:
-                    let e = (0, O.f2)(i, I.Eu4.TIER_1) ? N.intl.format(N.t.DDzEVl, {}) : N.intl.formatToPlainString(N.t.pMftkJ, { boostCount: (0, O.KK)(i, I.Eu4.TIER_1) }),
-                        t = (0, O.f2)(i, I.Eu4.TIER_1) ? N.intl.string(N.t.rOFcBg) : N.intl.string(N.t.hvVgAQ);
+                    let e = (0, E.f2)(i, I.Eu4.TIER_1) ? N.intl.format(N.t.DDzEVl, {}) : N.intl.formatToPlainString(N.t.pMftkJ, { boostCount: (0, E.KK)(i, I.Eu4.TIER_1) }),
+                        t = (0, E.f2)(i, I.Eu4.TIER_1) ? N.intl.string(N.t.rOFcBg) : N.intl.string(N.t.hvVgAQ);
                     return (0, r.jsx)(R, {
                         renderPopout: (0, r.jsx)(_.ZP, {
                             onComponentMount: D,
@@ -170,8 +170,8 @@ let D = i.memo(function (e) {
                             content: e,
                             buttonCTA: t,
                             secondaryButtonCTA: N.intl.string(N.t.hBIHLS),
-                            onSecondaryClick: () => w(u),
-                            onClick: () => w(u, i),
+                            onSecondaryClick: () => L(u),
+                            onClick: () => L(u, i),
                             markAsDismissed: U
                         }),
                         renderGuildHeaderDropdownButton: o

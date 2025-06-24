@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(255367),
     a = n(73800),
     i = n(793030),
@@ -12,7 +12,7 @@ var r = n(255367),
     m = n(669401),
     h = n(388032),
     g = n(348666);
-function _(e) {
+function f(e) {
     let { application: t } = e,
         n = a.useMemo(() => {
             var e, n, r;

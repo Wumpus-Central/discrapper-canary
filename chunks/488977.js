@@ -72,8 +72,8 @@ function T(e, t) {
 function L(e) {
     var t;
     let { application: l, context: L, className: R, sectionName: w } = e,
-        Z = r.useRef(null),
-        k = (0, a.e7)([j.Z], () => j.Z.entrypoint()),
+        k = r.useRef(null),
+        Z = (0, a.e7)([j.Z], () => j.Z.entrypoint()),
         M = (0, N.L1)(l),
         D = (0, m.Eb)(M),
         U = (0, d.R)(l.id),
@@ -113,7 +113,7 @@ function L(e) {
                     (0, x.JG)(e, () => (0, c.showToast)((0, c.createToast)(I.intl.string(I.t['L/PwZW']), c.ToastType.SUCCESS))),
                         v.default.track(A.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
                             application_id: l.id,
-                            source: k
+                            source: Z
                         });
                 },
                 className: o()(O.clickable, R),
@@ -124,7 +124,7 @@ function L(e) {
                 })
             }),
             (0, i.jsx)(c.yRy, {
-                targetElementRef: Z,
+                targetElementRef: k,
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (0, i.jsxs)(c.v2r, {
@@ -199,7 +199,7 @@ function L(e) {
                 children: (e) =>
                     (0, i.jsx)(
                         c.P3F,
-                        T(S({ innerRef: Z }, e), {
+                        T(S({ innerRef: k }, e), {
                             onClick: e.onClick,
                             className: o()(O.clickable, R),
                             'aria-label': I.intl.string(I.t.UKOtz8),

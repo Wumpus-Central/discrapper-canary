@@ -64,8 +64,8 @@ function f() {
             isLoggingOverlayEvents: h,
             isLoggingAnalyticsEvents: j,
             isAnalyticsDebuggerEnabled: v,
-            isTracingRequests: S,
-            isForcedCanary: E,
+            isTracingRequests: E,
+            isForcedCanary: S,
             isSourceMapsEnabled: P,
             isIdleStatusIndicatorEnabled: m,
             isAxeEnabled: x,
@@ -140,9 +140,9 @@ function f() {
                                 {
                                     id: 'tracing-requests',
                                     label: 'Tracing Requests',
-                                    checked: S,
+                                    checked: E,
                                     action: () => {
-                                        (0, a.y)({ trace: !S });
+                                        (0, a.y)({ trace: !E });
                                     }
                                 },
                                 'tracing-requests'
@@ -152,9 +152,9 @@ function f() {
                                 {
                                     id: 'forced-canary',
                                     label: 'Forced Canary',
-                                    checked: E,
+                                    checked: S,
                                     action: () => {
-                                        (0, a.y)({ canary: !E });
+                                        (0, a.y)({ canary: !S });
                                     }
                                 },
                                 'forced-canary'

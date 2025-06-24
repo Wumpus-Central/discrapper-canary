@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(102888),
     _ = n(65839),
     y = n(453879),
-    C = n(408310),
-    x = n(75666),
+    x = n(408310),
+    C = n(75666),
     v = n(981631),
     j = n(400816);
 let O = (e) => {
@@ -25,13 +25,13 @@ let O = (e) => {
     let { channel: O, guild: E } = e,
         {
             currentCategoryId: I,
-            directoryEntries: P,
-            categoryCounts: S,
+            directoryEntries: S,
+            categoryCounts: P,
             allEntriesCount: Z,
             isLoading: N
         } = (0, l.cj)([m.Z], () => {
             let e = m.Z.getCurrentCategoryId(O.id),
-                t = m.Z.getDirectoryEntries(O.id, e === x.AR.ALL ? null : e),
+                t = m.Z.getDirectoryEntries(O.id, e === C.AR.ALL ? null : e),
                 n = m.Z.getDirectoryCategoryCounts(O.id);
             return {
                 currentCategoryId: e,
@@ -60,7 +60,7 @@ let O = (e) => {
         },
         [O.id]
     );
-    let T = i.useMemo(() => (null != P ? (0, y.v)(Object.values(P), I) : null), [P, I]),
+    let T = i.useMemo(() => (null != S ? (0, y.v)(Object.values(S), I) : null), [S, I]),
         {
             mostRecentQuery: A,
             searchFetching: w,
@@ -74,8 +74,8 @@ let O = (e) => {
             };
         }),
         [M, k] = i.useState(A),
-        L = '' !== A,
-        { showHubEventsList: D } = c.Z.useExperiment(
+        D = '' !== A,
+        { showHubEventsList: L } = c.Z.useExperiment(
             {
                 guildId: null != (t = E.id) ? t : '',
                 location: '6f7fb0_1'
@@ -84,7 +84,7 @@ let O = (e) => {
         ),
         U = {
             mostRecentQuery: A,
-            showHubEventsList: D
+            showHubEventsList: L
         },
         B = i.useRef(U);
     i.useEffect(() => {
@@ -139,7 +139,7 @@ let O = (e) => {
                                       directoryGuildName: E.name,
                                       directoryGuildId: E.id,
                                       directoryChannelId: O.id,
-                                      currentCategoryId: I === x.AR.ALL ? null : I
+                                      currentCategoryId: I === C.AR.ALL ? null : I
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -171,8 +171,8 @@ let O = (e) => {
         H = () => {
             k(''), h.So(O.id);
         };
-    return L
-        ? (0, r.jsx)(C.Z, {
+    return D
+        ? (0, r.jsx)(x.Z, {
               searchQuery: M,
               setSearchQuery: k,
               mostRecentQuery: A,
@@ -207,7 +207,7 @@ let O = (e) => {
                       h.Su(O.id, e);
                   },
                   directoryEntries: T,
-                  categoryCounts: S,
+                  categoryCounts: P,
                   allEntriesCount: Z,
                   isLoading: N
               });

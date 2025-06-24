@@ -17,8 +17,8 @@ function m(e) {
     let { party: t, close: n, onSelect: m } = e,
         b = (0, c.Z)(t),
         _ = (0, p.Z)(t),
-        E = (0, d.Z)(t),
-        O = (0, u.Z)(t),
+        O = (0, d.Z)(t),
+        E = (0, u.Z)(t),
         y = (0, o.Z)(t),
         I = (0, s.Z)(t);
     return (
@@ -42,9 +42,9 @@ function m(e) {
             children: [
                 b,
                 (0, r.jsxs)(i.kSQ, {
-                    children: [_, E]
+                    children: [_, O]
                 }),
-                (0, r.jsx)(i.kSQ, { children: O }),
+                (0, r.jsx)(i.kSQ, { children: E }),
                 (0, r.jsx)(i.kSQ, { children: y }),
                 I
             ]

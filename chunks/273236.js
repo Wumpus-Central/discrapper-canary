@@ -1,24 +1,24 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => u }), n(388685);
 var i = n(255367),
-    s = n(73800),
-    r = n(120356),
-    a = n.n(r),
+    r = n(73800),
+    s = n(120356),
+    a = n.n(s),
     l = n(867309),
     c = n(481060),
     o = n(388032),
     d = n(94546),
     m = n(699343);
-let x = s.forwardRef(function (e, t) {
+let u = r.forwardRef(function (e, t) {
     let {} = e,
-        [r, a] = s.useState('before'),
-        [x, j] = s.useState(!1),
-        [g, _] = s.useState(!1);
-    s.useImperativeHandle(t, () => ({ maybeChangeToAfterTab: () => (g || b('after'), g) }));
-    let b = s.useCallback((e) => {
+        [s, a] = r.useState('before'),
+        [u, j] = r.useState(!1),
+        [g, b] = r.useState(!1);
+    r.useImperativeHandle(t, () => ({ maybeChangeToAfterTab: () => (g || f('after'), g) }));
+    let f = r.useCallback((e) => {
         j(!0),
             setTimeout(() => {
                 l.unstable_batchedUpdates(() => {
-                    'after' === e && _(!0), j(!1), a(e);
+                    'after' === e && b(!0), j(!1), a(e);
                 });
             }, 400);
     }, []);
@@ -55,23 +55,23 @@ let x = s.forwardRef(function (e, t) {
                         children: [
                             (0, i.jsx)('div', {
                                 className: d.tabBackground,
-                                style: { left: 'before' === r ? 0 : '50%' }
+                                style: { left: 'before' === s ? 0 : '50%' }
                             }),
                             (0, i.jsx)(c.P3F, {
                                 className: d.tab,
-                                onClick: () => b('before'),
+                                onClick: () => f('before'),
                                 children: (0, i.jsx)(c.Text, {
                                     variant: 'text-sm/medium',
-                                    color: 'before' === r ? 'header-primary' : 'text-muted',
+                                    color: 'before' === s ? 'header-primary' : 'text-muted',
                                     children: o.intl.string(o.t.sLv7LC)
                                 })
                             }),
                             (0, i.jsx)(c.P3F, {
                                 className: d.tab,
-                                onClick: () => b('after'),
+                                onClick: () => f('after'),
                                 children: (0, i.jsx)(c.Text, {
                                     variant: 'text-sm/medium',
-                                    color: 'after' === r ? 'header-primary' : 'text-muted',
+                                    color: 'after' === s ? 'header-primary' : 'text-muted',
                                     children: o.intl.string(o.t.R8eSY2)
                                 })
                             })
@@ -93,7 +93,7 @@ let x = s.forwardRef(function (e, t) {
                                         })
                                     }),
                                     (0, i.jsx)('div', {
-                                        className: 'after' === r ? d.guild : d.unreadGuild,
+                                        className: 'after' === s ? d.guild : d.unreadGuild,
                                         children: (0, i.jsx)('img', {
                                             src: n(390115),
                                             width: 36,
@@ -102,7 +102,7 @@ let x = s.forwardRef(function (e, t) {
                                         })
                                     }),
                                     (0, i.jsx)('div', {
-                                        className: 'after' === r ? d.guild : d.unreadGuild,
+                                        className: 'after' === s ? d.guild : d.unreadGuild,
                                         children: (0, i.jsx)('img', {
                                             src: n(536411),
                                             width: 36,
@@ -115,49 +115,49 @@ let x = s.forwardRef(function (e, t) {
                             (0, i.jsxs)('div', {
                                 className: d.channels,
                                 children: [
-                                    (0, i.jsx)(u, {
+                                    (0, i.jsx)(h, {
                                         mention: !0,
                                         name: o.intl.string(o.t.WFejRk)
                                     }),
-                                    (0, i.jsx)(u, { name: o.intl.string(o.t.jqWm9f) }),
-                                    (0, i.jsx)(u, {
-                                        grey: 'after' === r,
+                                    (0, i.jsx)(h, { name: o.intl.string(o.t.jqWm9f) }),
+                                    (0, i.jsx)(h, {
+                                        grey: 'after' === s,
                                         name: o.intl.string(o.t.p9z9Iy)
                                     }),
-                                    (0, i.jsx)(u, {
-                                        grey: 'after' === r,
+                                    (0, i.jsx)(h, {
+                                        grey: 'after' === s,
                                         name: o.intl.string(o.t['2bdWDw'])
                                     }),
-                                    (0, i.jsx)(u, { name: o.intl.string(o.t['Ci+Our']) }),
-                                    (0, i.jsx)(u, {
-                                        grey: 'after' === r,
+                                    (0, i.jsx)(h, { name: o.intl.string(o.t['Ci+Our']) }),
+                                    (0, i.jsx)(h, {
+                                        grey: 'after' === s,
                                         name: o.intl.string(o.t['/7TEdn'])
                                     }),
-                                    (0, i.jsx)(u, {
-                                        grey: 'after' === r,
+                                    (0, i.jsx)(h, {
+                                        grey: 'after' === s,
                                         name: o.intl.string(o.t['Ime/t7'])
                                     })
                                 ]
                             })
                         ]
                     }),
-                    (0, i.jsx)(h, {
-                        hidden: x || 'after' === r,
+                    (0, i.jsx)(x, {
+                        hidden: u || 'after' === s,
                         className: d.tipBefore1,
                         text: o.intl.string(o.t.WrPMOD)
                     }),
-                    (0, i.jsx)(h, {
-                        hidden: x || 'after' === r,
+                    (0, i.jsx)(x, {
+                        hidden: u || 'after' === s,
                         className: d.tipBefore2,
                         text: o.intl.string(o.t['pApL7+'])
                     }),
-                    (0, i.jsx)(h, {
-                        hidden: x || 'before' === r,
+                    (0, i.jsx)(x, {
+                        hidden: u || 'before' === s,
                         className: d.tipAfter1,
                         text: o.intl.string(o.t.eZb3iY)
                     }),
-                    (0, i.jsx)(h, {
-                        hidden: x || 'before' === r,
+                    (0, i.jsx)(x, {
+                        hidden: u || 'before' === s,
                         className: d.tipAfter2,
                         text: o.intl.string(o.t.M3KrJS)
                     })
@@ -166,10 +166,10 @@ let x = s.forwardRef(function (e, t) {
         ]
     });
 });
-function h(e) {
-    let { text: t, className: n, hidden: s } = e;
+function x(e) {
+    let { text: t, className: n, hidden: r } = e;
     return (0, i.jsxs)('div', {
-        className: a()(n, d.tip, { [d.hidden]: s }),
+        className: a()(n, d.tip, { [d.hidden]: r }),
         children: [
             (0, i.jsx)(c.Text, {
                 className: d.__invalid_tipText,
@@ -181,8 +181,8 @@ function h(e) {
         ]
     });
 }
-function u(e) {
-    let { grey: t, mention: n, name: s } = e;
+function h(e) {
+    let { grey: t, mention: n, name: r } = e;
     return (0, i.jsxs)('div', {
         className: a()(d.channel, {
             [d.grey]: t,
@@ -197,7 +197,7 @@ function u(e) {
             (0, i.jsx)(c.Text, {
                 variant: 'text-md/medium',
                 className: d.channelName,
-                children: s
+                children: r
             })
         ]
     });

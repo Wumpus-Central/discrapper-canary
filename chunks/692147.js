@@ -1,32 +1,32 @@
 n.d(t, { Z: () => p });
 var i = n(255367),
-    r = n(73800),
+    o = n(73800),
     l = n(392711),
-    o = n(399606),
-    s = n(351780),
-    a = n(576125),
+    r = n(399606),
+    a = n(351780),
+    s = n(576125),
     c = n(465858),
     u = n(112843),
     d = n(524484);
 function h(e) {
     let { reactionRef: t, count: n } = e,
-        i = r.useRef(n),
-        a = (0, o.e7)([s.Z], () => s.Z.getState()),
+        i = o.useRef(n),
+        s = (0, r.e7)([a.Z], () => a.Z.getState()),
         d = (0, u.Z)(),
         h = (0, c.Z)(t);
     return (
-        r.useEffect(() => {
+        o.useEffect(() => {
             if (n > i.current && null != h) {
-                let e = (0, l.clamp)(n, a.confettiCount / 2, 2 * a.confettiCount);
+                let e = (0, l.clamp)(n, s.confettiCount / 2, 2 * s.confettiCount);
                 d.fire(h.x, h.y, { count: e });
             }
             i.current = n;
-        }, [n, h, d, a.confettiCount]),
+        }, [n, h, d, s.confettiCount]),
         null
     );
 }
 function p(e) {
-    return (0, i.jsx)(a.Z, {
+    return (0, i.jsx)(s.Z, {
         confettiLocation: d.Hn.REACTION,
         children: (0, i.jsx)(
             h,

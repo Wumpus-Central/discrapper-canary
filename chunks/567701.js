@@ -70,7 +70,7 @@
                 } else if (H(e[r], t)) return '?' === r ? n : r;
             return e.hasOwnProperty('*') ? e['*'] : t;
         },
-        $ = {
+        X = {
             ME: '4.90',
             'NT 3.11': 'NT3.51',
             'NT 4.0': 'NT4.0',
@@ -83,7 +83,7 @@
             10: ['NT 6.4', 'NT 10.0'],
             RT: 'ARM'
         },
-        X = {
+        Y = {
             browser: [
                 [/\b(?:crmo|crios)\/([\w\.]+)/i],
                 [h, [l, 'Chrome']],
@@ -470,10 +470,10 @@
                 [/microsoft (windows) (vista|xp)/i],
                 [l, h],
                 [/(windows (?:phone(?: os)?|mobile))[\/ ]?([\d\.\w ]*)/i],
-                [l, [h, J, $]],
+                [l, [h, J, X]],
                 [/windows nt 6\.2; (arm)/i, /windows[\/ ]?([ntce\d\. ]+\w)(?!.+xbox)/i, /(?:win(?=3|9|n)|win 9x )([nt\d\.]+)/i],
                 [
-                    [h, J, $],
+                    [h, J, X],
                     [l, 'Windows']
                 ],
                 [/ip[honead]{2,4}\b(?:.*os ([\w]+) like mac|; opera)/i, /(?:ios;fbsv\/|iphone.+ios[\/ ])([\d\.]+)/i, /cfnetwork\/.+darwin/i],
@@ -512,12 +512,12 @@
                 [l, h]
             ]
         },
-        Y = function (t, e) {
-            if ((typeof t === a && ((e = t), (t = n)), !(this instanceof Y))) return new Y(t, e).getResult();
+        Z = function (t, e) {
+            if ((typeof t === a && ((e = t), (t = n)), !(this instanceof Z))) return new Z(t, e).getResult();
             var g = typeof r !== o && r.navigator ? r.navigator : n,
                 m = t || (g && g.userAgent ? g.userAgent : ''),
                 _ = g && g.userAgentData ? g.userAgentData : n,
-                b = e ? U(X, e) : X,
+                b = e ? U(Y, e) : Y,
                 S = g && g.userAgent == m;
             return (
                 (this.getBrowser = function () {
@@ -561,29 +561,29 @@
                 this
             );
         };
-    (Y.VERSION = '0.7.40'),
-        (Y.BROWSER = q([l, h, s])),
-        (Y.CPU = q([d])),
-        (Y.DEVICE = q([c, p, f, g, y, m, v, _, b])),
-        (Y.ENGINE = Y.OS = q([l, h])),
+    (Z.VERSION = '0.7.40'),
+        (Z.BROWSER = q([l, h, s])),
+        (Z.CPU = q([d])),
+        (Z.DEVICE = q([c, p, f, g, y, m, v, _, b])),
+        (Z.ENGINE = Z.OS = q([l, h])),
         typeof e !== o
-            ? (t.exports && (e = t.exports = Y), (e.UAParser = Y))
+            ? (t.exports && (e = t.exports = Z), (e.UAParser = Z))
             : typeof define === i && define.amd
               ? define(function () {
-                    return Y;
+                    return Z;
                 })
-              : typeof r !== o && (r.UAParser = Y);
-    var Z = typeof r !== o && (r.jQuery || r.Zepto);
-    if (Z && !Z.ua) {
-        var Q = new Y();
-        (Z.ua = Q.getResult()),
-            (Z.ua.get = function () {
+              : typeof r !== o && (r.UAParser = Z);
+    var $ = typeof r !== o && (r.jQuery || r.Zepto);
+    if ($ && !$.ua) {
+        var Q = new Z();
+        ($.ua = Q.getResult()),
+            ($.ua.get = function () {
                 return Q.getUA();
             }),
-            (Z.ua.set = function (t) {
+            ($.ua.set = function (t) {
                 Q.setUA(t);
                 var e = Q.getResult();
-                for (var r in e) Z.ua[r] = e[r];
+                for (var r in e) $.ua[r] = e[r];
             });
     }
 })('object' == typeof window ? window : this);

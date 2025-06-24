@@ -20,15 +20,15 @@ var r,
     g = n(427679),
     m = n(155409),
     b = n(131704),
-    O = n(199902),
-    y = n(430824),
-    _ = n(496675),
+    _ = n(199902),
+    O = n(430824),
+    y = n(496675),
     v = n(914010),
     C = n(281029),
     j = n(981631),
-    S = n(388032),
-    x = n(915887);
-function E(e, t, n) {
+    E = n(388032),
+    S = n(915887);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +41,7 @@ function E(e, t, n) {
         e
     );
 }
-function P(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,12 +52,12 @@ function P(e) {
                 })
             )),
             r.forEach(function (t) {
-                E(e, t, n[t]);
+                x(e, t, n[t]);
             });
     }
     return e;
 }
-function I(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -79,19 +79,19 @@ function N(e, t, n) {
     return null != t && !!t && !(0, C.ig)(n, e.type);
 }
 function w(e, t) {
-    return null == t ? x.containerDefault : e > t ? x.containerDragAfter : x.containerDragBefore;
+    return null == t ? S.containerDefault : e > t ? S.containerDragAfter : S.containerDragBefore;
 }
 function Z(e) {
     let { tabIndex: t, forceShowButtons: n, hasChannelInfo: r, onContextMenu: l } = e;
     return (0, i.jsx)(c.ua7, {
-        text: S.intl.string(S.t.OBr7Cw),
+        text: E.intl.string(E.t.OBr7Cw),
         children: (e) => {
             let { onMouseEnter: o, onMouseLeave: a, onFocus: u, onBlur: d } = e;
             return (0, i.jsx)(c.P3F, {
-                className: s()(x.iconItem, n ? x.alwaysShown : void 0, r ? x.iconWithChannelInfo : x.iconNoChannelInfo),
+                className: s()(S.iconItem, n ? S.alwaysShown : void 0, r ? S.iconWithChannelInfo : S.iconNoChannelInfo),
                 onClick: l,
                 tabIndex: t,
-                'aria-label': S.intl.string(S.t.OBr7Cw),
+                'aria-label': E.intl.string(E.t.OBr7Cw),
                 onMouseEnter: o,
                 onMouseLeave: a,
                 onFocus: u,
@@ -99,7 +99,7 @@ function Z(e) {
                 children: (0, i.jsx)(c.xhG, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: x.actionIcon
+                    className: S.actionIcon
                 })
             });
         }
@@ -107,19 +107,19 @@ function Z(e) {
 }
 function T(e) {
     let { channel: t, disableManageChannels: n, tabIndex: r, forceShowButtons: l, hasChannelInfo: o = !1 } = e;
-    if ((0, a.e7)([_.Z, v.Z], () => n || v.Z.getGuildId() === j.I_8 || (!_.Z.can(j.Plq.MANAGE_CHANNELS, t) && !_.Z.can(j.Plq.MANAGE_ROLES, t) && !_.Z.can(j.Plq.MANAGE_WEBHOOKS, t)) || ((0, b.r8)(t.type) && !_.Z.can(j.Plq.VIEW_CHANNEL, t)) || (t.isGuildVocal() && !_.Z.can(j.Plq.CONNECT, t)) || !b.dF.has(t.type) || t.isModeratorReportChannel())) return null;
+    if ((0, a.e7)([y.Z, v.Z], () => n || v.Z.getGuildId() === j.I_8 || (!y.Z.can(j.Plq.MANAGE_CHANNELS, t) && !y.Z.can(j.Plq.MANAGE_ROLES, t) && !y.Z.can(j.Plq.MANAGE_WEBHOOKS, t)) || ((0, b.r8)(t.type) && !y.Z.can(j.Plq.VIEW_CHANNEL, t)) || (t.isGuildVocal() && !y.Z.can(j.Plq.CONNECT, t)) || !b.dF.has(t.type) || t.isModeratorReportChannel())) return null;
     function d() {
         u.ZP.open(t.id);
     }
     return (0, i.jsx)(c.ua7, {
-        text: S.intl.string(S.t['3gUsJS']),
+        text: E.intl.string(E.t['3gUsJS']),
         children: (e) => {
             let { onMouseEnter: t, onMouseLeave: n, onFocus: a, onBlur: u } = e;
             return (0, i.jsx)(c.P3F, {
-                className: s()(x.iconItem, l ? x.alwaysShown : void 0, o ? x.iconWithChannelInfo : x.iconNoChannelInfo),
+                className: s()(S.iconItem, l ? S.alwaysShown : void 0, o ? S.iconWithChannelInfo : S.iconNoChannelInfo),
                 onClick: d,
                 tabIndex: r,
-                'aria-label': S.intl.string(S.t['3gUsJS']),
+                'aria-label': E.intl.string(E.t['3gUsJS']),
                 onMouseEnter: t,
                 onMouseLeave: n,
                 onFocus: a,
@@ -127,7 +127,7 @@ function T(e) {
                 children: (0, i.jsx)(c.ewm, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: x.actionIcon
+                    className: S.actionIcon
                 })
             });
         }
@@ -136,23 +136,23 @@ function T(e) {
 function A(e) {
     let { channel: t, isDefaultChannel: r = !1, locked: o, tabIndex: u, forceShowButtons: f, hasChannelInfo: b = !1 } = e,
         { entrypoints: v } = (0, h._k)({ location: 'channel_base' }),
-        C = (0, a.e7)([y.Z], () => y.Z.getGuild(t.getGuildId())),
-        E = (0, a.e7)([g.Z], () => g.Z.getStageInstanceByChannel(t.id), [t.id]),
+        C = (0, a.e7)([O.Z], () => O.Z.getGuild(t.getGuildId())),
+        x = (0, a.e7)([g.Z], () => g.Z.getStageInstanceByChannel(t.id), [t.id]),
         N = (0, a.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(t.id), [t.id]),
-        w = (0, a.e7)([_.Z], () => (0, p.b)(_.Z, C, t, E)),
-        Z = (0, a.e7)([_.Z], () => (_.Z.can(j.Plq.CREATE_INSTANT_INVITE, t) ? S.intl.string(S.t.zJrgTE) : S.intl.string(S.t.Sd8Ix8))),
-        T = v ? S.intl.string(S.t['EE+P0N']) : Z,
+        w = (0, a.e7)([y.Z], () => (0, p.b)(y.Z, C, t, x)),
+        Z = (0, a.e7)([y.Z], () => (y.Z.can(j.Plq.CREATE_INSTANT_INVITE, t) ? E.intl.string(E.t.zJrgTE) : E.intl.string(E.t.Sd8Ix8))),
+        T = v ? E.intl.string(E.t['EE+P0N']) : Z,
         A = l.useRef(null);
     if (o || !w || t.isModeratorReportChannel()) return null;
     function R() {
         if (null != C) {
-            let e = O.Z.getAllActiveStreams().filter((e) => e.state !== j.jm8.ENDED && e.channelId === t.id);
+            let e = _.Z.getAllActiveStreams().filter((e) => e.state !== j.jm8.ENDED && e.channelId === t.id);
             (0, c.ZDy)(async () => {
                 let { default: r } = await Promise.all([n.e('7654'), n.e('17439')]).then(n.bind(n, 560114));
                 return (n) =>
                     (0, i.jsx)(
                         r,
-                        I(P({}, n), {
+                        P(I({}, n), {
                             guild: C,
                             channel: t,
                             streamUserId: 1 === e.length ? e[0].ownerId : null,
@@ -166,7 +166,7 @@ function A(e) {
     let D = v ? c.oLu : c.ejJ,
         L = (0, i.jsx)(D, {
             size: 'xs',
-            className: x.actionIcon,
+            className: S.actionIcon,
             'aria-hidden': !0,
             color: 'currentColor'
         });
@@ -186,7 +186,7 @@ function A(e) {
             children: (e) =>
                 (0, i.jsx)(
                     c.P3F,
-                    I(P({ className: s()(x.iconItem, f ? x.alwaysShown : void 0, b ? x.iconWithChannelInfo : x.iconNoChannelInfo) }, e), {
+                    P(I({ className: s()(S.iconItem, f ? S.alwaysShown : void 0, b ? S.iconWithChannelInfo : S.iconNoChannelInfo) }, e), {
                         onClick: R,
                         tabIndex: u,
                         'aria-label': T,
@@ -202,17 +202,17 @@ function R(e) {
             (0, f._U)(t.guild_id, t.id);
         };
     return (0, i.jsx)(c.ua7, {
-        text: S.intl.string(S.t.ROh4T0),
+        text: E.intl.string(E.t.ROh4T0),
         children: (e) =>
             (0, i.jsx)(
                 c.P3F,
-                I(P({ className: x.iconItem }, e), {
+                P(I({ className: S.iconItem }, e), {
                     onClick: n,
-                    'aria-label': S.intl.string(S.t.ROh4T0),
+                    'aria-label': E.intl.string(E.t.ROh4T0),
                     children: (0, i.jsx)(c.Dio, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: x.actionIcon
+                        className: S.actionIcon
                     })
                 })
             )
@@ -224,17 +224,17 @@ function D(e) {
             (0, f.dM)(t.guild_id, t.id, !0, { section: j.jXE.CHANNEL_LIST });
         };
     return (0, i.jsx)(c.ua7, {
-        text: S.intl.string(S.t['N2c/Ul']),
+        text: E.intl.string(E.t['N2c/Ul']),
         children: (e) =>
             (0, i.jsx)(
                 c.P3F,
-                I(P({ className: x.iconItem }, e), {
+                P(I({ className: S.iconItem }, e), {
                     onClick: n,
-                    'aria-label': S.intl.string(S.t['N2c/Ul']),
+                    'aria-label': E.intl.string(E.t['N2c/Ul']),
                     children: (0, i.jsx)(c.dz2, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: x.actionIcon
+                        className: S.actionIcon
                     })
                 })
             )
@@ -243,19 +243,19 @@ function D(e) {
 class L extends (r = l.PureComponent) {
     renderOptionsButton(e) {
         let { onContextMenu: t } = e;
-        return (0, i.jsx)(Z, I(P({}, this.props), { onContextMenu: t }));
+        return (0, i.jsx)(Z, P(I({}, this.props), { onContextMenu: t }));
     }
     renderEditButton() {
-        return (0, i.jsx)(T, P({}, this.props));
+        return (0, i.jsx)(T, I({}, this.props));
     }
     renderInviteButton() {
-        return (0, i.jsx)(A, P({}, this.props));
+        return (0, i.jsx)(A, I({}, this.props));
     }
     renderRemoveSuggestionButton() {
-        return (0, i.jsx)(R, P({}, this.props));
+        return (0, i.jsx)(R, I({}, this.props));
     }
     renderAcceptSuggestionButton() {
-        return (0, i.jsx)(D, P({}, this.props));
+        return (0, i.jsx)(D, I({}, this.props));
     }
     getClassName() {
         let { position: e, sortingPosition: t } = this.props;
@@ -266,4 +266,4 @@ class L extends (r = l.PureComponent) {
         return N(e, t, n);
     }
 }
-E(L, 'defaultProps', { isDefaultChannel: !1 });
+x(L, 'defaultProps', { isDefaultChannel: !1 });

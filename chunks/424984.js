@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(255367),
     s = n(120356),
     o = n.n(s),
-    a = n(481060),
-    i = n(144931),
+    i = n(481060),
+    a = n(144931),
     c = n(543856);
 function l(e) {
     let { className: t, children: n } = e;
@@ -17,12 +17,12 @@ function l(e) {
 }
 function u(e) {
     let { iconSrc: t, title: n, onClick: s } = e;
-    return (0, r.jsx)(a.ua7, {
+    return (0, r.jsx)(i.ua7, {
         text: n,
         children: (e) => {
-            var o, a;
+            var o, i;
             return (0, r.jsx)(
-                i.Z,
+                a.Z,
                 ((o = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,7 +48,7 @@ function u(e) {
                     }
                     return e;
                 })({}, e)),
-                (a = a =
+                (i = i =
                     {
                         onClick: s,
                         className: c.toolbarButton,
@@ -59,7 +59,7 @@ function u(e) {
                         })
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(a))
+                    ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(i))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -67,8 +67,8 @@ function u(e) {
                               n.push.apply(n, r);
                           }
                           return n;
-                      })(Object(a)).forEach(function (e) {
-                          Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(a, e));
+                      })(Object(i)).forEach(function (e) {
+                          Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(i, e));
                       }),
                 o)
             );

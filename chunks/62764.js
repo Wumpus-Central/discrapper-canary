@@ -16,15 +16,15 @@ var r = n(255367),
     b = n(443877),
     _ = n(60174),
     y = n(216337),
-    C = n(920888),
-    x = n(287151),
+    x = n(920888),
+    C = n(287151),
     v = n(799903),
     j = n(501517),
     O = n(982168),
     E = n(216572),
     I = n(817608),
-    P = n(569471),
-    S = n(346479),
+    S = n(569471),
+    P = n(346479),
     Z = n(592125),
     N = n(934415),
     T = n(572004),
@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(228392),
     M = n(981631),
     k = n(388032),
-    L = n(130883),
-    D = n(184844),
+    D = n(130883),
+    L = n(184844),
     U = n(92254);
 function B(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -111,7 +111,7 @@ function G(e) {
                         });
               },
               disabled: l,
-              innerClassName: D.actionButton,
+              innerClassName: L.actionButton,
               submitting: o,
               children: [
                   (0, r.jsx)(c.dz2, {
@@ -120,7 +120,7 @@ function G(e) {
                       width: 16,
                       height: 16
                   }),
-                  l ? k.intl.string(L.default['2Y4vkp']) : k.intl.string(L.default.YIbR4u)
+                  l ? k.intl.string(D.default['2Y4vkp']) : k.intl.string(D.default.YIbR4u)
               ]
           })
         : null;
@@ -128,13 +128,13 @@ function G(e) {
 function H(e) {
     let { postId: t, isFirstMessage: n, isLastItem: l = !1, parentChannelId: s } = e,
         { ref: v, width: j } = (0, p.ZP)(),
-        [O, L] = i.useState(3),
+        [O, D] = i.useState(3),
         [H, V] = i.useState(!n),
         [z, W] = (0, h.Z)(!1, 2000),
         Y = (0, o.e7)([Z.Z], () => Z.Z.getChannel(t), [t]),
         { firstMessage: q } = (0, w.cl)(Y),
-        K = (0, o.e7)([P.Z], () => P.Z.hasJoined(t)),
-        { disableReactionUpdates: X, disableReactionCreates: Q, isLurking: J, isGuest: $, isPendingMember: ee } = (0, b.Z)(Y),
+        K = (0, o.e7)([S.Z], () => S.Z.hasJoined(t)),
+        { disableReactionUpdates: X, disableReactionCreates: J, isLurking: Q, isGuest: $, isPendingMember: ee } = (0, b.Z)(Y),
         et = (0, E.nw)(Y),
         en = (0, o.e7)([Z.Z], () => Z.Z.getChannel(s)),
         er = (0, A.Bs)(en),
@@ -164,14 +164,14 @@ function H(e) {
     let [ea, eo] = i.useState(!0);
     if (
         (i.useEffect(() => {
-            null != j && (L(Math.floor((j - 280) / 58)), eo(!1));
+            null != j && (D(Math.floor((j - 280) / 58)), eo(!1));
         }, [j]),
         null == Y || null == q)
     )
         return null;
     let es = q.reactions.length > 0,
         ec = () => {
-            K ? S.Z.leaveThread(Y, 'Forum Toolbar') : S.Z.joinThread(Y, 'Forum Toolbar');
+            K ? P.Z.leaveThread(Y, 'Forum Toolbar') : P.Z.joinThread(Y, 'Forum Toolbar');
         },
         eu = () => {
             (0, R.B)({
@@ -192,30 +192,30 @@ function H(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                className: a()(D.container, { [D.header]: H }),
+                className: a()(L.container, { [L.header]: H }),
                 ref: v,
                 children: [
                     et
                         ? (0, r.jsx)('div', {
-                              className: D.reportedMessageActions,
+                              className: L.reportedMessageActions,
                               children: (0, r.jsx)(I.Z, {
                                   message: q,
                                   channel: Y
                               })
                           })
                         : (0, r.jsxs)('div', {
-                              className: a()(D.reactButtons, { [D.loading]: ea }),
+                              className: a()(L.reactButtons, { [L.loading]: ea }),
                               children: [
                                   !es &&
-                                      !Q &&
+                                      !J &&
                                       null != er &&
                                       (0, r.jsx)('div', {
                                           className: U.reactions,
-                                          children: (0, r.jsx)(x.le, {
+                                          children: (0, r.jsx)(C.le, {
                                               message: q,
                                               readOnly: !1,
                                               useChatFontScaling: !1,
-                                              isLurking: J,
+                                              isLurking: Q,
                                               isGuest: $,
                                               isPendingMember: ee,
                                               emoji: er,
@@ -228,34 +228,34 @@ function H(e) {
                                               emojiSize: 'reaction'
                                           })
                                       }),
-                                  (0, r.jsx)(C.Z, {
+                                  (0, r.jsx)(x.Z, {
                                       message: q,
                                       channel: Y,
                                       disableReactionCreates: !0,
                                       disableReactionUpdates: X,
-                                      isLurking: J,
+                                      isLurking: Q,
                                       isGuest: $,
                                       isPendingMember: ee,
                                       maxReactions: O,
-                                      className: D.reactions,
+                                      className: L.reactions,
                                       useChatFontScaling: !1,
                                       isForumToolbar: !0,
                                       forceHideReactionCreates: !0
                                   }),
-                                  !Q &&
+                                  !J &&
                                       (0, r.jsx)(_.X, {
                                           type: g.O.NORMAL,
                                           message: q,
                                           channel: Y,
                                           useChatFontScaling: !1,
-                                          className: a()(D.addReactButton, { [D.hasNoReactions]: !es }),
+                                          className: a()(L.addReactButton, { [L.hasNoReactions]: !es }),
                                           isForumToolbar: !0,
                                           children: !es && k.intl.string(k.t.xpOyTE)
                                       })
                               ]
                           }),
                     (0, r.jsxs)('div', {
-                        className: D.buttons,
+                        className: L.buttons,
                         children: [
                             et
                                 ? (0, r.jsx)(G, { channel: Y })
@@ -268,8 +268,8 @@ function H(e) {
                                                   look: c.zxk.Looks.BLANK,
                                                   size: c.zxk.Sizes.SMALL,
                                                   onClick: ec,
-                                                  className: D.button,
-                                                  innerClassName: a()(D.buttonInner, { [D.active]: K }),
+                                                  className: L.button,
+                                                  innerClassName: a()(L.buttonInner, { [L.active]: K }),
                                                   children: [
                                                       (0, r.jsx)(ep, {
                                                           size: 'xs',
@@ -289,8 +289,8 @@ function H(e) {
                                             look: c.zxk.Looks.BLANK,
                                             size: c.zxk.Sizes.SMALL,
                                             onClick: eu,
-                                            className: D.button,
-                                            innerClassName: D.buttonInner,
+                                            className: L.button,
+                                            innerClassName: L.buttonInner,
                                             children: [
                                                 z
                                                     ? (0, r.jsx)(c.dz2, {
@@ -320,8 +320,8 @@ function H(e) {
                                                 look: c.zxk.Looks.BLANK,
                                                 size: c.zxk.Sizes.SMALL,
                                                 onClick: ed,
-                                                className: D.button,
-                                                innerClassName: D.buttonInner,
+                                                className: L.button,
+                                                innerClassName: L.buttonInner,
                                                 children: (0, r.jsx)(c.Za2, {
                                                     size: 'custom',
                                                     color: 'currentColor',

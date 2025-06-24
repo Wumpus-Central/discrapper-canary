@@ -2,8 +2,8 @@ n.d(t, { Z: () => m }), n(388685);
 var r = n(392711),
     s = n.n(r),
     o = n(570140),
-    a = n(317770),
-    i = n(120421),
+    i = n(317770),
+    a = n(120421),
     c = n(477839),
     l = n(981631),
     u = n(603571),
@@ -21,13 +21,13 @@ function f(e, t, n) {
         e
     );
 }
-class p extends a.Z {
+class p extends i.Z {
     _initialize() {
-        (this.loaded = !0), (this.startingTime = Date.now()), i.Z.addChangeListener(this._onStoreChange);
+        (this.loaded = !0), (this.startingTime = Date.now()), a.Z.addChangeListener(this._onStoreChange);
     }
     _terminate() {
         (this.loaded = !1),
-            i.Z.removeChangeListener(this._onStoreChange),
+            a.Z.removeChangeListener(this._onStoreChange),
             o.Z.dispatch({
                 type: 'LOCAL_ACTIVITY_UPDATE',
                 socketId: 'clicker-game',
@@ -48,18 +48,18 @@ class p extends a.Z {
                             application_id: c.bO,
                             type: l.IIU.PLAYING,
                             name: d.intl.string(u.default['7qZdOz']),
-                            details: d.intl.formatToPlainString(u.default['A3tW/f'], { total: Math.round(i.Z.lifetimePoints) }),
+                            details: d.intl.formatToPlainString(u.default['A3tW/f'], { total: Math.round(a.Z.lifetimePoints) }),
                             state: (function (e) {
                                 if (null == e) return d.intl.string(u.default.HXxY0N);
                                 if ('purchase-item' === e.type) return d.intl.formatToPlainString(u.default.QfiQys, { name: (0, c.w2)()[e.id].name });
                                 if ('purchase-item-upgrade' === e.type) {
                                     let t = (0, c.r7)()[e.id],
-                                        n = i.Z.getNumPurchasesForItemUpgrade(t.itemId, e.id),
+                                        n = a.Z.getNumPurchasesForItemUpgrade(t.itemId, e.id),
                                         r = 'string' == typeof t.name ? t.name : d.intl.formatToPlainString(t.name, { numPurchasing: n });
                                     return d.intl.formatToPlainString(u.default.GJwbPj, { name: r });
                                 }
                                 return 'unlock-achievement' === e.type ? d.intl.formatToPlainString(u.default.hUterq, { name: (0, c.EC)()[e.id].name }) : d.intl.string(u.default.HXxY0N);
-                            })(i.Z.getLastAction()),
+                            })(a.Z.getLastAction()),
                             timestamps: { start: this.startingTime }
                         };
                         o.Z.dispatch({

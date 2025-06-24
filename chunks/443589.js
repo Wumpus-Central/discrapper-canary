@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(626135),
     b = n(479446),
     _ = n(522558),
-    E = n(441623),
-    O = n(317271),
+    O = n(441623),
+    E = n(317271),
     y = n(674701),
     I = n(474936),
     v = n(981631),
@@ -30,8 +30,8 @@ let T = {
 function P(e) {
     let { recipientUser: t, giftIntentType: n, analyticsPage: l, shouldHighlight: P } = e,
         { analyticsLocations: j } = (0, d.ZP)(),
-        { isHovered: A, setIsHovered: Z, onMouseEnter: x, onMouseLeave: L } = (0, f.Z)(200, 300),
-        { enableEmojiCTA: w } = _.w.useExperiment({ location: 'GiftIntentActionButton' }, { autoTrackExposure: !1 });
+        { isHovered: A, setIsHovered: Z, onMouseEnter: x, onMouseLeave: w } = (0, f.Z)(200, 300),
+        { enableEmojiCTA: L } = _.w.useExperiment({ location: 'GiftIntentActionButton' }, { autoTrackExposure: !1 });
     i.useEffect(() => {
         let e = g.Z.getUserAffinity(t.id);
         (0, p.h)({
@@ -60,7 +60,7 @@ function P(e) {
                     isGift: !0,
                     initialPlanId: null,
                     giftRecipient: t,
-                    analyticsLocation: (0, O.F)(n).actionButton,
+                    analyticsLocation: (0, E.F)(n).actionButton,
                     analyticsLocations: j,
                     analyticsObject: {
                         page: l,
@@ -71,11 +71,11 @@ function P(e) {
                     giftMessage: k()
                 });
         },
-        k = () => (n === I.hX.FRIEND_ANNIVERSARY ? C.intl.formatToPlainString(C.t['L2s/Nz'], { numberOfYears: E.Z.getFriendAnniversaryYears(t.id) }) : (0, b.Ou)(n)),
+        k = () => (n === I.hX.FRIEND_ANNIVERSARY ? C.intl.formatToPlainString(C.t['L2s/Nz'], { numberOfYears: O.Z.getFriendAnniversaryYears(t.id) }) : (0, b.Ou)(n)),
         M = () => (n === I.hX.FRIEND_ANNIVERSARY ? C.intl.string(C.t['4LohBA']) : (0, b.Ou)(n)),
         U = i.useRef(null),
         G = () =>
-            w
+            L
                 ? (0, r.jsx)(u.P3F, {
                       innerRef: U,
                       'aria-label': M(),
@@ -85,7 +85,7 @@ function P(e) {
                           [N.actionButtonMobile]: c.tq
                       }),
                       onMouseEnter: R,
-                      onMouseLeave: L,
+                      onMouseLeave: w,
                       children: (0, r.jsx)(o.animated.div, {
                           className: S.spriteContainer,
                           children: (0, r.jsx)('div', { className: S.sprite })
@@ -95,7 +95,7 @@ function P(e) {
                       buttonRef: U,
                       onClick: D,
                       onMouseEnter: R,
-                      onMouseLeave: L,
+                      onMouseLeave: w,
                       children: (0, r.jsxs)('div', {
                           className: S.pillContentContainer,
                           children: [
@@ -132,7 +132,7 @@ function P(e) {
                 premiumGiftIntentCardType: y.U.COACHMARK,
                 recipientUser: t,
                 onMouseEnter: x,
-                onMouseLeave: L,
+                onMouseLeave: w,
                 popoutPosition: e.position,
                 analyticsPage: l,
                 analyticsSection: v.jXE.FRIENDS_LIST_FRIEND_ROW_GIFT_POPOUT,

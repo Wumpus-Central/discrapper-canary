@@ -1,5 +1,5 @@
 n.d(t, {
-    $: () => O,
+    $: () => C,
     s: () => v
 }),
     n(953529);
@@ -19,12 +19,12 @@ var r = n(255367),
     g = n(719548),
     _ = n(388032),
     b = n(580297);
-let E = (e) => {
+let x = (e) => {
         let { attachment: t } = e,
             { url: n, description: i } = t;
         return null == n
             ? null
-            : (0, r.jsx)(x, {
+            : (0, r.jsx)(E, {
                   url: n,
                   description: i
               });
@@ -34,9 +34,9 @@ let E = (e) => {
         let { embed: l } = e;
         if (!g.n2.has(l.type)) return null;
         let a = void 0 !== l.video && l.type !== o.h.GIFV ? l.video.url : null != (i = null == (t = l.thumbnail) ? void 0 : t.url) ? i : null == (n = l.image) ? void 0 : n.url;
-        return null == a ? null : (0, r.jsx)(x, { url: a });
+        return null == a ? null : (0, r.jsx)(E, { url: a });
     },
-    x = (e) => {
+    E = (e) => {
         let { url: t, description: n } = e,
             i = (0, p.cb)(t);
         return (0, r.jsx)('div', {
@@ -62,10 +62,10 @@ function v(e) {
         }),
         e();
 }
-function O(e) {
+function C(e) {
     let { channelId: t, messageId: n, isReportFalsePositiveLoading: l, analyticsContext: a, attachmentPreview: o, embedPreview: c, onConfirmPress: d, transitionState: p, onClose: m } = e,
         g = (0, u.Dt)(),
-        x = (0, h.pn)('ExplicitMediaFalsePositiveModal'),
+        E = (0, h.pn)('ExplicitMediaFalsePositiveModal'),
         v = i.useCallback(() => {
             (0, f.aP)({
                 action: f.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
@@ -75,7 +75,7 @@ function O(e) {
             }),
                 m();
         }, [t, n, a, m]),
-        O = i.useCallback(() => {
+        C = i.useCallback(() => {
             null == d || d(),
                 (0, f.aP)({
                     action: f.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
@@ -92,7 +92,7 @@ function O(e) {
             context: a
         });
     }, [t, n, a]);
-    let C = i.useMemo(() => (x ? _.intl.string(_.t['z4du/P']) : _.intl.string(_.t.gg5Dp6)), [x]);
+    let O = i.useMemo(() => (E ? _.intl.string(_.t['z4du/P']) : _.intl.string(_.t.gg5Dp6)), [E]);
     return (0, r.jsxs)(s.Y0X, {
         transitionState: p,
         'aria-labelledby': g,
@@ -116,9 +116,9 @@ function O(e) {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
                         className: b.subheader,
-                        children: C
+                        children: O
                     }),
-                    null != o && (0, r.jsx)(E, { attachment: o }),
+                    null != o && (0, r.jsx)(x, { attachment: o }),
                     null != c && (0, r.jsx)(y, { embed: c })
                 ]
             }),
@@ -130,7 +130,7 @@ function O(e) {
                         submitting: l,
                         size: s.zxk.Sizes.MEDIUM,
                         color: s.zxk.Colors.BRAND,
-                        onClick: O,
+                        onClick: C,
                         children: _.intl.string(_.t['cY+Ooa'])
                     }),
                     (0, r.jsx)(s.zxk, {

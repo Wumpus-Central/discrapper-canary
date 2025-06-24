@@ -1,10 +1,10 @@
-n.d(t, { Z: () => g }), n(388685);
-var l,
+n.d(t, { Z: () => p }), n(388685);
+var r,
     i = n(442837),
-    r = n(570140),
-    a = n(709054),
-    u = n(592125);
-function s(e, t, n) {
+    s = n(570140),
+    o = n(709054),
+    l = n(592125);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,49 +17,49 @@ function s(e, t, n) {
         e
     );
 }
-let o = {},
-    d = o;
-function c() {
-    a.default.keys(d).forEach((e) => {
-        null == u.Z.getChannel(e) && delete d[e];
+let c = {},
+    u = c;
+function d() {
+    o.default.keys(u).forEach((e) => {
+        null == l.Z.getChannel(e) && delete u[e];
     });
 }
-class f extends (l = i.ZP.PersistedStore) {
+class f extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(u.Z), (d = null != e ? e : o);
+        this.waitFor(l.Z), (u = null != e ? e : c);
     }
     getState() {
-        return d;
+        return u;
     }
     getCollapsed() {
-        return d;
+        return u;
     }
     isCollapsed(e) {
-        return d[e] || !1;
+        return u[e] || !1;
     }
 }
-s(f, 'displayName', 'CollapsedVoiceChannelStore'), s(f, 'persistKey', 'collapsedChannels');
-let g = new f(r.Z, {
-    CONNECTION_OPEN: c,
-    OVERLAY_INITIALIZE: c,
+a(f, 'displayName', 'CollapsedVoiceChannelStore'), a(f, 'persistKey', 'collapsedChannels');
+let p = new f(s.Z, {
+    CONNECTION_OPEN: d,
+    OVERLAY_INITIALIZE: d,
     CHANNEL_COLLAPSE: function (e) {
         let { channelId: t } = e;
-        d[t] ? delete d[t] : (d[t] = !0),
-            (d = (function (e) {
+        u[t] ? delete u[t] : (u[t] = !0),
+            (u = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
-                        l = Object.keys(n);
+                        r = Object.keys(n);
                     'function' == typeof Object.getOwnPropertySymbols &&
-                        (l = l.concat(
+                        (r = r.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             })
                         )),
-                        l.forEach(function (t) {
-                            s(e, t, n[t]);
+                        r.forEach(function (t) {
+                            a(e, t, n[t]);
                         });
                 }
                 return e;
-            })({}, d));
+            })({}, u));
     }
 });

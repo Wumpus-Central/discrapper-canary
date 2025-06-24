@@ -17,12 +17,12 @@ function g(e) {
     let t,
         n,
         g,
-        { author: _, banned: b, channelId: E } = e,
+        { author: _, banned: b, channelId: x } = e,
         y = (0, i.e7)([s.default], () => s.default.getId()),
-        x = p.ZP.useName(_),
+        E = p.ZP.useName(_),
         v = y === _.id,
-        O = (0, i.e7)([c.Z, u.Z], () => {
-            let e = c.Z.getChannel(E);
+        C = (0, i.e7)([c.Z, u.Z], () => {
+            let e = c.Z.getChannel(x);
             if (null == e) return !1;
             if (e.isPrivate()) return !0;
             if (e.isThread()) {
@@ -38,8 +38,8 @@ function g(e) {
             : ((g = f.intl.string(f.t['YVub5+'])),
               b
                   ? (t = f.intl.string(f.t['57nBt7']))
-                  : null != x && O
-                    ? ((t = f.intl.formatToPlainString(f.t['9Akp1t'], { username: x })),
+                  : null != E && C
+                    ? ((t = f.intl.formatToPlainString(f.t['9Akp1t'], { username: E })),
                       (n = (0, r.jsx)(a.Z.Button, {
                           onClick: function () {
                               let { id: e } = _,
@@ -48,7 +48,7 @@ function g(e) {
                                   plainText: t,
                                   rawText: '<@'.concat(e, '>')
                               }),
-                                  null != E && l.Z.startTyping(E);
+                                  null != x && l.Z.startTyping(x);
                           },
                           children: f.intl.string(f.t.P8tvKC)
                       })))

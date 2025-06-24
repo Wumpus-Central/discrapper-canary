@@ -10,8 +10,8 @@ var r = n(913527),
     d = n(883904),
     u = n(211644),
     m = n(675478),
-    x = n(681619),
-    p = n(177488);
+    p = n(681619),
+    x = n(177488);
 let h = (e) => {
         switch (e) {
             case c.D.DC_DISMISSED:
@@ -48,7 +48,7 @@ function v() {
         n = (0, u.ZP)((e) => e.lastWinnerTime),
         r = 0 !== n ? l()(n).fromNow() : 'n/a',
         v = (0, u.ZP)((e) => e.recentlyShown[0]),
-        g = e.map((e) => {
+        _ = e.map((e) => {
             let { eventType: t, dismissibleContent: n } = e;
             return {
                 key: h(t) + n.toString(),
@@ -56,28 +56,28 @@ function v() {
                 dismissibleContent: n
             };
         }),
-        j = Array.from(t.keys()).map((e) => ({
+        g = Array.from(t.keys()).map((e) => ({
             key: e.toString(),
             dismissibleContent: e
         }));
     return (0, a.jsxs)('div', {
-        className: p.panelContainer,
+        className: x.panelContainer,
         children: [
             (0, a.jsxs)('div', {
-                className: p.buttonContainer,
+                className: x.buttonContainer,
                 children: [
                     (0, a.jsx)(o.zxk, {
-                        className: p.button,
+                        className: x.button,
                         onClick: () => (0, d.EG)(),
                         children: 'Reset Daily Cap'
                     }),
                     (0, a.jsx)(o.zxk, {
-                        className: p.button,
+                        className: x.button,
                         onClick: m.sr,
                         children: 'Clear All Dismissed Contents'
                     }),
                     (0, a.jsx)(o.zxk, {
-                        className: p.button,
+                        className: x.button,
                         onClick: m.bE,
                         children: 'Check All Dismissed Contents'
                     })
@@ -85,27 +85,27 @@ function v() {
             }),
             (0, a.jsx)('br', {}),
             (0, a.jsxs)('div', {
-                className: p.info,
+                className: x.info,
                 children: ['Last winner time: ', r]
             }),
             (0, a.jsx)('br', {}),
             (0, a.jsxs)('div', {
-                className: p.info,
+                className: x.info,
                 children: ['Last winner: ', null != v ? s.z[v] : 'None']
             }),
             (0, a.jsx)('br', {}),
             (0, a.jsx)('div', {
-                className: p.candidatesTableContainer,
-                children: (0, a.jsx)(x.Z, {
-                    className: p.candidatesTable,
+                className: x.candidatesTableContainer,
+                children: (0, a.jsx)(p.Z, {
+                    className: x.candidatesTable,
                     columns: f,
-                    data: j
+                    data: g
                 })
             }),
             (0, a.jsx)('br', {}),
-            (0, a.jsx)(x.Z, {
+            (0, a.jsx)(p.Z, {
                 columns: b,
-                data: g
+                data: _
             })
         ]
     });

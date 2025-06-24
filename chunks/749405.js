@@ -23,8 +23,8 @@ function f(e) {
             o.Z.closeChannelSidebar(s.uZ), g && (0, a.Kh)(f.id);
         }, [f.id, g]),
         {
-            acceptMessageRequest: E,
-            rejectMessageRequest: O,
+            acceptMessageRequest: O,
+            rejectMessageRequest: E,
             isAcceptLoading: y,
             isRejectLoading: I,
             isUserProfileLoading: v,
@@ -53,7 +53,7 @@ function f(e) {
                         color: l.Ttl.PRIMARY,
                         size: l.zxk.Sizes.SMALL,
                         onClick: (e) => {
-                            e.stopPropagation(), O(f.id);
+                            e.stopPropagation(), E(f.id);
                         },
                         disabled: N,
                         submitting: I || S,
@@ -64,7 +64,7 @@ function f(e) {
                         color: l.Ttl.BRAND,
                         size: l.zxk.Sizes.SMALL,
                         onClick: (e) => {
-                            e.stopPropagation(), E(f.id);
+                            e.stopPropagation(), O(f.id);
                         },
                         disabled: N,
                         submitting: y || v || C,

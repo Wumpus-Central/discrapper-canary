@@ -16,15 +16,15 @@ var r = n(255367),
     b = n(970731),
     _ = n(560688),
     y = n(173507),
-    C = n(523746),
-    x = n(819640),
+    x = n(523746),
+    C = n(819640),
     v = n(131951),
     j = n(699516),
     O = n(594174),
     E = n(979651),
     I = n(585483),
-    P = n(63063),
-    S = n(665149),
+    S = n(63063),
+    P = n(665149),
     Z = n(981631),
     N = n(921944),
     T = n(65154),
@@ -60,7 +60,7 @@ class M extends i.PureComponent {
             h = !1;
         return (
             u ? ((h = !0), (p = A.intl.string(A.t.izMR7u)), (e = o.ua7.Colors.RED)) : v.Z.supports(T.AN.VIDEO) ? (a ? ((p = A.intl.string(A.t.PHzjvb)), (e = o.ua7.Colors.RED), (h = !0)) : i && c === Z.WtW.VIDEO ? ((t = this.handleJoinVideoCall), (p = d ? A.intl.string(A.t.S0W8Z2) : A.intl.string(A.t.W68MhI))) : ((t = this.handleStartVideoCall), (p = d ? A.intl.string(A.t.S0W8Z2) : A.intl.string(A.t.oCqlGB)))) : ((h = !0), (t = this.handleBrowserNotSupported), (p = A.intl.string(A.t.UVpg3d))),
-            (0, r.jsx)(S.ZP.Icon, {
+            (0, r.jsx)(P.ZP.Icon, {
                 icon: o.Odl,
                 onClick: t,
                 disabled: h || l,
@@ -77,7 +77,7 @@ class M extends i.PureComponent {
         let f = u.isManaged(),
             g = !1;
         h ? ((g = !0), (e = A.intl.string(A.t.izMR7u)), (t = o.ua7.Colors.RED)) : s ? ((e = f ? A.intl.string(A.t.LW2Gho) : A.intl.string(A.t.rF7lNz)), (t = o.ua7.Colors.RED), (g = !0)) : c ? ((e = A.intl.string(A.t.PHzjvb)), (t = o.ua7.Colors.RED), (g = !0)) : (e = l ? (f ? A.intl.string(A.t.S0W8Z2) : A.intl.string(A.t.fdEeb2)) : f ? A.intl.string(A.t.S0W8Z2) : A.intl.string(A.t.focH1t));
-        let _ = (0, r.jsx)(S.ZP.Icon, {
+        let _ = (0, r.jsx)(P.ZP.Icon, {
             ref: this.iconRef,
             icon: o.Csw,
             onClick: this.handleVoiceClick,
@@ -112,7 +112,7 @@ class M extends i.PureComponent {
                                               children: A.intl.string(A.t.xAW71d)
                                           }),
                                           (0, r.jsx)(o.eee, {
-                                              href: P.Z.getArticleURL(Z.BhN.ACTIVITIES),
+                                              href: S.Z.getArticleURL(Z.BhN.ACTIVITIES),
                                               children: A.intl.string(A.t.hvVgAQ)
                                           })
                                       ]
@@ -172,9 +172,9 @@ function k(e) {
         s = (0, l.e7)([h.Z], () => h.Z.getMode(n.id)),
         c = (0, l.e7)([E.Z], () => E.Z.isInChannel(n.id)),
         f = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        { callActive: m, callUnavailable: b } = (0, l.cj)([C.Z], () => ({
-            callActive: C.Z.isCallActive(n.id),
-            callUnavailable: C.Z.isCallUnavailable(n.id)
+        { callActive: m, callUnavailable: b } = (0, l.cj)([x.Z], () => ({
+            callActive: x.Z.isCallActive(n.id),
+            callUnavailable: x.Z.isCallUnavailable(n.id)
         })),
         _ = n.getRecipientId(),
         { notFriend: y, isBlocked: v } = (0, l.cj)([j.Z], () => ({
@@ -182,11 +182,11 @@ function k(e) {
             isBlocked: n.type === Z.d4z.DM && null != _ && j.Z.isBlocked(_)
         })),
         I = (0, l.e7)([O.default], () => O.default.getUser(_)),
-        P = (0, u.bp)(),
-        S = [],
+        S = (0, u.bp)(),
+        P = [],
         N = (0, p.Z)(n.id),
-        T = (0, l.e7)([x.Z], () => x.Z.hasLayers());
-    N && !T && S.push(a.z.ACTIVITY_GDM_CALL_TOOLTIP);
+        T = (0, l.e7)([C.Z], () => C.Z.hasLayers());
+    N && !T && P.push(a.z.ACTIVITY_GDM_CALL_TOOLTIP);
     let [A, w] = i.useState(!1);
     return (i.useEffect(() => {
         let e = setTimeout(() => {
@@ -205,10 +205,10 @@ function k(e) {
               callUnavailable: b,
               notFriend: y,
               isBlocked: v,
-              appContext: P,
+              appContext: S,
               canShowTooltip: A,
               canShowActivityGdmTooltip: N,
-              dismissibleContentTypes: S,
+              dismissibleContentTypes: P,
               useReducedMotion: f
           });
 }

@@ -21,8 +21,8 @@ var r = n(255367),
     _ = n(592125),
     v = n(944486),
     j = n(594174),
-    S = n(74538),
-    b = n(451467),
+    b = n(74538),
+    S = n(451467),
     C = n(122186),
     y = n(37113),
     O = n(981631),
@@ -152,12 +152,12 @@ function A(e) {
             return a()(null != e, 'StreamSettings: user cannot be undefined'), e;
         }),
         D = (0, c.e7)([v.Z, _.Z], () => _.Z.getChannel(v.Z.getVoiceChannelId())),
-        B = S.ZP.canStreamQuality(S.U2.MID, L),
+        B = b.ZP.canStreamQuality(b.U2.MID, L),
         { location: U } = (0, f.O)(),
         G = (0, m.Zq)({ autoTrackExposure: !1 }),
-        z = (0, x.B4)(),
-        W = j.default.getUser(null == D ? void 0 : D.hdStreamingBuyerId),
-        F = null != D && null != D.hdStreamingUntil && new Date(D.hdStreamingUntil) > new Date() && null != W,
+        W = (0, x.B4)(),
+        z = j.default.getUser(null == D ? void 0 : D.hdStreamingBuyerId),
+        F = null != D && null != D.hdStreamingUntil && new Date(D.hdStreamingUntil) > new Date() && null != z,
         H = !B && !G,
         [V, Y] = i.useState(!1),
         X = M ? y.z8 : y.WC,
@@ -167,8 +167,8 @@ function A(e) {
                 k({
                     type: e,
                     selected: e.value === l,
-                    needsPremium: !(0, b.Z)(n, e.value, s, L, A, D),
-                    needsDemo: z && e.value !== y.LY.RESOLUTION_720,
+                    needsPremium: !(0, S.Z)(n, e.value, s, L, A, D),
+                    needsDemo: W && e.value !== y.LY.RESOLUTION_720,
                     analyticsLocation: J,
                     onClick: () => o(e.value),
                     onClose: t,
@@ -181,8 +181,8 @@ function A(e) {
                 k({
                     type: e,
                     selected: e.value === s,
-                    needsPremium: !(0, b.Z)(n, l, e.value, L, A, D),
-                    needsDemo: z && e.value === y.ws.FPS_60,
+                    needsPremium: !(0, S.Z)(n, l, e.value, L, A, D),
+                    needsDemo: W && e.value === y.ws.FPS_60,
                     analyticsLocation: J,
                     onClick: () => p(e.value),
                     onClose: t,
@@ -230,12 +230,12 @@ function A(e) {
                                     openStreamUpsellModal: P
                                 })
                               : null,
-                          z && (0, r.jsx)(C.c, {}),
+                          W && (0, r.jsx)(C.c, {}),
                           F &&
                               null != D.hdStreamingUntil &&
                               (0, r.jsx)(g.Z, {
                                   streamingUntil: D.hdStreamingUntil,
-                                  user: W,
+                                  user: z,
                                   channel: D
                               })
                       ]
@@ -265,12 +265,12 @@ function A(e) {
                                     glow: V
                                 })
                               : null,
-                          z && (0, r.jsx)(C.c, {}),
+                          W && (0, r.jsx)(C.c, {}),
                           F &&
                               null != D.hdStreamingUntil &&
                               (0, r.jsx)(g.Z, {
                                   streamingUntil: null == D ? void 0 : D.hdStreamingUntil,
-                                  user: W,
+                                  user: z,
                                   channel: D
                               })
                       ]

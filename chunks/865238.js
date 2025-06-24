@@ -16,14 +16,14 @@ var r = n(255367),
     b = n(131951),
     _ = n(594174),
     y = n(63063),
-    C = n(5192),
-    x = n(823961),
+    x = n(5192),
+    C = n(823961),
     v = n(981631),
     j = n(37113),
     O = n(388032),
     E = n(15322),
     I = n(574169);
-function P(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,20 +48,20 @@ function P(e) {
     }
     return e;
 }
-let S = (e) => 1 - Math.pow(1 - e, 3);
+let P = (e) => 1 - Math.pow(1 - e, 3);
 function Z(e) {
     let { channel: t, buyer: l, onClose: o, dismissibleContent: Z } = e,
         N = (0, u.Wu)([g.Z], () => g.Z.getAllActiveStreams()),
         T = (0, u.e7)([_.default], () => _.default.getCurrentUser()),
         A = null != N.find((e) => e.ownerId === (null == T ? void 0 : T.id)),
-        w = (0, u.e7)([x.Z], () => x.Z.getPreviousGoLiveSettings()),
+        w = (0, u.e7)([C.Z], () => C.Z.getPreviousGoLiveSettings()),
         R = A && null != w && w.resolution !== j.LY.RESOLUTION_1440 && w.frameRate !== j.ws.FPS_60,
         [M, k] = (0, i.useState)(!1);
     (0, i.useEffect)(() => {
         k(!0);
     }, []);
-    let L = (0, i.useContext)(m.h9),
-        D = (0, d.q_F)({
+    let D = (0, i.useContext)(m.h9),
+        L = (0, d.q_F)({
             from: M
                 ? {
                       opacity: 0,
@@ -70,11 +70,11 @@ function Z(e) {
                 : {},
             to: {
                 opacity: 1,
-                transform: L ? 'translateX(-50%) translateY(0px) scale(1)' : 'translateX(-50%) translateY(-66px) scale(1)'
+                transform: D ? 'translateX(-50%) translateY(0px) scale(1)' : 'translateX(-50%) translateY(-66px) scale(1)'
             },
             config: {
                 duration: 250,
-                easing: S,
+                easing: P,
                 immediate: !M
             }
         }),
@@ -83,7 +83,7 @@ function Z(e) {
             size: d.EFr.SIZE_48,
             animateOnHover: !0
         }),
-        F = C.ZP.getName(t.guild_id, t.id, l),
+        F = x.ZP.getName(t.guild_id, t.id, l),
         G = A && !R,
         H = t.hdStreamingUntil;
     if (null == H || null == l || null == T) return null;
@@ -106,14 +106,14 @@ function Z(e) {
     return null == l || null == T
         ? null
         : (0, r.jsxs)(c.animated.div, {
-              style: D,
+              style: L,
               className: E.banner,
               children: [
                   (0, r.jsxs)('div', {
                       children: [
                           (0, r.jsx)(
                               d.qEK,
-                              P(
+                              S(
                                   {
                                       src: U,
                                       'aria-label': l.username,
@@ -139,7 +139,7 @@ function Z(e) {
                           (0, r.jsx)(d.zxk, {
                               onClick: () => {
                                   if (R) {
-                                      let e = x.Z.getPreviousGoLiveSettings(),
+                                      let e = C.Z.getPreviousGoLiveSettings(),
                                           t = b.Z.getGoLiveSource();
                                       if (null == e) return void o();
                                       let n = (0, h.s_)(e.resolution, e.frameRate, t);
@@ -148,7 +148,7 @@ function Z(e) {
                                   if (G) return void o();
                                   (0, d.ZDy)(async () => {
                                       let { default: e } = await Promise.all([n.e('46746'), n.e('52657')]).then(n.bind(n, 60594));
-                                      return (t) => (0, r.jsx)(e, P({ analyticsLocation: 'HDStreamingPotionBanner' }, t));
+                                      return (t) => (0, r.jsx)(e, S({ analyticsLocation: 'HDStreamingPotionBanner' }, t));
                                   }),
                                       o();
                               },

@@ -3,64 +3,64 @@ var r = n(255367),
     i = n(73800),
     s = n(120356),
     o = n.n(s),
-    a = n(442837),
-    l = n(704215),
+    l = n(442837),
+    a = n(704215),
     c = n(243778),
     u = n(367074),
     d = n(104494),
-    p = n(639119),
-    f = n(655525),
+    f = n(639119),
+    p = n(655525),
     g = n(52188),
     b = n(924540),
     m = n(351402),
     _ = n(170671),
-    v = n(921944),
-    h = n(474936),
+    h = n(921944),
+    v = n(474936),
     O = n(374594);
 function y(e) {
     let t,
         { decoration: n, label: s, isSelected: y } = e,
-        j = (0, p.N)(),
-        x = (0, d.Ng)(),
-        S = (0, u.Vi)(),
-        C = (0, a.e7)([m.Z], () => m.Z.isLocalizedPromoEnabled) && null == j && null == n,
-        E = (null == j ? void 0 : j.trial_id) === h.a7,
+        S = (0, f.N)(),
+        C = (0, d.Ng)(),
+        j = (0, u.Vi)(),
+        x = (0, l.e7)([m.Z], () => m.Z.isLocalizedPromoEnabled) && null == S && null == n,
+        E = (null == S ? void 0 : S.trial_id) === v.a7,
         P = [];
-    S && P.push(l.z.BOGO_2025_NITRO_TAB_BADGE);
+    j && P.push(a.z.BOGO_2025_NITRO_TAB_BADGE);
     let [w, T] = (0, c.US)(P, void 0, !0);
     return (
         i.useEffect(() => {
-            !0 === y && w === l.z.BOGO_2025_NITRO_TAB_BADGE && T(v.L.AUTO_DISMISS);
+            !0 === y && w === a.z.BOGO_2025_NITRO_TAB_BADGE && T(h.L.AUTO_DISMISS);
         }, [T, y, w]),
-        (t = S
-            ? (0, r.jsx)(f.Z, {})
-            : null != x
+        (t = j
+            ? (0, r.jsx)(p.Z, {})
+            : null != C
               ? (0, r.jsx)(b.GN, {
                     isTabSelected: y,
-                    userDiscount: x,
+                    userDiscount: C,
                     includesAmountOff: !1
                 })
-              : null == j || E
+              : null == S || E
                 ? null != n
                     ? n
-                    : C
+                    : x
                       ? (0, r.jsx)(g.k, { entryPoint: g.U.SettingsMenu })
                       : (0, r.jsx)(_.Z, { isSelected: y })
                 : (0, r.jsx)(b.$H, {
                       isTabSelected: y,
-                      trialOffer: j
+                      trialOffer: S
                   })),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)('div', {
-                    className: o()(O.premiumLabel, { [O.selected]: (y || C) && !S }),
+                    className: o()(O.premiumLabel, { [O.selected]: (y || x) && !j }),
                     children: [s, t]
                 }),
                 (0, r.jsx)('div', {
                     className: o()(O.background, {
-                        [O.auPromo]: C && !y,
-                        [O.auPromoSelected]: C && y,
-                        [O.selectedBackground]: !C && !S && y
+                        [O.auPromo]: x && !y,
+                        [O.auPromoSelected]: x && y,
+                        [O.selectedBackground]: !x && !j && y
                     })
                 })
             ]

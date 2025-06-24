@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(114851),
     b = n(175307),
     _ = n(17845),
-    E = n(374939),
-    O = n(233374),
+    O = n(374939),
+    E = n(233374),
     y = n(611928),
     I = n(763433),
     v = n(283293),
@@ -29,8 +29,8 @@ var r = n(255367),
     A = n(833435),
     Z = n(150560),
     x = n(558652),
-    L = n(736683),
-    w = n(879438),
+    w = n(736683),
+    L = n(879438),
     R = n(251360),
     D = n(466962),
     k = n(452081),
@@ -82,8 +82,8 @@ let Y = function () {
     let { selectedTab: e, onSelectTab: t, tabs: n } = (0, k.z)(),
         { onScroll: l, scrollPosition: s } = (0, m.M)(),
         u = Z.Z.getState().getUtmCurrentContext(),
-        g = (0, A._)({ location: M.dr.QUEST_HOME_DESKTOP }) ? L.Z : L.j,
-        T = (0, w.z)((e) => e.registerAssetLoad),
+        g = (0, A._)({ location: M.dr.QUEST_HOME_DESKTOP }) ? w.Z : w.j,
+        T = (0, L.z)((e) => e.registerAssetLoad),
         H = i.useRef(u);
     i.useEffect(() => {
         H.current = u;
@@ -180,7 +180,7 @@ let Y = function () {
                                   className: a()(V.bannerContainer, { [V.orbsContainer]: F }),
                                   children: [(0, r.jsx)('div', { className: a()(V.bannerGradient, { [V.orbsGradient]: F }) }), (0, r.jsx)(W, { onLoadComplete: T })]
                               }),
-                              (0, r.jsx)(E.Z, { children: e === j.e5.CLAIMED ? (0, r.jsx)(g, { onSelectTab: t }) : (0, r.jsx)(x.Z, {}) })
+                              (0, r.jsx)(O.Z, { children: e === j.e5.CLAIMED ? (0, r.jsx)(g, { onSelectTab: t }) : (0, r.jsx)(x.Z, {}) })
                           ]
                       })
                   })
@@ -206,11 +206,11 @@ let Y = function () {
                                           className: a()(V.bannerContainer, { [V.orbsContainer]: F }),
                                           children: [(0, r.jsx)('div', { className: a()(V.bannerGradient, { [V.orbsGradient]: F }) }), (0, r.jsx)(W, { onLoadComplete: T })]
                                       }),
-                                      (0, r.jsxs)(E.Z, {
+                                      (0, r.jsxs)(O.Z, {
                                           children: [
                                               (0, r.jsx)('div', {
                                                   className: V.tabs,
-                                                  children: (0, r.jsx)(O.Z, {
+                                                  children: (0, r.jsx)(E.Z, {
                                                       tabs: n,
                                                       selectedTab: e,
                                                       onTabSelect: t

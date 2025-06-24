@@ -62,11 +62,11 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
         max: 1000000,
         warn: 500000
     },
-    x = {
+    p = {
         max: 250000,
         warn: 50000
     },
-    p = {
+    x = {
         [r.aB.PROFILE_EFFECT]: c,
         [r.aB.AVATAR_DECORATION]: d,
         [r.jE.HERO_BANNER_ANIMATED]: c,
@@ -80,13 +80,13 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
         [r.jE.HERO_BANNER_STATIC]: u,
         [r.jE.SHOP_ALL_BANNER_STATIC]: u,
         [r.jE.UPSELL_BANNER]: m,
-        [r.jE.UPSELL_BANNER_POPOUT]: x,
+        [r.jE.UPSELL_BANNER_POPOUT]: p,
         [r.jE.MOBILE_BANNER]: m,
-        [r.jE.MOBILE_BACKGROUND]: x,
-        [r.jE.PDP_BACKGROUND]: x,
-        [r.jE.PDP_LOGO]: x,
-        [r.jE.COLLECTED_MODAL_BG]: x,
-        [r.jE.COACHTIP_AVATAR]: x
+        [r.jE.MOBILE_BACKGROUND]: p,
+        [r.jE.PDP_BACKGROUND]: p,
+        [r.jE.PDP_LOGO]: p,
+        [r.jE.COLLECTED_MODAL_BG]: p,
+        [r.jE.COACHTIP_AVATAR]: p
     },
     h = async (e) => {
         let t = Object.values(r.CM),
@@ -114,20 +114,20 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
             n('Files exceed the recommended size limit - make sure they are optimized!', [''.concat(i, ' (max: ').concat(t, ')')]);
         } else r > e.warn && a("Files are a tad chonky - are you sure they're optimized?", [''.concat(i)]);
     },
-    g = (e, t, n, a) => {
-        let r = p[e];
+    _ = (e, t, n, a) => {
+        let r = x[e];
         if (null != r) for (let e of t) e.name.endsWith('.txt') || v(r, e, n, a);
     },
-    j = (e, t, n) => {
+    g = (e, t, n) => {
         for (let a of e) {
             let e = (0, r.BU)(a),
-                l = null != e ? p[e] : null;
+                l = null != e ? x[e] : null;
             null != l && v(l, a, t, n);
         }
     },
-    _ = (e) => {
+    j = (e) => {
         let { files: t, addError: n, addWarning: a } = e;
-        j(t.collectionFiles, n, a),
+        g(t.collectionFiles, n, a),
             f({
                 names: t.collectionFiles.map((e) => e.name),
                 addError: n
@@ -156,7 +156,7 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
                     }),
                     addError: n
                 }),
-                    g(r.aB.PROFILE_EFFECT, l, n, a);
+                    _(r.aB.PROFILE_EFFECT, l, n, a);
                 let s = o.filter((e) => !i.some((t) => t.startsWith(e) && t.endsWith('.png'))).map((e) => ''.concat(t, '/').concat(e));
                 s.length > 0 && n('Missing required PFX files with prefix', s), i.some((e) => e.endsWith('.txt')) || n('PFX configs required - please include both exports! (exception: duplicate variant configs are optional)', [t]);
                 let c = i.filter((e) => !o.some((t) => e.startsWith(t)) && !e.endsWith('.txt')).map((e) => ''.concat(t, '/').concat(e));
@@ -169,10 +169,10 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
             names: t.avatarDecorationFiles.map((e) => e.name),
             addError: n
         }),
-            g(r.aB.AVATAR_DECORATION, t.avatarDecorationFiles, n, a);
+            _(r.aB.AVATAR_DECORATION, t.avatarDecorationFiles, n, a);
     },
     N = (e, t, n) => {
-        _({
+        j({
             files: e,
             addError: n,
             addWarning: t

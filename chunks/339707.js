@@ -4,7 +4,6 @@ e.exports = {
     radioPositionRight: 'radioPositionRight__001a7',
     item: 'item__001a7',
     itemFilled: 'itemFilled__001a7',
-    radioIconForeground: 'radioIconForeground__001a7',
     disabled: 'disabled__001a7',
     collapsibleItem: 'collapsibleItem__001a7',
     tooltipWrapper: 'tooltipWrapper__001a7',

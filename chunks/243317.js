@@ -1,12 +1,12 @@
 n.d(t, { Z: () => s });
 var r = n(255367);
 n(73800);
-var o = n(481060),
-    l = n(388032),
+var l = n(481060),
+    o = n(388032),
     i = n(156189);
 function s() {
-    return (0, r.jsx)(o.ua7, {
-        text: l.intl.string(l.t['RO/KYm']),
+    return (0, r.jsx)(l.ua7, {
+        text: o.intl.string(o.t['RO/KYm']),
         children: (e) => {
             var t, n;
             return (0, r.jsx)(
@@ -38,7 +38,7 @@ function s() {
                 })({ className: i.badge }, e)),
                 (n = n =
                     {
-                        children: (0, r.jsx)(o.LQn, {
+                        children: (0, r.jsx)(l.LQn, {
                             color: 'currentColor',
                             size: 'custom',
                             width: '1rem',

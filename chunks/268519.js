@@ -2,13 +2,13 @@ n.d(t, { Z: () => c });
 var r = n(73800),
     s = n(442837),
     o = n(668826),
-    a = n(120421),
-    i = n(477839);
+    i = n(120421),
+    a = n(477839);
 function c() {
-    let e = (0, s.e7)([a.Z], () => a.Z.numPurchases),
-        t = (0, s.e7)([a.Z], () => a.Z.purchasedItems);
+    let e = (0, s.e7)([i.Z], () => i.Z.numPurchases),
+        t = (0, s.e7)([i.Z], () => i.Z.purchasedItems);
     (0, r.useEffect)(() => {
-        i.YG.forEach((n) => {
+        a.YG.forEach((n) => {
             null == t[n.itemId] && e > n.purchasesRequired && (0, o.xD)(n.itemId);
         });
     }, [e, t]);

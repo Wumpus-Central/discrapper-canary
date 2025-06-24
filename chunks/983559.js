@@ -16,15 +16,15 @@ var r = n(255367),
     b = n(892001),
     _ = n(113557),
     y = n(867176),
-    C = n(451834),
-    x = n(502762),
+    x = n(451834),
+    C = n(502762),
     v = n(952124),
     j = n(544989),
     O = n(481932),
     E = n(664794),
     I = n(4517),
-    P = n(277117),
-    S = n(52639),
+    S = n(277117),
+    P = n(52639),
     Z = n(228168),
     N = n(388032),
     T = n(638414);
@@ -58,8 +58,8 @@ function w(e) {
         R = __OVERLAY__,
         M = (0, m.ZP)(t.id),
         k = (0, c.ZP)(),
-        L = i.useRef(Date.now()),
-        { analyticsLocations: D } = (0, d.ZP)(u.Z.USER_PROFILE_SIDEBAR),
+        D = i.useRef(Date.now()),
+        { analyticsLocations: L } = (0, d.ZP)(u.Z.USER_PROFILE_SIDEBAR),
         U = (0, h.ZB)({
             layout: 'SIDEBAR',
             userId: t.id,
@@ -76,7 +76,7 @@ function w(e) {
             (0, b.openUserProfileModal)(
                 A(
                     {
-                        sourceAnalyticsLocations: D,
+                        sourceAnalyticsLocations: L,
                         hideRestrictedProfile: !0
                     },
                     U,
@@ -85,16 +85,16 @@ function w(e) {
             );
         };
     return (0, r.jsx)(d.Gt, {
-        value: D,
+        value: L,
         children: (0, r.jsx)(h.Mt, {
             value: U,
-            openedAt: L.current,
+            openedAt: D.current,
             fetchStartedAt: null == M ? void 0 : M.fetchStartedAt,
             fetchEndedAt: null == M ? void 0 : M.fetchEndedAt,
             isLoaded: null == M ? void 0 : M.isLoaded,
             children: (0, r.jsx)(g.NJ, {
                 value: G,
-                children: (0, r.jsxs)(x.Z, {
+                children: (0, r.jsxs)(C.Z, {
                     ref: B,
                     user: t,
                     displayProfile: M,
@@ -133,7 +133,7 @@ function w(e) {
                                             animateOnHover: !F,
                                             className: T.banner
                                         }),
-                                        (0, r.jsx)(C.Z, {
+                                        (0, r.jsx)(x.Z, {
                                             userId: t.id,
                                             className: T.toast
                                         }),
@@ -154,7 +154,7 @@ function w(e) {
                                         })
                                     ]
                                 }),
-                                (0, r.jsx)(P.Z, {
+                                (0, r.jsx)(S.Z, {
                                     user: t,
                                     currentUser: n,
                                     displayProfile: M,
@@ -162,7 +162,7 @@ function w(e) {
                                     isHovering: null == G.interactionType && F,
                                     onOpenProfile: R ? void 0 : V
                                 }),
-                                (0, r.jsx)(S.Z, {
+                                (0, r.jsx)(P.Z, {
                                     user: t,
                                     channelId: w.id
                                 })
@@ -182,7 +182,7 @@ function w(e) {
                                                 A(
                                                     {
                                                         action: 'PRESS_VIEW_PROFILE',
-                                                        analyticsLocations: D
+                                                        analyticsLocations: L
                                                     },
                                                     U
                                                 )

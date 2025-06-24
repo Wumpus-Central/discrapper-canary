@@ -16,15 +16,15 @@ var r = n(255367),
     b = n(407477),
     _ = n(633302),
     y = n(856985),
-    C = n(868643),
-    x = n(245216),
+    x = n(868643),
+    C = n(245216),
     v = n(223606),
     j = n(188597),
     O = n(41776),
     E = n(980463),
     I = n(328908),
-    P = n(992970),
-    S = n(135793),
+    S = n(992970),
+    P = n(135793),
     Z = n(576645),
     N = n(84040),
     T = n(222677),
@@ -33,8 +33,8 @@ var r = n(255367),
     R = n(280845),
     M = n(2818),
     k = n(768943),
-    L = n(665906),
-    D = n(695346),
+    D = n(665906),
+    L = n(695346),
     U = n(314897),
     B = n(323873),
     F = n(271383),
@@ -47,8 +47,8 @@ var r = n(255367),
     q = n(823379),
     K = n(970257),
     X = n(418476),
-    Q = n(151007),
-    J = n(432376),
+    J = n(151007),
+    Q = n(432376),
     $ = n(373662),
     ee = n(996861),
     et = n(603490),
@@ -201,12 +201,12 @@ function ef(e) {
                 { author: s } = n,
                 u = (0, c.e7)([G.Z], () => G.Z.getGuild(t.guild_id), [t.guild_id]),
                 d = (0, c.e7)([U.default], () => U.default.getId()),
-                p = (0, L.$R)(t),
-                m = (0, L.Gu)(t),
-                g = D.nc.useSetting(),
-                b = D.Sb.useSetting(),
+                p = (0, D.$R)(t),
+                m = (0, D.Gu)(t),
+                g = L.nc.useSetting(),
+                b = L.Sb.useSetting(),
                 _ = (0, c.e7)([H.Z], () => null == t.guild_id || H.Z.canChatInGuild(t.guild_id), [t]),
-                { canManageMessages: y, canAddNewReactions: x } = (0, c.cj)(
+                { canManageMessages: y, canAddNewReactions: C } = (0, c.cj)(
                     [V.Z],
                     () => ({
                         canAddNewReactions: _ && V.Z.can(ei.Plq.ADD_REACTIONS, t),
@@ -215,29 +215,29 @@ function ef(e) {
                     [t, _]
                 ),
                 v = (0, R.U)(t, n),
-                j = (0, L.NE)(t, n),
-                E = (0, L.Ek)(n),
+                j = (0, D.NE)(t, n),
+                E = (0, D.Ek)(n),
                 I = (0, c.e7)([O.Z], () => null != t.guild_id && O.Z.isLurking(t.guild_id), [t]),
-                P = (0, c.e7)([F.ZP], () => null != t.guild_id && F.ZP.isCurrentUserGuest(t.guild_id), [t]),
-                S = s.id === d,
+                S = (0, c.e7)([F.ZP], () => null != t.guild_id && F.ZP.isCurrentUserGuest(t.guild_id), [t]),
+                P = s.id === d,
                 Z = (y || n.canDeleteOwnMessage(d)) && p && !ei.V$x.UNDELETABLE.has(n.type);
             n.type === ei.uaV.AUTO_MODERATION_ACTION && (Z = Z && y);
             let N = (0, K.a4)(n),
-                T = (0, Q.Z)(n, t, y),
+                T = (0, J.Z)(n, t, y),
                 A = !t.isSystemDM() && (0, X.Z)(n, d) && p && !m,
-                { disableReactionCreates: w } = (0, J.Z)({
+                { disableReactionCreates: w } = (0, Q.Z)({
                     channel: t,
                     canChat: _,
                     renderReactions: g,
-                    canAddNewReactions: x,
+                    canAddNewReactions: C,
                     isLurking: I,
-                    isGuest: P,
+                    isGuest: S,
                     isActiveChannelOrUnarchivableThread: p
                 }),
-                B = t.type === ei.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature(ei.oNc.NEWS) && (S || y) && (0, f.Z)(n),
+                B = t.type === ei.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature(ei.oNc.NEWS) && (P || y) && (0, f.Z)(n),
                 z = t.getGuildId(),
                 Y = null != z && (n.type === ei.uaV.USER_JOIN || n.type === ei.uaV.GUILD_INVITE_REMINDER) && V.Z.canWithPartialContext(ei.Plq.MANAGE_GUILD, { guildId: z }),
-                q = (0, C.a)(n),
+                q = (0, x.a)(n),
                 { enabled: $ } = M.Z.useExperiment({ location: 'message_utilities' }),
                 ee = (0, c.e7)([k.Z], () => null != k.Z.getSavedMessage(t.id, n.id)),
                 et = (0, er.Z)(),
@@ -281,10 +281,10 @@ function ef(e) {
         eg = i.useCallback(() => {
             ea({ emojiPicker: !Y });
         }, [Y, ea]),
-        e_ = (0, L.$R)(t),
+        e_ = (0, D.$R)(t),
         ey = n.hasFlag(ei.iLy.CROSSPOSTED),
-        [eC, ex] = (0, m.cv)(A ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []),
-        ev = eC === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE,
+        [ex, eC] = (0, m.cv)(A ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []),
+        ev = ex === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE,
         [ej, eO] = i.useState(!1),
         eE = i.useCallback(() => {
             eO(!0);
@@ -292,13 +292,13 @@ function ef(e) {
         eI = i.useCallback(() => {
             eO(!1);
         }, []),
-        eP = i.useCallback(
+        eS = i.useCallback(
             (e, t) => {
-                ex(el.L.TAKE_ACTION), (0, ee.ts)(e, t);
+                eC(el.L.TAKE_ACTION), (0, ee.ts)(e, t);
             },
-            [ex]
+            [eC]
         ),
-        { canShowReactionsOnMessageHover: eS } = b.ZP.useExperiment({ location: 'ExpandingButtons' }, { autoTrackExposure: !0 });
+        { canShowReactionsOnMessageHover: eP } = b.ZP.useExperiment({ location: 'ExpandingButtons' }, { autoTrackExposure: !0 });
     b.Xb.useExperiment({ location: 'ExpandingButtons' }, { autoTrackExposure: !0 });
     let eZ = (0, N.Z)(t, n),
         eN = (0, Z.Nt)(),
@@ -412,7 +412,7 @@ function ef(e) {
             _ && !eu
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          eS && !w
+                          eP && !w
                               ? (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(eh, {
@@ -438,13 +438,13 @@ function ef(e) {
                                         label: eo.intl.string(eo.t.icaJW1),
                                         icon: d.l22,
                                         onClick: () => {
-                                            z.default.track(ei.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, { location: P.MG.MessageExpandingButtons }),
-                                                (0, S.s)({
+                                            z.default.track(ei.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, { location: S.MG.MessageExpandingButtons }),
+                                                (0, P.s)({
                                                     channelId: t.id,
                                                     message: n,
                                                     onRedeem: eA,
                                                     onClose: I.Qy,
-                                                    source: P.YD.MessageExpandingButtons
+                                                    source: S.YD.MessageExpandingButtons
                                                 });
                                         }
                                     },
@@ -481,8 +481,8 @@ function ef(e) {
                       $.sF,
                       {
                           label: eo.intl.string(eo.t.I3ltXF),
-                          icon: x.Z,
-                          onClick: () => eP(t, n),
+                          icon: C.Z,
+                          onClick: () => eS(t, n),
                           onTooltipShow: eE,
                           onTooltipHide: eI,
                           showNewBadge: !ej && ev

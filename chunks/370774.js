@@ -1,9 +1,9 @@
 if (
     (e.d(n, {
-        D: () => I,
+        D: () => T,
         YH: () => E,
-        fW: () => g,
-        j4: () => T,
+        fW: () => I,
+        j4: () => g,
         s: () => c
     }),
     e(467055),
@@ -19,8 +19,8 @@ e(375954);
 var _ = e(306680);
 e(594174);
 var u = e(709054),
-    o = e(982183),
-    p = e(981631);
+    p = e(982183),
+    o = e(981631);
 function E(t) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.Z,
         e = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.Z,
@@ -37,15 +37,15 @@ function E(t) {
     }
     return u.default.compare(t.id, d) > 0;
 }
-function g(t) {
+function I(t) {
     let n = (0, r.cj)([a.Z, _.ZP, s.Z], () =>
         Object.fromEntries(
             t.map((t) => [
                 t.message.id,
                 (function (t) {
-                    if (E(t)) return o.KZ.UNREAD;
+                    if (E(t)) return p.KZ.UNREAD;
                     let n = (0, i.default)(new Date(), t.timestamp);
-                    return 0 === n ? o.KZ.TODAY : 1 === n ? o.KZ.YESTERDAY : o.KZ.OLDER;
+                    return 0 === n ? p.KZ.TODAY : 1 === n ? p.KZ.YESTERDAY : p.KZ.OLDER;
                 })(t.message)
             ])
         )
@@ -56,10 +56,10 @@ function c(t) {
     let n = new Date(new Date().setHours(0, 0, 0, 0));
     return t.OLDER ? null : t.YESTERDAY ? u.default.fromTimestamp(new Date(n.setDate(n.getDate() - 1)).getTime()) : t.TODAY ? u.default.fromTimestamp(n.getTime()) : null;
 }
-function I() {
+function T() {
     let { pathname: t } = (0, l.TH)();
-    return t.startsWith(p.Z5c.NOTIFICATIONS_INBOX());
+    return t.startsWith(o.Z5c.NOTIFICATIONS_INBOX());
 }
-function T(t) {
-    d.Z.open(p.oAB.NOTIFICATIONS, void 0, { analyticsLocations: t });
+function g(t) {
+    d.Z.open(o.oAB.NOTIFICATIONS, void 0, { analyticsLocations: t });
 }

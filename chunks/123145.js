@@ -14,9 +14,9 @@ function c(e) {
             compact: !!e.compact,
             isRepliedMessage: !!e.isRepliedMessage
         }),
-        d = {};
+        p = {};
     return (
-        null != u && (d[o.a.SYSTEM_TAG] = u),
+        null != u && (p[o.a.SYSTEM_TAG] = u),
         (0, a.jsx)(
             o.Z,
             ((c = (function (e) {
@@ -47,7 +47,7 @@ function c(e) {
             (l = l =
                 {
                     author: s,
-                    decorations: d
+                    decorations: p
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(c, Object.getOwnPropertyDescriptors(l))

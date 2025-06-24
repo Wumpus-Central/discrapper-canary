@@ -15,26 +15,26 @@ var r = n(255367),
     g = n(895924),
     _ = n(311819),
     b = n(758199),
-    E = n(943762),
+    x = n(943762),
     y = n(914498),
-    x = n(208444),
+    E = n(208444),
     v = n(429551),
-    O = n(973616),
-    C = n(314897),
+    C = n(973616),
+    O = n(314897),
     j = n(592125),
     S = n(158776),
     I = n(594174),
-    N = n(626135),
-    T = n(768581),
+    T = n(626135),
+    N = n(768581),
     P = n(70956),
     A = n(823379),
     w = n(506071),
     Z = n(226378),
     R = n(981631),
     k = n(701488),
-    D = n(388032),
-    M = n(484608);
-let L = i.memo((e) => {
+    L = n(388032),
+    D = n(484608);
+let M = i.memo((e) => {
     let { start: t } = e,
         [n, r] = i.useState(0),
         o = (0, w.n)(),
@@ -53,7 +53,7 @@ let L = i.memo((e) => {
         (0, v.m)(n)
     );
 });
-L.displayName = 'ActivityRuntimeCounter';
+M.displayName = 'ActivityRuntimeCounter';
 let U = i.memo(function (e) {
     var t, n, a, c;
     let v,
@@ -62,7 +62,7 @@ let U = i.memo(function (e) {
         B = (0, s.O)(),
         G = (0, l.e7)([j.Z], () => j.Z.getChannel(w), [w]),
         H = (null == G || null == (t = G.isThread) ? void 0 : t.call(G)) ? (null == G ? void 0 : G.parent_id) : w,
-        V = (0, l.e7)([C.default], () => C.default.getId()),
+        V = (0, l.e7)([O.default], () => O.default.getId()),
         {
             embeddedActivity: z,
             currentEmbeddedActivity: W,
@@ -77,7 +77,7 @@ let U = i.memo(function (e) {
             [H, P.id]
         ),
         Y = null == z ? void 0 : z.userIds,
-        X = (0, l.Wu)(
+        q = (0, l.Wu)(
             [I.default],
             () =>
                 Array.from(null != Y ? Y : [])
@@ -85,7 +85,7 @@ let U = i.memo(function (e) {
                     .filter(A.lm),
             [Y]
         ),
-        q = (0, l.e7)(
+        X = (0, l.e7)(
             [S.Z],
             () => {
                 if (null == Y) return null;
@@ -97,9 +97,9 @@ let U = i.memo(function (e) {
             },
             [P.id, Y]
         ),
-        Q = null == q ? void 0 : q.details,
+        Q = null == X ? void 0 : X.details,
         J = i.useMemo(() => {
-            let e = new O.ZP(P);
+            let e = new C.ZP(P);
             return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = k.wT), e;
         }, [P]),
         $ = (0, m.s5)({
@@ -117,7 +117,7 @@ let U = i.memo(function (e) {
         en = i.useId(),
         er = null != K && K.isLaunching && K.componentId === en,
         ei = async () => {
-            N.default.track(R.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
+            T.default.track(R.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
                 application_id: P.id,
                 channel_id: w,
                 channel_type: null == G ? void 0 : G.type,
@@ -141,29 +141,29 @@ let U = i.memo(function (e) {
                           componentId: en
                       });
         },
-        el = et.disabled ? D.intl.string(D.t.JBnc7O) : D.intl.string(D.t.cX9uLS),
-        ea = (0, x.z)(J, () => {
-            N.default.track(R.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
+        el = et.disabled ? L.intl.string(L.t.JBnc7O) : L.intl.string(L.t.cX9uLS),
+        ea = (0, E.z)(J, () => {
+            T.default.track(R.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
                 application_id: P.id,
                 channel_id: w,
                 channel_type: null == G ? void 0 : G.type,
                 cta: 'View'
             });
         }),
-        eo = T.ZP.getApplicationIconURL({
+        eo = N.ZP.getApplicationIconURL({
             id: P.id,
             icon: P.icon,
             bot: P.bot
         });
     et.disabled && (v = null != (a = et.tooltip) ? a : et.text);
     let es = I.default.getCurrentUser(),
-        ec = X.length,
-        eu = null != (c = null == q || null == (n = q.timestamps) ? void 0 : n.start) ? c : null == q ? void 0 : q.created_at,
-        ed = ee ? el : null != Q ? Q : D.intl.string(D.t.oQn0h4),
-        ep = (0, E.r)(q),
+        ec = q.length,
+        eu = null != (c = null == X || null == (n = X.timestamps) ? void 0 : n.start) ? c : null == X ? void 0 : X.created_at,
+        ed = ee ? el : null != Q ? Q : L.intl.string(L.t.oQn0h4),
+        ep = (0, x.r)(X),
         em = [
             {
-                label: ee ? D.intl.string(D.t.cnBQPD) : D.intl.string(D.t.VJlc0d),
+                label: ee ? L.intl.string(L.t.cnBQPD) : L.intl.string(L.t.VJlc0d),
                 trackingArea: y.j_.PLAY,
                 onClick: ei,
                 disabledReason: v,
@@ -181,7 +181,7 @@ let U = i.memo(function (e) {
                 referrerId: null == es ? void 0 : es.id
             }),
             info: (0, r.jsxs)('div', {
-                className: M.infoWrapper,
+                className: D.infoWrapper,
                 children: [
                     null != Q &&
                         (0, r.jsx)(o.Text, {
@@ -190,19 +190,19 @@ let U = i.memo(function (e) {
                             children:
                                 null != eu &&
                                 (0, r.jsxs)('div', {
-                                    className: M.activityTimer,
+                                    className: D.activityTimer,
                                     children: [
                                         (0, r.jsx)(ep.Icon, {
                                             size: 'xxs',
                                             color: 'currentColor'
                                         }),
-                                        (0, r.jsx)(L, { start: eu })
+                                        (0, r.jsx)(M, { start: eu })
                                     ]
                                 })
                         }),
                     ec > 0 &&
-                        (0, r.jsx)(E.K, {
-                            activityUsers: X,
+                        (0, r.jsx)(x.K, {
+                            activityUsers: q,
                             guildId: U,
                             activityText: ep.text
                         })

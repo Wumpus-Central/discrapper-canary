@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(388685);
+n.d(t, { Z: () => k }), n(388685);
 var i = n(255367),
     r = n(73800),
     l = n(392711),
@@ -57,10 +57,10 @@ let L = Array(6)
         .map((e, t) => t),
     R = [, , ,].fill(0).map((e, t) => t),
     w = [, , , ,].fill(0).map((e, t) => t);
-function Z(e) {
-    return (0, i.jsx)(k, T({}, e));
-}
 function k(e) {
+    return (0, i.jsx)(Z, T({}, e));
+}
+function Z(e) {
     let { context: t, query: n, entrypoint: l, isScrollCloseToBottom: c } = e,
         s = l === _._b.TEXT,
         u = l === _._b.TEXT,
@@ -176,14 +176,14 @@ function M(e) {
                 num: o.length
             });
     }, [o.length, g, v]);
-    let Z = T || R,
-        k = T ? N.Z.buttonTypes.VIEW_LESS : N.Z.buttonTypes.VIEW_MORE,
-        M = Z ? o : C;
+    let k = T || R,
+        Z = T ? N.Z.buttonTypes.VIEW_LESS : N.Z.buttonTypes.VIEW_MORE,
+        M = k ? o : C;
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(N.Z, {
                 title: O.intl.string(O.t['0hKkS0']),
-                buttonType: k,
+                buttonType: Z,
                 onClickViewButton: m ? j : void 0
             }),
             (0, i.jsx)('div', {

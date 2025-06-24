@@ -1,13 +1,13 @@
 n.d(t, {
     Z: () => b,
-    y: () => f
+    y: () => g
 });
 var i,
-    r,
+    o,
     l = n(255367),
-    o = n(73800),
-    s = n(392711),
-    a = n.n(s),
+    r = n(73800),
+    a = n(392711),
+    s = n.n(a),
     c = n(748780),
     u = n(451478);
 function d(e, t, n) {
@@ -58,28 +58,28 @@ function p(e, t) {
     );
 }
 var m = (((i = m || {})[(i.ABOVE = 0)] = 'ABOVE'), (i[(i.VISIBLE = 1)] = 'VISIBLE'), (i[(i.BELOW = 2)] = 'BELOW'), i);
-function g(e, t) {
+function f(e, t) {
     return {
         toValue: e,
         duration: null != t ? t : 300,
         easing: c.Z.Easing.inOut(c.Z.Easing.back())
     };
 }
-function f(e, t, n) {
+function g(e, t, n) {
     if (null != t) {
         let i = Math.ceil(Math.log10(e + 1));
         return null != n && n > 0 ? Math.min(i, n) * t : i * t;
     }
 }
-class b extends (r = o.PureComponent) {
+class b extends (o = r.PureComponent) {
     static getDerivedStateFromProps(e, t) {
-        let { prevValue: n, currValue: i, nextValue: r } = t;
+        let { prevValue: n, currValue: i, nextValue: o } = t;
         return null == n && i !== e.value
             ? {
                   prevValue: u.Z.isFocused() ? i : null,
                   currValue: e.value
               }
-            : null != r && r !== e.value
+            : null != o && o !== e.value
               ? { nextValue: e.value }
               : null;
     }
@@ -89,8 +89,8 @@ class b extends (r = o.PureComponent) {
     }
     animateBetween(e, t) {
         let n,
-            { forcePosition: i, animationSpeed: r } = this.props;
-        this.prevAnimate.setValue(1), null != i ? (0 === i ? (this.currAnimate.setValue(0), (n = 2)) : 2 === i && (this.currAnimate.setValue(2), (n = 0))) : e > t ? (this.currAnimate.setValue(0), (n = 2)) : (this.currAnimate.setValue(2), (n = 0)), c.Z.parallel([c.Z.timing(this.prevAnimate, g(n, r)), c.Z.timing(this.currAnimate, g(1, r))]).start(this.animateNext);
+            { forcePosition: i, animationSpeed: o } = this.props;
+        this.prevAnimate.setValue(1), null != i ? (0 === i ? (this.currAnimate.setValue(0), (n = 2)) : 2 === i && (this.currAnimate.setValue(2), (n = 0))) : e > t ? (this.currAnimate.setValue(0), (n = 2)) : (this.currAnimate.setValue(2), (n = 0)), c.Z.parallel([c.Z.timing(this.prevAnimate, f(n, o)), c.Z.timing(this.currAnimate, f(1, o))]).start(this.animateNext);
     }
     getAnimatedStyle(e) {
         let { animationColor: t } = this.props;
@@ -115,7 +115,7 @@ class b extends (r = o.PureComponent) {
     }
     getMinWidth(e) {
         let { digitWidth: t, padStartLength: n } = this.props;
-        return f(e, t, n);
+        return g(e, t, n);
     }
     padValue(e) {
         let { padStartLength: t } = this.props;
@@ -124,11 +124,11 @@ class b extends (r = o.PureComponent) {
     render() {
         let { prevValue: e, currValue: t } = this.state,
             { color: n, formatString: i } = this.props,
-            r = a().omit(this.props, ['value', 'digitWidth', 'padStartLength', 'forcePosition']);
+            o = s().omit(this.props, ['value', 'digitWidth', 'padStartLength', 'forcePosition']);
         if (null == e)
             return (0, l.jsx)(
                 'div',
-                p(h({}, r), {
+                p(h({}, o), {
                     style: {
                         color: n,
                         minWidth: this.getMinWidth(t)
@@ -136,10 +136,10 @@ class b extends (r = o.PureComponent) {
                     children: null != i ? i(this.padValue(t)) : this.padValue(t)
                 })
             );
-        let o = Math.max(e, t);
+        let r = Math.max(e, t);
         return (0, l.jsxs)(
             'div',
-            p(h({}, r), {
+            p(h({}, o), {
                 style: {
                     color: n,
                     position: 'relative',
@@ -149,9 +149,9 @@ class b extends (r = o.PureComponent) {
                     (0, l.jsx)('div', {
                         style: {
                             visibility: 'hidden',
-                            minWidth: this.getMinWidth(o)
+                            minWidth: this.getMinWidth(r)
                         },
-                        children: this.padValue(o)
+                        children: this.padValue(r)
                     }),
                     (0, l.jsx)(c.Z.div, {
                         style: h({ color: n }, this.getAnimatedStyle(this.prevAnimate)),

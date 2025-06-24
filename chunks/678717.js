@@ -9,16 +9,16 @@ var a = n(255367),
     d = n(347469),
     u = n(213609),
     m = n(213713),
-    x = n(665149),
-    p = n(238246),
+    p = n(665149),
+    x = n(238246),
     h = n(788983),
     b = n(906467),
     f = n(259580),
     v = n(31336),
-    g = n(19759),
-    j = n(432877);
+    _ = n(19759),
+    g = n(432877);
 n(381996);
-var _ = n(392750),
+var j = n(392750),
     y = n(926976),
     C = n(789654),
     N = n(719672),
@@ -36,8 +36,8 @@ var _ = n(392750),
     L = n(484662),
     D = n(496025),
     M = n(442954),
-    z = n(633001),
-    B = n(702904),
+    B = n(633001),
+    z = n(702904),
     U = n(178821),
     F = n(891401),
     G = n(958328),
@@ -59,7 +59,7 @@ var W = n(384207),
 function er(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: r } = e,
         l = (0, d.Z)({
-            minDimension: g.h,
+            minDimension: _.h,
             resizableDomNodeRef: t,
             onElementResize: n,
             onElementResizeEnd: r,
@@ -136,7 +136,7 @@ function el(e) {
                         id: 'overlay',
                         name: 'Overlay v3',
                         group: Q.v0.GAMES,
-                        render: () => (0, a.jsx)(z.Z, {})
+                        render: () => (0, a.jsx)(B.Z, {})
                     }),
                     e.push({
                         id: 'slayer_sdk',
@@ -166,7 +166,7 @@ function el(e) {
                     id: 'overlays',
                     name: 'Dev Overlays',
                     group: Q.v0.DEVELOPMENT,
-                    render: () => (0, a.jsx)(I.Z, { devSettingsCategory: j.zU.OVERLAYS })
+                    render: () => (0, a.jsx)(I.Z, { devSettingsCategory: g.zU.OVERLAYS })
                 }),
                 e.push({
                     id: 'messaging',
@@ -178,7 +178,7 @@ function el(e) {
                     id: 'reporting',
                     name: 'Reporting',
                     group: Q.v0.EXPERIMENTS,
-                    render: () => (0, a.jsx)(I.Z, { devSettingsCategory: j.zU.REPORTING })
+                    render: () => (0, a.jsx)(I.Z, { devSettingsCategory: g.zU.REPORTING })
                 }),
                 e.push({
                     id: 'permissions',
@@ -202,7 +202,7 @@ function el(e) {
                     id: 'affinity',
                     name: 'Affinity',
                     group: Q.v0.USERS,
-                    render: () => (0, a.jsx)(_.Z, {})
+                    render: () => (0, a.jsx)(j.Z, {})
                 }),
                 b.Z.isDeveloper &&
                     e.push({
@@ -240,7 +240,7 @@ function el(e) {
                         id: 'payments',
                         name: 'Payments',
                         group: Q.v0.BILLING,
-                        render: () => (0, a.jsx)(B.Z, {})
+                        render: () => (0, a.jsx)(z.Z, {})
                     }),
                     e.push({
                         id: 'subscriptions',
@@ -288,7 +288,7 @@ function el(e) {
         } = (0, Q.ZP)(
             {
                 tabs: l,
-                initialSelectedTabId: null != (t = g.Z.lastOpenTabId) ? t : void 0,
+                initialSelectedTabId: null != (t = _.Z.lastOpenTabId) ? t : void 0,
                 onChangeTab: (e) => {
                     (0, v.Qh)({ lastOpenTabId: e });
                 }
@@ -303,20 +303,20 @@ function el(e) {
         }),
         (0, a.jsxs)(Z.Gk, {
             children: [
-                (0, a.jsxs)(x.ZP, {
+                (0, a.jsxs)(p.ZP, {
                     className: ea.headerBar,
                     toolbar: n
                         ? null
                         : (0, a.jsxs)(a.Fragment, {
                               children: [
-                                  (0, a.jsx)(x.ZP.Icon, {
+                                  (0, a.jsx)(p.ZP.Icon, {
                                       icon: c.rgF,
                                       tooltip: 'Pop Out',
                                       onClick: () => {
                                           (0, h.bA)(
                                               ee.KJ3.DEVTOOLS_POPOUT,
                                               () =>
-                                                  (0, a.jsx)(p.Z, {
+                                                  (0, a.jsx)(x.Z, {
                                                       windowKey: ee.KJ3.DEVTOOLS_POPOUT,
                                                       title: 'DevTools',
                                                       withTitleBar: !0,
@@ -332,7 +332,7 @@ function el(e) {
                                           );
                                       }
                                   }),
-                                  (0, a.jsx)(x.ZP.Icon, {
+                                  (0, a.jsx)(p.ZP.Icon, {
                                       icon: c.Dio,
                                       tooltip: et.intl.string(et.t.cpT0Cg),
                                       onClick: v.SO
@@ -340,11 +340,11 @@ function el(e) {
                               ]
                           }),
                     children: [
-                        (0, a.jsx)(x.ZP.Icon, {
+                        (0, a.jsx)(p.ZP.Icon, {
                             icon: c.Ymb,
                             tooltip: 'DevTools'
                         }),
-                        (0, a.jsx)(x.ZP.Title, { children: 'DevTools' })
+                        (0, a.jsx)(p.ZP.Title, { children: 'DevTools' })
                     ]
                 }),
                 (0, a.jsx)(i, {}),
@@ -356,7 +356,7 @@ function el(e) {
 }
 function ei() {
     let e = r.useRef(null),
-        t = (0, o.e7)([g.Z], () => g.Z.sidebarWidth),
+        t = (0, o.e7)([_.Z], () => _.Z.sidebarWidth),
         [n, l] = r.useState(null),
         i = r.useCallback((e) => (0, v.Qh)({ sidebarWidth: e }), []);
     return (r.useEffect(() => {
@@ -368,7 +368,7 @@ function ei() {
               ref: e,
               className: en.container,
               style: {
-                  minWidth: g.h,
+                  minWidth: _.h,
                   width: n
               },
               'data-app-right-panel': !0,
@@ -386,7 +386,7 @@ function ei() {
           });
 }
 function es() {
-    return (0, o.e7)([g.Z], () => g.Z.displayTools)
+    return (0, o.e7)([_.Z], () => _.Z.displayTools)
         ? (0, a.jsx)('div', {
               className: i()(en.container, en.mobileContainerExpanded),
               children: (0, a.jsx)('div', {
@@ -398,15 +398,15 @@ function es() {
               className: en.container,
               children: (0, a.jsx)(c.P3F, {
                   onClick: v.SO,
-                  children: (0, a.jsxs)(x.ZP, {
+                  children: (0, a.jsxs)(p.ZP, {
                       className: i()(ea.headerBar, en.mobileHeaderCollapsed),
                       toolbar: (0, a.jsx)(f.Z, { direction: f.Z.Directions.UP }),
                       children: [
-                          (0, a.jsx)(x.ZP.Icon, {
+                          (0, a.jsx)(p.ZP.Icon, {
                               icon: c.Ymb,
                               tooltip: 'DevTools'
                           }),
-                          (0, a.jsx)(x.ZP.Title, { children: 'DevTools' })
+                          (0, a.jsx)(p.ZP.Title, { children: 'DevTools' })
                       ]
                   })
               })

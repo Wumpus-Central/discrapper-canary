@@ -30,16 +30,16 @@ let T = function (e) {
         ),
         N = (0, d.N)(),
         S = (0, o.Z)(null != N && null != N.expires_at ? Date.parse(N.expires_at) : 0),
-        A = null == N || (null == (t = N.subscription_trial) ? void 0 : t.sku_id) !== T || null == N.expires_at || Object.values(S).every((e) => 0 === e);
+        f = null == N || (null == (t = N.subscription_trial) ? void 0 : t.sku_id) !== T || null == N.expires_at || Object.values(S).every((e) => 0 === e);
     return ((0, s.Z)(
         {
             type: i.ImpressionTypes.VIEW,
             name: i.ImpressionNames.TRIAL_NOTICE,
             properties: { trial_id: null == N ? void 0 : N.trial_id }
         },
-        { disableTrack: A }
+        { disableTrack: f }
     ),
-    A)
+    f)
         ? null
         : (0, r.jsxs)(l.qXd, {
               color: (function (e) {

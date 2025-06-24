@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(953529);
+n.d(t, { Z: () => E }), n(953529);
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -23,9 +23,9 @@ var r = n(255367),
     C = n(642145),
     w = n(388032),
     S = n(882067);
-let E = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
-function P(e) {
-    var t, n, o, P, N;
+let P = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
+function E(e) {
+    var t, n, o, E, N;
     let { quest: A, questContent: k, isHovering: R, contentPosition: B, rowIndex: q, isVisibleInViewport: I, onReceiveErrorHints: D } = e,
         L = (0, g.j)({ location: O.dr.QUESTS_BAR_MOBILE }),
         M = s.useMemo(() => x.r.build(A.config), [A.config]),
@@ -39,7 +39,7 @@ function P(e) {
         { expansionSpring: X } = (0, c.q_F)({
             expansionSpring: +!!R,
             config:
-                ((P = (function (e) {
+                ((E = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
@@ -66,7 +66,7 @@ function P(e) {
                 })({}, C.Y)),
                 (N = N = { clamp: !0 }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(P, Object.getOwnPropertyDescriptors(N))
+                    ? Object.defineProperties(E, Object.getOwnPropertyDescriptors(N))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -75,9 +75,9 @@ function P(e) {
                           }
                           return n;
                       })(Object(N)).forEach(function (e) {
-                          Object.defineProperty(P, e, Object.getOwnPropertyDescriptor(N, e));
+                          Object.defineProperty(E, e, Object.getOwnPropertyDescriptor(N, e));
                       }),
-                P)
+                E)
         }),
         K = (null == (n = A.userStatus) ? void 0 : n.completedAt) != null,
         Y = (null == (o = A.userStatus) ? void 0 : o.claimedAt) != null,
@@ -162,7 +162,7 @@ function P(e) {
                                           children: [
                                               K &&
                                                   (0, r.jsx)(c.Fmz, {
-                                                      importData: E,
+                                                      importData: P,
                                                       className: S.confetti,
                                                       loop: !1,
                                                       autoplay: !1,

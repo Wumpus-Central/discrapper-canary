@@ -1,8 +1,8 @@
 n.d(t, { Z: () => j }), n(388685);
 var r = n(255367),
     l = n(73800),
-    i = n(399606),
-    o = n(481060),
+    o = n(399606),
+    i = n(481060),
     s = n(367907),
     a = n(863249),
     c = n(944163),
@@ -57,11 +57,11 @@ function g(e, t) {
 }
 function j(e) {
     var t;
-    let { guild: n, prompts: j, completeOnboarding: v, setCurrentStep: b, disableTracking: _, previousPromptIndex: N } = e,
+    let { guild: n, prompts: j, completeOnboarding: v, setCurrentStep: _, disableTracking: b, previousPromptIndex: N } = e,
         C = l.useRef(null),
-        E = (0, i.e7)([c.Z], () => c.Z.getRulesPrompt(n.id)),
+        E = (0, o.e7)([c.Z], () => c.Z.getRulesPrompt(n.id)),
         [O, I] = l.useState(null != (t = null == E ? void 0 : E.response) && t),
-        k = (0, i.e7)([c.Z], () => c.Z.get(n.id)),
+        k = (0, o.e7)([c.Z], () => c.Z.get(n.id)),
         Z = l.useRef(null),
         y = l.useRef(null),
         P = l.useCallback(async () => {
@@ -98,16 +98,16 @@ function j(e) {
                   className: p.promptContent,
                   ref: Z,
                   children: [
-                      (0, r.jsxs)(o.h21, {
+                      (0, r.jsxs)(i.h21, {
                           className: p.scrollerContent,
                           ref: C,
                           children: [
-                              (0, r.jsx)(o.Text, {
+                              (0, r.jsx)(i.Text, {
                                   variant: 'text-sm/medium',
                                   color: 'text-muted',
                                   children: h.intl.string(h.t['b1JC+v'])
                               }),
-                              (0, r.jsx)(o.X6q, {
+                              (0, r.jsx)(i.X6q, {
                                   variant: 'heading-xl/semibold',
                                   children: h.intl.string(h.t.prJqwc)
                               }),
@@ -120,12 +120,12 @@ function j(e) {
                                           {
                                               className: p.termsRow,
                                               children: [
-                                                  (0, r.jsx)(o.Text, {
+                                                  (0, r.jsx)(i.Text, {
                                                       variant: 'text-sm/normal',
                                                       color: 'text-muted',
                                                       children: ''.concat(t + 1, '.')
                                                   }),
-                                                  (0, r.jsx)(o.Text, {
+                                                  (0, r.jsx)(i.Text, {
                                                       variant: 'text-sm/normal',
                                                       className: p.termsRowContent,
                                                       children: d.Z.parseGuildVerificationFormRule(e, !0, { channelId: n.rulesChannelId })
@@ -146,10 +146,10 @@ function j(e) {
                                   className: p.leftButtons,
                                   children:
                                       -1 !== N &&
-                                      (0, r.jsxs)(o.zxk, {
+                                      (0, r.jsxs)(i.zxk, {
                                           innerClassName: p.buttonInner,
                                           onClick: () => {
-                                              !_ &&
+                                              !b &&
                                                   (m.default.track(
                                                       f.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
                                                       g(x({}, (0, s.hH)(n.id)), {
@@ -169,12 +169,12 @@ function j(e) {
                                                               required: j[N].required
                                                           })
                                                       )),
-                                                  b(N);
+                                                  _(N);
                                           },
-                                          size: o.zxk.Sizes.MEDIUM,
-                                          look: o.zxk.Looks.OUTLINED,
+                                          size: i.zxk.Sizes.MEDIUM,
+                                          look: i.zxk.Looks.OUTLINED,
                                           grow: !1,
-                                          color: o.zxk.Colors.PRIMARY,
+                                          color: i.zxk.Colors.PRIMARY,
                                           children: [
                                               (0, r.jsx)(u.Z, {
                                                   className: p.arrow,
@@ -187,20 +187,20 @@ function j(e) {
                               (0, r.jsxs)('div', {
                                   className: p.rightButtons,
                                   children: [
-                                      (0, r.jsx)(o.Text, {
+                                      (0, r.jsx)(i.Text, {
                                           className: p.helpText,
                                           variant: 'text-xs/normal',
                                           color: 'text-muted',
                                           children: O ? h.intl.string(h.t.arAe3N) : h.intl.string(h.t.D0CVAQ)
                                       }),
-                                      (0, r.jsxs)(o.zxk, {
+                                      (0, r.jsxs)(i.zxk, {
                                           innerClassName: p.buttonInner,
                                           onClick: P,
                                           disabled: !O,
-                                          size: o.zxk.Sizes.MEDIUM,
-                                          look: o.zxk.Looks.FILLED,
+                                          size: i.zxk.Sizes.MEDIUM,
+                                          look: i.zxk.Looks.FILLED,
                                           grow: !1,
-                                          color: o.zxk.Colors.BRAND,
+                                          color: i.zxk.Colors.BRAND,
                                           children: [
                                               h.intl.string(h.t['8SuVoK']),
                                               (0, r.jsx)('span', {

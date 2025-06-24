@@ -15,26 +15,26 @@ var r = n(255367),
     g = n(884697),
     _ = n(600164),
     b = n(479446),
-    E = n(930114),
+    x = n(930114),
     y = n(981632),
-    x = n(108989),
+    E = n(108989),
     v = n(703656),
-    O = n(314897),
-    C = n(82142),
+    C = n(314897),
+    O = n(82142),
     j = n(283595),
     S = n(594174),
     I = n(509545),
-    N = n(55563),
-    T = n(199480),
+    T = n(55563),
+    N = n(199480),
     P = n(626135),
     A = n(669079),
     w = n(74538),
     Z = n(296848),
     R = n(51144),
     k = n(626799),
-    D = n(981631),
-    M = n(474936),
-    L = n(388032),
+    L = n(981631),
+    D = n(474936),
+    M = n(388032),
     U = n(955964);
 function F(e, t, n) {
     return (
@@ -94,7 +94,7 @@ function H(e) {
                 color: 'currentColor',
                 className: U.libraryIcon
             }),
-            (0, r.jsx)('div', { children: n.isHidden() ? L.intl.string(L.t.Wi99Rk) : L.intl.string(L.t['+tXad3']) })
+            (0, r.jsx)('div', { children: n.isHidden() ? M.intl.string(M.t.Wi99Rk) : M.intl.string(M.t['+tXad3']) })
         ]
     });
 }
@@ -104,7 +104,7 @@ class V extends i.PureComponent {
         return e >= p.aL;
     }
     handleViewInventory() {
-        d.Z.open(D.oAB.INVENTORY);
+        d.Z.open(L.oAB.INVENTORY);
     }
     render() {
         return (0, r.jsx)(p.$G, {
@@ -118,21 +118,21 @@ class V extends i.PureComponent {
     constructor(...e) {
         super(...e),
             F(this, 'renderMedia', () => (0, r.jsx)('div', { className: a()(U.invalidPoop, { [U.invalidPoopHorizontal]: this.isHorizontal }) })),
-            F(this, 'renderTitle', () => (this.props.isSelfGift ? L.intl.string(L.t['mT9B4+']) : L.intl.string(L.t.Vo5yHx))),
+            F(this, 'renderTitle', () => (this.props.isSelfGift ? M.intl.string(M.t['mT9B4+']) : M.intl.string(M.t.Vo5yHx))),
             F(this, 'renderActions', () =>
                 this.props.isSelfGift
                     ? (0, r.jsx)(u.zxk, {
                           size: u.zxk.Sizes.SMALL,
                           onClick: this.handleViewInventory,
-                          children: L.intl.string(L.t['jcSP+v'])
+                          children: M.intl.string(M.t['jcSP+v'])
                       })
                     : (0, r.jsx)(u.zxk, {
                           disabled: !0,
                           size: u.zxk.Sizes.SMALL,
-                          children: L.intl.string(L.t.bUvv1d)
+                          children: M.intl.string(M.t.bUvv1d)
                       })
             ),
-            F(this, 'renderTagline', () => (this.props.isSelfGift ? L.intl.string(L.t.aUqE6e) : L.intl.string(L.t['2mWvHB'])));
+            F(this, 'renderTagline', () => (this.props.isSelfGift ? M.intl.string(M.t.aUqE6e) : M.intl.string(M.t['2mWvHB'])));
     }
 }
 class z extends i.Component {
@@ -140,7 +140,7 @@ class z extends i.Component {
         let {
             analyticsContext: { location: e }
         } = this.props;
-        return G(B({}, e), { section: D.jXE.GIFT_CODE_EMBED });
+        return G(B({}, e), { section: L.jXE.GIFT_CODE_EMBED });
     }
     renderActions(e) {
         let { libraryApplication: t } = this.props;
@@ -163,14 +163,14 @@ class z extends i.Component {
                     justify: _.Z.Justify.END,
                     className: U.metadata,
                     direction: _.Z.Direction.VERTICAL,
-                    children: [e.hasMultipleCopies ? (0, r.jsx)('div', { children: this.renderGiftCodeCopiesLeft(e) }) : null, e.redeemed || e.isClaimed || null != t || null == e.expiresAt ? null : (0, r.jsx)('div', { children: L.intl.format(L.t.nZBvUV, { hours: e.expiresAt.diff(s()(), 'h') }) })]
+                    children: [e.hasMultipleCopies ? (0, r.jsx)('div', { children: this.renderGiftCodeCopiesLeft(e) }) : null, e.redeemed || e.isClaimed || null != t || null == e.expiresAt ? null : (0, r.jsx)('div', { children: M.intl.format(M.t.nZBvUV, { hours: e.expiresAt.diff(s()(), 'h') }) })]
                 })
             ]
         });
     }
     renderGiftCodeCopiesLeft(e) {
-        let t = e.isSubscription ? L.t['4iHwKS'] : L.t['YeLq8/'];
-        return L.intl.format(t, {
+        let t = e.isSubscription ? M.t['4iHwKS'] : M.t['YeLq8/'];
+        return M.intl.format(t, {
             remaining: e.remainingUses,
             total: e.maxUses
         });
@@ -189,85 +189,85 @@ class z extends i.Component {
                 G(B({}, l), {
                     className: (0, g.mO)(e) ? U.collectiblesAcceptButton : null,
                     size: u.zxk.Sizes.SMALL,
-                    children: e.redeemed ? L.intl.string(L.t.BTihoq) : null != e.giftStyle ? L.intl.string(L.t.TiZFqa) : L.intl.string(L.t.bUvv1d)
+                    children: e.redeemed ? M.intl.string(M.t.BTihoq) : null != e.giftStyle ? M.intl.string(M.t.TiZFqa) : M.intl.string(M.t.bUvv1d)
                 })
             )
         );
     }
     isCustomGiftMessage() {
         let { type: e } = this.props;
-        return e === D.uaV.CUSTOM_GIFT;
+        return e === L.uaV.CUSTOM_GIFT;
     }
     renderTitle(e) {
         let { currentUser: t, isSelfGift: n, sku: r } = this.props;
-        return this.isCustomGiftMessage() && !n ? L.intl.formatToPlainString(L.t.t1SOIS, { recipientDisplayName: R.ZP.getName(t) }) : null == r ? null : e.isSubscription ? (n ? L.intl.string(L.t['2PJ1ND']) : L.intl.string(L.t.hrnGnp)) : n ? L.intl.string(L.t.QLEMlZ) : L.intl.string(L.t.W4DBc3);
+        return this.isCustomGiftMessage() && !n ? M.intl.formatToPlainString(M.t.t1SOIS, { recipientDisplayName: R.ZP.getName(t) }) : null == r ? null : e.isSubscription ? (n ? M.intl.string(M.t['2PJ1ND']) : M.intl.string(M.t.hrnGnp)) : n ? M.intl.string(M.t.QLEMlZ) : M.intl.string(M.t.W4DBc3);
     }
     renderBody(e) {
         let { libraryApplication: t, isSelfGift: n, sku: r, gifter: i, subscriptionPlan: l, currentUser: a } = this.props;
-        if (null == r) return L.intl.string(L.t.ZTNur6);
+        if (null == r) return M.intl.string(M.t.ZTNur6);
         if (!n && this.isCustomGiftMessage() && !e.redeemed) return;
-        let o = r.isPreorder() ? L.intl.formatToPlainString(L.t.evinTU, { name: r.name }) : r.name;
+        let o = r.isPreorder() ? M.intl.formatToPlainString(M.t.evinTU, { name: r.name }) : r.name;
         if (e.redeemed)
             return e.isSubscription || (0, g.mO)(e)
-                ? L.intl.string(L.t.mVC3Cg)
-                : L.intl.format(L.t['ss/L+/'], {
+                ? M.intl.string(M.t.mVC3Cg)
+                : M.intl.format(M.t['ss/L+/'], {
                       skuName: o,
                       onViewInLibrary: this.handleViewLibrary
                   });
         if (!e.isSubscription && null != t)
-            return L.intl.format(L.t.UdXO8P, {
+            return M.intl.format(M.t.UdXO8P, {
                 skuName: o,
                 onViewInLibrary: this.handleViewLibrary
             });
-        if (e.isClaimed) return L.intl.string(L.t.ARWFQU);
-        if (!a.verified) return L.intl.format(L.t.GQxl7u, { onClick: this.handleVerificationClick });
-        if (n) return e.isSelfRedeemable ? L.intl.string(L.t['lQI+cH']) : L.intl.formatToPlainString(L.t['A+etHx'], { skuName: o });
-        if (e.isExistingPremiumSubscriptionDisallowed) return L.intl.string(L.t['UCIU9/']);
+        if (e.isClaimed) return M.intl.string(M.t.ARWFQU);
+        if (!a.verified) return M.intl.format(M.t.GQxl7u, { onClick: this.handleVerificationClick });
+        if (n) return e.isSelfRedeemable ? M.intl.string(M.t['lQI+cH']) : M.intl.formatToPlainString(M.t['A+etHx'], { skuName: o });
+        if (e.isExistingPremiumSubscriptionDisallowed) return M.intl.string(M.t['UCIU9/']);
         if (e.hasMultipleCopies)
             return null != i
                 ? e.isSubscription
-                    ? L.intl.format(L.t.l3VxgI, {
+                    ? M.intl.format(M.t.l3VxgI, {
                           username: R.ZP.getUserTag(i),
                           maxUses: e.maxUses,
                           skuName: o
                       })
-                    : L.intl.format(L.t['9cYrw8'], {
+                    : M.intl.format(M.t['9cYrw8'], {
                           username: R.ZP.getUserTag(i),
                           totalCopies: e.maxUses,
                           skuName: o
                       })
                 : e.isSubscription
-                  ? L.intl.formatToPlainString(L.t.svrO3d, {
+                  ? M.intl.formatToPlainString(M.t.svrO3d, {
                         maxUses: e.maxUses,
                         skuName: o
                     })
-                  : L.intl.formatToPlainString(L.t['3AgAn5'], {
+                  : M.intl.formatToPlainString(M.t['3AgAn5'], {
                         totalCopies: e.maxUses,
                         skuName: o
                     });
         if (e.isSubscription) {
-            if (null == l) return L.intl.string(L.t.ZTNur6);
+            if (null == l) return M.intl.string(M.t.ZTNur6);
             if (null != i) {
-                let e = l.interval === M.rV.MONTH ? L.t['/RDIEB'] : L.t['3CX6Eh'];
-                return L.intl.format(e, {
+                let e = l.interval === D.rV.MONTH ? M.t['/RDIEB'] : M.t['3CX6Eh'];
+                return M.intl.format(e, {
                     username: R.ZP.getUserTag(i),
                     skuName: o,
                     intervalCount: l.intervalCount
                 });
             }
-            let e = l.interval === M.rV.MONTH ? L.t['2O4lo6'] : L.t['+Xjmsb'];
-            return L.intl.format(e, {
+            let e = l.interval === D.rV.MONTH ? M.t['2O4lo6'] : M.t['+Xjmsb'];
+            return M.intl.format(e, {
                 skuName: o,
                 intervalCount: l.intervalCount
             });
         }
-        return null != i ? L.intl.format(L.t['3HsdQ0'], { username: R.ZP.getUserTag(i) }) : L.intl.string(L.t.Jdnjjo);
+        return null != i ? M.intl.format(M.t['3HsdQ0'], { username: R.ZP.getUserTag(i) }) : M.intl.string(M.t.Jdnjjo);
     }
     renderPromotionActions() {
         return (0, r.jsx)(u.zxk, {
             size: u.zxk.Sizes.SMALL,
             onClick: this.handleClaimPromotion,
-            children: L.intl.string(L.t['71nuwc'])
+            children: M.intl.string(M.t['71nuwc'])
         });
     }
     renderEmbed() {
@@ -277,7 +277,7 @@ class z extends i.Component {
             : (0, r.jsx)(k.$, {
                   skuId: e.skuId,
                   onEmbedClick: this.handleEmbedClick,
-                  analyticsSection: D.jXE.GIFT_CODE_EMBED,
+                  analyticsSection: L.jXE.GIFT_CODE_EMBED,
                   renderCustomActions: () => this.renderActions(e),
                   renderCustomTitle: () => this.renderTitle(e),
                   renderCustomTagline: () => this.renderBody(e),
@@ -291,10 +291,10 @@ class z extends i.Component {
             return (0, r.jsx)(k.$, {
                 skuId: e.skuId,
                 onEmbedClick: this.handleClaimPromotion,
-                analyticsSection: D.jXE.GIFT_CODE_EMBED,
+                analyticsSection: L.jXE.GIFT_CODE_EMBED,
                 renderCustomActions: () => this.renderPromotionActions(),
-                renderCustomTitle: () => L.intl.string(L.t.X4p5uL),
-                renderCustomTagline: () => L.intl.string(L.t.VIuwDw),
+                renderCustomTitle: () => M.intl.string(M.t.X4p5uL),
+                renderCustomTagline: () => M.intl.string(M.t.VIuwDw),
                 width: n
             });
         if (null == e || e.revoked)
@@ -315,21 +315,21 @@ class z extends i.Component {
         super(...e),
             F(this, 'handleViewLibrary', (e) => {
                 let { libraryApplication: t } = this.props;
-                e.preventDefault(), null != t && t.isHidden() ? (0, v.uL)(D.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, v.uL)(D.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } });
+                e.preventDefault(), null != t && t.isHidden() ? (0, v.uL)(L.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, v.uL)(L.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } });
             }),
             F(this, 'handleVerificationClick', (e) => {
-                e.stopPropagation(), e.preventDefault(), d.Z.open(D.oAB.ACCOUNT);
+                e.stopPropagation(), e.preventDefault(), d.Z.open(L.oAB.ACCOUNT);
             }),
             F(this, 'handleAccept', (e) => {
                 let { channelId: t, code: n, content: r, type: i, giftInfo: l } = this.props;
                 e.preventDefault(),
                     e.stopPropagation(),
-                    P.default.track(D.rMx.OPEN_MODAL, {
+                    P.default.track(L.rMx.OPEN_MODAL, {
                         type: 'gift_accept',
-                        location: G(B({}, this.analyticsLocation), { object: D.qAy.BUTTON_CTA })
+                        location: G(B({}, this.analyticsLocation), { object: L.qAy.BUTTON_CTA })
                     });
-                let a = i !== D.uaV.CUSTOM_GIFT ? void 0 : r;
-                (0, E.V)({
+                let a = i !== L.uaV.CUSTOM_GIFT ? void 0 : r;
+                (0, x.V)({
                     processedCode: n,
                     channelContext: t,
                     customGiftMessage: a,
@@ -338,18 +338,18 @@ class z extends i.Component {
             }),
             F(this, 'handleEmbedClick', (e) => {
                 let { giftCode: t } = this.props;
-                null != t && t.isSubscription && (e.preventDefault(), d.Z.open(D.oAB.PREMIUM));
+                null != t && t.isSubscription && (e.preventDefault(), d.Z.open(L.oAB.PREMIUM));
             }),
             F(this, 'handleClaimPromotion', (e) => {
                 var t;
                 e.stopPropagation(), e.preventDefault();
                 let n = null == (t = this.props.giftCode) ? void 0 : t.code;
-                null != n && window.open(D.Z5c.BILLING_PROMOTION_REDEMPTION(n));
+                null != n && window.open(L.Z5c.BILLING_PROMOTION_REDEMPTION(n));
             }),
             F(this, 'renderCustomGiftBox', (e) => {
                 let { useReducedMotion: t, width: n } = this.props;
                 if (null == e || null == e.giftStyle) return null;
-                let i = M.jy.includes(e.giftStyle),
+                let i = D.jy.includes(e.giftStyle),
                     l = a()(U.customGiftEmbedWrapper, {
                         [U.legacySeasonalGiftEmbedWrapper]: i,
                         [U.giftEmbedWrapperHorizontal]: n >= p.aL
@@ -364,12 +364,12 @@ class z extends i.Component {
                     className: l,
                     children: [
                         !t &&
-                            M.eZ.includes(e.giftStyle) &&
-                            (0, r.jsx)(x.Z, {
+                            D.eZ.includes(e.giftStyle) &&
+                            (0, r.jsx)(E.Z, {
                                 className: U.snow,
                                 wind: 5
                             }),
-                        i && (0, r.jsx)(T.Z, { className: U.headerIcon }),
+                        i && (0, r.jsx)(N.Z, { className: U.headerIcon }),
                         null != e.giftStyle &&
                             (0, r.jsx)(y.Z, {
                                 defaultAnimationState: e.redeemed ? b.SR.LOOP : b.SR.IDLE,
@@ -382,10 +382,10 @@ class z extends i.Component {
     }
 }
 let W = (0, f.Z)((0, m.Z)(z)),
-    K = c.ZP.connectStores([C.Z, N.Z, S.default, j.Z, I.Z, O.default, h.Z], (e) => {
+    K = c.ZP.connectStores([O.Z, T.Z, S.default, j.Z, I.Z, C.default, h.Z], (e) => {
         let { code: t, author: n, currentUser: r } = e,
-            i = C.Z.get(t),
-            l = null != i ? N.Z.get(i.skuId) : null,
+            i = O.Z.get(t),
+            l = null != i ? T.Z.get(i.skuId) : null,
             a = null != i && null != i.userId ? S.default.getUser(i.userId) : null,
             o = h.Z.useReducedMotion;
         return {
@@ -394,8 +394,8 @@ let W = (0, f.Z)((0, m.Z)(z)),
             gifter: a,
             currentUser: r,
             subscriptionPlan: null != i && null != i.subscriptionPlanId ? (0, Z.oE)(i.subscriptionPlanId) : null,
-            isSelfGift: null != i ? O.default.getId() === i.userId : O.default.getId() === n.id,
-            resolved: C.Z.getIsResolved(t),
+            isSelfGift: null != i ? C.default.getId() === i.userId : C.default.getId() === n.id,
+            resolved: O.Z.getIsResolved(t),
             libraryApplication: null != l && (null == i ? void 0 : i.entitlementBranches) != null ? A.z2(i.entitlementBranches, l, j.Z) : null,
             useReducedMotion: o
         };

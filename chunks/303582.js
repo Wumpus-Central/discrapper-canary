@@ -1,9 +1,9 @@
-n.d(t, { Z: () => a }), n(953529);
+n.d(t, { Z: () => i }), n(953529);
 var r = n(255367),
     s = n(763283),
     o = n(204162);
-function a(e) {
-    let { name: t, description: n, pointsDescription: a } = e;
+function i(e) {
+    let { name: t, description: n, pointsDescription: i } = e;
     return (0, r.jsxs)('div', {
         className: o.tooltipContent,
         children: [
@@ -18,11 +18,11 @@ function a(e) {
                 color: 'text-muted',
                 children: n
             }),
-            null != a
+            null != i
                 ? (0, r.jsx)(s.Z, {
                       variant: 'text-sm/normal',
                       className: o.pointsDescription,
-                      children: a
+                      children: i
                   })
                 : null
         ]

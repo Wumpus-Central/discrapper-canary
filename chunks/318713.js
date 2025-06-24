@@ -1,21 +1,21 @@
 n.d(t, { Z: () => f });
 var r = n(255367),
-    o = n(73800),
-    l = n(120356),
-    i = n.n(l),
+    l = n(73800),
+    o = n(120356),
+    i = n.n(o),
     s = n(481060),
     a = n(55935),
     c = n(543388),
     u = n(223021),
     d = n(388032),
     p = n(848697);
-let m = o.memo(function (e) {
-        let { children: t, className: n, compact: l = !1, timestamp: m, timestampFormat: f, isVisibleOnlyOnHover: b = !1, cozyAlt: h = !1, isInline: O = !0, id: y, isEdited: j = !1, application: v, tooltipPosition: P } = e,
-            x = o.useMemo(() => new Date(m), [m]),
-            C = o.useMemo(() => (0, a.Hg)(x), [x]),
-            w = o.useMemo(() => (null != f ? (0, a.vc)(x, f) : l ? (0, a.vc)(x, 'LT') : (0, a.Y4)(x, !0)), [x, f, l]),
-            S = o.useMemo(() => (l ? (0, u.Z)(w) : null), [l, w]),
-            N = o.useMemo(() => (j ? d.intl.formatToPlainString(d.t.CDzOFR, { timeFormatted: C }) : C), [j, C]);
+let m = l.memo(function (e) {
+        let { children: t, className: n, compact: o = !1, timestamp: m, timestampFormat: f, isVisibleOnlyOnHover: b = !1, cozyAlt: h = !1, isInline: O = !0, id: y, isEdited: j = !1, application: v, tooltipPosition: P } = e,
+            x = l.useMemo(() => new Date(m), [m]),
+            C = l.useMemo(() => (0, a.Hg)(x), [x]),
+            w = l.useMemo(() => (null != f ? (0, a.vc)(x, f) : o ? (0, a.vc)(x, 'LT') : (0, a.Y4)(x, !0)), [x, f, o]),
+            S = l.useMemo(() => (o ? (0, u.Z)(w) : null), [o, w]),
+            N = l.useMemo(() => (j ? d.intl.formatToPlainString(d.t.CDzOFR, { timeFormatted: C }) : C), [j, C]);
         return (0, r.jsx)('span', {
             className: i()(n, S, {
                 [p.timestamp]: !0,
@@ -37,27 +37,27 @@ let m = o.memo(function (e) {
                                   timeFormatted: w,
                                   timestamp: x,
                                   id: y,
-                                  compact: l,
+                                  compact: o,
                                   children: t
                               })
                       })
                     : (0, r.jsx)(c.Z, {
                           application: v,
                           timestamp: x,
-                          compact: l,
+                          compact: o,
                           children: (0, r.jsx)(g, {
                               timeFormatted: w,
                               timestamp: x,
                               id: y,
-                              compact: l,
+                              compact: o,
                               children: t
                           })
                       })
         });
     }),
-    g = o.memo(function (e) {
+    g = l.memo(function (e) {
         var t, n;
-        let { tooltipProps: o, timeFormatted: l, children: i, compact: s, timestamp: a, id: c } = e;
+        let { tooltipProps: l, timeFormatted: o, children: i, compact: s, timestamp: a, id: c } = e;
         return (0, r.jsx)(
             'time',
             ((t = (function (e) {
@@ -84,7 +84,7 @@ let m = o.memo(function (e) {
                         });
                 }
                 return e;
-            })({}, o)),
+            })({}, l)),
             (n = n =
                 {
                     id: c,
@@ -99,7 +99,7 @@ let m = o.memo(function (e) {
                                           'aria-hidden': !0,
                                           children: s ? '[' : ' \u2014 '
                                       }),
-                                      l,
+                                      o,
                                       s &&
                                           (0, r.jsxs)('i', {
                                               className: p.separator,

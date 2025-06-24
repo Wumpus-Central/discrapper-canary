@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -7,75 +7,61 @@ var i = n(120356),
     s = n(481060),
     l = n(872810),
     c = n(493773),
-    u = n(540059),
-    d = n(569545),
-    f = n(592125),
-    _ = n(112560),
-    p = n(231338),
-    h = n(388032),
-    m = n(65558);
-let g = n(340109);
-function E(e) {
-    let { stream: t, width: n, noArt: i = !1, selected: E = !1 } = e,
-        b = (0, o.e7)([f.Z], () => f.Z.getChannel(t.channelId)),
-        y = (0, u.Q3)('StreamEnded');
-    function O(e) {
+    u = n(569545),
+    d = n(592125),
+    f = n(231338),
+    _ = n(388032),
+    p = n(65558);
+function h(e) {
+    let { stream: t, width: n } = e,
+        i = (0, o.e7)([d.Z], () => d.Z.getChannel(t.channelId));
+    function h(e) {
         return e < 550 ? 'small' : e < 1000 ? 'medium' : 'large';
     }
     (0, c.ZP)(() => {
-        (null == b ? void 0 : b.isGuildStageVoice()) && (0, l.aP)((0, d.V9)(t), !1);
+        (null == i ? void 0 : i.isGuildStageVoice()) && (0, l.aP)((0, u.V9)(t), !1);
     });
-    let v = () => (0, l.aP)((0, d.V9)(t)),
-        I = h.intl.string(h.t['4EGMWF']),
-        T = O(n);
-    return y
-        ? (0, r.jsx)(s.f6W, {
-              disableAdaptiveTheme: !0,
-              theme: p.BR.MIDNIGHT,
-              children: (e) =>
-                  (0, r.jsx)('div', {
-                      className: a()(m.container, e),
-                      children: (0, r.jsxs)('div', {
-                          className: m.content,
-                          children: [
-                              (0, r.jsx)('div', {
-                                  className: a()(m.artContainer, m[T]),
-                                  children: (0, r.jsx)('div', { className: a()(m.art, m[T]) })
-                              }),
-                              (0, r.jsxs)('div', {
-                                  className: m.cta,
-                                  children: [
-                                      (0, r.jsx)(s.X6q, {
-                                          color: 'none',
-                                          variant: 'small' === T ? 'heading-md/normal' : 'heading-lg/normal',
-                                          className: m.header,
-                                          children: h.intl.formatToMarkdownString(h.t.Kb4Ukp, {})
-                                      }),
-                                      (0, r.jsx)(s.zxk, {
-                                          size: 'small' === T ? s.zxk.Sizes.MEDIUM : s.zxk.Sizes.LARGE,
-                                          color: s.zxk.Colors.PRIMARY,
-                                          onClick: (e) => {
-                                              e.stopPropagation(), v();
-                                          },
-                                          children: (0, r.jsx)(s.Text, {
-                                              color: 'none',
-                                              variant: 'text-md/semibold',
-                                              children: I
-                                          })
-                                      })
-                                  ]
-                              })
-                          ]
-                      })
-                  })
-          })
-        : (0, r.jsx)(_.Z, {
-              artURL: g,
-              noArt: i,
-              selected: E,
-              size: (0, _.L)(n),
-              header: h.intl.formatToMarkdownString(h.t['1Ww0Hh'], {}),
-              onCTAClick: v,
-              callToAction: I
-          });
+    let m = () => (0, l.aP)((0, u.V9)(t)),
+        g = _.intl.string(_.t['4EGMWF']),
+        E = h(n);
+    return (0, r.jsx)(s.f6W, {
+        disableAdaptiveTheme: !0,
+        theme: f.BR.MIDNIGHT,
+        children: (e) =>
+            (0, r.jsx)('div', {
+                className: a()(p.container, e),
+                children: (0, r.jsxs)('div', {
+                    className: p.content,
+                    children: [
+                        (0, r.jsx)('div', {
+                            className: a()(p.artContainer, p[E]),
+                            children: (0, r.jsx)('div', { className: a()(p.art, p[E]) })
+                        }),
+                        (0, r.jsxs)('div', {
+                            className: p.cta,
+                            children: [
+                                (0, r.jsx)(s.X6q, {
+                                    color: 'none',
+                                    variant: 'small' === E ? 'heading-md/normal' : 'heading-lg/normal',
+                                    className: p.header,
+                                    children: _.intl.formatToMarkdownString(_.t.Kb4Ukp, {})
+                                }),
+                                (0, r.jsx)(s.zxk, {
+                                    size: 'small' === E ? s.zxk.Sizes.MEDIUM : s.zxk.Sizes.LARGE,
+                                    color: s.zxk.Colors.PRIMARY,
+                                    onClick: (e) => {
+                                        e.stopPropagation(), m();
+                                    },
+                                    children: (0, r.jsx)(s.Text, {
+                                        color: 'none',
+                                        variant: 'text-md/semibold',
+                                        children: g
+                                    })
+                                })
+                            ]
+                        })
+                    ]
+                })
+            })
+    });
 }

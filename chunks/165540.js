@@ -14,21 +14,19 @@ var r = n(255367),
     m = n(533379),
     g = n(562129),
     b = n(404295),
-    _ = n(540059),
-    y = n(605236),
-    C = n(291407),
+    _ = n(605236),
+    y = n(291407),
     x = n(685006),
-    v = n(61356),
-    j = n(314734),
-    O = n(921944),
-    E = n(388032),
-    I = n(560163);
-let P = i.forwardRef(function (e, t) {
+    C = n(61356),
+    v = n(314734),
+    j = n(921944),
+    O = n(388032),
+    E = n(560163);
+let I = i.forwardRef(function (e, t) {
         var n, l;
         let { type: f, animateRef: m } = e,
             b = (0, o.e7)([p.Z], () => p.Z.shouldShowPopup() && p.Z.activeViewType() === f),
-            { Component: C, events: x, play: v } = (0, g.Z)('ChannelAppLauncherButton'),
-            P = (0, _.Q3)('ChannelAppLauncherButton');
+            { Component: y, events: x, play: C } = (0, g.Z)('ChannelAppLauncherButton');
         i.useImperativeHandle(
             m,
             () => ({
@@ -38,15 +36,15 @@ let P = i.forwardRef(function (e, t) {
             }),
             [x]
         );
-        let S = i.useCallback(() => {
-                b ? d.yT(h.ti.DISMISSED) : ((0, y.EW)(s.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: O.L.TAKE_ACTION }), d.__(h._b.TEXT, f), u.ux()), v();
-            }, [b, f, v]),
-            Z = (0, r.jsx)(C, {
-                size: P ? 'refresh_sm' : void 0,
+        let I = i.useCallback(() => {
+                b ? d.yT(h.ti.DISMISSED) : ((0, _.EW)(s.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: j.L.TAKE_ACTION }), d.__(h._b.TEXT, f), u.ux()), C();
+            }, [b, f, C]),
+            S = (0, r.jsx)(y, {
+                size: 'refresh_sm',
                 color: 'currentColor'
             });
         return (0, r.jsx)('div', {
-            className: a()(I.buttonContainer, j.t4),
+            className: a()(E.buttonContainer, v.t4),
             ref: t,
             children: (0, r.jsx)(
                 c.zxk,
@@ -79,9 +77,9 @@ let P = i.forwardRef(function (e, t) {
                         look: c.zxk.Looks.BLANK,
                         size: c.zxk.Sizes.NONE,
                         tabIndex: 0,
-                        className: a()(I.button, { [I.buttonActive]: b }),
-                        onClick: S,
-                        'aria-label': E.intl.string(E.t.erHFxM),
+                        className: a()(E.button, { [E.buttonActive]: b }),
+                        onClick: I,
+                        'aria-label': O.intl.string(O.t.erHFxM),
                         'aria-expanded': b,
                         'aria-haspopup': 'dialog',
                         focusProps: {
@@ -92,11 +90,11 @@ let P = i.forwardRef(function (e, t) {
                                 right: -4
                             }
                         },
-                        innerClassName: I.buttonContents
+                        innerClassName: E.buttonContents
                     },
                     x
                 )),
-                (l = l = { children: Z }),
+                (l = l = { children: S }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                     : (function (e, t) {
@@ -120,20 +118,20 @@ let P = i.forwardRef(function (e, t) {
                 channel: t,
                 chatInputType: n
             }),
-            u = (0, v.Z)({ type: n }),
+            u = (0, C.Z)({ type: n }),
             d = (0, b.h9)(t.id),
             h = (0, o.e7)([p.Z], () => p.Z.appDMChannelsWithFailedLoads().has(t.id)),
             { visible: g } = (0, x.xL)();
         return c
             ? (0, r.jsxs)('div', {
-                  className: I.channelAppLauncher,
+                  className: E.channelAppLauncher,
                   children: [
-                      (0, r.jsx)(C.Z, {
+                      (0, r.jsx)(y.Z, {
                           channel: t,
-                          animationContainerClassName: I.entrypointAnimation,
-                          glowClassName: I.animationGlow,
-                          trinketsClassName: I.animationTrinkets,
-                          children: (0, r.jsx)(P, {
+                          animationContainerClassName: E.entrypointAnimation,
+                          glowClassName: E.animationGlow,
+                          trinketsClassName: E.animationTrinkets,
+                          children: (0, r.jsx)(I, {
                               type: n,
                               ref: s,
                               animateRef: l

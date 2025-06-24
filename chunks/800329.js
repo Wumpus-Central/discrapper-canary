@@ -27,8 +27,8 @@ function p(e) {
         }),
         { width: b, height: _ } = m,
         y = null != (t = null == l ? void 0 : l.length) ? t : 0,
-        C = b - 16,
-        x = _ - (h + f),
+        x = b - 16,
+        C = _ - (h + f),
         {
             tileStyle: v,
             tileWidth: j,
@@ -82,13 +82,13 @@ function p(e) {
                         rows: r,
                         columns: i
                     };
-                })(y, C, x),
-            [y, C, x]
+                })(y, x, C),
+            [y, x, C]
         ),
         I = E + 1,
-        P = I * j + (I - 1) * 8 <= b,
-        S = Math.floor(j / c) + 8,
-        Z = Math.max(0, x - S * O) / 2;
+        S = I * j + (I - 1) * 8 <= b,
+        P = Math.floor(j / c) + 8,
+        Z = Math.max(0, C - P * O) / 2;
     return (0, r.jsx)(o.Z, {
         fade: !0,
         className: n,
@@ -111,7 +111,7 @@ function p(e) {
                                       {
                                           style: v,
                                           className: a()(s.tile, {
-                                              [s.padColumn]: P,
+                                              [s.padColumn]: S,
                                               [s.noVerticalMargin]: l >= (O - 1) * E,
                                               [s.noHorizontalMargin]: (l + 1) % E == 0 || l === y - 1
                                           }),
@@ -129,7 +129,7 @@ function p(e) {
         },
         rowCount: O,
         rowCountBySection: [O],
-        rowHeight: S,
+        rowHeight: P,
         onResize: g
     });
 }

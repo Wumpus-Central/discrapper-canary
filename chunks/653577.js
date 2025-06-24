@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => _ });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -14,12 +14,12 @@ var r = n(255367),
     g = n(388032),
     m = n(32066),
     b = n(73433);
-function O(e) {
-    let { channel: t, connected: n, hovered: l, subtitle: O, onClick: y } = e,
-        _ = (0, s.e7)([u.Z], () => u.Z.getChannelStatus(t)),
-        v = null != _ && _.length > 0,
+function _(e) {
+    let { channel: t, connected: n, hovered: l, subtitle: _, onClick: O } = e,
+        y = (0, s.e7)([u.Z], () => u.Z.getChannelStatus(t)),
+        v = null != y && y.length > 0,
         C = (0, c.ZP)(t, !0),
-        j = null != O && O.length > 0;
+        j = null != _ && _.length > 0;
     if (
         (i.useEffect(() => {
             v &&
@@ -31,21 +31,21 @@ function O(e) {
         null == t.guild_id)
     )
         return null;
-    let S = o()(m.statusDiv, n && C ? m.hoverable : null);
+    let E = o()(m.statusDiv, n && C ? m.hoverable : null);
     return v
         ? (0, r.jsx)(a.P3F, {
-              className: S,
-              onClick: C ? y : void 0,
+              className: E,
+              onClick: C ? O : void 0,
               children: (0, r.jsx)(a.Text, {
                   variant: 'text-xs/medium',
                   className: o()(m.statusText, b.markup),
-                  children: (0, r.jsx)(d.Z, { children: h.Z.parseVoiceChannelStatus(_, !0, { channelId: t.id }) })
+                  children: (0, r.jsx)(d.Z, { children: h.Z.parseVoiceChannelStatus(y, !0, { channelId: t.id }) })
               })
           })
         : n && C && (!j || l)
           ? (0, r.jsxs)(a.P3F, {
-                className: S,
-                onClick: y,
+                className: E,
+                onClick: O,
                 children: [
                     (0, r.jsx)(a.Text, {
                         variant: 'text-xs/medium',
@@ -60,6 +60,6 @@ function O(e) {
                 ]
             })
           : j
-            ? (0, r.jsx)(d.Z, { children: O })
+            ? (0, r.jsx)(d.Z, { children: _ })
             : null;
 }

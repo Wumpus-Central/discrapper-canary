@@ -1,47 +1,45 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
     s = n(442837),
     a = n(481060),
-    c = n(540059),
-    u = n(592125),
-    d = n(938475),
-    h = n(823379),
-    p = n(734190),
-    f = n(388032),
-    g = n(995453);
-let m = i.memo(function (e) {
-    let { channel: t, selectedChannel: n, selectedVoiceChannelId: i, sortedThreadIds: l, withGuildIcon: m } = e,
-        { density: b } = (0, a.TCT)(),
-        O = (0, c.Q3)('GuildSidebarThreadList'),
-        y = (0, s.Wu)([u.Z], () => l.map((e) => u.Z.getChannel(e)).filter(h.lm), [l]),
-        _ = (0, s.e7)([d.ZP], () => {
-            let e = y[y.length - 1];
+    c = n(592125),
+    u = n(938475),
+    d = n(823379),
+    h = n(734190),
+    p = n(388032),
+    f = n(995453);
+let g = i.memo(function (e) {
+    let { channel: t, selectedChannel: n, selectedVoiceChannelId: i, sortedThreadIds: l, withGuildIcon: g } = e,
+        { density: m } = (0, a.TCT)(),
+        b = (0, s.Wu)([c.Z], () => l.map((e) => c.Z.getChannel(e)).filter(d.lm), [l]),
+        _ = (0, s.e7)([u.ZP], () => {
+            let e = b[b.length - 1];
             if (null == e) return 0;
-            let t = d.ZP.getVoiceStates(e.guild_id)[e.id];
+            let t = u.ZP.getVoiceStates(e.guild_id)[e.id];
             return null == t || 0 === t.length ? 0 : i !== e.id ? 40 : 32 * t.length + 8;
         });
     return (0, r.jsx)('li', {
-        className: g.container,
+        className: f.container,
         children: (0, r.jsxs)('ul', {
             role: 'group',
-            'aria-label': f.intl.formatToPlainString(f.t.EiyIi4, { channelName: t.name }),
+            'aria-label': p.intl.formatToPlainString(p.t.EiyIi4, { channelName: t.name }),
             children: [
                 (0, r.jsx)('div', {
-                    className: o()(g.spineBorder, { [g.spineBorderWithGuildIcon]: m }),
-                    style: { bottom: (O && 'cozy' === b ? 28 : 24) + _ }
+                    className: o()(f.spineBorder, { [f.spineBorderWithGuildIcon]: g }),
+                    style: { bottom: ('cozy' === m ? 28 : 24) + _ }
                 }),
-                y.map((e, t) =>
+                b.map((e, t) =>
                     (0, r.jsx)(
-                        p.Z,
+                        h.Z,
                         {
                             thread: e,
                             isSelectedChannel: (null == n ? void 0 : n.id) === e.id,
                             isSelectedVoice: i === e.id,
-                            isLast: t === y.length - 1,
-                            withGuildIcon: m
+                            isLast: t === b.length - 1,
+                            withGuildIcon: g
                         },
                         e.id
                     )

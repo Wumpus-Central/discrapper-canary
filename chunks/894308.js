@@ -2,8 +2,8 @@ n.r(t), n.d(t, { default: () => f });
 var r = n(255367),
     s = n(73800),
     o = n(481060),
-    a = n(238246),
-    i = n(873164),
+    i = n(238246),
+    a = n(873164),
     c = n(799176),
     l = n(231338),
     u = n(603571),
@@ -13,14 +13,14 @@ function f(e) {
     return (
         s.useEffect(
             () => (
-                i.Z.initialize(),
+                a.Z.initialize(),
                 () => {
-                    i.Z.terminate();
+                    a.Z.terminate();
                 }
             ),
             []
         ),
-        (0, r.jsx)(a.Z, {
+        (0, r.jsx)(i.Z, {
             withTitleBar: !0,
             windowKey: t,
             title: d.intl.string(u.default['7qZdOz']),

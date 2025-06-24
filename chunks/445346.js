@@ -54,15 +54,7 @@ class p {
         return u;
     }
     registerActionHandlers(e, t) {
-        this._dispatcher.register(
-            this.getName(),
-            e,
-            (e) => {
-                (this._changeCallbacks.hasAny() || this._reactChangeCallbacks.hasAny() || this._syncWiths.length > 0) && (l.Z.markChanged(this), l.Z.getIsPaused() && null != this._mustEmitChanges && this._mustEmitChanges(e) && l.Z.resume(!1));
-            },
-            t,
-            this._dispatchToken
-        );
+        this._dispatcher.register(this.getName(), e, this.doEmitChanges, t, this._dispatchToken);
     }
     getName() {
         var e;
@@ -111,7 +103,26 @@ class p {
         this._mustEmitChanges = e;
     }
     constructor(e, t, n) {
-        c(this, '_changeCallbacks', new s.Z()), c(this, '_reactChangeCallbacks', new s.Z()), c(this, '_syncWiths', []), c(this, '_dispatchToken', void 0), c(this, '_dispatcher', void 0), c(this, '_mustEmitChanges', void 0), c(this, '_isInitialized', !1), c(this, 'addChangeListener', this._changeCallbacks.add), c(this, 'addConditionalChangeListener', this._changeCallbacks.addConditional), c(this, 'removeChangeListener', this._changeCallbacks.remove), c(this, 'addReactChangeListener', this._reactChangeCallbacks.add), c(this, 'removeReactChangeListener', this._reactChangeCallbacks.remove), (this._dispatcher = e), (this._dispatchToken = this._dispatcher.createToken()), this.registerActionHandlers(null != t ? t : {}, n), u.push(this), d && this.initializeIfNeeded();
+        c(this, '_changeCallbacks', new s.Z()),
+            c(this, '_reactChangeCallbacks', new s.Z()),
+            c(this, '_syncWiths', []),
+            c(this, '_dispatchToken', void 0),
+            c(this, '_dispatcher', void 0),
+            c(this, '_mustEmitChanges', void 0),
+            c(this, '_isInitialized', !1),
+            c(this, 'doEmitChanges', (e) => {
+                (this._changeCallbacks.hasAny() || this._reactChangeCallbacks.hasAny() || this._syncWiths.length > 0) && (l.Z.markChanged(this), l.Z.getIsPaused() && null != this._mustEmitChanges && this._mustEmitChanges(e) && l.Z.resume(!1));
+            }),
+            c(this, 'addChangeListener', this._changeCallbacks.add),
+            c(this, 'addConditionalChangeListener', this._changeCallbacks.addConditional),
+            c(this, 'removeChangeListener', this._changeCallbacks.remove),
+            c(this, 'addReactChangeListener', this._reactChangeCallbacks.add),
+            c(this, 'removeReactChangeListener', this._reactChangeCallbacks.remove),
+            (this._dispatcher = e),
+            (this._dispatchToken = this._dispatcher.createToken()),
+            this.registerActionHandlers(null != t ? t : {}, n),
+            u.push(this),
+            d && this.initializeIfNeeded();
     }
 }
 c(p, 'displayName', void 0), c(p, 'initialized', f);

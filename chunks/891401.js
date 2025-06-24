@@ -9,15 +9,15 @@ var a = n(255367),
     d = n(704215),
     u = n(481060),
     m = n(411149),
-    x = n(151480),
-    p = n(461762),
+    p = n(151480),
+    x = n(461762),
     h = n(680783),
     b = n(605236),
     f = n(675478),
     v = n(944486),
-    g = n(388032),
-    j = n(145634);
-function _(e) {
+    _ = n(388032),
+    g = n(145634);
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
@@ -62,7 +62,7 @@ function y(e, t) {
 }
 function C() {
     return (0, a.jsxs)(u.Ttm, {
-        className: j.container,
+        className: g.container,
         children: [(0, a.jsx)(N, {}), (0, a.jsx)(O, {})]
     });
 }
@@ -71,10 +71,10 @@ function N() {
     let n = (0, c.e7)([v.Z], () => v.Z.getChannelId()),
         l = (0, h.Z)(n),
         s = null == l ? void 0 : l.wallpaperId,
-        d = (0, p.Z)(s),
+        d = (0, x.Z)(s),
         b = r.useCallback(
             (e) => {
-                null != s && (0, x.i)(s, { opacity: e });
+                null != s && (0, p.i)(s, { opacity: e });
             },
             [s]
         ),
@@ -101,37 +101,37 @@ function N() {
         I = r.useCallback(() => T(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
         w = r.useCallback(
             (e) => {
-                null != s && (0, x.i)(s, { token_mix_amount: Math.round(e) });
+                null != s && (0, p.i)(s, { token_mix_amount: Math.round(e) });
             },
             [s]
         ),
         k = r.useCallback(() => {
-            null != s && (0, x.i)(s, null);
+            null != s && (0, p.i)(s, null);
         }, [s]),
         R = null != (e = null == d ? void 0 : d.opacity) ? e : 1,
         A = null != (t = null == d ? void 0 : d.token_mix_amount) ? t : 100;
     return (0, a.jsxs)('div', {
         children: [
             (0, a.jsx)(o.X6, {
-                className: j.header,
+                className: g.header,
                 variant: 'heading-lg/semibold',
                 children: 'DM Wallpapers'
             }),
             null == d &&
                 (0, a.jsx)('p', {
-                    className: j.explanation,
+                    className: g.explanation,
                     children: 'Open a DM with a wallpaper to customize.'
                 }),
             null != d &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsx)(o.X6, {
-                            className: j.subheader,
+                            className: g.subheader,
                             variant: 'heading-md/semibold',
                             children: 'ChatWallpaperMetadataRecord'
                         }),
                         (0, a.jsx)('pre', {
-                            className: j.code,
+                            className: g.code,
                             children: JSON.stringify(m.Z.getWallpaperById(s), null, 2)
                         }),
                         (0, a.jsx)(u.ua7, {
@@ -140,9 +140,9 @@ function N() {
                                 (0, a.jsx)(
                                     o.X6,
                                     y(
-                                        _(
+                                        j(
                                             {
-                                                className: i()(j.subheader, j.hasTooltip),
+                                                className: i()(g.subheader, g.hasTooltip),
                                                 variant: 'heading-md/semibold'
                                             },
                                             e
@@ -154,7 +154,7 @@ function N() {
                         (0, a.jsx)(
                             u.iRW,
                             {
-                                className: j.slider,
+                                className: g.slider,
                                 initialValue: R,
                                 defaultValue: 1,
                                 minValue: 0,
@@ -169,9 +169,9 @@ function N() {
                                 (0, a.jsx)(
                                     o.X6,
                                     y(
-                                        _(
+                                        j(
                                             {
-                                                className: i()(j.subheader, j.hasTooltip),
+                                                className: i()(g.subheader, g.hasTooltip),
                                                 variant: 'heading-md/semibold'
                                             },
                                             e
@@ -181,7 +181,7 @@ function N() {
                                 )
                         }),
                         (0, a.jsxs)('div', {
-                            className: j.colorInputContainer,
+                            className: g.colorInputContainer,
                             children: [
                                 (0, a.jsx)(
                                     'input',
@@ -194,13 +194,13 @@ function N() {
                                 ),
                                 (0, a.jsx)(u.M0o, {
                                     color: 'currentColor',
-                                    tooltip: g.intl.string(g.t.N86XcH),
+                                    tooltip: _.intl.string(_.t.N86XcH),
                                     icon: (0, a.jsx)(u.P$X, {
                                         size: 'xs',
                                         color: 'currentColor'
                                     }),
                                     onClick: O,
-                                    className: j.removeButton
+                                    className: g.removeButton
                                 })
                             ]
                         }),
@@ -210,9 +210,9 @@ function N() {
                                 (0, a.jsx)(
                                     o.X6,
                                     y(
-                                        _(
+                                        j(
                                             {
-                                                className: i()(j.subheader, j.hasTooltip),
+                                                className: i()(g.subheader, g.hasTooltip),
                                                 variant: 'heading-md/semibold'
                                             },
                                             e
@@ -222,7 +222,7 @@ function N() {
                                 )
                         }),
                         (0, a.jsxs)('div', {
-                            className: j.colorInputContainer,
+                            className: g.colorInputContainer,
                             children: [
                                 (0, a.jsx)(
                                     'input',
@@ -235,13 +235,13 @@ function N() {
                                 ),
                                 (0, a.jsx)(u.M0o, {
                                     color: 'currentColor',
-                                    tooltip: g.intl.string(g.t.N86XcH),
+                                    tooltip: _.intl.string(_.t.N86XcH),
                                     icon: (0, a.jsx)(u.P$X, {
                                         size: 'xs',
                                         color: 'currentColor'
                                     }),
                                     onClick: P,
-                                    className: j.removeButton
+                                    className: g.removeButton
                                 })
                             ]
                         }),
@@ -251,9 +251,9 @@ function N() {
                                 (0, a.jsx)(
                                     o.X6,
                                     y(
-                                        _(
+                                        j(
                                             {
-                                                className: i()(j.subheader, j.hasTooltip),
+                                                className: i()(g.subheader, g.hasTooltip),
                                                 variant: 'heading-md/semibold'
                                             },
                                             e
@@ -265,7 +265,7 @@ function N() {
                         (0, a.jsx)(
                             u.iRW,
                             {
-                                className: j.slider,
+                                className: g.slider,
                                 initialValue: A,
                                 defaultValue: 100,
                                 minValue: 0,
@@ -280,9 +280,9 @@ function N() {
                                 (0, a.jsx)(
                                     o.X6,
                                     y(
-                                        _(
+                                        j(
                                             {
-                                                className: i()(j.subheader, j.hasTooltip),
+                                                className: i()(g.subheader, g.hasTooltip),
                                                 variant: 'heading-md/semibold'
                                             },
                                             e
@@ -292,7 +292,7 @@ function N() {
                                 )
                         }),
                         (0, a.jsxs)('div', {
-                            className: j.colorInputContainer,
+                            className: g.colorInputContainer,
                             children: [
                                 (0, a.jsx)(
                                     'input',
@@ -305,18 +305,18 @@ function N() {
                                 ),
                                 (0, a.jsx)(u.M0o, {
                                     color: 'currentColor',
-                                    tooltip: g.intl.string(g.t.N86XcH),
+                                    tooltip: _.intl.string(_.t.N86XcH),
                                     icon: (0, a.jsx)(u.P$X, {
                                         size: 'xs',
                                         color: 'currentColor'
                                     }),
                                     onClick: I,
-                                    className: j.removeButton
+                                    className: g.removeButton
                                 })
                             ]
                         }),
                         (0, a.jsx)(u.zxk, {
-                            className: j.resetButton,
+                            className: g.resetButton,
                             onClick: k,
                             children: 'Reset'
                         })
@@ -334,7 +334,7 @@ function O() {
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(o.X6, {
-                className: j.header,
+                className: g.header,
                 variant: 'heading-lg/semibold',
                 children: 'Tenure Badges'
             }),
@@ -349,7 +349,7 @@ function O() {
                 ]
             }),
             (0, a.jsx)('div', {
-                className: j.tenureBadgeControls,
+                className: g.tenureBadgeControls,
                 children: (0, a.jsx)(u.zxk, {
                     onClick: e,
                     children: 'Reset Level Up DC'
@@ -359,11 +359,11 @@ function O() {
     });
 }
 let E = (0, s.debounce)(function (e, t) {
-        null != e && (0, x.i)(e, { primary_color: t });
+        null != e && (0, p.i)(e, { primary_color: t });
     }, 200),
     T = (0, s.debounce)(function (e, t) {
-        null != e && (0, x.i)(e, { link_color: t });
+        null != e && (0, p.i)(e, { link_color: t });
     }, 200),
     S = (0, s.debounce)(function (e, t) {
-        null != e && (0, x.i)(e, { secondary_color: t });
+        null != e && (0, p.i)(e, { secondary_color: t });
     }, 200);

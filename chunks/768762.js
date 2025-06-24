@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => E });
 var r,
     i,
     l = n(255367),
@@ -19,7 +19,7 @@ let d = {
         [d.DOWN]: s.down,
         [d.LEFT]: s.left
     };
-class E extends (i = o.PureComponent) {
+class f extends (i = o.PureComponent) {
     render() {
         let { direction: e, className: t } = this.props;
         return (0, l.jsx)(c.wj7, {
@@ -29,12 +29,12 @@ class E extends (i = o.PureComponent) {
         });
     }
 }
-(r = 'Directions') in E
-    ? Object.defineProperty(E, r, {
+(r = 'Directions') in f
+    ? Object.defineProperty(f, r, {
           value: d,
           enumerable: !0,
           configurable: !0,
           writable: !0
       })
-    : (E[r] = d);
-let f = E;
+    : (f[r] = d);
+let E = f;

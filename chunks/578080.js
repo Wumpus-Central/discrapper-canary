@@ -23,8 +23,8 @@ var r = n(255367),
     C = n(475595),
     w = n(566078),
     S = n(340100),
-    E = n(611855),
-    P = n(644646),
+    P = n(611855),
+    E = n(644646),
     T = n(78826),
     N = n(670638),
     A = n(667105),
@@ -185,7 +185,7 @@ let V = s.forwardRef(function (e, t) {
                                       (0, r.jsxs)('div', {
                                           className: I.questAcceptedContentHeading,
                                           children: [
-                                              (0, r.jsx)(P.Z, {
+                                              (0, r.jsx)(E.Z, {
                                                   className: I.questProgressRewardTile,
                                                   learnMoreStyle: 'icon',
                                                   quest: X,
@@ -266,7 +266,7 @@ let V = s.forwardRef(function (e, t) {
                                       (0, r.jsxs)('div', {
                                           className: I.utils,
                                           children: [
-                                              (0, r.jsx)(E.Z, { color: 'always-white' }),
+                                              (0, r.jsx)(P.Z, { color: 'always-white' }),
                                               (0, r.jsx)(N.r, {
                                                   onOpen: U,
                                                   onClose: z,
@@ -294,7 +294,7 @@ let V = s.forwardRef(function (e, t) {
                                       (0, r.jsxs)('div', {
                                           className: I.details,
                                           children: [
-                                              (0, r.jsx)(P.Z, {
+                                              (0, r.jsx)(E.Z, {
                                                   className: I.rewardTile,
                                                   learnMoreStyle: 'text',
                                                   quest: X,

@@ -3,7 +3,7 @@ n.d(t, {
     QQ: () => f,
     QY: () => b,
     Vj: () => d,
-    Vs: () => E,
+    Vs: () => x,
     j8: () => h,
     oO: () => m,
     qt: () => g,
@@ -158,7 +158,7 @@ function b(e, t) {
         showBlocked: t
     });
 }
-function E(e, t, n) {
+function x(e, t, n) {
     r.Z.dispatch({
         type: 'SEARCH_RESULTS_QUERY_UPDATE',
         searchId: e,

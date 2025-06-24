@@ -2,8 +2,8 @@ n.d(t, { Z: () => v }), n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(392711),
-    a = n(772848),
-    i = n(481060),
+    i = n(772848),
+    a = n(481060),
     c = n(377171),
     l = n(668826),
     u = n(18582),
@@ -107,7 +107,7 @@ function v(e) {
             }),
                 v(
                     ((n = h({}, b)),
-                    (r = r = { [(0, a.Z)()]: t }),
+                    (r = r = { [(0, i.Z)()]: t }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                         : (function (e, t) {
@@ -143,9 +143,9 @@ function v(e) {
                             null == c ? void 0 : c.title,
                             (null == c ? void 0 : c.primaryButtonCTA) != null &&
                                 (0, r.jsx)(d.Z, {
-                                    size: i.zxk.Sizes.TINY,
-                                    look: i.zxk.Looks.OUTLINED,
-                                    color: i.zxk.Colors.WHITE,
+                                    size: a.zxk.Sizes.TINY,
+                                    look: a.zxk.Looks.OUTLINED,
+                                    color: a.zxk.Colors.WHITE,
                                     onClick: (t) => {
                                         var r;
                                         N(t, c.primaryButtonPoints), null == (r = n.current) || r.removeDrop(e), g((0, o.sample)(x()));
@@ -154,9 +154,9 @@ function v(e) {
                                 }),
                             (null == c ? void 0 : c.secondaryButtonCTA) != null &&
                                 (0, r.jsx)(d.Z, {
-                                    size: i.zxk.Sizes.TINY,
-                                    look: i.zxk.Looks.OUTLINED,
-                                    color: i.zxk.Colors.WHITE,
+                                    size: a.zxk.Sizes.TINY,
+                                    look: a.zxk.Looks.OUTLINED,
+                                    color: a.zxk.Colors.WHITE,
                                     onClick: (t) => {
                                         var r;
                                         N(t, c.secondaryButtonPoints), null == (r = n.current) || r.removeDrop(e), g((0, o.sample)(x()));
@@ -171,7 +171,7 @@ function v(e) {
                                         var r;
                                         N(t, c.closeButtonPoints), null == (r = n.current) || r.removeDrop(e), g((0, o.sample)(x()));
                                     },
-                                    children: (0, r.jsx)(i.Dio, {
+                                    children: (0, r.jsx)(a.Dio, {
                                         size: 'md',
                                         color: 'white'
                                     })

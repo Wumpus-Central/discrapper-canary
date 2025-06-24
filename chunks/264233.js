@@ -1,64 +1,64 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(392711),
-    a = n.n(l),
-    o = n(442837),
-    s = n(524437),
+    o = n.n(l),
+    s = n(442837),
+    a = n(524437),
     c = n(481060),
     u = n(317632),
     d = n(174767),
-    p = n(240126),
-    m = n(791914),
+    h = n(240126),
+    p = n(791914),
     f = n(326838),
-    h = n(388032),
-    g = n(175646);
-function _(e) {
-    let { setTab: t, badgeState: l, closePopout: _ } = e,
-        E = (0, o.Wu)([u.Z], () => u.Z.getInvites()),
-        y = (0, o.e7)([u.Z], () => u.Z.getInviteStatuses()),
-        [x, v] = i.useMemo(
+    g = n(388032),
+    m = n(175646);
+function b(e) {
+    let { setTab: t, badgeState: l, closePopout: b } = e,
+        O = (0, s.Wu)([u.Z], () => u.Z.getInvites()),
+        y = (0, s.e7)([u.Z], () => u.Z.getInviteStatuses()),
+        [v, C] = i.useMemo(
             () =>
-                a().partition(E, (e) => {
+                o().partition(O, (e) => {
                     var t;
                     return (null == (t = y[e.invite_id]) ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl;
                 }),
-            [E, y]
+            [O, y]
         );
     return (i.useEffect(() => {
         (0, d.sJ)();
     }),
-    0 === E.length)
+    0 === O.length)
         ? (0, r.jsxs)('div', {
-              className: g.container,
+              className: m.container,
               children: [
-                  (0, r.jsx)(m.Z, {
-                      tab: s.X.GAME_INVITES,
+                  (0, r.jsx)(p.Z, {
+                      tab: a.X.GAME_INVITES,
                       setTab: t,
                       badgeState: l,
-                      closePopout: _
+                      closePopout: b
                   }),
                   (0, r.jsx)('div', {
-                      className: g.__invalid_emptyStateContainer,
-                      children: (0, r.jsx)(p.Z, {
+                      className: m.__invalid_emptyStateContainer,
+                      children: (0, r.jsx)(h.Z, {
                           Icon: c.iWm,
-                          header: h.intl.string(h.t.PbSPWV),
-                          tip: h.intl.string(h.t.BxNbS0)
+                          header: g.intl.string(g.t.PbSPWV),
+                          tip: g.intl.string(g.t.BxNbS0)
                       })
                   })
               ]
           })
         : (0, r.jsxs)('div', {
-              className: g.container,
+              className: m.container,
               children: [
-                  (0, r.jsx)(m.Z, {
-                      tab: s.X.GAME_INVITES,
+                  (0, r.jsx)(p.Z, {
+                      tab: a.X.GAME_INVITES,
                       setTab: t,
                       badgeState: l,
-                      closePopout: _,
+                      closePopout: b,
                       children: (0, r.jsx)(c.M0o, {
-                          className: g.__invalid_deleteButton,
-                          tooltip: h.intl.string(h.t.Zy3MR0),
+                          className: m.__invalid_deleteButton,
+                          tooltip: g.intl.string(g.t.Zy3MR0),
                           color: c.YX$.SECONDARY,
                           icon: (0, r.jsx)(c.XHJ, { size: 'xs' }),
                           onClick: function () {
@@ -120,14 +120,14 @@ function _(e) {
                   }),
                   (0, r.jsx)(c.h21, {
                       children: (0, r.jsxs)('div', {
-                          className: g.invitesContainer,
+                          className: m.invitesContainer,
                           children: [
-                              x.length > 0 &&
+                              v.length > 0 &&
                                   (0, r.jsxs)(r.Fragment, {
                                       children: [
-                                          (0, r.jsx)(b, { title: h.intl.string(h.t.yflAJS) }),
+                                          (0, r.jsx)(_, { title: g.intl.string(g.t.yflAJS) }),
                                           (0, r.jsx)(r.Fragment, {
-                                              children: x.map((e) =>
+                                              children: v.map((e) =>
                                                   (0, r.jsx)(
                                                       f.Z,
                                                       {
@@ -140,12 +140,12 @@ function _(e) {
                                           })
                                       ]
                                   }),
-                              v.length > 0 &&
+                              C.length > 0 &&
                                   (0, r.jsxs)(r.Fragment, {
                                       children: [
-                                          (0, r.jsx)(b, { title: h.intl.string(h.t.f0Ia4e) }),
+                                          (0, r.jsx)(_, { title: g.intl.string(g.t.f0Ia4e) }),
                                           (0, r.jsx)(r.Fragment, {
-                                              children: v.map((e) =>
+                                              children: C.map((e) =>
                                                   (0, r.jsx)(
                                                       f.Z,
                                                       {
@@ -164,18 +164,18 @@ function _(e) {
               ]
           });
 }
-function b(e) {
+function _(e) {
     let { title: t } = e;
     return (0, r.jsxs)('div', {
-        className: g.headerContainer,
+        className: m.headerContainer,
         children: [
             (0, r.jsx)(c.Text, {
-                className: g.headerTitle,
+                className: m.headerTitle,
                 variant: 'text-xs/semibold',
                 color: 'interactive-normal',
                 children: t
             }),
-            (0, r.jsx)('div', { className: g.headerDivider })
+            (0, r.jsx)('div', { className: m.headerDivider })
         ]
     });
 }

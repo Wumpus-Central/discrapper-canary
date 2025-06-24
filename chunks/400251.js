@@ -21,8 +21,8 @@ var r = n(255367),
     b = n(601964),
     _ = n(430824),
     y = n(768581),
-    C = n(683818),
-    x = n(16853),
+    x = n(683818),
+    C = n(16853),
     v = n(981631),
     j = n(388032),
     O = n(901593),
@@ -52,7 +52,7 @@ function I(e) {
     }
     return e;
 }
-function P(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -70,7 +70,7 @@ function P(e, t) {
         e
     );
 }
-function S(e, t) {
+function P(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -112,7 +112,7 @@ function N(e) {
     let { entry: t } = e,
         [l, o] = i.useState(!1),
         c = i.useRef(null),
-        { canEdit: u } = (0, C.Z)(t);
+        { canEdit: u } = (0, x.Z)(t);
     return (0, r.jsx)('div', {
         className: a()(O.actionButtonsContainer, { [O.forceButtonsShow]: l }),
         children: (0, r.jsxs)(p.ZP, {
@@ -123,15 +123,15 @@ function N(e) {
                           hideOnClick: !0,
                           children: (e) => {
                               var { onClick: i } = e,
-                                  l = S(e, ['onClick']);
+                                  l = P(e, ['onClick']);
                               return (0, r.jsx)(
                                   p.zx,
-                                  P(I({}, l), {
+                                  S(I({}, l), {
                                       onClick: () => {
                                           null == i || i(),
                                               (0, s.ZDy)(async () => {
                                                   let { default: e } = await n.e('34191').then(n.bind(n, 303647));
-                                                  return (n) => (0, r.jsx)(e, P(I({}, n), { entry: t }));
+                                                  return (n) => (0, r.jsx)(e, S(I({}, n), { entry: t }));
                                               });
                                       },
                                       'aria-label': j.intl.string(j.t.XnuOvL),
@@ -145,7 +145,7 @@ function N(e) {
                           }
                       })
                     : null,
-                (0, r.jsx)(x.Z, {
+                (0, r.jsx)(C.Z, {
                     targetElementRef: c,
                     onRequestOpen: () => o(!0),
                     onRequestClose: () => o(!1),
@@ -153,16 +153,16 @@ function N(e) {
                     hideEditButton: !0,
                     children: (e) => {
                         var { onClick: t } = e,
-                            n = S(e, ['onClick']);
+                            n = P(e, ['onClick']);
                         return (0, r.jsx)(s.ua7, {
                             text: j.intl.string(j.t.UKOtz8),
                             hideOnClick: !0,
                             children: (e) => {
                                 var { onClick: i } = e,
-                                    l = S(e, ['onClick']);
+                                    l = P(e, ['onClick']);
                                 return (0, r.jsx)(
                                     p.zx,
-                                    P(I({}, n, l), {
+                                    S(I({}, n, l), {
                                         ref: c,
                                         onClick: (e) => {
                                             null == i || i(), t(e);
@@ -187,11 +187,11 @@ let T = (e) => {
     var t;
     let { entry: l } = e,
         [a, p] = i.useState(!1),
-        C = null != (0, o.e7)([_.Z], () => _.Z.getGuild(l.guildId)),
-        x = async () => {
+        x = null != (0, o.e7)([_.Z], () => _.Z.getGuild(l.guildId)),
+        C = async () => {
             p(!0);
             try {
-                C ? (0, g.X)(l.guildId) : await u.Z.joinGuild(l.guildId, { source: v.vtS.DIRECTORY_ENTRY });
+                x ? (0, g.X)(l.guildId) : await u.Z.joinGuild(l.guildId, { source: v.vtS.DIRECTORY_ENTRY });
             } finally {
                 p(!1);
             }
@@ -201,7 +201,7 @@ let T = (e) => {
             splash: l.splash,
             size: 300 * (0, m.x_)()
         }),
-        S =
+        P =
             null !=
             (t = y.ZP.getGuildIconURL({
                 id: l.guildId,
@@ -212,13 +212,13 @@ let T = (e) => {
                 : void 0,
         Z = j.intl.string(j.t.VJlc0d);
     return (
-        C && (Z = j.intl.string(j.t.cqWE2d)),
+        x && (Z = j.intl.string(j.t.cqWE2d)),
         (0, r.jsxs)('div', {
             className: O.card,
             onContextMenu: (e) => {
                 (0, c.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 643560));
-                    return (t) => (0, r.jsx)(e, P(I({}, t), { entry: l }));
+                    return (t) => (0, r.jsx)(e, S(I({}, t), { entry: l }));
                 });
             },
             children: [
@@ -245,7 +245,7 @@ let T = (e) => {
                                     className: O.iconMask,
                                     children: (0, r.jsx)(h.Z, {
                                         className: O.icon,
-                                        iconSrc: S,
+                                        iconSrc: P,
                                         guild: new b.ZP(l),
                                         size: h.Z.Sizes.MEDIUM,
                                         active: !0
@@ -312,8 +312,8 @@ let T = (e) => {
                         (0, r.jsx)(s.zxk, {
                             submitting: a,
                             className: O.joinButton,
-                            color: C ? s.zxk.Colors.PRIMARY : s.zxk.Colors.GREEN,
-                            onClick: x,
+                            color: x ? s.zxk.Colors.PRIMARY : s.zxk.Colors.GREEN,
+                            onClick: C,
                             children: Z
                         })
                     ]

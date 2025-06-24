@@ -2,20 +2,20 @@ n.d(t, { Z: () => v }), n(35282), n(388685);
 var r,
     i = n(255367),
     l = n(73800),
-    o = n(593473),
-    a = n(442837),
+    a = n(593473),
+    o = n(442837),
     s = n(544891),
     c = n(481060),
     u = n(129293),
     d = n(388905),
     h = n(108427),
-    g = n(598077),
-    p = n(896797),
+    p = n(598077),
+    g = n(896797),
     m = n(981631),
     f = n(930441),
     _ = n(388032),
-    x = n(20493);
-function E(e, t, n) {
+    E = n(20493);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,11 +28,11 @@ function E(e, t, n) {
         e
     );
 }
-a.ZP.initialize();
+o.ZP.initialize();
 class b extends (r = l.PureComponent) {
     componentDidMount() {
         let e = (0, u.Z)(this.props.location),
-            t = (0, o.parse)(this.props.location.search);
+            t = (0, a.parse)(this.props.location.search);
         s.tn
             .post({
                 url: m.ANM.DISABLE_EMAIL_NOTIFICATIONS,
@@ -50,7 +50,7 @@ class b extends (r = l.PureComponent) {
                     let {
                             body: { user: n }
                         } = e,
-                        r = new g.Z(n);
+                        r = new p.Z(n);
                     this.setState({
                         success: !0,
                         busy: !1,
@@ -75,17 +75,17 @@ class b extends (r = l.PureComponent) {
         return (0, i.jsxs)(d.ZP, {
             children: [
                 (0, i.jsx)(d.Dx, {
-                    className: x.marginBottom8,
+                    className: E.marginBottom8,
                     children: _.intl.string(_.t.f6rdLi)
                 }),
                 (0, i.jsx)(d.DK, { children: l }),
                 (0, i.jsx)(d.zx, {
-                    className: x.marginTop20,
+                    className: E.marginTop20,
                     onClick: () => r(n),
                     children: _.intl.string(_.t.fIv16O)
                 }),
                 (0, i.jsx)(d.zx, {
-                    className: x.marginTop8,
+                    className: E.marginTop8,
                     color: d.zx.Colors.LINK,
                     look: d.zx.Looks.LINK,
                     onClick: () => r(m.Z5c.SETTINGS('notifications', f.vG)),
@@ -106,15 +106,15 @@ class b extends (r = l.PureComponent) {
                 (0, i.jsx)(d.qE, {
                     src: null == n ? void 0 : n.getAvatarURL(void 0, 100),
                     size: c.EFr.DEPRECATED_SIZE_100,
-                    className: x.marginBottom20
+                    className: E.marginBottom20
                 }),
                 (0, i.jsx)(d.Dx, {
-                    className: x.marginBottom8,
+                    className: E.marginBottom8,
                     children: _.intl.string(_.t['6U6OMT'])
                 }),
                 (0, i.jsx)(d.DK, { children: _.intl.string(_.t['yaDJ4+']) }),
                 (0, i.jsx)(d.zx, {
-                    className: x.marginTop40,
+                    className: E.marginTop40,
                     onClick: () => t(e),
                     children: _.intl.string(_.t.fIv16O)
                 })
@@ -127,15 +127,15 @@ class b extends (r = l.PureComponent) {
             children: [
                 (0, i.jsx)(d.Ee, {
                     src: n(105020),
-                    className: x.marginBottom20
+                    className: E.marginBottom20
                 }),
                 (0, i.jsx)(d.Dx, {
-                    className: x.marginBottom8,
+                    className: E.marginBottom8,
                     children: _.intl.string(_.t.ox9hIS)
                 }),
                 (0, i.jsx)(d.DK, { children: _.intl.string(_.t['/dcuR0']) }),
                 (0, i.jsx)(d.zx, {
-                    className: x.marginTop40,
+                    className: E.marginTop40,
                     onClick: () => t(e),
                     children: _.intl.string(_.t.fIv16O)
                 })
@@ -148,7 +148,7 @@ class b extends (r = l.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            E(this, 'state', {
+            x(this, 'state', {
                 busy: !0,
                 success: !1,
                 user: null,
@@ -156,5 +156,5 @@ class b extends (r = l.PureComponent) {
             });
     }
 }
-E(b, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) });
-let v = a.ZP.connectStores([p.Z], () => ({ defaultRoute: p.Z.defaultRoute }))(b);
+x(b, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) });
+let v = o.ZP.connectStores([g.Z], () => ({ defaultRoute: g.Z.defaultRoute }))(b);

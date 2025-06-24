@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(26373),
     b = n(486622),
     _ = n(488634),
-    E = n(110287),
-    O = n(355350),
+    O = n(110287),
+    E = n(355350),
     y = n(948247),
     I = n(125855),
     v = n(687683),
@@ -25,8 +25,8 @@ var r = n(255367),
     N = n(39276);
 function T() {
     let e = i.useRef(null),
-        t = (0, E.Z)(),
-        n = (0, O.w)(),
+        t = (0, O.Z)(),
+        n = (0, E.w)(),
         l = (0, m.V)(),
         T = (0, u.N)(),
         P = (0, p.Z)('message-requests-spam-list'),
@@ -41,7 +41,7 @@ function T() {
     (0, d.ZP)(() => {
         g.default.track(C.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), f.Z.increment({ name: s.V.SPAM_MESSAGE_REQUEST_VIEW });
     });
-    let L = i.useCallback(
+    let w = i.useCallback(
             (e) => {
                 var n, i;
                 let { row: o } = e,
@@ -65,7 +65,7 @@ function T() {
             },
             [t, l, j]
         ),
-        w = i.useCallback(
+        L = i.useCallback(
             () =>
                 (0, r.jsxs)(
                     h.Z,
@@ -166,8 +166,8 @@ function T() {
                                   paddingBottom: 24,
                                   sectionHeight: v.oi,
                                   rowHeight: v.WN,
-                                  renderSection: w,
-                                  renderRow: L,
+                                  renderSection: L,
+                                  renderRow: w,
                                   sections: [t.length],
                                   chunkSize: 30,
                                   fade: !0

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
 var r = n(255367);
 n(73800);
-var o = n(481060),
-    l = n(493773),
+var l = n(481060),
+    o = n(493773),
     i = n(367907),
     s = n(524444),
     a = n(297047),
@@ -15,7 +15,7 @@ var o = n(481060),
 let f = function (e) {
     let { guild: t, message: n, onClose: f } = e,
         b = c.Z.getChannel(u.Z.getChannelId(t.id));
-    return ((0, l.ZP)(() => {
+    return ((0, o.ZP)(() => {
         d.default.track(p.rMx.OPEN_POPOUT, {
             type: 'New Member Badge Popout',
             guild_id: t.id,
@@ -34,7 +34,7 @@ let f = function (e) {
                           children: [
                               (0, r.jsx)('div', {
                                   className: g.iconContainer,
-                                  children: (0, r.jsx)(o.hg2, {
+                                  children: (0, r.jsx)(l.hg2, {
                                       size: 'custom',
                                       color: 'currentColor',
                                       width: 40,
@@ -43,12 +43,12 @@ let f = function (e) {
                               }),
                               (0, r.jsxs)('div', {
                                   children: [
-                                      (0, r.jsx)(o.X6q, {
+                                      (0, r.jsx)(l.X6q, {
                                           variant: 'heading-md/semibold',
                                           className: g.header,
                                           children: m.intl.string(m.t['v/OYd3'])
                                       }),
-                                      (0, r.jsx)(o.Text, {
+                                      (0, r.jsx)(l.Text, {
                                           variant: 'text-sm/normal',
                                           children: m.intl.string(m.t.Z85MlJ)
                                       })
@@ -56,9 +56,9 @@ let f = function (e) {
                               })
                           ]
                       }),
-                      (0, r.jsx)(o.zxk, {
-                          size: o.zxk.Sizes.SMALL,
-                          color: o.zxk.Colors.BRAND,
+                      (0, r.jsx)(l.zxk, {
+                          size: l.zxk.Sizes.SMALL,
+                          color: l.zxk.Colors.BRAND,
                           className: g.ctaButton,
                           fullWidth: !0,
                           onClick: () => {

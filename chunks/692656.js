@@ -31,8 +31,8 @@ var i = n(255367),
     L = n(541099),
     R = n(827498),
     w = n(87005),
-    Z = n(219066),
-    k = n(106066),
+    k = n(219066),
+    Z = n(106066),
     M = n(783097),
     D = n(695676),
     U = n(98880),
@@ -344,7 +344,7 @@ function el(e) {
             numItems: o.length,
             numVisibleItems: o.length
         }),
-        s = (0, k.s)(),
+        s = (0, Z.s)(),
         u = 0 === o.length;
     return (r.useEffect(() => {
         l(u);
@@ -386,7 +386,7 @@ function el(e) {
 function eo(e) {
     let { context: t, onEmptyState: n } = e,
         l = R.L3.APPS_IN_THIS_SERVER,
-        { appsInThisServer: o, isLoading: a } = (0, Z.Z)({ context: t }),
+        { appsInThisServer: o, isLoading: a } = (0, k.Z)({ context: t }),
         { items: c, handleViewMore: s } = eu({
             title: X.intl.string(X.t.KfkuGR),
             look: U.U4.ROW,

@@ -1,4 +1,4 @@
-n.d(t, { W: () => E });
+n.d(t, { W: () => x });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -65,7 +65,7 @@ function b(e) {
         })
     });
 }
-function E(e) {
+function x(e) {
     let { questId: t } = e,
         { containerRef: n, size: i } = (0, d.h)();
     return (

@@ -12,8 +12,8 @@ var r = n(255367),
     m = n(906732),
     h = n(279332),
     g = n(915346),
-    _ = n(783097),
-    f = n(433534),
+    f = n(783097),
+    _ = n(433534),
     b = n(299206),
     x = n(276022),
     v = n(703656),
@@ -22,8 +22,8 @@ var r = n(255367),
     y = n(626135),
     I = n(572004),
     O = n(135431),
-    P = n(881294),
-    S = n(258971),
+    S = n(881294),
+    P = n(258971),
     E = n(98449),
     N = n(981631),
     T = n(388032),
@@ -109,10 +109,10 @@ function Z(e) {
 function k(e) {
     let { application: t, variant: n, size: i, color: o } = e,
         { onClickInstallApplication: d, canInstall: u } = (function (e) {
-            let t = (0, P.nu)(),
+            let t = (0, S.nu)(),
                 n = a.useCallback(() => {
                     var t;
-                    let n = null != (t = S.z8.getField('guildId')) ? t : void 0;
+                    let n = null != (t = P.z8.getField('guildId')) ? t : void 0;
                     (0, O.L)({
                         applicationId: e.id,
                         customInstallUrl: e.custom_install_url,
@@ -133,7 +133,7 @@ function k(e) {
                 }, [t, n]),
                 {
                     onClickInstallApplication: a.useCallback(() => {
-                        if (((0, P.zZ)(N.rMx.APP_DIRECTORY_INSTALL_CLICKED, { application_id: e.id }), (s.tq || s.Em) && null == e.custom_install_url)) {
+                        if (((0, S.zZ)(N.rMx.APP_DIRECTORY_INSTALL_CLICKED, { application_id: e.id }), (s.tq || s.Em) && null == e.custom_install_url)) {
                             let t = (0, O.E)({
                                 applicationId: e.id,
                                 customInstallUrl: e.custom_install_url,
@@ -144,7 +144,7 @@ function k(e) {
                         }
                         if (t) n();
                         else {
-                            let t = S.z8.getField('guildId');
+                            let t = P.z8.getField('guildId');
                             y.default.track(N.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
                                 application_id: e.id,
                                 guild_id: t,
@@ -152,12 +152,12 @@ function k(e) {
                                 source: 'product_page',
                                 device_platform: s.tq ? 'mobile_web' : 'desktop_web'
                             }),
-                                (0, P.rf)({ [L]: 'true' });
+                                (0, S.rf)({ [L]: 'true' });
                         }
                     }, [e, n, t]),
                     canInstall: a.useMemo(
                         () =>
-                            (0, f.Eb)({
+                            (0, _.Eb)({
                                 customInstallUrl: e.custom_install_url,
                                 installParams: e.install_params,
                                 integrationTypesConfig: e.integration_types_config
@@ -218,21 +218,21 @@ function w(e) {
 let D = a.forwardRef(function (e, t) {
     let { application: n, size: i } = e,
         s = h.J.useExperiment({ location: 'UserSettingsAuthedApps' }, { autoTrackExposure: !0 }).enabled,
-        f = (e) => ''.concat(location.protocol, '//').concat(location.host).concat(N.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e)),
+        _ = (e) => ''.concat(location.protocol, '//').concat(location.host).concat(N.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e)),
         { analyticsLocations: y } = (0, m.ZP)(),
         O = a.useCallback(() => {
-            (0, P.zZ)(N.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id }), (0, I.JG)(f(n.id), () => (0, c.showToast)((0, c.createToast)(T.intl.string(T.t['L/PwZW']), c.ToastType.SUCCESS)));
+            (0, S.zZ)(N.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id }), (0, I.JG)(_(n.id), () => (0, c.showToast)((0, c.createToast)(T.intl.string(T.t['L/PwZW']), c.ToastType.SUCCESS)));
         }, [n.id]),
-        S = (0, o.e7)([C.default], () => C.default.locale),
+        P = (0, o.e7)([C.default], () => C.default.locale),
         L = a.useCallback(() => {
             (0, d.Z)(
                 (0, E.G)({
                     id: n.id,
                     name: n.name,
-                    locale: S
+                    locale: P
                 })
             );
-        }, [S, n]),
+        }, [P, n]),
         D = (0, b.Z)({
             id: n.id,
             label: T.intl.string(T.t['FfCL+/']),
@@ -241,7 +241,7 @@ let D = a.forwardRef(function (e, t) {
         M = (0, x.Z)({
             application: n,
             onItemClick: () => {
-                (0, P.zZ)(N.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id });
+                (0, S.zZ)(N.rMx.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: n.id });
             }
         }),
         G = a.useCallback(
@@ -280,12 +280,12 @@ let D = a.forwardRef(function (e, t) {
             var n;
             let r = e.id,
                 i = null == e || null == (n = e.bot) ? void 0 : n.id,
-                l = null != i && (0, _.BQ)(e) && (0, _.ye)(e),
+                l = null != i && (0, f.BQ)(e) && (0, f.ye)(e),
                 [s, c] = a.useState(!1),
-                d = (0, P.nu)(),
+                d = (0, S.nu)(),
                 m = (0, o.e7)([j.default], () => j.default.getCurrentUser()),
                 h = (0, o.e7)([u.ZP], () => u.ZP.getCurrentEmbeddedActivity()),
-                f = a.useCallback(
+                _ = a.useCallback(
                     async (t, n, r) => {
                         if (null != h && h.applicationId === e.id) {
                             let e = h.location;
@@ -310,15 +310,15 @@ let D = a.forwardRef(function (e, t) {
                 if (d && l && n && null != i && null != m) {
                     e.searchParams.delete(R);
                     let n = e.pathname + e.search;
-                    (0, v.dL)(n), f(i, r, t);
+                    (0, v.dL)(n), _(i, r, t);
                 }
-            }, [d, l, i, r, t, m, f]);
+            }, [d, l, i, r, t, m, _]);
             let b = a.useCallback(async () => {
                 if (null != i) {
-                    if (((0, P.zZ)(N.rMx.APP_DIRECTORY_LAUNCH_CLICKED, { application_id: r }), !d)) return void (0, P.rf)({ [R]: 'true' });
-                    await f(i, r, t);
+                    if (((0, S.zZ)(N.rMx.APP_DIRECTORY_LAUNCH_CLICKED, { application_id: r }), !d)) return void (0, S.rf)({ [R]: 'true' });
+                    await _(i, r, t);
                 }
-            }, [i, r, t, d, f]);
+            }, [i, r, t, d, _]);
             return {
                 onClickLaunchActivity: l ? b : void 0,
                 isSubmitting: s

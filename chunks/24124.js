@@ -1,6 +1,6 @@
 n.d(t, {
     GG: () => a,
-    R2: () => o,
+    R2: () => u,
     h7: () => l,
     rh: () => i
 });
@@ -30,7 +30,7 @@ function a(e) {
         channelId: e
     });
 }
-function o(e) {
+function u(e) {
     r.Z.dispatch({
         type: 'ACTIVITY_INVITE_MODAL_SEND',
         userId: e

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -15,7 +15,7 @@ var r = n(255367),
     g = n(838440),
     _ = n(981631),
     b = n(18485);
-function E(e) {
+function x(e) {
     let { assets: t, currentUser: n, message: r } = e,
         i = (h.default.extractTimestamp(n.id) + h.default.extractTimestamp(r.id)) % t.length;
     return t[i];
@@ -25,16 +25,16 @@ function y(e) {
         [h, _] = i.useState(!1),
         y = i.useMemo(
             () =>
-                E({
+                x({
                     assets: d,
                     currentUser: t,
                     message: l
                 }),
             [d, t, l]
         ),
-        x = i.useMemo(
+        E = i.useMemo(
             () =>
-                E({
+                x({
                     assets: u,
                     currentUser: t,
                     message: l
@@ -131,11 +131,11 @@ function y(e) {
                 sticker: y,
                 size: 28
             }),
-            x
+            E
         ]
     });
 }
-function x(e) {
+function E(e) {
     let { channel: t, message: n, buttonLabels: i, stickers: a, event: o, eventProperties: s } = e,
         c = m.default.getCurrentUser(),
         f = (function (e) {

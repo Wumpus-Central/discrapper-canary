@@ -4,9 +4,9 @@ n.d(t, {
     ZP: () => O
 });
 var r = n(255367),
-    o = n(73800),
-    l = n(120356),
-    i = n.n(l),
+    l = n(73800),
+    o = n(120356),
+    i = n.n(o),
     s = n(653603),
     a = n.n(s),
     c = n(902704),
@@ -21,36 +21,36 @@ function b(e, t) {
 }
 function h(e, t) {
     var n, r;
-    let { message: o } = t,
-        { message: l } = e;
-    return (0, c.Z)(e, t, ['message']) && o.content === l.content && o.state === l.state && (null == (n = o.editedTimestamp) ? void 0 : n.toString()) === (null == (r = l.editedTimestamp) ? void 0 : r.toString());
+    let { message: l } = t,
+        { message: o } = e;
+    return (0, c.Z)(e, t, ['message']) && l.content === o.content && l.state === o.state && (null == (n = l.editedTimestamp) ? void 0 : n.toString()) === (null == (r = o.editedTimestamp) ? void 0 : r.toString());
 }
-let O = o.memo(function (e) {
+let O = l.memo(function (e) {
     var t;
-    let { className: n, message: l, children: s, content: c, onUpdate: m, contentRef: h, compact: O } = e,
-        y = l.state === p.yb.SEND_FAILED,
-        j = l.state === p.yb.SENDING,
-        v = l.isCommandType(),
-        P = null == (t = l.editedTimestamp) ? void 0 : t.toString(),
-        x = o.useRef(!1);
+    let { className: n, message: o, children: s, content: c, onUpdate: m, contentRef: h, compact: O } = e,
+        y = o.state === p.yb.SEND_FAILED,
+        j = o.state === p.yb.SENDING,
+        v = o.isCommandType(),
+        P = null == (t = o.editedTimestamp) ? void 0 : t.toString(),
+        x = l.useRef(!1);
     return (
-        o.useLayoutEffect(() => {
+        l.useLayoutEffect(() => {
             x.current ? null != m && m() : (x.current = !0);
-        }, [m, l.content, c, P, s]),
+        }, [m, o.content, c, P, s]),
         (0, r.jsxs)('div', {
-            id: (0, u.ut)(l),
+            id: (0, u.ut)(o),
             ref: h,
             className: i()(n, f.markup, {
                 [g.messageContent]: !0,
                 [g.isSending]: j && !v,
-                [g.markupRtl]: 'rtl' === a()(l.content),
+                [g.markupRtl]: 'rtl' === a()(o.content),
                 [g.isFailed]: y,
-                [g.isUnsupported]: l.isUnsupported
+                [g.isUnsupported]: o.isUnsupported
             }),
             children: [
-                null != s ? s : b(l, c),
+                null != s ? s : b(o, c),
                 (0, r.jsx)(d.Z, {
-                    message: l,
+                    message: o,
                     compact: O,
                     location: d.H.WITH_CONTENT
                 })

@@ -38,7 +38,7 @@ function g(e) {
 }
 let m = a().debounce(s.ZP.trackWithMetadata, 500),
     b = (e) => {
-        let { guild: t, title: n, message: l, image: a, type: u, imageMarginX: d, imageMarginTop: g, trackingSource: b, undismissable: _, onDismissed: E, onClick: O, cta: y, ctaColor: I } = e;
+        let { guild: t, title: n, message: l, image: a, type: u, imageMarginX: d, imageMarginTop: g, trackingSource: b, undismissable: _, onDismissed: O, onClick: E, cta: y, ctaColor: I } = e;
         i.useEffect(() => {
             m(p.rMx.CHANNEL_NOTICE_VIEWED, {
                 notice_type: u,
@@ -59,7 +59,7 @@ let m = a().debounce(s.ZP.trackWithMetadata, 500),
                               guild_id: t.id,
                               notice_type: u
                           }),
-                          null == O || O();
+                          null == E || E();
                   },
                   fullWidth: !0,
                   color: I,
@@ -73,7 +73,7 @@ let m = a().debounce(s.ZP.trackWithMetadata, 500),
                     ? null
                     : (0, r.jsx)(o.P3F, {
                           onClick: () => {
-                              s.ZP.trackWithMetadata(p.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: u }), null == E || E();
+                              s.ZP.trackWithMetadata(p.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: u }), null == O || O();
                           },
                           className: f.close,
                           'aria-label': h.intl.string(h.t.WAI6xs),

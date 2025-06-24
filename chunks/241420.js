@@ -1,9 +1,9 @@
-n.d(t, { default: () => g });
+n.d(t, { default: () => m });
 var a = n(255367);
 n(73800);
 var r = n(481060),
-    o = n(546957),
-    i = n(190014),
+    i = n(546957),
+    o = n(190014),
     c = n(301812),
     l = n(988043),
     s = n(919539),
@@ -12,7 +12,7 @@ var r = n(481060),
     _ = n(671364);
 function p(e) {
     let { guildId: t } = e;
-    return (0, a.jsxs)(o.Z, {
+    return (0, a.jsxs)(i.Z, {
         children: [
             (0, a.jsx)(l.Z, {
                 ingress: u.f4.SERVER_PRIVACY_MODAL,
@@ -26,7 +26,7 @@ function p(e) {
                 ingress: u.f4.SERVER_PRIVACY_MODAL,
                 guildId: t
             }),
-            (0, a.jsx)(i.Z, {
+            (0, a.jsx)(o.Z, {
                 ingress: u.f4.SERVER_PRIVACY_MODAL,
                 guildId: t
             }),
@@ -38,19 +38,19 @@ function p(e) {
         ]
     });
 }
-function g(e) {
-    let { guild: t, transitionState: n, onClose: o } = e,
-        i = ''.concat(d.intl.string(d.t.BayiAg), '\u2014').concat(null != t ? t.toString() : '??');
+function m(e) {
+    let { guild: t, transitionState: n, onClose: i } = e,
+        o = ''.concat(d.intl.string(d.t.BayiAg), '\u2014').concat(null != t ? t.toString() : '??');
     return (0, a.jsxs)(r.Y0X, {
         transitionState: n,
         size: r.CgR.SMALL,
-        'aria-label': i,
+        'aria-label': o,
         parentComponent: 'PrivacySettings',
         children: [
             (0, a.jsx)(r.xBx, {
                 children: (0, a.jsx)(r.X6q, {
                     variant: 'heading-lg/semibold',
-                    children: i
+                    children: o
                 })
             }),
             (0, a.jsx)(r.hzk, {
@@ -59,7 +59,7 @@ function g(e) {
             }),
             (0, a.jsx)(r.mzw, {
                 children: (0, a.jsx)(r.zxk, {
-                    onClick: () => o(),
+                    onClick: () => i(),
                     children: d.intl.string(d.t.i4jeWV)
                 })
             })

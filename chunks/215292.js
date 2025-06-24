@@ -1,5 +1,5 @@
 e.d(n, {
-    F: () => _,
+    F: () => L,
     Z: () => g
 }),
     e(388685);
@@ -11,37 +11,37 @@ var i = e(255367),
     d = e(881052),
     c = e(600164),
     o = e(313201),
-    C = e(565138),
-    m = e(984933),
+    m = e(565138),
+    C = e(984933),
     p = e(430824),
     u = e(388032),
-    L = e(78389);
-function _(t) {
-    let { createdGuildId: n, hasFooter: e = !0, onClose: _, onChannelPromptCompleted: g, isSlideReady: x } = t,
+    _ = e(78389);
+function L(t) {
+    let { createdGuildId: n, hasFooter: e = !0, onClose: L, onChannelPromptCompleted: g, isSlideReady: x } = t,
         [T, E] = l.useState(''),
         [h, I] = l.useState(null),
         [G, D] = l.useState(!1),
         y = (0, o.Dt)(),
-        U = (0, s.e7)([p.Z], () => p.Z.getGuild(n), [n]),
-        z = l.useRef(null);
+        z = (0, s.e7)([p.Z], () => p.Z.getGuild(n), [n]),
+        U = l.useRef(null);
     l.useEffect(() => {
         var t;
-        x && (null == (t = z.current) || t.focus());
+        x && (null == (t = U.current) || t.focus());
     }, [x]);
     let N = l.useCallback(
             async (t) => {
-                if ((t.preventDefault(), null == U)) return;
+                if ((t.preventDefault(), null == z)) return;
                 D(!0), I(null);
-                let n = m.ZP.getDefaultChannel(U.id);
+                let n = C.ZP.getDefaultChannel(z.id);
                 try {
                     let t = u.intl.formatToPlainString(u.t.V4lepK, { topic: T });
-                    await r.Z.createTextChannel(U.id, T, null == n ? void 0 : n.parent_id, t), g();
+                    await r.Z.createTextChannel(z.id, T, null == n ? void 0 : n.parent_id, t), g();
                 } catch (t) {
                     I(new d.yZ(t));
                 }
                 D(!1);
             },
-            [U, T, g]
+            [z, T, g]
         ),
         j = (0, i.jsxs)(i.Fragment, {
             children: [
@@ -53,7 +53,7 @@ function _(t) {
                     children: u.intl.string(u.t.i4jeWV)
                 }),
                 (0, i.jsx)(a.zxk, {
-                    className: L.skipButton,
+                    className: _.skipButton,
                     look: a.zxk.Looks.BLANK,
                     size: a.zxk.Sizes.MIN,
                     onClick: g,
@@ -65,37 +65,37 @@ function _(t) {
         content: (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)(a.xBx, {
-                    className: L.header,
+                    className: _.header,
                     direction: c.Z.Direction.VERTICAL,
                     separator: !1,
                     children: [
-                        null != U && (0, i.jsx)(C.Z, { guild: U }),
+                        null != z && (0, i.jsx)(m.Z, { guild: z }),
                         (0, i.jsx)(a.Text, {
-                            className: L.guildName,
+                            className: _.guildName,
                             color: 'header-primary',
                             variant: 'text-sm/semibold',
-                            children: null == U ? void 0 : U.name
+                            children: null == z ? void 0 : z.name
                         }),
                         (0, i.jsx)(a.X6q, {
-                            className: L.title,
+                            className: _.title,
                             variant: 'heading-sm/semibold',
                             children: u.intl.string(u.t['8VRa7e'])
                         }),
                         (0, i.jsx)(a.Text, {
-                            className: L.subtitle,
+                            className: _.subtitle,
                             color: 'header-secondary',
                             variant: 'text-md/normal',
                             children: u.intl.string(u.t['+855Pj'])
                         }),
-                        null != _ &&
+                        null != L &&
                             (0, i.jsx)(a.olH, {
-                                className: L.closeButton,
-                                onClick: _
+                                className: _.closeButton,
+                                onClick: L
                             })
                     ]
                 }),
                 (0, i.jsxs)(a.hzk, {
-                    className: L.channelPrompt,
+                    className: _.channelPrompt,
                     children: [
                         (0, i.jsx)('form', {
                             onSubmit: N,
@@ -110,7 +110,7 @@ function _(t) {
                                     id: y,
                                     onChange: E,
                                     placeholder: u.intl.string(u.t.xGOYAw),
-                                    inputRef: z
+                                    inputRef: U
                                 })
                             })
                         }),
@@ -130,6 +130,6 @@ function _(t) {
     };
 }
 function g(t) {
-    let { content: n } = _(t);
+    let { content: n } = L(t);
     return n;
 }

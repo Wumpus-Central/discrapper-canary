@@ -9,15 +9,15 @@ var a = n(255367),
     d = n(481060),
     u = n(570140),
     m = n(665149),
-    x = n(886118),
-    p = n(301801),
+    p = n(886118),
+    x = n(301801),
     h = n(4912),
     b = n(572004),
     f = n(55935),
     v = n(428530),
-    g = n(257785),
-    j = n(484036),
-    _ = n(681619),
+    _ = n(257785),
+    g = n(484036),
+    j = n(681619),
     y = n(621060),
     C = n(981631),
     N = n(248520),
@@ -54,7 +54,7 @@ function S(e) {
             [t]
         );
     return (0, a.jsx)(d.zJl, {
-        children: (0, a.jsx)(_.Z, {
+        children: (0, a.jsx)(j.Z, {
             columns: T,
             data: n
         })
@@ -71,10 +71,10 @@ let P = [
                 r = c()(n.createdAt);
             return (0, a.jsxs)(a.Fragment, {
                 children: [
-                    (0, a.jsxs)(g.E, {
+                    (0, a.jsxs)(_.E, {
                         className: N.actionProperties,
                         children: [
-                            (0, a.jsx)(g.Z9, {
+                            (0, a.jsx)(_.Z9, {
                                 name: 'Created at',
                                 children: (0, a.jsx)('time', {
                                     dateTime: null == (t = n.createdAt) ? void 0 : t.toISOString(),
@@ -82,7 +82,7 @@ let P = [
                                     children: (0, f.Y4)(r)
                                 })
                             }),
-                            (0, a.jsxs)(g.Z9, {
+                            (0, a.jsxs)(_.Z9, {
                                 name: 'Total Time',
                                 children: [E(n.totalTime), ' ms']
                             })
@@ -148,7 +148,7 @@ function I(e) {
             [t]
         ),
         { TabBar: s, renderSelectedTab: o } = (0, y.ZP)({ tabs: l }, [l]);
-    return (0, a.jsxs)(j.Z, {
+    return (0, a.jsxs)(g.Z, {
         className: N.subPanel,
         minHeight: 100,
         initialHeight: n,
@@ -215,7 +215,7 @@ let w = [
         }
     ],
     k = {
-        searchType: x.S.REGEX,
+        searchType: p.S.REGEX,
         searchStringGenerator: (e) => {
             let { actionLog: t } = e;
             return t.name;
@@ -254,13 +254,13 @@ function R() {
             [l]
         ),
         [c, m] = r.useState(o),
-        [x, h] = r.useState(o),
+        [p, h] = r.useState(o),
         [b, f] = r.useState(!1),
-        [v, g] = r.useState(),
-        j = r.useCallback((e) => {
+        [v, _] = r.useState(),
+        g = r.useCallback((e) => {
             h(e);
         }, []);
-    (0, p.BO)(t, b ? c : o, j, k);
+    (0, x.BO)(t, b ? c : o, g, k);
     let y = r.useCallback(
             (e) => {
                 m(o), f(e);
@@ -268,7 +268,7 @@ function R() {
             [o]
         ),
         C = t.trim().length > 0,
-        E = r.useMemo(() => (C ? x : b ? c : o), [o, x, C, b, c]);
+        E = r.useMemo(() => (C ? p : b ? c : o), [o, p, C, b, c]);
     return (0, a.jsxs)('div', {
         ref: e,
         className: i()(O.panel, N.panel),
@@ -293,11 +293,11 @@ function R() {
                     })
                 ]
             }),
-            (0, a.jsx)(_.Z, {
+            (0, a.jsx)(j.Z, {
                 columns: w,
                 data: E,
                 selectedRowKey: null == v ? void 0 : v.id.toString(),
-                onClickRow: (e) => g(e.actionLog)
+                onClickRow: (e) => _(e.actionLog)
             }),
             null != v &&
                 (0, a.jsx)(I, {

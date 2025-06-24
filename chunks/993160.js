@@ -13,18 +13,18 @@ var r = n(481060),
     p = n(562831),
     m = n(981631);
 function b(e) {
-    let { user: t, currentUser: n, guildId: b, channelId: y, displayProfile: _, relationshipType: x, onClose: h } = e,
+    let { user: t, currentUser: n, guildId: b, channelId: x, displayProfile: y, relationshipType: _, onClose: h } = e,
         { newestAnalyticsLocation: g } = (0, c.ZP)(),
         j = (0, l.Z)({
             user: t,
             guildId: b,
-            channelId: y,
-            displayProfile: _,
+            channelId: x,
+            displayProfile: y,
             onClose: h
         }),
         { gameFriends: I, hasOutgoingPendingGameFriends: v, hasIncomingPendingGameFriends: O } = (0, p.H)({ userId: t.id }),
         P = I.length > 0 || v || O;
-    return x === m.OGo.BLOCKED
+    return _ === m.OGo.BLOCKED
         ? null
         : t.id === n.id
           ? (0, o.jsxs)(o.Fragment, {
@@ -62,7 +62,7 @@ function b(e) {
                       })
                   ]
               })
-            : x === m.OGo.PENDING_INCOMING
+            : _ === m.OGo.PENDING_INCOMING
               ? (0, o.jsxs)(o.Fragment, {
                     children: [
                         (0, o.jsx)(s.Z, {
@@ -80,7 +80,7 @@ function b(e) {
                         })
                     ]
                 })
-              : x === m.OGo.FRIEND || x === m.OGo.PENDING_OUTGOING
+              : _ === m.OGo.FRIEND || _ === m.OGo.PENDING_OUTGOING
                 ? (0, o.jsxs)(o.Fragment, {
                       children: [
                           (0, o.jsx)(s.Z, {
@@ -93,7 +93,7 @@ function b(e) {
                           (0, o.jsx)(f.g, {
                               type: 'icon',
                               user: t,
-                              relationshipType: x,
+                              relationshipType: _,
                               shouldShowTooltip: !0,
                               themeColor: 'secondary',
                               analyticsLocation: g
@@ -107,7 +107,7 @@ function b(e) {
                           })
                       ]
                   })
-                : x === m.OGo.NONE && P
+                : _ === m.OGo.NONE && P
                   ? (0, o.jsxs)(o.Fragment, {
                         children: [
                             (0, o.jsx)(s.Z, {

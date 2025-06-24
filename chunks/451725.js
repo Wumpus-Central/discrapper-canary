@@ -2,17 +2,17 @@ n.d(t, { Z: () => u }), n(388685);
 var r = n(255367),
     s = n(284539),
     o = n(18582),
-    a = n(944548),
-    i = n(477839),
+    i = n(944548),
+    a = n(477839),
     c = n(125500);
 function l(e) {
     let { cursor: t, selected: n, onClick: s } = e,
-        l = (0, i.Ly)()[t];
-    return (0, r.jsx)(a.Z, {
+        l = (0, a.Ly)()[t];
+    return (0, r.jsx)(i.Z, {
         text: l.name,
         borderColor: 'white',
         children: (e) => {
-            var t, a;
+            var t, i;
             return (0, r.jsx)(
                 o.Z,
                 ((t = (function (e) {
@@ -40,7 +40,7 @@ function l(e) {
                     }
                     return e;
                 })({}, e)),
-                (a = a =
+                (i = i =
                     {
                         onClick: s,
                         className: c.cursor,
@@ -50,7 +50,7 @@ function l(e) {
                         })
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(a))
+                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -58,8 +58,8 @@ function l(e) {
                               n.push.apply(n, r);
                           }
                           return n;
-                      })(Object(a)).forEach(function (e) {
-                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(a, e));
+                      })(Object(i)).forEach(function (e) {
+                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e));
                       }),
                 t)
             );
@@ -68,11 +68,11 @@ function l(e) {
 }
 function u() {
     var e;
-    let [t, n] = (0, s.Z)(i.yN.CURSORS),
-        o = null != (e = t.selectedCursor) ? e : i.Vx.DEFAULT;
+    let [t, n] = (0, s.Z)(a.yN.CURSORS),
+        o = null != (e = t.selectedCursor) ? e : a.Vx.DEFAULT;
     return (0, r.jsx)('div', {
         className: c.cursors,
-        children: i.Wq.map((e) =>
+        children: a.Wq.map((e) =>
             (0, r.jsx)(
                 l,
                 {

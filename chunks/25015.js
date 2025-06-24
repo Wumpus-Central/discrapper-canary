@@ -1,7 +1,7 @@
 n.d(t, { Z: () => b });
 var r = n(255367),
-    o = n(73800),
-    l = n(905405),
+    l = n(73800),
+    o = n(905405),
     i = n(626135),
     s = n(750030),
     a = n(937889),
@@ -11,12 +11,12 @@ var r = n(255367),
     p = n(981631),
     m = n(388032),
     g = n(875231);
-let f = o.lazy(() => n.e('85831').then(n.bind(n, 120314)));
+let f = l.lazy(() => n.e('85831').then(n.bind(n, 120314)));
 function b(e, t) {
     let { hideSimpleEmbedContent: b, formatInline: h = !1, noStyleAndInteraction: O = !1, isInteracting: y = !1, allowHeading: j = !1, allowList: v = !1, allowLinks: P = !1, allowDevLinks: x = !1, previewLinkTarget: C = !1, viewingChannelId: w } = t,
-        S = (0, l.p)(),
+        S = (0, o.p)(),
         N = (0, d.o)({ location: 'useMessageRenderedContent' });
-    return o.useMemo(() => {
+    return l.useMemo(() => {
         if (null != e.customRenderedContent) return e.customRenderedContent;
         if (e.isUnsupported)
             return {
@@ -34,7 +34,7 @@ function b(e, t) {
         }
         return N.enabled
             ? {
-                  content: (0, r.jsx)(o.Suspense, {
+                  content: (0, r.jsx)(l.Suspense, {
                       children: (0, r.jsx)(u.v.Provider, {
                           value: {
                               messageId: e.id,

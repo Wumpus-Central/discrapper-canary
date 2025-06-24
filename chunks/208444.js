@@ -1,4 +1,4 @@
-n.d(t, { z: () => E });
+n.d(t, { z: () => x });
 var r = n(73800),
     i = n(442837),
     l = n(783097),
@@ -15,18 +15,18 @@ var r = n(73800),
     g = n(981631),
     _ = n(49898),
     b = n(388032);
-function E(e, t) {
-    let { isDiscoverable: n, customInstallUrl: E, installParams: y, integrationTypesConfig: x } = e,
+function x(e, t) {
+    let { isDiscoverable: n, customInstallUrl: x, installParams: y, integrationTypesConfig: E } = e,
         v = (0, f.Eb)({
-            customInstallUrl: E,
+            customInstallUrl: x,
             installParams: y,
-            integrationTypesConfig: x
+            integrationTypesConfig: E
         }),
-        O = (0, i.e7)([p.Z], () => {
+        C = (0, i.e7)([p.Z], () => {
             var e;
             return null != (e = p.Z.getGuildId()) ? e : void 0;
         }),
-        C = (0, i.e7)(
+        O = (0, i.e7)(
             [c.Z, u.Z, d.Z],
             () => {
                 let e = c.Z.getChannel(d.Z.getChannelId());
@@ -34,7 +34,7 @@ function E(e, t) {
             },
             []
         ),
-        j = (0, l.PZ)(e, O) && C,
+        j = (0, l.PZ)(e, C) && O,
         S = n || j;
     return r.useMemo(
         () =>
@@ -59,15 +59,15 @@ function E(e, t) {
                             null == t || t(h.j_.ADD_APP),
                                 (0, m.L)({
                                     applicationId: e.id,
-                                    customInstallUrl: E,
+                                    customInstallUrl: x,
                                     installParams: y,
-                                    integrationTypesConfig: x,
-                                    guildId: O,
+                                    integrationTypesConfig: E,
+                                    guildId: C,
                                     source: 'app_message_embed'
                                 });
                         }
                     }
                   : void 0,
-        [e.id, j, S, E, y, x, v, t, O]
+        [e.id, j, S, x, y, E, v, t, C]
     );
 }

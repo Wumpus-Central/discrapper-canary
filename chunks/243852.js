@@ -15,8 +15,8 @@ var r,
     m = n(780570),
     b = n(314897),
     _ = n(77498),
-    E = n(283595),
-    O = n(19780),
+    O = n(283595),
+    E = n(19780),
     y = n(944486),
     I = n(981631);
 let v = 'ActivityTrackingStore',
@@ -36,10 +36,10 @@ function A(e) {
         n = Date.now(),
         r = null != e.updatedAt ? n - e.updatedAt : 0;
     r > C + S && (r = 0);
-    let i = (0, m.OT)(e.applicationId, E.Z),
+    let i = (0, m.OT)(e.applicationId, O.Z),
         l = y.Z.getVoiceChannelId(),
         a = b.default.getSessionId(),
-        o = O.Z.getMediaSessionId();
+        o = E.Z.getMediaSessionId();
     d.Z.updateActivity({
         applicationId: e.applicationId,
         distributor: e.isDiscordApplication ? I.GQo.DISCORD : e.distributor,
@@ -78,24 +78,24 @@ function x() {
     for (let e of Object.keys(N)) j(N[e]);
     P = !1;
 }
-class L extends (i = o.ZP.Store) {
+class w extends (i = o.ZP.Store) {
     initialize() {
-        this.waitFor(h.ZP, f.Z, E.Z), this.syncWith([f.Z], Z);
+        this.waitFor(h.ZP, f.Z, O.Z), this.syncWith([f.Z], Z);
     }
     getActivities() {
         return N;
     }
 }
 (a = 'ActivityTrackingStore'),
-    (l = 'displayName') in L
-        ? Object.defineProperty(L, l, {
+    (l = 'displayName') in w
+        ? Object.defineProperty(w, l, {
               value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (L[l] = a),
-    new L(u.Z, {
+        : (w[l] = a),
+    new w(u.Z, {
         RUNNING_GAMES_CHANGE: () => Z(),
         CONNECTION_OPEN: function () {
             if (P) return !1;

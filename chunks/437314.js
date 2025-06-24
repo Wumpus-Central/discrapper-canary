@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => E,
-    j: () => g
+    Z: () => _,
+    j: () => f
 }),
     n(415506),
     n(388685);
@@ -10,12 +10,11 @@ var r,
     a = n(748780),
     o = n(442837),
     s = n(481060),
-    c = n(540059),
-    u = n(210887),
-    d = n(981631),
-    p = n(388032),
-    h = n(332295);
-function f(e, t, n) {
+    c = n(210887),
+    u = n(981631),
+    d = n(388032),
+    p = n(332295);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,8 +27,8 @@ function f(e, t, n) {
         e
     );
 }
-var g = (((r = {}).SECTION_NO_RESULTS = 'SECTION_NO_RESULTS'), r);
-let m = Object.freeze({
+var f = (((r = {}).SECTION_NO_RESULTS = 'SECTION_NO_RESULTS'), r);
+let g = Object.freeze({
         SECTION_ALL: {
             lightSrc: n(900933),
             darkSrc: n(67764),
@@ -38,11 +37,11 @@ let m = Object.freeze({
             renderContent: (e) =>
                 (0, i.jsxs)(l.Fragment, {
                     children: [
-                        (0, i.jsx)(s.OZU, { note: p.intl.string(p.t.Y4vMY2) }),
+                        (0, i.jsx)(s.OZU, { note: d.intl.string(d.t.Y4vMY2) }),
                         (0, i.jsx)(s.zxk, {
-                            className: h.button,
+                            className: p.button,
                             onClick: e,
-                            children: p.intl.string(p.t.w5uwoK)
+                            children: d.intl.string(d.t.w5uwoK)
                         })
                     ]
                 })
@@ -52,14 +51,14 @@ let m = Object.freeze({
             darkSrc: n(917847),
             width: 421,
             height: 218,
-            renderContent: () => (0, i.jsx)(s.OZU, { note: p.intl.string(p.t.v7HbiY) })
+            renderContent: () => (0, i.jsx)(s.OZU, { note: d.intl.string(d.t.v7HbiY) })
         },
         SECTION_BLOCKED: {
             lightSrc: n(459505),
             darkSrc: n(356634),
             width: 433,
             height: 232,
-            renderContent: () => (0, i.jsx)(s.OZU, { note: p.intl.string(p.t['9xdyWF']) })
+            renderContent: () => (0, i.jsx)(s.OZU, { note: d.intl.string(d.t['9xdyWF']) })
         },
         SECTION_PENDING: {
             lightSrc: n(979770),
@@ -68,20 +67,20 @@ let m = Object.freeze({
             height: 200,
             renderContent: (e, t) =>
                 (0, i.jsxs)('div', {
-                    className: h.emptyStateContainer,
+                    className: p.emptyStateContainer,
                     children: [
-                        (0, i.jsx)(s.OZU, { note: p.intl.string(p.t['aCYQ+P']) }),
+                        (0, i.jsx)(s.OZU, { note: d.intl.string(d.t['aCYQ+P']) }),
                         null != e &&
                             (0, i.jsx)(s.zxk, {
                                 color: s.zxk.Colors.PRIMARY,
                                 look: s.zxk.Looks.OUTLINED,
                                 size: s.zxk.Sizes.TINY,
                                 onClick: e,
-                                className: h.spamButton,
+                                className: p.spamButton,
                                 children: (0, i.jsx)(s.Text, {
                                     variant: 'text-xs/medium',
                                     color: 'text-muted',
-                                    children: t ? p.intl.string(p.t.R40bU1) : p.intl.string(p.t.rXl8fn)
+                                    children: t ? d.intl.string(d.t.R40bU1) : d.intl.string(d.t.rXl8fn)
                                 })
                             })
                     ]
@@ -92,92 +91,71 @@ let m = Object.freeze({
             darkSrc: n(138715),
             width: 415,
             height: 200,
-            renderContent: () => (0, i.jsx)(s.OZU, { note: p.intl.string(p.t['vgI/EB']) })
+            renderContent: () => (0, i.jsx)(s.OZU, { note: d.intl.string(d.t['vgI/EB']) })
         },
         SECTION_NO_RESULTS: {
             lightSrc: n(55346),
             darkSrc: n(917847),
             width: 421,
             height: 218,
-            renderContent: () => (0, i.jsx)(s.OZU, { note: p.intl.string(p.t['7sW4h4']) })
+            renderContent: () => (0, i.jsx)(s.OZU, { note: d.intl.string(d.t['7sW4h4']) })
         }
     }),
-    b = (e) => {
+    m = (e) => {
         let { theme: t } = e,
-            n = p.intl.string(p.t['oi+B4u']),
-            r = m.SECTION_ALL,
-            l = (0, c.Q3)('AddFriendEmpty');
-        return (0, i.jsxs)(s.ubH, {
+            n = d.intl.string(d.t['oi+B4u']);
+        return (0, i.jsx)(s.ubH, {
             theme: t,
-            children: [
-                !l &&
-                    (0, i.jsx)(s.oxh, {
-                        width: r.width,
-                        height: r.height,
-                        lightSrc: r.lightSrc,
-                        darkSrc: r.darkSrc
-                    }),
-                (0, i.jsx)(s.OZU, { note: n })
-            ]
+            children: (0, i.jsx)(s.OZU, { note: n })
         });
     };
-class _ extends l.PureComponent {
+class b extends l.PureComponent {
     render() {
         let { type: e, onClick: t, theme: n } = this.props,
             r = { opacity: this.state.opacity },
             l = (function (e) {
                 switch (e) {
-                    case d.pJs.ADD_FRIEND:
-                    case d.pJs.ALL:
-                        return m.SECTION_ALL;
-                    case d.pJs.ONLINE:
-                        return m.SECTION_ONLINE;
-                    case d.pJs.PENDING:
-                        return m.SECTION_PENDING;
-                    case d.pJs.SUGGESTIONS:
-                        return m.SECTION_SUGGESTIONS;
+                    case u.pJs.ADD_FRIEND:
+                    case u.pJs.ALL:
+                        return g.SECTION_ALL;
+                    case u.pJs.ONLINE:
+                        return g.SECTION_ONLINE;
+                    case u.pJs.PENDING:
+                        return g.SECTION_PENDING;
+                    case u.pJs.SUGGESTIONS:
+                        return g.SECTION_SUGGESTIONS;
                     case 'SECTION_NO_RESULTS':
-                        return m.SECTION_NO_RESULTS;
+                        return g.SECTION_NO_RESULTS;
                     default:
                         throw Error('FriendsEmptyState: Invalid empty state');
                 }
             })(e);
-        return e === d.pJs.ADD_FRIEND
+        return e === u.pJs.ADD_FRIEND
             ? (0, i.jsx)(a.Z.div, {
-                  className: h.friendsEmpty,
+                  className: p.friendsEmpty,
                   style: r,
-                  children: (0, i.jsx)(b, { theme: n })
+                  children: (0, i.jsx)(m, { theme: n })
               })
             : (0, i.jsx)(a.Z.div, {
-                  className: h.friendsEmpty,
+                  className: p.friendsEmpty,
                   style: r,
-                  children: (0, i.jsxs)(s.ubH, {
+                  children: (0, i.jsx)(s.ubH, {
                       theme: n,
-                      children: [
-                          !this.isDesktopVisualRefreshEnabled &&
-                              (0, i.jsx)(s.oxh, {
-                                  width: l.width,
-                                  height: l.height,
-                                  lightSrc: l.lightSrc,
-                                  darkSrc: l.darkSrc
-                              }),
-                          l.renderContent(t)
-                      ]
+                      children: l.renderContent(t)
                   })
               });
     }
     constructor(...e) {
         super(...e),
-            f(this, 'isDesktopVisualRefreshEnabled', (0, c.i9)('FriendsEmptyState')),
-            f(this, 'state', { opacity: new a.Z.Value(1) }),
-            f(this, 'componentWillEnter', (e) => {
+            h(this, 'state', { opacity: new a.Z.Value(1) }),
+            h(this, 'componentWillEnter', (e) => {
                 this.state.opacity.setValue(0),
                     a.Z.timing(this.state.opacity, {
                         toValue: 1,
                         duration: 250
                     }).start(e);
             }),
-            f(this, 'componentWillLeave', (e) => {
+            h(this, 'componentWillLeave', (e) => {
                 a.Z.timing(this.state.opacity, {
                     toValue: 0,
                     duration: 250
@@ -185,4 +163,4 @@ class _ extends l.PureComponent {
             });
     }
 }
-let E = o.ZP.connectStores([u.Z], () => ({ theme: u.Z.theme }), { forwardRef: !0 })(_);
+let _ = o.ZP.connectStores([c.Z], () => ({ theme: c.Z.theme }), { forwardRef: !0 })(b);

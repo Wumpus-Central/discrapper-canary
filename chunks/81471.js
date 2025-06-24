@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(699516),
     b = n(868807),
     _ = n(981631),
-    E = n(217702),
-    O = n(388032),
+    O = n(217702),
+    E = n(388032),
     y = n(391587),
     I = n(73433);
 let v = i.memo(function (e) {
@@ -50,7 +50,7 @@ let v = i.memo(function (e) {
             className: y.messageReplacement,
             variant: 'text-sm/normal',
             color: 'text-muted',
-            children: O.intl.string(O.t.BZHld3)
+            children: E.intl.string(E.t.BZHld3)
         });
     else if (n)
         if (null != v && S)
@@ -58,20 +58,20 @@ let v = i.memo(function (e) {
                 className: y.messageReplacement,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
-                children: O.intl.string(O.t['WPe+xM'])
+                children: E.intl.string(E.t['WPe+xM'])
             });
         else if (null != v && N)
             A = (0, r.jsx)(s.Text, {
                 className: y.messageReplacement,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
-                children: O.intl.string(O.t.uxrh1N)
+                children: E.intl.string(E.t.uxrh1N)
             });
         else if (null != v) {
             let { contentPlaceholder: e, renderedContent: t } = (0, h.f)(v, j, S, N, a()(y.messageContent, I.inlineFormat), {
                 leadingIconClass: y.messageContentIcon,
                 trailingIconClass: y.messageContentIcon,
-                iconSize: E.WW
+                iconSize: O.WW
             });
             A =
                 null != t
@@ -93,7 +93,7 @@ let v = i.memo(function (e) {
                 className: y.messageReplacement,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
-                children: O.intl.string(O.t['0KfDxM'])
+                children: E.intl.string(E.t['0KfDxM'])
             });
     else A = null;
     return (0, r.jsx)(c.aQ.Provider, {

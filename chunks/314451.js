@@ -9,7 +9,7 @@ var r = n(255367),
     u = n(63063),
     d = n(665149),
     p = n(388032);
-let m = () =>
+let h = () =>
     (0, a.ZDy)(async () => {
         let { default: e } = await n.e('83051').then(n.bind(n, 115072));
         return (t) =>
@@ -45,29 +45,29 @@ let m = () =>
 function f(e) {
     let { className: t } = e,
         n = (0, l.e7)([c.Z], () => c.Z.isDeveloper),
-        [f, h] = i.useState(!1),
-        [g, _] = i.useState(0),
-        b = i.useRef(null),
-        E = (e) => {
-            clearTimeout(g),
-                _(
+        [f, g] = i.useState(!1),
+        [m, b] = i.useState(0),
+        _ = i.useRef(null),
+        O = (e) => {
+            clearTimeout(m),
+                b(
                     setTimeout(() => {
-                        h(e);
+                        g(e);
                     }, 100)
                 );
         };
     return (0, r.jsx)('div', {
-        onMouseEnter: () => E(!0),
-        onMouseLeave: () => E(!1),
+        onMouseEnter: () => O(!0),
+        onMouseLeave: () => O(!1),
         children: (0, r.jsx)(a.yRy, {
-            targetElementRef: b,
+            targetElementRef: _,
             shouldShow: f,
             animation: a.yRy.Animation.NONE,
             position: 'bottom',
             align: 'right',
             autoInvert: !1,
-            onRequestOpen: () => h(!0),
-            onRequestClose: () => h(!1),
+            onRequestOpen: () => g(!0),
+            onRequestClose: () => g(!1),
             renderPopout: () =>
                 (function (e) {
                     let { onClose: t, isDiscordDeveloper: n } = e;
@@ -83,7 +83,7 @@ function f(e) {
                                     id: 'staff-help-bug-reporter',
                                     label: p.intl.string(p.t['5Lqopa']),
                                     icon: a.nnZ,
-                                    action: m
+                                    action: h
                                 }),
                                 n &&
                                     (0, r.jsx)(a.sNh, {
@@ -102,14 +102,14 @@ function f(e) {
                         })
                     });
                 })({
-                    onClose: () => h(!1),
+                    onClose: () => g(!1),
                     isDiscordDeveloper: n
                 }),
             children: (e, n) => {
                 let { isShown: i } = n;
                 return (0, r.jsx)(d.JO, {
-                    ref: b,
-                    onClick: m,
+                    ref: _,
+                    onClick: h,
                     icon: a.nnZ,
                     'aria-label': p.intl.string(p.t.cqEoj4),
                     selected: i,

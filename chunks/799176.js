@@ -2,8 +2,8 @@ n.d(t, { Z: () => x }), n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(120356),
-    a = n.n(o),
-    i = n(524979),
+    i = n.n(o),
+    a = n(524979),
     c = n(481060),
     l = n(100527),
     u = n(906732),
@@ -56,19 +56,19 @@ function x(e) {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
-            config: i.config.gentle
+            config: a.config.gentle
         });
     return (0, r.jsx)(u.Gt, {
         value: v,
         children: (0, r.jsxs)('div', {
-            className: a()(b.container, h[j]),
+            className: i()(b.container, h[j]),
             children: [
                 (0, r.jsx)('div', {
                     className: b.background,
                     children: (0, r.jsx)('div', { className: b.backgroundGradient })
                 }),
                 N((t, n) =>
-                    (0, r.jsx)(i.animated.div, {
+                    (0, r.jsx)(a.animated.div, {
                         style: t,
                         className: b.animationContainer,
                         children: n ? (0, r.jsx)(m.Z, y({}, e)) : (0, r.jsx)(p.Z, y({}, e))

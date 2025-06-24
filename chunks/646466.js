@@ -9,7 +9,7 @@ var a = n(255367),
     d = n(281598),
     u = n(206878),
     m = n(63874);
-function x(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
@@ -34,7 +34,7 @@ function x(e) {
     }
     return e;
 }
-let p = [
+let x = [
         {
             name: 'Preview',
             value: 'preview'
@@ -58,7 +58,7 @@ let p = [
             : (0, l.ZDy)(
                   async () => {
                       let { ShopAssetsPreviewInstructionModal: e } = await Promise.resolve().then(n.bind(n, 637443));
-                      return (t) => (0, a.jsx)(e, x({}, t));
+                      return (t) => (0, a.jsx)(e, p({}, t));
                   },
                   {
                       modalKey: s.g,
@@ -72,7 +72,7 @@ let p = [
             : (0, l.ZDy)(
                   async () => {
                       let { ShopPFXPreviewInstructionModal: e } = await Promise.resolve().then(n.bind(n, 637443));
-                      return (t) => (0, a.jsx)(e, x({}, t));
+                      return (t) => (0, a.jsx)(e, p({}, t));
                   },
                   {
                       modalKey: s.c,
@@ -80,7 +80,7 @@ let p = [
                   }
               );
     },
-    g = () => {
+    _ = () => {
         let e = (0, i.lb)(),
             { previewProfileEffectId: t, setPreviewProfileEffectId: n } = (0, o.N9)(),
             s = r.useMemo(
@@ -122,7 +122,7 @@ let p = [
             ]
         });
     },
-    j = () => {
+    g = () => {
         let { previewAvatarDecorationId: e, setPreviewAvatarDecorationId: t } = (0, o.N9)(),
             { avatarDecorationAssets: n } = (0, o.xq)(),
             i = r.useMemo(
@@ -154,7 +154,7 @@ let p = [
                   ]
               });
     },
-    _ = (e) => {
+    j = (e) => {
         let { clearAssets: t, clearIgnoredFiles: n } = e,
             { collectionAssets: i } = (0, o.xq)(),
             { deleteCollectionAsset: s, clearAssets: c } = (0, o.N9)(),
@@ -167,7 +167,7 @@ let p = [
                 [i]
             ),
             u = r.useCallback((e) => s(e), [s]),
-            x = r.useCallback(() => {
+            p = r.useCallback(() => {
                 c(), t(), n();
             }, [c, t, n]);
         return 0 === d.length
@@ -185,7 +185,7 @@ let p = [
                               (0, a.jsx)(l.zxk, {
                                   look: l.zxk.Looks.FILLED,
                                   size: l.zxk.Sizes.TINY,
-                                  onClick: x,
+                                  onClick: p,
                                   children: 'Clear All'
                               })
                           ]
@@ -261,8 +261,8 @@ let p = [
         let { validateShopAssetPackage: e, reset: t, validationComplete: n, warnings: i, errors: s } = (0, u.g)(),
             o = Object.entries(s),
             d = Object.entries(i),
-            x = o.length > 0,
-            p = d.length > 0,
+            p = o.length > 0,
+            x = d.length > 0,
             h = r.useCallback(
                 (n) => {
                     t(), e(n);
@@ -278,12 +278,12 @@ let p = [
                           children: [
                               (0, a.jsx)(l.Text, {
                                   variant: 'text-md/normal',
-                                  color: x ? 'text-danger' : 'text-normal',
+                                  color: p ? 'text-danger' : 'text-normal',
                                   children: ''.concat(o.length, ' errors')
                               }),
                               (0, a.jsx)(l.Text, {
                                   variant: 'text-md/normal',
-                                  color: p ? 'text-warning' : 'text-normal',
+                                  color: x ? 'text-warning' : 'text-normal',
                                   children: ''.concat(d.length, ' warnings')
                               }),
                               (0, a.jsx)(l.zxk, {
@@ -300,7 +300,7 @@ let p = [
                           children: 'Drop asset folder to validate.'
                       }),
                 (0, a.jsx)(l.LZC, { size: 16 }),
-                x &&
+                p &&
                     (0, a.jsxs)(a.Fragment, {
                         children: [
                             (0, a.jsx)(l.X6q, {
@@ -346,7 +346,7 @@ let p = [
                             })
                         ]
                     }),
-                p &&
+                x &&
                     (0, a.jsxs)(a.Fragment, {
                         children: [
                             (0, a.jsx)(l.X6q, {
@@ -397,16 +397,16 @@ let p = [
     },
     N = () => {
         let { previewEnabled: e, setPreviewEnabled: t, clearAssets: n } = (0, o.N9)(),
-            { ignoredFilenames: i, clearAssets: s, clearIgnoredFilenames: u, processAndUpsertAssets: x } = (0, d.hm)(),
-            p = r.useCallback(
+            { ignoredFilenames: i, clearAssets: s, clearIgnoredFilenames: u, processAndUpsertAssets: p } = (0, d.hm)(),
+            x = r.useCallback(
                 (e) => {
-                    n(), x(e);
+                    n(), p(e);
                 },
-                [x, n]
+                [p, n]
             );
         return (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, a.jsx)(c.L, { onDrop: p }),
+                (0, a.jsx)(c.L, { onDrop: x }),
                 (0, a.jsx)(l.Text, {
                     variant: 'text-md/normal',
                     children: 'Drop files in this panel to begin preview.'
@@ -431,9 +431,9 @@ let p = [
                         })
                     ]
                 }),
+                (0, a.jsx)(_, {}),
                 (0, a.jsx)(g, {}),
-                (0, a.jsx)(j, {}),
-                (0, a.jsx)(_, {
+                (0, a.jsx)(j, {
                     clearAssets: s,
                     clearIgnoredFiles: u
                 }),
@@ -450,7 +450,7 @@ let p = [
             className: m.container,
             children: [
                 (0, a.jsx)(l.sY7, {
-                    options: p,
+                    options: x,
                     value: e,
                     onChange: (e) => {
                         let { value: n } = e;

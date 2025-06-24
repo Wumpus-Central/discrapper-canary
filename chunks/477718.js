@@ -16,23 +16,23 @@ var r = n(255367),
     b = n(501801),
     _ = n(884902),
     y = n(271383),
-    C = n(430824),
-    x = n(5192),
+    x = n(430824),
+    C = n(5192),
     v = n(776767),
     j = n(981631),
     O = n(388032),
     E = n(54433),
     I = n(44946),
-    P = n(12740);
-function S(e) {
+    S = n(12740);
+function P(e) {
     var t;
     let { log: n, member: l, guild: o } = e,
         { analyticsLocations: d } = (0, p.ZP)(),
         m = g.nm(n),
-        C = g.QM(n),
+        x = g.QM(n),
         v = null == (t = g.V$(j.zUn.REASON, n)) ? void 0 : t.newValue,
-        P = g.J5(n),
-        S = (0, h.LJ)(n.id),
+        S = g.J5(n),
+        P = (0, h.LJ)(n.id),
         Z = (0, c.e7)([y.ZP], () => (null != n.userId ? y.ZP.getMember(l.guildId, n.userId) : null), [l.guildId, n.userId]),
         N = (0, _.X)(null == Z ? void 0 : Z.guildId, null == Z ? void 0 : Z.colorStrings, 'UserModInfoAuditLog'),
         T = i.useCallback(
@@ -62,7 +62,7 @@ function S(e) {
                                       children: [
                                           '@',
                                           (0, r.jsx)(u.PUh, {
-                                              name: x.ZP.getName(l.guildId, null, n.user),
+                                              name: C.ZP.getName(l.guildId, null, n.user),
                                               color: null != (t = null == Z ? void 0 : Z.colorString) ? t : void 0,
                                               roleColors: N
                                           })
@@ -88,11 +88,11 @@ function S(e) {
                                     color: 'header-primary',
                                     children: m
                                 }),
-                            null != C &&
+                            null != x &&
                                 (0, r.jsxs)(u.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'header-secondary',
-                                    children: ['(', 'string' == typeof C ? C : s()(C).fromNow(), ')']
+                                    children: ['(', 'string' == typeof x ? x : s()(x).fromNow(), ')']
                                 })
                         ]
                     }),
@@ -101,7 +101,7 @@ function S(e) {
                         children: (0, r.jsx)(u.Text, {
                             variant: 'text-sm/medium',
                             color: 'header-primary',
-                            children: S
+                            children: P
                         })
                     })
                 ]
@@ -123,7 +123,7 @@ function S(e) {
                     })
                 }),
             null == v &&
-                null != P &&
+                null != S &&
                 (0, r.jsx)('div', {
                     className: E.auditLogSecondaryContainer,
                     children: (0, r.jsxs)('div', {
@@ -134,13 +134,13 @@ function S(e) {
                                 variant: 'text-sm/normal',
                                 color: 'text-muted',
                                 tag: 'span',
-                                children: P
+                                children: S
                             })
                         ]
                     })
                 }),
             null == v &&
-                null == P &&
+                null == S &&
                 (0, r.jsx)('div', {
                     className: E.auditLogSecondaryContainer,
                     children: (0, r.jsx)('div', {
@@ -163,7 +163,7 @@ function S(e) {
 }
 function Z(e) {
     let { member: t } = e,
-        n = (0, c.e7)([C.Z], () => C.Z.getGuild(t.guildId), [t.guildId]),
+        n = (0, c.e7)([x.Z], () => x.Z.getGuild(t.guildId), [t.guildId]),
         l = (0, c.e7)(
             [m.Z],
             () => {
@@ -181,13 +181,13 @@ function Z(e) {
         ? null
         : (0, r.jsx)(u.xJW, {
               title: O.intl.string(O.t.flCxLi),
-              titleClassName: P.infoTitle,
+              titleClassName: S.infoTitle,
               children:
                   l.length > 0
                       ? (0, r.jsx)(v.WM, {
                             children: l.map((e) =>
                                 (0, r.jsx)(
-                                    S,
+                                    P,
                                     {
                                         log: e,
                                         member: t,

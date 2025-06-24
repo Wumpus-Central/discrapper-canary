@@ -11,7 +11,6 @@ e.exports = {
     headerDescription: 'headerDescription_a55fdc',
     header: 'header_a55fdc',
     cancelButton: 'cancelButton_a55fdc',
-    art: 'art_a55fdc',
     modalFooter: 'modalFooter_a55fdc',
     artContainer: 'artContainer_a55fdc',
     refreshedArt: 'refreshedArt_a55fdc',

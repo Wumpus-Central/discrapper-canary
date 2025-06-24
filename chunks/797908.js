@@ -11,8 +11,8 @@ var r = n(255367),
     p = n(275459);
 let m = function (e) {
     var t, n, m;
-    let { application: h, onSelectApplication: g, showCategory: _ = !1 } = e,
-        f = a.useRef(null),
+    let { application: h, onSelectApplication: g, showCategory: f = !1 } = e,
+        _ = a.useRef(null),
         b = null == (t = h.categories) ? void 0 : t[0],
         [x, v] = a.useState(!1),
         C = a.useCallback((e) => {
@@ -33,13 +33,13 @@ let m = function (e) {
                     : void 0,
             [x, h]
         ),
-        O = _ && null != b;
+        O = f && null != b;
     return (0, r.jsx)(i.$, {
-        innerRef: f,
+        innerRef: _,
         onChange: C,
         active: !x,
         children: (0, r.jsx)('div', {
-            ref: f,
+            ref: _,
             className: p.container,
             children: (0, r.jsxs)(o.Z, {
                 className: p.card,

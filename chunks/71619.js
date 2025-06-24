@@ -4,11 +4,11 @@ n.d(t, {
     s5: () => d
 });
 var r = n(442837),
-    o = n(271383),
-    l = n(594174),
+    l = n(271383),
+    o = n(594174),
     i = n(69882);
 function s(e) {
-    let t = (0, r.e7)([l.default], () => l.default.getCurrentUser());
+    let t = (0, r.e7)([o.default], () => o.default.getCurrentUser());
     return u(null == t ? void 0 : t.id, e);
 }
 function a(e, t, n) {
@@ -19,8 +19,8 @@ function c(e) {
     return [null != (t = null == e ? void 0 : e.communicationDisabledUntil) ? t : null, (0, i.b)(e)];
 }
 function u(e, t) {
-    return c((0, r.e7)([o.ZP], () => a(e, t, o.ZP), [t, e]));
+    return c((0, r.e7)([l.ZP], () => a(e, t, l.ZP), [t, e]));
 }
 function d(e, t) {
-    return c(a(e, t, o.ZP));
+    return c(a(e, t, l.ZP));
 }

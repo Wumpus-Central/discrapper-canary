@@ -8,7 +8,6 @@ e.exports = {
     channelTextAreaDisabled: 'channelTextAreaDisabled__74017',
     hasStackedBar: 'hasStackedBar__74017',
     inlineContainer: 'inlineContainer__74017',
-    accessoryBar: 'accessoryBar__74017',
     flushContainer: 'flushContainer__74017 inlineContainer__74017',
     inner: 'inner__74017',
     innerDisabled: 'innerDisabled__74017 inner__74017',

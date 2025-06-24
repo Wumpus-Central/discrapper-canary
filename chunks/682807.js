@@ -38,14 +38,14 @@ function h(e) {
                               )
                           ),
                           null != a.terms_of_service_url
-                              ? (0, r.jsx)(_, {
+                              ? (0, r.jsx)(f, {
                                     icon: s.aAW,
                                     url: a.terms_of_service_url,
                                     children: p.intl.string(p.t.s7STcX)
                                 })
                               : null,
                           null != a.privacy_policy_url
-                              ? (0, r.jsx)(_, {
+                              ? (0, r.jsx)(f, {
                                     icon: s.mBM,
                                     url: a.privacy_policy_url,
                                     children: p.intl.string(p.t.kH3JR0)
@@ -63,14 +63,14 @@ function g(e) {
         o = (0, c.ZP)(),
         u = d.Z.getByUrl(a),
         p = (0, l.wj)(o) ? (null == u || null == (t = u.icon) ? void 0 : t.darkSVG) : null == u || null == (n = u.icon) ? void 0 : n.lightSVG;
-    return (0, r.jsx)(_, {
+    return (0, r.jsx)(f, {
         icon: void 0 === p ? s.xPt : void 0,
         imageSrc: p,
         url: a,
         children: i
     });
 }
-function _(e) {
+function f(e) {
     let { icon: t, imageSrc: n, iconColor: a, url: l, children: c } = e,
         d = (0, u.nu)(),
         p = null;

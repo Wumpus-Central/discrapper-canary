@@ -1,7 +1,6 @@
 n.d(t, {
     $R: () => u,
     AG: () => l,
-    I3: () => f,
     Md: () => a,
     PJ: () => o,
     Ub: () => d,
@@ -33,7 +32,4 @@ function u() {
 }
 function d(e) {
     return (0, r.ZP)().generateLaunchSignature(e);
-}
-function f() {
-    return (0, r.ZP)().NoteStore;
 }

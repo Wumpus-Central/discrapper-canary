@@ -15,7 +15,7 @@ var r = n(255367),
     g = n(981631),
     _ = n(388032),
     b = n(429495);
-let E = (e) => {
+let x = (e) => {
         let { channel: t, message: n } = e,
             [l, c] = i.useState(!1),
             u = (0, h.y6)(n.id),
@@ -65,7 +65,7 @@ let E = (e) => {
                 return a && !l && !o && !s && h;
             });
         return null != i && a
-            ? (0, r.jsx)(E, {
+            ? (0, r.jsx)(x, {
                   message: t,
                   channel: n
               })

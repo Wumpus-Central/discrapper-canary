@@ -1,12 +1,12 @@
-n.d(t, { H: () => i }), n(388685);
+n.d(t, { H: () => l }), n(388685);
 var r = n(73800),
-    l = n(481060);
-function i() {
+    a = n(481060);
+function l() {
     let [e, t] = r.useState(!0);
     return {
-        transitions: (0, l.Yzy)(e, {
+        transitions: (0, a.Yzy)(e, {
             keys: (e) => (e ? 'shown' : 'hidden'),
-            config: a,
+            config: i,
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
@@ -15,7 +15,7 @@ function i() {
         setVisible: t
     };
 }
-let a = {
+let i = {
     mass: 1,
     tension: 250,
     friction: 18,

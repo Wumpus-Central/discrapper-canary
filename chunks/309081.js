@@ -26,10 +26,10 @@ var r = n(255367),
     w = n(35463),
     v = n(489887),
     _ = n(185923),
-    C = n(957825),
-    P = n(388032),
+    P = n(957825),
+    C = n(388032),
     E = n(687852);
-function I(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -73,7 +73,7 @@ function A(e, t) {
     }
     return a;
 }
-let k = {
+let I = {
     offset: {
         top: -4,
         bottom: -4,
@@ -98,25 +98,25 @@ function S(e) {
             })
           : s;
 }
-function R(e) {
+function D(e) {
     let { onSelect: t, onEditMedia: n, onDeleteMedia: a, closePopout: l } = e;
     return (0, r.jsx)('div', {
         className: E.menuContainer,
         children: (0, r.jsx)(c.v2r, {
             navId: 'poll-media-edit-menu',
             onClose: l,
-            'aria-label': P.intl.string(P.t['cV+h7O']),
+            'aria-label': C.intl.string(C.t['cV+h7O']),
             onSelect: t,
             children: (0, r.jsxs)(c.kSQ, {
                 children: [
                     (0, r.jsx)(c.sNh, {
                         id: 'poll-media-replace',
-                        label: P.intl.string(P.t.CZeRhY),
+                        label: C.intl.string(C.t.CZeRhY),
                         action: n
                     }),
                     (0, r.jsx)(c.sNh, {
                         id: 'poll-media-delete',
-                        label: P.intl.string(P.t.IhMxgo),
+                        label: C.intl.string(C.t.IhMxgo),
                         action: a,
                         color: 'danger'
                     })
@@ -125,14 +125,14 @@ function R(e) {
         })
     });
 }
-function D(e) {
+function R(e) {
     let { channelId: t, localCreationAnswerId: n, buttonImage: l, layout: u, onEmojiSelect: d, onEmojiRemove: f, answerIndex: m, shouldShowEmojiPicker: b, toggleEmojiPicker: h, containerRef: O } = e,
         j = a.useRef(null),
         x = (0, s.e7)([g.Z], () => g.Z.getChannel(t)),
         {
             emoji: v,
-            isLoadingMedia: k,
-            hasUpload: D,
+            isLoadingMedia: I,
+            hasUpload: R,
             mediaUrl: N,
             mediaFilename: T
         } = (0, w.Z)({
@@ -141,24 +141,24 @@ function D(e) {
             image: l
         }),
         L = u === i.C.DEFAULT,
-        B = D || null != v,
+        B = R || null != v,
         Z = a.useCallback(() => {
             f(m);
         }, [f, m]),
         U = a.useMemo(
             () =>
-                D
-                    ? P.intl.formatToPlainString(P.t.vcC7Qk, {
+                R
+                    ? C.intl.formatToPlainString(C.t.vcC7Qk, {
                           imageName: (0, y.fw)(T),
                           answerNumber: m + 1
                       })
                     : null != v
-                      ? P.intl.formatToPlainString(P.t.ncOAhY, {
+                      ? C.intl.formatToPlainString(C.t.ncOAhY, {
                             emojiName: v.name,
                             answerNumber: m + 1
                         })
-                      : P.intl.formatToPlainString(P.t.emdpNj, { answerNumber: m + 1 }),
-            [D, v, m, T]
+                      : C.intl.formatToPlainString(C.t.emdpNj, { answerNumber: m + 1 }),
+            [R, v, m, T]
         ),
         M = a.useCallback(
             (e) => {
@@ -182,7 +182,7 @@ function D(e) {
         z = a.useCallback(
             (e) => {
                 let { closePopout: t } = e;
-                return (0, r.jsx)(R, {
+                return (0, r.jsx)(D, {
                     onSelect: t,
                     onEditMedia: h,
                     onDeleteMedia: Z,
@@ -191,10 +191,10 @@ function D(e) {
             },
             [Z, h]
         ),
-        W = k
+        W = I
             ? (0, r.jsx)(c.$jN, { className: L ? E.spinnerWrapperDefault : E.spinnerWrapperImageOnly })
             : (0, r.jsx)(S, {
-                  hasUpload: D,
+                  hasUpload: R,
                   mediaUrl: N,
                   mediaFilename: T,
                   imageClassName: o()(E.media, L ? E.gifDefault : E.gifJumbo),
@@ -206,7 +206,7 @@ function D(e) {
                       className: L ? E.expressionPickerIconDefault : E.expressionPickerIconImageOnly
                   })
               }),
-        H = o()(C.CT, u === i.C.IMAGE_ONLY_ANSWERS ? E.expressionPickerButtonImageOnly : E.expressionPickerButtonDefault, { [E.canEditMedia]: B });
+        H = o()(P.CT, u === i.C.IMAGE_ONLY_ANSWERS ? E.expressionPickerButtonImageOnly : E.expressionPickerButtonDefault, { [E.canEditMedia]: B });
     return (0, r.jsx)(c.yRy, {
         targetElementRef: O,
         renderPopout: M,
@@ -231,7 +231,7 @@ function D(e) {
                             u = A(e, ['onClick', 'aria-controls', 'aria-expanded']);
                         return (0, r.jsxs)(
                             c.P3F,
-                            ((a = I({ innerRef: j }, u)),
+                            ((a = k({ innerRef: j }, u)),
                             (l = l =
                                 {
                                     className: H,
@@ -287,13 +287,13 @@ function N(e) {
             }),
             (0, r.jsxs)(c.nn4, {
                 id: a,
-                children: [P.intl.format(P.t.fR1coa, { remainingCharacters: l }), ' ', P.intl.format(P.t['+DFxLS'], { maxLength: v.WA })]
+                children: [C.intl.format(C.t.fR1coa, { remainingCharacters: l }), ' ', C.intl.format(C.t['+DFxLS'], { maxLength: v.WA })]
             })
         ]
     });
 }
 let T = a.forwardRef(function (e, t) {
-    let { channelId: l, answer: d, index: p, layout: b, isLastAnswer: g, onAnswerTextChange: w, onEmojiSelect: _, onEmojiRemove: C, canRemoveAnswer: A, onRemoveAnswer: S, addAnswer: R, submitPoll: T, answerTextInputRefs: L, error: B, inputRef: Z, deleteButtonRef: U } = e,
+    let { channelId: l, answer: d, index: p, layout: b, isLastAnswer: g, onAnswerTextChange: w, onEmojiSelect: _, onEmojiRemove: P, canRemoveAnswer: A, onRemoveAnswer: S, addAnswer: D, submitPoll: T, answerTextInputRefs: L, error: B, inputRef: Z, deleteButtonRef: U } = e,
         M = a.useRef(null),
         z = (0, m.Dt)(),
         W = (0, m.Dt)(),
@@ -309,7 +309,7 @@ let T = a.forwardRef(function (e, t) {
                 return (n) =>
                     (0, r.jsx)(
                         t,
-                        I(
+                        k(
                             {
                                 channelId: l,
                                 answer: d,
@@ -323,28 +323,28 @@ let T = a.forwardRef(function (e, t) {
         X = a.useCallback(() => {
             K((e) => !e);
         }, []),
-        J = a.useCallback(
+        G = a.useCallback(
             (e) => {
                 let t = e.ctrlKey && !(e.altKey || e.metaKey || e.shiftKey),
                     n = e.metaKey && !(e.altKey || e.ctrlKey || e.shiftKey);
                 switch (e.key.toLowerCase()) {
                     case 'enter':
                         var r;
-                        g && (e.preventDefault(), ((0, y.cS)(d, b) || 'macos' !== (0, j.getOS)() ? t : n) ? (e.stopPropagation(), T()) : R()), null == (r = L.current[p + 1]) || r.focus();
+                        g && (e.preventDefault(), ((0, y.cS)(d, b) || 'macos' !== (0, j.getOS)() ? t : n) ? (e.stopPropagation(), T()) : D()), null == (r = L.current[p + 1]) || r.focus();
                         break;
                     case 'e':
                         ('macos' === (0, j.getOS)() ? n : t) && (e.preventDefault(), e.stopPropagation(), X());
                 }
             },
-            [R, d, L, p, g, b, T, X]
+            [D, d, L, p, g, b, T, X]
         ),
-        G = (0, r.jsx)(D, {
+        J = (0, r.jsx)(R, {
             containerRef: M,
             channelId: l,
             buttonImage: d.image,
             layout: b,
             onEmojiSelect: _,
-            onEmojiRemove: C,
+            onEmojiRemove: P,
             localCreationAnswerId: d.localCreationAnswerId,
             answerIndex: p,
             shouldShowEmojiPicker: F,
@@ -360,10 +360,10 @@ let T = a.forwardRef(function (e, t) {
                       className: o()(E.defaultTextInputWrapper, { [E.hasError]: H }),
                       ref: t,
                       children: [
-                          G,
+                          J,
                           (0, r.jsx)(c.oil, {
-                              'aria-label': P.intl.formatToPlainString(P.t['3+V8Gx'], { answerNumber: p + 1 }),
-                              placeholder: P.intl.string(P.t.NNHVlp),
+                              'aria-label': C.intl.formatToPlainString(C.t['3+V8Gx'], { answerNumber: p + 1 }),
+                              placeholder: C.intl.string(C.t.NNHVlp),
                               value: d.text,
                               className: E.defaultTextInput,
                               inputClassName: E.defaultTextInput,
@@ -373,11 +373,11 @@ let T = a.forwardRef(function (e, t) {
                                       index: p,
                                       localCreationAnswerId: d.localCreationAnswerId
                                   }),
-                              onKeyDown: J,
+                              onKeyDown: G,
                               maxLength: v.WA,
                               'aria-invalid': H,
                               'aria-describedby': H ? z : W,
-                              focusProps: k,
+                              focusProps: I,
                               inputRef: Z
                           }),
                           (0, r.jsx)(N, {
@@ -390,7 +390,7 @@ let T = a.forwardRef(function (e, t) {
                       (0, r.jsx)(c.P3F, {
                           onClick: () => S(p),
                           className: E.removeAnswerButtonDefault,
-                          'aria-label': P.intl.formatToPlainString(P.t['22fjER'], { answerNumber: p + 1 }),
+                          'aria-label': C.intl.formatToPlainString(C.t['22fjER'], { answerNumber: p + 1 }),
                           ref: U,
                           children: (0, r.jsx)(c.XHJ, {
                               size: 'md',
@@ -416,7 +416,7 @@ let T = a.forwardRef(function (e, t) {
                   (0, r.jsxs)('div', {
                       className: E.imagePreviewContainer,
                       children: [
-                          G,
+                          J,
                           V &&
                               (0, r.jsxs)(r.Fragment, {
                                   children: [
@@ -424,12 +424,12 @@ let T = a.forwardRef(function (e, t) {
                                           variant: 'text-xs/semibold',
                                           className: E.altBadge,
                                           'aria-hidden': !0,
-                                          children: P.intl.string(P.t.QEW819)
+                                          children: C.intl.string(C.t.QEW819)
                                       }),
                                       (0, r.jsxs)('div', {
                                           onClick: q,
                                           children: [
-                                              (0, r.jsx)(c.nn4, { children: P.intl.string(P.t.piH89v) }),
+                                              (0, r.jsx)(c.nn4, { children: C.intl.string(C.t.piH89v) }),
                                               (0, r.jsx)(c.Text, {
                                                   variant: 'text-xxs/medium',
                                                   className: E.altTextPreview,
@@ -446,15 +446,15 @@ let T = a.forwardRef(function (e, t) {
                       children: [
                           null != Y
                               ? (0, r.jsx)(f.Z, {
-                                    tooltip: P.intl.string(P.t.QbhHBQ),
-                                    'aria-label': V ? P.intl.formatToPlainString(P.t.d04UhI, { answerNumber: p + 1 }) : P.intl.formatToPlainString(P.t.mULZgY, { answerNumber: p + 1 }),
+                                    tooltip: C.intl.string(C.t.QbhHBQ),
+                                    'aria-label': V ? C.intl.formatToPlainString(C.t.d04UhI, { answerNumber: p + 1 }) : C.intl.formatToPlainString(C.t.mULZgY, { answerNumber: p + 1 }),
                                     onClick: q,
                                     children: (0, r.jsx)(x.N, { 'aria-hidden': !0 })
                                 })
                               : null,
                           (0, r.jsx)(f.Z, {
-                              tooltip: P.intl.string(P.t.x7DOr6),
-                              'aria-label': P.intl.formatToPlainString(P.t['22fjER'], { answerNumber: p + 1 }),
+                              tooltip: C.intl.string(C.t.x7DOr6),
+                              'aria-label': C.intl.formatToPlainString(C.t['22fjER'], { answerNumber: p + 1 }),
                               onClick: () => S(p),
                               dangerous: !0,
                               children: (0, r.jsx)(c.XHJ, {

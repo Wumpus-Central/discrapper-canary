@@ -1,15 +1,15 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(954955),
-    o = n.n(l),
-    a = n(748780),
+    a = n.n(l),
+    o = n(748780),
     s = n(873546),
     c = n(477690),
     u = n(481060),
     d = n(624138),
     h = n(749047);
-function g(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function g(e, t, n) {
         e
     );
 }
-function p(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,7 +33,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
@@ -47,7 +47,7 @@ let m = (0, d.Mg)(c.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
         friction: 10,
         tension: 130
     },
-    x = function (e) {
+    E = function (e) {
         return class extends i.Component {
             componentDidMount() {
                 s.tq || (window.addEventListener('resize', this.handleResizeDebounced), this.handleResize());
@@ -65,7 +65,7 @@ let m = (0, d.Mg)(c.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
                 this.state.shouldAnimate ? this.animateTo(f.START, e) : e();
             }
             animateTo(e, t) {
-                a.Z.spring(this.anim, p({ toValue: e }, _)).start(t);
+                o.Z.spring(this.anim, g({ toValue: e }, _)).start(t);
             }
             getAnimatedStyle(e) {
                 return this.state.shouldAnimate
@@ -97,9 +97,9 @@ let m = (0, d.Mg)(c.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
                     children: (0, r.jsx)(u.Sfi.Consumer, {
                         children: (t) => {
                             let { reducedMotion: n } = t;
-                            return (0, r.jsx)(a.Z.div, {
+                            return (0, r.jsx)(o.Z.div, {
                                 style: this.getAnimatedStyle(n.enabled),
-                                children: (0, r.jsx)(e, p({}, this.props))
+                                children: (0, r.jsx)(e, g({}, this.props))
                             });
                         }
                     })
@@ -107,14 +107,14 @@ let m = (0, d.Mg)(c.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
             }
             constructor(...e) {
                 super(...e),
-                    g(this, 'timeout', void 0),
-                    g(this, 'anim', new a.Z.Value(f.START)),
-                    g(this, 'state', { shouldAnimate: !s.tq }),
-                    g(this, 'handleResize', () => {
+                    p(this, 'timeout', void 0),
+                    p(this, 'anim', new o.Z.Value(f.START)),
+                    p(this, 'state', { shouldAnimate: !s.tq }),
+                    p(this, 'handleResize', () => {
                         let e = window.innerWidth > m;
                         !this.state.shouldAnimate && e && this.anim.setValue(f.END), this.setState({ shouldAnimate: e });
                     }),
-                    g(this, 'handleResizeDebounced', o()(this.handleResize, 60));
+                    p(this, 'handleResizeDebounced', a()(this.handleResize, 60));
             }
         };
     };

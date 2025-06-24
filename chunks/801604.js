@@ -18,13 +18,13 @@ var i = n(120356),
     _ = n(676462),
     v = n(388032),
     j = n(326879);
-function S() {
+function b() {
     return (0, r.jsx)('span', {
         className: j.ellipsis,
         children: '\u2022'
     });
 }
-function b(e) {
+function S(e) {
     let { source: t } = e;
     return null == t
         ? (0, r.jsx)(o.hGI, {
@@ -69,7 +69,7 @@ function C(e) {
     return (0, r.jsxs)('div', {
         className: j.root,
         children: [
-            D && (0, r.jsx)(b, { source: I }),
+            D && (0, r.jsx)(S, { source: I }),
             (0, r.jsxs)('div', {
                 className: j.summary,
                 children: [
@@ -98,20 +98,20 @@ function C(e) {
                                                 A
                                             ]
                                         }),
-                                        (0, r.jsx)(S, {})
+                                        (0, r.jsx)(b, {})
                                     ]
                                 }),
                             null != U &&
                                 (0, r.jsxs)(r.Fragment, {
-                                    children: [(0, r.jsx)('span', { children: U }), (0, r.jsx)(S, {})]
+                                    children: [(0, r.jsx)('span', { children: U }), (0, r.jsx)(b, {})]
                                 }),
                             (0, r.jsx)('span', { children: M }),
-                            (0, r.jsx)(S, {}),
+                            (0, r.jsx)(b, {}),
                             (0, r.jsx)('span', { children: ''.concat(k, 'fps') }),
                             Z &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
-                                        (0, r.jsx)(S, {}),
+                                        (0, r.jsx)(b, {}),
                                         (0, r.jsxs)('span', {
                                             className: j.iconSummaryContainer,
                                             children: [
@@ -128,7 +128,7 @@ function C(e) {
                             B
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
-                                          (0, r.jsx)(S, {}),
+                                          (0, r.jsx)(b, {}),
                                           (0, r.jsx)('span', {
                                               children:
                                                   null ==

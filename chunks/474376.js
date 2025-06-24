@@ -1,47 +1,45 @@
-n.d(t, { g: () => C }), n(539854);
+n.d(t, { g: () => j }), n(539854);
 var i = n(255367);
 n(73800);
 var r = n(442837),
     s = n(780384),
     l = n(481060),
     a = n(44315),
-    o = n(540059),
-    c = n(210887),
-    d = n(598077),
-    u = n(246946),
-    m = n(594174),
-    g = n(626135),
-    p = n(51144),
-    h = n(480387),
-    f = n(726745),
-    b = n(251423),
-    _ = n(383832),
-    x = n(981631),
-    E = n(388032),
-    j = n(965695);
-function C(e) {
-    let t = (0, r.e7)([m.default], () => m.default.getCurrentUser()),
-        n = (0, r.e7)([u.Z], () => u.Z.hidePersonalInformation),
-        C = (0, r.e7)([c.Z], () => (0, s.wj)(c.Z.theme)),
-        O = (0, o.R6)('useMultiAccountMenuItems'),
-        { multiAccountUsers: S } = (0, b.L)(),
-        v = (e) => {
-            e !== (null == t ? void 0 : t.id) && (g.default.track(x.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: x.jXE.USER_PROFILE } }), h.yD(e));
+    o = n(210887),
+    c = n(598077),
+    d = n(246946),
+    u = n(594174),
+    m = n(626135),
+    g = n(51144),
+    p = n(480387),
+    h = n(726745),
+    f = n(251423),
+    b = n(383832),
+    _ = n(981631),
+    x = n(388032),
+    E = n(965695);
+function j(e) {
+    let t = (0, r.e7)([u.default], () => u.default.getCurrentUser()),
+        n = (0, r.e7)([d.Z], () => d.Z.hidePersonalInformation),
+        j = (0, r.e7)([o.Z], () => (0, s.wj)(o.Z.theme)),
+        { multiAccountUsers: C } = (0, f.L)(),
+        O = (e) => {
+            e !== (null == t ? void 0 : t.id) && (m.default.track(_.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: _.jXE.USER_PROFILE } }), p.yD(e));
         },
-        T = S.map((r) => {
-            let s = new d.Z(r),
+        S = C.map((r) => {
+            let s = new c.Z(r),
                 o = s.id === (null == t ? void 0 : t.id),
-                c = r.tokenStatus === f.q.INVALID,
+                d = r.tokenStatus === h.q.INVALID,
                 u = n ? null : '#'.concat(s.discriminator);
             return (0, i.jsx)(
                 l.sNh,
                 {
                     id: s.id,
-                    focusedClassName: j.focused,
+                    focusedClassName: E.focused,
                     label: (e) => {
                         let { isFocused: t } = e;
                         return (0, i.jsxs)('div', {
-                            className: j.userMenuItem,
+                            className: E.userMenuItem,
                             children: [
                                 (0, i.jsx)(l.qEK, {
                                     src: s.getAvatarURL(void 0, 40),
@@ -49,19 +47,19 @@ function C(e) {
                                     'aria-label': r.username
                                 }),
                                 (0, i.jsxs)('div', {
-                                    className: j.userMenuUsername,
+                                    className: E.userMenuUsername,
                                     children: [
                                         (0, i.jsx)(l.Text, {
-                                            className: j.userMenuText,
+                                            className: E.userMenuText,
                                             variant: 'text-sm/normal',
-                                            children: p.ZP.getUserTag(s, {
+                                            children: g.ZP.getUserTag(s, {
                                                 mode: 'username',
                                                 identifiable: n ? 'never' : 'always'
                                             })
                                         }),
                                         !s.isPomelo() &&
                                             (0, i.jsx)(l.Text, {
-                                                className: j.userMenuDiscriminator,
+                                                className: E.userMenuDiscriminator,
                                                 variant: 'text-sm/normal',
                                                 children: u
                                             })
@@ -70,42 +68,42 @@ function C(e) {
                                 o &&
                                     (0, i.jsx)(l.owK, {
                                         size: 'sm',
-                                        color: (0, a.Lq)(t ? x.Ilk.WHITE_500 : x.Ilk.BRAND_500),
-                                        secondaryColor: (0, a.Lq)((t && C) || (t && !O && !C) ? x.Ilk.BRAND_500 : x.Ilk.WHITE_500),
-                                        className: j.activeIcon
+                                        color: (0, a.Lq)(t ? _.Ilk.WHITE_500 : _.Ilk.BRAND_500),
+                                        secondaryColor: (0, a.Lq)((t && j) || (t && !j) ? _.Ilk.BRAND_500 : _.Ilk.WHITE_500),
+                                        className: E.activeIcon
                                     }),
-                                c &&
+                                d &&
                                     (0, i.jsx)(l.P4T, {
-                                        color: (0, a.Lq)(x.Ilk.RED_400),
-                                        secondaryColor: (0, a.Lq)((t && C) || (t && !O && !C) ? x.Ilk.BRAND_500 : x.Ilk.WHITE_500),
+                                        color: (0, a.Lq)(_.Ilk.RED_400),
+                                        secondaryColor: (0, a.Lq)((t && j) || (t && !j) ? _.Ilk.BRAND_500 : _.Ilk.WHITE_500),
                                         size: 'xs',
-                                        className: j.activeIcon
+                                        className: E.activeIcon
                                     })
                             ]
                         });
                     },
                     action: () => {
-                        null == e || e(), c ? (0, _.Z)() : v(s.id);
+                        null == e || e(), d ? (0, b.Z)() : O(s.id);
                     }
                 },
                 s.id
             );
         });
     return (
-        T.push(
+        S.push(
             (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(l.Clw, {}),
                     (0, i.jsx)(l.sNh, {
                         id: 'manage-accounts',
-                        label: E.intl.string(E.t.WbFpq6),
+                        label: x.intl.string(x.t.WbFpq6),
                         action: () => {
-                            null == e || e(), (0, _.Z)();
+                            null == e || e(), (0, b.Z)();
                         }
                     })
                 ]
             })
         ),
-        T
+        S
     );
 }

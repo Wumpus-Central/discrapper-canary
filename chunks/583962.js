@@ -1,7 +1,7 @@
 n.d(t, {
-    PD: () => w,
-    ZP: () => A,
-    aR: () => Z
+    PD: () => N,
+    ZP: () => T,
+    aR: () => w
 }),
     n(388685);
 var r = n(255367),
@@ -14,21 +14,20 @@ var r = n(255367),
     u = n(477690),
     d = n(481060),
     h = n(239091),
-    p = n(540059),
-    f = n(151494),
-    g = n(496675),
-    m = n(259580),
-    b = n(267642),
-    O = n(624138),
-    y = n(667815),
-    _ = n(531572),
-    v = n(651138),
-    C = n(18857),
-    j = n(981631),
-    S = n(388032),
-    x = n(93841),
-    E = n(30009);
-function P(e) {
+    p = n(151494),
+    f = n(496675),
+    g = n(259580),
+    m = n(267642),
+    b = n(624138),
+    _ = n(667815),
+    O = n(531572),
+    y = n(651138),
+    v = n(18857),
+    C = n(981631),
+    j = n(388032),
+    E = n(93841),
+    S = n(30009);
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -71,52 +70,51 @@ function I(e, t) {
         e
     );
 }
-let N = (0, O.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
-    w = 57,
-    Z = 57 + N,
-    T = {
+let P = (0, b.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
+    N = 57,
+    w = 57 + P,
+    Z = {
         tension: 180,
         friction: 80
     },
-    A = (e) => {
+    T = (e) => {
         let { guild: t, withMargin: n } = e,
-            l = (0, p.Q3)('GuildBoostingSidebarDisplay'),
-            u = (0, b.Jh)(t.id),
-            O = (0, f.Z)(t.id),
-            N = (0, b.FZ)(u),
-            w = null == N,
-            Z = null != N ? N : u,
-            A = (0, c.e7)([_.Z], () => {
+            l = (0, m.Jh)(t.id),
+            u = (0, p.Z)(t.id),
+            b = (0, m.FZ)(l),
+            P = null == b,
+            N = null != b ? b : l,
+            w = (0, c.e7)([O.Z], () => {
                 var e;
-                return null != (e = _.Z.getCountForGuild(t.id)) ? e : 0;
+                return null != (e = O.Z.getCountForGuild(t.id)) ? e : 0;
             }),
-            R = (0, c.e7)([g.Z], () => g.Z.can(j.Plq.MANAGE_GUILD, t));
+            T = (0, c.e7)([f.Z], () => f.Z.can(C.Plq.MANAGE_GUILD, t));
         i.useEffect(() => {
-            A !== O && (0, y.v)(t.id, O);
-        }, [t.id, A, O]);
-        let D = w ? '100%' : ''.concat(Math.min(100, (O / j.oCV[Z]) * 100), '%'),
-            { current: L } = i.useRef(D),
-            [M] = (0, d.q_F)(
+            w !== u && (0, _.v)(t.id, u);
+        }, [t.id, w, u]);
+        let A = P ? '100%' : ''.concat(Math.min(100, (u / C.oCV[N]) * 100), '%'),
+            { current: R } = i.useRef(A),
+            [D] = (0, d.q_F)(
                 () => ({
-                    from: { width: A === O ? L : '0%' },
-                    to: { width: D },
-                    config: T
+                    from: { width: w === u ? R : '0%' },
+                    to: { width: A },
+                    config: Z
                 }),
                 'respect-motion-settings',
-                [A, O, L, D]
+                [w, u, R, A]
             ),
-            k = t.premiumTier < Z && A >= j.oCV[Z],
-            U = (0, C.Z)(t),
-            G = S.intl.formatToPlainString(S.t['2oNfMT'], { levelName: (0, b.e9)(Z) }),
-            B = S.intl.format(S.t.dhKnYm, {
-                numBoosts: O,
-                numTotal: j.oCV[Z]
+            L = t.premiumTier < N && w >= C.oCV[N],
+            M = (0, v.Z)(t),
+            k = j.intl.formatToPlainString(j.t['2oNfMT'], { levelName: (0, m.e9)(N) }),
+            U = j.intl.format(j.t.dhKnYm, {
+                numBoosts: u,
+                numTotal: C.oCV[N]
             });
-        w && ((G = (0, b.e9)(Z)), (B = S.intl.format(S.t.B2byER, { numBoosts: O }))), l && (G = G.toLocaleLowerCase());
-        let V = (0, a.JA)('boosts-'.concat(t.id));
+        P && ((k = (0, m.e9)(N)), (U = j.intl.format(j.t.B2byER, { numBoosts: u }))), (k = k.toLocaleLowerCase());
+        let G = (0, a.JA)('boosts-'.concat(t.id));
         return (0, r.jsx)('li', {
             children: (0, r.jsx)(d.ua7, {
-                text: k ? S.intl.formatToPlainString(x.default['9CtPjo'], { perk: (0, b.nW)(Z) }) : w ? S.intl.string(S.t['Y+V9go']) : S.intl.formatToPlainString(S.t.UyDKl5, { levelName: (0, b.nW)(Z) }),
+                text: L ? j.intl.formatToPlainString(E.default['9CtPjo'], { perk: (0, m.nW)(N) }) : P ? j.intl.string(j.t['Y+V9go']) : j.intl.formatToPlainString(j.t.UyDKl5, { levelName: (0, m.nW)(N) }),
                 color: d.ua7.Colors.BLACK,
                 position: 'top',
                 delay: 200,
@@ -124,7 +122,7 @@ let N = (0, O.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                 children: (e) =>
                     (0, r.jsxs)(
                         d.P3F,
-                        I(P({}, V, e), {
+                        I(x({}, G, e), {
                             'aria-label': void 0,
                             role: 'button',
                             focusProps: {
@@ -133,58 +131,58 @@ let N = (0, O.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                                     right: 4
                                 }
                             },
-                            onClick: U,
-                            className: o()(E.container, { [E.containerWithMargin]: n }),
+                            onClick: M,
+                            className: o()(S.container, { [S.containerWithMargin]: n }),
                             onContextMenu: (e) => {
-                                R && (0, h.vq)(e, (e) => (0, r.jsx)(v.default, I(P({}, e), { guild: t })));
+                                T && (0, h.vq)(e, (e) => (0, r.jsx)(y.default, I(x({}, e), { guild: t })));
                             },
                             children: [
                                 (0, r.jsx)(d.nn4, { children: e['aria-label'] }),
                                 (0, r.jsxs)('div', {
-                                    className: E.textArea,
+                                    className: S.textArea,
                                     children: [
                                         (0, r.jsx)('div', {
-                                            className: E.goalTextContainer,
+                                            className: S.goalTextContainer,
                                             children: (0, r.jsx)(d.Text, {
-                                                className: E.goalText,
-                                                color: l ? 'none' : 'interactive-active',
-                                                variant: l ? 'text-sm/medium' : 'text-xs/bold',
+                                                className: S.goalText,
+                                                color: 'none',
+                                                variant: 'text-sm/medium',
                                                 lineClamp: 1,
-                                                children: G
+                                                children: k
                                             })
                                         }),
                                         (0, r.jsxs)('div', {
-                                            className: E.progressFraction,
+                                            className: S.progressFraction,
                                             children: [
                                                 (0, r.jsx)(d.Text, {
-                                                    color: l ? 'none' : 'interactive-normal',
-                                                    variant: l ? 'text-sm/medium' : 'text-xs/normal',
-                                                    className: E.progressText,
+                                                    color: 'none',
+                                                    variant: 'text-sm/medium',
+                                                    className: S.progressText,
                                                     lineClamp: 1,
-                                                    children: B
+                                                    children: U
                                                 }),
-                                                (0, r.jsx)(m.Z, {
-                                                    className: E.count,
+                                                (0, r.jsx)(g.Z, {
+                                                    className: S.count,
                                                     height: 16,
                                                     width: 16,
-                                                    direction: m.Z.Directions.RIGHT
+                                                    direction: g.Z.Directions.RIGHT
                                                 })
                                             ]
                                         })
                                     ]
                                 }),
                                 (0, r.jsxs)('div', {
-                                    className: o()(E.progressBarContainer, { [E.progressBarContainerComplete]: w }),
+                                    className: o()(S.progressBarContainer, { [S.progressBarContainerComplete]: P }),
                                     children: [
                                         (0, r.jsx)(s.animated.div, {
-                                            className: E.progressBar,
-                                            style: M
+                                            className: S.progressBar,
+                                            style: D
                                         }),
-                                        w
+                                        P
                                             ? (0, r.jsx)('span', {
-                                                  'aria-label': S.intl.string(S.t['7iL1q6']),
+                                                  'aria-label': j.intl.string(j.t['7iL1q6']),
                                                   role: 'img',
-                                                  className: E.tadaIcon,
+                                                  className: S.tadaIcon,
                                                   children: '\uD83C\uDF89'
                                               })
                                             : null

@@ -1,5 +1,5 @@
 n.d(t, {
-    Q: () => _,
+    Q: () => f,
     Z: () => x
 }),
     n(35282),
@@ -80,10 +80,10 @@ function g(e, t) {
     }
     return a;
 }
-function _(e) {
+function f(e) {
     return ''.concat(e.split('?')[0], '?size=').concat(2048);
 }
-let f = (e) => {
+let _ = (e) => {
     var { index: t, items: n } = e,
         a = g(e, ['index', 'items']);
     let i = n[t],
@@ -94,7 +94,7 @@ let f = (e) => {
             let { width: t, height: n, src: r } = e;
             e === i && (l = o.length),
                 o.push({
-                    src: _(r),
+                    src: f(r),
                     width: t,
                     height: n
                 });
@@ -134,7 +134,7 @@ class b extends a.Component {
                                 {
                                     parentComponent: 'ApplicationStoreListingCarousel',
                                     children: (0, r.jsx)(
-                                        f,
+                                        _,
                                         h(m({}, e), {
                                             index: t,
                                             items: this.props.items

@@ -13,7 +13,6 @@ e.exports = {
     clickableTile: 'clickableTile__4ad81',
     iconContainer: 'iconContainer__4ad81',
     shelfButtonCloseButton: 'shelfButtonCloseButton__4ad81',
-    button: 'button__4ad81',
     closeButtonIcon: 'closeButtonIcon__4ad81',
     singleUserRoot: 'singleUserRoot__4ad81'
 };

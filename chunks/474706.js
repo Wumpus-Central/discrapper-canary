@@ -1,6 +1,6 @@
 t.d(n, { f: () => c });
-var l = t(255367),
-    i = t(442837),
+var i = t(255367),
+    l = t(442837),
     r = t(481060),
     s = t(607070),
     a = t(987209),
@@ -8,34 +8,34 @@ var l = t(255367),
     C = t(897942),
     d = t(263562);
 function c() {
-    let e = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
+    let e = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
         { claimableRewards: n } = (0, a.wD)(),
         t = (0, o.Z)(),
         c = null == t ? void 0 : t.planSelection;
     return null == c || null == n || 0 === n.length
         ? null
-        : (0, l.jsxs)('div', {
+        : (0, i.jsxs)('div', {
               className: d.container,
               children: [
-                  (0, l.jsx)('div', {
+                  (0, i.jsx)('div', {
                       className: d.avatar,
-                      children: (0, l.jsx)(C.Z, {
+                      children: (0, i.jsx)(C.Z, {
                           maxRewardImageSrc: c.getImageUrl(!0, e),
                           claimableRewards: n,
                           size: r.EFr.SIZE_48
                       })
                   }),
-                  (0, l.jsxs)('div', {
+                  (0, i.jsxs)('div', {
                       className: d.textSection,
                       children: [
-                          (0, l.jsx)(r.Text, {
+                          (0, i.jsx)(r.Text, {
                               variant: 'text-md/medium',
                               color: 'text-primary',
                               children: c.heading()
                           }),
                           null != c.subheading &&
                               n.length > 1 &&
-                              (0, l.jsx)(r.Text, {
+                              (0, i.jsx)(r.Text, {
                                   variant: 'text-md/medium',
                                   className: d.subheading,
                                   children: c.subheading(n.length)

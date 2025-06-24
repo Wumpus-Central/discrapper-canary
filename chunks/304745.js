@@ -16,22 +16,22 @@ var r = n(255367),
     b = n(906732),
     _ = n(522651),
     y = n(243778),
-    C = n(579185),
-    x = n(301076),
+    x = n(579185),
+    C = n(301076),
     v = n(127379),
     j = n(981631),
     O = n(921944),
     E = n(388032);
 function I(e) {
-    let { channel: t, idle: n, whichPopoutIsOpen: I, setWhichPopoutIsOpen: P } = e,
-        S = (0, l.e7)([u.ZP], () => u.ZP.isLaunchingActivity()),
+    let { channel: t, idle: n, whichPopoutIsOpen: I, setWhichPopoutIsOpen: S } = e,
+        P = (0, l.e7)([u.ZP], () => u.ZP.isLaunchingActivity()),
         Z = (0, p.KF)(t.id),
         N = (0, p.g5)(Z),
-        T = Z !== p.jy.CAN_LAUNCH || S,
-        { isHovered: A, setIsHovered: w, onMouseEnter: R, onMouseLeave: M } = (0, C.Z)(200, 300),
+        T = Z !== p.jy.CAN_LAUNCH || P,
+        { isHovered: A, setIsHovered: w, onMouseEnter: R, onMouseLeave: M } = (0, x.Z)(200, 300),
         k = (0, d.a)({ surface: s.eR.VOICE_LAUNCHER }),
-        L = (0, l.e7)([u.ZP], () => null != u.ZP.getSelfEmbeddedActivityForLocation(u.ZP.getConnectedActivityLocation())),
-        D = !T,
+        D = (0, l.e7)([u.ZP], () => null != u.ZP.getSelfEmbeddedActivityForLocation(u.ZP.getConnectedActivityLocation())),
+        L = !T,
         U = i.useCallback(
             (e) => {
                 'focus' !== e.type && R();
@@ -70,11 +70,11 @@ function I(e) {
                     align: 'center',
                     spacing: 16,
                     onRequestClose: () => {
-                        w(!1), null == P || P(void 0);
+                        w(!1), null == S || S(void 0);
                     },
                     renderPopout: (e) => {
                         let { closePopout: n, setPopoutRef: i } = e;
-                        return D
+                        return L
                             ? (0, r.jsx)(f.m, {
                                   ref: (e) => {
                                       null == i || i(e);
@@ -127,11 +127,11 @@ function I(e) {
                                             })({ ref: W }, e)),
                                             (n = n =
                                                 {
-                                                    children: (0, r.jsx)(x.Z, {
+                                                    children: (0, r.jsx)(C.Z, {
                                                         disabled: T,
                                                         'aria-label': N,
-                                                        label: D ? void 0 : N,
-                                                        isActivityActive: L,
+                                                        label: L ? void 0 : N,
+                                                        isActivityActive: D,
                                                         onClick: () => {
                                                             H(), (i === a.z.ACTIVITIES_MINI_SHELF_SPARKLES || i === a.z.ACTIVITY_GDM_ROCKET_SPARKLE || i === a.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || i === a.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES || i === a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) && l(O.L.TAKE_ACTION);
                                                         },

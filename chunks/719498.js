@@ -1,18 +1,16 @@
-r.d(t, { default: () => b });
+r.d(t, { default: () => x });
 var n = r(255367),
     a = r(73800),
     i = r(481060),
     o = r(933557),
-    c = r(540059),
-    s = r(925329),
-    l = r(296023),
-    d = r(388032),
-    x = r(821084);
-let b = (e) => {
-    let { channel: t, application: b, onClose: p, transitionState: u } = e,
-        m = (0, c.Q3)('IntegrationsEditLinkedLobbyModal'),
-        j = (0, l.w)(t),
-        h = a.useCallback(
+    c = r(925329),
+    s = r(296023),
+    l = r(388032),
+    d = r(821084);
+let x = (e) => {
+    let { channel: t, application: x, onClose: p, transitionState: u } = e,
+        m = (0, s.w)(t),
+        b = a.useCallback(
             () => (
                 p(),
                 (0, i.ZDy)(async () => {
@@ -49,7 +47,7 @@ let b = (e) => {
                             (i = i =
                                 {
                                     channelId: t.id,
-                                    application: b
+                                    application: x
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(i))
@@ -68,54 +66,54 @@ let b = (e) => {
                     };
                 })
             ),
-            [b, t.id, p]
+            [x, t.id, p]
         ),
-        O = (0, o.ZP)(t, !0);
+        j = (0, o.ZP)(t, !0);
     return (0, n.jsxs)(i.Y0X, {
         transitionState: u,
-        'aria-label': d.intl.string(d.t.OJknho),
+        'aria-label': l.intl.string(l.t.OJknho),
         parentComponent: 'IntegrationsEditLinkedLobbyModal',
         children: [
             (0, n.jsx)(i.xBx, {
                 separator: !1,
                 children: (0, n.jsx)(i.X6q, {
                     variant: 'heading-lg/semibold',
-                    children: d.intl.string(d.t.OJknho)
+                    children: l.intl.string(l.t.OJknho)
                 })
             }),
             (0, n.jsxs)(i.hzk, {
-                className: x.content,
+                className: d.content,
                 children: [
-                    (0, n.jsx)(s.Z, {
-                        game: b,
-                        size: s.Z.Sizes.XLARGE
+                    (0, n.jsx)(c.Z, {
+                        game: x,
+                        size: c.Z.Sizes.XLARGE
                     }),
                     (0, n.jsxs)('div', {
-                        className: x.metadata,
+                        className: d.metadata,
                         children: [
                             (0, n.jsxs)('div', {
-                                className: x.metadataHeader,
+                                className: d.metadataHeader,
                                 children: [
                                     (0, n.jsx)(i.Text, {
                                         variant: 'text-md/semibold',
                                         color: 'header-primary',
-                                        children: b.name
+                                        children: x.name
                                     }),
                                     (0, n.jsx)(i.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'text-muted',
-                                        children: d.intl.format(d.t['0NJZAQ'], { channelName: O })
+                                        children: l.intl.format(l.t['0NJZAQ'], { channelName: j })
                                     })
                                 ]
                             }),
-                            null != j &&
+                            null != m &&
                                 (0, n.jsxs)(n.Fragment, {
                                     children: [
-                                        (0, n.jsx)('div', { className: x.divider }),
+                                        (0, n.jsx)('div', { className: d.divider }),
                                         (0, n.jsx)(i.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'text-muted',
-                                            children: j
+                                            children: m
                                         })
                                     ]
                                 })
@@ -126,16 +124,16 @@ let b = (e) => {
             (0, n.jsxs)(i.mzw, {
                 children: [
                     (0, n.jsx)(i.zxk, {
-                        onClick: h,
+                        onClick: b,
                         color: i.zxk.Colors.RED,
-                        children: d.intl.string(d.t.LLWaxc)
+                        children: l.intl.string(l.t.LLWaxc)
                     }),
                     (0, n.jsx)(i.zxk, {
                         onClick: p,
-                        look: m ? i.zxk.Looks.FILLED : i.zxk.Looks.LINK,
+                        look: i.zxk.Looks.FILLED,
                         color: i.zxk.Colors.PRIMARY,
-                        className: x.cancelButton,
-                        children: d.intl.string(d.t['ETE/oK'])
+                        className: d.cancelButton,
+                        children: l.intl.string(l.t['ETE/oK'])
                     })
                 ]
             })

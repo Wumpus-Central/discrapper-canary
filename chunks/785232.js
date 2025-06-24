@@ -27,7 +27,7 @@ let u = function (e) {
             return i;
         })(e, ['recipients', 'size', 'status', 'isTyping', 'className']);
     let p = l.ny6[n],
-        E = (0, i.Wu)(
+        f = (0, i.Wu)(
             [a.default],
             () =>
                 t.slice(0, 2).map((e) => {
@@ -39,8 +39,8 @@ let u = function (e) {
     return (0, r.jsx)(o.Z, {
         'aria-label': d['aria-label'],
         'aria-hidden': d['aria-hidden'],
-        backSrc: E[0],
-        frontSrc: E[1],
+        backSrc: f[0],
+        frontSrc: f[1],
         size: n,
         status: u,
         isTyping: null != c && c,

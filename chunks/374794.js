@@ -8,7 +8,7 @@ var r = n(120356),
 function o(e) {
     var t,
         n,
-        { children: r, className: o, innerClassName: c, onChange: d, 'aria-label': u, 'aria-describedby': m, filters: x, multiple: p = !1, disabled: h = !1, submitting: b = !1 } = e,
+        { children: r, className: o, innerClassName: c, onChange: d, 'aria-label': u, 'aria-describedby': m, filters: p, multiple: x = !1, disabled: h = !1, submitting: b = !1 } = e,
         f = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -89,8 +89,8 @@ function o(e) {
                 (0, a.jsx)(s.Z, {
                     tabIndex: 0,
                     onChange: d,
-                    filters: x,
-                    multiple: p,
+                    filters: p,
+                    multiple: x,
                     'aria-label': u,
                     'aria-describedby': m,
                     disabled: h

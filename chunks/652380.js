@@ -28,8 +28,8 @@ var r = n(255367),
     C = n(341907),
     w = n(478977),
     S = n(456799),
-    E = n(210851),
-    P = n(602683),
+    P = n(210851),
+    E = n(602683),
     T = n(916028),
     N = n(749912),
     A = n(815183),
@@ -364,19 +364,19 @@ function H() {
             (0, r.jsxs)('div', {
                 className: R.fields,
                 children: [
-                    (0, r.jsx)(P.Z, {
+                    (0, r.jsx)(E.Z, {
                         title: 'Quest Name',
                         assetKey: 'questName',
                         onMessageChange: eo,
                         initialValue: H.config.messages.questName
                     }),
-                    (0, r.jsx)(P.Z, {
+                    (0, r.jsx)(E.Z, {
                         title: 'Game Title',
                         assetKey: 'gameTitle',
                         onMessageChange: eo,
                         initialValue: H.config.messages.gameTitle
                     }),
-                    (0, r.jsx)(P.Z, {
+                    (0, r.jsx)(E.Z, {
                         title: 'Game Publisher',
                         assetKey: 'gamePublisher',
                         onMessageChange: eo,
@@ -385,19 +385,19 @@ function H() {
                     eu &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(P.Z, {
+                                (0, r.jsx)(E.Z, {
                                     title: 'Video Title',
                                     assetKey: 'videoTitle',
                                     onMessageChange: ea,
                                     initialValue: null == ep ? void 0 : ep.messages.videoTitle
                                 }),
-                                (0, r.jsx)(P.Z, {
+                                (0, r.jsx)(E.Z, {
                                     title: 'End CTA Title',
                                     assetKey: 'videoEndCtaTitle',
                                     onMessageChange: ea,
                                     initialValue: null == ep ? void 0 : ep.messages.videoEndCtaTitle
                                 }),
-                                (0, r.jsx)(P.Z, {
+                                (0, r.jsx)(E.Z, {
                                     title: 'End CTA Subtitle',
                                     assetKey: 'videoEndCtaSubtitle',
                                     onMessageChange: ea,
@@ -415,42 +415,42 @@ function H() {
             (0, r.jsxs)('div', {
                 className: R.fields,
                 children: [
-                    (0, r.jsx)(E.Z, {
+                    (0, r.jsx)(P.Z, {
                         title: 'Hero',
                         assetKey: 'hero',
                         onFileChange: en,
                         filters: M,
                         initialValue: H.config.assets.hero
                     }),
-                    (0, r.jsx)(E.Z, {
+                    (0, r.jsx)(P.Z, {
                         title: 'Hero Video (optional)',
                         assetKey: 'heroVideo',
                         onFileChange: en,
                         filters: M,
                         initialValue: null != (B = H.config.assets.heroVideo) ? B : void 0
                     }),
-                    (0, r.jsx)(E.Z, {
+                    (0, r.jsx)(P.Z, {
                         title: 'Quest Bar Hero',
                         assetKey: 'questBarHero',
                         onFileChange: en,
                         filters: M,
                         initialValue: H.config.assets.questBarHero
                     }),
-                    (0, r.jsx)(E.Z, {
+                    (0, r.jsx)(P.Z, {
                         title: 'Quest Bar Hero Video (optional)',
                         assetKey: 'questBarHeroVideo',
                         onFileChange: en,
                         filters: M,
                         initialValue: null != (V = H.config.assets.questBarHeroVideo) ? V : void 0
                     }),
-                    (0, r.jsx)(E.Z, {
+                    (0, r.jsx)(P.Z, {
                         title: 'Game Tile',
                         assetKey: 'gameTile',
                         onFileChange: en,
                         filters: [...L, 'svg'],
                         initialValue: H.config.assets.gameTile
                     }),
-                    (0, r.jsx)(E.Z, {
+                    (0, r.jsx)(P.Z, {
                         title: 'Logotype',
                         assetKey: 'logotype',
                         onFileChange: en,
@@ -460,35 +460,35 @@ function H() {
                     eu &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(E.Z, {
+                                (0, r.jsx)(P.Z, {
                                     title: 'Quest Video',
                                     assetKey: 'videoPlayerVideo',
                                     onFileChange: er,
                                     filters: M,
                                     initialValue: null == ep ? void 0 : ep.assets.video.url
                                 }),
-                                (0, r.jsx)(E.Z, {
+                                (0, r.jsx)(P.Z, {
                                     title: 'Quest Video (Low Resolution)',
                                     assetKey: 'videoPlayerVideoLowRes',
                                     onFileChange: er,
                                     filters: M,
                                     initialValue: null == ep || null == (e = ep.assets.videoLowRes) ? void 0 : e.url
                                 }),
-                                (0, r.jsx)(E.Z, {
+                                (0, r.jsx)(P.Z, {
                                     title: 'Video Player Thumbnail (optional)',
                                     assetKey: 'videoPlayerThumbnail',
                                     onFileChange: er,
                                     filters: L,
                                     initialValue: null == ep ? void 0 : ep.assets.video.thumbnail
                                 }),
-                                (0, r.jsx)(E.Z, {
+                                (0, r.jsx)(P.Z, {
                                     title: 'Quest Bar Preview Video (optional)',
                                     assetKey: 'questBarPreviewVideo',
                                     onFileChange: es,
                                     filters: M,
                                     initialValue: null == (t = H.config.videoMetadata) ? void 0 : t.assets.questBarPreviewVideo
                                 }),
-                                (0, r.jsx)(E.Z, {
+                                (0, r.jsx)(P.Z, {
                                     title: 'Quest Home Video (optional)',
                                     assetKey: 'questHomeVideo',
                                     onFileChange: es,
@@ -512,20 +512,20 @@ function H() {
                             (0, r.jsxs)('div', {
                                 className: R.fields,
                                 children: [
-                                    (0, r.jsx)(P.Z, {
+                                    (0, r.jsx)(E.Z, {
                                         title: 'Name',
                                         assetKey: 'name',
                                         onMessageChange: (e, n) => ei(e, n, t),
                                         initialValue: e.messages.name
                                     }),
-                                    (0, r.jsx)(P.Z, {
+                                    (0, r.jsx)(E.Z, {
                                         title: 'Name With Article',
                                         assetKey: 'nameWithArticle',
                                         onMessageChange: (e, n) => ei(e, n, t),
                                         initialValue: e.messages.nameWithArticle
                                     }),
                                     e.type !== c.w.VIRTUAL_CURRENCY &&
-                                        (0, r.jsx)(E.Z, {
+                                        (0, r.jsx)(P.Z, {
                                             title: 'Asset',
                                             assetKey: 'asset',
                                             onFileChange: (e, n) =>

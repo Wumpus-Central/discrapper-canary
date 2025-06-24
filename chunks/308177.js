@@ -20,7 +20,7 @@ let y = {
         twoSpeakers: 624,
         threeSpeakers: 824
     },
-    C = (e, t) => {
+    x = (e, t) => {
         let n = Math.floor(e / t - 8),
             r = Math.floor(n / g.Q);
         return {
@@ -28,7 +28,7 @@ let y = {
             speakerTileHeight: r
         };
     },
-    x = (e, t) => (e < y.singleSpeaker ? 1 : e < y.twoSpeakers ? 2 : e < y.threeSpeakers || t ? 3 : 4),
+    C = (e, t) => (e < y.singleSpeaker ? 1 : e < y.twoSpeakers ? 2 : e < y.threeSpeakers || t ? 3 : 4),
     v = (e) => Math.floor((e - 32) / 102);
 function j(e) {
     return e.type === u.Ui.VOICE;
@@ -39,7 +39,7 @@ let O = (0, a.Z)((e) => {
         {
             selectedParticipantId: E,
             largeStream: I,
-            chatOpen: P
+            chatOpen: S
         } = (0, l.cj)(
             [o.Z],
             () => ({
@@ -49,25 +49,25 @@ let O = (0, a.Z)((e) => {
             }),
             [a.id]
         ),
-        S = (0, c.Io)(a.id),
+        P = (0, c.Io)(a.id),
         Z = (0, c.Rk)(a.id, u.pV.AUDIENCE),
         N = (0, l.e7)([s.Z], () => (null != E ? s.Z.getParticipant(a.id, E) : null)),
         T = (0, c.w8)(a.id, u.pV.SPEAKER),
         A = T.filter(j),
         w = null != T.find((e) => e.type === u.Ui.STREAM),
         R = v(y),
-        M = x(y, P),
+        M = C(y, S),
         k = {
             [u.pV.SPEAKER]: M,
             [u.pV.AUDIENCE]: R,
             [u.pV.SELECTED]: 1
         },
-        L = (0, d.Dx)(a.id),
-        [D, U] = (0, d.aP)(a.id, k, L),
-        B = [Math.max(null != (t = D[0]) ? t : 1, 1), Math.max(null != (n = D[1]) ? n : 1, 1), D[2]],
-        { speakerTileWidth: F, speakerTileHeight: G } = C(y, M),
+        D = (0, d.Dx)(a.id),
+        [L, U] = (0, d.aP)(a.id, k, D),
+        B = [Math.max(null != (t = L[0]) ? t : 1, 1), Math.max(null != (n = L[1]) ? n : 1, 1), L[2]],
+        { speakerTileWidth: F, speakerTileHeight: G } = x(y, M),
         H = I ? y - 32 : Math.min(y - 64, 3 * F + 8),
-        V = (e) => e === D.length - 1 || (0 === Z && 1 === e),
+        V = (e) => e === L.length - 1 || (0 === Z && 1 === e),
         [z, W] = i.useState(!1),
         [Y, q] = i.useState(!1);
     return (0, r.jsx)(h.Z, {
@@ -75,12 +75,12 @@ let O = (0, a.Z)((e) => {
         renderSection: (e) => {
             let { section: t } = e;
             return 1 === t
-                ? 0 === S
+                ? 0 === P
                     ? null
                     : (0, r.jsx)(
                           m.Z,
                           {
-                              participantCount: S,
+                              participantCount: P,
                               label: b.intl.string(b.t.CduOk5),
                               className: _.header,
                               onClick: () => W(!z),

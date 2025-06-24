@@ -16,14 +16,14 @@ var r = n(255367),
     b = n(299206),
     _ = n(727429),
     y = n(665149),
-    C = n(359110),
-    x = n(585483),
+    x = n(359110),
+    C = n(585483),
     v = n(407908),
     j = n(739830),
     O = n(488131),
     E = n(981631),
     I = n(388032);
-function P(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function P(e) {
     }
     return e;
 }
-function S(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -83,13 +83,13 @@ function Z(e) {
         autoInvert: !1,
         onRequestClose: () => a(!1),
         renderPopout: function (e) {
-            return (0, r.jsx)(N, S(P({}, e), { channel: t }));
+            return (0, r.jsx)(N, P(S({}, e), { channel: t }));
         },
         children: (e, t) => {
             let { isShown: n } = t;
             return (0, r.jsx)(
                 y.ZP.Icon,
-                S(P({}, e), {
+                P(S({}, e), {
                     ref: o,
                     onClick: s,
                     tooltip: n ? null : c,
@@ -108,8 +108,8 @@ function N(e) {
         v = (0, f.Z)(t),
         j = (0, m.Z)(t),
         O = (0, a.Z)(t),
-        P = (0, u.Z)(t),
-        S = (0, h.Z)(t.id),
+        S = (0, u.Z)(t),
+        P = (0, h.Z)(t.id),
         Z = (0, p.Z)(t),
         N = (0, s.Z)(t),
         T = (0, o.Z)(t),
@@ -119,7 +119,7 @@ function N(e) {
         }),
         w = (0, g.Z)(t);
     function R() {
-        (0, C.Kh)(t.id);
+        (0, x.Kh)(t.id);
     }
     return (0, r.jsxs)(l.v2r, {
         navId: 'thread-context',
@@ -141,7 +141,7 @@ function N(e) {
                 children: [v, j]
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [Z, y, S]
+                children: [Z, y, P]
             }),
             (0, r.jsxs)(l.kSQ, {
                 children: [
@@ -152,7 +152,7 @@ function N(e) {
                         action: function () {
                             R(),
                                 setTimeout(() => {
-                                    x.S.dispatch(E.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
+                                    C.S.dispatch(E.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
                                 }, 2000);
                         }
                     }),
@@ -161,13 +161,13 @@ function N(e) {
                         label: I.intl.string(I.t['2BSH7u']),
                         icon: l.rgF,
                         action: function () {
-                            R(), x.S.dispatch(E.CkL.TOGGLE_CHANNEL_PINS);
+                            R(), C.S.dispatch(E.CkL.TOGGLE_CHANNEL_PINS);
                         }
                     })
                 ]
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [w, O, P, N]
+                children: [w, O, S, N]
             }),
             (0, r.jsxs)(l.kSQ, {
                 children: [T, A]

@@ -16,15 +16,15 @@ var r = n(255367),
     b = n(185413),
     _ = n(42311),
     y = n(626786),
-    C = n(434404),
-    x = n(454585),
+    x = n(434404),
+    C = n(454585),
     v = n(430824),
     j = n(496675),
     O = n(594174),
     E = n(700785),
     I = n(51144),
-    P = n(396769),
-    S = n(967128),
+    S = n(396769),
+    P = n(967128),
     Z = n(318374),
     N = n(981631),
     T = n(388032),
@@ -49,7 +49,7 @@ function w(e) {
                     : [],
             [w, R]
         ),
-        L = i.useMemo(
+        D = i.useMemo(
             () =>
                 s()(k)
                     .filter((e) => {
@@ -63,7 +63,7 @@ function w(e) {
                     .value(),
             [t, w, k]
         ),
-        D = (0, d.Wu)(
+        L = (0, d.Wu)(
             [O.default],
             () => {
                 let e = {};
@@ -90,25 +90,25 @@ function w(e) {
         ),
         U = j.Z.can(N.Plq.MANAGE_CHANNELS, t) || j.Z.can(N.Plq.MANAGE_ROLES, t),
         B = i.useCallback(() => l(!1), []);
-    return (0, r.jsxs)(S.ZP, {
+    return (0, r.jsxs)(P.ZP, {
         channelId: t.id,
         children: [
-            (0, r.jsx)(S.Kq, {
+            (0, r.jsx)(P.Kq, {
                 locked: !0,
                 channelType: t.type
             }),
-            (0, r.jsx)(S.Ot, { children: T.intl.format(T.t.I3R7Vl, { channelName: o }) }),
-            (0, r.jsx)(S.jz, {
+            (0, r.jsx)(P.Ot, { children: T.intl.format(T.t.I3R7Vl, { channelName: o }) }),
+            (0, r.jsx)(P.jz, {
                 children: T.intl.format(T.t.QuwqjI, {
                     channelName: o,
-                    topicHook: () => x.Z.parseTopic(t.topic, !0, { channelId: t.id })
+                    topicHook: () => C.Z.parseTopic(t.topic, !0, { channelId: t.id })
                 })
             }),
             U
                 ? (0, r.jsxs)('div', {
                       className: A.channelSettingButtons,
                       children: [
-                          (0, r.jsx)(P.Z, {
+                          (0, r.jsx)(S.Z, {
                               label: T.intl.string(T.t.dMJ3Y2),
                               onClick: () => l(!0),
                               icon: (0, r.jsx)(p.BFJ, {
@@ -116,7 +116,7 @@ function w(e) {
                                   color: 'currentColor'
                               })
                           }),
-                          (0, r.jsx)(P.Z, {
+                          (0, r.jsx)(S.Z, {
                               label: T.intl.string(T.t['3gUsJS']),
                               onClick: function () {
                                   h.ZP.open(t.id);
@@ -133,14 +133,14 @@ function w(e) {
                 className: A.members,
                 children: [
                     (function () {
-                        if (1 !== D.length || L.length > 0)
+                        if (1 !== L.length || D.length > 0)
                             return (0, r.jsx)(Z.Z, {
                                 guildId: t.guild_id,
                                 className: A.avatars,
                                 maxUsers: 5,
-                                users: D
+                                users: L
                             });
-                        let e = D[0],
+                        let e = L[0],
                             n = I.ZP.getName(e);
                         return (0, r.jsxs)('div', {
                             className: A.avatars,
@@ -166,7 +166,7 @@ function w(e) {
                             ]
                         });
                     })(),
-                    L.map((e, n) => {
+                    D.map((e, n) => {
                         var i, l;
                         let o = null != (l = e.colorString) ? l : (0, u.Rf)(N.p6O),
                             s = (null == (i = e.tags) ? void 0 : i.guild_connections) !== void 0;
@@ -174,13 +174,13 @@ function w(e) {
                             ? (0, r.jsx)(
                                   _.Z,
                                   {
-                                      className: a()(A.role, { [A.last]: n === L.length - 1 }),
+                                      className: a()(A.role, { [A.last]: n === D.length - 1 }),
                                       roleName: e.name,
                                       roleColor: o,
                                       disabled: !U,
                                       verified: s,
                                       onClick: () => {
-                                          C.Z.open(t.guild_id, N.pNK.MEMBERS), C.Z.selectRole(e.id);
+                                          x.Z.open(t.guild_id, N.pNK.MEMBERS), x.Z.selectRole(e.id);
                                       }
                                   },
                                   e.id
@@ -188,7 +188,7 @@ function w(e) {
                             : (0, r.jsx)(
                                   y.Z,
                                   {
-                                      className: a()(A.role, { [A.last]: n === L.length - 1 }),
+                                      className: a()(A.role, { [A.last]: n === D.length - 1 }),
                                       roleName: e.name,
                                       roleColor: o,
                                       verified: s

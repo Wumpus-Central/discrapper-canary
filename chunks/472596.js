@@ -1,5 +1,5 @@
 n.d(t, {
-    RE: () => c,
+    RE: () => u,
     RN: () => d,
     po: () => T,
     vN: () => _,
@@ -13,8 +13,8 @@ var r,
     a = n(892001),
     o = n(430824),
     E = n(594174),
-    u = n(91047);
-let c = (e, t) => {
+    c = n(91047);
+let u = (e, t) => {
     let { guildId: n, userId: r, colorRoleId: l } = e;
     (0, a.openUserProfileModal)({
         userId: r,
@@ -31,7 +31,7 @@ function _(e, t, n, r) {
             let i = E.default.getUser(e.userId);
             null != i &&
                 (l.stopPropagation(),
-                (0, u.nm)(l, {
+                (0, c.nm)(l, {
                     user: i,
                     guildId: e.guildId,
                     analyticsLocations: null != n ? [n] : s,
@@ -50,7 +50,7 @@ function d(e, t, n) {
             let s = E.default.getUser(e.userId);
             null != s &&
                 (l.stopPropagation(),
-                (0, u._j)(l, {
+                (0, c._j)(l, {
                     user: s,
                     guildId: e.guildId,
                     analyticsLocations: null != t ? [t] : r,
