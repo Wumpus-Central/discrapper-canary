@@ -94,7 +94,7 @@ let Y = {
     K = (0, C.hQ)(),
     q = (0, C.hQ)(),
     X = '1337',
-    Q = (e) => {
+    J = (e) => {
         let t = 0;
         return [
             (0, S.e5)(
@@ -174,7 +174,7 @@ let Y = {
             )
         ];
     },
-    J = () =>
+    Q = () =>
         (0, i.jsxs)('div', {
             className: V.themeTitle,
             children: [
@@ -354,7 +354,7 @@ class $ extends r.Component {
                           children: U.intl.string(U.t.Ksh3io)
                       }),
                       (0, i.jsx)(u.xJW, {
-                          title: (0, i.jsx)(J, {}),
+                          title: (0, i.jsx)(Q, {}),
                           children: (0, i.jsx)(Z.i, {})
                       })
                   ]
@@ -529,8 +529,8 @@ class $ extends r.Component {
     }
     constructor(...e) {
         super(...e),
-            F(this, 'darkMessages', Q(L.BRd.DARK)),
-            F(this, 'lightMessages', Q(L.BRd.LIGHT)),
+            F(this, 'darkMessages', J(L.BRd.DARK)),
+            F(this, 'lightMessages', J(L.BRd.LIGHT)),
             F(this, 'handleDisplayCompactAvatarsChanged', (e) => {
                 m.ZP.updatedUnsyncedSettings({ displayCompactAvatars: e });
             }),

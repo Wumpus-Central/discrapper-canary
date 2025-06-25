@@ -48,8 +48,8 @@ var r = n(990547),
     K = n(572004),
     q = n(49012),
     X = n(358085),
-    Q = n(998502),
-    J = n(695346),
+    J = n(998502),
+    Q = n(695346),
     $ = n(604227),
     ee = n(38915),
     et = n(321614),
@@ -102,13 +102,13 @@ var r = n(990547),
     eK = n(388032),
     eq = n(603571),
     eX = n(916723),
-    eQ = n(539452);
-let eJ = () => {
+    eJ = n(539452);
+let eQ = () => {
         let e = [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BADGE];
         return j.M.getCurrentConfig({ location: 'getAppearanceDCs' }).enabled && e.push(s.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE), e;
     },
     e$ = () => {
-        let e = eJ(),
+        let e = eQ(),
             [t] = (0, I.US)(e);
         return t === s.z.CLIENT_THEMES_SETTINGS_BADGE || t === s.z.DEKSTOP_CUSTOM_APP_ICON_BADGE ? (0, i.jsx)(a.lBU, { text: eK.intl.string(eK.t.y2b7CA) }) : t === s.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE ? (0, i.jsx)(a.IGR, { text: eK.intl.string(eK.t.y2b7CA) }) : null;
     },
@@ -593,7 +593,7 @@ let eJ = () => {
                 searchableTitles: [eK.intl.string(eK.t.Ipxkoq)],
                 label: eK.intl.string(eK.t.Ipxkoq),
                 element: ei.Z,
-                className: eQ.premiumTab
+                className: eJ.premiumTab
             },
             [eF.s6.GUILD_BOOSTING]: {
                 section: ez.oAB.GUILD_BOOSTING,
@@ -675,7 +675,7 @@ let eJ = () => {
                 ariaLabel: eK.intl.string(eK.t['iHH+k5']),
                 element: ed.Z,
                 newIndicator: (0, i.jsx)(e$, {}),
-                newIndicatorDismissibleContentTypes: eJ(),
+                newIndicatorDismissibleContentTypes: eQ(),
                 url: ez.Z5c.SETTINGS('appearance')
             },
             [eF.s6.APPEARANCE_THEME]: {
@@ -994,7 +994,7 @@ let eJ = () => {
                 section: ez.oAB.VOICE,
                 searchableTitles: [eK.intl.string(eK.t.AxnPm5)],
                 parent: eF.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO,
-                predicate: () => 'stable' !== Q.ZP.releaseChannel && z.Z.isExperimentalEncodersSupported()
+                predicate: () => 'stable' !== J.ZP.releaseChannel && z.Z.isExperimentalEncodersSupported()
             },
             [eF.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING]: {
                 section: ez.oAB.VOICE,
@@ -1098,7 +1098,7 @@ let eJ = () => {
                 section: ez.oAB.VOICE,
                 searchableTitles: [eK.intl.string(eK.t['0CEP6e'])],
                 parent: eF.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
-                predicate: () => J.Sb.getSetting()
+                predicate: () => Q.Sb.getSetting()
             },
             [eF.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_AEC_DUMP]: {
                 section: ez.oAB.VOICE,
@@ -1110,7 +1110,7 @@ let eJ = () => {
                 section: ez.oAB.VOICE,
                 searchableTitles: [eK.intl.string(eK.t.U4FgFB)],
                 parent: eF.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
-                predicate: () => ('canary' === Q.ZP.releaseChannel || 'development' === Q.ZP.releaseChannel) && e5 && z.Z.supports(eW.AN.CONNECTION_REPLAY)
+                predicate: () => ('canary' === J.ZP.releaseChannel || 'development' === J.ZP.releaseChannel) && e5 && z.Z.supports(eW.AN.CONNECTION_REPLAY)
             },
             [eF.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING]: {
                 section: ez.oAB.VOICE,
@@ -1134,7 +1134,7 @@ let eJ = () => {
                 icon: (0, i.jsx)('img', {
                     alt: '',
                     src: n(186542),
-                    className: eQ.clickerGameIcon
+                    className: eJ.clickerGameIcon
                 })
             },
             [eF.s6.POGGERMODE]: {
@@ -1147,7 +1147,7 @@ let eJ = () => {
                 icon: (0, i.jsx)('img', {
                     alt: '',
                     src: n(348621),
-                    className: eQ.poggermodeIcon
+                    className: eJ.poggermodeIcon
                 })
             },
             [eF.s6.CHAT]: {

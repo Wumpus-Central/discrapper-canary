@@ -93,28 +93,29 @@ function G() {
         p = (0, O.D)(),
         f = null;
     return (
-        p && ((e = w.intl.string(w.t.HcoRu7)), (f = (0, r.jsx)(s.Dkj, { size: 'xs' }))),
-        null != u
-            ? ((f = d
-                  ? (0, r.jsx)(s.r7p, { size: 'xs' })
-                  : (0, r.jsx)(g.Z, {
-                        guild: u,
-                        size: g.Z.Sizes.MINI,
-                        active: !0,
-                        className: D.guildIcon
-                    })),
-              (e = u.name))
-            : null != a && (a.isDM() || a.isGroupDM())
-              ? ((e = w.intl.string(w.t.YUU0RE)), (f = (0, r.jsx)(s.gw7, { size: 'xs' })))
-              : t.pathname.startsWith(x.Z5c.GLOBAL_DISCOVERY)
-                ? ((e = w.intl.string(w.t['4nEZLi'])), (f = (0, r.jsx)(s.Jmo, { size: 'xs' })))
-                : t.pathname.startsWith(x.Z5c.NITRO_HOME)
-                  ? ((e = w.intl.string(w.t.Ipxkoq)), (f = (0, r.jsx)(s.SrA, { size: 'xs' })))
-                  : t.pathname.startsWith(x.Z5c.COLLECTIBLES_SHOP)
-                    ? ((e = w.intl.string(w.t.pWG4zc)), (f = (0, r.jsx)(s.EOn, { size: 'xs' })))
-                    : t.pathname.startsWith(x.Z5c.FRIENDS)
-                      ? ((e = w.intl.string(w.t.TdEu5e)), (f = (0, r.jsx)(s.iFz, { size: 'xs' })))
-                      : t.pathname.startsWith(x.Z5c.FAMILY_CENTER) && ((e = w.intl.string(R.default.RZqaJi)), (f = (0, r.jsx)(s.BFJ, { size: 'xs' }))),
+        p
+            ? ((e = w.intl.string(w.t.HcoRu7)), (f = (0, r.jsx)(s.Dkj, { size: 'xs' })))
+            : null != u
+              ? ((f = d
+                    ? (0, r.jsx)(s.r7p, { size: 'xs' })
+                    : (0, r.jsx)(g.Z, {
+                          guild: u,
+                          size: g.Z.Sizes.MINI,
+                          active: !0,
+                          className: D.guildIcon
+                      })),
+                (e = u.name))
+              : null != a && (a.isDM() || a.isGroupDM())
+                ? ((e = w.intl.string(w.t.YUU0RE)), (f = (0, r.jsx)(s.gw7, { size: 'xs' })))
+                : t.pathname.startsWith(x.Z5c.GLOBAL_DISCOVERY)
+                  ? ((e = w.intl.string(w.t['4nEZLi'])), (f = (0, r.jsx)(s.Jmo, { size: 'xs' })))
+                  : t.pathname.startsWith(x.Z5c.NITRO_HOME)
+                    ? ((e = w.intl.string(w.t.Ipxkoq)), (f = (0, r.jsx)(s.SrA, { size: 'xs' })))
+                    : t.pathname.startsWith(x.Z5c.COLLECTIBLES_SHOP)
+                      ? ((e = w.intl.string(w.t.pWG4zc)), (f = (0, r.jsx)(s.EOn, { size: 'xs' })))
+                      : t.pathname.startsWith(x.Z5c.FRIENDS)
+                        ? ((e = w.intl.string(w.t.TdEu5e)), (f = (0, r.jsx)(s.iFz, { size: 'xs' })))
+                        : t.pathname.startsWith(x.Z5c.FAMILY_CENTER) && ((e = w.intl.string(R.default.RZqaJi)), (f = (0, r.jsx)(s.BFJ, { size: 'xs' }))),
         null != e &&
             '' !== e &&
             (0, r.jsxs)('div', {

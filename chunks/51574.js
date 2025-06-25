@@ -1,18 +1,17 @@
 n.d(t, {
-    BL: () => a,
-    ZP: () => o,
-    zS: () => l
+    BL: () => l,
+    J1: () => a,
+    ZP: () => o
 });
-var i,
-    r = n(818083),
-    s = n(987338),
-    l = (((i = {}).V3 = 'v3'), (i.V4 = 'v4'), (i.V5 = 'v5'), i);
-let a = (0, r.B)({
+var i = n(818083),
+    r = n(987338),
+    s = n(388032);
+let l = (0, i.B)({
     kind: 'user',
     id: '2025-06_nitro_tagline_premium_brand_refresh_experiment',
     label: 'Nitro Tagline Premium Brand Refresh Experiment',
     defaultConfig: { taglineVersion: 'v3' },
-    commonTriggerPoint: s.$P.CONNECTION_OPEN,
+    commonTriggerPoint: r.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 0,
@@ -31,7 +30,17 @@ let a = (0, r.B)({
         }
     ]
 });
+function a(e) {
+    switch (e) {
+        case 'v4':
+            return s.intl.string(s.t['EW+VIS']);
+        case 'v5':
+            return s.intl.string(s.t['eG+cW1']);
+        default:
+            return s.intl.string(s.t.YCZldH);
+    }
+}
 function o(e) {
     let { location: t } = e;
-    return a.useExperiment({ location: t }, { autoTrackExposure: !0 }).taglineVersion;
+    return l.useExperiment({ location: t }, { autoTrackExposure: !0 }).taglineVersion;
 }

@@ -23,6 +23,7 @@ function f(e, t, n, f) {
         feature_name: u.QP.SOUNDBOARD_PLAY,
         feature_tier: b ? u.h1.PREMIUM_STANDARD : u.h1.FREE,
         guild_id: h,
+        home_guild_id: n.guildId,
         location_stack: e,
         rtc_connection_id: g,
         media_session_id: m,

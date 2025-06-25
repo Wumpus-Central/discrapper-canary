@@ -1,6 +1,7 @@
 e.exports = {
     channelTextArea: 'channelTextArea__74017',
     highlighted: 'highlighted__74017',
+    error: 'error__74017',
     focusRing: 'focusRing__74017',
     scrollableContainer: 'scrollableContainer__74017',
     themedBackground: 'themedBackground__74017',

@@ -238,15 +238,11 @@ let A = {
         handler() {}
     },
     [S.zMe.ACTIVITY_PIP_MODE_UPDATE]: {
-        scope: {
-            [C.Gp.ANY]: [l.x.RPC, C.wE, C.lH]
-        },
+        scope: void 0,
         handler() {}
     },
     [S.zMe.ACTIVITY_LAYOUT_MODE_UPDATE]: {
-        scope: {
-            [C.Gp.ANY]: [l.x.RPC, C.wE, C.lH]
-        },
+        scope: void 0,
         handler() {}
     },
     [S.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: E.gQ,

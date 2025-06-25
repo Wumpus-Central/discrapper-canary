@@ -47,8 +47,8 @@ var i = n(255367),
     K = n(474376),
     q = n(431282),
     X = n(213928),
-    Q = n(587243),
-    J = n(383832),
+    J = n(587243),
+    Q = n(383832),
     $ = n(981631),
     ee = n(228168),
     et = n(388032),
@@ -96,12 +96,12 @@ function es(e) {
         r.useEffect(() => (W.Z.setState({ isOpen: !0 }), () => W.Z.setState({ isOpen: !1 })), []);
     let ep = (0, l.e7)([G.Z], () => G.Z.getStatus(t.id)),
         eh = U.Cr.useSetting(),
-        ef = (0, Q.F)(eh),
+        ef = (0, J.F)(eh),
         { expiringStatusProfileFeedback: eb } = _.Y.useExperiment({ location: 'UserProfileAccountPopout' }, { autoTrackExposure: !1 }),
         e_ = (0, l.e7)([F.Z], () => F.Z.hidePersonalInformation),
         ex = (0, x.p)(),
         eE = U.Sb.useSetting(),
-        ej = (0, Q.I)(ep),
+        ej = (0, J.I)(ep),
         eC = (0, K.g)(n),
         eO = (0, E.Z)({ analyticsLocations: ed }),
         eS = (0, Y.I5)(t),
@@ -380,7 +380,7 @@ function es(e) {
                                                             icon: o.lMe,
                                                             label: et.intl.string(et.t.oMNyYG),
                                                             onClick: () => {
-                                                                n(), (0, J.Z)();
+                                                                n(), (0, Q.Z)();
                                                             },
                                                             renderSubmenu: (e) => {
                                                                 let { closePopout: t } = e;

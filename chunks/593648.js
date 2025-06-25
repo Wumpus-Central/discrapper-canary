@@ -120,7 +120,7 @@ function X(e) {
         })
     });
 }
-function Q(e) {
+function J(e) {
     let { disabledSounds: t, disableAllSounds: n, notifyMessagesInSelectedChannel: s } = e,
         a = r.useRef(null),
         o = (0, S.p)(),
@@ -280,7 +280,7 @@ function Q(e) {
         })
     });
 }
-function J() {
+function Q() {
     let e = (0, c.e7)([j.Z], () => j.Z.getGuildAlertSettings()),
         [t, n] = r.useState(null),
         s = L.default.keys(e).map((t) => {
@@ -456,9 +456,9 @@ class $ extends r.PureComponent {
                     })
                 }),
                 this.renderTTS(),
-                (0, i.jsx)(J, {}),
+                (0, i.jsx)(Q, {}),
                 (0, i.jsx)(u.xJW, {
-                    children: (0, i.jsx)(Q, {
+                    children: (0, i.jsx)(J, {
                         disabledSounds: s,
                         disableAllSounds: a,
                         notifyMessagesInSelectedChannel: c

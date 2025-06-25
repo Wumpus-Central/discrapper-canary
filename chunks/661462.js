@@ -36,7 +36,7 @@ function f(e) {
 }
 function p(e) {
     var t, n, l;
-    let { user: a, currentUser: s, displayProfile: d, guildId: p, channelId: m, items: b, initialSection: x, initialSubsection: y, onClose: _ } = e,
+    let { user: a, currentUser: s, displayProfile: d, guildId: p, channelId: m, items: b, initialSection: y, initialSubsection: _, onClose: x } = e,
         { trackUserProfileAction: h } = (0, c.KZ)(),
         [{ section: g, subsection: j, text: I }, v] = r.useState(
             ((n = (function (e) {
@@ -68,12 +68,12 @@ function p(e) {
                 null !=
                     (t = b.find((e) => {
                         let { section: t } = e;
-                        return t === x;
+                        return t === y;
                     }))
                     ? t
                     : b[0]
             )),
-            (l = l = { subsection: y }),
+            (l = l = { subsection: _ }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                 : (function (e, t) {
@@ -136,7 +136,7 @@ function p(e) {
                     channelId: m,
                     section: g,
                     subsection: j,
-                    onClose: _
+                    onClose: x
                 })
             })
         ]

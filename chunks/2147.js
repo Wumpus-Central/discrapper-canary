@@ -287,7 +287,8 @@ class eT extends l.PureComponent {
                                         },
                                         focused: this.state.topicFocused,
                                         onSubmit: this.handleSubmit,
-                                        disableThemedBackground: !0
+                                        disableThemedBackground: !0,
+                                        error: this.getError('topic')
                                     })
                                   : (0, i.jsx)(g.Kx8, {
                                         autoFocus: this.props.subsection === ee.ZfP.TOPIC,

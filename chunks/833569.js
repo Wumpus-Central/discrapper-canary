@@ -383,8 +383,8 @@ function q(e) {
                     )
                 );
         },
-        Q = (0, I.UV)(),
-        { churnUserDiscountOffer: J, isFetchingChurnDiscountOffer: $ } = (0, I.WR)(!Q || 1 !== Z);
+        J = (0, I.UV)(),
+        { churnUserDiscountOffer: Q, isFetchingChurnDiscountOffer: $ } = (0, I.WR)(!J || 1 !== Z);
     switch (Z) {
         case 6:
             n = (0, r.jsx)(P.of, {
@@ -461,8 +461,8 @@ function q(e) {
                 onClose: () => X(Z),
                 onDiscountClaim: () => w(4),
                 onContinue: () => w(2),
-                isLoading: Q && $,
-                churnUserDiscountOffer: J,
+                isLoading: J && $,
+                churnUserDiscountOffer: Q,
                 analyticsLocations: D
             });
             break;
@@ -491,7 +491,7 @@ function q(e) {
                 premiumType: v,
                 onClose: () => X(Z),
                 onConfirm: () => w(5),
-                userDiscountOffer: J
+                userDiscountOffer: Q
             });
             break;
         case 5:
@@ -500,7 +500,7 @@ function q(e) {
                 premiumType: v,
                 onClose: () => X(Z),
                 confettiCanvas: x,
-                userDiscountOffer: J
+                userDiscountOffer: Q
             });
             break;
         default:

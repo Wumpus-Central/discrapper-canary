@@ -73,10 +73,10 @@ function G() {
         W = (0, a.e7)([A.Z], () => A.Z.showNotice()),
         K = w.dN.useSetting() && null != F ? E.ZP.parse(void 0, F).content : F,
         q = D.ZP.canUsePremiumProfileCustomization(n),
-        { analyticsLocations: X, newestAnalyticsLocation: Q } = (0, f.ZP)(h.Z.USER_SETTINGS_USER_PROFILE),
-        J = (0, N.T)({ location: 'UserSettingsProfileCustomization' }),
+        { analyticsLocations: X, newestAnalyticsLocation: J } = (0, f.ZP)(h.Z.USER_SETTINGS_USER_PROFILE),
+        Q = (0, N.T)({ location: 'UserSettingsProfileCustomization' }),
         $ = (0, _.wE)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE),
-        ee = J && !$;
+        ee = Q && !$;
     r.useEffect(() => {
         ee && (0, _.EW)(o.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE, { forceTrack: !0 });
     }, [ee]);
@@ -182,7 +182,7 @@ function G() {
                       (0, i.jsx)(j.p, {
                           className: V.floatingNitroUpsell,
                           showUpsell: eo && !es,
-                          text: U.intl.format(U.t.TmfgIy, { onClick: () => (0, C.y)({ analyticsSource: Q }) }),
+                          text: U.intl.format(U.t.TmfgIy, { onClick: () => (0, C.y)({ analyticsSource: J }) }),
                           textVariant: 'heading-md/medium',
                           button: (0, i.jsxs)(d.gtL, {
                               className: V.floatingNitroButton,

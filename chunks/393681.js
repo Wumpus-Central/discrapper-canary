@@ -1,4 +1,4 @@
-n.d(t, { Z: () => J }), n(388685);
+n.d(t, { Z: () => Q }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -88,7 +88,7 @@ function X(e, t) {
         e
     );
 }
-class Q extends r.PureComponent {
+class J extends r.PureComponent {
     componentDidMount() {
         let { currentUser: e } = this.props;
         (0, T.Z)(e.id, e.getAvatarURL(void 0, 80));
@@ -417,7 +417,7 @@ class Q extends r.PureComponent {
             });
     }
 }
-let J = () => {
+let Q = () => {
     let e = (0, c.e7)([P.default], () => {
             let e = P.default.getCurrentUser();
             return o()(null != e, 'ConnectedUserAccountSettings: currentUser cannot be undefined'), e;
@@ -430,7 +430,7 @@ let J = () => {
         a = (0, c.e7)([Z.default], () => Z.default.locale),
         d = (0, c.e7)([A.Z], () => A.Z.getSubsection()),
         { teams: u, loading: m } = (0, v.Z)({ refreshOnDepChange: !0 });
-    return (0, i.jsx)(Q, {
+    return (0, i.jsx)(J, {
         theme: r,
         currentUser: e,
         backupCodes: t,

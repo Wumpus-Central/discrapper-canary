@@ -99,8 +99,8 @@ function D() {
             image: M
         }),
         X = (0, c.gS)(),
-        Q = A.ZP.canUsePremiumProfileCustomization(L),
-        J = (0, m.gd)(M, L.avatar),
+        J = A.ZP.canUsePremiumProfileCustomization(L),
+        Q = (0, m.gd)(M, L.avatar),
         $ = (0, m.f$)(V, null == B ? void 0 : B.banner),
         ee = 'DefaultCustomizationSections';
     (0, o.j)({
@@ -141,7 +141,7 @@ function D() {
                 h.Z,
                 {
                     onAvatarChange: a.I5,
-                    showRemoveAvatarButton: J,
+                    showRemoveAvatarButton: Q,
                     errors: K.avatar,
                     sectionTitle: P.intl.string(P.t.lqaIxM),
                     forcedDivider: !0
@@ -165,7 +165,7 @@ function D() {
                 },
                 'effect'
             ),
-            Q
+            J
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)(

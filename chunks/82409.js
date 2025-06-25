@@ -225,7 +225,7 @@ function L(e) {
                     [Z.V5.ALL, Z.V5.MENTIONS, Z.V5.ANNOUNCEMENTS].includes(g) && d && !p && M(null, t), [Z.V5.ALL, Z.V5.ANNOUNCEMENTS].includes(g) && x !== I.jd.Done && x !== I.jd.Loading && P(e);
                 },
                 renderLoadingState: k,
-                ignoreGrouping: g !== Z.V5.ALL
+                ignoreGrouping: g === Z.V5.BOOKMARKS
             })
         ]
     });

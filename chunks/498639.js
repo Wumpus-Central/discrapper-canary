@@ -112,7 +112,7 @@ let w = function () {
         { analyticsLocations: Y } = (0, g.ZP)(m.Z.PAYMENT_FLOW_TEST_PAGE),
         [W, K] = r.useState(''),
         [q, X] = r.useState(y.lds),
-        { balance: Q, isFetching: J, error: $ } = (0, v.A)(),
+        { balance: J, isFetching: Q, error: $ } = (0, v.A)(),
         { isSubmitting: ee, responseMessage: et, redeemVirtualCurrency: en } = (0, v.f)(),
         [ei, er] = r.useState(y.lds),
         [es, el] = r.useState(''),
@@ -342,7 +342,7 @@ let w = function () {
                                     variant: 'text-sm/normal',
                                     children: 'Virtual Currency Balance:'
                                 }),
-                                J
+                                Q
                                     ? (0, i.jsx)('div', {
                                           className: P.loader,
                                           children: (0, i.jsx)(o.$jN, { type: o.RAz.SPINNING_CIRCLE })
@@ -356,7 +356,7 @@ let w = function () {
                                                       children: ['Error fetching Virtual Currency Balance: ', $.message]
                                                   }),
                                               (0, i.jsx)(T.A4, {
-                                                  balance: null != Q ? Q : 0,
+                                                  balance: null != J ? J : 0,
                                                   balanceWidgetMode: T.b6.SELECTED
                                               })
                                           ]

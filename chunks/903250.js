@@ -38,32 +38,23 @@ let T = (e) => {
     },
     I = r.forwardRef((e, t) => {
         var n, r;
-        let { isFullscreen: s, className: h, buttonClassName: I, subscriptionTier: N, entrypoint: y, isDarkMode: A, isEligibleForBogoPromotion: P } = e,
-            { analyticsLocations: R } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_HERO_CTA),
-            D = (0, g._O)(),
-            Z = (0, f.Ng)(),
-            w = (0, f.Wp)(Z, O.Si.TIER_2) ? O.Si.TIER_2 : void 0,
-            k = (0, b.N)(),
-            L = (0, m.Nx)(),
-            B = (0, a.e7)([u.Z], () => u.Z.affinities),
-            M = (0, _.Z)(),
-            U = y === O.EZ.ApplicationStoreHome,
-            V = U && null != M,
-            G = A ? o.Ttl.WHITE : o.Ttl.BRAND,
-            F = B.length > 0,
-            H = (0, p.ZP)({ location: 'PremiumMarketingHeroHeading' }),
-            z = (() => {
-                switch (H) {
-                    case p.zS.V4:
-                        return S.intl.string(S.t['EW+VIS']);
-                    case p.zS.V5:
-                        return S.intl.string(S.t['eG+cW1']);
-                    default:
-                        return S.intl.string(S.t.YCZldH);
-                }
-            })();
+        let { isFullscreen: s, className: h, buttonClassName: S, subscriptionTier: I, entrypoint: N, isDarkMode: y, isEligibleForBogoPromotion: A } = e,
+            { analyticsLocations: P } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_HERO_CTA),
+            R = (0, g._O)(),
+            D = (0, f.Ng)(),
+            Z = (0, f.Wp)(D, O.Si.TIER_2) ? O.Si.TIER_2 : void 0,
+            w = (0, b.N)(),
+            k = (0, m.Nx)(),
+            L = (0, a.e7)([u.Z], () => u.Z.affinities),
+            B = (0, _.Z)(),
+            M = N === O.EZ.ApplicationStoreHome,
+            U = M && null != B,
+            V = y ? o.Ttl.WHITE : o.Ttl.BRAND,
+            G = L.length > 0,
+            F = (0, p.ZP)({ location: 'PremiumMarketingHeroHeading' }),
+            H = (0, p.J1)(F);
         return (0, i.jsx)(d.Gt, {
-            value: R,
+            value: P,
             children: (0, i.jsx)('div', {
                 ref: t,
                 className: l()(v.container, v.marketingPageContainer, h),
@@ -71,52 +62,52 @@ let T = (e) => {
                 children: (0, i.jsxs)('div', {
                     className: v.marketingPageTextContainer,
                     children: [
-                        L &&
+                        k &&
                             (0, i.jsx)(T, {
-                                trialOffer: k,
-                                discountOffer: Z
+                                trialOffer: w,
+                                discountOffer: D
                             }),
                         (0, i.jsx)(o.X6q, {
                             className: v.marketingPageHeading,
                             variant: 'display-sm',
                             color: 'header-primary',
-                            children: z
+                            children: H
                         }),
-                        V
+                        U
                             ? (0, i.jsx)(j.Z, {
-                                  referrer: M,
-                                  isApplicationHome: U
+                                  referrer: B,
+                                  isApplicationHome: M
                               })
-                            : F &&
+                            : G &&
                               (0, i.jsx)('div', {
                                   className: v.affinityDescriptionContainer,
                                   children: (0, i.jsx)(E.Z, {
                                       textColor: 'text-normal',
                                       smallerText: !s,
-                                      isApplicationHome: U
+                                      isApplicationHome: M
                                   })
                               }),
-                        D
+                        R
                             ? (0, i.jsx)('div', {
-                                  className: l()(v.buttonContainer, v.marketingPageCTAContainer, { [v.marketingPageCTAMargin]: !(F || V) }),
+                                  className: l()(v.buttonContainer, v.marketingPageCTAContainer, { [v.marketingPageCTAMargin]: !(G || U) }),
                                   children: (0, i.jsx)(x.Z, {
-                                      className: l()(v.button, I),
-                                      color: G
+                                      className: l()(v.button, S),
+                                      color: V
                                   })
                               })
                             : (0, i.jsx)(C.PK, {
-                                  subscriptionTier: null != (r = null != N ? N : null == k || null == (n = k.subscription_trial) ? void 0 : n.sku_id) ? r : w,
-                                  inOfferExperience: L,
-                                  containerClassName: l()(v.marketingPageCTAContainer, { [v.marketingPageCTAMargin]: !(F || V) }),
-                                  buttonClassName: I,
-                                  isApplicationHome: U,
-                                  isDarkMode: A,
-                                  isEligibleForBogoPromotion: P
+                                  subscriptionTier: null != (r = null != I ? I : null == w || null == (n = w.subscription_trial) ? void 0 : n.sku_id) ? r : Z,
+                                  inOfferExperience: k,
+                                  containerClassName: l()(v.marketingPageCTAContainer, { [v.marketingPageCTAMargin]: !(G || U) }),
+                                  buttonClassName: S,
+                                  isApplicationHome: M,
+                                  isDarkMode: y,
+                                  isEligibleForBogoPromotion: A
                               }),
                         (0, i.jsx)(C._O, {
                             variant: 'text-md/normal',
                             withBottomMargin: !1,
-                            isApplicationHome: U
+                            isApplicationHome: M
                         })
                     ]
                 })

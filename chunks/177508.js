@@ -74,7 +74,7 @@ function D(e, t) {
 function Z() {
     return (0, i.jsxs)('div', {
         className: A.root,
-        children: [(0, i.jsx)(H, {}), (0, i.jsx)(X, {}), (0, i.jsx)(Q, {}), (0, i.jsx)(q, {}), (0, i.jsx)(K, {}), (0, i.jsx)(W, {}), (0, i.jsx)(Y, {}), (0, i.jsx)(er, {}), (0, i.jsx)(w, {}), (0, i.jsx)(es, {})]
+        children: [(0, i.jsx)(H, {}), (0, i.jsx)(X, {}), (0, i.jsx)(J, {}), (0, i.jsx)(q, {}), (0, i.jsx)(K, {}), (0, i.jsx)(W, {}), (0, i.jsx)(Y, {}), (0, i.jsx)(er, {}), (0, i.jsx)(w, {}), (0, i.jsx)(es, {})]
     });
 }
 function w() {
@@ -1110,7 +1110,7 @@ function X() {
         ]
     });
 }
-function Q() {
+function J() {
     let [e, t] = r.useState(''),
         [n, s] = r.useState(''),
         [l, a] = r.useState('');
@@ -1179,7 +1179,7 @@ function Q() {
         ]
     });
 }
-function J(e) {
+function Q(e) {
     let { transitionState: t } = e,
         [n, s] = r.useState(!1),
         [l, a] = r.useState(j.CgR.SMALL),
@@ -1592,7 +1592,7 @@ function er() {
                     }),
                     (0, i.jsx)(j.zxk, {
                         onClick: () => {
-                            (0, j.h7j)((e) => (0, i.jsx)(J, R({}, e)));
+                            (0, j.h7j)((e) => (0, i.jsx)(Q, R({}, e)));
                         },
                         children: 'Open modal'
                     }),

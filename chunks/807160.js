@@ -91,8 +91,8 @@ function X(e, t) {
         e
     );
 }
-let Q = (e) => 'https://'.concat(F.xr4, '/hc/').concat(e.toLowerCase(), '/requests/new?ticket_form_id=360000118612'),
-    J = [F.epS.DURABLE_PRIMARY, F.epS.DURABLE, F.epS.CONSUMABLE],
+let J = (e) => 'https://'.concat(F.xr4, '/hc/').concat(e.toLowerCase(), '/requests/new?ticket_form_id=360000118612'),
+    Q = [F.epS.DURABLE_PRIMARY, F.epS.DURABLE, F.epS.CONSUMABLE],
     $ = [F.PyE.FAILED, F.PyE.REVERSED, F.PyE.CANCELED],
     ee = [z.gg.APPLE],
     et = (e) => {
@@ -408,7 +408,7 @@ class el extends (i = s.PureComponent) {
             i = this.validateRefundRules();
         if (i.includes('PAYMENT_GATEWAY') || i.includes('PAYMENT_STATUS') || i.includes('ALREADY_REFUNDED') || i.includes('SKU_STICKER_PACK') || i.includes('SUBSCRIPTION_TYPE') || i.includes('GUILD_PRODUCT')) return null;
         let l = 0 === i.length,
-            a = Q(t),
+            a = J(t),
             o = this.isPremium ? 5 : 14;
         return (
             (e = i.includes('SKU_TYPE')
@@ -490,7 +490,7 @@ class el extends (i = s.PureComponent) {
                     children: !n.isCollectible && this.renderRefundCriteria(Y.intl.string(Y.t.H0RNz8), i, Y.intl.formatToPlainString(Y.t['7dtXa2'], { daysSincePurchase: this.daysSincePurchase }))
                 }),
                 (0, r.jsx)(g.eee, {
-                    href: Q(t),
+                    href: J(t),
                     children: Y.intl.string(Y.t.re5nOD)
                 })
             ]
@@ -618,7 +618,7 @@ class el extends (i = s.PureComponent) {
                                 buttonPosition: v.E.RIGHT,
                                 notice: Y.intl.string(Y.t['3AvulJ']),
                                 ctaLabel: Y.intl.string(Y.t.zoztQE),
-                                onClick: () => (0, h.Z)(Q(n))
+                                onClick: () => (0, h.Z)(J(n))
                             })
                           : null != i &&
                             null != e.sku &&
@@ -767,7 +767,7 @@ class el extends (i = s.PureComponent) {
 function ea(e) {
     var t, n;
     let { payment: i, locale: l, compactMode: a, className: o } = e,
-        c = null != i.sku && J.includes(i.sku.type),
+        c = null != i.sku && Q.includes(i.sku.type),
         d = null != i.sku && c ? i.sku.applicationId : null,
         u = null == (t = i.sku) ? void 0 : t.applicationId,
         g = (null == (n = i.subscription) ? void 0 : n.type) === F.NYc.APPLICATION,

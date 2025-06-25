@@ -219,8 +219,8 @@ let w = function (e) {
         }, [K, v]),
         X = r.useMemo(() => U.find((e) => e.isAvailable()), [U]);
     if (0 === U.length) return null;
-    let Q = U.length;
-    if (((t = W ? N.intl.formatToPlainString(F ? N.t['3DW6DQ'] : N.t['/u15QU'], { numUnappliedGuildBoostSlots: Q }) : N.intl.formatToPlainString(F ? N.t['3DW6DQ'] : N.t.BPadnJ, { numUnappliedGuildBoostSlots: Q })), C.ZP.isPremium(w))) {
+    let J = U.length;
+    if (((t = W ? N.intl.formatToPlainString(F ? N.t['3DW6DQ'] : N.t['/u15QU'], { numUnappliedGuildBoostSlots: J }) : N.intl.formatToPlainString(F ? N.t['3DW6DQ'] : N.t.BPadnJ, { numUnappliedGuildBoostSlots: J })), C.ZP.isPremium(w))) {
         let e = (e, t) =>
             (0, i.jsx)(
                 c.P3F,
@@ -237,11 +237,11 @@ let w = function (e) {
         n = F
             ? N.intl.format(N.t.omcpSE, { learnMoreHook: e })
             : N.intl.format(N.t['5mAkVl'], {
-                  numUnappliedGuildBoostSlots: Q,
+                  numUnappliedGuildBoostSlots: J,
                   learnMoreHook: e
               });
-    } else n = F ? N.intl.string(N.t['8pcUZm']) : N.intl.formatToPlainString(N.t.Kaw82t, { numUnappliedGuildBoostSlots: Q });
-    let J = (0, a.EQ)({
+    } else n = F ? N.intl.string(N.t['8pcUZm']) : N.intl.formatToPlainString(N.t.Kaw82t, { numUnappliedGuildBoostSlots: J });
+    let Q = (0, a.EQ)({
         subscriptionIsPausedOrPausePending: h,
         fractionalPremiumBlocksBoosting: L
     })
@@ -297,8 +297,8 @@ let w = function (e) {
                             className: y.headerContentSecondary,
                             children: (0, i.jsx)(m.Z, {
                                 shouldShow: null == X || B,
-                                text: J,
-                                'aria-label': J.toString(),
+                                text: Q,
+                                'aria-label': Q.toString(),
                                 children: (e) =>
                                     (0, i.jsx)(
                                         c.zxk,

@@ -47,8 +47,8 @@ var i = n(255367),
     K = n(355863),
     q = n(283595),
     X = n(594174),
-    Q = n(556296),
-    J = n(808506),
+    J = n(556296),
+    Q = n(808506),
     $ = n(237997),
     ee = n(626135),
     et = n(823379),
@@ -113,17 +113,17 @@ function e_(e) {
     var t;
     let n = $.default.getNotificationPositionMode(),
         i = n !== es._vf.DISABLED,
-        r = Q.ZP.getOverlayKeybind(),
-        s = Q.ZP.getOverlayChatKeybind();
+        r = J.ZP.getOverlayKeybind(),
+        s = J.ZP.getOverlayChatKeybind();
     return {
-        enabled: J.default.enabled,
+        enabled: Q.default.enabled,
         notifications_enabled: i,
         notifications_position: i ? n : null,
         text_notifications_mode: L.Z.isNotificationDisabled(R.OverlayNotificationDisabledSetting.TEXT_CHAT) ? 'DISABLED' : 'ENABLED',
         hotkey: null != r ? (0, ei.BB)(r.shortcut) : null,
         text_activation_hotkey: null != s ? (0, ei.BB)(s.shortcut) : null,
         text_opacity_slider: $.default.getTextWidgetOpacity(),
-        old_enabled: null != (t = null == e ? void 0 : e.enabled) ? t : J.default.enabled
+        old_enabled: null != (t = null == e ? void 0 : e.enabled) ? t : Q.default.enabled
     };
 }
 function ex(e) {
@@ -363,8 +363,8 @@ function eS(e) {
         Y = (null == d ? void 0 : d.state) != null && eC.has(d.state) && !H,
         K = (null == d ? void 0 : d.overlayMethod) === j.gl.OutOfProcess,
         X = (null == d ? void 0 : d.overlayMethod) === j.gl.OutOfProcessLimitedInteraction,
-        Q = (null == d ? void 0 : d.overlayMethod) === j.gl.Hook,
-        J = (null == d ? void 0 : d.state) === j.mM.OVERLAY_CRASHED || (null == d ? void 0 : d.state) === j.mM.OVERLAY_CRASHED_DISABLED,
+        J = (null == d ? void 0 : d.overlayMethod) === j.gl.Hook,
+        Q = (null == d ? void 0 : d.state) === j.mM.OVERLAY_CRASHED || (null == d ? void 0 : d.state) === j.mM.OVERLAY_CRASHED_DISABLED,
         $ = !b && !E,
         [ee, et] = (() => {
             switch (!0) {
@@ -406,7 +406,7 @@ function eS(e) {
                         }),
                         null
                     ];
-                case z && Q:
+                case z && J:
                     return [
                         ec.intl.format(ec.t.hFVBIi, {
                             overlayMethod: ec.intl.string(ec.t.bvlpDQ),
@@ -441,7 +441,7 @@ function eS(e) {
                             }
                         })()
                     ];
-                case J:
+                case Q:
                     return [ec.intl.string(ec.t.OFC2a2), null];
                 case U:
                     return [ec.intl.string(ec.t.m7X4a2), null];
@@ -454,7 +454,7 @@ function eS(e) {
                     return [ec.intl.string(ec.t.VWUn0d), null];
                 case Y:
                     if (K) return [ec.intl.string(ec.t['s8+CFh']), null];
-                    if (Q) return [ec.intl.string(ec.t.JEEdqq), null];
+                    if (J) return [ec.intl.string(ec.t.JEEdqq), null];
                     if (X) return [ec.intl.string(ec.t.pzBMwc), null];
                     return [ec.intl.string(ec.t['2Xhy9v']), null];
                 case null == d:
@@ -466,7 +466,7 @@ function eS(e) {
     (0, O.ZP)(() => {
         f.Z.getDetectableGames();
     });
-    let [en, ei] = r.useMemo(() => (Y ? ['text-muted', h.TVs.colors.TEXT_MUTED.css] : z && X ? ['text-warning', h.TVs.colors.TEXT_FEEDBACK_WARNING.css] : z && K ? ['text-positive', h.TVs.colors.TEXT_FEEDBACK_POSITIVE.css] : z && Q ? ['text-primary', h.TVs.colors.TEXT_PRIMARY.css] : ['interactive-normal', h.TVs.colors.INTERACTIVE_NORMAL.css]), [Y, z, X, K, Q]);
+    let [en, ei] = r.useMemo(() => (Y ? ['text-muted', h.TVs.colors.TEXT_MUTED.css] : z && X ? ['text-warning', h.TVs.colors.TEXT_FEEDBACK_WARNING.css] : z && K ? ['text-positive', h.TVs.colors.TEXT_FEEDBACK_POSITIVE.css] : z && J ? ['text-primary', h.TVs.colors.TEXT_PRIMARY.css] : ['interactive-normal', h.TVs.colors.INTERACTIVE_NORMAL.css]), [Y, z, X, K, J]);
     return null == l
         ? null
         : (0, i.jsxs)(ej, {
@@ -786,7 +786,7 @@ function eN() {
           });
 }
 function ey() {
-    let e = (0, g.e7)([Q.ZP], () => Q.ZP.getOverlayKeybind()),
+    let e = (0, g.e7)([J.ZP], () => J.ZP.getOverlayKeybind()),
         t = !(0, er.supportsLegacy)(),
         n = !(0, er.supportsOutOfProcess)(),
         [r, s] = (0, g.Wu)([I.ZP], () => [I.ZP.canShowAdminWarning, I.ZP.getVisibleGame()], []),

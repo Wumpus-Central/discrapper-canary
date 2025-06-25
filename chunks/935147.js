@@ -48,8 +48,8 @@ function G(e) {
             tryItOutThemeColors: K,
             tryItOutAvatar: q,
             tryItOutBanner: X,
-            tryItOutProfileEffectId: Q,
-            tryItOutAvatarDecoration: J
+            tryItOutProfileEffectId: J,
+            tryItOutAvatarDecoration: Q
         } = (0, s.cj)([T.Z], () => {
             var e, t;
             let n = T.Z.getAllPending(),
@@ -96,16 +96,16 @@ function G(e) {
                 e
             );
         }),
-        $ = (0, h.Z)(Q),
+        $ = (0, h.Z)(J),
         { preset: ee, onShuffle: et } = (0, _.Z)(),
         en = r.useRef(null);
     (0, v.Z)(en, M.Y_.TRY_IT_OUT);
     let { analyticsLocations: ei, newestAnalyticsLocation: er, sourceAnalyticsLocations: es } = (0, d.ZP)(c.Z.USER_SETTINGS_TRY_OUT_PREMIUM),
         el = (e) => {
             if (e) {
-                if (((0, a.I5)(q), (0, S.z5)(K), (0, S.ho)(X), null != J)) {
-                    let e = m.Z.getProduct(J.skuId);
-                    null != e && (0, p.G1)(e) ? (0, u.fK)(e.skuId).then(() => (0, a.cV)(J)) : null != g.Z.getPurchase(J.skuId) && (0, a.cV)(J);
+                if (((0, a.I5)(q), (0, S.z5)(K), (0, S.ho)(X), null != Q)) {
+                    let e = m.Z.getProduct(Q.skuId);
+                    null != e && (0, p.G1)(e) ? (0, u.fK)(e.skuId).then(() => (0, a.cV)(Q)) : null != g.Z.getPurchase(Q.skuId) && (0, a.cV)(Q);
                 }
                 I.default.track(L.rMx.TRY_IT_OUT_PRESET_SELECTED, { preset: ee });
             }

@@ -208,10 +208,10 @@ let Y = function (e) {
         K = (0, o.e7)([b.default], () => b.default.getCurrentUser()),
         { fractionalState: q } = (0, g.Z)({ forceFetch: !1 }),
         X = q === D.a$.FP_SUB_PAUSED,
-        { enabled: Q } = (0, N.ZP)({ location: Y });
-    (D.pj.has(r.planId) && Z.JwP.ALL_PAUSEABLE.has(r.status) && !X) || (Q = !1);
-    let J = (0, y.Ng)(),
-        $ = null == J || null == (t = J.discount) ? void 0 : t.amount,
+        { enabled: J } = (0, N.ZP)({ location: Y });
+    (D.pj.has(r.planId) && Z.JwP.ALL_PAUSEABLE.has(r.status) && !X) || (J = !1);
+    let Q = (0, y.Ng)(),
+        $ = null == Q || null == (t = Q.discount) ? void 0 : t.amount,
         ee = (0, v.t7)(),
         et = (0, v.lr)(),
         en = (0, T.W)(),
@@ -361,7 +361,7 @@ let Y = function (e) {
                 return (0, i.jsxs)('div', {
                     className: k.toolsButtons,
                     children: [
-                        Q
+                        J
                             ? (0, i.jsx)(c.zxk, {
                                   className: k.toolsButton,
                                   size: c.zxk.Sizes.SMALL,

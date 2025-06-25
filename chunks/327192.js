@@ -153,17 +153,17 @@ function z(e) {
     r.useEffect(() => {
         b(o.friendSync), S(o.visibility), I(o.metadataVisibility), y(o.showActivity);
     }, [o]);
-    let Q = {
+    let J = {
             inProgressVisibility: A,
             inProgressMetadataVisibility: M
         },
-        J = r.useRef(Q);
+        Q = r.useRef(J);
     r.useEffect(() => {
-        J.current = Q;
+        Q.current = J;
     }),
         r.useEffect(() => {
             if (!1 === o.verified) return;
-            let { inProgressVisibility: e, inProgressMetadataVisibility: t } = J.current;
+            let { inProgressVisibility: e, inProgressMetadataVisibility: t } = Q.current;
             null != e && (S(e), g.Z.setVisibility(o.type, o.id, e), R(null)), null != t && (I(t), g.Z.setMetadataVisibility(o.type, o.id, t), G(null));
         }, [o]);
     function $() {

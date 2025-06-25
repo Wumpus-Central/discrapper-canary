@@ -107,11 +107,11 @@ function W(e) {
             }),
             (0, i.jsx)(O.F, {
                 setting: R.s6.ACCESSIBILITY_ROLE_STYLE,
-                children: (0, i.jsx)(Q, {})
+                children: (0, i.jsx)(J, {})
             }),
             (0, i.jsx)(O.F, {
                 setting: R.s6.ACCESSIBILITY_PROFILE_COLORS,
-                children: (0, i.jsx)(J, {})
+                children: (0, i.jsx)(Q, {})
             }),
             (0, h.b)()
                 ? (0, i.jsxs)(O.F, {
@@ -271,7 +271,7 @@ function X() {
         })
     });
 }
-function Q() {
+function J() {
     let e = (0, c.e7)([p.Z], () => p.Z.roleStyle);
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -310,7 +310,7 @@ function Q() {
         ]
     });
 }
-function J() {
+function Q() {
     let e = (0, c.e7)([p.Z], () => p.Z.syncProfileThemeWithUserTheme),
         t = r.useRef(null);
     return (
