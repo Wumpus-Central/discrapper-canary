@@ -172,7 +172,7 @@ let y = (t) => {
                   {
                       text: X,
                       onClick: y,
-                      variant: 'destructive-primary'
+                      variant: 'critical-primary'
                   }
               ],
               children: j

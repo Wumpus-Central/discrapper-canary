@@ -47,7 +47,7 @@ let C = function (e) {
                                 })
                             ]
                         }),
-                        (0, u.u)(x).map((e, n) => {
+                        (0, u.uH)(x).map((e, n) => {
                             let { title: t, description: o } = e;
                             return (0, i.jsx)(
                                 a.ZP,

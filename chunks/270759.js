@@ -53,9 +53,9 @@ let Z = function (e) {
         }, []);
     let _ = (0, c.e7)([y.Z], () => y.Z.theme),
         Z = (0, v.If)(),
-        { section: x, rows: w } = (0, c.cj)([I.ZP], () => I.ZP.getState()),
-        L = (0, c.e7)([m.Z], () => m.Z.getSuggestionCount()),
-        R = i.useMemo(() => w.getRelationshipCounts(), [w]);
+        { section: x, rows: L } = (0, c.cj)([I.ZP], () => I.ZP.getState()),
+        w = (0, c.e7)([m.Z], () => m.Z.getSuggestionCount()),
+        R = i.useMemo(() => L.getRelationshipCounts(), [L]);
     i.useEffect(() => {
         null != t && h.Z.setInitialSection(t), 0 === R[N.OGo.FRIEND] && 0 === R[N.OGo.PENDING_INCOMING] && 0 === R[N.OGo.PENDING_OUTGOING] && 0 === R[N.OGo.BLOCKED] && h.Z.setSection(N.pJs.ADD_FRIEND);
     }, [t, R]);
@@ -67,7 +67,7 @@ let Z = function (e) {
         U = [
             {
                 id: N.pJs.ONLINE,
-                show: w.filter(N.pJs.ONLINE).length > 0,
+                show: L.filter(N.pJs.ONLINE).length > 0,
                 content: P.intl.string(P.t.b9w3bG),
                 className: j.item
             },
@@ -79,7 +79,7 @@ let Z = function (e) {
             },
             {
                 id: N.pJs.PENDING,
-                show: w.filter(N.pJs.PENDING).length > 0,
+                show: L.filter(N.pJs.PENDING).length > 0,
                 content: (0, r.jsxs)(r.Fragment, {
                     children: [
                         P.intl.string(P.t.p6IHGB),
@@ -95,17 +95,17 @@ let Z = function (e) {
             },
             {
                 id: N.pJs.SUGGESTIONS,
-                show: L > 0,
+                show: w > 0,
                 content: (0, r.jsxs)(r.Fragment, {
                     children: [
                         P.intl.string(P.t['8rSi19']),
                         (0, r.jsx)(u.mAB, {
-                            count: L,
+                            count: w,
                             className: j.badge
                         })
                     ]
                 }),
-                ariaLabel: P.intl.formatToPlainString(P.t.AbMQp6, { count: L.toString() }),
+                ariaLabel: P.intl.formatToPlainString(P.t.AbMQp6, { count: w.toString() }),
                 className: j.item
             },
             {

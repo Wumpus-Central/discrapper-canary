@@ -85,20 +85,20 @@ let O = (0, h.Z)(
     (e) => {
         var t;
         let { clientId: n, authorizations: u, scopes: d, parsedPermissions: h, responseType: O, redirectUri: y, codeChallenge: I, codeChallengeMethod: v, state: C, guildId: S, channelId: N, prompt: T, disableGuildSelect: P, disclosures: j, integrationType: A, pid: Z, signal: x } = e,
-            w = 'OAuth2Authorize_'.concat(n, '_').concat(S, '_').concat(N),
-            L = null != A ? (null == u ? void 0 : u.get(A)) : void 0,
-            R = null != (t = null == L ? void 0 : L.application) ? t : a.Z.getApplication(n);
+            L = 'OAuth2Authorize_'.concat(n, '_').concat(S, '_').concat(N),
+            w = null != A ? (null == u ? void 0 : u.get(A)) : void 0,
+            R = null != (t = null == w ? void 0 : w.application) ? t : a.Z.getApplication(n);
         return new Promise((e, t) => {
             let a = (0, f.jU)(Z),
-                L = i.z1l;
+                w = i.z1l;
             null != R &&
             null !=
                 (0, l.ZP)({
                     application: R,
                     channelId: N
                 })
-                ? (L = i.u1M)
-                : a.context === g.IlC.POPOUT && (L = i.u1M);
+                ? (w = i.u1M)
+                : a.context === g.IlC.POPOUT && (w = i.u1M);
             let D = !1,
                 k = (l) => {
                     let { clientId: o, location: u } = l;
@@ -133,7 +133,7 @@ let O = (0, h.Z)(
                                         l(), e(u), a.lock();
                                     }
                                 },
-                                L
+                                w
                             );
                         } else {
                             let t = 'OAuth2AuthorizeExternalError_'.concat(n, '_').concat(S, '_').concat(N),
@@ -157,12 +157,12 @@ let O = (0, h.Z)(
                                         l(), e(u), a.lock();
                                     }
                                 },
-                                L
+                                w
                             );
                         }
                     }
                 },
-                { cleanup: M } = E(w, x);
+                { cleanup: M } = E(L, x);
             (0, i.h7j)(
                 (e) =>
                     (0, r.jsx)(
@@ -188,12 +188,12 @@ let O = (0, h.Z)(
                         })
                     ),
                 {
-                    modalKey: w,
+                    modalKey: L,
                     onCloseCallback: () => {
                         M(), D || (t(new p.Z({ errorCode: g.lTL.OAUTH2_ERROR }, 'User cancelled authorization')), a.lock());
                     }
                 },
-                L
+                w
             );
         });
     },

@@ -1,13 +1,16 @@
 n.d(t, {
-    u: () => l,
-    z: () => c
-});
+    dx: () => l,
+    uH: () => c,
+    zJ: () => u
+}),
+    n(388685);
 var r = n(63063),
     i = n(168107),
     a = n(480916),
     o = n(981631),
     s = n(388032);
-let l = (e) => [
+let l = new Set([a.cU.NSFW_GUILD]),
+    c = (e) => [
         {
             title: s.intl.string(s.t.HphYKi),
             description: s.intl.string(s.t['GCZC+/'])
@@ -25,4 +28,4 @@ let l = (e) => [
             })
         }
     ],
-    c = 'AGE_VERIFICATION_MODAL_KEY';
+    u = 'AGE_VERIFICATION_MODAL_KEY';

@@ -29,8 +29,8 @@ var r = n(255367),
     A = n(954709),
     Z = n(644679),
     x = n(403763),
-    w = n(314533),
-    L = n(9029),
+    L = n(314533),
+    w = n(9029),
     R = n(935347),
     D = n(560067),
     k = n(823169),
@@ -83,8 +83,8 @@ var r = n(255367),
     eA = n(911560),
     eZ = n(703016),
     ex = n(892001),
-    ew = n(497805),
-    eL = n(332754),
+    eL = n(497805),
+    ew = n(332754),
     eR = n(507468),
     eD = n(722589),
     ek = n(282506),
@@ -122,7 +122,7 @@ function e4(e, t, n) {
         e
     );
 }
-function e7(e) {
+function e2(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -139,7 +139,7 @@ function e7(e) {
     return e;
 }
 n(117240), n(801077), n(967368), n(272053), n(974180), n(574254), n(551428), n(55563), n(882029), n(959457), n(653255), n(663389), n(25990), n(778825), n(999382), n(388610), n(533947), n(277053), n(371398), n(141233), n(471073), n(606206);
-let e2 = !1;
+let e7 = !1;
 (0, S.DL)(),
     o.ZP.initialize(),
     eI.Z.loadServer(),
@@ -329,7 +329,7 @@ let ti = [
                             var n, l;
                             return (0, r.jsx)(
                                 e,
-                                ((n = e7({}, t)),
+                                ((n = e2({}, t)),
                                 (l = l = { guildId: i }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
@@ -455,10 +455,10 @@ class to extends i.PureComponent {
             O.Z.initialize(),
             eZ.Z.init(),
             eq.Z.init(),
-            eL.Z.init(),
+            ew.Z.init(),
             eT.Z.initialize(),
             eP.Z.initialize(),
-            ew.Z.initialize(),
+            eL.Z.initialize(),
             eR.Z.init(),
             G.Z.initialize(),
             E.Z.initialize(),
@@ -467,15 +467,15 @@ class to extends i.PureComponent {
             ed.Z.initialize(),
             eu.Z.initialize(),
             ep.Z.initialize(),
-            w.Z.initialize(),
             L.Z.initialize(),
+            w.Z.initialize(),
             H.Z.initialize(),
             er.Z.init({
                 hasModalOpen: s.$sL,
                 openModal: () =>
                     (0, s.ZDy)(async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 650233));
-                        return (t) => (0, r.jsx)(e, e7({}, t));
+                        return (t) => (0, r.jsx)(e, e2({}, t));
                     })
             }),
             U.Z.init(),
@@ -490,7 +490,7 @@ class to extends i.PureComponent {
             (this.historyUnlisten = eE.Z.addRouteChangeListener(this.handleHistoryChange));
     }
     componentWillUnmount() {
-        eI.Z.terminate(), eM.Z.terminate(), em.Z.terminate(), ef.Z.terminate(), P.Z.terminate(), I.ZP.terminate(), ek.Z.terminate(), y.Z.terminate(), eb.Z.terminate(), eh.Z.terminate(), ew.Z.terminate(), O.Z.terminate(), G.Z.terminate(), el.Z.terminate(), E.Z.terminate(), e_.Z.terminate(), ev.Z.terminate(), eN.Z.terminate(), ed.Z.terminate(), eu.Z.terminate(), ep.Z.terminate(), w.Z.terminate(), L.Z.terminate(), eg.Z.terminate(), k.Z.terminate(), V.Z.terminate(), A.Z.terminate(), Z.Z.terminate(), C.Z.terminate(), H.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
+        eI.Z.terminate(), eM.Z.terminate(), em.Z.terminate(), ef.Z.terminate(), P.Z.terminate(), I.ZP.terminate(), ek.Z.terminate(), y.Z.terminate(), eb.Z.terminate(), eh.Z.terminate(), eL.Z.terminate(), O.Z.terminate(), G.Z.terminate(), el.Z.terminate(), E.Z.terminate(), e_.Z.terminate(), ev.Z.terminate(), eN.Z.terminate(), ed.Z.terminate(), eu.Z.terminate(), ep.Z.terminate(), L.Z.terminate(), w.Z.terminate(), eg.Z.terminate(), k.Z.terminate(), V.Z.terminate(), A.Z.terminate(), Z.Z.terminate(), C.Z.terminate(), H.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
     }
     handleHistoryChange(e) {
         let { pathname: t, search: n } = e;
@@ -521,8 +521,8 @@ class to extends i.PureComponent {
                 if ((c && g && d.Z.selectGuild(r), c && u)) {
                     let n = eW.Z.getChannelId(f),
                         a = n !== i;
-                    if (!e2 || g || a || null != o) {
-                        (e2 = !0),
+                    if (!e7 || g || a || null != o) {
+                        (e7 = !0),
                             p.default.selectChannel({
                                 guildId: r,
                                 channelId: i,

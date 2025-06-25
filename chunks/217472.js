@@ -22,5 +22,12 @@ let i = {
             guildId: e,
             joinType: t
         });
+    },
+    setIsAgeRestricted: function (e, t) {
+        r.Z.dispatch({
+            type: 'GUILD_SETTINGS_JOIN_RULES_SET_CONTENT_LEVEL',
+            guildId: e,
+            isAgeRestricted: t
+        });
     }
 };

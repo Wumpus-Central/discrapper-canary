@@ -139,8 +139,8 @@ let N = (e) => {
         x = async () => {
             await f.Z.resetGuildJoinRequest(t), (0, g.hk)(t);
         },
-        w = Z(v.intl.format(v.t['9ZezpK'], { name: null == j ? void 0 : j.name }), A),
-        L = Z(v.intl.format(v.t.fJwWVl, { name: null == j ? void 0 : j.name }), A);
+        L = Z(v.intl.format(v.t['9ZezpK'], { name: null == j ? void 0 : j.name }), A),
+        w = Z(v.intl.format(v.t.fJwWVl, { name: null == j ? void 0 : j.name }), A);
     return (0, r.jsxs)('div', {
         className: C.page,
         ref: n,
@@ -157,7 +157,7 @@ let N = (e) => {
                     switch (N.applicationStatus) {
                         case m.wB.SUBMITTED:
                             return (0, r.jsx)(O.Z, {
-                                onWithdrawApplication: w,
+                                onWithdrawApplication: L,
                                 guild: j
                             });
                         case m.wB.REJECTED:
@@ -165,13 +165,13 @@ let N = (e) => {
                                 reapplyText: v.intl.string(v.t.I1LYVl),
                                 onReapply: x,
                                 confirmText: v.intl.string(v.t.g9tK0t),
-                                onWithdrawApplication: w,
+                                onWithdrawApplication: L,
                                 rejectionReason: N.rejectionReason,
                                 guild: j
                             });
                         default:
                             return (0, r.jsx)(_.s, {
-                                onDiscardApplication: L,
+                                onDiscardApplication: w,
                                 onContinueApplication: () => (0, g.hk)(t),
                                 guild: j
                             });

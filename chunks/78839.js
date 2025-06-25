@@ -203,7 +203,8 @@ function V(e, t) {
     for (let n in r) {
         let i = r[n];
         if (!B(i)) {
-            if (!I) {
+            let e = c.default.getSuspendedUserToken();
+            if (!I && null == e) {
                 let e = c.default.getId();
                 R.log('user id mismatch between logged in user and SubscriptionStore user'),
                     (0, u.g9)('user id mismatch between logged in user and SubscriptionStore user', {

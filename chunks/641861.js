@@ -111,7 +111,7 @@ function v(e) {
                   u.Z.ring(t, [n], 'dm_banner'), (0, m.Kh)(t);
               };
     return (0, r.jsx)(s.z, {
-        variant: i ? 'destructive-secondary' : 'secondary',
+        variant: i ? 'critical-secondary' : 'secondary',
         size: 'sm',
         text: l,
         iconPosition: 'start',

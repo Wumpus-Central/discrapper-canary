@@ -508,9 +508,10 @@ let G = {
         });
     },
     nsfwReturnToSafety(e) {
-        if (null == e) return void (0, _.uL)(A.Z5c.FRIENDS);
-        let t = m.ZP.getDefaultChannel(e);
-        null == t || t.isNSFW() ? (0, _.uL)(A.Z5c.FRIENDS) : (0, _.uL)(A.Z5c.CHANNEL(e, t.id));
+        let t = g.Z.getGuild(e);
+        if (null == e || (null == t ? void 0 : t.isNSFW())) return void (0, _.uL)(A.Z5c.FRIENDS);
+        let n = m.ZP.getDefaultChannel(e);
+        null == n || n.isNSFW() ? (0, _.uL)(A.Z5c.FRIENDS) : (0, _.uL)(A.Z5c.CHANNEL(e, n.id));
     },
     escapeToDefaultChannel(e) {
         let t = m.ZP.getDefaultChannel(e);

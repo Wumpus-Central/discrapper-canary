@@ -24,7 +24,7 @@ function g(e, t) {
                             title: f.intl.string(f.t.iz3vYW),
                             body: f.intl.string(f.t.VpjOCg),
                             confirmText: f.intl.string(f.t.p89ACg),
-                            confirmVariant: 'destructive-primary',
+                            confirmVariant: 'critical-primary',
                             cancelText: f.intl.string(f.t.gm1Ven),
                             onConfirm: () => {
                                 (0, s.wX)(t.id, e.id);

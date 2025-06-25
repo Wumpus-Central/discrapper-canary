@@ -82,7 +82,7 @@ let p = {
                             onClick: () => {
                                 null == m || m(), e.onClose();
                             },
-                            variant: null != p ? p : u === o.Ttl.RED ? 'destructive-primary' : 'primary'
+                            variant: null != p ? p : u === o.Ttl.RED ? 'critical-primary' : 'primary'
                         }),
                         (0, r.jsx)(
                             a.u,

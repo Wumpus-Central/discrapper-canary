@@ -29,8 +29,8 @@ var r = n(255367),
     A = n(833435),
     Z = n(150560),
     x = n(558652),
-    w = n(736683),
-    L = n(879438),
+    L = n(736683),
+    w = n(879438),
     R = n(251360),
     D = n(466962),
     k = n(452081),
@@ -82,8 +82,8 @@ let Y = function () {
     let { selectedTab: e, onSelectTab: t, tabs: n } = (0, k.z)(),
         { onScroll: l, scrollPosition: s } = (0, m.M)(),
         u = Z.Z.getState().getUtmCurrentContext(),
-        g = (0, A._)({ location: M.dr.QUEST_HOME_DESKTOP }) ? w.Z : w.j,
-        T = (0, L.z)((e) => e.registerAssetLoad),
+        g = (0, A._)({ location: M.dr.QUEST_HOME_DESKTOP }) ? L.Z : L.j,
+        T = (0, w.z)((e) => e.registerAssetLoad),
         H = i.useRef(u);
     i.useEffect(() => {
         H.current = u;

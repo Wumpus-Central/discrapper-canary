@@ -69,7 +69,7 @@ function S(e) {
         null == (await O()) && Y(0);
     }
     r.useEffect(() => {
-        null != a && null != a.nsfwAllowed && (0, C.qq)(l);
+        null == a || null == a.nsfwAllowed || U || (0, C.qq)(l);
     }),
         r.useEffect(() => {
             N.default.track(L.rMx.AGE_GATE_ACTION, {

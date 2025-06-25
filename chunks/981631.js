@@ -4688,6 +4688,7 @@ var nF = (function (e) {
             (e.DM_WALLPAPERS = '30608198149015-DM-Wallpapers'),
             (e.AV_ERROR_CODES = '30952914470807'),
             (e.SERVER_TAGS = '31444248479639'),
+            (e.NSFW_SERVER_AGE_RESTRICTION = '1500005292701'),
             (e.SUMMER_BOGO_2025 = '32702667550743'),
             e
         );

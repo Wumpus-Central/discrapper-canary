@@ -23,7 +23,7 @@ function x(e) {
             return (null == (e = f.default.getCurrentUser()) ? void 0 : e.nsfwAllowed) === !1;
         }),
         a = (0, p.Kt)(),
-        { verifyAgreementButtonText: x, verifyGateDescription: C } = (0, p.a1)(b.L0.NSFW_CHANNEL),
+        { verifyAgreementButtonText: x, verifyGateDescription: C } = (0, p.a1)((null == t ? void 0 : t.isNSFW()) ? b.L0.NSFW_SERVER : b.L0.NSFW_CHANNEL),
         v = i.useCallback(() => {
             null != t && c.Z.nsfwReturnToSafety(t.id);
         }, [t]),

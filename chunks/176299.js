@@ -29,8 +29,8 @@ var r = n(255367),
     A = n(540059),
     Z = n(724383),
     x = n(135864),
-    w = n(372900),
-    L = n(6039),
+    L = n(372900),
+    w = n(6039),
     R = n(637853),
     D = n(326145),
     k = n(269675),
@@ -129,13 +129,13 @@ let eP = (0, u.Un)({
         name: 'MemberSafetyPage',
         renderLoader: ej
     }),
-    ew = (0, u.Un)({
+    eL = (0, u.Un)({
         createPromise: () => Promise.all([n.e('44156'), n.e('58227'), n.e('58121')]).then(n.bind(n, 603072)),
         webpackId: 603072,
         name: 'ChannelsAndRolesPage',
         renderLoader: ej
     }),
-    eL = (0, u.Un)({
+    ew = (0, u.Un)({
         createPromise: () => Promise.all([n.e('44156'), n.e('37709')]).then(n.bind(n, 599263)),
         webpackId: 599263,
         name: 'GuildOnboardingPage',
@@ -192,14 +192,14 @@ let eP = (0, u.Un)({
                 case eI.oC.GUILD_HOME:
                     return (0, r.jsx)(eZ, { guildId: l });
                 case eI.oC.CHANNEL_BROWSER:
-                    return (0, r.jsx)(ew, {
+                    return (0, r.jsx)(eL, {
                         guildId: l,
                         selectedSection: eC.l7.BROWSE
                     });
                 case eI.oC.GUILD_ONBOARDING:
-                    return (0, r.jsx)(eL, { guildId: l });
+                    return (0, r.jsx)(ew, { guildId: l });
                 case eI.oC.CUSTOMIZE_COMMUNITY:
-                    return (0, r.jsx)(ew, {
+                    return (0, r.jsx)(eL, {
                         guildId: l,
                         selectedSection: eC.l7.CUSTOMIZE
                     });
@@ -257,7 +257,7 @@ let eP = (0, u.Un)({
     eG = (e) => (null != e.match.params.channelId ? eM(e) : (0, r.jsx)(K.Z, {})),
     eB = (e) => {
         let { match: t } = e;
-        return null != t.params.guildId ? (0, r.jsx)(L.Z, { guildId: t.params.guildId }) : null;
+        return null != t.params.guildId ? (0, r.jsx)(w.Z, { guildId: t.params.guildId }) : null;
     },
     eV = (e) => {
         let { match: t } = e;
@@ -522,7 +522,7 @@ function e0() {
         C = (0, p.e7)([v.Z], () => v.Z.isFullscreenInContext());
     return (0, r.jsx)('div', {
         className: eN.container,
-        children: (0, r.jsx)(w.Z.Provider, {
+        children: (0, r.jsx)(L.Z.Provider, {
             value: (null == g ? void 0 : g.params.guildId) === ey.ME || null == g ? void 0 : g.params.guildId,
             children: (0, r.jsxs)('div', {
                 className: eN.base,

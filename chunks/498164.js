@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(35282), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685);
+n.d(t, { Z: () => w }), n(35282), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(756647),
@@ -54,7 +54,7 @@ function x(e) {
     }
     return e;
 }
-function w(e, t) {
+function L(e, t) {
     null != e &&
         S.default.track(Z.rMx.EXTERNAL_DYNAMIC_LINK_RECEIVED, {
             invite_code: null,
@@ -64,7 +64,7 @@ function w(e, t) {
             link_type: t
         });
 }
-let L = {
+let w = {
     [Z.Etm.INVITE_BROWSER]: {
         scope: A.cE,
         async handler(e) {
@@ -168,19 +168,19 @@ let L = {
             } = e;
             switch ((P.ZP.focus(), t)) {
                 case A.jE.USER_SETTINGS:
-                    null != n && ((0, y.dL)(Z.Z5c.SETTINGS(n.section, n.subsection)), w(n.fingerprint, (0, A.O)(t)));
+                    null != n && ((0, y.dL)(Z.Z5c.SETTINGS(n.section, n.subsection)), L(n.fingerprint, (0, A.O)(t)));
                     break;
                 case A.jE.CHANGELOG:
-                    null != n && ((0, y.dL)(T.Z.formatPathWithQuery(Z.Z5c.CHANGELOGS(n.date), n.query)), w(n.fingerprint, (0, A.O)(t)));
+                    null != n && ((0, y.dL)(T.Z.formatPathWithQuery(Z.Z5c.CHANGELOGS(n.date), n.query)), L(n.fingerprint, (0, A.O)(t)));
                     break;
                 case A.jE.LIBRARY:
-                    (0, y.dL)(Z.Z5c.APPLICATION_LIBRARY), null != n && w(n.fingerprint, (0, A.O)(t));
+                    (0, y.dL)(Z.Z5c.APPLICATION_LIBRARY), null != n && L(n.fingerprint, (0, A.O)(t));
                     break;
                 case A.jE.STORE_HOME:
-                    (0, y.dL)(Z.Z5c.APPLICATION_STORE), null != n && w(n.fingerprint, (0, A.O)(t));
+                    (0, y.dL)(Z.Z5c.APPLICATION_STORE), null != n && L(n.fingerprint, (0, A.O)(t));
                     break;
                 case A.jE.STORE_LISTING:
-                    null != n && ((0, y.dL)(Z.Z5c.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)), w(n.fingerprint, (0, A.O)(t)));
+                    null != n && ((0, y.dL)(Z.Z5c.APPLICATION_STORE_LISTING_SKU(n.skuId, n.slug)), L(n.fingerprint, (0, A.O)(t)));
                     break;
                 case A.jE.PICK_GUILD_SETTINGS:
                     null != n &&
@@ -188,7 +188,7 @@ let L = {
                             pathname: Z.Z5c.PICK_GUILD_SETTINGS(n.section, n.subsection),
                             search: n.search
                         }),
-                        w(n.fingerprint, (0, A.O)(t)));
+                        L(n.fingerprint, (0, A.O)(t)));
                     break;
                 case A.jE.CHANNEL:
                     null != n &&
@@ -196,7 +196,7 @@ let L = {
                             pathname: Z.Z5c.CHANNEL(n.guildId, n.channelId, n.messageId),
                             search: n.search
                         }),
-                        w(n.fingerprint, (0, A.O)(t)));
+                        L(n.fingerprint, (0, A.O)(t)));
                     break;
                 case A.jE.QUEST_HOME:
                     null != n
@@ -204,7 +204,7 @@ let L = {
                               pathname: Z.Z5c.QUEST_HOME,
                               hash: n.questId
                           }),
-                          w(n.fingerprint, (0, A.O)(t)))
+                          L(n.fingerprint, (0, A.O)(t)))
                         : (0, y.dL)(Z.Z5c.QUEST_HOME);
                     break;
                 case A.jE.DISCOVERY_GAME_RESULTS:
@@ -213,7 +213,7 @@ let L = {
                             pathname: Z.Z5c.GLOBAL_DISCOVERY_SERVERS,
                             search: '?game='.concat(n.gameId)
                         }),
-                        w(n.fingerprint, (0, A.O)(t)));
+                        L(n.fingerprint, (0, A.O)(t)));
                     break;
                 case A.jE.OAUTH2:
                     let r = new URL(Z.Z5c.OAUTH2_AUTHORIZE, window.location.origin);
@@ -227,11 +227,11 @@ let L = {
                             pathname: Z.Z5c.COLLECTIBLES_SHOP,
                             search: n.search
                         }),
-                        w(n.fingerprint, (0, A.O)(t)));
+                        L(n.fingerprint, (0, A.O)(t)));
                     break;
                 case A.jE.FEATURES:
                 case A.jE.SHOP:
-                    (null == n ? void 0 : n.path) != null && ((0, y.dL)({ pathname: n.path }), w(n.fingerprint, (0, A.O)(t)));
+                    (null == n ? void 0 : n.path) != null && ((0, y.dL)({ pathname: n.path }), L(n.fingerprint, (0, A.O)(t)));
                     break;
                 case A.jE.ACTIVITIES:
                     if (null != n)
@@ -255,7 +255,7 @@ let L = {
                                     referrerId: d
                                 });
                             })(n.applicationId, n.url),
-                            w(n.fingerprint, (0, A.O)(t)),
+                            L(n.fingerprint, (0, A.O)(t)),
                             !0
                         );
                     return !1;

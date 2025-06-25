@@ -78,7 +78,7 @@ function V(e, t) {
     );
 }
 let F = !0,
-    Z = ['name', 'description', 'icon', 'splash', 'banner', 'homeHeader', 'afkChannelId', 'afkTimeout', 'systemChannelId', 'verificationLevel', 'defaultMessageNotifications', 'explicitContentFilter', 'features', 'systemChannelFlags', 'preferredLocale', 'rulesChannelId', 'safetyAlertsChannelId', 'discoverySplash', 'publicUpdatesChannelId', 'premiumProgressBarEnabled'],
+    Z = ['name', 'description', 'icon', 'splash', 'banner', 'homeHeader', 'afkChannelId', 'afkTimeout', 'systemChannelId', 'verificationLevel', 'defaultMessageNotifications', 'explicitContentFilter', 'features', 'systemChannelFlags', 'preferredLocale', 'rulesChannelId', 'safetyAlertsChannelId', 'ownerConfiguredContentLevel', 'discoverySplash', 'publicUpdatesChannelId', 'premiumProgressBarEnabled'],
     H = ['brandColorPrimary', 'description', 'icon', 'name', 'traits', 'visibility', 'gameApplicationIds', 'customBanner', 'tag', 'badge', 'badgeColorPrimary', 'badgeColorSecondary'],
     Y = new Set(['icon', 'splash', 'banner', 'discoverySplash', 'homeHeader']),
     W = !1,
@@ -286,10 +286,14 @@ function eM(e) {
         }
         let t = (o = e),
             n = s.toJS();
-        Z.forEach((e) => {
-            if (!Y.has(e) && (('rulesChannelId' !== e && 'publicUpdatesChannelId' !== e) || n[e] !== j.b4)) {
-                if ('features' === e) return void t.set(e, new Set(n[e]));
-                t = t.set(e, n[e]);
+        Z.forEach((r) => {
+            if (!Y.has(r) && (('rulesChannelId' !== r && 'publicUpdatesChannelId' !== r) || n[r] !== j.b4)) {
+                if ('features' === r) return void t.set(r, new Set(n[r]));
+                if ('ownerConfiguredContentLevel' === r) {
+                    t = t.set(r, e[r]);
+                    return;
+                }
+                t = t.set(r, n[r]);
             }
         }),
             (s = t);

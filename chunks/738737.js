@@ -6,7 +6,7 @@ var i = n(481060),
     a = n(107998),
     s = n(981631);
 function o(e) {
-    let { initialPlanId: t, activeSubscription: o, trialId: c, trialFooterMessageOverride: d, onClose: u, analyticsObject: m, analyticsLocation: p, analyticsLocations: f, analyticsSubscriptionType: h, renderHeader: g, renderPurchaseConfirmation: C, planGroup: _, reviewWarningMessage: v, skuId: b } = e;
+    let { initialPlanId: t, activeSubscription: o, trialId: c, trialFooterMessageOverride: d, onClose: u, analyticsObject: m, analyticsLocation: p, analyticsLocations: f, analyticsSubscriptionType: h, renderHeader: g, renderPurchaseConfirmation: C, planGroup: _, reviewWarningMessage: b, skuId: v } = e;
     (0, i.ZDy)(
         async () => {
             let { PaymentContextProvider: e } = await Promise.resolve().then(n.bind(n, 563132)),
@@ -38,7 +38,7 @@ function o(e) {
                 return (0, r.jsx)(e, {
                     activeSubscription: o,
                     stepConfigs: s,
-                    skuIDs: [b],
+                    skuIDs: [v],
                     children: (0, r.jsx)(a.c1, {
                         children: (0, r.jsx)(l.KB, {
                             children: (0, r.jsx)(
@@ -78,13 +78,13 @@ function o(e) {
                                         analyticsObject: m,
                                         analyticsLocation: p,
                                         analyticsSubscriptionType: h,
-                                        skuId: b,
+                                        skuId: v,
                                         renderHeader: g,
                                         renderPurchaseConfirmation: C,
                                         planGroup: _,
                                         trialId: c,
                                         trialFooterMessageOverride: d,
-                                        reviewWarningMessage: v
+                                        reviewWarningMessage: b
                                     }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(j, Object.getOwnPropertyDescriptors(y))

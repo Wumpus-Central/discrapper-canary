@@ -1,14 +1,15 @@
 n.d(t, {
-    U: () => s,
-    a: () => o
+    U: () => l,
+    a: () => s
 });
-var r = n(818083);
-let i = { enabled: !1 },
-    a = (0, r.B)({
+var r = n(818083),
+    i = n(491218);
+let a = { enabled: !1 },
+    o = (0, r.B)({
         kind: 'user',
         id: '2025-06_search_desktop_xdm_experiment',
         label: 'Search Desktop XDM Experiment',
-        defaultConfig: i,
+        defaultConfig: a,
         treatments: [
             {
                 id: 1,
@@ -17,13 +18,33 @@ let i = { enabled: !1 },
             }
         ]
     });
-function o(e) {
-    let { location: t, autoTrackExposure: n = !0 } = e,
-        { enabled: r } = a.getCurrentConfig({ location: t }, { autoTrackExposure: n });
-    return r;
-}
 function s(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        { enabled: r } = a.useExperiment({ location: t }, { autoTrackExposure: n });
-    return r;
+        r = (0, i.ro)({
+            location: t,
+            autoTrackExposure: n
+        }),
+        { enabled: a } = o.getCurrentConfig(
+            { location: t },
+            {
+                autoTrackExposure: n,
+                disable: r
+            }
+        );
+    return a;
+}
+function l(e) {
+    let { location: t, autoTrackExposure: n = !0 } = e,
+        r = (0, i.nd)({
+            location: t,
+            autoTrackExposure: n
+        }),
+        { enabled: a } = o.useExperiment(
+            { location: t },
+            {
+                autoTrackExposure: n,
+                disable: r
+            }
+        );
+    return a;
 }

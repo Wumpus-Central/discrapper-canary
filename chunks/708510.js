@@ -1,30 +1,35 @@
-n.d(t, { O: () => O });
+n.d(t, { O: () => T });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
     s = n(481060),
     a = n(456268),
     o = n(863249),
-    c = n(999382),
-    d = n(209054),
-    u = n(96788),
-    m = n(217472),
-    g = n(202905),
-    p = n(44867),
-    f = n(557359),
-    h = n(658666),
-    x = n(307375),
-    b = n(384632),
-    j = n(388032),
-    _ = n(162193);
-function v(e) {
+    c = n(981312),
+    d = n(430824),
+    u = n(63063),
+    m = n(500496),
+    g = n(999382),
+    p = n(209054),
+    f = n(96788),
+    h = n(217472),
+    x = n(202905),
+    b = n(44867),
+    j = n(557359),
+    _ = n(658666),
+    v = n(307375),
+    O = n(384632),
+    C = n(981631),
+    y = n(388032),
+    N = n(162193);
+function I(e) {
     let { pendingState: t } = e,
         n = i.useRef(!1),
         l = i.useCallback(
             async (e) => {
                 if (!n.current)
                     try {
-                        await (0, d.k)(e), (0, u.V)(e), (0, a.le)(), (0, a.aC)(e);
+                        await (0, p.k)(e), (0, f.V)(e), (0, a.le)(), (0, a.aC)(e);
                     } finally {
                         n.current = !0;
                     }
@@ -32,15 +37,15 @@ function v(e) {
             [n]
         );
     switch (t.joinType) {
-        case b.A.INVITE:
-            return (0, r.jsx)(f.A, {
+        case O.A.INVITE:
+            return (0, r.jsx)(j.A, {
                 requireTerms: t.requireTerms,
                 rules: t.termRules
             });
-        case b.A.APPLY:
-            return (0, r.jsx)(g.r, { pendingFields: t.pendingVerificationFields });
-        case b.A.DISCOVERABLE:
-            return (0, r.jsx)(p.c, {
+        case O.A.APPLY:
+            return (0, r.jsx)(x.r, { pendingFields: t.pendingVerificationFields });
+        case O.A.DISCOVERABLE:
+            return (0, r.jsx)(b.c, {
                 fetchDiscoveryData: l,
                 settingsView: t.settingsView,
                 requireTerms: t.requireTerms,
@@ -48,15 +53,55 @@ function v(e) {
             });
     }
 }
-function O() {
-    let e = (0, l.e7)([c.Z], () => c.Z.getProps().guild),
-        t = (0, l.e7)([h.Z], () => h.Z.pendingState);
+function E(e) {
+    let { guildId: t } = e,
+        n = (0, l.e7)([d.Z], () => {
+            var e;
+            return null == (e = d.Z.getGuild(t)) ? void 0 : e.nsfwLevel;
+        }),
+        a = (0, l.e7)([_.Z], () => {
+            var e;
+            return null == (e = _.Z.pendingState) ? void 0 : e.isAgeRestricted;
+        }),
+        o = i.useCallback(
+            (e) => {
+                h.Z.setIsAgeRestricted(t, e);
+            },
+            [t]
+        ),
+        c = n === C.V_K.AGE_RESTRICTED && !a;
+    return (0, r.jsx)(s.hjN, {
+        children: (0, r.jsx)(s.j7V, {
+            onChange: o,
+            value: a,
+            hideBorder: !0,
+            disabled: c,
+            note: y.intl.format(y.t['iyQQ6+'], { helpArticleLink: u.Z.getArticleURL(C.BhN.NSFW_SERVER_AGE_RESTRICTION) }),
+            children: y.intl.string(y.t.N9xEJC)
+        })
+    });
+}
+function S(e) {
+    let { guildId: t } = e,
+        n = (0, c.U)();
+    return !(0, m.j0)({
+        guildId: t,
+        location: 'guild-settings'
+    }) || n
+        ? null
+        : (0, r.jsxs)(r.Fragment, {
+              children: [(0, r.jsx)('div', { className: N.divider }), (0, r.jsx)(E, { guildId: t })]
+          });
+}
+function T() {
+    let e = (0, l.e7)([g.Z], () => g.Z.getProps().guild),
+        t = (0, l.e7)([_.Z], () => _.Z.pendingState);
     i.useEffect(() => {
         (null == e ? void 0 : e.id) != null && o.ZP.fetchVerificationForm(e.id);
     }, [null == e ? void 0 : e.id]);
     let n = i.useCallback(
         (t) => {
-            (null == e ? void 0 : e.id) != null && m.Z.setSelectedJoinType(e.id, t);
+            (null == e ? void 0 : e.id) != null && h.Z.setSelectedJoinType(e.id, t);
         },
         [null == e ? void 0 : e.id]
     );
@@ -68,15 +113,16 @@ function O() {
             (0, r.jsx)(s.X6q, {
                 color: 'header-primary',
                 variant: 'heading-lg/semibold',
-                children: j.intl.string(j.t.YJlvBA)
+                children: y.intl.string(y.t.YJlvBA)
             }),
-            (0, r.jsx)(x.h, {
+            (0, r.jsx)(v.h, {
                 onTypePicked: n,
                 activeType: a,
                 guild: e
             }),
-            (0, r.jsx)('div', { className: _.divider }),
-            (0, r.jsx)('div', { children: (0, r.jsx)(v, { pendingState: t }) })
+            (0, r.jsx)('div', { className: N.divider }),
+            (0, r.jsx)('div', { children: (0, r.jsx)(I, { pendingState: t }) }),
+            null != e && (0, r.jsx)(S, { guildId: e.id })
         ]
     });
 }

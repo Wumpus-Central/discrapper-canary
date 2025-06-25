@@ -1,4 +1,4 @@
-n.d(t, { o: () => v });
+n.d(t, { o: () => b });
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -16,22 +16,22 @@ var i = n(442837),
     g = n(526761),
     C = n(388032),
     _ = n(435803);
-function v(e) {
+function b(e) {
     var t;
-    let { onClose: n, markAsDismissed: v } = e,
-        b = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
-        j = (t = null == b ? void 0 : b.premiumType) === h.p9.TIER_2 ? C.intl.string(C.t.jqO5Qk) : null == t ? C.intl.string(C.t.f2qjw8) : C.intl.string(C.t.SblICQ),
-        y = m.ZP.canUseCustomCallSounds(b);
+    let { onClose: n, markAsDismissed: b } = e,
+        v = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
+        j = (t = null == v ? void 0 : v.premiumType) === h.p9.TIER_2 ? C.intl.string(C.t.jqO5Qk) : null == t ? C.intl.string(C.t.f2qjw8) : C.intl.string(C.t.SblICQ),
+        y = m.ZP.canUseCustomCallSounds(v);
     return (0, r.jsxs)(d.Z, {
         isShown: !0,
         type: d.Y.PREMIUM,
         className: _.upsellOuter,
         backgroundClassName: _.upsellInner,
         children: [
-            null != v
+            null != b
                 ? (0, r.jsx)(s.P3F, {
                       className: _.close,
-                      onClick: () => (null == v ? void 0 : v(f.L.DISMISS)),
+                      onClick: () => (null == b ? void 0 : b(f.L.DISMISS)),
                       'aria-label': C.intl.string(C.t.cpT0Cg),
                       children: (0, r.jsx)(s.Dio, {
                           size: 'xs',
@@ -61,7 +61,7 @@ function v(e) {
             y
                 ? (0, r.jsx)(l.zx, {
                       onClick: function () {
-                          o.Z.open(p.oAB.VOICE, g.GA), null == n || n(), null == v || v(f.L.PRIMARY);
+                          o.Z.open(p.oAB.VOICE, g.GA), null == n || n(), null == b || b(f.L.PRIMARY);
                       },
                       children: C.intl.string(C.t.RzWDqa)
                   })
@@ -73,7 +73,7 @@ function v(e) {
                           object: p.qAy.BUTTON_CTA
                       },
                       color: l.zx.Colors.GREEN,
-                      onSubscribeModalClose: () => (null == v ? void 0 : v(f.L.PRIMARY))
+                      onSubscribeModalClose: () => (null == b ? void 0 : b(f.L.PRIMARY))
                   })
         ]
     });

@@ -49,7 +49,7 @@ function T(e) {
             },
             [t.id, f, o]
         ),
-        w = i.useCallback(
+        L = i.useCallback(
             (e) => {
                 (0, u.jW)(e, async () => {
                     let { default: e } = await n.e('88560').then(n.bind(n, 858523));
@@ -102,7 +102,7 @@ function T(e) {
             },
             [t]
         ),
-        L = (0, d.ZP)(),
+        w = (0, d.ZP)(),
         R = t.features.has(y.oNc.HUB),
         D = i.useMemo(() => {
             let e = _.ZP.getGuildDiscoverySplashURL({
@@ -112,13 +112,13 @@ function T(e) {
             });
             if (null != e) return e;
             if (R) return N;
-            switch (L) {
+            switch (w) {
                 case y.BRd.DARK:
                     return C;
                 case y.BRd.LIGHT:
                     return S;
             }
-        }, [t.discoverySplash, t.id, R, L]),
+        }, [t.discoverySplash, t.id, R, w]),
         k = i.useMemo(
             () =>
                 _.ZP.getGuildIconURL({
@@ -149,7 +149,7 @@ function T(e) {
                     className: v.card,
                     onClick: Z,
                     disabled: E,
-                    onContextMenu: w,
+                    onContextMenu: L,
                     'aria-label': I.intl.string(I.t['M9wQ+f']),
                     children: [
                         (0, r.jsxs)('div', {

@@ -47,24 +47,24 @@ function u(e) {
     return e;
 }
 function d(e, t) {
-    var n, r, s, c, u, d, f, _, p, g, E, b, y;
-    let O = null != e.joined_at ? new Date(e.joined_at) : null == t ? void 0 : t.joinedAt,
-        v = null != (n = e.premium_subscription_count) ? n : 0;
+    var n, r, s, c, u, d, f, _, p, g, E, b, y, O;
+    let v = null != e.joined_at ? new Date(e.joined_at) : null == t ? void 0 : t.joinedAt,
+        I = null != (n = e.premium_subscription_count) ? n : 0;
     if (null == e.properties) {
         i()(null != t, 'If guild.properties is null, existingGuild must be passed in');
         let e = t.joinedAt instanceof Date ? t.joinedAt.getTime() : t.joinedAt,
-            n = O instanceof Date ? O.getTime() : O;
-        return v === t.premiumSubscriberCount && e === n
+            n = v instanceof Date ? v.getTime() : v;
+        return I === t.premiumSubscriberCount && e === n
             ? t
             : t.merge({
-                  joinedAt: O,
-                  premiumSubscriberCount: v
+                  joinedAt: v,
+                  premiumSubscriberCount: I
               });
     }
-    let I = {
+    let T = {
         id: e.id,
-        joinedAt: O,
-        premiumSubscriberCount: v,
+        joinedAt: v,
+        premiumSubscriberCount: I,
         name: null != (r = e.properties.name) ? r : '',
         description: e.properties.description,
         icon: e.properties.icon,
@@ -94,56 +94,58 @@ function d(e, t) {
         maxVideoChannelUsers: null != (E = e.properties.max_video_channel_users) ? E : -1,
         maxMembers: null != (b = e.properties.max_members) ? b : -1,
         nsfwLevel: null != (y = e.properties.nsfw_level) ? y : l.V_K.DEFAULT,
+        ownerConfiguredContentLevel: null != (O = e.properties.owner_configured_content_level) ? O : null,
         hubType: e.properties.hub_type,
         latestOnboardingQuestionId: e.properties.latest_onboarding_question_id,
         profile: e.properties.profile,
         premiumFeatures: null != e.properties.premium_features ? h(e.properties.premium_features) : null,
         moderatorReporting: null != e.properties.moderator_reporting ? m(e.properties.moderator_reporting) : null
     };
-    return null == t ? (0, a.gh)(I, o.ZP) : t.merge(I);
+    return null == t ? (0, a.gh)(T, o.ZP) : t.merge(T);
 }
 function f(e, t) {
     return new o.Bg(u({}, e, t));
 }
 function _(e, t) {
-    var n, r, i, a, o, s, c, u, d, f, _, p, h;
-    let m = null != (n = e.properties) ? n : b(t),
-        g = {
+    var n, r, i, a, o, s, c, u, d, f, _, p, h, m;
+    let g = null != (n = e.properties) ? n : b(t),
+        E = {
             id: e.id,
-            name: null != (r = m.name) ? r : '',
-            description: m.description,
-            icon: m.icon,
-            splash: m.splash,
-            banner: m.banner,
-            homeHeader: m.home_header,
-            features: new Set(null != (i = m.features) ? i : []),
-            preferredLocale: null != (a = m.preferred_locale) ? a : 'en-us',
-            ownerId: m.owner_id,
-            application_id: m.application_id,
-            afkChannelId: m.afk_channel_id,
-            afkTimeout: m.afk_timeout,
-            systemChannelId: m.system_channel_id,
-            verificationLevel: null != (o = m.verification_level) ? o : l.sFg.NONE,
-            explicitContentFilter: null != (s = m.explicit_content_filter) ? s : l.lxg.DISABLED,
-            defaultMessageNotifications: null != (c = m.default_message_notifications) ? c : l.bL.ALL_MESSAGES,
-            mfaLevel: null != (u = m.mfa_level) ? u : l.BpS.NONE,
-            vanityURLCode: m.vanity_url_code,
-            premiumTier: null != (d = m.premium_tier) ? d : l.Eu4.NONE,
-            premiumProgressBarEnabled: m.premium_progress_bar_enabled || !1,
-            systemChannelFlags: m.system_channel_flags,
-            discoverySplash: m.discovery_splash,
-            rulesChannelId: m.rules_channel_id,
-            safetyAlertsChannelId: m.safety_alerts_channel_id,
-            publicUpdatesChannelId: m.public_updates_channel_id,
-            maxStageVideoChannelUsers: null != (f = m.max_stage_video_channel_users) ? f : -1,
-            maxVideoChannelUsers: null != (_ = m.max_video_channel_users) ? _ : -1,
-            maxMembers: null != (p = m.max_members) ? p : -1,
-            nsfwLevel: null != (h = m.nsfw_level) ? h : l.V_K.DEFAULT,
-            hubType: m.hub_type,
-            latestOnboardingQuestionId: m.latest_onboarding_question_id,
-            profile: m.profile
+            name: null != (r = g.name) ? r : '',
+            description: g.description,
+            icon: g.icon,
+            splash: g.splash,
+            banner: g.banner,
+            homeHeader: g.home_header,
+            features: new Set(null != (i = g.features) ? i : []),
+            preferredLocale: null != (a = g.preferred_locale) ? a : 'en-us',
+            ownerId: g.owner_id,
+            application_id: g.application_id,
+            afkChannelId: g.afk_channel_id,
+            afkTimeout: g.afk_timeout,
+            systemChannelId: g.system_channel_id,
+            verificationLevel: null != (o = g.verification_level) ? o : l.sFg.NONE,
+            explicitContentFilter: null != (s = g.explicit_content_filter) ? s : l.lxg.DISABLED,
+            defaultMessageNotifications: null != (c = g.default_message_notifications) ? c : l.bL.ALL_MESSAGES,
+            mfaLevel: null != (u = g.mfa_level) ? u : l.BpS.NONE,
+            vanityURLCode: g.vanity_url_code,
+            premiumTier: null != (d = g.premium_tier) ? d : l.Eu4.NONE,
+            premiumProgressBarEnabled: g.premium_progress_bar_enabled || !1,
+            systemChannelFlags: g.system_channel_flags,
+            discoverySplash: g.discovery_splash,
+            rulesChannelId: g.rules_channel_id,
+            safetyAlertsChannelId: g.safety_alerts_channel_id,
+            publicUpdatesChannelId: g.public_updates_channel_id,
+            maxStageVideoChannelUsers: null != (f = g.max_stage_video_channel_users) ? f : -1,
+            maxVideoChannelUsers: null != (_ = g.max_video_channel_users) ? _ : -1,
+            maxMembers: null != (p = g.max_members) ? p : -1,
+            nsfwLevel: null != (h = g.nsfw_level) ? h : l.V_K.DEFAULT,
+            ownerConfiguredContentLevel: null != (m = g.owner_configured_content_level) ? m : null,
+            hubType: g.hub_type,
+            latestOnboardingQuestionId: g.latest_onboarding_question_id,
+            profile: g.profile
         };
-    return t.merge(g);
+    return t.merge(E);
 }
 function p(e, t) {
     let n = {
@@ -180,6 +182,7 @@ function p(e, t) {
         maxVideoChannelUsers: e.max_video_channel_users,
         maxMembers: e.max_members,
         nsfwLevel: e.nsfw_level,
+        ownerConfiguredContentLevel: e.owner_configured_content_level,
         hubType: e.hub_type,
         latestOnboardingQuestionId: e.latest_onboarding_question_id,
         profile: e.profile,
@@ -266,6 +269,7 @@ function b(e) {
         unavailable: !1,
         max_members: e.maxMembers,
         nsfw_level: e.nsfwLevel,
+        owner_configured_content_level: e.ownerConfiguredContentLevel,
         hub_type: e.hubType,
         latest_onboarding_question_id: e.latestOnboardingQuestionId,
         profile: e.profile

@@ -121,7 +121,7 @@ function k(e) {
                     body: w.intl.string(w.t['Wxa/j4']),
                     confirmColor: c.Ttl.RED,
                     confirmText: w.intl.string(w.t.TzJA4u),
-                    confirmVariant: 'destructive-primary',
+                    confirmVariant: 'critical-primary',
                     cancelText: w.intl.string(w.t['2BR5R0']),
                     onConfirm: () => {
                         ea();

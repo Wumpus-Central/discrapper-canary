@@ -88,20 +88,18 @@ function I(e, t) {
 }
 let T = {
         sm: 'text-sm/semibold',
-        md: 'text-md/semibold',
-        lg: 'text-lg/semibold'
+        md: 'text-md/semibold'
     },
     S = {
         sm: 'xs',
-        md: 'refresh_sm',
-        lg: 'md'
+        md: 'refresh_sm'
     };
 function A(e) {
     let t;
     var n,
         a,
-        { role: u = 'button', variant: d = 'primary', size: E = 'md', text: y, icon: I, iconPosition: A = 'start', iconOpticalOffsetMargin: R = 0, fullWidth: P = !1, focusProps: w, submitting: D = !1, submittingStartedLabel: L, submittingFinishedLabel: x } = e,
-        k = v(e, ['role', 'variant', 'size', 'text', 'icon', 'iconPosition', 'iconOpticalOffsetMargin', 'fullWidth', 'focusProps', 'submitting', 'submittingStartedLabel', 'submittingFinishedLabel']);
+        { role: u = 'button', variant: d = 'primary', size: E = 'md', text: y, icon: I, iconPosition: A = 'start', iconOpticalOffsetMargin: R = 0, fullWidth: P = !1, focusProps: w, loading: D, loadingStartedLabel: L, loadingFinishedLabel: x } = e,
+        k = v(e, ['role', 'variant', 'size', 'text', 'icon', 'iconPosition', 'iconOpticalOffsetMargin', 'fullWidth', 'focusProps', 'loading', 'loadingStartedLabel', 'loadingFinishedLabel']);
     let M = (0, m.M)(),
         j = null != (n = null == M ? void 0 : M.size) ? n : E,
         U = null != (a = null == M ? void 0 : M.fullWidth) ? a : P;
@@ -131,7 +129,7 @@ function A(e) {
         !0 === D && ((Y.current = !0), s.u.announce(null != L ? L : h.intl.string(h.t.A11Y_LOADING_STARTED))), !1 === D && !0 === Y.current && (s.u.announce(null != x ? x : h.intl.string(h.t.A11Y_LOADING_FINISHED)), (Y.current = !1));
     }, [D, L, x]);
     let W = (0, r.jsxs)('div', {
-            className: o()(g.buttonChildren, { [g.submitting]: D }),
+            className: o()(g.buttonChildren, { [g.loading]: D }),
             children: [
                 null != t && 'start' === A && t,
                 B &&
@@ -140,7 +138,6 @@ function A(e) {
                         variant: T[j],
                         color: 'none',
                         lineClamp: 1,
-                        className: g.text,
                         children: y
                     }),
                 null != t && 'end' === A && t

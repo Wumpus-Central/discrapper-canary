@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -77,31 +77,41 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let p = {
+function p(e) {
+    if (null != e) return (0, o.AY)(e) ? i.fCB.LIGHTBOX : void 0;
+}
+let h = {
     showAgeVerification: (e) => {
-        var { onClose: t } = e,
-            a = f(e, ['onClose']);
+        var { onClose: t, entryPoint: a } = e,
+            o = f(e, ['onClose', 'entryPoint']);
         (0, i.ZDy)(
             async () => {
                 let { default: e } = await n.e('12014').then(n.bind(n, 879367));
-                return (t) => (0, r.jsx)(e, c({}, a, t));
+                return (t) => (0, r.jsx)(e, c({}, o, t));
             },
             {
-                modalKey: s.z,
-                onCloseCallback: t
+                modalKey: s.zJ,
+                onCloseCallback: t,
+                backdropStyle: p(a)
             }
         );
     },
     showAgeVerificationGetStartedModal: (e) => {
         if ((0, o.kJ)() && (0, a.G7)('age_verification_utils'))
-            return void (0, i.ZDy)(async () => {
-                let { default: t } = await n.e('22447').then(n.bind(n, 686768));
+            return void (0, i.ZDy)(
+                async () => {
+                    let { default: t } = await n.e('22447').then(n.bind(n, 686768));
+                    return (n) => (0, r.jsx)(t, d(c({}, n), { entryPoint: e }));
+                },
+                { backdropStyle: p(e) }
+            );
+        (0, i.ZDy)(
+            async () => {
+                let { default: t } = await n.e('80144').then(n.bind(n, 634997));
                 return (n) => (0, r.jsx)(t, d(c({}, n), { entryPoint: e }));
-            });
-        (0, i.ZDy)(async () => {
-            let { default: t } = await n.e('80144').then(n.bind(n, 634997));
-            return (n) => (0, r.jsx)(t, d(c({}, n), { entryPoint: e }));
-        });
+            },
+            { backdropStyle: p(e) }
+        );
     },
     openUrl: (e) => {
         window.open(e, '_blank');
