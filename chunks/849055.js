@@ -109,7 +109,7 @@ var l = {
         }),
         clientExtensionResults: u(p, (e) => e.getClientExtensionResults())
     },
-    g = {
+    w = {
         mediation: f(o),
         publicKey: s({
             challenge: s(a),
@@ -121,7 +121,7 @@ var l = {
         }),
         signal: f(o)
     },
-    w = {
+    g = {
         type: s(o),
         id: s(o),
         rawId: s(a),
@@ -139,6 +139,6 @@ async function y(e) {
     return c(i, v, t);
 }
 async function m(e) {
-    let t = await navigator.credentials.get(c(r, g, e));
-    return c(i, w, t);
+    let t = await navigator.credentials.get(c(r, w, e));
+    return c(i, g, t);
 }

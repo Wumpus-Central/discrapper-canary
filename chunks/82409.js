@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685), n(361932), n(187205), n(415506);
+n.d(t, { Z: () => L }), n(388685), n(361932), n(187205);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -47,13 +47,15 @@ let D = {
 function L(e) {
     var t, n;
     let { includePanelSpacing: l } = e,
+        a = (0, c.Wu)([b.Z], () => {
+            var e;
+            return null != (e = b.Z.getSettingsFilteredMentions()) ? e : [];
+        }),
         {
-            messages: a,
             hasMore: d,
             loading: p,
             hasLoadedEver: f
         } = (0, c.cj)([b.Z], () => ({
-            messages: b.Z.getSettingsFilteredMentions(),
             hasMore: b.Z.hasMore,
             loading: b.Z.loading,
             hasLoadedEver: b.Z.hasLoadedEver,
@@ -88,61 +90,52 @@ function L(e) {
         H = (0, c.e7)([_.Z], () => _.Z.getSavedMessages()),
         z = i.useMemo(() => {
             var e;
-            if (!A) return null;
-            if (g === Z.V5.BOOKMARKS)
-                return H.flatMap((e) => {
-                    let { message: t } = e;
-                    return null != t
-                        ? [
-                              {
-                                  kind: Z.fL.BOOKMARK,
-                                  message: t
-                              }
-                          ]
-                        : [];
-                });
-            let t = (0, s.uniqBy)(
-                [
-                    ...(null !=
-                    (e =
-                        null == a
-                            ? void 0
-                            : a.map((e) => ({
-                                  kind: Z.fL.MENTION,
-                                  message: e
-                              })))
-                        ? e
-                        : []),
-                    ...S.filter((e) => e.author.id !== (null == V ? void 0 : V.id)).map((e) => ({
-                        message: e,
-                        kind: Z.fL.ALL_MESSAGES_CHANNEL
-                    }))
-                ],
-                (e) => {
-                    let { message: t } = e;
-                    return t.id;
-                }
-            ).filter((e) => {
-                let { message: t } = e;
-                return t.author.id !== (null == V ? void 0 : V.id) && C.default.age(t.id) < Z.ib;
-            });
-            if (g === Z.V5.ALL) return t;
-            if (g === Z.V5.ANNOUNCEMENTS)
-                return null == t
-                    ? void 0
-                    : t.filter((e) => {
-                          let { message: t } = e,
-                              n = O.Z.getChannel(t.channel_id);
-                          return (null == n ? void 0 : n.type) === T.d4z.GUILD_ANNOUNCEMENT;
-                      });
-            if (g === Z.V5.MENTIONS)
-                return null == t
-                    ? void 0
-                    : t.filter((e) => {
+            return A
+                ? g === Z.V5.BOOKMARKS
+                    ? H.flatMap((e) => {
                           let { message: t } = e;
-                          return (null == V ? void 0 : V.id) != null && t.mentioned && t.mentions.includes(null == V ? void 0 : V.id);
-                      });
-            throw Error('Unknown filter: '.concat(g));
+                          return null != t
+                              ? [
+                                    {
+                                        kind: Z.fL.BOOKMARK,
+                                        message: t
+                                    }
+                                ]
+                              : [];
+                      })
+                    : (0, s.uniqBy)(
+                          [
+                              ...(null !=
+                              (e =
+                                  null == a
+                                      ? void 0
+                                      : a.map((e) => ({
+                                            kind: Z.fL.MENTION,
+                                            message: e
+                                        })))
+                                  ? e
+                                  : []),
+                              ...S.filter((e) => e.author.id !== (null == V ? void 0 : V.id)).map((e) => ({
+                                  message: e,
+                                  kind: Z.fL.ALL_MESSAGES_CHANNEL
+                              }))
+                          ],
+                          (e) => {
+                              let { message: t } = e;
+                              return t.id;
+                          }
+                      ).filter((e) => {
+                          let { message: t } = e;
+                          if (t.author.id === (null == V ? void 0 : V.id) || C.default.age(t.id) > Z.ib) return !1;
+                          if (g === Z.V5.ALL) return !0;
+                          if (g === Z.V5.MENTIONS) return t.mentioned;
+                          if (g === Z.V5.ANNOUNCEMENTS) {
+                              let e = O.Z.getChannel(t.channel_id);
+                              return (null == e ? void 0 : e.type) === T.d4z.GUILD_ANNOUNCEMENT;
+                          }
+                          return !1;
+                      })
+                : null;
         }, [g, a, V, H, S, A]),
         { filterStyle: W } = j.Lk.useExperiment({ location: 'NotificationsInboxSidebar' }),
         K = W === j.v8.DROPDOWN && g !== Z.V5.ALL;

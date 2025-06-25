@@ -20,6 +20,10 @@ e.exports = {
     hint: 'hint__56fec',
     hintValue: 'hintValue__56fec',
     searchResultChannelIcon: 'searchResultChannelIcon__56fec',
+    searchResultDMChannelIcon: 'searchResultDMChannelIcon__56fec',
+    searchResultGDMChannelIcon: 'searchResultGDMChannelIcon__56fec',
+    searchResultDMChannelName: 'searchResultDMChannelName__56fec',
+    searchResultDMUserName: 'searchResultDMUserName__56fec',
     searchResultChannelCategory: 'searchResultChannelCategory__56fec',
     resultChannel: 'resultChannel__56fec'
 };

@@ -1,13 +1,13 @@
 var r = n(98405),
     i = n(967333),
-    o = n(861567),
-    a = n(914331),
-    c = n(201390),
-    u = n(146063),
-    s = n(77826),
-    f = Array,
-    l = Math.max,
-    d = Math.min;
+    a = n(861567),
+    o = n(914331),
+    s = n(201390),
+    l = n(146063),
+    c = n(77826),
+    u = Array,
+    d = Math.max,
+    f = Math.min;
 r(
     {
         target: 'Array',
@@ -18,16 +18,16 @@ r(
             var n,
                 r,
                 i,
-                p,
-                h = u(this),
-                v = a(h),
-                g = c(e, v),
-                w = arguments.length,
-                y = 0;
-            for (0 === w ? (n = r = 0) : 1 === w ? ((n = 0), (r = v - g)) : ((n = w - 2), (r = d(l(s(t), 0), v - g))), p = f((i = o(v + n - r))); y < g; y++) p[y] = h[y];
-            for (; y < g + n; y++) p[y] = arguments[y - g + 2];
-            for (; y < i; y++) p[y] = h[y + r - n];
-            return p;
+                _,
+                p = l(this),
+                h = o(p),
+                m = s(e, h),
+                g = arguments.length,
+                E = 0;
+            for (0 === g ? (n = r = 0) : 1 === g ? ((n = 0), (r = h - m)) : ((n = g - 2), (r = f(d(c(t), 0), h - m))), _ = u((i = a(h + n - r))); E < m; E++) _[E] = p[E];
+            for (; E < m + n; E++) _[E] = arguments[E - m + 2];
+            for (; E < i; E++) _[E] = p[E + r - n];
+            return _;
         }
     }
 ),

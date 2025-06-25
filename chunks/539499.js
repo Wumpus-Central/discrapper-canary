@@ -7,6 +7,7 @@ e.exports = {
     messageClickableContainer: 'messageClickableContainer_cb862a',
     message: 'message_cb862a',
     timestamp: 'timestamp_cb862a',
+    mentionBadge: 'mentionBadge_cb862a',
     actions: 'actions_cb862a',
     selected: 'selected_cb862a',
     descriptionMessage: 'descriptionMessage_cb862a',

@@ -218,8 +218,7 @@ function X(e) {
         tO = null != (o = null == Z ? void 0 : Z.inReverseTrial) && o && !X,
         tv = (0, E.Z)({ location: 'PaymentModal' }) && e9,
         tI = tv ? F.premiumBrandRefreshBackground : void 0,
-        { enabled: tT } = (0, g.I9)({ location: 'PaymentModal' }),
-        { elementsOptions: tS } = (0, g.ai)({ shouldGenerateSetupIntent: !1 });
+        { enabled: tT } = (0, g.I9)({ location: 'PaymentModal' });
     return (0, r.jsx)(K.Provider, {
         value: W(
             H(
@@ -312,7 +311,7 @@ function X(e) {
             }
         ),
         children: (0, r.jsx)(a.Elements, {
-            options: H({}, B.OBo, tT && tS),
+            options: B.OBo,
             stripe: ei,
             children: Q
         })

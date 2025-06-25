@@ -1,16 +1,20 @@
 let r;
 n.d(t, {
-    az: () => u,
-    d2: () => c,
-    eH: () => l,
-    oe: () => d
+    XZ: () => p,
+    az: () => _,
+    d2: () => d,
+    eH: () => u,
+    oe: () => h,
+    rI: () => f
 }),
     n(35282),
     n(388685);
 var i = n(36140),
     a = n(544891),
-    o = n(981631);
-let s = (e) => {
+    o = n(710845),
+    s = n(981631);
+let l = new o.Z('StripeUtils'),
+    c = (e) => {
         let t = (t) => 'You passed an invalid expiration date '.concat(e) + ''.concat(null != t ? t : '') + 'Please pass a string containing a numeric month and year such as `01-17` or `2015 / 05`',
             n = e.split(/[.\-/\s]+/g);
         2 !== n.length && t();
@@ -21,10 +25,10 @@ let s = (e) => {
             [i, a] = r[0] > 12 ? [r[1], r[0]] : [r[0], r[1]];
         return i > 12 && t('Month must be a number 1-12, not '.concat(i, '.')), a < 100 && (a += 2000), [i, a];
     },
-    l = (e) => {
+    u = (e) => {
         let t, n;
         try {
-            [t, n] = s(e);
+            [t, n] = c(e);
         } catch (e) {
             return !1;
         }
@@ -32,10 +36,13 @@ let s = (e) => {
             i = new Date();
         return r.setMonth(r.getMonth() - 1), r.setMonth(r.getMonth() + 1, 1), r > i;
     };
-function c() {
-    return null != r ? Promise.resolve(r) : (0, i.loadStripe)(o.Ai1.STRIPE.KEY).then((e) => ((r = e), e));
+function d() {
+    return null != r ? Promise.resolve(r) : (0, i.loadStripe)(s.Ai1.STRIPE.KEY).then((e) => ((r = e), e));
 }
-function u(e) {
+function f() {
+    return null == s.Ai1.STRIPE.KEY ? (l.warn('getStripeClientMode() called before PaymentSettings.STRIPE.KEY initialized: ', s.Ai1.STRIPE.KEY), 'unknown') : s.Ai1.STRIPE.KEY.startsWith('pk_live') ? 'live' : s.Ai1.STRIPE.KEY.startsWith('pk_test') ? 'test' : (l.warn('Unexpected value for Stripe public key: ', s.Ai1.STRIPE.KEY), 'unknown');
+}
+function _(e) {
     var t, n, r, i, a, o, s, l;
     let { billing_details: c } = e,
         u = null != (t = c.address) ? t : {},
@@ -53,26 +60,40 @@ function u(e) {
         billingAddressInfo: d
     };
 }
-async function d(e) {
+function p(e) {
+    let { name: t, line1: n, line2: r, city: i, state: a, postalCode: o, country: s } = e;
+    return {
+        name: t,
+        address: {
+            line1: n,
+            line2: r,
+            city: i,
+            state: a,
+            postal_code: o,
+            country: s
+        }
+    };
+}
+async function h(e) {
     try {
         let { stripe_payment_intent_client_secret: t } = (
                 await a.tn.get({
-                    url: o.ANM.BILLING_STRIPE_PAYMENT_INTENTS(e),
+                    url: s.ANM.BILLING_STRIPE_PAYMENT_INTENTS(e),
                     oldFormErrors: !0,
                     rejectWithError: !1
                 })
             ).body,
-            n = await c();
+            n = await d();
         if (null == n) return { error: 'unable to load stripe' };
         let { error: r, paymentIntent: i } = await n.retrievePaymentIntent(t);
         if (null != r) return { error: r.message };
         if (null == i) return { error: 'payment intent does not exist' };
-        let s = {};
-        switch (('requires_payment_method' === i.status && null != i.last_payment_error && null != i.last_payment_error.payment_method && (s.payment_method = i.last_payment_error.payment_method.id), i.status)) {
+        let o = {};
+        switch (('requires_payment_method' === i.status && null != i.last_payment_error && null != i.last_payment_error.payment_method && (o.payment_method = i.last_payment_error.payment_method.id), i.status)) {
             case 'requires_payment_method':
             case 'requires_confirmation':
             case 'requires_action':
-                let { error: l } = await n.confirmCardPayment(t, s);
+                let { error: l } = await n.confirmCardPayment(t, o);
                 if (null != l) return { error: l.message };
                 return {};
             case 'succeeded':

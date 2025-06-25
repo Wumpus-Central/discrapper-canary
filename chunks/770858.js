@@ -37,17 +37,13 @@ function P(e) {
         { anyUnread: A, unreadRecentMentionsCount: R } = (function () {
             let e = (0, C.wt)(),
                 t = (0, o.e7)([m.ZP], () => e.some((e) => m.ZP.hasUnread(e))),
-                n = (0, o.e7)([h.Z], () => h.Z.getSettingsFilteredMentions());
+                n = (0, o.Wu)([h.Z], () => {
+                    var e;
+                    return null != (e = h.Z.getSettingsFilteredMentions()) ? e : [];
+                });
             return {
                 anyUnread: t,
-                unreadRecentMentionsCount: (0, o.e7)(
-                    [m.ZP, f.Z, g.Z],
-                    () => {
-                        var e, t;
-                        return null != (t = null == n || null == (e = n.filter((e) => (0, y.YH)(e, g.Z, f.Z, m.ZP))) ? void 0 : e.length) ? t : 0;
-                    },
-                    [n]
-                )
+                unreadRecentMentionsCount: (0, o.e7)([m.ZP, f.Z, g.Z], () => n.filter((e) => (0, y.YH)(e, g.Z, f.Z, m.ZP)).length, [n])
             };
         })(),
         { notificationCenterVariant: D } = O.Lk.useExperiment({ location: 'NotificationsInboxButtonInner' }),

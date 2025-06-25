@@ -1,9 +1,11 @@
 n.d(t, {
-    I9: () => v,
-    ai: () => I,
-    hn: () => A
+    I9: () => T,
+    Og: () => A,
+    hR: () => w,
+    hn: () => x
 }),
-    n(388685);
+    n(388685),
+    n(35282);
 var r = n(255367),
     i = n(73800),
     a = n(245364),
@@ -16,8 +18,10 @@ var r = n(255367),
     f = n(409813),
     _ = n(622999),
     p = n(288138),
-    h = n(528157);
-function m(e, t, n) {
+    h = n(231338),
+    m = n(388032),
+    g = n(528157);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,7 +34,7 @@ function m(e, t, n) {
         e
     );
 }
-function g(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,12 +45,12 @@ function g(e) {
                 })
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                E(e, t, n[t]);
             });
     }
     return e;
 }
-function E(e, t) {
+function y(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -58,29 +62,29 @@ function E(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function y(e, t) {
+function v(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = O(e, t);
+        i = I(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function O(e, t) {
+function I(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -89,8 +93,8 @@ function O(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let v = (e) => ({ enabled: p.Z.getCurrentConfig(e).enabled }),
-    I = (e) => {
+let T = (e) => ({ enabled: p.Z.getCurrentConfig(e).enabled }),
+    S = (e) => {
         let { shouldGenerateSetupIntent: t } = e,
             [n, r] = i.useState(null),
             a = i.useCallback(async () => {
@@ -124,46 +128,76 @@ let v = (e) => ({ enabled: p.Z.getCurrentConfig(e).enabled }),
             )
         };
     },
-    T = i.memo(function (e) {
-        var { enforcePaymentMethodTypes: t, wallets: n = [], options: i } = e,
-            o = y(e, ['enforcePaymentMethodTypes', 'wallets', 'options']);
-        let s = (0, a.useElements)();
-        return (
-            (0, d.ZP)(() => {
-                null != s && null != t && s.update({ paymentMethodTypes: t });
-            }),
-            (0, r.jsx)(
-                a.PaymentElement,
-                g(
-                    {
-                        id: 'stripe-payment-element',
-                        options: g(
-                            {
-                                layout: { type: 'tabs' },
-                                wallets: {
-                                    applePay: n.includes('applePay') ? 'auto' : 'never',
-                                    googlePay: n.includes('googlePay') ? 'auto' : 'never'
-                                },
-                                defaultValues: { billingDetails: { name: '' } },
-                                fields: {
-                                    billingDetails: {
-                                        name: 'auto',
-                                        address: 'auto'
-                                    }
-                                }
-                            },
-                            i
-                        )
-                    },
-                    o
-                )
+    A = new Set([h.He.CARD, h.He.PAYPAL]),
+    N = [f.h8.PAYMENT_ELEMENT],
+    C = {
+        [h.He.PAYPAL]: {
+            live: 'cpmt_1RbPZnCR4aIufmH2qyrDhNFa',
+            test: 'cpmt_1RRMZZCR4aIufmH2ZzcE5aS4'
+        }
+    },
+    R = {
+        [h.He.PAYPAL]: {
+            getStripeId: (e) => ('live' === e ? C[h.He.PAYPAL].live : C[h.He.PAYPAL].test),
+            subtitleTranslationKey: m.t.Djzd7O
+        }
+    },
+    P = () => {
+        let e = (0, _.rI)();
+        return Object.values(R).map((t) => {
+            let { getStripeId: n, subtitleTranslationKey: r } = t;
+            return {
+                id: n(e),
+                options: {
+                    type: 'static',
+                    subtitle: m.intl.string(r)
+                }
+            };
+        });
+    },
+    w = (e) => {
+        let t = (0, _.rI)();
+        return e === R[h.He.PAYPAL].getStripeId(t) ? h.He.PAYPAL : 'card' === e ? h.He.CARD : null;
+    },
+    D = i.memo(function (e) {
+        var { paymentMethodTypes: t, customPaymentMethods: n, wallets: o = [], options: s, originalPaymentType: l } = e,
+            c = v(e, ['paymentMethodTypes', 'customPaymentMethods', 'wallets', 'options', 'originalPaymentType']);
+        let u = (0, a.useElements)(),
+            d = i.useRef(!1);
+        i.useEffect(() => {
+            if (null != u && !d.current) {
+                let e = b({ customPaymentMethods: null != n ? n : P() }, null != t && { paymentMethodTypes: t });
+                u.update(e), (d.current = !0);
+            }
+        }, [u, n, t]);
+        let f = i.useMemo(() => {
+            let e = (0, _.rI)();
+            return null != l && l in R ? [R[l].getStripeId(e)] : l === h.He.CARD ? ['card'] : void 0;
+        }, [l]);
+        return (0, r.jsx)(
+            a.PaymentElement,
+            b(
+                {
+                    id: 'stripe-payment-element',
+                    options: b(
+                        O(b({}, null != f && { paymentMethodOrder: f }), {
+                            layout: { type: 'tabs' },
+                            wallets: {
+                                applePay: o.includes('applePay') ? 'auto' : 'never',
+                                googlePay: o.includes('googlePay') ? 'auto' : 'never'
+                            }
+                        }),
+                        s
+                    )
+                },
+                c
             )
         );
     }),
-    S = i.memo(function (e) {
+    L = i.memo(function (e) {
         var { options: t, renderWithoutElement: n } = e,
-            i = y(e, ['options', 'renderWithoutElement']);
-        let o = (0, r.jsx)(a.AddressElement, g({ options: g({ mode: 'billing' }, t) }, i));
+            i = v(e, ['options', 'renderWithoutElement']);
+        let o = (0, r.jsx)(a.AddressElement, b({ options: b({ mode: 'billing' }, t) }, i));
         return n
             ? o
             : (0, r.jsx)(a.Elements, {
@@ -171,21 +205,33 @@ let v = (e) => ({ enabled: p.Z.getCurrentConfig(e).enabled }),
                   children: o
               });
     }),
-    A = (e) => {
-        let { step: t, shouldRender: n, shouldRenderPaymentElement: i, stripePaymentElementProps: a, stripeAddressElementProps: o } = e;
-        if (!n) return null;
-        let l = t === f.h8.CREDIT_CARD_INFORMATION,
-            c = t === f.h8.ADDRESS;
+    x = (e) => {
+        let { elementsOptions: t } = S({ shouldGenerateSetupIntent: !1 });
+        return (0, r.jsxs)(a.Elements, {
+            stripe: (0, _.d2)(),
+            options: t,
+            children: [(0, r.jsx)(k, b({}, e)), ';']
+        });
+    },
+    k = (e) => {
+        let { step: t, stripePaymentElementProps: n, stripeAddressElementProps: o, elementsRef: l, originalPaymentType: c, paymentElementSelectedType: u } = e,
+            d = (0, a.useElements)();
+        i.useEffect(() => {
+            l.current = d;
+        }, [d, l]);
+        let _ = N.includes(t),
+            p = t === f.h8.ADDRESS;
         return (0, r.jsxs)('div', {
-            className: h.body,
+            className: g.body,
             children: [
+                null != u &&
+                    (0, r.jsx)('div', {
+                        className: s()(_ ? g.visible : g.hidden, { [g.cardElementContainer]: t === f.h8.CREDIT_CARD_INFORMATION }),
+                        children: (0, r.jsx)(D, O(b({}, n), { originalPaymentType: c }))
+                    }),
                 (0, r.jsx)('div', {
-                    className: s()(l ? h.visible : h.hidden, { [h.cardElementContainer]: t === f.h8.CREDIT_CARD_INFORMATION }),
-                    children: i && (0, r.jsx)(T, g({}, a))
-                }),
-                (0, r.jsx)('div', {
-                    className: s()(h.addressElementContainer, c ? h.visible : h.hidden),
-                    children: (0, r.jsx)(S, b(g({}, o), { renderWithoutElement: !0 }))
+                    className: s()(g.addressElementContainer, p ? g.visible : g.hidden),
+                    children: (0, r.jsx)(L, O(b({}, o), { renderWithoutElement: !0 }))
                 })
             ]
         });
