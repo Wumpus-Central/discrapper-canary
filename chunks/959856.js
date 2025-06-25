@@ -204,6 +204,7 @@ class N extends l.Z {
     setSoundshareSource(e, t, n) {}
     setAudioSubsystem(e) {}
     queueAudioSubsystem(e) {}
+    setOffloadAdmControls(e) {}
     getAudioSubsystem() {
         return I.iA.STANDARD;
     }

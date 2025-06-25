@@ -153,6 +153,8 @@ class v extends o.Z {
                 return (0, d.eJ)(h.eR.NATIVE_SCREENSHARE_PICKER);
             case h.AN.MLS_PAIRWISE_FINGERPRINTS:
                 return (0, d.eJ)(h.eR.MLS_PAIRWISE_FINGERPRINTS);
+            case h.AN.OFFLOAD_ADM_CONTROLS:
+                return (0, d.eJ)(h.eR.OFFLOAD_ADM_CONTROLS);
             case h.AN.DIAGNOSTICS:
             case h.AN.NATIVE_PING:
             case h.AN.AUTOMATIC_VAD:
@@ -389,6 +391,10 @@ class v extends o.Z {
     }
     setAudioSubsystem(e) {
         null != (0, d.zS)().setAudioSubsystem ? (0, d.zS)().setAudioSubsystem(e) : (0, d.zS)().setUseLegacyAudioDevice(e === h.iA.LEGACY);
+    }
+    setOffloadAdmControls(e) {
+        let t = (0, d.zS)();
+        null != t.setOffloadAdmControls && t.setOffloadAdmControls(e);
     }
     queueAudioSubsystem(e) {
         let t = (0, d.zS)();

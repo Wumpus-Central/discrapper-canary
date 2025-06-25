@@ -727,6 +727,7 @@ let ek = Object.freeze({
                 compact: i
             });
         },
+        [eT.uaV.EMOJI_ADDED]: void 0,
         [eT.uaV.CHAT_WALLPAPER_SET]: function (e) {
             let { message: t, channel: n, compact: i } = e;
             return (0, r.jsx)(h.Z, {

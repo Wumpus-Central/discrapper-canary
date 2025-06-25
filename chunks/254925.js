@@ -1,7 +1,7 @@
 t.d(n, {
-    QV: () => I,
+    QV: () => O,
     ZP: () => w,
-    go: () => O
+    go: () => I
 });
 var r = t(255367),
     i = t(73800),
@@ -30,8 +30,8 @@ var r = t(255367),
     E = t(195196),
     Z = t(388032),
     k = t(602268);
-let I = [T.x_.LEAF, T.x_.SWORD, T.x_.HEART, T.x_.FIRE, T.x_.WATER_DROP, T.x_.SKULL, T.x_.MOON, T.x_.LIGHTNING, T.x_.COMPASS, T.x_.TOADSTOOL],
-    O = [
+let O = [T.x_.LEAF, T.x_.SWORD, T.x_.HEART, T.x_.FIRE, T.x_.WATER_DROP, T.x_.SKULL, T.x_.MOON, T.x_.LIGHTNING, T.x_.COMPASS, T.x_.TOADSTOOL],
+    I = [
         {
             primary: '#ff1c90',
             secondary: '#ff7fc0'
@@ -108,9 +108,9 @@ let I = [T.x_.LEAF, T.x_.SWORD, T.x_.HEART, T.x_.FIRE, T.x_.WATER_DROP, T.x_.SKU
         let L = a.Y.VISIBLE.has(R.visibility),
             D = (0, f.up)(w),
             A = !D || (null == R ? void 0 : R.tag) == null,
-            U = null != (e = R.badge) ? e : I[0],
-            F = null != (n = R.badgeColorPrimary) ? n : O[0].primary,
-            B = null != (t = R.badgeColorSecondary) ? t : O[0].secondary,
+            U = null != (e = R.badge) ? e : O[0],
+            F = null != (n = R.badgeColorPrimary) ? n : I[0].primary,
+            B = null != (t = R.badgeColorSecondary) ? t : I[0].secondary,
             K = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(j.Z, {

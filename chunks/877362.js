@@ -143,7 +143,7 @@ function P(e) {
                               color: null != (n = null == P ? void 0 : P.colorString) ? n : void 0
                           }),
                           className: o()(N.content, N.exampleMessage),
-                          message: Z.intl.string(E.default.eTHkQU),
+                          message: Z.intl.string(Z.t['6OSasb']),
                           decorations: (0, r.jsx)(g.Z, { className: N.boostIcon })
                       }),
                   (0, r.jsx)(p.Z, {

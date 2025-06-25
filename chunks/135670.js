@@ -101,6 +101,7 @@ class c extends r.Z {
     }
     setAudioSubsystem(e) {}
     queueAudioSubsystem(e) {}
+    setOffloadAdmControls(e) {}
     getDebugLogging() {
         return !1;
     }

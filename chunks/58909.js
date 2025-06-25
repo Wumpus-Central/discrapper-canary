@@ -51,7 +51,7 @@ function y(e) {
                                 inline: !1
                             }),
                             username: h.ZP.getName(i, null, j),
-                            message: g.intl.string(p.default.bpghV1)
+                            message: g.intl.string(g.t['6OSasb'])
                         }),
                         (0, r.jsx)(s.zxk, {
                             onClick: v,
