@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => P,
-    m: () => C
+    Z: () => C,
+    m: () => P
 }),
     n(539854),
     n(388685);
@@ -26,23 +26,23 @@ var r = n(255367),
     A = n(629481),
     R = n(981631);
 let g = i.createContext(void 0);
-function C() {
+function P() {
     let e = i.useContext(g);
     return o()(null != e, 'must use useGuildShopDisplayContext within a GuildShopDisplayContextProvider'), e;
 }
-function P(e) {
+function C(e) {
     var t;
     let { children: n, initialTab: l, guildId: o } = e,
-        C = (0, a.e7)([T.Z], () => T.Z.getGuild(o)),
-        P = (0, a.e7)([E.Z], () => E.Z.isViewingServerShop(o)),
-        y = (0, S.g)(C, 'guild_shop_page'),
+        P = (0, a.e7)([T.Z], () => T.Z.getGuild(o)),
+        C = (0, a.e7)([E.Z], () => E.Z.isViewingServerShop(o)),
+        y = (0, S.g)(P, 'guild_shop_page'),
         b = (0, N.RF)(o, 'guild_shop_page'),
-        D = (null == C ? void 0 : C.hasFeature(R.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0,
-        h = (0, _.mY)(null == C ? void 0 : C.id),
+        D = (null == P ? void 0 : P.hasFeature(R.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0,
+        h = (0, _.mY)(null == P ? void 0 : P.id),
         U = null == (t = (0, d.YB)(o)) ? void 0 : t.server_shop_tab_order,
         M = [],
         v = f.y.GUILD_SHOP_FULL_PREVIEW;
-    P || (D && h) ? (M.push(U === m.a3.PRODUCTS_FIRST ? f.y.GUILD_PRODUCTS : f.y.GUILD_ROLE_SUBSCRIPTIONS), M.push(U === m.a3.PRODUCTS_FIRST ? f.y.GUILD_ROLE_SUBSCRIPTIONS : f.y.GUILD_PRODUCTS), (v = M[0])) : D && !h ? (M.push(f.y.GUILD_PRODUCTS), (v = f.y.GUILD_PRODUCTS)) : !D && h && (M.push(f.y.GUILD_ROLE_SUBSCRIPTIONS), (v = f.y.GUILD_ROLE_SUBSCRIPTIONS), y && M.push(f.y.GUILD_PRODUCTS_PREVIEW)), (l = null != l ? l : v);
+    C || (D && h) ? (M.push(U === m.a3.PRODUCTS_FIRST ? f.y.GUILD_PRODUCTS : f.y.GUILD_ROLE_SUBSCRIPTIONS), M.push(U === m.a3.PRODUCTS_FIRST ? f.y.GUILD_ROLE_SUBSCRIPTIONS : f.y.GUILD_PRODUCTS), (v = M[0])) : D && !h ? (M.push(f.y.GUILD_PRODUCTS), (v = f.y.GUILD_PRODUCTS)) : !D && h && (M.push(f.y.GUILD_ROLE_SUBSCRIPTIONS), (v = f.y.GUILD_ROLE_SUBSCRIPTIONS), y && M.push(f.y.GUILD_PRODUCTS_PREVIEW)), (l = null != l ? l : v);
     let [k, L] = i.useState(l),
         Z = (y && !(h && b)) || k === f.y.GUILD_PRODUCTS_PREVIEW;
     return (

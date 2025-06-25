@@ -1,9 +1,9 @@
 n.d(t, {
     DT: () => R,
     Ef: () => y,
-    HO: () => P,
+    HO: () => C,
     NZ: () => b,
-    Pq: () => C,
+    Pq: () => P,
     Q1: () => S,
     RK: () => m,
     _0: () => f,
@@ -150,7 +150,7 @@ function g(e, t) {
         })
     );
 }
-function C(e, t, n) {
+function P(e, t, n) {
     let r = e.getGuildId();
     i()(null != r, 'Channel cannot be guildless');
     let o = e.permissionOverwrites[r],
@@ -165,7 +165,7 @@ function C(e, t, n) {
         );
     n ? ((s.allow = l.IH(s.allow, t)), (s.deny = l.Od(s.deny, t))) : ((s.allow = l.Od(s.allow, t)), (s.deny = l.IH(s.deny, t))), a.Z.updatePermissionOverwrite(e.id, s);
 }
-async function P(e, t, n, r) {
+async function C(e, t, n, r) {
     if ('' === t) return;
     u.Z.getVoiceChannelId() !== e.id && (0, E.TM)(e);
     let i = await (0, O.me)(e.id, t, n, r);

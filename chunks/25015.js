@@ -13,7 +13,7 @@ var r = n(255367),
     g = n(875231);
 let f = l.lazy(() => n.e('85831').then(n.bind(n, 120314)));
 function b(e, t) {
-    let { hideSimpleEmbedContent: b, formatInline: h = !1, noStyleAndInteraction: O = !1, isInteracting: y = !1, allowHeading: j = !1, allowList: v = !1, allowLinks: P = !1, allowDevLinks: x = !1, previewLinkTarget: C = !1, viewingChannelId: w } = t,
+    let { hideSimpleEmbedContent: b, formatInline: h = !1, noStyleAndInteraction: O = !1, isInteracting: y = !1, allowHeading: v = !1, allowList: j = !1, allowLinks: P = !1, allowDevLinks: x = !1, previewLinkTarget: C = !1, viewingChannelId: w } = t,
         S = (0, o.p)(),
         N = (0, d.o)({ location: 'useMessageRenderedContent' });
     return l.useMemo(() => {
@@ -52,13 +52,13 @@ function b(e, t) {
                   formatInline: h,
                   noStyleAndInteraction: O,
                   isInteracting: y,
-                  allowHeading: j,
-                  allowList: v,
+                  allowHeading: v,
+                  allowList: j,
                   allowLinks: P,
                   allowDevLinks: x,
                   previewLinkTarget: C,
                   shouldFilterKeywords: S,
                   viewingChannelId: w
               });
-    }, [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, b, h, O, y, j, v, P, C, S, x, w, N.enabled]);
+    }, [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, b, h, O, y, v, j, P, C, S, x, w, N.enabled]);
 }

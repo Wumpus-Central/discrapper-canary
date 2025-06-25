@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => C });
 var r = n(255367),
     a = n(73800),
     l = n(442837),
@@ -16,26 +16,26 @@ var r = n(255367),
     j = n(699516),
     v = n(594174),
     Z = n(709054),
-    b = n(51144),
-    p = n(144140),
+    p = n(51144),
+    b = n(144140),
     N = n(91159),
     T = n(217702),
     y = n(388032),
     P = n(915298);
-function w(e) {
-    return e.isActiveThread() ? (0, r.jsx)(C, { channel: e }) : (0, r.jsx)(S, { channel: e });
-}
 function C(e) {
+    return e.isActiveThread() ? (0, r.jsx)(I, { channel: e }) : (0, r.jsx)(S, { channel: e });
+}
+function I(e) {
     let { channel: t } = e,
-        n = (0, l.e7)([p.Z], () => p.Z.getMostRecentMessage(t.id));
+        n = (0, l.e7)([b.Z], () => b.Z.getMostRecentMessage(t.id));
     return null == n
-        ? (0, r.jsx)(I, { channel: t })
-        : (0, r.jsx)(O, {
+        ? (0, r.jsx)(O, { channel: t })
+        : (0, r.jsx)(w, {
               channel: t,
               message: n
           });
 }
-function I(e) {
+function O(e) {
     let { channel: t } = e,
         n = (0, N.Ok)(t);
     return (0, r.jsxs)(s.Text, {
@@ -45,16 +45,16 @@ function I(e) {
         children: [y.intl.string(y.t.Jmh6n5), '\xA0 \u2022 \xA0', (0, N.Ye)(n)]
     });
 }
-function O(e) {
+function w(e) {
     let { channel: t, message: n } = e;
     (0, o.$)({ [t.guild_id]: [n.author.id] });
     let c = (0, l.e7)([v.default], () => {
             var e;
             return null != (e = v.default.getUser(n.author.id)) ? e : n.author;
         }),
-        { nick: f, colorString: x, colorStrings: b } = (0, h.ZP)(n),
-        p = (0, m.X)(t.guild_id, b, 'ThreadBrowserRowSubtext'),
-        { isBlocked: y, isIgnored: w } = (0, l.cj)(
+        { nick: f, colorString: x, colorStrings: p } = (0, h.ZP)(n),
+        b = (0, m.X7)(t.guild_id, c.id, p),
+        { isBlocked: y, isIgnored: C } = (0, l.cj)(
             [j.Z],
             () => ({
                 isBlocked: j.Z.isBlockedForMessage(n),
@@ -62,13 +62,13 @@ function O(e) {
             }),
             [n]
         ),
-        C = (0, d.p)(),
-        I = a.useMemo(() => {
+        I = (0, d.p)(),
+        O = a.useMemo(() => {
             let e =
                     null != n.content && '' !== n.content
                         ? (0, u.ZP)(n, {
                               formatInline: !0,
-                              shouldFilterKeywords: C
+                              shouldFilterKeywords: I
                           }).content
                         : null,
                 {
@@ -76,7 +76,7 @@ function O(e) {
                     renderedContent: a,
                     trailingIcon: l,
                     leadingIcon: s
-                } = (0, g.f)(n, e, y, w, P.messageContent, {
+                } = (0, g.f)(n, e, y, C, P.messageContent, {
                     trailingIconClass: P.messageContentTrailingIcon,
                     leadingIconClass: P.messageContentLeadingIcon,
                     iconSize: T.WW
@@ -84,7 +84,7 @@ function O(e) {
             return (0, r.jsxs)(r.Fragment, {
                 children: [s, null != a ? a : (0, r.jsx)('span', { children: t }), l]
             });
-        }, [n, y, w, C]);
+        }, [n, y, C, I]);
     return (0, r.jsxs)(s.Text, {
         className: P.subtext,
         variant: 'text-sm/normal',
@@ -98,11 +98,11 @@ function O(e) {
             (0, r.jsx)(s.PUh, {
                 name: f,
                 color: x,
-                roleColors: p,
+                roleColors: b,
                 className: P.authorName
             }),
             ':\xA0',
-            I,
+            O,
             '\xA0 \u2022 \xA0',
             (0, N.Ye)(Z.default.extractTimestamp(n.id))
         ]
@@ -116,7 +116,7 @@ function S(e) {
     (0, o.$)({ [d.guild_id]: [d.ownerId] });
     let g = (0, l.e7)([v.default], () => v.default.getUser(d.ownerId)),
         j = (0, l.e7)([f.ZP], () => f.ZP.getMember(d.guild_id, d.ownerId)),
-        p = (0, m.X)(d.guild_id, null == j ? void 0 : j.colorStrings, 'ArchiveTimeSubtext'),
+        b = (0, m.X7)(d.guild_id, null == g ? void 0 : g.id, null == j ? void 0 : j.colorStrings),
         T = null != (a = (0, c.KS)(d)) ? a : s.or_;
     return (0, r.jsx)(s.Text, {
         className: P.subtext,
@@ -153,8 +153,8 @@ function S(e) {
                                       {
                                           className: P.startedByName,
                                           color: null != (n = null == j ? void 0 : j.colorString) ? n : void 0,
-                                          roleColors: p,
-                                          name: null != (a = null == j ? void 0 : j.nick) ? a : b.ZP.getName(g)
+                                          roleColors: b,
+                                          name: null != (a = null == j ? void 0 : j.nick) ? a : p.ZP.getName(g)
                                       },
                                       t
                                   );

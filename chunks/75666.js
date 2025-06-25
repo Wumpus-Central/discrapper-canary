@@ -1,7 +1,7 @@
 t.d(n, {
     AR: () => p,
     C2: () => u,
-    Pp: () => f,
+    Pp: () => I,
     VX: () => _,
     b7: () => m,
     sE: () => g
@@ -59,7 +59,7 @@ function m(e) {
               }
           ];
 }
-function f() {
+function I() {
     return {
         CREATE: {
             id: 'CREATE',

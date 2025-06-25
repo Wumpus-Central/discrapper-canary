@@ -43,7 +43,7 @@ var i = n(255367),
     B = n(981631),
     V = n(388032),
     W = n(483112);
-function G(e) {
+function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -68,7 +68,7 @@ function G(e) {
     }
     return e;
 }
-function U(e, t) {
+function G(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -131,7 +131,7 @@ function F(e) {
             }
             if (
                 T.Z.can(e, n, {
-                    [m]: U(G({}, t), {
+                    [m]: G(U({}, t), {
                         allow: l,
                         deny: r
                     })
@@ -419,7 +419,7 @@ function q() {
                         children: (n) =>
                             (0, i.jsx)(
                                 d.njP.Header,
-                                U(G({ ref: e }, n), {
+                                G(U({ ref: e }, n), {
                                     children: (0, i.jsxs)('div', {
                                         className: W.sidebarHeaderDefault,
                                         children: [

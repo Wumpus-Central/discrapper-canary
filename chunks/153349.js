@@ -105,7 +105,7 @@ let A = i.memo(function (e) {
                 status: x.Z.getStatus(l.user.id, E)
             })),
             A = (0, c.e7)([_.ZP], () => _.ZP.getMember(E, l.user.id)),
-            w = (0, g.X)(t.guild_id, null == A ? void 0 : A.colorStrings, 'RequestToSpeakSidebar'),
+            w = (0, g.X7)(t.guild_id, null == A ? void 0 : A.userId, null == A ? void 0 : A.colorStrings),
             R = i.useMemo(() => ({ [E]: [l.user.id] }), [E, l.user.id]);
         (0, f.$)(R);
         let M = l.rtsState === O.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;

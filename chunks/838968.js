@@ -10,8 +10,8 @@ var i = t(120356),
     s = t(477415),
     l = t(690786),
     c = t(192371),
-    u = t(279604),
-    d = t(93841),
+    d = t(279604),
+    u = t(93841),
     p = t(388032),
     m = t(117172);
 function _(e) {
@@ -26,7 +26,7 @@ function _(e) {
             (0, r.jsx)(a.Text, {
                 color: 'status-warning',
                 variant: 'text-sm/bold',
-                children: p.intl.formatToMarkdownString(d.default['ol/ao6'], { dateString: (0, c.Z)(n) })
+                children: p.intl.formatToMarkdownString(u.default['ol/ao6'], { dateString: (0, c.Z)(n) })
             })
         ]
     });
@@ -66,7 +66,7 @@ function f(e) {
                               (0, r.jsx)(a.Text, {
                                   color: 'text-positive',
                                   variant: 'text-sm/bold',
-                                  children: p.intl.string(d.default.FFLkm5)
+                                  children: p.intl.string(u.default.FFLkm5)
                               })
                           ]
                       }))
@@ -74,12 +74,12 @@ function f(e) {
     });
 }
 function x(e) {
-    let { guildId: n, powerup: t, className: i, onHover: c, children: d } = e,
+    let { guildId: n, powerup: t, className: i, onHover: c, children: u } = e,
         p = (0, s.Z)(n, t),
         _ = (0, l.Z)(n, t),
         f = null != _ || p,
         x = (null == _ ? void 0 : _.ends_at) != null,
-        { onShowMore: b } = (0, u.ZP)(n, t);
+        { onShowMore: b } = (0, d.ZP)(n, t);
     return (0, r.jsx)('div', {
         className: m.parentContainer,
         children: (0, r.jsx)(a.kL8, {
@@ -95,7 +95,7 @@ function x(e) {
                 },
                 i
             ),
-            children: d
+            children: u
         })
     });
 }

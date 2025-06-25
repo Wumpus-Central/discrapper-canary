@@ -28,8 +28,8 @@ var r,
     A = n(569545),
     R = n(528011),
     g = n(487419),
-    C = n(715903),
-    P = n(223606),
+    P = n(715903),
+    C = n(223606),
     y = n(160404),
     b = n(41776),
     D = n(347649),
@@ -82,8 +82,8 @@ var r,
     eA = n(436181),
     eR = n(941128),
     eg = n(981631),
-    eC = n(188785),
-    eP = n(474936),
+    eP = n(188785),
+    eC = n(474936),
     ey = n(46140),
     eb = n(231338),
     eD = n(65154);
@@ -188,7 +188,7 @@ let eB = [eg.kVF.QUARANTINED, eg.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eg.kVF.VI
                 let { currentUser: t, selectedGuildId: n } = e;
                 if (null == n) return !1;
                 let r = Q.ZP.getMember(n, t.id);
-                return null != r && !r.isPending && (0, C.EY)(r);
+                return null != r && !r.isPending && (0, P.EY)(r);
             }
         },
         [eg.kVF.QUARANTINED]: {
@@ -337,15 +337,15 @@ let eB = [eg.kVF.QUARANTINED, eg.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eg.kVF.VI
             metadata: () => ({ dismissUntil: l()().add(5, 'days').toDate() })
         },
         [eg.kVF.CONNECT_PLAYSTATION]: { predicate: () => X.Z.isSuggestedAccountType(eg.ABu.PLAYSTATION) && null == X.Z.getAccount(null, eg.ABu.PLAYSTATION) && !ew(eg.kVF.CONNECT_PLAYSTATION) },
-        [eg.kVF.PREMIUM_TIER_2_TRIAL_ENDING]: { predicate: () => eT.Z.getAlmostExpiringTrialOffers([eP.Si.TIER_2]).length > 0 && !ew(eg.kVF.PREMIUM_TIER_2_TRIAL_ENDING) },
-        [eg.kVF.PREMIUM_TIER_0_TRIAL_ENDING]: { predicate: () => eT.Z.getAlmostExpiringTrialOffers([eP.Si.TIER_0]).length > 0 && !ew(eg.kVF.PREMIUM_TIER_0_TRIAL_ENDING) },
+        [eg.kVF.PREMIUM_TIER_2_TRIAL_ENDING]: { predicate: () => eT.Z.getAlmostExpiringTrialOffers([eC.Si.TIER_2]).length > 0 && !ew(eg.kVF.PREMIUM_TIER_2_TRIAL_ENDING) },
+        [eg.kVF.PREMIUM_TIER_0_TRIAL_ENDING]: { predicate: () => eT.Z.getAlmostExpiringTrialOffers([eC.Si.TIER_0]).length > 0 && !ew(eg.kVF.PREMIUM_TIER_0_TRIAL_ENDING) },
         [eg.kVF.PREMIUM_UNCANCEL]: {
             predicate: (e) => {
                 let { premiumSubscription: t, currentUser: n } = e,
                     r = null != t ? l()(t.currentPeriodEnd).diff(l()().startOf('day'), 'days') : 0,
                     i = (null == t ? void 0 : t.canceledAt) != null && (null == t ? void 0 : t.status) === eg.O0b.CANCELED && 1 >= l()().diff(l()(t.canceledAt), 'days'),
                     o = null != t && l()(t.currentPeriodEnd).isBefore(l()()),
-                    a = null != t && t.status === eg.O0b.CANCELED && !o && r <= 7 && r >= 0 && (0, ef.M5)(n, eP.p9.TIER_2) && !i && !n.hasFreePremium() && !t.isPurchasedExternally;
+                    a = null != t && t.status === eg.O0b.CANCELED && !o && r <= 7 && r >= 0 && (0, ef.M5)(n, eC.p9.TIER_2) && !i && !n.hasFreePremium() && !t.isPurchasedExternally;
                 return !ew(eg.kVF.PREMIUM_UNCANCEL) && a;
             },
             metadata: (e) => {
@@ -366,8 +366,8 @@ let eB = [eg.kVF.QUARANTINED, eg.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eg.kVF.VI
                     r = null != t ? l()(t.currentPeriodEnd).diff(l()().startOf('day'), 'days') : 0,
                     i = null != t ? l()(t.currentPeriodEnd).diff(l()(t.currentPeriodStart).startOf('day'), 'days') : 0,
                     o = null != t && l()(t.currentPeriodEnd).isBefore(l()()),
-                    a = ep.Z.applicationIdsFetched.has(eP.CL),
-                    c = ep.Z.getForApplication(eP.CL),
+                    a = ep.Z.applicationIdsFetched.has(eC.CL),
+                    c = ep.Z.getForApplication(eC.CL),
                     s = null != t ? (0, ef.Af)(t) : null,
                     u = null != s ? ef.ZP.getSkuIdForPlan(s.planId) : null,
                     d =
@@ -474,13 +474,13 @@ let eB = [eg.kVF.QUARANTINED, eg.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eg.kVF.VI
             predicate: (e) => {
                 let { selectedGuildId: t } = e,
                     n = null != t ? $.Z.getGuild(t) : null;
-                return (null != t && null != P.Z.getMentionRaidDetected(t) && (null == n ? void 0 : n.hasFeature(eg.oNc.COMMUNITY)) && !ew(eg.kVF.AUTO_MODERATION_MENTION_RAID_DETECTION)) || !1;
+                return (null != t && null != C.Z.getMentionRaidDetected(t) && (null == n ? void 0 : n.hasFeature(eg.oNc.COMMUNITY)) && !ew(eg.kVF.AUTO_MODERATION_MENTION_RAID_DETECTION)) || !1;
             },
             metadata: (e) => {
                 let { selectedGuildId: t } = e,
                     n = { dismissUntil: l()().add(2, 'hours').toDate() };
                 if (null != t) {
-                    let e = P.Z.getMentionRaidDetected(t);
+                    let e = C.Z.getMentionRaidDetected(t);
                     null != e && (n.decisionId = e.decisionId);
                 }
                 return n;
@@ -543,7 +543,7 @@ function eH() {
         o = eo.Z.getGuildId(),
         a = el.Z.getVoiceChannelId(),
         c = null != a ? e_.Z.getVoiceStateForChannel(a) : null;
-    for (let n of eC.a ? eW : eB)
+    for (let n of eP.a ? eW : eB)
         if (
             null != ez[n] &&
             ez[n].predicate({

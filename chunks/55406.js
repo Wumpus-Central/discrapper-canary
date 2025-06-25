@@ -63,9 +63,9 @@ let p = o().defaultRules.lheading,
     h = o().defaultRules.blockQuote,
     O = o().defaultRules.paragraph,
     y = /\{(.+?)}/,
-    j = /^\$(\w+?)\$/;
+    v = /^\$(\w+?)\$/;
 r = n(235375);
-let v = (e) => {
+let j = (e) => {
         let { transformUpperCase: t = !1 } = e;
         return (e, n, r) => {
             let l = y.exec(e[1]),
@@ -87,7 +87,7 @@ let v = (e) => {
             list: u({}, b, 'function' == typeof r.customRules.list ? r.customRules.list(e) : r.customRules.list),
             interpolation: {
                 order: a.ZP.order,
-                match: (e) => j.exec(e),
+                match: (e) => v.exec(e),
                 parse(e, t, n) {
                     let r = n.interpolations[e[1]];
                     return null == r
@@ -102,12 +102,12 @@ let v = (e) => {
                 },
                 react: (e) => e.renderer()
             },
-            lheading: u(d(u({}, p), { parse: v({ transformUpperCase: !0 }) }), 'function' == typeof r.customRules.lheading ? r.customRules.lheading(e) : r.customRules.lheading),
+            lheading: u(d(u({}, p), { parse: j({ transformUpperCase: !0 }) }), 'function' == typeof r.customRules.lheading ? r.customRules.lheading(e) : r.customRules.lheading),
             heading: u({}, m, 'function' == typeof r.customRules.heading ? r.customRules.heading(e) : r.customRules.heading),
             blockQuote: u({}, h, 'function' == typeof r.customRules.blockQuote ? r.customRules.blockQuote(e) : r.customRules.blockQuote),
             paragraph: u({}, O, 'function' == typeof r.customRules.paragraph ? r.customRules.paragraph(e) : r.customRules.paragraph)
         }),
-    x = (e) => ({ lheading: u(d(u({}, p), { parse: v({ transformUpperCase: !1 }) }), 'function' == typeof r.customRules.lheading ? r.customRules.lheading(e) : r.customRules.lheading) }),
+    x = (e) => ({ lheading: u(d(u({}, p), { parse: j({ transformUpperCase: !1 }) }), 'function' == typeof r.customRules.lheading ? r.customRules.lheading(e) : r.customRules.lheading) }),
     C = (e) =>
         d(u({}, P(e)), {
             newline: u({}, o().defaultRules.newline),

@@ -23,8 +23,8 @@ var r = n(255367),
     h = n(913834),
     O = n(397589),
     y = n(98278),
-    j = n(869765),
-    v = n(243317),
+    v = n(869765),
+    j = n(243317),
     P = n(621853),
     x = n(518950),
     C = n(484459),
@@ -125,7 +125,7 @@ function q(e) {
     });
 }
 let X = l.memo(function (e) {
-    let { message: t, author: n, channel: o, guildId: i, compact: s = !1, roleIconProps: u, showUsernamePopout: d, renderPopout: p, onClickUsername: f, onContextMenu: O, displayCompactAvatars: y = !1, onPopoutRequestClose: j, preview: v, subscribeToGroupId: P } = e,
+    let { message: t, author: n, channel: o, guildId: i, compact: s = !1, roleIconProps: u, showUsernamePopout: d, renderPopout: p, onClickUsername: f, onContextMenu: O, displayCompactAvatars: y = !1, onPopoutRequestClose: v, preview: j, subscribeToGroupId: P } = e,
         x = (0, M.ZP)(t, n),
         C = l.useMemo(
             () =>
@@ -253,14 +253,14 @@ let X = l.memo(function (e) {
                       renderPopout: p,
                       onClick: f,
                       onContextMenu: O,
-                      onPopoutRequestClose: j,
+                      onPopoutRequestClose: v,
                       decorations: {
                           [D.a.SYSTEM_TAG]: C,
                           [D.a.BADGES]: _
                       },
                       renderRemixTag: !0,
                       previewGuildId: i,
-                      preview: v,
+                      preview: j,
                       subscribeToGroupId: P
                   }),
                   s &&
@@ -408,7 +408,7 @@ let ee = l.memo(function (e) {
             D = (function (e) {
                 var t, n;
                 let { props: o, guildId: i, handleRenderPopout: c, showCommunicationDisabledStyles: p = !1, className: m } = e,
-                    { message: g, author: f, compact: b = !1, subscribeToGroupId: h, animate: O = !0, onContextMenu: y, onClickAvatar: j, onPopoutRequestClose: v, showAvatarPopout: P } = o,
+                    { message: g, author: f, compact: b = !1, subscribeToGroupId: h, animate: O = !0, onContextMenu: y, onClickAvatar: v, onPopoutRequestClose: j, showAvatarPopout: P } = o,
                     C = l.useRef(null),
                     [N, E] = l.useState(!1),
                     { analyticsLocations: Z } = (0, d.ZP)(u.Z.AVATAR),
@@ -475,7 +475,7 @@ let ee = l.memo(function (e) {
                                                 size: 80
                                             })
                                           : g.author.getAvatarURL(void 0, 80, !1),
-                                  onRequestClose: v,
+                                  onRequestClose: j,
                                   clickTrap: P,
                                   children: (e) =>
                                       q(
@@ -483,7 +483,7 @@ let ee = l.memo(function (e) {
                                               avatarSrc: z,
                                               avatarDecorationSrc: L,
                                               compact: b,
-                                              onClick: j,
+                                              onClick: v,
                                               onContextMenu: y,
                                               onMouseDown: e.onMouseDown,
                                               onKeyDown: e.onKeyDown,
@@ -501,7 +501,7 @@ let ee = l.memo(function (e) {
                                       avatarSrc: z,
                                       avatarDecorationSrc: L,
                                       compact: b,
-                                      onClick: j,
+                                      onClick: v,
                                       onContextMenu: y,
                                       onMouseDown: void 0,
                                       onKeyDown: void 0,
@@ -534,12 +534,12 @@ let ee = l.memo(function (e) {
             V = (0, a.e7)([N.Z], () => $(o, L, g, N.Z.getGuild(e.guildId)), [o, L, g, e.guildId]),
             Y = l.useMemo(() => {
                 let e = [];
-                return (0, _.yE)(t.flags, F.iLy.SUPPRESS_NOTIFICATIONS) && e.push((0, r.jsx)(v.Z, {}, 'suppress-notifications')), t.hasPotions() && e.push((0, r.jsx)(O.Z, { message: t })), e;
+                return (0, _.yE)(t.flags, F.iLy.SUPPRESS_NOTIFICATIONS) && e.push((0, r.jsx)(j.Z, {}, 'suppress-notifications')), t.hasPotions() && e.push((0, r.jsx)(O.Z, { message: t })), e;
             }, [t]),
             J = (0, A.XX)(t, b),
             ee = (0, A.Dv)(t),
             et = h ? ''.concat(J) : ''.concat(J, ' ').concat(ee),
-            en = (null == n ? void 0 : n.state) === j.Y.LOADED ? (0, A.Gq)(t) : void 0;
+            en = (null == n ? void 0 : n.state) === v.Y.LOADED ? (0, A.Gq)(t) : void 0;
         return (0, r.jsx)(Q, {
             message: t,
             avatar: D,

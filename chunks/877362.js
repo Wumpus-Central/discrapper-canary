@@ -6,8 +6,8 @@ var r = t(255367),
     s = t(442837),
     l = t(481060),
     c = t(99690),
-    u = t(607070),
-    d = t(623624),
+    d = t(607070),
+    u = t(623624),
     p = t(678558),
     m = t(343649),
     _ = t(742409),
@@ -22,8 +22,8 @@ var r = t(255367),
     E = t(93841),
     Z = t(388032),
     N = t(302794),
-    w = t(350618);
-let I = j.ZP.getEnableHardwareAcceleration() ? l.Xo$ : c.Z;
+    I = t(350618);
+let w = j.ZP.getEnableHardwareAcceleration() ? l.Xo$ : c.Z;
 function P(e) {
     var n, t, i;
     let { guildId: c } = e,
@@ -38,7 +38,7 @@ function P(e) {
         y = null == O ? void 0 : O.id,
         S = (0, s.e7)([x.ZP], () => (null != y ? x.ZP.getMember(c, y) : void 0), [y, c]),
         T = (null == S ? void 0 : S.premiumSince) != null,
-        R = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
+        R = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
         {
             avatarDecorationSrc: k,
             avatarSrc: L,
@@ -58,7 +58,7 @@ function P(e) {
                   (0, r.jsx)('img', {
                       alt: '',
                       className: N.image,
-                      src: w
+                      src: I
                   }),
                   (0, r.jsxs)('div', {
                       className: N.textContainer,
@@ -71,7 +71,7 @@ function P(e) {
                               variant: 'text-sm/medium',
                               children: Z.intl.format(T ? E.default['7fWTg4'] : E.default['7PXeeX'], {
                                   onClick: () => {
-                                      (0, d.f)({
+                                      (0, u.f)({
                                           guildId: c,
                                           location: {
                                               section: C.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
@@ -87,7 +87,7 @@ function P(e) {
                       !T &&
                       (0, r.jsx)(_.l, {
                           avatar: (0, r.jsx)(
-                              I,
+                              w,
                               ((t = (function (e) {
                                   for (var n = 1; n < arguments.length; n++) {
                                       var t = null != arguments[n] ? arguments[n] : {},

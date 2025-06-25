@@ -1,4 +1,4 @@
-n.d(t, { default: () => _ });
+n.d(t, { default: () => A });
 var l = n(255367);
 n(73800);
 var i = n(481060),
@@ -26,14 +26,14 @@ var i = n(481060),
     M = n(991307),
     C = n(37258),
     x = n(931617),
-    I = n(700994),
-    N = n(332031),
+    N = n(700994),
+    I = n(332031),
     T = n(981631),
-    U = n(388032);
-let _ = (0, a.Z)(
+    _ = n(388032);
+let A = (0, a.Z)(
     (0, o.Z)(
         function (e) {
-            let { user: t, guildId: n, showModalItems: o = !0, showMediaItems: a = !1, showChatItems: u = !0, context: _, onSelect: A } = e,
+            let { user: t, guildId: n, showModalItems: o = !0, showMediaItems: a = !1, showChatItems: u = !0, context: A, onSelect: U } = e,
                 D = {
                     page: T.ZY5.GUILD_CHANNEL,
                     section: T.jXE.CHAT_USERNAME,
@@ -43,26 +43,26 @@ let _ = (0, a.Z)(
                     userId: t.id,
                     guildId: n
                 }),
-                w = (0, p.Z)(t, n, _),
-                R = (0, P.Z)(t.id, _),
-                k = (0, N.Z)(t.id),
+                w = (0, p.Z)(t, n, A),
+                k = (0, P.Z)(t.id, A),
+                R = (0, I.Z)(t.id),
                 B = (0, j.Z)({
                     user: t,
-                    context: _
+                    context: A
                 }),
                 V = (0, O.Z)({
                     user: t,
                     guildId: n,
-                    context: _
+                    context: A
                 }),
                 q = (0, Z.Z)({ user: t }),
-                G = (0, I.Z)(t.id),
+                G = (0, N.Z)(t.id),
                 F = (0, M.Z)(t.id),
                 Y = (0, c.Z)({
                     guildId: n,
                     userId: t.id,
                     analyticsLocation: D,
-                    context: _
+                    context: A
                 }),
                 H = (0, g.Z)({
                     user: t,
@@ -91,20 +91,20 @@ let _ = (0, a.Z)(
                 en = (0, y.Z)(t, n),
                 el = (0, d.Z)({
                     id: t.id,
-                    label: U.intl.string(U.t['/AXYnJ'])
+                    label: _.intl.string(_.t['/AXYnJ'])
                 }),
                 ei = t.isNonUserBot();
             return (0, l.jsxs)(i.v2r, {
                 navId: 'user-context',
                 onClose: r.Zy,
-                'aria-label': U.intl.string(U.t.liqwPD),
-                onSelect: A,
+                'aria-label': _.intl.string(_.t.liqwPD),
+                onSelect: U,
                 children: [
                     !ei &&
                         (0, l.jsxs)(l.Fragment, {
                             children: [
                                 (0, l.jsxs)(i.kSQ, {
-                                    children: [o && L, u && w, R, B, o && V, o && q, k]
+                                    children: [o && L, u && w, k, B, o && V, o && q, R]
                                 }),
                                 a && (0, l.jsx)(i.kSQ, { children: G }),
                                 (0, l.jsx)(i.kSQ, { children: o && K }),

@@ -16,7 +16,7 @@ var i = n(658722),
 let m = function (e) {
     let { className: t, guild: n, roleStyle: i, roleFilter: o, onSelect: m, onClose: g } = e,
         E = (0, c.e7)([f.Z], () => f.Z.getRoles(n.id)),
-        b = (0, d.Z)(n.id, 'AddRolesPopout'),
+        b = (0, d.ZP)(n.id, null),
         y = (e) =>
             s()(E)
                 .filter(o)

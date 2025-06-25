@@ -20,7 +20,8 @@ let h = {
                 url: u.ANM.POMELO_SUGGESTIONS_UNAUTHED,
                 query: null == e ? void 0 : { global_name: e },
                 timeout: t,
-                rejectWithError: !0
+                rejectWithError: !0,
+                failImmediatelyWhenRateLimited: !0
             });
             if (r.ok && (null == (n = r.body) ? void 0 : n.username) != null)
                 return l.Z.dispatch({

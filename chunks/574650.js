@@ -49,14 +49,14 @@ let A = () => {
         A = (0, a.e7)([s.Z], () => s.Z.getGuild(i), [i]),
         R = (0, a.e7)([O.Z], () => (null != i ? O.Z.getRequest(i) : null), [i]),
         g = (0, o.TH)(),
-        C = (null == (e = (0, o.LX)(g.pathname, T.Z5c.CHANNEL(null == A ? void 0 : A.id, p.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
-    if (null == A || !(0, I.Dc)(A) || C) return null;
-    let P = null != (t = null == R ? void 0 : R.applicationStatus) ? t : E.wB.STARTED,
+        P = (null == (e = (0, o.LX)(g.pathname, T.Z5c.CHANNEL(null == A ? void 0 : A.id, p.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
+    if (null == A || !(0, I.Dc)(A) || P) return null;
+    let C = null != (t = null == R ? void 0 : R.applicationStatus) ? t : E.wB.STARTED,
         y = null,
         b = null,
         D = null,
         h = [S.notice, f.notice];
-    switch (P) {
+    switch (C) {
         case E.wB.SUBMITTED:
             (y = N.intl.string(N.t['5iLvS0'])),
                 (b = N.intl.string(N.t.mqtdmZ)),

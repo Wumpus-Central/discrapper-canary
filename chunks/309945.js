@@ -6,15 +6,15 @@ var r = t(255367),
     s = t(442837),
     l = t(692547),
     c = t(899667),
-    u = t(905128),
-    d = t(93841),
+    d = t(905128),
+    u = t(93841),
     p = t(388032),
     m = t(45355);
 function _(e) {
     let { guildId: n, powerups: t } = e,
-        _ = (0, s.e7)([u.Z], () => {
+        _ = (0, s.e7)([d.Z], () => {
             var e, t;
-            return null != (t = null == (e = u.Z.getStateForGuild(n)) ? void 0 : e.appliedBoosts) ? t : 0;
+            return null != (t = null == (e = d.Z.getStateForGuild(n)) ? void 0 : e.appliedBoosts) ? t : 0;
         }),
         f = (0, s.e7)([c.Z], () => c.Z.getAppliedGuildBoostsForGuild(n), [n]),
         x =
@@ -35,11 +35,11 @@ function _(e) {
                   (0, r.jsx)(a.xv, {
                       variant: 'text-md/semibold',
                       color: 'text-warning',
-                      children: p.intl.string(d.default.n5hQhY)
+                      children: p.intl.string(u.default.n5hQhY)
                   }),
                   (0, r.jsx)(a.xv, {
                       variant: 'text-sm/medium',
-                      children: p.intl.formatToPlainString(d.default.iAaAiI, {
+                      children: p.intl.formatToPlainString(u.default.iAaAiI, {
                           boostCount: x,
                           perksString: t.map((e) => e.title).join(', ')
                       })

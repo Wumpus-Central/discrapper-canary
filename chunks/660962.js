@@ -425,7 +425,7 @@ function el(e) {
 }
 function es(e) {
     let { guild: t, role: n, locked: i, setSelectedSection: l } = e,
-        a = (0, I.Z)(t.id, 'GuildSettingsRolesEditDisplay'),
+        a = (0, I.yH)(t.id, n),
         o = (0, d.e7)([Z.Z], () => Z.Z.getRoleStyleData(n.id)),
         c = null != o && a ? o.currentStyle : Z.g.SOLID,
         u = (0, N.Ek)(t.id, 'GuildSettingsRolesEditDisplay') && !t.hasFeature(U.oNc.ENHANCED_ROLE_COLORS),

@@ -138,7 +138,7 @@ let V = l.memo(function (e) {
         m = s.includes(j.CR) ? '' : '@',
         p = (0, u.dQu)(u.TVs.unsafe_rawColors.PRIMARY_300).hsl(),
         g = null != (t = null == C ? void 0 : C.colorString) ? t : p,
-        v = (0, h.X)(l, null == C ? void 0 : C.colorStrings, 'ChannelAndRoleSearchContent');
+        v = (0, h._f)(l, C, null == C ? void 0 : C.colorStrings);
     return (0, r.jsxs)('div', {
         className: i()(_.rowLabel, _.roleTagContainer, o),
         children: [

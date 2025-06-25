@@ -13,7 +13,7 @@ let g = new Set();
 function m(e) {
     let { channel: t, startThread: n, goToThread: m } = e,
         { joinedThreadIds: x, unjoinedThreadIds: j } = (0, o.FO)(t),
-        { threadIds: v, canLoadMore: Z, loading: b, loadMore: p } = (0, o.qQ)(t, s.z.LATEST_ACTIVITY, g, l.z.MATCH_SOME),
+        { threadIds: v, canLoadMore: Z, loading: p, loadMore: b } = (0, o.qQ)(t, s.z.LATEST_ACTIVITY, g, l.z.MATCH_SOME),
         N = a.useRef(null);
     (0, o.r7)();
     let T = a.useCallback(
@@ -32,15 +32,15 @@ function m(e) {
         ),
         y = a.useCallback((e) => (0 === e.section ? (0, r.jsx)(f, { text: u.intl.formatToPlainString(u.t['4E27f3'], { count: x.length }) }, e.section) : 1 === e.section ? (0, r.jsx)(f, { text: u.intl.formatToPlainString(u.t.csPc4O, { count: j.length }) }, e.section) : (0, r.jsx)(f, { text: u.intl.string(u.t['wUNQ+/']) }, e.section)), [x.length, j.length]),
         P = a.useCallback((e) => ((1 === e && x.length > 0) || (2 === e && (x.length > 0 || j.length > 0)) ? 64 : 32), [x.length, j.length]),
-        w = a.useCallback(() => {
+        C = a.useCallback(() => {
             var e;
             let t = null == (e = N.current) ? void 0 : e.getScrollerState();
             if (null == t) return;
             let n = t.scrollTop + t.offsetHeight;
-            t.scrollHeight - n < 200 && p();
-        }, [p]);
+            t.scrollHeight - n < 200 && b();
+        }, [b]);
     if (0 === x.length && 0 === j.length && 0 === v.length)
-        if (b)
+        if (p)
             return (0, r.jsx)('div', {
                 className: h.list,
                 children: (0, r.jsx)(i.$jN, { className: h.spinner })
@@ -64,7 +64,7 @@ function m(e) {
         renderRow: T,
         renderSection: y,
         chunkSize: 20,
-        onScroll: Z ? w : void 0
+        onScroll: Z ? C : void 0
     });
 }
 function f(e) {

@@ -7,8 +7,8 @@ var i = t(114858),
     s = t(906732),
     l = t(213609),
     c = t(353926),
-    u = t(443002),
-    d = t(703656),
+    d = t(443002),
+    u = t(703656),
     p = t(430824),
     m = t(742139),
     _ = t(50101),
@@ -20,7 +20,7 @@ function v(e) {
         v = (0, a.e7)([p.Z], () => p.Z.getGuild(n)),
         g = (0, a.e7)([c.Z], () => c.Z.hasLoadedExperiments),
         h = (0, f.Z)(n),
-        j = (0, d.At)(),
+        j = (0, u.At)(),
         C = (0, _.Ek)(n, 'GuildPowerupsPage'),
         E = (0, m.V)('GuildPowerupsPage'),
         Z = !g || null == h || null == v,
@@ -41,7 +41,7 @@ function v(e) {
                     guildId: n,
                     powerupSkuId: t
                 })
-              : (0, r.jsx)(u.Z, {
+              : (0, r.jsx)(d.Z, {
                     analyticsLocation: {
                         section: b.jXE.CHANNEL_LIST,
                         object: b.qAy.GUILD_POWERUPS_CHANNEL_LIST_ITEM

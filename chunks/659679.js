@@ -7,8 +7,8 @@ var i = t(793030),
     s = t(834129),
     l = t(271383),
     c = t(709054),
-    u = t(884902),
-    d = t(93841),
+    d = t(884902),
+    u = t(93841),
     p = t(388032),
     m = t(326319);
 function _(e) {
@@ -31,7 +31,7 @@ function _(e) {
             },
             [n]
         ),
-        b = (0, u.X)(n.guildId, x, 'GuildPowerupsRecentActivityRow');
+        b = (0, d.X7)(n.guildId, n.userId, x);
     return (0, r.jsx)(s.Z, {
         className: m.systemMessageContainer,
         contentClassName: m.systemMessageContent,
@@ -58,7 +58,7 @@ function _(e) {
                 (0, r.jsx)(i.xv, {
                     variant: 'text-md/medium',
                     lineClamp: 1,
-                    children: p.intl.string(d.default.plwH8f)
+                    children: p.intl.string(u.default.plwH8f)
                 })
             ]
         })

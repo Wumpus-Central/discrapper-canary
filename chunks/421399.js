@@ -92,7 +92,7 @@ function R(e) {
         et = (0, c.e7)([p.Z], () => p.Z.roleStyle),
         en = 'username' === et,
         er = (0, v.X$)(),
-        ei = (0, b.Z)(null != V ? V : q, 'BaseUsername'),
+        ei = (0, b.ZP)(null != V ? V : q, n.authorId),
         el = (0, y.Z)(r),
         ea = l.useContext(u.d),
         eo = ei && (0, x.S2)(n),

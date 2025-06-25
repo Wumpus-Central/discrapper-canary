@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L });
+n.d(t, { Z: () => M });
 var r,
     i = n(442837),
     a = n(780384),
@@ -68,15 +68,16 @@ function y(e, t) {
 let O = 0,
     v = h.K2,
     I = (0, c.Z)(),
-    T = v[I];
-function S() {
-    return (0, u.Z)(I, v, T);
-}
+    T = v[I],
+    S = null;
 function A() {
-    let e = S();
+    return __OVERLAY__ || null == S ? (0, u.Z)(I, v, T) : S;
+}
+function N() {
+    let e = A();
     return e === T || ((T = e), (0, d.Z)(T), !0);
 }
-class N extends (r = i.ZP.PersistedStore) {
+class C extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         (null == e ? void 0 : e.theme) != null && ((O = 1), (T = e.theme), (0, d.Z)(T), null != e.preferences && (v = e.preferences), (0, a.wj)(T) && (v[h.zd.DARK] = T)), this.waitFor(_.ZP, f.Z, p.Z, s.Z);
     }
@@ -91,7 +92,7 @@ class N extends (r = i.ZP.PersistedStore) {
         return (0, a.ap)(this.theme) && _.ZP.darkSidebar && null == l.Z.gradientPreset;
     }
     get theme() {
-        return S();
+        return A();
     }
     get systemTheme() {
         return I;
@@ -100,41 +101,49 @@ class N extends (r = i.ZP.PersistedStore) {
         return v[e];
     }
 }
-function C() {
-    return 0 === O && ((v = y(E({}, v), { [h.zd.DARK]: m.BRd.DARKER })), (O = 1)), A();
-}
 function R() {
-    return (0, a.ap)(S());
+    return 0 === O && ((v = y(E({}, v), { [h.zd.DARK]: m.BRd.DARKER })), (O = 1)), N();
 }
-function P(e) {
-    return !e.isSwitchingAccount && T !== m.BRd.DARK && ((T = m.BRd.DARK), (0, d.Z)(T), A());
+function P() {
+    return (0, a.ap)(A());
 }
 function w(e) {
-    let { systemTheme: t } = e;
-    return (I = t), A();
+    return (S = null), !e.isSwitchingAccount && T !== m.BRd.DARK && ((T = m.BRd.DARK), (0, d.Z)(T), N());
 }
 function D(e) {
-    return (v = E({}, v, e.preferences)), A();
+    let { systemTheme: t } = e;
+    return (I = t), N();
 }
-g(N, 'displayName', 'ThemeStore'),
-    g(N, 'persistKey', 'ThemeStore'),
-    g(N, 'migrations', [
+function L(e) {
+    return (v = E({}, v, e.preferences)), N();
+}
+function x(e) {
+    return (S = e.theme), N();
+}
+function k() {
+    return (S = null), N();
+}
+g(C, 'displayName', 'ThemeStore'),
+    g(C, 'persistKey', 'ThemeStore'),
+    g(C, 'migrations', [
         (e) => {
             let t = e.theme;
             return 'amoled' === t && (t = 'midnight'), y(E({}, e), { theme: t });
         },
         (e) => e
     ]);
-let L = new N(o.Z, {
-    CACHE_LOADED: A,
-    CONNECTION_OPEN: C,
-    LOGOUT: P,
-    OVERLAY_INITIALIZE: A,
-    SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: A,
-    UNSYNCED_USER_SETTINGS_UPDATE: A,
-    USER_SETTINGS_PROTO_UPDATE: A,
-    RESET_PREVIEW_CLIENT_THEME: A,
-    SYSTEM_THEME_CHANGE: w,
-    ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: R,
-    UPDATE_THEME_PREFERENCES: D
+let M = new C(o.Z, {
+    CACHE_LOADED: N,
+    CONNECTION_OPEN: R,
+    LOGOUT: w,
+    OVERLAY_INITIALIZE: N,
+    SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: N,
+    UNSYNCED_USER_SETTINGS_UPDATE: N,
+    USER_SETTINGS_PROTO_UPDATE: N,
+    RESET_PREVIEW_CLIENT_THEME: N,
+    SYSTEM_THEME_CHANGE: D,
+    ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: P,
+    UPDATE_THEME_PREFERENCES: L,
+    SET_THEME_OVERRIDE: x,
+    CLEAR_THEME_OVERRIDE: k
 });

@@ -16,8 +16,8 @@ var r = n(255367),
     h = n(367907),
     O = n(906732),
     y = n(385499),
-    j = n(892001),
-    v = n(598077),
+    v = n(892001),
+    j = n(598077),
     P = n(271383),
     x = n(626135),
     C = n(275759),
@@ -115,7 +115,7 @@ function A(e) {
                 m = c.find((e) => null != e.application),
                 f = b.Z.get(e),
                 h = null == m ? void 0 : m.application,
-                O = (null == h ? void 0 : h.bot) != null ? new v.Z(h.bot) : null;
+                O = (null == h ? void 0 : h.bot) != null ? new j.Z(h.bot) : null;
             return (
                 C.SJ.includes(null != (t = null == h ? void 0 : h.id) ? t : '')
                     ? (a = (0, r.jsx)(E.Z, {
@@ -279,7 +279,7 @@ function G(e) {
                               (0, Z.Am)(o.id);
                           },
                           onOpenProfile: () => {
-                              (0, j.openUserProfileModal)({
+                              (0, v.openUserProfileModal)({
                                   userId: t,
                                   messageId: n,
                                   guildId: o.id,

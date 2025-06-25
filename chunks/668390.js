@@ -89,7 +89,7 @@ function j(e) {
 }
 function x(e) {
     let { color: t, id: r, role: s, guild: d, children: x, isDragging: b, selectedItem: v, onItemSelect: y, itemType: C, locked: N, lockTooltip: S, showContextMenu: E, theme: O, roleStyle: Z, 'aria-label': T } = e,
-        w = (0, h.X)(d.id, null == s ? void 0 : s.colorStrings, 'GuildRole'),
+        w = (0, h._f)(d.id, s, null == s ? void 0 : s.colorStrings),
         R = l.useCallback(
             (e) => {
                 (0, c.jW)(e, async () => {

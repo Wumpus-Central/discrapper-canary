@@ -7,8 +7,8 @@ var i = t(793030),
     s = t(678558),
     l = t(343649),
     c = t(430824),
-    u = t(63063),
-    d = t(317169),
+    d = t(63063),
+    u = t(317169),
     p = t(639660),
     m = t(767218),
     _ = t(981631),
@@ -18,7 +18,7 @@ var i = t(793030),
 function v(e) {
     let { guildId: n } = e,
         t = (0, o.e7)([c.Z], () => c.Z.getGuild(n)),
-        { available: v, spent: g, total: h } = (0, d.Z)(n);
+        { available: v, spent: g, total: h } = (0, u.Z)(n);
     if (null != t)
         return (0, r.jsxs)('div', {
             className: b.container,
@@ -33,7 +33,7 @@ function v(e) {
                         (0, r.jsx)(i.xv, {
                             className: b.learnMore,
                             variant: 'text-xs/semibold',
-                            children: x.intl.format(f.default.fXE30d, { helpDeskArticle: u.Z.getArticleURL(_.BhN.GUILD_BOOSTING_FAQ) })
+                            children: x.intl.format(f.default.fXE30d, { helpDeskArticle: d.Z.getArticleURL(_.BhN.GUILD_BOOSTING_FAQ) })
                         })
                     ]
                 }),

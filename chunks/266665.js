@@ -78,7 +78,7 @@ function Z(e) {
         S = (0, h.pM)(d.id, g.id),
         Z = null == I && !S,
         D = (null == (t = g.tags) ? void 0 : t.guild_connections) !== void 0,
-        k = (0, j.X)(d.id, g.colorStrings, 'GuildSettingsRolesEditSidebar'),
+        k = (0, j._f)(d.id, g, g.colorStrings),
         [, A] = (0, a.c)({
             type: R,
             item: () => (

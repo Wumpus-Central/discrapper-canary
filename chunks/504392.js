@@ -6,8 +6,8 @@ var r = t(255367),
     s = t(442837),
     l = t(481060),
     c = t(984370),
-    u = t(713081),
-    d = t(905128),
+    d = t(713081),
+    u = t(905128),
     p = t(639777),
     m = t(27237),
     _ = t(51859),
@@ -24,17 +24,17 @@ let Z = [h.Us.LEVEL, h.Us.PERK];
 function N(e) {
     let { guildId: n, powerupSkuId: t } = e;
     i.useEffect(() => {
-        (0, u.Sn)(n), (0, u.Fm)(n);
+        (0, d.Sn)(n), (0, d.Fm)(n);
     }, [n]),
         (0, g.Wj)(n);
-    let o = (0, s.e7)([d.Z], () => d.Z.getStateForGuild(n)),
+    let o = (0, s.e7)([u.Z], () => u.Z.getStateForGuild(n)),
         N = (0, p.Z)(n),
-        w = i.useRef(!1);
+        I = i.useRef(!1);
     return (i.useEffect(() => {
         var e;
         if (null == t) return;
         let r = null == o || null == (e = o.allPowerups) ? void 0 : e[t];
-        null == r || w.current || ((0, v.KE)(n, r), (w.current = !0));
+        null == r || I.current || ((0, v.KE)(n, r), (I.current = !0));
     }, [n, t, null == o ? void 0 : o.allPowerups]),
     (null == o ? void 0 : o.powerupCatalog) == null)
         ? null

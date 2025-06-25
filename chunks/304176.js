@@ -17,8 +17,8 @@ var l = n(442837),
     h = n(709586),
     O = n(626135),
     y = n(524444),
-    j = n(981631),
-    v = n(176505),
+    v = n(981631),
+    j = n(176505),
     P = n(388032),
     x = n(854422);
 function C(e) {
@@ -69,7 +69,7 @@ let S = (e) => {
         { name: S } = t;
     (0, i.ZP)(() => {
         O.default.track(
-            j.rMx.OPEN_POPOUT,
+            v.rMx.OPEN_POPOUT,
             C(
                 {
                     type: 'Role Icon Popout',
@@ -88,12 +88,12 @@ let S = (e) => {
         }),
         R = E
             ? () => {
-                  (0, m.uL)(j.Z5c.CHANNEL(n.id, v.oC.ROLE_SUBSCRIPTIONS));
+                  (0, m.uL)(v.Z5c.CHANNEL(n.id, j.oC.ROLE_SUBSCRIPTIONS));
               }
             : () => {
                   (0, d.f)({
                       guildId: n.id,
-                      location: { section: j.jXE.ROLE_ICON_POPOUT }
+                      location: { section: v.jXE.ROLE_ICON_POPOUT }
                   });
               };
     return (0, r.jsx)(o.VqE, {

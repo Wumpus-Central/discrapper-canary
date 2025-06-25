@@ -65,7 +65,7 @@ function j(e, n) {
             },
             [e, n, j]
         ),
-        E = (0, d.Z)(n, 'useUserRolesItems');
+        E = (0, d.ZP)(n, e);
     if (__OVERLAY__ || null == _ || null == j || !y) return null;
     let C = b.Z.getHighestRole(j),
         I = Object.values(P).filter((e) => !(0, u.pM)(j.id, e.id)),

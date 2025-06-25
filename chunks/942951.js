@@ -37,7 +37,7 @@ function p(e) {
     let { user: t, channelId: n, guildId: p, messageId: m, stopPropagation: f = !1, ariaLabel: g } = e,
         b = o.useRef(null),
         { analyticsLocations: j } = (0, a.ZP)(r.Z.USERNAME),
-        v = (0, s.Z)(p, 'useUsernameHook'),
+        v = (0, s.ZP)(p, null == t ? void 0 : t.id),
         O = o.useCallback(
             (e) => {
                 let i = u.Z.getChannel(n);

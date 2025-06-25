@@ -170,7 +170,7 @@ function L(e) {
     let { id: t, guildId: n } = e,
         o = (0, i.e7)([m.Z], () => (null != n ? m.Z.getRole(n, t) : void 0)),
         s = (0, i.e7)([l.Z], () => l.Z.roleStyle),
-        c = (0, p.X)(n, null == o ? void 0 : o.colorStrings, 'RoleMention');
+        c = (0, p._f)(n, o, null == o ? void 0 : o.colorStrings);
     if (null == o)
         return (0, r.jsxs)('span', {
             children: ['@', v.intl.string(v.t['YV4F/v'])]

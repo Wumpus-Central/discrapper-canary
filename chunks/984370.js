@@ -73,8 +73,8 @@ async function g() {
         'Minimize' === r ? p.ZP.minimize() : 'Maximize' === r && p.ZP.maximize();
     }
 }
-function C(e) {
-    let { children: t, className: n, channelId: a, channelType: c, guildId: T, innerClassname: p, transparent: A = !1, toolbar: R, mobileToolbar: C, 'aria-label': P, 'aria-labelledby': y, scrollable: b, role: D, hideSearch: h, showDivider: U } = e,
+function P(e) {
+    let { children: t, className: n, channelId: a, channelType: c, guildId: T, innerClassname: p, transparent: A = !1, toolbar: R, mobileToolbar: P, 'aria-label': C, 'aria-labelledby': y, scrollable: b, role: D, hideSearch: h, showDivider: U } = e,
         M = null == a || (0, f.AB)(a) ? null : a,
         v = (0, l.e7)([O.Z], () => O.Z.isInChannel(M) || !1),
         k = (0, l.e7)([s.Z], () => null != M && s.Z.getParticipantsListOpen(M)),
@@ -87,7 +87,7 @@ function C(e) {
             if (null == R) return null;
             let e = null != a && !h;
             return i.tq
-                ? C
+                ? P
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           R,
@@ -108,14 +108,14 @@ function C(e) {
         })(),
         transparent: A,
         onDoubleClick: g,
-        'aria-label': P,
+        'aria-label': C,
         'aria-labelledby': y,
         role: D,
         scrollable: b,
         children: t
     });
 }
-function P(e) {
+function C(e) {
     let { children: t, className: n, 'aria-label': i, 'aria-labelledby': l, role: o } = e;
     return (0, r.jsx)(N.ZP, {
         className: n,
@@ -150,7 +150,7 @@ function y(e) {
     let { analyticsLocations: i } = (0, c.ZP)(a.Z.HEADER_BAR);
     return (0, r.jsx)(c.Gt, {
         value: i,
-        children: t ? (0, r.jsx)(C, R(A({}, n), { className: n.className })) : (0, r.jsx)(P, R(A({}, n), { className: n.className }))
+        children: t ? (0, r.jsx)(P, R(A({}, n), { className: n.className })) : (0, r.jsx)(C, R(A({}, n), { className: n.className }))
     });
 }
 (y.Title = N.ZP.Title), (y.Icon = N.ZP.Icon), (y.Divider = N.ZP.Divider), (y.Caret = N.ZP.Caret);

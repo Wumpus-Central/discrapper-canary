@@ -41,13 +41,13 @@ function p(e, t, n) {
         h = e.hasFlag(o.iLy.HAS_THREAD),
         O = p || m || g || f || h || b || e.type === o.uaV.THREAD_CREATED,
         y = p && e.content === e.embeds[0].url && e.embeds[0].type === o.hBH.GIFV,
-        j = e.type !== o.uaV.DEFAULT || (!y && '' !== e.content),
-        v = (0, l.Z)(e),
-        P = !v && (null == n ? void 0 : n.hasTimestamp) !== !1,
+        v = e.type !== o.uaV.DEFAULT || (!y && '' !== e.content),
+        j = (0, l.Z)(e),
+        P = !j && (null == n ? void 0 : n.hasTimestamp) !== !1,
         x = a(e, t),
         C = s(e),
-        w = v ? '' : ''.concat(u ? C : x, ' ').concat(r.Z0);
-    if (j) {
+        w = j ? '' : ''.concat(u ? C : x, ' ').concat(r.Z0);
+    if (v) {
         let t = i(e);
         w += ' '.concat(t);
     }
