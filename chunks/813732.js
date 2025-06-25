@@ -18,8 +18,8 @@ var i = n(255367),
     x = n(600164),
     E = n(925329),
     j = n(406174),
-    C = n(810762),
-    O = n(681833),
+    O = n(810762),
+    C = n(681833),
     S = n(856888),
     v = n(921801),
     T = n(246946),
@@ -131,7 +131,7 @@ let q = function () {
         ? (0, i.jsx)(h.Z, {})
         : m && E
           ? P === G.cP
-              ? (0, i.jsx)(C.Z, { onGoBack: () => p.Z.clearSubsection() })
+              ? (0, i.jsx)(O.Z, { onGoBack: () => p.Z.clearSubsection() })
               : P === G.XZ
                 ? (0, i.jsx)(S.Z, { onGoBack: () => p.Z.clearSubsection() })
                 : (0, i.jsx)('div', {
@@ -186,7 +186,7 @@ let q = function () {
                                   (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(K, {}),
-                                          (0, i.jsx)(O.Z, {
+                                          (0, i.jsx)(C.Z, {
                                               count: Z,
                                               onClickManageSubscription: () => {
                                                   p.Z.setSection(V.oAB.SUBSCRIPTIONS, G.XZ), R.default.track(V.rMx.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED);

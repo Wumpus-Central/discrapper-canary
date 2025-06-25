@@ -18,8 +18,8 @@ var i,
     x = n(925329),
     E = n(267101),
     j = n(240864),
-    C = n(942833),
-    O = n(400916),
+    O = n(942833),
+    C = n(400916),
     S = n(916001),
     v = n(539290),
     T = n(336197),
@@ -170,7 +170,7 @@ let ei = (e) => {
 function er(e) {
     let { guildId: t, guildProductListingId: n } = e,
         i = (0, E.hO)(t, n, { requireCurrentGuild: !1 }),
-        l = (0, C.C)(i),
+        l = (0, O.C)(i),
         a = (0, m.e7)([R.Z], () => R.Z.getGuild(t)),
         o = (null == i ? void 0 : i.role_id) != null && (null == i ? void 0 : i.attachments_count) === 0 ? Y.intl.string(Y.t.H11qcX) : l,
         c = s.useCallback(async () => {
@@ -221,7 +221,7 @@ function es(e) {
                                     className: W.guildProductBenefitLabel,
                                     children: Y.intl.string(Y.t.hxawo6)
                                 }),
-                                (0, r.jsx)(O.Z, {
+                                (0, r.jsx)(C.Z, {
                                     guildId: i,
                                     productId: l.id
                                 })
@@ -790,7 +790,7 @@ function ea(e) {
     let x = (0, m.e7)([R.Z], () => R.Z.getGuild(null == h ? void 0 : h.guildId)),
         E = c ? h : void 0,
         j = i.subscription,
-        C = (0, m.e7)([Z.Z], () => (null != j && j.type !== F.NYc.PREMIUM ? Z.Z.get(j.items[0].planId) : null));
+        O = (0, m.e7)([Z.Z], () => (null != j && j.type !== F.NYc.PREMIUM ? Z.Z.get(j.items[0].planId) : null));
     return (0, r.jsx)(el, {
         applicationStatistics: p,
         application: g ? _ : E,
@@ -801,7 +801,7 @@ function ea(e) {
         compactMode: a,
         className: o,
         payment: i,
-        plan: C
+        plan: O
     });
 }
 K(el, 'defaultProps', { compactMode: !1 });

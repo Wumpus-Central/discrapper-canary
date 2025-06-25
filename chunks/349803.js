@@ -19,7 +19,7 @@ let f = function (e) {
         x = null == (t = (0, d.N)()) ? void 0 : t.subscription_trial,
         E = (0, c.Ng)(),
         j = (0, c.Wp)(E, g.Si.TIER_2) ? g.Si.TIER_2 : void 0,
-        C = (0, a.q_F)({
+        O = (0, a.q_F)({
             transform: r ? 'translateY(-100%)' : 'translateY(0%)',
             opacity: +!!r,
             config: {
@@ -27,7 +27,7 @@ let f = function (e) {
                 friction: 12
             }
         }),
-        O = { section: p.jXE.MARKETING_FLOATING_CTA },
+        C = { section: p.jXE.MARKETING_FLOATING_CTA },
         S = (0, o.ZP)(),
         v = (0, a.wjy)(S);
     return (0, i.jsx)(l.animated.div, {
@@ -35,7 +35,7 @@ let f = function (e) {
             [h.fullscreenWrapper]: b,
             [h.invisible]: !r
         }),
-        style: C,
+        style: O,
         children: (0, i.jsxs)('div', {
             className: b ? h.innerWrapperApplicationHome : h.innerWrapper,
             children: [
@@ -43,14 +43,14 @@ let f = function (e) {
                     color: v ? a.Ttl.BRAND_INVERTED : void 0,
                     className: s()(h.button, { [h.subButton]: v }),
                     subscriptionTier: null != (n = null != f ? f : null == x ? void 0 : x.sku_id) ? n : j,
-                    premiumModalAnalyticsLocation: O,
+                    premiumModalAnalyticsLocation: C,
                     isPersistentCTA: !0,
                     hasActivePromotion: _,
                     shinyButtonClassName: v ? void 0 : h.tier2Gradient
                 }),
                 (0, i.jsx)(u.Z, {
                     className: h.button,
-                    premiumModalAnalyticsLocation: O
+                    premiumModalAnalyticsLocation: C
                 })
             ]
         })

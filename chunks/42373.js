@@ -15,7 +15,7 @@ var i = n(255367),
     f = n(869783),
     b = n(888723);
 let _ = (e) => {
-    let { name: t, title: n, description: s, descriptionCta: _, previewImage: x, videoUrl: E, shouldLoadVideo: j, index: C, customVideoStyle: O, isReducedMotion: S, onClick: v, badgeText: T, size: N } = e,
+    let { name: t, title: n, description: s, descriptionCta: _, previewImage: x, videoUrl: E, shouldLoadVideo: j, index: O, customVideoStyle: C, isReducedMotion: S, onClick: v, badgeText: T, size: N } = e,
         I = (0, g.rO)(),
         y = r.useRef(null),
         A = r.useRef(0),
@@ -132,7 +132,7 @@ let _ = (e) => {
                             [b.largeBoxVideo]: N === p.y$.LARGE,
                             [b.mediumBoxVideo]: N === p.y$.MEDIUM,
                             [b.smallBoxVideo]: N === p.y$.SMALL,
-                            [O]: null != O
+                            [C]: null != C
                         }),
                         ref: y,
                         children: (0, i.jsx)('source', {
@@ -154,7 +154,7 @@ let _ = (e) => {
         onBlur: L,
         onMouseLeave: L,
         children:
-            C % 2 != 0
+            O % 2 != 0
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [(0, i.jsx)(B, {}), (0, i.jsx)(M, {})]
                   })

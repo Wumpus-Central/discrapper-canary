@@ -50,10 +50,10 @@ let c = 'url(#gradient)',
             return () => clearTimeout(e);
         }, [t]);
         let j = (0, l.ZP)(),
-            C = (0, s.ap)(j),
-            O = u(h),
-            S = d(h, C),
-            v = null != f ? f : m(C, h);
+            O = (0, s.ap)(j),
+            C = u(h),
+            S = d(h, O),
+            v = null != f ? f : m(O, h);
         return (0, i.jsxs)('div', {
             className: o.circleContainer,
             children: [
@@ -68,7 +68,7 @@ let c = 'url(#gradient)',
                             r: ''.concat(b),
                             cx: '50%',
                             cy: '50%',
-                            stroke: O,
+                            stroke: C,
                             strokeOpacity: S
                         }),
                         (0, i.jsx)('circle', {

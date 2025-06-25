@@ -59,8 +59,7 @@ class s extends r.Z {
                 0 !== e.fallback_price &&
                 Object.assign(n, {
                     fallbackPrice: e.fallback_price,
-                    fallbackCurrency: e.fallback_currency,
-                    fallbackPremiumUserPrice: e.fallback_discount_price
+                    fallbackCurrency: e.fallback_currency
                 }),
             new s(n)
         );
@@ -86,25 +85,9 @@ class s extends r.Z {
         if ('number' == typeof this.fallbackPrice) return this.fallbackPrice;
         throw Error('Missing fallback price for non-giftable currency');
     }
-    get giftCurrency() {
-        if (this.isGiftableCurrency) return this.currency;
-        if ('string' == typeof this.fallbackCurrency) return this.fallbackCurrency;
-        throw Error('Missing fallback currency for non-giftable currency');
-    }
-    get giftPremiumUserPrice() {
-        return this.isGiftableCurrency ? this.premiumUserPrice : this.fallbackPremiumUserPrice;
-    }
     getPrice() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         return e ? this.giftPrice : this.price;
-    }
-    getCurrency() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        return e ? this.giftCurrency : this.currency;
-    }
-    getPremiumUserPrice() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        return e ? this.giftPremiumUserPrice : this.premiumUserPrice;
     }
     toServerData() {
         let e = {};
@@ -132,13 +115,12 @@ class s extends r.Z {
                 price_tier: this.price,
                 discount_price: this.premiumUserPrice,
                 fallback_price: this.fallbackPrice,
-                fallback_currency: this.fallbackCurrency,
-                fallback_discount_price: this.fallbackPremiumUserPrice
+                fallback_currency: this.fallbackCurrency
             }
         );
     }
     constructor(e) {
-        super(), o(this, 'id', void 0), o(this, 'name', void 0), o(this, 'interval', void 0), o(this, 'intervalCount', void 0), o(this, 'taxInclusive', void 0), o(this, 'skuId', void 0), o(this, 'currency', void 0), o(this, 'price', void 0), o(this, 'prices', void 0), o(this, 'premiumUserPrice', void 0), o(this, 'fallbackPrice', void 0), o(this, 'fallbackCurrency', void 0), o(this, 'fallbackPremiumUserPrice', void 0), (this.id = e.id), (this.name = e.name), (this.interval = e.interval), (this.intervalCount = e.intervalCount), (this.taxInclusive = e.taxInclusive), (this.skuId = e.skuId), (this.currency = e.currency), (this.price = e.price), (this.premiumUserPrice = e.premiumUserPrice), (this.prices = e.prices), e.fallbackPrice && ((this.fallbackPrice = e.fallbackPrice), (this.fallbackCurrency = e.fallbackCurrency), (this.fallbackPremiumUserPrice = e.fallbackPremiumUserPrice));
+        super(), o(this, 'id', void 0), o(this, 'name', void 0), o(this, 'interval', void 0), o(this, 'intervalCount', void 0), o(this, 'taxInclusive', void 0), o(this, 'skuId', void 0), o(this, 'currency', void 0), o(this, 'price', void 0), o(this, 'prices', void 0), o(this, 'premiumUserPrice', void 0), o(this, 'fallbackPrice', void 0), o(this, 'fallbackCurrency', void 0), (this.id = e.id), (this.name = e.name), (this.interval = e.interval), (this.intervalCount = e.intervalCount), (this.taxInclusive = e.taxInclusive), (this.skuId = e.skuId), (this.currency = e.currency), (this.price = e.price), (this.premiumUserPrice = e.premiumUserPrice), (this.prices = e.prices), e.fallbackPrice && ((this.fallbackPrice = e.fallbackPrice), (this.fallbackCurrency = e.fallbackCurrency));
     }
 }
 function l(e, t) {

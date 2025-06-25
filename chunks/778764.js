@@ -42,7 +42,7 @@ function j(e) {
     }
     return e;
 }
-function C(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,11 +60,11 @@ function C(e, t) {
         e
     );
 }
-function O(e) {
+function C(e) {
     let { transitionState: t, onClose: l, ticket: o, challenge: u } = e,
         f = (0, c.Dt)(),
-        [j, C] = r.useState(''),
-        [O, S] = r.useState(!0),
+        [j, O] = r.useState(''),
+        [C, S] = r.useState(!0),
         [v, T] = r.useState(b.x.INIT),
         [N, I] = r.useState(''),
         [y, A] = r.useState(null),
@@ -201,7 +201,7 @@ function O(e) {
                                                     className: E.input,
                                                     value: j,
                                                     onChange: (e) => {
-                                                        C(e), S(0 === e.length);
+                                                        O(e), S(0 === e.length);
                                                     },
                                                     autoFocus: !0,
                                                     minLength: 1
@@ -215,7 +215,7 @@ function O(e) {
                                     children: [
                                         (0, i.jsx)(a.zxk, {
                                             type: 'submit',
-                                            disabled: O,
+                                            disabled: C,
                                             children: x.intl.string(x.t['5dyZ1d'])
                                         }),
                                         (0, i.jsx)(a.zxk, {
@@ -301,7 +301,7 @@ function v() {
                                         color: a.zxk.Colors.TRANSPARENT,
                                         size: a.zxk.Sizes.ICON,
                                         onClick: (t) => {
-                                            (0, o.vq)(t, (t) => (0, i.jsx)(S, C(j({}, t), { credential: e })));
+                                            (0, o.vq)(t, (t) => (0, i.jsx)(S, O(j({}, t), { credential: e })));
                                         },
                                         'aria-label': x.intl.string(x.t['+nrTbG']),
                                         innerClassName: E.credentialOptions,
@@ -327,8 +327,8 @@ function v() {
                                     let { ticket: t, challenge: n } = e;
                                     (0, a.h7j)((e) =>
                                         (0, i.jsx)(
-                                            O,
-                                            C(j({}, e), {
+                                            C,
+                                            O(j({}, e), {
                                                 ticket: t,
                                                 challenge: n
                                             })

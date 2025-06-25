@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => C });
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -18,12 +18,12 @@ var i = n(255367),
     x = n(388032),
     E = n(209782),
     j = n(20493);
-let C = p.isWindows() ? ['BTHENUM', 'BTHHFENUM'] : [];
-function O() {
+let O = p.isWindows() ? ['BTHENUM', 'BTHHFENUM'] : [];
+function C() {
     let e,
         t,
         { analyticsLocations: p } = (0, c.ZP)(),
-        O = (0, s.e7)([h.Z], () => h.Z.theme),
+        C = (0, s.e7)([h.Z], () => h.Z.theme),
         {
             canSetInputDevice: S,
             canSetOutputDevice: v,
@@ -41,11 +41,11 @@ function O() {
         P = r.useMemo(() => {
             let e = y.find((e) => e.id === T),
                 t = A.find((e) => e.id === N),
-                n = C.some((t) => {
+                n = O.some((t) => {
                     var n;
                     return null == e || null == (n = e.hardwareId) ? void 0 : n.startsWith(t);
                 }),
-                i = C.some((e) => {
+                i = O.some((e) => {
                     var n;
                     return null == t || null == (n = t.hardwareId) ? void 0 : n.startsWith(e);
                 });
@@ -71,7 +71,7 @@ function O() {
         let t,
             { label: r, value: s } = e;
         if (m.Z.isCertified(s)) {
-            let e = (0, l.ap)(O) ? n(561259) : n(887695);
+            let e = (0, l.ap)(C) ? n(561259) : n(887695);
             t = (0, i.jsx)('img', {
                 src: e,
                 alt: 'Certified',

@@ -13,8 +13,8 @@ var r = n(525654),
 function g() {
     var e, t, n, r, g;
     let p = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        h = '412834',
-        f = '17203ce73f1c0c62b3aaab3a2d67bee66017e44f'.substring(0, 7),
+        h = '412923',
+        f = '4c55ab10cf35b65bd8df1e8baf246e988e1fa532'.substring(0, 7),
         b = null === a.Z || void 0 === a.Z ? void 0 : a.Z.remoteApp.getVersion(),
         _ = null === a.Z || void 0 === a.Z || null == (e = (t = a.Z.remoteApp).getBuildNumber) ? void 0 : e.call(t),
         x = null === a.Z || void 0 === a.Z || null == (n = (r = a.Z.remoteApp).getAppArch) ? void 0 : n.call(r),
@@ -27,13 +27,13 @@ function g() {
                 [i, r, l] = d.ZP.parsedOSRelease;
             return t.includes('Windows 10') && void 0 !== l && l >= 22000 && (t = t.replace('Windows 10', 'Windows 11')), t.includes('OS X 10.15.7') && void 0 !== i && i >= 20 && (t = 'macOS '.concat(i - 9)), ''.concat(t, ' (').concat(n, ')');
         })(),
-        C = [p, h, '('.concat(f, ')')];
+        O = [p, h, '('.concat(f, ')')];
     return (
-        null != b && (C.push('Host '.concat(b)), null != x && C.push(x.toLowerCase()), null != _ && C.push('('.concat(_, ')'))),
-        C.push('Build Override: '.concat(null != E ? E.id : 'N/A')),
-        null != j && C.push(j),
+        null != b && (O.push('Host '.concat(b)), null != x && O.push(x.toLowerCase()), null != _ && O.push('('.concat(_, ')'))),
+        O.push('Build Override: '.concat(null != E ? E.id : 'N/A')),
+        null != j && O.push(j),
         (0, i.jsx)(c.Z, {
-            copyValue: C.join(' '),
+            copyValue: O.join(' '),
             text: u.intl.string(u.t['9Al4QU']),
             'aria-label': !1,
             children: (e) => {

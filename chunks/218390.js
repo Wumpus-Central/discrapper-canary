@@ -22,8 +22,8 @@ var i = n(255367),
     x = n(634894),
     E = n(410030),
     j = n(607070),
-    C = n(100527),
-    O = n(906732),
+    O = n(100527),
+    C = n(906732),
     S = n(211242),
     v = n(975298),
     T = n(15640),
@@ -367,7 +367,7 @@ function eu() {
 }
 let em = function () {
     let e = (0, S.Q)(),
-        { analyticsLocations: t } = (0, O.ZP)(C.Z.PREMIUM_SETTINGS),
+        { analyticsLocations: t } = (0, C.ZP)(O.Z.PREMIUM_SETTINGS),
         n = (0, c.e7)([R.ZP], () => R.ZP.getPremiumTypeSubscription()),
         s = (0, c.e7)([R.ZP], () => R.ZP.hasFetchedSubscriptions()),
         l = (0, T.V)(),
@@ -405,7 +405,7 @@ let em = function () {
         });
     if ((!k && !L) || a) return (0, i.jsx)(m.$jN, {});
     let B = !!(null == n ? void 0 : n.hasActiveTrial);
-    return (0, i.jsx)(O.Gt, {
+    return (0, i.jsx)(C.Gt, {
         value: t,
         children: (0, i.jsxs)(i.Fragment, {
             children: [

@@ -39,8 +39,8 @@ function _(e) {
     });
 }
 function x(e) {
-    let { hovered: t, activities: s, user: l, applicationStream: f, voiceChannel: x, status: E, userTag: j, customStatusHoverOnlyRTCEntrypointEnabled: C } = e,
-        { analyticsLocations: O } = (0, m.ZP)(u.Z.RTC_PANEL),
+    let { hovered: t, activities: s, user: l, applicationStream: f, voiceChannel: x, status: E, userTag: j, customStatusHoverOnlyRTCEntrypointEnabled: O } = e,
+        { analyticsLocations: C } = (0, m.ZP)(u.Z.RTC_PANEL),
         S = (0, h.a)(),
         v = r.useCallback(() => {
             (0, a.ZDy)(async () => {
@@ -77,7 +77,7 @@ function x(e) {
                         })({}, n)),
                         (s = s =
                             {
-                                sourceAnalyticsLocations: O,
+                                sourceAnalyticsLocations: C,
                                 location: 'CustomStatusRTCEntrypoint',
                                 prompt: e
                             }),
@@ -97,7 +97,7 @@ function x(e) {
                     );
                 };
             });
-        }, [O]),
+        }, [C]),
         T = r.useMemo(() => (null != E && E !== a.Skl.UNKNOWN && null != l && l.isPomelo() ? (0, i.jsx)(c.Z, { text: g.ZP.humanizeStatus(E) }) : j), [E, l, j]),
         N = null != S,
         [I, y] = r.useState(!1),
@@ -112,7 +112,7 @@ function x(e) {
                 }),
             [v, N]
         ),
-        P = C
+        P = O
             ? (0, i.jsx)(d.Z, {
                   hoverText: A,
                   forceHover: t || I,
@@ -120,7 +120,7 @@ function x(e) {
               })
             : A;
     return (0, i.jsx)(m.Gt, {
-        value: O,
+        value: C,
         children:
             null != s && s.length > 0
                 ? (0, i.jsx)(d.Z, {

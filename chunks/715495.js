@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
+n.d(t, { Z: () => C }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -42,7 +42,7 @@ function j(e) {
     }
     return e;
 }
-function C(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,14 +60,14 @@ function C(e, t) {
         e
     );
 }
-function O() {
+function C() {
     var e;
     let [t, n] = (0, r.useState)(!1),
         [s, l] = (0, r.useState)(!1),
         [a, c] = (0, r.useState)(null),
         m = (0, g.ZP)((e) => e.toolsCache),
         { setToolsCache: f, removeToolsCache: _ } = (0, g.L3)(),
-        { setImgCache: O } = (0, g.W_)(),
+        { setImgCache: C } = (0, g.W_)(),
         A = (0, r.useCallback)(
             (e) => {
                 let t = m[e];
@@ -84,7 +84,7 @@ function O() {
                                   palette: p.jD,
                                   preview: !0
                               }
-                            : C(j({}, t), {
+                            : O(j({}, t), {
                                   src: e,
                                   preview: !0
                               })
@@ -96,7 +96,7 @@ function O() {
             c((t) =>
                 null == t
                     ? null
-                    : C(j({}, t), {
+                    : O(j({}, t), {
                           palette: e,
                           preview: !0
                       })
@@ -190,7 +190,7 @@ function O() {
                                     let t = URL.createObjectURL(e[0]),
                                         n = e[0],
                                         i = await n.arrayBuffer();
-                                    O(t, t, (0, h.xh)(i)), f(t, t, p.jD);
+                                    C(t, t, (0, h.xh)(i)), f(t, t, p.jD);
                                 }
                             }),
                             (0, i.jsx)('div', {

@@ -21,8 +21,8 @@ var i = n(255367),
     x = n(605236),
     E = n(984370),
     j = n(797614),
-    C = n(108427),
-    O = n(210887),
+    O = n(108427),
+    C = n(210887),
     S = n(695346),
     v = n(594174),
     T = n(626135),
@@ -157,9 +157,9 @@ function W() {
         h = (0, _.Dt)(),
         f = v.default.getCurrentUser(),
         E = null != e,
-        O = s && null != f && !E;
+        C = s && null != f && !E;
     (0, g.ZP)(() => {
-        (0, C.e)('family-center'),
+        (0, O.e)('family-center'),
             N.ZP.initialPageLoad(),
             n ||
                 (0, x.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
@@ -191,9 +191,9 @@ function W() {
         }
     }, [s, E]),
     r.useEffect(() => {
-        O && (0, p.mN)(B.L0.FAMILY_CENTER);
-    }, [O]),
-    O)
+        C && (0, p.mN)(B.L0.FAMILY_CENTER);
+    }, [C]),
+    C)
         ? null
         : (0, i.jsxs)('main', {
               className: G.container,
@@ -222,7 +222,7 @@ function K() {
         s = (0, x.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
         a = (0, c.e7)([I.Z], () => I.Z.getIsInitialized()),
         E = (0, A.M)(),
-        D = (0, c.e7)([O.Z], () => O.Z.theme),
+        D = (0, c.e7)([C.Z], () => C.Z.theme),
         { selectedTab: Z, handleTabChange: w } = (0, y.Z)(),
         F = (0, _.Dt)(),
         z = v.default.getCurrentUser(),
@@ -230,7 +230,7 @@ function K() {
         K = a && null != z && !W;
     (0, g.ZP)(() => {
         m.Y(L.Z5c.FAMILY_CENTER),
-            (0, C.e)('family-center'),
+            (0, O.e)('family-center'),
             !I.Z.isLoading() && I.Z.canRefetch() && N.ZP.initialPageLoad(),
             s ||
                 (0, x.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {

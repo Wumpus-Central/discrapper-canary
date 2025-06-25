@@ -16,7 +16,7 @@ var i = n(255367),
     b = n(388032),
     _ = n(482470);
 function x(e) {
-    let { user: t, guild: n, className: s, sectionTitle: x, forcedDivider: E = !1, withTutorial: j = !1, showBorder: C = !1, isTryItOutFlow: O = !1, initialSelectedEffectId: S } = e,
+    let { user: t, guild: n, className: s, sectionTitle: x, forcedDivider: E = !1, withTutorial: j = !1, showBorder: O = !1, isTryItOutFlow: C = !1, initialSelectedEffectId: S } = e,
         v = (0, m.Kg)(t, n),
         T = u.ZP.canUsePremiumProfileCustomization(t),
         { analyticsLocations: N } = (0, o.ZP)(),
@@ -44,7 +44,7 @@ function x(e) {
         borderType: p.Y.PREMIUM,
         hasBackground: !0,
         title: x,
-        showBorder: C,
+        showBorder: O,
         errors: y,
         className: s,
         children: (0, i.jsxs)('div', {
@@ -56,7 +56,7 @@ function x(e) {
                     className: l()({ [_.buttonHighlighted]: j }),
                     children: b.intl.string(b.t['/dRfCQ'])
                 }),
-                (O || void 0 !== I ? null != I : null != v) &&
+                (C || void 0 !== I ? null != I : null != v) &&
                     (0, i.jsx)(a.zxk, {
                         className: _.removeButton,
                         color: a.zxk.Colors.PRIMARY,

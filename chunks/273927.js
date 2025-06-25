@@ -50,7 +50,7 @@ function j(e) {
         ]
     });
 }
-function C(e) {
+function O(e) {
     var t;
     let { userId: n, last: s } = e,
         p = (0, a.e7)([m.Z], () => m.Z.isBlocked(n)),
@@ -104,7 +104,7 @@ function C(e) {
               ]
           });
 }
-function O(e) {
+function C(e) {
     let { setting: t, userIds: n, listType: s } = e,
         [l, a] = r.useState(5);
     return (0, i.jsx)(h.U, {
@@ -120,7 +120,7 @@ function O(e) {
                     className: E.usersList,
                     children: n.slice(0, l).map((e, t) =>
                         (0, i.jsx)(
-                            C,
+                            O,
                             {
                                 userId: e,
                                 last: t === n.length - 1
@@ -151,7 +151,7 @@ function O(e) {
 }
 function S() {
     let e = (0, a.Wu)([m.Z], () => m.Z.getBlockedIDs());
-    return (0, i.jsx)(O, {
+    return (0, i.jsx)(C, {
         setting: b.s6.BLOCKED_USERS,
         userIds: e,
         listType: 'blocked'
@@ -159,7 +159,7 @@ function S() {
 }
 function v() {
     let e = (0, a.Wu)([m.Z], () => m.Z.getIgnoredIDs());
-    return (0, i.jsx)(O, {
+    return (0, i.jsx)(C, {
         setting: b.s6.IGNORED_USERS,
         userIds: e,
         listType: 'ignored'

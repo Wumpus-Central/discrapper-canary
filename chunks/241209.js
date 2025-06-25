@@ -62,10 +62,10 @@ function E(e, t) {
     );
 }
 let j = new RegExp('https?://'.concat(null != (i = window.GLOBAL_ENV.CDN_HOST) ? i : ''));
-function C(e) {
+function O(e) {
     return 'string' == typeof e.content ? e.content : v(e.content);
 }
-let O = E(x({}, d().defaultRules), {
+let C = E(x({}, d().defaultRules), {
         heading: E(x({}, d().defaultRules.heading), {
             react(e, t, n) {
                 let i = 'h'.concat(e.level);
@@ -101,7 +101,7 @@ let O = E(x({}, d().defaultRules), {
                     'blockquote',
                     {
                         className: f.blockquote,
-                        children: C(e)
+                        children: O(e)
                     },
                     n.key
                 )
@@ -126,7 +126,7 @@ let O = E(x({}, d().defaultRules), {
                     'code',
                     {
                         className: f.codeInline,
-                        children: C(e)
+                        children: O(e)
                     },
                     n.key
                 )
@@ -139,7 +139,7 @@ let O = E(x({}, d().defaultRules), {
                         {
                             children: (0, s.jsx)('code', {
                                 className: o()(b.scrollbarGhostHairline, 'hljs'),
-                                children: C(e)
+                                children: O(e)
                             })
                         },
                         i.key
@@ -174,8 +174,8 @@ let O = E(x({}, d().defaultRules), {
             }
         })
     }),
-    S = d().parserFor(O),
-    v = d().reactFor(d().ruleOutput(O, 'react'));
+    S = d().parserFor(C),
+    v = d().reactFor(d().ruleOutput(C, 'react'));
 class T extends (r = l.PureComponent) {
     render() {
         let { className: e, children: t, state: n, parser: i, output: r } = this.props,
@@ -186,7 +186,7 @@ class T extends (r = l.PureComponent) {
         });
     }
 }
-_(T, 'rules', O),
+_(T, 'rules', C),
     _(T, 'defaultProps', {
         parser: S,
         output: v

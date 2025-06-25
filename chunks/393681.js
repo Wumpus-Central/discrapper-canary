@@ -18,8 +18,8 @@ var i = n(255367),
     x = n(346585),
     E = n(347649),
     j = n(332473),
-    C = n(303172),
-    O = n(518560),
+    O = n(303172),
+    C = n(518560),
     S = n(921801),
     v = n(577275),
     T = n(484459),
@@ -164,7 +164,7 @@ class J extends r.PureComponent {
                       '',
                       (0, i.jsx)(_.Z, {
                           className: W.noticeTextButton,
-                          onClick: () => (0, C.Z)(z.Kq.USER_SETTINGS),
+                          onClick: () => (0, O.Z)(z.Kq.USER_SETTINGS),
                           children: Y.intl.string(Y.t.LhlgY2)
                       })
                   ]
@@ -362,7 +362,7 @@ class J extends r.PureComponent {
                     },
                     {
                         title: Y.intl.string(Y.t['Vov/9v']),
-                        component: O.Z,
+                        component: C.Z,
                         setting: F.s6.PRIVACY_AND_SAFETY_STANDING
                     }
                 ]

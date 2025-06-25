@@ -34,14 +34,14 @@ class f extends r.Z {
     }
     setIncomingVideoEnabled(e) {
         let t = this.incomingVideoEnabled !== e;
-        (this.incomingVideoEnabled = e), t && (this.logger.info('Incoming video enabled changed, incomingVideoEnabled = '.concat(this.incomingVideoEnabled)), (this.lastEnabledChange = Date.now()), this.emit('incoming-video-enabled-changed', this.incomingVideoEnabled));
+        (this.incomingVideoEnabled = e), t && (this.logger.info('Incoming video enabled changed, incomingVideoEnabled = '.concat(this.incomingVideoEnabled)), (this.lastEnabledChange = performance.now()), this.emit('incoming-video-enabled-changed', this.incomingVideoEnabled));
     }
     constructor() {
         super(),
             u(this, 'disableVideoTimer', new i.V7()),
             u(this, 'discordVisible', !0),
             u(this, 'incomingVideoEnabled', !0),
-            u(this, 'lastEnabledChange', Date.now()),
+            u(this, 'lastEnabledChange', performance.now()),
             u(this, 'logger', new o.Z('WindowVisibilityVideoManager')),
             u(this, 'HIDDEN_WINDOW_DISABLE_VIDEO_DURATION_MS', 30 * l.Z.Millis.SECOND),
             u(this, 'update', () => {

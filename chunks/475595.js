@@ -160,11 +160,13 @@ function O(e, t) {
           };
 }
 function v(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        n = i.Z.toURLSafe(e);
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    if (e.startsWith('blob:')) return e;
+    let n = i.Z.toURLSafe(e);
     return null == n ? e : (null != t.format && n.searchParams.append('format', t.format), null != t.width && n.searchParams.append('width', ''.concat(y(t.width))), null != t.height && n.searchParams.append('height', ''.concat(y(t.height))), n.toString());
 }
 function I(e, t) {
+    if (e.startsWith('blob:')) return e;
     let n = i.Z.toURLSafe(e);
     return null == n ? null : (n.searchParams.append('format', 'webp'), null != t && (n.searchParams.append('width', ''.concat(y(t.width))), n.searchParams.append('height', ''.concat(y(t.height)))), n.toString());
 }

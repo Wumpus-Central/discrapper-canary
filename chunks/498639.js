@@ -18,8 +18,8 @@ var i = n(255367),
     x = n(305342),
     E = n(333867),
     j = n(963249),
-    C = n(87484),
-    O = n(736519),
+    O = n(87484),
+    C = n(736519),
     S = n(911367),
     v = n(43747),
     T = n(970815),
@@ -154,7 +154,7 @@ let w = function () {
                                     ],
                                     onChange: (e) => t(e)
                                 }),
-                                (0, i.jsx)(O.Z, {
+                                (0, i.jsx)(C.Z, {
                                     subscriptionTier: e,
                                     premiumModalAnalyticsLocation: {},
                                     color: o.Ttl.PRIMARY,
@@ -468,7 +468,7 @@ let w = function () {
                                 }),
                                 (0, i.jsx)(o.zxk, {
                                     onClick: () =>
-                                        (0, C.Z)({
+                                        (0, O.Z)({
                                             applicationId: es,
                                             skuId: ea,
                                             analyticsLocations: Y

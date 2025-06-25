@@ -18,8 +18,8 @@ var i = n(255367),
     x = n(13245),
     E = n(825209),
     j = n(615287),
-    C = n(593472),
-    O = n(493773),
+    O = n(593472),
+    C = n(493773),
     S = n(812206),
     v = n(835473),
     T = n(243778),
@@ -261,8 +261,8 @@ function ej(e) {
         }
     });
 }
-let eC = new Set([j.mM.INITIALIZING, j.mM.WAITING_FOR_SCREEN_TYPE_RESOLUTION, j.mM.WAITING_FOR_MODULE_TRACKING, j.mM.WAITING_FOR_OVERLAY_OPEN]),
-    eO = (e) => {
+let eO = new Set([j.mM.INITIALIZING, j.mM.WAITING_FOR_SCREEN_TYPE_RESOLUTION, j.mM.WAITING_FOR_MODULE_TRACKING, j.mM.WAITING_FOR_OVERLAY_OPEN]),
+    eC = (e) => {
         e.preventDefault(), e.stopPropagation();
     };
 function eS(e) {
@@ -301,7 +301,7 @@ function eS(e) {
         { legacyEnabled: D, oopEnabled: Z } = (0, g.cj)([w.default], () => w.default.getGlobalEnabledStatus()),
         k = (e, t, n) => {
             var i, r, s;
-            if ((eO(n), null == l)) return;
+            if ((eC(n), null == l)) return;
             let a = !1,
                 o = !1;
             switch (t) {
@@ -335,7 +335,7 @@ function eS(e) {
             }
         },
         B = (e, t, n) => {
-            if ((eO(n), null == l)) return;
+            if ((eC(n), null == l)) return;
             let i = !1,
                 r = !1;
             switch (t) {
@@ -360,7 +360,7 @@ function eS(e) {
         F = !E && !Z && b && !R,
         H = (null == d ? void 0 : d.overlayMethod) === j.gl.Disabled,
         z = (null == d ? void 0 : d.state) === j.mM.OVERLAY_RENDERING && !H,
-        Y = (null == d ? void 0 : d.state) != null && eC.has(d.state) && !H,
+        Y = (null == d ? void 0 : d.state) != null && eO.has(d.state) && !H,
         K = (null == d ? void 0 : d.overlayMethod) === j.gl.OutOfProcess,
         X = (null == d ? void 0 : d.overlayMethod) === j.gl.OutOfProcessLimitedInteraction,
         J = (null == d ? void 0 : d.overlayMethod) === j.gl.Hook,
@@ -426,7 +426,7 @@ function eS(e) {
                         (function () {
                             var e, t;
                             switch (!0) {
-                                case (null == d ? void 0 : d.fullscreenType) !== C.Jx.BORDERLESS_FULLSCREEN:
+                                case (null == d ? void 0 : d.fullscreenType) !== O.Jx.BORDERLESS_FULLSCREEN:
                                     return ec.intl.string(ec.t.mJmbeH);
                                 case R:
                                     return ec.intl.string(ec.t.C7bLTU);
@@ -463,7 +463,7 @@ function eS(e) {
                     return [ec.intl.string(ec.t.ONovPz), null];
             }
         })();
-    (0, O.ZP)(() => {
+    (0, C.ZP)(() => {
         f.Z.getDetectableGames();
     });
     let [en, ei] = r.useMemo(() => (Y ? ['text-muted', h.TVs.colors.TEXT_MUTED.css] : z && X ? ['text-warning', h.TVs.colors.TEXT_FEEDBACK_WARNING.css] : z && K ? ['text-positive', h.TVs.colors.TEXT_FEEDBACK_POSITIVE.css] : z && J ? ['text-primary', h.TVs.colors.TEXT_PRIMARY.css] : ['interactive-normal', h.TVs.colors.INTERACTIVE_NORMAL.css]), [Y, z, X, K, J]);
@@ -527,7 +527,7 @@ function eS(e) {
               }),
               'aria-label': ec.intl.string(ec.t['87O5GB']),
               action: (0, i.jsx)(h.P3F, {
-                  onClick: (e) => eO(e),
+                  onClick: (e) => eC(e),
                   children: (0, i.jsx)(h.rsf, {
                       checked: (b && Z) || (E && D),
                       disabled: U,
@@ -597,7 +597,7 @@ function eT(e) {
     }, [m]);
     let b = (e, n) => {
         let i = !e && p;
-        if ((eO(n), f(e), a(e, d, u), i)) {
+        if ((eC(n), f(e), a(e, d, u), i)) {
             var r, s;
             (0, M.l)(o, null != (s = null != (r = d.id) ? r : null == t ? void 0 : t.id) ? s : null);
         }
@@ -629,7 +629,7 @@ function eN() {
         o = !(0, er.supportsLegacy)(),
         c = (e, t) => {
             var i, r;
-            eO(t), x.Z.setEnabled(e, s);
+            eC(t), x.Z.setEnabled(e, s);
             let l = null != (r = null == (i = N.ZP.getCurrentGameForAnalytics()) ? void 0 : i.id) ? r : null;
             (0, P.ou)(e, P.AE.LEGACY, l), !e && n && (0, M.l)(P.AE.LEGACY, l);
         },
@@ -662,7 +662,7 @@ function eN() {
               description: u,
               'aria-label': ec.intl.string(ec.t.BfFpW1),
               action: (0, i.jsx)(h.P3F, {
-                  onClick: (e) => eO(e),
+                  onClick: (e) => eC(e),
                   children: (0, i.jsx)(h.rsf, {
                       checked: n,
                       disabled: o,
@@ -710,7 +710,7 @@ function eI() {
         o = (0, v.Z)(a.map((e) => e.id)),
         c = (e, t) => {
             var i, r;
-            eO(t);
+            eC(t);
             let l = !e && n;
             x.Z.setEnabled(s, e);
             let a = null != (r = null == (i = N.ZP.getCurrentGameForAnalytics()) ? void 0 : i.id) ? r : null;
@@ -745,7 +745,7 @@ function eI() {
               description: u,
               'aria-label': ec.intl.string(ec.t['7BlVIi']),
               action: (0, i.jsx)(h.P3F, {
-                  onClick: (e) => eO(e),
+                  onClick: (e) => eC(e),
                   children: (0, i.jsx)(h.rsf, {
                       checked: n,
                       disabled: l,
@@ -1109,7 +1109,7 @@ function eZ() {
         n = () => {
             t(el.L.DISMISS);
         };
-    return ((0, O.ZP)(() => () => {
+    return ((0, C.ZP)(() => () => {
         t(el.L.AUTO_DISMISS);
     }),
     e !== p.z.OVERLAY_OOP_SETTINGS_NUX)
@@ -1258,7 +1258,7 @@ function ek(e) {
         })(),
         l = (0, D.o4)('user_settings').overlayV3UI,
         a = (0, g.e7)([X.default], () => X.default.getCurrentUser());
-    (0, O.ZP)(() => {
+    (0, C.ZP)(() => {
         if (en.isPlatformEmbedded) return (0, I.Ky)(), I.P7;
     });
     let c = e_(eh);

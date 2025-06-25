@@ -1,6 +1,6 @@
 n.d(t, {
-    C: () => C,
-    Z: () => O
+    C: () => O,
+    Z: () => C
 });
 var i,
     r = n(255367);
@@ -22,8 +22,8 @@ var s = n(120356),
     x = n(579273),
     E = n(38874),
     j = n(267201),
-    C = (((i = {}).SUBSCRIBER_HOME = 'SUBSCRIBER_HOME'), (i.NITRO_SETTINGS = 'SETTINGS'), (i.APPLICATION_NITRO_HOME = 'APPLICATION_NITRO_HOME'), i);
-let O = function (e) {
+    O = (((i = {}).SUBSCRIBER_HOME = 'SUBSCRIBER_HOME'), (i.NITRO_SETTINGS = 'SETTINGS'), (i.APPLICATION_NITRO_HOME = 'APPLICATION_NITRO_HOME'), i);
+let C = function (e) {
     let { variant: t } = e,
         n = (0, m.Vi)(),
         i = (0, o.ZP)(),

@@ -18,8 +18,8 @@ var i = n(255367),
     x = n(890022),
     E = n(688907),
     j = n(487419),
-    C = n(197344),
-    O = n(476756),
+    O = n(197344),
+    C = n(476756),
     S = n(734934),
     v = n(223683),
     T = n(312400),
@@ -229,7 +229,7 @@ function J(e) {
                 sound: 'reconnect'
             }
         ],
-        p = null != C.Z.useHolidaySoundpack();
+        p = null != O.Z.useHolidaySoundpack();
     return (0, i.jsx)(P.F, {
         setting: V.s6.NOTIFICATIONS_SOUNDS,
         children: (0, i.jsxs)(u.hjN, {
@@ -241,7 +241,7 @@ function J(e) {
                                   className: Y.marginBottom20,
                                   children: H.intl.string(H.t.fgSHf3)
                               }),
-                              (0, i.jsx)(O.Z, {})
+                              (0, i.jsx)(C.Z, {})
                           ]
                       })
                     : null,

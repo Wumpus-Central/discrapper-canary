@@ -251,6 +251,9 @@ class ev extends d.Z {
     getBandwidthEstimationExperiment() {
         return this._bandwidthEstimationExperiment;
     }
+    getRemoteVideoSinkWants() {
+        return this._remoteVideoSinkWants;
+    }
     pauseStatsCollectionForUser(e, t) {
         let n = this.getOrCreateVideoQuality();
         if (null == n) return void this.logger.error('pauseStatsCollectionForUser: Unable to create videoQuality.');
@@ -967,7 +970,14 @@ class ev extends d.Z {
     }
     _handleMediaSinkWants(e) {
         let t = this._connection;
-        this.logger.info('Remote media sink wants: '.concat(JSON.stringify(e))), (this._remoteVideoSinkWants = e), null == t || t.setRemoteVideoSinkWants(e);
+        this.logger.info('Remote media sink wants: '.concat(JSON.stringify(e))),
+            (this._remoteVideoSinkWants = e),
+            p.Z.dispatch({
+                type: 'RTC_CONNECTION_REMOTE_VIDEO_SINK_WANTS',
+                context: this.context,
+                wants: e
+            }),
+            null == t || t.setRemoteVideoSinkWants(e);
     }
     _handleCodeVersion(e, t) {
         (this.voiceVersion = e), (this.rtcWorkerVersion = t);

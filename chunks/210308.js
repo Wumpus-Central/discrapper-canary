@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => C });
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -18,8 +18,8 @@ var i = n(255367),
     x = n(921944),
     E = n(46140),
     j = n(388032),
-    C = n(669018);
-function O(e) {
+    O = n(669018);
+function C(e) {
     let { groupName: t, targetElementRef: n } = e,
         r = (0, h.Z)(),
         m = (0, p.Z)({ location: 'TenureLevelUpCoachmark' }),
@@ -64,10 +64,10 @@ function S(e) {
         }, [s, l]),
         h = b.vK[n];
     return (0, i.jsxs)('div', {
-        className: C.contents,
+        className: O.contents,
         children: [
             (0, i.jsx)(a.M0o, {
-                className: C.closeButton,
+                className: O.closeButton,
                 tooltip: j.intl.string(j.t.cpT0Cg),
                 color: a.YX$.TERTIARY,
                 size: a.tT7.SIZE_24,
@@ -81,7 +81,7 @@ function S(e) {
                 (0, i.jsx)('img', {
                     src: d,
                     alt: j.intl.string(h.nameUnformatted),
-                    className: C.badgeImage
+                    className: O.badgeImage
                 }),
             (0, i.jsx)(a.X6q, {
                 variant: 'heading-md/extrabold',
@@ -89,17 +89,17 @@ function S(e) {
             }),
             (0, i.jsx)(a.Text, {
                 variant: 'text-sm/medium',
-                className: C.subtitle,
+                className: O.subtitle,
                 children: j.intl.formatToPlainString(j.t.ewkaVV, { timeMilestone: null == (t = (0, g.q)(h.id, h.tenureReqNumMonths)) ? void 0 : t.toLocaleLowerCase() })
             }),
             (0, i.jsx)(a.zxk, {
-                className: C.checkItOutButton,
+                className: O.checkItOutButton,
                 color: a.Ttl.WHITE,
                 size: a.PhG.SMALL,
                 onClick: u,
                 children: j.intl.string(j.t.RzWDqa)
             }),
-            (0, i.jsx)('div', { className: C.pointer })
+            (0, i.jsx)('div', { className: O.pointer })
         ]
     });
 }

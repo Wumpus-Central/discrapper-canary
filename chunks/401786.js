@@ -18,8 +18,8 @@ var i = n(255367),
     x = n(311821),
     E = n(42818),
     j = n(314884),
-    C = n(509545),
-    O = n(78839),
+    O = n(509545),
+    C = n(78839),
     S = n(267642),
     v = n(74538),
     T = n(937615),
@@ -105,7 +105,7 @@ async function D(e, t, n, i) {
 function Z(e) {
     var t, n, s;
     let { premiumSubscription: l, guildBoostSlotId: c, fractionalPremiumInfo: d, onBack: g, onNext: _, onClose: j } = e,
-        [O, S] = r.useState(!1),
+        [C, S] = r.useState(!1),
         [y, R] = r.useState(null),
         [Z, w] = r.useMemo(() => {
             try {
@@ -121,11 +121,11 @@ function Z(e) {
         r.useEffect(() => {
             w && k.current();
         }, [w]);
-    let { premiumSubscriptionPlan: L, premiumGuildPlan: B } = (0, a.cj)([C.Z], () => {
-            let e = C.Z.get(l.planId);
+    let { premiumSubscriptionPlan: L, premiumGuildPlan: B } = (0, a.cj)([O.Z], () => {
+            let e = O.Z.get(l.planId);
             return {
                 premiumSubscriptionPlan: e,
-                premiumGuildPlan: null != e ? C.Z.getForSkuAndInterval((0, v.Wz)(I.Si.GUILD), e.interval, e.intervalCount) : null
+                premiumGuildPlan: null != e ? O.Z.getForSkuAndInterval((0, v.Wz)(I.Si.GUILD), e.interval, e.intervalCount) : null
             };
         }),
         { analyticsLocations: M } = (0, m.ZP)(),
@@ -210,7 +210,7 @@ function Z(e) {
                     children: [
                         (0, i.jsx)(o.zxk, {
                             color: o.zxk.Colors.RED,
-                            disabled: O,
+                            disabled: C,
                             onClick: async () => {
                                 try {
                                     S(!0), R(null), await D(l, Z, M, c), _();
@@ -262,9 +262,9 @@ function k(e) {
     let t,
         { guildBoostSlot: n, transitionState: s, onClose: l } = e;
     r.useEffect(() => {
-        O.ZP.hasFetchedSubscriptions() || (0, c.jg)();
+        C.ZP.hasFetchedSubscriptions() || (0, c.jg)();
     }, []);
-    let d = (0, a.e7)([O.ZP], () => O.ZP.getPremiumTypeSubscription()),
+    let d = (0, a.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()),
         p = (0, g.Z)(),
         [h, f] = r.useState(1),
         { analyticsLocations: b } = (0, m.ZP)(u.Z.GUILD_BOOST_CANCELLATION_MODAL);

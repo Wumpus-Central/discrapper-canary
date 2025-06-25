@@ -17,10 +17,5 @@ e.exports = {
     flexCentered: 'flexCentered__3ce43',
     tooltip: 'tooltip__3ce43',
     pillContainer: 'pillContainer__3ce43',
-    pillIcon: 'pillIcon__3ce43',
-    giftingContainerHighVis: 'giftingContainerHighVis__3ce43',
-    giftingContainerHighVisIcon: 'giftingContainerHighVisIcon__3ce43',
-    giftingContainerHighVisDescription: 'giftingContainerHighVisDescription__3ce43',
-    giftingContainerHighVisButtonContainer: 'giftingContainerHighVisButtonContainer__3ce43',
-    giftingContainerHighVisButton: 'giftingContainerHighVisButton__3ce43'
+    pillIcon: 'pillIcon__3ce43'
 };

@@ -18,8 +18,8 @@ var i = n(255367),
     x = n(63063),
     E = n(581883),
     j = n(738486),
-    C = n(918257),
-    O = n(970813),
+    O = n(918257),
+    C = n(970813),
     S = n(726985),
     v = n(981631),
     T = n(710111),
@@ -39,7 +39,7 @@ function P(e) {
             children: [
                 (0, i.jsxs)(g.F, {
                     setting: S.s6.VOICE_AND_VIDEO_SOUNDBOARD,
-                    children: [(0, i.jsx)(C.Z, { refreshStyles: t }), (0, i.jsx)(O.Z, { refreshStyles: t })]
+                    children: [(0, i.jsx)(O.Z, { refreshStyles: t }), (0, i.jsx)(C.Z, { refreshStyles: t })]
                 }),
                 (0, i.jsxs)(g.F, {
                     setting: S.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
@@ -63,11 +63,11 @@ function R(e) {
         [s, c] = r.useState(T.hY),
         g = (0, b.tT)(s),
         E = A(g),
-        C = (null == g ? void 0 : g.type) === b.zx.GLOBAL,
-        O = (0, a.e7)([h.Z], () => h.Z.hasFetchedAllSounds()) && null != g && null == E;
+        O = (null == g ? void 0 : g.type) === b.zx.GLOBAL,
+        C = (0, a.e7)([h.Z], () => h.Z.hasFetchedAllSounds()) && null != g && null == E;
     r.useEffect(() => {
-        O && (0, f.tt)({ location: n });
-    }, [O, n]),
+        C && (0, f.tt)({ location: n });
+    }, [C, n]),
         r.useEffect(() => {
             (0, p.w)();
         }, []);
@@ -108,12 +108,12 @@ function R(e) {
                     children: [
                         (0, i.jsx)(_.Z, {
                             sound: E,
-                            isGlobal: C,
+                            isGlobal: O,
                             onSelect: (e) => {
                                 null == e ? (0, f.aC)(s, n) : (0, f.SZ)(s, e, n);
                             }
                         }),
-                        O &&
+                        C &&
                             (0, i.jsx)(o.Wn, {
                                 className: I.notice,
                                 messageType: o.QYI.WARNING,

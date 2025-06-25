@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -42,7 +42,7 @@ function j(e) {
     }
     return e;
 }
-function C(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,8 +60,8 @@ function C(e, t) {
         e
     );
 }
-function O(e) {
-    let { onLearnMore: t, selectedBackgroundOption: O, onSelectBackgroundOption: S, currentDeviceId: v, smallerBackgroundOptions: T, className: N } = e,
+function C(e) {
+    let { onLearnMore: t, selectedBackgroundOption: C, onSelectBackgroundOption: S, currentDeviceId: v, smallerBackgroundOptions: T, className: N } = e,
         I = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
         [y, A] = r.useState(null),
         P = (0, p.Z)(),
@@ -75,7 +75,7 @@ function O(e) {
         k = {
             isVideoBackgroundSupported: P,
             onSelectBackgroundOption: S,
-            selectedBackgroundOption: O
+            selectedBackgroundOption: C
         },
         L = r.useRef(k);
     r.useEffect(() => {
@@ -107,7 +107,7 @@ function O(e) {
                   (0, i.jsx)(h.Z, {
                       canUseCustomBackgrounds: R,
                       customBackgroundOptions: Z,
-                      selectedOption: O,
+                      selectedOption: C,
                       onSelectOption: B,
                       onUpsellClick: () => {
                           (0, l.ZDy)(async () => {
@@ -115,9 +115,9 @@ function O(e) {
                               return (n) =>
                                   (0, i.jsx)(
                                       e,
-                                      C(j({}, n), {
+                                      O(j({}, n), {
                                           onLearnMore: t,
-                                          analyticsSource: C(j({}, w.location), { object: b.qAy.BUTTON_CTA })
+                                          analyticsSource: O(j({}, w.location), { object: b.qAy.BUTTON_CTA })
                                       })
                                   );
                           });

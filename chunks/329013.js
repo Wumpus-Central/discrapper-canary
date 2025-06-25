@@ -21,8 +21,8 @@ var i = n(255367),
     x = n(639119),
     E = n(767714),
     j = n(165583),
-    C = n(504983),
-    O = n(626135),
+    O = n(504983),
+    C = n(626135),
     S = n(210887),
     v = n(981631),
     T = n(921944),
@@ -47,7 +47,7 @@ let A = () => {
         return (
             r.useEffect(() => {
                 l &&
-                    O.default.track(v.rMx.PREMIUM_UPSELL_VIEWED, {
+                    C.default.track(v.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: N.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                         location_stack: n
                     });
@@ -59,10 +59,10 @@ let A = () => {
                         children: [
                             (0, i.jsx)(h.ZP.Basic, { className: y.basicThemeSelectors }),
                             (0, i.jsx)(R, {}),
-                            (0, i.jsxs)(C.Z, {
+                            (0, i.jsxs)(O.Z, {
                                 className: y.featureBorder,
                                 isShown: l,
-                                type: C.Y.PREMIUM,
+                                type: O.Y.PREMIUM,
                                 children: [
                                     (0, i.jsx)(h.ZP.Gradient, {
                                         disabled: l,

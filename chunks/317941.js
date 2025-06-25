@@ -18,8 +18,8 @@ var i = n(255367),
     x = n(509545),
     E = n(55563),
     j = n(259580),
-    C = n(572004),
-    O = n(669079),
+    O = n(572004),
+    C = n(669079),
     S = n(296848),
     v = n(474936),
     T = n(388032),
@@ -63,10 +63,10 @@ class y extends r.PureComponent {
             children: [
                 (0, i.jsx)(c.kO8, {
                     className: N.codeText,
-                    value: (0, O.Nz)(t.code),
+                    value: (0, C.Nz)(t.code),
                     text: this.copyButtonText,
                     mode: n,
-                    supportsCopy: C.wS,
+                    supportsCopy: O.wS,
                     hideMessage: e ? T.intl.string(T.t['0RLn4+']) : null,
                     onCopy: this.handleCopy,
                     buttonColor: c.Ttl.BRAND,
@@ -96,8 +96,8 @@ class y extends r.PureComponent {
             I(this, 'state', { copyMode: c.uA3.DEFAULT }),
             I(this, 'handleCopy', (e) => {
                 let { giftCode: t, sku: n } = this.props;
-                (0, O.dM)(t, n),
-                    (0, C.JG)(
+                (0, C.dM)(t, n),
+                    (0, O.JG)(
                         e,
                         () => this.setState({ copyMode: c.uA3.SUCCESS }),
                         () => this.setState({ copyMode: c.uA3.ERROR })
