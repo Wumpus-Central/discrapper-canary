@@ -173,6 +173,7 @@ let A = i.forwardRef((e, t) => {
                         {
                             ref: t,
                             className: o()(
+                                'imageWrapper',
                                 g.imageWrapper,
                                 {
                                     [g.imageZoom]: k,

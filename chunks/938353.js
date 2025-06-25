@@ -442,7 +442,6 @@ class e8 extends (r = l.Component) {
                     autoPlayGif: n,
                     canRemoveItem: r && (d.length > 1 || '' !== e.content),
                     onRemoveItem: this.handleRemoveAttachment,
-                    className: eq.embedWrapper,
                     getObscureReason: _,
                     onContextMenu:
                         null != a
@@ -782,7 +781,6 @@ class e8 extends (r = l.Component) {
                                   C.ZP,
                                   eJ(
                                       {
-                                          className: eq.embedWrapper,
                                           embed: e,
                                           obscureReason: null != m ? m : void 0,
                                           autoPlayGif: l,

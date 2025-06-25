@@ -1,7 +1,6 @@
 e.exports = {
     container: 'container_b7e1cb',
     gifFavoriteButton: 'gifFavoriteButton_b7e1cb',
-    embedWrapper: 'embedWrapper_b7e1cb',
     giftCodeContainer: 'giftCodeContainer_b7e1cb',
     referralContainer: 'referralContainer_b7e1cb',
     pollContainer: 'pollContainer_b7e1cb',

@@ -105,7 +105,7 @@ let W = i.memo(
         function (e) {
             var t, n;
             let { className: l, messageGroupSpacing: p, scrollerClassName: m, channel: g, messages: b, unreadCount: _, showNewMessagesBar: y, messageDisplayCompact: C, channelStream: v, uploads: j, hasUnreads: E, editingMessageId: I, fontSize: S, keyboardModeEnabled: Z, filterAfterTimestamp: N, showingQuarantineBanner: T, hideSummaries: w = !1, jumpBarClassName: R, typingGradient: k } = e,
-                [W, Y] = i.useState(null == (n = O.Z.isAtBottom(g.id)) || n),
+                [W, Y] = i.useState(null != (n = O.Z.isAtBottom(g.id)) && n),
                 q = i.useMemo(
                     () =>
                         C
@@ -208,11 +208,11 @@ let W = i.memo(
                     (K.ref.current = e), (el.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
                 }),
                 { fadeStart: es, maskOpacity: ec } = (0, u.q_F)({
-                    fadeStart: W ? 28 : 84,
+                    fadeStart: k && !W ? 96 : 40,
                     maskOpacity: k && !W ? 0 : 1,
                     config: {
-                        tension: 100,
-                        friction: 20,
+                        tension: 150,
+                        friction: 15,
                         clamp: !0
                     }
                 });
@@ -222,9 +222,11 @@ let W = i.memo(
                     null != en && en,
                     (0, r.jsxs)(o.animated.div, {
                         className: a()(G.messagesWrapper, l, 'group-spacing-'.concat(p)),
-                        style: {
-                            mask: (0, o.to)([es, ec], (e, t) => 'linear-gradient(180deg, black 0%, black calc(100% - '.concat(e, 'px), rgba(0,0,0,').concat(t, ') calc(100% - 12px), rgba(0,0,0,').concat(t, ') 100%)'))
-                        },
+                        style: k
+                            ? {
+                                  mask: (0, o.to)([es, ec], (e, t) => 'linear-gradient(180deg, black 0%, black calc(100% - '.concat(e, 'px), rgba(0,0,0,').concat(t, ') calc(100% - 24px), rgba(0,0,0,').concat(t, ') 100%)'))
+                              }
+                            : void 0,
                         children: [
                             null == en && $,
                             (0, r.jsxs)(
