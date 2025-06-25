@@ -71,7 +71,7 @@ let C = {
             s = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
             [S, v] = r.useState(!0),
             T = r.useRef(null),
-            [I, N] = r.useState(!1),
+            [N, I] = r.useState(!1),
             [y, A] = r.useState(!1),
             [P, R] = r.useState([]),
             [D, Z] = r.useState(C),
@@ -191,7 +191,7 @@ let C = {
                               className: l()(b.col, b.preview),
                               children: [
                                   (0, i.jsx)('img', {
-                                      src: I ? _ : x,
+                                      src: N ? _ : x,
                                       alt: '',
                                       width: 450
                                   }),
@@ -230,10 +230,10 @@ let C = {
                                                   }),
                                                   (0, i.jsx)('input', {
                                                       type: 'checkbox',
-                                                      checked: I,
+                                                      checked: N,
                                                       className: b.checkBox,
                                                       onChange: () => {
-                                                          N(!I);
+                                                          I(!N);
                                                       }
                                                   })
                                               ]

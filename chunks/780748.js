@@ -42,12 +42,6 @@ function c(e) {
                             e.preventDefault(), e.stopPropagation();
                             return;
                         }
-                        break;
-                    case l.yXg.HOME:
-                        e.preventDefault(), e.stopPropagation(), a.Q.updateSelectionForHomeKey(t, e);
-                        break;
-                    case l.yXg.END:
-                        e.preventDefault(), e.stopPropagation(), a.Q.updateSelectionForEndKey(t, e);
                 }
                 if ((null == (r = t.onKeyDown) ? void 0 : r.call(t, e)) === !0) {
                     e.preventDefault(), e.stopPropagation();

@@ -74,7 +74,7 @@ class R extends (r = o.ZP.PersistedStore) {
             for (let e in r) {
                 let { evaluation_id: t, assignments: n } = r[e],
                     a = {
-                        evaluationId: t,
+                        evaluationId: null != t ? t : void 0,
                         assignments: {}
                     };
                 for (let [t, r, o, s] of ((i[e] = a), n))
@@ -150,7 +150,9 @@ class R extends (r = o.ZP.PersistedStore) {
         }
     }
     evaluationIds(e) {
-        return Object.values(b[e]).map((e) => e.evaluationId);
+        return Object.values(b[e])
+            .map((e) => e.evaluationId)
+            .filter((e) => null != e);
     }
     shouldTrackExposure(e) {
         let t = A[e];

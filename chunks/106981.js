@@ -15,6 +15,6 @@ e.exports = {
     planOptionSubtext: 'planOptionSubtext_b13085',
     discountPlanOptionSubtext: 'discountPlanOptionSubtext_b13085',
     planOptionClickableContainer: 'planOptionClickableContainer_b13085',
-    updatedOptionSelected: 'updatedOptionSelected_b13085',
-    optionPriceSelected: 'optionPriceSelected_b13085'
+    optionPriceSelected: 'optionPriceSelected_b13085',
+    updatedOptionSelected: 'updatedOptionSelected_b13085'
 };

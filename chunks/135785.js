@@ -15,20 +15,17 @@ var r = n(120356),
 let h = (e) => {
     let t,
         n,
-        { premiumSubscription: r, className: h, isFullscreen: f = !1, textColor: b } = e,
-        _ = (0, d.Nx)();
+        { premiumSubscription: r, className: h, textColor: f } = e,
+        b = (0, d.Nx)();
     if (null == r) return null;
-    let x = null != r ? c.ZP.getPremiumPlanItem(r) : null;
-    if ((c.ZP.isBoostOnlySubscription(r) ? (t = g.intl.string(g.t.Uj0md3)) : null != x && (t = c.ZP.getDisplayPremiumType(x.planId)), null == t)) return null;
-    let E = () => a.Z.open(m.oAB.SUBSCRIPTIONS),
-        j = (null != x ? c.ZP.getSkuIdForPlan(x.planId) : null) === u.Si.TIER_1;
+    let _ = null != r ? c.ZP.getPremiumPlanItem(r) : null;
+    if ((c.ZP.isBoostOnlySubscription(r) ? (t = g.intl.string(g.t.Uj0md3)) : null != _ && (t = c.ZP.getDisplayPremiumType(_.planId)), null == t)) return null;
+    let x = () => a.Z.open(m.oAB.SUBSCRIPTIONS),
+        E = (null != _ ? c.ZP.getSkuIdForPlan(_.planId) : null) === u.Si.TIER_1;
     return (
-        (n = null != b ? b : _ || f ? 'always-white' : 'text-normal'),
+        (n = null != f ? f : b ? 'always-white' : 'text-normal'),
         (0, i.jsxs)(l.Zbd, {
-            className: s()(p.container, h, {
-                [p.lightTextLink]: f,
-                [p.centerText]: _
-            }),
+            className: s()(p.container, h, { [p.centerText]: b }),
             type: l.Zbd.Types.CUSTOM,
             children: [
                 (0, i.jsx)(l.P4T, {
@@ -36,19 +33,19 @@ let h = (e) => {
                     width: 20,
                     height: 20,
                     color: 'currentColor',
-                    className: s()(p.icon, { [p.lightThemeColorOnly]: _ || f })
+                    className: s()(p.icon, { [p.lightThemeColorOnly]: b })
                 }),
                 (0, i.jsx)(l.Text, {
                     variant: 'text-sm/medium',
                     color: n,
-                    children: j
+                    children: E
                         ? g.intl.format(g.t['tYuv+f'], {
                               helpdeskArticle: o.Z.getArticleURL(m.BhN.PREMIUM_DETAILS),
-                              onSubscriptionsClick: E
+                              onSubscriptionsClick: x
                           })
                         : g.intl.format(g.t.xHRgU1, {
                               subscriptionName: t,
-                              onSubscriptionsClick: E
+                              onSubscriptionsClick: x
                           })
                 })
             ]

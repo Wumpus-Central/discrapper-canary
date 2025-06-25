@@ -99,23 +99,23 @@ function x(e) {
             });
         }, [O]),
         T = r.useMemo(() => (null != E && E !== a.Skl.UNKNOWN && null != l && l.isPomelo() ? (0, i.jsx)(c.Z, { text: g.ZP.humanizeStatus(E) }) : j), [E, l, j]),
-        I = null != S,
-        [N, y] = r.useState(!1),
+        N = null != S,
+        [I, y] = r.useState(!1),
         A = r.useMemo(
             () =>
                 (0, i.jsx)(_, {
                     openModal: v,
-                    hasCustomStatus: I,
+                    hasCustomStatus: N,
                     className: b.customStatusActionHoverText,
                     onFocus: () => y(!0),
                     onBlur: () => y(!1)
                 }),
-            [v, I]
+            [v, N]
         ),
         P = C
             ? (0, i.jsx)(d.Z, {
                   hoverText: A,
-                  forceHover: t || N,
+                  forceHover: t || I,
                   children: T
               })
             : A;
@@ -125,7 +125,7 @@ function x(e) {
             null != s && s.length > 0
                 ? (0, i.jsx)(d.Z, {
                       hoverText: P,
-                      forceHover: t || N,
+                      forceHover: t || I,
                       children: (0, i.jsx)(o.Z, {
                           location: 'CustomStatusRTCEntrypoint',
                           user: l,

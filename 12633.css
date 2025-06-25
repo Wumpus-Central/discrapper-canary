@@ -25049,7 +25049,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     top: 0
 }
 
-.visual-refresh.align-chat-input .emojiButton__74017:hover {
+.align-chat-input .emojiButton__74017:hover {
     background-color: var(--background-modifier-selected);
     border-radius: 8px
 }
@@ -35668,7 +35668,7 @@ div.modalOverrideBody__34eac {
     color: var(--interactive-active)
 }
 
-.visual-refresh.align-chat-input .button__24af7:not(.noHover__24af7):hover {
+.align-chat-input .button__24af7:not(.noHover__24af7):hover {
     background-color: var(--background-modifier-selected);
     border-radius: 8px
 }

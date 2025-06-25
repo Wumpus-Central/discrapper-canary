@@ -12,7 +12,6 @@ e.exports = {
     moreSubtitleMargin: 'moreSubtitleMargin_efc71f',
     fullWidth: 'fullWidth_efc71f',
     cardContainer: 'cardContainer_efc71f',
-    cardContainerNarrowWidth: 'cardContainerNarrowWidth_efc71f',
     centerAlignSection: 'centerAlignSection_efc71f',
     showAllPerksButton: 'showAllPerksButton_efc71f',
     showAllPerksButtonCenter: 'showAllPerksButtonCenter_efc71f'

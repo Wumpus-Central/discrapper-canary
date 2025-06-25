@@ -23,8 +23,8 @@ var i = n(255367),
     S = n(734934),
     v = n(223683),
     T = n(312400),
-    I = n(115345),
-    N = n(392888),
+    N = n(115345),
+    I = n(392888),
     y = n(106371),
     A = n(995774),
     P = n(921801),
@@ -604,7 +604,7 @@ function en() {
                                           setting: V.s6.NOTIFICATIONS_LAUNCH_MIGRATION,
                                           children: (0, i.jsx)(u.zxk, {
                                               onClick: () => {
-                                                  (0, N.R)(!0);
+                                                  (0, I.R)(!0);
                                               },
                                               children: 'Launch Migration'
                                           })
@@ -634,13 +634,13 @@ async function ei(e) {
     e(!0);
     let t = await (0, v.Tn)();
     0 === t.length
-        ? await (0, I.oL)()
+        ? await (0, N.oL)()
         : m.Z.show({
               title: H.intl.string(H.t['cY+Ooa']),
               body: H.intl.format(H.t['7zTJJS'], { date: new Date(t[t.length - 1].recorded_at) }),
               cancelText: H.intl.string(H.t['ETE/oK']),
               confirmText: H.intl.string(H.t.Rm96T0),
-              onConfirm: I.oL
+              onConfirm: N.oL
           }),
         e(!1);
 }

@@ -15,8 +15,8 @@ var n = a(696486),
     l = a(622916),
     u = a(873567),
     I = a(665909),
-    R = a(395848),
-    d = a(501684),
+    d = a(395848),
+    R = a(501684),
     N = a(108185),
     f = a(896247),
     A = a(416987);
@@ -25,8 +25,8 @@ let T = 0,
 function L() {
     let t = (0, N.QV)();
     if (t && s.Z1) {
-        t.mark && R.m.performance.mark('sentry-tracing-init');
-        let e = (0, d.to)(({ metric: t }) => {
+        t.mark && d.m.performance.mark('sentry-tracing-init');
+        let e = (0, R.to)(({ metric: t }) => {
                 let e = t.entries[t.entries.length - 1];
                 if (!e) return;
                 let a = (0, N.XL)(s.Z1),
@@ -41,7 +41,7 @@ function L() {
                         unit: 'second'
                     });
             }),
-            a = (0, d.PR)(({ metric: t }) => {
+            a = (0, R.PR)(({ metric: t }) => {
                 let e = t.entries[t.entries.length - 1];
                 e &&
                     (I.X && l.kg.log('[Measurements] Adding CLS'),
@@ -51,7 +51,7 @@ function L() {
                     }),
                     (_ = e));
             }, !0),
-            n = (0, d.$A)(({ metric: t }) => {
+            n = (0, R.$A)(({ metric: t }) => {
                 let e = t.entries[t.entries.length - 1];
                 e &&
                     (I.X && l.kg.log('[Measurements] Adding LCP'),
@@ -61,7 +61,7 @@ function L() {
                     }),
                     (r = e));
             }, !0),
-            o = (0, d._4)(({ metric: t }) => {
+            o = (0, R._4)(({ metric: t }) => {
                 t.entries[t.entries.length - 1] &&
                     (I.X && l.kg.log('[Measurements] Adding TTFB'),
                     (p.ttfb = {
@@ -76,7 +76,7 @@ function L() {
     return () => void 0;
 }
 function h() {
-    (0, d._j)('longtask', ({ entries: t }) => {
+    (0, R._j)('longtask', ({ entries: t }) => {
         for (let e of t) {
             if (!(0, n.HN)()) return;
             let t = (0, N.XL)(s.Z1 + e.startTime),
@@ -117,7 +117,7 @@ function O() {
     });
 }
 function P() {
-    (0, d._j)('event', ({ entries: t }) => {
+    (0, R._j)('event', ({ entries: t }) => {
         for (let e of t) {
             if (!(0, n.HN)()) return;
             if ('click' === e.name) {
@@ -139,16 +139,16 @@ function P() {
 }
 function g(t) {
     let e = (0, N.QV)();
-    if (!e || !R.m.performance.getEntries || !s.Z1) return;
+    if (!e || !d.m.performance.getEntries || !s.Z1) return;
     I.X && l.kg.log('[Tracing] Adding & adjusting spans using Performance API');
     let a = (0, N.XL)(s.Z1),
         o = e.getEntries(),
-        { op: d, start_timestamp: L } = (0, n.XU)(t);
+        { op: R, start_timestamp: L } = (0, n.XU)(t);
     if (
         (o.slice(T).forEach((e) => {
             let r = (0, N.XL)(e.startTime),
                 _ = (0, N.XL)(Math.max(0, e.duration));
-            if ('navigation' !== d || !L || !(a + r < L))
+            if ('navigation' !== R || !L || !(a + r < L))
                 switch (e.entryType) {
                     case 'navigation':
                         var n, o, c;
@@ -196,17 +196,17 @@ function g(t) {
                                 op: E.entryType,
                                 attributes: u
                             });
-                        let R = (0, A.Y)(),
-                            d = e.startTime < R.firstHiddenTime;
+                        let d = (0, A.Y)(),
+                            R = e.startTime < d.firstHiddenTime;
                         'first-paint' === e.name &&
-                            d &&
+                            R &&
                             (I.X && l.kg.log('[Measurements] Adding FP'),
                             (p.fp = {
                                 value: e.startTime,
                                 unit: 'millisecond'
                             })),
                             'first-contentful-paint' === e.name &&
-                                d &&
+                                R &&
                                 (I.X && l.kg.log('[Measurements] Adding FCP'),
                                 (p.fcp = {
                                     value: e.startTime,
@@ -219,10 +219,10 @@ function g(t) {
                             if ('xmlhttprequest' === e.initiatorType || 'fetch' === e.initiatorType) return;
                             let o = (0, u.en)(a),
                                 c = { [i.S3]: 'auto.resource.browser.metrics' };
-                            C(c, e, 'transferSize', 'http.response_transfer_size'), C(c, e, 'encodedBodySize', 'http.response_content_length'), C(c, e, 'decodedBodySize', 'http.decoded_response_content_length'), 'renderBlockingStatus' in e && (c['resource.render_blocking_status'] = e.renderBlockingStatus), o.protocol && (c['url.scheme'] = o.protocol.split(':').pop()), o.host && (c['server.address'] = o.host), (c['url.same_origin'] = a.includes(R.m.location.origin));
+                            C(c, e, 'transferSize', 'http.response_transfer_size'), C(c, e, 'encodedBodySize', 'http.response_content_length'), C(c, e, 'decodedBodySize', 'http.decoded_response_content_length'), 'renderBlockingStatus' in e && (c['resource.render_blocking_status'] = e.renderBlockingStatus), o.protocol && (c['url.scheme'] = o.protocol.split(':').pop()), o.host && (c['server.address'] = o.host), (c['url.same_origin'] = a.includes(d.m.location.origin));
                             let s = n + r;
                             (0, N.Y)(t, s, s + _, {
-                                name: a.replace(R.m.location.origin, ''),
+                                name: a.replace(d.m.location.origin, ''),
                                 op: e.initiatorType ? `resource.${e.initiatorType}` : 'resource.other',
                                 attributes: c
                             });
@@ -231,7 +231,7 @@ function g(t) {
         }),
         (T = Math.max(o.length - 1, 0)),
         (function (t) {
-            let e = R.m.navigator;
+            let e = d.m.navigator;
             if (!e) return;
             let a = e.connection;
             a &&
@@ -245,7 +245,7 @@ function g(t) {
                 (0, N.nl)(e.deviceMemory) && t.setAttribute('deviceMemory', `${e.deviceMemory} GB`),
                 (0, N.nl)(e.hardwareConcurrency) && t.setAttribute('hardwareConcurrency', String(e.hardwareConcurrency));
         })(t),
-        'pageload' === d)
+        'pageload' === R)
     ) {
         var h;
         (function (t) {

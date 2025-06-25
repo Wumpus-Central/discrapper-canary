@@ -24,31 +24,31 @@ var i = n(255367),
 let v = (e) => {
     let t,
         n,
-        { isAllPerksVisible: s, setIsAllPerksVisible: v, previousComponent: T, isFullScreen: I } = e,
+        { isAllPerksVisible: s, setIsAllPerksVisible: v, previousComponent: T } = e,
         N = r.useRef(null),
-        y = r.useRef(null),
-        A = Object.entries((0, _.Z)()).reduce((e, t) => {
+        I = r.useRef(null),
+        y = Object.entries((0, _.Z)()).reduce((e, t) => {
             let [n, i] = t;
             return !1 !== i.canReveal && 'upcomingDropUntimed' !== i.name && (e[n] = i), e;
         }, {}),
-        { analyticsLocations: P } = (0, m.ZP)(u.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
-        [R, D] = r.useState(!1),
-        Z = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
-        w = (0, E.mN)(),
-        { fractionalState: k } = (0, g.Z)(),
-        L = (0, h.W)();
+        { analyticsLocations: A } = (0, m.ZP)(u.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
+        [P, R] = r.useState(!1),
+        D = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
+        Z = (0, E.mN)(),
+        { fractionalState: w } = (0, g.Z)(),
+        k = (0, h.W)();
     return (
-        w ? ((t = C.intl.string(C.t['+vt7w8'])), (n = C.intl.string(C.t.LgHbnJ))) : ((t = C.intl.string(C.t.LgHbnJ)), (n = C.intl.string(C.t['+vt7w8']))),
+        Z ? ((t = C.intl.string(C.t['+vt7w8'])), (n = C.intl.string(C.t.LgHbnJ))) : ((t = C.intl.string(C.t.LgHbnJ)), (n = C.intl.string(C.t['+vt7w8']))),
         (0, i.jsx)(c.yWw, {
             className: l()(O.allPerksScroller, {
                 [O.open]: s,
-                [O.openCloseReduceMotion]: Z
+                [O.openCloseReduceMotion]: D
             }),
             ref: N,
             children: (0, i.jsx)('div', {
                 className: O.container,
                 children: (0, i.jsxs)(m.Gt, {
-                    value: P,
+                    value: A,
                     children: [
                         (0, i.jsx)(f.Z, {
                             className: O.heroHeading,
@@ -73,12 +73,12 @@ let v = (e) => {
                                 (0, i.jsx)(b.Z, {
                                     className: O.cardCarousel,
                                     cards: (0, E.ZM)({
-                                        perksCards: A,
+                                        perksCards: y,
                                         variant: x.gM.CARD_CAROUSEL_FIRST_ROW,
-                                        isPremiumSubscriber: w,
-                                        isFullScreen: I,
-                                        fractionalState: k,
-                                        isInReverseTrial: L
+                                        isPremiumSubscriber: Z,
+                                        hideCardsOnNarrowScreen: !0,
+                                        fractionalState: w,
+                                        isInReverseTrial: k
                                     }),
                                     cardType: x.gM.CARD_CAROUSEL_FIRST_ROW
                                 }),
@@ -91,12 +91,12 @@ let v = (e) => {
                                 (0, i.jsx)(b.Z, {
                                     className: O.cardCarousel,
                                     cards: (0, E.ZM)({
-                                        perksCards: A,
+                                        perksCards: y,
                                         variant: x.gM.CARD_CAROUSEL_SECOND_ROW,
-                                        isPremiumSubscriber: w,
-                                        isFullScreen: I,
-                                        fractionalState: k,
-                                        isInReverseTrial: L
+                                        isPremiumSubscriber: Z,
+                                        hideCardsOnNarrowScreen: !0,
+                                        fractionalState: w,
+                                        isInReverseTrial: k
                                     }),
                                     cardType: x.gM.CARD_CAROUSEL_SECOND_ROW
                                 }),
@@ -109,12 +109,12 @@ let v = (e) => {
                                 (0, i.jsx)(b.Z, {
                                     className: O.cardCarousel,
                                     cards: (0, E.ZM)({
-                                        perksCards: A,
+                                        perksCards: y,
                                         variant: x.gM.CARD_CAROUSEL_THIRD_ROW,
-                                        isPremiumSubscriber: w,
-                                        isFullScreen: I,
-                                        fractionalState: k,
-                                        isInReverseTrial: L
+                                        isPremiumSubscriber: Z,
+                                        hideCardsOnNarrowScreen: !0,
+                                        fractionalState: w,
+                                        isInReverseTrial: k
                                     }),
                                     cardType: x.gM.CARD_CAROUSEL_THIRD_ROW
                                 })
@@ -122,12 +122,12 @@ let v = (e) => {
                         }),
                         (0, i.jsx)('div', { className: O.footerSpacing }),
                         (0, i.jsx)(o.$, {
-                            innerRef: y,
+                            innerRef: I,
                             onChange: (e) => {
-                                e && !R && (p.default.track(j.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: P }), D(!0));
+                                e && !P && (p.default.track(j.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: A }), R(!0));
                             },
                             children: (0, i.jsx)('div', {
-                                ref: y,
+                                ref: I,
                                 className: O.bottomOfPageVisibilitySensor
                             })
                         }),

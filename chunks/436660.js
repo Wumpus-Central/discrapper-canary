@@ -1,4 +1,4 @@
-n.d(t, { Q: () => c }), n(388685), n(784620), n(973216), n(583741), n(35282);
+n.d(t, { Q: () => c }), n(784620), n(973216), n(583741), n(388685), n(35282);
 var r = n(327432),
     i = n(91313),
     a = n(887490),
@@ -61,60 +61,6 @@ let c = (function (e, t) {
         },
         resetSelectionToEditorEnd(e) {
             r.YR.select(e, a.bN.end(e, []));
-        },
-        resetSelectionToLineStart(e) {
-            let { selection: t } = e,
-                n = null != t ? f(t)[0].path.slice(0, -1) : [];
-            r.YR.select(e, a.bN.start(e, n));
-        },
-        resetSelectionToLineEnd(e) {
-            let { selection: t } = e,
-                n = null != t ? f(t)[1].path.slice(0, -1) : [];
-            r.YR.select(e, a.bN.end(e, n));
-        },
-        makeSelectionToEditorStart(e) {
-            let { selection: t } = e;
-            null != t
-                ? r.YR.select(e, {
-                      anchor: f(t)[1],
-                      focus: a.bN.start(e, [])
-                  })
-                : r.YR.select(e, a.bN.start(e, []));
-        },
-        makeSelectionToEditorEnd(e) {
-            let { selection: t } = e;
-            null != t
-                ? r.YR.select(e, {
-                      anchor: f(t)[0],
-                      focus: a.bN.end(e, [])
-                  })
-                : r.YR.select(e, a.bN.end(e, []));
-        },
-        makeSelectionToLineStart(e) {
-            let { selection: t } = e;
-            if (null != t) {
-                let [n, i] = f(t);
-                r.YR.select(e, {
-                    anchor: i,
-                    focus: a.bN.start(e, n.path.slice(0, -1))
-                });
-            } else r.YR.select(e, a.bN.start(e, []));
-        },
-        makeSelectionToLineEnd(e) {
-            let { selection: t } = e;
-            if (null != t) {
-                let [n, i] = f(t);
-                r.YR.select(e, {
-                    anchor: n,
-                    focus: a.bN.end(e, i.path.slice(0, -1))
-                });
-            } else r.YR.select(e, a.bN.end(e, []));
-        },
-        updateSelectionForHomeKey(e, t) {
-            'Home' === t.key && (t.shiftKey ? (t.ctrlKey ? c.makeSelectionToEditorStart(e) : c.makeSelectionToLineStart(e)) : t.ctrlKey ? c.resetSelectionToEditorStart(e) : c.resetSelectionToLineStart(e));
-        },
-        updateSelectionForEndKey(e, t) {
-            'End' === t.key && (t.shiftKey ? (t.ctrlKey ? c.makeSelectionToEditorEnd(e) : c.makeSelectionToLineEnd(e)) : t.ctrlKey ? c.resetSelectionToEditorEnd(e) : c.resetSelectionToLineEnd(e));
         },
         delete(e, t) {
             let { at: n, distance: i, unit: o, reverse: s = !1, select: l = !1, bounds: c, voids: u } = t;
@@ -357,8 +303,4 @@ function d(e, t, n, r, i) {
         focus: l
     };
     c.select(e, d);
-}
-function f(e) {
-    let { anchor: t, focus: n } = e;
-    return r.E9.isBefore(t, n) ? [t, n] : [n, t];
 }

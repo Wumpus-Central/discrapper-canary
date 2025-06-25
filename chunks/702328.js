@@ -1,4 +1,4 @@
-n.d(t, { Z: () => z }), n(388685);
+n.d(t, { Z: () => F }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -23,206 +23,187 @@ var i = n(255367),
     S = n(91802),
     v = n(8647),
     T = n(784238),
-    I = n(568126),
-    N = n(823188),
+    N = n(568126),
+    I = n(823188),
     y = n(611116),
     A = n(349803),
     P = n(8231),
     R = n(836332),
     D = n(903250),
-    Z = n(391110),
-    w = n(71363),
-    k = n(474936),
-    L = n(981631),
-    B = n(869783),
-    M = n(651117),
-    U = n(107283),
-    V = n(181960),
-    G = n(313199),
-    F = n(821969);
-let H = (e) => {
+    Z = n(474936),
+    w = n(981631),
+    k = n(869783),
+    L = n(651117),
+    B = n(107283),
+    M = n(181960),
+    U = n(313199),
+    V = n(821969);
+let G = (e) => {
         let { hasRenderedOnce: t, isReducedMotion: n } = e;
         return (0, i.jsx)('div', {
-            className: l()(M.whatsNewSectionBackground, M.whatsNewSectionBackgroundV2),
+            className: l()(L.whatsNewSectionBackground, L.whatsNewSectionBackgroundV2),
             children: (0, i.jsx)(y.Z, {
                 shouldLoadVideo: t,
                 isReducedMotion: n
             })
         });
     },
-    z = (e) => {
-        let { entrypoint: t } = e;
+    F = () => {
         (0, _.z)(b.X);
-        let n = r.useRef(null),
+        let e = r.useRef(null),
+            t = r.useRef(null),
+            n = r.useRef(null),
             s = r.useRef(null),
             y = r.useRef(null),
-            z = r.useRef(null),
-            Y = r.useRef(null),
-            W = r.useRef(null),
-            K = (0, a.e7)([g.Z], () => g.Z.useReducedMotion),
-            q = (0, m.ZP)(),
-            X = (0, c.wj)(q),
+            F = r.useRef(null),
+            H = (0, a.e7)([g.Z], () => g.Z.useReducedMotion),
+            z = (0, m.ZP)(),
+            Y = (0, c.wj)(z),
+            [W, K] = r.useState(!1),
+            [q, X] = r.useState(!1),
             [J, Q] = r.useState(!1),
             [$, ee] = r.useState(!1),
-            [et, en] = r.useState(!1),
-            [ei, er] = r.useState(!1),
-            es = (0, j.rO)(),
-            [el, ea] = r.useState(!1),
-            eo = (0, a.e7)([x.ZP], () => x.ZP.getPremiumTypeSubscription()),
-            ec = null != eo ? (0, C.Af)(eo) : null,
-            ed = null != ec ? C.ZP.getSkuIdForPlan(ec.planId) : null,
-            eu = null !== ed && ed !== k.Si.TIER_2 ? k.Si.TIER_2 : null,
-            em = (0, S.n)(),
-            [eg, ep] = r.useState(!1),
-            eh = (0, O.Vi)(),
-            ef = null != eh && eh,
-            { analyticsLocations: eb } = (0, h.ZP)(p.Z.PREMIUM_MARKETING),
-            e_ = 'PremiumMarketingHome';
+            et = (0, j.rO)(),
+            [en, ei] = r.useState(!1),
+            er = (0, a.e7)([x.ZP], () => x.ZP.getPremiumTypeSubscription()),
+            es = null != er ? (0, C.Af)(er) : null,
+            el = null != es ? C.ZP.getSkuIdForPlan(es.planId) : null,
+            ea = null !== el && el !== Z.Si.TIER_2 ? Z.Si.TIER_2 : null,
+            eo = (0, S.n)(),
+            ec = (0, O.Vi)(),
+            ed = null != ec && ec,
+            { analyticsLocations: eu } = (0, h.ZP)(p.Z.PREMIUM_MARKETING),
+            em = 'PremiumMarketingHome';
         (0, u.j)({
-            location: e_ + ' auto on',
+            location: em + ' auto on',
             autoTrackExposure: !0
         }),
             (0, u.j)({
-                location: e_ + ' auto off',
+                location: em + ' auto off',
                 autoTrackExposure: !1
             }),
             r.useEffect(() => {
-                ea(!0);
+                ei(!0);
             }, []);
-        let ex = (0, i.jsx)('div', {
-                className: M.premiumTierCardsContainerFullscreen,
+        let eg = (0, i.jsx)('div', {
+                className: L.premiumTierCardsContainerFullscreen,
                 children: (0, i.jsx)(o.$, {
-                    innerRef: y,
-                    onChange: (e) => en(e),
+                    innerRef: n,
+                    onChange: (e) => Q(e),
                     threshold: 0.1,
                     active: !0,
-                    children: (0, i.jsx)(N.ZP, {
-                        innerRef: y,
-                        isApplicationHome: !0,
-                        showWumpus: !1,
+                    children: (0, i.jsx)(I.Ub, {
+                        innerRef: n,
                         tier0CTAButton: (0, i.jsx)(T.Z, {
                             color: void 0,
                             showIcon: !1,
-                            subscriptionTier: k.Si.TIER_0,
-                            className: M.marginTopForButtons,
-                            textOptions: { textClassName: M.v2SubButtonText },
-                            buttonShineClassName: M.buttonShine
+                            subscriptionTier: Z.Si.TIER_0,
+                            className: L.marginTopForButtons,
+                            textOptions: { textClassName: L.v2SubButtonText },
+                            buttonShineClassName: L.buttonShine
                         }),
                         tier2CTAButton: (0, i.jsx)(T.Z, {
                             color: void 0,
                             showIcon: !1,
-                            subscriptionTier: k.Si.TIER_2,
-                            className: M.marginTopForButtons,
-                            hasActivePromotion: ef,
-                            textOptions: { textClassName: M.v2SubButtonText },
-                            buttonShineClassName: M.buttonShine
+                            subscriptionTier: Z.Si.TIER_2,
+                            className: L.marginTopForButtons,
+                            hasActivePromotion: ed,
+                            textOptions: { textClassName: L.v2SubButtonText },
+                            buttonShineClassName: L.buttonShine
                         })
                     })
                 })
             }),
-            eE = (0, i.jsxs)('div', {
-                className: l()(M.container, M.responsiveContainer, { [M.containerBackground]: X }),
+            ep = (0, i.jsxs)('div', {
+                className: l()(L.container, L.responsiveContainer, { [L.containerBackground]: Y }),
                 'data-cy': 'tier-0-marketing-page',
                 children: [
-                    (0, i.jsx)('div', { className: M.heroHeaderSideGradient }),
+                    (0, i.jsx)('div', { className: L.heroHeaderSideGradient }),
                     (0, i.jsx)('img', {
-                        src: U,
-                        className: M.heroHeaderBackgroundStars,
+                        src: B,
+                        className: L.heroHeaderBackgroundStars,
                         alt: ''
                     }),
                     (0, i.jsxs)('div', {
-                        className: M.heroHeadingV2Container,
+                        className: L.heroHeadingV2Container,
                         children: [
                             (0, i.jsx)(o.$, {
-                                innerRef: z,
-                                onChange: (e) => Q(e),
+                                innerRef: s,
+                                onChange: (e) => K(e),
                                 threshold: 0,
                                 active: !0,
                                 children: (0, i.jsx)(D.Z, {
-                                    ref: z,
-                                    subscriptionTier: eu,
-                                    isFullscreen: !0,
-                                    entrypoint: t,
-                                    isDarkMode: X,
-                                    isEligibleForBogoPromotion: eh
+                                    ref: s,
+                                    subscriptionTier: ea,
+                                    isDarkMode: Y,
+                                    isEligibleForBogoPromotion: ec
                                 })
                             }),
                             (0, i.jsx)('div', {
-                                className: M.heroHeadingV2ArtContainer,
+                                className: L.heroHeadingV2ArtContainer,
                                 children: (0, i.jsx)(f.Z, {
-                                    autoPlay: !K,
+                                    autoPlay: !H,
                                     playsInline: !0,
-                                    preload: K ? 'none' : 'auto',
-                                    poster: G.Z,
+                                    preload: H ? 'none' : 'auto',
+                                    poster: U.Z,
                                     loop: !0,
-                                    className: M.heroHeadingV2Art,
-                                    ref: s,
+                                    className: L.heroHeadingV2Art,
+                                    ref: t,
                                     children: (0, i.jsx)('source', {
-                                        src: es ? V.Z : F.Z,
-                                        type: es ? B.m.MP4 : B.m.WEBM
+                                        src: et ? M.Z : V.Z,
+                                        type: et ? k.m.MP4 : k.m.WEBM
                                     })
                                 })
                             })
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: M.promoBannerContainer,
-                        children: [(0, i.jsx)(v.Z, { variant: v.C.APPLICATION_NITRO_HOME }), null != em && (0, i.jsx)(I.Z, { localizedPricingPromo: em })]
+                        className: L.promoBannerContainer,
+                        children: [(0, i.jsx)(v.Z, { variant: v.C.APPLICATION_NITRO_HOME }), null != eo && (0, i.jsx)(N.Z, { localizedPricingPromo: eo })]
                     }),
-                    (0, i.jsx)(H, {
-                        hasRenderedOnce: el,
-                        isReducedMotion: K
+                    (0, i.jsx)(G, {
+                        hasRenderedOnce: en,
+                        isReducedMotion: H
                     }),
-                    ex,
+                    eg,
                     (0, i.jsx)('div', {
-                        className: M.planComparisonTableContainer,
-                        children: (0, i.jsx)(P.Z, { className: M.planComparisonTableApplicationHome })
+                        className: L.planComparisonTableContainer,
+                        children: (0, i.jsx)(P.Z, { className: L.planComparisonTableApplicationHome })
                     }),
                     (0, i.jsx)(A.Z, {
-                        isVisible: !J && !et && !$ && el,
-                        isFullscreen: !0,
-                        subscriptionTier: eu,
+                        isVisible: !W && !J && !q && en,
+                        subscriptionTier: ea,
                         isApplicationHome: !0,
-                        isEligibleForBogoPromotion: eh
+                        isEligibleForBogoPromotion: ec
                     }),
                     (0, i.jsx)(o.$, {
-                        innerRef: Y,
+                        innerRef: y,
                         onChange: (e) => {
-                            e && !ei && (E.default.track(L.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eb }), er(!0));
+                            e && !$ && (E.default.track(w.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eu }), ee(!0));
                         },
                         children: (0, i.jsx)('div', {
-                            ref: Y,
-                            className: M.bottomOfPageVisibilitySensor
+                            ref: y,
+                            className: L.bottomOfPageVisibilitySensor
                         })
                     }),
                     (0, i.jsx)(o.$, {
-                        innerRef: W,
+                        innerRef: F,
                         onChange: (e) => {
-                            ee(e);
+                            X(e);
                         },
                         children: (0, i.jsx)(R.Z, {
-                            ref: W,
-                            isFooterVisible: $,
-                            isDarkMode: X,
-                            isReducedMotion: K,
-                            subscriptionTier: eu
+                            ref: F,
+                            isFooterVisible: q,
+                            isDarkMode: Y,
+                            isReducedMotion: H,
+                            subscriptionTier: ea
                         })
                     })
                 ]
             });
-        return (0, i.jsxs)(i.Fragment, {
-            children: [
-                (0, i.jsx)(d.yWw, {
-                    className: M.scroller,
-                    ref: n,
-                    children: eE
-                }),
-                (0, i.jsx)(w.Z, {
-                    previousComponent: Z.MQ.MARKETING,
-                    isAllPerksVisible: eg,
-                    setIsAllPerksVisible: ep,
-                    isFullScreen: !0
-                })
-            ]
+        return (0, i.jsx)(d.yWw, {
+            className: L.scroller,
+            ref: e,
+            children: ep
         });
     };

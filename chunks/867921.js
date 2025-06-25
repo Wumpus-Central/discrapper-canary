@@ -23,7 +23,7 @@ function E(t, e, a = (0, r.x)(t.bufferSize || 64)) {
             )
                 return (0, o.WD)({});
             let I = (0, _.Jd)(r[0], E),
-                R = (e) => {
+                d = (e) => {
                     (0, _.gv)(I, (a, r) => {
                         let n = l(a, r);
                         t.recordDroppedEvent(e, (0, _.mL)(r), n);
@@ -34,14 +34,14 @@ function E(t, e, a = (0, r.x)(t.bufferSize || 64)) {
                     e({ body: (0, _.V$)(I) }).then(
                         (t) => (void 0 !== t.statusCode && (t.statusCode < 200 || t.statusCode >= 300) && s.X && i.kg.warn(`Sentry responded with status code ${t.statusCode} to sent event.`), (u = (0, n.WG)(u, t)), t),
                         (t) => {
-                            throw (R('network_error'), t);
+                            throw (d('network_error'), t);
                         }
                     )
                 )
                 .then(
                     (t) => t,
                     (t) => {
-                        if (t instanceof c.b) return s.X && i.kg.error('Skipped sending event because buffer is full.'), R('queue_overflow'), (0, o.WD)({});
+                        if (t instanceof c.b) return s.X && i.kg.error('Skipped sending event because buffer is full.'), d('queue_overflow'), (0, o.WD)({});
                         throw t;
                     }
                 );

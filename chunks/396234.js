@@ -73,15 +73,15 @@ function i(t, e) {
         });
 }
 function c(t, e) {
-    let { extra: a, tags: r, user: _, contexts: n, level: o, sdkProcessingMetadata: i, breadcrumbs: c, fingerprint: E, eventProcessors: l, attachments: u, propagationContext: I, transactionName: R, span: d } = e;
+    let { extra: a, tags: r, user: _, contexts: n, level: o, sdkProcessingMetadata: i, breadcrumbs: c, fingerprint: E, eventProcessors: l, attachments: u, propagationContext: I, transactionName: d, span: R } = e;
     s(t, 'extra', a),
         s(t, 'tags', r),
         s(t, 'user', _),
         s(t, 'contexts', n),
         s(t, 'sdkProcessingMetadata', i),
         o && (t.level = o),
-        R && (t.transactionName = R),
-        d && (t.span = d),
+        d && (t.transactionName = d),
+        R && (t.span = R),
         c.length && (t.breadcrumbs = [...t.breadcrumbs, ...c]),
         E.length && (t.fingerprint = [...t.fingerprint, ...E]),
         l.length && (t.eventProcessors = [...t.eventProcessors, ...l]),

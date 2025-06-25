@@ -11,9 +11,9 @@ e.exports = {
     bannedUserModal: 'bannedUserModal_a73dc3',
     header: 'header_a73dc3',
     footer: 'footer_a73dc3',
+    reasonHeader: 'reasonHeader_a73dc3',
     userDiscrim: 'userDiscrim_a73dc3',
     userUsername: 'userUsername_a73dc3',
-    reasonHeader: 'reasonHeader_a73dc3',
     content: 'content_a73dc3',
     error: 'error_a73dc3'
 };

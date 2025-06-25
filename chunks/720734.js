@@ -28,8 +28,8 @@ var i = n(255367),
     S = n(468363),
     v = n(326255),
     T = n(771173),
-    I = n(963056),
-    N = n(570928),
+    N = n(963056),
+    I = n(570928),
     y = n(100527),
     A = n(906732),
     P = n(676742),
@@ -82,8 +82,8 @@ var i = n(255367),
     eS = n(56848),
     ev = n(940315),
     eT = n(378441),
-    eI = n(358820),
-    eN = n(723547),
+    eN = n(358820),
+    eI = n(723547),
     ey = n(361045),
     eA = n(74650),
     eP = n(306609),
@@ -340,7 +340,7 @@ class td extends r.PureComponent {
                 voiceChannel: a ? o : void 0
             })
         )
-            return (0, i.jsx)(N.Z, {
+            return (0, i.jsx)(I.Z, {
                 hoverText: l,
                 forceHover: e,
                 children: (0, i.jsx)(T.Z, {
@@ -361,7 +361,7 @@ class td extends r.PureComponent {
                       return t === e4.IIU.CUSTOM_STATUS;
                   });
         return null != u
-            ? (0, i.jsx)(N.Z, {
+            ? (0, i.jsx)(I.Z, {
                   hoverText: l,
                   forceHover: e,
                   children: (0, i.jsx)(Y.Z, {
@@ -371,10 +371,10 @@ class td extends r.PureComponent {
                   })
               })
             : null != s && s !== e4.Skl.UNKNOWN && r.isPomelo()
-              ? (0, i.jsx)(N.Z, {
+              ? (0, i.jsx)(I.Z, {
                     hoverText: l,
                     forceHover: e,
-                    children: (0, i.jsx)(I.Z, { text: e3.ZP.humanizeStatus(s) })
+                    children: (0, i.jsx)(N.Z, { text: e3.ZP.humanizeStatus(s) })
                 })
               : l;
     }
@@ -736,10 +736,10 @@ function tm() {
             return (0, Z.fD)() ? (null == (e = D.C.getCurrentBuildOverride().overrides) ? void 0 : e.discord_web) : null;
         }),
         T = (0, d.e7)([ez.ZP], () => ez.ZP.getPremiumTypeSubscription()),
-        I = (0, d.e7)([eM.Z], () => eM.Z.getSpeakingWhileMuted()),
-        N = (0, d.e7)([w.Z], () => w.Z.isFullscreenInContext()),
+        N = (0, d.e7)([eM.Z], () => eM.Z.getSpeakingWhileMuted()),
+        I = (0, d.e7)([w.Z], () => w.Z.isFullscreenInContext()),
         P = (0, d.e7)([eB.Z], () => eB.Z.hasLayers()),
-        R = (0, f.s9z)(f.JQI) || P || e0.s.isDisallowPopupsSet() || N,
+        R = (0, f.s9z)(f.JQI) || P || e0.s.isDisallowPopupsSet() || I,
         k = (0, el.b)(),
         L = (0, d.e7)([q.Z], () => null != q.Z.getAwaitingRemoteSessionInfo()),
         B = (0, d.e7)([eV.Z], () => eV.Z.getGuildId()),
@@ -803,7 +803,7 @@ function tm() {
                 serverDeaf: O,
                 serverMute: h,
                 speaking: c,
-                speakingWhileMuted: I,
+                speakingWhileMuted: N,
                 status: l,
                 streaming: s,
                 suppress: _,
@@ -863,10 +863,10 @@ function tp(e) {
         S = r.useRef(null),
         v = r.useRef(null),
         T = (0, eD.b)(O),
-        { activeVoice: I, mostRecentlyRequestedVoiceId: N, lastInitAttemptMayHaveCrashed: P } = (0, eT.o)(),
+        { activeVoice: N, mostRecentlyRequestedVoiceId: I, lastInitAttemptMayHaveCrashed: P } = (0, eT.o)(),
         { showSilentLagWarning: R } = (0, ev.Y)(),
-        D = null != I,
-        Z = (0, eS.z)(I),
+        D = null != N,
+        Z = (0, eS.z)(N),
         w = (0, d.e7)([eU.Z], () => eU.Z.isConnected()),
         { Component: k, events: B, play: M } = T,
         U = n || s ? f.v0G : k,
@@ -936,7 +936,7 @@ function tp(e) {
         );
     }, [w]);
     let ee = r.useCallback(() => {
-            P || (0, eI.r5)();
+            P || (0, eN.r5)();
         }, [P]),
         et = O ? f.TVs.colors.STATUS_DANGER : R ? f.TVs.colors.STATUS_WARNING : 'currentColor',
         en = O || R,
@@ -1035,7 +1035,7 @@ function tp(e) {
                                                         onCTA: () => X(!0)
                                                     }))
                                                   : t === u.z.VOICE_FILTER_FIRST_USE_COACHMARK &&
-                                                    (o = (0, i.jsx)(eN.v, {
+                                                    (o = (0, i.jsx)(eI.v, {
                                                         markAsDismissed: s,
                                                         onCTA: () => X(!0)
                                                     }));
@@ -1079,7 +1079,7 @@ function tp(e) {
                                                             'aria-label': tt.intl.string(tt.t.Hapb4O),
                                                             disabled: a,
                                                             onClick: (e) => {
-                                                                s(e9.L.INDIRECT_ACTION), n(e), null != N && !q && P ? (0, eR.$)(() => X(!0)) : X(!q);
+                                                                s(e9.L.INDIRECT_ACTION), n(e), null != I && !q && P ? (0, eR.$)(() => X(!0)) : X(!q);
                                                             }
                                                         },
                                                         r

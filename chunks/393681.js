@@ -23,8 +23,8 @@ var i = n(255367),
     S = n(921801),
     v = n(577275),
     T = n(484459),
-    I = n(430824),
-    N = n(325067),
+    N = n(430824),
+    I = n(325067),
     y = n(246946),
     A = n(663389),
     P = n(594174),
@@ -386,7 +386,7 @@ class J extends r.PureComponent {
         var e;
         let t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
             { currentUser: n, userTeams: r } = this.props,
-            s = I.Z.getGuilds(),
+            s = N.Z.getGuilds(),
             l = D.default.keys(s).filter((e) => s[e].ownerId === n.id);
         return (null != (e = null == r ? void 0 : r.filter((e) => e.owner_user_id === n.id)) ? e : []).length > 0
             ? void this.setState({ shouldRenderOwnedTeamsModal: !0 })
@@ -422,7 +422,7 @@ let Q = () => {
             let e = P.default.getCurrentUser();
             return o()(null != e, 'ConnectedUserAccountSettings: currentUser cannot be undefined'), e;
         }),
-        t = (0, c.e7)([N.Z], () => N.Z.getBackupCodes()),
+        t = (0, c.e7)([I.Z], () => I.Z.getBackupCodes()),
         n = (0, c.e7)([y.Z], () => y.Z.hidePersonalInformation),
         r = (0, c.e7)([w.Z], () => w.Z.theme),
         s = (0, j.b)(),

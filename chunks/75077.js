@@ -15,17 +15,16 @@ var i = n(442837),
     d = n(388032);
 let u = (e, t, n) => ((0, r.wj)(e) ? t : n),
     m = (e) => {
-        let { cards: t, perksCards: n, isFullScreen: i, showVoiceFiltersCard: r } = e,
-            s = i ? 3 : 2,
-            l = (e) => {
+        let { cards: t, perksCards: n, showVoiceFiltersCard: i } = e,
+            r = (e) => {
                 let { card: n } = e;
-                t.length < s && t.push(n);
+                t.length < 3 && t.push(n);
             },
-            a = f();
-        return l(r ? { card: n.voiceFilters } : { card: n.nameplates }), null != n.tenureBadge && l({ card: n.tenureBadge }), l({ card: n.permadecos }), i && a ? (0 === t.length && l({ card: n.specialShopPerks }), l({ card: n.newAppStylesUpdateJune2024 }), l({ card: n.serverProfiles })) : i && !a && (l({ card: n.referralProgram }), l({ card: n.newAppStylesUpdateJune2024 }), l({ card: n.serverProfiles })), l({ card: n.earlyAccess }), l({ card: n.unlimitedSuperReactions }), t;
+            s = f();
+        return r(i ? { card: n.voiceFilters } : { card: n.nameplates }), null != n.tenureBadge && r({ card: n.tenureBadge }), r({ card: n.permadecos }), s ? 0 === t.length && r({ card: n.specialShopPerks }) : r({ card: n.referralProgram }), r({ card: n.newAppStylesUpdateJune2024 }), r({ card: n.serverProfiles }), r({ card: n.earlyAccess }), r({ card: n.unlimitedSuperReactions }), t;
     },
     g = (e) => {
-        let { perksCards: t, variant: n, isFullScreen: i, isPremiumSubscriber: r, fractionalState: s, isInReverseTrial: l, showVoiceFiltersCard: a } = e,
+        let { perksCards: t, variant: n, hideCardsOnNarrowScreen: i, isPremiumSubscriber: r, fractionalState: s, isInReverseTrial: l, showVoiceFiltersCard: a } = e,
             d = [];
         switch (n) {
             case o.gM.PERKS_DISCOVERABILITY:
@@ -35,7 +34,6 @@ let u = (e, t, n) => ((0, r.wj)(e) ? t : n),
                 d = m({
                     cards: d,
                     perksCards: t,
-                    isFullScreen: i,
                     showVoiceFiltersCard: a
                 });
                 break;
@@ -48,7 +46,7 @@ let u = (e, t, n) => ((0, r.wj)(e) ? t : n),
             case o.gM.CARD_CAROUSEL_THIRD_ROW:
                 d = s === c.a$.FP_ONLY ? (l ? [t.entranceSoundsSeeAllVariation] : [t.entranceSoundsSeeAllVariation, t.greyBadge]) : [t.entranceSoundsSeeAllVariation, t.badge];
         }
-        return i || (d = d.filter((e) => !e.hideOnNarrowScreen)), d;
+        return i && (d = d.filter((e) => !e.hideOnNarrowScreen)), d;
     },
     p = (e) => {
         let t = (0, i.e7)([l.ZP], () => l.ZP.getPremiumTypeSubscription()),

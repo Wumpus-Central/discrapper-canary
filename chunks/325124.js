@@ -14,8 +14,8 @@ var r = a(650665),
     l = a(305625),
     u = a(622916),
     I = a(370541),
-    R = a(101284),
-    d = a(731889),
+    d = a(101284),
+    R = a(731889),
     N = a(467510),
     f = a(454463),
     A = a(163162),
@@ -37,7 +37,7 @@ let L = {
         let {
                 enableInp: e,
                 enableLongTask: a,
-                enableLongAnimationFrame: d,
+                enableLongAnimationFrame: R,
                 _experiments: { enableInteractions: N },
                 beforeStartSpan: h,
                 idleTimeout: D,
@@ -55,7 +55,7 @@ let L = {
                 ...t
             },
             w = (0, r.PR)();
-        e && (0, _.N)(), d && PerformanceObserver.supportedEntryTypes.includes('long-animation-frame') ? (0, r.Jk)() : a && (0, r.Fv)(), N && (0, r.sn)();
+        e && (0, _.N)(), R && PerformanceObserver.supportedEntryTypes.includes('long-animation-frame') ? (0, r.Jk)() : a && (0, r.Fv)(), N && (0, r.sn)();
         let M = {
             name: void 0,
             source: void 0
@@ -90,7 +90,7 @@ let L = {
         return {
             name: 'BrowserTracing',
             afterAllSetup(t) {
-                var a, r, i, d;
+                var a, r, i, R;
                 let L,
                     h,
                     w = A.m9.location && A.m9.location.href;
@@ -129,7 +129,7 @@ let L = {
                         (G &&
                             O(t, {
                                 name: A.m9.location.pathname,
-                                startTime: R.Z1 ? R.Z1 / 1000 : void 0,
+                                startTime: d.Z1 ? d.Z1 / 1000 : void 0,
                                 attributes: {
                                     [c.Zj]: 'url',
                                     [c.S3]: 'auto.pageload.browser'
@@ -156,7 +156,7 @@ let L = {
                         ((a = D),
                         (r = C),
                         (i = v),
-                        (d = M),
+                        (R = M),
                         A.m9.document &&
                             addEventListener(
                                 'click',
@@ -168,15 +168,15 @@ let L = {
                                         f.X && u.kg.warn(`[Tracing] Did not create ${t} span because a pageload or navigation span is in progress.`);
                                         return;
                                     }
-                                    if ((L && (L.setAttribute(c.ju, 'interactionInterrupted'), L.end(), (L = void 0)), !d.name)) {
+                                    if ((L && (L.setAttribute(c.ju, 'interactionInterrupted'), L.end(), (L = void 0)), !R.name)) {
                                         f.X && u.kg.warn(`[Tracing] Did not create ${t} transaction because _latestRouteName is missing.`);
                                         return;
                                     }
                                     L = (0, o.R)(
                                         {
-                                            name: d.name,
+                                            name: R.name,
                                             op: t,
-                                            attributes: { [c.Zj]: d.source || 'url' }
+                                            attributes: { [c.Zj]: R.source || 'url' }
                                         },
                                         {
                                             idleTimeout: a,
@@ -207,7 +207,7 @@ function O(t, e, a) {
     return 'pageload' === (r && (0, E.XU)(r).op) ? r : void 0;
 }
 function P(t, e) {
-    (0, s.aF)().setPropagationContext((0, d.Q)()), (0, s.nZ)().setPropagationContext((0, d.Q)()), t.emit('startNavigationSpan', e), (0, s.nZ)().setTransactionName(e.name);
+    (0, s.aF)().setPropagationContext((0, R.Q)()), (0, s.nZ)().setPropagationContext((0, R.Q)()), t.emit('startNavigationSpan', e), (0, s.nZ)().setTransactionName(e.name);
     let a = (0, E.HN)();
     return 'navigation' === (a && (0, E.XU)(a).op) ? a : void 0;
 }

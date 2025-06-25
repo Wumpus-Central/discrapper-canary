@@ -44,31 +44,31 @@ let b = (e) => {
                 });
     },
     _ = (e) => {
-        let { className: t, variant: n = g.gM.PERKS_DISCOVERABILITY, noBackground: s = !1, leftAlignHeaders: _ = !1, showAllPerksButton: x, headerClassname: E, isFullScreen: j = !0 } = e,
-            C = r.useRef(null),
-            O = n === g.gM.WHATS_NEW,
-            S = (0, u.x)();
+        let { className: t, variant: n, noBackground: s = !1, leftAlignHeaders: _ = !1, showAllPerksButton: x, headerClassname: E } = e,
+            j = r.useRef(null),
+            C = n === g.gM.WHATS_NEW,
+            O = (0, u.x)();
         r.useEffect(() => {
-            O && S();
-        }, [S, O]);
-        let v = (0, p.re)(O),
-            T = (0, m.Z)(),
-            I = (0, p.mN)(),
+            C && O();
+        }, [O, C]);
+        let S = (0, p.re)(C),
+            v = (0, m.Z)(),
+            T = (0, p.mN)(),
             { fractionalState: N } = (0, o.Z)(),
-            y = (0, c.W)(),
-            A = (0, d.Z)({ location: 'WhatsNewSection' }),
-            P = (0, p.ZM)({
-                perksCards: T,
+            I = (0, c.W)(),
+            y = (0, d.Z)({ location: 'WhatsNewSection' }),
+            A = (0, p.ZM)({
+                perksCards: v,
                 variant: n,
-                isFullScreen: j,
-                isPremiumSubscriber: I,
+                hideCardsOnNarrowScreen: !1,
+                isPremiumSubscriber: T,
                 fractionalState: N,
-                isInReverseTrial: y,
-                showVoiceFiltersCard: A
+                isInReverseTrial: I,
+                showVoiceFiltersCard: y
             }),
-            R = P.some((e) => null != e.pillText);
+            P = A.some((e) => null != e.pillText);
         return (0, i.jsxs)('div', {
-            ref: C,
+            ref: j,
             className: l()(
                 f.section,
                 {
@@ -81,7 +81,7 @@ let b = (e) => {
                 (0, i.jsx)(b, {
                     showAllPerksButton: x,
                     leftAlignHeaders: _,
-                    title: v.title,
+                    title: S.title,
                     headerClassname: E
                 }),
                 (0, i.jsx)(a.Text, {
@@ -90,12 +90,12 @@ let b = (e) => {
                     className: l()(f.subtitle, {
                         [f.subtitle]: null == x || _,
                         [f.subtitleWithButton]: null != x && !_,
-                        [f.fullWidth]: O || _,
-                        [f.moreSubtitleMargin]: R,
+                        [f.fullWidth]: C || _,
+                        [f.moreSubtitleMargin]: P,
                         [f.leftAlignSubtitle]: _,
                         [f.centerAlignSubtitle]: !_
                     }),
-                    children: v.subtitle
+                    children: S.subtitle
                 }),
                 !_ &&
                     null != x &&
@@ -104,11 +104,8 @@ let b = (e) => {
                         children: x
                     }),
                 (0, i.jsx)('div', {
-                    className: l()({
-                        [f.cardContainer]: j,
-                        [f.cardContainerNarrowWidth]: !j
-                    }),
-                    children: P.map((e, t) => {
+                    className: f.cardContainer,
+                    children: A.map((e, t) => {
                         var n, r;
                         return (0, i.jsx)(
                             h.Z,

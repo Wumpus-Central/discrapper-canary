@@ -17,8 +17,8 @@ var r = a(636361),
     l = a(622916),
     u = a(694043),
     I = a(688838),
-    R = a(393523),
-    d = a(833772),
+    d = a(393523),
+    R = a(833772),
     N = a(454463),
     f = a(163162),
     A = a(408720),
@@ -65,7 +65,7 @@ function D(t = {}) {
             integrations: (0, o.m8)(e),
             transport: e.transport || P.f
         },
-        r = (0, i.M)(d.R, a);
+        r = (0, i.M)(R.R, a);
     return (
         e.autoSessionTracking &&
             (function () {
@@ -75,7 +75,7 @@ function D(t = {}) {
                 }
                 (0, s.yj)({ ignoreDuration: !0 }),
                     (0, s.cg)(),
-                    (0, R.a)(({ from: t, to: e }) => {
+                    (0, d.a)(({ from: t, to: e }) => {
                         void 0 !== t && t !== e && ((0, s.yj)({ ignoreDuration: !0 }), (0, s.cg)());
                     });
             })(),

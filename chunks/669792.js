@@ -1,5 +1,5 @@
 e.exports = {
-    banner: 'banner__62eb1',
+    applicationHomeBanner: 'applicationHomeBanner__62eb1',
     settingsBanner: 'settingsBanner__62eb1',
     settingsImageContainer: 'settingsImageContainer__62eb1',
     settingsBannerLeftImageContainer: 'settingsBannerLeftImageContainer__62eb1 settingsImageContainer__62eb1',

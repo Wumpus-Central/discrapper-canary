@@ -35,7 +35,7 @@ let O = function (e) {
                       (0, r.jsx)(d.O, {
                           newLocations: [c.Z.PREMIUM_MARKETING_PAGE_BANNER],
                           children: (0, r.jsxs)('div', {
-                              className: b.banner,
+                              className: b.applicationHomeBanner,
                               children: [
                                   (0, r.jsx)('div', {
                                       className: b.bannerBoxOutlinePosition,
