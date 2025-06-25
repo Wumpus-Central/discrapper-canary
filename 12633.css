@@ -24779,12 +24779,22 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     width: 100%
 }
 
+.channelTextArea__74017:not(.highlighted__74017) {
+    transition: box-shadow .2s ease
+}
+
+.channelTextArea__74017.error__74017:not(:hover):not(:focus-within) {
+    box-shadow: 0 0 0 2px var(--text-danger)
+}
+
 .channelTextArea__74017.highlighted__74017 {
+    border: 1px solid var(--border-faint);
     box-shadow: 0 0 0 4px var(--blue-345)
 }
 
 .channelTextArea__74017:focus-within {
-    border-color: var(--border-subtle)
+    border-color: var(--border-subtle);
+    box-shadow: none
 }
 
 .focusRing__74017 {
