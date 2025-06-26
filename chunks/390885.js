@@ -69,25 +69,25 @@ function p(e, t) {
     }
     return i;
 }
-function g(e) {
+function m(e) {
     var t = (function (e, t) {
-        if ('object' !== m(e) || null === e) return e;
+        if ('object' !== g(e) || null === e) return e;
         var n = e[Symbol.toPrimitive];
         if (void 0 !== n) {
             var r = n.call(e, t || 'default');
-            if ('object' !== m(r)) return r;
+            if ('object' !== g(r)) return r;
             throw TypeError('@@toPrimitive must return a primitive value.');
         }
         return ('string' === t ? String : Number)(e);
     })(e, 'string');
-    return 'symbol' === m(t) ? t : String(t);
+    return 'symbol' === g(t) ? t : String(t);
 }
-function m(e) {
+function g(e) {
     return e && 'undefined' != typeof Symbol && e.constructor === Symbol ? 'symbol' : typeof e;
 }
 let f = 'UserFlowAnalyticsStore_current',
     _ = 'UserFlowAnalyticsStore';
-function E(e) {
+function x(e) {
     if (e === c.MK.UNKNOWN) return null;
     let t = a.K.get(''.concat(_, '-').concat(e));
     if (null == t) return null;
@@ -96,7 +96,7 @@ function E(e) {
     return 1 !== n ? null : r;
 }
 new o.Z('UserFlowAnalytics');
-let x = (0, r.U)()(
+let E = (0, r.U)()(
     (0, i.XR)((e, t) => ({
         flows: {},
         currentFlow: null,
@@ -105,19 +105,19 @@ let x = (0, r.U)()(
             let n = null != (e = t().currentFlow) ? e : a.K.get(f);
             if (null == n) return null;
             let { [n]: r } = t().flows,
-                i = null != r ? r : E(n);
+                i = null != r ? r : x(n);
             return (null == i ? void 0 : i.currentStep) != null ? n : null;
         }
     }))
 );
 function b(e, t) {
-    let n = x.getState().flows,
+    let n = E.getState().flows,
         { [e]: r } = n,
-        i = p(n, [e].map(g)),
-        a = null != r ? r : E(e);
+        i = p(n, [e].map(m)),
+        a = null != r ? r : x(e);
     ((null == a ? void 0 : a.currentStep) == null || a.currentStep !== t) &&
         (0, l.j)(() => {
-            x.setState({
+            E.setState({
                 flows: h(d({}, i), {
                     [e]: {
                         type: e,
@@ -132,22 +132,22 @@ function b(e, t) {
             });
         });
 }
-function v(e, t) {
+function I(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = e;
     if (e === c.MK.ANY) {
         var i;
-        r = null != (i = x.getState().activeFlow()) ? i : c.MK.UNKNOWN;
+        r = null != (i = E.getState().activeFlow()) ? i : c.MK.UNKNOWN;
     }
-    let a = x.getState().flows,
+    let a = E.getState().flows,
         { [r]: o } = a,
-        s = p(a, [r].map(g)),
-        u = null != o ? o : E(r);
+        s = p(a, [r].map(m)),
+        u = null != o ? o : x(r);
     null != u &&
         null != u.currentStep &&
         u.currentStep !== t &&
         (0, l.j)(() => {
-            x.setState({
+            E.setState({
                 flows: h(d({}, s), {
                     [r]: h(d({}, u), {
                         lastStep: u.currentStep,
@@ -161,10 +161,10 @@ function v(e, t) {
             });
         });
 }
-function I() {
-    return null != x.getState().activeFlow();
+function v() {
+    return null != E.getState().activeFlow();
 }
-x.subscribe(
+E.subscribe(
     (e) => (null != e.currentFlow ? e.flows[e.currentFlow] : void 0),
     (e) => {
         var t;
@@ -187,10 +187,10 @@ x.subscribe(
             ),
             e.ended)
         ) {
-            let t = d({}, x.getState().flows);
+            let t = d({}, E.getState().flows);
             delete t[e.type],
                 (0, l.j)(() => {
-                    x.setState({
+                    E.setState({
                         flows: t,
                         currentFlow: null
                     });
@@ -201,8 +201,8 @@ x.subscribe(
 let O = {
     flowStart: b,
     flowStepOrStart: function (e, t) {
-        I() ? v(e, t) : b(e, t);
+        v() ? I(e, t) : b(e, t);
     },
-    flowStep: v,
-    hasActiveFlow: I
+    flowStep: I,
+    hasActiveFlow: v
 };

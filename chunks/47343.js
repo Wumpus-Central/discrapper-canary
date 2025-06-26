@@ -1,4 +1,4 @@
-n.d(t, { R: () => E }), n(388685);
+n.d(t, { R: () => x }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -10,15 +10,15 @@ var r = n(255367),
     d = n(259580),
     h = n(626135),
     p = n(44609),
-    g = n(731971),
-    m = n(981631),
+    m = n(731971),
+    g = n(981631),
     f = n(388032),
     _ = n(190981);
-let E = () => {
+let x = () => {
     var e;
     let [t, n] = i.useState(!1),
         l = c.G6.useSetting(),
-        { nickname: E, dmsAllowed: x, showActivity: b, mutedServer: v, setNickname: I, setDmsAllowed: O, setShowActivity: S, setMutedServer: N, guildId: y, inviteCode: j } = (0, g.XW)(),
+        { nickname: x, dmsAllowed: E, showActivity: b, mutedServer: I, setNickname: v, setDmsAllowed: O, setShowActivity: N, setMutedServer: j, guildId: S, inviteCode: y } = (0, m.XW)(),
         C = null == (e = s.Z.getProps().invite) ? void 0 : e.is_nickname_changeable,
         T = (0, p.m4)({ location: 'InviteSettingsControls' });
     return (0, r.jsxs)('div', {
@@ -28,9 +28,9 @@ let E = () => {
                 className: _.header,
                 onClick: () => {
                     t ||
-                        h.default.track(m.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, {
-                            guild_id: y,
-                            invite_code: j
+                        h.default.track(g.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, {
+                            guild_id: S,
+                            invite_code: y
                         }),
                         n(!t);
                 },
@@ -78,28 +78,28 @@ let E = () => {
                                 }),
                                 (0, r.jsx)(o.oil, {
                                     placeholder: f.intl.string(f.t['09Q8ys']),
-                                    maxLength: m.l$U,
-                                    value: E,
-                                    onChange: I
+                                    maxLength: g.l$U,
+                                    value: x,
+                                    onChange: v
                                 })
                             ]
                         }),
                     (0, r.jsx)(u.Z, {
                         title: f.intl.string(f.t['/2ed39']),
-                        value: x,
+                        value: E,
                         onChange: O
                     }),
                     l &&
                         (0, r.jsx)(u.Z, {
                             title: f.intl.string(f.t.bN4m1N),
                             value: b,
-                            onChange: S
+                            onChange: N
                         }),
                     T &&
                         (0, r.jsx)(u.Z, {
                             title: f.intl.string(f.t['0nZCqK']),
-                            value: v,
-                            onChange: N
+                            value: I,
+                            onChange: j
                         })
                 ]
             })

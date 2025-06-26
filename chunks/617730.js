@@ -11,7 +11,7 @@ var i = n(481060),
     d = n(981631),
     h = n(388032),
     p = n(15282);
-function g(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function g(e) {
     }
     return e;
 }
-function m(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -67,23 +67,23 @@ let f = (e) => {
 function _(e) {
     let { invite: t, onAcceptInvite: n, disableUser: _ = !1 } = e;
     if (null == t) return null;
-    let E = null != t.guild ? new o.ZP(t.guild) : null,
-        x = null != t.channel ? (0, a.jD)(t.channel) : null,
+    let x = null != t.guild ? new o.ZP(t.guild) : null,
+        E = null != t.channel ? (0, a.jD)(t.channel) : null,
         b = null != t.target_application ? new l.ZP(t.target_application) : null,
-        v = _ || null == t.inviter ? null : new s.Z(t.inviter),
-        I = !((null != t.approximate_member_count && t.approximate_member_count > c.mx) || (null != E && E.hasFeature(d.oNc.COMMUNITY))) && null != v && (0, c.WT)(t),
+        I = _ || null == t.inviter ? null : new s.Z(t.inviter),
+        v = !((null != t.approximate_member_count && t.approximate_member_count > c.mx) || (null != x && x.hasFeature(d.oNc.COMMUNITY))) && null != I && (0, c.WT)(t),
         O = f(t),
-        S = {
+        N = {
             invite: t,
-            user: v,
-            guild: E,
-            channel: x,
+            user: I,
+            guild: x,
+            channel: E,
             application: b
         };
     return (0, c.JI)(t)
         ? (0, r.jsx)(u.Z, {
               invite: t,
-              channel: x,
+              channel: E,
               isSubmitting: O,
               onAcceptInvite: n
           })
@@ -92,12 +92,12 @@ function _(e) {
               children: [
                   (0, r.jsx)(c.GB, {
                       application: b,
-                      guild: E,
-                      user: I || (0, c.X7)(t) ? v : null
+                      guild: x,
+                      user: v || (0, c.X7)(t) ? I : null
                   }),
-                  (0, c.X7)(t) ? null : (0, r.jsx)(c.jq, m(g({}, S), { showBigUserIcon: I })),
-                  (0, r.jsx)(c.UM, m(g({}, S), { showBigUserIcon: I })),
-                  (0, r.jsx)(c.V6, g({}, S)),
+                  (0, c.X7)(t) ? null : (0, r.jsx)(c.jq, g(m({}, N), { showBigUserIcon: v })),
+                  (0, r.jsx)(c.UM, g(m({}, N), { showBigUserIcon: v })),
+                  (0, r.jsx)(c.V6, m({}, N)),
                   (0, r.jsx)(i.zxk, {
                       onClick: n,
                       submitting: O,

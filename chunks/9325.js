@@ -10,14 +10,14 @@ var r = n(255367),
     d = n(108427),
     h = n(314897),
     p = n(626135),
-    g = n(587444),
-    m = n(981631),
+    m = n(587444),
+    g = n(981631),
     f = n(260539),
     _ = n(388032),
-    E = n(20493);
-function x(e, t, n) {
+    x = n(20493);
+function E(e, t, n) {
     e.preventDefault(),
-        p.default.track(m.rMx.GUILD_TEMPLATE_APP_OPENED, {
+        p.default.track(g.rMx.GUILD_TEMPLATE_APP_OPENED, {
             guild_template_code: t,
             guild_template_name: n.name,
             guild_template_description: n.description,
@@ -43,16 +43,16 @@ function b(e) {
                         tall: !0
                     }),
                     (0, r.jsx)(o.zx, {
-                        onClick: (e) => x(e, t, n),
-                        className: E.marginTop20,
+                        onClick: (e) => E(e, t, n),
+                        className: x.marginTop20,
                         children: _.intl.string(_.t['a3Gl+f'])
                     })
                 ]
             })
-          : (0, r.jsx)(g.Z, {
+          : (0, r.jsx)(m.Z, {
                 text: _.intl.string(_.t['e/rZ2t']),
                 buttonCta: _.intl.string(_.t.HAvYn5),
-                onClick: (e) => x(e, t, n)
+                onClick: (e) => E(e, t, n)
             });
 }
 l.ZP.initialize();

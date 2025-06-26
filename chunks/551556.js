@@ -6,7 +6,7 @@ var i = r(692547),
 function s(e) {
     var t,
         r,
-        { width: s = 24, height: l = 24, color: a = i.Z.unsafe_rawColors.WHITE_500.css, backgroundColor: c = i.Z.unsafe_rawColors.BRAND_500.css } = e,
+        { width: s = 24, height: a = 24, color: l = i.Z.unsafe_rawColors.WHITE_500.css, backgroundColor: c = i.Z.unsafe_rawColors.BRAND_500.css } = e,
         u = (function (e, t) {
             if (null == e) return {};
             var r,
@@ -56,7 +56,7 @@ function s(e) {
         (r = r =
             {
                 width: s,
-                height: l,
+                height: a,
                 viewBox: '0 0 14 14',
                 children: [
                     (0, n.jsx)('path', {
@@ -65,7 +65,7 @@ function s(e) {
                     }),
                     (0, n.jsx)('path', {
                         d: 'M6.5,10.3L3.4,8l0.9-1.2l1.8,1.4l3.3-4.3l1.2,0.9L6.5,10.3z',
-                        fill: a
+                        fill: l
                     })
                 ]
             }),

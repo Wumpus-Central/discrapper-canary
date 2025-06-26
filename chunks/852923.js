@@ -11,13 +11,13 @@ var i = n(120356),
     d = n(930180),
     _ = n(388032),
     E = n(957991);
-function I(e) {
+function O(e) {
     let t = c.Z.getVoiceChannelId();
     if (null == t) return;
     let n = a.Z.getChannel(t);
     null != n && (0, s.RK)(n, e);
 }
-function O(e) {
+function I(e) {
     var t, n;
     let { channelId: i } = e,
         o = null != (t = (0, d._d)(i)) ? t : 0,
@@ -57,12 +57,12 @@ function T() {
               color: o.DM8.DEFAULT,
               children: [
                   (0, r.jsx)('div', { children: _.intl.string(_.t.Ul1RJS) }),
-                  (0, r.jsx)(O, { channelId: e.id }),
+                  (0, r.jsx)(I, { channelId: e.id }),
                   (0, r.jsx)(o.zxk, {
                       className: E.acceptButton,
                       size: o.zxk.Sizes.MIN,
                       color: o.zxk.Colors.WHITE,
-                      onClick: () => I(!1),
+                      onClick: () => O(!1),
                       children: (0, r.jsx)(o.Text, {
                           className: E.acceptText,
                           variant: 'text-xs/normal',
@@ -75,7 +75,7 @@ function T() {
                       look: o.zxk.Looks.OUTLINED,
                       size: o.zxk.Sizes.MIN,
                       color: o.zxk.Colors.WHITE,
-                      onClick: () => I(!0),
+                      onClick: () => O(!0),
                       children: (0, r.jsx)(o.Text, {
                           className: E.declineText,
                           variant: 'text-xs/normal',

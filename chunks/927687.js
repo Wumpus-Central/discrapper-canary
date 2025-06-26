@@ -9,7 +9,6 @@ e.exports = {
     prompt: 'prompt_a76279',
     promptFinish: 'promptFinish_a76279',
     finishTitle: 'finishTitle_a76279',
-    finishTitlePadding: 'finishTitlePadding_a76279',
     button: 'button_a76279',
     infoContainer: 'infoContainer_a76279',
     infoItem: 'infoItem_a76279',

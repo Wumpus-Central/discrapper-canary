@@ -1,15 +1,15 @@
-r.d(t, { G: () => a }), r(388685), r(457542);
+r.d(t, { G: () => l }), r(388685), r(457542);
 var n = r(399606),
     i = r(570140),
     o = r(493773),
     s = r(986197),
-    l = r(135200);
-let a = (e) => {
-    let [t, r] = (0, n.Wu)([l.Z], () => [l.Z.usernameSuggestion(), l.Z.usernameSuggestionLoading()]);
+    a = r(135200);
+let l = (e) => {
+    let [t, r] = (0, n.Wu)([a.Z], () => [a.Z.usernameSuggestion(), a.Z.usernameSuggestionLoading()]);
     return (
         (0, o.ZP)(
             () => (
-                l.Z.wasSuggestionsFetched()
+                a.Z.wasSuggestionsFetched()
                     ? i.Z.dispatch({
                           type: 'POMELO_SUGGESTIONS_FETCH',
                           usernameSuggestionLoading: !1

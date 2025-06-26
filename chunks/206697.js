@@ -65,11 +65,11 @@ function x() {
                           })
                       ]
                   }),
-                  (0, r.jsx)(E, {})
+                  (0, r.jsx)(y, {})
               ]
           });
 }
-function E() {
+function y() {
     let e = (0, d.Px)(f.p9.TIER_2),
         t = i.useCallback(
             () =>

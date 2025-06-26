@@ -10,88 +10,88 @@ var r = n(255367),
     d = n(844800),
     h = n(580497),
     p = n(981631),
-    g = n(388032),
-    m = n(742834);
+    m = n(388032),
+    g = n(742834);
 function f(e) {
     let { location: t } = e,
         [f, _] = i.useState(!1),
-        { verifySuccess: E, verifyErrors: x, redirectGuildId: b } = (0, l.e7)([d.Z], () => d.Z.getState());
+        { verifySuccess: x, verifyErrors: E, redirectGuildId: b } = (0, l.e7)([d.Z], () => d.Z.getState());
     i.useEffect(() => {
         let e = (0, o.Z)(t);
         a.Z.verify(e), (0, u.e)('verify_hub_email');
     }, [t]);
-    let v = () => {
+    let I = () => {
         (0, h.Z)(b), _(!0);
     };
     return f
         ? (0, r.jsxs)(s.ZP, {
               children: [
                   (0, r.jsx)(s.Dx, {
-                      className: m.title,
-                      children: g.intl.string(g.t.csrAMD)
+                      className: g.title,
+                      children: m.intl.string(m.t.csrAMD)
                   }),
                   (0, r.jsx)(s.DK, {
-                      className: m.subtitle,
-                      children: g.intl.string(g.t['m1+IBg'])
+                      className: g.subtitle,
+                      children: m.intl.string(m.t['m1+IBg'])
                   }),
                   (0, r.jsx)(s.zx, {
-                      className: m.spacedButton,
+                      className: g.spacedButton,
                       onClick: () => (0, c.uL)(p.Z5c.CHANNEL(b)),
-                      children: g.intl.string(g.t.fIv16O)
+                      children: m.intl.string(m.t.fIv16O)
                   })
               ]
           })
-        : E
+        : x
           ? (0, r.jsxs)(s.ZP, {
                 children: [
                     (0, r.jsx)(s.Ee, {
-                        className: m.image,
+                        className: g.image,
                         src: n(73962)
                     }),
                     (0, r.jsx)(s.Dx, {
-                        className: m.title,
-                        children: g.intl.string(g.t.dAfGb2)
+                        className: g.title,
+                        children: m.intl.string(m.t.dAfGb2)
                     }),
                     (0, r.jsx)(s.zx, {
-                        onClick: v,
-                        children: g.intl.string(g.t.uJWIj4)
+                        onClick: I,
+                        children: m.intl.string(m.t.uJWIj4)
                     })
                 ]
             })
-          : null != x
+          : null != E
             ? (0, r.jsxs)(s.ZP, {
                   children: [
                       (0, r.jsx)(s.Ee, {
-                          className: m.image,
+                          className: g.image,
                           src: n(375673)
                       }),
                       (0, r.jsx)(s.Dx, {
-                          className: m.title,
-                          children: g.intl.string(g.t.PCgG39)
+                          className: g.title,
+                          children: m.intl.string(m.t.PCgG39)
                       }),
                       (0, r.jsx)(s.DK, {
-                          className: m.subtitle,
-                          children: g.intl.string(g.t.tQpeAw)
+                          className: g.subtitle,
+                          children: m.intl.string(m.t.tQpeAw)
                       }),
                       (0, r.jsx)(s.zx, {
-                          onClick: v,
-                          children: g.intl.string(g.t.uJWIj4)
+                          onClick: I,
+                          children: m.intl.string(m.t.uJWIj4)
                       })
                   ]
               })
             : (0, r.jsxs)(s.ZP, {
                   children: [
                       (0, r.jsx)(s.Ee, {
-                          className: m.image,
+                          className: g.image,
                           src: n(892235)
                       }),
                       (0, r.jsx)(s.Dx, {
-                          className: m.title,
-                          children: g.intl.string(g.t['0c8+5u'])
+                          className: g.title,
+                          children: m.intl.string(m.t['0c8+5u'])
                       }),
                       (0, r.jsx)(s.DK, {
-                          className: m.subtitle,
-                          children: g.intl.string(g.t.ULTCBA)
+                          className: g.subtitle,
+                          children: m.intl.string(m.t.ULTCBA)
                       }),
                       (0, r.jsx)(s.zx, {
                           submitting: !0,

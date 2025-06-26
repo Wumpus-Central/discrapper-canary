@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(990547),
@@ -10,14 +10,14 @@ var r = n(255367),
     d = n(353926),
     h = n(82554),
     p = n(726521),
-    g = n(185625),
-    m = n(314897),
+    m = n(185625),
+    g = n(314897),
     f = n(63063),
     _ = n(981631),
-    E = n(388032),
-    x = n(793613),
+    x = n(388032),
+    E = n(793613),
     b = n(20493);
-function v(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function v(e) {
     }
     return e;
 }
-function I(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -62,11 +62,11 @@ function I(e, t) {
 }
 a.ZP.initialize();
 let O = {
-        [h.BM.MESSAGE]: E.t.fuqnBA,
-        [h.BM.USER]: E.t.F4jrRU,
-        [h.BM.GUILD]: E.t.gH3aMj
+        [h.BM.MESSAGE]: x.t.fuqnBA,
+        [h.BM.USER]: x.t.F4jrRU,
+        [h.BM.GUILD]: x.t.gH3aMj
     },
-    S = (e) => {
+    N = (e) => {
         let { title: t, menuType: i } = e,
             a = () => {
                 (0, o.ZDy)(async () => {
@@ -74,10 +74,10 @@ let O = {
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            I(v({}, t), {
+                            v(I({}, t), {
                                 onSuccess: s,
-                                headerText: E.intl.string(E.t.ZLRYGR),
-                                confirmButtonText: E.intl.string(E.t.PDTjLC),
+                                headerText: x.intl.string(x.t.ZLRYGR),
+                                confirmButtonText: x.intl.string(x.t.PDTjLC),
                                 confirmButtonColor: o.zxk.Colors.BRAND,
                                 impressionName: l.ImpressionNames.URF_ENTER_EMAIL
                             })
@@ -86,9 +86,9 @@ let O = {
             },
             s = (e) => {
                 let t = async () => {
-                        await (0, g.yL)(i, e);
+                        await (0, m.yL)(i, e);
                     },
-                    a = async (t) => await (0, g.RV)(i, e, t),
+                    a = async (t) => await (0, m.RV)(i, e, t),
                     s = (e) => {
                         let t = null == e ? void 0 : e.token;
                         i === h.BM.MESSAGE ? (0, p.eE)(t) : i === h.BM.USER ? (0, p.JM)(t) : i === h.BM.GUILD && (0, p.FO)(t);
@@ -99,12 +99,12 @@ let O = {
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                I(v({}, n), {
+                                v(I({}, n), {
                                     onFormSubmit: a,
                                     onResend: t,
                                     onSuccess: s,
-                                    headerText: E.intl.string(E.t.H3Q7U1),
-                                    confirmButtonText: E.intl.string(E.t['13ofGh']),
+                                    headerText: x.intl.string(x.t.H3Q7U1),
+                                    confirmButtonText: x.intl.string(x.t['13ofGh']),
                                     confirmButtonColor: o.zxk.Colors.BRAND,
                                     impressionName: l.ImpressionNames.URF_CONFIRM_EMAIL_CODE
                                 })
@@ -112,7 +112,7 @@ let O = {
                     });
             };
         return (0, r.jsxs)(o.P3F, {
-            className: x.reportButton,
+            className: E.reportButton,
             onClick: () => a(),
             children: [
                 (0, r.jsx)(o.Text, {
@@ -126,13 +126,13 @@ let O = {
             ]
         });
     },
-    N = () => {
+    j = () => {
         let [e, t] = i.useState(!0),
             [n, l] = i.useState([]),
-            h = (0, a.e7)([m.default], () => m.default.isAuthenticated()),
+            h = (0, a.e7)([g.default], () => g.default.isAuthenticated()),
             p = (0, a.e7)([d.Z], () => d.Z.hasLoadedExperiments),
-            v = () => {
-                (0, g.Jj)()
+            I = () => {
+                (0, m.Jj)()
                     .then((e) => {
                         let {
                             body: { capabilities: n }
@@ -149,9 +149,9 @@ let O = {
                     ? (t(!0),
                       c
                           .k({ withAnalyticsToken: !0 })
-                          .then(() => v())
+                          .then(() => I())
                           .catch(() => t(!1)))
-                    : v();
+                    : I();
             }, [h]),
             i.useEffect(() => {
                 (async () => {
@@ -166,21 +166,21 @@ let O = {
                       children: [
                           (0, r.jsx)(u.Dx, {
                               className: b.marginBottom8,
-                              children: E.intl.string(E.t.Z11w19)
+                              children: x.intl.string(x.t.Z11w19)
                           }),
                           (0, r.jsx)(u.DK, {
                               className: b.marginBottom8,
-                              children: E.intl.format(E.t['532l+v'], { supportURL: f.Z.getArticleURL(_.BhN.COPYRIGHT_AND_IP_POLICY) })
+                              children: x.intl.format(x.t['532l+v'], { supportURL: f.Z.getArticleURL(_.BhN.COPYRIGHT_AND_IP_POLICY) })
                           }),
                           (0, r.jsx)('div', {
-                              className: x.container,
+                              className: E.container,
                               children: n.map((e) =>
                                   null == O[e]
                                       ? null
                                       : (0, r.jsx)(
-                                            S,
+                                            N,
                                             {
-                                                title: E.intl.string(O[e]),
+                                                title: x.intl.string(O[e]),
                                                 menuType: e
                                             },
                                             e

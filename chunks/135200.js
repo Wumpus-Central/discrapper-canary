@@ -1,19 +1,19 @@
-n.d(t, { Z: () => g });
-var r,
+r.d(t, { Z: () => f });
+var n,
     i,
-    l,
-    a = n(31775),
-    o = n.n(a),
-    s = n(442837),
-    c = n(570140),
-    u = n(70956);
+    o,
+    s = r(31775),
+    a = r.n(s),
+    l = r(442837),
+    c = r(570140),
+    u = r(70956);
 let d = {
         taken: null,
         error: void 0,
         rateLimited: !0
     },
-    h = {
-        validations: new (o())({
+    m = {
+        validations: new (a())({
             max: 100,
             maxAge: 60000
         }),
@@ -32,72 +32,72 @@ let d = {
             }
         }
     };
-class p extends (l = s.ZP.Store) {
+class g extends (o = l.ZP.Store) {
     isRateLimited() {
-        return null != h.retryAfterTime && Date.now() < h.retryAfterTime;
+        return null != m.retryAfterTime && Date.now() < m.retryAfterTime;
     }
     validate(e) {
-        let t = h.validations.get(e);
+        let t = m.validations.get(e);
         return this.isRateLimited() && (null == t || t.rateLimited) ? d : this.isRateLimited() || null == t || !t.rateLimited ? t : void 0;
     }
     registrationUsernameSuggestion() {
-        return h.suggestions.registration.suggestion.username;
+        return m.suggestions.registration.suggestion.username;
     }
     usernameSuggestion() {
-        return h.suggestions.migration.suggestion.username;
+        return m.suggestions.migration.suggestion.username;
     }
     usernameSuggestionLoading() {
-        return h.suggestions.migration.usernameSuggestionLoading;
+        return m.suggestions.migration.usernameSuggestionLoading;
     }
     isCurrentUsernameInvalid() {
-        return h.currentUsernameInvalid;
+        return m.currentUsernameInvalid;
     }
     wasRegistrationSuggestionFetched(e) {
-        return h.suggestions.registration.source === e && h.suggestions.registration.fetched;
+        return m.suggestions.registration.source === e && m.suggestions.registration.fetched;
     }
     wasSuggestionsFetched() {
-        return h.suggestions.migration.fetched;
+        return m.suggestions.migration.fetched;
     }
 }
 (i = 'PomeloStore'),
-    (r = 'displayName') in p
-        ? Object.defineProperty(p, r, {
+    (n = 'displayName') in g
+        ? Object.defineProperty(g, n, {
               value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (p[r] = i);
-let g = new p(c.Z, {
+        : (g[n] = i);
+let f = new g(c.Z, {
     POMELO_ATTEMPT_SUCCESS: function (e) {
-        let { username: t, taken: n } = e;
-        h.validations.set(t, { taken: n });
+        let { username: t, taken: r } = e;
+        m.validations.set(t, { taken: r });
     },
     POMELO_ATTEMPT_FAILURE: function (e) {
-        let { username: t, error: n, statusCode: r, retryAfter: i } = e;
-        429 === r
-            ? h.validations.set(
+        let { username: t, error: r, statusCode: n, retryAfter: i } = e;
+        429 === n
+            ? m.validations.set(
                   t,
                   {
                       taken: null,
-                      error: n,
+                      error: r,
                       rateLimited: !0
                   },
                   (null != i ? i : 7) * u.Z.Millis.SECOND
               )
-            : h.validations.set(t, {
+            : m.validations.set(t, {
                   taken: null,
-                  error: n
+                  error: r
               }),
-            null != i && (h.retryAfterTime = Date.now() + i * u.Z.Millis.SECOND);
+            null != i && (m.retryAfterTime = Date.now() + i * u.Z.Millis.SECOND);
     },
     POMELO_SUGGESTIONS_RESET: function () {
-        (h.suggestions.migration = {
+        (m.suggestions.migration = {
             suggestion: { username: void 0 },
             fetched: !1,
             usernameSuggestionLoading: !1
         }),
-            (h.suggestions.registration = {
+            (m.suggestions.registration = {
                 suggestion: { username: void 0 },
                 source: void 0,
                 fetched: !1
@@ -105,24 +105,24 @@ let g = new p(c.Z, {
     },
     POMELO_SUGGESTIONS_SUCCESS: function (e) {
         let { suggestion: t } = e;
-        (h.suggestions.migration = {
+        (m.suggestions.migration = {
             suggestion: t,
             fetched: !0,
             usernameSuggestionLoading: !1
         }),
-            (null == t ? void 0 : t.invalid_current_username) === !0 && (h.currentUsernameInvalid = !0);
+            (null == t ? void 0 : t.invalid_current_username) === !0 && (m.currentUsernameInvalid = !0);
     },
     POMELO_SUGGESTIONS_FETCH: function (e) {
         let { usernameSuggestionLoading: t } = e;
-        h.suggestions.migration.usernameSuggestionLoading = t;
+        m.suggestions.migration.usernameSuggestionLoading = t;
     },
     POMELO_REGISTRATION_SUGGESTIONS_SUCCESS: function (e) {
-        let { suggestion: t, source: n } = e;
-        (h.suggestions.registration = {
+        let { suggestion: t, source: r } = e;
+        (m.suggestions.registration = {
             suggestion: t,
-            source: n,
+            source: r,
             fetched: !0
         }),
-            (null == t ? void 0 : t.username) != null && h.validations.set(t.username, { taken: !1 });
+            (null == t ? void 0 : t.username) != null && m.validations.set(t.username, { taken: !1 });
     }
 });

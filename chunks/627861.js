@@ -16,8 +16,8 @@ var r = n(255367),
     _ = n(172109),
     b = n(880251),
     x = n(208444),
-    E = n(371991),
-    y = n(561308),
+    y = n(371991),
+    E = n(561308),
     v = n(810568),
     C = n(567409),
     O = n(168524),
@@ -134,7 +134,7 @@ function ea(e) {
     let { application: c, currentUserPresenceActivity: u, hideParty: d, message: p, onView: m, partyStatusElement: f, presenceActivity: _ } = e,
         b = ei(u, _),
         x = (0, I.Lz)(_, p.author, 'Invite Embed'),
-        y = !(0, W.Z)(_, p, c.id),
+        E = !(0, W.Z)(_, p, c.id),
         v = i.useMemo(() => {
             let e = [];
             if (!b) {
@@ -161,7 +161,7 @@ function ea(e) {
             );
         }, [b, _, x]),
         C = el(c.name, null == (t = p.activity) ? void 0 : t.type);
-    if (y) {
+    if (E) {
         let e = (0, r.jsx)(o.Text, {
             variant: 'text-xs/medium',
             className: J.description,
@@ -198,7 +198,7 @@ function ea(e) {
                           className: J.timestampContainer,
                           children: [
                               (0, r.jsx)(o.RZG, { size: 'xxs' }),
-                              (0, r.jsx)(E.x3, {
+                              (0, r.jsx)(y.x3, {
                                   entry: {
                                       start: t,
                                       end: null == _ || null == (l = _.timestamps) ? void 0 : l.end
@@ -353,7 +353,7 @@ function ec(e) {
             let l = et(e);
             return !(!er(l) || en(l));
         })(R, P, j, I),
-        eE = i.useMemo(
+        ey = i.useMemo(
             () =>
                 eg
                     ? {
@@ -419,7 +419,7 @@ function ec(e) {
                             : void 0,
             [O, eg, ex, e_, S.id, S.guild_id, I, eb, P.author.id, P.id, R, eh]
         ),
-        ey = i.useMemo(
+        eE = i.useMemo(
             () =>
                 ea
                     ? {
@@ -468,8 +468,8 @@ function ec(e) {
         ),
         eO = i.useMemo(() => {
             let e = [];
-            return V || null == eE ? V && null != ey && e.push(ey) : e.push(eE), null != eC && e.push(eC), e;
-        }, [ey, V, eE, eC]),
+            return V || null == ey ? V && null != eE && e.push(eE) : e.push(ey), null != eC && e.push(eC), e;
+        }, [eE, V, ey, eC]),
         ej = el(j.name, null == (t = P.activity) ? void 0 : t.type),
         eS = k
             ? (0, f.H)({
@@ -477,7 +477,7 @@ function ec(e) {
                   referrerId: I
               })
             : void 0,
-        eI = (0, C.N)(j.id).some((e) => (0, y.ig)(e) === l.o.GLOBAL)
+        eI = (0, C.N)(j.id).some((e) => (0, E.ig)(e) === l.o.GLOBAL)
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsx)(o.YqE, {
@@ -535,7 +535,7 @@ function ec(e) {
                               size: 'xxs',
                               color: 'currentColor'
                           }),
-                          (0, r.jsx)(E.x3, {
+                          (0, r.jsx)(y.x3, {
                               entry: {
                                   start: eT,
                                   end: null == R || null == (_ = R.timestamps) ? void 0 : _.end
@@ -608,7 +608,7 @@ function eu(e) {
             [f]
         ),
         { partySize: b, maxPartySize: x } = et(f),
-        E = i.useMemo(
+        y = i.useMemo(
             () =>
                 g.map((e) => {
                     let t = M.default.getUser(e);
@@ -616,15 +616,15 @@ function eu(e) {
                 }),
             [g]
         ),
-        y = (0, X.Ps)(null == f || null == (t = f.party) ? void 0 : t.id) || p.id === T.r9.id,
+        E = (0, X.Ps)(null == f || null == (t = f.party) ? void 0 : t.id) || p.id === T.r9.id,
         v = (0, r.jsx)($, {
-            partyMembers: E,
+            partyMembers: y,
             partySize: b,
             maxPartySize: x,
             guildId: s.guild_id,
             activityActionType: null == (n = c.activity) ? void 0 : n.type
         });
-    return y
+    return E
         ? (0, r.jsx)(ea, {
               application: p,
               currentUserPresenceActivity: h,

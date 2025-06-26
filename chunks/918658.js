@@ -13,12 +13,12 @@ var r = n(255367),
     d = n(819553),
     _ = n(17181),
     E = n(303737),
-    I = n(434404),
-    O = n(703656),
+    O = n(434404),
+    I = n(703656),
     T = n(944486),
     p = n(914010),
-    N = n(671533),
-    S = n(259580),
+    S = n(671533),
+    N = n(259580),
     f = n(358085),
     m = n(962086),
     A = n(160404),
@@ -78,29 +78,29 @@ function M() {
             }
         })(o),
         k = o === g.pNK.ROLE_SUBSCRIPTIONS ? b.intl.string(b.t.hZUCzc) : b.intl.string(b.t['/djIh4']),
-        L = n === P.oC.GUILD_ONBOARDING,
-        Z = (e) => {
+        Z = n === P.oC.GUILD_ONBOARDING,
+        L = (e) => {
             let { backToSettings: n } = e;
-            null != t && (A.Z.isFullServerPreview(t) && (0, O.uL)(g.Z5c.CHANNEL(t)), d.ZP.shouldShowOnboarding(t) && (u.Z.finishOnboarding(t), (0, _.EI)(t)), (0, m.mL)(t), n && I.Z.open(t, o), o === g.pNK.ROLE_SUBSCRIPTIONS && (0, E.GN)(t));
+            null != t && (A.Z.isFullServerPreview(t) && (0, I.uL)(g.Z5c.CHANNEL(t)), d.ZP.shouldShowOnboarding(t) && (u.Z.finishOnboarding(t), (0, _.EI)(t)), (0, m.mL)(t), n && O.Z.open(t, o), o === g.pNK.ROLE_SUBSCRIPTIONS && (0, E.GN)(t));
         };
     return (0, r.jsxs)(s.qXd, {
         color: s.DM8.BRAND,
         className: D.notice,
         children: [
             (0, r.jsxs)(h, {
-                onClick: () => Z({ backToSettings: !0 }),
+                onClick: () => L({ backToSettings: !0 }),
                 className: D.backButton,
                 children: [
-                    (0, r.jsx)(N.Z, {
+                    (0, r.jsx)(S.Z, {
                         width: 16,
                         height: 16,
-                        direction: N.Z.Directions.LEFT,
+                        direction: S.Z.Directions.LEFT,
                         className: D.backArrow
                     }),
                     v
                 ]
             }),
-            L && f
+            Z && f
                 ? (0, r.jsx)('div', {
                       className: D.noticeContents,
                       children: (0, r.jsx)('div', {
@@ -126,10 +126,10 @@ function M() {
                                       buttonRef: e,
                                       children: [
                                           k,
-                                          (0, r.jsx)(S.Z, {
+                                          (0, r.jsx)(N.Z, {
                                               width: 16,
                                               height: 16,
-                                              direction: S.Z.Directions.DOWN,
+                                              direction: N.Z.Directions.DOWN,
                                               className: D.selectCaret
                                           })
                                       ]
@@ -159,7 +159,7 @@ function M() {
                               })
                       ]
                   }),
-            f || o === g.pNK.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(U, { onClick: () => Z({ backToSettings: !1 }) })
+            f || o === g.pNK.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(U, { onClick: () => L({ backToSettings: !1 }) })
         ]
     });
 }

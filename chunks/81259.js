@@ -4,29 +4,29 @@ r(73800);
 var i = r(120356),
     o = r.n(i),
     s = r(278074),
-    l = r(692547),
-    a = r(481060),
+    a = r(692547),
+    l = r(481060),
     c = r(551556),
     u = r(927687);
 let d = () =>
         (0, n.jsx)(c.Z, {
             width: 13,
             height: 13,
-            backgroundColor: l.Z.colors.TEXT_FEEDBACK_POSITIVE.css
+            backgroundColor: a.Z.colors.TEXT_FEEDBACK_POSITIVE.css
         }),
     m = () =>
-        (0, n.jsx)(a.k$p, {
+        (0, n.jsx)(l.k$p, {
             size: 'custom',
             width: 13,
             height: 13,
-            color: l.Z.colors.TEXT_DANGER.css
+            color: a.Z.colors.TEXT_DANGER.css
         }),
     g = () =>
-        (0, n.jsx)(a.k$p, {
+        (0, n.jsx)(l.k$p, {
             size: 'custom',
             width: 13,
             height: 13,
-            color: l.Z.colors.TEXT_FEEDBACK_WARNING.css
+            color: a.Z.colors.TEXT_FEEDBACK_WARNING.css
         });
 function f(e) {
     let t = (0, s.EQ)(e.type)
@@ -37,7 +37,7 @@ function f(e) {
     return (0, n.jsxs)(n.Fragment, {
         children: [
             t,
-            (0, n.jsx)(a.Text, {
+            (0, n.jsx)(l.Text, {
                 variant: 'text-sm/medium',
                 className: o()(u.formMessage, {
                     [u.formMessageNegative]: 'error' === e.type,

@@ -16,11 +16,11 @@ var r = n(73800),
     _ = n(49898),
     b = n(388032);
 function x(e, t) {
-    let { isDiscoverable: n, customInstallUrl: x, installParams: E, integrationTypesConfig: y } = e,
+    let { isDiscoverable: n, customInstallUrl: x, installParams: y, integrationTypesConfig: E } = e,
         v = (0, f.Eb)({
             customInstallUrl: x,
-            installParams: E,
-            integrationTypesConfig: y
+            installParams: y,
+            integrationTypesConfig: E
         }),
         C = (0, i.e7)([p.Z], () => {
             var e;
@@ -60,14 +60,14 @@ function x(e, t) {
                                 (0, m.L)({
                                     applicationId: e.id,
                                     customInstallUrl: x,
-                                    installParams: E,
-                                    integrationTypesConfig: y,
+                                    installParams: y,
+                                    integrationTypesConfig: E,
                                     guildId: C,
                                     source: 'app_message_embed'
                                 });
                         }
                     }
                   : void 0,
-        [e.id, j, S, x, E, y, v, t, C]
+        [e.id, j, S, x, y, E, v, t, C]
     );
 }

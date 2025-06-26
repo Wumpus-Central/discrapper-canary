@@ -1,50 +1,50 @@
-n.d(t, { Z: () => d }), n(388685);
-var r,
-    i = n(255367),
-    l = n(73800),
+n.d(t, { Z: () => g }), n(388685);
+var i,
+    r = n(255367),
+    o = n(73800),
     a = n(796075),
-    o = n(695469),
-    s = n(481060);
-let c = null != (r = window.ResizeObserver) ? r : a.d,
-    u = () => {
-        let e = l.useRef(null),
-            [t, n] = l.useState(0),
-            r = l.useMemo(
+    s = n(695469),
+    l = n(481060);
+let u = null != (i = window.ResizeObserver) ? i : a.d,
+    d = () => {
+        let e = o.useRef(null),
+            [t, n] = o.useState(0),
+            i = o.useMemo(
                 () =>
-                    new c((e) => {
+                    new u((e) => {
                         let [t] = e;
                         return n(t.contentRect.height);
                     }),
                 []
             );
         return (
-            l.useLayoutEffect(() => (null != e.current && r.observe(e.current), () => r.disconnect()), [r]),
+            o.useLayoutEffect(() => (null != e.current && i.observe(e.current), () => i.disconnect()), [i]),
             {
                 ref: e,
                 height: t
             }
         );
     };
-function d(e) {
-    let { show: t, children: n, top: r = 0, bottom: l = 0 } = e,
-        { ref: a, height: c } = u(),
-        d = (0, s.q_F)({
+function g(e) {
+    let { show: t, children: n, top: i = 0, bottom: o = 0 } = e,
+        { ref: a, height: u } = d(),
+        g = (0, l.q_F)({
             from: {
                 height: 0,
                 paddingBottom: '0px',
                 marginTop: '0px'
             },
             to: {
-                height: t ? c : 0,
-                paddingBottom: t ? ''.concat(l, 'px') : '0px',
-                marginTop: t ? ''.concat(r, 'px') : '0px'
+                height: t ? u : 0,
+                paddingBottom: t ? ''.concat(o, 'px') : '0px',
+                marginTop: t ? ''.concat(i, 'px') : '0px'
             },
             config: {
                 tension: 170,
                 friction: 26
             }
         }),
-        h = (0, s.q_F)({
+        c = (0, l.q_F)({
             from: { opacity: 0 },
             to: { opacity: +!!t },
             config: {
@@ -52,15 +52,15 @@ function d(e) {
                 easing: t ? (e) => e ** 4 : (e) => e * (2 - e)
             }
         });
-    return (0, i.jsx)(o.animated.div, {
+    return (0, r.jsx)(s.animated.div, {
         style: {
             overflow: 'hidden',
-            height: d.height,
-            paddingBottom: d.paddingBottom,
-            marginTop: d.marginTop
+            height: g.height,
+            paddingBottom: g.paddingBottom,
+            marginTop: g.marginTop
         },
-        children: (0, i.jsx)(o.animated.div, {
-            style: { opacity: h.opacity },
+        children: (0, r.jsx)(s.animated.div, {
+            style: { opacity: c.opacity },
             ref: a,
             children: n
         })

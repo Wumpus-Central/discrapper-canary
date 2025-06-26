@@ -3,24 +3,24 @@ var n = r(255367),
     i = r(73800),
     o = r(120356),
     s = r.n(o),
-    l = r(695469),
-    a = r(399606),
+    a = r(695469),
+    l = r(399606),
     c = r(481060),
     u = r(607070),
     d = r(745510),
     m = r(899007),
     g = r(867176),
     f = r(51144),
-    E = r(346585),
-    O = r(81259),
-    h = r(119848),
-    p = r(801461),
+    h = r(346585),
+    E = r(81259),
+    p = r(119848),
+    O = r(801461),
     y = r(228168),
     S = r(388032),
     b = r(927687),
-    x = r(733469);
-let j = i.forwardRef(function (e, t) {
-        let { style: r, value: i, placeholder: o, maxLength: l, onFocus: a, onChange: u } = e;
+    _ = r(733469);
+let x = i.forwardRef(function (e, t) {
+        let { style: r, value: i, placeholder: o, maxLength: a, onFocus: l, onChange: u } = e;
         return (0, n.jsx)(c.Kx8, {
             className: s()(b.userCardInput, r),
             autosize: !0,
@@ -31,9 +31,9 @@ let j = i.forwardRef(function (e, t) {
             value: i,
             placeholder: o,
             rows: 1,
-            maxLength: l,
+            maxLength: a,
             onChange: u,
-            onFocus: a,
+            onFocus: l,
             onKeyDown: (e) => {
                 'Enter' === e.key && e.preventDefault();
             },
@@ -41,17 +41,17 @@ let j = i.forwardRef(function (e, t) {
         });
     }),
     N = i.forwardRef(function (e, t) {
-        let { user: r, error: o, formValues: N, displayProfile: v, onChangeFormValue: T, onFocusDisplayName: P, onFocusUsername: I, editState: _, footerNotice: C, usernameSuggestionLoading: A, oneClickFlow: w } = e,
-            { username: M, globalName: L } = N,
+        let { user: r, error: o, formValues: N, displayProfile: j, onChangeFormValue: v, onFocusDisplayName: T, onFocusUsername: I, editState: C, footerNotice: P, usernameSuggestionLoading: A, oneClickFlow: R } = e,
+            { username: w, globalName: L } = N,
+            M = i.useRef(null),
             k = i.useRef(null),
-            R = i.useRef(null),
             D = i.useMemo(() => r.merge({ discriminator: '0000' }), [r]),
-            [Z, U] = (0, c.q_F)(() => ({
+            [U, Z] = (0, c.q_F)(() => ({
                 opacity: 0,
                 y: 5
             }));
         i.useEffect(() => {
-            U({
+            Z({
                 y: 0,
                 opacity: 1,
                 from: {
@@ -59,29 +59,29 @@ let j = i.forwardRef(function (e, t) {
                     opacity: 0
                 }
             });
-        }, [U, _]),
+        }, [Z, C]),
             i.useImperativeHandle(
                 t,
                 () => ({
                     focusDisplayName: () => {
                         var e, t, r;
-                        null == (t = R.current) || t.setSelection(0, null == (e = R.current) ? void 0 : e.value.length), null == (r = R.current) || r.focus();
+                        null == (t = k.current) || t.setSelection(0, null == (e = k.current) ? void 0 : e.value.length), null == (r = k.current) || r.focus();
                     },
                     focusUsername: () => {
                         var e, t, r;
-                        null == (t = k.current) || t.setSelection(0, null == (e = k.current) ? void 0 : e.value.length), null == (r = k.current) || r.focus();
+                        null == (t = M.current) || t.setSelection(0, null == (e = M.current) ? void 0 : e.value.length), null == (r = M.current) || r.focus();
                     }
                 }),
                 []
             );
-        let G = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
+        let G = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
             { createMultipleConfettiAt: W } = i.useContext(d.h),
-            z = null == v ? void 0 : v.getLegacyUsername();
+            z = null == j ? void 0 : j.getLegacyUsername();
         return (
             i.useEffect(() => {
                 !G &&
-                    _ === p.Wq.PREVIEW &&
-                    r.username.includes(p.nA) &&
+                    C === O.Wq.PREVIEW &&
+                    r.username.includes(O.nA) &&
                     (W(
                         window.innerWidth / 2 + 150,
                         0,
@@ -118,24 +118,24 @@ let j = i.forwardRef(function (e, t) {
                         },
                         15
                     ));
-            }, [W, _, r, G]),
+            }, [W, C, r, G]),
             (0, n.jsxs)('div', {
-                className: s()(b.userCardContainer, { [b.shinyCard]: _ === p.Wq.PREVIEW }),
+                className: s()(b.userCardContainer, { [b.shinyCard]: C === O.Wq.PREVIEW }),
                 children: [
                     (0, n.jsxs)('div', {
                         className: b.profileCard,
                         children: [
                             (0, n.jsx)(g.Z, {
                                 user: D,
-                                displayProfile: v,
+                                displayProfile: j,
                                 themeType: y.lY.SIDEBAR
                             }),
                             (0, n.jsx)(m.Z, {
                                 user: D,
-                                displayProfile: v,
+                                displayProfile: j,
                                 themeType: y.lY.SIDEBAR
                             }),
-                            _ === p.Wq.PREVIEW &&
+                            C === O.Wq.PREVIEW &&
                                 null != z &&
                                 (0, n.jsx)('div', {
                                     className: b.legacyUsernameBadgeContainer,
@@ -178,7 +178,7 @@ let j = i.forwardRef(function (e, t) {
                                                         children: (0, n.jsx)('img', {
                                                             className: b.legacyUsernameBadge,
                                                             alt: '',
-                                                            src: x
+                                                            src: _
                                                         })
                                                     }),
                                                 Object.getOwnPropertyDescriptors
@@ -200,15 +200,15 @@ let j = i.forwardRef(function (e, t) {
                                 })
                         ]
                     }),
-                    _ !== p.Wq.PREVIEW &&
-                        (0, n.jsxs)(l.animated.div, {
+                    C !== O.Wq.PREVIEW &&
+                        (0, n.jsxs)(a.animated.div, {
                             style: {
-                                opacity: Z.opacity,
-                                y: Z.y
+                                opacity: U.opacity,
+                                y: U.y
                             },
                             className: b.inputContainer,
                             children: [
-                                _ === p.Wq.EDIT_DISPLAY_NAME &&
+                                C === O.Wq.EDIT_DISPLAY_NAME &&
                                     (0, n.jsxs)(n.Fragment, {
                                         children: [
                                             (0, n.jsx)(c.Text, {
@@ -217,18 +217,18 @@ let j = i.forwardRef(function (e, t) {
                                                 variant: 'text-sm/semibold',
                                                 children: S.intl.string(S.t['9AjdkJ'])
                                             }),
-                                            (0, n.jsx)(j, {
+                                            (0, n.jsx)(x, {
                                                 style: s()(b.displayNameHeight, b['heading-xl/bold']),
                                                 value: null != L ? L : '',
                                                 placeholder: f.ZP.getName(r),
-                                                maxLength: p.hy,
-                                                onChange: (e) => T({ globalName: e }),
-                                                onFocus: P,
-                                                ref: R
+                                                maxLength: O.hy,
+                                                onChange: (e) => v({ globalName: e }),
+                                                onFocus: T,
+                                                ref: k
                                             })
                                         ]
                                     }),
-                                (_ === p.Wq.EDIT_USERNAME || _ === p.Wq.SUGGESTION) &&
+                                (C === O.Wq.EDIT_USERNAME || C === O.Wq.SUGGESTION) &&
                                     (0, n.jsxs)(n.Fragment, {
                                         children: [
                                             (0, n.jsx)(c.Text, {
@@ -237,14 +237,14 @@ let j = i.forwardRef(function (e, t) {
                                                 variant: 'text-sm/semibold',
                                                 children: S.intl.string(S.t.IEpCBQ)
                                             }),
-                                            (0, n.jsx)(j, {
+                                            (0, n.jsx)(x, {
                                                 style: s()(b.userCardHeight, b.lowercaseUsername, b['heading-lg/medium']),
-                                                value: null != M ? M : '',
+                                                value: null != w ? w : '',
                                                 placeholder: r.username,
-                                                maxLength: p.hy,
-                                                onChange: (e) => T({ username: e.replace('@', '') }),
+                                                maxLength: O.hy,
+                                                onChange: (e) => v({ username: e.replace('@', '') }),
                                                 onFocus: I,
-                                                ref: k
+                                                ref: M
                                             })
                                         ]
                                     }),
@@ -252,33 +252,33 @@ let j = i.forwardRef(function (e, t) {
                                     className: b.messageContainer,
                                     children: (() => {
                                         if (null != o)
-                                            return (0, n.jsx)(O.Z, {
+                                            return (0, n.jsx)(E.Z, {
                                                 type: 'error',
                                                 children: o
                                             });
-                                        if (null != C) {
-                                            if (_ !== p.Wq.SUGGESTION)
+                                        if (null != P) {
+                                            if (C !== O.Wq.SUGGESTION)
                                                 return (0, n.jsx)(c.Text, {
                                                     variant: 'text-sm/normal',
-                                                    children: C
+                                                    children: P
                                                 });
                                             else if (!A)
-                                                return (0, n.jsx)(O.Z, {
+                                                return (0, n.jsx)(E.Z, {
                                                     type: 'success',
-                                                    children: C
+                                                    children: P
                                                 });
                                         }
-                                        return null == C && null == o && (_ === p.Wq.EDIT_USERNAME || _ === p.Wq.SUGGESTION)
-                                            ? (0, n.jsx)(h.Z, {
-                                                  username: M,
-                                                  oneClickFlow: w
+                                        return null == P && null == o && (C === O.Wq.EDIT_USERNAME || C === O.Wq.SUGGESTION)
+                                            ? (0, n.jsx)(p.Z, {
+                                                  username: w,
+                                                  oneClickFlow: R
                                               })
                                             : null;
                                     })()
                                 })
                             ]
                         }),
-                    _ === p.Wq.PREVIEW &&
+                    C === O.Wq.PREVIEW &&
                         (0, n.jsxs)('div', {
                             className: b.userCard,
                             children: [
@@ -296,7 +296,7 @@ let j = i.forwardRef(function (e, t) {
                                     className: b.memberText,
                                     color: 'text-muted',
                                     variant: 'text-sm/medium',
-                                    children: S.intl.format(S.t['9rfonp'], { date: (0, E.K9)(r.id) })
+                                    children: S.intl.format(S.t['9rfonp'], { date: (0, h.K9)(r.id) })
                                 })
                             ]
                         })

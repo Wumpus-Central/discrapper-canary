@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => S }), n(388685), n(35282);
+n.d(t, { Z: () => N }), n(388685), n(35282);
 var i = n(255367),
     l = n(73800),
     a = n(873546),
@@ -10,17 +10,17 @@ var i = n(255367),
     d = n(133853),
     h = n(568154),
     p = n(353926),
-    g = n(703656),
-    m = n(981631),
+    m = n(703656),
+    g = n(981631),
     f = n(963865);
 let _ = n(575703),
-    E = n(2984),
-    x = [m.Z5c.LOGIN, m.Z5c.LOGIN_HANDOFF, m.Z5c.REGISTER, m.Z5c.INVITE(''), m.Z5c.GIFT_CODE(''), m.Z5c.GUILD_TEMPLATE_LOGIN(''), m.Z5c.GUILD_TEMPLATE(''), m.Z5c.DISABLE_EMAIL_NOTIFICATIONS, m.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, m.Z5c.BILLING_PREMIUM_SUBSCRIBE, m.Z5c.BILLING_PAYMENT_SOURCES_CREATE, m.Z5c.BILLING_PAYMENTS, m.Z5c.BILLING_PREMIUM_SWITCH_PLAN, m.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, m.Z5c.VERIFY, m.Z5c.VERIFY_HUB_EMAIL, m.Z5c.REJECT_IP, m.Z5c.REJECT_MFA, m.Z5c.AUTHORIZE_IP, m.Z5c.AUTHORIZE_PAYMENT, m.Z5c.RESET, m.Z5c.HANDOFF, m.Z5c.REPORT, m.Z5c.REPORT_SECOND_LOOK, m.Z5c.ACCOUNT_REVERT('')];
+    x = n(2984),
+    E = [g.Z5c.LOGIN, g.Z5c.LOGIN_HANDOFF, g.Z5c.REGISTER, g.Z5c.INVITE(''), g.Z5c.GIFT_CODE(''), g.Z5c.GUILD_TEMPLATE_LOGIN(''), g.Z5c.GUILD_TEMPLATE(''), g.Z5c.DISABLE_EMAIL_NOTIFICATIONS, g.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, g.Z5c.BILLING_PREMIUM_SUBSCRIBE, g.Z5c.BILLING_PAYMENT_SOURCES_CREATE, g.Z5c.BILLING_PAYMENTS, g.Z5c.BILLING_PREMIUM_SWITCH_PLAN, g.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, g.Z5c.VERIFY, g.Z5c.VERIFY_HUB_EMAIL, g.Z5c.REJECT_IP, g.Z5c.REJECT_MFA, g.Z5c.AUTHORIZE_IP, g.Z5c.AUTHORIZE_PAYMENT, g.Z5c.RESET, g.Z5c.HANDOFF, g.Z5c.REPORT, g.Z5c.REPORT_SECOND_LOOK, g.Z5c.ACCOUNT_REVERT('')];
 function b(e) {
-    return x.some((t) => e.startsWith(t));
+    return E.some((t) => e.startsWith(t));
 }
-let v = (e) => ((r = e), e);
-function I(e) {
+let I = (e) => ((r = e), e);
+function v(e) {
     let { children: t } = e;
     switch (
         (function () {
@@ -28,7 +28,7 @@ function I(e) {
             let [t, n] = l.useState(!1),
                 [i, a] = l.useState(!0),
                 s = (0, o.e7)([p.Z], () => p.Z.hasLoadedExperiments);
-            return ((0, c.Z)(() => {}, 300), void 0 !== r) ? r : !i && s ? (t || n(!0), v(((e = 0), 'default'))) : i ? v('default') : 'loading';
+            return ((0, c.Z)(() => {}, 300), void 0 !== r) ? r : !i && s ? (t || n(!0), I(((e = 0), 'default'))) : i ? I('default') : 'loading';
         })()
     ) {
         case 'default':
@@ -41,7 +41,7 @@ function I(e) {
                     }),
                     (0, i.jsx)('img', {
                         className: f.logoWithText,
-                        src: E,
+                        src: x,
                         alt: ''
                     }),
                     t
@@ -60,14 +60,14 @@ class O extends l.Component {
         window.removeEventListener('resize', this.handleResize);
     }
     mobileTransitionTo(e, t) {
-        if (b(e)) (0, g.uL)(e, t);
+        if (b(e)) (0, m.uL)(e, t);
         else {
             let n = null != t && null != t.search ? t.search : null;
             window.location = null == n ? e : ''.concat(e, '?').concat(n);
         }
     }
     mobileReplaceWith(e) {
-        b(e) ? (0, g.dL)(e) : (window.location = e);
+        b(e) ? (0, m.dL)(e) : (window.location = e);
     }
     renderDefault() {
         let { splash: e } = this.props,
@@ -75,8 +75,8 @@ class O extends l.Component {
                 component: l.Fragment,
                 children: l.Children.map(this.props.children, (e) =>
                     l.cloneElement(e, {
-                        transitionTo: g.uL,
-                        replaceWith: g.dL
+                        transitionTo: m.uL,
+                        replaceWith: m.dL
                     })
                 )
             });
@@ -98,7 +98,7 @@ class O extends l.Component {
                                   })
                               ]
                           })
-                        : (0, i.jsx)(I, { children: t })
+                        : (0, i.jsx)(v, { children: t })
             })
         });
     }
@@ -136,4 +136,4 @@ class O extends l.Component {
             (this.state = { isMobileWidth: window.innerWidth <= 485 });
     }
 }
-let S = O;
+let N = O;

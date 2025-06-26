@@ -16,7 +16,7 @@ var r = n(255367),
     _ = n(489887),
     b = n(388032),
     x = n(271629);
-function E() {
+function y() {
     return (0, r.jsx)('svg', {
         width: '24',
         height: '24',
@@ -31,10 +31,10 @@ function E() {
         })
     });
 }
-function y(e) {
+function E(e) {
     let t,
         { hasNoVotes: n, victorEmoji: i } = e;
-    if (n) t = (0, r.jsx)(E, {});
+    if (n) t = (0, r.jsx)(y, {});
     else if (null != i) {
         let e = '' !== i.name ? i.name : i.displayName;
         t = (0, r.jsx)(u.Z, {
@@ -162,7 +162,7 @@ function C(e) {
     return (0, r.jsxs)('div', {
         className: a()(x.container, { [x.containerWithImage]: c }, t),
         children: [
-            (0, r.jsx)(y, {
+            (0, r.jsx)(E, {
                 hasNoVotes: 'NO_VOTES' === o.type,
                 victorEmoji: n.victorEmoji
             }),
@@ -215,8 +215,8 @@ function O(e) {
     let { message: n, channel: l, compact: a, disableInteraction: u = !1 } = e,
         d = n.embeds[0],
         g = i.useMemo(() => (0, h.Z)(d), [d]),
-        E = (0, o.aF)(null != (t = null == g ? void 0 : g.questionText) ? t : '', _.Dv),
-        y = (0, p.ZP)(n),
+        y = (0, o.aF)(null != (t = null == g ? void 0 : g.questionText) ? t : '', _.Dv),
+        E = (0, p.ZP)(n),
         v = (0, m.l)({
             user: n.author,
             channelId: l.id,
@@ -242,9 +242,9 @@ function O(e) {
                       timestamp: n.timestamp,
                       compact: a,
                       children: b.intl.format(b.t['VJcK4+'], {
-                          username: y.nick,
-                          usernameHook: v(y),
-                          title: E,
+                          username: E.nick,
+                          usernameHook: v(E),
+                          title: y,
                           titleOnClick: j
                       })
                   }),

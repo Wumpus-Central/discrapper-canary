@@ -10,12 +10,12 @@ var r = n(255367),
     d = n(869765),
     _ = n(592125),
     E = n(496675),
-    I = n(709054),
-    O = n(786761),
+    O = n(709054),
+    I = n(786761),
     T = n(900164),
     p = n(739566),
-    N = n(492593),
-    S = n(453687),
+    S = n(492593),
+    N = n(453687),
     f = n(25015),
     m = n(689674),
     A = n(438075),
@@ -71,7 +71,7 @@ function U(e, t) {
 }
 let M = i.memo(function (e) {
     var t, n;
-    let { message: i, compact: l = !1, className: M, onContextMenu: v, onClick: k, hideSimpleEmbedContent: L = !0, channel: Z, isGroupStart: j, animateAvatar: x, subscribeToComponentDispatch: F, renderThreadAccessory: V, trackAnnouncementViews: G = !1 } = e,
+    let { message: i, compact: l = !1, className: M, onContextMenu: v, onClick: k, hideSimpleEmbedContent: Z = !0, channel: L, isGroupStart: j, animateAvatar: x, subscribeToComponentDispatch: F, renderThreadAccessory: V, trackAnnouncementViews: G = !1 } = e,
         w = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -92,10 +92,10 @@ let M = i.memo(function (e) {
             return i;
         })(e, ['message', 'compact', 'className', 'onContextMenu', 'onClick', 'hideSimpleEmbedContent', 'channel', 'isGroupStart', 'animateAvatar', 'subscribeToComponentDispatch', 'renderThreadAccessory', 'trackAnnouncementViews']),
         B = i.type === b.uaV.POLL_RESULT || (null != (t = e.disableInteraction) && t),
-        W = i.isFirstMessageInForumPost(Z),
+        W = i.isFirstMessageInForumPost(L),
         z = (0, u.A)((null != (n = i.editedTimestamp) ? n : i.timestamp).valueOf()),
         { content: H, hasSpoilerEmbeds: Y } = (0, f.Z)(i, {
-            hideSimpleEmbedContent: L,
+            hideSimpleEmbedContent: Z,
             allowList: W || z,
             allowHeading: W || z,
             allowLinks: !0,
@@ -105,35 +105,35 @@ let M = i.memo(function (e) {
         q = (0, c.e7)([d.Z], () => d.Z.getMessageByReference(K)),
         X = (0, a.JA)(i.id),
         J = (0, p.ZP)(i),
-        Q = (0, c.e7)([_.Z], () => i.hasFlag(b.iLy.HAS_THREAD) && _.Z.getChannel(I.default.castMessageIdAsChannelId(i.id))),
+        Q = (0, c.e7)([_.Z], () => i.hasFlag(b.iLy.HAS_THREAD) && _.Z.getChannel(O.default.castMessageIdAsChannelId(i.id))),
         $ = (0, s.p9)({
-            guildId: Z.guild_id,
+            guildId: L.guild_id,
             roleId: J.iconRoleId
         }),
-        ee = (0, c.e7)([E.Z], () => E.Z.can(b.Plq.CREATE_INSTANT_INVITE, Z)),
+        ee = (0, c.e7)([E.Z], () => E.Z.can(b.Plq.CREATE_INSTANT_INVITE, L)),
         et = (0, m.Z)({
             message: i,
-            channel: Z,
+            channel: L,
             enabled: G
         });
     if ((0, T.Z)(i, ee)) return null;
-    let en = (0, S.iG)(i),
-        er = (0, S.Gx)(i);
+    let en = (0, N.iG)(i),
+        er = (0, N.Gx)(i);
     return (0, r.jsx)(
-        N.Z,
+        S.Z,
         h(
             {
                 compact: l,
                 className: o()(M, {
-                    [D.ephemeral]: (0, O.Pv)(i),
+                    [D.ephemeral]: (0, I.Pv)(i),
                     [D.disableInteraction]: B
                 }),
                 disableInteraction: B,
-                childrenRepliedMessage: (0, y.Z)(i, Z, K, q, l),
-                childrenExecutedCommand: (0, C.Z)(i, Z, l),
+                childrenRepliedMessage: (0, y.Z)(i, L, K, q, l),
+                childrenExecutedCommand: (0, C.Z)(i, L, l),
                 childrenHeader: (0, g.Z)(
                     U(h({}, e), {
-                        guildId: Z.guild_id,
+                        guildId: L.guild_id,
                         author: J,
                         roleIcon: $
                     })

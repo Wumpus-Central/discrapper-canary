@@ -5,7 +5,7 @@ var i = r(325767);
 function o(e) {
     var t,
         r,
-        { width: o = 16, height: s = 16, color: l = 'currentColor', foreground: a } = e,
+        { width: o = 16, height: s = 16, color: a = 'currentColor', foreground: l } = e,
         c = (function (e, t) {
             if (null == e) return {};
             var r,
@@ -62,8 +62,8 @@ function o(e) {
                         clipPath: 'url(#clip0_3283_145261)',
                         children: (0, n.jsx)('path', {
                             d: 'M3 5V19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3H5C3.89 3 3 3.9 3 5ZM15 9C15 10.66 13.66 12 12 12C10.34 12 9 10.66 9 9C9 7.34 10.34 6 12 6C13.66 6 15 7.34 15 9ZM6 17C6 15 10 13.9 12 13.9C14 13.9 18 15 18 17V18H6V17Z',
-                            fill: l,
-                            className: a
+                            fill: a,
+                            className: l
                         })
                     }),
                     (0, n.jsx)('defs', {

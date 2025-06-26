@@ -16,8 +16,8 @@ var r = n(255367),
     _ = n(15210),
     b = n(43542),
     x = n(910200),
-    E = n(358595),
-    y = n(981631),
+    y = n(358595),
+    E = n(981631),
     v = n(388032),
     C = n(583136);
 function O(e) {
@@ -25,7 +25,7 @@ function O(e) {
         h = i.useRef(null),
         [_, O] = i.useState(!0),
         [S, I] = i.useState(!1),
-        T = t.state === y.r2o.ACCEPTING,
+        T = t.state === E.r2o.ACCEPTING,
         N = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
         { updateButton: P, updateCopy: A } = (0, f.n2)(),
         w = p === l.author.id,
@@ -51,7 +51,7 @@ function O(e) {
                 : {};
         }, [_, S, N, Z]);
     return null == R
-        ? (0, r.jsx)(E.Z, {})
+        ? (0, r.jsx)(y.Z, {})
         : (0, r.jsxs)(s.P3F, {
               className: a()(C.guildInviteContainer, { [C.clickable]: S && _ }),
               onClick: k,

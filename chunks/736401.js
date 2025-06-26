@@ -1,12 +1,11 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(433517),
     i = n(147913),
     a = n(594174),
     o = n(918505),
     s = n(548161),
-    l = n(347649),
-    c = n(801461);
-function u(e, t, n) {
+    l = n(801461);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,27 +18,26 @@ function u(e, t, n) {
         e
     );
 }
-let d = 604800000,
-    f = 'lastSawPomelo',
-    _ = 'lastSawPomeloMigration';
-function p() {
-    r.K.set(f, Date.now());
+let u = 604800000,
+    d = 'lastSawPomelo';
+function f() {
+    r.K.set(d, Date.now());
 }
-function h() {
+function _() {
     if (!o.w8.getCurrentConfig({ location: 'b9eb97_1' }, { autoTrackExposure: !1 }).enabled) return !1;
     let e = a.default.getCurrentUser();
     if (null == e || e.isPomelo() || !e.hasVerifiedEmailOrPhone()) return !1;
-    let t = (0, l.ov)() ? _ : f,
+    let t = d,
         n = r.K.get(t);
-    return !(null != n && Date.now() - n < d);
+    return !(null != n && Date.now() - n < u);
 }
-class m extends i.Z {
+class p extends i.Z {
     constructor(...e) {
         super(...e),
-            u(this, 'actions', { POST_CONNECTION_OPEN: () => this.onPostConnectionOpen() }),
-            u(this, 'onPostConnectionOpen', () => {
-                h() && (0, s.a)(c.Kq.APP_START, !0, !1) && p();
+            c(this, 'actions', { POST_CONNECTION_OPEN: () => this.onPostConnectionOpen() }),
+            c(this, 'onPostConnectionOpen', () => {
+                _() && (0, s.a)(l.Kq.APP_START, !0, !1) && f();
             });
     }
 }
-let g = new m();
+let h = new p();

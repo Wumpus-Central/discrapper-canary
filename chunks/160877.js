@@ -24,19 +24,19 @@ let x = (e) => {
             { url: n, description: i } = t;
         return null == n
             ? null
-            : (0, r.jsx)(y, {
+            : (0, r.jsx)(E, {
                   url: n,
                   description: i
               });
     },
-    E = (e) => {
+    y = (e) => {
         var t, n, i;
         let { embed: l } = e;
         if (!g.n2.has(l.type)) return null;
         let a = void 0 !== l.video && l.type !== o.h.GIFV ? l.video.url : null != (i = null == (t = l.thumbnail) ? void 0 : t.url) ? i : null == (n = l.image) ? void 0 : n.url;
-        return null == a ? null : (0, r.jsx)(y, { url: a });
+        return null == a ? null : (0, r.jsx)(E, { url: a });
     },
-    y = (e) => {
+    E = (e) => {
         let { url: t, description: n } = e,
             i = (0, p.cb)(t);
         return (0, r.jsx)('div', {
@@ -65,7 +65,7 @@ function v(e) {
 function C(e) {
     let { channelId: t, messageId: n, isReportFalsePositiveLoading: l, analyticsContext: a, attachmentPreview: o, embedPreview: c, onConfirmPress: d, transitionState: p, onClose: m } = e,
         g = (0, u.Dt)(),
-        y = (0, h.pn)('ExplicitMediaFalsePositiveModal'),
+        E = (0, h.pn)('ExplicitMediaFalsePositiveModal'),
         v = i.useCallback(() => {
             (0, f.aP)({
                 action: f.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
@@ -92,7 +92,7 @@ function C(e) {
             context: a
         });
     }, [t, n, a]);
-    let O = i.useMemo(() => (y ? _.intl.string(_.t['z4du/P']) : _.intl.string(_.t.gg5Dp6)), [y]);
+    let O = i.useMemo(() => (E ? _.intl.string(_.t['z4du/P']) : _.intl.string(_.t.gg5Dp6)), [E]);
     return (0, r.jsxs)(s.Y0X, {
         transitionState: p,
         'aria-labelledby': g,
@@ -119,7 +119,7 @@ function C(e) {
                         children: O
                     }),
                     null != o && (0, r.jsx)(x, { attachment: o }),
-                    null != c && (0, r.jsx)(E, { embed: c })
+                    null != c && (0, r.jsx)(y, { embed: c })
                 ]
             }),
             (0, r.jsxs)(s.mzw, {

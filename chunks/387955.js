@@ -4,8 +4,8 @@ r(73800);
 var i = r(120356),
     o = r.n(i),
     s = r(481060),
-    l = r(63063),
-    a = r(773446),
+    a = r(63063),
+    l = r(773446),
     c = r(572264),
     u = r(981631),
     d = r(388032),
@@ -37,7 +37,7 @@ function f(e) {
                 className: m.prompt,
                 color: 'header-secondary',
                 variant: 'text-sm/medium',
-                children: d.intl.format(d.t['i2vB8/'], { helpdeskArticle: l.Z.getArticleURL(u.BhN.POMELO_FAQ) })
+                children: d.intl.format(d.t['i2vB8/'], { helpdeskArticle: a.Z.getArticleURL(u.BhN.POMELO_FAQ) })
             }),
             (0, n.jsxs)('div', {
                 className: o()([m.infoItem, m.infoItemSpacing]),
@@ -63,7 +63,7 @@ function f(e) {
                 children: [
                     (0, n.jsx)('div', {
                         className: m.infoIcon,
-                        children: (0, n.jsx)(a.Z, {
+                        children: (0, n.jsx)(l.Z, {
                             width: 20,
                             height: 20
                         })

@@ -18,8 +18,8 @@ function _(e) {
     var t;
     let { message: n, compact: i, usernameHook: _, channel: b } = e,
         x = (0, a.e7)([c.Z], () => c.Z.getGuild(b.guild_id)),
-        E = (0, u.ZP)(n),
-        y = _(E),
+        y = (0, u.ZP)(n),
+        E = _(y),
         {
             avatarSrc: v,
             eventHandlers: { onMouseEnter: C, onMouseLeave: O }
@@ -61,8 +61,8 @@ function _(e) {
                     (0, r.jsx)('div', {
                         className: l()(g.__invalid_messageContent, { [g.compact]: i }),
                         children: h.intl.format(h.t.W0UBIy, {
-                            username: E.nick,
-                            usernameHook: y,
+                            username: y.nick,
+                            usernameHook: E,
                             guildName: null != (t = null == x ? void 0 : x.name) ? t : ''
                         })
                     })

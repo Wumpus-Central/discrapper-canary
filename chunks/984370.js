@@ -15,12 +15,12 @@ var i = n(873546),
     d = n(2818),
     _ = n(954551),
     E = n(208450),
-    I = n(975146),
-    O = n(979651),
+    O = n(975146),
+    I = n(979651),
     T = n(358085),
     p = n(998502),
-    N = n(665149),
-    S = n(981631),
+    S = n(665149),
+    N = n(981631),
     f = n(176505),
     m = n(220705);
 function A(e) {
@@ -76,11 +76,11 @@ async function g() {
 function P(e) {
     let { children: t, className: n, channelId: a, channelType: c, guildId: T, innerClassname: p, transparent: A = !1, toolbar: R, mobileToolbar: P, 'aria-label': C, 'aria-labelledby': y, scrollable: b, role: D, hideSearch: h, showDivider: U } = e,
         M = null == a || (0, f.AB)(a) ? null : a,
-        v = (0, l.e7)([O.Z], () => O.Z.isInChannel(M) || !1),
+        v = (0, l.e7)([I.Z], () => I.Z.isInChannel(M) || !1),
         k = (0, l.e7)([s.Z], () => null != M && s.Z.getParticipantsListOpen(M)),
-        { enabled: L, inInbox: Z } = d.Z.useExperiment({ location: 'HeaderBar' }),
+        { enabled: Z, inInbox: L } = d.Z.useExperiment({ location: 'HeaderBar' }),
         { hasParticipantsPanel: j } = (0, u.Z)({ location: 'HeaderBar' });
-    return (0, r.jsx)(N.ZP, {
+    return (0, r.jsx)(S.ZP, {
         className: n,
         innerClassName: p,
         toolbar: (function () {
@@ -92,16 +92,16 @@ function P(e) {
                       children: [
                           R,
                           e ? (0, r.jsx)(E.Z, { className: m.search }, null != T ? T : a) : null,
-                          U && (0, r.jsx)(N.ZP.Divider, {}),
-                          L && !Z ? (0, r.jsx)(_.Z, {}) : null,
+                          U && (0, r.jsx)(S.ZP.Divider, {}),
+                          Z && !L ? (0, r.jsx)(_.Z, {}) : null,
                           j &&
                               v &&
                               null != M &&
                               !k &&
-                              c === S.d4z.GROUP_DM &&
+                              c === N.d4z.GROUP_DM &&
                               (0, r.jsxs)('div', {
                                   className: m.controlButtonWrapper,
-                                  children: [(0, r.jsx)(N.ZP.Divider, {}), (0, r.jsx)(I.Z, { onClick: () => o.Z.toggleParticipantsList(M, !k) })]
+                                  children: [(0, r.jsx)(S.ZP.Divider, {}), (0, r.jsx)(O.Z, { onClick: () => o.Z.toggleParticipantsList(M, !k) })]
                               })
                       ]
                   });
@@ -117,7 +117,7 @@ function P(e) {
 }
 function C(e) {
     let { children: t, className: n, 'aria-label': i, 'aria-labelledby': l, role: o } = e;
-    return (0, r.jsx)(N.ZP, {
+    return (0, r.jsx)(S.ZP, {
         className: n,
         onDoubleClick: g,
         'aria-label': i,
@@ -153,5 +153,5 @@ function y(e) {
         children: t ? (0, r.jsx)(P, R(A({}, n), { className: n.className })) : (0, r.jsx)(C, R(A({}, n), { className: n.className }))
     });
 }
-(y.Title = N.ZP.Title), (y.Icon = N.ZP.Icon), (y.Divider = N.ZP.Divider), (y.Caret = N.ZP.Caret);
+(y.Title = S.ZP.Title), (y.Icon = S.ZP.Icon), (y.Divider = S.ZP.Divider), (y.Caret = S.ZP.Caret);
 let b = y;

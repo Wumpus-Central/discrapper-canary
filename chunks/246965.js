@@ -11,8 +11,8 @@ var i = n(990547),
     d = n(639119),
     _ = n(474936),
     E = n(981631),
-    I = n(388032),
-    O = n(131715);
+    O = n(388032),
+    I = n(131715);
 let T = function (e) {
     var t;
     let { dismissCurrentNotice: n, subscriptionTier: T } = e,
@@ -28,14 +28,14 @@ let T = function (e) {
                 }
             })(T)
         ),
-        N = (0, d.N)(),
-        S = (0, o.Z)(null != N && null != N.expires_at ? Date.parse(N.expires_at) : 0),
-        f = null == N || (null == (t = N.subscription_trial) ? void 0 : t.sku_id) !== T || null == N.expires_at || Object.values(S).every((e) => 0 === e);
+        S = (0, d.N)(),
+        N = (0, o.Z)(null != S && null != S.expires_at ? Date.parse(S.expires_at) : 0),
+        f = null == S || (null == (t = S.subscription_trial) ? void 0 : t.sku_id) !== T || null == S.expires_at || Object.values(N).every((e) => 0 === e);
     return ((0, s.Z)(
         {
             type: i.ImpressionTypes.VIEW,
             name: i.ImpressionNames.TRIAL_NOTICE,
-            properties: { trial_id: null == N ? void 0 : N.trial_id }
+            properties: { trial_id: null == S ? void 0 : S.trial_id }
         },
         { disableTrack: f }
     ),
@@ -57,22 +57,22 @@ let T = function (e) {
                   (0, r.jsx)(l.SrA, {
                       size: 'md',
                       color: 'currentColor',
-                      className: O.premiumIcon
+                      className: I.premiumIcon
                   }),
                   (function (e, t) {
                       switch (e) {
                           case _.Si.TIER_0:
-                              return t.days > 0 ? I.intl.formatToPlainString(I.t.sP5OqK, { days: t.days }) : t.hours > 0 ? I.intl.formatToPlainString(I.t['7Lhfu7'], { hours: t.hours }) : I.intl.formatToPlainString(I.t.coDiS0, { minutes: Math.max(t.minutes, 1) });
+                              return t.days > 0 ? O.intl.formatToPlainString(O.t.sP5OqK, { days: t.days }) : t.hours > 0 ? O.intl.formatToPlainString(O.t['7Lhfu7'], { hours: t.hours }) : O.intl.formatToPlainString(O.t.coDiS0, { minutes: Math.max(t.minutes, 1) });
                           case _.Si.TIER_2:
-                              return t.days > 0 ? I.intl.formatToPlainString(I.t['4prs5e'], { days: t.days }) : t.hours > 0 ? I.intl.formatToPlainString(I.t.OD5nIS, { hours: t.hours }) : I.intl.formatToPlainString(I.t.rvyXjI, { minutes: Math.max(t.minutes, 1) });
+                              return t.days > 0 ? O.intl.formatToPlainString(O.t['4prs5e'], { days: t.days }) : t.hours > 0 ? O.intl.formatToPlainString(O.t.OD5nIS, { hours: t.hours }) : O.intl.formatToPlainString(O.t.rvyXjI, { minutes: Math.max(t.minutes, 1) });
                           default:
                               throw Error('Unsupported subscription tier: '.concat(e));
                       }
-                  })(T, S),
+                  })(T, N),
                   (0, r.jsx)(l.EyT, {
                       onClick: () => {
                           (0, u.Z)({
-                              trialId: N.trial_id,
+                              trialId: S.trial_id,
                               subscriptionTier: T,
                               analyticsLocations: p,
                               analyticsObject: {
@@ -85,9 +85,9 @@ let T = function (e) {
                       children: (function (e) {
                           switch (e) {
                               case _.Si.TIER_0:
-                                  return I.intl.string(I.t.mCG029);
+                                  return O.intl.string(O.t.mCG029);
                               case _.Si.TIER_2:
-                                  return I.intl.string(I.t['7590PT']);
+                                  return O.intl.string(O.t['7590PT']);
                               default:
                                   throw Error('Unsupported subscription tier: '.concat(e));
                           }

@@ -25,8 +25,8 @@ function b(e, t) {
             },
             [b]
         ),
-        E = (0, i.e7)([l.Z], () => null != b && (null == b ? void 0 : b.channelId) != null && l.Z.isChannelGated(b.guildId, b.channelId), [b]),
-        y = t.hasFlag(_.iLy.IS_CROSSPOST),
+        y = (0, i.e7)([l.Z], () => null != b && (null == b ? void 0 : b.channelId) != null && l.Z.isChannelGated(b.guildId, b.channelId), [b]),
+        E = t.hasFlag(_.iLy.IS_CROSSPOST),
         {
             rawMediaPostEmbedData: v,
             guild: C,
@@ -111,9 +111,9 @@ function b(e, t) {
         r.useEffect(() => {
             if ((null == b ? void 0 : b.threadId) != null) {
                 let e = h.Z.getEmbedFetchState(b.threadId);
-                !0 !== n || e !== h.M.NOT_FETCHED || (x && !1 === E) || (!x && y) || (0, m.xP)(null == b ? void 0 : b.threadId);
+                !0 !== n || e !== h.M.NOT_FETCHED || (x && !1 === y) || (!x && E) || (0, m.xP)(null == b ? void 0 : b.threadId);
             }
-        }, [b, n, x, E, y]),
+        }, [b, n, x, y, E]),
         T
     );
 }
