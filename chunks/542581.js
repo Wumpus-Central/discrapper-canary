@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b }), n(388685);
 var r = n(255367),
-    a = n(73800),
-    l = n(120356),
-    i = n.n(l),
+    i = n(73800),
+    a = n(120356),
+    l = n.n(a),
     s = n(695469),
     o = n(94171),
     c = n(481060),
@@ -14,27 +14,27 @@ var r = n(255367),
     f = n(388032),
     x = n(761852),
     p = n(73433);
-let b = a.memo(function (e) {
-    let { channel: t, onChange: l } = e,
+let b = i.memo(function (e) {
+    let { channel: t, onChange: a } = e,
         b = (0, h.AF)(),
         { guidelinesOpen: j } = (0, h.xH)((e) => {
             let { guidelinesOpen: t } = e;
             return { guidelinesOpen: t };
         }, o.X),
         v = (0, m.r_)(t),
-        [C, _] = a.useState(!1),
-        y = a.useCallback(
+        [_, C] = i.useState(!1),
+        y = i.useCallback(
             (e) => {
                 if (null == e) return;
                 let t = e.clientHeight >= 220;
-                t !== C && _(t);
+                t !== _ && C(t);
             },
-            [C]
+            [_]
         );
-    a.useLayoutEffect(() => {
-        setTimeout(l, 350);
-    }, [j, l]);
-    let [O, w] = a.useState(!j),
+    i.useLayoutEffect(() => {
+        setTimeout(a, 350);
+    }, [j, a]);
+    let [O, w] = i.useState(!j),
         S = (0, c.q_F)({
             opacity: +!!j,
             maxHeight: 500 * !!j,
@@ -97,7 +97,7 @@ let b = a.memo(function (e) {
                                   variant: 'text-sm/normal',
                                   color: 'header-secondary',
                                   style: { maxHeight: 220 },
-                                  className: i()(x.guidelines, p.markup),
+                                  className: l()(x.guidelines, p.markup),
                                   children: (0, r.jsx)('div', {
                                       ref: y,
                                       children: u.Z.parseForumPostGuidelines(t.topic, !0, {
@@ -107,7 +107,7 @@ let b = a.memo(function (e) {
                                       })
                                   })
                               }),
-                              C &&
+                              _ &&
                                   (0, r.jsxs)('div', {
                                       className: x.showMore,
                                       children: [
@@ -120,10 +120,10 @@ let b = a.memo(function (e) {
                                                       (0, c.ZDy)(async () => {
                                                           let { default: e } = await n.e('78712').then(n.bind(n, 223164));
                                                           return (n) => {
-                                                              var a, l;
+                                                              var i, a;
                                                               return (0, r.jsx)(
                                                                   e,
-                                                                  ((a = (function (e) {
+                                                                  ((i = (function (e) {
                                                                       for (var t = 1; t < arguments.length; t++) {
                                                                           var n = null != arguments[t] ? arguments[t] : {},
                                                                               r = Object.keys(n);
@@ -148,9 +148,9 @@ let b = a.memo(function (e) {
                                                                       }
                                                                       return e;
                                                                   })({}, n)),
-                                                                  (l = l = { channel: t }),
+                                                                  (a = a = { channel: t }),
                                                                   Object.getOwnPropertyDescriptors
-                                                                      ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(l))
+                                                                      ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
                                                                       : (function (e, t) {
                                                                             var n = Object.keys(e);
                                                                             if (Object.getOwnPropertySymbols) {
@@ -158,10 +158,10 @@ let b = a.memo(function (e) {
                                                                                 n.push.apply(n, r);
                                                                             }
                                                                             return n;
-                                                                        })(Object(l)).forEach(function (e) {
-                                                                            Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(l, e));
+                                                                        })(Object(a)).forEach(function (e) {
+                                                                            Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
                                                                         }),
-                                                                  a)
+                                                                  i)
                                                               );
                                                           };
                                                       });

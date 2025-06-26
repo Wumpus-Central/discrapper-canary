@@ -2,13 +2,13 @@ i.d(t, { K: () => p }), i(388685), i(953529);
 var n = i(73800),
     l = i(442837),
     r = i(172337),
-    s = i(101492),
+    a = i(101492),
     u = i(710091),
-    a = i(496675),
+    s = i(496675),
     d = i(388032);
 let o = {
         'server-subscriptions-onboarding': u.Z,
-        'server-subscriptions-finish-setting-up': s.Z,
+        'server-subscriptions-finish-setting-up': a.Z,
         'server-subscriptions-create-tier-from-template': r.Z
     },
     c = {
@@ -18,14 +18,14 @@ let o = {
         createGuildDescription: () => d.intl.string(d.t.anOis7),
         createGuildCta: () => d.intl.string(d.t.B44MTk),
         canCreateGuild: !0,
-        useIsGuildSupported: () => (0, l.e7)([a.Z], () => (e) => a.Z.canAccessGuildSettings(e), [], l.pF)
+        useIsGuildSupported: () => (0, l.e7)([s.Z], () => (e) => s.Z.canAccessGuildSettings(e), [], l.pF)
     };
 function p(e) {
     var t;
     let [i] = n.useState(null == e ? void 0 : o[e]),
         l = c.useIsGuildSupported(),
         r = null == i || null == (t = i.useIsGuildSupported) ? void 0 : t.call(i),
-        s = (function (e) {
+        a = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var i = null != arguments[t] ? arguments[t] : {},
                     n = Object.keys(i);
@@ -51,12 +51,12 @@ function p(e) {
             return e;
         })({}, c, null != i ? i : {});
     return {
-        title: s.title(),
-        description: s.description(),
-        selectGuildCta: s.selectGuildCta(),
-        createGuildDescription: s.createGuildDescription(),
-        createGuildCta: s.createGuildCta(),
-        canCreateGuild: s.canCreateGuild,
+        title: a.title(),
+        description: a.description(),
+        selectGuildCta: a.selectGuildCta(),
+        createGuildDescription: a.createGuildDescription(),
+        createGuildCta: a.createGuildCta(),
+        canCreateGuild: a.canCreateGuild,
         isGuildSupported: (e, t) => l(e, t) && (null == r ? void 0 : r(e, t)) !== !1
     };
 }

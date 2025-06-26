@@ -11,8 +11,8 @@ var l = e(399606),
     p = e(446226),
     o = e(937393),
     E = e(721351),
-    I = e(981631),
-    c = e(388032);
+    c = e(981631),
+    I = e(388032);
 function T(t) {
     for (var n = 1; n < arguments.length; n++) {
         var e = null != arguments[n] ? arguments[n] : {},
@@ -71,12 +71,12 @@ function D(t) {
                 platformType: n.type,
                 location: 'Console Transfer Item'
             });
-        n.type === I.ABu.XBOX
+        n.type === c.ABu.XBOX
             ? (0, r.ZDy)(async () => {
                   let { default: n } = await Promise.all([e.e('1717'), e.e('522')]).then(e.bind(e, 200623));
                   return (e) => (0, i.jsx)(n, g(T({}, e), { channel: t }));
               })
-            : (n.type === I.ABu.PLAYSTATION || n.type === I.ABu.PLAYSTATION_STAGING) &&
+            : (n.type === c.ABu.PLAYSTATION || n.type === c.ABu.PLAYSTATION_STAGING) &&
               (0, r.ZDy)(async () => {
                   let { default: l } = await e.e('638').then(e.bind(e, 543974));
                   return (e) =>
@@ -91,7 +91,7 @@ function D(t) {
     };
     return m
         ? (0, i.jsx)(r.sNh, {
-              label: c.intl.string(c.t.PlwgdX),
+              label: I.intl.string(I.t.PlwgdX),
               id: 'handoff',
               action: () => {
                   (0, u.F)(D);
@@ -105,7 +105,7 @@ function D(t) {
                   r.sNh,
                   {
                       id: 'transfer-'.concat(t.type, '-').concat(t.id),
-                      label: ((e = t.type), (l = n), e === I.ABu.XBOX ? (l ? c.intl.string(c.t['qVE/VF']) : c.intl.string(c.t.E8euSk)) : e === I.ABu.PLAYSTATION ? (l ? c.intl.string(c.t.vzfxmZ) : c.intl.string(c.t.QxEYDg)) : e === I.ABu.PLAYSTATION_STAGING ? (l ? c.intl.string(c.t.BDiXtb) : c.intl.string(c.t['bhdB9/'])) : void 0),
+                      label: ((e = t.type), (l = n), e === c.ABu.XBOX ? (l ? I.intl.string(I.t['qVE/VF']) : I.intl.string(I.t.E8euSk)) : e === c.ABu.PLAYSTATION ? (l ? I.intl.string(I.t.vzfxmZ) : I.intl.string(I.t.QxEYDg)) : e === c.ABu.PLAYSTATION_STAGING ? (l ? I.intl.string(I.t.BDiXtb) : I.intl.string(I.t['bhdB9/'])) : void 0),
                       action: () => y(t),
                       icon: (0, E.Z)(t.type),
                       disabled: U

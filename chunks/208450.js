@@ -1,4 +1,4 @@
-n.d(t, { Z: () => z }), n(35282), n(704826);
+n.d(t, { Z: () => W }), n(35282), n(704826);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -16,8 +16,8 @@ var r = n(255367),
     _ = n(607070),
     b = n(313201),
     x = n(977885),
-    y = n(778877),
-    E = n(903488),
+    E = n(778877),
+    y = n(903488),
     v = n(416638),
     C = n(592125),
     O = n(984933),
@@ -29,12 +29,13 @@ var r = n(255367),
     P = n(181389),
     A = n(854709),
     w = n(652399),
-    Z = n(778177),
-    R = n(981631),
-    k = n(862825),
-    L = n(388032),
-    D = n(665333);
-function M(e, t, n) {
+    Z = n(861262),
+    R = n(778177),
+    k = n(981631),
+    L = n(862825),
+    D = n(388032),
+    M = n(665333);
+function U(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -48,26 +49,26 @@ function M(e, t, n) {
     );
 }
 n(539658);
-let U = (0, b.hQ)(),
-    F = c()(p.yC, 500);
-class B extends i.PureComponent {
+let F = (0, b.hQ)(),
+    B = c()(p.yC, 500);
+class G extends i.PureComponent {
     componentDidMount() {
         var e, t;
-        I.S.subscribe(R.CkL.PERFORM_SEARCH, this.search), I.S.subscribe(R.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery), I.S.subscribe(R.CkL.FOCUS_SEARCH, this.handleFocusSearch), null == (t = this._editorRef) || null == (e = t.editor) || e.setAttribute('aria-haspopup', 'listbox');
+        I.S.subscribe(k.CkL.PERFORM_SEARCH, this.search), I.S.subscribe(k.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery), I.S.subscribe(k.CkL.FOCUS_SEARCH, this.handleFocusSearch), null == (t = this._editorRef) || null == (e = t.editor) || e.setAttribute('aria-haspopup', 'listbox');
     }
     componentDidUpdate(e) {
         let { editorState: t, searchId: n } = this.props;
         if (t !== e.editorState) {
-            let e = N.kG(T.Sq(t)),
+            let e = (0, N.kG)(T.Sq(t)),
                 r = P.g9(e, t);
             p.u$(n, e, r), null != this._editorRef && T.iE(this._editorRef.editor);
         }
     }
     componentWillUnmount() {
-        I.S.unsubscribe(R.CkL.PERFORM_SEARCH, this.search), I.S.unsubscribe(R.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery), I.S.unsubscribe(R.CkL.FOCUS_SEARCH, this.handleFocusSearch);
+        I.S.unsubscribe(k.CkL.PERFORM_SEARCH, this.search), I.S.unsubscribe(k.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery), I.S.unsubscribe(k.CkL.FOCUS_SEARCH, this.handleFocusSearch);
     }
     tokenize(e) {
-        let t = N.kG(T.Sq(e)).filter((e) => e.type !== f.ZP.NON_TOKEN_TYPE);
+        let t = (0, N.kG)(T.Sq(e)).filter((e) => e.type !== f.ZP.NON_TOKEN_TYPE);
         return T.lv(t, e, h.ZP);
     }
     clearSearch() {
@@ -98,13 +99,13 @@ class B extends i.PureComponent {
             handleDroppedFiles: this.handleDroppedFiles,
             handleDrop: this.handleDrop,
             keyBindingFn: this.handleKeyBind,
-            placeholder: L.intl.string(L.t['5h0QOD']),
+            placeholder: D.intl.string(D.t['5h0QOD']),
             editorState: t,
             onChange: this.setEditorState,
             role: 'combobox',
             ariaExpanded: e,
-            ariaControls: e ? U : void 0,
-            ariaLabel: L.intl.string(L.t['5h0QOD']),
+            ariaControls: e ? F : void 0,
+            ariaLabel: D.intl.string(D.t['5h0QOD']),
             ariaAutoComplete: 'list'
         });
     }
@@ -128,9 +129,9 @@ class B extends i.PureComponent {
                           className: i,
                           ref: this._containerRef,
                           children: (0, r.jsx)('div', {
-                              className: a()(D.search, {
-                                  [D.open]: o || l,
-                                  [D.focused]: l
+                              className: a()(M.search, {
+                                  [M.open]: o || l,
+                                  [M.focused]: l
                               }),
                               children: (0, r.jsx)(d.tEY, {
                                   focusTarget: { current: null == (c = this._editorRef) ? void 0 : c.editor },
@@ -138,14 +139,14 @@ class B extends i.PureComponent {
                                   children: (0, r.jsxs)(
                                       'div',
                                       {
-                                          className: D.searchBar,
+                                          className: M.searchBar,
                                           ref: this._searchBarRef,
                                           children: [
                                               this.renderInput(u),
                                               (0, r.jsx)(m.BK, {
                                                   onClear: this.handleClearSearch,
                                                   hasContent: o || n,
-                                                  className: D.icon
+                                                  className: M.icon
                                               })
                                           ]
                                       },
@@ -159,15 +160,15 @@ class B extends i.PureComponent {
     }
     constructor(e) {
         super(e),
-            M(this, 'state', {
+            U(this, 'state', {
                 focused: !1,
                 selectedIndex: void 0
             }),
-            M(this, '_editorRef', void 0),
-            M(this, '_containerRef', i.createRef()),
-            M(this, '_searchBarRef', i.createRef()),
-            M(this, '_searchPopoutRef', i.createRef()),
-            M(this, 'handleSetSearchQuery', (e) => {
+            U(this, '_editorRef', void 0),
+            U(this, '_containerRef', i.createRef()),
+            U(this, '_searchBarRef', i.createRef()),
+            U(this, '_searchPopoutRef', i.createRef()),
+            U(this, 'handleSetSearchQuery', (e) => {
                 let { query: t, anchor: n, focus: r, performSearch: i, replace: l } = e,
                     { editorState: a } = this.props,
                     o = T.Sq(a);
@@ -175,18 +176,18 @@ class B extends i.PureComponent {
                 let s = Number(n) + t.length;
                 (a = T.iK(s, a)), this.setEditorState(a), i && this.search({ queryString: T.Sq(a) });
             }),
-            M(this, 'handleSelectedIndexChanged', (e) => {
+            U(this, 'handleSelectedIndexChanged', (e) => {
                 var t, n;
-                null == (n = this._editorRef) || null == (t = n.editor) || t.setAttribute('aria-activedescendant', null != e ? ''.concat(U, '-').concat(e) : void 0), this.setState({ selectedIndex: e });
+                null == (n = this._editorRef) || null == (t = n.editor) || t.setAttribute('aria-activedescendant', null != e ? ''.concat(F, '-').concat(e) : void 0), this.setState({ selectedIndex: e });
             }),
-            M(this, 'renderPopout', () =>
-                (0, r.jsx)(Z.ZP, {
+            U(this, 'renderPopout', () =>
+                (0, r.jsx)(R.ZP, {
                     ref: this._searchPopoutRef,
-                    navId: U,
+                    navId: F,
                     onSelectedIndexChanged: this.handleSelectedIndexChanged
                 })
             ),
-            M(this, 'search', (e) => {
+            U(this, 'search', (e) => {
                 let { searchId: t, isSearching: n } = this.props,
                     { queryString: r, searchEverywhere: i } = null != e ? e : {};
                 if (null == r || '' === r) {
@@ -194,21 +195,21 @@ class B extends i.PureComponent {
                     r = T.Sq(e);
                 }
                 if (null != t && !n) {
-                    let e = N.kG(r),
-                        t = N.$G(e);
-                    for (let t = 0; t < e.length; t++) N.Fr(e[t], e[t + 1]) || (r = r.substring(0, e[t].start) + r.substring(e[t].end));
+                    let e = (0, N.kG)(r),
+                        t = (0, N.$G)(e);
+                    for (let t = 0; t < e.length; t++) (0, N.Fr)(e[t], e[t + 1]) || (r = r.substring(0, e[t].start) + r.substring(e[t].end));
                     if (0 === e.length || 0 === Object.keys(t).length) return !1;
                     this.props.onSearch({
                         queryString: r,
                         query: t,
                         searchEverywhere: null != i && i
                     }),
-                        d.uvj.announce(L.intl.string(L.t.pKCxWF)),
+                        d.uvj.announce(D.intl.string(D.t.pKCxWF)),
                         this.onBlur();
                 }
                 return !0;
             }),
-            M(this, 'handleClearSearch', (e) => {
+            U(this, 'handleClearSearch', (e) => {
                 let { editorState: t, searchId: n, searchType: r } = this.props,
                     { focused: i } = this.state;
                 if ((e.preventDefault(), e.stopPropagation(), '' === T.Sq(t))) return void this.focusEditor();
@@ -221,7 +222,7 @@ class B extends i.PureComponent {
                         }),
                     i || Promise.resolve().then(() => this.blurEditor());
             }),
-            M(this, 'handleFocusSearch', (e) => {
+            U(this, 'handleFocusSearch', (e) => {
                 let { prefillCurrentChannel: t } = e;
                 if (!t) return void this.focusEditor();
                 let n = S.Z.getChannelId(),
@@ -233,56 +234,56 @@ class B extends i.PureComponent {
                     let { _editorRef: e } = this;
                     null == e || e.focus(),
                         this.handleSetSearchQuery({
-                            query: h.ZP[R.dCx.FILTER_IN].key + '#'.concat(l, ' '),
+                            query: h.ZP[k.dCx.FILTER_IN].key + '#'.concat(l, ' '),
                             replace: !0
                         });
                 });
             }),
-            M(this, 'focusEditor', () => {
+            U(this, 'focusEditor', () => {
                 let { _editorRef: e } = this;
                 null != e && Promise.resolve().then(() => e.focus());
             }),
-            M(this, 'blurEditor', () => {
+            U(this, 'blurEditor', () => {
                 let { _editorRef: e } = this;
                 null != e && Promise.resolve().then(() => e.blur());
             }),
-            M(this, 'setEditorRef', (e) => {
+            U(this, 'setEditorRef', (e) => {
                 this._editorRef = e;
             }),
-            M(this, 'onFocus', () => {
+            U(this, 'onFocus', () => {
                 let { searchId: e, searchType: t } = this.props;
                 this.setState({ focused: !0 }),
                     null == e ||
                         j.Z.isActive(e) ||
                         (0, w.I1)({
                             searchId: e,
-                            searchType: null != t ? t : (0, j.g)(e)
+                            searchType: null != t ? t : (0, Z.g)(e)
                         });
             }),
-            M(this, 'onBlur', () => {
+            U(this, 'onBlur', () => {
                 let { searchId: e, searchType: t } = this.props;
                 this.setState({ focused: !1 }, () => {
                     null == e ||
                         j.Z.isActive(e) ||
                         (0, w.IZ)({
                             searchId: e,
-                            searchType: null != t ? t : (0, j.g)(e)
+                            searchType: null != t ? t : (0, Z.g)(e)
                         }),
                         T.xb(this.props.editorState) && this.clearSearch();
                 });
             }),
-            M(this, 'handleReturn', (e) => {
+            U(this, 'handleReturn', (e) => {
                 let { shiftKey: t } = e;
                 e.preventDefault();
                 let { current: n } = this._searchPopoutRef;
                 return (null != n && n.selectOption()) || ((0, A.X)() && t ? this.search({ searchEverywhere: !0 }) : this.search()), 'handled';
             }),
-            M(this, 'handleBeforeInput', (e) => {
+            U(this, 'handleBeforeInput', (e) => {
                 let { editorState: t } = this.props,
                     { focused: n } = this.state;
                 return T.Sq(t).length >= 512 || ((t = T.x0(e, t)), (t = T.Hl(t, 512)), (t = this.tokenize(t)), this.setEditorState(t), n || this.setState({ focused: !0 })), 'handled';
             }),
-            M(this, 'handleKeyCommand', (e) => {
+            U(this, 'handleKeyCommand', (e) => {
                 let { editorState: t } = this.props,
                     { focused: n } = this.state;
                 switch (e) {
@@ -304,16 +305,16 @@ class B extends i.PureComponent {
                 }
                 return 'not-handled';
             }),
-            M(this, 'handlePastedText', (e) => {
+            U(this, 'handlePastedText', (e) => {
                 let { editorState: t } = this.props,
                     { focused: n } = this.state;
                 return (e = null != e ? e.replace(/\n/g, '') : ''), (t = T.x0(e, t)), (t = T.Hl(t, 512)), (t = this.tokenize(t)), n || this.setState({ focused: !0 }), this.setEditorState(t), 'handled';
             }),
-            M(this, 'setEditorState', (e) => {
+            U(this, 'setEditorState', (e) => {
                 let { searchId: t } = this.props;
                 p.j8(t, e);
             }),
-            M(this, 'handleKeyBind', (e) => {
+            U(this, 'handleKeyBind', (e) => {
                 let { key: t, metaKey: n, shiftKey: r } = e,
                     { editorState: i, searchId: l, keyboardModeEnabled: a } = this.props;
                 if ((e.stopPropagation(), 'Escape' === t)) {
@@ -346,10 +347,10 @@ class B extends i.PureComponent {
                 }
                 return T.q0(e);
             }),
-            N.WU();
+            (0, N.WU)();
     }
 }
-function G(e) {
+function H(e) {
     let { isSearchActive: t, searchId: n, searchType: r } = e,
         l = i.useRef(t);
     i.useEffect(() => {
@@ -363,29 +364,29 @@ function G(e) {
             !l.current && t && (l.current = !0);
     }, [t, n, r]);
 }
-function H(e) {
+function V(e) {
     let { className: t, keyboardModeEnabled: n, editorState: l } = e,
-        a = i.useMemo(() => ({ type: R.aib.DMS }), []),
-        o = (0, u.e7)([j.Z], () => j.Z.getSearchResultsQueryString(R.aib.DMS)),
-        s = (0, v.jj)(a, k.sR.MESSAGES, o),
-        c = (0, u.e7)([E.Z], () => {
-            let e = E.Z.getTotalCount(s);
+        a = i.useMemo(() => ({ type: k.aib.DMS }), []),
+        o = (0, u.e7)([j.Z], () => j.Z.getSearchResultsQueryString(k.aib.DMS)),
+        s = (0, v.jj)(a, L.sR.MESSAGES, o),
+        c = (0, u.e7)([y.Z], () => {
+            let e = y.Z.getTotalCount(s);
             return null != e && e > 0;
         }),
-        d = (0, u.e7)([E.Z], () => E.Z.getIsFetching(s));
-    G({
+        d = (0, u.e7)([y.Z], () => y.Z.getIsFetching(s));
+    H({
         isSearchActive: d || c,
-        searchId: R.aib.DMS,
-        searchType: R.aib.DMS
+        searchId: k.aib.DMS,
+        searchType: k.aib.DMS
     });
     let m = i.useCallback(
         (e) => {
             let { queryString: t } = e;
             x.Z.fetchMessages({
                 searchContext: a,
-                searchTabs: [k.sR.MESSAGES],
+                searchTabs: [L.sR.MESSAGES],
                 searchQueryString: t,
-                getLimit: () => R.vpv,
+                getLimit: () => k.vpv,
                 onFetchStart: (e) => {
                     let { searchContext: t, searchQueryString: n, searchQuery: r } = e,
                         i = (0, v.WJ)(t);
@@ -397,10 +398,10 @@ function H(e) {
         },
         [a]
     );
-    return (0, r.jsx)(B, {
+    return (0, r.jsx)(G, {
         className: t,
-        searchId: R.aib.DMS,
-        searchType: R.aib.DMS,
+        searchId: k.aib.DMS,
+        searchType: k.aib.DMS,
         isSearching: d,
         editorState: l,
         hasResults: c,
@@ -408,14 +409,14 @@ function H(e) {
         onSearch: m
     });
 }
-function V(e) {
+function z(e) {
     let { className: t, keyboardModeEnabled: n, editorState: l } = e,
         a = (0, u.e7)([j.Z], () => j.Z.getCurrentSearchId()),
-        o = (0, u.e7)([j.Z], () => j.Z.getSearchType()),
+        o = (0, Z.k)(a),
         s = (0, u.e7)([j.Z], () => j.Z.isActive(a)),
         c = (0, u.e7)([j.Z], () => j.Z.hasResults(a)),
         d = (0, u.e7)([j.Z], () => null != a && j.Z.isSearching(a));
-    G({
+    H({
         isSearchActive: s,
         searchId: a,
         searchType: o
@@ -423,11 +424,11 @@ function V(e) {
     let p = i.useCallback(
         (e) => {
             let { queryString: t, query: n, searchEverywhere: r } = e;
-            null != a && F(a, n, t, !!r);
+            null != a && B(a, n, t, !!r);
         },
         [a]
     );
-    return (0, r.jsx)(B, {
+    return (0, r.jsx)(G, {
         className: t,
         searchId: a,
         searchType: o,
@@ -438,20 +439,20 @@ function V(e) {
         onSearch: p
     });
 }
-function z(e) {
+function W(e) {
     let { className: t } = e,
         n = (0, u.e7)([j.Z], () => j.Z.getCurrentSearchId()),
         l = (0, u.e7)([_.Z], () => _.Z.keyboardModeEnabled),
         a = (0, u.e7)([j.Z], () => (null != n ? j.Z.getEditorState(n) : null)),
         o = i.useMemo(() => (null != a ? a : T.nR(P.Jl(h.ZP))), [a]),
-        s = (0, y.U)({ location: 'Search' });
-    return n === R.aib.DMS && s
-        ? (0, r.jsx)(H, {
+        s = (0, E.U)({ location: 'Search' });
+    return n === k.aib.DMS && s
+        ? (0, r.jsx)(V, {
               className: t,
               keyboardModeEnabled: l,
               editorState: o
           })
-        : (0, r.jsx)(V, {
+        : (0, r.jsx)(z, {
               className: t,
               keyboardModeEnabled: l,
               editorState: o

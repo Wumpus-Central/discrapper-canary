@@ -1,8 +1,8 @@
 n.d(t, { q: () => S });
 var r = n(255367),
-    a = n(73800),
-    l = n(120356),
-    i = n.n(l),
+    i = n(73800),
+    a = n(120356),
+    l = n.n(a),
     s = n(442837),
     o = n(481060),
     c = n(596454),
@@ -17,28 +17,28 @@ var r = n(255367),
     b = n(981631),
     j = n(675654),
     v = n(710111),
-    C = n(130883),
-    _ = n(388032),
+    _ = n(130883),
+    C = n(388032),
     y = n(773967);
 function O(e) {
-    let { className: t, sound: n, playSound: l, isPlaying: s, text: d } = e,
+    let { className: t, sound: n, playSound: a, isPlaying: s, text: d } = e,
         u = (null == n ? void 0 : n.emojiId) != null || (null == n ? void 0 : n.emojiName) != null,
-        m = _.intl.formatToPlainString(_.t.tuMUJy, {
+        m = C.intl.formatToPlainString(C.t.tuMUJy, {
             emojiName: null == n ? void 0 : n.emojiName,
             soundName: null == n ? void 0 : n.name
         }),
-        h = a.useCallback(() => {
+        h = i.useCallback(() => {
             x.default.track(b.rMx.MODERATOR_QUEUE_ACTION, {
                 guild_id: f.Z.getGuildId(),
                 action: 'airhorn'
             }),
-                null != l && l();
-        }, [l]);
+                null != a && a();
+        }, [a]);
     return (0, r.jsxs)(o.P3F, {
         'aria-label': m,
         tag: 'span',
         onClick: h,
-        className: i()(y.inlineContainer, y.inlineButton, { [y.playing]: !0 === s }, t),
+        className: l()(y.inlineContainer, y.inlineButton, { [y.playing]: !0 === s }, t),
         children: [
             u &&
                 (0, r.jsx)(c.Z, {
@@ -52,21 +52,21 @@ function O(e) {
 }
 function w(e) {
     let { containerRef: t, text: n } = e,
-        l = a.useRef(null),
-        i = (0, s.e7)([g.Z], () => {
+        a = i.useRef(null),
+        l = (0, s.e7)([g.Z], () => {
             var e;
             return null == (e = g.Z.getSoundsForGuild(v.X8)) ? void 0 : e.find((e) => 'airhorn' === e.name);
         }),
-        { createMultipleConfettiAt: o } = a.useContext(m.h),
+        { createMultipleConfettiAt: o } = i.useContext(m.h),
         c = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
-        { isPlaying: f, playSound: x } = (0, p.W)(i);
+        { isPlaying: f, playSound: x } = (0, p.W)(l);
     (0, d.ZP)(() => {
         (0, h.w)();
     });
-    let b = a.useCallback(async () => {
+    let b = i.useCallback(async () => {
         if (await x()) {
             var e;
-            if ((null == (e = l.current) || e.addAnimation(), !c && (null == t ? void 0 : t.current) != null)) {
+            if ((null == (e = a.current) || e.addAnimation(), !c && (null == t ? void 0 : t.current) != null)) {
                 let e = t.current.getBoundingClientRect(),
                     n = {
                         x: e.left + e.width / 2,
@@ -95,17 +95,17 @@ function w(e) {
             }
         }
     }, [x, o, c, t]);
-    return void 0 === i
+    return void 0 === l
         ? null
         : (0, r.jsx)(O, {
-              sound: i,
+              sound: l,
               playSound: b,
               isPlaying: f,
               text: n
           });
 }
 function S() {
-    let e = a.useRef(null);
+    let e = i.useRef(null);
     return (0, r.jsxs)(o.Kqy, {
         className: y.container,
         direction: 'vertical',
@@ -130,13 +130,13 @@ function S() {
                     (0, r.jsx)(o.X6q, {
                         className: y.header,
                         variant: 'heading-md/medium',
-                        children: _.intl.string(C.default.h6QNk5)
+                        children: C.intl.string(_.default.h6QNk5)
                     }),
                     (0, r.jsx)(o.Text, {
                         className: y.text,
                         variant: 'text-md/medium',
                         color: 'text-secondary',
-                        children: _.intl.format(C.default['8N4c5+'], {
+                        children: C.intl.format(_.default['8N4c5+'], {
                             airhornHook: (t) =>
                                 (0, r.jsx)(w, {
                                     containerRef: e,

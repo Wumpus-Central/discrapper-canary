@@ -16,8 +16,8 @@ var r = n(255367),
     _ = n(930282),
     b = n(464891),
     x = n(507418),
-    y = n(348238),
-    E = n(38267),
+    E = n(348238),
+    y = n(38267),
     v = n(25015),
     C = n(438075),
     O = n(359110),
@@ -100,12 +100,12 @@ function B(e) {
             showUsernamePopout: p,
             showAvatarPopout: m
         } = (function (e, t) {
-            let { popouts: n, setPopout: r } = (0, E.Z)(e.id, M.d$),
+            let { popouts: n, setPopout: r } = (0, y.Z)(e.id, M.d$),
                 { usernameProfile: l, avatarProfile: a } = n,
-                o = (0, y.XO)(e, t, l, r);
+                o = (0, E.XO)(e, t, l, r);
             return {
                 onClickUsername: o,
-                onClickAvatar: (0, y.R9)(a, r),
+                onClickAvatar: (0, E.R9)(a, r),
                 onPopoutRequestClose: i.useCallback(
                     () =>
                         r({
@@ -176,7 +176,7 @@ function G(e) {
         _ = S.NA.useSetting(),
         b = (0, a.e7)([N.Z], () => N.Z.isDeveloper),
         x = (0, f.A)((null != (l = h.editedTimestamp) ? l : h.timestamp).valueOf()),
-        { content: y, hasSpoilerEmbeds: E } = (0, v.Z)(h, {
+        { content: E, hasSpoilerEmbeds: y } = (0, v.Z)(h, {
             hideSimpleEmbedContent: g && _,
             isInteracting: !1,
             formatInline: !1,
@@ -198,7 +198,7 @@ function G(e) {
                       children: [
                           (0, r.jsx)(B, {
                               mergedMessageRecord: h,
-                              content: y,
+                              content: E,
                               channel: O,
                               reportingUserId: null == s || null == (n = s.moderatorReport) ? void 0 : n.reporting_user_id,
                               reportedTimestamp: o.timestamp
@@ -209,7 +209,7 @@ function G(e) {
                                   channel: O,
                                   compact: !1
                               },
-                              hasSpoilerEmbeds: E,
+                              hasSpoilerEmbeds: y,
                               isInteracting: !1,
                               isMessageSnapshot: !0,
                               renderThreadAccessory: !1,

@@ -157,7 +157,7 @@ function w(e) {
         G = i.useMemo(() => {
             let e = [];
             return (
-                null == t || n
+                null == t || n || null == U
                     ? e.push(h())
                     : 0 === t.length
                       ? e.push((0, r.jsx)(N, {}, 'empty-state'))

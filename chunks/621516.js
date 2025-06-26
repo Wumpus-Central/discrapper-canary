@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E });
 var r = n(255367),
-    a = n(73800),
-    l = n(120356),
-    i = n.n(l),
+    i = n(73800),
+    a = n(120356),
+    l = n.n(a),
     s = n(695469),
     o = n(442837),
     c = n(780384),
@@ -17,15 +17,15 @@ var r = n(255367),
     b = n(434404),
     j = n(430824),
     v = n(63063),
-    C = n(595433),
-    _ = n(981631),
+    _ = n(595433),
+    C = n(981631),
     y = n(388032),
     O = n(461238),
     w = n(906739),
     S = n(965358),
     N = n(420196),
-    P = n(433075);
-function T(e) {
+    T = n(433075);
+function P(e) {
     let { handleHide: t } = e;
     return (0, r.jsx)(d.P3F, {
         onClick: t,
@@ -39,9 +39,9 @@ function T(e) {
     });
 }
 function I(e) {
-    let { username: t, title: n, videoSrc: a, messageCount: l, reaction: s, reactionCount: o, classname: c } = e;
+    let { username: t, title: n, videoSrc: i, messageCount: a, reaction: s, reactionCount: o, classname: c } = e;
     return (0, r.jsxs)('div', {
-        className: i()(O.videoPreview, c),
+        className: l()(O.videoPreview, c),
         children: [
             (0, r.jsx)('div', {
                 className: O.authorRow,
@@ -73,7 +73,7 @@ function I(e) {
             (0, r.jsx)(d.LZC, { size: 10 }),
             (0, r.jsx)(h.Z, {
                 className: O.video,
-                src: a,
+                src: i,
                 autoPlay: !0,
                 loop: !0,
                 muted: !0
@@ -97,7 +97,7 @@ function I(e) {
                                 (0, r.jsx)(d.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'interactive-normal',
-                                    children: l
+                                    children: a
                                 })
                             ]
                         }),
@@ -124,30 +124,30 @@ function I(e) {
 }
 let E = (e) => {
     var t, n;
-    let { channel: l } = e,
+    let { channel: a } = e,
         h = (0, u.ZP)(),
         E = (0, c.wj)(h),
-        R = (0, o.e7)([j.Z], () => j.Z.getGuild(l.guild_id)),
+        R = (0, o.e7)([j.Z], () => j.Z.getGuild(a.guild_id)),
         k = (0, o.e7)([m.Z], () => m.Z.useReducedMotion),
-        M = (0, o.e7)([g.Z], () => g.Z.hasHidden(l.id)),
+        M = (0, o.e7)([g.Z], () => g.Z.hasHidden(a.id)),
         Z = (0, p.C)({
-            guildId: l.guild_id,
-            channelId: l.id
+            guildId: a.guild_id,
+            channelId: a.id
         }),
-        { transitions: A, setVisible: L } = (0, C.H)(),
-        F = a.useCallback(() => {
-            L(!1), f.Z.hideAdminOnboarding(l.id, !0);
-        }, [l, L]);
-    a.useEffect(() => {
-        (0, x.c)(l.id) || L(!M);
-    }, [l, L, M]);
-    let D = a.useMemo(() => [y.intl.string(y.t['8pEGAw']), y.intl.string(y.t.jwfgDQ), y.intl.string(y.t.mPKs29), y.intl.string(y.t.StRbvL)], []),
-        z = a.useMemo(() => [y.intl.string(y.t['m/b58P']), y.intl.string(y.t.MuJSKy), y.intl.string(y.t['d/Wqvr']), y.intl.string(y.t.GJklAw)], []),
+        { transitions: A, setVisible: L } = (0, _.H)(),
+        F = i.useCallback(() => {
+            L(!1), f.Z.hideAdminOnboarding(a.id, !0);
+        }, [a, L]);
+    i.useEffect(() => {
+        (0, x.c)(a.id) || L(!M);
+    }, [a, L, M]);
+    let D = i.useMemo(() => [y.intl.string(y.t['8pEGAw']), y.intl.string(y.t.jwfgDQ), y.intl.string(y.t.mPKs29), y.intl.string(y.t.StRbvL)], []),
+        z = i.useMemo(() => [y.intl.string(y.t['m/b58P']), y.intl.string(y.t.MuJSKy), y.intl.string(y.t['d/Wqvr']), y.intl.string(y.t.GJklAw)], []),
         B = () => {
-            b.Z.open(l.guild_id, _.pNK.ROLE_SUBSCRIPTIONS);
+            b.Z.open(a.guild_id, C.pNK.ROLE_SUBSCRIPTIONS);
         },
-        H = null != (t = null == R ? void 0 : R.hasFeature(_.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) && t ? y.intl.string(y.t.n0q7sL) : y.intl.string(y.t.QoYdiY),
-        U = null != (n = (null == R ? void 0 : R.hasFeature(_.oNc.CREATOR_MONETIZABLE)) || (null == R ? void 0 : R.hasFeature(_.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) && n,
+        H = null != (t = null == R ? void 0 : R.hasFeature(C.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) && t ? y.intl.string(y.t.n0q7sL) : y.intl.string(y.t.QoYdiY),
+        U = null != (n = (null == R ? void 0 : R.hasFeature(C.oNc.CREATOR_MONETIZABLE)) || (null == R ? void 0 : R.hasFeature(C.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) && n,
         V = U ? y.intl.string(y.t['G/7ciY']) : y.intl.string(y.t.IFOiio),
         G = U ? y.intl.string(y.t.GjgQOz) : y.intl.string(y.t.E7AO6u);
     return (0, r.jsx)(r.Fragment, {
@@ -172,14 +172,14 @@ let E = (e) => {
                                           y.intl.string(y.t.znhX2d)
                                       ]
                                   }),
-                                  (0, r.jsx)(T, { handleHide: F })
+                                  (0, r.jsx)(P, { handleHide: F })
                               ]
                           }),
                           (0, r.jsxs)('div', {
                               className: O.contentContainer,
                               children: [
                                   (0, r.jsxs)('div', {
-                                      className: i()(O.contentRow, U && O.contentRowOne),
+                                      className: l()(O.contentRow, U && O.contentRowOne),
                                       children: [
                                           (0, r.jsx)('div', {
                                               className: O.contentMediaContainer,
@@ -232,7 +232,7 @@ let E = (e) => {
                                                   }),
                                                   (0, r.jsx)(d.LZC, { size: 16 }),
                                                   (0, r.jsxs)(d.P3F, {
-                                                      onClick: () => open(v.Z.getCreatorSupportArticleURL(_.BhN.MEDIA_CHANNEL)),
+                                                      onClick: () => open(v.Z.getCreatorSupportArticleURL(C.BhN.MEDIA_CHANNEL)),
                                                       className: O.helpCenterLink,
                                                       children: [
                                                           (0, r.jsx)(d.Text, {
@@ -269,7 +269,7 @@ let E = (e) => {
                                   }),
                                   U &&
                                       (0, r.jsxs)('div', {
-                                          className: i()(O.contentRow, O.contentRowTwo),
+                                          className: l()(O.contentRow, O.contentRowTwo),
                                           children: [
                                               (0, r.jsx)('div', {
                                                   className: O.contentMediaContainer,
@@ -277,7 +277,7 @@ let E = (e) => {
                                                       className: O.contentImageContainer,
                                                       children: [
                                                           (0, r.jsx)('img', {
-                                                              src: E ? N : P,
+                                                              src: E ? N : T,
                                                               alt: '',
                                                               className: O.previewEmbedImage
                                                           }),

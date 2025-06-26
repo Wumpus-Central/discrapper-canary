@@ -2,10 +2,10 @@ e.d(n, {
     $J: () => u,
     F7: () => o,
     KZ: () => E,
-    V5: () => I,
+    V5: () => c,
     Vv: () => T,
     by: () => g,
-    fL: () => c,
+    fL: () => I,
     ib: () => p,
     yG: () => _
 });
@@ -24,8 +24,8 @@ let _ = 'notifications_inbox_guild_id',
         description: ''
     });
 var E = 12633 == e.j ? (((i = {}).UNREAD = 'UNREAD'), (i.TODAY = 'TODAY'), (i.YESTERDAY = 'YESTERDAY'), (i.OLDER = 'OLDER'), i) : null,
-    I = 12633 == e.j ? (((l = {}).ALL = 'all'), (l.ANNOUNCEMENTS = 'announcements'), (l.MENTIONS = 'mentions'), (l.BOOKMARKS = 'bookmarks'), l) : null,
-    c = 12633 == e.j ? (((r = {}).ALL_MESSAGES_CHANNEL = 'ALL_MESSAGES_CHANNEL'), (r.MENTION = 'MENTION'), (r.BOOKMARK = 'BOOKMARK'), r) : null;
+    c = 12633 == e.j ? (((l = {}).ALL = 'all'), (l.ANNOUNCEMENTS = 'announcements'), (l.MENTIONS = 'mentions'), (l.BOOKMARKS = 'bookmarks'), l) : null,
+    I = 12633 == e.j ? (((r = {}).ALL_MESSAGES_CHANNEL = 'ALL_MESSAGES_CHANNEL'), (r.MENTION = 'MENTION'), (r.BOOKMARK = 'BOOKMARK'), r) : null;
 let T = {
         UNREAD: s.t.sRUdBw,
         TODAY: s.t.F4jZQk,

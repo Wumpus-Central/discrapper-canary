@@ -40,7 +40,7 @@ function x(e) {
     }
     return e;
 }
-function y(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +58,7 @@ function y(e, t) {
         e
     );
 }
-let E = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
+let y = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
     v = (e) => {
         null != e &&
             s.ZP.trackWithMetadata(g.rMx.EXPRESSION_TOOLTIP_VIEWED, {
@@ -99,7 +99,7 @@ let E = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                 renderPopout: (e) =>
                     (0, r.jsx)(
                         h.Z,
-                        y(x({}, e), {
+                        E(x({}, e), {
                             renderableSticker: t,
                             channel: n,
                             refreshPositionKey: () => _(String(Date.now()))
@@ -110,7 +110,7 @@ let E = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                     let { onClick: n } = e;
                     return (0, r.jsx)(
                         a.ua7,
-                        y(x({}, u.b_), {
+                        E(x({}, u.b_), {
                             shouldShow: d,
                             text: (0, u.Y)(j),
                             'aria-label': !1,
@@ -120,7 +120,7 @@ let E = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                             children: (e) =>
                                 (0, r.jsx)(
                                     a.P3F,
-                                    y(x({}, e), {
+                                    E(x({}, e), {
                                         innerRef: s,
                                         className: b.clickableSticker,
                                         onClick: (e) => {
@@ -129,7 +129,7 @@ let E = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                                         tag: 'span',
                                         children: (0, r.jsx)(f.Z, {
                                             isInteracting: l,
-                                            size: E,
+                                            size: y,
                                             sticker: null != C ? C : t
                                         })
                                     })

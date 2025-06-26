@@ -2,9 +2,9 @@ i.d(t, { Z: () => o });
 var n = i(442837),
     l = i(223892),
     r = i(738774),
-    s = i(353926),
+    a = i(353926),
     u = i(923726),
-    a = i(144507),
+    s = i(144507),
     d = i(388032);
 let o = {
     title: () => d.intl.string(d.t['KzCF//']),
@@ -12,10 +12,10 @@ let o = {
     canCreateGuild: !1,
     useIsGuildSupported: () =>
         (0, n.e7)(
-            [s.Z],
+            [a.Z],
             () => (e, t) =>
                 e.isOwner(t) &&
-                (0, a.X$)({
+                (0, s.X$)({
                     guild: e,
                     isOwner: !0,
                     canManageGuildRoleSubscriptions: !0,

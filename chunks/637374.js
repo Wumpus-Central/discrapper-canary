@@ -16,8 +16,8 @@ var r = n(255367),
     _ = n(600164),
     b = n(479446),
     x = n(930114),
-    y = n(981632),
-    E = n(108989),
+    E = n(981632),
+    y = n(108989),
     v = n(703656),
     C = n(314897),
     O = n(82142),
@@ -365,13 +365,13 @@ class z extends i.Component {
                     children: [
                         !t &&
                             D.eZ.includes(e.giftStyle) &&
-                            (0, r.jsx)(E.Z, {
+                            (0, r.jsx)(y.Z, {
                                 className: U.snow,
                                 wind: 5
                             }),
                         i && (0, r.jsx)(N.Z, { className: U.headerIcon }),
                         null != e.giftStyle &&
-                            (0, r.jsx)(y.Z, {
+                            (0, r.jsx)(E.Z, {
                                 defaultAnimationState: e.redeemed ? b.SR.LOOP : b.SR.IDLE,
                                 giftStyle: e.giftStyle,
                                 className: o

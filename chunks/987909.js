@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -20,10 +20,10 @@ function x(e) {
         i = (h.default.extractTimestamp(n.id) + h.default.extractTimestamp(r.id)) % t.length;
     return t[i];
 }
-function y(e) {
+function E(e) {
     let { currentUser: t, channel: n, message: l, buttonLabels: u, stickers: d, event: p, eventProperties: m } = e,
         [h, _] = i.useState(!1),
-        y = i.useMemo(
+        E = i.useMemo(
             () =>
                 x({
                     assets: d,
@@ -32,7 +32,7 @@ function y(e) {
                 }),
             [d, t, l]
         ),
-        E = i.useMemo(
+        y = i.useMemo(
             () =>
                 x({
                     assets: u,
@@ -63,7 +63,7 @@ function y(e) {
                 })({
                     channel: n,
                     message: l,
-                    sticker: y
+                    sticker: E
                 }),
                 (function (e) {
                     var t, n;
@@ -112,11 +112,11 @@ function y(e) {
                             t)
                         );
                 })({
-                    sticker: y,
+                    sticker: E,
                     event: p,
                     eventProperties: m
                 }));
-        }, [n, l, y, p, m]);
+        }, [n, l, E, p, m]);
     return (0, r.jsxs)(a.zxk, {
         className: b.CTAMessageButtonOuter,
         innerClassName: b.CTAMessageButton,
@@ -128,14 +128,14 @@ function y(e) {
             (0, r.jsx)(c.Z, {
                 className: b.CTAMessageSticker,
                 isInteracting: h,
-                sticker: y,
+                sticker: E,
                 size: 28
             }),
-            E
+            y
         ]
     });
 }
-function E(e) {
+function y(e) {
     let { channel: t, message: n, buttonLabels: i, stickers: a, event: o, eventProperties: s } = e,
         c = m.default.getCurrentUser(),
         f = (function (e) {
@@ -158,7 +158,7 @@ function E(e) {
     return null != c && f
         ? (0, r.jsx)('div', {
               className: b.CTAMessage,
-              children: (0, r.jsx)(y, {
+              children: (0, r.jsx)(E, {
                   currentUser: c,
                   channel: t,
                   message: n,

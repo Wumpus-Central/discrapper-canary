@@ -415,6 +415,7 @@ var r = (function (e) {
             (e[(e.REFERRAL_PROGRAM_NITRO_TAB_BADGE = 557)] = 'REFERRAL_PROGRAM_NITRO_TAB_BADGE'),
             (e[(e.ACTIVITIES_VOICE_LAUNCHER_BADGE = 558)] = 'ACTIVITIES_VOICE_LAUNCHER_BADGE'),
             (e[(e.BOGO_2025_NITRO_TAB_BADGE = 559)] = 'BOGO_2025_NITRO_TAB_BADGE'),
+            (e[(e.BOGO_2025_ANNOUNCEMENT_MODAL = 560)] = 'BOGO_2025_ANNOUNCEMENT_MODAL'),
             e
         );
     })({}),

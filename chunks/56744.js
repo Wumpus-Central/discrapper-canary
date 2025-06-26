@@ -32,10 +32,10 @@ let m = i.memo(function (e) {
             [f]
         ),
         x = (0, u.Uj)(f),
-        y = (0, u.Uj)(t);
+        E = (0, u.Uj)(t);
     return (0, r.jsx)(d.Z, {
         repliedAuthor: x,
-        baseAuthor: y,
+        baseAuthor: E,
         baseMessage: t,
         channel: n,
         referencedMessage: p,

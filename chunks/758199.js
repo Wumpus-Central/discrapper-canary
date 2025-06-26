@@ -26,8 +26,8 @@ var r,
     _ = n(217702),
     b = n(388032),
     x = n(383195);
-function y() {
-    return (y =
+function E() {
+    return (E =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -37,7 +37,7 @@ function y() {
             return e;
         }).apply(this, arguments);
 }
-function E(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -226,19 +226,19 @@ function C(e) {
                                           {
                                               text: a,
                                               children: (e) => {
-                                                  var t = y(
+                                                  var t = E(
                                                       {},
                                                       (function (e) {
                                                           if (null == e) throw TypeError('Cannot destructure ' + e);
                                                           return e;
                                                       })(e)
                                                   );
-                                                  return (0, i.jsx)(c.zxk, E({}, m, t));
+                                                  return (0, i.jsx)(c.zxk, y({}, m, t));
                                               }
                                           },
                                           n
                                       )
-                                    : (0, i.jsx)(c.zxk, E({}, m), n);
+                                    : (0, i.jsx)(c.zxk, y({}, m), n);
                             })
                         })
                 ]
