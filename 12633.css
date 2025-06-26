@@ -11236,7 +11236,7 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 }
 
 .jumpToPresentBar__0f481:active {
-    margin-bottom: -1px
+    margin-bottom: calc(var(--space-24) - 1px)
 }
 
 .jumpToPresentBar__0f481 .spinner__0f481 {
