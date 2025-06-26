@@ -1,18 +1,18 @@
-n.d(t, { h: () => c });
+n.d(t, { h: () => s });
 var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(671533),
     o = n(981631),
     a = n(261496);
-function c(e) {
-    let { buttonText: t, onGoBack: n, onDismiss: c, showCloseButton: s } = e;
+function s(e) {
+    let { buttonText: t, onGoBack: n, onDismiss: s, showCloseButton: c } = e;
     return (0, r.jsxs)(i.qXd, {
         className: a.backNotice,
         children: [
-            s &&
+            c &&
                 (0, r.jsx)(i.RyX, {
-                    onClick: c,
+                    onClick: s,
                     noticeType: o.kVF.BACK_TO_PREVIOUS_SCREEN
                 }),
             (0, r.jsxs)(i.zxk, {

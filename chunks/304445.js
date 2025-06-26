@@ -1,11 +1,11 @@
-n.d(t, { Z: () => c }), n(388685), n(415506);
+n.d(t, { Z: () => u }), n(388685), n(415506);
 var i = n(572299),
     r = n(38618),
     l = n(905423),
     o = n(622143),
     s = n(703656),
     a = n(981631);
-function u(e, t, n) {
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +18,7 @@ function u(e, t, n) {
         e
     );
 }
-let c = new (class {
+let u = new (class {
     initialize() {
         this.cleanup(), (this.unlistenHistory = (0, s.s1)().listen(this.handleRouteChange));
         let { pathname: e } = (0, s.s1)().location;
@@ -69,19 +69,19 @@ let c = new (class {
         return (0, s.s1)();
     }
     constructor() {
-        u(this, 'unlistenHistory', void 0),
-            u(this, 'unlistenKeyboardChange', void 0),
-            u(this, 'rewrites', new Set()),
-            u(this, 'listeners', new Set()),
-            u(this, 'routeChangeCount', 0),
-            u(this, 'timer', -1),
-            u(this, 'connected', !1),
-            u(this, 'handleConnectionChange', () => {
+        c(this, 'unlistenHistory', void 0),
+            c(this, 'unlistenKeyboardChange', void 0),
+            c(this, 'rewrites', new Set()),
+            c(this, 'listeners', new Set()),
+            c(this, 'routeChangeCount', 0),
+            c(this, 'timer', -1),
+            c(this, 'connected', !1),
+            c(this, 'handleConnectionChange', () => {
                 let e = r.Z.isConnected(),
                     t = e && !this.connected;
                 (this.connected = e), t && ((this.routeChangeCount = 0), this.executeRouteRewrites((0, s.s1)().location, 'REPLACE'));
             }),
-            u(this, 'handleRouteChange', (e, t) => {
+            c(this, 'handleRouteChange', (e, t) => {
                 if (this.executeRouteRewrites(e, t)) return;
                 if (!(0, o.r)(e)) return void (0, s.dL)(a.Z5c.ME);
                 let n = l.Z.getState();
@@ -93,11 +93,11 @@ let c = new (class {
                     }
                 this.routeChangeCount = 0;
             }),
-            u(this, 'handleKeybindRouteChange', (e) => {
+            c(this, 'handleKeybindRouteChange', (e) => {
                 let { path: t } = e;
                 -1 !== this.timer && clearTimeout(this.timer), null != t && (this.timer = setTimeout(this.flushRoute, 200));
             }),
-            u(this, 'flushRoute', () => {
+            c(this, 'flushRoute', () => {
                 clearTimeout(this.timer);
                 let e = l.Z.getState();
                 null != e.path && (0, s.uL)(e.path);

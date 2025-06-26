@@ -239,6 +239,9 @@ function P() {
     (0, o.Pe)(), S.reset(), i()(o.ZP).forOwn((e, t) => S.addRule(p({ type: t }, e)));
 }
 function w(e) {
-    let t = (0, s.a)({ location: 'isGuildOrDMSearchType' });
-    return e === d.aib.GUILD || (e === d.aib.DMS && t);
+    if (e === d.aib.GUILD) return !0;
+    {
+        let t = (0, s.a)({ location: 'isChannelFilterSupported' });
+        return e === d.aib.DMS && t;
+    }
 }

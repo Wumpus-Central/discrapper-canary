@@ -1,61 +1,61 @@
 n.d(t, {
-    g: () => T,
-    mI: () => I
+    g: () => f,
+    mI: () => p
 }),
     n(388685);
-var r = n(149765),
-    i = n(399606),
-    l = n(581883),
-    o = n(430824),
+var i = n(149765),
+    s = n(399606),
+    r = n(581883),
+    l = n(430824),
     a = n(496675),
-    c = n(914010),
-    s = n(594174),
-    u = n(700785),
-    d = n(709054),
-    _ = n(533244),
-    E = n(487419),
-    O = n(676770);
-function I(e) {
-    let t = (0, i.e7)([o.Z, a.Z], () => {
-            let t = o.Z.getGuild(e);
+    o = n(914010),
+    d = n(594174),
+    h = n(700785),
+    u = n(709054),
+    c = n(533244),
+    g = n(487419),
+    C = n(676770);
+function p(e) {
+    let t = (0, s.e7)([l.Z, a.Z], () => {
+            let t = l.Z.getGuild(e);
             if (null == t) return !1;
             let n = a.Z.getGuildPermissions(t);
-            return null != n && r.Db(n, O.cv);
+            return null != n && i.Db(n, C.cv);
         }),
-        n = (0, i.e7)([E.Z], () => (null != e ? E.Z.getGuildIncident(e) : null)),
-        l = null != n && (0, _.ur)(n);
+        n = (0, s.e7)([g.Z], () => (null != e ? g.Z.getGuildIncident(e) : null)),
+        r = null != n && (0, c.ur)(n);
     return {
         shouldShowIncidentActions: t,
         incidentData: n,
-        isUnderLockdown: l
+        isUnderLockdown: r
     };
 }
-function T() {
+function f() {
     var e;
     let t = (function (e) {
-            let t = s.default.getCurrentUser(),
-                n = E.Z.getIncidentsByGuild();
-            for (let i of d.default.keys(n).map((e) => o.Z.getGuild(e))) {
-                if (null == i) continue;
-                let l = n[i.id];
+            let t = d.default.getCurrentUser(),
+                n = g.Z.getIncidentsByGuild();
+            for (let s of u.default.keys(n).map((e) => l.Z.getGuild(e))) {
+                if (null == s) continue;
+                let r = n[s.id];
                 if (
-                    !(null == l || (!(0, _.i9)(l) && !(0, _.ur)(l)) || ((0, _.ur)(l) && i.id !== e)) &&
-                    r.Db(
-                        u.uB({
+                    !(null == r || (!(0, c.i9)(r) && !(0, c.ur)(r)) || ((0, c.ur)(r) && s.id !== e)) &&
+                    i.Db(
+                        h.uB({
                             user: t,
-                            context: i,
+                            context: s,
                             checkElevated: !1
                         }),
-                        O.cv
+                        C.cv
                     )
                 )
-                    return i.id;
+                    return s.id;
             }
             return null;
-        })(c.Z.getGuildId()),
-        n = null != (e = l.Z.getGuildsProto()) ? e : {},
-        i = null != t ? n[t] : null,
-        a = null != i && i.disableRaidAlertNag;
+        })(o.Z.getGuildId()),
+        n = null != (e = r.Z.getGuildsProto()) ? e : {},
+        s = null != t ? n[t] : null,
+        a = null != s && s.disableRaidAlertNag;
     return {
         show: null != t && !a,
         guildId: t

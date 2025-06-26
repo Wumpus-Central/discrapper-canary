@@ -151,7 +151,7 @@ let O = function (e) {
                             className: b.subBanner,
                             children: [
                                 (0, r.jsx)('div', {
-                                    className: b.settingsBannerLeftImageContainer,
+                                    className: b.subHomeBannerImageContainer,
                                     children: (0, r.jsx)('img', {
                                         alt: '',
                                         src: _.Z,

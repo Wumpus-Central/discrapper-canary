@@ -364,8 +364,11 @@ function V(e) {
         a = (0, _.WJ)(o),
         s = (0, c.e7)([x.Z], () => x.Z.getSearchResultsQueryString(a)),
         u = (0, _.jj)(o, k.sR.MESSAGES, s),
-        [d, h] = i.useState(0),
-        f = (0, c.cj)([b.Z], () => {
+        [d, h] = i.useState(0);
+    i.useEffect(() => {
+        h(0);
+    }, [s]);
+    let f = (0, c.cj)([b.Z], () => {
             var e, t, n, r;
             return {
                 isSearching: null != (e = b.Z.getIsFetching(u)) && e,

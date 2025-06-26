@@ -2,8 +2,8 @@ n.d(t, { q: () => _ });
 var r = n(255367),
     l = n(73800),
     a = n(120356),
-    o = n.n(a),
-    i = n(180650),
+    i = n.n(a),
+    o = n(180650),
     s = n(622535),
     c = n(481060),
     u = n(626135),
@@ -17,29 +17,29 @@ var r = n(255367),
 let _ = (e) => {
     var t, n, a, _;
     let C,
-        { category: v, subblock: O, badgeText: x, handleTransition: S } = e;
+        { category: v, subblock: O, badgeText: E, handleTransition: x } = e;
     null != O && (C = null == (t = p.Z.getCategoryByStoreListingId(null == O ? void 0 : O.categoryStoreListingId)) ? void 0 : t.skuId);
-    let E = null != (n = null != C ? C : null == v ? void 0 : v.skuId) ? n : '',
-        { handleCardVisibilityChange: y } = (0, f.E)(E, 'home', 'marketing featured block'),
-        { featuredBlockBanner: j } = (0, b.YG)(v, O),
+    let S = null != (n = null != C ? C : null == v ? void 0 : v.skuId) ? n : '',
+        { handleCardVisibilityChange: j } = (0, f.E)(S, 'home', 'marketing featured block'),
+        { featuredBlockBanner: y } = (0, b.YG)(v, O),
         k = l.useRef(null),
-        P = E === i.T.NAMEPLATES_V3,
+        P = S === o.T.NAMEPLATES_V3,
         T = P ? 'NAMEPLATES VOL.3' : null,
         I = null == O ? void 0 : O.bodyText,
         L = (0, d.sp)();
     return (0, r.jsx)(s.$, {
         innerRef: k,
-        onChange: y,
+        onChange: j,
         threshold: 0,
         children: (0, r.jsxs)(c.P3F, {
             className: m.featuredBlock,
             innerRef: k,
-            style: { backgroundImage: 'url('.concat(j, ')') },
+            style: { backgroundImage: 'url('.concat(y, ')') },
             onClick: () => {
-                S('shop marketing tile', E),
+                x('shop marketing tile', S),
                     u.default.track(g.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                         collectibles_shop_session_id: null == L ? void 0 : L.sessionId,
-                        sku_id: E,
+                        sku_id: S,
                         page_type: 'home',
                         page_section: null == L ? void 0 : L.pageSection,
                         page_category: null == L ? void 0 : L.pageCategory,
@@ -49,10 +49,10 @@ let _ = (e) => {
                     });
             },
             children: [
-                null != x &&
+                null != E &&
                     (0, r.jsx)(c.IGR, {
                         disableColor: !0,
-                        text: x,
+                        text: E,
                         className: m.featuredBlockBadge
                     }),
                 (0, r.jsxs)('div', {
@@ -61,7 +61,7 @@ let _ = (e) => {
                         null != T &&
                             (0, r.jsx)(c.X6q, {
                                 lineClamp: 2,
-                                className: o()(m.featuredBlockTitleText, { [m.featuredBlockTitleTextNameplate]: P }),
+                                className: i()(m.featuredBlockTitleText, { [m.featuredBlockTitleTextNameplate]: P }),
                                 style: { color: null != (a = null == O ? void 0 : O.bannerTextColor) ? a : 'white' },
                                 variant: 'heading-xl/semibold',
                                 children: T
@@ -80,11 +80,11 @@ let _ = (e) => {
                     className: m.featuredBlockButton,
                     color: c.Ttl.WHITE,
                     onClick: (e) => {
-                        S('shop marketing take me there button', E),
+                        x('shop marketing take me there button', S),
                             e.stopPropagation(),
                             u.default.track(g.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                 collectibles_shop_session_id: null == L ? void 0 : L.sessionId,
-                                sku_id: E,
+                                sku_id: S,
                                 page_type: 'home',
                                 page_section: null == L ? void 0 : L.pageSection,
                                 page_category: null == L ? void 0 : L.pageCategory,

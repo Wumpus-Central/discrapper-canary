@@ -1,12 +1,12 @@
 n.d(t, {
     g: () => a,
-    y: () => o
+    y: () => i
 }),
     n(388685);
 var r,
     l = n(73800),
     a = (((r = {}).MOUNTED = 'mounted'), (r.SORT_OUT = 'sort-out'), (r.SORT_IN = 'sort-in'), (r.SHUFFLE_OUT = 'shuffle-out'), (r.SHUFFLE_IN = 'shuffle-in'), (r.FINISHED = 'finished'), r);
-let o = () => {
+let i = () => {
     let [e, t] = l.useState('mounted'),
         [n, r] = l.useState(!1),
         a = l.useRef(null);
@@ -17,8 +17,8 @@ let o = () => {
         {
             animationPhase: e,
             startAnimation: l.useCallback((e) => {
-                let { isShuffling: n, onOutroComplete: l, returnRef: o } = e;
-                (null == o ? void 0 : o.current) != null && ((a.current = o.current), r(!0)),
+                let { isShuffling: n, onOutroComplete: l, returnRef: i } = e;
+                (null == i ? void 0 : i.current) != null && ((a.current = i.current), r(!0)),
                     t(n ? 'shuffle-out' : 'sort-out'),
                     setTimeout(
                         () => {

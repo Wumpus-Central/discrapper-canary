@@ -19,5 +19,6 @@ e.exports = {
     badgeGradient: 'badgeGradient__62eb1',
     buttonGradient: 'buttonGradient__62eb1',
     subBanner: 'subBanner__62eb1',
+    subHomeBannerImageContainer: 'subHomeBannerImageContainer__62eb1',
     subBannerContent: 'subBannerContent__62eb1'
 };

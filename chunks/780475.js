@@ -7,8 +7,8 @@ n.d(t, {
 var r = n(73800),
     l = n(442837),
     a = n(100527),
-    o = n(906732),
-    i = n(626135),
+    i = n(906732),
+    o = n(626135),
     s = n(74538),
     c = n(328347),
     u = n(215023),
@@ -35,34 +35,34 @@ let f = (e) => {
     b = (e) => {
         let { analyticsSource: t, analyticsLocations: n } = (0, l.cj)([c.Z], () => c.Z.getAnalytics()),
             r = f(e),
-            { analyticsLocations: i, newestAnalyticsLocation: s } = (0, o.ZP)([...n, a.Z.COLLECTIBLES_SHOP, r]);
+            { analyticsLocations: o, newestAnalyticsLocation: s } = (0, i.ZP)([...n, a.Z.COLLECTIBLES_SHOP, r]);
         return {
             analyticsSource: t,
-            analyticsLocations: i,
+            analyticsLocations: o,
             newestAnalyticsLocation: s,
             currentTabLocation: r
         };
     },
     g = (e, t, n, l, a) => {
-        let { analyticsLocations: o, analyticsSource: s, currentTabLocation: c, newestAnalyticsLocation: p } = b(t);
+        let { analyticsLocations: i, analyticsSource: s, currentTabLocation: c, newestAnalyticsLocation: p } = b(t);
         r.useEffect(() => {
             if (l !== u.f7.VISIBLE || p !== c) return;
             let r = t === u.AW.CATALOG ? a : s;
-            i.default.track(d.rMx.COLLECTIBLES_SHOP_VIEWED, {
-                location_stack: o,
+            o.default.track(d.rMx.COLLECTIBLES_SHOP_VIEWED, {
+                location_stack: i,
                 source: r,
                 page_session_id: e,
                 page_type: t === u.AW.CATALOG ? 'full' : t,
                 category: t === u.AW.HOME ? void 0 : n
             });
-        }, [o, e, t, n, c, l, a, s, p]);
+        }, [i, e, t, n, c, l, a, s, p]);
     },
     h = (e, t) => {
         let { analyticsLocations: n } = b(e);
         r.useEffect(() => {
             null == t ||
                 s.ZP.canUseCollectibles(t) ||
-                i.default.track(d.rMx.PREMIUM_UPSELL_VIEWED, {
+                o.default.track(d.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: p.cd.COLLECTIBLES_SHOP,
                     location_stack: n
                 });

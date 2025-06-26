@@ -1,10 +1,10 @@
 n.d(t, {
-    Pe: () => eu,
-    Pr: () => J,
-    Qe: () => es,
-    ZP: () => e_,
-    co: () => ef,
-    nB: () => ed
+    Pe: () => ef,
+    Pr: () => ee,
+    Qe: () => ec,
+    ZP: () => eh,
+    co: () => ep,
+    nB: () => e_
 }),
     n(388685),
     n(413496),
@@ -157,43 +157,44 @@ function z(e, t) {
         a = U()[i];
     return null != a ? ([n, r] = a()) : D().has(i) ? ([n, r] = j(i, 'MMMM', 'month')) : L().has(i) ? ([n, r] = j(i, 'dddd', 'day')) : x().has(i) ? ([n, r] = j(i, 'YYYY', 'year')) : ([n, r] = j(i, A.b2L, 'day')), !!(n.isValid() && r.isValid()) && ('before' === t ? ((r = n), (n = null)) : 'after' === t && ((n = r), (r = null)), e.setData('start', n), e.setData('end', r), !0);
 }
-function q(e) {
-    let t = e.getMatch(1);
-    t.startsWith('"') && t.endsWith('"') && (t = t.substring(1, t.length - 1));
-    let n = E.Z.getGuildId(),
-        r = m.Z.getCurrentSearchId(),
-        i = (0, d.g)(r),
-        a = (0, f.a)({ location: 'channelValidator' });
-    if (i === A.aib.DMS && a) {
-        let n = Object.values(_.Z.getMutablePrivateChannels()).find((e) => {
-            let n = (0, u.F6)(e, y.default, h.Z);
-            if (t === n) return !0;
-            if (e.isDM()) {
-                let n = e.getRecipientId(),
-                    r = y.default.getUser(n);
-                if (null == r) return !1;
-                let i = T.ZP.getUserTag(r);
-                return t === i;
-            }
-        });
-        if (null != n) return e.setData('channel', n), !0;
-    }
-    let s = p.ZP.getChannels(n)[p.sH].concat(p.ZP.getChannels(n)[p.Zb]),
-        l = p.ZP.getTextChannelNameDisambiguations(n),
-        c = o()
-            .chain(s)
+function q(e, t, n) {
+    let r = p.ZP.getChannels(n)[p.sH].concat(p.ZP.getChannels(n)[p.Zb]),
+        i = p.ZP.getTextChannelNameDisambiguations(n),
+        a = o()
+            .chain(r)
             .map((e) => {
                 let { channel: t } = e;
                 return t;
             })
             .find((e) => {
                 var n, r;
-                return t === (null != (r = null == (n = l[e.id]) ? void 0 : n.name) ? r : e.name);
+                return t === (null != (r = null == (n = i[e.id]) ? void 0 : n.name) ? r : e.name);
             })
             .value();
-    return null != c && (e.setData('channel', c), !0);
+    return null != a && (e.setData('channel', a), !0);
 }
-function X(e) {
+function X(e, t) {
+    let n = Object.values(_.Z.getMutablePrivateChannels()).find((e) => {
+        if (t === (0, u.F6)(e, y.default, h.Z)) return !0;
+        if (e.isDM()) {
+            let n = e.getRecipientId(),
+                r = y.default.getUser(n);
+            return null != r && t === T.ZP.getUserTag(r);
+        }
+    });
+    return null != n && (e.setData('channel', n), !0);
+}
+function Q(e) {
+    let t = e.getMatch(1);
+    t.startsWith('"') && t.endsWith('"') && (t = t.substring(1, t.length - 1));
+    let n = E.Z.getGuildId(),
+        r = m.Z.getCurrentSearchId(),
+        i = (0, d.g)(r);
+    if (i === A.aib.GUILD) return q(e, t, n);
+    let a = (0, f.a)({ location: 'channelValidator' });
+    return i === A.aib.DMS && !!a && X(e, t);
+}
+function J(e) {
     let t = {
         [N.intl.string(N.t.ZNR2fn)]: 'link',
         [N.intl.string(N.t['20uQR0'])]: 'embed',
@@ -207,21 +208,21 @@ function X(e) {
     }[e.getMatch(1)];
     return null != t && '' !== t && (e.setData('has', t), !0);
 }
-function Q() {
+function $() {
     return [...Array.from(D()), ...Array.from(L()), ...Array.from(x()), ...Object.keys(U())];
 }
-function J() {
-    return o().sample(Q());
+function ee() {
+    return o().sample($());
 }
-function $(e, t, n) {
-    return ee(e, t, Q()).map((e) =>
+function et(e, t, n) {
+    return en(e, t, $()).map((e) =>
         w(R({}, e), {
             group: n,
             key: ''.concat(n, '-').concat(e.text)
         })
     );
 }
-function ee(e, t, n) {
+function en(e, t, n) {
     let r = e.toLocaleLowerCase();
     return o()(n)
         .filter((e) => i()(r, e.toLocaleLowerCase()))
@@ -229,7 +230,7 @@ function ee(e, t, n) {
         .map((e) => ({ text: e }))
         .value();
 }
-function et(e, t) {
+function er(e, t) {
     let n,
         r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10,
         i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
@@ -276,10 +277,10 @@ function et(e, t) {
         u
     );
 }
-function en() {
+function ei() {
     return !b.Z.hidePersonalInformation;
 }
-function er(e, t, n) {
+function ea(e, t, n) {
     let r = O.ZP.queryGroupDMs({
             query: e,
             limit: n,
@@ -303,7 +304,7 @@ function er(e, t, n) {
         .take(n)
         .value();
 }
-function ei(e, t, n) {
+function eo(e, t, n) {
     let r = O.ZP.queryChannels({
         query: e,
         type: p.sH,
@@ -340,16 +341,18 @@ function ei(e, t, n) {
         })
         .value();
 }
-function ea(e, t, n) {
+function es(e, t, n) {
     e.startsWith('"') && e.endsWith('"') ? (e = e.substring(1, e.length - 1)) : e.startsWith('"') && (e = e.substring(1)), '#' === e[0] && (e = e.substring(1));
-    let r = (0, f.a)({ location: 'getAutocompletions' });
-    return (0, d.g)(t) === A.aib.DMS && r ? er(e, t, n) : ei(e, t, n);
+    let r = (0, d.g)(t);
+    if (r === A.aib.GUILD) return eo(e, t, n);
+    let i = (0, f.a)({ location: 'getInFilterAutocompletions' });
+    return r === A.aib.DMS && i ? ea(e, t, n) : [];
 }
-let eo = /^(?:\s*(\d{17,20}|@me|([^@#:]+)#([0-9]{4})|([a-z0-9_.]{2,32})))/i;
-var es = (function (e) {
+let el = /^(?:\s*(\d{17,20}|@me|([^@#:]+)#([0-9]{4})|([a-z0-9_.]{2,32})))/i;
+var ec = (function (e) {
     return (e.FILTER = 'FILTER'), (e.ANSWER = 'ANSWER'), e;
 })({});
-function el() {
+function eu() {
     let e = [N.intl.string(N.t.ZNR2fn), N.intl.string(N.t['20uQR0']), N.intl.string(N.t.L4lxyM), N.intl.string(N.t['AV/v6u']), N.intl.string(N.t.XM9XGB), N.intl.string(N.t.TNLcp6), N.intl.string(N.t.F8Wf0d), N.intl.string(N.t.PJgX2t), N.intl.string(N.t.nrpA5O)];
     return {
         [A.dCx.FILTER_FROM]: {
@@ -357,12 +360,12 @@ function el() {
             componentType: 'FILTER',
             key: Y(N.intl.string(N.t['1TUdFh'])),
             plainText: N.intl.string(N.t['1TUdFh']),
-            validator: en,
-            getAutocompletions: et
+            validator: ei,
+            getAutocompletions: er
         },
         [A.dCx.ANSWER_USERNAME_FROM]: {
             follows: [A.dCx.FILTER_FROM],
-            regex: eo,
+            regex: el,
             validator: K,
             mutable: !0,
             componentType: 'ANSWER',
@@ -373,12 +376,12 @@ function el() {
             componentType: 'FILTER',
             key: Y(N.intl.string(N.t.i96lOz)),
             plainText: N.intl.string(N.t.i96lOz),
-            validator: en,
-            getAutocompletions: et
+            validator: ei,
+            getAutocompletions: er
         },
         [A.dCx.ANSWER_USERNAME_MENTIONS]: {
             follows: [A.dCx.FILTER_MENTIONS],
-            regex: eo,
+            regex: el,
             validator: K,
             mutable: !0,
             componentType: 'ANSWER',
@@ -389,12 +392,12 @@ function el() {
             componentType: 'FILTER',
             key: Y(N.intl.string(N.t.CqCvio)),
             plainText: N.intl.string(N.t.CqCvio),
-            getAutocompletions: (t, n, r) => ee(t, r, e)
+            getAutocompletions: (t, n, r) => en(t, r, e)
         },
         [A.dCx.ANSWER_HAS]: {
             regex: RegExp('(?:\\s*-?('.concat(e.map((e) => v.Z.escape(e)).join('|'), '))'), 'i'),
             follows: [A.dCx.FILTER_HAS],
-            validator: X,
+            validator: J,
             componentType: 'ANSWER',
             queryKey: 'has'
         },
@@ -429,21 +432,21 @@ function el() {
             componentType: 'FILTER',
             key: Y(N.intl.string(N.t['qZ+7BA'])),
             plainText: N.intl.string(N.t['qZ+7BA']),
-            getAutocompletions: (e, t, n) => $(e, n, A.dCx.FILTER_BEFORE)
+            getAutocompletions: (e, t, n) => et(e, n, A.dCx.FILTER_BEFORE)
         },
         [A.dCx.FILTER_ON]: {
             regex: W('('.concat(N.intl.string(N.t.tIxkOj), '|').concat(N.intl.string(N.t.h2NzSU), ')')),
             componentType: 'FILTER',
             key: Y(N.intl.string(N.t.h2NzSU)),
             plainText: N.intl.string(N.t.h2NzSU),
-            getAutocompletions: (e, t, n) => $(e, n, A.dCx.FILTER_ON)
+            getAutocompletions: (e, t, n) => et(e, n, A.dCx.FILTER_ON)
         },
         [A.dCx.FILTER_AFTER]: {
             regex: W(N.intl.string(N.t.KSDx7O)),
             componentType: 'FILTER',
             key: Y(N.intl.string(N.t.KSDx7O)),
             plainText: N.intl.string(N.t.KSDx7O),
-            getAutocompletions: (e, t, n) => $(e, n, A.dCx.FILTER_AFTER)
+            getAutocompletions: (e, t, n) => et(e, n, A.dCx.FILTER_AFTER)
         },
         [A.dCx.ANSWER_BEFORE]: {
             regex: Z,
@@ -476,14 +479,14 @@ function el() {
                     t = (0, d.g)(e);
                 return (0, I.R6)(t);
             },
-            getAutocompletions: (e, t, n) => ea(e, t, n)
+            getAutocompletions: (e, t, n) => es(e, t, n)
         },
         [A.dCx.ANSWER_IN]: {
             regex: S.e,
             mutable: !0,
             follows: [A.dCx.FILTER_IN],
             componentType: 'ANSWER',
-            validator: q,
+            validator: Q,
             queryKey: 'channel_id'
         },
         [A.dCx.FILTER_PINNED]: {
@@ -505,19 +508,19 @@ function el() {
         }
     };
 }
-let ec = {};
-function eu() {
-    Object.assign(ec, el());
+let ed = {};
+function ef() {
+    Object.assign(ed, eu());
 }
-function ed(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.keys(ec).length;
-    return o()(ec)
+function e_(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.keys(ed).length;
+    return o()(ed)
         .keys()
         .filter((e) => A.TNx.test(e))
-        .filter((e) => null != ec[e].key)
+        .filter((e) => null != ed[e].key)
         .map((e) => ({
             token: e,
-            text: ec[e].key
+            text: ed[e].key
         }))
         .filter((t) => {
             let { text: n } = t;
@@ -526,9 +529,9 @@ function ed(e) {
         .take(t)
         .value();
 }
-function ef(e) {
+function ep(e) {
     if (0 === e.length) return !1;
     let t = e.toLowerCase().replace(/^@/, '');
     return N.intl.string(N.t.Qf3ptr).startsWith(t) || A.ME.substring(1).startsWith(t);
 }
-let e_ = ec;
+let eh = ed;

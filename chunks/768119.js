@@ -164,7 +164,7 @@ function L(e) {
 }
 function x(e) {
     let { guildId: t, channelId: n } = e;
-    null == t && (0, d.a)({ location: 'SearchStore' }) ? L(h.aib.DMS) : L(null != t ? t : n);
+    null != t ? L(t) : (0, d.a)({ location: 'SearchStore' }) ? L(h.aib.DMS) : L(n);
 }
 function k(e) {
     let { searchId: t } = e;

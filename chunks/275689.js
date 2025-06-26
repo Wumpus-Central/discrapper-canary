@@ -10,8 +10,8 @@ var r = a(394798),
     l = a(988097),
     u = a(696486),
     I = a(305625),
-    R = a(966497),
-    d = a(241225),
+    d = a(966497),
+    R = a(241225),
     N = a(881243);
 class f {
     constructor(t = {}) {
@@ -63,7 +63,7 @@ class f {
         return (this._name = t), this;
     }
     end(t) {
-        this._endTime || ((this._endTime = (0, u.$k)(t)), (0, R.w)(this), this._onSpanEnded());
+        this._endTime || ((this._endTime = (0, u.$k)(t)), (0, d.w)(this), this._onSpanEnded());
     }
     getSpanJSON() {
         return (0, n.Jr)({
@@ -80,7 +80,7 @@ class f {
             _metrics_summary: (0, E.y)(this),
             profile_id: this._attributes[l.p6],
             exclusive_time: this._attributes[l.JQ],
-            measurements: (0, d.l)(this._events),
+            measurements: (0, R.l)(this._events),
             is_segment: (this._isStandaloneSpan && (0, u.Gx)(this) === this) || void 0,
             segment_id: this._isStandaloneSpan ? (0, u.Gx)(this).spanContext().spanId : void 0
         });
@@ -154,8 +154,8 @@ class f {
                 _metrics_summary: (0, E.y)(this),
                 ...(_ && { transaction_info: { source: _ } })
             },
-            R = (0, d.l)(this._events);
-        return R && Object.keys(R).length && (c.X && o.kg.log('[Measurements] Adding measurements to transaction event', JSON.stringify(R, void 0, 2)), (s.measurements = R)), s;
+            d = (0, R.l)(this._events);
+        return d && Object.keys(d).length && (c.X && o.kg.log('[Measurements] Adding measurements to transaction event', JSON.stringify(d, void 0, 2)), (s.measurements = d)), s;
     }
 }
 function A(t) {

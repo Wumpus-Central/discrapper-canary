@@ -2029,7 +2029,7 @@ class rh extends (u = E.ZP.Store) {
     }
     fetchAsyncResources() {
         let e = { fetchDave: !1 };
-        return (0, et.isWeb)() && (e.fetchDave = B.m.getCurrentConfig({ location: 'MediaEngineStore fetchAsyncResources' }).canSupportDaveProtocol), eF.fetchAsyncResources(e);
+        return (0, et.isWeb)() && (e.fetchDave = !1), eF.fetchAsyncResources(e);
     }
     getSupportedSecureFramesProtocolVersion() {
         let e = eF.getSupportedSecureFramesProtocolVersion(),
