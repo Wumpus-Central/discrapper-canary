@@ -20741,7 +20741,6 @@
   "jp25IS": "Webhooks",
   "xNhj0N": "Cancel",
   "eHUWKi": "Create Webhook",
-  "YrsmBA": "!!{username}!! on {timestamp, date, medium}",
   "W+K1Fh": "Delete",
   "rIWe+/": "Are you sure you want to delete the **!!{name}!!** webhook? This action cannot be undone.",
   "QVFjHh": "Delete !!{name}!!",
