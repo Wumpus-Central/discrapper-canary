@@ -5652,6 +5652,10 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     top: 0
 }
 
+:where(.container__73454>*) {
+    position: relative
+}
+
 .purple__73454 {
     --custom-gradient-color-start: var(--expressive-gradient-purple-start);
     --custom-gradient-color-end: var(--expressive-gradient-purple-end)
@@ -26445,14 +26449,6 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .headerContainer_d5200e.containerBottomPadding_d5200e {
     padding-bottom: var(--space-12)
-}
-
-.tier0Background_d5200e {
-    background: radial-gradient(100% 100% at 50% 100%, var(--background-base-low) 60%, var(--transparent) 100%), linear-gradient(270deg, var(--expressive-gradient-nitro-green-end) 0, var(--expressive-gradient-nitro-green-start) 100%)
-}
-
-.tier2Background_d5200e {
-    background: radial-gradient(100% 100% at 50% 100%, var(--background-base-low) 60%, var(--transparent) 100%), linear-gradient(270deg, var(--expressive-gradient-nitro-pink-end) 0, var(--expressive-gradient-nitro-pink-start) 100%)
 }
 
 .bigWumpus_d5200e {
