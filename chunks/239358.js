@@ -1,30 +1,30 @@
 a.d(t, { Z: () => n });
-var r = a(255367);
+var l = a(255367);
 a(73800);
-var l = a(481060),
+var r = a(481060),
     s = a(475286);
 let n = function (e) {
     let { label: t, subLabel: a, icon: n } = e;
-    return (0, r.jsxs)('div', {
+    return (0, l.jsxs)('div', {
         className: s.valueProp,
         children: [
-            (0, r.jsx)('div', {
+            (0, l.jsx)('div', {
                 className: s.valuePropIconContainer,
-                children: (0, r.jsx)(n, {
+                children: (0, l.jsx)(n, {
                     size: 'md',
                     color: 'currentColor'
                 })
             }),
-            (0, r.jsxs)('div', {
+            (0, l.jsxs)('div', {
                 className: s.valuePropText,
                 children: [
-                    (0, r.jsx)(l.Text, {
+                    (0, l.jsx)(r.Text, {
                         variant: 'text-sm/medium',
-                        color: 'text-normal',
+                        color: 'text-default',
                         children: t
                     }),
                     null != a &&
-                        (0, r.jsx)(l.Text, {
+                        (0, l.jsx)(r.Text, {
                             variant: 'text-xs/normal',
                             color: 'text-secondary',
                             children: a

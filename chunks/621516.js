@@ -255,7 +255,7 @@ let E = (e) => {
                                                               d.Text,
                                                               {
                                                                   variant: 'text-sm/medium',
-                                                                  color: 'text-normal',
+                                                                  color: 'text-default',
                                                                   className: O.mediaChannelTag,
                                                                   children: e
                                                               },
@@ -325,7 +325,7 @@ let E = (e) => {
                                                                   d.Text,
                                                                   {
                                                                       variant: 'text-sm/medium',
-                                                                      color: 'text-normal',
+                                                                      color: 'text-default',
                                                                       className: O.mediaChannelTag,
                                                                       children: e
                                                                   },

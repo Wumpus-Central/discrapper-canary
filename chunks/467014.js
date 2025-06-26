@@ -42,7 +42,7 @@ function f(e) {
                     }),
                     name: (0, r.jsx)(a.Text, {
                         variant: 'text-sm/semibold',
-                        color: 'text-normal',
+                        color: 'text-default',
                         children: p.intl.string(p.t.OIgYlZ)
                     }),
                     description:
@@ -66,7 +66,7 @@ function f(e) {
                     }),
                     name: (0, r.jsx)(a.Text, {
                         variant: 'text-sm/semibold',
-                        color: 'text-normal',
+                        color: 'text-default',
                         children: p.intl.string(p.t.DFSvTk)
                     }),
                     description:
@@ -90,7 +90,7 @@ function f(e) {
                     }),
                     name: (0, r.jsx)(a.Text, {
                         variant: 'text-sm/semibold',
-                        color: 'text-normal',
+                        color: 'text-default',
                         children: p.intl.string(p.t['Aw9+/P'])
                     }),
                     description:

@@ -35,7 +35,7 @@ function d(e) {
                 p(!0), null == i || i();
             });
         }, [i, f]),
-        O = h ? a.owK : a.TIy;
+        y = h ? a.owK : a.TIy;
     return (0, r.jsx)(a.P3F, {
         className: o()(c.container, n),
         onClick: g,
@@ -44,7 +44,7 @@ function d(e) {
             children: (e) => {
                 var t, n;
                 return (0, r.jsx)(
-                    O,
+                    y,
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},

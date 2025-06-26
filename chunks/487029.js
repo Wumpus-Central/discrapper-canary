@@ -12,19 +12,19 @@ var r = n(255367),
     h = n(208049),
     p = n(763296),
     g = n(242291),
-    O = n(174470),
-    y = n(549771),
+    y = n(174470),
+    O = n(549771),
     b = n(964398),
     N = n(294206),
-    m = n(710111),
-    v = n(840558);
+    v = n(710111),
+    m = n(840558);
 function x(e) {
     let { guildId: t, channel: n, width: x, height: E, keepOpen: C, interactive: I = !0, analyticsSource: T, onClose: j } = e,
         S = (function (e) {
             let [t, n] = (0, o.Wu)([p.Z], () => [p.Z.getSounds(), p.Z.getFavorites()]);
             return l.useMemo(() => {
                 let r = [],
-                    l = [...e, m.X8],
+                    l = [...e, v.X8],
                     i = (e, l) => {
                         var i, o;
                         for (let a of null != (o = null == (i = t.get(e)) ? void 0 : i.sort((e, t) => f.default.compare(e.soundId, t.soundId))) ? o : []) {
@@ -34,8 +34,8 @@ function x(e) {
                     };
                 return l.forEach((e) => i(e, !0)), l.forEach((e) => i(e, !1)), r;
             }, [t, n, e]);
-        })((0, y.h)(n, !0)),
-        P = (0, O.j)(),
+        })((0, O.h)(n, !0)),
+        P = (0, y.j)(),
         _ = l.useRef(null),
         [Z, A] = l.useState(void 0),
         w = (0, o.e7)([d.Z], () => d.Z.getMediaSessionId()),
@@ -97,7 +97,7 @@ function x(e) {
                         N.ZP,
                         {
                             interactive: I,
-                            className: v.soundButton,
+                            className: m.soundButton,
                             sound: e,
                             focused: Z === e.soundId,
                             channel: n

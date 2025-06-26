@@ -164,7 +164,7 @@ function v(e) {
             }),
             (0, r.jsx)(l.Text, {
                 variant: 'text-sm/medium',
-                color: 'text-normal',
+                color: 'text-default',
                 children: t.name
             })
         ]

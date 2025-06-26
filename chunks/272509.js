@@ -5,8 +5,8 @@ var s = i(255367),
     l = i(481060),
     a = i(607070),
     r = i(605236),
-    c = i(749681),
-    d = i(661824),
+    d = i(749681),
+    c = i(661824),
     b = i(626135),
     m = i(258971),
     x = i(981631),
@@ -59,12 +59,12 @@ function C(t) {
                                         }),
                                         (0, s.jsx)(l.Text, {
                                             variant: 'text-sm/medium',
-                                            color: 'text-normal',
+                                            color: 'text-default',
                                             children: I.intl.string(I.t['0vKo5O'])
                                         })
                                     ]
                                 }),
-                                (0, s.jsx)(d.Z, { className: _.divider }),
+                                (0, s.jsx)(c.Z, { className: _.divider }),
                                 (0, s.jsxs)('li', {
                                     className: _.listItem,
                                     children: [
@@ -74,12 +74,12 @@ function C(t) {
                                         }),
                                         (0, s.jsx)(l.Text, {
                                             variant: 'text-sm/medium',
-                                            color: 'text-normal',
+                                            color: 'text-default',
                                             children: I.intl.string(I.t.CprEDA)
                                         })
                                     ]
                                 }),
-                                (0, s.jsx)(d.Z, { className: _.divider }),
+                                (0, s.jsx)(c.Z, { className: _.divider }),
                                 (0, s.jsxs)('li', {
                                     className: _.listItem,
                                     children: [
@@ -89,7 +89,7 @@ function C(t) {
                                         }),
                                         (0, s.jsx)(l.Text, {
                                             variant: 'text-sm/medium',
-                                            color: 'text-normal',
+                                            color: 'text-default',
                                             children: I.intl.string(I.t.wQJMPD)
                                         })
                                     ]
@@ -109,7 +109,7 @@ function C(t) {
                                         dismissAction: u.L.PRIMARY,
                                         guildId: e
                                     }),
-                                    (0, c.transitionToGlobalDiscovery)({
+                                    (0, d.transitionToGlobalDiscovery)({
                                         tab: h.GlobalDiscoveryTab.APPS,
                                         newSessionState: {
                                             guildId: e,

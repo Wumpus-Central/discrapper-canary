@@ -67,7 +67,7 @@ function b(e) {
                                 '' !== t &&
                                 (0, r.jsx)(u.x, {
                                     className: d.description,
-                                    color: 'text-normal',
+                                    color: 'text-default',
                                     variant: 'text-sm/medium',
                                     children: t
                                 })

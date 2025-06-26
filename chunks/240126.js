@@ -38,7 +38,7 @@ function a(e) {
                               tag: 'span',
                               className: s.protip,
                               variant: 'text-xs/bold',
-                              color: 'text-positive',
+                              color: 'text-feedback-positive',
                               children: [o.intl.string(o.t['8tvIiI']), ':', ' ']
                           }),
                     a

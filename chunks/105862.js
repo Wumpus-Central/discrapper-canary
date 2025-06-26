@@ -1,7 +1,7 @@
 n.d(t, { Z: () => _ });
 var i = n(255367),
-    r = n(73800),
-    l = n(780384),
+    l = n(73800),
+    r = n(780384),
     o = n(481060),
     a = n(410030),
     c = n(782568),
@@ -16,8 +16,8 @@ var i = n(255367),
 function _(e) {
     let { showImage: t = !0, padding: n = !1 } = e,
         _ = (0, a.ZP)(),
-        C = (0, l.ap)(_) ? b : h,
-        v = r.useCallback(() => {
+        C = (0, r.ap)(_) ? b : h,
+        v = l.useCallback(() => {
             (0, c.Z)(s.Z.getAppsSupportURL(p.BhN.APPS_LEARN_MORE));
         }, []),
         { trackSectionImpressionRef: x } = (0, d.Z)({
@@ -50,7 +50,7 @@ function _(e) {
                         }),
                         (0, i.jsx)(o.Text, {
                             variant: 'text-xs/normal',
-                            color: 'text-normal',
+                            color: 'text-default',
                             children: m.intl.string(m.t.GZoV1N)
                         })
                     ]

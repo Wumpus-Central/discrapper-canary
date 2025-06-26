@@ -31,7 +31,7 @@ function u(e) {
                 children: [
                     (0, r.jsxs)(o.X6q, {
                         variant: 'text-sm/medium',
-                        color: 'text-normal',
+                        color: 'text-default',
                         children: [n, ' \u2014 ', l.length]
                     }),
                     (0, r.jsx)(g, { size: 'md' })

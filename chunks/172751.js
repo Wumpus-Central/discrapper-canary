@@ -58,7 +58,7 @@ let E = i.memo(function (e) {
               });
     }),
     b = i.memo(function (e) {
-        let { guildId: t, guildTag: n, guildBadge: i, className: a, textClassName: s, badgeClassName: c, onClick: u, onMouseEnter: d, textVariant: p = 'text-xs/semibold', textColor: m = 'text-normal', badgeSize: g = _.Gg.SIZE_12, inline: b = !0 } = e;
+        let { guildId: t, guildTag: n, guildBadge: i, className: a, textClassName: s, badgeClassName: c, onClick: u, onMouseEnter: d, textVariant: p = 'text-xs/semibold', textColor: m = 'text-default', badgeSize: g = _.Gg.SIZE_12, inline: b = !0 } = e;
         return (0, r.jsx)(l.P3F, {
             tag: 'span',
             tabIndex: null == u ? -1 : void 0,

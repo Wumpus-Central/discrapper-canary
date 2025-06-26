@@ -25,7 +25,7 @@ function l(e, t) {
     let r = (0, a.z)(e),
         s = null != (n = (0, o.i6)()) ? n : 0,
         i = 'var(--green-330)',
-        l = ['var(--background-tertiary)', 'var(--interactive-normal)'];
+        l = ['var(--background-base-lowest)', 'var(--interactive-normal)'];
     return {
         backgroundTop: t ? l[s] : ['#828288', '#CBCDD4'][s],
         backgroundBottom: t ? l[s] : ['#535356', '#8B8C95'][s],

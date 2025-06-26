@@ -1,7 +1,7 @@
 n.d(t, { Z: () => u });
 var i = n(255367),
-    r = n(73800),
-    l = n(481060),
+    l = n(73800),
+    r = n(481060),
     o = n(984168),
     a = n(314734),
     c = n(388032),
@@ -9,7 +9,7 @@ var i = n(255367),
 function u(e) {
     let t,
         { sortOrder: n, onSortOptionClick: u } = e,
-        d = r.useRef(null);
+        d = l.useRef(null);
     switch (n) {
         case a.bS.POPULAR:
             t = c.intl.string(c.t.SzxiqK);
@@ -17,7 +17,7 @@ function u(e) {
         case a.bS.ALPHABETICAL:
             t = c.intl.string(c.t.m8xstr);
     }
-    return (0, i.jsx)(l.yRy, {
+    return (0, i.jsx)(r.yRy, {
         targetElementRef: d,
         renderPopout: (e) => {
             let { closePopout: t } = e;
@@ -30,11 +30,11 @@ function u(e) {
         position: 'bottom',
         align: 'left',
         children: (e, n) => {
-            var r, o;
+            var l, o;
             let { isShown: a } = n;
             return (0, i.jsxs)(
-                l.zxk,
-                ((r = (function (e) {
+                r.zxk,
+                ((l = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             i = Object.keys(n);
@@ -62,29 +62,29 @@ function u(e) {
                 (o = o =
                     {
                         buttonRef: d,
-                        size: l.zxk.Sizes.MIN,
-                        color: l.zxk.Colors.CUSTOM,
+                        size: r.zxk.Sizes.MIN,
+                        color: r.zxk.Colors.CUSTOM,
                         className: s.sortDropdown,
                         innerClassName: s.sortDropdownInner,
                         'aria-label': c.intl.string(c.t.yeYaHR),
                         children: [
-                            (0, i.jsx)(l.uVW, {
+                            (0, i.jsx)(r.uVW, {
                                 size: 'xs',
                                 color: 'currentColor',
                                 className: s.sortIconMargin
                             }),
-                            (0, i.jsx)(l.Text, {
+                            (0, i.jsx)(r.Text, {
                                 variant: 'text-sm/medium',
-                                color: 'text-normal',
+                                color: 'text-default',
                                 children: t
                             }),
                             a
-                                ? (0, i.jsx)(l.u04, {
+                                ? (0, i.jsx)(r.u04, {
                                       size: 'custom',
                                       color: 'currentColor',
                                       width: 20
                                   })
-                                : (0, i.jsx)(l.CJ0, {
+                                : (0, i.jsx)(r.CJ0, {
                                       size: 'custom',
                                       color: 'currentColor',
                                       width: 20
@@ -92,7 +92,7 @@ function u(e) {
                         ]
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(o))
+                    ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -101,9 +101,9 @@ function u(e) {
                           }
                           return n;
                       })(Object(o)).forEach(function (e) {
-                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(o, e));
+                          Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
                       }),
-                r)
+                l)
             );
         }
     });

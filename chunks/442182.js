@@ -82,7 +82,7 @@ async function w(e, t, n) {
                     confirmText: I.intl.string(I.t.BddRzc),
                     confirmButtonColor: o.zxk.Colors.BRAND,
                     children: (0, r.jsx)(o.Text, {
-                        color: 'text-normal',
+                        color: 'text-default',
                         variant: 'text-md/normal',
                         children: e.getAnyErrorMessage()
                     })
@@ -109,7 +109,7 @@ function R(e) {
                         onConfirm: () => w(t, l, a),
                         children: [
                             (0, r.jsx)(o.Text, {
-                                color: 'text-normal',
+                                color: 'text-default',
                                 variant: 'text-md/normal',
                                 children: I.intl.format(I.t.scORUl, {
                                     username: t.name,

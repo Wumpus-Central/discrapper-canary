@@ -13,8 +13,8 @@ var l = t(442837),
     g = t(984933),
     p = t(430824),
     m = t(496675),
-    I = t(626135),
-    f = t(572004),
+    f = t(626135),
+    I = t(572004),
     v = t(482241),
     h = t(951539),
     C = t(894017),
@@ -168,8 +168,8 @@ function D(e) {
                         guildId: A,
                         guildEventId: z
                     });
-                    (0, f.JG)(e),
-                        I.default.track(L.rMx.GUILD_SCHEDULED_EVENT_LINK_COPIED, {
+                    (0, I.JG)(e),
+                        f.default.track(L.rMx.GUILD_SCHEDULED_EVENT_LINK_COPIED, {
                             guild_id: A,
                             guild_scheduled_event_id: z
                         });

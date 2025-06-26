@@ -106,7 +106,7 @@ let P = (e) => {
                                             children: (0, i.jsx)(o.Text, {
                                                 tag: 'span',
                                                 variant: 'heading-md/normal',
-                                                color: 'text-normal',
+                                                color: 'text-default',
                                                 children: E.intl.format(E.t.TByIjY, { expirationDate: n.toLocaleDateString(a, { dateStyle: 'medium' }) })
                                             })
                                         },
@@ -129,7 +129,7 @@ let P = (e) => {
                         children: (0, i.jsx)(o.Text, {
                             tag: 'span',
                             variant: 'heading-md/normal',
-                            color: 'text-normal',
+                            color: 'text-default',
                             children: e
                         })
                     },

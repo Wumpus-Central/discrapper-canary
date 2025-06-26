@@ -139,7 +139,7 @@ function C(e) {
                               className: E.loadMoreButton,
                               children: (0, i.jsx)(o.Text, {
                                   variant: 'text-sm/semibold',
-                                  color: 'text-normal',
+                                  color: 'text-default',
                                   children: x.intl.format(x.t.jULEDg, { numberOfUsers: l + 5 < n.length ? 5 : n.length - l })
                               })
                           })

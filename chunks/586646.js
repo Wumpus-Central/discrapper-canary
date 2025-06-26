@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => y });
 var r = n(255367),
     l = n(73800),
     i = n(442837),
@@ -12,18 +12,18 @@ var r = n(255367),
     h = n(760373),
     p = n(388032),
     g = n(764229);
-function O(e) {
+function y(e) {
     let { channelId: t } = e,
         n = (0, i.e7)([a.Z], () => {
             var e;
             return null == (e = a.Z.getSecureFramesState()) ? void 0 : e.epochAuthenticator;
         }),
-        O = (0, c.W)({
+        y = (0, c.W)({
             fingerprintBase64: n,
             chunkSize: h.y6,
             desiredLength: h.YP
         }),
-        y = l.useCallback(() => {
+        O = l.useCallback(() => {
             (0, s.PM)({ channelId: t });
         }, [t]);
     return (0, r.jsxs)('div', {
@@ -38,7 +38,7 @@ function O(e) {
                     }),
                     (0, r.jsx)(o.Text, {
                         variant: 'text-xs/medium',
-                        color: 'text-positive',
+                        color: 'text-feedback-positive',
                         children: p.intl.string(p.t['3BogKS'])
                     })
                 ]
@@ -56,17 +56,17 @@ function O(e) {
                         color: 'header-primary',
                         children: p.intl.string(p.t.cTQI5u)
                     }),
-                    null != O &&
+                    null != y &&
                         (0, r.jsx)(f.H, {
-                            chunks: O,
+                            chunks: y,
                             color: o.TVs.colors.INTERACTIVE_NORMAL.css,
-                            onCopy: y
+                            onCopy: O
                         })
                 ]
             }),
             (0, r.jsx)(d.b, {
                 className: g.code,
-                chunks: O,
+                chunks: y,
                 columns: h.WK
             }),
             (0, r.jsx)(o.Text, {

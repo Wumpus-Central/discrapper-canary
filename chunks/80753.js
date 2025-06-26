@@ -40,7 +40,7 @@ function u() {
               children: [
                   (0, i.jsx)(l.Text, {
                       variant: 'text-sm/semibold',
-                      color: 'info-danger-text',
+                      color: 'text-feedback-critical',
                       children: 'Accessibility compliance issue(s) detected, check in-app DevTools'
                   }),
                   (0, i.jsxs)('div', {

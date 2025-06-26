@@ -14,14 +14,14 @@ var i = n(255367),
     u = n(493773),
     d = n(358221),
     p = n(569545),
-    h = n(522474),
-    f = n(199902),
+    f = n(522474),
+    h = n(199902),
     m = n(314897),
     g = n(592125),
     y = n(355863),
     O = n(944486),
-    v = n(353038),
-    b = n(804570),
+    b = n(353038),
+    v = n(804570),
     E = n(350663),
     _ = n(610394),
     x = n(461393),
@@ -80,7 +80,7 @@ let Z = [],
         height: t
     }),
     T = P(E.bt, E.fd);
-function D(e, t, n, i, r) {
+function k(e, t, n, i, r) {
     let { padding: o, sizeOffset: l } = r,
         a = Math.max(1, i),
         s = (a - 1) * o,
@@ -88,8 +88,8 @@ function D(e, t, n, i, r) {
         u = n * a + s;
     return e === I.C5.HORIZONTAL ? (u = n) : (c = t), P(c + l, u + l);
 }
-function k(e, t, n) {
-    return D(e, E.bt, E.fd, t, n);
+function D(e, t, n) {
+    return k(e, E.bt, E.fd, t, n);
 }
 let A = (e) => {
     let { operation: t, computedSize: n, originSize: i, borderWidth: r, padding: o, containerSpecs: l } = e,
@@ -97,8 +97,8 @@ let A = (e) => {
         s = Math.max(1, i.width - a) / Math.max(1, i.height - a),
         c = (() => {
             switch (t) {
-                case v.B.RESIZE_NORTH:
-                case v.B.RESIZE_SOUTH:
+                case b.B.RESIZE_NORTH:
+                case b.B.RESIZE_SOUTH:
                     return {
                         height: n.height,
                         width: Math.round((n.height - a) * s + a)
@@ -121,7 +121,7 @@ function R(e) {
     let { width: c, height: u } = A(
             N(
                 {
-                    operation: v.B.RESIZE_NORTH,
+                    operation: b.B.RESIZE_NORTH,
                     computedSize: {
                         width: n.width,
                         height: n.height
@@ -140,7 +140,7 @@ function R(e) {
         { width: d, height: p } = A(
             N(
                 {
-                    operation: v.B.RESIZE_NORTH,
+                    operation: b.B.RESIZE_NORTH,
                     computedSize: {
                         width: o.width,
                         height: o.height
@@ -170,7 +170,7 @@ function R(e) {
     });
 }
 function L(e) {
-    var t, n, a, v, x, P;
+    var t, n, a, b, x, P;
     let { id: A, widget: L, size: M, locked: z, padding: U, borderWidth: V, opacity: W, horizontal: G, pinned: F, anchorTop: B, anchorLeft: H, showEmpty: Y = !0 } = e,
         Q = 2 * U + 2 * V,
         { width: K, height: X } = {
@@ -198,7 +198,7 @@ function L(e) {
         } = ((x = (B && en) || (H && G)),
         (P = (!B && en) || (!H && G)),
         (0, o.cj)(
-            [f.Z, d.Z],
+            [h.Z, d.Z],
             () => {
                 if (null == J)
                     return {
@@ -206,7 +206,7 @@ function L(e) {
                         participantsVersion: -1,
                         activeStreams: new Set()
                     };
-                let e = new Set(f.Z.getAllActiveStreamsForChannel(J).map((e) => (0, p.V9)(e))),
+                let e = new Set(h.Z.getAllActiveStreamsForChannel(J).map((e) => (0, p.V9)(e))),
                     t = (t) => e.has((0, p.V9)(t.stream)),
                     n = d.Z.getStreamParticipants(J).filter((e) => e.user.id !== er && (!!et || t(e)));
                 return (
@@ -236,7 +236,7 @@ function L(e) {
             containerWidth: q,
             containerHeight: $
         },
-        { tileWidth: ep, tileHeight: eh } = (function (e, t, n) {
+        { tileWidth: ep, tileHeight: ef } = (function (e, t, n) {
             let { tileWidth: i, tileHeight: o } = (0, E.IV)(n, t.containerWidth, t.containerHeight),
                 [l, a] = r.useState(i),
                 [s, c] = r.useState(o);
@@ -250,7 +250,7 @@ function L(e) {
                 }
             );
         })(z, ed, eu),
-        ef = (0, o.e7)([h.Z], () => h.Z.getWindowState(S.$J)),
+        eh = (0, o.e7)([f.Z], () => f.Z.getWindowState(S.$J)),
         em = {
             id: A,
             widget: L,
@@ -259,22 +259,22 @@ function L(e) {
             containerSize: ed,
             tileSize: {
                 tileWidth: ep,
-                tileHeight: eh
+                tileHeight: ef
             },
             sizeOffset: Q,
             padding: U,
             borderWidth: V,
             containerSpecs: {
-                maxX: null != (t = null == ef ? void 0 : ef.width) ? t : K - Q,
-                maxY: null != (n = null == ef ? void 0 : ef.height) ? n : X - Q,
+                maxX: null != (t = null == eh ? void 0 : eh.width) ? t : K - Q,
+                maxY: null != (n = null == eh ? void 0 : eh.height) ? n : X - Q,
                 minX: 0,
                 minY: 0
             },
             orientedPosition: {
                 top: 0,
                 left: 0,
-                bottom: null != (a = null == ef ? void 0 : ef.height) ? a : X,
-                right: null != (v = null == ef ? void 0 : ef.width) ? v : K
+                bottom: null != (a = null == eh ? void 0 : eh.height) ? a : X,
+                right: null != (b = null == eh ? void 0 : eh.width) ? b : K
             }
         };
     return (r.useEffect(() => {
@@ -301,7 +301,7 @@ function L(e) {
                         {
                             widgetId: t,
                             size: T,
-                            minSize: k(a, 1, {
+                            minSize: D(a, 1, {
                                 padding: s,
                                 sizeOffset: r
                             }),
@@ -316,11 +316,11 @@ function L(e) {
                 N(
                     {
                         widgetId: t,
-                        size: D(a, d, p, l, {
+                        size: k(a, d, p, l, {
                             padding: s,
                             sizeOffset: r
                         }),
-                        minSize: k(a, l, {
+                        minSize: D(a, l, {
                             padding: s,
                             sizeOffset: r
                         }),
@@ -341,11 +341,11 @@ function L(e) {
                         N(
                             {
                                 widgetId: t,
-                                size: k(n, a, {
+                                size: D(n, a, {
                                     padding: l,
                                     sizeOffset: i
                                 }),
-                                minSize: k(n, a, {
+                                minSize: D(n, a, {
                                     padding: l,
                                     sizeOffset: i
                                 }),
@@ -366,7 +366,7 @@ function L(e) {
                             {
                                 widgetId: t,
                                 size: T,
-                                minSize: k(n, 0, {
+                                minSize: D(n, 0, {
                                     padding: l,
                                     sizeOffset: i
                                 }),
@@ -389,7 +389,7 @@ function L(e) {
           ? Y
               ? z
                   ? null
-                  : (0, i.jsx)(b.E, {
+                  : (0, i.jsx)(v.E, {
                         emptyText: j.intl.string(j.t['T6+rX1']),
                         icon: l.hGI,
                         absolute: !0
@@ -402,7 +402,7 @@ function L(e) {
                 children: (0, i.jsx)(E.ZP, {
                     widgetId: A,
                     tileWidth: ep,
-                    tileHeight: eh,
+                    tileHeight: ef,
                     locked: z,
                     layout: eu,
                     activeStreams: el,

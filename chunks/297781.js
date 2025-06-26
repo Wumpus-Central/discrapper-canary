@@ -175,7 +175,7 @@ function U(e) {
         { defaultTextColor: i, defaultIconColor: a, location: o } = x(),
         s = (0, b.Jg)(t) && (0, h.Hi)(o, [0, 4, 7, 9]),
         l = s ? f.TVs.colors.TEXT_FEEDBACK_POSITIVE : a,
-        c = s ? 'text-positive' : i,
+        c = s ? 'text-feedback-positive' : i,
         { streamPreviewUrl: u } = (0, E.Z)(t),
         { enabled: d } = _.c.useExperiment({ location: 'GameTimestampBadge' }, { autoTrackExposure: !0 }),
         p = null != u ? f.hGI : (0, g.Mq)(t) && !d ? f.jje : f.iWm;
@@ -222,7 +222,7 @@ function B(e) {
         { defaultTextColor: i, defaultIconColor: a, location: o } = x(),
         s = (0, b.Jg)(t) && (0, h.Hi)(o, [0, 4]),
         l = s ? f.TVs.colors.TEXT_FEEDBACK_POSITIVE : a,
-        c = s ? 'text-positive' : i;
+        c = s ? 'text-feedback-positive' : i;
     return (0, r.jsxs)('div', {
         className: T.badgeContainer,
         children: [
@@ -350,7 +350,7 @@ function q(e) {
         { defaultTextColor: i, defaultIconColor: a, location: o } = x(),
         s = (0, b.Jg)(t) && 4 === o,
         l = s ? f.TVs.colors.TEXT_FEEDBACK_POSITIVE : a,
-        c = s ? 'text-positive' : i;
+        c = s ? 'text-feedback-positive' : i;
     return (0, r.jsxs)('div', {
         className: T.badgeContainer,
         children: [

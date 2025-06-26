@@ -9,7 +9,7 @@ function s(e) {
         className: l.container,
         children: (0, r.jsx)(i.Text, {
             variant: 'text-sm/normal',
-            color: 'text-normal',
+            color: 'text-default',
             className: l.text,
             children: (0, r.jsxs)(r.Fragment, {
                 children: [

@@ -16,7 +16,7 @@ function a(e) {
             (0, r.jsx)(i.Text, {
                 className: l.tooltipText,
                 variant: 'text-sm/medium',
-                color: null != n ? n : 'text-normal',
+                color: null != n ? n : 'text-default',
                 children: t
             })
         ]

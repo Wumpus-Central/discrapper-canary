@@ -74,7 +74,7 @@ function N() {
                             }),
                             (0, i.jsx)(l.Text, {
                                 variant: 'text-md/normal',
-                                color: 'info-help-text',
+                                color: 'text-feedback-info',
                                 style: { marginBottom: '8px' },
                                 children: 'You will be redirected to the shop page and the coachmark will appear beneath the Balance Widget Pill in the header bar after 0.5 seconds.'
                             })
@@ -213,7 +213,7 @@ function I() {
                     }),
                     (0, i.jsx)(l.Text, {
                         variant: 'text-md/normal',
-                        color: 'info-help-text',
+                        color: 'text-feedback-info',
                         children: 'The Orb Checkout Modal will open with the orb price of the product, if it exists'
                     }),
                     (0, i.jsx)(s.zx, {
@@ -331,7 +331,7 @@ function y() {
                 children: [
                     (0, i.jsx)(l.Text, {
                         variant: 'text-md/normal',
-                        color: 'info-help-text',
+                        color: 'text-feedback-info',
                         style: { marginBottom: '8px' },
                         children: "After resetting your Announcement Modal State and exiting from user settings, you'll be able to see the Announcement Modal again."
                     }),

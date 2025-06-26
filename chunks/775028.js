@@ -151,7 +151,7 @@ let R = r.memo(function () {
             W = (e) => {
                 if (!M) return e.stopPropagation(), O(i.id, n.id, r.id), !0;
             },
-            z = (e) => {
+            F = (e) => {
                 n.isGuildVocal()
                     ? (0, u.jW)(e, async () => {
                           let { default: e } = await Promise.all([t.e('79695'), t.e('18320'), t.e('83331'), t.e('81070')]).then(t.bind(t, 213202));
@@ -176,7 +176,7 @@ let R = r.memo(function () {
                               );
                       });
             },
-            F = (function (e, n) {
+            z = (function (e, n) {
                 let t = [];
                 return (
                     Z.TPd.GUILD_THREADS_ONLY.has(e.type) &&
@@ -236,8 +236,8 @@ let R = r.memo(function () {
             ),
             X = P.intl.string(P.t.vetGQk);
         n.isGuildStageVoice() || n.isGuildVoice() ? (X = P.intl.string(P.t.VJlc0d)) : n.isForumLikeChannel() && (X = P.intl.string(P.t['3xjX0d']));
-        let V = M ? 'text-muted' : 'text-normal',
-            J = (0, d.dQu)(M ? c.Z.colors.TEXT_MUTED : c.Z.colors.TEXT_NORMAL).hex();
+        let V = M ? 'text-muted' : 'text-default',
+            J = (0, d.dQu)(M ? c.Z.colors.TEXT_MUTED : c.Z.colors.TEXT_DEFAULT).hex();
         return (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(d.ua7, {
@@ -260,7 +260,7 @@ let R = r.memo(function () {
                                 ),
                                 {
                                     onClick: W,
-                                    onContextMenu: z,
+                                    onContextMenu: F,
                                     children: [
                                         (0, l.jsxs)('div', {
                                             className: E.channelInfo,
@@ -299,7 +299,7 @@ let R = r.memo(function () {
                                                 }),
                                                 (0, l.jsx)('div', {
                                                     className: E.channelSubtitles,
-                                                    children: F
+                                                    children: z
                                                 })
                                             ]
                                         }),

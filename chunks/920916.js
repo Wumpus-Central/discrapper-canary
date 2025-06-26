@@ -254,7 +254,7 @@ function q(e) {
                         }),
                         (0, r.jsx)(u.Text, {
                             variant: 'text-sm/normal',
-                            color: 'text-normal',
+                            color: 'text-default',
                             className: G.text,
                             children: _
                         }),

@@ -9,14 +9,14 @@ var i = n(73800),
     u = n(592125),
     d = n(984933),
     p = n(271383),
-    h = n(430824),
-    f = n(496675),
+    f = n(430824),
+    h = n(496675),
     m = n(944486),
     g = n(914010),
     y = n(594174),
     O = n(237997),
-    v = n(145597),
-    b = n(981631);
+    b = n(145597),
+    v = n(981631);
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -49,7 +49,7 @@ class _ extends i.Component {
         if (null != t && (t !== e.selectedGuild || (i && !e.isMemberPending))) {
             var d, p;
             (0, c.Q)(
-                b.rMx.GUILD_VIEWED,
+                v.rMx.GUILD_VIEWED,
                 ((d = E(
                     {},
                     i
@@ -74,37 +74,37 @@ class _ extends i.Component {
                       }),
                 d)
             ),
-                (0, s.a)(b.rMx.GUILD_VIEWED_CLICKSTREAM, { guildId: t });
+                (0, s.a)(v.rMx.GUILD_VIEWED_CLICKSTREAM, { guildId: t });
         }
         if (null != n && n !== e.selectedChannel) {
             let e = (0, a.K)(u.Z.getChannel(n), !0);
-            (0, c.Q)(b.rMx.CHANNEL_OPENED, E({}, e, (0, l.$H)(n))), (0, s.a)(b.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: n });
+            (0, c.Q)(v.rMx.CHANNEL_OPENED, E({}, e, (0, l.$H)(n))), (0, s.a)(v.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: n });
         }
     }
     render() {
         return null;
     }
 }
-let x = o.ZP.connectStores([g.Z, m.Z, h.Z, y.default, O.default, d.ZP, f.Z, p.ZP], () => {
+let x = o.ZP.connectStores([g.Z, m.Z, f.Z, y.default, O.default, d.ZP, h.Z, p.ZP], () => {
     var e, t, n;
     let i = g.Z.getGuildId(),
         o = m.Z.getChannelId(i),
-        l = h.Z.getGuild(i),
+        l = f.Z.getGuild(i),
         a = y.default.getCurrentUser(),
         s = null != (t = d.ZP.getChannels(null == l ? void 0 : l.id)[d.sH]) ? t : [],
         c =
             s.length > 0
                 ? s.filter((e) => {
                       let { channel: t } = e;
-                      return f.Z.can(r.$e(b.Plq.SEND_MESSAGES, b.Plq.VIEW_CHANNEL), t);
+                      return h.Z.can(r.$e(v.Plq.SEND_MESSAGES, v.Plq.VIEW_CHANNEL), t);
                   }).length
                 : 0,
         u = null != a && null != i && null != (n = null == (e = p.ZP.getMember(i, a.id)) ? void 0 : e.isPending) && n;
     return {
         selectedGuild: i,
         selectedChannel: o,
-        locked: O.default.isLocked((0, v.getPID)()),
-        hasPreviewEnabled: null == l ? void 0 : l.features.has(b.oNc.PREVIEW_ENABLED),
+        locked: O.default.isLocked((0, b.getPID)()),
+        hasPreviewEnabled: null == l ? void 0 : l.features.has(v.oNc.PREVIEW_ENABLED),
         isMemberPending: u,
         postableChannelCount: c
     };

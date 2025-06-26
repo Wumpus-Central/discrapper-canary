@@ -278,12 +278,12 @@ let x = [
                           children: [
                               (0, a.jsx)(l.Text, {
                                   variant: 'text-md/normal',
-                                  color: p ? 'text-danger' : 'text-normal',
+                                  color: p ? 'text-danger' : 'text-default',
                                   children: ''.concat(o.length, ' errors')
                               }),
                               (0, a.jsx)(l.Text, {
                                   variant: 'text-md/normal',
-                                  color: x ? 'text-warning' : 'text-normal',
+                                  color: x ? 'text-feedback-warning' : 'text-default',
                                   children: ''.concat(d.length, ' warnings')
                               }),
                               (0, a.jsx)(l.zxk, {
@@ -364,7 +364,7 @@ let x = [
                                             children: [
                                                 (0, a.jsx)(l.Text, {
                                                     variant: 'text-md/bold',
-                                                    color: 'text-warning',
+                                                    color: 'text-feedback-warning',
                                                     children: n
                                                 }),
                                                 r.length > 0 &&
@@ -376,7 +376,7 @@ let x = [
                                                                 {
                                                                     children: (0, a.jsx)(l.Text, {
                                                                         variant: 'text-sm/normal',
-                                                                        color: 'text-warning',
+                                                                        color: 'text-feedback-warning',
                                                                         children: e
                                                                     })
                                                                 },

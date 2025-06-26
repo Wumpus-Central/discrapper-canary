@@ -560,7 +560,7 @@ class ed extends (r = l.PureComponent) {
                         bottom: 20,
                         children: (0, i.jsx)(p.Text, {
                             variant: 'text-sm/normal',
-                            color: 'text-normal',
+                            color: 'text-default',
                             children: er.intl.string(er.t['330TCQ'])
                         })
                     }),
@@ -864,14 +864,14 @@ function ep(e) {
                   .otherwise(() =>
                       (0, i.jsx)(p.Text, {
                           variant: 'text-sm/normal',
-                          color: 'text-normal',
+                          color: 'text-default',
                           children: er.intl.string(er.t.z7c4bG)
                       })
                   )
             : null != r && r.length > 0 && l.length > 0
               ? (0, i.jsx)(p.Text, {
                     variant: 'text-sm/normal',
-                    color: 'text-normal',
+                    color: 'text-default',
                     children: er.intl.format(er.t.nDGqqq, {
                         suggestion: r,
                         nameOnClick: o
@@ -879,7 +879,7 @@ function ep(e) {
                 })
               : (0, i.jsx)(p.Text, {
                     variant: 'text-sm/normal',
-                    color: 'text-normal',
+                    color: 'text-default',
                     children: er.intl.string(er.t.z7c4bG)
                 })),
         (0, i.jsx)(G.Z, {

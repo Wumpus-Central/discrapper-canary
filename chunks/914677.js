@@ -20,7 +20,7 @@ let c = 'url(#gradient)',
         switch (e) {
             case a.Qo.NITRO_GEM:
             case a.Qo.AVATAR_DECO:
-                return 'var(--background-primary)';
+                return 'var(--background-base-low)';
             case a.Qo.NITRO_LOGO:
                 return 'var(--premium-tier-2-purple)';
             default:

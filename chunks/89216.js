@@ -143,7 +143,7 @@ function b(e) {
                     (0, t.jsx)(o.Text, {
                         className: C.__invalid_channelName,
                         variant: 'text-md/medium',
-                        color: 'text-normal',
+                        color: 'text-default',
                         lineClamp: 1,
                         children: a.name
                     })

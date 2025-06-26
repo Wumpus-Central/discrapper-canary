@@ -40,12 +40,12 @@ function f(e) {
                               }),
                               name: (0, r.jsx)(a.Text, {
                                   variant: 'text-sm/semibold',
-                                  color: 'text-normal',
+                                  color: 'text-default',
                                   children: p.intl.string(p.t.ZRnONz)
                               }),
                               description: (0, r.jsx)(a.Text, {
                                   variant: 'text-sm/semibold',
-                                  color: 'text-normal',
+                                  color: 'text-default',
                                   children: _
                               })
                           }),
@@ -60,12 +60,12 @@ function f(e) {
                               }),
                               name: (0, r.jsx)(a.Text, {
                                   variant: 'text-sm/semibold',
-                                  color: 'text-normal',
+                                  color: 'text-default',
                                   children: p.intl.string(p.t['TJ8/tL'])
                               }),
                               description: (0, r.jsx)(a.Text, {
                                   variant: 'text-sm/semibold',
-                                  color: 'text-normal',
+                                  color: 'text-default',
                                   children: (0, r.jsx)(o.Z, {
                                       deadline: x,
                                       showUnits: !0,

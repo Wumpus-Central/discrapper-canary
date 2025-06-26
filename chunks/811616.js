@@ -164,7 +164,7 @@ function I(e) {
                     className: v.planOptionSubtextContainer,
                     children: (0, r.jsx)(u.Text, {
                         variant: 'text-md/normal',
-                        color: o ? 'text-normal' : 'interactive-normal',
+                        color: o ? 'text-default' : 'interactive-normal',
                         className: a()(v.planOptionSubtext, { [v.discountPlanOptionSubtext]: S }),
                         children: K()
                     })

@@ -218,7 +218,7 @@ function L(e) {
                     className: I.popoutHeaderContainer,
                     children: (0, r.jsx)(p.Text, {
                         variant: 'text-xs/normal',
-                        color: 'text-normal',
+                        color: 'text-default',
                         className: I.popoutHeaderText,
                         children: t
                     })

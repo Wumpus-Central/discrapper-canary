@@ -1,6 +1,6 @@
 a.d(t, { m: () => h });
-var r = a(255367),
-    l = a(73800),
+var l = a(255367),
+    r = a(73800),
     s = a(442837),
     n = a(481060),
     o = a(600164),
@@ -15,46 +15,46 @@ function h(e) {
             let e = c.Z.getAccount(null, t);
             return (null == e ? void 0 : e.twoWayLink) === !1;
         });
-    return (0, r.jsxs)(i.Z, {
+    return (0, l.jsxs)(i.Z, {
         children: [
-            (0, r.jsxs)(n.xBx, {
+            (0, l.jsxs)(n.xBx, {
                 direction: o.Z.Direction.VERTICAL,
                 className: u.header,
                 separator: !1,
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, l.jsxs)('div', {
                         className: u.illustration,
                         children: [m, ' ']
                     }),
-                    (0, r.jsx)(n.X6q, {
+                    (0, l.jsx)(n.X6q, {
                         className: u.title,
                         variant: 'heading-xl/extrabold',
                         children: p && null != C ? C : N
                     }),
-                    (0, r.jsx)(n.olH, {
+                    (0, l.jsx)(n.olH, {
                         className: u.closeButton,
                         onClick: h
                     })
                 ]
             }),
-            (0, r.jsxs)(n.hzk, {
+            (0, l.jsxs)(n.hzk, {
                 className: u.body,
                 children: [
-                    (0, r.jsx)(n.Text, {
+                    (0, l.jsx)(n.Text, {
                         tag: 'p',
                         variant: 'text-md/normal',
                         color: 'header-secondary',
                         children: j
                     }),
-                    (0, r.jsx)('div', {
+                    (0, l.jsx)('div', {
                         className: u.valueProps,
                         children: v.map((e, t) => {
                             let { label: a, subLabel: s, icon: n } = e;
-                            return (0, r.jsxs)(
-                                l.Fragment,
+                            return (0, l.jsxs)(
+                                r.Fragment,
                                 {
                                     children: [
-                                        (0, r.jsx)(
+                                        (0, l.jsx)(
                                             d.Z,
                                             {
                                                 label: a,
@@ -63,7 +63,7 @@ function h(e) {
                                             },
                                             a
                                         ),
-                                        t !== v.length - 1 && (0, r.jsx)('div', { className: u.valuePropDivider })
+                                        t !== v.length - 1 && (0, l.jsx)('div', { className: u.valuePropDivider })
                                     ]
                                 },
                                 a
@@ -71,7 +71,7 @@ function h(e) {
                         })
                     }),
                     null != k
-                        ? (0, r.jsx)(n.Text, {
+                        ? (0, l.jsx)(n.Text, {
                               tag: 'p',
                               variant: 'text-sm/normal',
                               color: 'header-secondary',
@@ -80,9 +80,9 @@ function h(e) {
                         : null
                 ]
             }),
-            (0, r.jsx)(n.mzw, {
+            (0, l.jsx)(n.mzw, {
                 className: u.footer,
-                children: (0, r.jsx)(n.zxk, {
+                children: (0, l.jsx)(n.zxk, {
                     className: u.footerButton,
                     color: n.zxk.Colors.BRAND,
                     onClick: a,

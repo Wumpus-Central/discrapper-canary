@@ -12,7 +12,7 @@ var r = n(255367),
     x = n(388032),
     p = n(954353);
 function h(e) {
-    let { orientation: t = 'horizontal', headingColor: n = 'text-normal', textColor: o = 'text-normal', withRewardName: h = !1, withPremiumHighlight: g = !0, quest: j } = e,
+    let { orientation: t = 'horizontal', headingColor: n = 'text-default', textColor: o = 'text-default', withRewardName: h = !1, withPremiumHighlight: g = !0, quest: j } = e,
         f = (0, c.j)({ location: m.dr.QUESTS_BAR_MOBILE }),
         C = s.useMemo(() => d.r.build(j.config), [j.config]),
         b = C.defaultRewardName,

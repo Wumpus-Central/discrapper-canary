@@ -36,7 +36,7 @@ function y(e) {
                     }),
                     a
                         ? (0, r.jsx)(u.X6q, {
-                              color: null != i ? i : 'text-normal',
+                              color: null != i ? i : 'text-default',
                               variant: 'heading-sm/semibold',
                               children: n
                           })
@@ -45,7 +45,7 @@ function y(e) {
             }),
             (0, r.jsx)(u.Text, {
                 variant: a ? 'text-xs/normal' : 'text-sm/medium',
-                color: null != i ? i : 'text-normal',
+                color: null != i ? i : 'text-default',
                 children: t
             })
         ]

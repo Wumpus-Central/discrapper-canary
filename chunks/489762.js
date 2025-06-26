@@ -123,7 +123,7 @@ let W = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                         onClick: () => t(e),
                         children: (0, r.jsx)(l.Text, {
                             variant: 'text-sm/normal',
-                            color: 'text-normal',
+                            color: 'text-default',
                             children: e
                         })
                     },

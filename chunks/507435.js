@@ -77,7 +77,7 @@ function v(e) {
         case 'NO_VOTES':
             t = (0, r.jsx)(s.Text, {
                 variant: 'text-sm/semibold',
-                color: 'text-normal',
+                color: 'text-default',
                 scaleFontToUserSetting: !0,
                 children: b.intl.string(b.t['a+lSZ2'])
             });
@@ -91,7 +91,7 @@ function v(e) {
                         children: [
                             (0, r.jsx)(s.Text, {
                                 variant: 'text-sm/semibold',
-                                color: 'text-normal',
+                                color: 'text-default',
                                 className: x.victorAnswerText,
                                 scaleFontToUserSetting: !0,
                                 children: a
@@ -119,7 +119,7 @@ function v(e) {
                 children: [
                     (0, r.jsx)(s.Text, {
                         variant: 'text-sm/semibold',
-                        color: 'text-normal',
+                        color: 'text-default',
                         scaleFontToUserSetting: !0,
                         children: b.intl.string(b.t.kPN9sr)
                     }),

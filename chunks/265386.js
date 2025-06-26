@@ -45,13 +45,13 @@ function b(e) {
         children: [
             (0, r.jsxs)(s.X6q, {
                 variant: 'heading-sm/semibold',
-                color: 'text-normal',
+                color: 'text-default',
                 className: E.voiceChannelHeading,
                 children: [
                     (0, r.jsx)(h.Z, {
                         channel: t,
                         size: 'xxs',
-                        color: s.TVs.colors.TEXT_NORMAL,
+                        color: s.TVs.colors.TEXT_DEFAULT,
                         className: E.voiceIcon
                     }),
                     v()

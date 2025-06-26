@@ -25,7 +25,7 @@ function m(t) {
                   (0, n.jsxs)(a.X6q, {
                       className: b.warningSectionHeader,
                       variant: 'text-md/medium',
-                      color: 'text-normal',
+                      color: 'text-default',
                       children: [
                           (0, n.jsx)(a.P4T, {
                               size: 'sm',

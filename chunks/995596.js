@@ -3,8 +3,8 @@ var r = n(255367),
     l = n(73800),
     i = n(120356),
     a = n.n(i),
-    o = n(442837),
-    s = n(21260),
+    s = n(442837),
+    o = n(21260),
     c = n(780384),
     d = n(481060),
     u = n(393903),
@@ -66,9 +66,9 @@ let C = (e) => [
     };
 function T(e) {
     let { onTabSelect: t, tabs: n, selectedTab: i } = e,
-        o = l.useRef(null),
-        s = (0, x.ZP)(),
-        u = (0, c.wj)(s),
+        s = l.useRef(null),
+        o = (0, x.ZP)(),
+        u = (0, c.wj)(o),
         m = l.useMemo(
             () =>
                 null !=
@@ -81,7 +81,7 @@ function T(e) {
         h = m ? 'header-primary' : u ? 'text-muted' : 'header-primary',
         j = m ? d.TVs.colors.HEADER_PRIMARY : u ? d.TVs.colors.TEXT_MUTED : d.TVs.colors.HEADER_PRIMARY;
     return (0, r.jsx)(d.yRy, {
-        targetElementRef: o,
+        targetElementRef: s,
         renderPopout: (e) => {
             let { closePopout: l } = e;
             return (0, r.jsx)(_, {
@@ -126,7 +126,7 @@ function T(e) {
                 (l = l =
                     {
                         id: 'more',
-                        clickableInnerRef: o,
+                        clickableInnerRef: s,
                         color: 'text-muted',
                         className: a()(v.more, { [v.selected]: m }),
                         'aria-label': g.intl.string(g.t.UKOtz8),
@@ -175,13 +175,13 @@ function N(e) {
             lastVisibleIndex: S,
             onItemLayout: I,
             overflowItemsRef: R
-        } = (0, s.zP)({
+        } = (0, o.zP)({
             items: E,
             itemGapPx: 16,
             maxLines: 1,
             containerWidth: a - 200
         }),
-        P = (0, o.e7)([f.ZP], () => null != f.ZP.getGuildSidebarState(t), [t]),
+        P = (0, s.e7)([f.ZP], () => null != f.ZP.getGuildSidebarState(t), [t]),
         O = (0, h.L)({ guildId: t }),
         y = l.useMemo(() => (n === p.e.ALL_MEMBERS ? P : null != O && null != O.user), [n, P, O]),
         w = l.useMemo(() => E.slice(0, S + 1), [S, E]),
@@ -204,7 +204,7 @@ function N(e) {
                             children: [
                                 E.map((e, t) =>
                                     (0, r.jsx)(
-                                        s.AJ,
+                                        o.AJ,
                                         {
                                             index: t,
                                             onItemLayout: I,

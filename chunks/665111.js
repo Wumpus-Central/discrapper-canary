@@ -33,8 +33,8 @@ function h(e) {
             return i;
         })(e, ['channel', 'transitionState', 'onClose']);
     let g = (0, o.Dt)(),
-        m = (0, s._d)(h.id),
-        f = (0, s.K3)(h.id),
+        f = (0, s._d)(h.id),
+        m = (0, s.K3)(h.id),
         j = async () => {
             await (0, l.yi)(h), b();
         },
@@ -106,7 +106,7 @@ function h(e) {
                             className: d.headerSubtitle,
                             children: u.intl.string(u.t.LQY4JS)
                         }),
-                        (m > 0 || f > 0) && (0, r.jsx)(c.mv, { channelId: h.id }),
+                        (f > 0 || m > 0) && (0, r.jsx)(c.mv, { channelId: h.id }),
                         (0, r.jsxs)('div', {
                             className: d.buttonsContainer,
                             children: [

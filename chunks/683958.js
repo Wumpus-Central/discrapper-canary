@@ -315,7 +315,7 @@ function w(e) {
                                                 q
                                                     ? (0, r.jsx)(i.Text, {
                                                           variant: 'text-sm/normal',
-                                                          color: 'text-warning',
+                                                          color: 'text-feedback-warning',
                                                           children: y.intl.format(y.t['/KhyPT'], { count: 5 })
                                                       })
                                                     : null,

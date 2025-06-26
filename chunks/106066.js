@@ -1,5 +1,5 @@
-n.d(t, { s: () => r });
+n.d(t, { s: () => l });
 var i = n(695346);
-function r() {
+function l() {
     return i.Sb.useSetting();
 }

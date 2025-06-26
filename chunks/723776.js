@@ -41,7 +41,7 @@ function h(e) {
                       tag: 'span',
                       className: n ? _.ellipsize : void 0,
                       variant: 'text-sm/normal',
-                      color: 'text-normal',
+                      color: 'text-default',
                       children: t.label
                   })
               ]
@@ -59,7 +59,7 @@ function m(e) {
                               children: (0, r.jsx)(l.Text, {
                                   tag: 'span',
                                   variant: 'text-sm/normal',
-                                  color: 'text-normal',
+                                  color: 'text-default',
                                   children: e
                               })
                           },

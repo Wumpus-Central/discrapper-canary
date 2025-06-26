@@ -25,7 +25,7 @@ function u(e) {
                         }),
                         (0, r.jsx)(i.xv, {
                             className: c.perkText,
-                            color: 'text-normal',
+                            color: 'text-default',
                             variant: 'text-sm/medium',
                             children: e.description
                         })

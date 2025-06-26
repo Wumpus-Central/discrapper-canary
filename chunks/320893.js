@@ -21,7 +21,7 @@ function j(e) {
 }
 function _() {
     let e = (0, s.ZP)(),
-        t = { backgroundColor: (0, i.wj)(e) ? '#2e3638' : 'var(--background-primary)' };
+        t = { backgroundColor: (0, i.wj)(e) ? '#2e3638' : 'var(--background-base-low)' };
     return (0, r.jsxs)('div', {
         className: c.earningsPreviewContainer,
         style: t,

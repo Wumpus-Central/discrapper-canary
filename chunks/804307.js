@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var i = n(255367),
-    r = n(73800),
-    l = n(120356),
-    o = n.n(l),
+    l = n(73800),
+    r = n(120356),
+    o = n.n(r),
     a = n(442837),
     c = n(481060),
     s = n(607070),
@@ -11,7 +11,7 @@ var i = n(255367),
 function p(e) {
     let { look: t = u.U4.LARGE_BANNER } = e,
         n = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
-        { styleLarge: l, styleSmall: p } = r.useMemo(
+        { styleLarge: r, styleSmall: p } = l.useMemo(
             () => ({
                 styleLarge: { width: ''.concat(10 + 50 * Math.random(), '%') },
                 styleSmall: { width: ''.concat(30 + 60 * Math.random(), '%') }
@@ -40,7 +40,7 @@ function p(e) {
                         children: [
                             (0, i.jsx)('div', {
                                 className: d.textPlaceholder,
-                                style: l,
+                                style: r,
                                 children: (0, i.jsx)(c.X6q, {
                                     className: d.hidden,
                                     variant: 'heading-md/semibold',

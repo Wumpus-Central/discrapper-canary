@@ -85,7 +85,7 @@ function h(e) {
     return (0, r.jsx)(a.Z, { application: e }, e.id);
 }
 function m(e) {
-    var { userId: t, variant: n = 'text-xs/normal', color: a = 'text-normal' } = e,
+    var { userId: t, variant: n = 'text-xs/normal', color: a = 'text-default' } = e,
         s = _(e, ['userId', 'variant', 'color']);
     let l = (0, o.e)({
         userId: t,
@@ -115,7 +115,7 @@ function g(e) {
                 children: [
                     (0, r.jsx)(i.X6q, {
                         variant: 'text-md/semibold',
-                        color: 'text-normal',
+                        color: 'text-default',
                         children: s.intl.string(s.t.Iyka0d)
                     }),
                     (0, r.jsx)(i.P4T, {

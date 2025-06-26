@@ -90,7 +90,7 @@ function _() {
                     innerClassName: f.innerButton,
                     children: (0, i.jsx)(a.Text, {
                         variant: 'text-md/medium',
-                        color: e ? 'always-white' : 'text-normal',
+                        color: e ? 'always-white' : 'text-default',
                         children: h.intl.string(h.t.GURBQk)
                     })
                 })

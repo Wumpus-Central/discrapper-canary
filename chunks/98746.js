@@ -262,7 +262,7 @@ function C(e) {
                                 onChange: (e, t) => Y(t),
                                 children: (0, l.jsx)(s.Text, {
                                     variant: 'text-md/normal',
-                                    color: 'text-normal',
+                                    color: 'text-default',
                                     children: g.intl.string(h.default['8yIKen'])
                                 })
                             }),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var i = n(255367),
     r = n(73800),
     o = n(120356),
@@ -9,8 +9,8 @@ var i = n(255367),
     u = n(178821),
     d = n(38618),
     p = n(522474),
-    h = n(333031),
-    f = n(610394),
+    f = n(333031),
+    h = n(610394),
     m = n(501787),
     g = n(565655);
 function y(e) {
@@ -56,18 +56,18 @@ function O(e, t) {
         e
     );
 }
-function v(e) {
+function b(e) {
     let { locked: t, pinned: n, anchorLeft: o } = e,
-        v = (0, a.e7)([d.Z], () => d.Z.getSocket()),
-        b = (0, a.e7)([f.ZP], () => f.ZP.isGPUBoosted());
+        b = (0, a.e7)([d.Z], () => d.Z.getSocket()),
+        v = (0, a.e7)([h.ZP], () => h.ZP.isGPUBoosted());
     (0, u.nU)();
     let E = (0, a.e7)([p.Z], () => p.Z.getWindow(m.$J)),
-        [_, x] = (0, u.m8)(v),
+        [_, x] = (0, u.m8)(b),
         { currentFPS: I, averageFrameTime: S, timeSinceLastDrop: j, onResetFrameData: C, droppedFramesRef: N, renderedFrameCount: w, bufferFramecountRef: Z, frameCheckerEffect: P } = (0, u.d6)(!0, _, !0),
-        [T, D, k] = (0, u.ZF)(v),
+        [T, k, D] = (0, u.ZF)(b),
         [A, R] = (0, u.Y5)(T, P, E),
         L = performance.now() - x.current < u.MC,
-        M = D(S, Z.current);
+        M = k(S, Z.current);
     (0, c.ZP)(
         () => (
             A(),
@@ -77,8 +77,8 @@ function v(e) {
         )
     );
     let z = r.useCallback(() => {
-            C(), k(), A();
-        }, [C, k, A]),
+            C(), D(), A();
+        }, [C, D, A]),
         [U, V] = r.useState(!0),
         [W, G] = r.useState(!0),
         [F, B] = r.useState(!0),
@@ -112,7 +112,7 @@ function v(e) {
                                       (0, i.jsx)(s.Text, {
                                           tag: 'span',
                                           variant: 'code',
-                                          color: I < 30 ? 'text-danger' : I < 45 ? 'text-warning' : 'text-primary',
+                                          color: I < 30 ? 'text-danger' : I < 45 ? 'text-feedback-warning' : 'text-primary',
                                           children: I.toFixed(2)
                                       })
                                   ]
@@ -142,7 +142,7 @@ function v(e) {
                                       (0, i.jsxs)(s.Text, {
                                           tag: 'span',
                                           variant: 'code',
-                                          color: S > 1.1 * u.tO ? 'text-warning' : 'text-primary',
+                                          color: S > 1.1 * u.tO ? 'text-feedback-warning' : 'text-primary',
                                           children: [S.toFixed(2), 'ms']
                                       })
                                   ]
@@ -172,7 +172,7 @@ function v(e) {
                                       (0, i.jsx)(s.Text, {
                                           tag: 'span',
                                           variant: 'code',
-                                          color: j < 2 ? 'text-danger' : j < 5 ? 'text-warning' : 'text-primary',
+                                          color: j < 2 ? 'text-danger' : j < 5 ? 'text-feedback-warning' : 'text-primary',
                                           children: N.current
                                       }),
                                       (0, i.jsxs)(s.Text, {
@@ -273,17 +273,17 @@ function v(e) {
                                   })
                               )
                       }),
-                  b &&
+                  v &&
                       (0, i.jsx)(s.Text, {
                           tag: 'span',
                           variant: 'code',
-                          color: 'text-positive',
+                          color: 'text-feedback-positive',
                           children: '(Using GPU Priority - Realtime)'
                       }),
                   !t &&
                       (0, i.jsx)('div', {
                           className: g.bottomPanelButton,
-                          children: (0, i.jsx)(h.Z, {
+                          children: (0, i.jsx)(f.Z, {
                               children: (0, i.jsx)(s.zxk, {
                                   onClick: z,
                                   children: 'Reset Frame Data'

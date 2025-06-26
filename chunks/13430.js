@@ -72,9 +72,9 @@ let O = l.forwardRef(function (e, t) {
         {
             day: j,
             setDay: T,
-            month: C,
-            setMonth: M,
-            year: w,
+            month: w,
+            setMonth: C,
+            year: M,
             setYear: R
         } = (function (e) {
             let t = null,
@@ -93,7 +93,7 @@ let O = l.forwardRef(function (e, t) {
                 setYear: u
             };
         })(r),
-        S = l.useMemo(() => (null != j && null != C && null != w ? c()(''.concat(j, '/').concat(C, '/').concat(w), 'DD/MM/YYYY') : null), [j, C, w]);
+        S = l.useMemo(() => (null != j && null != w && null != M ? c()(''.concat(j, '/').concat(w, '/').concat(M), 'DD/MM/YYYY') : null), [j, w, M]);
     l.useEffect(() => {
         i((null == S ? void 0 : S.isValid()) ? S : null);
     }, [S, i]);
@@ -194,7 +194,7 @@ let O = l.forwardRef(function (e, t) {
                     key: 'month',
                     input: (0, n.jsx)(y, {
                         options: b,
-                        selectOption: M,
+                        selectOption: C,
                         children: (0, n.jsx)(d.Z, {
                             ref: Z,
                             className: h.__invalid_inputMonth,
@@ -205,10 +205,10 @@ let O = l.forwardRef(function (e, t) {
                                 children: p.intl.string(p.t.UDlN8f)
                             }),
                             options: b,
-                            value: C,
+                            value: w,
                             onChange: (t) => {
                                 let { value: r } = t;
-                                M(r), D(e + 1);
+                                C(r), D(e + 1);
                             },
                             maxMenuHeight: 215,
                             onFocus: () => (null == x ? void 0 : x(''.concat(k, '_').concat(t))),
@@ -233,7 +233,7 @@ let O = l.forwardRef(function (e, t) {
                                 children: p.intl.string(p.t.ZWr5WF)
                             }),
                             options: P,
-                            value: w,
+                            value: M,
                             onChange: (t) => {
                                 let { value: r } = t;
                                 R(r), D(e + 1);

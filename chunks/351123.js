@@ -114,7 +114,7 @@ function W(e) {
                                 (0, i.jsx)(o.Text, {
                                     variant: 'text-sm/normal',
                                     className: k.rowLabel,
-                                    color: j.disabled ? 'text-muted' : 'text-normal',
+                                    color: j.disabled ? 'text-muted' : 'text-default',
                                     children: j.name
                                 })
                             ]

@@ -39,7 +39,7 @@ function h(e) {
                             (0, i.jsx)(l.Text, {
                                 variant: 'text-md/medium',
                                 lineClamp: 1,
-                                color: 'text-normal',
+                                color: 'text-default',
                                 children: t.toString()
                             }),
                             (0, i.jsxs)('div', {

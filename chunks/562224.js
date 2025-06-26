@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(268146),
     l = n(872810),
     i = n(594190),
@@ -12,12 +12,12 @@ var r = n(268146),
     h = n(594174),
     p = n(358085),
     g = n(451467),
-    O = n(537413),
-    y = n(143135),
+    y = n(537413),
+    O = n(143135),
     b = n(37113),
     N = n(761274);
-async function m(e, t) {
-    var n, m, v, x, E, C, I, T, j, S;
+async function v(e, t) {
+    var n, v, m, x, E, C, I, T, j, S;
     let P = h.default.getCurrentUser(),
         _ = f.Z.getVoiceChannelId(),
         Z = u.Z.getChannel(_),
@@ -28,8 +28,8 @@ async function m(e, t) {
     if (null == (R = 'number' == typeof e ? i.ZP.getGameForPID(e) : e)) return [!1, 'no source'];
     if (!d.Z.getUseSystemScreensharePicker() && !(await o.Z.hasPermission(N.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }))) return [!1, 'no permission'];
     let { preset: D, resolution: U, fps: k, soundshareEnabled: M } = s.Z.getState(),
-        L = null != (v = null == t ? void 0 : t.preset) ? v : D,
-        [B, G] = null != (x = (0, O.Z)(L, P, w)) ? x : [],
+        L = null != (m = null == t ? void 0 : t.preset) ? m : D,
+        [B, G] = null != (x = (0, y.Z)(L, P, w)) ? x : [],
         V = null != (E = null != B ? B : null == t ? void 0 : t.resolution) ? E : U,
         F = null != (C = null != G ? G : null == t ? void 0 : t.fps) ? C : k,
         W = null != (I = null == t ? void 0 : t.previewDisabled) ? I : a.I0.getSetting(),
@@ -73,7 +73,7 @@ async function m(e, t) {
                 {},
                 (function (e) {
                     if (e.hasOwnProperty('pid')) return { pid: e.pid };
-                    let t = (0, y.Z)(void 0, e, i.ZP.getRunningGames()),
+                    let t = (0, O.Z)(void 0, e, i.ZP.getRunningGames()),
                         n = !(0, p.isWindows)() || null == t || (null == e ? void 0 : e.id.startsWith(r.vA.CAMERA)) || null == t ? null : t.pid;
                     return null != n
                         ? { pid: n }
@@ -86,7 +86,7 @@ async function m(e, t) {
             )),
             (S = S =
                 {
-                    audioSourceId: (null == (m = R.id) ? void 0 : m.startsWith(r.vA.CAMERA)) ? (null == t ? void 0 : t.audioSourceId) : void 0,
+                    audioSourceId: (null == (v = R.id) ? void 0 : v.startsWith(r.vA.CAMERA)) ? (null == t ? void 0 : t.audioSourceId) : void 0,
                     sound: K,
                     previewDisabled: W,
                     goLiveModalDurationMs: null == t ? void 0 : t.goLiveModalDurationMs

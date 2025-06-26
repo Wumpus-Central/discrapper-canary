@@ -18,7 +18,7 @@ let f = (0, s.e)(function (e) {
             children: (0, n.jsx)(r.Text, {
                 className: u.error,
                 variant: 'text-md/normal',
-                color: 'text-warning',
+                color: 'text-feedback-warning',
                 children: d.intl.string(d.t.WLDKSU)
             })
         });

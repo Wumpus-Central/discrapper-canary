@@ -123,7 +123,7 @@ function M(e) {
         K = (0, u.wj)(F) ? V : Y,
         X = H.to({
             range: [0, 1],
-            output: [(0, m.dQu)(c.Z.unsafe_rawColors.WHITE_500).hex(), (0, m.dQu)(c.Z.colors.TEXT_NORMAL).hex()]
+            output: [(0, m.dQu)(c.Z.unsafe_rawColors.WHITE_500).hex(), (0, m.dQu)(c.Z.colors.TEXT_DEFAULT).hex()]
         }),
         q = H.to({
             range: [0, 1],

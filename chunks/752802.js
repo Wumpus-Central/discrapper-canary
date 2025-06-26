@@ -9,14 +9,14 @@ var i = n(255367),
     u = n(846027),
     d = n(239091),
     p = n(765250),
-    h = n(872810),
-    f = n(40851),
+    f = n(872810),
+    h = n(40851),
     m = n(414910),
     g = n(194082),
     y = n(871118),
     O = n(172751),
-    v = n(352978),
-    b = n(833519),
+    b = n(352978),
+    v = n(833519),
     E = n(839662),
     _ = n(199902),
     x = n(314897),
@@ -53,7 +53,7 @@ function T(e) {
     }
     return e;
 }
-function D(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,7 +71,7 @@ function D(e, t) {
         e
     );
 }
-function k(e, t) {
+function D(e, t) {
     if (null == e) return {};
     var n,
         i,
@@ -104,17 +104,17 @@ function A(e) {
         l = (0, a.e7)([x.default], () => x.default.getId()),
         { hasVideo: d } = (0, E.Z)(t, l),
         p = o && d,
-        h = r.useCallback(() => {
+        f = r.useCallback(() => {
             u.Z.toggleLocalMute(n, s.Yn.STREAM);
         }, [n]);
     return (0, i.jsx)(c.ua7, {
         text: p ? Z.intl.string(Z.t.YqAjX1) : Z.intl.string(Z.t['w4m94+']),
         children: (e) => {
             var { onClick: n } = e,
-                r = k(e, ['onClick']);
+                r = D(e, ['onClick']);
             return (0, i.jsx)(
                 c.P3F,
-                D(T({}, r), {
+                k(T({}, r), {
                     className: P.controlAction,
                     onClick: (e) => {
                         e.stopPropagation(),
@@ -124,7 +124,7 @@ function A(e) {
                                 userId: t.user.id
                             }),
                             null == n || n(),
-                            h();
+                            f();
                     },
                     children: p
                         ? (0, i.jsx)(c.OyP, {
@@ -154,7 +154,7 @@ function R(e, t, r) {
                 return (n) =>
                     (0, i.jsx)(
                         r,
-                        D(T({}, n), {
+                        k(T({}, n), {
                             stream: e.stream,
                             exitFullscreen: () => {},
                             appContext: t
@@ -165,7 +165,7 @@ function R(e, t, r) {
 }
 function L(e) {
     let { hasActiveStream: t, participant: n, onEnablePin: r } = e,
-        o = (0, f.bp)(),
+        o = (0, h.bp)(),
         s = n.user,
         u = (0, a.e7)(
             [S.default],
@@ -187,12 +187,12 @@ function L(e) {
                         children: (e) =>
                             (0, i.jsxs)(
                                 c.P3F,
-                                D(T({}, e), {
+                                k(T({}, e), {
                                     className: P.watchButton,
                                     onClick: () => {
                                         var t;
                                         null == (t = e.onClick) || t.call(e),
-                                            (0, h.rn)(n.stream, {
+                                            (0, f.rn)(n.stream, {
                                                 forceMultiple: !0,
                                                 noFocus: !0
                                             }),
@@ -263,10 +263,10 @@ function L(e) {
                                         text: Z.intl.string(Z.t['3D5yo6']),
                                         children: (e) => {
                                             var { onClick: t } = e,
-                                                r = k(e, ['onClick']);
+                                                r = D(e, ['onClick']);
                                             return (0, i.jsx)(
                                                 c.P3F,
-                                                D(T({}, r), {
+                                                k(T({}, r), {
                                                     className: P.controlAction,
                                                     onClick: R(n, o, t),
                                                     children: (0, i.jsx)(c.xhG, {
@@ -289,23 +289,23 @@ let M = new Set([w.jm8.ENDED, w.jm8.FAILED, w.jm8.PAUSED]),
     z = r.memo(function (e) {
         let { participant: t, width: n, locked: r, widgetId: o, pinned: l } = e,
             s = (0, a.e7)([_.Z], () => _.Z.getActiveStreamForUser(t.user.id, t.stream.guildId), [t.user.id, t.stream.guildId]),
-            u = (0, f.bp)(),
+            u = (0, h.bp)(),
             d = null != s && M.has(s.state),
-            h = null != s,
+            f = null != s,
             m = (0, N.yA)(t.stream),
             O = (0, N.xN)(t.stream);
-        return (!h && r) || d
+        return (!f && r) || d
             ? null
             : (0, i.jsxs)('div', {
                   className: P.tile,
                   children: [
-                      h &&
+                      f &&
                           !r &&
                           (0, i.jsx)(g.ZP, {
                               size: g.ZP.Sizes.SMALL,
                               className: P.liveIndicator
                           }),
-                      h
+                      f
                           ? (0, i.jsx)('div', {
                                 className: P.streamTile,
                                 children: (0, i.jsx)(c.kL8, {
@@ -314,10 +314,10 @@ let M = new Set([w.jm8.ENDED, w.jm8.FAILED, w.jm8.PAUSED]),
                                     onContextMenu: R(t, u),
                                     className: P.streamTile,
                                     style: { transform: 'scale('.concat(m, ')') },
-                                    children: (0, i.jsx)(b.Z, {
+                                    children: (0, i.jsx)(v.Z, {
                                         participant: t,
                                         width: n,
-                                        fit: null != O ? O : v.L.CONTAIN,
+                                        fit: null != O ? O : b.L.CONTAIN,
                                         inPopout: !0,
                                         focused: !r,
                                         selected: !1,
@@ -338,7 +338,7 @@ let M = new Set([w.jm8.ENDED, w.jm8.FAILED, w.jm8.PAUSED]),
                           ? null
                           : (0, i.jsx)(L, {
                                 participant: t,
-                                hasActiveStream: h,
+                                hasActiveStream: f,
                                 onEnablePin: () => {
                                     l || (0, p.xh)(o);
                                 }

@@ -24,7 +24,7 @@ function u(e) {
                           children: (0, r.jsx)(a.Text, {
                               className: s.codeText,
                               variant: 'code',
-                              color: 'text-normal',
+                              color: 'text-default',
                               children: e
                           })
                       },

@@ -66,7 +66,7 @@ function x(e) {
                       children: b.intl.string(b.t.n7i7sr)
                   }),
                   (0, s.jsx)(c.Text, {
-                      color: 'text-normal',
+                      color: 'text-default',
                       className: h.description,
                       variant: 'text-md/normal',
                       children: b.intl.format(b.t.fa8kW1, { helpURL: p.Z.getArticleURL(f.BhN.AGE_GATE) })

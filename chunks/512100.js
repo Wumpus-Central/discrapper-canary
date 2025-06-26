@@ -55,7 +55,7 @@ function c(e) {
                                     null != l &&
                                         '' !== l &&
                                         (0, t.jsx)(i.x, {
-                                            color: 'text-normal',
+                                            color: 'text-default',
                                             variant: 'text-md/normal',
                                             className: o.description,
                                             children: l

@@ -156,7 +156,7 @@ function P(e) {
                                                                   className: T.__invalid_channelText,
                                                                   variant: 'text-md/medium',
                                                                   lineClamp: 1,
-                                                                  color: 'text-normal',
+                                                                  color: 'text-default',
                                                                   children: e.name
                                                               })
                                                           })

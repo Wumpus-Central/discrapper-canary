@@ -308,7 +308,7 @@ function x(e) {
                                             children: V
                                                 ? (0, l.jsx)(s.Text, {
                                                       variant: 'text-sm/normal',
-                                                      color: 'text-warning',
+                                                      color: 'text-feedback-warning',
                                                       children: S.intl.format(S.t['3Fbkio'], { count: I.G })
                                                   })
                                                 : (0, l.jsx)(s.X6q, {

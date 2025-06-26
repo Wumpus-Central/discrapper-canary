@@ -28,7 +28,7 @@ function u(e) {
             numAdditional: (0, s.Je)(g)
         }),
         headerColor: 'header-primary',
-        textColor: 'text-normal',
+        textColor: 'text-default',
         buttonProps: f,
         guild: t,
         analyticsLocation: {

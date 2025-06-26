@@ -78,7 +78,7 @@ let T = (e) => {
                               (0, i.jsx)('div', {
                                   className: v.affinityDescriptionContainer,
                                   children: (0, i.jsx)(E.Z, {
-                                      textColor: 'text-normal',
+                                      textColor: 'text-default',
                                       smallerText: !1,
                                       isApplicationHome: !0
                                   })

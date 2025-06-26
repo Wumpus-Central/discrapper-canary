@@ -104,7 +104,7 @@ function W(e) {
             null != o ? (0, c.jsx)(o, { className: U.channelNameIcon }) : null,
             (0, c.jsx)(C.X6q, {
                 variant: 'heading-lg/semibold',
-                color: 'text-normal',
+                color: 'text-default',
                 className: U.channelNameText,
                 children: n.name
             })

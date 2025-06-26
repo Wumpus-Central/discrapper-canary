@@ -24,7 +24,7 @@ function g(e, t, n) {
         e
     );
 }
-function O(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function O(e) {
     }
     return e;
 }
-let y = {
+let O = {
         [h.IE4.UNKNOWN]: a.ua7.Colors.BLACK,
         [h.IE4.BAD]: a.ua7.Colors.RED,
         [h.IE4.AVERAGE]: a.ua7.Colors.YELLOW,
@@ -57,7 +57,7 @@ let y = {
         [h.IE4.BAD]: p.rtcConnectionQualityBad,
         [h.IE4.UNKNOWN]: null
     };
-class m extends l.PureComponent {
+class v extends l.PureComponent {
     renderPopoutTarget(e) {
         let t = this.props.channelId;
         return null == t
@@ -98,11 +98,11 @@ class m extends l.PureComponent {
             i === h.hes.RTC_CONNECTED &&
                 (e = (0, r.jsx)(a.ua7, {
                     text: t !== h.IE4.UNKNOWN && null != l ? ''.concat(l.toFixed(0), ' ms') : null,
-                    color: y[t],
+                    color: O[t],
                     children: (e) =>
                         (0, r.jsx)(
-                            v,
-                            O(
+                            m,
+                            y(
                                 {
                                     quality: t,
                                     smallPing: !c && n,
@@ -137,7 +137,7 @@ class m extends l.PureComponent {
                 var n, l;
                 return (0, r.jsx)(
                     d.Z,
-                    ((n = O({}, t)),
+                    ((n = y({}, t)),
                     (l = l = { channelId: e }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
@@ -156,7 +156,7 @@ class m extends l.PureComponent {
             });
     }
 }
-function v(e) {
+function m(e) {
     var { quality: t, smallPing: n, largePing: l } = e,
         i = (function (e, t) {
             if (null == e) return {};
@@ -185,7 +185,7 @@ function v(e) {
     }[t];
     return (0, r.jsx)(
         s,
-        O(
+        y(
             {
                 className: o()(p.ping, {
                     [p.smallPing]: n,
@@ -196,4 +196,4 @@ function v(e) {
         )
     );
 }
-let x = m;
+let x = v;

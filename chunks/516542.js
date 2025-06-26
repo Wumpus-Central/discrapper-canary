@@ -9,14 +9,14 @@ var i = n(255367),
     u = n(541716),
     d = n(752305),
     p = n(893718),
-    h = n(957730),
-    f = n(849522),
+    f = n(957730),
+    h = n(849522),
     m = n(145597),
     g = n(981631),
     y = n(842304);
 function O(e) {
-    let { id: t, replyToMessageId: n, channel: O, onSend: v } = e,
-        b = (0, f.Z)(),
+    let { id: t, replyToMessageId: n, channel: O, onSend: b } = e,
+        v = (0, h.Z)(),
         { placeholder: E, accessibilityLabel: _ } = (0, c.Z)({ channel: O }),
         [x, I] = r.useState(() => (0, d.H2)()),
         { textValue: S, richValue: j } = x,
@@ -48,15 +48,15 @@ function O(e) {
             },
             [t]
         ),
-        D = r.useCallback(
+        k = r.useCallback(
             () => (
-                S.length > b || (o.Z.sendMessage(O.id, h.ZP.parse(O, S), !1), l.Z.setInputLocked(!0, (0, m.getPID)()), l.Z.updateNotificationStatus(t, g._1z.DISMISSED), null == v || v(S)),
+                S.length > v || (o.Z.sendMessage(O.id, f.ZP.parse(O, S), !1), l.Z.setInputLocked(!0, (0, m.getPID)()), l.Z.updateNotificationStatus(t, g._1z.DISMISSED), null == b || b(S)),
                 Promise.resolve({
                     shouldClear: !1,
                     shouldRefocus: !0
                 })
             ),
-            [S, b, O, t, v]
+            [S, v, O, t, b]
         );
     return (0, i.jsx)('div', {
         className: y.container,
@@ -73,7 +73,7 @@ function O(e) {
             onBlur: Z,
             onFocus: w,
             focused: C,
-            onSubmit: D,
+            onSubmit: k,
             onKeyDown: T,
             autoCompletePosition: 'bottom',
             disableThemedBackground: !0

@@ -43,7 +43,7 @@ function _(e) {
         children: (0, r.jsx)(o.Text, {
             className: m.textContent,
             variant: 'text-xs/medium',
-            color: 'text-positive',
+            color: 'text-feedback-positive',
             lineClamp: 1,
             children: v.join(' \xB7 ')
         })

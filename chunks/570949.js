@@ -4,8 +4,8 @@ n.d(t, {
 }),
     n(388685);
 var i = n(255367),
-    r = n(481060),
-    l = n(239091),
+    l = n(481060),
+    r = n(239091),
     o = n(299206),
     a = n(276022),
     c = n(695346),
@@ -22,7 +22,7 @@ function f(e) {
         application: n,
         guildId: i,
         onItemClick: () => {
-            (0, r.Mr3)(p.e9), (0, u.yT)(d.ti.DISMISSED);
+            (0, l.Mr3)(p.e9), (0, u.yT)(d.ti.DISMISSED);
         }
     });
 }
@@ -34,11 +34,11 @@ function h(e) {
             label: m.intl.string(m.t['+NP/b2'])
         }),
         u = f({ application: t });
-    return (0, i.jsxs)(r.v2r, {
+    return (0, i.jsxs)(l.v2r, {
         navId: 'activity-shelf-item-context',
-        onClose: l.Zy,
+        onClose: r.Zy,
         'aria-label': m.intl.string(m.t.WkcHT0),
         onSelect: n,
-        children: [null != u && (0, i.jsxs)(r.kSQ, { children: [...u] }, 'manage-app-actions'), a && (0, i.jsx)(r.kSQ, { children: s }, 'developer-actions')]
+        children: [null != u && (0, i.jsxs)(l.kSQ, { children: [...u] }, 'manage-app-actions'), a && (0, i.jsx)(l.kSQ, { children: s }, 'developer-actions')]
     });
 }

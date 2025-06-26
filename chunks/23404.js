@@ -215,7 +215,7 @@ function L(e) {
                                   children: [
                                       (0, r.jsx)(s.Text, {
                                           variant: 'text-sm/normal',
-                                          color: 'text-normal',
+                                          color: 'text-default',
                                           children: X
                                       }),
                                       Q &&

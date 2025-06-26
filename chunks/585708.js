@@ -10,14 +10,14 @@ var r = n(13245),
     u = n(974180),
     d = n(358085),
     p = n(998502),
-    h = n(145597),
-    f = n(610394),
+    f = n(145597),
+    h = n(610394),
     m = n(516542),
     g = n(618373),
     y = n(620954),
     O = n(987650),
-    v = n(981631),
-    b = n(388032);
+    b = n(981631),
+    v = n(388032);
 function E(e, t, n, E) {
     var _;
     let { icon: x, title: I, body: S } = (0, a.Xi)(e, t, n),
@@ -41,7 +41,7 @@ function E(e, t, n, E) {
                       hideSimpleEmbedContent: !1
                   }).content
                 : S,
-        hint: (e, t) => (e && !t ? null : (0, g.Q)((0, y.P)(), b.t.ykjOAA, b.intl.string(b.t.jZkzVF))),
+        hint: (e, t) => (e && !t ? null : (0, g.Q)((0, y.P)(), v.t.ykjOAA, v.intl.string(v.t.jZkzVF))),
         maxBodyLines: 2,
         renderFooter: (n, r, o) =>
             n && !o
@@ -56,19 +56,19 @@ function E(e, t, n, E) {
             E && (0, c.GN)(u.Ay, u.yk), j();
         },
         onNotificationClick: () => {
-            let n = (0, h.getPID)();
+            let n = (0, f.getPID)();
             (0, o.In)(
                 e.id,
                 {
-                    section: v.jXE.OVERLAY,
-                    object: v.qAy.ACK_TEXT_CHAT_NOTIFICATION,
-                    objectType: v.Qqv.ACK_SEMI_AUTOMATIC
+                    section: b.jXE.OVERLAY,
+                    object: b.qAy.ACK_TEXT_CHAT_NOTIFICATION,
+                    objectType: b.Qqv.ACK_SEMI_AUTOMATIC
                 },
                 !0,
                 !0,
                 t.id
             ),
-                f.ZP.isInputLocked(n) ? (C('unlock'), r.Z.setInputLocked(!1, n)) : (C('jump'), (0, s.uL)(v.Z5c.CHANNEL(e.guild_id, e.id, t.id)), d.isPlatformEmbedded && p.ZP.focus());
+                h.ZP.isInputLocked(n) ? (C('unlock'), r.Z.setInputLocked(!1, n)) : (C('jump'), (0, s.uL)(b.Z5c.CHANNEL(e.guild_id, e.id, t.id)), d.isPlatformEmbedded && p.ZP.focus());
         },
         onDismissClick: () => {
             C('dismiss');

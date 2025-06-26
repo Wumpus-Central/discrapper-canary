@@ -27,7 +27,7 @@ function j(e) {
                 children: [
                     (0, r.jsx)(s.Text, {
                         variant: 'text-sm/medium',
-                        color: 'text-normal',
+                        color: 'text-default',
                         children: l ? x.intl.string(x.t.DKNxgI) : x.intl.string(x.t.ESEKub)
                     }),
                     (0, r.jsx)(o.Z, {

@@ -20,7 +20,7 @@ let u = function () {
                 children: [
                     (0, i.jsx)(s.Text, {
                         variant: 'text-md/normal',
-                        color: 'info-help-text',
+                        color: 'text-feedback-info',
                         style: { marginBottom: '8px' },
                         children: 'Click the button below to clear your Minor Reward Capping History.'
                     }),
@@ -32,7 +32,7 @@ let u = function () {
                     }),
                     (0, i.jsx)(s.Text, {
                         variant: 'text-md/normal',
-                        color: 'info-help-text',
+                        color: 'text-feedback-info',
                         children: 'Your may have to refresh your client after being redirected to the Quest Home in order to see these changes.'
                     })
                 ]

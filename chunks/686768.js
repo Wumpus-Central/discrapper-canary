@@ -63,7 +63,7 @@ let m = function (t) {
                         }),
                         (0, o.jsx)(s.X6q, {
                             variant: 'heading-md/medium',
-                            color: 'text-normal',
+                            color: 'text-default',
                             children: I.intl.string(I.t.O7SO0N)
                         }),
                         (0, o.jsx)(s.olH, {

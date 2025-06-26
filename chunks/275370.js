@@ -8,38 +8,38 @@ var n = t(255367),
     a = t(985002),
     d = t(880257),
     u = t(957656),
-    b = t(130310),
-    f = t(916723),
+    f = t(130310),
+    b = t(916723),
     h = t(388032),
     j = t(13625);
 let x = (e) => {
     let { currentUser: r, otherUser: t, transitionState: l, onClose: x } = e,
-        m = o.useCallback(() => {
+        p = o.useCallback(() => {
             x();
         }, [x]),
-        p = (0, d.Z)(),
+        m = (0, d.Z)(),
         [y, O] = o.useState(!1),
         g = o.useCallback(() => {
             O(!0);
         }, []),
         { acceptLinkRequest: k, isAcceptLoading: v } = (0, a.G)({
             onError: g,
-            onSuccess: m
+            onSuccess: p
         });
     return (
-        s()(!p, 'FamilyCenterAcceptLinkModal should only be rendered for teens.'),
+        s()(!m, 'FamilyCenterAcceptLinkModal should only be rendered for teens.'),
         (0, n.jsxs)(u.Z, {
             transitionState: l,
-            'aria-label': h.intl.string(f.default.rlNJwc),
+            'aria-label': h.intl.string(b.default.rlNJwc),
             className: j.root,
             children: [
-                (0, n.jsx)(u.Z.Error, { error: y ? h.intl.string(f.default.pegSMz) : void 0 }),
+                (0, n.jsx)(u.Z.Error, { error: y ? h.intl.string(b.default.pegSMz) : void 0 }),
                 (0, n.jsxs)(i.hzk, {
                     children: [
                         (0, n.jsx)(u.Z.Header, {
                             currentUser: r,
                             otherUser: t,
-                            header: h.intl.string(f.default.rlNJwc),
+                            header: h.intl.string(b.default.rlNJwc),
                             icon: (0, n.jsx)(i.xPt, {
                                 size: 'md',
                                 color: 'currentColor',
@@ -48,12 +48,12 @@ let x = (e) => {
                         }),
                         (0, n.jsxs)(u.Z.Content, {
                             children: [
-                                (0, n.jsx)(b.Z, { inModal: !0 }),
+                                (0, n.jsx)(f.Z, { inModal: !0 }),
                                 (0, n.jsx)(i.Text, {
                                     className: j.disclaimer,
                                     variant: 'text-xs/normal',
-                                    color: 'text-normal',
-                                    children: h.intl.format(f.default.snlFqa, { username: c.ZP.getName(t) })
+                                    color: 'text-default',
+                                    children: h.intl.format(b.default.snlFqa, { username: c.ZP.getName(t) })
                                 })
                             ]
                         })
@@ -81,7 +81,7 @@ let x = (e) => {
                                     submitting: v,
                                     color: i.Ttl.BRAND,
                                     size: i.zxk.Sizes.SMALL,
-                                    children: h.intl.string(f.default['wI/jo6'])
+                                    children: h.intl.string(b.default['wI/jo6'])
                                 })
                             ]
                         })

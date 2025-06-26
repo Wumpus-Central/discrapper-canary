@@ -32,7 +32,7 @@ function d(e) {
             (0, r.jsx)(o.Text, {
                 className: s.text,
                 variant: 'text-sm/medium',
-                color: 'text-normal',
+                color: 'text-default',
                 children: t
             })
         ]

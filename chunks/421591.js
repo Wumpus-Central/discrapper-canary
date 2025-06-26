@@ -1,7 +1,7 @@
 n.d(t, { Z: () => v }), n(388685), n(482853);
 var i = n(255367),
-    r = n(73800),
-    l = n(481060),
+    l = n(73800),
+    r = n(481060),
     o = n(100527),
     a = n(367907),
     c = n(906732),
@@ -18,27 +18,27 @@ let _ = {
         height: f.lv
     },
     C = { height: f.lv },
-    v = r.memo(
-        r.forwardRef(function (e, t) {
-            let { context: n, entrypoint: l, initHistory: u } = e,
+    v = l.memo(
+        l.forwardRef(function (e, t) {
+            let { context: n, entrypoint: r, initHistory: u } = e,
                 { analyticsLocations: d } = (0, c.ZP)(o.Z.APP_LAUNCHER);
             return (
-                r.useEffect(() => {
+                l.useEffect(() => {
                     (0, a.yw)(h.rMx.APPLICATION_COMMAND_TOP_OF_FUNNEL, {
-                        source: l,
+                        source: r,
                         location: 'app_launcher'
                     });
-                }, [l]),
-                r.useEffect(() => {
+                }, [r]),
+                l.useEffect(() => {
                     let e = Date.now();
                     return () => {
                         (0, a.yw)(h.rMx.APP_LAUNCHER_CLOSED, {
                             reason: s.Z.closeReason(),
                             time_spent: Date.now() - e,
-                            source: l
+                            source: r
                         });
                     };
-                }, [l]),
+                }, [r]),
                 (0, i.jsx)('div', {
                     className: b.drawerSizingWrapper,
                     ref: t,
@@ -51,7 +51,7 @@ let _ = {
                                 initHistory: u,
                                 children: (0, i.jsx)(y, {
                                     context: n,
-                                    entrypoint: l
+                                    entrypoint: r
                                 })
                             })
                         })
@@ -62,14 +62,14 @@ let _ = {
     );
 function x(e) {
     let { initHistory: t, children: n } = e,
-        [l, o] = r.useState(null != t ? t : [{ type: u.gc.HOME }]),
-        [a, c] = r.useState({}),
-        s = l[l.length - 1],
-        [d, p] = r.useState(!1),
-        m = r.useCallback((e) => {
+        [r, o] = l.useState(null != t ? t : [{ type: u.gc.HOME }]),
+        [a, c] = l.useState({}),
+        s = r[r.length - 1],
+        [d, p] = l.useState(!1),
+        m = l.useCallback((e) => {
             o((t) => [...t, e]);
         }, []),
-        f = r.useCallback(() => {
+        f = l.useCallback(() => {
             let e = null;
             o((t) => (t.length <= 1 ? t : ((e = t[t.length - 1]), t.slice(0, -1)))),
                 c((t) => {
@@ -117,16 +117,16 @@ function x(e) {
                           n);
                 });
         }, []),
-        h = r.useCallback(
+        h = l.useCallback(
             (e) => {
                 var t;
-                return null != (t = l.findLast((t) => t.type === e)) ? t : a[e];
+                return null != (t = r.findLast((t) => t.type === e)) ? t : a[e];
             },
-            [l, a]
+            [r, a]
         );
     return (0, i.jsx)(u.uX.Provider, {
         value: {
-            history: l,
+            history: r,
             discard: a,
             currentView: s,
             pushHistory: m,
@@ -140,16 +140,16 @@ function x(e) {
 }
 function y(e) {
     let { context: t, entrypoint: n } = e,
-        [o, a] = r.useState(''),
+        [o, a] = l.useState(''),
         { setScroller: c, isCloseToBottom: s } = (function (e) {
-            let [t, n] = r.useState(null),
-                [i, l] = r.useState(!1),
-                o = r.useRef(0);
+            let [t, n] = l.useState(null),
+                [i, r] = l.useState(!1),
+                o = l.useRef(0);
             return (
-                r.useEffect(() => {
+                l.useEffect(() => {
                     null == t || t.scrollTo(0, 0);
                 }, [t, e]),
-                r.useEffect(() => {
+                l.useEffect(() => {
                     if (null != t)
                         return (
                             t.scrollTo(0, o.current),
@@ -159,7 +159,7 @@ function y(e) {
                             }
                         );
                     function e() {
-                        null != t && ((o.current = t.scrollTop), l(t.scrollHeight - (t.scrollTop + t.clientHeight) < 0.5 * f.K7));
+                        null != t && ((o.current = t.scrollTop), r(t.scrollHeight - (t.scrollTop + t.clientHeight) < 0.5 * f.K7));
                     }
                 }, [t]),
                 {
@@ -169,21 +169,21 @@ function y(e) {
             );
         })(o),
         { currentView: h, getMostRecentHistoryItemByType: _, setSlideReady: v } = (0, u.hH)();
-    r.useEffect(() => {
+    l.useEffect(() => {
         v(!1);
     }, [null == h ? void 0 : h.type, v]);
-    let x = r.useCallback(() => {
+    let x = l.useCallback(() => {
         v(!0);
     }, [v]);
     if (null == h) return null;
     let y = _(u.gc.LIST),
         g = _(u.gc.APPLICATION);
-    return (0, i.jsxs)(l.MyZ, {
+    return (0, i.jsxs)(r.MyZ, {
         activeSlide: h.type,
         width: f.Gy,
         onSlideReady: x,
         children: [
-            (0, i.jsx)(l.Mi4, {
+            (0, i.jsx)(r.Mi4, {
                 id: u.gc.HOME,
                 children: (0, i.jsx)('div', {
                     className: b.slideContent,
@@ -198,7 +198,7 @@ function y(e) {
                     })
                 })
             }),
-            (0, i.jsx)(l.Mi4, {
+            (0, i.jsx)(r.Mi4, {
                 id: u.gc.LIST,
                 children: (0, i.jsx)('div', {
                     className: b.slideContent,
@@ -216,7 +216,7 @@ function y(e) {
                         })
                 })
             }),
-            (0, i.jsx)(l.Mi4, {
+            (0, i.jsx)(r.Mi4, {
                 id: u.gc.APPLICATION,
                 children: (0, i.jsx)('div', {
                     className: b.slideContent,

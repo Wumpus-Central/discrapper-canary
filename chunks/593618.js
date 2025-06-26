@@ -219,7 +219,7 @@ function Z(e, t, n) {
                           }),
                           (0, r.jsx)(u.Text, {
                               className: k.stageListenerCount,
-                              color: 'text-normal',
+                              color: 'text-default',
                               variant: 'text-xs/normal',
                               children: n
                           })
@@ -291,7 +291,7 @@ function K(e) {
     let { guildJoinRequestStatus: t } = e;
     return (0, r.jsx)(u.Text, {
         className: k.viewAsRolesWarning,
-        color: 'text-normal',
+        color: 'text-default',
         variant: 'text-xs/normal',
         children: W(t)
     });
@@ -337,7 +337,7 @@ function z(e) {
             d
                 ? (0, r.jsx)(u.Text, {
                       className: k.viewAsRolesWarning,
-                      color: 'text-normal',
+                      color: 'text-default',
                       variant: 'text-xs/normal',
                       children: x.intl.string(x.t['5LwN8/'])
                   })

@@ -365,7 +365,7 @@ let M = (e) => {
                                                   (0, r.jsx)(o.LZC, { size: 16 }),
                                                   (0, r.jsx)(o.Text, {
                                                       variant: 'text-sm/normal',
-                                                      color: 'text-normal',
+                                                      color: 'text-default',
                                                       className: a()((!H || !z) && Z.tierDescriptionTruncate),
                                                       children: (0, r.jsx)('div', {
                                                           ref: W,

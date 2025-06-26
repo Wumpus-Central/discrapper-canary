@@ -96,19 +96,19 @@ function v(e) {
                                 (0, o.jsx)(m.Z, {
                                     user: t,
                                     guildId: C,
-                                    iconColor: i.TVs.colors.TEXT_NORMAL
+                                    iconColor: i.TVs.colors.TEXT_DEFAULT
                                 }),
                                 (0, o.jsxs)('div', {
                                     className: j.textContainer,
                                     children: [
                                         (0, o.jsx)(i.X6q, {
                                             variant: 'heading-xl/bold',
-                                            color: 'text-normal',
+                                            color: 'text-default',
                                             children: g.intl.string(g.t.b33pLC)
                                         }),
                                         (0, o.jsx)(i.Text, {
                                             variant: 'text-md/medium',
-                                            color: 'text-normal',
+                                            color: 'text-default',
                                             children: g.intl.format(w ? g.t.T7QiLi : g.t.MnEow8, { username: D })
                                         })
                                     ]
@@ -123,7 +123,7 @@ function v(e) {
                                                 icon: n,
                                                 title: r,
                                                 titleVariant: 'text-md/normal',
-                                                color: i.TVs.colors.TEXT_NORMAL.css
+                                                color: i.TVs.colors.TEXT_DEFAULT.css
                                             },
                                             t
                                         );

@@ -207,7 +207,7 @@ let F = i.memo(function (e) {
                     (0, r.jsx)('div', {
                         children: (0, r.jsx)(c.Text, {
                             variant: 'text-xs/medium',
-                            color: 'text-normal',
+                            color: 'text-default',
                             children: N.intl.format(N.t.uFcRen, { nick: t })
                         })
                     }),
@@ -381,7 +381,7 @@ let F = i.memo(function (e) {
                                                   }),
                                               (0, r.jsx)(c.Text, {
                                                   variant: 'text-xs/medium',
-                                                  color: 'text-normal',
+                                                  color: 'text-default',
                                                   children: u
                                               })
                                           ]
@@ -451,7 +451,7 @@ let F = i.memo(function (e) {
                                           children: [
                                               (0, r.jsx)(c.Text, {
                                                   variant: 'text-xs/medium',
-                                                  color: 'text-normal',
+                                                  color: 'text-default',
                                                   children: u
                                               }),
                                               !C &&

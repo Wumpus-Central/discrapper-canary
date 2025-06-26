@@ -78,7 +78,7 @@ let I = (e) => {
                           null != f
                               ? null
                               : (0, n.jsx)(o.Text, {
-                                    color: 'text-normal',
+                                    color: 'text-default',
                                     variant: 'text-sm/normal',
                                     className: C.effectDescription,
                                     children: k

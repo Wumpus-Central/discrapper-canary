@@ -35,7 +35,7 @@ function d(e) {
                         (0, r.jsx)(o.Text, {
                             id: g,
                             variant: 'text-sm/normal',
-                            color: 'text-normal',
+                            color: 'text-default',
                             children: a ? s.intl.string(s.t['0r6pbG']) : s.intl.string(s.t['8MMHYG'])
                         })
                     ]

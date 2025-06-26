@@ -128,7 +128,7 @@ function E(e) {
                                 className: x.moreIcon,
                                 children: (0, i.jsx)(l.Text, {
                                     variant: 'text-xs/medium',
-                                    color: 'text-normal',
+                                    color: 'text-default',
                                     children: '+'.concat(t)
                                 })
                             },

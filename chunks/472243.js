@@ -130,7 +130,7 @@ function I(e) {
                                                   e
                                               ),
                                               {
-                                                  color: B ? 'text-normal' : 'text-danger',
+                                                  color: B ? 'text-default' : 'text-danger',
                                                   children: k
                                               }
                                           )

@@ -1037,7 +1037,7 @@ function eR(e) {
                                             children: [
                                                 (0, r.jsx)(x.X6q, {
                                                     variant: 'text-xs/normal',
-                                                    color: 'text-normal',
+                                                    color: 'text-default',
                                                     children: v
                                                         ? eg.intl.string(eg.t['/9i3qq'])
                                                         : 0 === O
@@ -1078,7 +1078,7 @@ function eR(e) {
                                                       }),
                                                       (0, r.jsx)(x.Text, {
                                                           variant: 'text-xs/normal',
-                                                          color: 'text-normal',
+                                                          color: 'text-default',
                                                           children: '+'
                                                       }),
                                                       (0, r.jsx)(x.M2$, {
@@ -1087,7 +1087,7 @@ function eR(e) {
                                                       }),
                                                       (0, r.jsx)(x.Text, {
                                                           variant: 'text-xs/normal',
-                                                          color: 'text-normal',
+                                                          color: 'text-default',
                                                           children: eg.intl.string(eg.t.ZvJ0ys)
                                                       })
                                                   ]
@@ -1104,7 +1104,7 @@ function eR(e) {
                                                       }),
                                                       (0, r.jsx)(x.Text, {
                                                           variant: 'text-xs/normal',
-                                                          color: 'text-normal',
+                                                          color: 'text-default',
                                                           children: eg.intl.string(eg.t.iyzwnJ)
                                                       })
                                                   ]

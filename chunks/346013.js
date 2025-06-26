@@ -188,7 +188,7 @@ function M(e) {
                         children: [
                             (0, r.jsx)(u.Text, {
                                 variant: 'text-md/semibold',
-                                color: 'text-normal',
+                                color: 'text-default',
                                 className: R.descriptionHeaderText,
                                 children: V.title
                             }),

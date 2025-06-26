@@ -150,7 +150,7 @@ function F(e) {
                       children: [
                           (0, r.jsx)(o.gj8, {
                               size: 'xxs',
-                              color: o.TVs.colors.TEXT_NORMAL,
+                              color: o.TVs.colors.TEXT_DEFAULT,
                               className: j.voiceIcon
                           }),
                           (0, r.jsx)(C.f, {

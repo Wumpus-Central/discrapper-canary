@@ -95,8 +95,8 @@ let g = {
     input: (e) => m(b({}, e), { color: 'var(--interactive-normal)' }),
     menu: (e) =>
         m(b({}, e), {
-            backgroundColor: 'var(--background-secondary)',
-            border: '1px solid var(--background-tertiary)',
+            backgroundColor: 'var(--background-base-lower)',
+            border: '1px solid var(--background-base-lowest)',
             borderRadius: '0 0 4px 4px',
             color: 'var(--interactive-normal)',
             marginTop: -1,
@@ -192,8 +192,8 @@ class O extends (n = o.Component) {
     render() {
         let e,
             t = this.props,
-            { className: r, selectClassName: n, error: l, valueRenderer: o, optionRenderer: i, multiValueRenderer: p, options: v, value: y, autofocus: O, disabled: E, clearable: x, searchable: _, styleOverrides: k, isMulti: A, placeholder: j, filterOption: T, closeMenuOnSelect: C = !0 } = t,
-            M = b(
+            { className: r, selectClassName: n, error: l, valueRenderer: o, optionRenderer: i, multiValueRenderer: p, options: v, value: y, autofocus: O, disabled: E, clearable: x, searchable: _, styleOverrides: k, isMulti: A, placeholder: j, filterOption: T, closeMenuOnSelect: w = !0 } = t,
+            C = b(
                 {},
                 (function (e, t) {
                     if (null == e) return {};
@@ -215,9 +215,9 @@ class O extends (n = o.Component) {
                     return l;
                 })(t, ['className', 'selectClassName', 'error', 'valueRenderer', 'optionRenderer', 'multiValueRenderer', 'options', 'value', 'autofocus', 'disabled', 'clearable', 'searchable', 'styleOverrides', 'isMulti', 'placeholder', 'filterOption', 'closeMenuOnSelect'])
             );
-        null != O && (M.autoFocus = O), null != E && (M.isDisabled = E), null != x && (M.isClearable = x), null != _ && (M.isSearchable = _);
-        let w = { IndicatorSeparator: () => null };
-        if ((null != i && (w.Option = (e) => (0, a.jsx)(s.c.Option, m(b({}, e), { children: i(e.data) }))), null != o && (w.SingleValue = (e) => (0, a.jsx)(s.c.SingleValue, m(b({}, e), { children: o(e.data) }))), null != p && (w.MultiValue = (e) => p(e.data)), A && Array.isArray(y))) {
+        null != O && (C.autoFocus = O), null != E && (C.isDisabled = E), null != x && (C.isClearable = x), null != _ && (C.isSearchable = _);
+        let M = { IndicatorSeparator: () => null };
+        if ((null != i && (M.Option = (e) => (0, a.jsx)(s.c.Option, m(b({}, e), { children: i(e.data) }))), null != o && (M.SingleValue = (e) => (0, a.jsx)(s.c.SingleValue, m(b({}, e), { children: o(e.data) }))), null != p && (M.MultiValue = (e) => p(e.data)), A && Array.isArray(y))) {
             let t = {};
             v.forEach((e) => {
                 t[String(e.value)] = e;
@@ -236,18 +236,18 @@ class O extends (n = o.Component) {
                 children: [
                     (0, a.jsx)(
                         u.ZP,
-                        m(b({}, M), {
+                        m(b({}, C), {
                             className: n,
                             ref: this._selectRef,
                             isMulti: A,
-                            components: w,
+                            components: M,
                             options: v,
                             styles: null != k ? k : g,
                             onFocus: this.handleFocus,
                             onBlur: this.handleBlur,
                             onMenuOpen: this.handleMenuOpen,
                             onMenuClose: this.handleMenuClose,
-                            closeMenuOnSelect: C,
+                            closeMenuOnSelect: w,
                             value: e,
                             onKeyDown: this.handleKeyDown,
                             placeholder: null != j ? j : h.intl.string(h.t.XqMe3N),

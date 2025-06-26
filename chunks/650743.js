@@ -119,7 +119,7 @@ function T(e) {
                   }),
                   (0, r.jsx)(o.Text, {
                       variant: 'text-sm/medium',
-                      color: 'text-normal',
+                      color: 'text-default',
                       className: O.keybindHintText,
                       children: L
                   }),

@@ -93,7 +93,7 @@ function D(e) {
                 renderOptionLabel: (e) =>
                     (0, i.jsx)(c.Text, {
                         variant: 'text-md/medium',
-                        color: 'text-normal',
+                        color: 'text-default',
                         lineClamp: 1,
                         children: e.label
                     })

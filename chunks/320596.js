@@ -1,5 +1,5 @@
 n.d(t, {
-    Ie: () => f,
+    Ie: () => m,
     mv: () => g
 }),
     n(388685);
@@ -19,9 +19,9 @@ var i = n(442837),
     p = n(193132);
 let g = (e) => {
         let { channelId: t } = e;
-        return (0, r.jsx)(m, { channelId: t });
+        return (0, r.jsx)(f, { channelId: t });
     },
-    m = (e) => {
+    f = (e) => {
         let { channelId: t } = e,
             n = (0, _._d)(t),
             i = (0, _.K3)(t);
@@ -137,13 +137,13 @@ let g = (e) => {
                     ]
                 });
     },
-    f = (e) => {
+    m = (e) => {
         let { user: t, showStatus: n, speaker: o, channelId: s } = e,
             _ = (0, i.e7)([h.ZP], () => h.ZP.isModerator(t.id, s)),
             g = (0, i.e7)([u.Z], () => u.Z.isBlocked(t.id)),
-            m = null;
+            f = null;
         return (
-            n && (m = o ? b.intl.string(b.t.LqMmGx) : _ ? b.intl.string(b.t.GMZqSk) : b.intl.string(b.t.suRAp6)),
+            n && (f = o ? b.intl.string(b.t.LqMmGx) : _ ? b.intl.string(b.t.GMZqSk) : b.intl.string(b.t.suRAp6)),
             (0, r.jsxs)('div', {
                 className: p.user,
                 children: [
@@ -189,13 +189,13 @@ let g = (e) => {
                                 children: [
                                     (0, r.jsx)(l.Text, {
                                         variant: 'text-xs/normal',
-                                        color: g ? 'text-danger' : 'text-normal',
+                                        color: g ? 'text-danger' : 'text-default',
                                         children: g ? b.intl.string(b.t['4bDptL']) : b.intl.string(b.t.tFY5ZW)
                                     }),
                                     (0, r.jsxs)(l.Text, {
                                         variant: 'text-xs/normal',
                                         color: 'text-muted',
-                                        children: ['| ', m]
+                                        children: ['| ', f]
                                     })
                                 ]
                             })
@@ -214,7 +214,7 @@ let g = (e) => {
             children: [...n, ...i].map((e) => {
                 let { user: n } = e;
                 return (0, r.jsx)(
-                    f,
+                    m,
                     {
                         user: n,
                         channelId: t

@@ -12,8 +12,8 @@ var i = t(255367),
     g = t(884902),
     p = t(892001),
     m = t(271383),
-    I = t(430824),
-    f = t(51144),
+    f = t(430824),
+    I = t(51144),
     v = t(897285),
     h = t(978227),
     C = t(894017),
@@ -39,7 +39,7 @@ function O(e) {
             (0, i.jsx)(o.qEK, {
                 size: o.EFr.SIZE_20,
                 src: t.getAvatarURL(l, 20),
-                'aria-label': null != (n = null == s ? void 0 : s.nick) ? n : f.ZP.getName(t),
+                'aria-label': null != (n = null == s ? void 0 : s.nick) ? n : I.ZP.getName(t),
                 className: D.icon
             }),
             (0, i.jsx)(o.Text, {
@@ -63,7 +63,7 @@ function O(e) {
                                 tag: 'span',
                                 role: 'link',
                                 children: (0, i.jsx)(o.PUh, {
-                                    name: null != (e = null == s ? void 0 : s.nick) ? e : f.ZP.getName(t),
+                                    name: null != (e = null == s ? void 0 : s.nick) ? e : I.ZP.getName(t),
                                     color: null != (n = null == s ? void 0 : s.colorString) ? n : void 0,
                                     roleColors: u
                                 })
@@ -146,7 +146,7 @@ function Z(e) {
 }
 function G(e) {
     let { guildEvent: n, guild: t, channel: r, headerId: a, onClose: c, onClickInterestedCount: u, isHub: _ = !1, containerRef: g, recurrenceId: p, setRecurrenceId: m } = e,
-        f = (0, d.e7)([I.Z], () => null != I.Z.getGuild(t.id), [t.id]),
+        I = (0, d.e7)([f.Z], () => null != f.Z.getGuild(t.id), [t.id]),
         { startTime: S, endTime: G } = (0, E.ZP)(n, p),
         P = (0, b.Z)(n.guild_id, n.id, p),
         z = l.useCallback(
@@ -190,7 +190,7 @@ function G(e) {
                 children: [
                     (0, i.jsx)(U, {
                         guild: t,
-                        onClick: f ? z : void 0,
+                        onClick: I ? z : void 0,
                         onClose: c
                     }),
                     (0, i.jsx)(N.Z, {

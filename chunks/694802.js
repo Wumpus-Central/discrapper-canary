@@ -21,7 +21,7 @@ function l(e) {
                         height: 16
                     }),
                     (0, r.jsx)(s.X6q, {
-                        color: 'text-normal',
+                        color: 'text-default',
                         variant: 'heading-sm/medium',
                         children: t
                     })

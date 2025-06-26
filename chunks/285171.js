@@ -7,9 +7,9 @@ var n = r(255367),
     s = r(237997),
     a = r(451478),
     u = r(358085),
-    p = r(998502),
-    b = r(145597),
-    f = r(981631),
+    f = r(998502),
+    p = r(145597),
+    b = r(981631),
     d = r(388032);
 function O(e) {
     var t,
@@ -36,8 +36,8 @@ function O(e) {
         })(e, ['transitionState', 'onClose', 'contextKey']);
     let h = (0, c.Dt)(),
         x = (0, i.e7)([a.Z], () => a.Z.isFocused()),
-        P = y === f.IlC.APP,
-        k = (0, b.getPID)(),
+        P = y === b.IlC.APP,
+        k = (0, p.getPID)(),
         m = (0, i.e7)([s.default], () => s.default.isLocked(k));
     return (o.useEffect(() => {
         (x || P || m) && (null == j || j());
@@ -90,7 +90,7 @@ function O(e) {
                           }),
                           (0, n.jsx)(l.hzk, {
                               children: (0, n.jsx)(l.Text, {
-                                  color: 'text-normal',
+                                  color: 'text-default',
                                   variant: 'text-md/medium',
                                   children: d.intl.string(d.t['E+Ph7O'])
                               })
@@ -99,7 +99,7 @@ function O(e) {
                               children: [
                                   (0, n.jsx)(l.zxk, {
                                       onClick: () => {
-                                          u.isPlatformEmbedded ? p.ZP.focus() : window.focus(), j();
+                                          u.isPlatformEmbedded ? f.ZP.focus() : window.focus(), j();
                                       },
                                       color: l.zxk.Colors.BRAND,
                                       children: d.intl.string(d.t.ELRJQk)

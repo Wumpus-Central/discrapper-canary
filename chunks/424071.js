@@ -1,11 +1,11 @@
 a.d(t, { Z: () => s });
-var r = a(255367);
+var l = a(255367);
 a(73800);
-var l = a(475286);
+var r = a(475286);
 function s(e) {
     let { children: t } = e;
-    return (0, r.jsx)('div', {
-        className: l.slideContainer,
+    return (0, l.jsx)('div', {
+        className: r.slideContainer,
         children: t
     });
 }

@@ -57,7 +57,7 @@ function C(e) {
                         )
                     ),
                     (0, a.jsx)(n.Text, {
-                        color: d ? 'text-muted' : 'text-normal',
+                        color: d ? 'text-muted' : 'text-default',
                         variant: 'text-md/semibold',
                         children: f
                     })

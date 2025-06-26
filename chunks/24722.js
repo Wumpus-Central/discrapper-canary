@@ -11,8 +11,8 @@ var o = r(255367),
     b = r(892880),
     m = r(51144),
     _ = r(480608),
-    x = r(434404),
-    f = r(946724),
+    f = r(434404),
+    x = r(946724),
     h = r(130341),
     p = r(494831),
     g = r(981631),
@@ -38,7 +38,7 @@ function j(e) {
 function C(e) {
     var t;
     let { onClose: r, roleId: j, guildId: C, onBack: w, isCreateRoleFlow: S, focusSearchAfterReady: M, isReady: O } = e,
-        L = (0, l.e7)([f.Z], () => f.Z.getRole(j), [j]),
+        L = (0, l.e7)([x.Z], () => x.Z.getRole(j), [j]),
         [z, N] = n.useState(''),
         [P, T] = n.useState({}),
         [B, I] = n.useState(!1);
@@ -52,7 +52,7 @@ function C(e) {
             let e = Object.values(P).map((e) => e.row.id);
             I(!0);
             try {
-                await x.Z.bulkAddMemberRoles(C, j, e), (0, _.H)(C, j, !1), r();
+                await f.Z.bulkAddMemberRoles(C, j, e), (0, _.H)(C, j, !1), r();
             } catch (e) {
                 I(!1);
             }
@@ -159,7 +159,7 @@ function C(e) {
                     S
                         ? (0, o.jsx)(i.Text, {
                               className: v.subtitle,
-                              color: 'text-normal',
+                              color: 'text-default',
                               variant: 'text-md/normal',
                               children: y.intl.string(y.t.AMsxa2)
                           })
@@ -172,7 +172,7 @@ function C(e) {
                                   }),
                                   (0, o.jsx)(i.Text, {
                                       className: v.roleName,
-                                      color: 'text-normal',
+                                      color: 'text-default',
                                       variant: 'text-md/normal',
                                       children: null == L ? void 0 : L.name
                                   })

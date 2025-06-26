@@ -106,7 +106,7 @@ let m = function (e) {
                                               ? (0, r.jsx)(l.Text, {
                                                     className: p.appCategory,
                                                     variant: 'text-xs/medium',
-                                                    color: 'text-normal',
+                                                    color: 'text-default',
                                                     children: b.name
                                                 })
                                               : null,

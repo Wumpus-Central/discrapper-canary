@@ -53,7 +53,7 @@ let B = l.memo(function (e) {
                 children: [
                     (0, i.jsx)('div', { className: G.liveIndicator }),
                     (0, i.jsx)(c.Text, {
-                        color: 'text-positive',
+                        color: 'text-feedback-positive',
                         variant: 'text-xs/semibold',
                         className: G.liveNowText,
                         children: t

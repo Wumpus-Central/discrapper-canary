@@ -378,7 +378,7 @@ function eS(e) {
                                     {
                                         tag: 'span',
                                         variant: 'text-sm/medium',
-                                        color: 'text-positive',
+                                        color: 'text-feedback-positive',
                                         children: e
                                     },
                                     t
@@ -397,7 +397,7 @@ function eS(e) {
                                     {
                                         tag: 'span',
                                         variant: 'text-sm/medium',
-                                        color: 'text-warning',
+                                        color: 'text-feedback-warning',
                                         children: e
                                     },
                                     t
@@ -466,7 +466,7 @@ function eS(e) {
     (0, C.ZP)(() => {
         f.Z.getDetectableGames();
     });
-    let [en, ei] = r.useMemo(() => (Y ? ['text-muted', h.TVs.colors.TEXT_MUTED.css] : z && X ? ['text-warning', h.TVs.colors.TEXT_FEEDBACK_WARNING.css] : z && K ? ['text-positive', h.TVs.colors.TEXT_FEEDBACK_POSITIVE.css] : z && J ? ['text-primary', h.TVs.colors.TEXT_PRIMARY.css] : ['interactive-normal', h.TVs.colors.INTERACTIVE_NORMAL.css]), [Y, z, X, K, J]);
+    let [en, ei] = r.useMemo(() => (Y ? ['text-muted', h.TVs.colors.TEXT_MUTED.css] : z && X ? ['text-feedback-warning', h.TVs.colors.TEXT_FEEDBACK_WARNING.css] : z && K ? ['text-feedback-positive', h.TVs.colors.TEXT_FEEDBACK_POSITIVE.css] : z && J ? ['text-primary', h.TVs.colors.TEXT_PRIMARY.css] : ['interactive-normal', h.TVs.colors.INTERACTIVE_NORMAL.css]), [Y, z, X, K, J]);
     return null == l
         ? null
         : (0, i.jsxs)(ej, {
@@ -808,7 +808,7 @@ function ey() {
                             l &&
                                 (0, i.jsx)(h.Text, {
                                     variant: 'text-xs/normal',
-                                    color: 'text-warning',
+                                    color: 'text-feedback-warning',
                                     className: ed.keybindAdminWarning,
                                     children: ec.intl.string(ec.t.NsowVV)
                                 })

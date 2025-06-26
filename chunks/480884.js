@@ -1,7 +1,7 @@
 t.d(n, { default: () => v }), t(953529);
 var a = t(255367),
-    o = t(73800),
-    s = t(286379),
+    s = t(73800),
+    o = t(286379),
     c = t(399606),
     i = t(481060),
     l = t(797614),
@@ -9,22 +9,22 @@ var a = t(255367),
     d = t(138201),
     u = t(359119),
     _ = t(473092),
-    m = t(636749),
-    x = t(981631),
+    x = t(636749),
+    m = t(981631),
     b = t(388032),
     g = t(661306);
 function v(e) {
-    let { transitionState: n, onClose: t, channelId: v, warningId: h, senderId: k, description: N, safetyTipRows: T, actionRows: f, learnMore: p } = e,
+    let { transitionState: n, onClose: t, channelId: v, warningId: h, senderId: k, description: N, safetyTipRows: f, actionRows: T, learnMore: p } = e,
         j = (0, c.e7)([u.ZP], () => u.ZP.getChannelSafetyWarning(v, h));
     return (
-        o.useEffect(() => {
-            (0, _.MC)(x.rMx.SAFETY_WARNING_MODAL_VIEWED, {
+        s.useEffect(() => {
+            (0, _.MC)(m.rMx.SAFETY_WARNING_MODAL_VIEWED, {
                 channelId: v,
                 warningId: h,
                 senderId: k,
                 warningType: null == j ? void 0 : j.type
             }),
-                l.Z.increment({ name: s.V.SAFETY_WARNING_MODAL_VIEW });
+                l.Z.increment({ name: o.V.SAFETY_WARNING_MODAL_VIEW });
         }, [v, h, k, j]),
         (0, a.jsx)(i.Y0X, {
             transitionState: n,
@@ -70,7 +70,7 @@ function v(e) {
                         children: [
                             (0, a.jsxs)('div', {
                                 className: g.mainSection,
-                                children: [(0, a.jsx)(r.z, { children: T }), null != p ? p : null]
+                                children: [(0, a.jsx)(r.z, { children: f }), null != p ? p : null]
                             }),
                             (0, a.jsxs)('div', {
                                 children: [
@@ -80,10 +80,10 @@ function v(e) {
                                         color: 'header-secondary',
                                         children: b.intl.string(b.t.K5FKtb)
                                     }),
-                                    (0, a.jsx)(d.rT, { children: f })
+                                    (0, a.jsx)(d.rT, { children: T })
                                 ]
                             }),
-                            (0, a.jsx)(m.Z, {
+                            (0, a.jsx)(x.Z, {
                                 channelId: v,
                                 warningId: h,
                                 senderId: k,

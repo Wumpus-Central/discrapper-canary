@@ -97,7 +97,7 @@ function O(e) {
                 }),
                 (0, r.jsx)(s.Text, {
                     variant: 'heading-md/bold',
-                    color: 'text-normal',
+                    color: 'text-default',
                     children: j.intl.format(j.t.TstoSU, { count: y.size })
                 }),
                 (0, r.jsx)(s.zxk, {

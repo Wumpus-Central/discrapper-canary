@@ -64,7 +64,7 @@ let x = (e) => {
                                     ? (0, r.jsxs)(r.Fragment, {
                                           children: [
                                               (0, r.jsx)(l.Text, {
-                                                  color: 'text-normal',
+                                                  color: 'text-default',
                                                   variant: 'text-md/normal',
                                                   children: (0, u.Z)(j.length)
                                               }),
@@ -78,13 +78,13 @@ let x = (e) => {
                                     : (0, r.jsxs)(r.Fragment, {
                                           children: [
                                               (0, r.jsx)(l.Text, {
-                                                  color: 'text-normal',
+                                                  color: 'text-default',
                                                   variant: 'text-md/normal',
                                                   children: null == (t = x.bot) ? void 0 : t.tag
                                               }),
                                               null != y &&
                                                   (0, r.jsx)(l.Text, {
-                                                      color: 'text-normal',
+                                                      color: 'text-default',
                                                       variant: 'text-md/normal',
                                                       children: _.intl.formatToPlainString(_.t.C9rUOz, { authorizedAt: y })
                                                   })

@@ -1,7 +1,7 @@
 n.d(t, { Z: () => a }), n(642613), n(388685);
 var i = n(73800),
-    r = n(471518),
-    l = n(70956),
+    l = n(471518),
+    r = n(70956),
     o = n(314734);
 function a(e) {
     let { sectionId: t, commandsByActiveSection: n } = e,
@@ -52,7 +52,7 @@ function a(e) {
             }, [t]);
         })({ alphabeticalSortedCommands: s });
     i.useEffect(() => {
-        r.i6(t, { dontRefetchMs: l.Z.Millis.DAY });
+        l.i6(t, { dontRefetchMs: r.Z.Millis.DAY });
     }, [t]),
         i.useLayoutEffect(() => {
             d && c(o.bS.POPULAR);

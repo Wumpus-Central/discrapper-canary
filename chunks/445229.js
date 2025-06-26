@@ -50,7 +50,7 @@ function h(e) {
                             className: f.userCountPill,
                             children: [
                                 (0, a.jsx)(s.Text, {
-                                    color: 'text-normal',
+                                    color: 'text-default',
                                     variant: 'text-xs/medium',
                                     children: l.length
                                 }),

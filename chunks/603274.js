@@ -129,7 +129,7 @@ function I() {
                                   }),
                                   (0, r.jsx)(c.Text, {
                                       className: E.stageListenerCount,
-                                      color: 'text-normal',
+                                      color: 'text-default',
                                       variant: 'text-xs/medium',
                                       children: j
                                   })

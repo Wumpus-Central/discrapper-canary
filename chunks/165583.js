@@ -169,7 +169,7 @@ function G(e) {
             }),
             (0, r.jsx)(p.X6q, {
                 variant: 'heading-md/semibold',
-                color: 'text-normal',
+                color: 'text-default',
                 children: w.intl.format(w.t['fF+cgY'], { onClick: () => (0, S.z)() })
             }),
             (0, r.jsx)(M, {

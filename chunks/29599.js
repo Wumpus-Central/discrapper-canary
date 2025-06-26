@@ -91,7 +91,7 @@ function Z(e) {
                                             }),
                                             (0, i.jsx)(d.Text, {
                                                 variant: 'text-sm/normal',
-                                                color: 'text-normal',
+                                                color: 'text-default',
                                                 className: D.__invalid_promotionText,
                                                 children: t
                                             })

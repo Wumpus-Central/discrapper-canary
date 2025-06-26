@@ -114,7 +114,7 @@ function O(e) {
                       'aria-hidden': !0,
                       children: (0, r.jsxs)(s.Text, {
                           variant: 'text-xxs/medium',
-                          color: 'text-normal',
+                          color: 'text-default',
                           className: m.additionalParticipantBadgeText,
                           children: ['+', v]
                       })
@@ -136,7 +136,7 @@ function O(e) {
 function v(e) {
     let { children: t } = e;
     return (0, r.jsx)(s.X6q, {
-        color: 'text-normal',
+        color: 'text-default',
         variant: 'heading-sm/medium',
         className: m.contentTitle,
         lineClamp: 1,

@@ -1,15 +1,15 @@
 n.d(t, { Z: () => a }), n(388685);
 var i = n(255367),
-    r = n(73800),
-    l = n(558522),
+    l = n(73800),
+    r = n(558522),
     o = n(484112);
 function a(e) {
     let { imageBackground: t, applicationName: n, imageClassName: a, imageNotFoundClassName: c } = e,
-        [s, u] = r.useState(!1);
+        [s, u] = l.useState(!1);
     return 'not-found' === t.state || s
         ? (0, i.jsx)('div', {
               className: c,
-              children: (0, i.jsx)(l.Z, { className: o.brokenImageIcon })
+              children: (0, i.jsx)(r.Z, { className: o.brokenImageIcon })
           })
         : 'loading' === t.state
           ? null

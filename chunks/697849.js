@@ -12,8 +12,8 @@ var i = t(255367),
     g = t(626135),
     p = t(981888),
     m = t(897285),
-    I = t(924301),
-    f = t(951539),
+    f = t(924301),
+    I = t(951539),
     v = t(592126),
     h = t(315416),
     C = t(711373),
@@ -57,9 +57,9 @@ function G(e) {
 }
 function P(e) {
     let { guildEvent: n, guild: t, channel: l, onActionTaken: a, isHub: d, isMember: o, recurrenceId: s } = e,
-        c = (0, I.xt)(n),
-        _ = (0, r.e7)([I.ZP], () => I.ZP.isInterestedInEventRecurrence(n.id, s), [s, n]),
-        g = (0, f.ZP)(n),
+        c = (0, f.xt)(n),
+        _ = (0, r.e7)([f.ZP], () => f.ZP.isInterestedInEventRecurrence(n.id, s), [s, n]),
+        g = (0, I.ZP)(n),
         p = (0, r.e7)([u.Z], () => u.Z.isLurking(t.id), [t.id]),
         m = (0, E.T)(null == l ? void 0 : l.id, n.id),
         v = (0, D.Z)({
@@ -104,10 +104,10 @@ function P(e) {
           );
 }
 let z = (e) => {
-    let { guildScheduledEventId: n, parentGuildId: t, transitionState: u, initialRecurrenceId: f, onClose: E } = e,
+    let { guildScheduledEventId: n, parentGuildId: t, transitionState: u, initialRecurrenceId: I, onClose: E } = e,
         { analyticsLocations: T } = (0, o.ZP)(d.Z.GUILD_EVENT_MODAL),
-        [L, D] = l.useState(f),
-        G = (0, r.e7)([I.ZP], () => I.ZP.getGuildScheduledEvent(n), [n]),
+        [L, D] = l.useState(I),
+        G = (0, r.e7)([f.ZP], () => f.ZP.getGuildScheduledEvent(n), [n]),
         z = null == G ? void 0 : G.id,
         k = null == G ? void 0 : G.guild_id,
         { guild: A, isMember: R } = (0, v.Z)(k, z),

@@ -250,7 +250,7 @@ let P = s.memo(function (e) {
         c.Text,
         {
             variant: 'text-md/semibold',
-            color: 'text-normal',
+            color: 'text-default',
             tag: 'span',
             className: E.header,
             children: n

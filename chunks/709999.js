@@ -209,7 +209,7 @@ let eh = (e) => {
                     src: null,
                     size: x.EFr.SIZE_32,
                     status: t ? eo.Skl.ONLINE : void 0,
-                    statusColor: 'var(--background-modifier-accent)',
+                    statusColor: 'var(--background-mod-subtle)',
                     'aria-hidden': !0,
                     imageClassName: eC.nameplatePlaceholderAvatar
                 }),

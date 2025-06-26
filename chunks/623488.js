@@ -133,7 +133,7 @@ function h(e) {
                         }),
                         (0, r.jsx)(a.Text, {
                             variant: 'text-xxs/normal',
-                            color: 'text-normal',
+                            color: 'text-default',
                             className: p.__invalid_productType,
                             children: x
                         }),

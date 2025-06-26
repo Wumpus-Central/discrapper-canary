@@ -57,7 +57,7 @@ function X() {
         style: { background: (0, f.wj)(e) ? 'rgba(0, 0, 0, 0.65)' : 'rgba(255, 255, 255, 0.65)' },
         children: (0, r.jsx)(p.Text, {
             variant: 'text-sm/normal',
-            color: 'text-normal',
+            color: 'text-default',
             children: Y.intl.string(Y.t.U7Xrb2)
         })
     });

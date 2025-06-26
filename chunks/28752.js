@@ -180,7 +180,7 @@ function y(e) {
                       className: f.partnerLabelContainer,
                       children: (0, r.jsx)(o.Text, {
                           variant: 'text-xs/medium',
-                          color: 'text-normal',
+                          color: 'text-default',
                           children: d.intl.string(d.t.LO4f0N)
                       })
                   })

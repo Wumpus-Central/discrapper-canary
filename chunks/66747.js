@@ -306,7 +306,7 @@ function K(e) {
         (0, b.Z)(() => {
             a(X(t.joinedAtTimestamp));
         }, 10000);
-    let s = o ? 'text-brand' : 'text-normal';
+    let s = o ? 'text-brand' : 'text-default';
     return (null == i ? void 0 : i.short) == null
         ? null
         : n
@@ -344,7 +344,7 @@ let J = l.memo(function (e) {
                     accountCreationDateLong: new Date(e).toLocaleDateString(U.intl.currentLocale, R.I)
                 };
             }, [t.userId]),
-            s = o ? 'text-brand' : 'text-normal';
+            s = o ? 'text-brand' : 'text-default';
         return n
             ? (0, r.jsx)(C.Text, {
                   variant: 'text-sm/medium',

@@ -11,8 +11,8 @@ var r = n(255367),
     p = n(600164),
     h = n(454585),
     _ = n(144114),
-    E = n(607018),
-    f = n(325067),
+    f = n(607018),
+    E = n(325067),
     S = n(594174),
     y = n(981631),
     b = n(815660),
@@ -215,7 +215,7 @@ class C extends o.PureComponent {
             },
             children: (0, r.jsx)(l.Text, {
                 variant: 'text-md/normal',
-                color: 'text-normal',
+                color: 'text-default',
                 children: e
             })
         });
@@ -260,7 +260,7 @@ class C extends o.PureComponent {
     }
     openPhoneVerificationModal() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        (0, l.h7j)((t) => (0, r.jsx)(E.default, g({ reason: _.L.MFA_PHONE_UPDATE }, t, e)), { modalKey: b.M });
+        (0, l.h7j)((t) => (0, r.jsx)(f.default, g({ reason: _.L.MFA_PHONE_UPDATE }, t, e)), { modalKey: b.M });
     }
     constructor(...e) {
         super(...e),
@@ -291,14 +291,14 @@ class C extends o.PureComponent {
             });
     }
 }
-let A = s.ZP.connectStores([S.default, f.Z], () => {
+let A = s.ZP.connectStores([S.default, E.Z], () => {
     let e = S.default.getCurrentUser();
     return (
         a()(null != e, 'MFAEnableSuccess: currentUser cannot be undefined'),
         {
             currentUser: e,
-            backupCodes: f.Z.getBackupCodes(),
-            hasSeenBackupPrompt: f.Z.hasSeenBackupPrompt
+            backupCodes: E.Z.getBackupCodes(),
+            hasSeenBackupPrompt: E.Z.hasSeenBackupPrompt
         }
     );
 })(C);

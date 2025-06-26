@@ -107,8 +107,8 @@ class E {
                     body: {
                         metrics: e,
                         client_info: {
-                            built_at: '1750892547800',
-                            build_number: '412998'
+                            built_at: '1750896675632',
+                            build_number: '413061'
                         }
                     },
                     retries: 1,

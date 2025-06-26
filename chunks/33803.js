@@ -479,7 +479,7 @@ function ee(e) {
                                             ? (0, r.jsx)(q, {
                                                   children: (0, r.jsx)(p.Text, {
                                                       variant: 'text-xs/medium',
-                                                      color: 'text-normal',
+                                                      color: 'text-default',
                                                       tag: 'span',
                                                       children: eo
                                                   })

@@ -163,7 +163,7 @@ function S(e) {
                     }),
                     (0, r.jsx)(u.Text, {
                         variant: 'text-sm/medium',
-                        color: 'text-normal',
+                        color: 'text-default',
                         children: O.intl.format(O.t.KmJI4O, { roleCount: w })
                     })
                 ]
@@ -189,7 +189,7 @@ function S(e) {
                                       className: I.roleChiplet,
                                       children: (0, r.jsx)(u.Text, {
                                           variant: 'text-xs/medium',
-                                          color: 'text-normal',
+                                          color: 'text-default',
                                           children: O.intl.string(O.t.pclUFB)
                                       })
                                   })

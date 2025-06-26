@@ -40,7 +40,7 @@ function d(e) {
     }
 }
 function f(e) {
-    let { children: t, messageType: n, className: i, textColor: o = 'text-normal', textVariant: c = 'text-sm/medium' } = e,
+    let { children: t, messageType: n, className: i, textColor: o = 'text-default', textVariant: c = 'text-sm/medium' } = e,
         f = u(n),
         _ = d(n);
     return (0, r.jsxs)('div', {

@@ -54,7 +54,7 @@ function f(e) {
                         }),
                         (0, s.jsx)(a.Text, {
                             variant: 'lg' === o ? 'text-sm/medium' : 'text-xs/medium',
-                            color: 'text-normal',
+                            color: 'text-default',
                             className: p.__invalid_mobileWebCopy,
                             children: x.intl.string('mobile_only' === n ? x.t.Pag1gY : x.t.CTn0yc)
                         }),

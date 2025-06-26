@@ -365,7 +365,7 @@ function P(e) {
                     children: [
                         (0, a.jsx)(c.X6q, {
                             variant: 'heading-lg/semibold',
-                            color: 'text-normal',
+                            color: 'text-default',
                             children: P
                         }),
                         (0, a.jsx)(c.P3F, {
@@ -388,7 +388,7 @@ function P(e) {
                     children: [
                         (0, a.jsxs)(c.Text, {
                             variant: 'eyebrow',
-                            color: 'text-normal',
+                            color: 'text-default',
                             children: ['Offer: ', C]
                         }),
                         m
@@ -412,7 +412,7 @@ function P(e) {
                     children: [
                         (0, a.jsxs)(c.Text, {
                             variant: 'eyebrow',
-                            color: 'text-normal',
+                            color: 'text-default',
                             children: ['Discount: ', T]
                         }),
                         h
@@ -432,7 +432,7 @@ function P(e) {
                     (0, a.jsx)('div', {
                         children: (0, a.jsxs)(c.Text, {
                             variant: 'eyebrow',
-                            color: 'text-normal',
+                            color: 'text-default',
                             children: [S.amount, '% off']
                         })
                     }),

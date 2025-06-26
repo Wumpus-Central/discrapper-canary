@@ -17,7 +17,7 @@ function g(e) {
         className: h.listItem,
         children: (0, r.jsx)(a.Text, {
             variant: 'text-sm/medium',
-            color: 'text-normal',
+            color: 'text-default',
             children: t
         })
     });

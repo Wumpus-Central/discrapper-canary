@@ -4,7 +4,7 @@ var r = n(255367),
     i = n(461745),
     a = n(932197);
 let s = l.forwardRef(function (e, t) {
-    let { query: n, onQueryChange: l, onRemoveTag: s, onSelect: o, onSelectionChange: c, selectedSection: d, selectedRow: u, tags: m, sections: x, placeholder: h = '', focusAfterReady: b, isReady: y, 'aria-labelledby': f, 'aria-controls': p } = e;
+    let { query: n, onQueryChange: l, onRemoveTag: s, onSelect: o, onSelectionChange: c, selectedSection: d, selectedRow: u, tags: m, sections: x, placeholder: h = '', focusAfterReady: b, isReady: f, 'aria-labelledby': y, 'aria-controls': p } = e;
     return (0, r.jsx)(i.ZP, {
         autoFocus: !0,
         className: a.searchBar,
@@ -22,9 +22,9 @@ let s = l.forwardRef(function (e, t) {
         tags: m,
         sections: x,
         focusAfterReady: b,
-        isReady: y,
+        isReady: f,
         inputProps: {
-            'aria-labelledby': f,
+            'aria-labelledby': y,
             'aria-controls': p,
             'aria-expanded': !0,
             'aria-activedescendant': 'user-row-'.concat(u)

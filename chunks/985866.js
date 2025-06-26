@@ -264,7 +264,7 @@ function Q(e) {
             if (o)
                 return (0, n.jsx)(u.Text, {
                     variant: 'text-sm/normal',
-                    color: 'text-normal',
+                    color: 'text-default',
                     className: W.bodyCopy,
                     children: s ? M.intl.format(M.t.m0btAQ, {}) : M.intl.format(M.t['ZUA/Ul'], { rewardName: i.defaultRewardName })
                 });
@@ -277,7 +277,7 @@ function Q(e) {
             return null != a && null != l
                 ? (0, n.jsx)(u.Text, {
                       variant: 'text-sm/normal',
-                      color: 'text-normal',
+                      color: 'text-default',
                       className: W.bodyCopy,
                       children: w.Z.parse(l, !1, { allowLinks: !0 })
                   })
@@ -463,7 +463,7 @@ function Q(e) {
                                                     }),
                                                     (0, n.jsx)(u.Text, {
                                                         variant: 'text-md/normal',
-                                                        color: 'text-normal',
+                                                        color: 'text-default',
                                                         className: W.cosponsorRedemptionInstructions,
                                                         children: w.Z.parse(s.config.cosponsorMetadata.redemptionInstructions, !1, { allowLinks: !0 })
                                                     })

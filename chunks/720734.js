@@ -887,7 +887,7 @@ function tp(e) {
                             null != V &&
                                 (0, i.jsx)(f.Text, {
                                     variant: 'text-xs/medium',
-                                    color: 'text-warning',
+                                    color: 'text-feedback-warning',
                                     children: V
                                 })
                         ]

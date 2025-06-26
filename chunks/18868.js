@@ -109,7 +109,7 @@ let m = () => {
                                         (0, a.jsx)(s.idN, {
                                             className: u.questionIcon,
                                             size: 'xs',
-                                            color: s.TVs.colors.TEXT_NORMAL
+                                            color: s.TVs.colors.TEXT_DEFAULT
                                         }),
                                         'above for more instructions.'
                                     ]

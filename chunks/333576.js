@@ -22,7 +22,7 @@ let u = function () {
                 children: [
                     (0, i.jsx)(s.Text, {
                         variant: 'text-md/normal',
-                        color: 'info-help-text',
+                        color: 'text-feedback-info',
                         style: { marginBottom: '8px' },
                         children: 'Click the button below to reset your onboarding state for Virtual Currency.'
                     }),
@@ -34,7 +34,7 @@ let u = function () {
                     }),
                     (0, i.jsx)(s.Text, {
                         variant: 'text-md/normal',
-                        color: 'info-help-text',
+                        color: 'text-feedback-info',
                         children: 'Your may have to refresh your client after being redirected to the main application in order to see these changes.'
                     })
                 ]

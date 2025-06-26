@@ -22,7 +22,7 @@ function x(t) {
                 children: [
                     (0, r.jsx)(i.Text, {
                         variant: 'text-sm/semibold',
-                        color: 'text-normal',
+                        color: 'text-default',
                         children: e
                     }),
                     (0, r.jsx)(i.LZC, { size: 4 }),

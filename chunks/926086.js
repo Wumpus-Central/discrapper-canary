@@ -9,8 +9,8 @@ var i = n(255367),
     u = n(481060),
     d = n(667142),
     p = n(333031),
-    h = n(86654);
-let f = {
+    f = n(86654);
+let h = {
     mass: 1,
     tension: 600,
     friction: 60,
@@ -21,8 +21,8 @@ function m(e) {
         [o, a] = r.useState(0),
         [m, g] = r.useState(0),
         [y, O] = r.useState(0),
-        v = r.useRef(0),
-        [b, E] = r.useState(0),
+        b = r.useRef(0),
+        [v, E] = r.useState(0),
         { timeToLiveMs: _, reappearTimeMs: x } = d.ZP.useState(
             (e) => ({
                 timeToLiveMs: e.timeToLiveMs,
@@ -40,7 +40,7 @@ function m(e) {
     }),
         r.useEffect(
             () => (
-                (v.current = setInterval(() => {
+                (b.current = setInterval(() => {
                     let e = Date.now();
                     g(e),
                         O((t) => {
@@ -52,7 +52,7 @@ function m(e) {
                         });
                 }, 100)),
                 () => {
-                    clearInterval(v.current);
+                    clearInterval(b.current);
                 }
             ),
             []
@@ -65,13 +65,13 @@ function m(e) {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
-            config: f
+            config: h
         }),
         [w, Z] = r.useState(!1);
     if (
         (r.useEffect(() => {
-            b > 10 && Z(!0);
-        }, [b]),
+            v > 10 && Z(!0);
+        }, [v]),
         w)
     )
         throw Error('ClickZoneDebugWidget crashed, too many clicks');
@@ -83,16 +83,16 @@ function m(e) {
                       t &&
                       (0, i.jsx)(c.animated.div, {
                           style: e,
-                          className: h.clickZoneDebugContainer,
+                          className: f.clickZoneDebugContainer,
                           children: (0, i.jsx)(p.Z, {
-                              className: l()(h.clickZone, C && h.clickBackground),
+                              className: l()(f.clickZone, C && f.clickBackground),
                               children: (0, i.jsx)(u.P3F, {
                                   onClick: j,
-                                  className: h.clickable,
+                                  className: f.clickable,
                                   children: (0, i.jsxs)(u.Text, {
                                       variant: 'text-md/semibold',
                                       color: 'always-white',
-                                      children: ['Click Me (', b, ')']
+                                      children: ['Click Me (', v, ')']
                                   })
                               })
                           })

@@ -9,20 +9,20 @@ var i = n(255367),
     u = n(944486),
     d = n(594174),
     p = n(5192),
-    h = n(620954),
-    f = n(987650),
+    f = n(620954),
+    h = n(987650),
     m = n(388032),
     g = n(484762);
 function y(e, t, n) {
     var y;
     let O = d.default.getUser(e);
     if (null == O) return null;
-    let v = u.Z.getCurrentlySelectedChannelId(),
-        b = c.Z.getChannel(v),
+    let b = u.Z.getCurrentlySelectedChannelId(),
+        v = c.Z.getChannel(b),
         E = l.Z.getApplication(t),
         _ = a.ZP.getRunningGames().find((e) => e.id === t),
         x = null != (y = null == _ ? void 0 : _.name) ? y : null == E ? void 0 : E.name,
-        I = (0, p.oY)(null == b ? void 0 : b.guild_id, null == b ? void 0 : b.id, O),
+        I = (0, p.oY)(null == v ? void 0 : v.guild_id, null == v ? void 0 : v.id, O),
         S = (0, i.jsxs)('div', {
             className: g.nowPlayingNotification,
             children: [
@@ -57,8 +57,8 @@ function y(e, t, n) {
                 })
             ]
         }),
-        { trackView: j, trackClick: C } = (0, h.R)(f.n0.NowPlayingNotification, {
-            notif_type: f.n0.NowPlayingNotification,
+        { trackView: j, trackClick: C } = (0, f.R)(h.n0.NowPlayingNotification, {
+            notif_type: h.n0.NowPlayingNotification,
             notif_user_id: O.id,
             activity_type: n.type,
             activity_name: null != x ? x : n.name

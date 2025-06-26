@@ -89,7 +89,7 @@ let E = (0, h.hQ)(),
 function H(e) {
     let { text: t, onChange: n, value: A, disabled: a, warning: o } = e,
         i = (0, h.Dt)(),
-        s = a ? 'text-muted' : 'text-normal';
+        s = a ? 'text-muted' : 'text-default';
     return (0, r.jsxs)('label', {
         className: l()(B.benefitToggleContainer, { [B.disabled]: a }),
         htmlFor: i,

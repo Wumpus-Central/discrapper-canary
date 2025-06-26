@@ -200,7 +200,7 @@ function w(e) {
                                     eu &&
                                         (0, r.jsx)(c.Text, {
                                             variant: 'text-xs/normal',
-                                            color: 'text-warning',
+                                            color: 'text-feedback-warning',
                                             className: S.warning,
                                             children: E.intl.string(E.t.AqTyaW)
                                         }),

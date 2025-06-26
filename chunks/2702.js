@@ -46,7 +46,7 @@ let L = (e) => {
             (e) =>
                 (0, i.jsx)(g.Text, {
                     variant: 'text-sm/normal',
-                    color: 'text-positive',
+                    color: 'text-feedback-positive',
                     children: e
                 })
         )
@@ -54,7 +54,7 @@ let L = (e) => {
             n
                 ? (0, i.jsx)(g.Text, {
                       variant: 'text-sm/normal',
-                      color: 'text-normal',
+                      color: 'text-default',
                       children: b.intl.string(b.t.z7c4bG)
                   })
                 : null
@@ -70,7 +70,7 @@ function P(e) {
         u = r.useMemo(() => T.ZP.canEditDiscriminator(o) && !o.isPomelo(), [o]),
         [c, P] = r.useState(!1),
         [C, R] = r.useState(o.username),
-        [N, k] = r.useState(o.discriminator),
+        [k, N] = r.useState(o.discriminator),
         [A, I] = r.useState(''),
         [U, w] = r.useState(!1),
         Z = (0, m.e7)([v.Z], () => v.Z.getErrors()),
@@ -88,12 +88,12 @@ function P(e) {
             null == (e = z.current) || e.focus();
         }
     }, [n]);
-    let B = N !== o.discriminator;
+    let B = k !== o.discriminator;
     async function W(e) {
         e.preventDefault(), w(!0);
         let t = await (0, f.Mn)({
             username: C,
-            discriminator: u ? N : void 0,
+            discriminator: u ? k : void 0,
             password: A
         });
         w(!1), (null == t ? void 0 : t.ok) && s();
@@ -157,8 +157,8 @@ function P(e) {
                                                 name: 'discriminator',
                                                 'aria-label': b.intl.string(b.t.ozumaG),
                                                 maxLength: 4,
-                                                value: N,
-                                                onChange: k,
+                                                value: k,
+                                                onChange: N,
                                                 onFocus: () => H(!0),
                                                 onBlur: () => H(!1),
                                                 inputPrefix: '#',

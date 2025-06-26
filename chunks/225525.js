@@ -103,7 +103,7 @@ function l(t) {
                     }),
                     (0, n.jsx)(a.Text, {
                         variant: 'eyebrow',
-                        color: 'text-positive',
+                        color: 'text-feedback-positive',
                         children: c.intl.string(c.t['2Ld8DA'])
                     }),
                     (0, n.jsx)(a.Text, {

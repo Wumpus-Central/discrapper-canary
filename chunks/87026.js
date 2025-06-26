@@ -421,7 +421,7 @@ function Y(e) {
                                 (0, s.jsx)('div', { className: L.bulletWarning }),
                                 (0, s.jsx)(u.Text, {
                                     variant: 'text-sm/normal',
-                                    color: 'text-normal',
+                                    color: 'text-default',
                                     children: i(e)
                                 })
                             ]

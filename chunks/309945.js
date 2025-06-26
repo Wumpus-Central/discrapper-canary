@@ -34,7 +34,7 @@ function _(e) {
                   }),
                   (0, r.jsx)(a.xv, {
                       variant: 'text-md/semibold',
-                      color: 'text-warning',
+                      color: 'text-feedback-warning',
                       children: p.intl.string(u.default.n5hQhY)
                   }),
                   (0, r.jsx)(a.xv, {

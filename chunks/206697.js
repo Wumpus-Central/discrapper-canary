@@ -30,7 +30,7 @@ function x() {
                       (0, r.jsx)(o.X6q, {
                           className: g.header,
                           variant: 'heading-xl/semibold',
-                          color: 'text-normal',
+                          color: 'text-default',
                           children: h.intl.string(h.t.erEf2t)
                       }),
                       (0, r.jsx)(a.xv, {
@@ -55,7 +55,7 @@ function x() {
                           (0, r.jsx)(o.X6q, {
                               className: g.header,
                               variant: 'heading-xl/semibold',
-                              color: 'text-normal',
+                              color: 'text-default',
                               children: h.intl.string(h.t.w4DRbW)
                           }),
                           (0, r.jsx)(a.xv, {

@@ -1,7 +1,7 @@
 n.d(t, { Z: () => h }), n(953529);
 var i = n(255367),
-    r = n(73800),
-    l = n(481060),
+    l = n(73800),
+    r = n(481060),
     o = n(239091),
     a = n(973616),
     c = n(783097),
@@ -14,7 +14,7 @@ var i = n(255367),
 function h(e) {
     var t;
     let { command: n, application: h, onClick: b, query: _, searchResultsPosition: C } = e,
-        v = r.useCallback(
+        v = l.useCallback(
             (e) => {
                 if ((0, c.BQ)(h)) {
                     let t = h instanceof a.ZP ? h : a.ZP.createFromServer(h);
@@ -52,8 +52,8 @@ function h(e) {
             },
             [h]
         ),
-        { iconURL: x, name: y, description: g } = r.useMemo(() => (0, c.sl)(h, { fakeAppIconURL: f }), [h]),
-        j = r.useMemo(() => {
+        { iconURL: x, name: y, description: g } = l.useMemo(() => (0, c.sl)(h, { fakeAppIconURL: f }), [h]),
+        j = l.useMemo(() => {
             var e;
             let t = null != (e = null == n ? void 0 : n.displayDescription) ? e : g;
             return null == t ? null : (0, s.ae)(t, void 0);
@@ -64,14 +64,14 @@ function h(e) {
             query: _,
             searchResultsPosition: C
         });
-    return (0, i.jsx)(l.P3F, {
+    return (0, i.jsx)(r.P3F, {
         className: m.clickable,
         innerRef: (e) => {
             N.current = e;
         },
         onClick: b,
         onContextMenu: v,
-        children: (0, i.jsxs)(l.Rny, {
+        children: (0, i.jsxs)(r.Rny, {
             className: m.focusBlock,
             children: [
                 (0, i.jsx)(d.Z, {
@@ -83,13 +83,13 @@ function h(e) {
                 (0, i.jsxs)('div', {
                     className: m.cmdDetails,
                     children: [
-                        (0, i.jsx)(l.X6q, {
+                        (0, i.jsx)(r.X6q, {
                             variant: 'heading-md/semibold',
                             color: 'header-primary',
                             lineClamp: 1,
                             children: null != (t = null == n ? void 0 : n.displayName) ? t : y
                         }),
-                        (0, i.jsx)(l.Text, {
+                        (0, i.jsx)(r.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-secondary',
                             lineClamp: 1,
@@ -98,7 +98,7 @@ function h(e) {
                     ]
                 }),
                 null != n
-                    ? (0, i.jsx)(l.Text, {
+                    ? (0, i.jsx)(r.Text, {
                           className: m.cmdAppName,
                           variant: 'text-sm/normal',
                           color: 'text-secondary',

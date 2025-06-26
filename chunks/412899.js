@@ -176,10 +176,10 @@ let H = l.forwardRef(function (e, t) {
         ),
         w = (0, T.dQu)(A.Z.unsafe_rawColors.PRIMARY_300).hsl(),
         H = null != (a = N.colorString) ? a : w,
-        V = null != (o = (0, _.wK)(H, 0.6)) ? o : void 0,
-        k = A.Z.unsafe_rawColors.WHITE_500.css,
+        k = null != (o = (0, _.wK)(H, 0.6)) ? o : void 0,
+        V = A.Z.unsafe_rawColors.WHITE_500.css,
         K = (0, _._i)(H);
-    null != K && 0.3 > (0, _.Bd)(K) && (k = A.Z.unsafe_rawColors.PRIMARY_630.css),
+    null != K && 0.3 > (0, _.Bd)(K) && (V = A.Z.unsafe_rawColors.PRIMARY_630.css),
         (E = x
             ? (0, r.jsx)(f.Z, {
                   className: y.roleFlowerStar,
@@ -201,8 +201,8 @@ let H = l.forwardRef(function (e, t) {
                 }));
     let Z = l.useMemo(() => {
         var t;
-        return G({ borderColor: h ? void 0 : V }, null != (t = e.style) ? t : {});
-    }, [V, h, e.style]);
+        return G({ borderColor: h ? void 0 : k }, null != (t = e.style) ? t : {});
+    }, [k, h, e.style]);
     return (0, r.jsx)(T.tEY, {
         children: (0, r.jsxs)(
             'div',
@@ -233,7 +233,7 @@ let H = l.forwardRef(function (e, t) {
                                 u
                                     ? (0, r.jsx)(T.Dio, {
                                           size: 'md',
-                                          color: k,
+                                          color: V,
                                           className: y.roleRemoveIcon,
                                           'aria-hidden': !0
                                       })
@@ -256,7 +256,7 @@ let H = l.forwardRef(function (e, t) {
         )
     });
 });
-function V(e) {
+function k(e) {
     let { user: t, numRolesHidden: n, roleClassName: s } = e,
         a = (0, c.JA)('overflow-more-roles-'.concat(t.id)),
         o = l.useRef(null);
@@ -271,7 +271,7 @@ function V(e) {
         children: (e) => (0, r.jsx)(T.tEY, { children: (0, r.jsx)('button', F(G(F(G({ ref: o }, e), { className: i()(y.overflowButton, s) }), a), { children: '+'.concat(n) })) })
     });
 }
-function k(e) {
+function V(e) {
     let t = l.useRef(null),
         { guild: n, user: s, handleAddRole: a, roleClassName: o, addButtonClassName: E, addButtonIconClassName: u } = e,
         _ = (0, c.JA)('overflow-add-roles-'.concat(s.id)),
@@ -400,7 +400,7 @@ function K(e) {
             );
         });
     return (
-        null != p && 0 !== C ? (t = (0, r.jsx)(V, F(G({}, e), { numRolesHidden: C }))) : w && (t = (0, r.jsx)(k, F(G({}, e), { handleAddRole: S }))),
+        null != p && 0 !== C ? (t = (0, r.jsx)(k, F(G({}, e), { numRolesHidden: C }))) : w && (t = (0, r.jsx)(V, F(G({}, e), { handleAddRole: S }))),
         (0, r.jsx)(c.bG, {
             navigator: W,
             children: (0, r.jsx)(c.SJ, {

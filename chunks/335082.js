@@ -110,7 +110,7 @@ function f() {
                                     (0, i.jsx)(s.Wn, {
                                         className: p.myServersIgnoredWarning,
                                         messageType: s.QYI.WARNING,
-                                        textColor: 'text-warning',
+                                        textColor: 'text-feedback-warning',
                                         children: g.intl.string(m.default['xxI0/f'])
                                     })
                             ]

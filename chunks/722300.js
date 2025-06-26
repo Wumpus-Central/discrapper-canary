@@ -52,7 +52,7 @@ function u(e) {
                             }),
                             (0, r.jsx)(i.Text, {
                                 variant: 'text-sm/normal',
-                                color: 'text-warning',
+                                color: 'text-feedback-warning',
                                 children: l.intl.string(l.t.tmGHjY)
                             })
                         ]

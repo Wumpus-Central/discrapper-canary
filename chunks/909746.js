@@ -4,7 +4,7 @@ n.d(t, {
     C2: () => $,
     EN: () => Z,
     F1: () => ea,
-    HE: () => k,
+    HE: () => V,
     HN: () => Y,
     Iv: () => ec,
     J5: () => eI,
@@ -21,7 +21,7 @@ n.d(t, {
     hQ: () => eg,
     hx: () => W,
     lR: () => q,
-    lU: () => V,
+    lU: () => k,
     nm: () => ed,
     oD: () => K,
     pA: () => en,
@@ -186,7 +186,7 @@ let F = new A.Z('AuditLogUtils'),
         [v.zUn.AVAILABLE_TAG_DELETE]: () => j.t['8QOsen'],
         [v.zUn.LINKED_LOBBY]: eC(j.t['+/3TkJ'], j.t['5kDYS0'])
     }),
-    V = () =>
+    k = () =>
         y(
             {
                 [v.zUn.NICK]: eM(j.t.qXDsHh, j.t['m+qur6'], j.t.DvLvjI),
@@ -201,7 +201,7 @@ let F = new A.Z('AuditLogUtils'),
             },
             B()
         ),
-    k = () =>
+    V = () =>
         y(
             {
                 [v.zUn.NAME]: eD(j.t.QBmlaG, j.t.Lfs4r6),

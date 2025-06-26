@@ -9,7 +9,7 @@ function s(e) {
         [n, s] = (0, l.useState)(null),
         [u] = (0, l.useState)(() => new i.TimelineDataSeries()),
         c = (0, a.dQu)(o.Z.colors.BACKGROUND_BASE_LOW).hsl(),
-        d = (0, a.dQu)(o.Z.colors.TEXT_NORMAL).hsl(),
+        d = (0, a.dQu)(o.Z.colors.TEXT_DEFAULT).hsl(),
         f = (0, a.dQu)(o.Z.colors.BACKGROUND_ACCENT).hsl(),
         h = (0, a.dQu)(o.Z.unsafe_rawColors.BRAND_500).hsl();
     (0, l.useEffect)(() => {

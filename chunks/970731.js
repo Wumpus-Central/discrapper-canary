@@ -79,7 +79,7 @@ let m = Object.freeze({
     }),
     E = Object.freeze({
         brand: 'always-white',
-        primary: 'text-normal'
+        primary: 'text-default'
     });
 function b(e) {
     let {

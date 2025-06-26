@@ -18,7 +18,7 @@ function b(e, t) {
         s.Text,
         {
             variant: 'text-xs/bold',
-            color: 'text-normal',
+            color: 'text-default',
             children: e
         },
         t

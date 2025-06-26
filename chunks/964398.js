@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685), n(415506);
+n.d(t, { Z: () => y }), n(388685), n(415506);
 var r = n(255367),
     l = n(73800),
     i = n(392711),
@@ -107,8 +107,8 @@ let g = (e, t) => {
             y: Math.max(l * Math.sin((2 * Math.PI * r) / 360), 0)
         };
     },
-    O = l.memo(function (e) {
-        let { wheelWidth: t, wheelHeight: n, itemWidth: O, itemHeight: y, showDeadZoneIndicator: b, activeItem: N, onItemSelect: m, onItemAction: v, interactive: x = !0, onClose: E, children: C } = e,
+    y = l.memo(function (e) {
+        let { wheelWidth: t, wheelHeight: n, itemWidth: y, itemHeight: O, showDeadZoneIndicator: b, activeItem: N, onItemSelect: v, onItemAction: m, interactive: x = !0, onClose: E, children: C } = e,
             I = l.useRef(null),
             T = l.useRef([]),
             j = l.useRef(!1),
@@ -128,13 +128,13 @@ let g = (e, t) => {
             ),
             U = l.useCallback(
                 (e, t) => {
-                    (S.current = t), m(h * e + t);
+                    (S.current = t), v(h * e + t);
                 },
-                [m]
+                [v]
             ),
             k = l.useCallback(() => {
-                (S.current = null), m(null);
-            }, [m]),
+                (S.current = null), v(null);
+            }, [v]),
             M = l.useCallback(
                 (e) => {
                     k(), (j.current = e);
@@ -161,9 +161,9 @@ let g = (e, t) => {
             }, []),
             B = l.useCallback(
                 (e) => {
-                    null != S.current && (e.preventDefault(), e.stopPropagation(), null == v || v(h * P + S.current));
+                    null != S.current && (e.preventDefault(), e.stopPropagation(), null == m || m(h * P + S.current));
                 },
-                [v, P]
+                [m, P]
             ),
             G = l.useMemo(
                 () =>
@@ -206,8 +206,8 @@ let g = (e, t) => {
                     R[P].map((e, l) => {
                         let i = f[l];
                         if (null == i) throw Error('Too many items supplied '.concat(C.length, ' expected max of ').concat(f.length));
-                        let o = p(i.x, t, O),
-                            a = p(i.y, n, y);
+                        let o = p(i.x, t, y),
+                            a = p(i.y, n, O);
                         return (0, r.jsx)(
                             'div',
                             {
@@ -216,15 +216,15 @@ let g = (e, t) => {
                                 style: {
                                     left: o,
                                     top: a,
-                                    width: O,
-                                    height: y
+                                    width: y,
+                                    height: O
                                 },
                                 children: e
                             },
                             l
                         );
                     }),
-                [R, P, t, O, n, y, C.length, D]
+                [R, P, t, y, n, O, C.length, D]
             );
         return (0, r.jsx)(a.P3F, {
             className: c.chatWheelMouseInput,

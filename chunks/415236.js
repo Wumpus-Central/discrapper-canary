@@ -32,7 +32,7 @@ function a(e) {
             }),
             (0, i.jsx)(l.Text, {
                 variant: 'text-xs/normal',
-                color: 'text-normal',
+                color: 'text-default',
                 className: s.cardDescription,
                 children: t
             })

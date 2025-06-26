@@ -92,7 +92,7 @@ function O(e) {
                       }),
                       (0, r.jsx)(o.Text, {
                           variant: 'text-lg/semibold',
-                          color: 'text-normal',
+                          color: 'text-default',
                           children: l.title
                       }),
                       (0, r.jsx)(o.P3F, {

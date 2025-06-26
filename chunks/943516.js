@@ -40,7 +40,7 @@ function p(e) {
                           }),
                           (0, r.jsx)(i.Text, {
                               variant: 'text-md/normal',
-                              color: 'text-normal',
+                              color: 'text-default',
                               children: A.name
                           }),
                           null != n &&
@@ -91,7 +91,7 @@ function h(e) {
                         (0, r.jsx)(i.Text, {
                             tag: 'span',
                             variant: 'text-md/semibold',
-                            color: 'text-normal',
+                            color: 'text-default',
                             children: e
                         })
                 })
@@ -99,7 +99,7 @@ function h(e) {
             (0, r.jsxs)(i.X6q, {
                 className: g.detachWarningHeading,
                 variant: 'text-md/medium',
-                color: 'text-normal',
+                color: 'text-default',
                 children: [
                     (0, r.jsx)(i.I9k, {
                         size: 'sm',
@@ -120,7 +120,7 @@ function h(e) {
             (0, r.jsxs)(i.X6q, {
                 className: g.detachWarningHeading,
                 variant: 'text-md/medium',
-                color: 'text-normal',
+                color: 'text-default',
                 children: [
                     (0, r.jsx)(i.XHJ, {
                         size: 'sm',

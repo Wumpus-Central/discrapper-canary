@@ -204,7 +204,7 @@ function L(e) {
                                   }),
                                   (0, r.jsx)(c.Text, {
                                       variant: 'text-xs/medium',
-                                      color: 'text-normal',
+                                      color: 'text-default',
                                       children: v ? M.intl.string(M.t.Izgpmp) : M.intl.string(M.t['7FHbPD'])
                                   })
                               ]

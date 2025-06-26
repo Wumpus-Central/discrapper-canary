@@ -58,7 +58,7 @@ function h(e) {
         onCancel: t,
         onConfirm: n,
         children: (0, r.jsx)(l.Text, {
-            color: 'text-normal',
+            color: 'text-default',
             variant: 'text-sm/normal',
             children: c.intl.string(c.t['0MQ0BQ'])
         })

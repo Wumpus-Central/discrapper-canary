@@ -94,7 +94,7 @@ function v(a) {
                                         }),
                                         (0, s.jsx)(r.X6q, {
                                             variant: 'heading-lg/semibold',
-                                            color: 'text-normal',
+                                            color: 'text-default',
                                             className: L.headingText,
                                             children: v.value.messages.questName
                                         })

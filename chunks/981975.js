@@ -316,7 +316,7 @@ function w(e) {
                               }),
                               (0, r.jsx)(d.Text, {
                                   variant: 'text-sm/normal',
-                                  color: 'text-normal',
+                                  color: 'text-default',
                                   children: y.intl.string(y.t['2aFeeX'])
                               })
                           ]

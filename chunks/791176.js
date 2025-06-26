@@ -88,7 +88,7 @@ let x = i.memo(function (e) {
                     className: a()(_.permissionChiplet, _.noModPerms),
                     children: (0, r.jsx)(s.Text, {
                         variant: 'text-sm/normal',
-                        color: 'text-positive',
+                        color: 'text-feedback-positive',
                         children: b.intl.string(b.t.sXhykZ)
                     })
                 });

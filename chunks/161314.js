@@ -98,7 +98,7 @@ function j(e) {
                     (0, r.jsx)(u.LZC, { size: 16 }),
                     (0, r.jsx)(u.X6q, {
                         variant: 'heading-md/semibold',
-                        color: 'text-normal',
+                        color: 'text-default',
                         children: C.intl.format(C.t.NZeik5, { guildName: l.name })
                     }),
                     (0, r.jsx)(u.LZC, { size: 4 }),

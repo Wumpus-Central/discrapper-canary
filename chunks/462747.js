@@ -12,8 +12,8 @@ var i = t(255367),
     g = t(314897),
     p = t(158776),
     m = t(885110),
-    I = t(594174),
-    f = t(315416),
+    f = t(594174),
+    I = t(315416),
     v = t(765305),
     h = t(388032),
     C = t(960689);
@@ -117,7 +117,7 @@ function L(e) {
                 })
             }),
             (0, i.jsx)(o.Text, {
-                color: 'text-normal',
+                color: 'text-default',
                 variant: 'text-md/normal',
                 children: h.intl.format(h.t.BdQTfX, { userRemainCount: n })
             })
@@ -127,8 +127,8 @@ function L(e) {
 function j(e) {
     let { eventUser: n, guildId: t, onContextMenu: r } = e,
         s = l.useRef(null),
-        u = (0, d.e7)([I.default], () => I.default.getUser(n.user_id)),
-        f = (0, d.e7)([m.Z, p.Z, g.default], () => (n.user_id === g.default.getId() ? m.Z.getStatus() : p.Z.getStatus(n.user_id, t)), [n.user_id, t]);
+        u = (0, d.e7)([f.default], () => f.default.getUser(n.user_id)),
+        I = (0, d.e7)([m.Z, p.Z, g.default], () => (n.user_id === g.default.getId() ? m.Z.getStatus() : p.Z.getStatus(n.user_id, t)), [n.user_id, t]);
     return null == u
         ? null
         : (0, i.jsx)(_.Z, {
@@ -158,7 +158,7 @@ function j(e) {
                                       'aria-label': u.username,
                                       size: o.EFr.SIZE_24,
                                       className: C.listAvatar,
-                                      status: f
+                                      status: I
                                   }),
                                   (0, i.jsx)(c.Z, {
                                       user: u,
@@ -210,7 +210,7 @@ function D(e) {
 }
 function O(e) {
     let { guildEvent: n, recurrenceId: l, eventUsers: r, loading: a, error: d, containerHeight: c } = e,
-        u = (0, f.Z)(n.guild_id, n.id, l);
+        u = (0, I.Z)(n.guild_id, n.id, l);
     if (a && 0 === r.length)
         return (0, i.jsx)(D, {
             height: c,

@@ -49,7 +49,7 @@ function h(e) {
                         className: f.text,
                         children: [
                             (0, r.jsx)(i.Text, {
-                                color: 'text-normal',
+                                color: 'text-default',
                                 variant: 'text-sm/semibold',
                                 className: f.title,
                                 children: m.intl.string(m.t['Fh/mk5'])

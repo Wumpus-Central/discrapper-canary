@@ -1,7 +1,7 @@
 n.d(t, { E: () => p }), n(388685);
 var i = n(73800),
-    r = n(442837),
-    l = n(835473),
+    l = n(442837),
+    r = n(835473),
     o = n(594174),
     a = n(695103),
     c = n(823379),
@@ -9,12 +9,12 @@ var i = n(73800),
     u = n(317381),
     d = n(761122);
 function p(e) {
-    let t = (0, r.e7)([o.default], o.default.getCurrentUser),
-        n = (0, r.Wu)([u.ZP], () => u.ZP.getShelfActivities(e)),
-        p = (0, r.e7)([a.Z], () => a.Z.testModeEmbeddedApplicationId),
+    let t = (0, l.e7)([o.default], o.default.getCurrentUser),
+        n = (0, l.Wu)([u.ZP], () => u.ZP.getShelfActivities(e)),
+        p = (0, l.e7)([a.Z], () => a.Z.testModeEmbeddedApplicationId),
         m = n.map((e) => e.application_id),
         f = null != p ? [p, ...m] : m,
-        h = (0, l.Z)(f),
+        h = (0, r.Z)(f),
         b = i.useMemo(() => h.filter(c.lm), [h]),
         _ = i.useMemo(
             () =>

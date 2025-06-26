@@ -112,7 +112,7 @@ function E(e) {
                     (0, l.jsxs)(o.Text, {
                         className: p.overflowCount,
                         variant: 'text-xs/semibold',
-                        color: 'text-normal',
+                        color: 'text-default',
                         children: ['+', A - 1]
                     })
                 ]

@@ -143,13 +143,13 @@ let L = function (e) {
                         }),
                         (0, r.jsx)(p.Text, {
                             className: E.clipMetadata,
-                            color: 'text-normal',
+                            color: 'text-default',
                             variant: 'text-md/medium',
                             children: o.applicationName
                         }),
                         (0, r.jsx)(p.Text, {
                             className: E.clipMetadata,
-                            color: 'text-normal',
+                            color: 'text-default',
                             variant: 'text-md/medium',
                             children: Y
                         }),
@@ -295,7 +295,7 @@ function T(e) {
                         })
                       : (0, r.jsx)(p.X6q, {
                             className: E.clipTitle,
-                            color: 'text-normal',
+                            color: 'text-default',
                             variant: 'heading-lg/medium',
                             children: n.name
                         }),

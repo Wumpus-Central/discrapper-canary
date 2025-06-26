@@ -23,7 +23,7 @@ function s(e) {
                 }),
                 (0, r.jsxs)(l.Text, {
                     variant: s,
-                    color: 'text-normal',
+                    color: 'text-default',
                     children: [(0, r.jsx)(l.nn4, { children: a.intl.string(a.t.RnyseH) }), n.name]
                 }),
                 !0 === t &&

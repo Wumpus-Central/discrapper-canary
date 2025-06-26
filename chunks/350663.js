@@ -1,8 +1,8 @@
 n.d(t, {
     IV: () => _,
     ZP: () => I,
-    bt: () => v,
-    fd: () => b
+    bt: () => b,
+    fd: () => v
 }),
     n(388685);
 var i = n(255367),
@@ -15,8 +15,8 @@ var i = n(255367),
     u = n(569545),
     d = n(237997),
     p = n(444295),
-    h = n(752802),
-    f = n(340101),
+    f = n(752802),
+    h = n(340101),
     m = n(981631),
     g = n(678270);
 function y(e) {
@@ -62,14 +62,14 @@ function O(e, t) {
         e
     );
 }
-let v = 256,
-    b = 144,
+let b = 256,
+    v = 144,
     E = (e) => {
         let { participant: t, width: n, locked: r, widgetId: o, pinned: l } = e;
         return (0, i.jsx)('div', {
             className: g.tileContainer,
             children: (0, i.jsx)(
-                h.Z,
+                f.Z,
                 {
                     participant: t,
                     width: n,
@@ -82,17 +82,17 @@ let v = 256,
         });
     };
 function _(e, t, n) {
-    if (e === f.C5.VERTICAL) {
-        let e = Math.max(t, v),
-            n = Math.max((9 / 16) * e, b);
+    if (e === h.C5.VERTICAL) {
+        let e = Math.max(t, b),
+            n = Math.max((9 / 16) * e, v);
         return {
             tileWidth: e,
             tileHeight: n
         };
     }
-    let i = Math.max(n, b);
+    let i = Math.max(n, v);
     return {
-        tileWidth: Math.max((16 / 9) * i, v),
+        tileWidth: Math.max((16 / 9) * i, b),
         tileHeight: i
     };
 }
@@ -103,33 +103,33 @@ let x = {
         clamp: !0
     },
     I = r.memo(function (e) {
-        let { widgetId: t, tileWidth: n, tileHeight: o, layout: h, locked: v, activeStreams: b, streamParticipants: _, participantsVersion: I, pinned: S, padding: j, sizeOffset: C } = e,
+        let { widgetId: t, tileWidth: n, tileHeight: o, layout: f, locked: b, activeStreams: v, streamParticipants: _, participantsVersion: I, pinned: S, padding: j, sizeOffset: C } = e,
             N = _.map((e) => ({
                 participant: e,
                 key: e.user.id,
                 width: n,
                 height: o,
-                locked: v,
+                locked: b,
                 widgetId: t,
                 pinned: S
             })),
             w = (0, c.Z)(n),
-            Z = (0, c.Z)(v),
-            P = h === f.C5.VERTICAL,
-            T = v || Z !== v || w !== n,
-            D = 0,
+            Z = (0, c.Z)(b),
+            P = f === h.C5.VERTICAL,
+            T = b || Z !== b || w !== n,
             k = 0,
+            D = 0,
             A = (0, s.Yzy)(
                 P
                     ? N.map((e, t) =>
                           O(y({}, e), {
-                              y: (D += e.height + (t > 0 ? j : 0)) - e.height,
+                              y: (k += e.height + (t > 0 ? j : 0)) - e.height,
                               x: 0
                           })
                       )
                     : N.map((e, t) =>
                           O(y({}, e), {
-                              x: (k += e.width + (t > 0 ? j : 0)) - e.width,
+                              x: (D += e.width + (t > 0 ? j : 0)) - e.width,
                               y: 0
                           })
                       ),
@@ -168,7 +168,7 @@ let x = {
                 T ? 'animate-never' : 'respect-motion-settings'
             ),
             R = (0, p.ee)(() => new Set(_.map((e) => e.user.id)), [_, I]),
-            L = (0, p.ee)(() => new Set(_.filter((e) => b.has((0, u.V9)(e.stream))).map((e) => e.user.id)), [_, b, I]);
+            L = (0, p.ee)(() => new Set(_.filter((e) => v.has((0, u.V9)(e.stream))).map((e) => e.user.id)), [_, v, I]);
         return (
             r.useEffect(() => {
                 0 !== R.size &&
@@ -185,7 +185,7 @@ let x = {
                     [g.vertical]: P,
                     [g.horizontal]: !P
                 }),
-                style: P ? { height: D } : { width: k },
+                style: P ? { height: k } : { width: D },
                 children: A((e, t, r, l) =>
                     (0, i.jsx)(a.animated.div, {
                         className: g.gridItem,

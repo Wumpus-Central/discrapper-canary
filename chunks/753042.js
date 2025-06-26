@@ -39,7 +39,7 @@ function _(e) {
                           }),
                           name: (0, r.jsx)(a.Text, {
                               variant: 'text-sm/medium',
-                              color: 'text-normal',
+                              color: 'text-default',
                               children: g.intl.string(g.t.nzGai4)
                           }),
                           description: _
@@ -65,7 +65,7 @@ function _(e) {
                               }),
                               name: (0, r.jsx)(a.Text, {
                                   variant: 'text-sm/medium',
-                                  color: 'text-normal',
+                                  color: 'text-default',
                                   children: g.intl.string(g.t['93hqlp'])
                               }),
                               description:
@@ -92,12 +92,12 @@ function _(e) {
                           }),
                           name: (0, r.jsx)(a.Text, {
                               variant: 'text-sm/medium',
-                              color: 'text-normal',
+                              color: 'text-default',
                               children: g.intl.string(g.t.SaDIpK)
                           }),
                           description: (0, r.jsx)(a.Text, {
                               variant: 'text-sm/medium',
-                              color: 'text-normal',
+                              color: 'text-default',
                               children: x
                           })
                       }),
@@ -110,12 +110,12 @@ function _(e) {
                           }),
                           name: (0, r.jsx)(a.Text, {
                               variant: 'text-sm/medium',
-                              color: 'text-normal',
+                              color: 'text-default',
                               children: g.intl.string(g.t['NQJ+WF'])
                           }),
                           description: (0, r.jsx)(a.Text, {
                               variant: 'text-sm/medium',
-                              color: 'text-normal',
+                              color: 'text-default',
                               children: C
                           })
                       }),
@@ -127,12 +127,12 @@ function _(e) {
                           }),
                           name: (0, r.jsx)(a.Text, {
                               variant: 'text-sm/medium',
-                              color: 'text-normal',
+                              color: 'text-default',
                               children: g.intl.string(g.t['eJOq+f'])
                           }),
                           description: (0, r.jsx)(a.Text, {
                               variant: 'text-sm/medium',
-                              color: 'text-normal',
+                              color: 'text-default',
                               children: (0, r.jsx)(u.ZP, {
                                   userId: t.userId,
                                   guildId: t.guildId,

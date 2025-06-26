@@ -4,28 +4,28 @@ n(73800);
 var l = n(990547),
     i = n(82659),
     r = n(481060),
-    o = n(213609),
-    s = n(313201),
+    s = n(213609),
+    o = n(313201),
     c = n(724723),
-    x = n(626135),
-    d = n(988158),
+    d = n(626135),
+    x = n(988158),
     m = n(981631),
     h = n(388032),
     u = n(946555);
 function p(t) {
-    let { url: e, trustUrl: n, isProtocol: p, onConfirm: C, onCancel: k, onClose: g, transitionState: M } = t,
-        _ = (0, s.Dt)(),
-        b = (0, c.q)('MaskedLinkModal'),
+    let { url: e, trustUrl: n, isProtocol: p, onConfirm: C, onCancel: k, onClose: g, transitionState: f } = t,
+        M = (0, o.Dt)(),
+        _ = (0, c.q)('MaskedLinkModal'),
         {
-            protocol: j,
-            authorityPrefix: T,
-            hostname: f,
+            protocol: b,
+            authorityPrefix: j,
+            hostname: T,
             theRestOfTheUrl: v,
             shouldTrustUrl: D,
             setShouldTrustUrl: L,
             handleConfirm: N,
             handleCancel: y
-        } = (0, d.X)({
+        } = (0, x.X)({
             url: e,
             trustUrl: n,
             onConfirm: C,
@@ -34,27 +34,27 @@ function p(t) {
         }),
         z = () => {
             N(),
-                x.default.track(m.rMx.MASKED_LINK_MODAL_CLICKED, {
+                d.default.track(m.rMx.MASKED_LINK_MODAL_CLICKED, {
                     is_trust_url_selected: D,
                     action_type: 'confirm'
                 });
         },
         I = () => {
             y(),
-                x.default.track(m.rMx.MASKED_LINK_MODAL_CLICKED, {
+                d.default.track(m.rMx.MASKED_LINK_MODAL_CLICKED, {
                     is_trust_url_selected: D,
                     action_type: 'cancel'
                 });
         };
     return (
-        (0, o.Z)({
+        (0, s.Z)({
             type: l.ImpressionTypes.MODAL,
             name: l.ImpressionNames.MASKED_LINK_MODAL
         }),
-        b
+        _
             ? (0, a.jsxs)(i.u, {
                   size: 'md',
-                  transitionState: M,
+                  transitionState: f,
                   onClose: g,
                   title: h.intl.string(h.t['3w1QGh']),
                   headerBody: p ? h.intl.format(h.t.aCYv19, {}) : h.intl.string(h.t.soRxRU),
@@ -77,14 +77,14 @@ function p(t) {
                               (0, a.jsxs)(r.Text, {
                                   tag: 'span',
                                   variant: p ? 'text-md/semibold' : 'text-md/normal',
-                                  color: p ? 'text-normal' : 'text-muted',
-                                  children: [j, T]
+                                  color: p ? 'text-default' : 'text-muted',
+                                  children: [b, j]
                               }),
                               (0, a.jsx)(r.Text, {
                                   tag: 'span',
                                   variant: p ? 'text-md/normal' : 'text-md/semibold',
-                                  color: p ? 'text-muted' : 'text-normal',
-                                  children: f
+                                  color: p ? 'text-muted' : 'text-default',
+                                  children: T
                               }),
                               (0, a.jsx)(r.Text, {
                                   tag: 'span',
@@ -101,21 +101,21 @@ function p(t) {
                           onChange: (t, e) => L(e),
                           children: (0, a.jsx)(r.Text, {
                               variant: 'text-sm/normal',
-                              children: p ? h.intl.format(h.t['haA+X1'], { protocol: j.replace(':', '') }) : h.intl.format(h.t.ZgXDsL, { domain: f })
+                              children: p ? h.intl.format(h.t['haA+X1'], { protocol: b.replace(':', '') }) : h.intl.format(h.t.ZgXDsL, { domain: T })
                           })
                       })
                   ]
               })
             : (0, a.jsxs)(r.Y0X, {
                   size: r.CgR.DYNAMIC,
-                  transitionState: M,
-                  'aria-labelledby': _,
+                  transitionState: f,
+                  'aria-labelledby': M,
                   parentComponent: 'MaskedLinkModal',
                   children: [
                       (0, a.jsxs)(r.hzk, {
                           children: [
                               (0, a.jsx)(r.X6q, {
-                                  id: _,
+                                  id: M,
                                   variant: 'heading-xl/bold',
                                   className: u.title,
                                   children: h.intl.string(h.t['3w1QGh'])
@@ -131,14 +131,14 @@ function p(t) {
                                       (0, a.jsxs)(r.Text, {
                                           tag: 'span',
                                           variant: p ? 'text-md/semibold' : 'text-md/normal',
-                                          color: p ? 'text-normal' : 'text-muted',
-                                          children: [j, T]
+                                          color: p ? 'text-default' : 'text-muted',
+                                          children: [b, j]
                                       }),
                                       (0, a.jsx)(r.Text, {
                                           tag: 'span',
                                           variant: p ? 'text-md/normal' : 'text-md/semibold',
-                                          color: p ? 'text-muted' : 'text-normal',
-                                          children: f
+                                          color: p ? 'text-muted' : 'text-default',
+                                          children: T
                                       }),
                                       (0, a.jsx)(r.Text, {
                                           tag: 'span',
@@ -155,7 +155,7 @@ function p(t) {
                                   onChange: (t, e) => L(e),
                                   children: (0, a.jsx)(r.Text, {
                                       variant: 'text-sm/normal',
-                                      children: p ? h.intl.format(h.t['haA+X1'], { protocol: j.replace(':', '') }) : h.intl.format(h.t.ZgXDsL, { domain: f })
+                                      children: p ? h.intl.format(h.t['haA+X1'], { protocol: b.replace(':', '') }) : h.intl.format(h.t.ZgXDsL, { domain: T })
                                   })
                               })
                           ]

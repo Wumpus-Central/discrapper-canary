@@ -736,11 +736,11 @@ function eS(e) {
                                   }),
                                   (0, r.jsx)(f.VL1, {
                                       size: 'xs',
-                                      color: d.Z.colors.TEXT_NORMAL
+                                      color: d.Z.colors.TEXT_DEFAULT
                                   }),
                                   (0, r.jsx)(f.Text, {
                                       variant: 'text-sm/medium',
-                                      color: 'text-normal',
+                                      color: 'text-default',
                                       className: el.voiceChannelName,
                                       children: null == n ? void 0 : n.name
                                   })
@@ -762,7 +762,7 @@ function eS(e) {
                                       className: el.voiceChannelAdditionalParticipants,
                                       children: (0, r.jsx)(f.Text, {
                                           variant: 'text-xxs/semibold',
-                                          color: 'text-normal',
+                                          color: 'text-default',
                                           children: e
                                       })
                                   })
@@ -863,11 +863,11 @@ function eA(e) {
                                             }),
                                             (0, r.jsx)(f.gj8, {
                                                 size: 'xs',
-                                                color: d.Z.colors.TEXT_NORMAL
+                                                color: d.Z.colors.TEXT_DEFAULT
                                             }),
                                             (0, r.jsx)(f.Text, {
                                                 variant: 'text-sm/medium',
-                                                color: 'text-normal',
+                                                color: 'text-default',
                                                 className: el.voiceChannelName,
                                                 children: s.name
                                             })
@@ -891,7 +891,7 @@ function eA(e) {
                                     className: el.voiceChannelAdditionalParticipants,
                                     children: (0, r.jsx)(f.Text, {
                                         variant: 'text-xxs/semibold',
-                                        color: 'text-normal',
+                                        color: 'text-default',
                                         children: e
                                     })
                                 })

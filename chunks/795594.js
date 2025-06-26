@@ -104,7 +104,7 @@ function es(e) {
                 className: et.warningIcon
             }),
             (0, r.jsx)(g.Text, {
-                color: 'text-normal',
+                color: 'text-default',
                 variant: 'text-sm/medium',
                 children: n
             })
@@ -347,7 +347,7 @@ let el = (e) => {
                     return (0, r.jsx)(g.Text, {
                         className: en.markup,
                         variant: 'text-sm/normal',
-                        color: 'text-normal',
+                        color: 'text-default',
                         children: (0, D.parseBioReact)(a.description)
                     });
             }, [a.description]),
@@ -428,7 +428,7 @@ let el = (e) => {
                                 }),
                                 (0, r.jsx)(g.Text, {
                                     variant: 'text-sm/normal',
-                                    color: 'text-normal',
+                                    color: 'text-default',
                                     children: ee.intl.format(ee.t.yOApCA, { date: n })
                                 })
                             ]

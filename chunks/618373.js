@@ -24,7 +24,7 @@ function d(e) {
     })
         ? (0, i.jsx)(o.Text, {
               variant: 'text-xxs/semibold',
-              color: d ? 'text-warning' : 'text-muted',
+              color: d ? 'text-feedback-warning' : 'text-muted',
               children: c.intl.string(c.t.PIeSHB)
           })
         : p

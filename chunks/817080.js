@@ -41,9 +41,9 @@ var t =
                 _ = function (e) {
                     return /^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(e.type) ? new Blob(['ï\xBB\xBF', e], { type: e.type }) : e;
                 },
-                E = function (t, c, E) {
-                    E || (t = _(t));
-                    var f,
+                f = function (t, c, f) {
+                    f || (t = _(t));
+                    var E,
                         S,
                         y = this,
                         b = t.type,
@@ -62,7 +62,7 @@ var t =
                                     (y.readyState = y.INIT);
                                 return;
                             }
-                            (m || !f) && (f = n().createObjectURL(t)), S ? (S.location.href = f) : void 0 === e.open(f, '_blank') && a && (e.location.href = f), (y.readyState = y.DONE), O(), p(f);
+                            (m || !E) && (E = n().createObjectURL(t)), S ? (S.location.href = E) : void 0 === e.open(E, '_blank') && a && (e.location.href = E), (y.readyState = y.DONE), O(), p(E);
                         },
                         g = function (e) {
                             return function () {
@@ -74,9 +74,9 @@ var t =
                             exclusive: !1
                         };
                     if (((y.readyState = y.INIT), c || (c = 'download'), o)) {
-                        (f = n().createObjectURL(t)),
+                        (E = n().createObjectURL(t)),
                             setTimeout(function () {
-                                (r.href = f), (r.download = c), i(r), O(), p(f), (y.readyState = y.DONE);
+                                (r.href = E), (r.download = c), i(r), O(), p(E), (y.readyState = y.DONE);
                             });
                         return;
                     }
@@ -136,20 +136,20 @@ var t =
                             N
                         );
                 },
-                f = E.prototype;
+                E = f.prototype;
             return 'undefined' != typeof navigator && navigator.msSaveOrOpenBlob
                 ? function (e, t, n) {
                       return n || (e = _(e)), navigator.msSaveOrOpenBlob(e, t || 'download');
                   }
-                : ((f.abort = function () {
+                : ((E.abort = function () {
                       (this.readyState = this.DONE), h(this, 'abort');
                   }),
-                  (f.readyState = f.INIT = 0),
-                  (f.WRITING = 1),
-                  (f.DONE = 2),
-                  (f.error = f.onwritestart = f.onprogress = f.onwrite = f.onabort = f.onerror = f.onwriteend = null),
+                  (E.readyState = E.INIT = 0),
+                  (E.WRITING = 1),
+                  (E.DONE = 2),
+                  (E.error = E.onwritestart = E.onprogress = E.onwrite = E.onabort = E.onerror = E.onwriteend = null),
                   function (e, t, n) {
-                      return new E(e, t, n);
+                      return new f(e, t, n);
                   });
         }
     })(('undefined' != typeof self && self) || ('undefined' != typeof window && window) || this.content);

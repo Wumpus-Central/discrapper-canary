@@ -35,7 +35,7 @@ function _(e) {
                     start: _,
                     end: null == (n = c.timestamps) ? void 0 : n.end
                 },
-                textColor: 'text-positive',
+                textColor: 'text-feedback-positive',
                 bold: !0
             })
         ]

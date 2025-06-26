@@ -11,7 +11,7 @@ function o(e) {
             type: l.hQ.SHORT
         });
     if (null == t.saveData.dueAt) return null;
-    let c = s ? 'text-danger' : 'text-normal';
+    let c = s ? 'text-danger' : 'text-default';
     return (0, r.jsxs)('div', {
         className: a.container,
         children: [

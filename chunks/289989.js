@@ -49,7 +49,7 @@ function b(e) {
             (0, r.jsx)(a.X6, {
                 className: v.header,
                 variant: 'heading-lg/semibold',
-                color: 'text-normal',
+                color: 'text-default',
                 children: _.intl.string(_.t.XyYoFR)
             }),
             l
