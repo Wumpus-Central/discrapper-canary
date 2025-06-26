@@ -1,28 +1,29 @@
-n.d(t, { Z: () => Z }), n(388685);
+n.d(t, { Z: () => A }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(392711),
     a = n.n(l),
     o = n(442837),
     s = n(481060),
-    c = n(493683),
-    u = n(239091),
-    d = n(443589),
-    p = n(703656),
-    h = n(592125),
-    f = n(131951),
-    g = n(699516),
-    m = n(51144),
-    b = n(298213),
-    _ = n(321488),
-    E = n(417183),
-    O = n(825682),
-    y = n(170245),
-    I = n(981631),
-    v = n(65154),
-    C = n(388032),
-    S = n(887563);
-function N(e, t, n) {
+    c = n(668781),
+    u = n(493683),
+    d = n(239091),
+    p = n(443589),
+    h = n(703656),
+    f = n(592125),
+    g = n(131951),
+    m = n(699516),
+    b = n(51144),
+    _ = n(298213),
+    E = n(321488),
+    O = n(417183),
+    y = n(825682),
+    I = n(170245),
+    v = n(981631),
+    C = n(65154),
+    S = n(388032),
+    N = n(887563);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,119 +36,71 @@ function N(e, t, n) {
         e
     );
 }
-function T(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
-            )),
-            r.forEach(function (t) {
-                N(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function P(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-function j(e) {
+function P(e) {
     let { user: t, applicationId: n, isGameRelationship: l, onSelect: a } = e,
-        d = i.useCallback(() => {
-            c.Z.openPrivateChannel({
+        p = i.useCallback(() => {
+            u.Z.openPrivateChannel({
                 recipientIds: t.id,
                 joinCall: !0
             });
         }, [t.id]),
-        p = i.useCallback(() => {
-            c.Z.openPrivateChannel({
+        h = i.useCallback(() => {
+            u.Z.openPrivateChannel({
                 recipientIds: t.id,
                 joinCall: !0,
                 joinCallVideo: !0
             });
         }, [t.id]),
-        h = i.useCallback(() => {
-            b.Z.removeFriend({
+        f = i.useCallback(() => {
+            _.Z.removeFriend({
                 userId: t.id,
                 applicationId: l ? n : null,
                 location: 'Friends'
             });
         }, [n, l, t.id]),
-        g = i.useCallback(() => {
-            let e = l ? C.intl.string(C.t['RLcE6+']) : C.intl.string(C.t.cvSt1N);
-            (0, s.h7j)((n) =>
-                (0, r.jsx)(
-                    s.ConfirmModal,
-                    P(
-                        T(
-                            {
-                                header: C.intl.formatToPlainString(C.t.fPLvZW, { name: m.ZP.getName(t) }),
-                                confirmText: e,
-                                cancelText: C.intl.string(C.t['ETE/oK']),
-                                onConfirm: h
-                            },
-                            n
-                        ),
-                        {
-                            children: (0, r.jsx)(s.Text, {
-                                variant: 'text-md/normal',
-                                children: C.intl.format(C.t.l5FFq6, { name: m.ZP.getName(t) })
-                            })
-                        }
-                    )
-                )
-            );
-        }, [h, l, t]),
-        _ = (0, o.e7)([f.Z], () => f.Z.supports(v.AN.VIDEO)),
-        E = t.isProvisional,
-        O = l ? C.intl.string(C.t['RLcE6+']) : C.intl.string(C.t.cvSt1N);
+        m = i.useCallback(() => {
+            let e = l ? S.intl.string(S.t['RLcE6+']) : S.intl.string(S.t.cvSt1N);
+            c.Z.show({
+                title: S.intl.formatToPlainString(S.t.fPLvZW, { name: b.ZP.getName(t) }),
+                body: S.intl.formatToPlainString(S.t.l5FFq6, { name: b.ZP.getName(t) }),
+                confirmText: e,
+                confirmVariant: 'critical-primary',
+                cancelText: S.intl.string(S.t['ETE/oK']),
+                onConfirm: f
+            });
+        }, [f, l, t]),
+        E = (0, o.e7)([g.Z], () => g.Z.supports(C.AN.VIDEO)),
+        O = t.isProvisional,
+        y = l ? S.intl.string(S.t['RLcE6+']) : S.intl.string(S.t.cvSt1N);
     return (0, r.jsxs)(s.v2r, {
         navId: 'friend-row',
-        'aria-label': C.intl.string(C.t.liqwPD),
-        onClose: u.Zy,
+        'aria-label': S.intl.string(S.t.liqwPD),
+        onClose: d.Zy,
         onSelect: a,
         children: [
-            !E && _
+            !O && E
                 ? (0, r.jsx)(s.sNh, {
                       id: 'start-video-call',
-                      label: C.intl.string(C.t.oCqlGB),
-                      action: p
+                      label: S.intl.string(S.t.oCqlGB),
+                      action: h
                   })
                 : null,
-            !E &&
+            !O &&
                 (0, r.jsx)(s.sNh, {
                     id: 'start-voice-call',
-                    label: C.intl.string(C.t.focH1t),
-                    action: d
+                    label: S.intl.string(S.t.focH1t),
+                    action: p
                 }),
             (0, r.jsx)(s.sNh, {
                 id: 'remove-friend',
-                label: O,
-                action: g,
+                label: y,
+                action: m,
                 color: 'danger'
             })
         ]
     });
 }
-class A extends i.PureComponent {
+class j extends i.PureComponent {
     componentWillLeave(e) {
         null != this.peopleListItemRef.current && this.peopleListItemRef.current.componentWillLeave(e);
     }
@@ -156,52 +109,52 @@ class A extends i.PureComponent {
     }
     render() {
         let { user: e, isFocused: t, activities: n, applicationStream: i, status: l, isMobile: a, isGameRelationship: o, giftIntentType: c } = this.props,
-            { isActiveRow: p } = this.state;
-        return (0, r.jsx)(E.Z, {
+            { isActiveRow: u } = this.state;
+        return (0, r.jsx)(O.Z, {
             ref: this.peopleListItemRef,
             isFocused: t,
-            isActive: p,
+            isActive: u,
             user: e,
-            onOtherHover: () => (p ? null : (0, u.Zy)()),
+            onOtherHover: () => (u ? null : (0, d.Zy)()),
             onClick: this.handleOpenPrivateChannel,
             children: (t) =>
                 (0, r.jsxs)('div', {
-                    className: S.listItemContents,
+                    className: N.listItemContents,
                     children: [
-                        (0, r.jsx)(y.Z, {
+                        (0, r.jsx)(I.Z, {
                             user: e,
                             status: l,
                             isMobile: a,
-                            subText: (0, r.jsx)(O.Z, {
+                            subText: (0, r.jsx)(y.Z, {
                                 hovered: t,
                                 activities: n,
                                 applicationStream: i,
                                 status: l,
                                 user: e,
-                                userIgnored: g.Z.isIgnored(e.id)
+                                userIgnored: m.Z.isIgnored(e.id)
                             }),
                             hovered: t,
                             showAccountIdentifier: !o && !e.isProvisional
                         }),
                         (0, r.jsxs)('div', {
-                            className: S.actions,
+                            className: N.actions,
                             children: [
                                 null != c &&
-                                    (0, r.jsx)(d.Z, {
+                                    (0, r.jsx)(p.Z, {
                                         recipientUser: e,
                                         giftIntentType: c,
-                                        analyticsPage: I.ZY5.FRIENDS_LIST,
+                                        analyticsPage: v.ZY5.FRIENDS_LIST,
                                         shouldHighlight: t
                                     }),
-                                (0, r.jsx)(_.Z, {
+                                (0, r.jsx)(E.Z, {
                                     icon: s.kBi,
-                                    tooltip: C.intl.string(C.t['g33r/P']),
+                                    tooltip: S.intl.string(S.t['g33r/P']),
                                     onClick: this.handleOpenPrivateChannel,
                                     shouldHighlight: t
                                 }),
-                                (0, r.jsx)(_.Z, {
+                                (0, r.jsx)(E.Z, {
                                     icon: s.Huf,
-                                    tooltip: C.intl.string(C.t.UKOtz8),
+                                    tooltip: S.intl.string(S.t.UKOtz8),
                                     onClick: this.handleOpenActionsMenu,
                                     shouldHighlight: t
                                 })
@@ -213,27 +166,59 @@ class A extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            N(this, 'peopleListItemRef', i.createRef()),
-            N(this, 'state', { isActiveRow: !1 }),
-            N(this, 'handleOpenPrivateChannel', (e) => {
+            T(this, 'peopleListItemRef', i.createRef()),
+            T(this, 'state', { isActiveRow: !1 }),
+            T(this, 'handleOpenPrivateChannel', (e) => {
                 let { user: t } = this.props;
                 e.stopPropagation();
-                let n = a().find(h.Z.getMutablePrivateChannels(), (e) => e.type === I.d4z.DM && e.getRecipientId() === t.id);
-                null != n ? (0, p.uL)(I.Z5c.CHANNEL(I.ME, n.id)) : c.Z.openPrivateChannel({ recipientIds: t.id });
+                let n = a().find(f.Z.getMutablePrivateChannels(), (e) => e.type === v.d4z.DM && e.getRecipientId() === t.id);
+                null != n ? (0, h.uL)(v.Z5c.CHANNEL(v.ME, n.id)) : u.Z.openPrivateChannel({ recipientIds: t.id });
             }),
-            N(this, 'handleOpenActionsMenu', (e) => {
+            T(this, 'handleOpenActionsMenu', (e) => {
                 let { user: t, isGameRelationship: n, applicationId: i } = this.props;
-                (0, u.vq)(
+                (0, d.vq)(
                     e,
-                    (e) =>
-                        (0, r.jsx)(
-                            j,
-                            P(T({}, e), {
-                                user: t,
-                                applicationId: i,
-                                isGameRelationship: n
-                            })
-                        ),
+                    (e) => {
+                        var l, a;
+                        return (0, r.jsx)(
+                            P,
+                            ((l = (function (e) {
+                                for (var t = 1; t < arguments.length; t++) {
+                                    var n = null != arguments[t] ? arguments[t] : {},
+                                        r = Object.keys(n);
+                                    'function' == typeof Object.getOwnPropertySymbols &&
+                                        (r = r.concat(
+                                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                            })
+                                        )),
+                                        r.forEach(function (t) {
+                                            T(e, t, n[t]);
+                                        });
+                                }
+                                return e;
+                            })({}, e)),
+                            (a = a =
+                                {
+                                    user: t,
+                                    applicationId: i,
+                                    isGameRelationship: n
+                                }),
+                            Object.getOwnPropertyDescriptors
+                                ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
+                                : (function (e, t) {
+                                      var n = Object.keys(e);
+                                      if (Object.getOwnPropertySymbols) {
+                                          var r = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, r);
+                                      }
+                                      return n;
+                                  })(Object(a)).forEach(function (e) {
+                                      Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
+                                  }),
+                            l)
+                        );
+                    },
                     {
                         onClose: () => {
                             this.setState({ isActiveRow: !1 });
@@ -244,4 +229,4 @@ class A extends i.PureComponent {
             });
     }
 }
-let Z = A;
+let A = j;

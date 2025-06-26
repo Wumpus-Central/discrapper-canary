@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685), n(65234), n(111804), n(490233), n(97749), n(35282);
+n.d(t, { Z: () => C }), n(388685), n(65234), n(111804), n(490233), n(97749), n(35282);
 var i = n(255367),
     r = n(73800),
     s = n(622535),
@@ -18,12 +18,12 @@ var i = n(255367),
     x = n(388032),
     E = n(614729),
     j = n(865215);
-let O = () => {
+let C = () => {
     (0, d.z)(c.X);
     let e = r.useRef(null),
         t = r.useRef(null),
-        [n, O] = r.useState(!1),
-        { analyticsLocations: C } = (0, o.ZP)(a.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
+        [n, C] = r.useState(!1),
+        { analyticsLocations: O } = (0, o.ZP)(a.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [S, v] = r.useState(!1),
         T = 'true' === new URLSearchParams(window.location.search).get('autoScroll');
     return (
@@ -36,7 +36,7 @@ let O = () => {
                     children: (0, i.jsx)('div', {
                         className: E.container,
                         children: (0, i.jsxs)(o.Gt, {
-                            value: C,
+                            value: O,
                             children: [
                                 (0, i.jsx)(p.Z, {
                                     className: E.heroHeading,
@@ -55,7 +55,7 @@ let O = () => {
                                     noBackground: !0,
                                     leftAlignHeaders: !0,
                                     showAllPerksButton: (0, i.jsx)(b.Z, {
-                                        setIsAllPerksVisible: O,
+                                        setIsAllPerksVisible: C,
                                         previousComponent: h.MQ.HOME
                                     })
                                 }),
@@ -71,7 +71,7 @@ let O = () => {
                                 (0, i.jsx)(s.$, {
                                     innerRef: t,
                                     onChange: (e) => {
-                                        e && !S && (u.default.track(_.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: C }), v(!0));
+                                        e && !S && (u.default.track(_.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: O }), v(!0));
                                     },
                                     children: (0, i.jsx)('div', {
                                         ref: t,
@@ -91,7 +91,7 @@ let O = () => {
                 }),
                 (0, i.jsx)(f.Z, {
                     isAllPerksVisible: n,
-                    setIsAllPerksVisible: O,
+                    setIsAllPerksVisible: C,
                     previousComponent: h.MQ.HOME
                 })
             ]

@@ -61,7 +61,7 @@ function _(e, t) {
 }
 let p = {
     show(e) {
-        let { title: t, body: n, confirmColor: u, confirmText: f, confirmVariant: p, cancelText: h, onConfirm: m, onCancel: g, onCloseCallback: E, secondaryConfirmText: b, onConfirmSecondary: y, className: O, titleClassName: v, contextKey: I } = e,
+        let { title: t, body: n, confirmColor: u, confirmText: f, confirmVariant: p = 'primary', cancelText: h, onConfirm: m, onCancel: g, onCloseCallback: E, secondaryConfirmText: b, onConfirmSecondary: y, className: O, titleClassName: v, contextKey: I } = e,
             T = l.Z.getCurrentConfig({ location: 'AlertActionCreators' }, { autoTrackExposure: !0 }).enabled;
         (0, i.h7)(
             (e) => {
@@ -82,7 +82,7 @@ let p = {
                             onClick: () => {
                                 null == m || m(), e.onClose();
                             },
-                            variant: null != p ? p : u === o.Ttl.RED ? 'critical-primary' : 'primary'
+                            variant: p
                         }),
                         (0, r.jsx)(
                             a.u,
@@ -100,7 +100,7 @@ let p = {
                     _(d({}, e), {
                         title: t,
                         body: n,
-                        confirmColor: u,
+                        confirmColor: 'critical-primary' === p ? o.Ttl.RED : o.Ttl.BRAND,
                         confirmText: f,
                         cancelText: h,
                         onConfirm: m,

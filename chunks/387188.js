@@ -46,7 +46,7 @@ function y(e) {
                 );
         }, [s, d, t.id]);
     return (0, r.jsx)(c.P3F, {
-        className: a()(n, b.clickableEmoji),
+        className: a()(n, b.ctaReactionButton),
         onClick: p,
         onMouseEnter: () => o(!0),
         onMouseLeave: () => o(!1),

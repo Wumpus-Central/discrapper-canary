@@ -124,7 +124,7 @@ let E = (e) => {
                     })
                 );
     },
-    O = (e) => {
+    C = (e) => {
         let { orbPriceAmount: t, skuId: n } = e,
             { skusById: s } = (0, d.Z)({
                 applicationId: (0, g.N)(n),
@@ -146,7 +146,7 @@ let E = (e) => {
                   value: (0, i.jsx)(E, { orbAmount: t })
               });
     },
-    C = (e) => {
+    O = (e) => {
         let { orbBalance: t } = e;
         return (0, i.jsxs)('div', {
             className: b.paymentSourceWrapper,
@@ -194,11 +194,11 @@ let E = (e) => {
                     tag: r.RB0.H5,
                     children: f.intl.string(f.t.sail9P)
                 }),
-                (0, i.jsx)(O, {
+                (0, i.jsx)(C, {
                     skuId: t,
                     orbPriceAmount: n
                 }),
-                (0, i.jsx)(C, { orbBalance: a }),
+                (0, i.jsx)(O, { orbBalance: a }),
                 (0, i.jsx)(l.Z, {
                     forceShow: !0,
                     onChange: h.dG4,

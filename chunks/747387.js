@@ -5,8 +5,8 @@ var n = r(255367),
     c = r(15155),
     o = r(772848),
     s = r(286379),
-    p = r(343817),
-    l = r(797614),
+    l = r(343817),
+    p = r(797614),
     d = r(626135),
     u = r(353250),
     h = r(599857),
@@ -55,7 +55,7 @@ function b(e, t) {
     );
 }
 let v = (e) => {
-    var { captchaService: t = p.hP.RECAPTCHA, sitekey: r, rqdata: v, onRender: m, onVerify: O, onError: g, onOpen: C, onClose: E, onChalExpired: j, size: w, userflow: _ } = e,
+    var { captchaService: t = l.hP.RECAPTCHA, sitekey: r, rqdata: v, onRender: m, onVerify: O, onError: g, onOpen: C, onClose: E, onChalExpired: j, size: w, userflow: _ } = e,
         R = (function (e, t) {
             if (null == e) return {};
             var r,
@@ -91,7 +91,7 @@ let v = (e) => {
         ),
         I = a.useCallback(
             (e) => {
-                l.Z.increment({
+                p.Z.increment({
                     name: s.V.CAPTCHA_EVENT,
                     tags: ['event_name:'.concat(e), 'captcha_service:'.concat(t)]
                 });
@@ -99,7 +99,7 @@ let v = (e) => {
             [t]
         ),
         D = a.useCallback(() => {
-            if (t === p.hP.HCAPTCHA) {
+            if (t === l.hP.HCAPTCHA) {
                 var e, r;
                 null != v && '' !== v && null != x.current && (null == (e = x.current) || e.setData({ rqdata: v })), 'invisible' === w && null != x.current && (null == (r = x.current) || r.execute());
             }
@@ -134,7 +134,7 @@ let v = (e) => {
         q = a.useCallback(() => {
             A('chal-expire'), null == j || j();
         }, [j, A]);
-    return ((null == r || '' === r) && (r = f.OL7), t === p.hP.RECAPTCHA)
+    return ((null == r || '' === r) && (r = f.OL7), t === l.hP.RECAPTCHA)
         ? (0, n.jsx)(
               c.Z,
               b(y({}, R), {
@@ -145,7 +145,7 @@ let v = (e) => {
                   sitekey: r
               })
           )
-        : t === p.hP.RECAPTCHA_ENTERPRISE
+        : t === l.hP.RECAPTCHA_ENTERPRISE
           ? (0, n.jsx)(
                 h._,
                 b(y({}, R), {
@@ -157,7 +157,7 @@ let v = (e) => {
                     action: _
                 })
             )
-          : t === p.hP.HCAPTCHA
+          : t === l.hP.HCAPTCHA
             ? (0, n.jsx)(
                   i.Z,
                   b(y({ ref: x }, R), {

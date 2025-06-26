@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -42,7 +42,7 @@ function j(e) {
     }
     return e;
 }
-function O(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,12 +60,12 @@ function O(e, t) {
         e
     );
 }
-function C(e) {
-    let { onLearnMore: t, selectedBackgroundOption: C, onSelectBackgroundOption: S, currentDeviceId: v, smallerBackgroundOptions: T, className: N } = e,
-        I = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
+function O(e) {
+    let { onLearnMore: t, selectedBackgroundOption: O, onSelectBackgroundOption: S, currentDeviceId: v, smallerBackgroundOptions: T, className: I } = e,
+        N = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
         [y, A] = r.useState(null),
         P = (0, p.Z)(),
-        R = c.ZP.canUseCustomBackgrounds(I);
+        R = c.ZP.canUseCustomBackgrounds(N);
     r.useEffect(() => {
         (0, d.XV)();
     }, []);
@@ -75,7 +75,7 @@ function C(e) {
         k = {
             isVideoBackgroundSupported: P,
             onSelectBackgroundOption: S,
-            selectedBackgroundOption: C
+            selectedBackgroundOption: O
         },
         L = r.useRef(k);
     r.useEffect(() => {
@@ -96,7 +96,7 @@ function C(e) {
     return P
         ? (0, i.jsxs)(l.xJW, {
               title: x.intl.string(x.t.lZTUPj),
-              className: N,
+              className: I,
               children: [
                   null != y
                       ? (0, i.jsx)(l.kzN, {
@@ -107,7 +107,7 @@ function C(e) {
                   (0, i.jsx)(h.Z, {
                       canUseCustomBackgrounds: R,
                       customBackgroundOptions: Z,
-                      selectedOption: C,
+                      selectedOption: O,
                       onSelectOption: B,
                       onUpsellClick: () => {
                           (0, l.ZDy)(async () => {
@@ -115,9 +115,9 @@ function C(e) {
                               return (n) =>
                                   (0, i.jsx)(
                                       e,
-                                      O(j({}, n), {
+                                      C(j({}, n), {
                                           onLearnMore: t,
-                                          analyticsSource: O(j({}, w.location), { object: b.qAy.BUTTON_CTA })
+                                          analyticsSource: C(j({}, w.location), { object: b.qAy.BUTTON_CTA })
                                       })
                                   );
                           });

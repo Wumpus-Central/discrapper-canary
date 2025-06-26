@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -47,13 +47,13 @@ let j = [
         value: 'custom'
     }
 ];
-function O() {
+function C() {
     let [e, t] = r.useState(Math.round((window.outerWidth / window.innerWidth) * 100)),
         { platformZoom: n, theme: s } = (0, a.cj)([b.Z, g.Z], () => ({
             theme: b.Z.theme,
             platformZoom: g.Z.zoom
         })),
-        [O, C] = r.useState('upright'),
+        [C, O] = r.useState('upright'),
         S = ['normal', 'medium', 'semibold', 'bold', 'extrabold'],
         v = new Map([
             ['normal', 400],
@@ -69,11 +69,11 @@ function O() {
             });
     }, []);
     let T = f.isPlatformEmbedded ? n : e,
-        N = (0, a.e7)([p.C], () => {
+        I = (0, a.e7)([p.C], () => {
             var e, t;
             return (0, h.fD)() ? (null == (t = p.C.getCurrentBuildOverride()) || null == (e = t.overrides) ? void 0 : e.discord_web) : null;
         }),
-        [I, y] = (0, m.R)('playground-overrideText', null),
+        [N, y] = (0, m.R)('playground-overrideText', null),
         [A, P] = (0, m.R)('playground-defaultText', j[0].value),
         R = r.useCallback(
             (e) => {
@@ -88,8 +88,8 @@ function O() {
     return (0, i.jsx)('div', {
         className: E.fullscreen,
         style: {
-            '--playground-font-family': 'mono' === O ? 'gg mono' : 'gg sans',
-            '--playground-font-style': 'italic' === O ? 'italic' : 'normal'
+            '--playground-font-family': 'mono' === C ? 'gg mono' : 'gg sans',
+            '--playground-font-style': 'italic' === C ? 'italic' : 'normal'
         },
         children: (0, i.jsxs)(o.hjN, {
             tag: o.RB0.H1,
@@ -105,7 +105,7 @@ function O() {
                                     style: { display: 'inline-block' },
                                     children: ['Zoom: ', T, '%']
                                 }),
-                                null != N
+                                null != I
                                     ? (0, i.jsxs)(o.Text, {
                                           tag: 'div',
                                           variant: 'heading-lg/bold',
@@ -114,7 +114,7 @@ function O() {
                                               marginLeft: '1em'
                                           },
                                           color: 'header-secondary',
-                                          children: ['(', N.id, ')']
+                                          children: ['(', I.id, ')']
                                       })
                                     : null
                             ]
@@ -132,7 +132,7 @@ function O() {
                                 className: E.input,
                                 children: (0, i.jsx)(o.oil, {
                                     placeholder: 'Enter custom input...',
-                                    value: null != I ? I : '',
+                                    value: null != N ? N : '',
                                     onChange: R
                                 })
                             })
@@ -178,9 +178,9 @@ function O() {
                                     }
                                 ],
                                 onChange: (e) => {
-                                    C(e.value);
+                                    O(e.value);
                                 },
-                                value: O
+                                value: C
                             })
                         }),
                         (0, i.jsx)(u.Z, {
@@ -233,7 +233,7 @@ function O() {
                                         ),
                                         S.map((t) => {
                                             var n;
-                                            let r = null != (n = 'custom' === A ? I : A) ? n : '';
+                                            let r = null != (n = 'custom' === A ? N : A) ? n : '';
                                             return (0, i.jsx)(
                                                 'div',
                                                 {

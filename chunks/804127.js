@@ -42,12 +42,12 @@ function l(e) {
 function d(e) {
     var t;
     let { claimCode: r, fetchCode: i, hasError: l, onDismiss: d, quest: c, questContent: u, questContentCTA: p = s.jZ.GET_REWARD_CODE, questContentPosition: _, requiresPlatformSelection: m, selectedPlatformType: f, redemptionLink: C, sourceQuestContent: g } = e,
-        b = (0, s.O5)();
+        h = (0, s.O5)();
     return n.useCallback(() => {
         var e;
         m && null != f
             ? (r(c.id, f, u),
-              b({
+              h({
                   questId: c.id,
                   questContent: u,
                   questContentCTA: p,
@@ -59,7 +59,7 @@ function d(e) {
                   ? i(c.id)
                   : null != f &&
                     (r(c.id, f, u),
-                    b({
+                    h({
                         questId: c.id,
                         questContent: u,
                         questContentCTA: p,
@@ -67,7 +67,7 @@ function d(e) {
                         sourceQuestContent: g
                     }))
               : (null != C &&
-                    (b({
+                    (h({
                         questId: c.id,
                         questContent: u,
                         questContentCTA: s.jZ.REDEEM_REWARD,
@@ -77,7 +77,7 @@ function d(e) {
                     (0, a.q)({
                         href: C,
                         onConfirm: () => {
-                            b({
+                            h({
                                 questId: c.id,
                                 questContent: u,
                                 questContentCTA: s.jZ.VISIT_REDEMPTION_LINK,
@@ -88,5 +88,5 @@ function d(e) {
                         }
                     })),
                 d());
-    }, [r, i, l, d, c.id, null == (t = c.userStatus) ? void 0 : t.claimedAt, u, p, _, m, f, b, C, g]);
+    }, [r, i, l, d, c.id, null == (t = c.userStatus) ? void 0 : t.claimedAt, u, p, _, m, f, h, C, g]);
 }

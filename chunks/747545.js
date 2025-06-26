@@ -1,6 +1,6 @@
 n.d(t, {
-    S: () => N,
-    Z: () => I
+    S: () => I,
+    Z: () => N
 }),
     n(704826),
     n(35282),
@@ -25,12 +25,12 @@ var i = n(255367),
     x = n(131951),
     E = n(626135),
     j = n(358085),
-    O = n(981631),
-    C = n(726985),
+    C = n(981631),
+    O = n(726985),
     S = n(388032),
     v = n(602985);
 let T = /\{65E8773D-8F56-11D0-A3B9-00A0C9223196\}/i;
-function N() {
+function I() {
     let [e, t] = r.useState(!1),
         n = (0, c.e7)([x.Z], () => x.Z.isMediaFilterSettingLoading());
     return (r.useEffect(() => {
@@ -51,8 +51,8 @@ function N() {
           })
         : null;
 }
-function I(e) {
-    let { hideDeviceSelector: t = !1, hideDeviceHeader: n = !1, hideCameraSettingsLink: r = !1, onLearnMore: s, selectedBackgroundOption: a, onSelectBackgroundOption: d, renderCamera: N, hidePreviewToggle: I = !1, showSmallBackgroundOptions: y = !1, onCancelPreview: A } = e,
+function N(e) {
+    let { hideDeviceSelector: t = !1, hideDeviceHeader: n = !1, hideCameraSettingsLink: r = !1, onLearnMore: s, selectedBackgroundOption: a, onSelectBackgroundOption: d, renderCamera: I, hidePreviewToggle: N = !1, showSmallBackgroundOptions: y = !1, onCancelPreview: A } = e,
         { analyticsLocations: P } = (0, p.ZP)(),
         { currentDeviceId: R, isVideoAvailable: D } = (0, c.cj)([x.Z], () => ({
             currentDeviceId: x.Z.getVideoDeviceId(),
@@ -69,7 +69,7 @@ function I(e) {
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            N(R),
+            I(R),
             x.Z.isEnabled()
                 ? null
                 : (0, i.jsx)(u.Text, {
@@ -78,13 +78,13 @@ function I(e) {
                       variant: 'text-sm/normal',
                       children: S.intl.format(S.t.stagfH, { onEnableClick: () => m.Z.enable(!0) })
                   }),
-            I
+            N
                 ? null
                 : (0, i.jsx)(u.j7V, {
                       className: v.previewToggle,
                       note: S.intl.string(S.t.WNbX4O),
                       onChange: (e) => {
-                          b.qF.updateSetting(e), E.default.track(O.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
+                          b.qF.updateSetting(e), E.default.track(C.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
                       },
                       value: w,
                       hideBorder: !0,
@@ -95,7 +95,7 @@ function I(e) {
                   }),
             !t &&
                 (0, i.jsx)(f.F, {
-                    setting: C.s6.VOICE_AND_VIDEO_VIDEO_CAMERA_PREVIEW,
+                    setting: O.s6.VOICE_AND_VIDEO_VIDEO_CAMERA_PREVIEW,
                     children: (0, i.jsxs)(u.xJW, {
                         title: n ? null : S.intl.string(S.t.FsQ3OT),
                         children: [
@@ -116,7 +116,7 @@ function I(e) {
                                     className: v.cameraDeeplink,
                                     children: S.intl.format(S.t.aJYgRk, {
                                         onCameraSettingsClick: () => {
-                                            null == A || A(), window.open((0, j.getPlatform)() === j.PlatformTypes.WINDOWS ? 'ms-settings:camera' + (null != R ? '?cameraId='.concat(encodeURIComponent(R.replace(T, '{E5323777-F976-4f5b-9B55-B94699C46E44}'))) : '') : ''), E.default.track(O.rMx.SYSTEM_CAMERA_SETTINGS_OPENED, { location_stack: P });
+                                            null == A || A(), window.open((0, j.getPlatform)() === j.PlatformTypes.WINDOWS ? 'ms-settings:camera' + (null != R ? '?cameraId='.concat(encodeURIComponent(R.replace(T, '{E5323777-F976-4f5b-9B55-B94699C46E44}'))) : '') : ''), E.default.track(C.rMx.SYSTEM_CAMERA_SETTINGS_OPENED, { location_stack: P });
                                         }
                                     })
                                 })
@@ -124,7 +124,7 @@ function I(e) {
                     })
                 }),
             (0, i.jsx)(f.F, {
-                setting: C.s6.VOICE_AND_VIDEO_VIDEO_BACKGROUND,
+                setting: O.s6.VOICE_AND_VIDEO_VIDEO_BACKGROUND,
                 children: (0, i.jsx)(_.Z, {
                     className: v.spacingTop24,
                     onLearnMore: s,

@@ -54,7 +54,7 @@ function C() {
                 className: n ? void 0 : b.premiumOption
             };
         }),
-        U = p.YX.map((e) => {
+        G = p.YX.map((e) => {
             let t = (0, c.Z)(C, _.LY.RESOLUTION_720, e, N, w);
             return {
                 value: e,
@@ -119,7 +119,7 @@ function C() {
                 children: (0, r.jsx)(s.sY7, {
                     className: b.segmentedControl,
                     disabled: D,
-                    options: U,
+                    options: G,
                     value: L,
                     look: 'pill',
                     onChange: (e) =>

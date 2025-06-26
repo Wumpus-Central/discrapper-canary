@@ -2474,7 +2474,6 @@ var tk = (function (e) {
             (e.UPSELL_HEADER = 'Upsell Header'),
             (e.TRY_IT_CTA = 'Try It CTA'),
             (e.GIFTING_PROMOTION_BUTTON = 'Gifting promotion icon'),
-            (e.NITROWEEN_BUTTON_ICON = 'Nitroween button icon'),
             (e.SERVER_BANNER_TOOLTIP = 'Server Banner Tooltip'),
             (e.THREAD_ARCHIVE_DURATION_DROPDOWN = 'Thread Archive Duration Dropdown'),
             (e.BOOST_SERVER_CTA = 'Boost This Server CTA'),

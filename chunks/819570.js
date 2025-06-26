@@ -1,5 +1,5 @@
 n.d(t, {
-    E: () => i,
+    E: () => o,
     M: () => a
 });
 var r = n(818083),
@@ -18,4 +18,4 @@ let a = (0, r.B)({
         ],
         commonTriggerPoint: l.$P.COLLECTIBLES_SHOP_OPEN
     }),
-    i = (e) => a.useExperiment({ location: e }).hideStrikethroughPrice;
+    o = (e) => a.useExperiment({ location: e }).hideStrikethroughPrice;

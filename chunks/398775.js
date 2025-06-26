@@ -1,6 +1,6 @@
 n.d(t, {
-    Sz: () => C,
-    of: () => O
+    Sz: () => O,
+    of: () => C
 }),
     n(539854),
     n(388685),
@@ -44,7 +44,7 @@ async function j(e) {
         r(!0), s(!1);
     }
 }
-function O(e) {
+function C(e) {
     let { premiumType: t, onClose: n, pauseDuration: s, setPauseDuration: l, footer: o, premiumSubscription: d } = e,
         m = r.useCallback(
             (e) => {
@@ -121,30 +121,30 @@ function O(e) {
         })
     );
 }
-function C(e) {
+function O(e) {
     let { premiumSubscription: t, premiumType: n, onClose: s, pauseDuration: a, analyticsLocation: d } = e,
         [u, h] = r.useState(!1),
         { analyticsLocations: f } = (0, g.ZP)(),
-        [O, C] = r.useState(!1),
+        [C, O] = r.useState(!1),
         S = (0, m.ZP)(),
         v = null,
         T = null,
-        N = [_.O0b.PAST_DUE, _.O0b.PAUSED].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd,
-        I = l()(N).add(a, 'days').toDate();
+        I = [_.O0b.PAST_DUE, _.O0b.PAUSED].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd,
+        N = l()(I).add(a, 'days').toDate();
     switch (t.status) {
         case _.O0b.PAST_DUE:
             T = x.intl.format(x.t['xaS18/'], {
                 pauseDuration: a,
-                resumeDate: I
+                resumeDate: N
             });
             break;
         case _.O0b.PAUSED:
-            T = x.intl.format(x.t.Vur3FR, { resumeDate: I });
+            T = x.intl.format(x.t.Vur3FR, { resumeDate: N });
             break;
         default:
             T = x.intl.format(x.t.W85vFB, {
-                pauseDate: N,
-                resumeDate: I,
+                pauseDate: I,
+                resumeDate: N,
                 pauseDuration: a
             });
     }
@@ -189,12 +189,12 @@ function C(e) {
                         children: [
                             (0, i.jsx)(c.zxk, {
                                 color: c.zxk.Colors.RED,
-                                disabled: O || null == a,
+                                disabled: C || null == a,
                                 onClick: async () => {
                                     await j({
                                         premiumSubscription: t,
                                         pauseDuration: a,
-                                        setIsCancelling: C,
+                                        setIsCancelling: O,
                                         setHasError: h,
                                         onClose: s,
                                         analyticsLocations: f,

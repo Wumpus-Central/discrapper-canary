@@ -1,26 +1,27 @@
-t.d(n, { Z: () => _ }), t(953529);
+t.d(n, { Z: () => C }), t(953529);
 var i = t(255367);
 t(73800);
 var s = t(120356),
     l = t.n(s),
     a = t(481060),
     r = t(600164),
-    o = t(788080),
-    c = t(548647),
-    d = t(696375),
-    x = t(97568),
-    m = t(800530),
-    u = t(388032),
+    o = t(531441),
+    c = t(788080),
+    d = t(548647),
+    x = t(696375),
+    m = t(97568),
+    u = t(800530),
+    _ = t(388032),
     h = t(91463);
-function _(e) {
+function C(e) {
     var n, t;
-    let { classification: s, isDsaEligible: _ = !1, isSpam: C = !1, isCoppa: p = !1, className: N, onClose: g, onNext: j } = e,
-        I = (0, c.n)(),
-        k = null != (n = null == s ? void 0 : s.explainer_link) ? n : '',
-        E = null != s && null != s.flagged_content && s.flagged_content.length > 0,
-        T = (0, o.c7)(null == s ? void 0 : s.description),
-        f = !C && !p,
-        S = null != s && ((0, o.FB)(s) || E);
+    let { classification: s, isDsaEligible: C = !1, isSpam: p = !1, isCoppa: N = !1, appealIngestionType: g, className: j, onClose: I, onNext: k } = e,
+        E = (0, d.n)(),
+        T = null != (n = null == s ? void 0 : s.explainer_link) ? n : '',
+        f = null != s && null != s.flagged_content && s.flagged_content.length > 0,
+        A = (0, c.c7)(null == s ? void 0 : s.description),
+        S = !p && !N && (null == g || g === o.j4.IN_APP),
+        v = null != s && ((0, c.FB)(s) || f);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(a.xBx, {
@@ -31,73 +32,73 @@ function _(e) {
                     (0, i.jsx)(a.X6q, {
                         className: h.title,
                         variant: 'heading-xl/semibold',
-                        children: u.intl.string(u.t['C5q+pa'])
+                        children: _.intl.string(_.t['C5q+pa'])
                     }),
                     (0, i.jsx)(a.Text, {
                         className: h.subtitle,
                         color: 'header-secondary',
                         variant: 'text-md/normal',
-                        children: u.intl.string(u.t.URt7VF)
+                        children: _.intl.string(_.t.URt7VF)
                     }),
-                    null != g &&
+                    null != I &&
                         (0, i.jsx)(a.olH, {
                             className: h.closeButton,
-                            onClick: g
+                            onClick: I
                         })
                 ]
             }),
             (0, i.jsxs)(a.hzk, {
-                className: l()(h.modalContent, !S && h.evidenceOffset, N),
+                className: l()(h.modalContent, !v && h.evidenceOffset, j),
                 paddingFix: !1,
                 children: [
-                    S && (0, i.jsx)(x.s, { flaggedContent: null != (t = s.flagged_content) ? t : [] }),
+                    v && (0, i.jsx)(m.s, { flaggedContent: null != (t = s.flagged_content) ? t : [] }),
                     (0, i.jsx)(a.Text, {
                         className: h.optionHeader,
                         color: 'header-secondary',
                         variant: 'text-xs/bold',
-                        children: u.intl.string(u.t.xsdcxs)
+                        children: _.intl.string(_.t.xsdcxs)
                     }),
                     (0, i.jsx)('div', {
                         className: h.policyContainer,
                         children: (0, i.jsx)(a.Text, {
                             variant: 'text-md/semibold',
-                            children: T
+                            children: A
                         })
                     }),
+                    N &&
+                        (0, i.jsx)(x.Z, {
+                            url: u.sQ.AGE_VERIFICATION_LINK,
+                            text: _.intl.string(_.t['gJs+kZ']),
+                            onClick: () => E(u.n0.ClickAgeVerificationLink)
+                        }),
                     p &&
-                        (0, i.jsx)(d.Z, {
-                            url: m.sQ.AGE_VERIFICATION_LINK,
-                            text: u.intl.string(u.t['gJs+kZ']),
-                            onClick: () => I(m.n0.ClickAgeVerificationLink)
+                        !N &&
+                        (0, i.jsx)(x.Z, {
+                            url: u.sQ.SPAM_LINK,
+                            text: _.intl.string(_.t['PaNS+P']),
+                            onClick: () => E(u.n0.ClickSpamWebformLink)
                         }),
-                    C &&
-                        !p &&
-                        (0, i.jsx)(d.Z, {
-                            url: m.sQ.SPAM_LINK,
-                            text: u.intl.string(u.t['PaNS+P']),
-                            onClick: () => I(m.n0.ClickSpamWebformLink)
+                    !N &&
+                        (0, i.jsx)(x.Z, {
+                            text: _.intl.string(_.t['Vtyn//']),
+                            url: T,
+                            onClick: () => E(u.n0.ClickLearnMoreLink)
                         }),
-                    !p &&
-                        (0, i.jsx)(d.Z, {
-                            text: u.intl.string(u.t['Vtyn//']),
-                            url: k,
-                            onClick: () => I(m.n0.ClickLearnMoreLink)
-                        }),
-                    f &&
-                        _ &&
+                    S &&
+                        C &&
                         (0, i.jsx)(a.Text, {
                             className: h.learnMore,
                             variant: 'text-xs/normal',
-                            children: u.intl.format(u.t.WMUgCQ, {})
+                            children: _.intl.format(_.t.WMUgCQ, {})
                         })
                 ]
             }),
-            f &&
+            S &&
                 (0, i.jsx)(a.mzw, {
                     children: (0, i.jsx)(a.zxk, {
-                        onClick: j,
+                        onClick: k,
                         color: a.zxk.Colors.BRAND,
-                        children: u.intl.string(u.t.PDTjLC)
+                        children: _.intl.string(_.t.PDTjLC)
                     })
                 })
         ]

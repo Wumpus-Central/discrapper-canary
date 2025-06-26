@@ -59,33 +59,33 @@ function j(e, t) {
         e
     );
 }
-let O = {
+let C = {
         [h.cq.THUMBNAIL]: null,
         [h.cq.STATIC]: null,
         [h.cq.REDUCED_MOTION]: null
     },
-    C = 'debug',
+    O = 'debug',
     S = (e) => {
         let { effect: t } = e,
             { upsertConfig: n } = (0, p.n6)(),
             s = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
             [S, v] = r.useState(!0),
             T = r.useRef(null),
-            [N, I] = r.useState(!1),
+            [I, N] = r.useState(!1),
             [y, A] = r.useState(!1),
             [P, R] = r.useState([]),
-            [D, Z] = r.useState(O),
+            [D, Z] = r.useState(C),
             w = r.useRef([]),
             [k, L] = r.useState(t.name),
             B = k.toLowerCase().replace(/\s+/g, '_'),
             M = r.useMemo(
                 () => ({
                     type: a.Z.PROFILE_EFFECT,
-                    id: C,
-                    skuId: C,
-                    title: C,
-                    description: C,
-                    accessibilityLabel: C,
+                    id: O,
+                    skuId: O,
+                    title: O,
+                    description: O,
+                    accessibilityLabel: O,
                     reducedMotionSrc: '',
                     effects: P,
                     animationType: 0
@@ -191,7 +191,7 @@ let O = {
                               className: l()(b.col, b.preview),
                               children: [
                                   (0, i.jsx)('img', {
-                                      src: N ? _ : x,
+                                      src: I ? _ : x,
                                       alt: '',
                                       width: 450
                                   }),
@@ -230,10 +230,10 @@ let O = {
                                                   }),
                                                   (0, i.jsx)('input', {
                                                       type: 'checkbox',
-                                                      checked: N,
+                                                      checked: I,
                                                       className: b.checkBox,
                                                       onChange: () => {
-                                                          I(!N);
+                                                          N(!I);
                                                       }
                                                   })
                                               ]
@@ -468,7 +468,7 @@ let O = {
                                           color: c.Ttl.RED,
                                           look: c.iLD.OUTLINED,
                                           onClick: () => {
-                                              R([]), Z(O);
+                                              R([]), Z(C);
                                           },
                                           children: 'Clear Assets'
                                       })

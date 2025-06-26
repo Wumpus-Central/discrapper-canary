@@ -3,17 +3,17 @@ var r = n(255367);
 n(73800);
 var l = n(120356),
     a = n.n(l),
-    i = n(481060),
-    o = n(388032),
+    o = n(481060),
+    i = n(388032),
     s = n(44615);
 let c = (e) => {
     let { className: t, isPartiallyPurchased: n } = e;
     return n
-        ? (0, r.jsx)(i.ua7, {
+        ? (0, r.jsx)(o.ua7, {
               tooltipClassName: s.partiallyOwnedDisclaimer,
               position: 'top',
               align: 'left',
-              text: o.intl.string(o.t.y1VWkZ),
+              text: i.intl.string(i.t.y1VWkZ),
               children: (e) => {
                   var n, l;
                   return (0, r.jsxs)(
@@ -48,15 +48,15 @@ let c = (e) => {
                               children: [
                                   (0, r.jsx)('span', {
                                       className: s.iconWrapper,
-                                      children: (0, r.jsx)(i.d3s, {
+                                      children: (0, r.jsx)(o.d3s, {
                                           size: 'md',
                                           color: 'currentColor',
                                           className: s.infoIcon
                                       })
                                   }),
-                                  (0, r.jsx)(i.Text, {
+                                  (0, r.jsx)(o.Text, {
                                       variant: 'text-md/semibold',
-                                      children: o.intl.string(o.t.BEjTio)
+                                      children: i.intl.string(i.t.BEjTio)
                                   })
                               ]
                           }),
@@ -76,9 +76,9 @@ let c = (e) => {
                   );
               }
           })
-        : (0, r.jsx)(i.Text, {
+        : (0, r.jsx)(o.Text, {
               variant: 'text-md/semibold',
               className: t,
-              children: o.intl.string(o.t['6cfuDg'])
+              children: i.intl.string(i.t['6cfuDg'])
           });
 };

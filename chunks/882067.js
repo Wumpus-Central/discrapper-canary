@@ -13,7 +13,6 @@ e.exports = {
     justifyCenter: 'justifyCenter__956c6',
     questName: 'questName__956c6',
     header: 'header__956c6',
-    headerWithoutMargin: 'headerWithoutMargin__956c6',
     orbsBalanceIcon: 'orbsBalanceIcon__956c6',
     description: 'description__956c6',
     textOverflowBlur: 'textOverflowBlur__956c6'

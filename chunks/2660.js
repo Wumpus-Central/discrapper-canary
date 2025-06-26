@@ -4,20 +4,20 @@ n(73800);
 var s = n(442837),
     o = n(481060),
     i = n(204418),
-    a = n(594174),
-    l = n(113434),
+    l = n(594174),
+    a = n(113434),
     c = n(182294),
     u = n(723781);
 let d = (e) => {
         let { questConfig: t, fallback: n, isFocused: d } = e,
-            m = (0, s.e7)([a.default], () => a.default.getCurrentUser()),
-            { avatarDecoration: x, isFetching: p } = (0, l.DU)(t);
-        return p
+            m = (0, s.e7)([l.default], () => l.default.getCurrentUser()),
+            { avatarDecoration: p, isFetching: h } = (0, a.DU)(t);
+        return h
             ? (0, r.jsx)('div', {
                   className: u.questsCollectibleReward,
                   children: (0, r.jsx)(o.$jN, {})
               })
-            : null == m || null == x
+            : null == m || null == p
               ? n
               : (0, r.jsx)('div', {
                     className: u.questsCollectibleReward,
@@ -25,7 +25,7 @@ let d = (e) => {
                         avatarSize: c.EF.SIZE_56,
                         user: m,
                         guildId: null,
-                        avatarDecorationOverride: x,
+                        avatarDecorationOverride: p,
                         animateOnHover: !d
                     })
                 });

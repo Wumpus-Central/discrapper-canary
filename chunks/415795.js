@@ -1,7 +1,7 @@
 n.d(t, {
-    $W: () => N,
+    $W: () => I,
     Mx: () => A,
-    PZ: () => I,
+    PZ: () => N,
     h4: () => P,
     ic: () => T,
     n5: () => y,
@@ -29,8 +29,8 @@ var i,
     x = n(699516),
     E = n(594174),
     j = n(51144),
-    O = n(388032),
-    C = n(212522);
+    C = n(388032),
+    O = n(212522);
 function S(e, t, n) {
     return (
         t in e
@@ -65,7 +65,7 @@ class v extends s.PureComponent {
             focusProps: { enabled: !1 },
             tabIndex: -1,
             innerRef: this.setRef,
-            className: C.result,
+            className: O.result,
             onClick: this.handleClick,
             onMouseEnter: this.handleMouseEnter,
             onContextMenu: i,
@@ -73,7 +73,7 @@ class v extends s.PureComponent {
                 t,
                 null != n
                     ? (0, r.jsx)('div', {
-                          className: C.score,
+                          className: O.score,
                           children: n >> 0
                       })
                     : null
@@ -103,21 +103,21 @@ class T extends s.Component {
     renderIcon() {
         let { guild: e } = this.props;
         return (0, r.jsx)('div', {
-            className: C.guildIconContainer,
+            className: O.guildIconContainer,
             children: (0, r.jsx)(h.Z, {
                 tabIndex: -1,
                 guild: e,
                 size: h.Z.Sizes.MINI,
-                className: C.guildIcon
+                className: O.guildIcon
             })
         });
     }
     renderName() {
         let { guild: e } = this.props;
         return (0, r.jsx)('div', {
-            className: C.name,
+            className: O.name,
             children: (0, r.jsx)('span', {
-                className: C.match,
+                className: O.match,
                 children: e.name
             })
         });
@@ -125,12 +125,12 @@ class T extends s.Component {
     renderContent() {
         let { unread: e, children: t } = this.props;
         return (0, r.jsxs)('div', {
-            className: e ? C.contentUnread : C.contentDefault,
+            className: e ? O.contentUnread : O.contentDefault,
             children: [
                 this.renderIcon(),
                 this.renderName(),
                 (0, r.jsx)('div', {
-                    className: C.misc,
+                    className: O.misc,
                     children: t
                 })
             ]
@@ -138,7 +138,7 @@ class T extends s.Component {
     }
     getAccessibilityLabel() {
         let { guild: e } = this.props;
-        return O.intl.formatToPlainString(O.t.WVq3Li, { name: e.name });
+        return C.intl.formatToPlainString(C.t.WVq3Li, { name: e.name });
     }
     render() {
         let { onMouseEnter: e, onClick: t, onFocus: n, onContextMenu: i, focused: s, score: l, id: a } = this.props;
@@ -155,7 +155,7 @@ class T extends s.Component {
         });
     }
 }
-class N extends (i = s.Component) {
+class I extends (i = s.Component) {
     renderIcon() {
         var e;
         let { channel: t } = this.props,
@@ -163,11 +163,11 @@ class N extends (i = s.Component) {
         if (null == n) return null;
         let i = null != (e = (0, m.Z)(t)) ? e : '';
         return (0, r.jsx)('div', {
-            className: C.iconContainer,
+            className: O.iconContainer,
             role: 'img',
             'aria-label': i,
             children: (0, r.jsx)(n, {
-                className: C.icon,
+                className: O.icon,
                 size: 'xs',
                 color: 'currentColor'
             })
@@ -181,20 +181,20 @@ class N extends (i = s.Component) {
             null != n &&
                 n > 0 &&
                 (e = (0, r.jsx)(g.Z, {
-                    className: C.badge,
+                    className: O.badge,
                     value: n,
                     lowImportance: l
                 })),
             null != i &&
                 (t = (0, r.jsx)('span', {
-                    className: C.note,
+                    className: O.note,
                     children: (0, d.F6)(i, E.default, x.Z)
                 })),
             (0, r.jsxs)('div', {
-                className: C.name,
+                className: O.name,
                 children: [
                     (0, r.jsx)('span', {
-                        className: C.match,
+                        className: O.match,
                         children: (0, d.F6)(s, E.default, x.Z)
                     }),
                     e,
@@ -209,7 +209,7 @@ class N extends (i = s.Component) {
         return null == e
             ? null
             : (0, r.jsx)(b.Z, {
-                  className: C.voiceSummaryContainer,
+                  className: O.voiceSummaryContainer,
                   guildId: t.guild_id,
                   users: e.map((e) => {
                       let { user: t } = e;
@@ -222,12 +222,12 @@ class N extends (i = s.Component) {
         let { unread: e, mentions: t, children: n } = this.props;
         return (0, r.jsxs)('div', {
             'aria-hidden': !0,
-            className: e || (null != t && t > 0) ? C.contentUnread : C.contentDefault,
+            className: e || (null != t && t > 0) ? O.contentUnread : O.contentDefault,
             children: [
                 this.renderIcon(),
                 this.renderName(),
                 (0, r.jsx)('div', {
-                    className: C.misc,
+                    className: O.misc,
                     children: n
                 })
             ]
@@ -239,7 +239,7 @@ class N extends (i = s.Component) {
             n = null == (e = _.Z.getGuild(this.props.channel.guild_id)) ? void 0 : e.name,
             i = (0, d.F6)(t, E.default, x.Z),
             r = (0, m.Z)(t);
-        return O.intl.formatToPlainString(O.t['Vw/da2'], {
+        return C.intl.formatToPlainString(C.t['Vw/da2'], {
             name: i,
             type: r,
             guild: n
@@ -260,12 +260,12 @@ class N extends (i = s.Component) {
         });
     }
 }
-S(N, 'defaultProps', { unread: !1 });
-class I extends s.Component {
+S(I, 'defaultProps', { unread: !1 });
+class N extends s.Component {
     renderIcon() {
         let { channel: e } = this.props;
         return (0, r.jsx)('div', {
-            className: C.dmIconContainer,
+            className: O.dmIconContainer,
             children: (0, r.jsx)(l.qEK, {
                 src: (0, c.x)(e),
                 size: l.EFr.SIZE_20,
@@ -280,14 +280,14 @@ class I extends s.Component {
             null != t &&
                 t > 0 &&
                 (e = (0, r.jsx)(g.Z, {
-                    className: C.badge,
+                    className: O.badge,
                     value: t
                 })),
             (0, r.jsxs)('div', {
-                className: C.name,
+                className: O.name,
                 children: [
                     (0, r.jsx)('span', {
-                        className: C.match,
+                        className: O.match,
                         children: (0, d.F6)(n, E.default, x.Z)
                     }),
                     e
@@ -298,12 +298,12 @@ class I extends s.Component {
     renderContent() {
         let { mentions: e, children: t } = this.props;
         return (0, r.jsxs)('div', {
-            className: null != e && e > 0 ? C.contentUnread : C.contentDefault,
+            className: null != e && e > 0 ? O.contentUnread : O.contentDefault,
             children: [
                 this.renderIcon(),
                 this.renderName(),
                 (0, r.jsx)('div', {
-                    className: C.misc,
+                    className: O.misc,
                     children: t
                 })
             ]
@@ -313,11 +313,11 @@ class I extends s.Component {
         let { channel: e, mentions: t } = this.props,
             n = (0, d.F6)(e, E.default, x.Z);
         return null != t && t > 0
-            ? O.intl.formatToPlainString(O.t.LYdVfH, {
+            ? C.intl.formatToPlainString(C.t.LYdVfH, {
                   name: n,
                   mentions: t
               })
-            : O.intl.formatToPlainString(O.t.lLSbnp, { name: n });
+            : C.intl.formatToPlainString(C.t.lLSbnp, { name: n });
     }
     render() {
         let { onMouseEnter: e, onClick: t, onFocus: n, onContextMenu: i, focused: s, score: l, id: a } = this.props;
@@ -338,7 +338,7 @@ class y extends s.Component {
     renderIcon() {
         let { user: e } = this.props;
         return (0, r.jsx)('div', {
-            className: C.iconContainer,
+            className: O.iconContainer,
             children: (0, r.jsx)(l.qEK, {
                 src: e.getAvatarURL(void 0, 20),
                 'aria-hidden': !0,
@@ -360,19 +360,19 @@ class y extends s.Component {
             null != n &&
                 n > 0 &&
                 (e = (0, r.jsx)(g.Z, {
-                    className: C.badge,
+                    className: O.badge,
                     value: n
                 })),
             (0, r.jsxs)('div', {
-                className: C.name,
+                className: O.name,
                 children: [
                     (0, r.jsx)('span', {
-                        className: C.match,
+                        className: O.match,
                         children: i
                     }),
                     e,
                     (0, r.jsx)('span', {
-                        className: C.username,
+                        className: O.username,
                         children: j.ZP.getUserTag(t)
                     })
                 ]
@@ -382,12 +382,12 @@ class y extends s.Component {
     renderContent() {
         let { children: e, mentions: t } = this.props;
         return (0, r.jsxs)('div', {
-            className: null != t && t > 0 ? C.contentUnread : C.contentDefault,
+            className: null != t && t > 0 ? O.contentUnread : O.contentDefault,
             children: [
                 this.renderIcon(),
                 this.renderName(),
                 (0, r.jsx)('div', {
-                    className: C.misc,
+                    className: O.misc,
                     children: e
                 })
             ]
@@ -398,12 +398,12 @@ class y extends s.Component {
             n = this.getDisplayNickname(),
             i = j.ZP.getUserTag(t);
         return null != e && e > 0
-            ? O.intl.formatToPlainString(O.t['6b9Ura'], {
+            ? C.intl.formatToPlainString(C.t['6b9Ura'], {
                   name: n,
                   id: i,
                   mentions: e
               })
-            : O.intl.formatToPlainString(O.t.GWYOAQ, {
+            : C.intl.formatToPlainString(C.t.GWYOAQ, {
                   name: n,
                   id: i
               });
@@ -427,20 +427,20 @@ class A extends s.Component {
     renderContent() {
         let { children: e, application: t } = this.props;
         return (0, r.jsxs)('div', {
-            className: C.contentDefault,
+            className: O.contentDefault,
             children: [
                 (0, r.jsx)('div', {
-                    className: C.iconContainer,
+                    className: O.iconContainer,
                     children: (0, r.jsx)(p.Z, {
                         tabIndex: -1,
-                        className: C.gameIcon,
+                        className: O.gameIcon,
                         game: t,
-                        size: C.gameIconSize
+                        size: O.gameIconSize
                     })
                 }),
                 t.name,
                 (0, r.jsx)('div', {
-                    className: C.misc,
+                    className: O.misc,
                     children: e
                 })
             ]
@@ -461,11 +461,11 @@ class A extends s.Component {
 class P extends s.Component {
     render() {
         return (0, r.jsx)('div', {
-            className: C.__invalid_resultDefault,
+            className: O.__invalid_resultDefault,
             children: (0, r.jsx)('div', {
-                className: C.contentDefault,
+                className: O.contentDefault,
                 children: (0, r.jsx)('div', {
-                    className: C.header,
+                    className: O.header,
                     children: this.props.children
                 })
             })
@@ -480,32 +480,32 @@ class R extends s.Component {
             s = (0, f.Qj)(n.path);
         return (
             null == s || void 0 === s.messageId
-                ? ((e = O.intl.string(O.t.qbSCqq)),
+                ? ((e = C.intl.string(C.t.qbSCqq)),
                   (t = (0, r.jsx)(l.xPt, {
                       size: 'xs',
                       color: 'currentColor'
                   })))
                 : (0, f.VO)(s)
-                  ? ((e = O.intl.string(O.t['6Fd/j4'])),
+                  ? ((e = C.intl.string(C.t['6Fd/j4'])),
                     (t = (0, r.jsx)(l.acy, {
                         size: 'xs',
                         color: 'currentColor'
                     })))
-                  : ((e = O.intl.string(O.t.jQRwp6)),
+                  : ((e = C.intl.string(C.t.jQRwp6)),
                     (t = (0, r.jsx)(l.mBM, {
                         size: 'xs',
                         color: 'currentColor'
                     }))),
             (0, r.jsxs)('div', {
-                className: C.contentDefault,
+                className: O.contentDefault,
                 children: [
                     (0, r.jsx)('div', {
-                        className: C.iconContainer,
+                        className: O.iconContainer,
                         children: t
                     }),
                     e,
                     (0, r.jsx)('div', {
-                        className: C.misc,
+                        className: O.misc,
                         children: i
                     })
                 ]
@@ -535,28 +535,28 @@ class D extends s.Component {
             c = s ? l.iWm : l.jje;
         switch (n.type) {
             case o.Ky.SHOP:
-                (e = O.intl.string(O.t.pWG4zc)),
+                (e = C.intl.string(C.t.pWG4zc)),
                     (t = (0, r.jsx)(l.EOn, {
                         size: 'xs',
                         color: 'currentColor'
                     }));
                 break;
             case o.Ky.NITRO_HOME:
-                (e = O.intl.string(O.t.Ipxkoq)),
+                (e = C.intl.string(C.t.Ipxkoq)),
                     (t = (0, r.jsx)(l.SrA, {
                         size: 'xs',
                         color: 'currentColor'
                     }));
                 break;
             case o.Ky.QUEST_HOME:
-                (e = O.intl.string(O.t.JALI2N)),
+                (e = C.intl.string(C.t.JALI2N)),
                     (t = (0, r.jsx)(l.qDn, {
                         size: 'xs',
                         color: 'currentColor'
                     }));
                 break;
             case o.Ky.APPS_HOME:
-                (e = O.intl.string(O.t.PHjkRE)),
+                (e = C.intl.string(C.t.PHjkRE)),
                     (t = (0, r.jsx)(c, {
                         size: 'xs',
                         color: 'currentColor'
@@ -564,7 +564,7 @@ class D extends s.Component {
                 break;
             case o.Ky.SETTINGS:
                 var d;
-                (e = null != (d = n.label) ? d : O.intl.string(O.t['3D5yo6'])),
+                (e = null != (d = n.label) ? d : C.intl.string(C.t['3D5yo6'])),
                     (t = (0, r.jsx)(l.ewm, {
                         size: 'xs',
                         color: 'currentColor'
@@ -578,18 +578,18 @@ class D extends s.Component {
                     }));
         }
         return (0, r.jsxs)('div', {
-            className: C.contentDefault,
+            className: O.contentDefault,
             children: [
                 (0, r.jsx)('div', {
-                    className: C.iconContainer,
+                    className: O.iconContainer,
                     children: t
                 }),
                 (0, r.jsx)('div', {
-                    className: C.name,
+                    className: O.name,
                     children: e
                 }),
                 (0, r.jsx)('div', {
-                    className: C.misc,
+                    className: O.misc,
                     children: i
                 })
             ]

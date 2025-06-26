@@ -19,12 +19,12 @@ let x = (0, o.hQ)(),
     E = r.memo(function (e) {
         let { availablePrimaryGuilds: t, pendingPrimaryGuildId: n, onChange: o } = e,
             [E, j] = (0, c.US)([l.z.GUILD_TAG_USER_PROFILE_NEW_BADGE]),
-            O = r.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
-            C = (0, s.e7)([g.default], () => {
+            C = r.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
+            O = (0, s.e7)([g.default], () => {
                 var e;
                 return (0, d.Pb)(null == (e = g.default.getCurrentUser()) ? void 0 : e.primaryGuild).guildId;
             }),
-            S = void 0 !== n ? n : C,
+            S = void 0 !== n ? n : O,
             v = r.useMemo(
                 () =>
                     t.reduce((e, t) => {
@@ -44,7 +44,7 @@ let x = (0, o.hQ)(),
                 (e) => {
                     var t, n, r;
                     if (null == e) return null;
-                    let s = O.get(e.value);
+                    let s = C.get(e.value);
                     if (null == s) return null;
                     let l = null == (t = s.profile) ? void 0 : t.tag;
                     return null == l
@@ -58,16 +58,16 @@ let x = (0, o.hQ)(),
                               guildIconSize: 32
                           });
                 },
-                [O]
+                [C]
             ),
-            N = r.useCallback(
+            I = r.useCallback(
                 (e) => {
                     let t = e[0];
                     return null == t ? null : (0, i.jsx)(i.Fragment, { children: T(t) });
                 },
                 [T]
             ),
-            I = r.useCallback(
+            N = r.useCallback(
                 (e) => {
                     j(h.L.TAKE_ACTION), null == o || o(e);
                 },
@@ -102,8 +102,8 @@ let x = (0, o.hQ)(),
                         optionClassName: _.selectPopout,
                         isSelected: y,
                         options: v,
-                        select: I,
-                        renderOptionValue: N,
+                        select: N,
+                        renderOptionValue: I,
                         renderOptionLabel: T,
                         serialize: A,
                         clear: P,

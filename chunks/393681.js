@@ -18,13 +18,13 @@ var i = n(255367),
     x = n(332473),
     E = n(303172),
     j = n(518560),
-    O = n(921801),
-    C = n(577275),
+    C = n(921801),
+    O = n(577275),
     S = n(484459),
     v = n(430824),
     T = n(325067),
-    N = n(246946),
-    I = n(663389),
+    I = n(246946),
+    N = n(663389),
     y = n(594174),
     A = n(626135),
     P = n(709054),
@@ -205,7 +205,7 @@ class q extends r.PureComponent {
                           })
                       })
                     : null,
-                (0, i.jsx)(O.F, {
+                (0, i.jsx)(C.F, {
                     setting: V.s6.ACCOUNT_CHANGE_PASSWORD,
                     children: (0, i.jsx)('div', {
                         children: (0, i.jsx)(u.zxk, {
@@ -216,7 +216,7 @@ class q extends r.PureComponent {
                         })
                     })
                 }),
-                (0, i.jsx)(O.F, {
+                (0, i.jsx)(C.F, {
                     setting: V.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
                     children: (0, i.jsxs)(b.Z, {
                         align: b.Z.Align.STRETCH,
@@ -325,15 +325,15 @@ class q extends r.PureComponent {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 this.renderConfirmModals(),
-                (0, i.jsx)(O.F, {
+                (0, i.jsx)(C.F, {
                     setting: V.s6.ACCOUNT_PROFILE,
                     children: this.renderAccountSettings(!1)
                 }),
-                (0, i.jsx)(O.F, {
+                (0, i.jsx)(C.F, {
                     setting: V.s6.ACCOUNT_PASSWORD_AND_AUTHENTICATION,
                     children: this.renderSecuritySettings()
                 }),
-                (0, i.jsx)(O.F, {
+                (0, i.jsx)(C.F, {
                     setting: V.s6.ACCOUNT_REMOVAL,
                     children: this.renderAccountRemovalSettings()
                 })
@@ -421,12 +421,12 @@ let X = () => {
             return o()(null != e, 'ConnectedUserAccountSettings: currentUser cannot be undefined'), e;
         }),
         t = (0, c.e7)([T.Z], () => T.Z.getBackupCodes()),
-        n = (0, c.e7)([N.Z], () => N.Z.hidePersonalInformation),
+        n = (0, c.e7)([I.Z], () => I.Z.hidePersonalInformation),
         r = (0, c.e7)([D.Z], () => D.Z.theme),
         s = (0, x.b)(),
         l = (0, c.e7)([R.default], () => R.default.locale),
-        a = (0, c.e7)([I.Z], () => I.Z.getSubsection()),
-        { teams: d, loading: u } = (0, C.Z)({ refreshOnDepChange: !0 });
+        a = (0, c.e7)([N.Z], () => N.Z.getSubsection()),
+        { teams: d, loading: u } = (0, O.Z)({ refreshOnDepChange: !0 });
     return (0, i.jsx)(q, {
         theme: r,
         currentUser: e,

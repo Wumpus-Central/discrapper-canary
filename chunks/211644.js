@@ -1,6 +1,7 @@
 n.d(t, {
     Aq: () => R,
-    ZP: () => w,
+    Kl: () => w,
+    ZP: () => D,
     bn: () => C,
     cI: () => N,
     f0: () => S,
@@ -74,7 +75,8 @@ let u = new (n(499303).I)(),
         recentlyShown: [],
         currentlyShown: new Set(),
         currentlyShownGroup: new Set(),
-        lastWinnerTime: 0
+        lastWinnerTime: 0,
+        postConnectionOpen: !1
     }),
     p = (0, r.F)(_),
     h = (e) =>
@@ -155,8 +157,15 @@ let u = new (n(499303).I)(),
         return [p.getState().currentlyShown.size, e];
     },
     P = () => {
-        (0, i.j)(() => p.setState(_)), u.unschedule();
-    };
-function w(e, t) {
+        (0, i.j)(() => {
+            p.setState(() => {
+                let e = _();
+                return (e.postConnectionOpen = !0), e;
+            });
+        }),
+            u.unschedule();
+    },
+    w = () => p.getState().postConnectionOpen;
+function D(e, t) {
     return p(e, t);
 }

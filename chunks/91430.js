@@ -24,13 +24,13 @@ var i = n(255367),
     x = n(600164),
     E = n(925329),
     j = n(963249),
-    O = n(301766),
-    C = n(594174),
+    C = n(301766),
+    O = n(594174),
     S = n(626135),
     v = n(63063),
     T = n(74538),
-    N = n(212895),
-    I = n(374649),
+    I = n(212895),
+    N = n(374649),
     y = n(160913),
     A = n(987997),
     P = n(393411),
@@ -43,8 +43,8 @@ var i = n(255367),
 function B(e) {
     let t,
         { subscription: n, renewalInvoicePreview: r, fractionalPremiumInfo: s, fromStandaloneBillingPage: a = !0, className: c } = e,
-        d = (0, u.e7)([C.default], () => {
-            let e = C.default.getCurrentUser();
+        d = (0, u.e7)([O.default], () => {
+            let e = O.default.getCurrentUser();
             return o()(null != e, 'GuildBoostingHeader: currentUser cannot be undefined'), e;
         });
     if (0 === (0, T.uV)(n.additionalPlans)) return null;
@@ -245,7 +245,7 @@ function H(e) {
                       analyticsLocations: m,
                       analyticsLocation: n
                   },
-        [b] = (0, I.ED)(p);
+        [b] = (0, N.ED)(p);
     b = null != d ? d : b;
     let x =
             null != u
@@ -257,7 +257,7 @@ function H(e) {
                       analyticsLocations: m,
                       analyticsLocation: n
                   },
-        [E] = (0, I.ED)(x);
+        [E] = (0, N.ED)(x);
     E = null != u ? u : E;
     let j = (0, _.Z)();
     return null == b || null == E
@@ -308,7 +308,7 @@ function H(e) {
                                           }),
                                           (0, i.jsx)(R.Z, {
                                               subscription: t,
-                                              onPaymentSourceAdded: N.i1,
+                                              onPaymentSourceAdded: I.i1,
                                               highlightAddPaymentMethodButton: c || o,
                                               analyticsLocation: n,
                                               currentInvoicePreview: b,
@@ -354,13 +354,13 @@ function W(e) {
     null != s && null != s[0] && (r = s[0]);
     let { analyticsLocations: m } = (0, f.ZP)(h.Z.SUBSCRIPTION_DETAILS),
         p = null != s ? s.slice(1) : [],
-        [b] = (0, I.ED)({
+        [b] = (0, N.ED)({
             subscriptionId: r.id,
             renewal: !0,
             analyticsLocations: m,
             analyticsLocation: c
         }),
-        [_] = (0, I.ED)({
+        [_] = (0, N.ED)({
             subscriptionId: r.id,
             renewal: !0,
             applyEntitlements: !0,
@@ -368,26 +368,26 @@ function W(e) {
             analyticsLocation: c
         }),
         x = null == l ? void 0 : l.invalid,
-        E = (0, u.e7)([C.default], () => {
+        E = (0, u.e7)([O.default], () => {
             var e;
-            return null == (e = C.default.getCurrentUser()) ? void 0 : e.hasFreePremium();
+            return null == (e = O.default.getCurrentUser()) ? void 0 : e.hasFreePremium();
         }),
         j = d()(r.currentPeriodEnd),
         S = null != r.paymentSourceId,
         v = null != (t = null == _ ? void 0 : _.total) ? t : 0,
         T = !S && v > 0 && (7 >= j.diff(d()(), 'days') || r.status === Z.O0b.PAST_DUE) && !E && !r.isPurchasedExternally,
-        N = x && r.status === Z.O0b.PAST_DUE && !E && !r.isPurchasedExternally,
+        I = x && r.status === Z.O0b.PAST_DUE && !E && !r.isPurchasedExternally,
         A = (0, y.U)(),
         P = !E && A,
         R = (null == r ? void 0 : r.status) === Z.O0b.PAST_DUE ? d()().diff(d()(r.currentPeriodStart), 'days') : 0,
-        [w] = (0, I.Ox)({
+        [w] = (0, N.Ox)({
             subscriptionId: r.id,
             preventFetch: !P
         });
     return null == b || null == _
         ? (0, i.jsx)(g.$jN, {})
         : (null != r.renewalMutations &&
-              ((r.renewalMutations.planId !== r.planId && !(0, O.Q0)(r.renewalMutations.planId)) || r.hasExternalPlanChange) &&
+              ((r.renewalMutations.planId !== r.planId && !(0, C.Q0)(r.renewalMutations.planId)) || r.hasExternalPlanChange) &&
               (n = (0, i.jsx)(D.Z, {
                   subscription: r,
                   renewalMutations: r.renewalMutations,
@@ -403,7 +403,7 @@ function W(e) {
                   }),
                   children: [
                       T ? (0, i.jsx)(M, {}) : null,
-                      N ? (0, i.jsx)(U, {}) : null,
+                      I ? (0, i.jsx)(U, {}) : null,
                       P && null != w
                           ? (0, i.jsx)(V, {
                                 daysPastDue: R,
@@ -429,7 +429,7 @@ function W(e) {
                                       busy: a,
                                       fromStandaloneBillingPage: o,
                                       showNoPaymentMethod: T,
-                                      showInvalidPaymentMethod: N,
+                                      showInvalidPaymentMethod: I,
                                       fetchedCurrentInvoicePreview: b,
                                       fetchedRenewalInvoicePreview: _
                                   })
@@ -452,7 +452,7 @@ function W(e) {
                                                   busy: a,
                                                   fromStandaloneBillingPage: o,
                                                   showNoPaymentMethod: T,
-                                                  showInvalidPaymentMethod: N,
+                                                  showInvalidPaymentMethod: I,
                                                   fetchedCurrentInvoicePreview: null,
                                                   fetchedRenewalInvoicePreview: null
                                               })

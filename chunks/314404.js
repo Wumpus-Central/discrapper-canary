@@ -26,9 +26,9 @@ var r = n(255367),
     I = n(937615),
     T = n(296848),
     S = n(711459),
-    A = n(109213),
-    N = n(717401),
-    C = n(857039),
+    A = n(367074),
+    N = n(109213),
+    C = n(717401),
     R = n(847903),
     P = n(104494),
     w = n(639119),
@@ -173,15 +173,15 @@ function et(e) {
         { isGift: ep, giftRecipient: eh, selectedGiftStyle: em, customGiftMessage: eg, setCustomGiftMessage: eE, giftingOrigin: eb, claimableRewards: ey, setSelectedGiftingPromotionReward: eO } = (0, h.wD)(),
         ev = (0, y.MY)(eh),
         eI = ep && (0, y.pO)(eh),
-        eT = (0, N.cF)(ed, eI, ey),
-        eS = (0, C.Z)({ location: 'PremiumPlanSelectStep' });
+        eT = (0, C.cF)(ed, eI, ey);
     (b = null != b ? b : eu), (g = null != g ? g : el), l()(void 0 !== g, 'should not be undefined');
-    let [eA, eN] = (0, c.Wu)([E.Z], () => [null != g ? E.Z.get(g.planId) : null, null != U ? E.Z.get(U) : null]),
-        eC = (0, w.N)(en),
-        eR = null == eC ? void 0 : eC.subscription_trial,
-        eP = (0, P.Ng)(),
-        ew = null == eP || null == (t = eP.discount) ? void 0 : t.plan_ids,
-        eD = null != eN ? eN : ed,
+    let [eS, eA] = (0, c.Wu)([E.Z], () => [null != g ? E.Z.get(g.planId) : null, null != U ? E.Z.get(U) : null]),
+        eN = (0, w.N)(en),
+        eC = null == eN ? void 0 : eN.subscription_trial,
+        eR = (0, P.Ng)(),
+        eP = (0, A.Vi)(),
+        ew = null == eR || null == (t = eR.discount) ? void 0 : t.plan_ids,
+        eD = null != eA ? eA : ed,
         eL = i.useCallback(
             (e) => {
                 null != G ? G(e) : ec(e);
@@ -195,8 +195,8 @@ function et(e) {
             excludeReverseTrial: !1,
             excludeReverseTrialFromCountdown: !0
         }),
-        eM = null != eC && F.nG[eC.trial_id].skus.includes(b),
-        ej = null != eP && $.some((e) => (null == ew ? void 0 : ew.includes(e))) && null != eP.discount,
+        eM = null != eN && F.nG[eN.trial_id].skus.includes(b),
+        ej = null != eR && $.some((e) => (null == ew ? void 0 : ew.includes(e))) && null != eR.discount,
         eU = (0, v.aS)(F.Xh.PREMIUM_MONTH_TIER_2, !1, ep, ex);
     i.useEffect(() => {
         et && S.ZP.trackExposure({ location: '5f89bb_1' });
@@ -204,13 +204,13 @@ function et(e) {
     let eG = (null == eD ? void 0 : eD.id) != null && $.includes(eD.id);
     i.useEffect(() => {
         if (!eG) {
-            if (null == eA || ep) eL($[0]);
-            else if (null != eA) {
-                let e = $.find((e) => e !== eA.id);
+            if (null == eS || ep) eL($[0]);
+            else if (null != eS) {
+                let e = $.find((e) => e !== eS.id);
                 null != e && eL(e);
             }
         }
-    }, [eG, ep, $, eA, eL]),
+    }, [eG, ep, $, eS, eL]),
         i.useEffect(() => {
             eT && null != ey && ey.length > 0 && eO(ey[0]);
         }, [ey, eO, eT]);
@@ -222,8 +222,8 @@ function et(e) {
         { ipCountryCode: eY } = (0, R.Z)(),
         eW = 'HR' === eY && null != eH && eH.currency === H.pK.EUR,
         eK = (0, v.Ap)(ex.paymentSourceId),
-        ez = i.useMemo(() => ((null == eR ? void 0 : eR.interval) === F.rV.DAY ? ((null == eR ? void 0 : eR.interval_count) > 7 ? Y.intl.string(Y.t.Z1V2cn) : Y.intl.string(Y.t.MI1rHh)) : Y.intl.string(Y.t['+S5lra'])), [eR]),
-        eq = !ep && (ej || (null != eR && eM && null != er)),
+        ez = i.useMemo(() => ((null == eC ? void 0 : eC.interval) === F.rV.DAY ? ((null == eC ? void 0 : eC.interval_count) > 7 ? Y.intl.string(Y.t.Z1V2cn) : Y.intl.string(Y.t.MI1rHh)) : Y.intl.string(Y.t['+S5lra'])), [eC]),
+        eq = !ep && (ej || (null != eC && eM && null != er)),
         eX = null == ea || null == (s = ea.find((e) => e.subscriptionPlanId === F.Xh.PREMIUM_MONTH_TIER_2)) || null == (a = s.discounts) || null == (n = a.find((e) => e.type === f.eW.SUBSCRIPTION_PLAN)) ? void 0 : n.amount,
         eQ = (e, t, n) => {
             if (eI)
@@ -261,7 +261,7 @@ function et(e) {
                             variant: 'text-sm/normal',
                             className: K.trialPlanSelectHeader,
                             children: Y.intl.format(Y.t['nG7g/P'], {
-                                numMonths: null == eP ? void 0 : eP.discount.user_usage_limit,
+                                numMonths: null == eR ? void 0 : eR.discount.user_usage_limit,
                                 discountedPrice: (0, I.T4)(eU.amount - eX, eU.currency),
                                 regularPrice: (0, I.T4)(eU.amount, eU.currency)
                             })
@@ -281,7 +281,7 @@ function et(e) {
                     currentText: eg
                 });
         },
-        { enabled: e$ } = A.G.useExperiment({ location: 'PremiumPlanSelectStep' }, { autoTrackExposure: !1 }),
+        { enabled: e$ } = N.G.useExperiment({ location: 'PremiumPlanSelectStep' }, { autoTrackExposure: !1 }),
         e0 = eb === F.Wt.DM_CHANNEL && e$,
         e1 = e0 ? K.bodyColumnLeft : K.bodyColumnMiddle,
         e2 = () =>
@@ -316,12 +316,12 @@ function et(e) {
                     )
                 })
             ),
-        e4 = () => eQ(eC, eM, ej),
+        e4 = () => eQ(eN, eM, ej),
         e5 = () => (eW ? (0, r.jsx)(d.Z, { message: Y.intl.formatToPlainString(Y.t['9hnZoK'], { kunaPriceWithCurrency: (0, I.T4)(7.5345 * eH.amount, H.pK.HRK) }) }) : null),
         e6 = null != g && null != U && (0, T.R4)(g, U, z),
         e8 = ek.isFractionalPremiumActive && (null == g || e6) && !ep && null != U && F.dJ.has(U);
     return (0, r.jsxs)('div', {
-        className: o()(eI ? K.stepBodyCustomGift : K.stepBody, { [K.paddingForHalloweenBanner]: eS }),
+        className: eI ? K.stepBodyCustomGift : K.stepBody,
         children: [
             e8 &&
                 (0, r.jsx)(k.n, {
@@ -349,12 +349,13 @@ function et(e) {
                     }),
                     e0 && e2(),
                     eJ(),
-                    null != eA &&
+                    null != eS &&
                         !ep &&
                         !e8 &&
+                        !eP &&
                         (0, r.jsx)('div', {
                             className: K.bodyText,
-                            children: ee(eA, b)
+                            children: ee(eS, b)
                         }),
                     !e0 && e4(),
                     !e0 && e3(),
@@ -431,7 +432,7 @@ function er(e) {
         y = g.h8.ADD_PAYMENT_STEPS;
     return (
         h && (y = g.h8.REVIEW),
-        (0, N.id)(_, i, a) && f !== g.h8.SELECT_FREE_SKU && (y = g.h8.SELECT_FREE_SKU),
+        (0, C.id)(_, i, a) && f !== g.h8.SELECT_FREE_SKU && (y = g.h8.SELECT_FREE_SKU),
         (0, r.jsx)(u.zxk, {
             onClick: () => t(y),
             children: E

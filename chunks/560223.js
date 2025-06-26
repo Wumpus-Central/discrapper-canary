@@ -46,24 +46,24 @@ let b = (e) => {
     _ = (e) => {
         let { className: t, variant: n, noBackground: s = !1, leftAlignHeaders: _ = !1, showAllPerksButton: x, headerClassname: E } = e,
             j = r.useRef(null),
-            O = n === g.gM.WHATS_NEW,
-            C = (0, u.x)();
+            C = n === g.gM.WHATS_NEW,
+            O = (0, u.x)();
         r.useEffect(() => {
-            O && C();
-        }, [C, O]);
-        let S = (0, p.re)(O),
+            C && O();
+        }, [O, C]);
+        let S = (0, p.re)(C),
             v = (0, m.Z)(),
             T = (0, p.mN)(),
-            { fractionalState: N } = (0, o.Z)(),
-            I = (0, c.W)(),
+            { fractionalState: I } = (0, o.Z)(),
+            N = (0, c.W)(),
             y = (0, d.Z)({ location: 'WhatsNewSection' }),
             A = (0, p.ZM)({
                 perksCards: v,
                 variant: n,
                 hideCardsOnNarrowScreen: !1,
                 isPremiumSubscriber: T,
-                fractionalState: N,
-                isInReverseTrial: I,
+                fractionalState: I,
+                isInReverseTrial: N,
                 showVoiceFiltersCard: y
             }),
             P = A.some((e) => null != e.pillText);
@@ -90,7 +90,7 @@ let b = (e) => {
                     className: l()(f.subtitle, {
                         [f.subtitle]: null == x || _,
                         [f.subtitleWithButton]: null != x && !_,
-                        [f.fullWidth]: O || _,
+                        [f.fullWidth]: C || _,
                         [f.moreSubtitleMargin]: P,
                         [f.leftAlignSubtitle]: _,
                         [f.centerAlignSubtitle]: !_

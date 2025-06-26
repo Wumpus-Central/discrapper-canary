@@ -21,7 +21,7 @@ function E(e) {
     var t;
     let { isNested: n = !1 } = e,
         E = null == (t = (0, m.Z)()) || t,
-        { explicitContentGuilds: j, explicitContentFriendDm: O, explicitContentNonFriendDm: C } = (0, d.B)(),
+        { explicitContentGuilds: j, explicitContentFriendDm: C, explicitContentNonFriendDm: O } = (0, d.B)(),
         S = (e) => {
             let t = Object.values(e);
             if ((0, o.Ks)() && t.includes(r.Q4.SHOW)) return void l.Z.showAgeVerificationGetStartedModal(a.cU.SENSITIVE_MEDIA_FILTER_SETTINGS);
@@ -43,12 +43,12 @@ function E(e) {
                 label: _.intl.string(_.t.S49UaW)
             }
         ],
-        N = {
+        I = {
             value: r.Q4.SHOW,
             label: _.intl.string(_.t['5k5OFh'])
         };
     return (
-        E && (v.unshift(N), T.unshift(N)),
+        E && (v.unshift(I), T.unshift(I)),
         (0, i.jsx)(p.U, {
             setting: f.s6.PRIVACY_SENSITIVE_MEDIA_V2,
             scrollPosition: h.FY.EXPLICIT_MEDIA_REDACTION_V2,
@@ -65,7 +65,7 @@ function E(e) {
                                   (0, i.jsx)(s.q4e, {
                                       look: s.qQH.CUSTOM,
                                       options: v,
-                                      value: O,
+                                      value: C,
                                       onChange: (e) => S({ explicitContentFriendDm: e }),
                                       renderOptionValue: (e) => {
                                           let [t] = e;
@@ -85,7 +85,7 @@ function E(e) {
                                   (0, i.jsx)(s.q4e, {
                                       look: s.qQH.CUSTOM,
                                       options: v,
-                                      value: C,
+                                      value: O,
                                       onChange: (e) => S({ explicitContentNonFriendDm: e }),
                                       renderOptionValue: (e) => {
                                           let [t] = e;
@@ -136,7 +136,7 @@ function E(e) {
                               titleClassName: x.selectItemTitle,
                               children: (0, i.jsx)(s.q4e, {
                                   options: v,
-                                  value: O,
+                                  value: C,
                                   onChange: (e) => S({ explicitContentFriendDm: e })
                               })
                           }),
@@ -146,7 +146,7 @@ function E(e) {
                               titleClassName: x.selectItemTitle,
                               children: (0, i.jsx)(s.q4e, {
                                   options: v,
-                                  value: C,
+                                  value: O,
                                   onChange: (e) => S({ explicitContentNonFriendDm: e })
                               })
                           }),

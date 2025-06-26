@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(539854), n(388685);
+n.d(t, { Z: () => I }), n(539854), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -59,18 +59,18 @@ function x(e, t) {
 }
 function E() {}
 let j = [h.h8.VOICE_CHANNEL];
-function O(e) {
+function C(e) {
     e.setOptions({ voiceChannelGuildFilter: null }), e.setLimit(1 / 0);
 }
-function C(e) {
+function O(e) {
     let { height: t } = e;
     return (0, i.jsx)('div', { style: { height: t } });
 }
 function S() {
-    return (0, i.jsx)(C, { height: 16 }, 'footer');
+    return (0, i.jsx)(O, { height: 16 }, 'footer');
 }
 function v() {
-    return (0, i.jsx)(C, { height: 8 }, 'header');
+    return (0, i.jsx)(O, { height: 8 }, 'header');
 }
 function T() {
     return (0, i.jsx)('div', {
@@ -83,7 +83,7 @@ function T() {
         })
     });
 }
-function N(e) {
+function I(e) {
     var t, n;
     let { keybind: s } = e,
         o = r.useRef(s);
@@ -95,7 +95,7 @@ function N(e) {
             (0, l.ZDy)(
                 async () => (e) =>
                     (0, i.jsx)(
-                        I,
+                        N,
                         x(_({}, e), {
                             onSelect: (e) => {
                                 u(e), a.Z.setKeybind(x(_({}, o.current), { params: { channelId: e } }));
@@ -126,14 +126,14 @@ function N(e) {
         })
     });
 }
-function I(e) {
+function N(e) {
     let { transitionState: t, onClose: n, onSelect: a } = e,
         c = r.useId(),
         _ = r.useRef(null),
         {
             mouseFocusEnabled: x,
             enableMouseFocus: E,
-            disableMouseFocus: C
+            disableMouseFocus: O
         } = (function () {
             let e = r.useRef(!1),
                 t = r.useCallback(() => {
@@ -149,13 +149,13 @@ function I(e) {
             };
         })(),
         {
-            query: N,
-            updateQuery: I,
+            query: I,
+            updateQuery: N,
             queryResults: y
         } = (0, o.Z)({
             visible: !0,
             autocompleterResultTypes: j,
-            autocompleterBeforeCreateSearchContext: O
+            autocompleterBeforeCreateSearchContext: C
         }),
         A = (function (e) {
             let t = '' !== e,
@@ -174,7 +174,7 @@ function I(e) {
                     [t]
                 );
             return t ? null : n;
-        })(N),
+        })(I),
         { focusedIndex: P, setFocusedIndex: R } = (function (e) {
             let [t, n] = r.useState(0),
                 i = r.useRef(e);
@@ -188,7 +188,7 @@ function I(e) {
                     setFocusedIndex: n
                 }
             );
-        })(N);
+        })(I);
     r.useEffect(() => {
         let { current: e } = _;
         null == e ||
@@ -219,10 +219,10 @@ function I(e) {
                 (0, i.jsx)('div', {
                     className: b.inputWrapper,
                     children: (0, i.jsx)(l.oil, {
-                        value: N,
-                        onChange: I,
+                        value: I,
+                        onChange: N,
                         onKeyDown: function (e) {
-                            C();
+                            O();
                             let t = e.key.toLowerCase();
                             if ('arrowdown' === t || 'arrowup' === t || 'enter' === t || 'escape' === t)
                                 switch ((e.preventDefault(), t)) {
@@ -254,8 +254,8 @@ function I(e) {
                         spellCheck: !1
                     })
                 }),
-                0 === D && '' !== N && (0, i.jsx)(T, {}),
-                (D > 0 || '' === N) &&
+                0 === D && '' !== I && (0, i.jsx)(T, {}),
+                (D > 0 || '' === I) &&
                     (0, i.jsx)(l.Tvr, {
                         innerId: c,
                         innerRole: 'listbox',

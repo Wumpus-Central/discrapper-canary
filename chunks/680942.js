@@ -1,9 +1,9 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => S });
 var r = n(255367),
     l = n(73800),
     a = n(979554),
-    i = n(481060),
-    o = n(727637),
+    o = n(481060),
+    i = n(727637),
     s = n(906732),
     c = n(333867),
     u = n(677232),
@@ -11,13 +11,14 @@ var r = n(255367),
     p = n(381585),
     f = n(884697),
     b = n(228624),
-    g = n(67409),
-    h = n(981631),
-    m = n(474936),
-    _ = n(231338),
-    C = n(388032),
-    v = n(846165);
-let O = {
+    g = n(410127),
+    h = n(67409),
+    m = n(981631),
+    _ = n(474936),
+    C = n(231338),
+    v = n(388032),
+    O = n(846165);
+let x = {
         dark: [
             {
                 box: '#FFF19E',
@@ -79,22 +80,23 @@ let O = {
             }
         ]
     },
-    x = (e) => {
-        let { product: t, selectedVariantIndex: n, returnRef: x, onSuccess: S, tooltipDelay: E, isGiftEasterEggEnabled: y, color: j = i.Ttl.BRAND } = e,
+    S = (e) => {
+        let { product: t, selectedVariantIndex: n, returnRef: S, onSuccess: E, tooltipDelay: y, isGiftEasterEggEnabled: j, color: k = o.Ttl.BRAND } = e,
             { analyticsLocations: P } = (0, s.ZP)(),
-            k = l.useRef(null),
-            T = (0, o.Z)(k),
-            I = (0, b.hv)('CollectiblesShopGiftButton'),
-            L = (0, p.sp)();
+            T = l.useRef(null),
+            I = (0, i.Z)(T),
+            L = (0, b.hv)('CollectiblesShopGiftButton'),
+            B = (0, p.sp)(),
+            w = (0, g.Z)();
         return (0, f.x6)(t)
             ? null
-            : (0, r.jsx)(i.ua7, {
-                  text: C.intl.string(C.t['JCFN//']),
-                  delay: E,
+            : (0, r.jsx)(o.ua7, {
+                  text: v.intl.string(v.t['JCFN//']),
+                  delay: y,
                   children: (e) => {
-                      var l, o;
+                      var l, i;
                       return (0, r.jsx)(
-                          i.zxk,
+                          o.zxk,
                           ((l = (function (e) {
                               for (var t = 1; t < arguments.length; t++) {
                                   var n = null != arguments[t] ? arguments[t] : {},
@@ -120,58 +122,59 @@ let O = {
                               }
                               return e;
                           })({}, e)),
-                          (o = o =
+                          (i = i =
                               {
-                                  buttonRef: k,
-                                  className: v.giftButton,
-                                  color: j,
-                                  look: i.zxk.Looks.FILLED,
-                                  size: i.PhG.ICON,
-                                  innerClassName: v.giftButtonInner,
-                                  'aria-label': C.intl.string(C.t.PEjaCw),
+                                  buttonRef: T,
+                                  className: O.giftButton,
+                                  color: k,
+                                  look: o.zxk.Looks.FILLED,
+                                  size: o.PhG.ICON,
+                                  innerClassName: O.giftButtonInner,
+                                  'aria-label': v.intl.string(v.t.PEjaCw),
                                   onClick: (e) => {
                                       e.stopPropagation(),
-                                          d.default.track(h.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                                              collectibles_shop_session_id: null == L ? void 0 : L.sessionId,
+                                          d.default.track(m.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                              collectibles_shop_session_id: null == B ? void 0 : B.sessionId,
                                               sku_id: t.skuId,
-                                              page_section: null == L ? void 0 : L.pageSection,
-                                              page_category: null == L ? void 0 : L.pageCategory,
+                                              page_section: null == B ? void 0 : B.pageSection,
+                                              page_category: null == B ? void 0 : B.pageCategory,
                                               tile_type: a.Z[t.type],
-                                              tile_position: String(null == L ? void 0 : L.tilePosition),
-                                              cta_name: 'gift button'
+                                              tile_position: String(null == B ? void 0 : B.tilePosition),
+                                              cta_name: 'gift button',
+                                              page_type: w || 'home'
                                           }),
                                           (0, c.Z)({
-                                              skuId: (0, g.S)({
+                                              skuId: (0, h.S)({
                                                   product: t,
                                                   selectedVariantIndex: n
                                               }),
                                               isGift: !0,
-                                              giftingOrigin: m.Wt.SHOP_PAGE,
+                                              giftingOrigin: _.Wt.SHOP_PAGE,
                                               analyticsLocations: P,
-                                              returnRef: x,
-                                              variantsReturnStyle: I,
+                                              returnRef: S,
+                                              variantsReturnStyle: L,
                                               onClose:
-                                                  null != S
+                                                  null != E
                                                       ? (e) => {
-                                                            e && S();
+                                                            e && E();
                                                         }
                                                       : void 0
                                           });
                                   },
-                                  children: y
+                                  children: j
                                       ? (0, r.jsx)(u.Z, {
-                                            hovered: T,
+                                            hovered: I,
                                             isContentDismissed: !0,
-                                            themeOverride: _.BR.DARK,
-                                            boxColors: O
+                                            themeOverride: C.BR.DARK,
+                                            boxColors: x
                                         })
-                                      : (0, r.jsx)(i.OgN, {
+                                      : (0, r.jsx)(o.OgN, {
                                             size: 'md',
                                             color: 'currentColor'
                                         })
                               }),
                           Object.getOwnPropertyDescriptors
-                              ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
+                              ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
                               : (function (e, t) {
                                     var n = Object.keys(e);
                                     if (Object.getOwnPropertySymbols) {
@@ -179,8 +182,8 @@ let O = {
                                         n.push.apply(n, r);
                                     }
                                     return n;
-                                })(Object(o)).forEach(function (e) {
-                                    Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
+                                })(Object(i)).forEach(function (e) {
+                                    Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(i, e));
                                 }),
                           l)
                       );

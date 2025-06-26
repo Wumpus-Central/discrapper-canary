@@ -1,6 +1,6 @@
 n.d(t, {
     A: () => a,
-    s: () => i
+    s: () => o
 });
 var r = n(818083),
     l = n(987338);
@@ -18,4 +18,4 @@ let a = (0, r.B)({
             }
         ]
     }),
-    i = (e) => a.useExperiment({ location: e }).showShopHomeSorting;
+    o = (e) => a.useExperiment({ location: e }).showShopHomeSorting;

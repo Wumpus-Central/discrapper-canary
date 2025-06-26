@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -18,34 +18,34 @@ var i = n(255367),
     x = n(828576),
     E = n(982404),
     j = n(299156);
-let O = function (e) {
-    let { premiumSubscription: t, premiumType: n, onClose: s, onConfirm: O, userDiscountOffer: C } = e,
+let C = function (e) {
+    let { premiumSubscription: t, premiumType: n, onClose: s, onConfirm: C, userDiscountOffer: O } = e,
         [S, v] = r.useState(!1),
-        [T, N] = r.useState(!1),
-        I = async (e) => {
+        [T, I] = r.useState(!1),
+        N = async (e) => {
             try {
-                N(!0),
+                I(!0),
                     v(!1),
                     await a.tn.post({
                         url: b.ANM.USER_OFFER_REDEEM,
                         body: { user_discount_offer_id: e },
                         rejectWithError: !0
                     }),
-                    O();
+                    C();
             } catch (e) {
                 v(!0);
             }
-            N(!1);
+            I(!1);
         },
         y = (0, d.ZP)(),
         A = (0, o.wj)(y) ? E : j,
-        P = (0, p._)(t, f.Xh.PREMIUM_MONTH_TIER_2, C),
+        P = (0, p._)(t, f.Xh.PREMIUM_MONTH_TIER_2, O),
         R = (0, m.aS)(f.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
             currency: t.currency,
             paymentSourceId: t.paymentSourceId
         }),
         D = (0, g.T4)(R.amount, R.currency);
-    return null == C
+    return null == O
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
@@ -60,7 +60,7 @@ let O = function (e) {
                           children: [
                               (0, i.jsx)(c.X6q, {
                                   variant: 'heading-xl/bold',
-                                  children: _.intl.format(_.t.q9Vxu7, { percent: C.discount.amount })
+                                  children: _.intl.format(_.t.q9Vxu7, { percent: O.discount.amount })
                               }),
                               (0, i.jsxs)('div', {
                                   className: x.confirmDiscountDescription,
@@ -73,8 +73,8 @@ let O = function (e) {
                                       (0, i.jsx)(c.Text, {
                                           variant: 'text-sm/medium',
                                           children: _.intl.format(_.t.Eq1RHB, {
-                                              percent: C.discount.amount,
-                                              numMonths: C.discount.user_usage_limit,
+                                              percent: O.discount.amount,
+                                              numMonths: O.discount.user_usage_limit,
                                               price: D
                                           })
                                       })
@@ -87,8 +87,8 @@ let O = function (e) {
                                       className: x.confirmDiscountLegaleseText,
                                       children: _.intl.format(_.t.hrGTjI, {
                                           discountedPrice: P,
-                                          billingPeriod: (0, m.JP)(C.discount.user_usage_limit_interval),
-                                          numMonths: C.discount.user_usage_limit,
+                                          billingPeriod: (0, m.JP)(O.discount.user_usage_limit_interval),
+                                          numMonths: O.discount.user_usage_limit,
                                           fullPrice: D,
                                           helpdeskArticle: u.Z.getArticleURL(b.BhN.PAID_TERMS)
                                       })
@@ -117,7 +117,7 @@ let O = function (e) {
                                       (0, i.jsx)(c.zxk, {
                                           size: c.PhG.SMALL,
                                           submitting: T,
-                                          onClick: () => I(C.id),
+                                          onClick: () => N(O.id),
                                           children: _.intl.string(_.t.CKSuZG)
                                       })
                                   ]

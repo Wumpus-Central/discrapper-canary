@@ -18,13 +18,13 @@ var i = n(255367),
     x = n(122021),
     E = n(275759),
     j = n(231757),
-    O = n(888496),
-    C = n(605236),
+    C = n(888496),
+    O = n(605236),
     S = n(565138),
     v = n(297700),
     T = n(553795),
-    N = n(430824),
-    I = n(771845),
+    I = n(430824),
+    N = n(771845),
     y = n(246946),
     A = n(626135),
     P = n(63063),
@@ -82,7 +82,7 @@ let H = (e) => {
             [s.id]
         );
     return (
-        null != (0, a.e7)([N.Z], () => N.Z.getGuild(s.guild.id), [s.guild.id]) ||
+        null != (0, a.e7)([I.Z], () => I.Z.getGuild(s.guild.id), [s.guild.id]) ||
             (r = (0, i.jsx)(u.zxk, {
                 size: u.PhG.SMALL,
                 onClick: function () {
@@ -141,9 +141,9 @@ function z(e) {
         l,
         { onDisconnect: a, account: o, theme: m, locale: p } = e,
         [h, b] = r.useState(o.friendSync),
-        [C, S] = r.useState(o.visibility),
-        [T, N] = r.useState(o.metadataVisibility),
-        [I, y] = r.useState(o.showActivity),
+        [O, S] = r.useState(o.visibility),
+        [T, I] = r.useState(o.metadataVisibility),
+        [N, y] = r.useState(o.showActivity),
         [A, R] = r.useState(null),
         [M, G] = r.useState(null),
         [z, Y] = r.useState(!1),
@@ -151,20 +151,20 @@ function z(e) {
         q = (0, x.rR)(o.type),
         X = _.Z.get(q);
     r.useEffect(() => {
-        b(o.friendSync), S(o.visibility), N(o.metadataVisibility), y(o.showActivity);
+        b(o.friendSync), S(o.visibility), I(o.metadataVisibility), y(o.showActivity);
     }, [o]);
-    let J = {
+    let Q = {
             inProgressVisibility: A,
             inProgressMetadataVisibility: M
         },
-        Q = r.useRef(J);
+        J = r.useRef(Q);
     r.useEffect(() => {
-        Q.current = J;
+        J.current = Q;
     }),
         r.useEffect(() => {
             if (!1 === o.verified) return;
-            let { inProgressVisibility: e, inProgressMetadataVisibility: t } = Q.current;
-            null != e && (S(e), g.Z.setVisibility(o.type, o.id, e), R(null)), null != t && (N(t), g.Z.setMetadataVisibility(o.type, o.id, t), G(null));
+            let { inProgressVisibility: e, inProgressMetadataVisibility: t } = J.current;
+            null != e && (S(e), g.Z.setVisibility(o.type, o.id, e), R(null)), null != t && (I(t), g.Z.setMetadataVisibility(o.type, o.id, t), G(null));
         }, [o]);
     function $() {
         let e = _.Z.get(o.type),
@@ -312,24 +312,24 @@ function z(e) {
                     s = (0, E.FI)(n[B.PC.CREATED_AT], p);
                 switch (e.type) {
                     case L.ABu.REDDIT:
-                        r = (0, O.oP)(n, V.metadataItem);
+                        r = (0, C.oP)(n, V.metadataItem);
                         break;
                     case L.ABu.STEAM:
-                        r = (0, O.Dq)(n, V.metadataItem);
+                        r = (0, C.Dq)(n, V.metadataItem);
                         break;
                     case L.ABu.BLUESKY:
                     case L.ABu.TWITTER:
                     case L.ABu.MASTODON:
-                        r = (0, O.rJ)(n, V.metadataItem);
+                        r = (0, C.rJ)(n, V.metadataItem);
                         break;
                     case L.ABu.EBAY:
-                        r = (0, O.ul)(n, V.metadataItem);
+                        r = (0, C.ul)(n, V.metadataItem);
                         break;
                     case L.ABu.PAYPAL:
-                        r = (0, O.li)(n, V.metadataItem);
+                        r = (0, C.li)(n, V.metadataItem);
                         break;
                     case L.ABu.TIKTOK:
-                        r = (0, O.hf)(n, V.metadataItem);
+                        r = (0, C.hf)(n, V.metadataItem);
                 }
                 null !== s &&
                     (null == r && (r = []),
@@ -421,7 +421,7 @@ function z(e) {
                 (s = (0, i.jsx)(u.j7V, {
                     className: V.connectionOptionSwitch,
                     hideBorder: !0,
-                    value: I,
+                    value: N,
                     onChange: function (e) {
                         y(e), g.Z.setShowActivity(o.type, o.id, e);
                     },
@@ -446,9 +446,9 @@ function z(e) {
                                 });
                             return;
                         }
-                        N(n), g.Z.setMetadataVisibility(o.type, o.id, n);
+                        I(n), g.Z.setMetadataVisibility(o.type, o.id, n);
                     },
-                    disabled: 1 !== C || null == o.metadata,
+                    disabled: 1 !== O || null == o.metadata,
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-sm/semibold',
                         children: U.intl.string(U.t.FYKGsL)
@@ -462,7 +462,7 @@ function z(e) {
                         (0, i.jsx)(u.j7V, {
                             className: V.connectionOptionSwitch,
                             hideBorder: !0,
-                            value: 1 === C,
+                            value: 1 === O,
                             onChange: function (e) {
                                 let { verified: t } = o,
                                     n = +!!e;
@@ -527,7 +527,7 @@ function Y() {
     return (
         r.useEffect(
             () => () => {
-                (0, C.EW)(o.z.NEW_CRUNCHYROLL_CONNECTION, { dismissAction: M.L.AUTO });
+                (0, O.EW)(o.z.NEW_CRUNCHYROLL_CONNECTION, { dismissAction: M.L.AUTO });
             },
             []
         ),
@@ -655,7 +655,7 @@ let X = () => {
         t = (0, a.e7)([T.Z], () => T.Z.isFetching()),
         n = (0, a.e7)([T.Z], () => T.Z.getAccounts()),
         s = (0, b.ZP)();
-    (0, a.e7)([I.ZP], () => I.ZP.getFlattenedGuildIds());
+    (0, a.e7)([N.ZP], () => N.ZP.getFlattenedGuildIds());
     let l = (0, a.e7)([R.default], () => R.default.locale);
     return (r.useEffect(() => {
         g.Z.fetch();

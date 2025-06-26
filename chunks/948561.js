@@ -127,7 +127,7 @@ function V(e) {
 }
 function F(e, t) {
     let { forceBatchScan: n = !1, jitter: r = !1 } = null != t ? t : {},
-        i = (null == t ? void 0 : t.isMessageUpdate) ? e.filter(A.MD).filter(V) : e.filter(V);
+        i = (null == t ? void 0 : t.isMessageUpdate) ? e.filter((e) => (0, A.MD)(e)).filter(V) : e.filter(V);
     i.forEach((e) => {
         let t = k(e);
         null == x[t] &&

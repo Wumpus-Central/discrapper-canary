@@ -1,71 +1,69 @@
 n.d(t, {
-    EB: () => m,
-    MV: () => g,
-    q3: () => h
+    EB: () => h,
+    MV: () => b,
+    q3: () => g
 }),
     n(388685);
 var r = n(73800),
     l = n(442837),
     a = n(100527),
-    i = n(906732),
-    o = n(626135),
+    o = n(906732),
+    i = n(626135),
     s = n(74538),
-    c = n(597688),
-    u = n(328347),
-    d = n(215023),
-    p = n(981631),
-    f = n(474936);
-let b = (e) => {
+    c = n(328347),
+    u = n(215023),
+    d = n(981631),
+    p = n(474936);
+let f = (e) => {
         switch (e) {
-            case d.AW.ORBS:
+            case u.AW.ORBS:
                 return a.Z.COLLECTIBLES_SHOP_ORBS_TAB;
-            case d.AW.HOME:
+            case u.AW.HOME:
                 return a.Z.COLLECTIBLES_SHOP_HOME_SCREEN;
-            case d.AW.BUNDLES:
+            case u.AW.BUNDLES:
                 return a.Z.COLLECTIBLES_SHOP_BUNDLES_TAB;
-            case d.AW.AVATAR_DECORATIONS:
+            case u.AW.AVATAR_DECORATIONS:
                 return a.Z.COLLECTIBLES_SHOP_AVATAR_DECORATIONS_TAB;
-            case d.AW.PROFILE_EFFECTS:
+            case u.AW.PROFILE_EFFECTS:
                 return a.Z.COLLECTIBLES_SHOP_PROFILE_EFFECTS_TAB;
-            case d.AW.NAMEPLATES:
+            case u.AW.NAMEPLATES:
                 return a.Z.COLLECTIBLES_SHOP_NAMEPLATES_TAB;
-            case d.AW.CATALOG:
+            case u.AW.CATALOG:
                 return a.Z.COLLECTIBLES_SHOP_FULLSCREEN;
         }
     },
-    g = (e) => {
-        let { analyticsSource: t, analyticsLocations: n } = (0, l.cj)([u.Z], () => u.Z.getAnalytics()),
-            r = b(e),
-            { analyticsLocations: o, newestAnalyticsLocation: s } = (0, i.ZP)([...n, a.Z.COLLECTIBLES_SHOP, r]);
+    b = (e) => {
+        let { analyticsSource: t, analyticsLocations: n } = (0, l.cj)([c.Z], () => c.Z.getAnalytics()),
+            r = f(e),
+            { analyticsLocations: i, newestAnalyticsLocation: s } = (0, o.ZP)([...n, a.Z.COLLECTIBLES_SHOP, r]);
         return {
             analyticsSource: t,
-            analyticsLocations: o,
+            analyticsLocations: i,
             newestAnalyticsLocation: s,
             currentTabLocation: r
         };
     },
-    h = (e, t, n, l, a) => {
-        let { analyticsLocations: i, analyticsSource: s, currentTabLocation: u, newestAnalyticsLocation: f } = g(t);
+    g = (e, t, n, l, a) => {
+        let { analyticsLocations: o, analyticsSource: s, currentTabLocation: c, newestAnalyticsLocation: p } = b(t);
         r.useEffect(() => {
-            var r;
-            if (l !== d.f7.VISIBLE || f !== u) return;
-            let b = t === d.AW.CATALOG ? a : s;
-            o.default.track(p.rMx.COLLECTIBLES_SHOP_VIEWED, {
-                location_stack: i,
-                source: b,
+            if (l !== u.f7.VISIBLE || p !== c) return;
+            let r = t === u.AW.CATALOG ? a : s;
+            i.default.track(d.rMx.COLLECTIBLES_SHOP_VIEWED, {
+                location_stack: o,
+                source: r,
                 page_session_id: e,
-                page_type: t === d.AW.CATALOG ? 'full' : t,
-                category: t === d.AW.HOME || null == (r = c.Z.getCategory(n)) ? void 0 : r.name
+                page_type: t === u.AW.CATALOG ? 'full' : t,
+                category: t === u.AW.HOME ? void 0 : n
             });
-        }, [i, e, t, n, u, l, a, s, f]);
+        }, [o, e, t, n, c, l, a, s, p]);
     },
-    m = (e, t) => {
-        let { analyticsLocations: n } = g(e);
+    h = (e, t) => {
+        let { analyticsLocations: n } = b(e);
         r.useEffect(() => {
             null == t ||
                 s.ZP.canUseCollectibles(t) ||
-                o.default.track(p.rMx.PREMIUM_UPSELL_VIEWED, {
-                    type: f.cd.COLLECTIBLES_SHOP,
+                i.default.track(d.rMx.PREMIUM_UPSELL_VIEWED, {
+                    type: p.cd.COLLECTIBLES_SHOP,
                     location_stack: n
                 });
         }, [n, t]);

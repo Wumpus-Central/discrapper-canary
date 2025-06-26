@@ -24,7 +24,6 @@ e.exports = {
     headerText: 'headerText__636a2',
     title: 'title__636a2',
     rewardTile: 'rewardTile__636a2',
-    questPromoContentWithCopySimplification: 'questPromoContentWithCopySimplification__636a2',
     hiddenRewardTile: 'hiddenRewardTile__636a2',
     description: 'description__636a2',
     flex: 'flex__636a2',

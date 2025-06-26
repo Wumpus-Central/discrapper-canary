@@ -18,13 +18,13 @@ var i = n(255367),
     x = n(78839),
     E = n(626135),
     j = n(526167),
-    O = n(74538),
-    C = n(367074),
+    C = n(74538),
+    O = n(367074),
     S = n(91802),
     v = n(8647),
     T = n(784238),
-    N = n(568126),
-    I = n(823188),
+    I = n(568126),
+    N = n(823188),
     y = n(611116),
     A = n(349803),
     P = n(8231),
@@ -51,16 +51,16 @@ let G = () => {
         Y = (0, c.wj)(z),
         [W, K] = r.useState(!1),
         [q, X] = r.useState(!1),
-        [J, Q] = r.useState(!1),
+        [Q, J] = r.useState(!1),
         [$, ee] = r.useState(!1),
         et = (0, j.rO)(),
         [en, ei] = r.useState(!1),
         er = (0, a.e7)([x.ZP], () => x.ZP.getPremiumTypeSubscription()),
-        es = null != er ? (0, O.Af)(er) : null,
-        el = null != es ? O.ZP.getSkuIdForPlan(es.planId) : null,
+        es = null != er ? (0, C.Af)(er) : null,
+        el = null != es ? C.ZP.getSkuIdForPlan(es.planId) : null,
         ea = null !== el && el !== Z.Si.TIER_2 ? Z.Si.TIER_2 : null,
         eo = (0, S.n)(),
-        ec = (0, C.Vi)(),
+        ec = (0, O.Vi)(),
         ed = null != ec && ec,
         { analyticsLocations: eu } = (0, h.ZP)(p.Z.PREMIUM_MARKETING),
         em = 'PremiumMarketingHome';
@@ -120,7 +120,7 @@ let G = () => {
             }),
             (0, i.jsxs)('div', {
                 className: L.promoBannerContainer,
-                children: [(0, i.jsx)(v.Z, { variant: v.C.APPLICATION_NITRO_HOME }), null != eo && (0, i.jsx)(N.Z, { localizedPricingPromo: eo })]
+                children: [(0, i.jsx)(v.Z, { variant: v.C.APPLICATION_NITRO_HOME }), null != eo && (0, i.jsx)(I.Z, { localizedPricingPromo: eo })]
             }),
             (0, i.jsx)('div', {
                 className: l()(L.whatsNewSectionBackground, L.whatsNewSectionBackgroundV2),
@@ -133,10 +133,10 @@ let G = () => {
                 className: L.premiumTierCardsContainerFullscreen,
                 children: (0, i.jsx)(o.$, {
                     innerRef: n,
-                    onChange: (e) => Q(e),
+                    onChange: (e) => J(e),
                     threshold: 0.1,
                     active: !0,
-                    children: (0, i.jsx)(I.Ub, {
+                    children: (0, i.jsx)(N.Ub, {
                         innerRef: n,
                         tier0CTAButton: (0, i.jsx)(T.Z, {
                             color: void 0,
@@ -163,7 +163,7 @@ let G = () => {
                 children: (0, i.jsx)(P.Z, { className: L.planComparisonTableApplicationHome })
             }),
             (0, i.jsx)(A.Z, {
-                isVisible: !W && !J && !q && en,
+                isVisible: !W && !Q && !q && en,
                 subscriptionTier: ea,
                 isApplicationHome: !0,
                 isEligibleForBogoPromotion: ec

@@ -382,7 +382,6 @@ var r = (function (e) {
         (e.DEV_TOOLS = 'devtools'),
         (e.IN_CASE_YOU_MISSED_IT_TAB = 'ICYMI Tab'),
         (e.REVERSE_TRIAL_UPSELL_MODAL = 'reverse trial upsell modal'),
-        (e.NITROWEEN_COACHMARK = 'nitroween coachmark'),
         (e.SEASONAL_GIFTING_COACHMARK = 'seasonal gifting coachmark'),
         (e.VALENTINES_GIFTING_COACHMARK = 'valentines gifting coachmark'),
         (e.SEASONAL_GIFTING_REMINDER_COACHMARK = 'seasonal gifting reminder coachmark'),

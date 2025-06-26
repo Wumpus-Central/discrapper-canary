@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(413496), n(433524), n(35282);
+n.d(t, { Z: () => I }), n(413496), n(433524), n(35282);
 var i,
     r,
     s = n(255367),
@@ -62,10 +62,10 @@ function E(e, t) {
     );
 }
 let j = new RegExp('https?://'.concat(null != (i = window.GLOBAL_ENV.CDN_HOST) ? i : ''));
-function O(e) {
+function C(e) {
     return 'string' == typeof e.content ? e.content : v(e.content);
 }
-let C = E(x({}, d().defaultRules), {
+let O = E(x({}, d().defaultRules), {
         heading: E(x({}, d().defaultRules.heading), {
             react(e, t, n) {
                 let i = 'h'.concat(e.level);
@@ -101,7 +101,7 @@ let C = E(x({}, d().defaultRules), {
                     'blockquote',
                     {
                         className: f.blockquote,
-                        children: O(e)
+                        children: C(e)
                     },
                     n.key
                 )
@@ -126,7 +126,7 @@ let C = E(x({}, d().defaultRules), {
                     'code',
                     {
                         className: f.codeInline,
-                        children: O(e)
+                        children: C(e)
                     },
                     n.key
                 )
@@ -139,7 +139,7 @@ let C = E(x({}, d().defaultRules), {
                         {
                             children: (0, s.jsx)('code', {
                                 className: o()(b.scrollbarGhostHairline, 'hljs'),
-                                children: O(e)
+                                children: C(e)
                             })
                         },
                         i.key
@@ -174,8 +174,8 @@ let C = E(x({}, d().defaultRules), {
             }
         })
     }),
-    S = d().parserFor(C),
-    v = d().reactFor(d().ruleOutput(C, 'react'));
+    S = d().parserFor(O),
+    v = d().reactFor(d().ruleOutput(O, 'react'));
 class T extends (r = l.PureComponent) {
     render() {
         let { className: e, children: t, state: n, parser: i, output: r } = this.props,
@@ -186,9 +186,9 @@ class T extends (r = l.PureComponent) {
         });
     }
 }
-_(T, 'rules', C),
+_(T, 'rules', O),
     _(T, 'defaultProps', {
         parser: S,
         output: v
     });
-let N = T;
+let I = T;

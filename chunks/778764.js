@@ -42,7 +42,7 @@ function j(e) {
     }
     return e;
 }
-function O(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,13 +60,13 @@ function O(e, t) {
         e
     );
 }
-function C(e) {
+function O(e) {
     let { transitionState: t, onClose: l, ticket: o, challenge: u } = e,
         f = (0, c.Dt)(),
-        [j, O] = r.useState(''),
-        [C, S] = r.useState(!0),
+        [j, C] = r.useState(''),
+        [O, S] = r.useState(!0),
         [v, T] = r.useState(b.x.INIT),
-        [N, I] = r.useState(''),
+        [I, N] = r.useState(''),
         [y, A] = r.useState(null),
         P = async () => {
             let e;
@@ -78,7 +78,7 @@ function C(e) {
                 g.Z.captureException(e), A(x.intl.string(x.t.xSCvBQ)), T(b.x.INIT);
                 return;
             }
-            I(e), T(b.x.NAME);
+            N(e), T(b.x.NAME);
         };
     return (0, i.jsxs)(a.Y0X, {
         transitionState: t,
@@ -171,7 +171,7 @@ function C(e) {
                         children: (0, i.jsxs)('form', {
                             onSubmit: (e) => {
                                 e.preventDefault(),
-                                    (0, h.Sr)(j, o, N)
+                                    (0, h.Sr)(j, o, I)
                                         .then(async () => {
                                             await (0, d.Yn)(!1);
                                         })
@@ -201,7 +201,7 @@ function C(e) {
                                                     className: E.input,
                                                     value: j,
                                                     onChange: (e) => {
-                                                        O(e), S(0 === e.length);
+                                                        C(e), S(0 === e.length);
                                                     },
                                                     autoFocus: !0,
                                                     minLength: 1
@@ -215,7 +215,7 @@ function C(e) {
                                     children: [
                                         (0, i.jsx)(a.zxk, {
                                             type: 'submit',
-                                            disabled: C,
+                                            disabled: O,
                                             children: x.intl.string(x.t['5dyZ1d'])
                                         }),
                                         (0, i.jsx)(a.zxk, {
@@ -301,7 +301,7 @@ function v() {
                                         color: a.zxk.Colors.TRANSPARENT,
                                         size: a.zxk.Sizes.ICON,
                                         onClick: (t) => {
-                                            (0, o.vq)(t, (t) => (0, i.jsx)(S, O(j({}, t), { credential: e })));
+                                            (0, o.vq)(t, (t) => (0, i.jsx)(S, C(j({}, t), { credential: e })));
                                         },
                                         'aria-label': x.intl.string(x.t['+nrTbG']),
                                         innerClassName: E.credentialOptions,
@@ -327,8 +327,8 @@ function v() {
                                     let { ticket: t, challenge: n } = e;
                                     (0, a.h7j)((e) =>
                                         (0, i.jsx)(
-                                            C,
-                                            O(j({}, e), {
+                                            O,
+                                            C(j({}, e), {
                                                 ticket: t,
                                                 challenge: n
                                             })

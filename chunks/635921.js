@@ -1,7 +1,7 @@
 n.d(t, {
     PK: () => T,
     ZP: () => y,
-    _O: () => I
+    _O: () => N
 }),
     n(953529);
 var i = n(255367),
@@ -23,8 +23,8 @@ var i = n(255367),
     x = n(736519),
     E = n(784238),
     j = n(422034),
-    O = n(206127),
-    C = n(474936),
+    C = n(206127),
+    O = n(474936),
     S = n(388032),
     v = n(909176);
 let T = (e) => {
@@ -60,13 +60,13 @@ let T = (e) => {
             children: [u, ' ', m]
         });
     },
-    N = () =>
+    I = () =>
         (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(u.A, { className: v.settingsSparkleStar1 }), (0, i.jsx)(u.A, { className: v.settingsSparkleStar2 }), (0, i.jsx)(u.A, { className: v.settingsSparkleStar3 }), (0, i.jsx)(u.A, { className: v.settingsSparkleStar4 })]
         });
-function I(e) {
+function N(e) {
     let { variant: t = 'text-lg/normal', withBottomMargin: n = !0, isApplicationHome: r } = e,
-        s = (0, O.$)();
+        s = (0, C.$)();
     return (0, i.jsx)(o.Text, {
         variant: t,
         color: r ? 'header-secondary' : 'always-white',
@@ -79,11 +79,11 @@ function I(e) {
 }
 let y = r.forwardRef((e, t) => {
     var n, r;
-    let { className: s, buttonClassName: u, subscriptionTier: E, isDarkMode: O } = e,
+    let { className: s, buttonClassName: u, subscriptionTier: E, isDarkMode: C } = e,
         { analyticsLocations: S } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_HERO_CTA),
         y = (0, h._O)(),
         A = (0, b.Ng)(),
-        P = (0, b.Wp)(A, C.Si.TIER_2) ? C.Si.TIER_2 : void 0,
+        P = (0, b.Wp)(A, O.Si.TIER_2) ? O.Si.TIER_2 : void 0,
         R = (0, _.N)(),
         D = (0, p.Nx)(),
         Z = (0, g.Vi)(),
@@ -116,7 +116,7 @@ let y = r.forwardRef((e, t) => {
                                       smallerText: !D
                                   })
                               })
-                            : (0, i.jsx)(I, {}),
+                            : (0, i.jsx)(N, {}),
                         Z || y
                             ? (0, i.jsx)('div', {
                                   className: v.buttonContainer,
@@ -129,16 +129,16 @@ let y = r.forwardRef((e, t) => {
                                   subscriptionTier: null != (r = null != E ? E : null == R || null == (n = R.subscription_trial) ? void 0 : n.sku_id) ? r : P,
                                   inOfferExperience: D,
                                   buttonClassName: u,
-                                  isDarkMode: O
+                                  isDarkMode: C
                               }),
                         w &&
-                            (0, i.jsx)(I, {
+                            (0, i.jsx)(N, {
                                 variant: 'text-md/normal',
                                 withBottomMargin: !1
                             })
                     ]
                 }),
-                !D && (0, i.jsx)(N, {})
+                !D && (0, i.jsx)(I, {})
             ]
         })
     });

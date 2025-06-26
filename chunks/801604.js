@@ -65,7 +65,7 @@ function C(e) {
         L = w === s.vA.CAMERA,
         D = null != I || (!!T && (!h || L)),
         B = null != I ? (null == I || null == (t = I.id) ? void 0 : t.startsWith(s.vA.CAMERA)) : L,
-        U = D ? void 0 : C === g.tI.PRESET_VIDEO ? v.intl.string(_.default.MuHUFR) : C === g.tI.PRESET_DOCUMENTS ? v.intl.string(_.default.y0JuYW) : void 0;
+        G = D ? void 0 : C === g.tI.PRESET_VIDEO ? v.intl.string(_.default.MuHUFR) : C === g.tI.PRESET_DOCUMENTS ? v.intl.string(_.default.y0JuYW) : void 0;
     return (0, r.jsxs)('div', {
         className: j.root,
         children: [
@@ -101,9 +101,9 @@ function C(e) {
                                         (0, r.jsx)(b, {})
                                     ]
                                 }),
-                            null != U &&
+                            null != G &&
                                 (0, r.jsxs)(r.Fragment, {
-                                    children: [(0, r.jsx)('span', { children: U }), (0, r.jsx)(b, {})]
+                                    children: [(0, r.jsx)('span', { children: G }), (0, r.jsx)(b, {})]
                                 }),
                             (0, r.jsx)('span', { children: M }),
                             (0, r.jsx)(b, {}),

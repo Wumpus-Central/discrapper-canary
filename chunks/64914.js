@@ -46,8 +46,8 @@ function j() {
         t = h.bm.useSetting(),
         n = h.Sb.useSetting(),
         j = (0, s.e7)([m.Z], () => m.Z.testModeApplicationId),
-        O = (0, s.e7)([p.ZP], () => p.ZP.showPlayAgain),
-        C = r.useCallback((e) => {
+        C = (0, s.e7)([p.ZP], () => p.ZP.showPlayAgain),
+        O = r.useCallback((e) => {
             h.bm.updateSetting(!e);
         }, []),
         S = r.useCallback((e) => {
@@ -94,8 +94,8 @@ function j() {
             });
         }, []),
         {
-            warpEnabled: N,
-            warpConnecting: I,
+            warpEnabled: I,
+            warpConnecting: N,
             warpLog: y
         } = (0, s.cj)([d.Z], () => ({
             warpEnabled: d.Z.enabled,
@@ -131,7 +131,7 @@ function j() {
                 setting: b.s6.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY,
                 children: (0, i.jsx)(l.j7V, {
                     value: !t,
-                    onChange: C,
+                    onChange: O,
                     note: x.intl.string(x.t['8mYp39']),
                     children: x.intl.string(x.t.fi3UQE)
                 })
@@ -148,7 +148,7 @@ function j() {
             (0, i.jsx)(u.F, {
                 setting: b.s6.SETTINGS_ADVANCED_SHOW_PLAY_AGAIN,
                 children: (0, i.jsx)(l.j7V, {
-                    value: O,
+                    value: C,
                     note: x.intl.string(x.t['B/qU4O']),
                     onChange: v,
                     children: x.intl.string(x.t.qDZryM)
@@ -158,12 +158,12 @@ function j() {
                 setting: b.s6.SETTINGS_ADVANCED_CF_WARP,
                 children: [
                     (0, i.jsx)(l.j7V, {
-                        value: N,
+                        value: I,
                         note: 'Enable WARP Proxy Connection',
                         onChange: A,
                         children: 'Enable WARP'
                     }),
-                    I ? (0, i.jsx)(l.$jN, {}) : null,
+                    N ? (0, i.jsx)(l.$jN, {}) : null,
                     (0, i.jsx)(l.Text, {
                         variant: 'code',
                         children: y.map((e, t) => (0, i.jsx)('div', { children: JSON.stringify(e) }, t))

@@ -5,13 +5,13 @@ var n = r(455412),
     c = r(304274),
     o = 'hcaptcha-api-script-id',
     s = 'hcaptchaOnLoad',
-    p = [],
-    l = function (e) {
+    l = [],
+    p = function (e) {
         void 0 === e && (e = {});
         var t = (0, c.as)(e.scriptLocation);
         delete e.scriptLocation;
         var r = (0, c.$h)(t),
-            n = p.find(function (e) {
+            n = l.find(function (e) {
                 return e.scope === r.window;
             });
         if (r.document.getElementById(o) && n) return n.promise;
@@ -19,19 +19,19 @@ var n = r(455412),
             r.window[s] = n;
             var i = e.apihost || 'https://js.hcaptcha.com';
             delete e.apihost;
-            var p = r.document.createElement('script');
-            (p.id = o),
-                (p.src = i + '/1/api.js?render=explicit&onload=' + s),
-                (p.async = void 0 === e.loadAsync || e.loadAsync),
+            var l = r.document.createElement('script');
+            (l.id = o),
+                (l.src = i + '/1/api.js?render=explicit&onload=' + s),
+                (l.async = void 0 === e.loadAsync || e.loadAsync),
                 delete e.loadAsync,
-                (p.onerror = function (e) {
+                (l.onerror = function (e) {
                     return a('script-error');
                 });
-            var l = (0, c.Ku)(e);
-            (p.src += '' !== l ? '&' + l : ''), t.appendChild(p);
+            var p = (0, c.Ku)(e);
+            (l.src += '' !== p ? '&' + p : ''), t.appendChild(l);
         });
         return (
-            p.push({
+            l.push({
                 promise: a,
                 scope: r.window
             }),
@@ -104,7 +104,7 @@ let d = (function (e) {
                     n = e.endpoint,
                     a = e.host,
                     i = e.imghost;
-                l({
+                p({
                     apihost: t,
                     assethost: r,
                     endpoint: n,

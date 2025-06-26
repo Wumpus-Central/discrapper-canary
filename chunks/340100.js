@@ -4,14 +4,14 @@ n(73800);
 var s = n(120356),
     o = n.n(s),
     i = n(692547),
-    a = n(481060),
-    l = n(113434),
+    l = n(481060),
+    a = n(113434),
     c = n(26650),
     u = n(485662);
 let d = function (e) {
     let { className: t, color: n = i.Z.colors.WHITE, quest: s, isInventory: d } = e,
-        m = (0, l.qb)(e.quest),
-        { percentComplete: x, completedRatioDisplay: p } = (0, l.I)(s);
+        m = (0, a.qb)(e.quest),
+        { percentComplete: p, completedRatioDisplay: h } = (0, a.I)(s);
     return !d && m.length > 0
         ? (0, r.jsx)(c.Z, { children: m.at(0) })
         : (0, r.jsxs)('div', {
@@ -21,25 +21,25 @@ let d = function (e) {
                   (0, r.jsxs)('div', {
                       className: u.percentCompleteWrapper,
                       children: [
-                          (0, r.jsx)(a.Text, {
+                          (0, r.jsx)(l.Text, {
                               variant: 'text-xs/semibold',
                               className: u.percentCompleteLabel,
                               color: 'none',
-                              children: p
+                              children: h
                           }),
                           (0, r.jsx)('div', {
                               className: u.percentCompleteLabelOffset,
-                              style: { width: ''.concat(100 - x, '%') }
+                              style: { width: ''.concat(100 - p, '%') }
                           })
                       ]
                   }),
                   (0, r.jsx)('div', {
                       className: u.progressBar,
                       role: 'progressbar',
-                      'aria-valuenow': x,
+                      'aria-valuenow': p,
                       children: (0, r.jsx)('div', {
                           className: u.progressBarFill,
-                          style: { width: ''.concat(x, '%') }
+                          style: { width: ''.concat(p, '%') }
                       })
                   }),
                   m.length > 0 &&

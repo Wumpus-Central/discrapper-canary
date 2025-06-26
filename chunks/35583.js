@@ -93,7 +93,8 @@ class m extends i.PureComponent {
                           body: h.intl.string(h.t['zK+lqa']),
                           onConfirm: this.doUpdate,
                           cancelText: h.intl.string(h.t['ETE/oK']),
-                          confirmText: h.intl.string(h.t['QDX/qq'])
+                          confirmText: h.intl.string(h.t['QDX/qq']),
+                          confirmVariant: 'critical-primary'
                       })
                     : this.doUpdate();
             }),

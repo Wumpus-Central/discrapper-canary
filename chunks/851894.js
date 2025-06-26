@@ -18,13 +18,13 @@ var i = n(255367),
     x = n(594174),
     E = n(63063),
     j = n(74538),
-    O = n(18438),
-    C = n(778825),
+    C = n(18438),
+    O = n(778825),
     S = n(856607),
     v = n(594496),
     T = n(856768),
-    N = n(981631),
-    I = n(388032);
+    I = n(981631),
+    N = n(388032);
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -71,7 +71,7 @@ function A(e, t) {
 function P(e) {
     (0, o.ZDy)(async () => {
         let { default: t } = await n.e('84509').then(n.bind(n, 933696));
-        return (n) => (0, i.jsx)(t, y({ source: A(y({}, e), { page: N.ZY5.GUILD_MEMBER_PROFILE_SETTINGS }) }, n));
+        return (n) => (0, i.jsx)(t, y({ source: A(y({}, e), { page: I.ZY5.GUILD_MEMBER_PROFILE_SETTINGS }) }, n));
     });
 }
 function R(e) {
@@ -83,7 +83,7 @@ function R(e) {
         }),
         R = (0, a.e7)([b.Z], () => !b.Z.isFetchingProfile(s.id, null == t ? void 0 : t.id)),
         D = (0, a.e7)([_.Z], () => _.Z.hidePersonalInformation),
-        Z = (0, a.cj)([C.Z], () => A(y({}, C.Z.getAllPending()), { source: C.Z.getSource() })),
+        Z = (0, a.cj)([O.Z], () => A(y({}, O.Z.getAllPending()), { source: O.Z.getSource() })),
         { source: w, pendingAvatar: k } = Z,
         L = (function (e, t) {
             if (null == e) return {};
@@ -108,12 +108,12 @@ function R(e) {
             userId: s.id,
             image: k
         });
-    return (r.useEffect(() => () => c.Z.wait(O.W3), []),
+    return (r.useEffect(() => () => c.Z.wait(C.W3), []),
     r.useEffect(() => {
         null != w &&
-            m.ZP.trackWithMetadata(N.rMx.SETTINGS_PANE_VIEWED, {
+            m.ZP.trackWithMetadata(I.rMx.SETTINGS_PANE_VIEWED, {
                 settings_type: 'guild',
-                destination_pane: N.jXE.SETTINGS_CUSTOMIZE_PROFILE,
+                destination_pane: I.jXE.SETTINGS_CUSTOMIZE_PROFILE,
                 source: w
             });
     }, [w]),
@@ -125,7 +125,7 @@ function R(e) {
                 children: [
                     (0, i.jsx)(o.Text, {
                         variant: 'text-sm/normal',
-                        children: I.intl.format(I.t['/PTB2N'], { helpCenterLink: E.Z.getArticleURL(N.BhN.GUILD_PROFILES) })
+                        children: N.intl.format(N.t['/PTB2N'], { helpCenterLink: E.Z.getArticleURL(I.BhN.GUILD_PROFILES) })
                     }),
                     null != t
                         ? (0, i.jsxs)(i.Fragment, {
@@ -133,11 +133,11 @@ function R(e) {
                                   (0, i.jsx)(T.Z, {
                                       guildId: t.id,
                                       onChange: (e) => {
-                                          null != e && (0, O.HP)(e);
+                                          null != e && (0, C.HP)(e);
                                       }
                                   }),
                                   (0, i.jsx)(p.Z, {
-                                      previewTitle: I.intl.formatToPlainString(I.t.Tc0slJ, { guildName: null == t ? void 0 : t.name }),
+                                      previewTitle: N.intl.formatToPlainString(N.t.Tc0slJ, { guildName: null == t ? void 0 : t.name }),
                                       profilePreview: (0, i.jsx)(
                                           h.Z,
                                           A(y({}, L), {

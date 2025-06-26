@@ -24,7 +24,7 @@ let p = s.forwardRef((e, t) => {
             strokeDashoffset: -s * _
         },
         O = { boxShadow: '0 0 30px 0px '.concat(h.glow) },
-        { progressTextAnimation: S } = (0, l.q_F)({
+        { progressTextAnimation: E } = (0, l.q_F)({
             progressTextAnimation: +(null != f && 1 !== s),
             config: u.Y
         });
@@ -38,7 +38,7 @@ let p = s.forwardRef((e, t) => {
                 children: [
                     x,
                     (0, r.jsxs)(i.animated.div, {
-                        style: { opacity: S },
+                        style: { opacity: E },
                         className: a()(d.coverContent, d.progressTextWrapper),
                         children: [
                             (0, r.jsx)('div', { className: a()(d.coverContent, d.progressTextOverlay) }),

@@ -333,7 +333,7 @@ let el = (e) => {
                                   ? (0, r.jsx)(d.tEY, {
                                         offset: -2,
                                         children: (0, r.jsx)(d.zxk, {
-                                            size: 'sm',
+                                            size: d.PhG.SMALL,
                                             onClick: n,
                                             children: es(t)
                                         })

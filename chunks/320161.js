@@ -16,8 +16,8 @@ let g = d.Z.Millis.SECOND,
 function b(e) {
     let { text: t, copyValue: n, children: d, onCopy: m, 'aria-label': b, delay: _ = h } = e,
         [x, E] = r.useState(0),
-        [j, O] = r.useState(!1),
-        [C, S] = r.useState(!1),
+        [j, C] = r.useState(!1),
+        [O, S] = r.useState(!1),
         [v] = r.useState(() => new l.V7()),
         [T] = r.useState(() => new l.V7());
     if (
@@ -30,11 +30,11 @@ function b(e) {
         !c.wS)
     )
         return (0, i.jsx)(i.Fragment, { children: d({}) });
-    let N = x >= f.length - 1,
-        I = N ? a.FGA.RED : a.FGA.GREEN,
-        y = j ? I : a.FGA.PRIMARY,
+    let I = x >= f.length - 1,
+        N = I ? a.FGA.RED : a.FGA.GREEN,
+        y = j ? N : a.FGA.PRIMARY,
         A = () => {
-            null == m || m(), (0, c.JG)(n), o.default.track(u.rMx.TEXT_COPIED), C || E(x + 1), S(!0), O(!0), v.start(g, () => S(!1)), T.start(p, () => E(0));
+            null == m || m(), (0, c.JG)(n), o.default.track(u.rMx.TEXT_COPIED), O || E(x + 1), S(!0), C(!0), v.start(g, () => S(!1)), T.start(p, () => E(0));
         };
     return (0, i.jsx)(a.ua7, {
         text: (() => {
@@ -43,16 +43,16 @@ function b(e) {
             let n = (0, s.clamp)(x - 1, 0, f.length - 1),
                 r = null != (e = f[n]) ? e : f[0];
             return (0, i.jsx)(a.UkV, {
-                isShaking: N,
+                isShaking: I,
                 children: r()
             });
         })(),
         delay: _,
         'aria-label': b,
         color: y,
-        forceOpen: C,
+        forceOpen: O,
         onAnimationRest: (e, t) => {
-            !C && j && t.phase === u.UkZ.LEAVE && O(!1);
+            !O && j && t.phase === u.UkZ.LEAVE && C(!1);
         },
         children: (e) => {
             var t,

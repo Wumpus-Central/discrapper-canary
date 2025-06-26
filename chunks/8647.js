@@ -1,6 +1,6 @@
 n.d(t, {
-    C: () => O,
-    Z: () => C
+    C: () => C,
+    Z: () => O
 });
 var i,
     r = n(255367);
@@ -22,8 +22,8 @@ var s = n(120356),
     x = n(579273),
     E = n(38874),
     j = n(267201),
-    O = (((i = {}).SUBSCRIBER_HOME = 'SUBSCRIBER_HOME'), (i.NITRO_SETTINGS = 'SETTINGS'), (i.APPLICATION_NITRO_HOME = 'APPLICATION_NITRO_HOME'), i);
-let C = function (e) {
+    C = (((i = {}).SUBSCRIBER_HOME = 'SUBSCRIBER_HOME'), (i.NITRO_SETTINGS = 'SETTINGS'), (i.APPLICATION_NITRO_HOME = 'APPLICATION_NITRO_HOME'), i);
+let O = function (e) {
     let { variant: t } = e,
         n = (0, m.Vi)(),
         i = (0, o.ZP)(),
@@ -110,7 +110,7 @@ let C = function (e) {
                                         children: [
                                             (0, r.jsx)(a.X6q, {
                                                 className: b.bannerHeader,
-                                                variant: 'heading-xl/extrabold',
+                                                variant: 'heading-lg/extrabold',
                                                 color: 'header-primary',
                                                 children: f.intl.string(f.t['+5UxMD'])
                                             }),

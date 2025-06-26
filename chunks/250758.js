@@ -16,8 +16,8 @@ var r,
     _ = n(430824),
     b = n(768119),
     x = n(246946),
-    y = n(594174),
-    E = n(981631);
+    E = n(594174),
+    y = n(981631);
 let v = {},
     C = {};
 function O(e) {
@@ -36,7 +36,7 @@ function O(e) {
                 null != r
                     ? r
                     : {
-                          type: E.Sap.EMPTY,
+                          type: y.Sap.EMPTY,
                           filter: null,
                           token: null
                       },
@@ -52,14 +52,14 @@ function j(e, t) {
         i = v[e];
     if (null == r || null == i) return;
     let { type: l, filter: a } = i.mode;
-    if (l === E.Sap.EMPTY || (l === E.Sap.FILTER && a !== E.dCx.FILTER_FROM && a !== E.dCx.FILTER_MENTIONS)) return;
+    if (l === y.Sap.EMPTY || (l === y.Sap.FILTER && a !== y.dCx.FILTER_FROM && a !== y.dCx.FILTER_MENTIONS)) return;
     let o = 3;
-    i.mode.type === E.Sap.FILTER && (o = 10),
+    i.mode.type === y.Sap.FILTER && (o = 10),
         (r.results = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
             return (
                 (e = e.reduce((e, t) => {
-                    let n = y.default.getUser(t.id);
+                    let n = E.default.getUser(t.id);
                     return (
                         null == n ||
                             e.push({
@@ -93,8 +93,8 @@ function S(e, t, n) {
     if (null == e || '' === e) return null;
     let c = (0, u.g)(n),
         p = null != (i = null == t || null == (r = t.getFullMatch()) ? void 0 : r.trim()) ? i : '',
-        m = e === E.dCx.FILTER_FROM || e === E.dCx.FILTER_MENTIONS;
-    if (c === E.aib.GUILD && m) {
+        m = e === y.dCx.FILTER_FROM || e === y.dCx.FILTER_MENTIONS;
+    if (c === y.aib.GUILD && m) {
         let e = C[n];
         null == e
             ? (a = null)
@@ -112,13 +112,13 @@ function S(e, t, n) {
         a = null != t ? t(p, n, null != o ? o : 10) : [];
     }
     if (null != a && m && (0, s.co)(p)) {
-        let e = y.default.getCurrentUser();
+        let e = E.default.getCurrentUser();
         null != e &&
             (a = a.filter((t) => {
                 let { user: n } = t;
                 return n.id !== e.id;
             })).unshift({
-                text: E.ME,
+                text: y.ME,
                 user: e
             });
     }
@@ -135,28 +135,28 @@ function I(e, t) {
             let t = (0, u.g)(e),
                 n = (0, m.R6)(t);
             return {
-                [E.dCx.FILTER_FROM]: !x.Z.hidePersonalInformation,
-                [E.dCx.FILTER_MENTIONS]: !x.Z.hidePersonalInformation,
-                [E.dCx.FILTER_HAS]: !0,
-                [E.dCx.FILTER_BEFORE]: !0,
-                [E.dCx.FILTER_AFTER]: !0,
-                [E.dCx.FILTER_ON]: !0,
-                [E.dCx.FILTER_IN]: n,
-                [E.dCx.FILTER_PINNED]: !0
+                [y.dCx.FILTER_FROM]: !x.Z.hidePersonalInformation,
+                [y.dCx.FILTER_MENTIONS]: !x.Z.hidePersonalInformation,
+                [y.dCx.FILTER_HAS]: !0,
+                [y.dCx.FILTER_BEFORE]: !0,
+                [y.dCx.FILTER_AFTER]: !0,
+                [y.dCx.FILTER_ON]: !0,
+                [y.dCx.FILTER_IN]: n,
+                [y.dCx.FILTER_PINNED]: !0
             };
         })(t),
         i = (0, s.nB)(n).filter((e) => r[e.token]);
     return {
-        group: E.rtL.SEARCH_OPTIONS,
+        group: y.rtL.SEARCH_OPTIONS,
         results: i
     };
 }
 function T(e, t) {
     let n = [];
     return (
-        t.type === E.Sap.FILTER
+        t.type === y.Sap.FILTER
             ? n.push(S(t.filter, t.token, e, 10))
-            : t.type === E.Sap.FILTER_ALL
+            : t.type === y.Sap.FILTER_ALL
               ? (n = (function (e, t) {
                     let n = (null != e ? e.getFullMatch() : '').trim(),
                         r = [];
@@ -165,8 +165,8 @@ function T(e, t) {
                             '' !== n &&
                             ((function (e) {
                                 let t = (0, u.g)(e),
-                                    n = [E.dCx.FILTER_HAS];
-                                return x.Z.hidePersonalInformation || (n.push(E.dCx.FILTER_FROM), n.push(E.dCx.FILTER_MENTIONS)), (0, m.R6)(t) && n.push(E.dCx.FILTER_IN), n;
+                                    n = [y.dCx.FILTER_HAS];
+                                return x.Z.hidePersonalInformation || (n.push(y.dCx.FILTER_FROM), n.push(y.dCx.FILTER_MENTIONS)), (0, m.R6)(t) && n.push(y.dCx.FILTER_IN), n;
                             })(t).forEach((n) => {
                                 if (null == n) return;
                                 let i = S(n, e, t, 3);
@@ -177,13 +177,13 @@ function T(e, t) {
                                     let n = (null != e ? e.getFullMatch() : '').trim();
                                     if (null != n && '' !== n) {
                                         var r, i, l;
-                                        let e = null == (r = s.ZP[E.dCx.FILTER_BEFORE]) ? void 0 : r.getAutocompletions(n, t, 1)[0],
-                                            a = null == (i = s.ZP[E.dCx.FILTER_ON]) ? void 0 : i.getAutocompletions(n, t, 1)[0],
-                                            o = null == (l = s.ZP[E.dCx.FILTER_AFTER]) ? void 0 : l.getAutocompletions(n, t, 1)[0];
+                                        let e = null == (r = s.ZP[y.dCx.FILTER_BEFORE]) ? void 0 : r.getAutocompletions(n, t, 1)[0],
+                                            a = null == (i = s.ZP[y.dCx.FILTER_ON]) ? void 0 : i.getAutocompletions(n, t, 1)[0],
+                                            o = null == (l = s.ZP[y.dCx.FILTER_AFTER]) ? void 0 : l.getAutocompletions(n, t, 1)[0];
                                         return null == e
                                             ? null
                                             : {
-                                                  group: E.rtL.DATES,
+                                                  group: y.rtL.DATES,
                                                   results: [e, a, o]
                                               };
                                     }
@@ -193,7 +193,7 @@ function T(e, t) {
                         r
                     );
                 })(t.token, e))
-              : t.type === E.Sap.EMPTY &&
+              : t.type === y.Sap.EMPTY &&
                 (n.push(I(t.token, e)),
                 n.push(
                     (function (e) {
@@ -202,7 +202,7 @@ function T(e, t) {
                         return null == t
                             ? null
                             : {
-                                  group: E.rtL.HISTORY,
+                                  group: y.rtL.HISTORY,
                                   results: t.map((e) => ({ text: e }))
                               };
                     })(e)
@@ -223,7 +223,7 @@ function P(e) {
         mode: r,
         tokens: i,
         cursorScope: l,
-        autocompletes: a.map((e) => ((null == e ? void 0 : e.group) === E.rtL.HISTORY ? null : e))
+        autocompletes: a.map((e) => ((null == e ? void 0 : e.group) === y.rtL.HISTORY ? null : e))
     });
 }
 function A() {
@@ -268,7 +268,7 @@ let Z = new w(o.Z, {
                 c = C[r],
                 u = !0;
             if (a === s.query && (null == s.mode || s.mode.filter === o.filter)) (n = s.autocompletes), (u = !1);
-            else if (o.type === E.Sap.EMPTY || (o.type === E.Sap.FILTER && o.filter !== E.dCx.FILTER_FROM && o.filter !== E.dCx.FILTER_MENTIONS)) null != c && (c.context.clearQuery(), (c.results = [])), (n = T(r, o));
+            else if (o.type === y.Sap.EMPTY || (o.type === y.Sap.FILTER && o.filter !== y.dCx.FILTER_FROM && o.filter !== y.dCx.FILTER_MENTIONS)) null != c && (c.context.clearQuery(), (c.results = [])), (n = T(r, o));
             else if (null != c) {
                 let { token: e } = o;
                 null != e && e.getFullMatch().trim().length > 0 ? (p.Z.requestMembers(r, e.getFullMatch().trim(), 10), c.context.setQuery(e.getFullMatch().trim(), { guild: r }), (n = s.autocompletes), (u = !1)) : (c.context.clearQuery(), (n = T(r, o)));

@@ -1,4 +1,4 @@
-n.d(t, { f: () => O }), n(388685), n(49124);
+n.d(t, { f: () => C }), n(388685), n(49124);
 var i = n(255367),
     r = n(73800),
     s = n(245364),
@@ -59,7 +59,7 @@ function j(e, t) {
         e
     );
 }
-function O() {
+function C() {
     return (0, i.jsx)(m.PaymentContextProvider, {
         stepConfigs: [],
         skuIDs: [],
@@ -72,14 +72,14 @@ function O() {
                     className: _.labelSpacing,
                     children: 'Payment-method-specific components and views may not appear for you unless your browser is supported for that payment method and they have been configured on your browser.'
                 }),
-                (0, i.jsx)(C, {}),
-                (0, i.jsx)(I, {}),
+                (0, i.jsx)(O, {}),
+                (0, i.jsx)(N, {}),
                 (0, i.jsx)(w, {})
             ]
         })
     });
 }
-function C() {
+function O() {
     return (0, i.jsxs)(h.$0, {
         children: [
             (0, i.jsx)(o.X6q, {
@@ -184,7 +184,7 @@ function T(e) {
         })
     });
 }
-function N(e) {
+function I(e) {
     let { children: t } = e;
     return (0, i.jsx)(v, {
         className: _.choosePaymentTypeModal,
@@ -194,7 +194,7 @@ function N(e) {
         })
     });
 }
-function I() {
+function N() {
     let e = {
         onChooseType: () => {},
         onStripePaymentMethodReceived: (e) => {
@@ -210,7 +210,7 @@ function I() {
             }),
             (0, i.jsx)(h.E_, {
                 label: 'All Payment Request Wallets Enabled',
-                children: (0, i.jsx)(N, {
+                children: (0, i.jsx)(I, {
                     children: (0, i.jsx)(
                         c.ZP,
                         j(E({}, e), {
@@ -222,7 +222,7 @@ function I() {
             }),
             (0, i.jsx)(h.E_, {
                 label: 'No Payment Wallets Enabled',
-                children: (0, i.jsx)(N, {
+                children: (0, i.jsx)(I, {
                     children: (0, i.jsx)(
                         c.ZP,
                         j(E({}, e), {
@@ -234,7 +234,7 @@ function I() {
             }),
             (0, i.jsx)(h.E_, {
                 label: 'Is Eligible for Trial',
-                children: (0, i.jsx)(N, {
+                children: (0, i.jsx)(I, {
                     children: (0, i.jsx)(
                         c.ZP,
                         j(E({}, e), {
@@ -247,7 +247,7 @@ function I() {
             }),
             (0, i.jsx)(h.E_, {
                 label: 'Only Stripe Card Enabled',
-                children: (0, i.jsx)(N, {
+                children: (0, i.jsx)(I, {
                     children: (0, i.jsx)(
                         c.ZP,
                         j(E({}, e), {

@@ -1,13 +1,15 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => h });
 var r = n(255367),
     i = n(73800),
     a = n(442837),
-    o = n(481060),
-    s = n(846027),
-    l = n(468026),
-    c = n(131951),
-    u = n(388032);
-function d(e, t, n) {
+    o = n(82659),
+    s = n(481060),
+    l = n(846027),
+    c = n(468026),
+    u = n(724723),
+    d = n(131951),
+    f = n(388032);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +22,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,45 +33,62 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-let _ = () => {
-    let e = (0, a.e7)([c.Z], () => c.Z.isInteractionRequired(), []),
+let h = () => {
+    let e = (0, a.e7)([d.Z], () => d.Z.isInteractionRequired(), []),
         t = i.useRef(null);
     function n() {
-        null !== t.current && ((0, o.Mr3)(t.current), (t.current = null));
+        null !== t.current && ((0, s.Mr3)(t.current), (t.current = null));
     }
-    function d() {
-        s.Z.interact();
+    function _() {
+        l.Z.interact();
     }
     return (
-        i.useEffect(
-            () => (
-                e
-                    ? (t.current = (0, o.h7j)((e) =>
-                          (0, r.jsx)(
-                              l.default,
-                              f(
+        i.useEffect(() => {
+            if (e) {
+                let e = u.Z.getCurrentConfig({ location: 'InteractionRequired' }).enabled;
+                t.current = (0, s.h7j)((t) =>
+                    e
+                        ? (0, r.jsx)(
+                              o.u,
+                              p(
                                   {
-                                      title: u.intl.string(u.t.dLLxCw),
-                                      body: u.intl.string(u.t['64lmt7']),
-                                      onConfirm: d,
-                                      confirmText: u.intl.string(u.t.BddRzc)
+                                      title: f.intl.string(f.t.dLLxCw),
+                                      headerBody: f.intl.string(f.t['64lmt7']),
+                                      actions: [
+                                          {
+                                              text: f.intl.string(f.t.BddRzc),
+                                              onClick: () => {
+                                                  _(), t.onClose();
+                                              }
+                                          }
+                                      ]
                                   },
-                                  e
+                                  t
                               )
                           )
-                      ))
-                    : n(),
-                () => {
-                    n();
-                }
-            ),
-            [e]
-        ),
+                        : (0, r.jsx)(
+                              c.default,
+                              p(
+                                  {
+                                      title: f.intl.string(f.t.dLLxCw),
+                                      body: f.intl.string(f.t['64lmt7']),
+                                      onConfirm: _,
+                                      confirmText: f.intl.string(f.t.BddRzc)
+                                  },
+                                  t
+                              )
+                          )
+                );
+            } else n();
+            return () => {
+                n();
+            };
+        }, [e]),
         null
     );
 };

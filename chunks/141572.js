@@ -10,8 +10,5 @@ e.exports = {
     stepIconWrapper: 'stepIconWrapper__10e9a',
     stepWrapperComplete: 'stepWrapperComplete__10e9a',
     stepConnector: 'stepConnector__10e9a',
-    stepIcon: 'stepIcon__10e9a',
-    rewardsListWrapper: 'rewardsListWrapper__10e9a',
-    rewardsListBody: 'rewardsListBody__10e9a',
-    rewardsListPremiumDurationExtension: 'rewardsListPremiumDurationExtension__10e9a'
+    stepIcon: 'stepIcon__10e9a'
 };

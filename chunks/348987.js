@@ -2,8 +2,6 @@ e.exports = {
     container: 'container_d5200e',
     headerContainer: 'headerContainer_d5200e',
     containerBottomPadding: 'containerBottomPadding_d5200e',
-    tier0Background: 'tier0Background_d5200e',
-    tier2Background: 'tier2Background_d5200e',
     bigWumpus: 'bigWumpus_d5200e',
     wumpus: 'wumpus_d5200e',
     bigCloud: 'bigCloud_d5200e',

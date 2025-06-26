@@ -20,11 +20,11 @@ let b = ['#51BC9D'],
         let { expansionSpring: n, overlayRef: o, quest: j, progressBarRef: _, isExpanded: v } = e,
             { completionSpring: y, startCompletionAnimation: C } = (0, f.G)(),
             O = (null == (t = j.userStatus) ? void 0 : t.completedAt) != null,
-            S = s.useRef(!1),
-            E = (0, u.e7)([p.Z], () => p.Z.useReducedMotion),
+            E = s.useRef(!1),
+            S = (0, u.e7)([p.Z], () => p.Z.useReducedMotion),
             w = s.useRef(null),
-            T = (0, u.e7)([m.Z], () => m.Z.hasLayers()),
-            P = (0, d.Z)(T),
+            P = (0, u.e7)([m.Z], () => m.Z.hasLayers()),
+            T = (0, d.Z)(P),
             [N, A] = s.useState(null),
             [R, k] = s.useState(null),
             B = s.useRef(
@@ -33,16 +33,16 @@ let b = ['#51BC9D'],
                     wind: 0
                 })
             ),
-            q = (0, i.uR)(N, R),
-            I = s.useCallback(() => {
-                if (E) return;
+            I = (0, i.uR)(N, R),
+            q = s.useCallback(() => {
+                if (S) return;
                 let e = _.current,
                     t = w.current;
-                if (null != t && null != e && q.isReady) {
+                if (null != t && null != e && I.isReady) {
                     var n, r, s, o, a, i;
                     let { x: l, y: c } = e.getBoundingClientRect(),
                         { x: u, y: d } = t.getBoundingClientRect();
-                    q.createMultipleConfetti(
+                    I.createMultipleConfetti(
                         ((n = l - u),
                         (r = c - d),
                         (s = e.clientHeight),
@@ -127,23 +127,23 @@ let b = ['#51BC9D'],
                         100
                     );
                 }
-            }, [_, w, q, E]),
+            }, [_, w, I, S]),
             D = (0, d.Z)(v);
         return (s.useEffect(() => {
-            O && v && !D && (C(), I());
-        }, [v, O, C, I, D]),
+            O && v && !D && (C(), q());
+        }, [v, O, C, q, D]),
         s.useEffect(() => {
             O &&
-                !T &&
-                P &&
+                !P &&
+                T &&
                 setTimeout(() => {
-                    C(), I();
+                    C(), q();
                 }, 200);
-        }, [O, P, T, C, I]),
+        }, [O, T, P, C, q]),
         s.useEffect(() => {
-            q.isReady && (!S.current && O && (C(), I()), (S.current = O));
-        }, [O, S, I, C, q]),
-        E)
+            I.isReady && (!E.current && O && (C(), q()), (E.current = O));
+        }, [O, E, q, C, I]),
+        S)
             ? null
             : (0, r.jsxs)('div', {
                   className: x.wrapper,

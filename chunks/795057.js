@@ -1,109 +1,69 @@
 n.d(t, {
-    Om: () => g,
-    ZP: () => x,
-    y3: () => f
+    ZP: () => u,
+    y3: () => c
 });
-var r = n(255367),
-    s = n(73800),
-    o = n(120356),
-    a = n.n(o),
-    i = n(481060),
-    l = n(918701),
-    c = n(373370),
-    u = n(566078),
-    d = n(388032),
-    p = n(141572);
-function m(e) {
+var r = n(255367);
+n(73800);
+var s = n(120356),
+    o = n.n(s),
+    a = n(481060);
+n(918701), n(373370), n(566078), n(388032);
+var i = n(141572);
+function l(e) {
     let { children: t, isComplete: n, hasNextStep: s } = e;
     return (0, r.jsxs)('li', {
-        className: a()(p.stepWrapper, { [p.stepWrapperComplete]: n }, { [p.stepWrapperWithNextStep]: s }),
+        className: o()(i.stepWrapper, { [i.stepWrapperComplete]: n }, { [i.stepWrapperWithNextStep]: s }),
         children: [
             (0, r.jsxs)('div', {
-                className: p.stepIndicator,
+                className: i.stepIndicator,
                 children: [
                     (0, r.jsx)('div', {
-                        className: p.stepIconWrapper,
+                        className: i.stepIconWrapper,
                         children:
                             n &&
-                            (0, r.jsx)(i.sV5, {
-                                className: p.stepIcon,
-                                color: i.TVs.colors.WHITE
+                            (0, r.jsx)(a.sV5, {
+                                className: i.stepIcon,
+                                color: a.TVs.colors.WHITE
                             })
                     }),
-                    s && (0, r.jsx)('div', { className: p.stepConnector })
+                    s && (0, r.jsx)('div', { className: i.stepConnector })
                 ]
             }),
             (0, r.jsx)('div', {
-                className: p.stepContent,
+                className: i.stepContent,
                 children: t
             })
         ]
     });
 }
-function f(e) {
+function c(e) {
     let { children: t } = e;
-    return (0, r.jsx)(i.Text, {
+    return (0, r.jsx)(a.Text, {
         color: 'text-muted',
         variant: 'text-xs/medium',
         children: t
     });
 }
-function g(e) {
-    let { quest: t } = e,
-        { rewardName: n, rewardDuration: o } = s.useMemo(
-            () => ({
-                rewardName: u.r.build(t.config).defaultRewardName,
-                rewardDuration: (0, l.Kr)(t.config)
-            }),
-            [t.config]
-        ),
-        a = (0, c.mK)(t.config);
-    return (0, r.jsxs)('div', {
-        className: p.rewardsListWrapper,
-        children: [
-            (0, r.jsx)(i.X6q, {
-                color: 'header-primary',
-                variant: 'text-xs/semibold',
-                children: null == o ? d.intl.string(d.t['7Rdjmp']) : d.intl.formatToPlainString(d.t.coKAb2, { rewardsDuration: o })
-            }),
-            (0, r.jsx)('ul', {
-                className: p.rewardsListBody,
-                children: (0, r.jsx)(i.Text, {
-                    tag: 'li',
-                    color: 'text-muted',
-                    variant: 'text-xs/normal',
-                    children: n
-                })
-            }),
-            null != a &&
-                (0, r.jsx)(i.Text, {
-                    className: p.rewardsListPremiumDurationExtension,
-                    variant: 'text-xs/semibold',
-                    children: a
-                })
-        ]
-    });
-}
-let x = function (e) {
+let u = function (e) {
     let { children: t, heading: n, steps: s } = e;
     return (0, r.jsxs)('div', {
-        className: p.wrapper,
+        className: i.wrapper,
         children: [
             (0, r.jsx)('div', {
-                className: p.headingWrapper,
-                children: (0, r.jsx)(i.X6q, {
-                    className: p.heading,
+                className: i.headingWrapper,
+                children: (0, r.jsx)(a.X6q, {
+                    className: i.heading,
                     color: 'header-primary',
                     variant: 'text-xs/semibold',
                     children: n
                 })
             }),
             (0, r.jsx)('div', {
-                className: p.stepsWrapper,
+                className: i.stepsWrapper,
                 children: (0, r.jsx)('ul', {
                     children: s.map((e, t) =>
                         (0, r.jsx)(
-                            m,
+                            l,
                             {
                                 isComplete: e.isComplete,
                                 hasNextStep: t < s.length - 1,

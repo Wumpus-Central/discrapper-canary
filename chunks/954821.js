@@ -35,11 +35,11 @@ let _ = (e) => {
         var t;
         let { transitionState: n, groupListing: r, guildId: s, listing: o, subscription: x, onClose: E } = e,
             j = (0, u.Dt)(),
-            O = (0, g.YB)(s),
-            C = (null == O || null == (t = O.cover_image_asset) ? void 0 : t.application_id) != null ? (0, m._W)(O.cover_image_asset.application_id, O.cover_image_asset, 440) : void 0,
+            C = (0, g.YB)(s),
+            O = (null == C || null == (t = C.cover_image_asset) ? void 0 : t.application_id) != null ? (0, m._W)(C.cover_image_asset.application_id, C.cover_image_asset, 440) : void 0,
             { analyticsLocations: S } = (0, d.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
-            { cancelSubscription: v, error: T, submitting: N } = _(S),
-            I = async () => {
+            { cancelSubscription: v, error: T, submitting: I } = _(S),
+            N = async () => {
                 (await v(x.id)) && E();
             },
             y = o.role_benefits.benefits.filter((e) => e.ref_type === h.Qs.CHANNEL),
@@ -59,7 +59,7 @@ let _ = (e) => {
                 (0, i.jsxs)('div', {
                     children: [
                         (0, i.jsx)('img', {
-                            src: C,
+                            src: O,
                             alt: '',
                             className: b.headerImage
                         }),
@@ -97,8 +97,8 @@ let _ = (e) => {
                     children: [
                         (0, i.jsx)(a.zxk, {
                             color: a.zxk.Colors.RED,
-                            onClick: I,
-                            submitting: N,
+                            onClick: N,
+                            submitting: I,
                             children: f.intl.string(f.t.F6lUDA)
                         }),
                         (0, i.jsx)(a.zxk, {

@@ -52,7 +52,7 @@ function p(e, t) {
     );
 }
 function m(e) {
-    let { application: t, fullWidth: n = !1, size: m = l.zxk.Sizes.LARGE, color: f, customDisabledColor: h, hideNotLaunchable: g, tooltipPosition: _, onClick: b, className: x, source: y, hover: E, innerClassName: v } = e,
+    let { application: t, fullWidth: n = !1, size: m = l.zxk.Sizes.LARGE, color: f, customDisabledColor: h, hideNotLaunchable: g, tooltipPosition: _, onClick: b, className: x, source: E, hover: y, innerClassName: v } = e,
         C = {
             fullWidth: n,
             size: m,
@@ -61,7 +61,7 @@ function m(e) {
             tooltipPosition: _,
             onClick: b,
             className: x,
-            hover: E,
+            hover: y,
             innerClassName: v
         },
         O = (0, i.e7)([a.Z], () => a.Z.getActiveLibraryApplication(t.id)),
@@ -73,7 +73,7 @@ function m(e) {
               u.Z,
               p(d({}, C), {
                   libraryApplication: O,
-                  source: y
+                  source: E
               })
           )
         : I

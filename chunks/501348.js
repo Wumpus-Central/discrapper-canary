@@ -18,13 +18,13 @@ var i = n(255367),
     x = n(514361),
     E = n(803038),
     j = n(600164),
-    O = n(313201),
-    C = n(605236),
+    C = n(313201),
+    O = n(605236),
     S = n(786761),
     v = n(3148),
     T = n(739566),
-    N = n(753206),
-    I = n(921801),
+    I = n(753206),
+    N = n(921801),
     y = n(594174),
     A = n(358085),
     P = n(210887),
@@ -90,11 +90,11 @@ let Y = {
         COZY: 'cozy',
         COMPACT: 'compact'
     },
-    W = (0, O.hQ)(),
-    K = (0, O.hQ)(),
-    q = (0, O.hQ)(),
+    W = (0, C.hQ)(),
+    K = (0, C.hQ)(),
+    q = (0, C.hQ)(),
     X = '1337',
-    J = (e) => {
+    Q = (e) => {
         let t = 0;
         return [
             (0, S.e5)(
@@ -174,7 +174,7 @@ let Y = {
             )
         ];
     },
-    Q = () =>
+    J = () =>
         (0, i.jsxs)('div', {
             className: V.themeTitle,
             children: [
@@ -306,7 +306,7 @@ class $ extends r.Component {
                 'aria-hidden': !0,
                 children: s.map((t, n) =>
                     (0, i.jsx)(
-                        N.Z,
+                        I.Z,
                         {
                             author: (0, T.ZH)(t),
                             message: t,
@@ -354,7 +354,7 @@ class $ extends r.Component {
                           children: U.intl.string(U.t.Ksh3io)
                       }),
                       (0, i.jsx)(u.xJW, {
-                          title: (0, i.jsx)(Q, {}),
+                          title: (0, i.jsx)(J, {}),
                           children: (0, i.jsx)(Z.i, {})
                       })
                   ]
@@ -391,7 +391,7 @@ class $ extends r.Component {
     }
     renderListSpacing() {
         let { density: e } = this.props;
-        return (0, i.jsxs)(I.F, {
+        return (0, i.jsxs)(N.F, {
             setting: k.s6.APPEARANCE_LIST_SPACING,
             children: [
                 (0, i.jsxs)(u.xJW, {
@@ -473,20 +473,20 @@ class $ extends r.Component {
             tag: u.RB0.H1,
             title: U.intl.string(U.t['iHH+k5']),
             children: [
-                (0, i.jsxs)(I.F, {
+                (0, i.jsxs)(N.F, {
                     setting: k.s6.APPEARANCE_THEME,
                     children: [this.renderPreview(), this.renderTheme()]
                 }),
-                (0, i.jsx)(I.F, {
+                (0, i.jsx)(N.F, {
                     setting: k.s6.APPEARANCE_MESSAGE_DISPLAY_COMPACT,
                     children: this.renderDisplayMode()
                 }),
                 this.renderListSpacing(),
-                (0, i.jsx)(I.F, {
+                (0, i.jsx)(N.F, {
                     setting: k.s6.APPEARANCE_SCALING_SPACING,
                     children: this.renderScalingAndSpacing()
                 }),
-                (0, i.jsxs)(I.F, {
+                (0, i.jsxs)(N.F, {
                     setting: k.s6.APPEARANCE_TIMESTAMP_HOUR_CYCLE,
                     children: [this.renderTimestampHourCycle(), (0, i.jsx)(u.$i$, { className: G.marginTop8 })]
                 }),
@@ -529,8 +529,8 @@ class $ extends r.Component {
     }
     constructor(...e) {
         super(...e),
-            F(this, 'darkMessages', J(L.BRd.DARK)),
-            F(this, 'lightMessages', J(L.BRd.LIGHT)),
+            F(this, 'darkMessages', Q(L.BRd.DARK)),
+            F(this, 'lightMessages', Q(L.BRd.LIGHT)),
             F(this, 'handleDisplayCompactAvatarsChanged', (e) => {
                 m.ZP.updatedUnsyncedSettings({ displayCompactAvatars: e });
             }),
@@ -550,11 +550,11 @@ class $ extends r.Component {
 class ee extends $ {
     render() {
         let { density: e } = this.props,
-            t = (0, i.jsxs)(I.F, {
+            t = (0, i.jsxs)(N.F, {
                 setting: k.s6.APPEARANCE_THEME,
                 children: [this.renderPreview(), this.renderTheme()]
             }),
-            n = (0, i.jsx)(I.F, {
+            n = (0, i.jsx)(N.F, {
                 setting: k.s6.APPEARANCE_ICON,
                 children: (0, i.jsx)(w.c, {})
             }),
@@ -572,7 +572,7 @@ class ee extends $ {
                     value: c.Pi.COZY
                 }
             ],
-            s = (0, i.jsxs)(I.F, {
+            s = (0, i.jsxs)(N.F, {
                 setting: k.s6.APPEARANCE_LIST_SPACING,
                 children: [
                     (0, i.jsxs)(u.xJW, {
@@ -597,7 +597,7 @@ class ee extends $ {
                     (0, i.jsx)(u.$i$, { className: V.divider })
                 ]
             }),
-            l = (0, i.jsxs)(I.F, {
+            l = (0, i.jsxs)(N.F, {
                 setting: k.s6.APPEARANCE_MESSAGE_DISPLAY_COMPACT,
                 children: [
                     (0, i.jsxs)(u.Kqy, {
@@ -656,7 +656,7 @@ class ee extends $ {
                     (0, i.jsx)(u.$i$, { className: V.divider })
                 ]
             }),
-            a = (0, i.jsxs)(I.F, {
+            a = (0, i.jsxs)(N.F, {
                 setting: k.s6.APPEARANCE_SCALING_SPACING,
                 children: [
                     (0, i.jsx)(u.Text, {
@@ -669,7 +669,7 @@ class ee extends $ {
                     (0, i.jsx)(u.$i$, { className: V.divider })
                 ]
             }),
-            o = (0, i.jsx)(I.F, {
+            o = (0, i.jsx)(N.F, {
                 setting: k.s6.APPEARANCE_TIMESTAMP_HOUR_CYCLE,
                 children: this.renderTimestampHourCycle()
             }),
@@ -690,8 +690,8 @@ class ee extends $ {
     }
 }
 let et = (e) => {
-    (0, C.un)(e) ||
-        (0, C.EW)(e, {
+    (0, O.un)(e) ||
+        (0, O.EW)(e, {
             dismissAction: B.L.AUTO,
             forceTrack: !0
         });

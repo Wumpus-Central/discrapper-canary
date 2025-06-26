@@ -19,15 +19,15 @@ var r = n(120356),
     x = n(726985),
     E = n(981631),
     j = n(388032),
-    O = n(20493);
-let C = n(775322),
+    C = n(20493);
+let O = n(775322),
     S = n(853453),
     v = (0, u.hQ)(),
     T = {
         page: E.ZY5.USER_SETTINGS,
         section: E.jXE.SETTINGS_VOICE_AND_VIDEO
     };
-function N(e) {
+function I(e) {
     let t = e.currentTarget;
     h.default.track(E.rMx.NOISE_CANCELLATION_LINK_CLICKED, {
         text: t.text,
@@ -38,7 +38,7 @@ function N(e) {
         }
     });
 }
-function I(e) {
+function N(e) {
     let { refreshStyles: t = !1 } = e,
         n = (0, l.e7)([b.Z], () => b.Z.theme),
         {
@@ -70,17 +70,17 @@ function I(e) {
             value: 0
         }),
         (0, i.jsxs)(o.hjN, {
-            className: t ? void 0 : O.marginBottom20,
+            className: t ? void 0 : C.marginBottom20,
             children: [
                 (0, i.jsx)(o.vwX, {
                     id: v,
                     tag: o.RB0.H3,
-                    className: O.marginBottom8,
+                    className: C.marginBottom8,
                     children: j.intl.string(j.t.t8QhiY)
                 }),
                 (0, i.jsx)(o.R94, {
                     type: o.R94.Types.DESCRIPTION,
-                    className: O.marginBottom8,
+                    className: C.marginBottom8,
                     children: j.intl.string(j.t.najZCQ)
                 }),
                 (0, i.jsx)(o.FXm, {
@@ -92,17 +92,17 @@ function I(e) {
                 }),
                 m &&
                     (0, i.jsx)(o.ToO, {
-                        className: O.marginBottom8,
+                        className: C.marginBottom8,
                         type: o.Dd5.PRIMARY,
                         imageData: {
-                            src: (0, a.ap)(n) ? C : S,
+                            src: (0, a.ap)(n) ? O : S,
                             width: 70,
                             height: 40
                         },
                         align: d.Z.Align.CENTER,
                         body: (0, i.jsx)(o.eee, {
                             href: f.Z.getArticleURL(E.BhN.NOISE_SUPPRESSION),
-                            onClick: N,
+                            onClick: I,
                             children: j.intl.string(j.t.hvVgAQ)
                         })
                     }),
@@ -132,7 +132,7 @@ function y(e) {
         })),
         {
             hasEchoCancellation: b,
-            hasNoiseSuppression: C,
+            hasNoiseSuppression: O,
             hasAutomaticGainControl: S
         } = (0, l.cj)(
             [g.Z],
@@ -146,16 +146,16 @@ function y(e) {
         v = n === E.pM4.VOICE_ACTIVITY && u,
         T = (0, i.jsxs)(_.Z, {
             children: [
-                (b || C || S) &&
+                (b || O || S) &&
                     (0, i.jsx)(o.R94, {
-                        className: t ? void 0 : O.marginBottom20,
+                        className: t ? void 0 : C.marginBottom20,
                         type: o.R94.Types.DESCRIPTION,
                         children: j.intl.string(j.t['/Whuzs'])
                     }),
                 (0, i.jsx)(m.F, {
                     setting: x.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION,
                     children: (0, i.jsx)(o.j7V, {
-                        className: t ? void 0 : s()(O.marginTop8, O.marginBottom20),
+                        className: t ? void 0 : s()(C.marginTop8, C.marginBottom20),
                         value: a,
                         onChange: (e) =>
                             c.Z.setEchoCancellation(e, {
@@ -169,7 +169,7 @@ function y(e) {
                 }),
                 (0, i.jsx)(m.F, {
                     setting: x.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION,
-                    children: (0, i.jsx)(I, { refreshStyles: t })
+                    children: (0, i.jsx)(N, { refreshStyles: t })
                 }),
                 (0, i.jsx)(m.F, {
                     setting: x.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ADVANCED_VOICE_ACTIVITY,
@@ -214,7 +214,7 @@ function y(e) {
     return t
         ? T
         : (0, i.jsx)(o.hjN, {
-              className: O.marginBottom20,
+              className: C.marginBottom20,
               title: j.intl.string(j.t['6I6GUl']),
               children: T
           });

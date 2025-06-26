@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
+n.d(t, { Z: () => O }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -42,7 +42,7 @@ function j(e) {
     }
     return e;
 }
-function O(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,14 +60,14 @@ function O(e, t) {
         e
     );
 }
-function C() {
+function O() {
     var e;
     let [t, n] = (0, r.useState)(!1),
         [s, l] = (0, r.useState)(!1),
         [a, c] = (0, r.useState)(null),
         m = (0, g.ZP)((e) => e.toolsCache),
         { setToolsCache: f, removeToolsCache: _ } = (0, g.L3)(),
-        { setImgCache: C } = (0, g.W_)(),
+        { setImgCache: O } = (0, g.W_)(),
         A = (0, r.useCallback)(
             (e) => {
                 let t = m[e];
@@ -84,7 +84,7 @@ function C() {
                                   palette: p.jD,
                                   preview: !0
                               }
-                            : O(j({}, t), {
+                            : C(j({}, t), {
                                   src: e,
                                   preview: !0
                               })
@@ -96,7 +96,7 @@ function C() {
             c((t) =>
                 null == t
                     ? null
-                    : O(j({}, t), {
+                    : C(j({}, t), {
                           palette: e,
                           preview: !0
                       })
@@ -162,12 +162,12 @@ function C() {
                                 variant: 'text-sm/semibold',
                                 children: 'Memberlist'
                             }),
-                            (0, i.jsx)(N, { nameplate: a }),
+                            (0, i.jsx)(I, { nameplate: a }),
                             (0, i.jsx)(o.Text, {
                                 variant: 'text-sm/semibold',
                                 children: 'DMs'
                             }),
-                            (0, i.jsx)(I, { nameplate: a }),
+                            (0, i.jsx)(N, { nameplate: a }),
                             (0, i.jsx)(o.Text, {
                                 variant: 'text-sm/semibold',
                                 children: 'RTC'
@@ -190,7 +190,7 @@ function C() {
                                     let t = URL.createObjectURL(e[0]),
                                         n = e[0],
                                         i = await n.arrayBuffer();
-                                    C(t, t, (0, h.xh)(i)), f(t, t, p.jD);
+                                    O(t, t, (0, h.xh)(i)), f(t, t, p.jD);
                                 }
                             }),
                             (0, i.jsx)('div', {
@@ -298,7 +298,7 @@ function T(e) {
         ]
     });
 }
-function N(e) {
+function I(e) {
     let { nameplate: t } = e,
         n = (0, a.e7)([m.default], () => m.default.getCurrentUser());
     return (0, i.jsx)('div', {
@@ -340,7 +340,7 @@ function N(e) {
         })
     });
 }
-function I(e) {
+function N(e) {
     let { nameplate: t } = e;
     return (0, i.jsx)('div', {
         className: l()(E.preview, E.resizer),

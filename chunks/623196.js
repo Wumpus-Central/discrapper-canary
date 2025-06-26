@@ -34,9 +34,9 @@ function j() {
         })),
         [s, j] = r.useState(!1);
     if (null == e) return null;
-    let O = (0, m.$6)(t, e) || n,
-        C = null != t && l()().diff(l()(t.created_at), 'days') < b.eBq,
-        S = O && C,
+    let C = (0, m.$6)(t, e) || n,
+        O = null != t && l()().diff(l()(t.created_at), 'days') < b.eBq,
+        S = C && O,
         v = () => {
             E({
                 header: _.intl.string(_.t.jxXMEx),
@@ -88,7 +88,7 @@ function j() {
                           children: (e) => {
                               let { onMouseEnter: t, onMouseLeave: r } = e;
                               return (0, i.jsx)(o.zxk, {
-                                  disabled: O,
+                                  disabled: C,
                                   onClick: v,
                                   onMouseEnter: t,
                                   onMouseLeave: r,

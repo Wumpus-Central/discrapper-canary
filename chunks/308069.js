@@ -18,14 +18,14 @@ var r = n(255367),
 let j = (e) => {
     let { quest: t, expansionSpring: n, onCtxMenuSelect: o, onCtxMenuOpen: j, onCtxMenuClose: _, useReducedMotion: v, isExpanded: y, isExpansionAnimationComplete: C } = e,
         O = (0, u.aM)(),
-        S = s.useCallback(() => {
+        E = s.useCallback(() => {
             (0, g.openDisclosureModal)(t, {
                 content: d.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_DISCLOSURE,
                 sourceQuestContent: d.jn.QUEST_BAR_V2
             });
         }, [t]),
-        E = s.useCallback(() => {
+        S = s.useCallback(() => {
             (0, p.nc)(t, {
                 content: d.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_GAME_LINK,
@@ -34,8 +34,8 @@ let j = (e) => {
             });
         }, [O, t]),
         w = y && C,
-        T = (0, r.jsx)(l.P3F, {
-            onClick: E,
+        P = (0, r.jsx)(l.P3F, {
+            onClick: S,
             className: a()(b.clickable, { [b.logo]: w }),
             children: (0, r.jsx)(m.ZP, {
                 quest: t,
@@ -70,7 +70,7 @@ let j = (e) => {
                 quest: t,
                 expansionSpring: n,
                 isFullyExpanded: w,
-                partnerBranding: T,
+                partnerBranding: P,
                 useReducedMotion: v
             }),
             (0, r.jsxs)(i.animated.div, {
@@ -84,7 +84,7 @@ let j = (e) => {
                 children: [
                     (0, r.jsxs)(l.P3F, {
                         className: b.promotedBadge,
-                        onClick: S,
+                        onClick: E,
                         children: [
                             (0, r.jsx)(l.Text, {
                                 color: 'always-white',

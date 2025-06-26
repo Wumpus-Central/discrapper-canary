@@ -5,5 +5,6 @@ e.exports = {
     content: 'content_deee3a',
     title: 'title_deee3a',
     captchaContainer: 'captchaContainer_deee3a',
+    manaDesktopModal: 'manaDesktopModal_deee3a',
     gradientBorder: 'gradientBorder_deee3a'
 };

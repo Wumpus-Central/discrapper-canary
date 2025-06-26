@@ -1,4 +1,4 @@
-t.d(n, { Z: () => _ });
+t.d(n, { Z: () => h });
 var i = t(255367);
 t(73800);
 var s = t(120356),
@@ -11,10 +11,10 @@ var s = t(120356),
     x = t(388032),
     m = t(395494),
     u = t(91463),
-    h = t(160557);
-function _(e) {
+    _ = t(160557);
+function h(e) {
     let { className: n, onNext: t, onClose: s } = e,
-        _ = (0, o.n)();
+        h = (0, o.n)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(a.xBx, {
@@ -25,7 +25,7 @@ function _(e) {
                     (0, i.jsx)('div', {
                         className: m.iconContainer,
                         children: (0, i.jsx)('img', {
-                            src: h,
+                            src: _,
                             alt: '',
                             className: m.icon
                         })
@@ -61,12 +61,12 @@ function _(e) {
                     (0, i.jsx)(c.Z, {
                         text: x.intl.string(x.t.PxL38P),
                         url: d.sQ.COMMUNITY_GUIDELINES,
-                        onClick: () => _(d.n0.ClickCommunityGuidelinesLink)
+                        onClick: () => h(d.n0.ClickCommunityGuidelinesLink)
                     }),
                     (0, i.jsx)(c.Z, {
                         text: x.intl.string(x.t.qC3XKS),
                         url: d.sQ.WARNING_SYSTEM_HELPCENTER_LINK,
-                        onClick: () => _(d.n0.ClickWarningSystemHelpcenterLink)
+                        onClick: () => h(d.n0.ClickWarningSystemHelpcenterLink)
                     })
                 ]
             }),

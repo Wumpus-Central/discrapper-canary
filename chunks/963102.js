@@ -2,8 +2,8 @@ n.d(t, { I: () => L }), n(388685), n(539854);
 var r = n(255367),
     l = n(73800),
     a = n(120356),
-    i = n.n(a),
-    o = n(636977),
+    o = n.n(a),
+    i = n(636977),
     s = n(442837),
     c = n(481060),
     u = n(37234),
@@ -23,20 +23,20 @@ var r = n(255367),
     E = n(304742),
     y = n(215023),
     j = n(981631),
-    P = n(388032),
-    k = n(774457);
+    k = n(388032),
+    P = n(774457);
 function T(e) {
     let { tab: t, displayText: n, selected: l, handleTransition: a } = e;
     return (0, r.jsx)(g.Z.Title, {
         onClick: () => a(t),
-        wrapperClassName: k.tabWrapper,
-        className: i()(k.tab, { [k.selected]: l }),
+        wrapperClassName: P.tabWrapper,
+        className: o()(P.tab, { [P.selected]: l }),
         children: n
     });
 }
 function I(e) {
-    let { tab: t, selected: n, displayText: a, handleTransition: i } = e,
-        [o, s] = l.useState(!1),
+    let { tab: t, selected: n, displayText: a, handleTransition: o } = e,
+        [i, s] = l.useState(!1),
         u = l.useRef(null),
         [d, p] = l.useState(0),
         g = l.useRef(!1),
@@ -50,12 +50,12 @@ function I(e) {
                 e && (g.current = b.Z.keyboardModeEnabled);
         };
     return (0, r.jsx)('div', {
-        className: k.tabWithMenuContainer,
+        className: P.tabWithMenuContainer,
         onMouseEnter: () => h(!0),
         onMouseLeave: () => h(!1),
         children: (0, r.jsx)(c.yRy, {
             targetElementRef: u,
-            shouldShow: o,
+            shouldShow: i,
             position: 'bottom',
             align: 'left',
             onRequestOpen: () => h(!0),
@@ -66,14 +66,14 @@ function I(e) {
             renderPopout: (e) => {
                 let { closePopout: t } = e;
                 return (0, r.jsx)(E.Z, {
-                    handleTransition: i,
+                    handleTransition: o,
                     onClose: t
                 });
             },
             children: () =>
                 (0, r.jsxs)('div', {
                     ref: u,
-                    className: k.tabWithMenu,
+                    className: P.tabWithMenu,
                     onKeyDown: (e) => {
                         ('Enter' === e.key || ' ' === e.key) && (h(!0), e.preventDefault());
                     },
@@ -84,11 +84,11 @@ function I(e) {
                                 tab: t,
                                 displayText: a,
                                 selected: n,
-                                handleTransition: i
+                                handleTransition: o
                             },
                             t
                         ),
-                        o
+                        i
                             ? (0, r.jsx)(c.u04, {
                                   size: 'sm',
                                   color: 'currentColor'
@@ -112,45 +112,45 @@ function L(e) {
         A = [
             {
                 tab: y.AW.HOME,
-                displayText: P.intl.string(P.t.ijDDw8)
+                displayText: k.intl.string(k.t.ijDDw8)
             },
             {
                 tab: y.AW.CATALOG,
-                displayText: N ? P.intl.string(P.t.Ah5sJi) : P.intl.string(P.t.xFcotb)
+                displayText: N ? k.intl.string(k.t.Ah5sJi) : k.intl.string(k.t.xFcotb)
             }
         ];
     w &&
         A.push({
             tab: y.AW.ORBS,
-            displayText: P.intl.string(P.t.EBYkzs)
+            displayText: k.intl.string(k.t.EBYkzs)
         });
-    let R = n ? x.DR : a,
-        Z = f === y.AW.ORBS ? j.ZY5.SHOP_ORBS_TAB : j.ZY5.COLLECTIBLES_SHOP,
+    let Z = n ? x.DR : a,
+        R = f === y.AW.ORBS ? j.ZY5.SHOP_ORBS_TAB : j.ZY5.COLLECTIBLES_SHOP,
         F = l.useCallback(() => {
-            t && (R(), (0, u.Ou)()),
+            t && (Z(), (0, u.Ou)()),
                 (0, m.Y)({
-                    pageType: Z,
+                    pageType: R,
                     sectionType: j.jXE.ORBS_BALANCE_MENU,
                     ctaObject: j.qAy.CTA_TO_QUEST_HOME
                 }),
-                (0, h.navigateToQuestHome)({ fromContent: o.j.ORBS_BALANCE_MENU });
-        }, [R, t, Z]);
+                (0, h.navigateToQuestHome)({ fromContent: i.j.ORBS_BALANCE_MENU });
+        }, [Z, t, R]);
     return (0, r.jsx)(c.f6W, {
         theme: E,
         children: (e) =>
             (0, r.jsxs)(g.Z, {
-                className: i()(e, k.headerBar, { [k.fullscreenHeaderBar]: t }),
-                innerClassname: w ? k.headerBarInner : void 0,
+                className: o()(e, P.headerBar, { [P.fullscreenHeaderBar]: t }),
+                innerClassname: w ? P.headerBarInner : void 0,
                 toolbar: t || !B ? null : (0, r.jsx)(l.Fragment, {}),
                 children: [
                     (0, r.jsxs)(c.P3F, {
-                        className: k.shopHomeLink,
+                        className: P.shopHomeLink,
                         onClick: () => b(y.AW.HOME),
-                        'aria-label': P.intl.string(P.t.pWG4zc) + ' home',
-                        children: [(0, r.jsx)(O.Z, { className: k.discordLogo }), (0, r.jsx)(g.Z.Title, { children: P.intl.string(P.t.pWG4zc) })]
+                        'aria-label': k.intl.string(k.t.pWG4zc) + ' home',
+                        children: [(0, r.jsx)(O.Z, { className: P.discordLogo }), (0, r.jsx)(g.Z.Title, { children: k.intl.string(k.t.pWG4zc) })]
                     }),
                     (0, r.jsx)('div', {
-                        className: k.tabs,
+                        className: P.tabs,
                         children: A.map((e) => {
                             let { tab: t, displayText: n } = e;
                             return t === y.AW.CATALOG && N
@@ -178,20 +178,20 @@ function L(e) {
                     }),
                     (w || t) &&
                         (0, r.jsxs)('div', {
-                            className: k.alignedRightContent,
+                            className: P.alignedRightContent,
                             children: [
                                 w &&
                                     (0, r.jsx)(C.V9, {
                                         anchorPillType: t ? 'SHOP_FULLSCREEN' : 'SHOP',
-                                        analyticsPage: Z,
+                                        analyticsPage: R,
                                         cardAlignment: C.V9.CardAlignment.END,
-                                        ctaText: P.intl.string(P.t.VC4Mq6),
+                                        ctaText: k.intl.string(k.t.VC4Mq6),
                                         ctaOnClick: F,
-                                        className: k.balanceWidgetMenu
+                                        className: P.balanceWidgetMenu
                                     }),
                                 t &&
                                     (0, r.jsx)(d.Z, {
-                                        closeAction: R,
+                                        closeAction: Z,
                                         keybind: 'ESC'
                                     })
                             ]

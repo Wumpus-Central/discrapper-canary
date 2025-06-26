@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -18,11 +18,11 @@ var i = n(255367),
     x = n(578504),
     E = n(839526),
     j = n(4046),
-    O = n(423741);
-let C = r.forwardRef((e, t) => {
+    C = n(423741);
+let O = r.forwardRef((e, t) => {
     var n, s;
-    let { className: C, isFooterVisible: S, isDarkMode: v, isReducedMotion: T, subscriptionTier: N } = e,
-        { analyticsLocations: I } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_FOOTER_CTA),
+    let { className: O, isFooterVisible: S, isDarkMode: v, isReducedMotion: T, subscriptionTier: I } = e,
+        { analyticsLocations: N } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_FOOTER_CTA),
         y = (0, g.Ng)(),
         A = (0, g.Wp)(y, f.Si.TIER_2) ? f.Si.TIER_2 : void 0,
         P = (0, p.N)(),
@@ -35,10 +35,10 @@ let C = r.forwardRef((e, t) => {
             !S || T || w || null == Z.current || Z.current.play();
         }, [S, T, w]),
         (0, i.jsx)(c.Gt, {
-            value: I,
+            value: N,
             children: (0, i.jsxs)('div', {
                 ref: t,
-                className: l()(x.container, C),
+                className: l()(x.container, O),
                 children: [
                     (0, i.jsx)(a.X6q, {
                         className: x.footerHeader,
@@ -47,7 +47,7 @@ let C = r.forwardRef((e, t) => {
                         children: _.intl.string(_.t.lEw32t)
                     }),
                     (0, i.jsx)(h.PK, {
-                        subscriptionTier: null != (s = null != N ? N : null == P || null == (n = P.subscription_trial) ? void 0 : n.sku_id) ? s : A,
+                        subscriptionTier: null != (s = null != I ? I : null == P || null == (n = P.subscription_trial) ? void 0 : n.sku_id) ? s : A,
                         inOfferExperience: R,
                         containerClassName: x.footerCTAContainer,
                         isApplicationHome: !0,
@@ -65,7 +65,7 @@ let C = r.forwardRef((e, t) => {
                             },
                             ref: Z,
                             children: (0, i.jsx)('source', {
-                                src: D ? E.Z : O.Z,
+                                src: D ? E.Z : C.Z,
                                 type: D ? b.m.MP4 : b.m.WEBM
                             })
                         })

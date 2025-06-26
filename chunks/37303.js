@@ -1,24 +1,24 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(255367),
     s = n(73800),
     o = n(695469);
 n(442837);
 var i = n(113434);
 n(569984);
-var a = n(497505),
-    l = n(602667),
+var l = n(497505),
+    a = n(602667),
     c = n(87894),
     u = n(372113),
     d = n(206044),
     m = n(266843),
-    x = n(463910);
-function p(e) {
-    let { quest: t, location: n, initiallyExpanded: p, contentPosition: h, sourceQuestContent: g } = e,
-        [j, f] = s.useState(!1),
-        C = s.useCallback(() => f(!0), []),
-        b = s.useCallback(() => f(!1), []),
+    p = n(463910);
+function h(e) {
+    let { quest: t, location: n, initiallyExpanded: h, contentPosition: x, sourceQuestContent: g } = e,
+        [j, C] = s.useState(!1),
+        f = s.useCallback(() => C(!0), []),
+        b = s.useCallback(() => C(!1), []),
         v = (0, i.tP)(t),
-        { containerRef: y, size: N, height: O } = (0, m.h)(),
+        { containerRef: y, size: O, height: N } = (0, m.h)(),
         {
             expansionSpring: T,
             isAnimating: E,
@@ -26,33 +26,33 @@ function p(e) {
             toggleExpanded: S
         } = (0, m.O)({
             initiallyExpanded:
-                p ||
+                h ||
                 (0, c.iM)({
                     location: n,
                     quest: t
                 })
         }),
-        P = null != O ? O : c.U0;
-    return (0, r.jsx)(l.A, {
+        P = null != N ? N : c.U0;
+    return (0, r.jsx)(a.A, {
         questOrQuests: t,
         questContent: n,
-        questContentPosition: h,
-        trackGuildAndChannelMetadata: n === a.jn.QUESTS_EMBED,
+        questContentPosition: x,
+        trackGuildAndChannelMetadata: n === l.jn.QUESTS_EMBED,
         sourceQuestContent: g,
         children: (e) =>
             (0, r.jsx)(o.animated.div, {
                 style: {
                     maxHeight:
-                        n === a.jn.QUESTS_EMBED
+                        n === l.jn.QUESTS_EMBED
                             ? void 0
                             : T.to({
                                   range: [0, 1],
                                   output: [c.DJ, P]
                               })
                 },
-                className: x.questsCard,
-                onFocus: C,
-                onMouseEnter: C,
+                className: p.questsCard,
+                onFocus: f,
+                onMouseEnter: f,
                 onBlur: b,
                 onMouseLeave: b,
                 children: (0, r.jsxs)('div', {
@@ -64,11 +64,11 @@ function p(e) {
                             isQuestExpired: v,
                             location: n,
                             quest: t,
-                            size: N,
+                            size: O,
                             expansionSpring: T,
                             isAnimating: E,
                             isExpanded: q,
-                            contentPosition: h,
+                            contentPosition: x,
                             toggleExpanded: S,
                             sourceQuestContent: g
                         }),
@@ -76,11 +76,11 @@ function p(e) {
                             quest: t,
                             isQuestExpired: v,
                             location: n,
-                            size: N,
+                            size: O,
                             isFocused: j,
                             isExpanded: q,
                             isAnimating: E,
-                            contentPosition: h,
+                            contentPosition: x,
                             sourceQuestContent: g
                         })
                     ]

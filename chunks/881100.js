@@ -18,13 +18,13 @@ var i = n(399606),
     x = n(269987),
     E = n(548629),
     j = n(507084),
-    O = n(680313),
-    C = n(926433),
+    C = n(680313),
+    O = n(926433),
     S = n(302036),
     v = n(994554),
     T = n(1549),
-    N = n(13327),
-    I = n(59137),
+    I = n(13327),
+    N = n(59137),
     y = n(405991),
     A = n(24615),
     P = n(193943),
@@ -105,7 +105,7 @@ let M = (e, t, n) => ((0, r.wj)(e) ? t : n),
             moreGuildsAlt: {
                 title: g.intl.string(g.t.Bv8Pfn),
                 description: g.intl.string(g.t.JMfaTU),
-                imageSource: M(n, j, O),
+                imageSource: M(n, j, C),
                 imageClassName: t.moreGuildsAltImage
             },
             remix: {
@@ -118,7 +118,7 @@ let M = (e, t, n) => ((0, r.wj)(e) ? t : n),
             soundboard: {
                 title: g.intl.string(g.t['lGcW+f']),
                 description: g.intl.string(g.t['/fDyOz']),
-                imageSource: M(n, C, S),
+                imageSource: M(n, O, S),
                 imageClassName: t.soundboardImage
             },
             stickers: {
@@ -148,7 +148,7 @@ let M = (e, t, n) => ((0, r.wj)(e) ? t : n),
             superReactions: {
                 title: g.intl.string(g.t.uZt5q6),
                 description: g.intl.string(g.t.ZK3Zoa),
-                imageSource: M(n, T, N),
+                imageSource: M(n, T, I),
                 imageClassName: t.superReactionsImage
             },
             upload: {
@@ -160,7 +160,7 @@ let M = (e, t, n) => ((0, r.wj)(e) ? t : n),
             videoBackground: {
                 title: g.intl.string(g.t.NaGpTU),
                 description: g.intl.string(g.t['A8O/Q0']),
-                imageSource: M(n, I, y),
+                imageSource: M(n, N, y),
                 imageClassName: t.videoBackgroundImage
             }
         };

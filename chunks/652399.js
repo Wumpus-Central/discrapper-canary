@@ -1,7 +1,7 @@
 n.d(t, {
-    I1: () => E,
+    I1: () => y,
     IZ: () => v,
-    Qb: () => y,
+    Qb: () => E,
     Yc: () => j,
     bo: () => S,
     cy: () => C,
@@ -55,7 +55,7 @@ function g(e) {
     return null != (r = null == e || null == (n = e.content) || null == (t = n.trim()) ? void 0 : t.length) ? r : 0;
 }
 function _(e) {
-    let { searchType: t, searchId: n, searchAnalyticsId: r, prevSearchAnalyticsId: l, isError: a, limit: o, offset: s, page: c, totalResults: u, pageResults: p, isIndexing: m, pageNumMessages: _, pageNumLinks: b, pageNumEmbeds: x, pageNumAttachments: y, searchQueryString: E, searchQuery: v } = e;
+    let { searchType: t, searchId: n, searchAnalyticsId: r, prevSearchAnalyticsId: l, isError: a, limit: o, offset: s, page: c, totalResults: u, pageResults: p, isIndexing: m, pageNumMessages: _, pageNumLinks: b, pageNumEmbeds: x, pageNumAttachments: E, searchQueryString: y, searchQuery: v } = e;
     i.ZP.trackWithMetadata(d.rMx.SEARCH_RESULT_VIEWED, {
         search_type: t,
         search_id: r,
@@ -71,8 +71,8 @@ function _(e) {
         page_num_messages: _,
         page_num_links: b,
         page_num_embeds: x,
-        page_num_attach: y,
-        search_query_length: h(E),
+        page_num_attach: E,
+        search_query_length: h(y),
         search_query_content_length: g(v)
     });
 }
@@ -103,7 +103,7 @@ function x(e) {
         new_sort_type: l
     });
 }
-function y(e) {
+function E(e) {
     let { searchType: t, searchId: n, searchAnalyticsId: r, searchQueryString: l, searchQuery: a } = e;
     i.ZP.trackWithMetadata(d.rMx.SEARCH_RESULT_EMPTY, {
         search_id: r,
@@ -113,7 +113,7 @@ function y(e) {
         search_query_content_length: g(a)
     });
 }
-function E(e) {
+function y(e) {
     let { searchType: t, searchId: n } = e;
     m(n, (e) => {
         a.Z.initialize(e, p.sR.MESSAGES);
@@ -155,12 +155,12 @@ function O(e) {
         _ = 0,
         b = 0,
         x = 0,
-        y = 0,
         E = 0,
+        y = 0,
         v = 0,
         C = 0;
     p.forEach((e) => {
-        e.type === d.dCx.ANSWER_IN ? m++ : e.type === d.dCx.ANSWER_USERNAME_FROM ? _++ : e.type === d.dCx.ANSWER_USERNAME_MENTIONS ? b++ : e.type === d.dCx.ANSWER_HAS ? x++ : e.type === d.dCx.ANSWER_BEFORE ? y++ : e.type === d.dCx.ANSWER_ON ? E++ : e.type === d.dCx.ANSWER_AFTER ? v++ : e.type === d.dCx.ANSWER_PINNED && C++;
+        e.type === d.dCx.ANSWER_IN ? m++ : e.type === d.dCx.ANSWER_USERNAME_FROM ? _++ : e.type === d.dCx.ANSWER_USERNAME_MENTIONS ? b++ : e.type === d.dCx.ANSWER_HAS ? x++ : e.type === d.dCx.ANSWER_BEFORE ? E++ : e.type === d.dCx.ANSWER_ON ? y++ : e.type === d.dCx.ANSWER_AFTER ? v++ : e.type === d.dCx.ANSWER_PINNED && C++;
     }),
         i.ZP.trackWithMetadata(d.rMx.MESSAGES_SEARCH_STARTED, {
             search_id: null != n ? o.Z.getAnalyticsId(n) : null,
@@ -173,8 +173,8 @@ function O(e) {
             filter_from_count: _,
             filter_mentions_count: b,
             filter_has_count: x,
-            filter_before_count: y,
-            filter_during_count: E,
+            filter_before_count: E,
+            filter_during_count: y,
             filter_after_count: v,
             filter_pinned_count: C
         }),

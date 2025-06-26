@@ -612,15 +612,15 @@ class tr extends i.PureComponent {
     render() {
         var e, t;
         let n,
-            { channel: i, guild: l, keyboardModeEnabled: a, hasModalOpen: s, pendingReply: c, chatInputType: d, placeholder: h, accessibilityLabel: f, showQuarantinedUserBanner: m, filterAfterTimestamp: g, communicationDisabledUntil: y, shakeIntensity: C, poggermodeEnabled: x, isSelectedResourceChannel: v, showAutomodUserProfileChatBlocker: j, showAppLauncherButton: O, showAppDMsUI: E, isInitialLoading: I, pendingScheduledMessage: S, recipientUser: P, voiceChannel: Z, theme: N, chatWallpaperState: T, wallpaperColorMix: A, messagesTypingGradient: w } = this.props,
-            { textAreaFocused: R, textAreaHighlighted: k } = this.state,
-            M = d === U.Ie.SIDEBAR;
-        n = M && i.type === e0.d4z.GUILD_VOICE ? e2.t.pnnyFR : M && i.type === e0.d4z.GUILD_STAGE_VOICE ? e2.t.YInSkp : u.T.THREADS.has(i.type) ? e2.t['OkzL+f'] : e2.t.UbNmGR;
-        let D = (0, r.jsx)('div', {
+            { channel: i, guild: l, keyboardModeEnabled: a, hasModalOpen: s, pendingReply: c, chatInputType: d, placeholder: h, accessibilityLabel: f, showQuarantinedUserBanner: m, filterAfterTimestamp: g, communicationDisabledUntil: y, shakeIntensity: C, poggermodeEnabled: x, isSelectedResourceChannel: v, showAutomodUserProfileChatBlocker: j, showAppLauncherButton: O, showAppDMsUI: E, isInitialLoading: I, pendingScheduledMessage: S, recipientUser: P, voiceChannel: Z, theme: N, chatWallpaperState: T, wallpaperColorMix: A, messagesTypingGradient: w, isChatInputBottomAligned: R } = this.props,
+            { textAreaFocused: k, textAreaHighlighted: M } = this.state,
+            D = d === U.Ie.SIDEBAR;
+        n = D && i.type === e0.d4z.GUILD_VOICE ? e2.t.pnnyFR : D && i.type === e0.d4z.GUILD_STAGE_VOICE ? e2.t.YInSkp : u.T.THREADS.has(i.type) ? e2.t['OkzL+f'] : e2.t.UbNmGR;
+        let L = (0, r.jsx)('div', {
                 className: e3.channelBottomBarArea,
                 children: (0, r.jsx)(eX.Z, {})
             }),
-            L = (0, r.jsxs)('div', {
+            B = (0, r.jsxs)('div', {
                 className: e3.channelBottomBarArea,
                 children: [
                     (0, r.jsx)(eO.Z, {
@@ -631,8 +631,8 @@ class tr extends i.PureComponent {
                         children: (0, r.jsx)(tt, {
                             ref: this.refToChannelTextAreaFormComponent,
                             refInstance: this.containerDomRef,
-                            focused: R,
-                            highlighted: k,
+                            focused: k,
+                            highlighted: M,
                             channel: i,
                             guild: l,
                             keyboardModeEnabled: a,
@@ -655,18 +655,18 @@ class tr extends i.PureComponent {
                     this.renderAppCommandButton()
                 ]
             }),
-            B = E && I,
-            F = B && I ? D : L,
-            G = o()({
+            F = E && I,
+            G = F && I ? L : B,
+            H = o()({
                 [e7.barWithAppLauncherButton]: O,
                 [e7.barWithAppsDMsUI]: E
             }),
-            { enabled: H } = eE.Z.getCurrentConfig({
+            { enabled: V } = eE.Z.getCurrentConfig({
                 guildId: null == Z ? void 0 : Z.guild_id,
                 location: 'ChannelChat'
             }),
-            V = W.qM.getCurrentConfig({ location: 'ChannelChat' }).enabled,
-            z = H && null != P && null != Z && null != Z.guild_id;
+            z = W.qM.getCurrentConfig({ location: 'ChannelChat' }).enabled,
+            q = V && null != P && null != Z && null != Z.guild_id;
         return (0, r.jsx)(
             _.Z,
             {
@@ -693,11 +693,11 @@ class tr extends i.PureComponent {
                                     handler: this.handleOpenAppLauncher
                                 }),
                                 (0, r.jsxs)(te, {
-                                    isSidebar: M,
+                                    isSidebar: D,
                                     className: o()(e3.chatContent, {
                                         [e3.hasWallpaper]: null == T ? void 0 : T.isViewable,
-                                        [X.e3]: V ? (null == T ? void 0 : T.isViewable) : void 0,
-                                        [null != (e = (0, p.QeD)(N)) ? e : '']: V ? (null == T ? void 0 : T.isViewable) : void 0
+                                        [X.e3]: z ? (null == T ? void 0 : T.isViewable) : void 0,
+                                        [null != (e = (0, p.QeD)(N)) ? e : '']: z ? (null == T ? void 0 : T.isViewable) : void 0
                                     }),
                                     'aria-label': e2.intl.formatToPlainString(n, { channelName: i.name }),
                                     onMouseDown: this.handleChatInteract,
@@ -706,7 +706,7 @@ class tr extends i.PureComponent {
                                     style: null != A ? A : {},
                                     children: [
                                         (0, r.jsx)(Y.Z, { channel: i }),
-                                        z &&
+                                        q &&
                                             (0, r.jsx)(e$.Z, {
                                                 recipientUser: P,
                                                 voiceChannel: Z
@@ -714,7 +714,7 @@ class tr extends i.PureComponent {
                                         (0, r.jsx)(eq.Z, {
                                             channel: i,
                                             guild: l,
-                                            narrow: M
+                                            narrow: D
                                         }),
                                         (0, r.jsxs)(p.y5t, {
                                             component: (0, r.jsx)(p.nn4, { children: (0, r.jsx)(p.H, { children: e2.intl.format(e2.t.eTzKk5, { channelName: i.name }) }) }),
@@ -724,8 +724,9 @@ class tr extends i.PureComponent {
                                                     forceCozy: v,
                                                     filterAfterTimestamp: g,
                                                     showingQuarantineBanner: m,
-                                                    jumpBarClassName: G,
-                                                    typingGradient: w
+                                                    jumpBarClassName: H,
+                                                    typingGradient: w,
+                                                    isChatInputBottomAligned: R
                                                 }),
                                                 v
                                                     ? null
@@ -741,17 +742,17 @@ class tr extends i.PureComponent {
                                                       : (0, r.jsxs)('form', {
                                                             ref: this.inputFormRef,
                                                             onSubmit: e4,
-                                                            className: o()(e3.form, { [e3.formWithLoadedChatInput]: !B }),
+                                                            className: o()(e3.form, { [e3.formWithLoadedChatInput]: !F }),
                                                             children: [
                                                                 x && (0, r.jsx)(ef.Z, { channelId: i.id }),
                                                                 i.isPrivate()
                                                                     ? (0, r.jsx)(eQ.Z, {
                                                                           channel: i,
-                                                                          children: F
+                                                                          children: G
                                                                       })
                                                                     : (0, r.jsx)(eJ.Z, {
                                                                           channel: i,
-                                                                          children: F
+                                                                          children: G
                                                                       }),
                                                                 (0, r.jsx)(b.Z, {
                                                                     channel: i,
@@ -965,6 +966,7 @@ let ti = i.memo(function (e) {
         theme: P,
         chatWallpaperState: N,
         wallpaperColorMix: T,
-        messagesTypingGradient: X && Y
+        messagesTypingGradient: X && Y,
+        isChatInputBottomAligned: X
     });
 });

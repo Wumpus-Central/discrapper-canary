@@ -18,17 +18,17 @@ var i,
     x = n(592125),
     E = n(58468),
     j = n(77498),
-    O = n(496675),
-    C = n(306680),
+    C = n(496675),
+    O = n(306680),
     S = n(944486),
     v = n(9156),
     T = n(823379),
-    N = n(709054),
-    I = n(540126),
+    I = n(709054),
+    N = n(540126),
     y = n(526761);
 let A = null,
     P = null,
-    R = new I.ZP();
+    R = new N.ZP();
 function D() {
     let e = S.Z.getChannelId(),
         t = S.Z.getVoiceChannelId();
@@ -96,7 +96,7 @@ function H(e) {
 }
 class z extends (i = o.ZP.Store) {
     initialize() {
-        this.waitFor(p.Z, b.default, _.Z, x.Z, E.Z, d.ZP, j.Z, m.Z, g.ZP, h.Z, O.Z, C.ZP, S.Z, v.ZP, f.Z);
+        this.waitFor(p.Z, b.default, _.Z, x.Z, E.Z, d.ZP, j.Z, m.Z, g.ZP, h.Z, C.Z, O.ZP, S.Z, v.ZP, f.Z);
     }
     getGuild(e, t) {
         var n, i;
@@ -289,7 +289,7 @@ let Y = new z(c.Z, {
             r = !1;
         return (
             null != i &&
-                N.default.keys(i).forEach((e) => {
+                I.default.keys(i).forEach((e) => {
                     null != i[e].guildRecentsDismissedAt && (r = R.updateRecentsCategory(e) || r);
                 }),
             r

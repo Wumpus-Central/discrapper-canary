@@ -5,5 +5,5 @@ var r = n(512722),
     o = n(594174);
 let s = () => {
     let e = (0, l.e7)([o.default], () => o.default.getCurrentUser());
-    return i()(null != e, 'user has signed in before accessing shop'), e;
+    return i()(null != e, 'user has to be signed in before accessing shop'), e;
 };

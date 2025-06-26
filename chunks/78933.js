@@ -18,13 +18,13 @@ var i = n(255367),
     x = n(734934),
     E = n(300284),
     j = n(680295),
-    O = n(785717),
-    C = n(209698),
+    C = n(785717),
+    O = n(209698),
     S = n(687158),
     v = n(892001),
     T = n(899007),
-    N = n(648052),
-    I = n(867176),
+    I = n(648052),
+    N = n(867176),
     y = n(537006),
     A = n(483517),
     P = n(483424),
@@ -47,8 +47,8 @@ var i = n(255367),
     K = n(474376),
     q = n(431282),
     X = n(213928),
-    J = n(587243),
-    Q = n(383832),
+    Q = n(587243),
+    J = n(383832),
     $ = n(981631),
     ee = n(228168),
     et = n(388032),
@@ -84,7 +84,7 @@ function es(e) {
         eo = __OVERLAY__,
         ec = (0, S.ZP)(t.id),
         { analyticsLocations: ed } = (0, m.ZP)(u.Z.USER_PROFILE_ACCOUNT_POPOUT),
-        eu = (0, O.ZB)({
+        eu = (0, C.ZB)({
             layout: 'ACCOUNT_POPOUT',
             userId: t.id
         }),
@@ -96,28 +96,28 @@ function es(e) {
         r.useEffect(() => (W.Z.setState({ isOpen: !0 }), () => W.Z.setState({ isOpen: !1 })), []);
     let ep = (0, l.e7)([G.Z], () => G.Z.getStatus(t.id)),
         eh = U.Cr.useSetting(),
-        ef = (0, J.F)(eh),
+        ef = (0, Q.F)(eh),
         { expiringStatusProfileFeedback: eb } = _.Y.useExperiment({ location: 'UserProfileAccountPopout' }, { autoTrackExposure: !1 }),
         e_ = (0, l.e7)([F.Z], () => F.Z.hidePersonalInformation),
         ex = (0, x.p)(),
         eE = U.Sb.useSetting(),
-        ej = (0, J.I)(ep),
-        eO = (0, K.g)(n),
-        eC = (0, E.Z)({ analyticsLocations: ed }),
+        ej = (0, Q.I)(ep),
+        eC = (0, K.g)(n),
+        eO = (0, E.Z)({ analyticsLocations: ed }),
         eS = (0, Y.I5)(t),
         ev = (0, p.p)({ location: 'UserProfileAccountPopout' }),
-        eT = (0, C.b)({ location: 'UserProfileAccountPopout' }),
-        eN = (0, g.Z)({ location: 'UserProfileAccountPopout' }),
-        eI = r.useRef(null),
+        eT = (0, O.b)({ location: 'UserProfileAccountPopout' }),
+        eI = (0, g.Z)({ location: 'UserProfileAccountPopout' }),
+        eN = r.useRef(null),
         [ey, eA] = r.useState(String(Date.now()));
     (0, V.fu)({
-        targetElementRef: eI,
+        targetElementRef: eN,
         onGetElementDimensionsAndBoundingRect: (e) => {
             let { hasElementPositionChanged: t } = e;
             t && eA(String(Date.now()));
         }
     });
-    let [eP, eR] = (0, b.US)(eN ? [a.z.CUSTOM_STATUS_PROMPTS_COACHMARK] : []),
+    let [eP, eR] = (0, b.US)(eI ? [a.z.CUSTOM_STATUS_PROMPTS_COACHMARK] : []),
         eD = eP === a.z.CUSTOM_STATUS_PROMPTS_COACHMARK,
         eZ = r.useRef((0, W.Z)((e) => e.shouldRenderTenureLevelUp)),
         ew = r.useMemo(() => (0, h.Z)(), []),
@@ -143,7 +143,7 @@ function es(e) {
         eM = (null == ec ? void 0 : ec.profileEffectId) != null && !eZ.current;
     return (0, i.jsx)(m.Gt, {
         value: ed,
-        children: (0, i.jsx)(O.Mt, {
+        children: (0, i.jsx)(C.Mt, {
             value: eu,
             openedAt: ea,
             fetchStartedAt: null == ec ? void 0 : ec.fetchStartedAt,
@@ -162,7 +162,7 @@ function es(e) {
                             (0, i.jsxs)('header', {
                                 className: ei.header,
                                 children: [
-                                    (0, i.jsx)(I.Z, {
+                                    (0, i.jsx)(N.Z, {
                                         user: t,
                                         displayProfile: ec,
                                         themeType: ee.lY.POPOUT
@@ -177,11 +177,11 @@ function es(e) {
                                         ? (0, i.jsx)(f.Z, {
                                               positionKey: ey,
                                               onTryFeature: n,
-                                              targetElementRef: eI,
+                                              targetElementRef: eN,
                                               markAsDismissed: eR,
                                               children: () =>
                                                   (0, i.jsx)(L.Z, {
-                                                      ref: eI,
+                                                      ref: eN,
                                                       location: 'UserProfileAccountPopout',
                                                       user: t,
                                                       themeType: ee.lY.POPOUT,
@@ -208,7 +208,7 @@ function es(e) {
                                         nickname: z.ZP.getName(null, null, t),
                                         onOpenProfile: eo ? void 0 : eB,
                                         pronouns: null == ec ? void 0 : ec.pronouns,
-                                        tags: (0, i.jsx)(N.Z, {
+                                        tags: (0, i.jsx)(I.Z, {
                                             displayProfile: ec,
                                             themeType: ee.lY.POPOUT,
                                             onClose: n,
@@ -263,7 +263,7 @@ function es(e) {
                                                             label: et.intl.string(et.t.s5vZlZ),
                                                             icon: o.vdY,
                                                             onClick: () => {
-                                                                eC(), n();
+                                                                eO(), n();
                                                             }
                                                         }),
                                                         (0, i.jsx)(A.Z, { className: en.menuDivider }),
@@ -380,7 +380,7 @@ function es(e) {
                                                             icon: o.lMe,
                                                             label: et.intl.string(et.t.oMNyYG),
                                                             onClick: () => {
-                                                                n(), (0, Q.Z)();
+                                                                n(), (0, J.Z)();
                                                             },
                                                             renderSubmenu: (e) => {
                                                                 let { closePopout: t } = e;
@@ -388,7 +388,7 @@ function es(e) {
                                                                     navId: 'switch-accounts-submenu',
                                                                     'aria-label': et.intl.string(et.t.wFhVqK),
                                                                     onClose: t,
-                                                                    children: eO
+                                                                    children: eC
                                                                 });
                                                             }
                                                         }),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -18,10 +18,10 @@ var i = n(255367),
     x = n(893354),
     E = n(20493);
 let j = (0, g.hQ)();
-function O() {
+function C() {
     let [e, t] = r.useState(-100),
         [n, s] = r.useState(!1),
-        { threshold: O, autoThreshold: C } = (0, a.cj)([p.Z], () => ({
+        { threshold: C, autoThreshold: O } = (0, a.cj)([p.Z], () => ({
             threshold: p.Z.getModeOptions().threshold,
             autoThreshold: p.Z.getModeOptions().autoThreshold
         })),
@@ -34,10 +34,10 @@ function O() {
             automaticVADSupported: p.Z.supports(h.AN.AUTOMATIC_VAD),
             isEnabled: p.Z.isEnabled()
         }));
-    function N(e, n) {
+    function I(e, n) {
         t(e), s((n & h.Dg.VOICE) === h.Dg.VOICE);
     }
-    function I(e, t) {
+    function N(e, t) {
         m.Z.setMode(S, {
             threshold: e,
             autoThreshold: t
@@ -47,19 +47,19 @@ function O() {
         let e = new c.V7();
         return (
             e.start(1000, () => {
-                p.Z.getMediaEngine().on(o.aB.VoiceActivity, N), e.stop();
+                p.Z.getMediaEngine().on(o.aB.VoiceActivity, I), e.stop();
             }),
             () => {
-                p.Z.getMediaEngine().removeListener(o.aB.VoiceActivity, N), e.stop();
+                p.Z.getMediaEngine().removeListener(o.aB.VoiceActivity, I), e.stop();
             }
         );
     }, []);
     let y = (0, i.jsx)('section', {
         className: l()(b.inputSensitivityToggle, b.manual),
         children: (0, i.jsx)(u.iRW, {
-            initialValue: O + 100,
+            initialValue: C + 100,
             onValueRender: (e) => ''.concat((-((100 - e) * 1)).toFixed(0), 'dB'),
-            onValueChange: (e) => I(-((100 - e) * 1), C),
+            onValueChange: (e) => N(-((100 - e) * 1), O),
             barStyles: { background: d.Z.unsafe_rawColors.GREEN_360.css },
             fillStyles: { background: d.Z.unsafe_rawColors.YELLOW_300.css },
             'aria-labelledby': j,
@@ -76,7 +76,7 @@ function O() {
         })
     });
     return (
-        C &&
+        O &&
             (y = (0, i.jsxs)('section', {
                 className: b.inputSensitivityToggle,
                 children: [
@@ -112,8 +112,8 @@ function O() {
                                     }),
                                     (0, i.jsx)(u.rsf, {
                                         id: e,
-                                        checked: C,
-                                        onChange: (e) => I(O, e)
+                                        checked: O,
+                                        onChange: (e) => N(C, e)
                                     })
                                 ]
                             })

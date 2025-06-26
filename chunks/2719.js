@@ -18,13 +18,13 @@ var i = n(255367),
     x = n(299206),
     E = n(295474),
     j = n(144114),
-    O = n(918505),
-    C = n(332473),
+    C = n(918505),
+    O = n(332473),
     S = n(921801),
     v = n(485341),
     T = n(687158),
-    N = n(518950),
-    I = n(184325),
+    I = n(518950),
+    N = n(184325),
     y = n(867176),
     A = n(25990),
     P = n(594174),
@@ -87,8 +87,8 @@ function Y(e) {
     var t, s;
     let { className: a, user: o } = e,
         c = r.useRef(null),
-        m = (0, O.o9)(),
-        g = (0, C.b)(),
+        m = (0, C.o9)(),
+        g = (0, O.b)(),
         p = (0, E.gS)(),
         h = null != (s = null == p || null == (t = p.nick) ? void 0 : t[0]) ? s : null,
         [f, b] = r.useState(!1);
@@ -271,7 +271,7 @@ function W(e) {
                     size: u.zxk.Sizes.SMALL,
                     color: u.zxk.Colors.PRIMARY,
                     'aria-label': V.intl.string(V.t.YXeWYG),
-                    onClick: Q,
+                    onClick: J,
                     children: p ? V.intl.string(V.t['16kTw8']) : V.intl.string(V.t.bt75u7)
                 })
             ]
@@ -457,7 +457,7 @@ function X(e) {
         })
     );
 }
-function J(e) {
+function Q(e) {
     let { user: t } = e,
         n = (0, x.Z)({
             id: t.id,
@@ -495,7 +495,7 @@ function J(e) {
           })
         : null;
 }
-function Q() {
+function J() {
     m.Z.setSection(B.oAB.PROFILE_CUSTOMIZATION);
 }
 function $(e) {
@@ -549,7 +549,7 @@ function ee() {
         s = w.co.useSetting(),
         l = (0, c.e7)([A.Z], () => A.Z.getErrors()),
         a = null == l || null == (e = l.avatar) ? void 0 : e[0],
-        { avatarSrc: d, avatarDecorationSrc: m } = (0, N.Z)({
+        { avatarSrc: d, avatarDecorationSrc: m } = (0, I.Z)({
             user: t,
             size: u.EFr.SIZE_80
         });
@@ -587,10 +587,10 @@ function ee() {
                                         className: G.userTag,
                                         discriminatorClass: G.discriminator
                                     }),
-                                    (0, i.jsx)(J, { user: t })
+                                    (0, i.jsx)(Q, { user: t })
                                 ]
                             }),
-                            (0, i.jsx)(I.Z, {
+                            (0, i.jsx)(N.Z, {
                                 badges: r,
                                 className: G.badgeList,
                                 badgeClassName: G.badge
@@ -598,7 +598,7 @@ function ee() {
                         ]
                     }),
                     (0, i.jsx)(u.zxk, {
-                        onClick: Q,
+                        onClick: J,
                         size: u.zxk.Sizes.SMALL,
                         children: V.intl.string(V.t['2p2aY2'])
                     })

@@ -39,12 +39,12 @@ function b() {
                 label: h.intl.string(h.t.S49UaW)
             }
         ],
-        O = {
+        C = {
             value: r.Q4.SHOW,
             label: h.intl.string(h.t['5k5OFh'])
         };
     return (
-        t && (E.unshift(O), j.unshift(O)),
+        t && (E.unshift(C), j.unshift(C)),
         (0, i.jsxs)(g.U, {
             setting: p.s6.GORE_MEDIA_REDACTION,
             children: [

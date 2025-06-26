@@ -2,7 +2,6 @@ e.exports = {
     card: 'card__6df1a',
     tier0: 'tier0__6df1a',
     pillMargin: 'pillMargin__6df1a',
-    tier2: 'tier2__6df1a',
     wordmark: 'wordmark__6df1a',
     wumpus: 'wumpus__6df1a',
     bigCloud: 'bigCloud__6df1a',

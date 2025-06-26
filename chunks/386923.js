@@ -42,7 +42,7 @@ let y = {
     w = (e) =>
         (0, c.Yzy)(e, {
             from: { maxHeight: 0 },
-            enter: { maxHeight: 700 },
+            enter: { maxHeight: 850 },
             leave: { maxHeight: 0 },
             config: { duration: 200 }
         }),
@@ -55,7 +55,7 @@ let y = {
             children: [
                 (0, r.jsxs)(c.Kqy, {
                     direction: 'vertical',
-                    gap: 24,
+                    gap: 16,
                     children: [
                         (0, r.jsx)(c.Kqy, {
                             direction: 'vertical',
@@ -71,7 +71,7 @@ let y = {
                             gap: 8,
                             children: [
                                 (0, r.jsx)(c.Text, {
-                                    variant: 'text-md/semibold',
+                                    variant: 'text-lg/semibold',
                                     color: 'header-secondary',
                                     children: b.intl.string(p.default['i7CH/P'])
                                 }),
@@ -161,7 +161,7 @@ let y = {
                             gap: 8,
                             children: [
                                 (0, r.jsx)(c.Text, {
-                                    variant: 'text-md/semibold',
+                                    variant: 'text-lg/semibold',
                                     color: 'header-secondary',
                                     children: b.intl.string(p.default.qJWXs7)
                                 }),
@@ -188,7 +188,7 @@ let y = {
                         }),
                         (0, r.jsxs)(c.Kqy, {
                             direction: 'vertical',
-                            gap: 4,
+                            gap: 8,
                             children: [
                                 (0, r.jsx)(c.Text, {
                                     variant: 'text-md/normal',

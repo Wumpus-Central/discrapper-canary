@@ -18,20 +18,20 @@ var i = n(255367),
     x = n(921801),
     E = n(553795),
     j = n(430824),
-    O = n(63063),
-    C = n(358085),
+    C = n(63063),
+    O = n(358085),
     S = n(709054),
     v = n(362352),
     T = n(413182),
-    N = n(695346),
-    I = n(726985),
+    I = n(695346),
+    N = n(726985),
     y = n(981631),
     A = n(388032),
     P = n(187382),
     R = n(20493);
 function D(e) {
     let t = () => {
-        N.SE.updateSetting(e ? S.default.keys(j.Z.getGuilds()) : []);
+        I.SE.updateSetting(e ? S.default.keys(j.Z.getGuilds()) : []);
     };
     (0, m.h7j)((e) => {
         var n, r;
@@ -95,15 +95,15 @@ function D(e) {
     });
 }
 function Z() {
-    let e = N.G6.useSetting(),
-        t = N.Wz.useSetting(),
+    let e = I.G6.useSetting(),
+        t = I.Wz.useSetting(),
         n = (0, v.Yd)('activity privacy tab'),
-        r = C.isPlatformEmbedded ? A.intl.string(A.t.MznbeH) : A.intl.string(A.t.oKqC4u),
+        r = O.isPlatformEmbedded ? A.intl.string(A.t.MznbeH) : A.intl.string(A.t.oKqC4u),
         s = (e) => {
-            N.Wz.updateSetting(e ? d.E5.ON_FOR_LARGE_GUILDS : d.E5.OFF), D(e);
+            I.Wz.updateSetting(e ? d.E5.ON_FOR_LARGE_GUILDS : d.E5.OFF), D(e);
         },
         a = (e) => {
-            N.Wz.updateSetting(e), D(e !== d.E5.OFF);
+            I.Wz.updateSetting(e), D(e !== d.E5.OFF);
         },
         o = [
             {
@@ -120,7 +120,7 @@ function Z() {
             }
         ];
     return (0, i.jsx)(x.F, {
-        setting: I.s6.ACTIVITY_PRIVACY_STATUS,
+        setting: N.s6.ACTIVITY_PRIVACY_STATUS,
         children: (0, i.jsxs)(m.hjN, {
             children: [
                 (0, i.jsx)(m.vwX, {
@@ -130,7 +130,7 @@ function Z() {
                 }),
                 (0, i.jsx)(m.j7V, {
                     value: e,
-                    onChange: (e) => N.G6.updateSetting(e),
+                    onChange: (e) => I.G6.updateSetting(e),
                     note: r,
                     children: A.intl.string(A.t['4q/Ewc'])
                 }),
@@ -145,7 +145,7 @@ function Z() {
                                           variant: 'text-sm/normal',
                                           color: 'header-secondary',
                                           className: R.marginBottom8,
-                                          children: A.intl.format(A.t.aUxRra, { helpdeskArticle: O.Z.getArticleURL(y.BhN.ACTIVITY_STATUS_SETTINGS) })
+                                          children: A.intl.format(A.t.aUxRra, { helpdeskArticle: C.Z.getArticleURL(y.BhN.ACTIVITY_STATUS_SETTINGS) })
                                       }),
                                       (0, i.jsx)(m.q4e, {
                                           options: o,
@@ -159,7 +159,7 @@ function Z() {
                       })
                     : (0, i.jsx)(m.j7V, {
                           value: t === d.E5.OFF,
-                          note: A.intl.format(A.t['+5/xu7'], { helpdeskArticle: O.Z.getArticleURL(y.BhN.ACTIVITY_STATUS_SETTINGS) }),
+                          note: A.intl.format(A.t['+5/xu7'], { helpdeskArticle: C.Z.getArticleURL(y.BhN.ACTIVITY_STATUS_SETTINGS) }),
                           onChange: (e) => s(!e),
                           children: A.intl.string(A.t.D5GXTU)
                       })
@@ -168,10 +168,10 @@ function Z() {
     });
 }
 function w() {
-    let e = N.cP.useSetting(),
-        t = N.Ou.useSetting();
+    let e = I.cP.useSetting(),
+        t = I.Ou.useSetting();
     return (0, i.jsx)(x.F, {
-        setting: I.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
+        setting: N.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
         children: (0, i.jsxs)(m.hjN, {
             className: R.marginBottom40,
             children: [
@@ -183,13 +183,13 @@ function w() {
                 (0, i.jsx)(m.j7V, {
                     value: e,
                     note: A.intl.string(A.t.Hdh7sb),
-                    onChange: (e) => N.cP.updateSetting(e),
+                    onChange: (e) => I.cP.updateSetting(e),
                     children: A.intl.string(A.t.WEWQQk)
                 }),
                 (0, i.jsx)(m.j7V, {
                     value: t,
                     note: A.intl.string(A.t.Czr3Bg),
-                    onChange: (e) => N.Ou.updateSetting(e),
+                    onChange: (e) => I.Ou.updateSetting(e),
                     children: A.intl.string(A.t.UUvJVl)
                 })
             ]
@@ -198,7 +198,7 @@ function w() {
 }
 function k() {
     return (0, i.jsx)(x.F, {
-        setting: I.s6.ACTIVITY_PRIVACY_TOS,
+        setting: N.s6.ACTIVITY_PRIVACY_TOS,
         children: (0, i.jsx)(m.hjN, {
             className: R.marginBottom40,
             children: (0, i.jsx)(m.ToO, {
@@ -277,7 +277,7 @@ function M() {
     return 0 === t.length
         ? null
         : (0, i.jsx)(x.F, {
-              setting: I.s6.ACTIVITY_PRIVACY_STATUS_DISPLAY,
+              setting: N.s6.ACTIVITY_PRIVACY_STATUS_DISPLAY,
               children: (0, i.jsxs)(m.hjN, {
                   className: R.marginBottom40,
                   children: [

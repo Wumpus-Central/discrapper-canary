@@ -36,8 +36,8 @@ var r = n(255367),
     L = n(143135),
     D = n(70722),
     B = n(981631),
-    U = n(526761),
-    G = n(388032),
+    G = n(526761),
+    U = n(388032),
     W = n(14383),
     z = n(347226);
 function F(e) {
@@ -57,7 +57,7 @@ function F(e) {
             : c,
         _ = null != t && t.id.startsWith('screen') ? a.pzj : a.GON;
     return (0, r.jsx)(a.xJW, {
-        title: G.intl.string(G.t.TC7Ev7),
+        title: U.intl.string(U.t.TC7Ev7),
         className: z.modalContent,
         titleClassName: z.formItemTitleVerySlim,
         children: (0, r.jsxs)(A.Z, {
@@ -79,7 +79,7 @@ function F(e) {
                           color: a.zxk.Colors.PRIMARY,
                           size: a.zxk.Sizes.SMALL,
                           onClick: l,
-                          children: G.intl.string(G.t.GEgsAw)
+                          children: U.intl.string(U.t.GEgsAw)
                       })
                     : null
             ]
@@ -92,7 +92,7 @@ function H(e) {
     return null == i
         ? (t(), null)
         : (0, r.jsx)(a.xJW, {
-              title: G.intl.string(G.t.WC3u3t),
+              title: U.intl.string(U.t.WC3u3t),
               className: z.modalContent,
               titleClassName: z.formItemTitle,
               children: (0, r.jsxs)(A.Z, {
@@ -111,7 +111,7 @@ function H(e) {
                           color: a.zxk.Colors.PRIMARY,
                           size: a.zxk.Sizes.SMALL,
                           onClick: t,
-                          children: G.intl.string(G.t.GEgsAw)
+                          children: U.intl.string(U.t.GEgsAw)
                       })
                   ]
               })
@@ -157,7 +157,7 @@ function Y(e) {
                   onChange: c,
                   children: (0, r.jsx)(a.Text, {
                       variant: 'text-sm/normal',
-                      children: G.intl.string(G.t.Cef4t7)
+                      children: U.intl.string(U.t.Cef4t7)
                   })
               })
           })
@@ -179,7 +179,7 @@ function X(e) {
             onChange: o,
             children: (0, r.jsx)(a.Text, {
                 variant: 'text-sm/normal',
-                children: l ? G.intl.string(G.t['5Adrtb']) : G.intl.string(G.t.gRpbRE)
+                children: l ? U.intl.string(U.t['5Adrtb']) : U.intl.string(U.t.gRpbRE)
             })
         })
     });
@@ -200,7 +200,7 @@ function J(e) {
             onChange: l,
             children: (0, r.jsx)(a.Text, {
                 variant: 'text-sm/normal',
-                children: G.intl.string(G.t.JE73jI)
+                children: U.intl.string(U.t.JE73jI)
             })
         })
     });
@@ -212,7 +212,7 @@ function K(e) {
         Q = (0, o.e7)([N.Z], () => N.Z.problematicGPUDriver),
         $ = (0, o.e7)([C.default], () => C.default.getCurrentUser()),
         ee = (0, E.Z)();
-    null != t && t.id.startsWith('screen') && !b.Z.supportsScreenSoundshare() && (ee = G.intl.string(G.t['1b0Gm5']));
+    null != t && t.id.startsWith('screen') && !b.Z.supportsScreenSoundshare() && (ee = U.intl.string(U.t['1b0Gm5']));
     let et = !!(null == t ? void 0 : t.id.startsWith('camera')),
         en = null != $ && $.verified && !$.bot,
         er = null != K && !(0, u.Yk)(K),
@@ -257,15 +257,15 @@ function K(e) {
                       onChangeSelectedChannelId: w
                   }),
             null != f && en && er ? (0, r.jsx)(Y, { guildId: f }) : null,
-            q ? (0, r.jsx)(V, { text: G.intl.string(G.t.q65tS0) }) : null,
-            Q ? (0, r.jsx)(V, { text: G.intl.format(G.t.RrLvub, { helpCenterLink: I.Z.getArticleURL(B.BhN.NVIDIA_DRIVER_ISSUES) }) }) : null,
+            q ? (0, r.jsx)(V, { text: U.intl.string(U.t.q65tS0) }) : null,
+            Q ? (0, r.jsx)(V, { text: U.intl.format(U.t.RrLvub, { helpCenterLink: I.Z.getArticleURL(B.BhN.NVIDIA_DRIVER_ISSUES) }) }) : null,
             ei &&
                 (0, r.jsx)(g.Z, {
                     look: g.z.WARNING,
                     className: W.hardwareWarning,
-                    children: G.intl.format(G.t.zCLXws, {
+                    children: U.intl.format(U.t.zCLXws, {
                         onClick: () => {
-                            j(), c.Z.open(B.oAB.VOICE, U.gP, { scrollPosition: U.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION });
+                            j(), c.Z.open(B.oAB.VOICE, G.gP, { scrollPosition: G.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION });
                         }
                     })
                 }),

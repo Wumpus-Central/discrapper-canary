@@ -78,8 +78,8 @@ function O(e) {
         { sortDevicesByFrecency: M } = (0, o._)({ location: 'StreamOptionsMenu' }),
         L = (0, a.zX)({ sortDevicesByFrecency: M }),
         D = (0, m.Z)(),
-        [B, U] = null != (n = (0, x.Z)(g.tI.PRESET_VIDEO)) ? n : [g.LY.RESOLUTION_720, g.ws.FPS_30],
-        [G, W] = null != (j = (0, x.Z)(g.tI.PRESET_DOCUMENTS)) ? j : [g.LY.RESOLUTION_SOURCE, g.ws.FPS_15];
+        [B, G] = null != (n = (0, x.Z)(g.tI.PRESET_VIDEO)) ? n : [g.LY.RESOLUTION_720, g.ws.FPS_30],
+        [U, W] = null != (j = (0, x.Z)(g.tI.PRESET_DOCUMENTS)) ? j : [g.LY.RESOLUTION_SOURCE, g.ws.FPS_15];
     return (0, r.jsxs)(l.v2r, {
         'aria-label': v.intl.string(v.t['+1H47u']),
         navId: 'stream-options',
@@ -107,11 +107,11 @@ function O(e) {
                                         case g.tI.PRESET_VIDEO:
                                             return v.intl.format(_.default.G5O1Mz, {
                                                 resolution: (0, f.M)(B),
-                                                frameRate: U
+                                                frameRate: G
                                             });
                                         case g.tI.PRESET_DOCUMENTS:
                                             return v.intl.format(_.default['8tcFLy'], {
-                                                resolution: (0, f.M)(G),
+                                                resolution: (0, f.M)(U),
                                                 frameRate: W
                                             });
                                         case g.tI.PRESET_CUSTOM:

@@ -19,18 +19,18 @@ var a = n(149765),
     x = n(347994),
     E = n(591526),
     j = n(261875),
-    O = n(710845),
-    C = n(38618),
+    C = n(710845),
+    O = n(38618),
     S = n(218543),
     v = n(314897),
     T = n(944486),
-    N = n(914010),
-    I = n(449934),
+    I = n(914010),
+    N = n(449934),
     y = n(576376),
     A = n(38217),
     P = n(864631),
     R = n(981631);
-let D = new O.Z('CacheStore'),
+let D = new C.Z('CacheStore'),
     Z = !1,
     w = !1,
     k = 'initializing',
@@ -73,9 +73,9 @@ async function G(e, t, n) {
 async function F(e, t, n) {
     var i, r, s;
     D.verbose('loading early cache');
-    let a = C.Z.getSocket();
+    let a = O.Z.getSocket();
     a.connect();
-    let c = null != (i = N.Z.getGuildId()) ? i : null,
+    let c = null != (i = I.Z.getGuildId()) ? i : null,
         u = null != (r = T.Z.getChannelId()) ? r : null,
         m = performance.now(),
         g = S.Z.loadCachedMessages.measureAsyncWithoutNesting(() => G(e, c, u)),
@@ -83,11 +83,11 @@ async function F(e, t, n) {
         h = S.Z.fetchGuildCache.measureAsync(() => Y(e, n)),
         f = null != e ? l.Z.timeAsync('\uD83D\uDCBE', 'cache: private_channels', () => E.Z.getAsync(e, null)) : Promise.resolve([]),
         j = null == e ? Promise.resolve({}) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: user_settings', () => x.Z.getAll(e)),
-        O = null == e ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: read_states', () => b.Z.getAll(e)),
+        C = null == e ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: read_states', () => b.Z.getAll(e)),
         v = null == e ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: user_guild_settings', () => _.Z.getAll(e)),
-        [[I, y], A, R, Z, w, k, L] = await Promise.all([g, p, h, f, j, O, v]),
+        [[N, y], A, R, Z, w, k, L] = await Promise.all([g, p, h, f, j, C, v]),
         B = performance.now() - m;
-    if ((D.verbose('cache loaded in '.concat(B, 'ms (channel_history ').concat(I, 'ms)')), null == y)) return (0, P.Z)('database:history_cache_null'), D.verbose('finished without dispatching CACHE_LOADED'), [!1, null, 0];
+    if ((D.verbose('cache loaded in '.concat(B, 'ms (channel_history ').concat(N, 'ms)')), null == y)) return (0, P.Z)('database:history_cache_null'), D.verbose('finished without dispatching CACHE_LOADED'), [!1, null, 0];
     {
         let i = Object.fromEntries(y.members.map((e) => [e.userId, e])),
             r = null != R.guildId && null != R.channels,
@@ -201,7 +201,7 @@ async function W(e, t, n, i) {
                 : Promise.resolve([])
         );
     await new Promise((e) => setTimeout(e, 0)), S.Z.loadLazyCache.recordStart();
-    let h = C.Z.getSocket();
+    let h = O.Z.getSocket();
     K(() => {
         let l = performance.now();
         if (!1 === r) {
@@ -310,7 +310,7 @@ async function W(e, t, n, i) {
     });
 }
 function K(e) {
-    let t = C.Z.getSocket(),
+    let t = O.Z.getSocket(),
         n = !1;
     o.ZP.Emitter.batched(() => {
         try {
@@ -340,7 +340,7 @@ function K(e) {
 }
 class q extends (i = o.ZP.Store) {
     initialize() {
-        Z || C.Z.getSocket().dispatcher.unpauseDispatchQueue();
+        Z || O.Z.getSocket().dispatcher.unpauseDispatchQueue();
     }
     hasCache() {
         return !Z || B;
@@ -352,7 +352,7 @@ class q extends (i = o.ZP.Store) {
         return L;
     }
     canWriteCaches(e) {
-        return (0, I.$8)() ? (w ? (D.log('Not writing cache because caches cleared'), !1) : !!e || !!U || (D.log('Not writing cache because never connected'), !1)) : (D.log('Not writing cache because not authenticated'), !1);
+        return (0, N.$8)() ? (w ? (D.log('Not writing cache because caches cleared'), !1) : !!e || !!U || (D.log('Not writing cache because never connected'), !1)) : (D.log('Not writing cache because not authenticated'), !1);
     }
     async loadCacheAsync(e, t) {
         let n = (0, y.h)(t);
@@ -361,7 +361,7 @@ class q extends (i = o.ZP.Store) {
                 n(),
                 setTimeout(() => {
                     var e, t;
-                    return null == (t = C.Z.getSocket()) || null == (e = t.dispatcher) ? void 0 : e.unpauseDispatchQueue();
+                    return null == (t = O.Z.getSocket()) || null == (e = t.dispatcher) ? void 0 : e.unpauseDispatchQueue();
                 }, 0);
             return;
         }

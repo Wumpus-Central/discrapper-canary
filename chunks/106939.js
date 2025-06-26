@@ -21,13 +21,13 @@ var i = n(255367),
     x = n(605236),
     E = n(984370),
     j = n(797614),
-    O = n(108427),
-    C = n(210887),
+    C = n(108427),
+    O = n(210887),
     S = n(695346),
     v = n(594174),
     T = n(626135),
-    N = n(260722),
-    I = n(914788),
+    I = n(260722),
+    N = n(914788),
     y = n(841409),
     A = n(652262),
     P = n(880257),
@@ -151,16 +151,16 @@ function W() {
     let e = (0, P.Z)(),
         t = (0, R.M8)(),
         n = (0, x.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
-        s = (0, c.e7)([I.Z], () => I.Z.getIsInitialized()),
+        s = (0, c.e7)([N.Z], () => N.Z.getIsInitialized()),
         l = (0, A.M)(),
         { selectedTab: a, handleTabChange: m } = (0, y.Z)(),
         h = (0, _.Dt)(),
         f = v.default.getCurrentUser(),
         E = null != e,
-        C = s && null != f && !E;
+        O = s && null != f && !E;
     (0, g.ZP)(() => {
-        (0, O.e)('family-center'),
-            N.ZP.initialPageLoad(),
+        (0, C.e)('family-center'),
+            I.ZP.initialPageLoad(),
             n ||
                 (0, x.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
                     dismissAction: M.L.AUTO,
@@ -191,9 +191,9 @@ function W() {
         }
     }, [s, E]),
     r.useEffect(() => {
-        C && (0, p.mN)(B.L0.FAMILY_CENTER);
-    }, [C]),
-    C)
+        O && (0, p.mN)(B.L0.FAMILY_CENTER);
+    }, [O]),
+    O)
         ? null
         : (0, i.jsxs)('main', {
               className: G.container,
@@ -220,9 +220,9 @@ function K() {
         t = (0, P.Z)(),
         n = (0, R.M8)(),
         s = (0, x.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
-        a = (0, c.e7)([I.Z], () => I.Z.getIsInitialized()),
+        a = (0, c.e7)([N.Z], () => N.Z.getIsInitialized()),
         E = (0, A.M)(),
-        D = (0, c.e7)([C.Z], () => C.Z.theme),
+        D = (0, c.e7)([O.Z], () => O.Z.theme),
         { selectedTab: Z, handleTabChange: w } = (0, y.Z)(),
         F = (0, _.Dt)(),
         z = v.default.getCurrentUser(),
@@ -230,8 +230,8 @@ function K() {
         K = a && null != z && !W;
     (0, g.ZP)(() => {
         m.Y(L.Z5c.FAMILY_CENTER),
-            (0, O.e)('family-center'),
-            !I.Z.isLoading() && I.Z.canRefetch() && N.ZP.initialPageLoad(),
+            (0, C.e)('family-center'),
+            !N.Z.isLoading() && N.Z.canRefetch() && I.ZP.initialPageLoad(),
             s ||
                 (0, x.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
                     dismissAction: M.L.AUTO,
@@ -272,8 +272,8 @@ function K() {
         K)
     )
         return null;
-    let J = Z !== k.dG.SETTINGS ? Z : k.dG.ACTIVITY,
-        Q = H[J];
+    let Q = Z !== k.dG.SETTINGS ? Z : k.dG.ACTIVITY,
+        J = H[Q];
     return (0, i.jsx)(f.Gt, {
         value: e,
         children: (0, i.jsxs)('main', {
@@ -283,19 +283,19 @@ function K() {
                 (0, i.jsx)(b.yY, { location: V.intl.string(U.default.RZqaJi) }),
                 (0, i.jsx)(Y, {
                     theme: D,
-                    section: J,
+                    section: Q,
                     handleItemSelect: (e) => {
                         w(e);
                     }
                 }),
                 (0, i.jsx)(u.njP.Panel, {
-                    id: J,
+                    id: Q,
                     'aria-labelledby': F,
                     className: G.contentPanel,
                     children: (0, i.jsx)(u.Ttm, {
                         children: (0, i.jsx)('div', {
                             className: G.sideNavContent,
-                            children: Q()
+                            children: J()
                         })
                     })
                 })

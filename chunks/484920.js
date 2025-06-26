@@ -6,7 +6,6 @@ e.exports = {
     fadeIn: 'fadeIn__6db1d',
     pageWrapper: 'pageWrapper__6db1d',
     page: 'page__6db1d',
-    pageWithPagination: 'pageWithPagination__6db1d',
     pageFullscreen: 'pageFullscreen__6db1d',
     categoryWrapper: 'categoryWrapper__6db1d',
     cardsContainer: 'cardsContainer__6db1d',

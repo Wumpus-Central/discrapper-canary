@@ -5,7 +5,7 @@ var i = n(785902),
 e.exports = function (e, t) {
     return function (n, o) {
         var _ = s(n) ? i : r,
-            l = t ? t() : {};
-        return _(n, e, a(o, 2), l);
+            E = t ? t() : {};
+        return _(n, e, a(o, 2), E);
     };
 };

@@ -2,8 +2,8 @@ n.d(t, { q: () => _ });
 var r = n(255367),
     l = n(73800),
     a = n(120356),
-    i = n.n(a),
-    o = n(180650),
+    o = n.n(a),
+    i = n(180650),
     s = n(622535),
     c = n(481060),
     u = n(626135),
@@ -22,18 +22,18 @@ let _ = (e) => {
     let E = null != (n = null != C ? C : null == v ? void 0 : v.skuId) ? n : '',
         { handleCardVisibilityChange: y } = (0, f.E)(E, 'home', 'marketing featured block'),
         { featuredBlockBanner: j } = (0, b.YG)(v, O),
-        P = l.useRef(null),
-        k = E === o.T.NAMEPLATES_V3,
-        T = k ? 'NAMEPLATES VOL.3' : null,
+        k = l.useRef(null),
+        P = E === i.T.NAMEPLATES_V3,
+        T = P ? 'NAMEPLATES VOL.3' : null,
         I = null == O ? void 0 : O.bodyText,
         L = (0, d.sp)();
     return (0, r.jsx)(s.$, {
-        innerRef: P,
+        innerRef: k,
         onChange: y,
         threshold: 0,
         children: (0, r.jsxs)(c.P3F, {
             className: m.featuredBlock,
-            innerRef: P,
+            innerRef: k,
             style: { backgroundImage: 'url('.concat(j, ')') },
             onClick: () => {
                 S('shop marketing tile', E),
@@ -61,7 +61,7 @@ let _ = (e) => {
                         null != T &&
                             (0, r.jsx)(c.X6q, {
                                 lineClamp: 2,
-                                className: i()(m.featuredBlockTitleText, { [m.featuredBlockTitleTextNameplate]: k }),
+                                className: o()(m.featuredBlockTitleText, { [m.featuredBlockTitleTextNameplate]: P }),
                                 style: { color: null != (a = null == O ? void 0 : O.bannerTextColor) ? a : 'white' },
                                 variant: 'heading-xl/semibold',
                                 children: T

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => y,
-    r: () => I
+    r: () => N
 }),
     n(539854),
     n(388685);
@@ -23,39 +23,39 @@ var i = n(255367),
     x = n(300037),
     E = n(981631),
     j = n(474936),
-    O = n(388032),
-    C = n(238045);
+    C = n(388032),
+    O = n(238045);
 function S(e) {
     let { guildTier: t, guildBoostSlot: n, showAltText: l, isCanceled: o, premiumSubscription: c, fractionalPremiumInfo: d } = e,
         u = r.useMemo(() => {
             if (o) {
                 let e = c.currentPeriodEnd;
-                return c.isPausedForFractionalPremium && (e = d.endsAt.toDate()), O.intl.format(O.t.Z4ULRE, { date: e });
+                return c.isPausedForFractionalPremium && (e = d.endsAt.toDate()), C.intl.format(C.t.Z4ULRE, { date: e });
             }
             let e = null != n.premiumGuildSubscription ? f.default.extractTimestamp(n.premiumGuildSubscription.id) : 0;
-            return O.intl.formatToPlainString(O.t.lY2Bur, { date: new Date(e) });
+            return C.intl.formatToPlainString(C.t.lY2Bur, { date: new Date(e) });
         }, [n, o, c, d]),
         m = r.useMemo(
             () =>
                 (function (e) {
                     if (null == e || e === E.Eu4.NONE) return '';
                     let t = [
-                        O.intl.formatToPlainString(O.t.dLlKX1, { numEmojiSlots: j.HO[e].limits.emoji }),
-                        O.intl.formatToPlainString(O.t['+ANIfn'], { numStickerSlots: j.HO[e].limits.stickers }),
-                        O.intl.formatToPlainString(O.t['4gt60d'], { numSoundboardSlots: j.HO[e].limits.soundboardSounds }),
-                        O.intl.formatToPlainString(O.t.XahSjY, {
+                        C.intl.formatToPlainString(C.t.dLlKX1, { numEmojiSlots: j.HO[e].limits.emoji }),
+                        C.intl.formatToPlainString(C.t['+ANIfn'], { numStickerSlots: j.HO[e].limits.stickers }),
+                        C.intl.formatToPlainString(C.t['4gt60d'], { numSoundboardSlots: j.HO[e].limits.soundboardSounds }),
+                        C.intl.formatToPlainString(C.t.XahSjY, {
                             resolution: j.HO[e].limits.screenShareQualityResolution,
                             framerate: j.HO[e].limits.screenShareQualityFramerate
                         }),
-                        O.intl.formatToPlainString(O.t.NbNs7e, { bitrate: j.HO[e].limits.bitrate / 1000 }),
-                        O.intl.formatToPlainString(O.t.VVKcpq, { filesize: j.HO[e].limits.fileSize / 1024 / 1024 }),
-                        O.intl.formatToPlainString(O.t.TbpCvr, { numVideoStageSeats: j.HO[e].limits.stageVideoUsers }),
-                        O.intl.string(O.t.LDyX3t),
-                        O.intl.string(O.t.YtGlPT)
+                        C.intl.formatToPlainString(C.t.NbNs7e, { bitrate: j.HO[e].limits.bitrate / 1000 }),
+                        C.intl.formatToPlainString(C.t.VVKcpq, { filesize: j.HO[e].limits.fileSize / 1024 / 1024 }),
+                        C.intl.formatToPlainString(C.t.TbpCvr, { numVideoStageSeats: j.HO[e].limits.stageVideoUsers }),
+                        C.intl.string(C.t.LDyX3t),
+                        C.intl.string(C.t.YtGlPT)
                     ];
-                    e >= E.Eu4.TIER_2 && (t.push(O.intl.string(O.t.SztbtL)), t.push(O.intl.string(O.t['3GK91t']))), e >= E.Eu4.TIER_3 && t.push(O.intl.string(O.t.XUUJd3));
+                    e >= E.Eu4.TIER_2 && (t.push(C.intl.string(C.t.SztbtL)), t.push(C.intl.string(C.t['3GK91t']))), e >= E.Eu4.TIER_3 && t.push(C.intl.string(C.t.XUUJd3));
                     let n = t[Math.floor(Math.random() * t.length)];
-                    return O.intl.format(O.t['/dOAmZ'], { perk: n });
+                    return C.intl.format(C.t['/dOAmZ'], { perk: n });
                 })(t),
             [t]
         ),
@@ -70,7 +70,7 @@ function S(e) {
         );
     return o || t === E.Eu4.NONE
         ? (0, i.jsx)('div', {
-              className: C.boostDescriptionInnerContainer,
+              className: O.boostDescriptionInnerContainer,
               children: (0, i.jsx)(a.Text, {
                   variant: 'text-sm/medium',
                   color: 'text-muted',
@@ -80,7 +80,7 @@ function S(e) {
         : g((e, t) =>
               (0, i.jsx)(s.animated.div, {
                   style: e,
-                  className: C.boostDescriptionInnerContainer,
+                  className: O.boostDescriptionInnerContainer,
                   children: (0, i.jsx)(a.Text, {
                       variant: 'text-sm/medium',
                       color: 'text-muted',
@@ -97,12 +97,12 @@ function v(e) {
         j = r.useMemo(() => null != E && E > new Date(), [E]),
         v = (0, p.tl)(n),
         T = (0, c.Z)(),
-        N = r.useRef(null);
+        I = r.useRef(null);
     return (0, i.jsxs)('div', {
-        className: C.boostContainer,
+        className: O.boostContainer,
         children: [
             (0, i.jsxs)('div', {
-                className: C.boostInnerContainer,
+                className: O.boostInnerContainer,
                 children: [
                     (0, i.jsx)(_.Z, {
                         isCanceled: v,
@@ -110,11 +110,11 @@ function v(e) {
                         useReducedMotion: f
                     }),
                     (0, i.jsx)('div', {
-                        className: C.boostDescriptionContainer,
+                        className: O.boostDescriptionContainer,
                         children:
                             null != E && j && !v
                                 ? (0, i.jsx)(b.Z, {
-                                      className: C.boostDescriptionInnerContainer,
+                                      className: O.boostDescriptionInnerContainer,
                                       cooldown: E.getTime()
                                   })
                                 : (0, i.jsx)(S, {
@@ -127,7 +127,7 @@ function v(e) {
                                   })
                     }),
                     (0, i.jsx)(a.yRy, {
-                        targetElementRef: N,
+                        targetElementRef: I,
                         renderPopout: function (e) {
                             let { closePopout: t } = e;
                             return (0, i.jsx)(d.Z, {
@@ -172,9 +172,9 @@ function v(e) {
                                 })({}, e)),
                                 (n = n =
                                     {
-                                        innerRef: N,
-                                        'aria-label': O.intl.string(O.t.PdRCRk),
-                                        className: C.boostSlotMenuIcon,
+                                        innerRef: I,
+                                        'aria-label': C.intl.string(C.t.PdRCRk),
+                                        className: O.boostSlotMenuIcon,
                                         children: (0, i.jsx)(a.Huf, {
                                             size: 'md',
                                             color: 'currentColor'
@@ -198,7 +198,7 @@ function v(e) {
                     })
                 ]
             }),
-            !h && (0, i.jsx)('div', { className: C.boostContainerSeparator })
+            !h && (0, i.jsx)('div', { className: O.boostContainerSeparator })
         ]
     });
 }
@@ -206,7 +206,7 @@ function T(e) {
     let { guildId: t, guildBoostSlotRecords: n, premiumSubscription: r, hasCancelableGuildBoostSlot: s, showAltText: a } = e,
         o = (0, l.e7)([m.Z], () => m.Z.getGuild(t), [t]);
     return (0, i.jsxs)('div', {
-        className: C.appliedBoostContainer,
+        className: O.appliedBoostContainer,
         children: [
             (0, i.jsx)(x.Z, {
                 guildId: t,
@@ -229,7 +229,7 @@ function T(e) {
         ]
     });
 }
-function N(e) {
+function I(e) {
     let { guildId: t, appliedGuildBoosts: n, premiumSubscription: r } = e,
         s = (0, l.e7)([m.Z], () => m.Z.getGuild(t), [t]),
         a = f.default.fromTimestamp(Date.now());
@@ -254,7 +254,7 @@ function N(e) {
         r
     );
     return (0, i.jsxs)('div', {
-        className: C.appliedBoostContainer,
+        className: O.appliedBoostContainer,
         children: [
             (0, i.jsx)(x.Z, {
                 guildId: t,
@@ -277,7 +277,7 @@ function N(e) {
         ]
     });
 }
-function I(e) {
+function N(e) {
     let { appliedGuildBoosts: t, premiumSubscription: n } = e,
         s = r.useMemo(() => {
             let e = {};
@@ -292,13 +292,13 @@ function I(e) {
     return null == n || 0 === t.length
         ? null
         : (0, i.jsxs)('div', {
-              className: C.wrapper,
+              className: O.wrapper,
               children: [
                   (0, i.jsx)('div', {
-                      className: C.container,
+                      className: O.container,
                       children: f.default.keys(s).map((e) =>
                           (0, i.jsx)(
-                              N,
+                              I,
                               {
                                   guildId: e,
                                   premiumSubscription: n,
@@ -308,7 +308,7 @@ function I(e) {
                           )
                       )
                   }),
-                  (0, i.jsx)('div', { className: C.mainSeparator })
+                  (0, i.jsx)('div', { className: O.mainSeparator })
               ]
           });
 }
@@ -347,10 +347,10 @@ function y(e) {
     if (null == n || 0 === Object.keys(a).length) return null;
     let c = o > h.ZP.getNumIncludedPremiumGuildSubscriptionSlots(n.planId);
     return (0, i.jsxs)('div', {
-        className: C.wrapper,
+        className: O.wrapper,
         children: [
             (0, i.jsx)('div', {
-                className: C.container,
+                className: O.container,
                 children: f.default.keys(a).map((e) =>
                     (0, i.jsx)(
                         T,
@@ -365,7 +365,7 @@ function y(e) {
                     )
                 )
             }),
-            (0, i.jsx)('div', { className: C.mainSeparator })
+            (0, i.jsx)('div', { className: O.mainSeparator })
         ]
     });
 }

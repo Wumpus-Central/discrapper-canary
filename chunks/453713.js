@@ -2,9 +2,9 @@ n.d(t, { P: () => S });
 var r = n(255367),
     l = n(73800),
     a = n(120356),
-    i = n.n(a),
-    o = n(404759),
-    s = n.n(o),
+    o = n.n(a),
+    i = n(404759),
+    s = n.n(i),
     c = n(91192),
     u = n(536895),
     d = n(866442),
@@ -85,12 +85,12 @@ let O = s()((e) => {
         return t ? p.TVs.unsafe_rawColors.PRIMARY_700.css : p.TVs.unsafe_rawColors.PRIMARY_200.css;
     }),
     x = (e) => {
-        let { variantGroupProduct: t, variant: n, variantIndex: a, totalVariants: o, selectedVariantIndex: s, onEnter: d, onLeave: f, minimal: x } = e,
+        let { variantGroupProduct: t, variant: n, variantIndex: a, totalVariants: i, selectedVariantIndex: s, onEnter: d, onLeave: f, minimal: x } = e,
             { isPurchased: S } = (0, g.L)(n),
             E = (0, c.JA)('shop-variants-group-'.concat(t.storeListingId, '-').concat(a)),
             { onFocus: y } = E,
             j = v(E, ['onFocus']),
-            P = l.useCallback(
+            k = l.useCallback(
                 (e) => {
                     e.preventDefault(), e.stopPropagation(), (0, b.$)(t, a), y();
                 },
@@ -121,19 +121,19 @@ let O = s()((e) => {
                             var t;
                             f(), null == (t = e.onMouseLeave) || t.call(e);
                         },
-                        onClick: P,
+                        onClick: k,
                         onKeyDown: (e) => {
-                            e.key === u.R8.ENTER && P(e);
+                            e.key === u.R8.ENTER && k(e);
                         },
                         className: m.colorVariant,
                         children: (0, r.jsx)('div', {
-                            className: i()(m.colorSwatch, {
+                            className: o()(m.colorSwatch, {
                                 [m.open]: !x,
                                 [m.selected]: a === s
                             }),
                             style: {
                                 backgroundColor: n.variantValue,
-                                zIndex: o - a
+                                zIndex: i - a
                             },
                             children: S
                                 ? (0, r.jsx)(p.kSu, {
@@ -148,8 +148,8 @@ let O = s()((e) => {
     },
     S = (e) => {
         var t, n;
-        let { variantGroupProduct: l, className: a, previewingVariantIndexProps: o, setIsHoveringOnSwitch: s, minimal: d, selectedVariantIndex: b, alternativeBackgroundColor: g } = e,
-            O = o.previewingVariantIndex,
+        let { variantGroupProduct: l, className: a, previewingVariantIndexProps: i, setIsHoveringOnSwitch: s, minimal: d, selectedVariantIndex: b, alternativeBackgroundColor: g } = e,
+            O = i.previewingVariantIndex,
             S = null == (t = l.variants) ? void 0 : t[b],
             E = null !== O ? (null == (n = l.variants) ? void 0 : n[O]) : void 0,
             y = (0, f.Z)('shop-variants-group-'.concat(l.storeListingId), u.hy.HORIZONTAL);
@@ -165,7 +165,7 @@ let O = s()((e) => {
                     return (0, r.jsxs)(
                         'div',
                         C(_({ ref: n }, c), {
-                            className: i()(m.variantsPanel, a, {
+                            className: o()(m.variantsPanel, a, {
                                 [m.minimalState]: d,
                                 [m.alternativeColor]: g
                             }),
@@ -187,8 +187,8 @@ let O = s()((e) => {
                                                           variantIndex: t,
                                                           selectedVariantIndex: b,
                                                           totalVariants: null != (a = null == (n = l.variants) ? void 0 : n.length) ? a : 0,
-                                                          onEnter: () => o.handleEntering(t),
-                                                          onLeave: o.handleLeaving,
+                                                          onEnter: () => i.handleEntering(t),
+                                                          onLeave: i.handleLeaving,
                                                           minimal: d
                                                       },
                                                       t

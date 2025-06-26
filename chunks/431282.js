@@ -81,21 +81,21 @@ function h(e) {
     let x = (0, l.JA)(t),
         { onFocus: E } = x,
         j = p(x, ['onFocus']),
-        { id: O } = (0, l.f$)(),
-        C = r.useRef(null),
+        { id: C } = (0, l.f$)(),
+        O = r.useRef(null),
         [S, v] = r.useState(!1),
         T = null != b;
     r.useLayoutEffect(() => {
         if (T)
-            return (0, s.N)(O, (e) => {
+            return (0, s.N)(C, (e) => {
                 v(e === t);
             });
-    }, [t, O, T]);
-    let N = (e) =>
+    }, [t, C, T]);
+    let I = (e) =>
         (0, i.jsxs)(
             d.kF,
             g(m({}, e, j, _), {
-                ref: C,
+                ref: O,
                 role: 'button',
                 look: o.zxk.Looks.BLANK,
                 size: o.zxk.Sizes.NONE,
@@ -134,14 +134,14 @@ function h(e) {
         );
     return T
         ? (0, i.jsx)(o.yRy, {
-              targetElementRef: C,
+              targetElementRef: O,
               spacing: 0,
               renderPopout: b,
               shouldShow: S,
               onRequestClose: () => v(!0),
-              children: N
+              children: I
           })
-        : N();
+        : I();
 }
 function f(e) {
     let { id: t, children: n } = e,

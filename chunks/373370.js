@@ -1,8 +1,7 @@
 n.d(t, {
-    CR: () => k,
-    DD: () => D,
-    mK: () => M,
-    up: () => j
+    CR: () => x,
+    DD: () => w,
+    up: () => k
 }),
     n(953529),
     n(388685);
@@ -12,14 +11,13 @@ var r = n(73800),
     o = n(111361),
     s = n(113434),
     l = n(918701),
-    c = n(467628),
-    u = n(84298),
-    d = n(5881),
-    f = n(566078),
-    _ = n(46140),
-    p = n(474936),
-    h = n(388032);
-function m(e, t, n) {
+    c = n(84298),
+    u = n(5881),
+    d = n(566078),
+    f = n(46140),
+    _ = n(474936),
+    p = n(388032);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +30,7 @@ function m(e, t, n) {
         e
     );
 }
-function g(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,12 +41,12 @@ function g(e) {
                 })
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                h(e, t, n[t]);
             });
     }
     return e;
 }
-function E(e, t) {
+function g(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -60,31 +58,31 @@ function E(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
+            : g(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let y = (0, d.T)({});
-function O(e, t, n) {
-    return n ? h.intl.formatToParts(e, t) : h.intl.formatToPlainString(e, t);
+let b = (0, u.T)({});
+function y(e, t, n) {
+    return n ? p.intl.formatToParts(e, t) : p.intl.formatToPlainString(e, t);
 }
-function v(e) {
+function O(e) {
     let t,
         { quest: n, taskDetails: r, withoutMarkdown: i, hasNitro: a, collectibleRewardDuration: o } = e,
-        s = f.r.build(n.config).defaultRewardNameWithArticle,
+        s = d.r.build(n.config).defaultRewardNameWithArticle,
         { targetMinutes: c } = r,
         u = n.config.messages.gameTitle,
-        d = (0, l.f$)(n.config),
+        f = (0, l.f$)(n.config),
         _ = (0, l._p)(n.config);
-    return O(
-        (t = a && d ? (_ ? h.t['eb/SnZ'] : h.t.ziB0HB) : d || null != o ? h.t.AwuMRU : h.t.NIimTk),
+    return y(
+        (t = a && f ? (_ ? p.t['eb/SnZ'] : p.t.ziB0HB) : f || null != o ? p.t.AwuMRU : p.t.NIimTk),
         {
             gameTitle: u,
             streamingDurationRequirement: c,
@@ -95,16 +93,16 @@ function v(e) {
         i
     );
 }
-function I(e) {
+function v(e) {
     let t,
         { quest: n, taskDetails: r, withoutMarkdown: i, hasNitro: a, collectibleRewardDuration: o } = e,
-        s = f.r.build(n.config).defaultRewardNameWithArticle,
+        s = d.r.build(n.config).defaultRewardNameWithArticle,
         { targetMinutes: c } = r,
         u = n.config.messages.gameTitle,
-        d = (0, l.f$)(n.config),
+        f = (0, l.f$)(n.config),
         _ = (0, l._p)(n.config);
-    return O(
-        (t = a && d ? (_ ? h.t['eb/SnZ'] : h.t.ziB0HB) : d || null != o ? h.t.AwuMRU : h.t.NIimTk),
+    return y(
+        (t = a && f ? (_ ? p.t['eb/SnZ'] : p.t.ziB0HB) : f || null != o ? p.t.AwuMRU : p.t.NIimTk),
         {
             gameTitle: u,
             targetMinutes: c,
@@ -115,16 +113,16 @@ function I(e) {
         i
     );
 }
-function T(e) {
+function I(e) {
     let t,
         { quest: n, taskDetails: r, withoutMarkdown: i, hasNitro: a, collectibleRewardDuration: o } = e,
-        s = f.r.build(n.config).defaultRewardNameWithArticle,
+        s = d.r.build(n.config).defaultRewardNameWithArticle,
         { targetMinutes: c } = r,
         u = n.config.messages.gameTitle,
-        d = (0, l.f$)(n.config),
+        f = (0, l.f$)(n.config),
         _ = (0, l._p)(n.config);
-    return O(
-        (t = a && d ? (_ ? h.t['eb/SnZ'] : h.t.ziB0HB) : d || null != o ? h.t.AwuMRU : h.t.FZL5Q0),
+    return y(
+        (t = a && f ? (_ ? p.t['eb/SnZ'] : p.t.ziB0HB) : f || null != o ? p.t.AwuMRU : p.t.FZL5Q0),
         {
             gameTitle: u,
             streamingDurationRequirement: c,
@@ -135,12 +133,12 @@ function T(e) {
         i
     );
 }
-function S(e) {
+function T(e) {
     let { quest: t, taskDetails: n, withoutMarkdown: r } = e,
         { targetMinutes: i } = n,
         a = t.config.messages.gameTitle;
-    return O(
-        h.t['a/ia7O'],
+    return y(
+        p.t['a/ia7O'],
         {
             gameTitle: a,
             streamingDurationRequirement: i
@@ -148,16 +146,16 @@ function S(e) {
         r
     );
 }
-function A(e, t, n, r) {
+function S(e, t, n, r) {
     var i;
     let a,
-        o = f.r.build(e.config).defaultWatchVideoTask,
+        o = d.r.build(e.config).defaultWatchVideoTask,
         s = null != (i = null == o ? void 0 : o.messages.videoTitle) ? i : 'video',
-        c = f.r.build(e.config).defaultRewardNameWithArticle,
+        c = d.r.build(e.config).defaultRewardNameWithArticle,
         u = (0, l.f$)(e.config),
-        d = (0, l._p)(e.config);
-    return O(
-        (a = u && n ? (d ? h.t['xqX+r6'] : h.t['vs/xBg']) : u || null != t ? h.t['W/HkLC'] : e.id === _.V6 ? h.t.Rsd5bG : h.t.yMsQ7e),
+        _ = (0, l._p)(e.config);
+    return y(
+        (a = u && n ? (_ ? p.t['xqX+r6'] : p.t['vs/xBg']) : u || null != t ? p.t['W/HkLC'] : e.id === f.V6 ? p.t.Rsd5bG : p.t.yMsQ7e),
         {
             videoTitle: s,
             rewardNameWithArticle: c,
@@ -166,12 +164,12 @@ function A(e, t, n, r) {
         r
     );
 }
-function N(e) {
+function A(e) {
     let { quest: t, taskDetails: n, withoutMarkdown: r } = e,
         i = n.targetMinutes,
-        a = f.r.build(t.config).defaultRewardNameWithArticle;
-    return O(
-        h.t.VYwSSk,
+        a = d.r.build(t.config).defaultRewardNameWithArticle;
+    return y(
+        p.t.VYwSSk,
         {
             streamingDurationRequirement: i,
             questReward: a
@@ -179,16 +177,16 @@ function N(e) {
         r
     );
 }
-function C(e) {
+function N(e) {
     let t,
         { quest: n, taskDetails: r, withoutMarkdown: i, hasNitro: a, collectibleRewardDuration: o } = e,
-        s = f.r.build(n.config).defaultRewardNameWithArticle,
+        s = d.r.build(n.config).defaultRewardNameWithArticle,
         { targetMinutes: c } = r,
         u = n.config.messages.gameTitle,
-        d = (0, l.f$)(n.config),
+        f = (0, l.f$)(n.config),
         _ = (0, l._p)(n.config);
-    return O(
-        (t = a && d ? (_ ? h.t['X8Yt//'] : h.t.smG9qq) : d || null != o ? h.t.BLyDvL : h.t['hkJ+Gh']),
+    return y(
+        (t = a && f ? (_ ? p.t['X8Yt//'] : p.t.smG9qq) : f || null != o ? p.t.BLyDvL : p.t['hkJ+Gh']),
         {
             gameTitle: u,
             streamingDurationRequirement: c,
@@ -198,155 +196,117 @@ function C(e) {
         i
     );
 }
-function R(e) {
-    let { quest: t, taskDetails: n, thirdPartyTaskDetails: r, withoutMarkdown: i, withSimplifiedCopy: a, currentUser: s } = e;
-    if (a)
-        switch (L(t)) {
-            case 0:
-                return O(
-                    h.t.goA6o6,
-                    {
-                        targetMinutes: n.targetMinutes,
-                        gameTitle: t.config.messages.gameTitle
-                    },
-                    i
-                );
-            case 1:
-                return O(
-                    h.t.NmzoDg,
-                    {
-                        targetMinutes: n.targetMinutes,
-                        gameTitle: t.config.messages.gameTitle
-                    },
-                    i
-                );
-            case 2:
-                return h.intl.string(h.t['f/J8v7']);
-            case 3:
-                let c = f.r.build(t.config).defaultInGameTask;
-                if (null != c) return c.messages.taskDescription;
-        }
-    let u = (0, o.I5)(s, p.p9.TIER_2),
-        d = (0, l.Kr)(t.config);
+function C(e) {
+    let { quest: t, taskDetails: n, thirdPartyTaskDetails: r, withoutMarkdown: i, currentUser: a } = e,
+        s = (0, o.I5)(a, _.p9.TIER_2),
+        c = (0, l.Kr)(t.config);
     if ((0, l.$J)(t) && (0, l.$H)(t))
+        return O({
+            quest: t,
+            taskDetails: n,
+            withoutMarkdown: i,
+            hasNitro: s,
+            collectibleRewardDuration: c
+        });
+    if ((0, l.$J)(t))
         return v({
             quest: t,
             taskDetails: n,
             withoutMarkdown: i,
-            hasNitro: u,
-            collectibleRewardDuration: d
+            hasNitro: s,
+            collectibleRewardDuration: c
         });
-    if ((0, l.$J)(t))
+    if ((0, l.$H)(t))
         return I({
             quest: t,
             taskDetails: n,
             withoutMarkdown: i,
-            hasNitro: u,
-            collectibleRewardDuration: d
-        });
-    if ((0, l.$H)(t))
-        return T({
-            quest: t,
-            taskDetails: n,
-            withoutMarkdown: i,
-            hasNitro: u,
-            collectibleRewardDuration: d
+            hasNitro: s,
+            collectibleRewardDuration: c
         });
     if ((0, l.oo)({ quest: t }))
-        return S({
+        return T({
             quest: t,
             taskDetails: n,
             withoutMarkdown: i
         });
-    if ((0, l.q8)(t)) return A(t, d, u, i);
+    if ((0, l.q8)(t)) return S(t, c, s, i);
     else if ((0, l.pO)(t))
-        return N({
+        return A({
             quest: t,
             taskDetails: n,
             withoutMarkdown: i
         });
     return null != r
         ? r.description
-        : C({
+        : N({
               quest: t,
               taskDetails: n,
               withoutMarkdown: i,
-              hasNitro: u,
-              collectibleRewardDuration: d
+              hasNitro: s,
+              collectibleRewardDuration: c
           });
 }
-let P = (e) => {
+let R = (e) => {
     try {
         let t = '';
         if ('string' == typeof e) return e;
         if (Array.isArray(e)) {
-            for (let n of e) t += P(n.content);
+            for (let n of e) t += R(n.content);
             return t;
         }
-        return P(e.content);
+        return R(e.content);
     } catch (e) {
-        return y.error('Failed to convert ASTNode to string', e), '';
+        return b.error('Failed to convert ASTNode to string', e), '';
     }
 };
-function w(e) {
+function P(e) {
     var t;
-    let n = R(b(g({}, e), { currentUser: null != (t = e.currentUser) ? t : a.default.getCurrentUser() }));
-    return e.withoutMarkdown ? P(n) : n;
+    let n = C(E(m({}, e), { currentUser: null != (t = e.currentUser) ? t : a.default.getCurrentUser() }));
+    return e.withoutMarkdown ? R(n) : n;
 }
-function D(e) {
-    let { quest: t, location: n, questContent: r, sourceQuestContent: o } = e,
-        l = (0, s.uA)({
+function w(e) {
+    let { quest: t, questContent: n, sourceQuestContent: r } = e,
+        o = (0, s.uA)({
             quest: t,
-            questContent: r,
-            sourceQuestContent: o
+            questContent: n,
+            sourceQuestContent: r
         }),
-        u = (0, i.e7)([a.default], () => a.default.getCurrentUser()),
-        d = (0, s.Jf)(t);
-    return w(
-        b(g({}, e), {
-            connectedConsoleLinkOnClick: l,
+        l = (0, i.e7)([a.default], () => a.default.getCurrentUser()),
+        c = (0, s.Jf)(t);
+    return P(
+        E(m({}, e), {
+            connectedConsoleLinkOnClick: o,
             withoutMarkdown: !1,
-            withSimplifiedCopy: (0, c.j)({ location: n }),
-            currentUser: u,
-            thirdPartyTaskDetails: null != d ? d : void 0
+            currentUser: l,
+            thirdPartyTaskDetails: null != c ? c : void 0
         })
     );
 }
-function L(e) {
+function D(e) {
     return (0, l.$J)(e) || (0, l.pO)(e) ? 0 : (0, l.Dr)({ quest: e }) ? 1 : (0, l.q8)(e) ? 2 : 3 * !!(0, l.Vl)(e);
 }
-function x(e) {
-    return r.useMemo(() => L(e), [e]);
+function L(e) {
+    return r.useMemo(() => D(e), [e]);
 }
-function k(e) {
-    let { quest: t, location: n, autoTrackExposure: r = !0 } = e,
-        i = x(t),
-        a = (0, c.j)({
-            location: n,
-            autoTrackExposure: r
-        });
-    switch (i) {
+function x(e) {
+    let { quest: t } = e;
+    switch (L(t)) {
         case 0:
-            return a ? h.intl.string(h.t.Y7LIPT) : h.intl.string(h.t.l7E81t);
         case 1:
-            return a ? h.intl.string(h.t.hyrGU1) : h.intl.string(h.t.l7E81t);
+            return p.intl.string(p.t.l7E81t);
         case 2:
-            return h.intl.string(h.t.umdNio);
+            return p.intl.string(p.t.umdNio);
         case 3:
-            return t.config.features.includes(_.S7.START_QUEST_CTA) ? h.intl.string(h.t.ToGcxM) : h.intl.string(h.t.l7E81t);
+            return t.config.features.includes(f.S7.START_QUEST_CTA) ? p.intl.string(p.t.ToGcxM) : p.intl.string(p.t.l7E81t);
     }
 }
-function M(e) {
-    let t = r.useMemo(() => (0, l.f$)(e), [e]),
-        n = r.useMemo(() => (0, l._p)(e), [e]);
-    return t ? (n ? h.intl.string(h.t.hh7Rb2) : h.intl.string(h.t.GYGb3N)) : null;
-}
-function j(e) {
+function k(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return (0, u.f)({
+    return (0, c.f)({
         location: e,
         autoTrackExposure: t
     })
-        ? h.intl.string(h.t.Av9jcX)
-        : h.intl.string(h.t.cfY4PD);
+        ? p.intl.string(p.t.Av9jcX)
+        : p.intl.string(p.t.cfY4PD);
 }

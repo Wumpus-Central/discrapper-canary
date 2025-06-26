@@ -18,13 +18,13 @@ var i,
     x = n(925329),
     E = n(267101),
     j = n(240864),
-    O = n(942833),
-    C = n(400916),
+    C = n(942833),
+    O = n(400916),
     S = n(916001),
     v = n(539290),
     T = n(336197),
-    N = n(690221),
-    I = n(307643),
+    I = n(690221),
+    N = n(307643),
     y = n(378233),
     A = n(419922),
     P = n(46141),
@@ -91,8 +91,8 @@ function X(e, t) {
         e
     );
 }
-let J = (e) => 'https://'.concat(F.xr4, '/hc/').concat(e.toLowerCase(), '/requests/new?ticket_form_id=360000118612'),
-    Q = [F.epS.DURABLE_PRIMARY, F.epS.DURABLE, F.epS.CONSUMABLE],
+let Q = (e) => 'https://'.concat(F.xr4, '/hc/').concat(e.toLowerCase(), '/requests/new?ticket_form_id=360000118612'),
+    J = [F.epS.DURABLE_PRIMARY, F.epS.DURABLE, F.epS.CONSUMABLE],
     $ = [F.PyE.FAILED, F.PyE.REVERSED, F.PyE.CANCELED],
     ee = [z.gg.APPLE],
     et = (e) => {
@@ -170,7 +170,7 @@ let ei = (e) => {
 function er(e) {
     let { guildId: t, guildProductListingId: n } = e,
         i = (0, E.hO)(t, n, { requireCurrentGuild: !1 }),
-        l = (0, O.C)(i),
+        l = (0, C.C)(i),
         a = (0, m.e7)([R.Z], () => R.Z.getGuild(t)),
         o = (null == i ? void 0 : i.role_id) != null && (null == i ? void 0 : i.attachments_count) === 0 ? Y.intl.string(Y.t.H11qcX) : l,
         c = s.useCallback(async () => {
@@ -186,7 +186,7 @@ function er(e) {
             null != a &&
                 (0, r.jsx)(ei, {
                     description: Y.intl.string(Y.t.Wpn8z8),
-                    detail: (0, r.jsx)(N.Z, {
+                    detail: (0, r.jsx)(I.Z, {
                         onClick: c,
                         children: a.name
                     })
@@ -221,7 +221,7 @@ function es(e) {
                                     className: W.guildProductBenefitLabel,
                                     children: Y.intl.string(Y.t.hxawo6)
                                 }),
-                                (0, r.jsx)(C.Z, {
+                                (0, r.jsx)(O.Z, {
                                     guildId: i,
                                     productId: l.id
                                 })
@@ -408,7 +408,7 @@ class el extends (i = s.PureComponent) {
             i = this.validateRefundRules();
         if (i.includes('PAYMENT_GATEWAY') || i.includes('PAYMENT_STATUS') || i.includes('ALREADY_REFUNDED') || i.includes('SKU_STICKER_PACK') || i.includes('SUBSCRIPTION_TYPE') || i.includes('GUILD_PRODUCT')) return null;
         let l = 0 === i.length,
-            a = J(t),
+            a = Q(t),
             o = this.isPremium ? 5 : 14;
         return (
             (e = i.includes('SKU_TYPE')
@@ -490,7 +490,7 @@ class el extends (i = s.PureComponent) {
                     children: !n.isCollectible && this.renderRefundCriteria(Y.intl.string(Y.t.H0RNz8), i, Y.intl.formatToPlainString(Y.t['7dtXa2'], { daysSincePurchase: this.daysSincePurchase }))
                 }),
                 (0, r.jsx)(g.eee, {
-                    href: J(t),
+                    href: Q(t),
                     children: Y.intl.string(Y.t.re5nOD)
                 })
             ]
@@ -618,7 +618,7 @@ class el extends (i = s.PureComponent) {
                                 buttonPosition: v.E.RIGHT,
                                 notice: Y.intl.string(Y.t['3AvulJ']),
                                 ctaLabel: Y.intl.string(Y.t.zoztQE),
-                                onClick: () => (0, h.Z)(J(n))
+                                onClick: () => (0, h.Z)(Q(n))
                             })
                           : null != i &&
                             null != e.sku &&
@@ -767,7 +767,7 @@ class el extends (i = s.PureComponent) {
 function ea(e) {
     var t, n;
     let { payment: i, locale: l, compactMode: a, className: o } = e,
-        c = null != i.sku && Q.includes(i.sku.type),
+        c = null != i.sku && J.includes(i.sku.type),
         d = null != i.sku && c ? i.sku.applicationId : null,
         u = null == (t = i.sku) ? void 0 : t.applicationId,
         g = (null == (n = i.subscription) ? void 0 : n.type) === F.NYc.APPLICATION,
@@ -785,12 +785,12 @@ function ea(e) {
         }),
         _ = (0, m.e7)([f.Z], () => (null != u ? f.Z.getApplication(u) : null));
     s.useEffect(() => {
-        g && null != u && (0, I.UM)(u);
+        g && null != u && (0, N.UM)(u);
     }, [u, g]);
     let x = (0, m.e7)([R.Z], () => R.Z.getGuild(null == h ? void 0 : h.guildId)),
         E = c ? h : void 0,
         j = i.subscription,
-        O = (0, m.e7)([Z.Z], () => (null != j && j.type !== F.NYc.PREMIUM ? Z.Z.get(j.items[0].planId) : null));
+        C = (0, m.e7)([Z.Z], () => (null != j && j.type !== F.NYc.PREMIUM ? Z.Z.get(j.items[0].planId) : null));
     return (0, r.jsx)(el, {
         applicationStatistics: p,
         application: g ? _ : E,
@@ -801,7 +801,7 @@ function ea(e) {
         compactMode: a,
         className: o,
         payment: i,
-        plan: O
+        plan: C
     });
 }
 K(el, 'defaultProps', { compactMode: !1 });

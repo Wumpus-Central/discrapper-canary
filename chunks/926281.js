@@ -1,9 +1,9 @@
 r.d(t, { default: () => a }), r(388685);
 var n = r(255367),
-    c = r(73800),
-    l = r(481060),
-    i = r(388032);
-function o(e) {
+    l = r(73800),
+    o = r(481060),
+    c = r(388032);
+function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -55,92 +55,138 @@ function a(e) {
             if (null == e) return {};
             var r,
                 n,
-                c = (function (e, t) {
+                l = (function (e, t) {
                     if (null == e) return {};
                     var r,
                         n,
-                        c = {},
-                        l = Object.keys(e);
-                    for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (c[r] = e[r]);
-                    return c;
+                        l = {},
+                        o = Object.keys(e);
+                    for (n = 0; n < o.length; n++) (r = o[n]), t.indexOf(r) >= 0 || (l[r] = e[r]);
+                    return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < l.length; n++) (r = l[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (c[r] = e[r]);
+                var o = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < o.length; n++) (r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]);
             }
-            return c;
+            return l;
         })(e.settings, ['onConfirm']);
-    let [u, b] = c.useState({
+    let [u, b] = l.useState({
             Account: {
                 value: 'Account',
-                label: i.intl.string(i.t['rfe/x8']),
+                label: c.intl.string(c.t['rfe/x8']),
                 checked: !1
             },
             Analytics: {
                 value: 'Analytics',
-                label: i.intl.string(i.t['j+d6RE']),
+                label: c.intl.string(c.t['j+d6RE']),
                 checked: !1
             },
             Activities: {
                 value: 'Activities',
-                label: i.intl.string(i.t.KO88BQ),
+                label: c.intl.string(c.t.KO88BQ),
                 checked: !1
             },
             Ads: {
                 value: 'Ads',
-                label: i.intl.string(i.t.wb7QJy),
+                label: c.intl.string(c.t.wb7QJy),
                 checked: !1
             },
             Messages: {
                 value: 'Messages',
-                label: i.intl.string(i.t['0dO1t7']),
+                label: c.intl.string(c.t['0dO1t7']),
                 checked: !1
             },
             Programs: {
                 value: 'Programs',
-                label: i.intl.string(i.t.M4ddeX),
+                label: c.intl.string(c.t.M4ddeX),
                 checked: !1
             },
             Servers: {
                 value: 'Servers',
-                label: i.intl.string(i.t.JN9c39),
+                label: c.intl.string(c.t.JN9c39),
                 checked: !1
             }
         }),
-        p = (e) => (t, r) => {
-            b((t) => s(o({}, t), { [e]: s(o({}, t[e]), { checked: r }) }));
-        };
+        [d, p] = l.useState(!1),
+        y = (e) => (t, r) => {
+            b((t) => s(i({}, t), { [e]: s(i({}, t[e]), { checked: r }) })), r && d && p(!1);
+        },
+        g = Object.values(u).some((e) => e.checked);
     return (0, n.jsxs)(
-        l.ConfirmModal,
-        s(o({}, t, a), {
-            onConfirm: () => {
-                let e = Object.keys(u)
-                    .filter((e) => u[e].checked)
-                    .map((e) => u[e].value);
-                null == r || r(e);
-            },
+        o.Y0X,
+        s(i({}, t), {
+            parentComponent: 'DataHarvestModal',
             children: [
-                (0, n.jsx)(l.Text, {
-                    variant: 'text-md/normal',
-                    style: { marginBottom: '5px' },
-                    children: a.body
+                (0, n.jsx)(o.xBx, {
+                    separator: !1,
+                    children: (0, n.jsx)(o.X6q, {
+                        variant: 'heading-lg/semibold',
+                        children: a.header
+                    })
                 }),
-                Object.keys(u).map((e) => {
-                    let { label: t, checked: r } = u[e];
-                    return (0, n.jsx)(
-                        l.XZJ,
-                        {
-                            type: l.XZJ.Types.INVERTED,
-                            value: r,
-                            style: { marginBottom: '2px' },
-                            onChange: p(e),
-                            children: (0, n.jsx)(l.Text, {
-                                variant: 'text-md/normal',
-                                children: t
+                (0, n.jsxs)(o.hzk, {
+                    children: [
+                        (0, n.jsx)(o.Text, {
+                            variant: 'text-md/normal',
+                            style: { marginBottom: '5px' },
+                            children: a.body
+                        }),
+                        Object.keys(u).map((e) => {
+                            let { label: t, checked: r } = u[e];
+                            return (0, n.jsx)(
+                                o.XZJ,
+                                {
+                                    type: o.XZJ.Types.INVERTED,
+                                    value: r,
+                                    style: { marginBottom: '2px' },
+                                    onChange: y(e),
+                                    children: (0, n.jsx)(o.Text, {
+                                        variant: 'text-md/normal',
+                                        children: t
+                                    })
+                                },
+                                e
+                            );
+                        }),
+                        d &&
+                            (0, n.jsx)(o.Text, {
+                                variant: 'text-sm/normal',
+                                color: 'text-danger',
+                                style: { marginTop: '8px' },
+                                children: c.intl.string(c.t.W1Rw3N)
                             })
-                        },
-                        e
-                    );
+                    ]
+                }),
+                (0, n.jsxs)(o.mzw, {
+                    children: [
+                        (0, n.jsx)(o.zxk, {
+                            type: 'button',
+                            size: o.zxk.Sizes.MEDIUM,
+                            color: null != a.confirmButtonColor ? a.confirmButtonColor : o.zxk.Colors.RED,
+                            onClick: () => {
+                                if (!g) return void p(!0);
+                                let e = Object.keys(u)
+                                    .filter((e) => u[e].checked)
+                                    .map((e) => u[e].value);
+                                null == r || r(e), t.onClose();
+                            },
+                            children: a.confirmText
+                        }),
+                        null != a.cancelText &&
+                            '' !== a.cancelText &&
+                            (0, n.jsx)(o.zxk, {
+                                type: 'button',
+                                look: o.zxk.Looks.FILLED,
+                                color: o.zxk.Colors.PRIMARY,
+                                size: o.zxk.Sizes.MEDIUM,
+                                onClick: () => {
+                                    var e;
+                                    null == (e = a.onCancel) || e.call(a), t.onClose();
+                                },
+                                style: { marginRight: 8 },
+                                children: a.cancelText
+                            })
+                    ]
                 })
             ]
         })

@@ -22,9 +22,9 @@ let x = [
     }
 ];
 function E(e) {
-    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: E, changeAvatarButtonText: j, guildId: O, className: C, disabled: S = !1, isTryItOutFlow: v = !1, forcedDivider: T, withHighlight: N = !1 } = e,
-        { newestAnalyticsLocation: I } = (0, c.ZP)(),
-        y = N ? o.gtL : o.zxk,
+    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: E, changeAvatarButtonText: j, guildId: C, className: O, disabled: S = !1, isTryItOutFlow: v = !1, forcedDivider: T, withHighlight: I = !1 } = e,
+        { newestAnalyticsLocation: N } = (0, c.ZP)(),
+        y = I ? o.gtL : o.zxk,
         A = (0, u.T)({ location: 'AvatarSection' }),
         P = [];
     A && P.push(a.z.RECENT_AVATARS_SETTINGS_PROFILE_PAGE_NEW_BADGE);
@@ -34,14 +34,14 @@ function E(e) {
             D(p.L.TAKE_ACTION),
                 (0, m.$r)({
                     uploadType: h.pC.AVATAR,
-                    analyticsSource: I,
+                    analyticsSource: N,
                     filters: v ? x : void 0,
-                    guildId: O,
+                    guildId: C,
                     isTryItOutFlow: v
                 });
-        }, [O, I, v, D]);
+        }, [C, N, v, D]);
     return (0, i.jsx)(g.Z, {
-        className: C,
+        className: O,
         title: E,
         titleIcon: Z
             ? (0, i.jsx)(o.IGR, {
@@ -62,7 +62,7 @@ function E(e) {
             className: _.buttonsContainer,
             children: [
                 (0, i.jsx)(y, {
-                    className: l()({ [_.buttonHighlighted]: N }),
+                    className: l()({ [_.buttonHighlighted]: I }),
                     size: o.zxk.Sizes.SMALL,
                     onClick: w,
                     children: null != j ? j : b.intl.string(b.t['4OynCA'])
@@ -74,7 +74,7 @@ function E(e) {
                         look: o.zxk.Looks.LINK,
                         size: o.zxk.Sizes.SMALL,
                         onClick: () => s(null),
-                        children: null != O ? b.intl.string(b.t.TDjKDg) : b.intl.string(b.t.twB3f3)
+                        children: null != C ? b.intl.string(b.t.TDjKDg) : b.intl.string(b.t.twB3f3)
                     })
             ]
         })

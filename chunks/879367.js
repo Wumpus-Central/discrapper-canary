@@ -5,28 +5,28 @@ var i = n(255367),
     s = n.n(o),
     E = n(481060),
     r = n(788080),
-    a = n(81643),
-    c = n(469775),
-    _ = n(388032),
-    I = n(23525);
+    _ = n(81643),
+    a = n(469775),
+    I = n(388032),
+    c = n(23525);
 let N = function (e) {
-    let { onClose: t, onComplete: n, onCancel: o, transitionState: N, webviewUrl: L, useV1: S = !1 } = e,
-        A = (0, r.GE)(),
+    let { onClose: t, onComplete: n, onCancel: o, transitionState: N, webviewUrl: A, useV1: L = !1 } = e,
+        S = (0, r.GE)(),
         u = l.useCallback(() => {
             n(), t();
         }, [n, t]),
         T = l.useCallback(() => {
-            (0, E.nfh)(c.zJ) && u();
+            (0, E.nfh)(a.zJ) && u();
         }, [u]);
-    (0, a.F5)(T);
+    (0, _.F5)(T);
     let d = l.useCallback(
         (e) => {
-            if (A && '' !== L) {
+            if (S && '' !== A) {
                 var t;
                 (null == e || null == (t = e.data) ? void 0 : t.eventType) === 'Verification.Result' && u();
             }
         },
-        [L, u, A]
+        [A, u, S]
     );
     return (
         l.useEffect(
@@ -40,53 +40,53 @@ let N = function (e) {
         ),
         (0, i.jsxs)(E.Y0X, {
             transitionState: N,
-            className: I.root,
+            className: c.root,
             parentComponent: 'AgeVerificationModal',
             children: [
                 (0, i.jsxs)(E.hzk, {
-                    className: s()(I.content, { [I.fullbleed]: !S }),
+                    className: s()(c.content, { [c.fullbleed]: !L }),
                     scrollbarType: 'none',
                     children: [
-                        S &&
+                        L &&
                             (0, i.jsx)(E.X6q, {
                                 variant: 'heading-xl/bold',
-                                children: _.intl.string(_.t.tYNaXF)
+                                children: I.intl.string(I.t.tYNaXF)
                             }),
                         (0, i.jsx)('iframe', {
                             id: 'frame',
-                            src: L,
-                            className: I.iframe,
+                            src: A,
+                            className: c.iframe,
                             allow: 'camera; microphone'
                         })
                     ]
                 }),
                 (0, i.jsx)(E.mzw, {
-                    children: S
+                    children: L
                         ? (0, i.jsx)(E.zxk, {
                               color: E.zxk.Colors.TRANSPARENT,
                               look: E.zxk.Looks.BLANK,
                               onClick: t,
-                              className: I.cancelButton,
-                              children: _.intl.string(_.t['4gTnU1'])
+                              className: c.cancelButton,
+                              children: I.intl.string(I.t['4gTnU1'])
                           })
                         : (0, i.jsxs)('div', {
-                              className: I.footer,
+                              className: c.footer,
                               children: [
                                   (0, i.jsx)(E.zxk, {
                                       color: E.zxk.Colors.TRANSPARENT,
                                       look: E.zxk.Looks.BLANK,
                                       onClick: t,
                                       size: E.zxk.Sizes.SMALL,
-                                      className: I.footerButton,
-                                      children: _.intl.string(_.t.fjKFaW)
+                                      className: c.footerButton,
+                                      children: I.intl.string(I.t.fjKFaW)
                                   }),
                                   (0, i.jsx)(E.zxk, {
                                       color: E.zxk.Colors.TRANSPARENT,
                                       look: E.zxk.Looks.BLANK,
                                       size: E.zxk.Sizes.SMALL,
                                       onClick: o,
-                                      className: I.footerButton,
-                                      children: _.intl.string(_.t['4gTnU1'])
+                                      className: c.footerButton,
+                                      children: I.intl.string(I.t['4gTnU1'])
                                   })
                               ]
                           })

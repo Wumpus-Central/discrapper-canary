@@ -108,7 +108,8 @@ function T(e) {
                   body: E.intl.string(E.t['zK+lqa']),
                   onConfirm: t,
                   cancelText: E.intl.string(E.t['ETE/oK']),
-                  confirmText: E.intl.string(E.t['QDX/qq'])
+                  confirmText: E.intl.string(E.t['QDX/qq']),
+                  confirmVariant: 'critical-primary'
               })
             : t();
     };

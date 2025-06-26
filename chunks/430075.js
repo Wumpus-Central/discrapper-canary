@@ -6,8 +6,8 @@ var r = n(442837),
     s = n(703656),
     o = n(314897),
     _ = n(236289),
-    l = n(518560),
-    E = n(800530),
+    E = n(518560),
+    l = n(800530),
     c = n(981631),
     I = n(388032),
     u = n(677095);
@@ -23,7 +23,7 @@ function d() {
                 children: I.intl.string(I.t['MG+Bzc'])
             }),
             (0, i.jsx)(a.u3T, {
-                href: E.sQ.WARNING_SYSTEM_HELPCENTER_LINK,
+                href: l.sQ.WARNING_SYSTEM_HELPCENTER_LINK,
                 children: (0, i.jsx)(a.Text, {
                     variant: 'text-md/normal',
                     color: 'always-white',
@@ -36,19 +36,19 @@ function d() {
 function S(e) {
     let {} = e,
         t = (0, r.e7)([_.Z], () => _.Z.getAgeCheckStatus());
-    return t === E.oE.NONE
+    return t === l.oE.NONE
         ? null
-        : t === E.oE.SUCCESS
+        : t === l.oE.SUCCESS
           ? (0, i.jsx)(a.Wn, {
                 messageType: a.QYI.POSITIVE,
                 children: I.intl.format(I.t.maZDLy, { login: '/login' })
             })
-          : t === E.oE.ERROR
+          : t === l.oE.ERROR
             ? (0, i.jsx)(a.Wn, {
                   messageType: a.QYI.ERROR,
                   children: I.intl.string(I.t['4sILBQ'])
               })
-            : t === E.oE.FAILURE
+            : t === l.oE.FAILURE
               ? (0, i.jsx)(a.Wn, {
                     messageType: a.QYI.ERROR,
                     children: I.intl.string(I.t['40R63t'])
@@ -61,7 +61,7 @@ function S(e) {
 function N() {
     return (0, i.jsxs)('div', {
         className: u.pageContainer,
-        children: [(0, i.jsx)(S, {}), (0, i.jsx)(l.Z, {})]
+        children: [(0, i.jsx)(S, {}), (0, i.jsx)(E.Z, {})]
     });
 }
 function L() {

@@ -18,19 +18,19 @@ var i = n(255367),
     x = n(779618),
     E = n(39604),
     j = n(442334),
-    O = n(356659),
-    C = n(981631),
+    C = n(356659),
+    O = n(981631),
     S = n(37113),
     v = n(526761),
     T = n(388032),
-    N = n(99645),
-    I = n(802454),
+    I = n(99645),
+    N = n(802454),
     y = n(20493);
 function A() {
     let e = (0, a.e7)([p.Z], () => p.Z.getHardwareEncoding()),
         { clipsEnabled: t, remindersEnabled: n, decoupledClipsEnabled: s, clipsLength: A, clipsQuality: P } = (0, a.cj)([b.Z], () => b.Z.getSettings()),
         R = (0, a.e7)([b.Z], () => b.Z.getHardwareClassification()),
-        D = (0, a.e7)([h.ZP], () => h.ZP.getKeybindForAction(C.kg4.SAVE_CLIP, !0)),
+        D = (0, a.e7)([h.ZP], () => h.ZP.getKeybindForAction(O.kg4.SAVE_CLIP, !0)),
         Z = b.Z.isDecoupledGameClippingEnabled(),
         w = (0, x.Z)(p.Z),
         { showClipsHeaderEntrypoint: k } = f.NV.useExperiment({ location: 'clips_recording_settings' }, { autoTrackExposure: !1 });
@@ -39,15 +39,15 @@ function A() {
         B = r.useMemo(
             () => [
                 {
-                    value: O.OT.SECONDS_30,
+                    value: C.OT.SECONDS_30,
                     label: T.intl.formatToPlainString(T.t['bTFv//'], { count: 30 })
                 },
                 {
-                    value: O.OT.MINUTES_1,
+                    value: C.OT.MINUTES_1,
                     label: T.intl.formatToPlainString(T.t.ICo9Nj, { count: 1 })
                 },
                 {
-                    value: O.OT.MINUTES_2,
+                    value: C.OT.MINUTES_2,
                     label: T.intl.formatToPlainString(T.t.ICo9Nj, { count: 2 })
                 }
             ],
@@ -150,20 +150,20 @@ function A() {
                     !e &&
                         (0, i.jsx)(g.Z, {
                             look: g.z.WARNING,
-                            className: I.formItem,
-                            children: T.intl.format(T.t.kiaF4e, { onClick: () => d.Z.open(C.oAB.VOICE, v.gP, { scrollPosition: v.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }) })
+                            className: N.formItem,
+                            children: T.intl.format(T.t.kiaF4e, { onClick: () => d.Z.open(O.oAB.VOICE, v.gP, { scrollPosition: v.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }) })
                         }),
                     R === _.x.BELOW_MINIMUM
                         ? (0, i.jsx)(g.Z, {
                               look: g.z.WARNING,
-                              className: I.formItem,
+                              className: N.formItem,
                               children: T.intl.string(T.t.SIxrIC)
                           })
                         : null,
                     (0, i.jsx)(o.j7V, {
                         hideBorder: !0,
                         disabled: !e,
-                        className: I.formItem,
+                        className: N.formItem,
                         value: t,
                         note: T.intl.string(T.t['4Qw3ND']),
                         onChange: (e) =>
@@ -175,7 +175,7 @@ function A() {
                     }),
                     e &&
                         (0, i.jsx)(g.Z, {
-                            className: I.formItem,
+                            className: N.formItem,
                             children: T.intl.string(T.t['Z+Mfqa'])
                         })
                 ]
@@ -191,7 +191,7 @@ function A() {
                             children: (0, i.jsx)(o.j7V, {
                                 hideBorder: !0,
                                 disabled: !e,
-                                className: I.formItem,
+                                className: N.formItem,
                                 value: s,
                                 note: T.intl.string(T.t.YP3ujo),
                                 onChange: (e) =>
@@ -212,7 +212,7 @@ function A() {
                             className: y.marginTop20,
                             children: (0, i.jsx)(o.j7V, {
                                 hideBorder: !0,
-                                className: I.formItem,
+                                className: N.formItem,
                                 value: n,
                                 note: T.intl.string(T.t.m4Cjj4),
                                 onChange: (e) => E.N0(e),
@@ -226,7 +226,7 @@ function A() {
                 className: y.marginTop20,
                 children: [
                     (0, i.jsx)(j.Q, {
-                        className: I.formItem,
+                        className: N.formItem,
                         select: E.eU,
                         title: T.intl.string(T.t.OgfUio),
                         note: T.intl.string(T.t.H7j4tb),
@@ -234,7 +234,7 @@ function A() {
                         options: B
                     }),
                     (0, i.jsx)(j.Q, {
-                        className: I.formItem,
+                        className: N.formItem,
                         select: (e) =>
                             E.yi({
                                 resolution: e,
@@ -246,7 +246,7 @@ function A() {
                         options: M
                     }),
                     (0, i.jsx)(j.Q, {
-                        className: I.formItem,
+                        className: N.formItem,
                         select: (e) =>
                             E.yi({
                                 resolution: P.resolution,
@@ -258,11 +258,11 @@ function A() {
                         options: U
                     }),
                     (0, i.jsx)(j.O, {
-                        className: I.formItem,
+                        className: N.formItem,
                         title: T.intl.string(T.t.pf54ER),
                         note: T.intl.string(T.t['QyB/jI']),
                         children: (0, i.jsx)('div', {
-                            className: N.keyRecorder,
+                            className: I.keyRecorder,
                             children: (0, i.jsx)(u.Z, {
                                 defaultValue: D.shortcut,
                                 onChange: V

@@ -17,7 +17,7 @@ let s = (e, t) => {
                       title: o.intl.string(o.t.pvRCSk),
                       body: o.intl.string(o.t.DRi46e),
                       confirmText: o.intl.string(o.t['6GQDFh']),
-                      confirmColor: i.Ttl.RED,
+                      confirmVariant: 'critical-primary',
                       cancelText: o.intl.string(o.t.DmDzZG),
                       onConfirm: () => (0, i.Mr3)(s),
                       onCancel: a.dG

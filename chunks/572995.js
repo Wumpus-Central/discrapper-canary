@@ -22,13 +22,13 @@ var i,
     x = n(872532),
     E = n(91342),
     j = n(181708),
-    O = n(290650),
-    C = n(751125),
+    C = n(290650),
+    O = n(751125),
     S = n(357003),
     v = n(904505),
     T = n(712626),
-    N = n(386014),
-    I = n(845571),
+    I = n(386014),
+    N = n(845571),
     y = n(220046),
     A = n(385874),
     P = n(371000),
@@ -73,14 +73,14 @@ let M = () => {
             descriptionCta: p.intl.string(p.t.jVcuVV),
             onClick: t,
             previewImage: x,
-            videoUrl: n ? I.ZP : y.ZP
+            videoUrl: n ? N.ZP : y.ZP
         },
         U = {
             name: 'referralProgram',
             title: p.intl.string(p.t.tPY4o6),
             description: p.intl.format(p.t.jRPQUF, { learnMoreLink: i }),
             previewImage: T.Z,
-            videoUrl: n ? v.ZP : N.ZP
+            videoUrl: n ? v.ZP : I.ZP
         },
         V = {
             name: 'showYourStyle',
@@ -124,7 +124,7 @@ let M = () => {
                     title: p.intl.string(p.t['6b3ydH']),
                     description: p.intl.string(p.t['Y+IJys']),
                     previewImage: f,
-                    videoUrl: n ? O.ZP : C.ZP
+                    videoUrl: n ? C.ZP : O.ZP
                 }
             ]
         ]
