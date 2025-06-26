@@ -11231,12 +11231,8 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 }
 
 .jumpToPresentBar__0f481 {
-    background-color: var(--background-accent);
-    border-radius: 8px 8px 0 0;
-    bottom: 0;
     color: var(--text-default);
-    opacity: .95;
-    padding-bottom: 8px
+    margin-bottom: var(--space-24)
 }
 
 .jumpToPresentBar__0f481:active {
