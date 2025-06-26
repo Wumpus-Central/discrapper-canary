@@ -2,8 +2,8 @@ n.d(t, { Z: () => H }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    a = n.n(l),
-    o = n(442837),
+    o = n.n(l),
+    a = n(442837),
     s = n(993365),
     c = n(481060),
     u = n(153867),
@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(402113),
     _ = n(800965),
     y = n(592125),
-    x = n(271383),
-    C = n(944486),
+    C = n(271383),
+    x = n(944486),
     v = n(594174),
     j = n(585483),
     O = n(51144),
@@ -31,8 +31,8 @@ var r = n(255367),
     A = n(884338),
     w = n(617552),
     R = n(719296),
-    M = n(225639),
-    k = n(651612),
+    k = n(225639),
+    M = n(651612),
     D = n(918559),
     L = n(981631),
     U = n(388032),
@@ -46,23 +46,23 @@ function H(e) {
     var t, n, l;
     let { maxHeight: H, connectedLocation: V, renderExternalHeader: z } = e,
         W = (0, N.Z)(),
-        Y = (0, o.Wu)([I.ZP], () => I.ZP.getEmbeddedActivitiesForLocation(V), [V]),
+        Y = (0, a.Wu)([I.ZP], () => I.ZP.getEmbeddedActivitiesForLocation(V), [V]),
         q = (0, Z.p)(V),
-        K = (0, o.e7)([y.Z], () => y.Z.getChannel(q)),
+        K = (0, a.e7)([y.Z], () => y.Z.getChannel(q)),
         X = (0, S.gb)(Y),
         Q = (0, S.uF)(X),
         J = i.useCallback(() => {
             (0, E.tg)(D.Ez.PIP);
         }, []),
         $ = i.useRef(null),
-        ee = (0, o.e7)([I.ZP], () => I.ZP.getFocusedLayout()),
+        ee = (0, a.e7)([I.ZP], () => I.ZP.getFocusedLayout()),
         et = ee !== D.MI.NO_CHAT,
         [en, er] = i.useState(null != (n = null != (t = m.ZP.activityPanelHeight) ? t : H) ? n : null),
         ei = i.useCallback((e) => {
             u.ZP.updatedUnsyncedSettings({ activityPanelHeight: e });
         }, []),
         el = i.useRef(null),
-        [ea, eo] = i.useState({
+        [eo, ea] = i.useState({
             width: 0,
             height: 0
         });
@@ -70,29 +70,29 @@ function H(e) {
         if (null == el.current) return;
         let e = new ResizeObserver(() => {
             var e, t, n, r;
-            eo({
+            ea({
                 width: null != (n = null == (e = el.current) ? void 0 : e.clientWidth) ? n : 0,
                 height: null != (r = null == (t = el.current) ? void 0 : t.clientHeight) ? r : 0
             });
         });
         return e.observe(el.current), () => e.disconnect();
     }, []);
-    let es = ea.width / Math.max(ea.height, 1) < D.I0,
+    let es = eo.width / Math.max(eo.height, 1) < D.I0,
         ec = 0,
         eu = 0,
         ed = (0, P.Z)(null == W ? void 0 : W.id);
     if (!ed) {
-        let e = ea.width,
-            t = ea.height;
-        es ? ((t = ea.width / D.I0) > ea.height && (e = (t = ea.height) * D.I0), (eu = (ea.height - t) / 2)) : ((e = Math.min(ea.height * D.I0)) > ea.width && (t = (e = ea.width) / D.I0), (ec = (ea.width - e) / 2));
+        let e = eo.width,
+            t = eo.height;
+        es ? ((t = eo.width / D.I0) > eo.height && (e = (t = eo.height) * D.I0), (eu = (eo.height - t) / 2)) : ((e = Math.min(eo.height * D.I0)) > eo.width && (t = (e = eo.width) / D.I0), (ec = (eo.width - e) / 2));
     }
     let ep = Q.get(null != (l = null == W ? void 0 : W.id) ? l : ''),
-        eh = (0, o.e7)([C.Z], () => C.Z.getChannelId()),
-        ef = (0, o.Wu)(
-            [x.ZP],
+        eh = (0, a.e7)([x.Z], () => x.Z.getChannelId()),
+        ef = (0, a.Wu)(
+            [C.ZP],
             () => {
                 var e;
-                return null == K ? [] : Array.from(null != (e = null == ep ? void 0 : ep.embeddedActivity.userIds) ? e : []).map((e) => x.ZP.getMember(K.guild_id, e));
+                return null == K ? [] : Array.from(null != (e = null == ep ? void 0 : ep.embeddedActivity.userIds) ? e : []).map((e) => C.ZP.getMember(K.guild_id, e));
             },
             [ep, K]
         ),
@@ -108,13 +108,13 @@ function H(e) {
         eg = (function (e, t, n) {
             let r = (0, d.Z)(e),
                 l = e !== r,
-                [a, o] = i.useState(!1);
+                [o, a] = i.useState(!1);
             i.useEffect(() => {
-                o(!0);
-                let e = setTimeout(() => o(!1), 50);
+                a(!0);
+                let e = setTimeout(() => a(!1), 50);
                 return () => clearTimeout(e);
             }, [e]);
-            let s = !p.Z.useReducedMotion && (l || a);
+            let s = !p.Z.useReducedMotion && (l || o);
             return i.useMemo(() => {
                 var r, i;
                 let l = s
@@ -172,7 +172,7 @@ function H(e) {
                     : l;
             }, [s, e, n, t]);
         })(et, en, H),
-        eb = (0, M.y)({ location: 'Activity Panel' });
+        eb = (0, k.y)({ location: 'Activity Panel' });
     if (null == W) return null;
     let e_ = [];
     null != ep &&
@@ -206,7 +206,7 @@ function H(e) {
         theme: L.BRd.DARK,
         children: (e) =>
             (0, r.jsxs)('div', {
-                className: a()(B.wrapper, G[ee], e),
+                className: o()(B.wrapper, G[ee], e),
                 ref: $,
                 style: eg,
                 children: [
@@ -226,7 +226,7 @@ function H(e) {
                                       })
                                   }),
                             (0, r.jsx)('div', {
-                                className: a()(B.activityContainer, { [B.activityContainerNoMargin]: ed }),
+                                className: o()(B.activityContainer, { [B.activityContainerNoMargin]: ed }),
                                 style: {
                                     paddingLeft: ec,
                                     paddingRight: ec,
@@ -256,7 +256,7 @@ function H(e) {
                                                   (0, r.jsxs)('div', {
                                                       className: B.buttonSection,
                                                       children: [
-                                                          (0, r.jsx)(k.Z, { channelId: eh }),
+                                                          (0, r.jsx)(M.Z, { channelId: eh }),
                                                           (0, r.jsx)(g.d, {
                                                               isTrayButton: !0,
                                                               label: U.intl.string(U.t.brPQ5e),

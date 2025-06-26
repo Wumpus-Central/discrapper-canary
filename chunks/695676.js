@@ -1,12 +1,12 @@
 n.d(t, {
     gc: () => r,
-    hH: () => a,
-    uX: () => o
+    hH: () => o,
+    uX: () => a
 });
-var i,
-    l = n(73800),
-    r = (((i = {}).HOME = 'home'), (i.LIST = 'list'), (i.APPLICATION = 'application'), i);
-let o = l.createContext({
+var l,
+    i = n(73800),
+    r = (((l = {}).HOME = 'home'), (l.LIST = 'list'), (l.APPLICATION = 'application'), l);
+let a = i.createContext({
     history: [],
     discard: {},
     currentView: void 0,
@@ -16,6 +16,6 @@ let o = l.createContext({
     isSlideReady: !1,
     setSlideReady: () => {}
 });
-function a() {
-    return l.useContext(o);
+function o() {
+    return i.useContext(a);
 }

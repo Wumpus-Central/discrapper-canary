@@ -2,8 +2,8 @@ n.d(t, { Z: () => b });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    a = n(481060),
-    o = n(40851),
+    o = n(481060),
+    a = n(40851),
     s = n(357156),
     c = n(390322),
     u = n(88479),
@@ -15,11 +15,11 @@ var r = n(255367),
     g = n(388032);
 function b(e) {
     let { channelId: t, onClick: n } = e,
-        b = (0, o.bp)(),
+        b = (0, a.bp)(),
         _ = (0, m.qY)(t),
         y = (0, l.e7)([d.Z], () => d.Z.getChannel(t), [t]),
-        { canManageGuildEvent: x } = (0, s.XJ)(y),
-        C = x(_),
+        { canManageGuildEvent: C } = (0, s.XJ)(y),
+        x = C(_),
         v = i.useRef(null);
     if (null == _) return null;
     let j = () => {
@@ -29,30 +29,30 @@ function b(e) {
         O = () => {
             h.Z.endEvent(_.id, _.guild_id);
         };
-    return C
-        ? (0, r.jsx)(a.yRy, {
+    return x
+        ? (0, r.jsx)(o.yRy, {
               targetElementRef: v,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
                   return (0, r.jsx)(c.Z, {
-                      children: (0, r.jsx)(a.v2r, {
+                      children: (0, r.jsx)(o.v2r, {
                           navId: 'exit-options',
                           onSelect: () => {},
                           'aria-label': g.intl.string(g.t['K6/mk5']),
                           onClose: t,
-                          children: (0, r.jsx)(a.sNh, {
+                          children: (0, r.jsx)(o.sNh, {
                               id: 'end-voice-event',
                               color: 'danger',
                               action: O,
                               label: g.intl.string(g.t.qaYzPD),
-                              icon: a.k$p
+                              icon: o.k$p
                           })
                       })
                   });
               },
               align: 'center',
               position: 'top',
-              animation: a.yRy.Animation.FADE,
+              animation: o.yRy.Animation.FADE,
               children: (e) => {
                   let { onClick: t } = e;
                   return (0, r.jsx)(u.Z, {

@@ -1,18 +1,18 @@
-n.d(t, { Z: () => a }), n(642613), n(388685);
-var i = n(73800),
-    l = n(471518),
+n.d(t, { Z: () => o }), n(642613), n(388685);
+var l = n(73800),
+    i = n(471518),
     r = n(70956),
-    o = n(314734);
-function a(e) {
+    a = n(314734);
+function o(e) {
     let { sectionId: t, commandsByActiveSection: n } = e,
-        [a, c] = i.useState(o.bS.ALPHABETICAL),
-        s = i.useMemo(() => {
-            var e, i;
-            return null != (i = null == (e = n.find((e) => e.section.id === t)) ? void 0 : e.data) ? i : [];
+        [o, s] = l.useState(a.bS.ALPHABETICAL),
+        c = l.useMemo(() => {
+            var e, l;
+            return null != (l = null == (e = n.find((e) => e.section.id === t)) ? void 0 : e.data) ? l : [];
         }, [n, t]),
         { popularSortedCommands: u, canSort: d } = (function (e) {
             let { alphabeticalSortedCommands: t } = e;
-            return i.useMemo(() => {
+            return l.useMemo(() => {
                 if (t.length <= 1)
                     return {
                         popularSortedCommands: t,
@@ -31,11 +31,11 @@ function a(e) {
                 return e
                     ? (n.sort((e, t) => {
                           let n = e.command.global_popularity_rank,
-                              i = t.command.global_popularity_rank;
-                          if (null != n && null != i) {
-                              if (n !== i) return n - i;
+                              l = t.command.global_popularity_rank;
+                          if (null != n && null != l) {
+                              if (n !== l) return n - l;
                           } else if (null != n) return -1;
-                          else if (null != i) return 1;
+                          else if (null != l) return 1;
                           return e.alphabeticalSortIndex - t.alphabeticalSortIndex;
                       }),
                       {
@@ -50,24 +50,24 @@ function a(e) {
                           canSort: !1
                       };
             }, [t]);
-        })({ alphabeticalSortedCommands: s });
-    i.useEffect(() => {
-        l.i6(t, { dontRefetchMs: r.Z.Millis.DAY });
+        })({ alphabeticalSortedCommands: c });
+    l.useEffect(() => {
+        i.i6(t, { dontRefetchMs: r.Z.Millis.DAY });
     }, [t]),
-        i.useLayoutEffect(() => {
-            d && c(o.bS.POPULAR);
+        l.useLayoutEffect(() => {
+            d && s(a.bS.POPULAR);
         }, [d]);
-    let p = s;
-    switch (a) {
-        case o.bS.POPULAR:
+    let p = c;
+    switch (o) {
+        case a.bS.POPULAR:
             p = u;
             break;
-        case o.bS.ALPHABETICAL:
-            p = s;
+        case a.bS.ALPHABETICAL:
+            p = c;
     }
     return {
-        sortOrder: a,
-        setSortOrder: c,
+        sortOrder: o,
+        setSortOrder: s,
         commands: p,
         canSort: d
     };

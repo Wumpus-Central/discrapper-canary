@@ -2,8 +2,8 @@ n.d(t, { Z: () => b }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    a = n(481060),
-    o = n(87051),
+    o = n(481060),
+    a = n(87051),
     s = n(9156),
     c = n(585483),
     u = n(621600),
@@ -58,9 +58,9 @@ function b(e) {
     let { channel: t } = e,
         n = i.useRef(null),
         [b, _] = (0, l.Wu)([s.ZP], () => [s.ZP.isChannelMuted(t.getGuildId(), t.id), s.ZP.resolvedMessageNotifications(t)], [t]),
-        [y, x] = i.useState(!1);
+        [y, C] = i.useState(!1);
     i.useEffect(() => {
-        let e = () => x(!0);
+        let e = () => C(!0);
         return (
             c.S.subscribe(h.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e),
             () => {
@@ -68,18 +68,18 @@ function b(e) {
             }
         );
     }, []);
-    let C = (e) => {
-            e.shiftKey ? o.Z.updateChannelOverrideSettings(t.guild_id, t.id, { muted: !b }, u.UE.muted(!b)) : x((e) => !e);
+    let x = (e) => {
+            e.shiftKey ? a.Z.updateChannelOverrideSettings(t.guild_id, t.id, { muted: !b }, u.UE.muted(!b)) : C((e) => !e);
         },
         v = f.intl.string(f.t.h850Sk);
-    return (0, r.jsx)(a.yRy, {
+    return (0, r.jsx)(o.yRy, {
         targetElementRef: n,
         shouldShow: y,
-        animation: a.yRy.Animation.NONE,
+        animation: o.yRy.Animation.NONE,
         position: 'bottom',
         align: 'right',
         autoInvert: !1,
-        onRequestClose: () => x(!1),
+        onRequestClose: () => C(!1),
         renderPopout: (e) =>
             (0, r.jsx)(
                 p.Z,
@@ -96,9 +96,9 @@ function b(e) {
                 d.ZP.Icon,
                 g(m({}, e), {
                     ref: n,
-                    onClick: C,
+                    onClick: x,
                     tooltip: i ? null : v,
-                    icon: b || _ !== h.bL.ALL_MESSAGES ? a.owu : a.Dkj,
+                    icon: b || _ !== h.bL.ALL_MESSAGES ? o.owu : o.Dkj,
                     'aria-label': v,
                     selected: i
                 })

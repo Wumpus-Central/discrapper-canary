@@ -2,8 +2,8 @@ n.d(t, { Z: () => p }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    a = n.n(l),
-    o = n(218867),
+    o = n.n(l),
+    a = n(218867),
     s = n(183155);
 let c = 16 / 9;
 function u(e, t) {
@@ -27,8 +27,8 @@ function p(e) {
         }),
         { width: b, height: _ } = m,
         y = null != (t = null == l ? void 0 : l.length) ? t : 0,
-        x = b - 16,
-        C = _ - (h + f),
+        C = b - 16,
+        x = _ - (h + f),
         {
             tileStyle: v,
             tileWidth: j,
@@ -69,11 +69,11 @@ function p(e) {
                                       );
                                   }) - 1;
                         let l = u(r, t),
-                            a = Math.ceil(e / l);
+                            o = Math.ceil(e / l);
                         return {
                             tileWidth: r,
                             columns: Math.max(1, l),
-                            rows: a
+                            rows: o
                         };
                     })(e, t, n);
                     return {
@@ -82,14 +82,14 @@ function p(e) {
                         rows: r,
                         columns: i
                     };
-                })(y, x, C),
-            [y, x, C]
+                })(y, C, x),
+            [y, C, x]
         ),
         I = E + 1,
         S = I * j + (I - 1) * 8 <= b,
         P = Math.floor(j / c) + 8,
-        Z = Math.max(0, C - P * O) / 2;
-    return (0, r.jsx)(o.Z, {
+        Z = Math.max(0, x - P * O) / 2;
+    return (0, r.jsx)(a.Z, {
         fade: !0,
         className: n,
         listPadding: [h + Z, 0, f + Z - 8, 8],
@@ -110,7 +110,7 @@ function p(e) {
                                       'div',
                                       {
                                           style: v,
-                                          className: a()(s.tile, {
+                                          className: o()(s.tile, {
                                               [s.padColumn]: S,
                                               [s.noVerticalMargin]: l >= (O - 1) * E,
                                               [s.noHorizontalMargin]: (l + 1) % E == 0 || l === y - 1

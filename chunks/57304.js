@@ -2,8 +2,8 @@ n.d(t, { Z: () => _ }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    a = n(481060),
-    o = n(23536),
+    o = n(481060),
+    a = n(23536),
     s = n(40851),
     c = n(731290),
     u = n(306680),
@@ -66,14 +66,14 @@ let _ = function (e) {
             [t]
         ),
         [_, y] = i.useState(!1),
-        x = (0, l.e7)([u.ZP], () => u.ZP.hasUnreadPins(t.id), [t]),
-        C = (0, s.Aq)(),
+        C = (0, l.e7)([u.ZP], () => u.ZP.hasUnreadPins(t.id), [t]),
+        x = (0, s.Aq)(),
         v = i.useRef(null),
         j = i.useCallback(() => {
             n || y((e) => !e);
         }, [n]);
     function O(e) {
-        (null == e ? void 0 : e.shiftKey) || C.dispatch(f.CkL.POPOUT_CLOSE);
+        (null == e ? void 0 : e.shiftKey) || x.dispatch(f.CkL.POPOUT_CLOSE);
     }
     return (
         i.useEffect(
@@ -85,10 +85,10 @@ let _ = function (e) {
             ),
             [j]
         ),
-        (0, r.jsx)(a.yRy, {
+        (0, r.jsx)(o.yRy, {
             targetElementRef: v,
             shouldShow: _,
-            animation: a.yRy.Animation.NONE,
+            animation: o.yRy.Animation.NONE,
             position: 'bottom',
             align: 'right',
             autoInvert: !1,
@@ -96,7 +96,7 @@ let _ = function (e) {
             onRequestClose: () => y(!1),
             renderPopout: function (e) {
                 return (0, r.jsx)(
-                    o.Z,
+                    a.Z,
                     b(g({}, e), {
                         onJump: O,
                         channel: t
@@ -112,11 +112,11 @@ let _ = function (e) {
                         ref: v,
                         onClick: j,
                         tooltip: i ? null : m.intl.string(m.t['mp1N//']),
-                        icon: a.qQX,
+                        icon: o.qQX,
                         iconSize: 20,
                         'aria-label': m.intl.string(m.t['mp1N//']),
                         disabled: n,
-                        showBadge: x,
+                        showBadge: C,
                         selected: i
                     })
                 );

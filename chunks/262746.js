@@ -2,8 +2,8 @@ n.d(t, { Z: () => m }), n(388685), n(457542);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    a = n(481060),
-    o = n(749210),
+    o = n(481060),
+    a = n(749210),
     s = n(493773),
     c = n(946273),
     u = n(496675),
@@ -15,13 +15,13 @@ function m(e) {
     let { channel: t, user: m, guild: g } = e,
         b = (0, l.e7)([d.Z], () => null != m && d.Z.isUserBanned(m.id)),
         _ = null != m && null == b,
-        [y, x] = i.useState(_),
-        C = (0, l.e7)([u.Z], () => null != m && null != g && (0, c.lD)(m, g, [u.Z]));
+        [y, C] = i.useState(_),
+        x = (0, l.e7)([u.Z], () => null != m && null != g && (0, c.lD)(m, g, [u.Z]));
     if (
         ((0, s.ZP)(() => {
-            _ && o.Z.searchGuildBans(t.guild_id, void 0, [null == m ? void 0 : m.id]).finally(() => x(!1));
+            _ && a.Z.searchGuildBans(t.guild_id, void 0, [null == m ? void 0 : m.id]).finally(() => C(!1));
         }),
-        !C)
+        !x)
     )
         return null;
     let v = !0 === b ? f.intl.string(h.default.dpfwQ0) : f.intl.string(h.default.ASv23d),
@@ -30,10 +30,10 @@ function m(e) {
         p.Z,
         {
             text: v,
-            icon: a.pgN,
+            icon: o.pgN,
             onClick: () => {
                 null != m &&
-                    (0, a.ZDy)(async () => {
+                    (0, o.ZDy)(async () => {
                         let { default: e } = await n.e('43350').then(n.bind(n, 98746));
                         return (n) => {
                             var i, l;
@@ -89,7 +89,7 @@ function m(e) {
             },
             disabled: !0 === b || y,
             submitting: y,
-            color: a.zxk.Colors.RED
+            color: o.zxk.Colors.RED
         },
         j
     );

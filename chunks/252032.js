@@ -2,8 +2,8 @@ n.d(t, { Z: () => O }), n(997841), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    a = n(904245),
-    o = n(257559),
+    o = n(904245),
+    a = n(257559),
     s = n(541716),
     c = n(893718),
     u = n(314897),
@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(930282),
     _ = n(955384),
     y = n(981631),
-    x = n(30804);
-function C(e) {
+    C = n(30804);
+function x(e) {
     let { value: t, channel: n } = e;
     return (0, g.v)({
         type: s.Ie.EDIT,
@@ -55,7 +55,7 @@ function v(e) {
                 let { content: i } = r,
                     l = h.Z.can(y.Plq.MANAGE_MESSAGES, t),
                     s = null != E && null != E.author ? E.author.id : null;
-                return O && (s === P || l) && null != E && (0, m.yE)(E.flags, y.iLy.CROSSPOSTED) ? o.Z.confirmEdit(e, n, i) : a.Z.editMessage(e, n, { content: i }), Promise.resolve();
+                return O && (s === P || l) && null != E && (0, m.yE)(E.flags, y.iLy.CROSSPOSTED) ? a.Z.confirmEdit(e, n, i) : o.Z.editMessage(e, n, { content: i }), Promise.resolve();
             },
             [E, O, P, t]
         ),
@@ -91,7 +91,7 @@ function v(e) {
                     })({}, e)),
                     (n = n =
                         {
-                            className: x.channelTextArea,
+                            className: C.channelTextArea,
                             key: c
                         }),
                     Object.getOwnPropertyDescriptors
@@ -118,17 +118,17 @@ function v(e) {
               message: n,
               textValue: I,
               richValue: S,
-              onCancel: a.Z.endEditMessage,
-              onChange: a.Z.updateEditMessage,
-              onConfirmDelete: o.Z.confirmDelete,
+              onCancel: o.Z.endEditMessage,
+              onChange: o.Z.updateEditMessage,
+              onConfirmDelete: a.Z.confirmDelete,
               saveMessage: Z,
-              validateEdit: C,
+              validateEdit: x,
               children: N
           })
         : null;
 }
 function j(e) {
-    let { textValue: t, richValue: n, message: l, channel: a, onChange: o, onSubmit: u, onKeyDown: d, renderLeftAccessories: p } = e,
+    let { textValue: t, richValue: n, message: l, channel: o, onChange: a, onSubmit: u, onKeyDown: d, renderLeftAccessories: p } = e,
         [h, m] = i.useState(!0),
         g = i.useCallback(() => m(!0), []),
         b = i.useCallback(() => m(!1), []);
@@ -146,12 +146,12 @@ function j(e) {
         (0, r.jsx)(
             c.Z,
             {
-                className: x.channelTextArea,
+                className: C.channelTextArea,
                 textValue: t,
                 richValue: n,
-                channel: a,
+                channel: o,
                 type: s.Ie.EDIT,
-                onChange: o,
+                onChange: a,
                 onSubmit: (e) => {
                     let { value: t } = e;
                     return u(t);
@@ -167,7 +167,7 @@ function j(e) {
     );
 }
 function O(e, t, n) {
-    let { message: i, channel: l, compact: a } = e;
+    let { message: i, channel: l, compact: o } = e;
     return n
         ? (0, r.jsx)(v, {
               channel: l,
@@ -176,6 +176,6 @@ function O(e, t, n) {
         : (0, r.jsx)(b.ZP, {
               message: i,
               content: t,
-              compact: null != a && a
+              compact: null != o && o
           });
 }

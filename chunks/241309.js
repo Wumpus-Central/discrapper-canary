@@ -1,8 +1,8 @@
 n.d(t, {
     Gx: () => s,
     Op: () => c,
-    T4: () => o,
-    V_: () => a
+    T4: () => a,
+    V_: () => o
 }),
     n(781311);
 var r = n(539573),
@@ -13,10 +13,10 @@ function l(e, t) {
         message: null != t ? t : null
     };
 }
-function a() {
+function o() {
     return l(0, i.intl.string(i.t['uXA57+']));
 }
-function o() {
+function a() {
     return l(0, i.intl.string(i.t.kesTVV));
 }
 function s(e, t) {

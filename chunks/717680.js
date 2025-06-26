@@ -1,11 +1,11 @@
-n.d(t, { Z: () => o }), n(388685);
+n.d(t, { Z: () => a }), n(388685);
 var r = n(73800);
 let i = !1,
     l = new Set();
-function a(e) {
+function o(e) {
     e !== i && ((i = e), l.forEach((e) => e(i)));
 }
-function o() {
+function a() {
     let [e, t] = r.useState(i);
     return (
         r.useEffect(() => {
@@ -23,14 +23,14 @@ function o() {
     );
 }
 window.addEventListener('keydown', (e) => {
-    a(e.shiftKey);
+    o(e.shiftKey);
 }),
     window.addEventListener('keyup', (e) => {
-        a(e.shiftKey);
+        o(e.shiftKey);
     }),
     window.addEventListener('mousemove', (e) => {
-        a(e.shiftKey);
+        o(e.shiftKey);
     }),
     window.addEventListener('blur', () => {
-        a(!1);
+        o(!1);
     });

@@ -2,8 +2,8 @@ n.d(t, { Z: () => y }), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(392711),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     s = n(481051),
     c = n(871499),
     u = n(306680),
@@ -36,15 +36,15 @@ function y(e) {
             }
             return i;
         })(e, ['channelId', 'className']);
-    let x = i.useRef(null),
-        C = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout() === m.MI.RESIZABLE),
+    let C = i.useRef(null),
+        x = (0, o.e7)([f.ZP], () => f.ZP.getFocusedLayout() === m.MI.RESIZABLE),
         v = i.useCallback(() => {
-            let e = C ? m.MI.NO_CHAT : m.MI.RESIZABLE;
+            let e = x ? m.MI.NO_CHAT : m.MI.RESIZABLE;
             (0, h.gC)(e);
-        }, [C]),
+        }, [x]),
         { unreadCount: j, mentionCount: O } = (function (e) {
-            let t = (0, a.e7)([d.Z], () => !(0, l.isEmpty)(d.Z.getTypingUsers(e)), [e]),
-                { unreadCount: n, mentionCount: r } = (0, a.cj)(
+            let t = (0, o.e7)([d.Z], () => !(0, l.isEmpty)(d.Z.getTypingUsers(e)), [e]),
+                { unreadCount: n, mentionCount: r } = (0, o.cj)(
                     [u.ZP],
                     () => ({
                         unreadCount: u.ZP.getUnreadCount(e),
@@ -60,16 +60,16 @@ function y(e) {
         })(t),
         E = i.useCallback(() => {
             var e;
-            null == (e = x.current) || e.focus();
+            null == (e = C.current) || e.focus();
         }, []);
     (0, p.yp)({
         event: g.CkL.FOCUS_CHAT_BUTTON,
         handler: E
     });
-    let I = C ? b.intl.string(b.t['5MstTk']) : b.intl.string(b.t.kkKapK),
+    let I = x ? b.intl.string(b.t['5MstTk']) : b.intl.string(b.t.kkKapK),
         S = [I];
     O > 0 && S.push(b.intl.formatToPlainString(b.t['3l1GOz'], { mentionCount: O })), j > 0 && S.push(b.intl.string(b.t.x5zAGR));
-    let P = (0, a.e7)([f.ZP], () => f.ZP.getFocusedLayout()),
+    let P = (0, o.e7)([f.ZP], () => f.ZP.getFocusedLayout()),
         Z = O > 0 ? O : j,
         N = Z > 0;
     return (0, r.jsxs)('div', {
@@ -104,12 +104,12 @@ function y(e) {
                 })(
                     {
                         isTrayButton: !0,
-                        buttonRef: x,
+                        buttonRef: C,
                         onClick: v,
                         label: I,
                         'aria-label': S.join(', '),
                         tooltipPosition: 'top',
-                        iconComponent: P === m.MI.NO_CHAT ? o.sXD : o.hic,
+                        iconComponent: P === m.MI.NO_CHAT ? a.sXD : a.hic,
                         themeable: !0,
                         className: n
                     },

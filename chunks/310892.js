@@ -6,8 +6,8 @@ var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(70097),
-    a = n(174609),
-    o = n(98278),
+    o = n(174609),
+    a = n(98278),
     s = n(790527),
     c = n(626135),
     u = n(981631),
@@ -62,13 +62,13 @@ function m(e) {
         })(e, ['onClose', 'analytics']);
     let m = d.intl.format(d.t['7aNIkZ'], {
         onPressMore: function () {
-            (0, a.Z)(),
+            (0, o.Z)(),
                 t(),
                 c.default.track(u.rMx.PREMIUM_PROMOTION_OPENED, {
                     location_section: u.jXE.VOICE_CHANNEL_EFFECTS_UPSELL_MODAL,
                     location_object: u.qAy.NAVIGATION_LINK
                 }),
-                (0, o.z)();
+                (0, a.z)();
         }
     });
     return (0, r.jsx)(
@@ -90,7 +90,7 @@ function m(e) {
                     section: n.section
                 },
                 onClose: t,
-                onSubscribeClick: a.Z,
+                onSubscribeClick: o.Z,
                 artElement: (0, r.jsx)(l.Z, {
                     className: p.video,
                     src: h,

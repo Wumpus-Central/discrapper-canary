@@ -1,13 +1,13 @@
 n.d(t, {
     H: () => v,
-    T: () => C
+    T: () => x
 }),
     n(388685);
 var r = n(73800),
     i = n(442837),
     l = n(570140),
-    a = n(662594),
-    o = n(592125),
+    o = n(662594),
+    a = n(592125),
     s = n(430824),
     c = n(451478),
     u = n(626135),
@@ -20,11 +20,11 @@ var r = n(73800),
     b = n(206583),
     _ = n(809017),
     y = n(981631),
-    x = n(388032);
-let C = 0;
+    C = n(388032);
+let x = 0;
 function v(e) {
     let {
-            memberStoreProps: { groups: t, rows: n, version: C },
+            memberStoreProps: { groups: t, rows: n, version: x },
             channelId: v,
             guildId: j
         } = e,
@@ -32,29 +32,29 @@ function v(e) {
         { requestId: I, entries: S, impressionCappedEntryIds: P, hasLeaderboardEntry: Z } = (0, m.Z)(v),
         N = (0, i.e7)([p.Z], () => p.Z.hidden),
         T = (0, i.e7)([c.Z], () => c.Z.isFocused()),
-        A = (0, i.e7)([o.Z], () => o.Z.getChannel(v)),
+        A = (0, i.e7)([a.Z], () => a.Z.getChannel(v)),
         w = (0, i.e7)([s.Z], () => s.Z.getGuild(j), [j]),
         R = (0, h.E)(w),
-        M = null != R && R && (null == A ? void 0 : A.isForumChannel()) === !1,
-        [k, D, L, U] = r.useMemo(() => {
+        k = null != R && R && (null == A ? void 0 : A.isForumChannel()) === !1,
+        [M, D, L, U] = r.useMemo(() => {
             let e;
-            if (null == S || 0 === S.length || null == I || !M) return [t, n, C];
+            if (null == S || 0 === S.length || null == I || !k) return [t, n, x];
             let r = O ? S.length : Z ? 4 : 3,
                 i = S.slice(0, r);
             e = N
-                ? [{ type: a.so.HIDDEN_CONTENT_INVENTORY }]
+                ? [{ type: o.so.HIDDEN_CONTENT_INVENTORY }]
                 : i.map((e) => ({
-                      type: a.so.CONTENT_INVENTORY,
+                      type: o.so.CONTENT_INVENTORY,
                       entry: e,
                       requestId: I
                   }));
             let l = {
                 id: _.G,
-                type: a.so.CONTENT_INVENTORY_GROUP,
+                type: o.so.CONTENT_INVENTORY_GROUP,
                 key: _.G,
                 count: e.length,
                 index: n.length,
-                title: x.intl.string(x.t['6gwSFR']),
+                title: C.intl.string(C.t['6gwSFR']),
                 onToggleExpand: () => {
                     E((e) => {
                         let t = !e;
@@ -73,7 +73,7 @@ function v(e) {
                 feedHeight: e.map(g.iZ).reduce((e, t) => e + t, 0)
             };
             return [[l, ...t], [...n, l, ...e], Math.random(), e];
-        }, [v, S, O, t, j, I, n, C, N, M, Z]),
+        }, [v, S, O, t, j, I, n, x, N, k, Z]),
         B = r.useRef(0),
         F = r.useRef(S),
         G = r.useRef(void 0),
@@ -105,7 +105,7 @@ function v(e) {
                         r = n.slice(0, B.current);
                     !N &&
                         T &&
-                        M &&
+                        k &&
                         ((0, f.e)(y.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
                             request_id: I,
                             first_shown_at: G.current,
@@ -123,10 +123,10 @@ function v(e) {
                             }));
                 }
             ),
-            [I, v, j, N, T, M]
+            [I, v, j, N, T, k]
         ),
         {
-            groups: k,
+            groups: M,
             rows: D,
             version: L,
             updateMaxRowSeen: V

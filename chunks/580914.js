@@ -91,8 +91,8 @@ let N = {
             W = (0, x.u)(),
             V = (0, C.sp)(),
             U = l.useMemo(() => (null != Z ? Z : A(y)), [Z, y]),
-            { isPreviewingStaticBanner: G, bannerOverrides: z, bannerStyleOverrides: q, heroLogo: Y, heroBannerStatic: K, heroBannerAnimated: $ } = (0, k.hr)(U),
-            X = null == z ? void 0 : z.heroBanner,
+            { isPreviewingStaticBanner: G, bannerOverrides: z, bannerStyleOverrides: q, heroLogo: Y, heroBannerStatic: K, heroBannerAnimated: X } = (0, k.hr)(U),
+            $ = null == z ? void 0 : z.heroBanner,
             J = null != (n = null != (t = null == q ? void 0 : q.responsive) ? t : U.responsive) && n,
             Q = null != (a = null == q ? void 0 : q.backgroundStyle) ? a : U.backgroundStyle,
             ee = l.useMemo(() => W(U.rankedSkuIds), [s, W, U.rankedSkuIds]),
@@ -108,21 +108,21 @@ let N = {
                           className: w.banner,
                           style: null != Q ? { background: Q } : void 0,
                           children: [
-                              null == $ || D || !H || G
+                              null == X || D || !H || G
                                   ? (0, r.jsx)('div', {
                                         className: i()(w.bannerAsset, w.bannerImage),
                                         style: { backgroundImage: 'url('.concat(K, ')') }
                                     })
                                   : (0, r.jsx)(p.Z, {
                                         className: i()(w.bannerAsset, w.bannerVideoBackground),
-                                        src: $,
+                                        src: X,
                                         autoPlay: !0,
                                         loop: !0
                                     }),
                               (null == q ? void 0 : q.hideSideShadow) === !0
                                   ? null
                                   : (0, r.jsx)(R, {
-                                        heroBannerOverrides: X,
+                                        heroBannerOverrides: $,
                                         isResponsive: J
                                     })
                           ]

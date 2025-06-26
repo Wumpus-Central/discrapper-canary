@@ -1,21 +1,21 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(388032),
-    a = n(695256);
-let o = (e) => {
-    let { guild: t, onClose: o } = e;
+    o = n(695256);
+let a = (e) => {
+    let { guild: t, onClose: a } = e;
     return (0, r.jsxs)('div', {
-        className: a.container,
+        className: o.container,
         children: [
             (0, r.jsx)('img', {
                 alt: '',
-                className: a.image,
+                className: o.image,
                 src: n(238980)
             }),
             (0, r.jsxs)('div', {
-                className: a.content,
+                className: o.content,
                 children: [
                     (0, r.jsx)(i.X6q, {
                         variant: 'heading-md/semibold',
@@ -27,9 +27,9 @@ let o = (e) => {
                         children: l.intl.string(l.t['1yq3nJ'])
                     }),
                     (0, r.jsx)('div', {
-                        className: a.buttonContainer,
+                        className: o.buttonContainer,
                         children: (0, r.jsx)(i.zxk, {
-                            onClick: o,
+                            onClick: a,
                             children: l.intl.string(l.t.hLw0wc)
                         })
                     })

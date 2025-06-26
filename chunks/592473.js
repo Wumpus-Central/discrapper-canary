@@ -2,15 +2,15 @@ n.d(t, { Z: () => f }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    a = n.n(l),
-    o = n(772848),
+    o = n.n(l),
+    a = n(772848),
     s = n(481060),
     c = n(871499),
     u = n(388032),
     d = n(730288);
 function p(e) {
     let { width: t = 24, height: n = 24, isBadged: l = !1 } = e,
-        [a] = i.useState(() => (0, o.Z)());
+        [o] = i.useState(() => (0, a.Z)());
     return (0, r.jsxs)('svg', {
         width: t,
         height: n,
@@ -18,7 +18,7 @@ function p(e) {
         children: [
             (0, r.jsx)('defs', {
                 children: (0, r.jsxs)('mask', {
-                    id: a,
+                    id: o,
                     children: [
                         (0, r.jsx)('rect', {
                             fill: 'white',
@@ -36,7 +36,7 @@ function p(e) {
                 })
             }),
             (0, r.jsx)('g', {
-                mask: 'url(#'.concat(a, ')'),
+                mask: 'url(#'.concat(o, ')'),
                 children: (0, r.jsx)(s.E0I, {})
             })
         ]
@@ -46,7 +46,7 @@ function h(e) {
     let { className: t, numRequestToSpeak: n } = e,
         i = n > 0;
     return (0, r.jsxs)('div', {
-        className: a()(d.raisedHandIcon, t),
+        className: o()(d.raisedHandIcon, t),
         children: [
             (0, r.jsx)(p, { isBadged: i }),
             i
@@ -60,7 +60,7 @@ function h(e) {
     });
 }
 function f(e) {
-    var { toggleRequestToSpeakSidebar: t, showRequestToSpeakSidebar: n, className: l, numRequestToSpeak: a, onClick: o } = e,
+    var { toggleRequestToSpeakSidebar: t, showRequestToSpeakSidebar: n, className: l, numRequestToSpeak: o, onClick: a } = e,
         s = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -81,8 +81,8 @@ function f(e) {
             return i;
         })(e, ['toggleRequestToSpeakSidebar', 'showRequestToSpeakSidebar', 'className', 'numRequestToSpeak', 'onClick']);
     let d = i.useCallback(() => {
-        null == o || o(), t();
-    }, [o, t]);
+        null == a || a(), t();
+    }, [a, t]);
     return (0, r.jsx)(
         c.Z,
         (function (e) {
@@ -116,7 +116,7 @@ function f(e) {
                 className: l,
                 iconComponent: () =>
                     (0, r.jsx)(h, {
-                        numRequestToSpeak: a,
+                        numRequestToSpeak: o,
                         className: l
                     })
             },

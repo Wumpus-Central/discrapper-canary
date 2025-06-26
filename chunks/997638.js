@@ -1,14 +1,14 @@
 n.d(t, {
     ZP: () => j,
-    cy: () => C,
-    iu: () => x
+    cy: () => x,
+    iu: () => C
 }),
     n(388685);
 var r,
     i,
     l,
-    a = n(255367),
-    o = n(73800),
+    o = n(255367),
+    a = n(73800),
     s = n(120356),
     c = n.n(s),
     u = n(780384),
@@ -65,9 +65,9 @@ function y(e, t) {
         e
     );
 }
-var x = (((i = {}).CENTER = 'center'), (i.LEFT = 'left'), i),
-    C = (((l = {}).TOP = 'top'), (l.MIDDLE = 'middle'), l);
-class v extends o.PureComponent {
+var C = (((i = {}).CENTER = 'center'), (i.LEFT = 'left'), i),
+    x = (((l = {}).TOP = 'top'), (l.MIDDLE = 'middle'), l);
+class v extends a.PureComponent {
     componentDidMount() {
         let { uniqueId: e } = this.props;
         p.default.track(f.rMx.SHOW_TUTORIAL, { tutorial: e });
@@ -79,46 +79,46 @@ class v extends o.PureComponent {
         });
     }
     render() {
-        let { renderMedia: e, textAlign: t, isLongText: n, title: r, body: i, className: l, forceTheme: o, onClickSkipAll: s } = this.props,
+        let { renderMedia: e, textAlign: t, isLongText: n, title: r, body: i, className: l, forceTheme: a, onClickSkipAll: s } = this.props,
             p = 'left' === t || n,
             f = 'center' === t || !p;
-        return (0, a.jsxs)(d.VqE, {
+        return (0, o.jsxs)(d.VqE, {
             className: c()(g.popoutRoot, l),
             children: [
                 null != e &&
-                    (0, a.jsx)(h.Z, {
+                    (0, o.jsx)(h.Z, {
                         className: g.mediaContainer,
                         justify: p ? h.Z.Justify.START : h.Z.Justify.CENTER,
                         children: e()
                     }),
-                (0, a.jsx)(d.H, {
+                (0, o.jsx)(d.H, {
                     className: c()({
                         [g.titleCenter]: f,
                         [g.titleLeft]: p
                     }),
                     children: r
                 }),
-                (0, a.jsx)('string' == typeof i ? 'p' : 'div', {
+                (0, o.jsx)('string' == typeof i ? 'p' : 'div', {
                     className: c()({
                         [g.bodyCenter]: f,
                         [g.bodyLeft]: p
                     }),
                     children: i
                 }),
-                (0, a.jsxs)(h.Z, {
+                (0, o.jsxs)(h.Z, {
                     className: g.buttonContainer,
                     justify: p ? h.Z.Justify.BETWEEN : h.Z.Justify.CENTER,
                     children: [
-                        (0, a.jsx)(d.zxk, {
+                        (0, o.jsx)(d.zxk, {
                             size: d.PhG.SMALL,
                             onClick: this.handleDismiss,
                             children: m.intl.string(m.t['+IrDzM'])
                         }),
-                        (0, a.jsx)(d.zxk, {
+                        (0, o.jsx)(d.zxk, {
                             size: d.PhG.SMALL,
                             look: d.zxk.Looks.BLANK,
                             onClick: s,
-                            color: (0, u.ap)(o) ? d.zxk.Colors.PRIMARY : d.zxk.Colors.WHITE,
+                            color: (0, u.ap)(a) ? d.zxk.Colors.PRIMARY : d.zxk.Colors.WHITE,
                             className: p ? g.buttonSkipLeftAlign : g.buttonSkipCenterAlign,
                             children: m.intl.string(m.t['33wtxs'])
                         })
@@ -136,10 +136,10 @@ class v extends o.PureComponent {
             });
     }
 }
-class j extends (r = o.PureComponent) {
+class j extends (r = a.PureComponent) {
     render() {
         let e = this.props,
-            { renderMedia: t, textAlign: n, onComplete: r, onSkipAll: i, isLongText: l, title: o, body: s, children: c, spacing: u, forceTheme: p, innerRef: h } = e,
+            { renderMedia: t, textAlign: n, onComplete: r, onSkipAll: i, isLongText: l, title: a, body: s, children: c, spacing: u, forceTheme: p, innerRef: h } = e,
             f = (function (e, t) {
                 if (null == e) return {};
                 var n,
@@ -160,7 +160,7 @@ class j extends (r = o.PureComponent) {
                 return i;
             })(e, ['renderMedia', 'textAlign', 'onComplete', 'onSkipAll', 'isLongText', 'title', 'body', 'children', 'spacing', 'forceTheme', 'innerRef']),
             m = 'top' === f.position || 'bottom' === f.position ? 'center' : 'top';
-        return (0, a.jsx)(
+        return (0, o.jsx)(
             d.yRy,
             y(_({ targetElementRef: h }, f), {
                 align: m,
@@ -182,12 +182,12 @@ class j extends (r = o.PureComponent) {
             }),
             b(this, 'renderPopoutContent', (e) => {
                 let { closePopout: t, position: n } = e,
-                    { forceTheme: r, isLongText: i, arrowAlignment: l, renderMedia: o } = this.props,
-                    s = null != o;
-                return (0, a.jsx)(d.f6W, {
+                    { forceTheme: r, isLongText: i, arrowAlignment: l, renderMedia: a } = this.props,
+                    s = null != a;
+                return (0, o.jsx)(d.f6W, {
                     theme: r,
                     children: (e) =>
-                        (0, a.jsx)(
+                        (0, o.jsx)(
                             v,
                             y(_({}, this.props), {
                                 className: c()(
@@ -214,4 +214,4 @@ class j extends (r = o.PureComponent) {
             });
     }
 }
-b(j, 'TextAlignments', x), b(j, 'defaultProps', { textAlign: 'left' });
+b(j, 'TextAlignments', C), b(j, 'defaultProps', { textAlign: 'left' });

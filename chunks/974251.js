@@ -2,8 +2,8 @@ n.d(t, { Z: () => G }), n(388685), n(415506);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    a = n.n(l),
-    o = n(442837),
+    o = n.n(l),
+    a = n(442837),
     s = n(704215),
     c = n(481060),
     u = n(53281),
@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(712114),
     _ = n(605236),
     y = n(536442),
-    x = n(79390),
-    C = n(216789),
+    C = n(79390),
+    x = n(216789),
     v = n(665906),
     j = n(695346),
     O = n(433355),
@@ -31,8 +31,8 @@ var r = n(255367),
     A = n(316595),
     w = n(193910),
     R = n(951211),
-    M = n(981631),
-    k = n(356659),
+    k = n(981631),
+    M = n(356659),
     D = n(921944),
     L = n(388032),
     U = n(911777);
@@ -85,22 +85,22 @@ let G = i.memo(function (e) {
         q = (0, p.bp)(),
         K = i.useRef(null),
         X = i.useRef(null),
-        Q = (0, o.e7)([P.Z], () => P.Z.getActivities()),
-        J = (0, o.e7)([g.Z], () => g.Z.getSettings().clipsEnabled),
-        $ = (0, o.e7)([g.Z], () => g.Z.getLastClipsSession()),
-        ee = (0, o.Wu)([g.Z], () => g.Z.getNewClipIds()),
-        et = (0, o.e7)([O.ZP], () => null == O.ZP.getCurrentSidebarChannelId(H.id)),
+        Q = (0, a.e7)([P.Z], () => P.Z.getActivities()),
+        J = (0, a.e7)([g.Z], () => g.Z.getSettings().clipsEnabled),
+        $ = (0, a.e7)([g.Z], () => g.Z.getLastClipsSession()),
+        ee = (0, a.Wu)([g.Z], () => g.Z.getNewClipIds()),
+        et = (0, a.e7)([O.ZP], () => null == O.ZP.getCurrentSidebarChannelId(H.id)),
         { showClipsHeaderEntrypoint: en } = m.NV.useExperiment({ location: 'ChannelAttachButton' }, { autoTrackExposure: !1 }),
-        er = (0, o.e7)([y.qc], () => y.qc.hasHotspot(y.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
-        ei = (0, c.s9z)((e) => (0, c.DEQ)(e, k.Qr)),
-        el = (0, o.e7)([E.Z], () => E.Z.hasLayers()),
-        ea = (0, o.e7)([g.Z], () => g.Z.hasClips()),
-        [eo, es] = i.useState(null),
-        ec = (0, m.Go)() && (J || ea),
+        er = (0, a.e7)([y.qc], () => y.qc.hasHotspot(y.v6.CLIPS_CHANNEL_ATTACH_REMINDER)),
+        ei = (0, c.s9z)((e) => (0, c.DEQ)(e, M.Qr)),
+        el = (0, a.e7)([E.Z], () => E.Z.hasLayers()),
+        eo = (0, a.e7)([g.Z], () => g.Z.hasClips()),
+        [ea, es] = i.useState(null),
+        ec = (0, m.Go)() && (J || eo),
         eu = H.isPrivate(),
-        ed = (0, o.e7)([S.Z], () => eu || (S.Z.can(M.Plq.ATTACH_FILES, H) && S.Z.can(M.Plq.SEND_MESSAGES, H))),
+        ed = (0, a.e7)([S.Z], () => eu || (S.Z.can(k.Plq.ATTACH_FILES, H) && S.Z.can(k.Plq.SEND_MESSAGES, H))),
         ep = (0, d.Z)($);
-    (null == ep ? void 0 : ep.newClipIds.length) !== (null == $ ? void 0 : $.newClipIds.length) && (null != (t = null == $ ? void 0 : $.newClipIds.length) ? t : 0) > 0 && null == eo && er && et && !ei && !en && !el && es('recentClips');
+    (null == ep ? void 0 : ep.newClipIds.length) !== (null == $ ? void 0 : $.newClipIds.length) && (null != (t = null == $ ? void 0 : $.newClipIds.length) ? t : 0) > 0 && null == ea && er && et && !ei && !en && !el && es('recentClips');
     let eh = (e, t, n) => {
             null != t && 'ETOOLARGE' === t.code
                 ? (0, T.G)(H, [])
@@ -108,16 +108,16 @@ let G = i.memo(function (e) {
                       requireConfirm: !0,
                       showLargeMessageDialog: n
                   }),
-                Z.S.dispatchToLastSubscribed(M.CkL.TEXTAREA_FOCUS);
+                Z.S.dispatchToLastSubscribed(k.CkL.TEXTAREA_FOCUS);
         },
-        ef = (0, o.e7)([I.Z], () => I.Z.hasCurrentUserSentMessageSinceAppStart());
+        ef = (0, a.e7)([I.Z], () => I.Z.hasCurrentUserSentMessageSinceAppStart());
     function em() {
         (0, c.ZDy)(
             async () => {
                 let { default: e } = await Promise.all([n.e('2668'), n.e('72739')]).then(n.bind(n, 542055));
                 return (t) => (0, r.jsx)(e, F(B({}, t), { channelId: H.id }));
             },
-            { modalKey: k.Qr }
+            { modalKey: M.Qr }
         ),
             es(null);
     }
@@ -127,18 +127,18 @@ let G = i.memo(function (e) {
             return null == (e = K.current) ? void 0 : e.activateUploadDialogue();
         };
         return (
-            Z.S.subscribe(M.CkL.UPLOAD_FILE, e),
+            Z.S.subscribe(k.CkL.UPLOAD_FILE, e),
             () => {
-                Z.S.unsubscribe(M.CkL.UPLOAD_FILE, e);
+                Z.S.unsubscribe(k.CkL.UPLOAD_FILE, e);
             }
         );
     });
     let eg = (0, v.NE)(H),
         eb = (0, v.Xu)(H),
         e_ = !j.dN.useSetting() && !(0, N.isAndroidWeb)() && null != window.ResizeObserver,
-        ey = (0, x.UI)(null != H ? H : void 0),
-        ex = (0, h.qB)(),
-        eC = (0, C.Us)({ location: 'ChannelAttachButton' }),
+        ey = (0, C.UI)(null != H ? H : void 0),
+        eC = (0, h.qB)(),
+        ex = (0, x.Us)({ location: 'ChannelAttachButton' }),
         ev = null != (l = null == ee ? void 0 : ee.length) ? l : 0,
         ej = (0, R.Z)({
             canAttachFiles: ed,
@@ -150,9 +150,9 @@ let G = i.memo(function (e) {
             activities: Q,
             newClipsCount: ev,
             canPostPolls: ey,
-            canLaunchActivities: ex,
+            canLaunchActivities: eC,
             appContext: q,
-            canSendScheduledMessages: eC
+            canSendScheduledMessages: ex
         }),
         eO = (0, f.Z)('ChannelAttachButton');
     if (0 === ej.length) return null;
@@ -170,11 +170,11 @@ let G = i.memo(function (e) {
               }),
         eS = (0, r.jsx)(c.yRy, {
             targetElementRef: X,
-            shouldShow: null != eo,
+            shouldShow: null != ea,
             animation: c.yRy.Animation.NONE,
-            align: 'recentClips' === eo ? 'center' : 'left',
+            align: 'recentClips' === ea ? 'center' : 'left',
             position: 'top',
-            positionKey: null != eo ? eo : 'null',
+            positionKey: null != ea ? ea : 'null',
             onRequestOpen: () => {
                 ef && (0, _.EW)(s.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: D.L.TAKE_ACTION }), es('attachMenu');
             },
@@ -182,7 +182,7 @@ let G = i.memo(function (e) {
                 (0, c.$sL)() || (ef && (0, _.EW)(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: D.L.TAKE_ACTION }), es(null));
             },
             renderPopout: (e) => {
-                switch (eo) {
+                switch (ea) {
                     case 'recentClips':
                         return (0, r.jsx)(
                             b.Z,
@@ -221,7 +221,7 @@ let G = i.memo(function (e) {
                                 buttonRef: X,
                                 look: c.zxk.Looks.BLANK,
                                 size: c.zxk.Sizes.NONE,
-                                className: a()(U.attachButton, G),
+                                className: o()(U.attachButton, G),
                                 innerClassName: U.attachButtonInner,
                                 'aria-label': L.intl.string(L.t.d56gCQ),
                                 onDoubleClick: ed
@@ -256,9 +256,9 @@ let G = i.memo(function (e) {
                 className: U.attachWrapper,
                 children: (0, r.jsx)(A.Z, {
                     channel: H,
-                    isOmniMenuOpen: 'attachMenu' === eo,
+                    isOmniMenuOpen: 'attachMenu' === ea,
                     openOmniMenu: () => es('attachMenu'),
-                    enabled: ex,
+                    enabled: eC,
                     animationContainerClassName: U.buttonAnimation,
                     glowClassName: U.buttonAnimationGlow,
                     trinketsClassName: U.buttonAnimationTrinkets,

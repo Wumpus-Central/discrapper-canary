@@ -282,8 +282,18 @@ class w extends u.Z {
                 type: 'KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS',
                 keybinds: L
             })
-        );
+        ),
+            r.Z.subscribe('AUDIO_SET_MODE', this.resetPTTState),
+            r.Z.subscribe('VOICE_CHANNEL_SELECT', this.resetPTTState);
     }
-    _terminate() {}
+    _terminate() {
+        r.Z.unsubscribe('AUDIO_SET_MODE', this.resetPTTState), r.Z.unsubscribe('VOICE_CHANNEL_SELECT', this.resetPTTState);
+    }
+    resetPTTState() {
+        Z.clear(),
+            y.Z.getMediaEngine().eachConnection((e) => {
+                e.setForceAudioInput(!1, !1), e.setForceAudioInput(!1, !0);
+            }, A.Yn.DEFAULT);
+    }
 }
 let R = new w();

@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
-    a = n(442837),
-    o = n(846027),
+    o = n(442837),
+    a = n(846027),
     s = n(522651),
     c = n(793148),
     u = n(131951),
@@ -14,7 +14,7 @@ var i = n(120356),
     f = n(434580);
 function m(e) {
     let { className: t, iconClassName: n, sliderClassName: i, userId: m, context: g, currentWindow: b = window, location: _ } = e,
-        { currentVolume: y, muted: x } = (0, a.cj)([u.Z], () => ({
+        { currentVolume: y, muted: C } = (0, o.cj)([u.Z], () => ({
             currentVolume: u.Z.getLocalVolume(m, g),
             muted: u.Z.isLocalMute(m, g)
         }));
@@ -25,13 +25,13 @@ function m(e) {
             sliderClassName: i,
             className: t,
             value: (0, d.P)(y),
-            muted: x,
+            muted: C,
             maxValue: p.isPlatformEmbedded ? 200 : 100,
             onValueChange: (e) => {
-                e > 0 && x && o.Z.toggleLocalMute(m, g), o.Z.setLocalVolume(m, (0, d.A)(e), g);
+                e > 0 && C && a.Z.toggleLocalMute(m, g), a.Z.setLocalVolume(m, (0, d.A)(e), g);
             },
             onToggleMute: () => {
-                null != _ && (0, s.v)(_, s.d.VOLUME, x), o.Z.toggleLocalMute(m, g);
+                null != _ && (0, s.v)(_, s.d.VOLUME, C), a.Z.toggleLocalMute(m, g);
             }
         })
     });

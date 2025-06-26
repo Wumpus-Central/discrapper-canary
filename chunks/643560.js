@@ -2,8 +2,8 @@ n.d(t, { default: () => f });
 var r = n(255367),
     i = n(73800),
     l = n(481060),
-    a = n(239091),
-    o = n(299206),
+    o = n(239091),
+    a = n(299206),
     s = n(726521),
     c = n(99325),
     u = n(683818),
@@ -54,19 +54,19 @@ function h(e, t) {
 function f(e) {
     let { entry: t, onSelect: f, closePopout: m, hideEditButton: g = !1 } = e,
         { isEntryAdmin: b, canEdit: _, canRemove: y } = (0, u.Z)(t),
-        x = (0, o.Z)({
+        C = (0, a.Z)({
             id: t.guildId,
             label: d.intl.string(d.t['94lLDw']),
             onSuccess: m
         });
     i.useEffect(() => {
-        _ || y || null != x || (0, a.Zy)();
+        _ || y || null != C || (0, o.Zy)();
     });
-    let C = () => {
+    let x = () => {
         c.kx(t.channelId, t.guildId);
     };
     function v() {
-        (0, a.Zy)(), null == m || m();
+        (0, o.Zy)(), null == m || m();
     }
     return (0, r.jsxs)(l.v2r, {
         navId: 'guild-entry-context',
@@ -103,7 +103,7 @@ function f(e) {
                                                       header: d.intl.string(d.t.KUxYWF),
                                                       confirmText: d.intl.string(d.t.N86XcH),
                                                       cancelText: d.intl.string(d.t['ETE/oK']),
-                                                      onConfirm: C
+                                                      onConfirm: x
                                                   },
                                                   e
                                               ),
@@ -134,7 +134,7 @@ function f(e) {
                           })
                 ]
             }),
-            (0, r.jsx)(l.kSQ, { children: x })
+            (0, r.jsx)(l.kSQ, { children: C })
         ]
     });
 }

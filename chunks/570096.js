@@ -1,9 +1,9 @@
-n.d(t, { N: () => x }), n(388685);
+n.d(t, { N: () => C }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    a = n(704215),
-    o = n(481060),
+    o = n(704215),
+    a = n(481060),
     s = n(782568),
     c = n(243778),
     u = n(970731),
@@ -22,14 +22,14 @@ let _ = (e) => {
                 (0, r.jsx)(h.Z, {
                     user: t,
                     rank: 1,
-                    avatarSize: o.EFr.SIZE_56
+                    avatarSize: a.EFr.SIZE_56
                 }),
-                (0, r.jsx)(o.P3F, {
+                (0, r.jsx)(a.P3F, {
                     className: b.closeIcon,
                     onClick: () => {
                         n(m.L.USER_DISMISS);
                     },
-                    children: (0, r.jsx)(o.Dio, {
+                    children: (0, r.jsx)(a.Dio, {
                         color: 'currentColor',
                         size: 'sm'
                     })
@@ -53,21 +53,21 @@ let _ = (e) => {
             markAsDismissed: n,
             caretPosition: u.DF.RIGHT_TOP,
             buttonProps: {
-                color: o.zxk.Colors.WHITE,
-                look: o.zxk.Looks.LINK,
-                size: o.zxk.Sizes.MIN
+                color: a.zxk.Colors.WHITE,
+                look: a.zxk.Looks.LINK,
+                size: a.zxk.Sizes.MIN
             }
         });
     };
-function x(e) {
+function C(e) {
     let { children: t } = e,
-        n = [a.z.LEADERBOARD_NUX_COACHMARK],
+        n = [o.z.LEADERBOARD_NUX_COACHMARK],
         [s, u] = (0, c.US)(n, void 0),
         p = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
         h = i.useRef(null);
-    return s !== a.z.LEADERBOARD_NUX_COACHMARK || null == p
+    return s !== o.z.LEADERBOARD_NUX_COACHMARK || null == p
         ? t
-        : (0, r.jsx)(o.yRy, {
+        : (0, r.jsx)(a.yRy, {
               targetElementRef: h,
               renderPopout: () =>
                   y({
@@ -75,7 +75,7 @@ function x(e) {
                       markAsDismissed: u
                   }),
               position: 'left',
-              animation: o.yRy.Animation.TRANSLATE,
+              animation: a.yRy.Animation.TRANSLATE,
               shouldShow: !0,
               children: () =>
                   (0, r.jsx)('div', {

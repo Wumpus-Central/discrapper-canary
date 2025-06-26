@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
-    a = n(91192),
-    o = n(442837),
+    o = n(91192),
+    a = n(442837),
     s = n(481060),
     c = n(129861),
     u = n(700582),
@@ -14,9 +14,9 @@ var i = n(120356),
     f = n(900054);
 function m(e) {
     var t, n;
-    let { user: i, row: m, hideDiscriminator: g, comparator: b, selected: _, checked: y, inlineUsername: x = !0, onClick: C, onMouseEnter: v, 'aria-setsize': j, 'aria-posinset': O } = e,
-        E = (0, o.e7)([p.Z], () => p.Z.getStatus(i.id)),
-        I = (0, a.JA)(String(i.id));
+    let { user: i, row: m, hideDiscriminator: g, comparator: b, selected: _, checked: y, inlineUsername: C = !0, onClick: x, onMouseEnter: v, 'aria-setsize': j, 'aria-posinset': O } = e,
+        E = (0, a.e7)([p.Z], () => p.Z.getStatus(i.id)),
+        I = (0, o.JA)(String(i.id));
     return (0, r.jsx)(
         s.P3F,
         ((t = (function (e) {
@@ -48,7 +48,7 @@ function m(e) {
                 id: 'user-row-'.concat(m),
                 className: f.friendWrapper,
                 onClick: () => {
-                    null != C && C(i.id);
+                    null != x && x(i.id);
                 },
                 onMouseEnter: () => {
                     null != v && v(m);
@@ -66,7 +66,7 @@ function m(e) {
                     align: d.Z.Align.CENTER,
                     className: l()(f.friend, {
                         [f.friendSelected]: _,
-                        [f.twoRows]: !x
+                        [f.twoRows]: !C
                     }),
                     children: [
                         (0, r.jsx)(u.Z, {
@@ -77,7 +77,7 @@ function m(e) {
                         (0, r.jsxs)(d.Z, {
                             className: f.match,
                             align: d.Z.Align.BASELINE,
-                            direction: x ? d.Z.Direction.HORIZONTAL : d.Z.Direction.VERTICAL,
+                            direction: C ? d.Z.Direction.HORIZONTAL : d.Z.Direction.VERTICAL,
                             children: [
                                 (0, r.jsx)(s.Text, {
                                     tag: 'strong',

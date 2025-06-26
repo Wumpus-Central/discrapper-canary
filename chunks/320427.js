@@ -2,8 +2,8 @@ n.d(t, { Z: () => f });
 var r = n(255367),
     i = n(73800),
     l = n(399606),
-    a = n(481060),
-    o = n(125268),
+    o = n(481060),
+    a = n(125268),
     s = n(673125),
     c = n(984063),
     u = n(871499),
@@ -25,7 +25,7 @@ function f() {
         t = (null == e ? void 0 : e.type) === c.W.LINE,
         n = i.useRef(null),
         f = () => {
-            t ? (0, o.Bo)(null) : (0, o.Bo)({ type: c.W.LINE });
+            t ? (0, a.Bo)(null) : (0, a.Bo)({ type: c.W.LINE });
         };
     return (0, r.jsx)(d.Z, {
         renderPopout: () => null,
@@ -33,7 +33,7 @@ function f() {
         children: (e) => {
             var i,
                 l,
-                o = h(
+                a = h(
                     {},
                     (function (e) {
                         if (null == e) throw TypeError('Cannot destructure ' + e);
@@ -66,13 +66,13 @@ function f() {
                             });
                     }
                     return e;
-                })({}, o)),
+                })({}, a)),
                 (l = l =
                     {
                         buttonRef: n,
                         label: p.intl.string(p.t.ZQCf9f),
                         isActive: t,
-                        iconComponent: a.vdY,
+                        iconComponent: o.vdY,
                         onClick: f
                     }),
                 Object.getOwnPropertyDescriptors

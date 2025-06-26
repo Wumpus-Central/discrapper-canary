@@ -1,8 +1,8 @@
-n.d(t, { _: () => a });
+n.d(t, { _: () => o });
 var r = n(442837),
     i = n(897473),
     l = n(433355);
-function a() {
+function o() {
     let e = (0, r.e7)([l.ZP], () => l.ZP.getSidebarState(l.uZ)),
         t = (null == e ? void 0 : e.type) === i.tI.VIEW_MESSAGE_REQUEST ? e : null;
     return {

@@ -3,25 +3,25 @@ var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
-    a = n(388032),
-    o = n(650011),
+    o = n(388032),
+    a = n(650011),
     s = n(296507),
     c = n(866402);
 function u(e) {
     let { className: t, children: n } = e;
     return (0, r.jsxs)('div', {
-        className: l()(o.container, t),
+        className: l()(a.container, t),
         children: [
             (0, r.jsx)('img', {
-                alt: a.intl.string(a.t.VoB8OT),
+                alt: o.intl.string(o.t.VoB8OT),
                 src: c,
-                className: l()(o.sparkleIcon, o.sparkleBottom)
+                className: l()(a.sparkleIcon, a.sparkleBottom)
             }),
             n,
             (0, r.jsx)('img', {
-                alt: a.intl.string(a.t.VoB8OT),
+                alt: o.intl.string(o.t.VoB8OT),
                 src: s,
-                className: l()(o.sparkleIcon, o.sparkleTop)
+                className: l()(a.sparkleIcon, a.sparkleTop)
             })
         ]
     });

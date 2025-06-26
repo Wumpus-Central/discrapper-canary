@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(442837),
     l = n(481060),
-    a = n(239091),
-    o = n(596454),
+    o = n(239091),
+    a = n(596454),
     s = n(339085),
     c = n(883429),
     u = n(456269),
@@ -15,15 +15,15 @@ var i = n(442837),
     m = n(939852);
 function g(e) {
     let { tag: t } = e,
-        { name: n, emojiId: l, emojiName: a } = t,
+        { name: n, emojiId: l, emojiName: o } = t,
         c = (0, i.e7)([s.ZP], () => (null != l ? s.ZP.getUsableCustomEmojiById(l) : null));
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            null != a || null != l
-                ? (0, r.jsx)(o.Z, {
+            null != o || null != l
+                ? (0, r.jsx)(a.Z, {
                       className: m.emoji,
                       emojiId: l,
-                      emojiName: a,
+                      emojiName: o,
                       animated: !!(null == c ? void 0 : c.animated)
                   })
                 : null,
@@ -34,12 +34,12 @@ function g(e) {
 function b(e) {
     let t = (0, i.e7)([p.Z], () => p.Z.getChannel(e), [e]),
         n = (0, d.C7)(t),
-        o = (0, i.e7)([p.Z], () => p.Z.getChannel(null == t ? void 0 : t.parent_id), [t]),
-        s = (0, u.Vm)(o),
+        a = (0, i.e7)([p.Z], () => p.Z.getChannel(null == t ? void 0 : t.parent_id), [t]),
+        s = (0, u.Vm)(a),
         m = (0, u.eV)(t),
         b = m.length >= h.Cn,
         _ = (0, d.$R)(t);
-    if (null == t) return (0, a.Zy)(), null;
+    if (null == t) return (0, o.Zy)(), null;
     if (!n || __OVERLAY__ || !t.isForumPost() || (null == s ? void 0 : s.length) === 0 || !_ || t.isModeratorReportChannel()) return null;
     let y = (e) => {
             let n = new Set(m);
@@ -51,7 +51,7 @@ function b(e) {
             let r = Array.from(n).map((e) => e.id);
             c.Z.updateForumPostTags(t.id, r);
         },
-        x =
+        C =
             null == s
                 ? void 0
                 : s.map((e) => {
@@ -71,6 +71,6 @@ function b(e) {
     return (0, r.jsx)(l.sNh, {
         id: 'edit-tags',
         label: f.intl.string(f.t['436ZFx']),
-        children: x
+        children: C
     });
 }

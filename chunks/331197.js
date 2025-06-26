@@ -2,8 +2,8 @@ n.d(t, { Z: () => O }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    a = n(704215),
-    o = n(582019),
+    o = n(704215),
+    a = n(582019),
     s = n(235874),
     c = n(239091),
     u = n(906732),
@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(603074),
     _ = n(294629),
     y = n(131951),
-    x = n(390322),
-    C = n(871499),
+    C = n(390322),
+    x = n(871499),
     v = n(127379),
     j = n(388032);
 function O(e) {
@@ -27,12 +27,12 @@ function O(e) {
             Component: P,
             play: Z,
             events: { onMouseEnter: N, onMouseLeave: T }
-        } = (0, o.j)(),
+        } = (0, a.j)(),
         A = t.getGuildId(),
         { mute: w, suppress: R } = (0, _.Z)(t),
-        M = (0, l.e7)([y.Z], () => y.Z.isDeaf()),
-        k = w || R || M,
-        D = (0, m.sR)({ isSoundboardButtonDisabled: k }),
+        k = (0, l.e7)([y.Z], () => y.Z.isDeaf()),
+        M = w || R || k,
+        D = (0, m.sR)({ isSoundboardButtonDisabled: M }),
         [L, U] = (0, h.cv)(D),
         { analyticsLocations: B } = (0, u.ZP)(),
         { isHovered: F, setIsHovered: G, onMouseEnter: H, onMouseLeave: V } = (0, f.Z)(200, 300);
@@ -110,9 +110,9 @@ function O(e) {
         },
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return k
+            return M
                 ? null
-                : (0, r.jsx)(x.Z, {
+                : (0, r.jsx)(C.Z, {
                       children: (0, r.jsx)('div', {
                           onMouseEnter: H,
                           onMouseLeave: V,
@@ -121,7 +121,7 @@ function O(e) {
                               channel: t,
                               onClose: n,
                               gridNotice:
-                                  L === a.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
+                                  L === o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
                                   (0, r.jsx)(g.o, {
                                       onClose: n,
                                       markAsDismissed: U
@@ -132,13 +132,13 @@ function O(e) {
                   });
         },
         children: () =>
-            (0, r.jsx)(C.d, {
+            (0, r.jsx)(x.d, {
                 ref: Y,
                 isTrayButton: !0,
                 themeable: O,
-                label: w ? j.intl.string(j.t['Ox4/zc']) : R ? j.intl.string(j.t['+YBKYG']) : M ? j.intl.string(j.t.X1lQlp) : void 0,
+                label: w ? j.intl.string(j.t['Ox4/zc']) : R ? j.intl.string(j.t['+YBKYG']) : k ? j.intl.string(j.t.X1lQlp) : void 0,
                 iconComponent: P,
-                disabled: k,
+                disabled: M,
                 onContextMenu: z,
                 onClick: W,
                 onMouseEnter: () => {

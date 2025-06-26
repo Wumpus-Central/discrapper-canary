@@ -1,11 +1,11 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(255367);
 n(73800);
 var i = n(27457),
     l = n(131951),
-    a = n(938243);
-function o(e) {
-    var { aspectRatio: t, blocked: n, ignored: o, channel: s, className: c, focused: u, children: d, inCall: p, inPopout: h, noBorder: f, onClick: m, onContextMenu: g, onDoubleClick: b, onVideoResize: _, paused: y, pulseSpeakingIndicator: x, participant: C, width: v } = e,
+    o = n(938243);
+function a(e) {
+    var { aspectRatio: t, blocked: n, ignored: a, channel: s, className: c, focused: u, children: d, inCall: p, inPopout: h, noBorder: f, onClick: m, onContextMenu: g, onDoubleClick: b, onVideoResize: _, paused: y, pulseSpeakingIndicator: C, participant: x, width: v } = e,
         j = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -28,9 +28,9 @@ function o(e) {
     let O = l.Z.getVideoComponent();
     return (0, r.jsx)('div', {
         style: { width: v },
-        className: a.spaceBetweenTiles,
+        className: o.spaceBetweenTiles,
         children: (0, r.jsxs)('div', {
-            className: a.tileSizer,
+            className: o.tileSizer,
             style: { aspectRatio: t },
             children: [
                 (0, r.jsx)(
@@ -62,7 +62,7 @@ function o(e) {
                     })(
                         {
                             blocked: n,
-                            ignored: o,
+                            ignored: a,
                             channel: s,
                             className: c,
                             focused: u,
@@ -73,9 +73,9 @@ function o(e) {
                             onContextMenu: g,
                             onDoubleClick: b,
                             onVideoResize: _,
-                            participant: C,
+                            participant: x,
                             paused: y,
-                            pulseSpeakingIndicator: x,
+                            pulseSpeakingIndicator: C,
                             videoComponent: O,
                             width: v
                         },

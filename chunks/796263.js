@@ -1,10 +1,10 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(624848);
-function a(e) {
-    let { text: t, icon: n, onClick: a, disabled: o, submitting: s } = e;
+function o(e) {
+    let { text: t, icon: n, onClick: o, disabled: a, submitting: s } = e;
     return (0, r.jsx)(i.ua7, {
         text: null != t ? t : void 0,
         children: (e) => {
@@ -41,8 +41,8 @@ function a(e) {
                         grow: !1,
                         look: i.zxk.Looks.BLANK,
                         size: i.zxk.Sizes.ICON,
-                        onClick: a,
-                        disabled: o,
+                        onClick: o,
+                        disabled: a,
                         submitting: s,
                         className: l.button,
                         innerClassName: l.buttonInner,

@@ -2,8 +2,8 @@ n.d(t, { Z: () => u });
 var r = n(255367),
     i = n(73800),
     l = n(906732),
-    a = n(628581),
-    o = n(522651),
+    o = n(628581),
+    a = n(522651),
     s = n(8404),
     c = n(871499);
 function u(e) {
@@ -30,8 +30,8 @@ function u(e) {
     let { parentAnalyticsLocation: b } = (0, l.ZP)(),
         _ = t || n || u,
         y = d ? c.d : c.Z,
-        x = (0, a.Z)(t, n, u, p),
-        { events: C, play: v, Component: j } = (0, s.b)(_);
+        C = (0, o.Z)(t, n, u, p),
+        { events: x, play: v, Component: j } = (0, s.b)(_);
     return (
         i.useEffect(() => () => v(), [v, _]),
         (0, r.jsx)(
@@ -66,15 +66,15 @@ function u(e) {
                     isTrayButton: !0,
                     caretColor: _ ? 'red' : 'primaryDark',
                     color: _ ? 'red' : void 0,
-                    label: x,
+                    label: C,
                     onMouseEnter: (e) => {
-                        null == h || h(e), C.onMouseEnter();
+                        null == h || h(e), x.onMouseEnter();
                     },
                     onMouseLeave: (e) => {
-                        null == f || f(e), C.onMouseLeave();
+                        null == f || f(e), x.onMouseLeave();
                     },
                     onClick: (e) => {
-                        null == m || m(e), (0, o.v)(b, o.d.MIC, t);
+                        null == m || m(e), (0, a.v)(b, a.d.MIC, t);
                     }
                 },
                 g

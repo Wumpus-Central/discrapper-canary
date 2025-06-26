@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(94171),
     l = n(442837),
-    a = n(481060),
-    o = n(43267),
+    o = n(481060),
+    a = n(43267),
     s = n(565138),
     c = n(905423),
     u = n(592125),
@@ -23,24 +23,24 @@ function m() {
         n = (0, l.e7)([d.Z], () => d.Z.getGuild(e)),
         m = (0, l.e7)([u.Z], () => (null == n ? u.Z.getChannel(t) : null)),
         g = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
-        b = null != m ? (0, o.x)(m) : null,
+        b = null != m ? (0, a.x)(m) : null,
         _ = null != g ? g.getAvatarURL(e, 80) : h.pK['0'],
-        y = (0, r.jsx)(a.qEK, {
+        y = (0, r.jsx)(o.qEK, {
             src: _,
             'aria-hidden': !0,
-            size: a.EFr.SIZE_80,
+            size: o.EFr.SIZE_80,
             className: f.avatarSizeOverride
         }),
-        x = null;
+        C = null;
     return (
-        (x =
+        (C =
             null != n
                 ? (0, r.jsx)(s.Z, { guild: n })
                 : null != b
-                  ? (0, r.jsx)(a.qEK, {
+                  ? (0, r.jsx)(o.qEK, {
                         'aria-hidden': !0,
                         src: b,
-                        size: a.EFr.SIZE_80,
+                        size: o.EFr.SIZE_80,
                         className: f.avatarSizeOverride
                     })
                   : y),
@@ -53,7 +53,7 @@ function m() {
                 }),
                 (0, r.jsx)('div', {
                     className: f.guildAvatar,
-                    children: x
+                    children: C
                 }),
                 (0, r.jsx)('svg', {
                     className: f.illustration,

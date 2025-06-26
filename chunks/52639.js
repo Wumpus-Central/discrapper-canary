@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(81897),
     l = n(906732),
-    a = n(566898),
-    o = n(769654),
+    o = n(566898),
+    a = n(769654),
     s = n(785717),
     c = n(806729),
     u = n(857302),
@@ -19,8 +19,8 @@ var i = n(81897),
 function y(e) {
     let { user: t, channelId: n } = e,
         { analyticsLocations: y } = (0, l.ZP)(),
-        { context: x } = (0, s.KZ)(),
-        C = (0, i.Z)(),
+        { context: C } = (0, s.KZ)(),
+        x = (0, i.Z)(),
         { mutualFriendsCount: v, mutualFriends: j, mutualGuilds: O } = (0, c.Z)(t),
         E = !t.bot && null != v && v > 0,
         I = null != O && O.length > 0;
@@ -41,7 +41,7 @@ function y(e) {
                                       user: t,
                                       guild: n,
                                       nick: i,
-                                      onSelect: () => (0, o.X)(n.id)
+                                      onSelect: () => (0, a.X)(n.id)
                                   },
                                   n.id
                               );
@@ -53,7 +53,7 @@ function y(e) {
                           section: 'MUTUAL_FRIENDS',
                           header: b.intl.string(b.t['0mTJ3t']),
                           listClassName: _.list,
-                          onExpand: () => (0, u.Z)(t.id, C),
+                          onExpand: () => (0, u.Z)(t.id, x),
                           items:
                               null == j
                                   ? Array.from({ length: v }).map((e, t) =>
@@ -62,11 +62,11 @@ function y(e) {
                                             {
                                                 className: _.loadingMutualFriend,
                                                 children: [
-                                                    (0, r.jsx)(a.ZT, {
+                                                    (0, r.jsx)(o.ZT, {
                                                         width: 40,
                                                         opacity: 0.08
                                                     }),
-                                                    (0, r.jsx)(a.ZT, {
+                                                    (0, r.jsx)(o.ZT, {
                                                         width: 135,
                                                         opacity: 0.08
                                                     })
@@ -110,7 +110,7 @@ function y(e) {
                                                                     });
                                                             }
                                                             return e;
-                                                        })({}, x)),
+                                                        })({}, C)),
                                                         (t = t =
                                                             {
                                                                 userId: i.id,

@@ -1,23 +1,23 @@
 n.d(t, { Z: () => r });
-var i = n(73800),
-    l = n(434650);
+var l = n(73800),
+    i = n(434650);
 function r(e) {
     let { onVisible: t, threshold: n, minTimeVisibleMs: r } = e,
-        o = i.useRef(!1),
-        a = i.useRef(null);
+        a = l.useRef(!1),
+        o = l.useRef(null);
     return (
-        i.useEffect(
+        l.useEffect(
             () => () => {
-                null != a.current && (clearTimeout(a.current), (a.current = null));
+                null != o.current && (clearTimeout(o.current), (o.current = null));
             },
             []
         ),
-        (0, l.O)((e) => {
-            if ((null == a.current || e || !1 !== o.current || (clearTimeout(a.current), (a.current = null)), !e || !0 === o.current)) return;
+        (0, i.O)((e) => {
+            if ((null == o.current || e || !1 !== a.current || (clearTimeout(o.current), (o.current = null)), !e || !0 === a.current)) return;
             let n = () => {
-                t(), (o.current = !0), (a.current = null);
+                t(), (a.current = !0), (o.current = null);
             };
-            null != r ? (a.current = setTimeout(n, r)) : n();
+            null != r ? (o.current = setTimeout(n, r)) : n();
         }, n)
     );
 }

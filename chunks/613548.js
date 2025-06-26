@@ -1,10 +1,10 @@
-n.d(t, { Z: () => k }), n(539854);
+n.d(t, { Z: () => M }), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    a = n.n(l),
-    o = n(392711),
-    s = n.n(o),
+    o = n.n(l),
+    a = n(392711),
+    s = n.n(a),
     c = n(442837),
     u = n(481060),
     d = n(475179),
@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(2818),
     _ = n(954551),
     y = n(44136),
-    x = n(651183),
-    C = n(853476),
+    C = n(651183),
+    x = n(853476),
     v = n(390322),
     j = n(616286),
     O = n(975146),
@@ -72,7 +72,7 @@ function R(e, t) {
         e
     );
 }
-function M(e) {
+function k(e) {
     let { channelId: t, guildId: n } = e,
         i = (0, c.Wu)([I.Z, S.Z], () => {
             let e = Date.now();
@@ -97,7 +97,7 @@ function M(e) {
                               (0, r.jsx)(
                                   E.ZP,
                                   R(w({}, l), {
-                                      className: a()(A.speaker, { [A.last]: t === i.length - 1 }),
+                                      className: o()(A.speaker, { [A.last]: t === i.length - 1 }),
                                       user: e.user,
                                       speaking: !0,
                                       collapsed: !0,
@@ -110,10 +110,10 @@ function M(e) {
               )
           });
 }
-function k(e) {
+function M(e) {
     let { channel: t, isChatOpen: n } = e,
         l = i.useRef(null),
-        { analyticsLocations: o } = (0, h.ZP)(p.Z.VOICE_CHANNEL_HEADER),
+        { analyticsLocations: a } = (0, h.ZP)(p.Z.VOICE_CHANNEL_HEADER),
         s = t.id,
         {
             voiceParticipantsHidden: y,
@@ -130,7 +130,7 @@ function k(e) {
             }),
             [s]
         ),
-        k = t.isGuildVoice() && !n,
+        M = t.isGuildVoice() && !n,
         { hasParticipantsPanel: D } = (0, Z.Z)({ location: 'ChannelCallHeaderToolbar' }),
         L = !T && D && (t.isGuildVoice() || t.isGroupDM()),
         { enabled: U, inInbox: B } = b.Z.useExperiment({ location: 'ChannelCallHeaderToolbar' }),
@@ -139,7 +139,7 @@ function k(e) {
         y &&
             F.push(
                 (0, r.jsx)(
-                    M,
+                    k,
                     {
                         channelId: s,
                         guildId: t.guild_id
@@ -160,7 +160,7 @@ function k(e) {
         (null == E ? void 0 : E.type) === N.fO.STREAM &&
             (F.push(
                 (0, r.jsx)(
-                    x.Z,
+                    C.Z,
                     {
                         className: A.button,
                         participant: E
@@ -184,7 +184,7 @@ function k(e) {
         (null == E ? void 0 : E.type) === N.fO.USER &&
             F.push(
                 (0, r.jsx)(
-                    C.Z,
+                    x.Z,
                     {
                         className: A.button,
                         userId: E.id
@@ -224,26 +224,26 @@ function k(e) {
                 (0, r.jsx)(
                     O.Z,
                     {
-                        className: a()(A.button, { [A.lastButton]: n }),
+                        className: o()(A.button, { [A.lastButton]: n }),
                         onClick: () => d.Z.toggleParticipantsList(t.id, !T)
                     },
                     'participants-list-button'
                 )
             ),
-        k &&
+        M &&
             F.push(
                 (0, r.jsx)(
                     j.T,
                     {
                         channelId: t.id,
-                        className: a()(A.button, { [A.lastButton]: T }),
+                        className: o()(A.button, { [A.lastButton]: T }),
                         disabled: n
                     },
                     'chat-spacer'
                 )
             ),
         (0, r.jsx)(h.Gt, {
-            value: o,
+            value: a,
             children: F
         })
     );

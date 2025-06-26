@@ -6,8 +6,8 @@ n.d(t, {
 var r,
     i = n(255367),
     l = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(392711),
     c = n(692547),
     u = n(481060),
@@ -18,9 +18,9 @@ var r,
     m = n(354494),
     g = (((r = {})[(r.PostSidebar = 0)] = 'PostSidebar'), (r[(r.ThreadSidebar = 1)] = 'ThreadSidebar'), (r[(r.CallChatSidebar = 2)] = 'CallChatSidebar'), (r[(r.MessageRequestSidebar = 3)] = 'MessageRequestSidebar'), (r[(r.HomeSidebar = 4)] = 'HomeSidebar'), (r[(r.ParticipantsSidebar = 5)] = 'ParticipantsSidebar'), r);
 function b(e) {
-    let { resizableNode: t, onResize: n, onResizeEnd: r, maxWidth: l, minWidth: a } = e,
-        o = (0, p.Z)({
-            minDimension: a,
+    let { resizableNode: t, onResize: n, onResizeEnd: r, maxWidth: l, minWidth: o } = e,
+        a = (0, p.Z)({
+            minDimension: o,
             maxDimension: l,
             resizableDomNodeRef: t,
             onElementResize: n,
@@ -29,12 +29,12 @@ function b(e) {
             throttleDuration: 16
         });
     return (0, i.jsx)('div', {
-        onMouseDown: o,
+        onMouseDown: a,
         className: m.resizeHandle
     });
 }
 function _(e) {
-    let { sidebarType: t, maxWidth: n, onWidthChange: r, children: a, floatingLayer: p } = e,
+    let { sidebarType: t, maxWidth: n, onWidthChange: r, children: o, floatingLayer: p } = e,
         g = l.useRef(null),
         _ = (function (e) {
             switch (e) {
@@ -52,8 +52,8 @@ function _(e) {
                     return 'callParticipantsSidebarWidth';
             }
         })(t),
-        [y, x] = l.useState(h.ZP[_]),
-        C = l.useCallback(
+        [y, C] = l.useState(h.ZP[_]),
+        x = l.useCallback(
             (e) => {
                 d.ZP.updatedUnsyncedSettings({ [_]: e });
             },
@@ -76,10 +76,10 @@ function _(e) {
             !j && (0, i.jsx)('div', { style: { minWidth: I } }),
             (0, i.jsx)(S, {
                 children: (0, i.jsxs)('div', {
-                    className: o()(m.chatLayerWrapper, { [m.hidden]: !1 }),
+                    className: a()(m.chatLayerWrapper, { [m.hidden]: !1 }),
                     children: [
                         (0, i.jsx)('div', {
-                            className: o()(m.chatTarget, {
+                            className: a()(m.chatTarget, {
                                 [m.floating]: j,
                                 [m.notFloating]: !j
                             }),
@@ -90,14 +90,14 @@ function _(e) {
                                 minWidth: v,
                                 maxWidth: n,
                                 resizableNode: g,
-                                onResize: x,
-                                onResizeEnd: C
+                                onResize: C,
+                                onResizeEnd: x
                             }),
                         (0, i.jsx)('div', {
                             ref: g,
-                            className: o()(m.container, { [m.floating]: j }),
+                            className: a()(m.container, { [m.floating]: j }),
                             style: { width: E },
-                            children: a
+                            children: o
                         })
                     ]
                 })

@@ -1,4 +1,4 @@
-a.d(e, { q: () => R });
+a.d(e, { q: () => d });
 var r = a(899517),
     _ = a(622916),
     n = a(101284),
@@ -20,19 +20,19 @@ function I(t, e, a, r, n = {}) {
     if (!s) return;
     let E = (0, c.HN)(),
         l = E ? (0, c.Gx)(E) : void 0,
-        d = l && (0, c.XU)(l).description,
-        { unit: R, tags: N, timestamp: f } = n,
+        R = l && (0, c.XU)(l).description,
+        { unit: d, tags: N, timestamp: f } = n,
         { release: A, environment: T } = s.getOptions(),
         p = {};
     A && (p.release = A),
         T && (p.environment = T),
-        d && (p.transaction = d),
+        R && (p.transaction = R),
         i.X && _.kg.log(`Adding value of ${r} to ${e} metric ${a}`),
         u(s, t).add(
             e,
             a,
             r,
-            R,
+            d,
             {
                 ...p,
                 ...N
@@ -40,14 +40,14 @@ function I(t, e, a, r, n = {}) {
             f
         );
 }
-function d(t, e, a, r) {
+function R(t, e, a, r) {
     I(t, l.g_, e, N(a), r);
 }
-let R = {
+let d = {
     increment: function (t, e, a = 1, r) {
         I(t, l.JM, e, N(a), r);
     },
-    distribution: d,
+    distribution: R,
     set: function (t, e, a, r) {
         I(t, l.is, e, a, r);
     },
@@ -70,7 +70,7 @@ let R = {
                         () => {},
                         () => {
                             let a = (0, n.ph)();
-                            d(t, e, a - r, {
+                            R(t, e, a - r, {
                                 ..._,
                                 unit: 'second'
                             }),
@@ -79,7 +79,7 @@ let R = {
                     )
             );
         }
-        d(t, e, a, {
+        R(t, e, a, {
             ..._,
             unit: r
         });

@@ -3,13 +3,13 @@ var r = n(255367);
 n(73800);
 var i = n(692547),
     l = n(481060),
-    a = n(40851),
-    o = n(881824),
+    o = n(40851),
+    a = n(881824),
     s = n(688641),
     c = n(388032);
 function u(e) {
     let { className: t, channel: n, highlight: u } = e,
-        d = (0, a.bp)();
+        d = (0, o.bp)();
     return (0, r.jsx)(s.Z, {
         highlight: null != u && u,
         className: t,
@@ -23,7 +23,7 @@ function u(e) {
         title: c.intl.string(c.t.OYbHfn),
         description: c.intl.string(c.t.yXwLMT),
         onClick: function () {
-            (0, o.T)(n, d);
+            (0, a.T)(n, d);
         }
     });
 }

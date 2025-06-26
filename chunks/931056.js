@@ -2,8 +2,8 @@ n.d(t, { Z: () => d }), n(539854), n(388685);
 var r = n(73800),
     i = n(442837),
     l = n(417438),
-    a = n(360787),
-    o = n(158776);
+    o = n(360787),
+    a = n(158776);
 let s = [],
     c = [],
     u = [];
@@ -22,14 +22,14 @@ function d(e, t) {
                     })(e, t),
                 [e, t]
             ),
-            a = (0, i.Wu)(
-                [o.Z],
+            o = (0, i.Wu)(
+                [a.Z],
                 () => {
                     let e = [];
                     return (
                         n.forEach((t) => {
                             null !=
-                                o.Z.findActivity(
+                                a.Z.findActivity(
                                     t.author.id,
                                     (e) => {
                                         var n, r, i;
@@ -55,29 +55,29 @@ function d(e, t) {
                             e.forEach((e) => {
                                 var r, i;
                                 let l = null == (r = e.application) ? void 0 : r.id,
-                                    a = null == (i = e.activity) ? void 0 : i.party_id;
-                                if (e.id in t || null == l || null == a) return;
-                                let o = e.timestamp.getTime(),
+                                    o = null == (i = e.activity) ? void 0 : i.party_id;
+                                if (e.id in t || null == l || null == o) return;
+                                let a = e.timestamp.getTime(),
                                     s = {
                                         userId: e.author.id,
                                         applicationId: l,
-                                        partyId: a,
+                                        partyId: o,
                                         messageId: e.id,
                                         channelId: e.channel_id,
-                                        inviteTime: o
+                                        inviteTime: a
                                     };
                                 n.push(s);
                             }),
                             n
                         );
-                    })(n, a),
-                [n, a]
+                    })(n, o),
+                [n, o]
             )
         ];
     })(e, t);
     return (
         r.useEffect(() => {
-            for (let e of d) a.Z.isSubscribed(e) || (0, l.L)(e);
+            for (let e of d) o.Z.isSubscribed(e) || (0, l.L)(e);
         }, [d]),
         [n, d]
     );

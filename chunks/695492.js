@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(607187),
-    a = n(112560),
-    o = n(981631),
+    o = n(112560),
+    a = n(981631),
     s = n(388032),
     c = n(91490),
     u = n(800350);
@@ -12,9 +12,9 @@ function d(e) {
     let { channel: t, guild: d, width: p, inPopout: h } = e;
     return (0, r.jsx)(l.Z, {
         className: c.root,
-        children: (0, r.jsx)(a.Z, {
+        children: (0, r.jsx)(o.Z, {
             artURL: u,
-            size: (0, a.L)(p),
+            size: (0, o.L)(p),
             header: s.intl.string(s.t.O4FiWl),
             onCTAClick: () =>
                 (0, i.ZDy)(
@@ -53,7 +53,7 @@ function d(e) {
                                     {
                                         guild: d,
                                         channel: t,
-                                        source: o.t4x.CHANNEL_CALL
+                                        source: a.t4x.CHANNEL_CALL
                                     }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))

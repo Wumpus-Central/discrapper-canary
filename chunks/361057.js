@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(871499),
-    a = n(447564),
-    o = n(304388);
+    o = n(447564),
+    a = n(304388);
 function s() {
     return (s =
         Object.assign ||
@@ -18,18 +18,18 @@ function s() {
 }
 let c = (e) => {
     let { channel: t, glow: n, ref: c } = e;
-    return (0, r.jsx)(o.Z, {
+    return (0, r.jsx)(a.Z, {
         renderPopout: () => null,
         popoutTargetRef: c,
         children: (e) => {
-            var o = s(
+            var a = s(
                 {},
                 (function (e) {
                     if (null == e) throw TypeError('Cannot destructure ' + e);
                     return e;
                 })(e)
             );
-            let { onClick: u } = o,
+            let { onClick: u } = a,
                 d = (function (e, t) {
                     if (null == e) return {};
                     var n,
@@ -48,7 +48,7 @@ let c = (e) => {
                         for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                     }
                     return i;
-                })(o, ['onClick']);
+                })(a, ['onClick']);
             return (0, r.jsx)(
                 l.Z,
                 (function (e) {
@@ -81,7 +81,7 @@ let c = (e) => {
                         iconComponent: i.hh5,
                         iconColor: n ? '#eb90f1' : void 0,
                         onClick: (e) => {
-                            (0, a.k)(t, 'ActionBar'), e.stopPropagation(), u(e);
+                            (0, o.k)(t, 'ActionBar'), e.stopPropagation(), u(e);
                         }
                     },
                     d

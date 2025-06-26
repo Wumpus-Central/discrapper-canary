@@ -2,8 +2,8 @@ n.d(t, { Z: () => U }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(392711),
-    a = n(442837),
-    o = n(704215),
+    o = n(442837),
+    a = n(704215),
     s = n(481060),
     c = n(570140),
     u = n(230711),
@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(594174),
     _ = n(176354),
     y = n(823379),
-    x = n(74538),
-    C = n(401062),
+    C = n(74538),
+    x = n(401062),
     v = n(696900),
     j = n(456631),
     O = n(963838),
@@ -31,8 +31,8 @@ var r = n(255367),
     A = n(474936),
     w = n(526761),
     R = n(388032),
-    M = n(934680);
-let k = T.Hz.CHAT,
+    k = n(934680);
+let M = T.Hz.CHAT,
     D = {
         section: Z.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
         openPopoutType: 'voice_channel_effect_emoji_picker'
@@ -41,10 +41,10 @@ let k = T.Hz.CHAT,
 function U(e) {
     var t;
     let { channel: n, closePopout: m, onFocus: y } = e,
-        T = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
-        U = (0, a.e7)([b.default], () => b.default.getCurrentUser()),
-        B = x.ZP.canUseFancyVoiceChannelReactions(U),
-        F = (0, a.e7)([v.Z], () => v.Z.getState().animationType),
+        T = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
+        U = (0, o.e7)([b.default], () => b.default.getCurrentUser()),
+        B = C.ZP.canUseFancyVoiceChannelReactions(U),
+        F = (0, o.e7)([v.Z], () => v.Z.getState().animationType),
         G = i.useRef(!1),
         H = i.useRef(null),
         V = (0, f.wC)(n.guild_id),
@@ -54,7 +54,7 @@ function U(e) {
                     !_.ZP.isEmojiFilteredOrLocked({
                         emoji: e,
                         channel: n,
-                        intention: k
+                        intention: M
                     })
             )
             .slice(0, N.e5),
@@ -66,10 +66,10 @@ function U(e) {
                 type: 'VOICE_CHANNEL_EFFECT_RECENT_EMOJI',
                 emoji: e
             }),
-                (0, C.Lx)({
+                (0, x.Lx)({
                     channel: n,
                     emoji: e,
-                    location: C.yX.EMOJI_PICKER,
+                    location: x.yX.EMOJI_PICKER,
                     animationType: F,
                     animationId: Y,
                     isPremium: B
@@ -99,13 +99,13 @@ function U(e) {
             guild_id: J
         });
     }, [Q, J]);
-    let $ = T ? [o.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
+    let $ = T ? [a.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
         ee = F === P.q.PREMIUM;
     return (0, r.jsx)(h.ZP, {
         contentTypes: $,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: i } = e,
-                l = T && t === o.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
+                l = T && t === a.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
             return (0, r.jsx)(s.yRy, {
                 targetElementRef: H,
                 position: 'left',
@@ -115,7 +115,7 @@ function U(e) {
                     (0, r.jsx)('div', {
                         onMouseEnter: y,
                         children: (0, r.jsx)(g.ZP, {
-                            className: M.reducedMotionTooltip,
+                            className: k.reducedMotionTooltip,
                             header: R.intl.string(R.t['6gGHnZ']),
                             content: R.intl.string(R.t.S2RGUF),
                             onClick: () => {

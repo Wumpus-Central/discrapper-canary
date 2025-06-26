@@ -3,17 +3,17 @@ var r = n(255367);
 n(73800);
 var i = n(442837),
     l = n(594174),
-    a = n(74538),
-    o = n(878349),
+    o = n(74538),
+    a = n(878349),
     s = n(388032);
 function c(e) {
     let { value: t, labelText: n, onChange: c, onShowUpsell: u } = e,
         d = (0, i.e7)([l.default], () => l.default.getCurrentUser()),
-        p = a.ZP.canUseFancyVoiceChannelReactions(d),
+        p = o.ZP.canUseFancyVoiceChannelReactions(d),
         h = '';
     return (
         (h = p ? (t ? s.intl.string(s.t.CfapQU) : s.intl.string(s.t.GB2x0t)) : s.intl.string(s.t.fe05ND)),
-        (0, r.jsx)(o.Z, {
+        (0, r.jsx)(a.Z, {
             checked: t,
             onChange: c,
             labelText: n,

@@ -1,9 +1,9 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => x });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    a = n.n(l),
-    o = n(442837),
+    o = n.n(l),
+    a = n(442837),
     s = n(481060),
     c = n(749210),
     u = n(168107),
@@ -16,14 +16,14 @@ var r = n(255367),
     b = n(723359),
     _ = n(388032),
     y = n(857651);
-function x(e) {
+function C(e) {
     let { guild: t, channelId: n } = e,
-        l = (0, o.e7)([f.default], () => {
+        l = (0, a.e7)([f.default], () => {
             var e;
             return (null == (e = f.default.getCurrentUser()) ? void 0 : e.nsfwAllowed) === !1;
         }),
-        a = (0, p.Kt)(),
-        { verifyAgreementButtonText: x, verifyGateDescription: C } = (0, p.a1)((null == t ? void 0 : t.isNSFW()) ? b.L0.NSFW_SERVER : b.L0.NSFW_CHANNEL),
+        o = (0, p.Kt)(),
+        { verifyAgreementButtonText: C, verifyGateDescription: x } = (0, p.a1)((null == t ? void 0 : t.isNSFW()) ? b.L0.NSFW_SERVER : b.L0.NSFW_CHANNEL),
         v = i.useCallback(() => {
             null != t && c.Z.nsfwReturnToSafety(t.id);
         }, [t]),
@@ -33,7 +33,7 @@ function x(e) {
         O = i.useCallback(() => {
             u.Z.showAgeVerificationGetStartedModal(d.cU.NSFW_GUILD);
         }, []);
-    return a
+    return o
         ? (0, r.jsx)(h.Z, {
               guildId: null == t ? void 0 : t.id,
               channelId: n,
@@ -41,8 +41,8 @@ function x(e) {
               onAgree: O,
               onDisagree: v,
               title: _.intl.string(_.t.ZmwvDQ),
-              description: C,
-              agreement: x,
+              description: x,
+              agreement: C,
               agreementButtonColor: s.zxk.Colors.BRAND,
               disagreement: _.intl.string(_.t['/g10LC']),
               imageClassName: y.ageGatedImage
@@ -72,20 +72,20 @@ function x(e) {
                 disagreement: _.intl.string(_.t['/g10LC'])
             });
 }
-let C = function (e) {
+let x = function (e) {
     let { guild: t, channelId: n, className: l } = e,
-        o = i.useRef(null);
+        a = i.useRef(null);
     return (
         i.useEffect(() => {
-            let { current: e } = o;
+            let { current: e } = a;
             null == e || e.scrollToBottom();
         }, []),
         (0, r.jsx)(s.Den, {
-            ref: o,
+            ref: a,
             className: y.scroller,
             children: (0, r.jsx)('div', {
-                className: a()(l, y.wrapper),
-                children: (0, r.jsx)(x, {
+                className: o()(l, y.wrapper),
+                children: (0, r.jsx)(C, {
                     guild: t,
                     channelId: n
                 })

@@ -2,8 +2,8 @@ n.d(t, { n: () => h });
 var r = n(255367),
     i = n(442837),
     l = n(481060),
-    a = n(384275),
-    o = n(468026),
+    o = n(384275),
+    a = n(468026),
     s = n(317381),
     c = n(513202),
     u = n(626135),
@@ -14,7 +14,7 @@ let h = (e) => {
         g = (0, i.e7)([s.ZP], () => s.ZP.getSelfEmbeddedActivities());
     if (!h.bot || null == f) return null;
     function b() {
-        a.Z.delete(m.id);
+        o.Z.delete(m.id);
         let e = g.get(f.id);
         null != e &&
             c.Z.leaveActivity({
@@ -31,7 +31,7 @@ let h = (e) => {
                 let i = p.intl.formatToPlainString(p.t.QWGvxM, { applicationName: e.name });
                 (0, l.h7j)((e) =>
                     (0, r.jsx)(
-                        o.default,
+                        a.default,
                         (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},

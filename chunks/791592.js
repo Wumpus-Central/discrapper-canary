@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(26151),
-    a = n(871499),
-    o = n(388032);
+    o = n(871499),
+    a = n(388032);
 function s(e) {
     var t,
         n,
@@ -29,7 +29,7 @@ function s(e) {
             return i;
         })(e, ['channel']);
     return (0, r.jsx)(
-        a.d,
+        o.d,
         ((t = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -58,7 +58,7 @@ function s(e) {
         (n = n =
             {
                 iconComponent: i.Dio,
-                label: o.intl.string(o.t.WAI6xs),
+                label: a.intl.string(a.t.WAI6xs),
                 onClick: () => l.Z.stopRinging(s.id)
             }),
         Object.getOwnPropertyDescriptors

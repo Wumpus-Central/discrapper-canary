@@ -112,27 +112,27 @@ let H = null != (o = window.requestIdleCallback) ? o : (e) => setImmediate(() =>
     q = () => Promise.resolve({ sessionId: void 0 }),
     X = (e) => {
         var t;
-        let { dispatcher: n, actionHandler: o, getFingerprint: d, getSessionId: h = q, TRACKING_URL: y, drainTimeoutOverride: O, waitFor: v, scheduleWhenIdle: X = H } = e;
-        function Q(e) {
+        let { dispatcher: n, actionHandler: o, getFingerprint: d, getSessionId: h = q, TRACKING_URL: y, drainTimeoutOverride: O, waitFor: v, scheduleWhenIdle: X = H, getLaunchSignature: Q = () => null } = e;
+        function J(e) {
             var t;
             if (null != a) return a;
             let n = null != (t = e.fingerprint) ? t : d();
             return null != n ? (0, l.s)(n) : null;
         }
-        function J() {
+        function $() {
             return 0 !== K.length && (null != a ? null != i : null != d());
         }
-        function $(e) {
+        function ee(e) {
             let { shouldFlushOnNextTick: t = !1 } = e;
-            null == z && J() && (z = t ? setTimeout(ee, 0) : X(ee, { timeout: A }));
+            null == z && $() && (z = t ? setTimeout(et, 0) : X(et, { timeout: A }));
         }
-        function ee() {
-            if (((z = null), !J())) return Promise.resolve();
+        function et() {
+            if (((z = null), !$())) return Promise.resolve();
             let e = K.slice();
             (K = []), (x = Z(x));
             let t = e.length;
             (k = Math.min(k, t)), (M = Math.max(M, t)), (j = Z(j, t));
-            let n = et(e);
+            let n = en(e);
             return (
                 n.then(
                     () => {
@@ -151,7 +151,7 @@ let H = null != (o = window.requestIdleCallback) ? o : (e) => setImmediate(() =>
                 n
             );
         }
-        function et(e) {
+        function en(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : y,
                 n = Date.now(),
                 r = e.map((e) => m(p({}, e), { properties: m(p({}, e.properties), { client_send_timestamp: n }) })),
@@ -178,7 +178,7 @@ let H = null != (o = window.requestIdleCallback) ? o : (e) => setImmediate(() =>
                     })
             );
         }
-        function en() {
+        function er() {
             let e = {
                 type: f.cN.CLIENT_TELEMETRY,
                 properties: {
@@ -196,12 +196,13 @@ let H = null != (o = window.requestIdleCallback) ? o : (e) => setImmediate(() =>
                     event_queue_batch_max_size: M,
                     event_queue_batch_avg_size: x > 0 ? j / x : 0,
                     science_request_id: V,
-                    science_response: B
+                    science_response: B,
+                    launch_signature: Q()
                 }
             };
-            return F(), et([e], f.tx.CLIENT_TELEMETRY);
+            return F(), en([e], f.tx.CLIENT_TELEMETRY);
         }
-        function er() {
+        function ei() {
             if (null == U) return !1;
             switch (U.type) {
                 case 'timeout':
@@ -215,7 +216,7 @@ let H = null != (o = window.requestIdleCallback) ? o : (e) => setImmediate(() =>
             }
             return (U = null), !0;
         }
-        function ei() {
+        function ea() {
             if (null != U) return;
             let e = () => {
                 let t = 0.1 * I;
@@ -223,7 +224,7 @@ let H = null != (o = window.requestIdleCallback) ? o : (e) => setImmediate(() =>
                     type: 'timeout',
                     id: setTimeout(
                         () => {
-                            en(), e();
+                            er(), e();
                         },
                         Math.max(I + (Math.floor(Math.random() * t * 2) - t), T)
                     )
@@ -233,25 +234,25 @@ let H = null != (o = window.requestIdleCallback) ? o : (e) => setImmediate(() =>
                 type: 'timeout',
                 id: setTimeout(
                     () => {
-                        en(), e();
+                        er(), e();
                     },
                     Math.floor(Math.random() * (S - T) + T)
                 )
             };
         }
-        function ea() {
-            if (!er()) return;
+        function eo() {
+            if (!ei()) return;
         }
         (A = null != O ? O : E),
             (W.handleConnectionOpen = function (e) {
                 let { analyticsToken: t, user: n } = e;
-                return null != t && (i = t), null != n.id && (a = n.id), ei(), $({ shouldFlushOnNextTick: !1 }), !1;
+                return null != t && (i = t), null != n.id && (a = n.id), ea(), ee({ shouldFlushOnNextTick: !1 }), !1;
             }),
             (W.handleConnectionClosed = function () {
-                return ee(), ea(), (i = null), (a = null), !1;
+                return et(), eo(), (i = null), (a = null), !1;
             }),
             (W.handleFingerprint = function () {
-                return ee(), !1;
+                return et(), !1;
             }),
             (W.handleTrack = function (e) {
                 let { event: t, properties: n, flush: i, fingerprint: a, resolve: o } = e;
@@ -272,23 +273,23 @@ let H = null != (o = window.requestIdleCallback) ? o : (e) => setImmediate(() =>
                                 ),
                                 resolve: o
                             },
-                            c = Q(l);
+                            c = J(l);
                         if ((null != c && (l.properties.client_uuid = Y.generate(c)), K.push(l), K.length > b)) {
                             let e = K.length - b;
                             (R = Z(R, e)), (K = K.slice(-b));
                         }
-                        i ? $({ shouldFlushOnNextTick: !0 }) : $({ shouldFlushOnNextTick: !1 });
+                        i ? ee({ shouldFlushOnNextTick: !0 }) : ee({ shouldFlushOnNextTick: !1 });
                     }),
                     !1
                 );
             });
-        class eo extends (t = c.ZP.Store) {
+        class es extends (t = c.ZP.Store) {
             initialize() {
                 null != v && this.waitFor(...v);
             }
             constructor(...e) {
-                super(...e), _(this, 'submitEventsImmediately', et);
+                super(...e), _(this, 'submitEventsImmediately', en);
             }
         }
-        return _(eo, 'displayName', 'AnalyticsTrackingStore'), new eo(n, o);
+        return _(es, 'displayName', 'AnalyticsTrackingStore'), new es(n, o);
     };

@@ -3,21 +3,21 @@ var r = n(255367);
 n(73800);
 var i = n(997638),
     l = n(113570),
-    a = n(482641),
-    o = n(613725);
+    o = n(482641),
+    a = n(613725);
 let s = Object.freeze({
         'voice-conversations': {
             popoutPosition: 'right',
             highPriority: !0,
             textAlign: i.iu.CENTER,
-            media: () => (0, r.jsx)(a.Z, {})
+            media: () => (0, r.jsx)(o.Z, {})
         },
         'writing-messages': {
             popoutPosition: 'top',
             highPriority: !0,
             textAlign: i.iu.CENTER,
             spacing: 10,
-            media: () => (0, r.jsx)(o.Z, {})
+            media: () => (0, r.jsx)(a.Z, {})
         },
         'direct-messages': { popoutPosition: 'right' },
         'create-first-server': {

@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
-    a = n(442837),
-    o = n(692547),
+    o = n(442837),
+    a = n(692547),
     s = n(481060),
     c = n(358221),
     u = n(594190),
@@ -18,7 +18,7 @@ let b = (e) => {
     let { className: t, channelId: n } = e,
         i = (0, p.Go)(),
         b = h.Z.isDecoupledGameClippingEnabled();
-    return (0, a.e7)([d.Z, c.Z, h.Z, u.ZP], () => {
+    return (0, o.e7)([d.Z, c.Z, h.Z, u.ZP], () => {
         var e;
         if (null == n) return !1;
         let t = d.Z.getCurrentUserActiveStream(),
@@ -33,13 +33,13 @@ let b = (e) => {
                   (0, r.jsx)(s.G2e, {
                       icon: s.AlX,
                       shape: s.Dv2.ROUND_LEFT,
-                      color: o.Z.unsafe_rawColors.PRIMARY_500.css,
+                      color: a.Z.unsafe_rawColors.PRIMARY_500.css,
                       className: g.clipBadgeIcon
                   }),
                   (0, r.jsx)(s.IGR, {
                       text: m.intl.string(m.t.pCMkDQ),
                       shape: s.Dv2.ROUND_RIGHT,
-                      color: o.Z.unsafe_rawColors.PRIMARY_500.css,
+                      color: a.Z.unsafe_rawColors.PRIMARY_500.css,
                       className: g.clipBadgeText
                   })
               ]

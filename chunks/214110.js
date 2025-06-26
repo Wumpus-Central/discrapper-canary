@@ -2,8 +2,8 @@ n.d(t, { Z: () => g }), n(388685);
 var r = n(255367),
     i = n(442837),
     l = n(481060),
-    a = n(251794),
-    o = n(386696),
+    o = n(251794),
+    a = n(386696),
     s = n(71619),
     c = n(271383),
     u = n(430824),
@@ -14,26 +14,26 @@ var r = n(255367),
     m = n(388032);
 function g(e) {
     let { channel: t, user: n, guild: g } = e,
-        b = (0, i.e7)([p.default, u.Z, d.Z], () => null != n && null != g && (0, o.F)(g.id, n.id, [p.default, u.Z, d.Z])),
+        b = (0, i.e7)([p.default, u.Z, d.Z], () => null != n && null != g && (0, a.F)(g.id, n.id, [p.default, u.Z, d.Z])),
         [_, y] = (0, s.ZP)(null == n ? void 0 : n.id, t.guild_id),
-        x = (0, i.e7)([c.ZP], () => null != g && null != n && null != c.ZP.getMember(g.id, n.id));
+        C = (0, i.e7)([c.ZP], () => null != g && null != n && null != c.ZP.getMember(g.id, n.id));
     if (!b) return null;
-    let C = 'timeout-user-'.concat(null == n ? void 0 : n.id);
+    let x = 'timeout-user-'.concat(null == n ? void 0 : n.id);
     return (0, r.jsx)(
         h.Z,
         {
-            text: x ? null : y ? m.intl.string(f.default['6uMZbm']) : m.intl.string(f.default['Sgg/uL']),
+            text: C ? null : y ? m.intl.string(f.default['6uMZbm']) : m.intl.string(f.default['Sgg/uL']),
             icon: l.T39,
             onClick: () => {
                 null != n &&
-                    (0, a.z)({
+                    (0, o.z)({
                         guildId: t.guild_id,
                         userId: n.id,
                         modReportId: t.id
                     });
             },
-            disabled: y || !x
+            disabled: y || !C
         },
-        C
+        x
     );
 }

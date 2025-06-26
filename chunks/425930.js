@@ -18,6 +18,6 @@ function n(t, e = {}, a = (0, _.nZ)()) {
             level: 'info',
             tags: u
         },
-        d = (a && a.getClient()) || (0, _.s3)();
-    return d && d.emit('beforeSendFeedback', I, e), a.captureEvent(I, e);
+        R = (a && a.getClient()) || (0, _.s3)();
+    return R && R.emit('beforeSendFeedback', I, e), a.captureEvent(I, e);
 }

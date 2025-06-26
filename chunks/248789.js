@@ -2,8 +2,8 @@ n.d(t, { Y: () => _ }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(286379),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     s = n(797614),
     c = n(699516),
     u = n(378298),
@@ -57,10 +57,10 @@ function b(e, t) {
 }
 function _(e) {
     let { channelId: t, warningId: _, senderId: y } = e,
-        x = i.useCallback(() => {
+        C = i.useCallback(() => {
             (0, u.T)(t, [_]);
         }, [t, _]),
-        C = (0, a.e7)([c.Z], () => c.Z.isBlocked(y)),
+        x = (0, o.e7)([c.Z], () => c.Z.isBlocked(y)),
         v = i.useMemo(
             () => ({
                 channelId: t,
@@ -80,7 +80,7 @@ function _(e) {
             [v]
         ),
         O = i.useCallback(() => {
-            (0, o.ZDy)(
+            (0, a.ZDy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e('49508'), n.e('89650')]).then(n.bind(n, 611446));
                     return (n) => {
@@ -100,13 +100,13 @@ function _(e) {
                 j(p.NM.USER_BANNER_OPEN_SAFETY_TOOLS);
         }, [t, y, _, j]),
         E = i.useCallback(() => {
-            x(), j(p.NM.USER_BANNER_BLOCK_CONFIRM);
-        }, [x, j]),
+            C(), j(p.NM.USER_BANNER_BLOCK_CONFIRM);
+        }, [C, j]),
         I = i.useCallback(() => {
-            x(), j(p.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
-        }, [x, j]),
+            C(), j(p.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
+        }, [C, j]),
         S = i.useCallback(() => {
-            (0, o.ZDy)(async () => {
+            (0, a.ZDy)(async () => {
                 let { default: e } = await n.e('19538').then(n.bind(n, 699783));
                 return (n) => {
                     let { transitionState: i, onClose: l } = n;
@@ -131,19 +131,19 @@ function _(e) {
         warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
         header: m.intl.string(m.t.ZzlB5u),
         description: m.intl.string(m.t['D1aU+v']),
-        onDismiss: x,
+        onDismiss: C,
         buttons: [
             {
                 text: m.intl.string(m.t.Qyu4UF),
-                color: o.zxk.Colors.BRAND,
+                color: a.zxk.Colors.BRAND,
                 onclick: O
             },
-            ...(C
+            ...(x
                 ? []
                 : [
                       {
                           text: m.intl.string(m.t['7q0bNT']),
-                          color: o.zxk.Colors.PRIMARY,
+                          color: a.zxk.Colors.PRIMARY,
                           onclick: S
                       }
                   ])

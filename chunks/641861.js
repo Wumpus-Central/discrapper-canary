@@ -1,10 +1,10 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => x });
 var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
-    a = n(990547),
-    o = n(442837),
+    o = n(990547),
+    a = n(442837),
     s = n(680018),
     c = n(481060),
     u = n(26151),
@@ -17,12 +17,12 @@ var i = n(120356),
     b = n(933557),
     _ = n(354459),
     y = n(388032),
-    x = n(249671);
-function C(e) {
+    C = n(249671);
+function x(e) {
     let { recipientUser: t, voiceChannel: n } = e,
         i = (0, b.ZP)(n),
         s = (0, h.s)(t, 'RingToVoiceBanner', n.id),
-        { userIsInCall: u, isUserRinging: m } = (0, o.cj)([p.Z], () => {
+        { userIsInCall: u, isUserRinging: m } = (0, a.cj)([p.Z], () => {
             let e = null;
             return (
                 s && null != n.id && (e = p.Z.getParticipant(n.id, t.id)),
@@ -32,13 +32,13 @@ function C(e) {
                 }
             );
         }),
-        C = (0, o.e7)([g.Z], () => g.Z.getGuild(n.guild_id)),
-        j = null != C ? C.getIconURL(32, !0) : null,
+        x = (0, a.e7)([g.Z], () => g.Z.getGuild(n.guild_id)),
+        j = null != x ? x.getIconURL(32, !0) : null,
         O = !s || (u && !m);
     return ((0, d.Z)(
         {
-            type: a.ImpressionTypes.PAGE,
-            name: a.ImpressionNames.RING_TO_GUILD_VC_BANNER_SHOWN,
+            type: o.ImpressionTypes.PAGE,
+            name: o.ImpressionNames.RING_TO_GUILD_VC_BANNER_SHOWN,
             properties: {
                 voice_channel_id: null == n ? void 0 : n.id,
                 voice_guild_id: null == n ? void 0 : n.guild_id
@@ -50,33 +50,33 @@ function C(e) {
     O)
         ? null
         : (0, r.jsxs)('div', {
-              className: l()(x.themed, x.chatHeaderBar),
+              className: l()(C.themed, C.chatHeaderBar),
               children: [
                   (0, r.jsxs)('div', {
-                      className: x.chatHeaderBarInfo,
+                      className: C.chatHeaderBarInfo,
                       children: [
                           (0, r.jsx)(f.ZP, {
-                              className: x.mask,
+                              className: C.mask,
                               mask: f.QS.SQUIRCLE,
                               width: 24,
                               height: 24,
                               children:
                                   null == j
                                       ? (0, r.jsx)('div', {
-                                            className: l()(x.guildIcon, x.guildIconWithoutImage),
+                                            className: l()(C.guildIcon, C.guildIconWithoutImage),
                                             children: (0, r.jsx)('div', {
-                                                className: x.guildAcronym,
-                                                children: null == C ? void 0 : C.acronym
+                                                className: C.guildAcronym,
+                                                children: null == x ? void 0 : x.acronym
                                             })
                                         })
                                       : (0, r.jsx)('img', {
-                                            alt: null == C ? void 0 : C.toString(),
+                                            alt: null == x ? void 0 : x.toString(),
                                             src: j,
-                                            className: x.guildIcon
+                                            className: C.guildIcon
                                         })
                           }),
                           (0, r.jsx)(c.Text, {
-                              className: x.chatHeaderBarText,
+                              className: C.chatHeaderBarText,
                               variant: 'text-md/medium',
                               color: 'header-secondary',
                               children: y.intl.format(y.t.f2tNxM, {
@@ -105,7 +105,7 @@ function C(e) {
 function v(e) {
     let { channelId: t, recipientUserId: n, isUserRinging: i } = e,
         l = i ? y.intl.string(y.t.ygslb2) : y.intl.string(y.t['3Hv9qa']),
-        a = i
+        o = i
             ? () => u.Z.stopRinging(t, [n])
             : () => {
                   u.Z.ring(t, [n], 'dm_banner'), (0, m.Kh)(t);
@@ -116,6 +116,6 @@ function v(e) {
         text: l,
         iconPosition: 'start',
         icon: c.gj8,
-        onClick: a
+        onClick: o
     });
 }

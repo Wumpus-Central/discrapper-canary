@@ -2,8 +2,8 @@ n.d(t, { Z: () => y }), n(388685), n(539854);
 var r,
     i,
     l,
-    a = n(442837),
-    o = n(846519),
+    o = n(442837),
+    a = n(846519),
     s = n(570140),
     c = n(278323),
     u = n(158776),
@@ -13,7 +13,7 @@ function p(e, t) {
 }
 let h = {},
     f = {},
-    m = new o.sW(3000, function () {
+    m = new a.sW(3000, function () {
         let e = [];
         for (let [t, n] of Object.entries(f)) e.push(n), (h[t] = n), delete f[t];
         0 !== e.length && c.Z.subscribeActivities(e);
@@ -25,7 +25,7 @@ function g(e) {
 function b() {
     (h = {}), (f = {});
 }
-class _ extends (r = a.ZP.Store) {
+class _ extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(u.Z);
     }
@@ -52,7 +52,7 @@ let y = new _(s.Z, {
                 for (let [n, r] of Object.entries(f)) r.expiresAt < t && (delete f[n], (e = !0));
                 return e;
             })(),
-            { userId: r, applicationId: i, partyId: l, messageId: a, channelId: o, inviteTime: s } = t;
+            { userId: r, applicationId: i, partyId: l, messageId: o, channelId: a, inviteTime: s } = t;
         if (g(t) || s + d.$y < Date.now()) return n;
         let c = p(i, l),
             u = d.$y + Date.now();
@@ -61,8 +61,8 @@ let y = new _(s.Z, {
                 userId: r,
                 applicationId: i,
                 partyId: l,
-                messageId: a,
-                channelId: o,
+                messageId: o,
+                channelId: a,
                 expiresAt: u
             }),
             m.delay(),

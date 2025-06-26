@@ -2,14 +2,14 @@ n.d(t, { Z: () => p }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    a = n.n(l),
-    o = n(772848),
+    o = n.n(l),
+    a = n(772848),
     s = n(481060),
     c = n(481051),
     u = n(978644);
 function d(e) {
-    let { width: t = 24, height: n = 24, isBadged: l = !1, isTyping: a = !1 } = e,
-        [c] = i.useState(() => (0, o.Z)());
+    let { width: t = 24, height: n = 24, isBadged: l = !1, isTyping: o = !1 } = e,
+        [c] = i.useState(() => (0, a.Z)());
     return (0, r.jsxs)('svg', {
         width: t,
         height: n,
@@ -24,7 +24,7 @@ function d(e) {
                             width: '100%',
                             height: '100%'
                         }),
-                        a &&
+                        o &&
                             (0, r.jsx)('g', {
                                 fill: 'black',
                                 transform: 'translate(5.5, '.concat(10.5, ') scale(').concat(11 / 24, ')'),
@@ -58,16 +58,16 @@ function d(e) {
 }
 function p(e) {
     var t;
-    let { className: n, unreadCount: i, mentionCount: l, isTyping: o, canBadge: s } = e,
+    let { className: n, unreadCount: i, mentionCount: l, isTyping: a, canBadge: s } = e,
         p = null != l && l > 0,
         h = null != (t = p ? l : i) ? t : 0,
         f = s && null != i && i > 0;
     return (0, r.jsxs)('div', {
-        className: a()(u.chatIcon, n),
+        className: o()(u.chatIcon, n),
         children: [
             (0, r.jsx)(d, {
                 isBadged: f,
-                isTyping: o
+                isTyping: a
             }),
             f &&
                 (0, r.jsx)(c.Z, {

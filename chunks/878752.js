@@ -2,8 +2,8 @@ n.d(t, { Z: () => v }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(704215),
-    a = n(100527),
-    o = n(906732),
+    o = n(100527),
+    a = n(906732),
     s = n(779618),
     c = n(243778),
     u = n(446226),
@@ -16,11 +16,11 @@ var r = n(255367),
     b = n(320427),
     _ = n(145010),
     y = n(361057),
-    x = n(159909),
-    C = n(531675);
+    C = n(159909),
+    x = n(531675);
 function v(e) {
     let { channel: t, hasActiveStream: n, showRightDivider: v } = e,
-        { analyticsLocations: j } = (0, o.ZP)(a.Z.VOICE_CONTROL_TRAY),
+        { analyticsLocations: j } = (0, a.ZP)(o.Z.VOICE_CONTROL_TRAY),
         O = (0, h.Ou)(t),
         E = i.useRef(null),
         I = (0, u.Z)(),
@@ -35,12 +35,12 @@ function v(e) {
         w = T === l.z.CONSUMABLE_HD_POTION_UPSELL;
     if (null == t || null != I) return null;
     let R = P && Z,
-        M = S && n;
-    return (0, r.jsxs)(o.Gt, {
+        k = S && n;
+    return (0, r.jsxs)(a.Gt, {
         value: j,
         children: [
             (0, r.jsxs)('div', {
-                className: C.voiceEffectsActionBar,
+                className: x.voiceEffectsActionBar,
                 children: [
                     R && (0, r.jsx)(g.Z, { channel: t }),
                     w &&
@@ -55,12 +55,12 @@ function v(e) {
                             channel: t,
                             glow: w
                         }),
-                    M && (0, r.jsx)(b.Z, {}),
-                    M && (0, r.jsx)(_.Z, { channel: t }),
-                    M && (0, r.jsx)(x.Z, {})
+                    k && (0, r.jsx)(b.Z, {}),
+                    k && (0, r.jsx)(_.Z, { channel: t }),
+                    k && (0, r.jsx)(C.Z, {})
                 ]
             }),
-            v && (R || w || O || M) && (0, r.jsx)('div', { className: C.divider })
+            v && (R || w || O || k) && (0, r.jsx)('div', { className: x.divider })
         ]
     });
 }

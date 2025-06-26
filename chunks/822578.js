@@ -1,6 +1,6 @@
 a.d(e, {
     R: () => I,
-    U0: () => R
+    U0: () => d
 });
 var r = a(394798),
     _ = a(101284),
@@ -12,7 +12,7 @@ var r = a(394798),
     E = a(574054),
     l = a(307854),
     u = a(396234);
-function I(t, e, a, I, R, N) {
+function I(t, e, a, I, d, N) {
     var f, A;
     let { normalizeDepth: T = 3, normalizeMaxBreadth: p = 1000 } = t,
         L = {
@@ -31,14 +31,14 @@ function I(t, e, a, I, R, N) {
     })(L, t),
         (f = L),
         (A = h).length > 0 && ((f.sdk = f.sdk || {}), (f.sdk.integrations = [...(f.sdk.integrations || []), ...A])),
-        R && R.emit('applyFrameMetadata', e),
+        d && d.emit('applyFrameMetadata', e),
         void 0 === e.type &&
             (function (t, e) {
                 let a,
                     r = o.n._sentryDebugIds;
                 if (!r) return;
-                let _ = d.get(e);
-                _ ? (a = _) : ((a = new Map()), d.set(e, a));
+                let _ = R.get(e);
+                _ ? (a = _) : ((a = new Map()), R.set(e, a));
                 let n = Object.entries(r).reduce((t, [r, _]) => {
                     let n,
                         o = a.get(r);
@@ -66,7 +66,7 @@ function I(t, e, a, I, R, N) {
         return a.update(e), a;
     })(I, a.captureContext);
     a.mechanism && (0, r.EG)(L, a.mechanism);
-    let P = R ? R.getEventProcessors() : [],
+    let P = d ? d.getEventProcessors() : [],
         g = (0, s.lW)().getScopeData();
     if (N) {
         let t = N.getScopeData();
@@ -129,8 +129,8 @@ function I(t, e, a, I, R, N) {
             : t
     );
 }
-let d = new WeakMap();
-function R(t) {
+let R = new WeakMap();
+function d(t) {
     if (t) {
         var e;
         return (e = t) instanceof l.s || 'function' == typeof e || Object.keys(t).some((t) => N.includes(t)) ? { captureContext: t } : t;

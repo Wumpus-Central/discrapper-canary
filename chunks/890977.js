@@ -2,9 +2,9 @@ n.d(t, { b: () => y }), n(49124);
 var r,
     i,
     l = n(255367),
-    a = n(73800),
-    o = n(120356),
-    s = n.n(o),
+    o = n(73800),
+    a = n(120356),
+    s = n.n(a),
     c = n(500923),
     u = n.n(c),
     d = n(442837),
@@ -14,9 +14,9 @@ var r,
     m = n(449696);
 function g(e) {
     let t = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
-        n = a.useRef(null);
+        n = o.useRef(null);
     return (
-        a.useEffect(() => {
+        o.useEffect(() => {
             let r;
             return (
                 null != n.current &&
@@ -50,11 +50,11 @@ function _(e) {
     });
 }
 let y = (e) => {
-    let { children: t, animationContainerClassName: n, glowClassName: r, trinketsClassName: i, onMount: o } = e;
+    let { children: t, animationContainerClassName: n, glowClassName: r, trinketsClassName: i, onMount: a } = e;
     return (
-        a.useEffect(() => {
-            o();
-        }, [o]),
+        o.useEffect(() => {
+            a();
+        }, [a]),
         (0, l.jsxs)('div', {
             className: n,
             children: [

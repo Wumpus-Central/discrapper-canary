@@ -1,8 +1,8 @@
 n.d(t, { D: () => r });
-var i = n(73800),
-    l = n(430824);
+var l = n(73800),
+    i = n(430824);
 function r(e) {
-    return i.useMemo(
+    return l.useMemo(
         () =>
             'contextless' === e.type
                 ? {
@@ -11,7 +11,7 @@ function r(e) {
                   }
                 : {
                       channel: e.channel,
-                      guild: l.Z.getGuild(e.channel.guild_id)
+                      guild: i.Z.getGuild(e.channel.guild_id)
                   },
         [e]
     );

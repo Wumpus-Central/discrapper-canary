@@ -2,12 +2,12 @@ n.d(t, { Z: () => s });
 var r = n(780384),
     i = n(410030),
     l = n(629935),
-    a = n(436952),
-    o = n(461762);
+    o = n(436952),
+    a = n(461762);
 function s(e) {
     let t = (0, r.wj)((0, i.ZP)()),
-        n = (0, o.Z)(e);
-    if (!a.qM.useExperiment({ location: 'chat_wallpaper_color_mix' }).enabled || null == n) return;
+        n = (0, a.Z)(e);
+    if (!o.qM.useExperiment({ location: 'chat_wallpaper_color_mix' }).enabled || null == n) return;
     let s = {},
         c = n.primary_color;
     if (null != c) {

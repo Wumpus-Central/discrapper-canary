@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(255367),
     i = n(73800),
     l = n(512722),
-    a = n.n(l),
-    o = n(990547),
+    o = n.n(l),
+    a = n(990547),
     s = n(442837),
     c = n(481060),
     u = n(475179),
@@ -19,8 +19,8 @@ var r = n(255367),
     b = n(358221),
     _ = n(795318),
     y = n(258609),
-    x = n(569545),
-    C = n(102172),
+    C = n(569545),
+    x = n(102172),
     v = n(352978),
     j = n(880395),
     O = n(670188),
@@ -34,8 +34,8 @@ var r = n(255367),
     A = n(248400),
     w = n(981631),
     R = n(354459),
-    M = n(820573);
-function k(e) {
+    k = n(820573);
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -80,21 +80,21 @@ function D(e, t) {
 }
 let L = 16 / 9,
     U = (e) => {
-        let { stageParticipant: t, rtcParticipant: n, channel: l, guildId: a, user: o, width: s, isModerator: u, onContextMenu: d, inPopout: p } = e,
+        let { stageParticipant: t, rtcParticipant: n, channel: l, guildId: o, user: a, width: s, isModerator: u, onContextMenu: d, inPopout: p } = e,
             h = i.useRef(null),
             { reducedMotion: f } = i.useContext(c.Sfi),
             { blocked: m, ignored: g, id: b } = t;
         return (0, r.jsx)(O.Z, {
             targetElementRef: h,
-            user: o,
-            guildId: a,
+            user: a,
+            guildId: o,
             channelId: l.id,
             clickTrap: !0,
             children: (e) =>
                 (0, r.jsx)(
                     c.P3F,
                     D(
-                        k(
+                        M(
                             {
                                 innerRef: h,
                                 onContextMenu: (e) => d(n, e)
@@ -110,7 +110,7 @@ let L = 16 / 9,
                                     blocked: m,
                                     ignored: g,
                                     channel: l,
-                                    className: M.tile,
+                                    className: k.tile,
                                     inCall: !0,
                                     inPopout: p,
                                     pulseSpeakingIndicator: !f.enabled,
@@ -126,7 +126,7 @@ let L = 16 / 9,
         });
     },
     B = (e) => {
-        let { stageParticipant: t, rtcParticipant: n, channel: l, width: a, isModerator: o, onContextMenu: d, inPopout: h } = e,
+        let { stageParticipant: t, rtcParticipant: n, channel: l, width: o, isModerator: a, onContextMenu: d, inPopout: h } = e,
             { reducedMotion: f } = i.useContext(c.Sfi),
             { id: m, blocked: g, ignored: _ } = t,
             j = (0, s.Wu)([E.Z], () => E.Z.getAllActiveStreams(), []),
@@ -136,9 +136,9 @@ let L = 16 / 9,
             })),
             N = i.useCallback(
                 (e, t) => {
-                    if (e.type === R.fO.STREAM && 0 === j.filter((t) => (0, x.V9)(t) === e.id && t.state !== w.jm8.ENDED).length) {
-                        if (!(0, C.p9)(l, Z.Z, S.Z, P.Z, y.Z)[0]) return;
-                        (0, p.rn)((0, x.my)(e.id), { forceMultiple: t.shiftKey });
+                    if (e.type === R.fO.STREAM && 0 === j.filter((t) => (0, C.V9)(t) === e.id && t.state !== w.jm8.ENDED).length) {
+                        if (!(0, x.p9)(l, Z.Z, S.Z, P.Z, y.Z)[0]) return;
+                        (0, p.rn)((0, C.my)(e.id), { forceMultiple: t.shiftKey });
                     }
                     (null == O ? void 0 : O.id) === e.id ? (I ? (u.Z.selectParticipant(l.id, null), u.Z.updateStageStreamSize(l.id, !1)) : u.Z.updateStageStreamSize(l.id, !0)) : (u.Z.updateStageStreamSize(l.id, !1), u.Z.selectParticipant(l.id, e.id));
                 },
@@ -153,14 +153,14 @@ let L = 16 / 9,
                 blocked: g,
                 ignored: _,
                 channel: l,
-                className: M.tile,
+                className: k.tile,
                 inCall: !0,
                 inPopout: h,
                 onClick: N,
                 onContextMenu: d,
                 pulseSpeakingIndicator: !f.enabled,
-                width: a,
-                children: o && n.type === R.fO.USER && (0, r.jsx)(A.Z, {})
+                width: o,
+                children: a && n.type === R.fO.USER && (0, r.jsx)(A.Z, {})
             },
             m
         );
@@ -171,24 +171,24 @@ let L = 16 / 9,
             { newestAnalyticsLocation: u } = (0, m.ZP)(f.Z.STAGE_TILE),
             p = (0, h.bp)(),
             y = l.getGuildId(),
-            x = I.default.getId();
-        a()(null != y, 'Channel cannot be guildless');
-        let { user: C } = i,
+            C = I.default.getId();
+        o()(null != y, 'Channel cannot be guildless');
+        let { user: x } = i,
             v = (0, s.e7)([b.Z], () => b.Z.getParticipant(l.id, i.id), [l.id, i.id]),
-            O = (0, s.e7)([N.ZP], () => N.ZP.isModerator(C.id, l.id), [l.id, C.id]);
+            O = (0, s.e7)([N.ZP], () => N.ZP.isModerator(x.id, l.id), [l.id, x.id]);
         if (null == v || v.type === R.fO.ACTIVITY) return null;
         let E = (e) => {
                 (0, g.h)({
-                    type: o.ImpressionTypes.MENU,
-                    name: o.ImpressionNames.CALL_TILE_CONTEXT_MENU,
+                    type: a.ImpressionTypes.MENU,
+                    name: a.ImpressionNames.CALL_TILE_CONTEXT_MENU,
                     properties: {
                         location: 'StageTile',
-                        is_tile_owner: C.id === x,
+                        is_tile_owner: x.id === C,
                         tile_type: e
                     }
                 });
             },
-            S = (e, t, i, a) => {
+            S = (e, t, i, o) => {
                 switch (e.type) {
                     case R.fO.HIDDEN_STREAM:
                     case R.fO.STREAM:
@@ -200,13 +200,13 @@ let L = 16 / 9,
                                     return (n) =>
                                         (0, r.jsx)(
                                             t,
-                                            D(k({}, n), {
+                                            D(M({}, n), {
                                                 stream: e.stream,
                                                 appContext: p,
                                                 exitFullscreen: () => {},
                                                 onInteraction: (0, _.u)('StreamContextMenu', u, {
-                                                    entrypoint: a,
-                                                    targetUserId: C.id,
+                                                    entrypoint: o,
+                                                    targetUserId: x.id,
                                                     tileType: R.TH.STREAM
                                                 })
                                             })
@@ -218,12 +218,12 @@ let L = 16 / 9,
                     case R.fO.USER:
                     default:
                         if ((E(R.TH.USER), i))
-                            return (0, j.D)(t, C, l, { context: p }, (e, t) =>
+                            return (0, j.D)(t, x, l, { context: p }, (e, t) =>
                                 (0, _.o)({
                                     menuName: e,
                                     menuItemProps: t,
                                     entrypoint: R.A5.THREE_DOT,
-                                    targetUserId: C.id,
+                                    targetUserId: x.id,
                                     location: u,
                                     tileType: R.TH.USER
                                 })
@@ -235,15 +235,15 @@ let L = 16 / 9,
                                 return (t) =>
                                     (0, r.jsx)(
                                         e,
-                                        D(k({}, t), {
-                                            user: C,
+                                        D(M({}, t), {
+                                            user: x,
                                             guildId: y,
                                             channel: l,
                                             showMediaItems: !0,
                                             showStageChannelItems: !0,
                                             showChatItems: !1,
                                             onInteraction: (0, _.u)('GuildChannelUserContextMenu', u, {
-                                                targetUserId: C.id,
+                                                targetUserId: x.id,
                                                 tileType: R.TH.USER
                                             })
                                         })
@@ -259,7 +259,7 @@ let L = 16 / 9,
                   rtcParticipant: v,
                   channel: l,
                   guildId: y,
-                  user: C,
+                  user: x,
                   width: c,
                   isModerator: O,
                   onContextMenu: S,
@@ -270,7 +270,7 @@ let L = 16 / 9,
                   rtcParticipant: v,
                   channel: l,
                   guildId: y,
-                  user: C,
+                  user: x,
                   width: c,
                   isModerator: O,
                   onContextMenu: S,

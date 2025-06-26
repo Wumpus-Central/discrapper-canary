@@ -1,17 +1,17 @@
-n.d(t, { g: () => s });
-var i = n(73800),
-    l = n(442837),
+n.d(t, { g: () => c });
+var l = n(73800),
+    i = n(442837),
     r = n(695346),
-    o = n(115130),
-    a = n(566620),
-    c = n(790920);
-function s() {
-    let e = (0, c.z)(),
+    a = n(115130),
+    o = n(566620),
+    s = n(790920);
+function c() {
+    let e = (0, s.z)(),
         t = r.Sb.getSetting(),
-        n = (0, l.e7)([o.Z], () => o.Z.getFetchState(), []);
+        n = (0, i.e7)([a.Z], () => a.Z.getFetchState(), []);
     return (
-        i.useEffect(() => {
-            e && t && n === o.O.INITIALIZED && (0, a.$h)();
+        l.useEffect(() => {
+            e && t && n === a.O.INITIALIZED && (0, o.$h)();
         }, [e, n, t]),
         null
     );

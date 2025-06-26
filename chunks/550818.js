@@ -2,8 +2,8 @@ n.d(t, { Z: () => E });
 var r = n(255367),
     i = n(73800),
     l = n(597312),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     s = n(410030),
     c = n(100527),
     u = n(906732),
@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(502762),
     _ = n(848780),
     y = n(907179),
-    x = n(228168),
-    C = n(388032),
+    C = n(228168),
+    x = n(388032),
     v = n(443773),
     j = n(268293);
 function O(e) {
@@ -49,7 +49,7 @@ function E(e) {
     let { user: t, channel: n, onHide: E } = e,
         I = (0, m.ZP)(t.id),
         S = (0, s.ZP)(),
-        P = (0, a.e7)([d.Z], () => d.Z.isBlocked(t.id)),
+        P = (0, o.e7)([d.Z], () => d.Z.isBlocked(t.id)),
         { analyticsLocations: Z } = (0, u.ZP)(P ? c.Z.BLOCKED_PROFILE_PANEL : c.Z.IGNORED_PROFILE_PANEL),
         N = (0, h.ZB)({
             layout: 'SIDEBAR',
@@ -68,7 +68,7 @@ function E(e) {
                 ref: T,
                 user: t,
                 displayProfile: I,
-                themeType: x.lY.SIDEBAR,
+                themeType: C.lY.SIDEBAR,
                 themeOverride: S,
                 children: (0, r.jsx)(l.u2, {
                     children: (0, r.jsxs)('div', {
@@ -87,17 +87,17 @@ function E(e) {
                                         className: v.headerContainer,
                                         children: [
                                             (0, r.jsx)(g.Z, { user: t }),
-                                            (0, r.jsx)(o.X6q, {
+                                            (0, r.jsx)(a.X6q, {
                                                 variant: 'heading-lg/bold',
-                                                children: C.intl.string(C.t.b33pLC)
+                                                children: x.intl.string(x.t.b33pLC)
                                             }),
-                                            (0, r.jsx)(o.Text, {
+                                            (0, r.jsx)(a.Text, {
                                                 variant: 'text-sm/medium',
-                                                children: C.intl.format(P ? C.t['8F+WNz'] : C.t['/cZp5u'], { username: p.ZP.getName(n.guild_id, n.id, t) })
+                                                children: x.intl.format(P ? x.t['8F+WNz'] : x.t['/cZp5u'], { username: p.ZP.getName(n.guild_id, n.id, t) })
                                             })
                                         ]
                                     }),
-                                    (0, r.jsxs)(o.Kqy, {
+                                    (0, r.jsxs)(a.Kqy, {
                                         align: 'center',
                                         children: [
                                             (0, r.jsx)(y.Z, {

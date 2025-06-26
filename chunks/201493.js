@@ -2,8 +2,8 @@ n.d(t, { Z: () => O }), n(388685), n(781311);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    a = n(481060),
-    o = n(570140),
+    o = n(481060),
+    a = n(570140),
     s = n(45114),
     c = n(147754),
     u = n(306680),
@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(102888),
     _ = n(65839),
     y = n(453879),
-    x = n(408310),
-    C = n(75666),
+    C = n(408310),
+    x = n(75666),
     v = n(981631),
     j = n(400816);
 let O = (e) => {
@@ -31,7 +31,7 @@ let O = (e) => {
             isLoading: N
         } = (0, l.cj)([m.Z], () => {
             let e = m.Z.getCurrentCategoryId(O.id),
-                t = m.Z.getDirectoryEntries(O.id, e === C.AR.ALL ? null : e),
+                t = m.Z.getDirectoryEntries(O.id, e === x.AR.ALL ? null : e),
                 n = m.Z.getDirectoryCategoryCounts(O.id);
             return {
                 currentCategoryId: e,
@@ -45,7 +45,7 @@ let O = (e) => {
         () => () => {
             let e = u.ZP.lastMessageId(O.id);
             null != e &&
-                o.Z.wait(() => {
+                a.Z.wait(() => {
                     (0, s.In)(
                         O.id,
                         {
@@ -73,7 +73,7 @@ let O = (e) => {
                 searchResults: f.Z.getSearchResults(O.id, e)
             };
         }),
-        [M, k] = i.useState(A),
+        [k, M] = i.useState(A),
         D = '' !== A,
         { showHubEventsList: L } = c.Z.useExperiment(
             {
@@ -92,7 +92,7 @@ let O = (e) => {
     }),
         i.useEffect(() => {
             let { mostRecentQuery: e, showHubEventsList: t } = B.current;
-            h.c$(O.id), h.YZ(O.id), t && p.c(O.id), k(e);
+            h.c$(O.id), h.YZ(O.id), t && p.c(O.id), M(e);
         }, [O.id]),
         i.useEffect(() => {
             d.default.track(v.rMx.GUILD_DIRECTORY_CHANNEL_VIEWED, {
@@ -103,7 +103,7 @@ let O = (e) => {
         }, [O.id, E.id, I]);
     let F = (0, g.G)(O)
             ? () => {
-                  (0, a.ZDy)(async () => {
+                  (0, o.ZDy)(async () => {
                       let { default: e } = await n.e('79764').then(n.bind(n, 533202));
                       return (t) => {
                           var n, i;
@@ -139,7 +139,7 @@ let O = (e) => {
                                       directoryGuildName: E.name,
                                       directoryGuildId: E.id,
                                       directoryChannelId: O.id,
-                                      currentCategoryId: I === C.AR.ALL ? null : I
+                                      currentCategoryId: I === x.AR.ALL ? null : I
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -160,21 +160,21 @@ let O = (e) => {
               }
             : void 0,
         G = (e) => {
-            0 !== M.trim().length &&
+            0 !== k.trim().length &&
                 e.charCode === v.yXg.ENTER &&
-                (h.Rq(O.id, M),
+                (h.Rq(O.id, k),
                 d.default.track(v.rMx.GUILD_DIRECTORY_SEARCH, {
                     directory_channel_id: O.id,
                     directory_guild_id: E.id
                 }));
         },
         H = () => {
-            k(''), h.So(O.id);
+            M(''), h.So(O.id);
         };
     return D
-        ? (0, r.jsx)(x.Z, {
-              searchQuery: M,
-              setSearchQuery: k,
+        ? (0, r.jsx)(C.Z, {
+              searchQuery: k,
+              setSearchQuery: M,
               mostRecentQuery: A,
               handleSearchKeyPress: G,
               handleClearSearch: H,
@@ -185,7 +185,7 @@ let O = (e) => {
         : null == T && null == I
           ? (0, r.jsx)('div', {
                 className: j.pageContainer,
-                children: (0, r.jsx)(a.$jN, { className: j.spinner })
+                children: (0, r.jsx)(o.$jN, { className: j.spinner })
             })
           : (null == T ? void 0 : T.length) === 0 && null == I
             ? (0, r.jsx)('div', {
@@ -197,8 +197,8 @@ let O = (e) => {
               })
             : (0, r.jsx)(_.Z, {
                   channel: O,
-                  searchQuery: M,
-                  setSearchQuery: k,
+                  searchQuery: k,
+                  setSearchQuery: M,
                   handleSearchKeyPress: G,
                   handleClearSearch: H,
                   handleCreateOrAddGuild: F,

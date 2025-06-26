@@ -2,8 +2,8 @@ n.d(t, { a: () => f }), n(388685);
 var r = n(392711),
     i = n.n(r),
     l = n(442837),
-    a = n(544891),
-    o = n(570140),
+    o = n(544891),
+    a = n(570140),
     s = n(375954),
     c = n(306680),
     u = n(748902),
@@ -16,7 +16,7 @@ function f(e) {
         {
             loaded: r,
             message: i,
-            error: a
+            error: o
         } = (0, l.cj)(
             [u.Z, s.Z, c.ZP],
             () => {
@@ -35,12 +35,12 @@ function f(e) {
             },
             [n]
         ),
-        o = (0, l.e7)([u.Z], () => u.Z.shouldLoadMessageRequestPreview(n), [n]);
+        a = (0, l.e7)([u.Z], () => u.Z.shouldLoadMessageRequestPreview(n), [n]);
     return (
-        !r && null == i && o && ((t = n), p.add(t), null == h && (h = setTimeout(m, 0))),
+        !r && null == i && a && ((t = n), p.add(t), null == h && (h = setTimeout(m, 0))),
         {
             loaded: r,
-            error: a,
+            error: o,
             message: i
         }
     );
@@ -55,18 +55,18 @@ async function m() {
 async function g() {
     let e = Array.from(p).slice(0, 25);
     try {
-        let t = await a.tn.get({
+        let t = await o.tn.get({
             url: d.ANM.MESSAGE_REQUESTS_SUPPLEMENTAL_DATA,
             query: { channel_ids: e },
             rejectWithError: !0
         });
-        o.Z.dispatch({
+        a.Z.dispatch({
             type: 'LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS',
             requestedChannelIds: e,
             supplementalData: t.body
         });
     } catch (t) {
-        o.Z.dispatch({
+        a.Z.dispatch({
             type: 'LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_ERROR',
             requestedChannelIds: e
         });

@@ -2,11 +2,11 @@ n.d(t, { W: () => s });
 var r = n(255367),
     i = n(442837),
     l = n(481060),
-    a = n(9156),
-    o = n(388032);
+    o = n(9156),
+    a = n(388032);
 let s = (e) => {
     let { className: t, channel: s, user: c } = e,
-        u = (0, i.e7)([a.ZP], () => a.ZP.isChannelMuted(null, s.id));
+        u = (0, i.e7)([o.ZP], () => o.ZP.isChannelMuted(null, s.id));
     return c.bot
         ? (0, r.jsx)(l.zxk, {
               className: t,
@@ -46,7 +46,7 @@ let s = (e) => {
                           );
                   });
               },
-              children: u ? o.intl.string(o.t.YqAjX1) : o.intl.string(o.t['w4m94+'])
+              children: u ? a.intl.string(a.t.YqAjX1) : a.intl.string(a.t['w4m94+'])
           })
         : null;
 };

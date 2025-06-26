@@ -2,8 +2,8 @@ n.d(t, { M: () => v }), n(953529);
 var r = n(255367),
     i = n(73800),
     l = n(286379),
-    a = n(481060),
-    o = n(87051),
+    o = n(481060),
+    a = n(87051),
     s = n(797614),
     c = n(681678),
     u = n(819557),
@@ -16,17 +16,17 @@ var r = n(255367),
     b = n(276060),
     _ = n(870991),
     y = n(981631),
-    x = n(134612),
-    C = n(388032);
+    C = n(134612),
+    x = n(388032);
 function v(e) {
     let { channelId: t, warningId: v, senderId: j } = e,
         O = (0, _.E4)(),
         E = i.useCallback(() => {
             (0, p.T)(t, [v]);
         }, [t, v]),
-        I = (0, b.t)({ location: x.zr }),
+        I = (0, b.t)({ location: C.zr }),
         S = (e) => {
-            o.Z.updateChannelOverrideSettings(null, t, { muted: !0 }, g.ZB.Muted),
+            a.Z.updateChannelOverrideSettings(null, t, { muted: !0 }, g.ZB.Muted),
                 c.Z.showMuteSuccessToast(j, t),
                 (0, f.qc)({
                     channelId: t,
@@ -38,7 +38,7 @@ function v(e) {
                 E();
         },
         P = () => {
-            (0, a.ZDy)(async () => {
+            (0, o.ZDy)(async () => {
                 let { default: e } = await n.e('59385').then(n.bind(n, 480884));
                 return (n) => {
                     let { transitionState: i, onClose: l } = n;
@@ -48,7 +48,7 @@ function v(e) {
                         channelId: t,
                         warningId: v,
                         senderId: j,
-                        description: C.intl.string(C.t['/uid3t']),
+                        description: x.intl.string(x.t['/uid3t']),
                         safetyTipRows: O.map((e, t) =>
                             (0, r.jsx)(
                                 u.q,
@@ -65,9 +65,9 @@ function v(e) {
                             (0, r.jsx)(
                                 d.ZP,
                                 {
-                                    title: C.intl.string(C.t.ftIK2N),
-                                    description: C.intl.string(C.t.w2ve0t),
-                                    buttonText: C.intl.string(C.t.ftIK2N),
+                                    title: x.intl.string(x.t.ftIK2N),
+                                    description: x.intl.string(x.t.w2ve0t),
+                                    buttonText: x.intl.string(x.t.ftIK2N),
                                     onButtonPress: () => {
                                         S(f.NM.USER_MODAL_MUTE), l();
                                     }
@@ -75,7 +75,7 @@ function v(e) {
                                 'likely-ato-mute'
                             )
                         ],
-                        learnMore: (0, r.jsx)(a.P3F, {
+                        learnMore: (0, r.jsx)(o.P3F, {
                             onClick: () =>
                                 (0, f.qc)({
                                     channelId: t,
@@ -84,10 +84,10 @@ function v(e) {
                                     warningType: h.pj.LIKELY_ATO,
                                     cta: f.NM.USER_MODAL_LEARN_MORE
                                 }),
-                            children: (0, r.jsx)(a.X6q, {
+                            children: (0, r.jsx)(o.X6q, {
                                 variant: 'heading-sm/medium',
                                 color: 'text-link',
-                                children: C.intl.format(C.t.UkH129, { learnMoreLink: _.D8 })
+                                children: x.intl.format(x.t.UkH129, { learnMoreLink: _.D8 })
                             })
                         })
                     });
@@ -110,13 +110,13 @@ function v(e) {
               warningId: v,
               senderId: j,
               warningType: h.pj.LIKELY_ATO,
-              header: C.intl.string(C.t.R8UsiI),
-              description: C.intl.string(C.t.lI8nQk),
+              header: x.intl.string(x.t.R8UsiI),
+              description: x.intl.string(x.t.lI8nQk),
               onDismiss: E,
               buttons: [
                   {
-                      text: C.intl.string(C.t.tC1pvL),
-                      color: a.zxk.Colors.BRAND,
+                      text: x.intl.string(x.t.tC1pvL),
+                      color: o.zxk.Colors.BRAND,
                       onclick: () => {
                           P(),
                               (0, f.qc)({
@@ -129,8 +129,8 @@ function v(e) {
                       }
                   },
                   {
-                      text: C.intl.string(C.t.ftIK2N),
-                      color: a.zxk.Colors.PRIMARY,
+                      text: x.intl.string(x.t.ftIK2N),
+                      color: o.zxk.Colors.PRIMARY,
                       onclick: () => S(f.NM.USER_BANNER_MUTE)
                   }
               ]

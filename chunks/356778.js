@@ -1,6 +1,6 @@
 n.d(t, {
     II: () => f,
-    Ow: () => C,
+    Ow: () => x,
     P2: () => O,
     mw: () => m,
     z0: () => v
@@ -10,8 +10,8 @@ n.d(t, {
 var r,
     i = n(73800),
     l = n(94171),
-    a = n(362383),
-    o = n(731965),
+    o = n(362383),
+    a = n(731965),
     s = n(570140),
     c = n(110924),
     u = n(840877),
@@ -57,17 +57,17 @@ let b = {
         messageCount: f,
         lastMessage: null
     },
-    _ = (0, a.F)(() => new Map()),
+    _ = (0, o.F)(() => new Map()),
     y = (e, t) => {
-        (0, o.j)(() => {
+        (0, a.j)(() => {
             _.setState((n) => {
                 let r = n.get(e);
                 return null == r ? n.set(e, h({}, b, t)) : n.set(e, h({}, r, t)), n;
             });
         });
     },
-    x = (e) => _((t) => t.get(e), l.X);
-function C(e, t, n) {
+    C = (e) => _((t) => t.get(e), l.X);
+function x(e, t, n) {
     let r = null != n ? n : {};
     switch (t) {
         case 'links':
@@ -101,17 +101,17 @@ function C(e, t, n) {
 }
 function v(e, t, n) {
     return (function (e, t, n, r) {
-        let { addtionalQuery: l, shouldDispatch: a = !1 } = r,
-            o = i.useMemo(() => g(e, t, n, l), [e, t, n, l]),
-            h = x(o),
-            m = (0, c.Z)(o),
+        let { addtionalQuery: l, shouldDispatch: o = !1 } = r,
+            a = i.useMemo(() => g(e, t, n, l), [e, t, n, l]),
+            h = C(a),
+            m = (0, c.Z)(a),
             [_, v] = i.useState({});
         return (
             i.useEffect(() => {
-                if (m !== o) {
-                    let r = C(e, n, l),
+                if (m !== a) {
+                    let r = x(e, n, l),
                         i = new u.ZP(t, p.aib.GUILD, r);
-                    y(o, {
+                    y(a, {
                         searchFetcher: i,
                         messageCount: f,
                         lastMessage: null
@@ -122,14 +122,14 @@ function v(e, t, n) {
                                     let n = e.body,
                                         r = n.messages[0];
                                     if (
-                                        (y(o, {
+                                        (y(a, {
                                             searchFetcher: i,
                                             result: n,
                                             messageCount: n.total_results,
                                             lastMessage: r
                                         }),
                                         v({}),
-                                        a)
+                                        o)
                                     ) {
                                         var l, c;
                                         s.Z.dispatch({
@@ -150,7 +150,7 @@ function v(e, t, n) {
                                 },
                                 (e) => {},
                                 (e) => {
-                                    y(o, {
+                                    y(a, {
                                         messageCount: 0,
                                         lastMessage: null
                                     }),
@@ -160,33 +160,33 @@ function v(e, t, n) {
                         });
                 }
                 return () => {};
-            }, [e, t, h, o, n, l, m, a]),
+            }, [e, t, h, a, n, l, m, o]),
             null != h ? h : b
         );
     })(e, t, 'messages', n);
 }
 function j(e, t, n, r) {
     let l = i.useMemo(() => g(e, t, n, r, !0), [e, t, n, r]),
-        a = x(l),
-        o = (0, c.Z)(l);
+        o = C(l),
+        a = (0, c.Z)(l);
     return {
         key: l,
-        previousKey: o,
-        state: a
+        previousKey: a,
+        state: o
     };
 }
 function O(e, t, n) {
-    var r, l, a;
-    let { key: o, state: s } = j(e, t, 'messages', n),
+    var r, l, o;
+    let { key: a, state: s } = j(e, t, 'messages', n),
         { key: c, state: d } = j(e, t, 'links', n),
         { key: h, state: m } = j(e, t, 'media', n),
-        g = i.useMemo(() => C(e, 'all_counts', n), [e, n]),
+        g = i.useMemo(() => x(e, 'all_counts', n), [e, n]),
         b = i.useMemo(
             () => ({
                 tabs: {
-                    messages: C(e, 'messages', g),
-                    links: C(e, 'links', g),
-                    media: C(e, 'media', g)
+                    messages: x(e, 'messages', g),
+                    links: x(e, 'links', g),
+                    media: x(e, 'media', g)
                 },
                 track_exact_total_hits: !0,
                 include_nsfw: !0
@@ -198,11 +198,11 @@ function O(e, t, n) {
                 let t = e.messages,
                     n = e.links,
                     r = e.media;
-                y(o, t), y(c, n), y(h, r);
+                y(a, t), y(c, n), y(h, r);
             },
-            [c, h, o]
+            [c, h, a]
         ),
-        x = i.useCallback(
+        C = i.useCallback(
             (e) => {
                 _({
                     messages: e,
@@ -214,7 +214,7 @@ function O(e, t, n) {
         );
     i.useEffect(() => {
         let e = new u.tJ(t, p.aib.GUILD, g, b);
-        x({
+        C({
             searchTabFetcher: e,
             messageCount: f,
             lastMessage: null
@@ -228,12 +228,12 @@ function O(e, t, n) {
                 t = null;
             }
             if (null == t)
-                x({
+                C({
                     messageCount: 0,
                     lastMessage: null
                 });
             else {
-                var n, r, i, l, a, o;
+                var n, r, i, l, o, a;
                 let e = t.tabs.messages,
                     s = t.tabs.links,
                     c = t.tabs.media;
@@ -247,8 +247,8 @@ function O(e, t, n) {
                         lastMessage: null != (l = null == s ? void 0 : s.messages[0]) ? l : null
                     },
                     media: {
-                        messageCount: null != (a = null == c ? void 0 : c.total_results) ? a : 0,
-                        lastMessage: null != (o = null == c ? void 0 : c.messages[0]) ? o : null
+                        messageCount: null != (o = null == c ? void 0 : c.total_results) ? o : 0,
+                        lastMessage: null != (a = null == c ? void 0 : c.messages[0]) ? a : null
                     }
                 });
             }
@@ -257,11 +257,11 @@ function O(e, t, n) {
         return () => {
             e.cancel(), clearTimeout(n);
         };
-    }, [e, t, g, b, x, _]);
+    }, [e, t, g, b, C, _]);
     let [v, O] = i.useState({});
     return {
         messagesCount: null != (r = null == s ? void 0 : s.messageCount) ? r : f,
         linksCount: null != (l = null == d ? void 0 : d.messageCount) ? l : f,
-        mediaCount: null != (a = null == m ? void 0 : m.messageCount) ? a : f
+        mediaCount: null != (o = null == m ? void 0 : m.messageCount) ? o : f
     };
 }

@@ -2,8 +2,8 @@ n.d(t, { Z: () => u }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    a = n.n(l),
-    o = n(481060),
+    o = n.n(l),
+    a = n(481060),
     s = n(785717),
     c = n(507710);
 function u(e) {
@@ -11,12 +11,12 @@ function u(e) {
         { trackUserProfileAction: p } = (0, s.KZ)(),
         h = i.useId(),
         [f, m] = i.useState(!1),
-        g = f ? o.CJ0 : o.Fbu;
+        g = f ? a.CJ0 : a.Fbu;
     return (0, r.jsxs)('section', {
         className: c.section,
         children: [
-            (0, r.jsxs)(o.P3F, {
-                className: a()(c.header, c.clickable),
+            (0, r.jsxs)(a.P3F, {
+                className: o()(c.header, c.clickable),
                 'aria-controls': h,
                 'aria-expanded': f,
                 onClick: () => {
@@ -29,7 +29,7 @@ function u(e) {
                             null == d || d());
                 },
                 children: [
-                    (0, r.jsxs)(o.X6q, {
+                    (0, r.jsxs)(a.X6q, {
                         variant: 'text-sm/medium',
                         color: 'text-default',
                         children: [n, ' \u2014 ', l.length]
@@ -41,7 +41,7 @@ function u(e) {
                 (0, r.jsx)('ul', {
                     id: h,
                     hidden: !f,
-                    className: a()(c.list, u),
+                    className: o()(c.list, u),
                     children: l
                 })
         ]

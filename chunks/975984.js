@@ -10,12 +10,12 @@ n.d(t, {
 var r = n(512722),
     i = n.n(r),
     l = n(392711),
-    a = n.n(l),
-    o = n(75666);
+    o = n.n(l),
+    a = n(75666);
 function s(e) {
-    var t, n, r, l, a, s, c;
+    var t, n, r, l, o, s, c;
     return (
-        i()(e.type === o.C2.GUILD, 'Directory entries must be connected to a guild!'),
+        i()(e.type === a.C2.GUILD, 'Directory entries must be connected to a guild!'),
         {
             channelId: e.directory_channel_id,
             guildId: e.entity_id,
@@ -28,7 +28,7 @@ function s(e) {
             icon: null == (n = e.guild) ? void 0 : n.icon,
             splash: null == (r = e.guild) ? void 0 : r.splash,
             features: new Set(null == (l = e.guild) ? void 0 : l.features),
-            approximateMemberCount: null == (a = e.guild) ? void 0 : a.approximate_member_count,
+            approximateMemberCount: null == (o = e.guild) ? void 0 : o.approximate_member_count,
             approximatePresenceCount: null == (s = e.guild) ? void 0 : s.approximate_presence_count,
             featurableInDirectory: null == (c = e.guild) ? void 0 : c.featurable_in_directory
         }
@@ -36,11 +36,11 @@ function s(e) {
 }
 let c = 5;
 function u(e) {
-    return a().orderBy(e, [(e) => e.approximateMemberCount], ['desc']);
+    return o().orderBy(e, [(e) => e.approximateMemberCount], ['desc']);
 }
 function d(e) {
     var t;
-    return ((t = e.filter((e) => e.featurableInDirectory)), a().orderBy(t, [(e) => e.createdAt], ['desc'])).slice(0, c);
+    return ((t = e.filter((e) => e.featurableInDirectory)), o().orderBy(t, [(e) => e.createdAt], ['desc'])).slice(0, c);
 }
 function p(e) {
     return u(e);
