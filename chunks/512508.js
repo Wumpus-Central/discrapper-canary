@@ -1,6 +1,6 @@
 n.d(t, {
     PM: () => M,
-    WG: () => I,
+    WG: () => P,
     ZP: () => k
 }),
     n(388685),
@@ -92,10 +92,10 @@ let D = (0, p.hQ)(),
 function R(e) {
     return 1 === e.type;
 }
-function P(e) {
+function I(e) {
     return 0 === e.type;
 }
-function I(e) {
+function P(e) {
     let t = ''.concat(!e.name.includes(j.CR) ? '@' : '').concat(e.name);
     return {
         tag: {
@@ -189,7 +189,7 @@ function T(e, t, n) {
               },
               e.record.id
           )
-        : P(e)
+        : I(e)
           ? (0, r.jsx)(
                 E,
                 {
@@ -215,7 +215,7 @@ function k(e) {
                             null != t && (r[e] = M(t));
                         }),
                         t.forEach((e) => {
-                            e in n && (r[e] = I(n[e]));
+                            e in n && (r[e] = P(n[e]));
                         }),
                         r
                     );
@@ -250,7 +250,7 @@ function k(e) {
                     n = t
                         .filter((e) => {
                             let { row: t } = e;
-                            return P(t);
+                            return I(t);
                         })
                         .map((e) => e.row.record.id),
                     r = t
@@ -280,7 +280,7 @@ function k(e) {
         W = l.useCallback(
             (e) => {
                 let t = H({}, j);
-                P(e) ? (t[e.id] = M(e.record)) : R(e) && (t[e.id] = I(e.record)),
+                I(e) ? (t[e.id] = M(e.record)) : R(e) && (t[e.id] = P(e.record)),
                     q(t),
                     S(''),
                     G(),
@@ -318,7 +318,7 @@ function k(e) {
             },
             [t, W, F]
         ),
-        K = l.useMemo(
+        J = l.useMemo(
             () =>
                 v.map((e) => {
                     var n;
@@ -333,7 +333,7 @@ function k(e) {
                 className: _.searchBox,
                 children: [
                     (0, r.jsx)(d.ZP, {
-                        tags: K,
+                        tags: J,
                         maxHeight: 98,
                         size: d.ZP.Sizes.MEDIUM,
                         query: O,

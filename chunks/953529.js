@@ -1,45 +1,45 @@
-var r = n(98405),
-    i = n(507604),
-    a = n(127849),
-    o = n(46015),
-    s = n(77025),
-    l = n(880181),
-    c = n(568033),
-    u = n(382698),
-    d = n(573078),
-    f = n(190289),
-    _ = a.Symbol,
-    p = _ && _.prototype;
-if (i && l(_) && (!('description' in p) || void 0 !== _().description)) {
-    var h = {},
-        m = function () {
-            var e = arguments.length < 1 || void 0 === arguments[0] ? void 0 : u(arguments[0]),
-                t = c(p, this) ? new _(e) : void 0 === e ? _() : _(e);
-            return '' === e && (h[t] = !0), t;
+var n = r(98405),
+    i = r(507604),
+    s = r(127849),
+    a = r(46015),
+    o = r(77025),
+    u = r(880181),
+    h = r(568033),
+    c = r(382698),
+    f = r(573078),
+    l = r(190289),
+    p = s.Symbol,
+    v = p && p.prototype;
+if (i && u(p) && (!('description' in v) || void 0 !== p().description)) {
+    var g = {},
+        d = function () {
+            var t = arguments.length < 1 || void 0 === arguments[0] ? void 0 : c(arguments[0]),
+                e = h(v, this) ? new p(t) : void 0 === t ? p() : p(t);
+            return '' === t && (g[e] = !0), e;
         };
-    f(m, _), (m.prototype = p), (p.constructor = m);
-    var g = 'Symbol(description detection)' === String(_('description detection')),
-        E = o(p.valueOf),
-        b = o(p.toString),
-        y = /^Symbol\((.*)\)[^)]+$/,
-        O = o(''.replace),
-        v = o(''.slice);
-    d(p, 'description', {
+    l(d, p), (d.prototype = v), (v.constructor = d);
+    var m = 'Symbol(description detection)' === String(p('description detection')),
+        y = a(v.valueOf),
+        b = a(v.toString),
+        w = /^Symbol\((.*)\)[^)]+$/,
+        x = a(''.replace),
+        S = a(''.slice);
+    f(v, 'description', {
         configurable: !0,
         get: function () {
-            var e = E(this);
-            if (s(h, e)) return '';
-            var t = b(e),
-                n = g ? v(t, 7, -1) : O(t, y, '$1');
-            return '' === n ? void 0 : n;
+            var t = y(this);
+            if (o(g, t)) return '';
+            var e = b(t),
+                r = m ? S(e, 7, -1) : x(e, w, '$1');
+            return '' === r ? void 0 : r;
         }
     }),
-        r(
+        n(
             {
                 global: !0,
                 constructor: !0,
                 forced: !0
             },
-            { Symbol: m }
+            { Symbol: d }
         );
 }

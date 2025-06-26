@@ -1,30 +1,30 @@
-var r = n(48657),
-    i = n(580983),
-    a = n(527160),
-    o = n(11356),
-    s = n(760725),
-    l = n(234488),
-    c = n(914331),
-    u = n(480296),
-    d = n(533610),
-    f = n(800054),
-    _ = Array;
-e.exports = function (e) {
-    var t,
-        n,
-        p,
-        h,
-        m,
+var n = r(48657),
+    i = r(580983),
+    s = r(527160),
+    a = r(11356),
+    o = r(760725),
+    u = r(234488),
+    h = r(914331),
+    c = r(480296),
+    f = r(533610),
+    l = r(800054),
+    p = Array;
+t.exports = function (t) {
+    var e,
+        r,
+        v,
         g,
-        E = a(e),
-        b = l(this),
-        y = arguments.length,
-        O = y > 1 ? arguments[1] : void 0,
-        v = void 0 !== O;
-    v && (O = r(O, y > 2 ? arguments[2] : void 0));
-    var I = f(E),
-        T = 0;
-    if (I && !(this === _ && s(I))) for (n = b ? new this() : [], m = (h = d(E, I)).next; !(p = i(m, h)).done; T++) (g = v ? o(h, O, [p.value, T], !0) : p.value), u(n, T, g);
-    else for (t = c(E), n = b ? new this(t) : _(t); t > T; T++) (g = v ? O(E[T], T) : E[T]), u(n, T, g);
-    return (n.length = T), n;
+        d,
+        m,
+        y = s(t),
+        b = u(this),
+        w = arguments.length,
+        x = w > 1 ? arguments[1] : void 0,
+        S = void 0 !== x;
+    S && (x = n(x, w > 2 ? arguments[2] : void 0));
+    var R = l(y),
+        k = 0;
+    if (R && !(this === p && o(R))) for (r = b ? new this() : [], d = (g = f(y, R)).next; !(v = i(d, g)).done; k++) (m = S ? a(g, x, [v.value, k], !0) : v.value), c(r, k, m);
+    else for (e = h(y), r = b ? new this(e) : p(e); e > k; k++) (m = S ? x(y[k], k) : y[k]), c(r, k, m);
+    return (r.length = k), r;
 };

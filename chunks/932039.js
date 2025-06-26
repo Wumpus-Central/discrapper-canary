@@ -141,7 +141,7 @@ function O(e) {
             },
             [H]
         ),
-        P = o.useCallback(() => {
+        I = o.useCallback(() => {
             null == i && null == r && O(0, null), S(!1);
         }, [r, i, O]);
     return (0, l.jsx)(d.v2r, {
@@ -155,7 +155,7 @@ function O(e) {
                       children: [
                           (0, l.jsx)(d.sNh, {
                               id: 'back',
-                              action: P,
+                              action: I,
                               render: (e) =>
                                   (0, l.jsxs)(
                                       'span',

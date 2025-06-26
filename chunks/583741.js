@@ -1,17 +1,17 @@
-var r = n(98405),
-    i = n(46015),
-    a = n(88996),
-    o = i([].reverse),
-    s = [1, 2];
-r(
+var n = r(98405),
+    i = r(46015),
+    s = r(88996),
+    a = i([].reverse),
+    o = [1, 2];
+n(
     {
         target: 'Array',
         proto: !0,
-        forced: String(s) === String(s.reverse())
+        forced: String(o) === String(o.reverse())
     },
     {
         reverse: function () {
-            return a(this) && (this.length = this.length), o(this);
+            return s(this) && (this.length = this.length), a(this);
         }
     }
 );

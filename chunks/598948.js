@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+n.d(t, { Z: () => I }), n(388685);
 var r = n(255367),
     l = n(73800),
     o = n(120356),
@@ -47,18 +47,18 @@ let w = {
                 f = (0, c.e7)([C.Z], () => C.Z.useReducedMotion),
                 _ = (0, u.f9)(),
                 R = (0, p.n)(),
-                [P, I] = l.useState(!1),
+                [I, P] = l.useState(!1),
                 [M, V] = l.useState(!1),
-                E = !_ && P && M;
+                E = !_ && I && M;
             l.useEffect(() => {
-                R || (I(!1), V(!1));
+                R || (P(!1), V(!1));
             }, [R]),
                 l.useLayoutEffect(() => {
                     let e = (e) => {
-                            Z(e) && I(!0), L(e) && V(!0);
+                            Z(e) && P(!0), L(e) && V(!0);
                         },
                         t = (e) => {
-                            Z(e) && I(!1), L(e) && V(!1);
+                            Z(e) && P(!1), L(e) && V(!1);
                         };
                     return (
                         window.addEventListener('keydown', e),
@@ -135,7 +135,7 @@ let w = {
             return n && r && l && o;
         }
     ),
-    P = function (e) {
+    I = function (e) {
         var t, n;
         let { guild: o, className: i, searchState: a, compact: s, onSelectRow: u, onResetForNewMembers: d } = e,
             C = (0, c.cj)([h.Z], () => h.Z.getPaginationStateByGuildId(o.id), [o.id]),

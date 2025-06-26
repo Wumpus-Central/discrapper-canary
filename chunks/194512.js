@@ -1,8 +1,8 @@
 e.exports = {
     formTitle: 'formTitle__0511a',
     description: 'description__0511a',
-    forumGuidelines: 'forumGuidelines__0511a',
-    forumGuidelinesCharacterCount: 'forumGuidelinesCharacterCount__0511a',
+    topic: 'topic__0511a',
+    topicCharacterCount: 'topicCharacterCount__0511a',
     badgedItem: 'badgedItem__0511a',
     twoColumnSettings: 'twoColumnSettings__0511a',
     settingsLeft: 'settingsLeft__0511a',

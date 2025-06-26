@@ -1,52 +1,52 @@
 r(35282);
 var n = r(580983),
     i = r(556585),
-    o = r(16721),
+    s = r(16721),
     a = r(621523),
-    c = r(751736),
+    o = r(751736),
     u = r(436207),
-    s = c('species'),
-    l = RegExp.prototype;
+    h = o('species'),
+    c = RegExp.prototype;
 t.exports = function (t, e, r, f) {
-    var p = c(t),
-        v = !a(function () {
+    var l = o(t),
+        p = !a(function () {
             var e = {};
             return (
-                (e[p] = function () {
+                (e[l] = function () {
                     return 7;
                 }),
                 7 !== ''[t](e)
             );
         }),
-        g =
-            v &&
+        v =
+            p &&
             !a(function () {
                 var e = !1,
                     r = /a/;
                 return (
                     'split' === t &&
                         (((r = {}).constructor = {}),
-                        (r.constructor[s] = function () {
+                        (r.constructor[h] = function () {
                             return r;
                         }),
                         (r.flags = ''),
-                        (r[p] = /./[p])),
+                        (r[l] = /./[l])),
                     (r.exec = function () {
                         return (e = !0), null;
                     }),
-                    r[p](''),
+                    r[l](''),
                     !e
                 );
             });
-    if (!v || !g || r) {
-        var d = /./[p],
-            x = e(p, ''[t], function (t, e, r, i, a) {
-                var c = e.exec;
-                return c === o || c === l.exec
-                    ? v && !a
+    if (!p || !v || r) {
+        var g = /./[l],
+            d = e(l, ''[t], function (t, e, r, i, a) {
+                var o = e.exec;
+                return o === s || o === c.exec
+                    ? p && !a
                         ? {
                               done: !0,
-                              value: n(d, e, r, i)
+                              value: n(g, e, r, i)
                           }
                         : {
                               done: !0,
@@ -54,7 +54,7 @@ t.exports = function (t, e, r, f) {
                           }
                     : { done: !1 };
             });
-        i(String.prototype, t, x[0]), i(l, p, x[1]);
+        i(String.prototype, t, d[0]), i(c, l, d[1]);
     }
-    f && u(l[p], 'sham', !0);
+    f && u(c[l], 'sham', !0);
 };

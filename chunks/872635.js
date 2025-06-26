@@ -65,17 +65,18 @@ function E(e) {
                               className: o()(g.icon, a)
                           })
                       }),
-                  (0, r.jsx)(y, {
-                      slateEditor: c,
-                      markdownSyntax: 'inlineCode',
-                      children: (0, r.jsx)(l.nF$, {
-                          size: 'custom',
-                          width: 20,
-                          height: 20,
-                          color: 'currentColor',
-                          className: o()(g.icon, a)
-                      })
-                  }),
+                  !(null == i ? void 0 : i.disableInlineCode) &&
+                      (0, r.jsx)(y, {
+                          slateEditor: c,
+                          markdownSyntax: 'inlineCode',
+                          children: (0, r.jsx)(l.nF$, {
+                              size: 'custom',
+                              width: 20,
+                              height: 20,
+                              color: 'currentColor',
+                              className: o()(g.icon, a)
+                          })
+                      }),
                   (0, r.jsx)(y, {
                       slateEditor: c,
                       markdownSyntax: 'spoiler',

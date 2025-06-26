@@ -1,47 +1,47 @@
 n.d(t, { Z: () => c });
-var l = n(255367),
-    r = n(73800),
-    i = n(481060),
-    a = n(43267),
-    s = n(93687),
-    o = n(785232);
-let c = r.memo(function (e) {
-    var { channel: t, size: n, facepileSizeOverride: r, experimentLocation: c, isTyping: u, status: d, className: f, animated: h = !1 } = e,
-        _ = (function (e, t) {
+var r = n(255367),
+    i = n(73800),
+    l = n(481060),
+    o = n(43267),
+    a = n(93687),
+    u = n(785232);
+let c = i.memo(function (e) {
+    var { channel: t, size: n, facepileSizeOverride: i, experimentLocation: c, isTyping: s, status: d, className: p, animated: f = !1 } = e,
+        E = (function (e, t) {
             if (null == e) return {};
             var n,
-                l,
-                r = (function (e, t) {
+                r,
+                i = (function (e, t) {
                     if (null == e) return {};
                     var n,
-                        l,
-                        r = {},
-                        i = Object.keys(e);
-                    for (l = 0; l < i.length; l++) (n = i[l]), t.indexOf(n) >= 0 || (r[n] = e[n]);
-                    return r;
+                        r,
+                        i = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                    return i;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (l = 0; l < i.length; l++) (n = i[l]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
-            return r;
+            return i;
         })(e, ['channel', 'size', 'facepileSizeOverride', 'experimentLocation', 'isTyping', 'status', 'className', 'animated']);
-    let { isFacepileEnabled: g } = s.Z.useExperiment({ location: c }, { autoTrackExposure: !0 });
-    return t.recipients.length >= 2 && g && null == t.icon
-        ? (0, l.jsx)(o.Z, {
-              'aria-label': _['aria-label'],
-              'aria-hidden': _['aria-hidden'],
-              className: f,
+    let { isFacepileEnabled: O } = a.Z.useExperiment({ location: c }, { autoTrackExposure: !0 });
+    return t.recipients.length >= 2 && O && null == t.icon
+        ? (0, r.jsx)(u.Z, {
+              'aria-label': E['aria-label'],
+              'aria-hidden': E['aria-hidden'],
+              className: p,
               recipients: t.recipients,
-              size: null != r ? r : n,
-              isTyping: u,
+              size: null != i ? i : n,
+              isTyping: s,
               status: d
           })
-        : (0, l.jsx)(i.qEK, {
-              'aria-hidden': _['aria-hidden'],
-              'aria-label': _['aria-label'],
-              className: f,
+        : (0, r.jsx)(l.qEK, {
+              'aria-hidden': E['aria-hidden'],
+              'aria-label': E['aria-label'],
+              className: p,
               size: n,
-              src: (0, a.x)(t, 80, h)
+              src: (0, o.x)(t, 80, f)
           });
 });

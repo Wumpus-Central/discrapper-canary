@@ -582,6 +582,9 @@ class v extends o.Z {
         var e, t;
         null == (e = (t = (0, d.zS)()).releaseNativeDesktopVideoSourcePickerStream) || e.call(t);
     }
+    fetchAsyncResources(e) {
+        return Promise.resolve();
+    }
     watchdogTick() {
         let e = !1;
         (0, d.zS)().pingVoiceThread(() => {

@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => w,
-    j: () => R
+    Z: () => R,
+    j: () => Z
 }),
     n(388685);
 var r = n(255367),
@@ -29,8 +29,9 @@ var r = n(255367),
     I = n(353890),
     E = n(716130),
     S = n(388032),
-    T = n(19567);
-function P(e) {
+    T = n(19567),
+    P = n(73433);
+function w(e) {
     let { guild: t } = e,
         a = (0, l.e7)([d.Z], () => d.Z.getEnabled(t.id)),
         f = (0, l.e7)([p.Z], () => p.Z.hasFetched(t.id)),
@@ -166,6 +167,7 @@ function P(e) {
                                                       ? (0, r.jsx)(
                                                             o.Z,
                                                             {
+                                                                className: P.markup,
                                                                 children: (0, r.jsx)(s.Text, {
                                                                     className: T.topic,
                                                                     variant: 'text-xs/normal',
@@ -213,7 +215,7 @@ function P(e) {
               ]
           });
 }
-function w(e) {
+function R(e) {
     let { saveOnClose: t = !1 } = e,
         n = (0, l.e7)([b.Z], () => b.Z.getGuild()),
         a = (0, l.e7)([d.Z], () => d.Z.isLoading()),
@@ -276,7 +278,7 @@ function w(e) {
                                 ? null
                                 : (0, r.jsxs)(r.Fragment, {
                                       children: [
-                                          (0, r.jsx)(P, { guild: n }),
+                                          (0, r.jsx)(w, { guild: n }),
                                           (0, r.jsx)(N.Z, {
                                               className: T.channelBrowserOuter,
                                               guild: n,
@@ -324,7 +326,7 @@ function w(e) {
                 ]
             });
 }
-function R() {
+function Z() {
     let e = (0, l.e7)([b.Z], () => b.Z.getProps().guild),
         t = (0, l.e7)([_.Z], () => _.Z.submitting),
         n = (0, l.e7)([O.Z], () => O.Z.advancedMode);

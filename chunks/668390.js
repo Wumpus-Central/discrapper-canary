@@ -88,8 +88,8 @@ function j(e) {
         : null;
 }
 function x(e) {
-    let { color: t, id: r, role: s, guild: d, children: x, isDragging: b, selectedItem: v, onItemSelect: y, itemType: C, locked: N, lockTooltip: S, showContextMenu: E, theme: O, roleStyle: Z, 'aria-label': T } = e,
-        w = (0, h._f)(d.id, s, null == s ? void 0 : s.colorStrings),
+    let { color: t, id: r, role: s, guild: d, children: x, isDragging: b, selectedItem: v, onItemSelect: y, itemType: C, locked: N, lockTooltip: S, showContextMenu: E, theme: O, roleStyle: w, 'aria-label': Z } = e,
+        T = (0, h._f)(d.id, s, null == s ? void 0 : s.colorStrings),
         R = l.useCallback(
             (e) => {
                 (0, c.jW)(e, async () => {
@@ -114,22 +114,22 @@ function x(e) {
               selectedItem: v,
               onItemSelect: y,
               itemType: C,
-              'aria-label': null != S ? ''.concat(T, ', ').concat(S) : T,
+              'aria-label': null != S ? ''.concat(Z, ', ').concat(S) : Z,
               children: (0, i.jsxs)('div', {
                   className: m.roleContent,
                   onContextMenu: R,
                   children: [
-                      'dot' === Z
+                      'dot' === w
                           ? (0, i.jsx)(o.FhE, {
                                 color: null != t ? t : void 0,
-                                colors: w,
+                                colors: T,
                                 className: m.roleDot,
                                 background: !1,
                                 tooltip: !1
                             })
                           : (0, i.jsx)(o.xko, {
                                 color: null != t ? t : void 0,
-                                colors: w,
+                                colors: T,
                                 className: m.roleCircle
                             }),
                       (function () {

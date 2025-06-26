@@ -75,15 +75,15 @@ let w = l.forwardRef(function (e, t) {
         D = (0, u.e7)([j.Z], () => j.Z.getSearchStateByGuildId(n.id), [n.id], s()),
         Z = (0, f.gm)(n.id),
         [L, R] = l.useState(D.query),
-        P = null != D.selectedSort && D.selectedSort !== h.d$.ORDER_BY_GUILD_JOINED_AT_DESC && D.selectedSort !== h.d$.ORDER_BY_UNSPECIFIED,
-        I = l.useCallback(
+        I = null != D.selectedSort && D.selectedSort !== h.d$.ORDER_BY_GUILD_JOINED_AT_DESC && D.selectedSort !== h.d$.ORDER_BY_UNSPECIFIED,
+        P = l.useCallback(
             (e) => {
                 let t = e.trim();
                 t.length > 0 && Z(), (0, g.Dr)(n.id, { query: t });
             },
             [n.id, Z]
         ),
-        M = l.useMemo(() => i()(I, 300), [I]),
+        M = l.useMemo(() => i()(P, 300), [P]),
         V = l.useCallback(
             (e) => {
                 R(e), M(e);
@@ -91,8 +91,8 @@ let w = l.forwardRef(function (e, t) {
             [M]
         ),
         E = l.useCallback(() => {
-            R(''), I('');
-        }, [I]);
+            R(''), P('');
+        }, [P]);
     return (
         l.useImperativeHandle(t, () => ({
             resetSearchText() {
@@ -180,11 +180,11 @@ let w = l.forwardRef(function (e, t) {
                                         children: [
                                             (0, r.jsx)(C.uVW, {
                                                 size: 'xs',
-                                                color: P ? C.TVs.colors.INTERACTIVE_ACTIVE.css : C.TVs.colors.HEADER_SECONDARY.css
+                                                color: I ? C.TVs.colors.INTERACTIVE_ACTIVE.css : C.TVs.colors.HEADER_SECONDARY.css
                                             }),
                                             (0, r.jsx)(C.Text, {
                                                 variant: 'text-sm/medium',
-                                                color: P ? 'interactive-active' : 'header-secondary',
+                                                color: I ? 'interactive-active' : 'header-secondary',
                                                 className: y.sortText,
                                                 children: O.intl.string(O.t.XvNMNj)
                                             })

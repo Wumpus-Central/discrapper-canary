@@ -1,10 +1,10 @@
-var r = n(98405),
-    i = n(710985).trim;
-r(
+var n = r(98405),
+    i = r(710985).trim;
+n(
     {
         target: 'String',
         proto: !0,
-        forced: n(530807)('trim')
+        forced: r(530807)('trim')
     },
     {
         trim: function () {

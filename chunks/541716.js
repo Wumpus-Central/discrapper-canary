@@ -1,5 +1,5 @@
 n.d(t, {
-    Ie: () => I,
+    Ie: () => T,
     OW: () => a,
     gy: () => o
 });
@@ -326,6 +326,26 @@ let s = {
         toolbarType: 1
     },
     I = {
+        analyticsName: 'channel_topic',
+        drafts: { type: i.d.ChannelMessage },
+        permissions: { requireSendMessages: !1 },
+        submit: {
+            useDisabledStylesOnSubmit: !0,
+            disableEnterToSubmit: !0
+        },
+        autocomplete: {
+            alwaysUseLayer: !0,
+            small: !0
+        },
+        showCharacterCount: !0,
+        toolbarType: 1,
+        markdown: {
+            disableCodeBlocks: !0,
+            disableBlockQuotes: !0,
+            disableInlineCode: !0
+        }
+    },
+    T = {
         NORMAL: s,
         OVERLAY: l,
         OVERLAY_INLINE_REPLY: g,
@@ -342,6 +362,7 @@ let s = {
         CREATE_FORUM_POST: p,
         CREATE_POLL: h,
         FORUM_CHANNEL_GUIDELINES: v,
+        CHANNEL_TOPIC: I,
         ATOMIC_REACTOR_REPLY_INPUT: {
             analyticsName: 'atomic_reator_reply_input',
             drafts: { type: i.d.ChannelMessage },

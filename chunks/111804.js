@@ -1,35 +1,35 @@
-var r = n(556585),
-    i = n(46015),
-    a = n(382698),
-    o = n(338045),
-    s = URLSearchParams,
-    l = s.prototype,
-    c = i(l.append),
-    u = i(l.delete),
-    d = i(l.forEach),
-    f = i([].push),
-    _ = new s('a=1&a=2&b=3');
-_.delete('a', 1),
-    _.delete('b', void 0),
-    _ + '' != 'a=2' &&
-        r(
-            l,
+var n = r(556585),
+    i = r(46015),
+    s = r(382698),
+    a = r(338045),
+    o = URLSearchParams,
+    u = o.prototype,
+    h = i(u.append),
+    c = i(u.delete),
+    f = i(u.forEach),
+    l = i([].push),
+    p = new o('a=1&a=2&b=3');
+p.delete('a', 1),
+    p.delete('b', void 0),
+    p + '' != 'a=2' &&
+        n(
+            u,
             'delete',
-            function (e) {
-                var t,
-                    n = arguments.length,
-                    r = n < 2 ? void 0 : arguments[1];
-                if (n && void 0 === r) return u(this, e);
+            function (t) {
+                var e,
+                    r = arguments.length,
+                    n = r < 2 ? void 0 : arguments[1];
+                if (r && void 0 === n) return c(this, t);
                 var i = [];
-                d(this, function (e, t) {
-                    f(i, {
-                        key: t,
-                        value: e
+                f(this, function (t, e) {
+                    l(i, {
+                        key: e,
+                        value: t
                     });
                 }),
-                    o(n, 1);
-                for (var s = a(e), l = a(r), _ = 0, p = 0, h = !1, m = i.length; _ < m; ) (t = i[_++]), h || t.key === s ? ((h = !0), u(this, t.key)) : p++;
-                for (; p < m; ) ((t = i[p++]).key !== s || t.value !== l) && c(this, t.key, t.value);
+                    a(r, 1);
+                for (var o = s(t), u = s(n), p = 0, v = 0, g = !1, d = i.length; p < d; ) (e = i[p++]), g || e.key === o ? ((g = !0), c(this, e.key)) : v++;
+                for (; v < d; ) ((e = i[v++]).key !== o || e.value !== u) && h(this, e.key, e.value);
             },
             {
                 enumerable: !0,

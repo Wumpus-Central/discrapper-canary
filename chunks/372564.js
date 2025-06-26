@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -10,8 +10,9 @@ var r = n(255367),
     d = n(984370),
     p = n(981631),
     h = n(388032),
-    f = n(916560);
-function m(e, t, n) {
+    f = n(916560),
+    m = n(73433);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +25,7 @@ function m(e, t, n) {
         e
     );
 }
-function g(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,15 +36,15 @@ function g(e) {
                 })
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                g(e, t, n[t]);
             });
     }
     return e;
 }
-function b(e) {
+function _(e) {
     return e.matches('a') || 'highlight' === e.className || e.className.includes('mention');
 }
-class _ extends i.Component {
+class y extends i.Component {
     render() {
         let { channel: e } = this.props;
         if (e.isMultiUserDM()) return null;
@@ -53,7 +54,7 @@ class _ extends i.Component {
                   children: [
                       (0, r.jsx)(d.Z.Divider, {}),
                       (0, r.jsxs)('div', {
-                          className: o()(f.topic, f.expandable),
+                          className: o()(f.topic, f.expandable, m.markup),
                           onMouseDown: this.onMouseDown,
                           onMouseMove: this.onMouseMove,
                           onMouseUp: this.onMouseUp,
@@ -74,30 +75,30 @@ class _ extends i.Component {
     }
     constructor(...e) {
         super(...e),
-            m(this, '_mouseDown', !1),
-            m(this, '_mouseUp', !1),
-            m(this, 'handleOpenTopic', (e) => {
+            g(this, '_mouseDown', !1),
+            g(this, '_mouseUp', !1),
+            g(this, 'handleOpenTopic', (e) => {
                 let t = e.target;
                 if ((0, a.k)(t)) {
-                    if (b(t)) return;
+                    if (_(t)) return;
                     let e = t.parentNode;
-                    if ((0, a.k)(e) && b(e)) return;
+                    if ((0, a.k)(e) && _(e)) return;
                 }
                 (0, s.ZDy)(async () => {
                     let { default: e } = await n.e('65631').then(n.bind(n, 10722));
-                    return (t) => (0, r.jsx)(e, g({}, t, this.props));
+                    return (t) => (0, r.jsx)(e, b({}, t, this.props));
                 });
             }),
-            m(this, 'onMouseDown', () => {
+            g(this, 'onMouseDown', () => {
                 this._mouseDown = !0;
             }),
-            m(this, 'onMouseMove', () => {
+            g(this, 'onMouseMove', () => {
                 this._mouseDown && (this._mouseDown = !1);
             }),
-            m(this, 'onMouseUp', (e) => {
+            g(this, 'onMouseUp', (e) => {
                 this._mouseDown && e.button !== p.AeJ.SECONDARY && this.handleOpenTopic(e), (this._mouseUp = !0), (this._mouseDown = !1);
             }),
-            m(this, 'handleContextMenu', (e) => {
+            g(this, 'handleContextMenu', (e) => {
                 let { channel: t, guild: i } = this.props;
                 (0, c.jW)(e, async () => {
                     let { default: e } = await n.e('24783').then(n.bind(n, 439635));
@@ -105,7 +106,7 @@ class _ extends i.Component {
                         var l, o;
                         return (0, r.jsx)(
                             e,
-                            ((l = g({}, n)),
+                            ((l = b({}, n)),
                             (o = o =
                                 {
                                     channel: t,
@@ -129,7 +130,7 @@ class _ extends i.Component {
                     };
                 });
             }),
-            m(this, 'handleClick', (e) => {
+            g(this, 'handleClick', (e) => {
                 if (this._mouseUp) {
                     this._mouseUp = !1;
                     return;
@@ -138,4 +139,4 @@ class _ extends i.Component {
             });
     }
 }
-let y = _;
+let C = y;

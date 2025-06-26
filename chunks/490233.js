@@ -1,23 +1,23 @@
-var r = n(556585),
-    i = n(46015),
-    a = n(382698),
-    o = n(338045),
-    s = URLSearchParams,
-    l = s.prototype,
-    c = i(l.getAll),
-    u = i(l.has),
-    d = new s('a=1');
-(d.has('a', 2) || !d.has('a', void 0)) &&
-    r(
-        l,
+var n = r(556585),
+    i = r(46015),
+    s = r(382698),
+    a = r(338045),
+    o = URLSearchParams,
+    u = o.prototype,
+    h = i(u.getAll),
+    c = i(u.has),
+    f = new o('a=1');
+(f.has('a', 2) || !f.has('a', void 0)) &&
+    n(
+        u,
         'has',
-        function (e) {
-            var t = arguments.length,
-                n = t < 2 ? void 0 : arguments[1];
-            if (t && void 0 === n) return u(this, e);
-            var r = c(this, e);
-            o(t, 1);
-            for (var i = a(n), s = 0; s < r.length; ) if (r[s++] === i) return !0;
+        function (t) {
+            var e = arguments.length,
+                r = e < 2 ? void 0 : arguments[1];
+            if (e && void 0 === r) return c(this, t);
+            var n = h(this, t);
+            a(e, 1);
+            for (var i = s(r), o = 0; o < n.length; ) if (n[o++] === i) return !0;
             return !1;
         },
         {

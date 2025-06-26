@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => b });
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -12,23 +12,25 @@ var i = n(442837),
     p = n(967128),
     h = n(981631),
     f = n(388032),
-    m = n(991992);
-function g(e) {
+    m = n(991992),
+    g = n(73433);
+function b(e) {
     let { channel: t } = e,
         n = (0, a.ZP)(t, !0),
-        g = (0, i.e7)([u.Z], () => u.Z.can(h.Plq.MANAGE_CHANNELS, t) && c.dF.has(t.type));
+        b = (0, i.e7)([u.Z], () => u.Z.can(h.Plq.MANAGE_CHANNELS, t) && c.dF.has(t.type));
     return (0, r.jsxs)(p.ZP, {
         channelId: t.id,
         children: [
             (0, r.jsx)(p.Kq, { channelType: t.type }),
             (0, r.jsx)(p.Ot, { children: f.intl.format(f.t.I3R7Vl, { channelName: n }) }),
             (0, r.jsx)(p.jz, {
+                className: g.markup,
                 children: f.intl.format(f.t.pYMVRU, {
                     channelName: n,
                     topicHook: () => s.Z.parseTopic(t.topic, !0, { channelId: t.id })
                 })
             }),
-            g
+            b
                 ? (0, r.jsx)('div', {
                       className: m.buttonContainer,
                       children: (0, r.jsx)(d.Z, {

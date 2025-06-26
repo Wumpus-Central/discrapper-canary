@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ev }), n(35282), n(415506), n(539854), n(388685), n(49124);
+n.d(t, { Z: () => ev }), n(35282), n(415506), n(539854), n(457542), n(388685), n(49124);
 var r = n(654861),
     i = n.n(r),
     a = n(954955),
@@ -360,20 +360,26 @@ class ev extends d.Z {
         this.setState(eo.hes.CONNECTING);
     }
     _handleConnect(e) {
-        var t, n;
-        let r = this.token;
-        if (null == r) throw Error('RTCConnection._handleConnect(...): Token is missing.');
+        let t = this.token;
+        if (null == t) throw Error('RTCConnection._handleConnect(...): Token is missing.');
         this.logger.info('Connected to RTC server.'),
-            e.identify({
-                serverId: null != (n = null != (t = this.rtcServerId) ? t : this.guildId) ? n : this.channelId,
-                userId: this.userId,
-                sessionId: this.sessionId,
-                token: r,
-                maxDaveProtocolVersion: x.Z.getSupportedSecureFramesProtocolVersion(),
-                video: x.Z.supports(es.AN.VIDEO),
-                streamParameters: x.Z.getVideoStreamParameters(this.context)
-            }),
-            this.setState(eo.hes.AUTHENTICATING);
+            this._fetchAsyncResourcesPromise
+                .catch((e) => {
+                    H.Z.captureException(e);
+                })
+                .finally(() => {
+                    var n, r;
+                    e.identify({
+                        serverId: null != (r = null != (n = this.rtcServerId) ? n : this.guildId) ? r : this.channelId,
+                        userId: this.userId,
+                        sessionId: this.sessionId,
+                        token: t,
+                        maxDaveProtocolVersion: x.Z.getSupportedSecureFramesProtocolVersion(),
+                        video: x.Z.supports(es.AN.VIDEO),
+                        streamParameters: x.Z.getVideoStreamParameters(this.context)
+                    }),
+                        this.setState(eo.hes.AUTHENTICATING);
+                });
     }
     _handleDisconnect(e, t, n, r) {
         var i, a, o, s, l, c, u, d, f, _, p, h, m, g, E, b, y, v, I, T, S;
@@ -1340,6 +1346,7 @@ class ev extends d.Z {
             el(this, '_secureFramesTransitionExecuteCount', 0),
             el(this, '_secureFramesLastBecameAloneTime', void 0),
             el(this, '_numNoiseCancellationChanges', 0),
+            el(this, '_fetchAsyncResourcesPromise', void 0),
             el(this, '_lastSentSpeakingStatus', void 0),
             el(this, '_lastSentSSRC', void 0),
             el(this, 'powerMonitorListener', void 0),
@@ -1432,6 +1439,7 @@ class ev extends d.Z {
                 null == (t = this._videoQuality) || t.setWindowOcclusionState(!e);
             }),
             (this.context = i),
+            (this._fetchAsyncResourcesPromise = x.Z.fetchAsyncResources()),
             (this.logger = new b.Z('RTCConnection('.concat(null != (l = null != a ? a : n) ? l : r, ', ').concat(this.context, ')'))),
             this.logger.enableNativeLogger(!0),
             (this.userId = e),

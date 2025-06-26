@@ -143,23 +143,33 @@ function D(e) {
         p = null == c ? void 0 : c.vanityURLCode,
         [D, Z] = l.useState(!1),
         { selectedSourceInviteCode: L, selectedJoinSourceType: R } = o,
-        P = null != R && R !== g.gq.UNSPECIFIED,
-        I = (0, d.e7)([b.Z], () => b.Z.hideInstantInvites, []);
-    I && (a = []);
-    let M = l.useCallback(
+        I = null != R && R !== g.gq.UNSPECIFIED,
+        P = (0, d.e7)([b.Z], () => b.Z.hideInstantInvites, []);
+    P && (a = []);
+    let M = s()((e) => {
+        let n = e.trim();
+        (0, j.Dr)(t, {
+            selectedSourceInviteCode: '' !== n ? n : void 0,
+            selectedJoinSourceType: void 0
+        });
+    }, 300);
+    l.useEffect(
+        () => () => {
+            M.cancel();
+        },
+        [M]
+    );
+    let V = l.useCallback(
             (e) => {
                 let n = e.trim();
-                (0, j.Dr)(
-                    t,
-                    w(H({}, o), {
-                        selectedSourceInviteCode: '' !== n ? n : void 0,
-                        selectedJoinSourceType: void 0
-                    })
-                );
+                (0, j.Dr)(t, {
+                    selectedSourceInviteCode: '' !== n ? n : void 0,
+                    selectedJoinSourceType: void 0
+                });
             },
-            [t, o]
+            [t]
         ),
-        V = l.useCallback(
+        E = l.useCallback(
             (e) => {
                 e === R
                     ? (0, j.Dr)(t, {
@@ -174,12 +184,15 @@ function D(e) {
             },
             [t, R]
         ),
-        E = l.useMemo(() => s()(M, 300), [M]),
         T = l.useCallback(
             (e) => {
-                E(e);
+                (0, j.Dr)(t, {
+                    selectedSourceInviteCode: e,
+                    selectedJoinSourceType: void 0
+                }),
+                    M(e);
             },
-            [E]
+            [t, M]
         );
     return (0, r.jsx)(C.v2r, {
         navId: 'members-table-join-method-menu',
@@ -227,12 +240,12 @@ function D(e) {
                                           w(H({}, t), {
                                               type: e,
                                               vanityUrl: p,
-                                              text: (0, g.bE)(e, p, I)
+                                              text: (0, g.bE)(e, p, P)
                                           })
                                       ),
                                   checked: R === e,
                                   disabled: !1,
-                                  action: () => V(e),
+                                  action: () => E(e),
                                   group: 'join-source-type-options'
                               },
                               'join-source-type-option-'.concat(e)
@@ -267,7 +280,7 @@ function D(e) {
                               label: O.intl.string(O.t.an9Ry8),
                               checked: null == L && null == R,
                               disabled: !1,
-                              action: () => V(null),
+                              action: () => E(null),
                               group: 'join-source-type-options'
                           },
                           'join-source-type-option-all'
@@ -288,7 +301,7 @@ function D(e) {
                                       ),
                                   checked: L === e,
                                   disabled: !1,
-                                  action: () => M(e),
+                                  action: () => V(e),
                                   group: 'join-source-type-options'
                               },
                               'join-source-type-option-'.concat(e)
@@ -312,14 +325,14 @@ function D(e) {
                                                       className: i()(y.__invalid_selectedRadio, y.labelText, { [y.focused]: e.isFocused }),
                                                       children: O.intl.string(O.t['Kz/cho'])
                                                   }),
-                                                  P
+                                                  I
                                                       ? (0, r.jsx)('div', {
                                                             className: y.selectedOption,
                                                             children: (0, r.jsx)(
                                                                 S,
                                                                 w(H({}, e), {
                                                                     size: 12,
-                                                                    text: (0, g.bE)(R, p, I),
+                                                                    text: (0, g.bE)(R, p, P),
                                                                     type: R,
                                                                     vanityUrl: p
                                                                 })
@@ -328,7 +341,7 @@ function D(e) {
                                                       : null
                                               ]
                                           }),
-                                          P
+                                          I
                                               ? (0, r.jsx)(f.Z, {
                                                     background: y.__invalid_radio,
                                                     foreground: y.radioSelection,

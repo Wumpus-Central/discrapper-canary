@@ -179,7 +179,7 @@ let y = {
                                             children: (0, r.jsx)(c.Text, {
                                                 variant: 'text-md/normal',
                                                 color: 'header-secondary',
-                                                children: b.intl.format(p.default.W4MIAA, { feedback: 'https://docs.google.com/forms/d/e/1FAIpQLSe8fwyqL9JyhEs3-6OXen4ee0BhTXX9l12NcIfix1PC4QjMMQ/viewform' })
+                                                children: b.intl.format(p.default.W4MIAA, { feedback: 'https://forms.gle/RbDhW46PMmR39XUP7' })
                                             })
                                         })
                                     ]

@@ -154,6 +154,9 @@ class c extends r.Z {
     releaseNativeDesktopVideoSourcePickerStream() {}
     setMaybePreprocessMute(e) {}
     setAudioInputBypassSystemProcessing(e) {}
+    fetchAsyncResources(e) {
+        return Promise.resolve();
+    }
     constructor(...e) {
         super(...e), o(this, 'Video', s), o(this, 'Camera', l);
     }

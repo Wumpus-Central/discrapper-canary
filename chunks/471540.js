@@ -1,21 +1,21 @@
 var n = r(46015),
     i = r(77826),
-    o = r(382698),
+    s = r(382698),
     a = r(497464),
-    c = n(''.charAt),
+    o = n(''.charAt),
     u = n(''.charCodeAt),
-    s = n(''.slice),
-    l = function (t) {
+    h = n(''.slice),
+    c = function (t) {
         return function (e, r) {
             var n,
-                l,
-                f = o(a(e)),
-                p = i(r),
-                v = f.length;
-            return p < 0 || p >= v ? (t ? '' : void 0) : (n = u(f, p)) < 55296 || n > 56319 || p + 1 === v || (l = u(f, p + 1)) < 56320 || l > 57343 ? (t ? c(f, p) : n) : t ? s(f, p, p + 2) : ((n - 55296) << 10) + (l - 56320) + 65536;
+                c,
+                f = s(a(e)),
+                l = i(r),
+                p = f.length;
+            return l < 0 || l >= p ? (t ? '' : void 0) : (n = u(f, l)) < 55296 || n > 56319 || l + 1 === p || (c = u(f, l + 1)) < 56320 || c > 57343 ? (t ? o(f, l) : n) : t ? h(f, l, l + 2) : ((n - 55296) << 10) + (c - 56320) + 65536;
         };
     };
 t.exports = {
-    codeAt: l(!1),
-    charAt: l(!0)
+    codeAt: c(!1),
+    charAt: c(!0)
 };

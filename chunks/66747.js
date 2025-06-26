@@ -29,8 +29,8 @@ var r = n(255367),
     Z = n(709054),
     L = n(51144),
     R = n(815790),
-    P = n(588215),
-    I = n(241559),
+    I = n(588215),
+    P = n(241559),
     M = n(893966),
     V = n(685244),
     E = n(16829),
@@ -297,7 +297,7 @@ function X(e) {
         long: new Date(null != e ? e : 0).toLocaleDateString(U.intl.currentLocale, R.UG)
     };
 }
-function K(e) {
+function J(e) {
     let { member: t, showLongDate: n, isSortedBy: o } = e,
         [i, a] = l.useState(null);
     l.useEffect(() => {
@@ -335,7 +335,7 @@ function K(e) {
                 })
             });
 }
-let J = l.memo(function (e) {
+let K = l.memo(function (e) {
         let { member: t, showLongDate: n, isSortedBy: o } = e,
             { accountCreationDateShort: i, accountCreationDateLong: a } = l.useMemo(() => {
                 let e = Z.default.extractTimestamp(t.userId);
@@ -369,14 +369,14 @@ let J = l.memo(function (e) {
         let { member: t, user: n, highestRole: o, isHoldingAdvancedInfoKey: a, onOpenModerationMenu: s, onOpenProfileMenu: d, compact: m } = e,
             b = (0, u.e7)([H.Z, _.Z], () => H.Z.can(B.Plq.MANAGE_GUILD, _.Z.getGuild(t.guildId)), [t.guildId]),
             { selectedUserIds: p, addUsers: f, removeUser: h } = (0, T.Z)(t.guildId),
-            j = (0, I.xC)(t.guildId),
-            x = (0, I.hB)(t.guildId, j, t.userId),
+            j = (0, P.xC)(t.guildId),
+            x = (0, P.hB)(t.guildId, j, t.userId),
             v = (0, g.m)(t.guildId),
             O = (0, u.e7)(
                 [M.Z],
                 () => {
                     var e;
-                    return null != (e = M.Z.getSearchStateByGuildId(t.guildId).selectedSort) ? e : P.d$.ORDER_BY_UNSPECIFIED;
+                    return null != (e = M.Z.getSearchStateByGuildId(t.guildId).selectedSort) ? e : I.d$.ORDER_BY_UNSPECIFIED;
                 },
                 [t.guildId],
                 c()
@@ -387,8 +387,8 @@ let J = l.memo(function (e) {
                 },
                 [f, x, t, h, p]
             ),
-            w = O === P.d$.ORDER_BY_GUILD_JOINED_AT_ASC,
-            N = O === P.d$.ORDER_BY_USER_ID_ASC || O === P.d$.ORDER_BY_USER_ID_DESC;
+            w = O === I.d$.ORDER_BY_GUILD_JOINED_AT_ASC,
+            N = O === I.d$.ORDER_BY_USER_ID_ASC || O === I.d$.ORDER_BY_USER_ID_DESC;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 j &&
@@ -423,7 +423,7 @@ let J = l.memo(function (e) {
                 }),
                 (0, r.jsx)('td', {
                     className: i()(F.smallCol, { [F.compact]: m }),
-                    children: (0, r.jsx)(K, {
+                    children: (0, r.jsx)(J, {
                         showLongDate: a,
                         member: t,
                         isSortedBy: w
@@ -431,7 +431,7 @@ let J = l.memo(function (e) {
                 }),
                 (0, r.jsx)('td', {
                     className: i()(F.smallCol, { [F.compact]: m }),
-                    children: (0, r.jsx)(J, {
+                    children: (0, r.jsx)(K, {
                         showLongDate: a,
                         member: t,
                         isSortedBy: N

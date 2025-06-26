@@ -240,10 +240,10 @@ class E extends s.Z {
         return null;
     }
     setVoiceFilterId(e) {}
-    constructor(e, t, n, r) {
-        var i;
-        super(e, t),
-            (i = this),
+    constructor(e) {
+        var t;
+        super(e.context, e.userId),
+            (t = this),
             h(this, 'input', void 0),
             h(this, 'silenced', !1),
             h(this, 'interacted', !1),
@@ -265,7 +265,7 @@ class E extends s.Z {
             h(this, 'setVideoSource', (e) => this.input.setVideoSource(e)),
             h(this, 'setDesktopInput', (e) => this.input.setDesktop(e)),
             h(this, 'setForceAudioInput', function (e) {
-                return arguments.length > 1 && void 0 !== arguments[1] && arguments[1], i.input.setPTTActive(e);
+                return arguments.length > 1 && void 0 !== arguments[1] && arguments[1], t.input.setPTTActive(e);
             }),
             h(this, 'setSelfMute', (e) => {
                 (this.selfMute = e), this.input.setMute(e), this.emit(l.Sh.Mute, e);
@@ -307,9 +307,9 @@ class E extends s.Z {
                 if (this.connectionState === _.$j.DISCONNECTED) return void this.off(l.Sh.Stats, this.handleStats);
                 null != e && (this.webrtcStats.update(e), (this.stats = e), Date.now() - this.lastPingTime >= _.$B && (this.emit(l.Sh.Ping, e.transport.ping), (this.lastPingTime = Date.now())));
             }),
-            (this.input = new c.Z(n)),
-            n.addEventListener('statechange', this.handleAudioContextStateChange),
-            (this.audioContext = n),
+            (this.input = new c.Z(e.audioContext)),
+            e.audioContext.addEventListener('statechange', this.handleAudioContextStateChange),
+            (this.audioContext = e.audioContext),
             this.input.on(c.G.AudioPermission, this.handleAudioPermission),
             this.input.on(c.G.VideoPermission, this.handleVideoPermission),
             this.input.on(c.G.Video, this.handleVideo),
@@ -320,6 +320,6 @@ class E extends s.Z {
             this.input.on(c.G.AddVideoTrack, this.handleAddVideoTrack),
             this.input.on(c.G.Video, this.handleAddVideoTrack),
             this.on('newListener', this.handleNewListener),
-            this.initializeStreamParameters(r);
+            this.initializeStreamParameters(e.streamParameters);
     }
 }

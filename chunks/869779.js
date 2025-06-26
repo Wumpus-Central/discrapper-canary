@@ -23,12 +23,12 @@ var i = n(255367),
     S = n(496675),
     E = n(699516),
     O = n(594174),
-    Z = n(585483),
-    T = n(787263),
-    w = n(975316),
+    w = n(585483),
+    Z = n(787263),
+    T = n(975316),
     R = n(428813),
-    I = n(2147),
-    _ = n(856606),
+    _ = n(2147),
+    I = n(856606),
     P = n(981631),
     A = n(388032),
     L = n(511740);
@@ -103,9 +103,9 @@ class M extends l.PureComponent {
                               section: P.CoT.OVERVIEW,
                               label: A.intl.string(A.t['/dp6yc']),
                               ariaLabel: A.intl.string(A.t['/dp6yc']),
-                              element: I.Z,
+                              element: _.Z,
                               notice: {
-                                  element: I.G,
+                                  element: _.G,
                                   stores: [C.Z]
                               },
                               predicate: () => !t.isModeratorReportChannel()
@@ -115,7 +115,7 @@ class M extends l.PureComponent {
                               label: A.intl.string(A.t.xrmhRU),
                               element: p.Z,
                               notice: {
-                                  element: _.n,
+                                  element: I.n,
                                   stores: [y.Z]
                               },
                               predicate: () => l && !x
@@ -131,10 +131,10 @@ class M extends l.PureComponent {
                               section: P.CoT.INTEGRATIONS,
                               label: A.intl.string(A.t.s69NLC),
                               ariaLabel: A.intl.string(A.t.s69NLC),
-                              element: w.Z,
+                              element: T.Z,
                               notice: {
                                   stores: [v.Z],
-                                  element: w.B
+                                  element: T.B
                               },
                               predicate: () => !((!d && !h) || t.isModeratorReportChannel()) && b.Ti.has(t.type)
                           },
@@ -142,8 +142,8 @@ class M extends l.PureComponent {
                           {
                               section: P.CoT.DELETE,
                               onClick() {
-                                  (0, T.w)(t, function () {
-                                      Z.S.subscribeOnce(P.CkL.LAYER_POP_COMPLETE, () => {
+                                  (0, Z.w)(t, function () {
+                                      w.S.subscribeOnce(P.CkL.LAYER_POP_COMPLETE, () => {
                                           (0, o.zz)(t.id);
                                       }),
                                           (0, c.xf)();

@@ -1,10 +1,10 @@
-var e = r(98405),
-    a = r(527160),
-    u = r(914331),
-    i = r(640883),
+var n = r(98405),
+    i = r(527160),
+    s = r(914331),
+    a = r(640883),
     o = r(992032),
-    f = r(861567);
-e(
+    u = r(861567);
+n(
     {
         target: 'Array',
         proto: !0,
@@ -21,18 +21,18 @@ e(
     },
     {
         unshift: function (t) {
-            var n = a(this),
-                r = u(n),
-                e = arguments.length;
-            if (e) {
-                f(r + e);
-                for (var c = r; c--; ) {
-                    var s = c + e;
-                    c in n ? (n[s] = n[c]) : o(n, s);
+            var e = i(this),
+                r = s(e),
+                n = arguments.length;
+            if (n) {
+                u(r + n);
+                for (var h = r; h--; ) {
+                    var c = h + n;
+                    h in e ? (e[c] = e[h]) : o(e, c);
                 }
-                for (var l = 0; l < e; l++) n[l] = arguments[l];
+                for (var f = 0; f < n; f++) e[f] = arguments[f];
             }
-            return i(n, r + e);
+            return a(e, r + n);
         }
     }
 );

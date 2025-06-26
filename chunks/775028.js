@@ -1,4 +1,4 @@
-t.d(n, { Z: () => M }), t(388685), t(539854), t(472816), t(794429);
+t.d(n, { Z: () => H }), t(388685), t(539854), t(472816), t(794429);
 var l = t(255367),
     r = t(73800),
     i = t(120356),
@@ -26,8 +26,9 @@ var l = t(255367),
     Z = t(981631),
     w = t(176505),
     P = t(388032),
-    E = t(174612);
-function S(e) {
+    E = t(174612),
+    S = t(73433);
+function T(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             l = Object.keys(t);
@@ -52,7 +53,7 @@ function S(e) {
     }
     return e;
 }
-function T(e, n) {
+function B(e, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -70,9 +71,9 @@ function T(e, n) {
         e
     );
 }
-let B = new Set([Z.d4z.GUILD_FORUM, Z.d4z.GUILD_MEDIA]),
-    k = new Set([Z.d4z.GUILD_VOICE, Z.d4z.GUILD_STAGE_VOICE]);
-function A(e) {
+let k = new Set([Z.d4z.GUILD_FORUM, Z.d4z.GUILD_MEDIA]),
+    A = new Set([Z.d4z.GUILD_VOICE, Z.d4z.GUILD_STAGE_VOICE]);
+function R(e) {
     let { guild: n, channel: r, onCategoryClick: i } = e,
         o = (0, I.Mf)(n.id, r.id, r.id),
         s = (0, I.t4)(n.id, r.id, r.id);
@@ -84,7 +85,7 @@ function A(e) {
                 return (t) =>
                     (0, l.jsx)(
                         e,
-                        T(S({}, t), {
+                        B(T({}, t), {
                             channel: r,
                             guild: n
                         })
@@ -125,10 +126,10 @@ function A(e) {
         ]
     });
 }
-let R = r.memo(function () {
+let D = r.memo(function () {
         return (0, l.jsx)('div', { className: E.separator });
     }),
-    D = r.memo(function (e) {
+    L = r.memo(function (e) {
         let { index: n } = e;
         return (0, l.jsx)(
             d.Text,
@@ -140,25 +141,25 @@ let R = r.memo(function () {
             'separator-'.concat(n)
         );
     }),
-    L = r.memo(function (e) {
+    M = r.memo(function (e) {
         let { channel: n, category: r, guild: i, isFirstChannel: s, isLastChannel: h, onChannelClick: O, tooltipDirection: N = 'right' } = e,
-            { isSubscriptionGated: A } = (0, p.Z)(n.id),
-            L = (0, I.Mf)(i.id, n.id, r.id),
-            M = (0, I.t4)(i.id, n.id, r.id),
-            H = (0, I.EH)(i.id, r.id),
-            U = (0, o.e7)([v.Z], () => v.Z.getActiveThreadCount(i.id, n.id)),
-            G = (0, o.e7)([_.Z], () => _.Z.shouldIndicateNewChannel(i.id, n.id)),
-            W = (e) => {
-                if (!M) return e.stopPropagation(), O(i.id, n.id, r.id), !0;
-            },
+            { isSubscriptionGated: R } = (0, p.Z)(n.id),
+            M = (0, I.Mf)(i.id, n.id, r.id),
+            H = (0, I.t4)(i.id, n.id, r.id),
+            U = (0, I.EH)(i.id, r.id),
+            G = (0, o.e7)([v.Z], () => v.Z.getActiveThreadCount(i.id, n.id)),
+            W = (0, o.e7)([_.Z], () => _.Z.shouldIndicateNewChannel(i.id, n.id)),
             F = (e) => {
+                if (!H) return e.stopPropagation(), O(i.id, n.id, r.id), !0;
+            },
+            z = (e) => {
                 n.isGuildVocal()
                     ? (0, u.jW)(e, async () => {
                           let { default: e } = await Promise.all([t.e('79695'), t.e('18320'), t.e('83331'), t.e('81070')]).then(t.bind(t, 213202));
                           return (t) =>
                               (0, l.jsx)(
                                   e,
-                                  T(S({}, t), {
+                                  B(T({}, t), {
                                       channel: n,
                                       guild: i
                                   })
@@ -169,14 +170,14 @@ let R = r.memo(function () {
                           return (t) =>
                               (0, l.jsx)(
                                   e,
-                                  T(S({}, t), {
+                                  B(T({}, t), {
                                       channel: n,
                                       guild: i
                                   })
                               );
                       });
             },
-            z = (function (e, n) {
+            q = (function (e, n) {
                 let t = [];
                 return (
                     Z.TPd.GUILD_THREADS_ONLY.has(e.type) &&
@@ -192,7 +193,7 @@ let R = r.memo(function () {
                                 'thread-count'
                             )
                         ),
-                    k.has(e.type) ||
+                    A.has(e.type) ||
                         t.push(
                             (0, l.jsx)(
                                 d.Text,
@@ -210,6 +211,7 @@ let R = r.memo(function () {
                             (0, l.jsx)(
                                 m.Z,
                                 {
+                                    className: S.markup,
                                     children: (0, l.jsx)(d.Text, {
                                         className: E.topic,
                                         variant: 'text-xs/normal',
@@ -219,11 +221,11 @@ let R = r.memo(function () {
                                 'topic'
                             )
                         ),
-                    [t.map((e, n) => [e, (0, l.jsx)(D, { index: n }, 'subtitle-separator-'.concat(n))])].flat(2).slice(0, -1)
+                    [t.map((e, n) => [e, (0, l.jsx)(L, { index: n }, 'subtitle-separator-'.concat(n))])].flat(2).slice(0, -1)
                 );
-            })(n, U),
-            q = (e) => (
-                (e.stopPropagation(), B.has(n.type) || e.shiftKey)
+            })(n, G),
+            X = (e) => (
+                (e.stopPropagation(), k.has(n.type) || e.shiftKey)
                     ? (0, C.XU)(i.id, n.id)
                     : n.isGuildStageVoice() || n.isGuildVoice()
                       ? (0, b.Cq)(n)
@@ -234,33 +236,33 @@ let R = r.memo(function () {
                         }),
                 !0
             ),
-            X = P.intl.string(P.t.vetGQk);
-        n.isGuildStageVoice() || n.isGuildVoice() ? (X = P.intl.string(P.t.VJlc0d)) : n.isForumLikeChannel() && (X = P.intl.string(P.t['3xjX0d']));
-        let V = M ? 'text-muted' : 'text-default',
-            J = (0, d.dQu)(M ? c.Z.colors.TEXT_MUTED : c.Z.colors.TEXT_DEFAULT).hex();
+            V = P.intl.string(P.t.vetGQk);
+        n.isGuildStageVoice() || n.isGuildVoice() ? (V = P.intl.string(P.t.VJlc0d)) : n.isForumLikeChannel() && (V = P.intl.string(P.t['3xjX0d']));
+        let J = H ? 'text-muted' : 'text-default',
+            Y = (0, d.dQu)(H ? c.Z.colors.TEXT_MUTED : c.Z.colors.TEXT_DEFAULT).hex();
         return (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(d.ua7, {
-                    text: H,
+                    text: U,
                     delay: 500,
                     position: N,
                     children: (e) =>
                         (0, l.jsxs)(
                             d.P3F,
-                            T(
-                                S(
+                            B(
+                                T(
                                     {
                                         className: a()(E.channelRow, {
                                             [E.firstChannel]: s,
                                             [E.lastChannel]: h,
-                                            [E.disabled]: M
+                                            [E.disabled]: H
                                         })
                                     },
                                     e
                                 ),
                                 {
-                                    onClick: W,
-                                    onContextMenu: F,
+                                    onClick: F,
+                                    onContextMenu: z,
                                     children: [
                                         (0, l.jsxs)('div', {
                                             className: E.channelInfo,
@@ -278,17 +280,17 @@ let R = r.memo(function () {
                                                                 className: E.channelText,
                                                                 variant: 'text-md/medium',
                                                                 lineClamp: 1,
-                                                                color: V,
+                                                                color: J,
                                                                 children: n.name
                                                             })
                                                         }),
-                                                        A
+                                                        R
                                                             ? (0, l.jsx)(f.Z, {
-                                                                  color: J,
+                                                                  color: Y,
                                                                   className: E.premiumIcon
                                                               })
                                                             : null,
-                                                        G
+                                                        W
                                                             ? (0, l.jsx)(d.IGR, {
                                                                   text: P.intl.string(P.t.y2b7CA),
                                                                   color: c.Z.unsafe_rawColors.BRAND_260.css,
@@ -299,7 +301,7 @@ let R = r.memo(function () {
                                                 }),
                                                 (0, l.jsx)('div', {
                                                     className: E.channelSubtitles,
-                                                    children: z
+                                                    children: q
                                                 })
                                             ]
                                         }),
@@ -311,14 +313,14 @@ let R = r.memo(function () {
                                                     color: d.Ttl.PRIMARY,
                                                     size: d.PhG.SMALL,
                                                     className: E.viewChannelButton,
-                                                    onClick: q,
-                                                    children: X
+                                                    onClick: X,
+                                                    children: V
                                                 }),
                                                 (0, l.jsx)(d.XZJ, {
-                                                    'aria-checked': L,
-                                                    value: L,
+                                                    'aria-checked': M,
+                                                    value: M,
                                                     type: d.XZJ.Types.INVERTED,
-                                                    disabled: M,
+                                                    disabled: H,
                                                     innerClassName: E.checkboxInner,
                                                     displayOnly: !0
                                                 })
@@ -329,11 +331,11 @@ let R = r.memo(function () {
                             )
                         )
                 }),
-                !h && (0, l.jsx)(R, {})
+                !h && (0, l.jsx)(D, {})
             ]
         });
     });
-function M(e) {
+function H(e) {
     let { categories: n, guild: t, className: i, innerClassName: o, hasSidebar: c } = e,
         { onChannelClick: u } = (0, O.Z)(t.id),
         m = (0, h.wE)(s.z.CHANNEL_BROWSER_NUX) ? 0 : -1,
@@ -343,7 +345,7 @@ function M(e) {
                 if (0 === r && -1 === m) return null;
                 let i = n._categories[r + m];
                 return (0, l.jsx)(
-                    A,
+                    R,
                     {
                         channel: i.channel,
                         guild: t,
@@ -363,7 +365,7 @@ function M(e) {
                 return null == o
                     ? null
                     : (0, l.jsx)(
-                          L,
+                          M,
                           {
                               category: a.channel,
                               channel: o.channel,
