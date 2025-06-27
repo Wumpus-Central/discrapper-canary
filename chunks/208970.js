@@ -76,10 +76,7 @@ function p(e) {
     let { channelId: t, query: n } = e;
     if (!f(t)) return !1;
     let r = _(t);
-    d[t] = u(l({}, r), {
-        query: n,
-        results: null
-    });
+    d[t] = u(l({}, r), { query: n });
 }
 function h(e) {
     let { channelId: t } = e;

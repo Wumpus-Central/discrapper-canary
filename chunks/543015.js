@@ -30,8 +30,8 @@ var r = n(255367),
     E = n(858543),
     R = n(265641),
     k = n(883728),
-    M = n(39154),
-    Z = n(712950),
+    Z = n(39154),
+    M = n(712950),
     A = n(406432),
     L = n(169525),
     F = n(566006),
@@ -100,8 +100,8 @@ let ec = i.memo(function (e) {
                 { firstMessage: l } = (0, S.cl)(r),
                 s = (function (e) {
                     let { firstMessage: t, formatInline: n = !0, noStyleAndInteraction: r = !0 } = e,
-                        a = (0, Z.p)(),
-                        l = i.useMemo(() => (null != t ? (0, M.Z)(t, null == t ? void 0 : t.messageSnapshots[0]) : null), [t]),
+                        a = (0, M.p)(),
+                        l = i.useMemo(() => (null != t ? (0, Z.Z)(t, null == t ? void 0 : t.messageSnapshots[0]) : null), [t]),
                         { hasSpoilerEmbeds: s, content: o } = i.useMemo(
                             () =>
                                 (null == l ? void 0 : l.content) != null && '' !== l.content

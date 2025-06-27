@@ -1,6 +1,6 @@
 n.d(t, {
     FT: () => Y,
-    L3: () => V,
+    L3: () => W,
     ZP: () => q
 }),
     n(388685),
@@ -186,7 +186,7 @@ let z = d().throttle(f.OQ, 1000),
             ]
         });
     },
-    W = (e) => {
+    V = (e) => {
         let { isLoading: t, staticEmojis: i, animatedEmojis: l, theme: s, guild: a } = e;
         return t
             ? (0, r.jsx)(g.$jN, {
@@ -212,7 +212,7 @@ let z = d().throttle(f.OQ, 1000),
                 })
               : (0, r.jsxs)('div', {
                     children: [
-                        (0, r.jsx)(V, {
+                        (0, r.jsx)(W, {
                             title: G.intl.string(G.t.sMOuub),
                             maxSlots: (0, R.y4)(a),
                             emojiCount: i.length
@@ -221,7 +221,7 @@ let z = d().throttle(f.OQ, 1000),
                             emojis: i,
                             guild: a
                         }),
-                        (0, r.jsx)(V, {
+                        (0, r.jsx)(W, {
                             title: G.intl.string(G.t.wWjQyc),
                             maxSlots: (0, R.y4)(a),
                             emojiCount: l.length
@@ -233,7 +233,7 @@ let z = d().throttle(f.OQ, 1000),
                     ]
                 });
     },
-    V = (e) => {
+    W = (e) => {
         let { title: t, maxSlots: n, emojiCount: i } = e;
         return (0, r.jsxs)(g.vwX, {
             tag: g.RB0.H2,
@@ -378,7 +378,7 @@ let z = d().throttle(f.OQ, 1000),
                 return [n, r];
             }, [p, e.id]),
             H = Math.max(Z - M.length, Z - B.length),
-            V =
+            W =
                 (0, v.h)({
                     location: 'guild_settings',
                     autoTrackExposure: !0
@@ -403,7 +403,7 @@ let z = d().throttle(f.OQ, 1000),
                 []
             ),
             q = async (n, r, i) => {
-                if (!V)
+                if (!W)
                     return await (0, C.G)({
                         data: n,
                         file: r,
@@ -474,7 +474,7 @@ let z = d().throttle(f.OQ, 1000),
                                         type: g.geA.DESCRIPTION,
                                         children: G.intl.format(G.t.uMkfTk, { onClick: () => D.Z.open(e.id, L.pNK.ROLE_SUBSCRIPTIONS, void 0, L.KsC.ROLE_SUBSCRIPTION_EMOJI) })
                                     }),
-                                V
+                                W
                                     ? (0, r.jsx)(g.zxk, {
                                           onClick: Y,
                                           children: G.intl.string(G.t.DU0dy8)
@@ -513,7 +513,7 @@ let z = d().throttle(f.OQ, 1000),
                                       })
                             ]
                         }),
-                        (0, r.jsx)(W, {
+                        (0, r.jsx)(V, {
                             isLoading: null == p,
                             staticEmojis: M,
                             animatedEmojis: B,

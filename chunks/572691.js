@@ -96,6 +96,6 @@ let _ = {
             });
     },
     popAll() {
-        (0, s.lE)(), a.Z.dispatch({ type: 'MODAL_POP_ALL' }), a.Z.dispatch({ type: 'CHANNEL_SETTINGS_CLOSE' }), a.Z.dispatch({ type: 'EMAIL_VERIFICATION_MODAL_CLOSE' }), a.Z.dispatch({ type: 'GUILD_SETTINGS_CLOSE' }), a.Z.dispatch({ type: 'HIDE_ACTION_SHEET' }), a.Z.dispatch({ type: 'DISPLAYED_INVITE_CLEAR' }), a.Z.dispatch({ type: 'NOTIFICATION_SETTINGS_MODAL_CLOSE' }), a.Z.dispatch({ type: 'QUICKSWITCHER_HIDE' }), a.Z.dispatch({ type: 'USER_SETTINGS_MODAL_CLOSE' }), a.Z.dispatch({ type: 'CONNECTIONS_GRID_MODAL_HIDE' }), a.Z.dispatch({ type: 'USER_PROFILE_MODAL_CLOSE' });
+        (0, s.lE)(), a.Z.dispatch({ type: 'MODAL_POP_ALL' }), a.Z.dispatch({ type: 'EMAIL_VERIFICATION_MODAL_CLOSE' }), a.Z.dispatch({ type: 'GUILD_SETTINGS_CLOSE' }), a.Z.dispatch({ type: 'HIDE_ACTION_SHEET' }), a.Z.dispatch({ type: 'DISPLAYED_INVITE_CLEAR' }), a.Z.dispatch({ type: 'NOTIFICATION_SETTINGS_MODAL_CLOSE' }), a.Z.dispatch({ type: 'QUICKSWITCHER_HIDE' }), a.Z.dispatch({ type: 'USER_SETTINGS_MODAL_CLOSE' }), a.Z.dispatch({ type: 'CONNECTIONS_GRID_MODAL_HIDE' }), a.Z.dispatch({ type: 'USER_PROFILE_MODAL_CLOSE' });
     }
 };

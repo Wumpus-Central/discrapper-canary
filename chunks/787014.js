@@ -149,18 +149,15 @@ async function h(e, t) {
             )
     );
 }
-function m(e) {
+async function m(e) {
     let t = s.Z.getChannel(e);
-    r.tn
-        .del({
-            url: c.ANM.CHANNEL(e),
-            oldFormErrors: !0,
-            rejectWithError: !0
-        })
-        .then(() => {
-            let e = null == t ? void 0 : t.getGuildId();
-            null == e || (null == t ? void 0 : t.isThread()) || a.Z.checkGuildTemplateDirty(e), f();
-        });
+    await r.tn.del({
+        url: c.ANM.CHANNEL(e),
+        oldFormErrors: !0,
+        rejectWithError: !0
+    });
+    let n = null == t ? void 0 : t.getGuildId();
+    null == n || (null == t ? void 0 : t.isThread()) || a.Z.checkGuildTemplateDirty(n), f();
 }
 let g = {
     init: u,

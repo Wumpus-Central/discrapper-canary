@@ -108,7 +108,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                           value: e
                       });
             },
-            W = (e) => {
+            V = (e) => {
                 try {
                     var t, n, r, i;
                     let l = new URL(e).hostname.split('.');
@@ -126,7 +126,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                     t = [];
                 D.socialLinks.forEach((n, r) => {
                     if ('' !== n) {
-                        let i = W(n);
+                        let i = V(n);
                         null !== i ? ((t[r] = i), (e[r] = !0)) : (e[r] = !1);
                     } else e[r] = !0;
                 }),
@@ -135,7 +135,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                     G(e.every((e) => !0 === e));
             }
         }, [D]);
-        let V = (0, l.e7)([v.Z], () => (null != d ? v.Z.getErrors() : null));
+        let W = (0, l.e7)([v.Z], () => (null != d ? v.Z.getErrors() : null));
         if (null == d || null == D) return null;
         let Y = (e) => {
                 _.Z.updateGuild({ discoverySplash: e });
@@ -324,12 +324,12 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                     })
                                                                 ]
                                                             }),
-                                                            (null == V ? void 0 : V.category) != null
+                                                            (null == W ? void 0 : W.category) != null
                                                                 ? (0, r.jsx)(a.Text, {
                                                                       color: 'text-danger',
                                                                       className: S.error,
                                                                       variant: 'text-sm/normal',
-                                                                      children: V.category
+                                                                      children: W.category
                                                                   })
                                                                 : null
                                                         ]
@@ -383,11 +383,11 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                     })
                                                                 ]
                                                             }),
-                                                            (null == V ? void 0 : V.discovery_splash) != null
+                                                            (null == W ? void 0 : W.discovery_splash) != null
                                                                 ? (0, r.jsx)(a.Text, {
                                                                       color: 'text-danger',
                                                                       variant: 'text-sm/normal',
-                                                                      children: V.discovery_splash
+                                                                      children: W.discovery_splash
                                                                   })
                                                                 : null
                                                         ]
@@ -447,11 +447,11 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                 reasons: e
                                                             })
                                                         }),
-                                                        (null == V ? void 0 : V.reasons_to_join) != null
+                                                        (null == W ? void 0 : W.reasons_to_join) != null
                                                             ? (0, r.jsx)(a.Text, {
                                                                   color: 'text-danger',
                                                                   variant: 'text-sm/normal',
-                                                                  children: V.reasons_to_join
+                                                                  children: W.reasons_to_join
                                                               })
                                                             : null
                                                     ]
@@ -490,11 +490,11 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                             )
                                                         ]
                                                     }),
-                                                    (null == V ? void 0 : V.about) != null
+                                                    (null == W ? void 0 : W.about) != null
                                                         ? (0, r.jsx)(a.Text, {
                                                               color: 'text-danger',
                                                               variant: 'text-sm/normal',
-                                                              children: V.about
+                                                              children: W.about
                                                           })
                                                         : null
                                                 ]
@@ -582,11 +582,11 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                             'social-container-' + t
                                                         )
                                                     ),
-                                                    (null == V ? void 0 : V.social_links) != null
+                                                    (null == W ? void 0 : W.social_links) != null
                                                         ? (0, r.jsx)(a.Text, {
                                                               color: 'text-danger',
                                                               variant: 'text-sm/normal',
-                                                              children: V.social_links
+                                                              children: W.social_links
                                                           })
                                                         : null,
                                                     (0, r.jsx)(a.zxk, {
@@ -629,11 +629,11 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                         })
                                                     ]
                                                 }),
-                                            (null == V ? void 0 : V.is_published) != null
+                                            (null == W ? void 0 : W.is_published) != null
                                                 ? (0, r.jsx)(a.Text, {
                                                       color: 'text-danger',
                                                       variant: 'text-sm/normal',
-                                                      children: V.is_published
+                                                      children: W.is_published
                                                   })
                                                 : null
                                         ]

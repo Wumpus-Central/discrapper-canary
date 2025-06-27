@@ -88,7 +88,7 @@ function B() {
               children: (0, r.jsx)(u.hjN, {
                   tag: u.RB0.H1,
                   title: A.intl.string(A.t.OWQNYm),
-                  children: (0, r.jsx)(V, { guild: e })
+                  children: (0, r.jsx)(W, { guild: e })
               })
           });
 }
@@ -192,7 +192,7 @@ let H = (e) => {
             )
         );
     },
-    W = () => {
+    V = () => {
         let e = i.useRef(null);
         return (0, r.jsx)(H, {
             renderPopoutBody: () =>
@@ -213,7 +213,7 @@ let H = (e) => {
             popoutTargetRef: e
         });
     };
-function V(e) {
+function W(e) {
     let { guild: t } = e,
         [l, s] = (0, c.Wu)([_.Z], () => {
             var e;
@@ -257,7 +257,7 @@ function V(e) {
               disabled: g <= 0 || !a,
               children: A.intl.string(A.t['/uNYPD'])
           })
-        : (0, r.jsx)(W, {});
+        : (0, r.jsx)(V, {});
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {

@@ -415,7 +415,7 @@ function M() {
     i.useEffect(() => {
         B(H.current);
     }, [B]);
-    let W = i.useMemo(() => {
+    let V = i.useMemo(() => {
         var e;
         return null != (e = F[G.currentPage - 1]) ? e : [];
     }, [F, G.currentPage]);
@@ -435,7 +435,7 @@ function M() {
                               (0, r.jsx)(A, {
                                   guild: c,
                                   bans: x,
-                                  sortedBans: W,
+                                  sortedBans: V,
                                   ref: y
                               }),
                           !k &&

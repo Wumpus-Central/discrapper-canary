@@ -98,14 +98,14 @@ function M(e) {
         }),
         F = (0, g.ZP)(),
         z = i.useRef(null),
-        [{ spring: H }, W] = (0, m.q_F)(() => ({ spring: 0 }), 'animate-always');
+        [{ spring: H }, V] = (0, m.q_F)(() => ({ spring: 0 }), 'animate-always');
     i.useEffect(() => {
         function e() {
-            W({
+            V({
                 spring: 1,
                 config: a.config.gentle
             }),
-                W({
+                V({
                     spring: 0,
                     config: a.config.gentle,
                     delay: 1000
@@ -117,10 +117,10 @@ function M(e) {
                 x.S.unsubscribe(R.CkL.EMPHASIZE_NOTICE, e);
             }
         );
-    }, [W]);
-    let V = (0, m.dQu)(c.Z.colors.BACKGROUND_SURFACE_HIGH).hex(),
+    }, [V]);
+    let W = (0, m.dQu)(c.Z.colors.BACKGROUND_SURFACE_HIGH).hex(),
         Y = (0, m.dQu)(c.Z.unsafe_rawColors.PRIMARY_160).hex(),
-        K = (0, u.wj)(F) ? V : Y,
+        K = (0, u.wj)(F) ? W : Y,
         X = H.to({
             range: [0, 1],
             output: [(0, m.dQu)(c.Z.unsafe_rawColors.WHITE_500).hex(), (0, m.dQu)(c.Z.colors.TEXT_DEFAULT).hex()]

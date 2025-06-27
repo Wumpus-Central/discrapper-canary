@@ -55,27 +55,30 @@ function I(e) {
 }
 function E(e) {
     let { guildId: t } = e,
-        n = (0, l.e7)([d.Z], () => {
-            var e;
-            return null == (e = d.Z.getGuild(t)) ? void 0 : e.nsfwLevel;
+        { nsfwLevel: n, ownerConfiguredContentLevel: a } = (0, l.cj)([d.Z], () => {
+            var e, n;
+            return {
+                nsfwLevel: null == (e = d.Z.getGuild(t)) ? void 0 : e.nsfwLevel,
+                ownerConfiguredContentLevel: null == (n = d.Z.getGuild(t)) ? void 0 : n.ownerConfiguredContentLevel
+            };
         }),
-        a = (0, l.e7)([_.Z], () => {
+        o = (0, l.e7)([_.Z], () => {
             var e;
             return null == (e = _.Z.pendingState) ? void 0 : e.isAgeRestricted;
         }),
-        o = i.useCallback(
+        c = i.useCallback(
             (e) => {
                 h.Z.setIsAgeRestricted(t, e);
             },
             [t]
         ),
-        c = n === C.V_K.AGE_RESTRICTED && !a;
+        m = n === C.V_K.AGE_RESTRICTED && a !== C.V_K.AGE_RESTRICTED;
     return (0, r.jsx)(s.hjN, {
         children: (0, r.jsx)(s.j7V, {
-            onChange: o,
-            value: a,
+            onChange: c,
+            value: o,
             hideBorder: !0,
-            disabled: c,
+            disabled: m,
             note: y.intl.format(y.t['iyQQ6+'], { helpArticleLink: u.Z.getArticleURL(C.BhN.NSFW_SERVER_AGE_RESTRICTION) }),
             children: y.intl.string(y.t.N9xEJC)
         })

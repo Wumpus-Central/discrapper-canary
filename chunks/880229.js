@@ -1,5 +1,5 @@
 n.d(t, {
-    C: () => W,
+    C: () => V,
     K: () => U
 }),
     n(388685),
@@ -519,7 +519,7 @@ function H(e) {
         ]
     });
 }
-function W(e) {
+function V(e) {
     let { transitionState: t, guildId: n, onClose: l, onImport: s } = e,
         [a, o] = i.useState();
     return (0, r.jsx)(m.Y0X, {

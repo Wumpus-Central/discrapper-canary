@@ -30,8 +30,8 @@ var r = n(255367),
     E = n(983200),
     R = n(196255),
     k = n(858543),
-    M = n(482062),
-    Z = n(883728),
+    Z = n(482062),
+    M = n(883728),
     A = n(710352),
     L = n(981631),
     F = n(388032),
@@ -111,7 +111,7 @@ function U(e) {
         { messageCountText: U } = (0, w.nP)(n),
         { isNew: G, hasUnreads: q } = (0, w.J$)(n),
         X = i.useRef(null),
-        { handleLeftClick: J, handleRightClick: Y } = (0, Z.Z)({
+        { handleLeftClick: J, handleRightClick: Y } = (0, M.Z)({
             facepileRef: X,
             goToThread: a,
             channel: n
@@ -128,7 +128,7 @@ function U(e) {
         ea = (0, w.xw)(n, s.z.CREATION_DATE, A.R6.POSTED_DURATION_AGO),
         el = (0, P.NN)(n),
         es = (null == E ? void 0 : E.blocked) || null == (null != u ? u : H),
-        eo = (0, M.nX)({
+        eo = (0, Z.nX)({
             id: t,
             row: g.row,
             column: g.column,

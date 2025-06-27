@@ -142,12 +142,12 @@ function A(e) {
         [L, M] = i.useState(null == a ? void 0 : a.store_page_guild_products_default_sort),
         [G, U] = i.useState(null == a ? void 0 : a.server_shop_tab_order),
         { loading: B, error: F, updateSubscriptionsSettings: z } = (0, O.QV)(),
-        { imageCTA: H, imageAriaLabel: W, setFilename: V } = (0, y.Z)(null == a ? void 0 : a.cover_image_asset),
+        { imageCTA: H, imageAriaLabel: V, setFilename: W } = (0, y.Z)(null == a ? void 0 : a.cover_image_asset),
         Y = (0, x.Dt)(),
         K = (0, x.Dt)(),
         X = (0, x.Dt)();
     function q(e, t) {
-        o()(null != e, 'Null value not allowed'), null != t && V(t.name), A(e);
+        o()(null != e, 'Null value not allowed'), null != t && W(t.name), A(e);
     }
     let Q = i.useMemo(() => {
             var e;
@@ -268,14 +268,14 @@ function A(e) {
                         imageClassName: P.coverImageUploaderInner,
                         iconClassName: P.coverImageUploaderIcon,
                         onChange: q,
-                        'aria-label': W,
+                        'aria-label': V,
                         disabled: $
                     }),
                     (0, r.jsx)(g.LZC, { size: 16 }),
                     (0, r.jsx)(b.Z, {
                         onChange: q,
                         buttonCTA: H,
-                        'aria-label': W,
+                        'aria-label': V,
                         disabled: $,
                         look: g.zxk.Looks.OUTLINED,
                         color: g.zxk.Colors.PRIMARY

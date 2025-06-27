@@ -1,4 +1,4 @@
-n.d(t, { Z: () => eN }), n(388685), n(539854);
+n.d(t, { Z: () => eT }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -36,40 +36,41 @@ var r = n(255367),
     k = n(258871),
     M = n(340541),
     U = n(972264),
-    G = n(50101),
-    B = n(639777),
-    V = n(11352),
-    H = n(304445),
-    F = n(344185),
-    z = n(155409),
-    W = n(10401),
-    Y = n(970731),
-    K = n(210887),
-    q = n(592125),
-    X = n(796974),
-    Q = n(486472),
-    J = n(984933),
-    $ = n(650774),
-    ee = n(430824),
-    et = n(819640),
-    en = n(496675),
-    er = n(878884),
-    ei = n(19780),
-    el = n(594174),
-    ea = n(74538),
-    eo = n(374023),
-    es = n(373274),
-    ec = n(315174),
-    eu = n(577718),
-    ed = n(156978),
-    ep = n(591190),
-    eh = n(981631),
-    ef = n(652785),
-    eg = n(921944),
-    em = n(647086),
-    eb = n(388032),
-    e_ = n(540835);
-function eE(e, t, n) {
+    G = n(232062),
+    B = n(50101),
+    V = n(639777),
+    H = n(11352),
+    F = n(304445),
+    z = n(344185),
+    W = n(155409),
+    Y = n(10401),
+    K = n(970731),
+    q = n(210887),
+    X = n(592125),
+    Q = n(796974),
+    J = n(486472),
+    $ = n(984933),
+    ee = n(650774),
+    et = n(430824),
+    en = n(819640),
+    er = n(496675),
+    ei = n(878884),
+    el = n(19780),
+    ea = n(594174),
+    eo = n(74538),
+    es = n(374023),
+    ec = n(373274),
+    eu = n(315174),
+    ed = n(577718),
+    ep = n(156978),
+    eh = n(591190),
+    ef = n(981631),
+    eg = n(652785),
+    em = n(921944),
+    eb = n(647086),
+    e_ = n(388032),
+    eE = n(540835);
+function eO(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -82,7 +83,7 @@ function eE(e, t, n) {
         e
     );
 }
-function eO(e) {
+function ey(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -93,12 +94,12 @@ function eO(e) {
                 })
             )),
             r.forEach(function (t) {
-                eE(e, t, n[t]);
+                eO(e, t, n[t]);
             });
     }
     return e;
 }
-function ey(e, t) {
+function eI(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -116,7 +117,7 @@ function ey(e, t) {
         e
     );
 }
-function eI(e, t) {
+function ev(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -135,8 +136,8 @@ function eI(e, t) {
     }
     return i;
 }
-let ev = 'server-settings',
-    eC = {
+let eC = 'server-settings',
+    eS = {
         origin: {
             x: -8,
             y: -48
@@ -148,7 +149,7 @@ let ev = 'server-settings',
             y: 0
         }
     };
-class eS extends i.PureComponent {
+class eN extends i.PureComponent {
     static getDerivedStateFromProps(e) {
         let { guild: t, hasChannelNotice: n } = e;
         return null == t || null == t.banner || n
@@ -160,8 +161,8 @@ class eS extends i.PureComponent {
     }
     componentDidMount() {
         var e;
-        this.setAnimatedValue(0), g.Z.subscribe('LAYER_PUSH', this.closeAllHeaderNotices), (this.historyUnlisten = H.Z.addRouteChangeListener(this.handleHistoryChange));
-        let { location: t } = H.Z.getHistory();
+        this.setAnimatedValue(0), g.Z.subscribe('LAYER_PUSH', this.closeAllHeaderNotices), (this.historyUnlisten = F.Z.addRouteChangeListener(this.handleHistoryChange));
+        let { location: t } = F.Z.getHistory();
         (null == (e = t.state) ? void 0 : e.shouldShowSubscribeTooltip) && this.showTimeout.start(1000, () => this.setState({ shouldShowSubscribeTooltip: !0 }));
     }
     componentWillUnmount() {
@@ -177,10 +178,10 @@ class eS extends i.PureComponent {
         return n
             ? (0, r.jsx)('div', {
                   onClick: (t) => (e ? null : t.stopPropagation()),
-                  children: (0, r.jsx)(z.Z, {
-                      tutorialId: ev,
+                  children: (0, r.jsx)(W.Z, {
+                      tutorialId: eC,
                       position: 'bottom',
-                      inlineSpecs: eC,
+                      inlineSpecs: eS,
                       children: this.renderGuildHeaderDropdownButton(e)
                   })
               })
@@ -190,8 +191,8 @@ class eS extends i.PureComponent {
                     color: f.FGA.BRAND,
                     position: 'bottom',
                     shouldShow: !e && !i,
-                    text: eb.intl.string(eb.t.sFSrFB),
-                    'aria-label': eb.intl.string(eb.t.sFSrFB),
+                    text: e_.intl.string(e_.t.sFSrFB),
+                    'aria-label': e_.intl.string(e_.t.sFSrFB),
                     children: () => this.renderGuildHeaderDropdownButton(e)
                 })
               : i || e
@@ -202,10 +203,10 @@ class eS extends i.PureComponent {
                         renderPopout: () =>
                             (0, r.jsx)('div', {
                                 onClick: (e) => e.stopPropagation(),
-                                children: (0, r.jsx)(Y.ZP, {
-                                    header: eb.intl.string(eb.t['Q3qa4+']),
-                                    content: eb.intl.string(eb.t.UyHD4O),
-                                    buttonCTA: eb.intl.string(eb.t.U9PrMz),
+                                children: (0, r.jsx)(K.ZP, {
+                                    header: e_.intl.string(e_.t['Q3qa4+']),
+                                    content: e_.intl.string(e_.t.UyHD4O),
+                                    buttonCTA: e_.intl.string(e_.t.U9PrMz),
                                     onClick: this.handleCloseSubscribeTooltip
                                 })
                             }),
@@ -226,7 +227,7 @@ class eS extends i.PureComponent {
             : (0, M.jW)({ location: 'guild_sidebar' }).entrypoints
               ? (0, r.jsx)(y.Gt, {
                     value: o,
-                    children: (0, r.jsx)(ec.ZP, {
+                    children: (0, r.jsx)(eu.ZP, {
                         guild: t,
                         controller: s,
                         renderBanner: c,
@@ -255,11 +256,11 @@ class eS extends i.PureComponent {
                         spacing: 4,
                         children: (i) => {
                             var { onClick: l } = i,
-                                a = eI(i, ['onClick']);
+                                a = ev(i, ['onClick']);
                             return (0, r.jsx)(
-                                ec.ZP,
-                                ey(
-                                    eO(
+                                eu.ZP,
+                                eI(
+                                    ey(
                                         {
                                             ref: this.guildHeaderRef,
                                             guild: t,
@@ -303,21 +304,21 @@ class eS extends i.PureComponent {
     renderChannelList() {
         let e = this.props,
             { isUnavailable: t, guild: n, selectedChannel: i, enableStudyGroup: l } = e,
-            a = eI(e, ['isUnavailable', 'guild', 'selectedChannel', 'enableStudyGroup']);
-        if (t || null == n) return (0, r.jsx)(ep.Z, { withBannerPadding: null != n && null != this.getGuildBannerHash() });
+            a = ev(e, ['isUnavailable', 'guild', 'selectedChannel', 'enableStudyGroup']);
+        if (t || null == n) return (0, r.jsx)(eh.Z, { withBannerPadding: null != n && null != this.getGuildBannerHash() });
         {
-            if (n.hasFeature(eh.oNc.HUB) && !l)
+            if (n.hasFeature(ef.oNc.HUB) && !l)
                 return (0, r.jsx)('div', {
-                    className: e_.hubContainer,
+                    className: eE.hubContainer,
                     children: (0, r.jsx)(k.Z, {
                         guild: n,
-                        channel: null != i ? i : J.ZP.getDefaultChannel(n.id)
+                        channel: null != i ? i : $.ZP.getDefaultChannel(n.id)
                     })
                 });
-            let e = n.id === em._ ? es.j : es.E;
+            let e = n.id === eb._ ? ec.j : ec.E;
             return (0, r.jsx)(
                 e,
-                ey(eO({ guild: n }, a), {
+                eI(ey({ guild: n }, a), {
                     guildBanner: this.getGuildBannerHash(),
                     hasGuildSubheader: this.state.hasGuildSubheader,
                     onScroll: null != n && (null != this.getGuildBannerHash() || n.hasCommunityInfoSubheader()) ? this.pinBannerOrGuildInfo : null
@@ -338,13 +339,13 @@ class eS extends i.PureComponent {
     render() {
         let { guild: e, footerAnalyticsLocations: t } = this.props;
         return (0, r.jsxs)('nav', {
-            className: e_.container,
+            className: eE.container,
             onContextMenu: this.handleContextMenu,
-            'aria-label': eb.intl.formatToPlainString(eb.t.nj5gAQ, { guildName: null != e ? e.toString() : '' }),
+            'aria-label': e_.intl.formatToPlainString(e_.t.nj5gAQ, { guildName: null != e ? e.toString() : '' }),
             children: [
                 null != e && this.renderGuildHeader(this.state.hasGuildSubheader),
                 null != e &&
-                    (0, r.jsx)(ed.Z, {
+                    (0, r.jsx)(ep.Z, {
                         guild: e,
                         setHasSubheader: (e) => this.setState({ hasGuildSubheader: e })
                     }),
@@ -358,11 +359,11 @@ class eS extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            eE(this, 'historyUnlisten', () => {}),
-            eE(this, 'guildHeaderRef', i.createRef()),
-            eE(this, 'guildHeaderDropdownButtonRef', i.createRef()),
-            eE(this, 'showTimeout', new h.V7()),
-            eE(this, 'state', {
+            eO(this, 'historyUnlisten', () => {}),
+            eO(this, 'guildHeaderRef', i.createRef()),
+            eO(this, 'guildHeaderDropdownButtonRef', i.createRef()),
+            eO(this, 'showTimeout', new h.V7()),
+            eO(this, 'state', {
                 controller: new c.Controller({
                     value: 1,
                     immediate: !0
@@ -374,46 +375,46 @@ class eS extends i.PureComponent {
                 bannerVisibleHeight: 88,
                 hasGuildSubheader: !1
             }),
-            eE(this, 'handleHistoryChange', (e) => {
+            eO(this, 'handleHistoryChange', (e) => {
                 null != e.state && e.state.shouldShowSubscribeTooltip && this.showTimeout.start(1000, () => this.setState({ shouldShowSubscribeTooltip: !0 }));
             }),
-            eE(this, 'handleHeaderMenuToggle', (e) => {
+            eO(this, 'handleHeaderMenuToggle', (e) => {
                 let { isHeaderPopoutOpen: t } = this.props;
                 e.stopPropagation(), (0, A.l)(!t), this.closeAllHeaderNotices();
             }),
-            eE(this, 'handleContextMenu', (e) => {
+            eO(this, 'handleContextMenu', (e) => {
                 let { guild: t } = this.props;
                 null != t &&
                     (0, m.jW)(e, async () => {
                         let { default: e } = await n.e('92795').then(n.bind(n, 652171));
-                        return (n) => (0, r.jsx)(e, ey(eO({}, n), { guild: t }));
+                        return (n) => (0, r.jsx)(e, eI(ey({}, n), { guild: t }));
                     });
             }),
-            eE(this, 'handleHeaderContextMenu', (e) => {
+            eO(this, 'handleHeaderContextMenu', (e) => {
                 let { guild: t } = this.props;
                 null != t &&
                     (0, m.jW)(e, async () => {
                         let { default: e } = await Promise.all([n.e('7654'), n.e('55616'), n.e('44156'), n.e('49286'), n.e('6850'), n.e('58227'), n.e('32652'), n.e('54408'), n.e('20087'), n.e('92754'), n.e('87154'), n.e('33213'), n.e('15875')]).then(n.bind(n, 545135));
-                        return (n) => (0, r.jsx)(e, ey(eO({}, n), { guild: t }));
+                        return (n) => (0, r.jsx)(e, eI(ey({}, n), { guild: t }));
                     });
             }),
-            eE(this, 'closeAllHeaderNotices', () => {
+            eO(this, 'closeAllHeaderNotices', () => {
                 this.handleCloseSubscribeTooltip(), this.handleCloseTemplateDirtyTooltip(), this.handleCloseStudentHubPrivacySettingsTooltip();
             }),
-            eE(this, 'handleCloseStudentHubPrivacySettingsTooltip', () => {
+            eO(this, 'handleCloseStudentHubPrivacySettingsTooltip', () => {
                 var e;
                 let t = (0, T.un)(p.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
-                    n = null == (e = this.props.guild) ? void 0 : e.hasFeature(eh.oNc.HUB);
-                !t && n && (0, T.EW)(p.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP, { dismissAction: eg.L.AUTO });
+                    n = null == (e = this.props.guild) ? void 0 : e.hasFeature(ef.oNc.HUB);
+                !t && n && (0, T.EW)(p.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP, { dismissAction: em.L.AUTO });
             }),
-            eE(this, 'handleCloseSubscribeTooltip', () => {
+            eO(this, 'handleCloseSubscribeTooltip', () => {
                 this.showTimeout.stop(), this.state.shouldShowSubscribeTooltip && this.setState({ shouldShowSubscribeTooltip: !1 });
             }),
-            eE(this, 'handleCloseTemplateDirtyTooltip', () => {
+            eO(this, 'handleCloseTemplateDirtyTooltip', () => {
                 let { guild: e, showGuildTemplateDirtyTooltip: t } = this.props;
                 null != e && t && w.Z.hideGuildTemplateDirtyTooltip(e.id);
             }),
-            eE(this, 'renderMenuPopout', async () => {
+            eO(this, 'renderMenuPopout', async () => {
                 let { default: e } = await Promise.all([n.e('87154'), n.e('42018')]).then(n.bind(n, 859432));
                 return (t) => {
                     let { closePopout: n } = t,
@@ -427,32 +428,32 @@ class eS extends i.PureComponent {
                     );
                 };
             }),
-            eE(this, 'renderGuildHeaderUpsellPopout', (e) => {
-                let { showGuildBoostingProgressBarUpsell: t, showGuildBoostingProgressBarSizeUpsell: n, showRoleSubscriptionUpsell: i, showInviteSplashUpsell: l, showDiscoveryLandingPageSettingsUpsell: a, showHubPrivacySettingsTooltip: o, showActiveThreadsNotice: s, showGuildSoundboardPermissionUpsell: c, showMediaChannelUpsell: u, showTierTemplatesUpsell: d, shouldRenderCustomNotificationSoundsCoachmark: h, shouldRenderGuildPowerupPerkCoachmark: f, guild: g, theme: m } = this.props;
-                if (null == g) return this.renderGuildHeaderDropdownButton(e);
-                let b = [];
-                return (o && b.push(p.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP), s && b.push(p.z.GUILD_HEADER_ACTIVE_THREADS_NOTICE), t && b.push(p.z.GUILD_HEADER_PREMIUM_GUILD_PROGRESS), n && b.push(p.z.GUILD_HEADER_PROGRESS_BAR_SIZE_COACH_MARK), i && b.push(p.z.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL), c && b.push(p.z.GUILD_HEADER_SOUNDBOARD_PERMISSION), l && b.push(p.z.GUILD_HEADER_INVITE_SPLASH), a && b.push(p.z.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL), f && b.push(p.z.GUILD_POWERUP_PERKS_COACHMARK), 0 === b.length)
+            eO(this, 'renderGuildHeaderUpsellPopout', (e) => {
+                let { showGuildBoostingProgressBarUpsell: t, showGuildBoostingProgressBarSizeUpsell: n, showRoleSubscriptionUpsell: i, showInviteSplashUpsell: l, showDiscoveryLandingPageSettingsUpsell: a, showHubPrivacySettingsTooltip: o, showActiveThreadsNotice: s, showGuildSoundboardPermissionUpsell: c, showMediaChannelUpsell: u, showTierTemplatesUpsell: d, shouldRenderCustomNotificationSoundsCoachmark: h, shouldRenderGuildPowerupPerkCoachmark: f, shouldRenderBoosterEnhancedRoleColorsCoachmark: g, guild: m, theme: b } = this.props;
+                if (null == m) return this.renderGuildHeaderDropdownButton(e);
+                let _ = [];
+                return (o && _.push(p.z.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP), s && _.push(p.z.GUILD_HEADER_ACTIVE_THREADS_NOTICE), t && _.push(p.z.GUILD_HEADER_PREMIUM_GUILD_PROGRESS), n && _.push(p.z.GUILD_HEADER_PROGRESS_BAR_SIZE_COACH_MARK), i && _.push(p.z.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL), c && _.push(p.z.GUILD_HEADER_SOUNDBOARD_PERMISSION), l && _.push(p.z.GUILD_HEADER_INVITE_SPLASH), a && _.push(p.z.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL), f && _.push(p.z.GUILD_POWERUP_PERKS_COACHMARK), g && _.push(p.z.BOOSTER_ENHANCED_ROLE_COLORS_COACHMARK), 0 === _.length)
                     ? this.renderGuildHeaderDropdownButton(e)
-                    : (u && b.push(p.z.MEDIA_CHANNEL_UPSELL),
-                      d && b.push(p.z.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL),
-                      h && b.push(p.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_COACHMARK),
-                      (0, r.jsx)(eu.Z, {
-                          contentTypes: b,
-                          theme: m,
-                          guild: g,
+                    : (u && _.push(p.z.MEDIA_CHANNEL_UPSELL),
+                      d && _.push(p.z.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL),
+                      h && _.push(p.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_COACHMARK),
+                      (0, r.jsx)(ed.Z, {
+                          contentTypes: _,
+                          theme: b,
+                          guild: m,
                           renderGuildHeaderDropdownButton: () => this.renderGuildHeaderDropdownButton(e)
                       }));
             }),
-            eE(this, 'renderGuildHeaderDropdownButton', (e) =>
+            eO(this, 'renderGuildHeaderDropdownButton', (e) =>
                 (0, M.jW)({ location: 'guild_sidebar' }).entrypoints
-                    ? (0, r.jsx)(ec.wD, { open: e })
+                    ? (0, r.jsx)(eu.wD, { open: e })
                     : (0, r.jsx)(b.Z, {
                           open: e,
-                          className: a()(e_.dropdownButton, { [e_.dropdownButtonBannerVisible]: this.state.bannerVisible }),
+                          className: a()(eE.dropdownButton, { [eE.dropdownButtonBannerVisible]: this.state.bannerVisible }),
                           ref: this.guildHeaderDropdownButtonRef
                       })
             ),
-            eE(this, 'setAnimatedValueForBanner', (e) => {
+            eO(this, 'setAnimatedValueForBanner', (e) => {
                 let { renderBanner: t, communityInfoVisible: n, bannerVisible: r, bannerVisibleHeight: i, controller: l } = this.state;
                 ((e >= 88 && r) || (e < 88 && !r)) && (r = !r),
                     ((e >= 88 && !t) || (e < 88 && t)) && (t = !t),
@@ -472,103 +473,106 @@ class eS extends i.PureComponent {
                         })
                         .start();
             }),
-            eE(this, 'pinBannerOrGuildInfo', (e) => {
+            eO(this, 'pinBannerOrGuildInfo', (e) => {
                 let { scrollTop: t } = e;
                 this.setAnimatedValue(t);
             });
     }
 }
-function eN(e) {
+function eT(e) {
     var t;
     let { guildId: n, hideSelectedChannel: l, selectedChannelId: a } = e,
-        o = (0, d.e7)([ee.Z], () => ee.Z.getGuild(n));
+        o = (0, d.e7)([et.Z], () => et.Z.getGuild(n));
     (0, _.J_)(n);
     let c = (0, j.Z)(n),
-        h = (0, d.e7)([X.Z], () => X.Z.getGuildDimensions(n).scrollTo),
-        g = (0, d.e7)([ei.Z], () => ei.Z.getChannelId()),
-        [m, b, C] = (0, d.Wu)([en.Z], () => [en.Z.can(eh.Plq.MANAGE_GUILD, o), en.Z.can(eh.Plq.MANAGE_ROLES, o), en.Z.can(eh.Plq.MANAGE_THREADS, o)]),
-        P = (0, d.e7)([Q.Z], () => Q.Z.isUnavailable(n)),
-        w = (0, d.e7)([el.default], () => el.default.getCurrentUser()),
-        k = (0, d.e7)([K.Z], () => (K.Z.darkSidebar ? eh.BRd.DARK : K.Z.theme)),
+        h = (0, d.e7)([Q.Z], () => Q.Z.getGuildDimensions(n).scrollTo),
+        g = (0, d.e7)([el.Z], () => el.Z.getChannelId()),
+        [m, b, C] = (0, d.Wu)([er.Z], () => [er.Z.can(ef.Plq.MANAGE_GUILD, o), er.Z.can(ef.Plq.MANAGE_ROLES, o), er.Z.can(ef.Plq.MANAGE_THREADS, o)]),
+        P = (0, d.e7)([J.Z], () => J.Z.isUnavailable(n)),
+        w = (0, d.e7)([ea.default], () => ea.default.getCurrentUser()),
+        k = (0, d.e7)([q.Z], () => (q.Z.darkSidebar ? ef.BRd.DARK : q.Z.theme)),
         { enableStudyGroup: M } = (0, D.s)(o),
-        H = (0, N.ZP)((e) => e.currentlyShown.has(p.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
-        [z, Y] = i.useState(!H),
-        J = (0, E.Z)(n),
-        { analyticsLocations: es } = (0, y.ZP)(O.Z.GUILD_HEADER),
-        { analyticsLocations: ec } = (0, y.ZP)(O.Z.GUILD_CHANNEL_LIST_FOOTER);
+        F = (0, N.ZP)((e) => e.currentlyShown.has(p.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
+        [W, K] = i.useState(!F),
+        $ = (0, E.Z)(n),
+        { analyticsLocations: ec } = (0, y.ZP)(O.Z.GUILD_HEADER),
+        { analyticsLocations: eu } = (0, y.ZP)(O.Z.GUILD_CHANNEL_LIST_FOOTER);
     i.useEffect(() => {
-        n !== J && Y(!H);
-    }, [n, J, H]);
-    let [eu, ed] = (0, N.ZP)((e) => [ef.XN.some((t) => e.currentlyShown.has(t.dismissibleContentType)), e.currentlyShownGroup.has(eg.R.GUILD_HEADER_TOOLTIPS)], u.X),
-        ep = (0, v.Z)(o),
-        em = (0, f.s9z)(f.JQI),
-        eb = (0, d.e7)([et.Z], () => et.Z.hasLayers()),
-        e_ = (0, d.e7)([W.Z], () => W.Z.shouldShow(ev)),
-        eE = m && (null == o ? void 0 : o.premiumProgressBarEnabled) === !1 && !eo.s.isDisallowPopupsSet(),
-        eO = (0, d.e7)([$.Z], () => $.Z.getMemberCount(n)),
-        ey = m && null != eO && eO >= 30 && (null == o ? void 0 : o.premiumProgressBarEnabled) === !1 && !eo.s.isDisallowPopupsSet(),
-        eI = b && null != o && (o.hasFeature(eh.oNc.COMMUNITY) || (null != eO && eO > 50)),
-        eC = (0, L.Z)(n),
-        eN = (null == o ? void 0 : o.hasFeature(eh.oNc.HUB)) === !0,
-        eT = m && (null == o ? void 0 : o.hasFeature(eh.oNc.DISCOVERABLE)) === !0,
-        eP = (0, I.Q)(),
-        ej = (m || (null == o ? void 0 : o.premiumTier) === eh.Eu4.NONE) && !eo.s.isDisallowPopupsSet() && !eP,
-        eA = (0, d.e7)([R.Z, et.Z], () => null != o && null != w && m && !et.Z.hasLayers() && R.Z.shouldShowGuildTemplateDirtyTooltip(n)),
-        eZ = (0, d.e7)([q.Z], () => q.Z.getChannel(a)),
-        { isPopoutOpen: ex } = (0, A.y)(),
-        eL = null != (t = null == o ? void 0 : o.hasFeature(eh.oNc.COMMUNITY)) && t,
-        ew = (0, d.e7)([F.Z], () => !s().isEmpty(F.Z.getThreadsForGuild(n))),
-        eR = ea.ZP.isNewUser(w),
-        eD = z && !eR,
-        ek = (0, S.Z)(w);
+        n !== $ && K(!F);
+    }, [n, $, F]);
+    let [ed, ep] = (0, N.ZP)((e) => [eg.XN.some((t) => e.currentlyShown.has(t.dismissibleContentType)), e.currentlyShownGroup.has(em.R.GUILD_HEADER_TOOLTIPS)], u.X),
+        eh = (0, v.Z)(o),
+        eb = (0, f.s9z)(f.JQI),
+        e_ = (0, d.e7)([en.Z], () => en.Z.hasLayers()),
+        eE = (0, d.e7)([Y.Z], () => Y.Z.shouldShow(eC)),
+        eO = m && (null == o ? void 0 : o.premiumProgressBarEnabled) === !1 && !es.s.isDisallowPopupsSet(),
+        ey = (0, d.e7)([ee.Z], () => ee.Z.getMemberCount(n)),
+        eI = m && null != ey && ey >= 30 && (null == o ? void 0 : o.premiumProgressBarEnabled) === !1 && !es.s.isDisallowPopupsSet(),
+        ev = b && null != o && (o.hasFeature(ef.oNc.COMMUNITY) || (null != ey && ey > 50)),
+        eS = (0, L.Z)(n),
+        eT = (null == o ? void 0 : o.hasFeature(ef.oNc.HUB)) === !0,
+        eP = m && (null == o ? void 0 : o.hasFeature(ef.oNc.DISCOVERABLE)) === !0,
+        ej = (0, I.Q)(),
+        eA = (m || (null == o ? void 0 : o.premiumTier) === ef.Eu4.NONE) && !es.s.isDisallowPopupsSet() && !ej,
+        eZ = (0, d.e7)([R.Z, en.Z], () => null != o && null != w && m && !en.Z.hasLayers() && R.Z.shouldShowGuildTemplateDirtyTooltip(n)),
+        ex = (0, d.e7)([X.Z], () => X.Z.getChannel(a)),
+        { isPopoutOpen: eL } = (0, A.y)(),
+        ew = null != (t = null == o ? void 0 : o.hasFeature(ef.oNc.COMMUNITY)) && t,
+        eR = (0, d.e7)([z.Z], () => !s().isEmpty(z.Z.getThreadsForGuild(n))),
+        eD = eo.ZP.isNewUser(w),
+        ek = W && !eD,
+        eM = (0, S.Z)(w);
     (0, Z.Z)(o);
-    let eM = (0, T.wE)(p.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
-        eU = (0, U.Z)(n),
-        eG = (0, x.Z)(n),
-        eB = (0, d.e7)([ei.Z], () => ei.Z.getChannelId()),
-        eV = (0, d.e7)([er.Z], () => er.Z.desyncedVoiceStatesCount),
-        eH = V.Y.useExperiment({ location: 'GuildSidebar' }, { autoTrackExposure: !0 }).enabled,
-        eF = (0, G.Ek)(n, 'ConnectedGuildSidebar'),
-        ez = (0, B.Z)(n);
-    return (0, r.jsx)(eS, {
+    let eU = (0, T.wE)(p.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
+        eG = (0, U.Z)(n),
+        eB = (0, x.Z)(n),
+        eV = (0, d.e7)([el.Z], () => el.Z.getChannelId()),
+        eH = (0, d.e7)([ei.Z], () => ei.Z.desyncedVoiceStatesCount),
+        eF = H.Y.useExperiment({ location: 'GuildSidebar' }, { autoTrackExposure: !0 }).enabled,
+        ez = (0, B.Ek)(n, 'ConnectedGuildSidebar'),
+        eW = (0, V.Z)(n),
+        eY = (0, G.W)(n, 'ConnectedGuildSidebar'),
+        eK = (null == o ? void 0 : o.premiumProgressBarEnabled) === !0;
+    return (0, r.jsx)(eN, {
         guildId: n,
         hideSelectedChannel: l,
         guild: o,
         scrollToChannel: h,
         selectedChannelId: l ? null : a,
-        selectedChannel: eZ,
+        selectedChannel: ex,
         selectedVoiceChannelId: g,
         voiceStates: c,
-        rtcConnectedChannelId: eB,
-        rtcDesyncedVoiceStatesCount: eV,
+        rtcConnectedChannelId: eV,
+        rtcDesyncedVoiceStatesCount: eH,
         isUnavailable: P,
         theme: k,
         user: w,
-        hasChannelNotice: null != ep || eu,
-        anyLayerOpen: em || eb,
-        showGuildBoostingProgressBarUpsell: eE,
-        showGuildBoostingProgressBarSizeUpsell: ey,
-        showInviteSplashUpsell: ej,
-        showDiscoveryLandingPageSettingsUpsell: eT,
-        showGuildHeaderTutorial: e_,
-        showGuildTemplateDirtyTooltip: eA,
-        showRoleSubscriptionUpsell: eC,
-        showHubPrivacySettingsTooltip: eN,
-        showNewUnreadsBar: eL,
-        showActiveThreadsNotice: C && null != eO && eO >= 200 && ew,
-        showGuildSoundboardPermissionUpsell: eI,
-        showMediaChannelUpsell: eU,
-        showTierTemplatesUpsell: eG,
-        isHeaderPopoutOpen: ex,
+        hasChannelNotice: null != eh || ed,
+        anyLayerOpen: eb || e_,
+        showGuildBoostingProgressBarUpsell: eO,
+        showGuildBoostingProgressBarSizeUpsell: eI,
+        showInviteSplashUpsell: eA,
+        showDiscoveryLandingPageSettingsUpsell: eP,
+        showGuildHeaderTutorial: eE,
+        showGuildTemplateDirtyTooltip: eZ,
+        showRoleSubscriptionUpsell: eS,
+        showHubPrivacySettingsTooltip: eT,
+        showNewUnreadsBar: ew,
+        showActiveThreadsNotice: C && null != ey && ey >= 200 && eR,
+        showGuildSoundboardPermissionUpsell: ev,
+        showMediaChannelUpsell: eG,
+        showTierTemplatesUpsell: eB,
+        isHeaderPopoutOpen: eL,
         enableStudyGroup: M,
-        isGuildHeaderDismissibleTooltipShown: ed,
-        canShowCoachMarkAtBottom: z,
-        headerAnalyticsLocations: es,
-        footerAnalyticsLocations: ec,
-        shouldRenderClipsEducation: ek,
-        isTutorialHighlightDismissed: eM,
-        shouldRenderBurstCoachmark: eD,
-        shouldRenderCustomNotificationSoundsCoachmark: eH,
-        shouldRenderGuildPowerupPerkCoachmark: eF && !1 === ez
+        isGuildHeaderDismissibleTooltipShown: ep,
+        canShowCoachMarkAtBottom: W,
+        headerAnalyticsLocations: ec,
+        footerAnalyticsLocations: eu,
+        shouldRenderClipsEducation: eM,
+        isTutorialHighlightDismissed: eU,
+        shouldRenderBurstCoachmark: ek,
+        shouldRenderCustomNotificationSoundsCoachmark: eF,
+        shouldRenderGuildPowerupPerkCoachmark: ez && !1 === eW,
+        shouldRenderBoosterEnhancedRoleColorsCoachmark: eY && !eK
     });
 }

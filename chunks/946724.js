@@ -1,6 +1,6 @@
 let r, i, l;
 n.d(t, {
-    Z: () => V,
+    Z: () => W,
     g: () => y
 }),
     n(388685),
@@ -159,7 +159,7 @@ let U = c().debounce(() => {
         }),
         0 === N.size && (E = !1),
         w && c().isEqual(Z, D) && ((e = !0), (w = !1)),
-        e && W.emitChange();
+        e && V.emitChange();
 }, 500);
 function B(e, t) {
     let n = T.indexOf(e);
@@ -278,7 +278,7 @@ class H extends (s = m.ZP.Store) {
     }
 }
 C(H, 'displayName', 'GuildSettingsRolesStore');
-let W = new H(
+let V = new H(
         g.Z,
         __OVERLAY__
             ? {}
@@ -451,4 +451,4 @@ let W = new H(
                   }
               }
     ),
-    V = W;
+    W = V;

@@ -36,9 +36,9 @@ function y(e) {
         [F] = b._T(P),
         [z] = b.mR(P),
         [H] = b.PK(P),
-        [W] = b.d9(P, 1024),
-        V = '' !== F ? F : O.intl.string(O.t.QWhe9P),
-        Y = '' !== F && null != W && '' !== H && null != z && !B,
+        [V] = b.d9(P, 1024),
+        W = '' !== F ? F : O.intl.string(O.t.QWhe9P),
+        Y = '' !== F && null != V && '' !== H && null != z && !B,
         K = b.rU(P),
         { loading: X, error: q, handleCreateOrUpdateFromEditState: Q } = b.Xo(),
         { submitting: J, error: $, publishSubscriptionListing: ee } = (0, p.HQ)(),
@@ -52,15 +52,15 @@ function y(e) {
                     (0, r.jsx)('div', {
                         className: C.headerImageContainer,
                         children:
-                            null == W
+                            null == V
                                 ? (0, r.jsx)(j.Z, {
                                       className: C.starIcon,
                                       'aria-hidden': !0
                                   })
                                 : (0, r.jsx)('img', {
                                       className: C.headerImage,
-                                      src: W,
-                                      alt: V
+                                      src: V,
+                                      alt: W
                                   })
                     }),
                     (0, r.jsxs)('div', {
@@ -69,7 +69,7 @@ function y(e) {
                             (0, r.jsx)(d.Text, {
                                 variant: 'text-md/medium',
                                 color: 'interactive-active',
-                                children: V
+                                children: W
                             }),
                             (0, r.jsx)(d.LZC, { size: 2 }),
                             (0, r.jsxs)('div', {

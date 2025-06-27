@@ -30,8 +30,8 @@ var r = n(255367),
     E = n(602034),
     R = n(23750),
     k = n(703558),
-    M = n(496675),
-    Z = n(300429),
+    Z = n(496675),
+    M = n(300429),
     A = n(117530),
     L = n(594174),
     F = n(459273),
@@ -117,11 +117,11 @@ function el(e) {
         v = i.useCallback(() => {
             j.bumpDispatchPriority();
         }, [j]),
-        O = (0, h.e7)([M.Z], () => M.Z.can($.Plq.ATTACH_FILES, t)),
+        O = (0, h.e7)([Z.Z], () => Z.Z.can($.Plq.ATTACH_FILES, t)),
         w = (0, h.Wu)([A.Z], () => A.Z.getUploads(t.id, k.d.FirstThreadMessage)),
         P = f && O && u,
         R = (null == t ? void 0 : t.isMediaChannel()) === !0,
-        Z = (function (e, t) {
+        M = (function (e, t) {
             let n = (0, X.AF)(),
                 r = (0, V.ql)(e);
             return i.useCallback(() => {
@@ -249,7 +249,7 @@ function el(e) {
             children: (0, r.jsx)('div', {
                 'aria-label': u ? et.intl.string(et.t.dq7mAQ) : et.intl.string(et.t['5h0QOD']),
                 className: l()(en.container, { [en.collapsed]: !f }),
-                onClick: !f && u ? Z : void 0,
+                onClick: !f && u ? M : void 0,
                 children: (0, r.jsxs)('form', {
                     onMouseDown: v,
                     onFocus: v,
@@ -760,8 +760,8 @@ let ex = i.memo(function (e) {
         }, c.X),
         { rateLimitPerUser: o } = t,
         d = o > 0,
-        u = (0, h.e7)([Z.Z], () => Z.Z.getSlowmodeCooldownGuess(t.id, Z.S.CreateThread)),
-        m = (0, h.e7)([M.Z], () => M.Z.can($.Plq.MANAGE_THREADS, t) || M.Z.can($.Plq.MANAGE_CHANNELS, t)),
+        u = (0, h.e7)([M.Z], () => M.Z.getSlowmodeCooldownGuess(t.id, M.S.CreateThread)),
+        m = (0, h.e7)([Z.Z], () => Z.Z.can($.Plq.MANAGE_THREADS, t) || Z.Z.can($.Plq.MANAGE_CHANNELS, t)),
         f = eg(t),
         x = (0, X.AF)(),
         p = i.useCallback(() => {

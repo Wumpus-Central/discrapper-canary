@@ -201,8 +201,8 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
                     F = Z < u.tier,
                     z = w(c.length, t),
                     H = x && !F && z === u.tier && C !== U.length,
-                    W = H || U.length > 0,
-                    V = C - O,
+                    V = H || U.length > 0,
+                    W = C - O,
                     Y = n(872732),
                     K = R - U.length,
                     X = H ? Math.min(5 - ((U.length + 0) % 5), K) : 0,
@@ -248,12 +248,12 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
                             onSetRef: d,
                             isAnimatedTo: a,
                             hasBottomMargin: h !== g.length - 1,
-                            withCardBody: !W,
+                            withCardBody: !V,
                             headerButton: l,
                             showHeaderLockStatus: en,
                             guildId: t.id,
                             children: [
-                                W &&
+                                V &&
                                     (0, r.jsxs)('div', {
                                         className: T.grid,
                                         children: [
@@ -298,9 +298,9 @@ let w = (e, t) => (e < (0, _.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, _.A3)(I.Eu4.
                                                 color: 'header-secondary',
                                                 children:
                                                     u.tier === I.Eu4.TIER_1
-                                                        ? S.intl.formatToPlainString(S.t.psMYu7, { numAdditional: V })
+                                                        ? S.intl.formatToPlainString(S.t.psMYu7, { numAdditional: W })
                                                         : S.intl.formatToPlainString(S.t.bLykER, {
-                                                              numAdditional: V,
+                                                              numAdditional: W,
                                                               numTotal: C
                                                           })
                                             }),
