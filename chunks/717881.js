@@ -18,7 +18,7 @@ var i = n(442837),
     g = n(153066),
     _ = n(981631),
     b = n(66569);
-function v(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,7 +43,7 @@ function v(e) {
     }
     return e;
 }
-function h(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -119,7 +119,7 @@ let O = o.Z.Types,
             ? null
             : (0, r.jsx)(
                   o.Z,
-                  h(v({}, O), {
+                  v(h({}, O), {
                       activity: t,
                       user: n,
                       application: C,
@@ -131,7 +131,7 @@ let O = o.Z.Types,
                           ? () =>
                                 (0, r.jsx)(
                                     y,
-                                    h(v({}, O), {
+                                    v(h({}, O), {
                                         applicationStream: S,
                                         activity: t,
                                         user: n

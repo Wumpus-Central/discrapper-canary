@@ -45,8 +45,8 @@ let a = {
     b = /^(.+?(s|t))(ion)$/,
     g = /^(.+?)(ed|ing)$/,
     h = /(at|bl|iz)$/,
-    y = /^(.+?)eed$/,
-    T = /^.+?[^s]s$/,
+    T = /^(.+?)eed$/,
+    y = /^.+?[^s]s$/,
     C = /^.+?(ss|i)es$/,
     O = /([^aeiouylsz])\1$/,
     v = /^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$/,
@@ -57,5 +57,5 @@ function j(e) {
         n = String(e).toLowerCase();
     if (n.length < 3) return n;
     let i = !1;
-    return 121 === n.codePointAt(0) && ((i = !0), (n = 'Y' + n.slice(1))), C.test(n) ? (n = n.slice(0, -2)) : T.test(n) && (n = n.slice(0, -1)), (t = y.exec(n)) ? l.test(t[1]) && (n = n.slice(0, -1)) : (t = g.exec(n)) && d.test(t[1]) && ((n = t[1]), h.test(n) ? (n += 'e') : O.test(n) ? (n = n.slice(0, -1)) : m.test(n) && (n += 'e')), (t = _.exec(n)) && d.test(t[1]) && (n = t[1] + 'i'), (t = v.exec(n)) && l.test(t[1]) && (n = t[1] + a[t[2]]), (t = x.exec(n)) && l.test(t[1]) && (n = t[1] + o[t[2]]), (t = I.exec(n)) ? u.test(t[1]) && (n = t[1]) : (t = b.exec(n)) && u.test(t[1]) && (n = t[1]), (t = f.exec(n)) && (u.test(t[1]) || (s.test(t[1]) && !m.test(t[1]))) && (n = t[1]), p.test(n) && u.test(n) && (n = n.slice(0, -1)), i && (n = 'y' + n.slice(1)), n;
+    return 121 === n.codePointAt(0) && ((i = !0), (n = 'Y' + n.slice(1))), C.test(n) ? (n = n.slice(0, -2)) : y.test(n) && (n = n.slice(0, -1)), (t = T.exec(n)) ? l.test(t[1]) && (n = n.slice(0, -1)) : (t = g.exec(n)) && d.test(t[1]) && ((n = t[1]), h.test(n) ? (n += 'e') : O.test(n) ? (n = n.slice(0, -1)) : m.test(n) && (n += 'e')), (t = _.exec(n)) && d.test(t[1]) && (n = t[1] + 'i'), (t = v.exec(n)) && l.test(t[1]) && (n = t[1] + a[t[2]]), (t = x.exec(n)) && l.test(t[1]) && (n = t[1] + o[t[2]]), (t = I.exec(n)) ? u.test(t[1]) && (n = t[1]) : (t = b.exec(n)) && u.test(t[1]) && (n = t[1]), (t = f.exec(n)) && (u.test(t[1]) || (s.test(t[1]) && !m.test(t[1]))) && (n = t[1]), p.test(n) && u.test(n) && (n = n.slice(0, -1)), i && (n = 'y' + n.slice(1)), n;
 }

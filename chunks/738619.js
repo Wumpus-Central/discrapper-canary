@@ -127,10 +127,10 @@ function U(t) {
     });
 }
 function k(t) {
-    let { guildId: e, activity: i, showInviteEducation: r, isFocused: s, typingUsers: l, className: a, channel: d, isThreadCreation: u, renderDots: h, poggermodeEnabled: p, isComboing: g } = t,
-        { rateLimitPerUser: m } = d,
-        v = S.Z.getGuild(e);
-    if (0 === l.length && !(m > 0) && !g)
+    let { guildId: e, activity: i, showInviteEducation: r, isFocused: s, typingUsers: l, className: a, channel: d, isThreadCreation: u, renderDots: h, poggermodeEnabled: p, isComboing: g, isInTextChannel: m } = t,
+        { rateLimitPerUser: v } = d,
+        b = S.Z.getGuild(e);
+    if (0 === l.length && !(v > 0) && !g)
         return r && null != i
             ? (0, n.jsx)(M, {
                   activity: i,
@@ -139,31 +139,32 @@ function k(t) {
               })
             : (0, n.jsx)(U, {
                   channel: d,
-                  guild: v
+                  guild: b
               });
-    let [b, y, E] = l,
-        w = '';
+    let [y, E, w] = l,
+        Z = '';
     return (
         1 === l.length
-            ? (w = _.intl.format(_.t.lJ9sZW, { a: b }))
+            ? (Z = _.intl.format(_.t.lJ9sZW, { a: y }))
             : 2 === l.length
-              ? (w = _.intl.format(_.t.rB0CUV, {
-                    a: b,
-                    b: y
+              ? (Z = _.intl.format(_.t.rB0CUV, {
+                    a: y,
+                    b: E
                 }))
               : 3 === l.length
-                ? (w = _.intl.format(_.t.StKTho, {
-                      a: b,
-                      b: y,
-                      c: E
+                ? (Z = _.intl.format(_.t.StKTho, {
+                      a: y,
+                      b: E,
+                      c: w
                   }))
-                : l.length > 3 && (w = _.intl.string(_.t.uVDhqa)),
+                : l.length > 3 && (Z = _.intl.string(_.t.uVDhqa)),
         (0, n.jsxs)('div', {
             className: o()(
                 A.typing,
                 {
                     'stop-animation': !s,
-                    [A.isComboing]: p && g
+                    [A.isComboing]: p && g,
+                    [A.inTextChannel]: m
                 },
                 a
             ),
@@ -182,7 +183,7 @@ function k(t) {
                             className: A.text,
                             'aria-live': 'polite',
                             'aria-atomic': !0,
-                            children: w
+                            children: Z
                         })
                     ]
                 }),

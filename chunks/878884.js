@@ -14,8 +14,8 @@ var r,
     g = n(979651),
     _ = n(938475),
     b = n(981631),
-    v = n(354459);
-let h = new c.Z(),
+    h = n(354459);
+let v = new c.Z(),
     y = new c.Z(),
     O = new Set();
 function j(e, t, n) {
@@ -24,9 +24,9 @@ function j(e, t, n) {
             channelId: n
         }),
         i = (0, _.PH)(r, null != t ? t : b.ME, e.id);
-    h.set(e.id, i);
+    v.set(e.id, i);
     let l = {
-        type: v.fO.USER,
+        type: h.fO.USER,
         user: e,
         id: e.id,
         streamId: null,
@@ -42,7 +42,7 @@ function j(e, t, n) {
     y.set(e.id, l);
 }
 function S(e) {
-    let t = h.delete(e),
+    let t = v.delete(e),
         n = y.delete(e),
         r = O.delete(e);
     return t || n || r;
@@ -63,20 +63,20 @@ function x() {
     );
 }
 function I() {
-    h.clear(), y.clear(), O.clear();
+    v.clear(), y.clear(), O.clear();
 }
 class C extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(g.Z, m.default, f.Z, p.Z), this.syncWith([m.default], x);
     }
     get desyncedVoiceStatesCount() {
-        return h.size();
+        return v.size();
     }
     getDesyncedUserIds() {
-        return h.keys();
+        return v.keys();
     }
     getDesyncedVoiceStates() {
-        return h.values();
+        return v.values();
     }
     getDesyncedParticipants() {
         return y.values();

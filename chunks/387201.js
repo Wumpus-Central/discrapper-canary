@@ -1,12 +1,12 @@
 var r = n(98405),
     i = n(46015),
-    a = n(896471),
-    o = n(146063),
-    s = n(335024),
-    l = n(557246),
+    l = n(896471),
+    s = n(146063),
+    o = n(335024),
+    a = n(557246),
     c = n(967333),
-    u = Array,
-    d = i(l('Array', 'sort'));
+    d = Array,
+    u = i(a('Array', 'sort'));
 r(
     {
         target: 'Array',
@@ -14,7 +14,7 @@ r(
     },
     {
         toSorted: function (e) {
-            return void 0 !== e && a(e), d(s(u, o(this)), e);
+            return void 0 !== e && l(e), u(o(d, s(this)), e);
         }
     }
 ),

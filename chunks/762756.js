@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var r,
     i = n(255367),
     a = n(73800),
@@ -28,7 +28,7 @@ function b(e, t, n) {
     );
 }
 let E = f.Z.getArticleURL(m.BhN.VERIFICATION_FAQ);
-class j extends (r = a.PureComponent) {
+class v extends (r = a.PureComponent) {
     renderFields() {
         let { types: e, captchaKey: t, theme: n, onCaptchaVerify: r } = this.props;
         return (0, i.jsx)(i.Fragment, {
@@ -116,9 +116,9 @@ class j extends (r = a.PureComponent) {
             });
     }
 }
-b(j, 'defaultProps', {
+b(v, 'defaultProps', {
     types: [m.PUi.CAPTCHA],
     onCaptchaVerify: m.dG4,
     onLogout: m.dG4
 });
-let v = j;
+let j = v;

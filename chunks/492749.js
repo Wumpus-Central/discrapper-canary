@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var i = n(255367),
     s = n(73800),
     l = n(120356),
@@ -12,8 +12,8 @@ var i = n(255367),
     x = n(388032),
     C = n(275017),
     h = n(36705),
-    p = n(216019);
-function g(e) {
+    g = n(216019);
+function p(e) {
     let { guild: t, onClick: n } = e;
     return (0, i.jsxs)(o.P3F, {
         className: C.clickableGuildRow,
@@ -30,16 +30,16 @@ function g(e) {
                 children: t.name
             }),
             (0, i.jsx)('img', {
-                className: C.__invalid_arrow,
                 alt: '',
-                src: p
+                src: g
             })
         ]
     });
 }
 function f(e) {
     let { directoryChannelId: t, guild: n } = e,
-        s = (0, a.e7)([u.Z], () => u.Z.getDirectoryEntry(t, n.id));
+        l = (0, a.e7)([u.Z], () => u.Z.getDirectoryEntry(t, n.id)),
+        r = s.useRef(null);
     return (0, i.jsxs)('div', {
         className: C.guildRow,
         children: [
@@ -54,7 +54,8 @@ function f(e) {
                 children: n.name
             }),
             (0, i.jsx)(m.Z, {
-                entry: s,
+                entry: l,
+                targetElementRef: r,
                 children: (e) => {
                     var t, n;
                     return (0, i.jsx)(
@@ -85,6 +86,7 @@ function f(e) {
                             return e;
                         })(
                             {
+                                ref: r,
                                 size: 'md',
                                 color: 'currentColor'
                             },
@@ -110,17 +112,17 @@ function f(e) {
         ]
     });
 }
-function _(e) {
+function j(e) {
     let t,
-        { directoryChannelId: n, onClose: l, onGuildChosen: a, handleChooseCreate: d, directoryGuildName: u, availableGuilds: m, addedGuilds: p, loading: _ } = e,
-        [j, b] = s.useState(0);
+        { directoryChannelId: n, onClose: l, onGuildChosen: a, handleChooseCreate: d, directoryGuildName: u, availableGuilds: m, addedGuilds: g, loading: j } = e,
+        [_, b] = s.useState(0);
     return (
-        (t = _
+        (t = j
             ? (0, i.jsx)('div', {
                   className: C.emptyContainer,
                   children: (0, i.jsx)(o.$jN, {})
               })
-            : 0 === j
+            : 0 === _
               ? 0 === m.length
                   ? (0, i.jsxs)('div', {
                         className: C.emptyContainer,
@@ -140,7 +142,7 @@ function _(e) {
                     })
                   : m.map((e) =>
                         (0, i.jsx)(
-                            g,
+                            p,
                             {
                                 guild: e,
                                 onClick: () => a(e)
@@ -148,7 +150,7 @@ function _(e) {
                             e.id
                         )
                     )
-              : 0 === p.length
+              : 0 === g.length
                 ? (0, i.jsxs)('div', {
                       className: C.emptyContainer,
                       children: [
@@ -165,7 +167,7 @@ function _(e) {
                           })
                       ]
                   })
-                : p.map((e) =>
+                : g.map((e) =>
                       (0, i.jsx)(
                           f,
                           {
@@ -200,18 +202,18 @@ function _(e) {
                         }),
                         (0, i.jsxs)(o.njP, {
                             className: C.tabBar,
-                            selectedItem: j,
+                            selectedItem: _,
                             onItemSelect: b,
                             type: 'top',
                             look: 'brand',
                             children: [
                                 (0, i.jsx)(o.njP.Item, {
-                                    className: r()(C.tabBarItem, { [C.selectedTab]: 0 === j }),
+                                    className: r()(C.tabBarItem, { [C.selectedTab]: 0 === _ }),
                                     id: 0,
                                     children: x.intl.string(x.t.FTe8HR)
                                 }),
                                 (0, i.jsx)(o.njP.Item, {
-                                    className: r()(C.tabBarItem, { [C.selectedTab]: 1 === j }),
+                                    className: r()(C.tabBarItem, { [C.selectedTab]: 1 === _ }),
                                     id: 1,
                                     children: x.intl.string(x.t.epOump)
                                 })

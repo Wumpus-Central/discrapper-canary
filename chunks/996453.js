@@ -1,6 +1,6 @@
 n.d(t, {
-    G: () => p,
-    Z: () => g
+    G: () => g,
+    Z: () => p
 }),
     n(388685);
 var i = n(255367),
@@ -16,38 +16,38 @@ var i = n(255367),
     x = n(981631),
     C = n(388032),
     h = n(685554);
-function p(e) {
+function g(e) {
     var t;
-    let { guildTemplate: n, onClose: p, onBack: g, onHubGuildInfoSet: f, onGuildCreated: _, isSlideReady: j, hasFooter: b = !0, isCommunity: L = !1 } = e,
+    let { guildTemplate: n, onClose: g, onBack: p, onHubGuildInfoSet: f, onGuildCreated: j, isSlideReady: _, hasFooter: b = !0, isCommunity: L = !1 } = e,
         [N, I] = s.useState(u.Z.getGuildNameSuggestion()),
         [y, v] = s.useState(null),
         [Z, S] = s.useState(!1),
-        [T, E] = s.useState(null),
+        [E, T] = s.useState(null),
         k = !!(null == (t = d.default.getCurrentUser()) ? void 0 : t.isStaff()),
         [O, B] = s.useState(k),
         M = (0, c.Dt)(),
         H = s.useRef(null);
     s.useEffect(() => {
         var e;
-        j && (null == (e = H.current) || e.focus());
-    }, [j]);
+        _ && (null == (e = H.current) || e.focus());
+    }, [_]);
     let D = s.useCallback(
             async (e) => {
                 if ((e.preventDefault(), null != n)) {
-                    S(!0), E(null);
+                    S(!0), T(null);
                     try {
                         if (null != f) f(N, y);
                         else {
                             let e = await m.Z.createGuildFromTemplate(N, y, n, L, O);
-                            r.Z.transitionToGuildSync(e.id), null == _ || _(e.id);
+                            r.Z.transitionToGuildSync(e.id), null == j || j(e.id);
                         }
                     } catch (e) {
-                        E(e);
+                        T(e);
                     }
                     S(!1);
                 }
             },
-            [n, f, N, y, L, O, _]
+            [n, f, N, y, L, O, j]
         ),
         G = (0, i.jsxs)(i.Fragment, {
             children: [
@@ -62,7 +62,7 @@ function p(e) {
                     className: h.backButton,
                     look: l.zxk.Looks.BLANK,
                     size: l.zxk.Sizes.MIN,
-                    onClick: g,
+                    onClick: p,
                     children: C.intl.string(C.t['13/7kZ'])
                 })
             ]
@@ -86,10 +86,10 @@ function p(e) {
                             variant: 'text-md/normal',
                             children: C.intl.string(C.t.AAfVqa)
                         }),
-                        null != p &&
+                        null != g &&
                             (0, i.jsx)(l.olH, {
                                 className: h.closeButton,
-                                onClick: p
+                                onClick: g
                             })
                     ]
                 }),
@@ -108,7 +108,7 @@ function p(e) {
                             children: [
                                 (0, i.jsxs)(l.xJW, {
                                     className: h.nameInput,
-                                    error: null == T ? void 0 : T.getFirstFieldErrorMessage('name'),
+                                    error: null == E ? void 0 : E.getFirstFieldErrorMessage('name'),
                                     children: [
                                         (0, i.jsx)(l.vwX, {
                                             tag: 'label',
@@ -145,12 +145,12 @@ function p(e) {
                                 })
                             ]
                         }),
-                        null == T || T.hasFieldErrors()
+                        null == E || E.hasFieldErrors()
                             ? null
                             : (0, i.jsx)(l.Text, {
                                   variant: 'text-xs/normal',
                                   color: 'text-danger',
-                                  children: T.message
+                                  children: E.message
                               })
                     ]
                 }),
@@ -164,7 +164,7 @@ function p(e) {
         footer: G
     };
 }
-function g(e) {
-    let { content: t } = p(e);
+function p(e) {
+    let { content: t } = g(e);
     return t;
 }

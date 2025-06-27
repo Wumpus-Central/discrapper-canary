@@ -9,7 +9,7 @@ var i = n(120356),
     c = n(862863);
 function u(e) {
     let { activity: t, user: n, channelId: i, guildId: u, source: d, size: f, look: p, color: m, className: g, onAction: _ } = e,
-        { tooltip: b, loading: v, disabled: h, onClick: y } = (0, s.Fe)(t, n, d, o.ZP.getNickname(u, i, n)),
+        { tooltip: b, loading: h, disabled: v, onClick: y } = (0, s.Fe)(t, n, d, o.ZP.getNickname(u, i, n)),
         O = () => {
             null == _ || _(), y();
         };
@@ -26,8 +26,8 @@ function u(e) {
                 onClick: O,
                 onMouseEnter: n,
                 onMouseLeave: i,
-                disabled: h,
-                submitting: v,
+                disabled: v,
+                submitting: h,
                 'aria-label': null != b ? b : t.name,
                 children: (0, r.jsx)(a.iOO, {
                     size: 'xs',

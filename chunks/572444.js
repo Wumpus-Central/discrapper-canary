@@ -84,7 +84,7 @@ function g(e) {
     });
 }
 function j() {
-    let e = (0, p.zX)(),
+    let e = (0, p.zX)({ location: 'DevToolsVoiceFiltersPanel' }),
         [t, n] = r.useState(!1),
         [l, i] = r.useState([]),
         s = (0, c.e7)([h.Z], () => h.Z.getKrispSuppressionLevel()),

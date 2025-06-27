@@ -9,7 +9,7 @@ var i = n(255367),
     d = n(131951),
     u = n(388032);
 function m() {
-    let e = (0, c.kj)(),
+    let e = (0, c.kj)({ location: 'UserSettingsCameraSelect' }),
         { currentDeviceId: t, isVideoAvailable: n } = (0, s.cj)([d.Z], () => ({
             currentDeviceId: d.Z.getVideoDeviceId(),
             isVideoAvailable: d.Z.isVideoAvailable()

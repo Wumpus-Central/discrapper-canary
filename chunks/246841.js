@@ -7,9 +7,9 @@ var i = n(481060),
     o = n(862863);
 function s(e) {
     let { activity: t, user: n, source: s, className: c, size: u, look: d, color: f, fullWidth: p, onAction: m } = e,
-        { label: g, tooltip: _, loading: b, disabled: v, onClick: h } = (0, a.Ih)(t, n, s),
+        { label: g, tooltip: _, loading: b, disabled: h, onClick: v } = (0, a.Ih)(t, n, s),
         y = () => {
-            null == m || m(), h();
+            null == m || m(), v();
         };
     return (0, r.jsx)(i.ua7, {
         text: _,
@@ -25,7 +25,7 @@ function s(e) {
                 onClick: y,
                 onMouseEnter: t,
                 onMouseLeave: n,
-                disabled: v,
+                disabled: h,
                 submitting: b,
                 children: [
                     (0, r.jsx)(l.Z, {

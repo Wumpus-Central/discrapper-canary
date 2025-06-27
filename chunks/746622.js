@@ -35,7 +35,7 @@ let c = (e) => {
             case a.ze.GIF_CROPPING:
                 return o.intl.string(o.t.X6rtiI);
             case a.ze.IMAGE_LOAD:
-                return o.intl.string(o.t['+ITMYW']);
+                return o.intl.format(o.t.xZLPcH, {});
             case a.ze.NO_PERMISSIONS:
                 return o.intl.string(o.t.QY7ZFR);
             case 429:

@@ -3,6 +3,7 @@ n.d(t, {
     M$: () => h,
     ZP: () => E
 }),
+    n(825670),
     n(539854),
     n(642613),
     n(388685);
@@ -103,7 +104,7 @@ class g {
     }
     track(e, t) {
         if (null == e) return;
-        let n = Object.prototype.hasOwnProperty.call(this.usageHistory, e) ? this.usageHistory[e] : void 0;
+        let n = Object.hasOwn(this.usageHistory, e) ? this.usageHistory[e] : void 0;
         if (null == n)
             n = {
                 totalUses: 1,

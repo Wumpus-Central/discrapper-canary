@@ -364,7 +364,8 @@ class es extends r.PureComponent {
                                                         className: ee.typingWrapper,
                                                         children: (0, i.jsx)(m.Z, {
                                                             channel: t,
-                                                            className: ee.typing
+                                                            className: ee.typing,
+                                                            isInTextChannel: !0
                                                         })
                                                     })
                                                 ]

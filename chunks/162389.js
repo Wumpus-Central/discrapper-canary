@@ -13,8 +13,8 @@ var i = n(255367),
     m = n(479099),
     p = n(710352),
     f = n(981631),
-    j = n(388032),
-    x = n(628961);
+    x = n(388032),
+    j = n(628961);
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -105,7 +105,7 @@ function y(e) {
             (0, d.pW)({ availableTags: e });
         });
     return (0, i.jsxs)('div', {
-        className: x.tags,
+        className: j.tags,
         children: [
             m
                 ? t.availableTags.map((e) =>
@@ -127,10 +127,10 @@ function y(e) {
             m
                 ? (0, i.jsx)(c.P3F, {
                       onClick: y,
-                      className: s()(x.addTags, { [x.disabled]: !r || u }),
+                      className: s()(j.addTags, { [j.disabled]: !r || u }),
                       children: (0, i.jsx)(c.qJs, {
                           size: 'custom',
-                          'aria-label': j.intl.string(j.t['/jubeH']),
+                          'aria-label': x.intl.string(x.t['/jubeH']),
                           color: o.Z.unsafe_rawColors.WHITE_500.css,
                           width: 20,
                           height: 20
@@ -139,7 +139,7 @@ function y(e) {
                 : (0, i.jsx)(c.zxk, {
                       disabled: !r,
                       onClick: y,
-                      children: j.intl.string(j.t['/jubeH'])
+                      children: x.intl.string(x.t['/jubeH'])
                   })
         ]
     });
@@ -161,9 +161,9 @@ function C(e) {
             onDragReset: c
         });
     return (0, i.jsx)('div', {
-        className: s()(x.container, {
-            [x.dropIndicatorBefore]: null != g && d < g,
-            [x.dropIndicatorAfter]: null != g && d > g
+        className: s()(j.container, {
+            [j.dropIndicatorBefore]: null != g && d < g,
+            [j.dropIndicatorAfter]: null != g && d > g
         }),
         ref: (e) => {
             h(p(e));
@@ -173,7 +173,7 @@ function C(e) {
         children: (0, i.jsx)(m.Z, {
             tag: t,
             disabled: !l,
-            ariaLabel: j.intl.formatToPlainString(j.t.jhSvBw, { name: t.name }),
+            ariaLabel: x.intl.formatToPlainString(x.t.jhSvBw, { name: t.name }),
             onClick: l ? () => r(t) : void 0
         })
     });

@@ -9,7 +9,7 @@ var i = n(442837),
     c = n(388032);
 function u(e) {
     var t;
-    let n = (0, s.kj)(),
+    let n = (0, s.kj)({ location: 'useInputVideoDeviceItems' }),
         u = (0, i.e7)([l.Z], () => l.Z.getVideoDeviceId()),
         d =
             null ==

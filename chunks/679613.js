@@ -1,23 +1,23 @@
-n.d(t, { _: () => a });
+n.d(t, { _: () => o });
 var r = n(818083),
     i = n(984134);
-let l = (0, r.B)({
+let a = (0, r.B)({
     kind: 'user',
     id: '2025-06_device_affinity',
     label: 'Device affinity experiment',
-    defaultConfig: { sortDevicesByFrecency: !1 },
+    defaultConfig: { shouldSortDevicesByFrecency: !1 },
     treatments: [
         {
             id: 1,
             label: 'Sort devices by frecency',
-            config: { sortDevicesByFrecency: !0 }
+            config: { shouldSortDevicesByFrecency: !0 }
         }
     ]
 });
-function a(e) {
+function o(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         { isInHoldout: r } = i.h.useExperiment({ location: t }, { autoTrackExposure: n });
-    return l.useExperiment(
+    return a.useExperiment(
         { location: t },
         {
             disable: r,

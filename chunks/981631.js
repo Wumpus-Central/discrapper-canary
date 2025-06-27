@@ -1384,6 +1384,7 @@ let eh = '@me',
         APPLIED_BOOST_MODIFY_END_DATE: (e) => '/debug/applied-boosts/'.concat(e, '/ends-at'),
         SEND_POWERUPS_SYSTEM_MESSAGE: (e) => '/guilds/'.concat(e, '/powerups-system-message'),
         SAFETY_FLOWS_TASK: '/safety-flows/task',
+        SAFETY_FLOWS_RESEND_VERIFICATION_CODE: '/safety-flows/resend/email/reverification/pincode',
         VOICE_FILTERS_CATALOG: '/voice-filters/catalog'
     }),
     eT = Object.freeze({

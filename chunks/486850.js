@@ -3,6 +3,7 @@ e.exports = {
     text: 'text_b88801',
     ellipsis: 'ellipsis_b88801',
     typingDots: 'typingDots_b88801',
+    inTextChannel: 'inTextChannel_b88801',
     typing: 'typing_b88801 base_b88801',
     isComboing: 'isComboing_b88801',
     activityInviteEducation: 'activityInviteEducation_b88801 base_b88801',

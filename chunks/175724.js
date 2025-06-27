@@ -14,8 +14,8 @@ var r = n(475179),
     g = n(592125),
     _ = n(703558),
     b = n(323873),
-    v = n(375954),
-    h = n(306680),
+    h = n(375954),
+    v = n(306680),
     y = n(944486),
     O = n(914010),
     j = n(574254),
@@ -59,8 +59,8 @@ function E(e) {
     if (null == e) return !1;
     let t = !1;
     return (
-        v.Z.getMessages(e).hasMoreAfter && (i.Z.jumpToPresent(e, I.AQB), (t = !0)),
-        h.ZP.hasUnread(e) &&
+        h.Z.getMessages(e).hasMoreAfter && (i.Z.jumpToPresent(e, I.AQB), (t = !0)),
+        v.ZP.hasUnread(e) &&
             ((0, l.In)(e, {
                 object: I.qAy.MARK_CHANNEL_AS_READ_KEYBIND,
                 objectType: I.Qqv.ACK_MANUAL
