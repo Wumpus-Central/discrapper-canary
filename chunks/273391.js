@@ -79,7 +79,7 @@ let m = new i.Z('ImageEditor'),
             }),
             [M, T] = l.useState(!1),
             R = 'image/gif' === t.type,
-            [L, P] = l.useState(null);
+            [P, L] = l.useState(null);
         l.useEffect(() => {
             (0, c.Z)();
         }, []);
@@ -229,7 +229,7 @@ let m = new i.Z('ImageEditor'),
             }, [t, S, R, i, D, E]);
         l.useEffect(() => {
             V();
-        }, [V, S, D, M, E, L]);
+        }, [V, S, D, M, E, P]);
         let H = l.useCallback(() => {
             if (null == j.current) return;
             let e = j.current.naturalWidth,
@@ -239,7 +239,7 @@ let m = new i.Z('ImageEditor'),
                 height: t
             });
             let n = Math.min(Math.max(e, t) / Math.min(e, t), 4);
-            P(n),
+            L(n),
                 N(n),
                 y(
                     _(
@@ -276,7 +276,7 @@ let m = new i.Z('ImageEditor'),
                             className: h.image,
                             src: n,
                             crossOrigin: 'anonymous',
-                            alt: 'avatar',
+                            alt: d.intl.string(d.t.EYR1FR),
                             ref: j,
                             onMouseDown: W,
                             draggable: !1
@@ -295,8 +295,8 @@ let m = new i.Z('ImageEditor'),
                     className: h.toolsContainer,
                     children: [
                         (0, r.jsx)(s.ua7, {
-                            text: d.intl.string(d.t.E36Wd3),
-                            'aria-label': d.intl.string(d.t.LzFiKC),
+                            text: d.intl.string(d.t['oCs/+P']),
+                            'aria-label': d.intl.string(d.t['oCs/+P']),
                             children: (e) => {
                                 var { onClick: t } = e,
                                     n = (function (e, t) {
@@ -349,17 +349,17 @@ let m = new i.Z('ImageEditor'),
                                     color: s.TVs.colors.ICON_SECONDARY,
                                     size: 'sm'
                                 }),
-                                null != L &&
+                                null != P &&
                                     (0, r.jsx)(s.iRW, {
                                         className: h.slider,
-                                        initialValue: L,
+                                        initialValue: P,
                                         minValue: 1,
                                         maxValue: 4,
                                         keyboardStep: 0.025,
                                         asValueChanges: Z,
                                         equidistant: !0,
                                         hideBubble: !0,
-                                        'aria-label': d.intl.string(d.t.dnvZSk)
+                                        'aria-label': d.intl.string(d.t['2hPcVF'])
                                     }),
                                 (0, r.jsx)(s.OyE, {
                                     color: s.TVs.colors.ICON_SECONDARY,

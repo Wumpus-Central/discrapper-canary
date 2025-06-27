@@ -2037,9 +2037,13 @@ class rm extends (u = E.ZP.Store) {
     }
     fetchAsyncResources() {
         let e = { fetchDave: !1 };
-        return (0, et.isWeb)() && (e.fetchDave = !1), eZ.fetchAsyncResources(e);
+        return (0, et.isWeb)() && (e.fetchDave = B.N.getCurrentConfig({ location: 'MediaEngineStore fetchAsyncResources' }).loadWasmModule), eZ.fetchAsyncResources(e);
     }
     getSupportedSecureFramesProtocolVersion() {
+        if ((0, et.isWeb)()) {
+            let { useWasmModule: e } = B.N.getCurrentConfig({ location: 'MediaEngineStore getSupportedSecureFramesProtocolVersion' });
+            if (!e) return 0;
+        }
         let e = eZ.getSupportedSecureFramesProtocolVersion(),
             t = B.m.getCurrentConfig({ location: 'MediaEngineStore' });
         return 114 === e && (e = 1), t.canSupportDaveProtocol && e >= t.protocolVersionFloor ? e : 0;

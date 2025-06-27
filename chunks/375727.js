@@ -51,14 +51,14 @@ let E = new u.Z('EmojiStudio'),
             R = l.useCallback((e) => {
                 A(e.length < 2 ? e : g.ZP.sanitizeEmojiName(e));
             }, []),
-            L = l.useCallback(() => {
+            P = l.useCallback(() => {
                 S(null), u(null), M(null), A('');
             }, []),
-            P = l.useRef(0),
+            L = l.useRef(0),
             z = l.useCallback((e) => {
                 let { imageData: t, imageDataTimestamp: n = 0, error: r } = e,
                     l = null;
-                null != t && g.ZP.isDataTooBig(t) && (l = m.ze.TOO_BIG), S(null != r ? r : l), n < P.current || (null != t && (M(t), (P.current = n)));
+                null != t && g.ZP.isDataTooBig(t) && (l = m.ze.TOO_BIG), S(null != r ? r : l), n < L.current || (null != t && (M(t), (L.current = n)));
             }, []),
             Z = l.useCallback((e) => {
                 var t;
@@ -175,7 +175,7 @@ let E = new u.Z('EmojiStudio'),
                     ]
                 }),
                 null != a
-                    ? (0, r.jsx)(D, { back: L })
+                    ? (0, r.jsx)(D, { back: P })
                     : (0, r.jsx)(o.olH, {
                           onClick: () => (0, o.Mr3)(m.Hj),
                           className: j.closeButton

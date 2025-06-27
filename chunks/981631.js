@@ -2970,6 +2970,7 @@ var n_ = (function (e) {
             (e.ENABLE_NOTIFICATIONS = 'enable_notifications'),
             (e.NOTIFICATION_CLICKED = 'notification_clicked'),
             (e.NOTIFICATION_RENDERED = 'notification_rendered'),
+            (e.NOTIFICATION_ACTION = 'notification_action'),
             (e.NOTIFICATION_VIEWED = 'notification_viewed'),
             (e.NOTIFICATION_SETTINGS_UPDATED = 'notification_settings_updated'),
             (e.NOTIFICATION_PERMISSION_STATUS = 'notification_permission_status'),
