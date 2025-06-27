@@ -7564,8 +7564,16 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 }
 
 .botTagAI__82f07 {
-    background: var(--text-feedback-positive);
+    background: var(--text-feedback-positive)
+}
+
+.botTagAI__82f07,
+.botTagNotStaffWarning__82f07 {
     color: var(--white)
+}
+
+.botTagNotStaffWarning__82f07 {
+    background: var(--status-warning-background)
 }
 
 .botTag__82f07.botTagRemix__82f07 {
