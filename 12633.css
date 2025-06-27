@@ -24786,7 +24786,6 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 .slateTextArea_ec4baf {
     box-sizing: border-box;
     left: 0;
-    margin-left: 10px;
     min-height: var(--custom-channel-textarea-text-area-height);
     padding: calc((var(--custom-channel-textarea-text-area-height) - var(--chat-markup-line-height))/2) 0;
     position: absolute;
@@ -24976,7 +24975,8 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 }
 
 .attachButton__74017 {
-    margin-left: calc((var(--space-xs) + var(--space-6))*-1)
+    margin-left: calc((var(--space-xs) + var(--space-6))*-1);
+    margin-right: 10px
 }
 
 .textArea__74017 {
