@@ -10,8 +10,8 @@ var r = a(967752),
     l = a(538022),
     u = a(510529),
     I = a(263449),
-    R = a(255768),
-    d = a(380132),
+    d = a(255768),
+    R = a(380132),
     N = a(151122),
     f = a(112797),
     A = a(305625),
@@ -20,7 +20,7 @@ var r = a(967752),
 let L = "Not capturing exception because it's already been captured.";
 class h {
     constructor(t) {
-        if (((this._options = t), (this._integrations = {}), (this._numProcessing = 0), (this._outcomes = {}), (this._hooks = {}), (this._eventProcessors = []), t.dsn ? (this._dsn = (0, r.vK)(t.dsn)) : R.X && _.kg.warn('No DSN provided, client will not send events.'), this._dsn)) {
+        if (((this._options = t), (this._integrations = {}), (this._numProcessing = 0), (this._outcomes = {}), (this._hooks = {}), (this._eventProcessors = []), t.dsn ? (this._dsn = (0, r.vK)(t.dsn)) : d.X && _.kg.warn('No DSN provided, client will not send events.'), this._dsn)) {
             let e = (0, u.U)(this._dsn, t.tunnel, t._metadata ? t._metadata.sdk : void 0);
             this._transport = t.transport({
                 tunnel: this._options.tunnel,
@@ -32,7 +32,7 @@ class h {
     }
     captureException(t, e, a) {
         let r = (0, n.DM)();
-        if ((0, n.YO)(t)) return R.X && _.kg.log(L), r;
+        if ((0, n.YO)(t)) return d.X && _.kg.log(L), r;
         let o = {
             event_id: r,
             ...e
@@ -50,7 +50,7 @@ class h {
     }
     captureEvent(t, e, a) {
         let r = (0, n.DM)();
-        if (e && e.originalException && (0, n.YO)(e.originalException)) return R.X && _.kg.log(L), r;
+        if (e && e.originalException && (0, n.YO)(e.originalException)) return d.X && _.kg.log(L), r;
         let o = {
                 event_id: r,
                 ...e
@@ -59,7 +59,7 @@ class h {
         return this._process(this._captureEvent(t, o, i || a)), o.event_id;
     }
     captureSession(t) {
-        'string' != typeof t.release ? R.X && _.kg.warn('Discarded session because of missing or non-string release') : (this.sendSession(t), (0, f.CT)(t, { init: !1 }));
+        'string' != typeof t.release ? d.X && _.kg.warn('Discarded session because of missing or non-string release') : (this.sendSession(t), (0, f.CT)(t, { init: !1 }));
     }
     getDsn() {
         return this._dsn;
@@ -98,20 +98,20 @@ class h {
     }
     sendEvent(t, e = {}) {
         this.emit('beforeSendEvent', t, e);
-        let a = (0, d.Mq)(t, this._dsn, this._options._metadata, this._options.tunnel);
+        let a = (0, R.Mq)(t, this._dsn, this._options._metadata, this._options.tunnel);
         for (let t of e.attachments || []) a = (0, c.BO)(a, (0, c.zQ)(t));
         let r = this.sendEnvelope(a);
         r && r.then((e) => this.emit('afterSendEvent', t, e), null);
     }
     sendSession(t) {
-        let e = (0, d.Q3)(t, this._dsn, this._options._metadata, this._options.tunnel);
+        let e = (0, R.Q3)(t, this._dsn, this._options._metadata, this._options.tunnel);
         this.sendEnvelope(e);
     }
     recordDroppedEvent(t, e, a) {
         if (this._options.sendClientReports) {
             let r = 'number' == typeof a ? a : 1,
                 n = `${t}:${e}`;
-            R.X && _.kg.log(`Recording outcome: "${n}"${r > 1 ? ` (${r} times)` : ''}`), (this._outcomes[n] = (this._outcomes[n] || 0) + r);
+            d.X && _.kg.log(`Recording outcome: "${n}"${r > 1 ? ` (${r} times)` : ''}`), (this._outcomes[n] = (this._outcomes[n] || 0) + r);
         }
     }
     on(t, e) {
@@ -129,7 +129,7 @@ class h {
         a && a.forEach((t) => t(...e));
     }
     sendEnvelope(t) {
-        return (this.emit('beforeEnvelope', t), this._isEnabled() && this._transport) ? this._transport.send(t).then(null, (t) => (R.X && _.kg.error('Error while sending event:', t), t)) : (R.X && _.kg.error('Transport disabled'), (0, i.WD)({}));
+        return (this.emit('beforeEnvelope', t), this._isEnabled() && this._transport) ? this._transport.send(t).then(null, (t) => (d.X && _.kg.error('Error while sending event:', t), t)) : (d.X && _.kg.error('Transport disabled'), (0, i.WD)({}));
     }
     _setupIntegrations() {
         let { integrations: t } = this._options;
@@ -202,7 +202,7 @@ class h {
         return this._processEvent(t, e, a).then(
             (t) => t.event_id,
             (t) => {
-                R.X && ('log' === t.logLevel ? _.kg.log(t.message) : _.kg.warn(t));
+                d.X && ('log' === t.logLevel ? _.kg.log(t.message) : _.kg.warn(t));
             }
         );
     }
@@ -216,8 +216,8 @@ class h {
             u = void 0 === _ ? void 0 : (0, T.o)(_);
         if (c && 'number' == typeof u && Math.random() > u) return this.recordDroppedEvent('sample_rate', 'error', t), (0, i.$2)(new E.b(`Discarding event because it's not included in the random sample (sampling rate = ${_})`, 'log'));
         let I = 'replay_event' === s ? 'replay' : s,
-            R = (t.sdkProcessingMetadata || {}).capturedSpanIsolationScope;
-        return this._prepareEvent(t, e, a, R)
+            d = (t.sdkProcessingMetadata || {}).capturedSpanIsolationScope;
+        return this._prepareEvent(t, e, a, d)
             .then((a) => {
                 if (null === a) throw (this.recordDroppedEvent('event_processor', I, t), new E.b('An event processor returned `null`, will not send event.', 'log'));
                 return e.data && !0 === e.data.__sentry__
@@ -325,17 +325,17 @@ Reason: ${t}`))
         );
     }
     _flushOutcomes() {
-        R.X && _.kg.log('Flushing outcomes...');
+        d.X && _.kg.log('Flushing outcomes...');
         let t = this._clearOutcomes();
         if (0 === t.length) {
-            R.X && _.kg.log('No outcomes to send');
+            d.X && _.kg.log('No outcomes to send');
             return;
         }
         if (!this._dsn) {
-            R.X && _.kg.log('No dsn provided, will not send outcomes');
+            d.X && _.kg.log('No dsn provided, will not send outcomes');
             return;
         }
-        R.X && _.kg.log('Sending outcomes:', t);
+        d.X && _.kg.log('Sending outcomes:', t);
         let e = (0, l.y)(t, this._options.tunnel && (0, r.RA)(this._dsn));
         this.sendEnvelope(e);
     }

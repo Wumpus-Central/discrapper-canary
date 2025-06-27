@@ -585,7 +585,7 @@ function ep(e) {
                 isActive: r,
                 onPopoutClick: s ? g(n) : void 0,
                 popoutOpen: r,
-                isTrayButton: !1
+                isTrayButton: !0
             });
         }
     });
@@ -611,7 +611,7 @@ function ef(e) {
                             }),
                             (0, i.jsx)(d.Text, {
                                 tag: 'div',
-                                variant: 'text-xs/semibold',
+                                variant: 'text-sm/medium',
                                 color: 'text-primary',
                                 className: ei.guildName,
                                 children: n.name
@@ -644,7 +644,7 @@ function eh(e) {
                 }),
             null != r &&
                 (0, i.jsx)(d.Text, {
-                    variant: 'text-xs/semibold',
+                    variant: 'text-sm/medium',
                     color: 'text-muted',
                     className: ei.channelName,
                     children: r
@@ -675,7 +675,7 @@ function em(e) {
                     (n = n =
                         {
                             hasVideo: c,
-                            connectionStatusTextVariant: 'text-xs/semibold'
+                            connectionStatusTextVariant: 'text-sm/medium'
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

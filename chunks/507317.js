@@ -191,11 +191,7 @@ let _ = function (e) {
                                               height: 16,
                                               width: 16
                                           }),
-                                          (0, r.jsx)(l.Text, {
-                                              variant: 'text-sm/medium',
-                                              color: 'text-default',
-                                              children: b.intl.string(b.t['+7XY39'])
-                                          })
+                                          b.intl.string(b.t['+7XY39'])
                                       ]
                                   })
                               ]

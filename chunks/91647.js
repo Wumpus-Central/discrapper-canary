@@ -13,9 +13,9 @@ class s {
         let l = Math.floor(E),
             u = (0, c.s3)(e),
             I = (0, c.Bg)(s),
-            R = (0, c.OC)(o),
-            d = (0, c.Ic)(t, u, R, I),
-            N = this._buckets.get(d),
+            d = (0, c.OC)(o),
+            R = (0, c.Ic)(t, u, d, I),
+            N = this._buckets.get(R),
             f = N && t === n.is ? N.metric.weight : 0;
         N
             ? (N.metric.add(a), N.timestamp < l && (N.timestamp = l))
@@ -24,12 +24,12 @@ class s {
                   timestamp: l,
                   metricType: t,
                   name: u,
-                  unit: R,
+                  unit: d,
                   tags: I
               }),
-              this._buckets.set(d, N));
+              this._buckets.set(R, N));
         let A = 'string' == typeof a ? N.metric.weight - f : a;
-        (0, _.yc)(t, u, A, R, s, d);
+        (0, _.yc)(t, u, A, d, s, R);
     }
     flush() {
         if (0 === this._buckets.size) return;

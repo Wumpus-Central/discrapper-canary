@@ -83,10 +83,7 @@ let j = function (e) {
         ? (0, r.jsx)(o.zxk, {
               size: o.zxk.Sizes.SMALL,
               onClick: j,
-              children: (0, r.jsx)(o.Text, {
-                  variant: 'text-sm/medium',
-                  children: f.intl.string(f.t['9Z+aEB'])
-              })
+              children: f.intl.string(f.t['9Z+aEB'])
           })
         : (0, r.jsxs)(o.P3F, {
               className: h.editWelcomeSection,

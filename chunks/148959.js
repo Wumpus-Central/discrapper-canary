@@ -27,7 +27,7 @@ function f(e, t, n) {
 }
 let _ = 10 * c.Z.Millis.SECOND,
     p = 10 * c.Z.Millis.SECOND,
-    h = 500;
+    h = 2000;
 var m = (function (e) {
     return (e.RequestedSSRCsUpdate = 'requested-ssrcs-update'), (e.RequestedStreamsUpdate = 'requested-streams-update'), e;
 })({});
@@ -147,12 +147,7 @@ class E extends a.Z {
         if (void 0 !== this.userId) {
             let n = e;
             t.forEach((e) => {
-                null == n.resolutionWants && (n.resolutionWants = {}),
-                    n[e] > 0 &&
-                        (n.resolutionWants[e] = {
-                            width: this.resolutionWidth,
-                            height: this.resolutionHeight
-                        });
+                null == n.pixelCounts && (n.pixelCounts = {}), n[e] > 0 && (n.pixelCounts[e] = this.resolutionWidth * this.resolutionHeight);
             }),
                 this.emit('requested-ssrcs-update', this.userId, this.audioSSRC, t),
                 this.emit('requested-streams-update', n);

@@ -47,30 +47,32 @@ function E(e, t, n, r, i) {
     }
     if (r) {
         let e = null != n ? s.Z.getChannel(n) : null;
-        if (null != e) {
-            if (e.isPrivate()) {
-                for (let t of e.recipients)
-                    if (b(a, o, t))
-                        return {
-                            type: 'userMention',
-                            userId: t,
-                            children: [{ text: '' }]
-                        };
-            } else
-                for (let { userId: e } of c.ZP.getMembers(t))
-                    if (b(a, o, e))
-                        return {
-                            type: 'userMention',
-                            userId: e,
-                            children: [{ text: '' }]
-                        };
+        if (null == e) return null;
+        let r = (
+            e.isPrivate()
+                ? e.recipients
+                : c.ZP.getMembers(t).map((e) => {
+                      let { userId: t } = e;
+                      return t;
+                  })
+        )
+            .map((e) => f.default.getUser(e))
+            .filter((e) => void 0 !== e && b(a, o, e));
+        if (1 === r.length) {
+            let e = r[0];
+            if (b(a, o, e, { requireExact: !0 }))
+                return {
+                    type: 'userMention',
+                    userId: e.id,
+                    children: [{ text: '' }]
+                };
         }
     }
     return null;
 }
 function b(e, t, n) {
-    let r = f.default.getUser(n);
-    return null != r && r.username === e && r.discriminator === (null != t ? t : '0');
+    let { requireExact: r = !1 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    return null != n && (r ? n.username === e : n.username.startsWith(e)) && n.discriminator === (null != t ? t : '0');
 }
 function y(e, t) {
     let n;
