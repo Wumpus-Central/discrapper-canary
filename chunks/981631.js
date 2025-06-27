@@ -3733,6 +3733,7 @@ var n_ = (function (e) {
             (e.UPLOAD_FILE_LIMIT_ERROR = 'upload_file_limit_error'),
             (e.UPDATE_USER_SETTINGS_LOCAL = 'update_user_settings_local'),
             (e.UPDATE_SOUNDBOARD_SETTINGS = 'update_soundboard_settings'),
+            (e.SYNC_ACROSS_CLIENTS_TOGGLED = 'sync_across_clients_toggled'),
             (e.CHANNEL_INFORMATION_OPENED = 'channel_information_opened'),
             (e.CHANNEL_INFORMATION_TAB_CLICKED = 'channel_information_tab_clicked'),
             (e.PREMIUM_GIFT_UPSELL_VIEWED = 'premium_gift_upsell_viewed'),

@@ -14,8 +14,8 @@ var i = t(255367),
     h = t(563132),
     f = t(409813),
     j = t(614277),
-    _ = t(981631),
-    m = t(388032),
+    m = t(981631),
+    _ = t(388032),
     L = t(529190);
 function g(e) {
     let { handleStepChange: n, handleClose: t } = e,
@@ -32,7 +32,7 @@ function g(e) {
             d.Z,
             {
                 skuId: n,
-                price: m.intl.string(m.t.QQsaCQ),
+                price: _.intl.string(_.t.QQsaCQ),
                 isSelected: n === (null == S ? void 0 : S.skuId),
                 onSelect: () => E(e),
                 className: L.giftSelectItem
@@ -42,7 +42,7 @@ function g(e) {
     };
     s()(null != r, 'Expected plan to selected'), s()(null != g, 'Expected selectedSkuId'), s()(null != y, 'Step should be set');
     let b = null == v ? void 0 : v.map((e) => Z(e)),
-        O =
+        I =
             null != S && null != P
                 ? (0, i.jsx)(C.Z, {
                       avatarDecorationOverride: { asset: S.assetId },
@@ -51,14 +51,14 @@ function g(e) {
                       avatarSize: o.EFr.SIZE_152
                   })
                 : null,
-        I = (0, i.jsx)(j.O3, {
+        O = (0, i.jsx)(j.O3, {
             children: (0, i.jsx)(o.mzw, {
                 className: L.modalFooter,
                 children: (0, i.jsx)(c.y, {
                     onStepChange: (e) => {
                         null != P &&
                             null != S &&
-                            p.default.track(_.rMx.GIFT_PROMOTION_REWARD_SELECTED, {
+                            p.default.track(m.rMx.GIFT_PROMOTION_REWARD_SELECTED, {
                                 user_id: P.id,
                                 reward_sku_id: S.skuId
                             }),
@@ -72,10 +72,10 @@ function g(e) {
                 })
             })
         }),
-        M = (0, i.jsx)(o.X6q, {
+        T = (0, i.jsx)(o.X6q, {
             variant: 'heading-lg/bold',
             color: 'header-primary',
-            children: m.intl.string(m.t['Rp0+ZG'])
+            children: _.intl.string(_.t['Rp0+ZG'])
         });
     return (0, i.jsxs)('div', {
         className: L.container,
@@ -85,7 +85,7 @@ function g(e) {
                     direction: 'horizontal',
                     justify: 'space-between',
                     align: 'center',
-                    children: [M, (0, i.jsx)(o.olH, { onClick: t })]
+                    children: [T, (0, i.jsx)(o.olH, { onClick: t })]
                 })
             }),
             (0, i.jsx)(o.hzk, {
@@ -94,7 +94,7 @@ function g(e) {
                     align: 'center',
                     padding: { top: 24 },
                     children: [
-                        O,
+                        I,
                         (0, i.jsx)(o.Kqy, {
                             gap: 8,
                             padding: { top: 12 },
@@ -103,7 +103,7 @@ function g(e) {
                     ]
                 })
             }),
-            I
+            O
         ]
     });
 }

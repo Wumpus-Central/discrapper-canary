@@ -1,17 +1,16 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => b });
 var r = n(255367);
 n(73800);
 var i = n(120356),
     a = n.n(i),
     o = n(442837),
-    s = n(680018),
-    l = n(481060),
-    c = n(451478),
-    u = n(648613),
-    d = n(433390),
-    f = n(474936),
-    _ = n(163882);
-function p(e, t, n) {
+    s = n(481060),
+    l = n(451478),
+    c = n(648613),
+    u = n(433390),
+    d = n(474936),
+    f = n(163882);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +23,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,12 +34,12 @@ function h(e) {
                 })
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function m(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -52,29 +51,29 @@ function m(e, t) {
     }
     return n;
 }
-function g(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function E(e, t) {
+function g(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = b(e, t);
+        i = E(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function b(e, t) {
+function E(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -83,83 +82,67 @@ function b(e, t) {
     for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let y = function (e) {
-    var { subscriptionTier: t, onClick: n, size: i, className: p, textOptions: m, iconClassName: b, postSuccessGuild: y, onSubscribeModalClose: O, premiumModalAnalyticsLocation: v, showIcon: I = !0, disableShine: T, applicationId: S, shinyButtonClassName: A, showGradient: N = !1, confirmationFooter: C, paymentModalBanner: R, color: P, iconColor: w = 'currentColor', useExpressiveButton: D } = e,
-        L = E(e, ['subscriptionTier', 'onClick', 'size', 'className', 'textOptions', 'iconClassName', 'postSuccessGuild', 'onSubscribeModalClose', 'premiumModalAnalyticsLocation', 'showIcon', 'disableShine', 'applicationId', 'shinyButtonClassName', 'showGradient', 'confirmationFooter', 'paymentModalBanner', 'color', 'iconColor', 'useExpressiveButton']);
-    let x = (0, o.e7)([c.Z], () => c.Z.isFocused()),
-        k = (0, d.Z)({
+let b = function (e) {
+    var { subscriptionTier: t, onClick: n, size: i, className: _, textOptions: h, iconClassName: E, postSuccessGuild: b, onSubscribeModalClose: y, premiumModalAnalyticsLocation: O, showIcon: v = !0, disableShine: I, applicationId: T, shinyButtonClassName: S, showGradient: A = !1, confirmationFooter: N, paymentModalBanner: C, color: R, iconColor: P = 'currentColor' } = e,
+        w = g(e, ['subscriptionTier', 'onClick', 'size', 'className', 'textOptions', 'iconClassName', 'postSuccessGuild', 'onSubscribeModalClose', 'premiumModalAnalyticsLocation', 'showIcon', 'disableShine', 'applicationId', 'shinyButtonClassName', 'showGradient', 'confirmationFooter', 'paymentModalBanner', 'color', 'iconColor']);
+    let D = (0, o.e7)([l.Z], () => l.Z.isFocused()),
+        L = (0, u.Z)({
             subscriptionTier: t,
-            buttonTextOverride: null == m ? void 0 : m.textOverride,
-            defaultTextOverride: null == m ? void 0 : m.subscribeText
+            buttonTextOverride: null == h ? void 0 : h.textOverride,
+            defaultTextOverride: null == h ? void 0 : h.subscribeText
         }),
-        M = {
+        x = {
             onClick: n,
             subscriptionTier: t,
-            postSuccessGuild: y,
-            onSubscribeModalClose: O,
-            premiumModalAnalyticsLocation: v,
-            applicationId: S,
-            confirmationFooter: C,
-            paymentModalBanner: R
+            postSuccessGuild: b,
+            onSubscribeModalClose: y,
+            premiumModalAnalyticsLocation: O,
+            applicationId: T,
+            confirmationFooter: N,
+            paymentModalBanner: C
         };
-    if (D && (null == m ? void 0 : m.expressiveButtonText) != null)
+    function k(e) {
+        let n = null != R ? R : t === d.Si.TIER_1 ? s.zxk.Colors.PRIMARY : s.zxk.Colors.GREEN;
         return (0, r.jsx)(
-            u.Z,
-            g(h({}, M), {
-                children: (e) => {
-                    var t;
-                    let { onClick: n } = e;
-                    return (0, r.jsx)(s.z, {
-                        onClick: n,
-                        variant: 'expressive',
-                        text: null != (t = null == m ? void 0 : m.expressiveButtonText) ? t : '',
-                        icon: l.SrA
-                    });
-                }
-            })
-        );
-    function j(e) {
-        let n = null != P ? P : t === f.Si.TIER_1 ? l.zxk.Colors.PRIMARY : l.zxk.Colors.GREEN;
-        return (0, r.jsx)(
-            u.Z,
-            g(h({}, M), {
+            c.Z,
+            m(p({}, x), {
                 children: (o) => {
-                    let { onClick: s } = o;
+                    let { onClick: l } = o;
                     return (0, r.jsxs)(
-                        l.gtL,
-                        g(
-                            h(
+                        s.gtL,
+                        m(
+                            p(
                                 {
-                                    disabled: k.disabled,
-                                    onClick: s,
-                                    innerClassName: _.premiumSubscribeButton,
+                                    disabled: L.disabled,
+                                    onClick: l,
+                                    innerClassName: f.premiumSubscribeButton,
                                     color: n,
                                     size: i,
-                                    className: A,
+                                    className: S,
                                     wrapperClassName: a()(
                                         {
-                                            [_.tier2Gradient]: N && t === f.Si.TIER_2,
-                                            [_.tier1Gradient]: N && t === f.Si.TIER_1
+                                            [f.tier2Gradient]: A && t === d.Si.TIER_2,
+                                            [f.tier1Gradient]: A && t === d.Si.TIER_1
                                         },
-                                        p
+                                        _
                                     ),
-                                    buttonShineClassName: 'buttonShineClassName' in L ? L.buttonShineClassName : n === l.Ttl.BRAND_INVERTED ? _.brandShine : void 0,
-                                    pauseAnimation: !x || T
+                                    buttonShineClassName: 'buttonShineClassName' in w ? w.buttonShineClassName : n === s.Ttl.BRAND_INVERTED ? f.brandShine : void 0,
+                                    pauseAnimation: !D || I
                                 },
-                                L,
+                                w,
                                 e
                             ),
                             {
                                 children: [
-                                    I &&
-                                        (0, r.jsx)(l.SrA, {
+                                    v &&
+                                        (0, r.jsx)(s.SrA, {
                                             size: 'md',
-                                            color: w,
-                                            className: a()(_.premiumIcon, b)
+                                            color: P,
+                                            className: a()(f.premiumIcon, E)
                                         }),
                                     (0, r.jsx)('span', {
-                                        className: a()(_.buttonText, null == m ? void 0 : m.textClassName),
-                                        children: k.buttonText
+                                        className: a()(f.buttonText, null == h ? void 0 : h.textClassName),
+                                        children: L.buttonText
                                     })
                                 ]
                             }
@@ -169,10 +152,10 @@ let y = function (e) {
             })
         );
     }
-    return null != k.buttonTooltipText
-        ? (0, r.jsx)(l.ua7, {
-              text: k.buttonTooltipText,
-              children: j
+    return null != L.buttonTooltipText
+        ? (0, r.jsx)(s.ua7, {
+              text: L.buttonTooltipText,
+              children: k
           })
-        : j();
+        : k();
 };

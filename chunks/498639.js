@@ -23,8 +23,8 @@ var i = n(255367),
     S = n(911367),
     v = n(43747),
     T = n(970815),
-    I = n(430824),
-    N = n(78839),
+    N = n(430824),
+    I = n(78839),
     y = n(981631),
     A = n(474936),
     P = n(951386);
@@ -94,8 +94,8 @@ function Z(e) {
 let w = function () {
     let [e, t] = r.useState(A.Si.TIER_2),
         [n, _] = r.useState(null),
-        [x] = (0, a.Wu)([I.Z], () => [I.Z.getGuilds()]),
-        [w] = (0, a.Wu)([N.ZP], () => [N.ZP.getPremiumSubscription()]);
+        [x] = (0, a.Wu)([N.Z], () => [N.Z.getGuilds()]),
+        [w] = (0, a.Wu)([I.ZP], () => [I.ZP.getPremiumSubscription()]);
     (0, S.t)();
     let k = Object.values(x).map((e) => ({
             value: e,

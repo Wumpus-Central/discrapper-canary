@@ -129,22 +129,22 @@ function O(e) {
         S = (0, m.ZP)(),
         v = null,
         T = null,
-        I = [_.O0b.PAST_DUE, _.O0b.PAUSED].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd,
-        N = l()(I).add(a, 'days').toDate();
+        N = [_.O0b.PAST_DUE, _.O0b.PAUSED].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd,
+        I = l()(N).add(a, 'days').toDate();
     switch (t.status) {
         case _.O0b.PAST_DUE:
             T = x.intl.format(x.t['xaS18/'], {
                 pauseDuration: a,
-                resumeDate: N
+                resumeDate: I
             });
             break;
         case _.O0b.PAUSED:
-            T = x.intl.format(x.t.Vur3FR, { resumeDate: N });
+            T = x.intl.format(x.t.Vur3FR, { resumeDate: I });
             break;
         default:
             T = x.intl.format(x.t.W85vFB, {
-                pauseDate: I,
-                resumeDate: N,
+                pauseDate: N,
+                resumeDate: I,
                 pauseDuration: a
             });
     }

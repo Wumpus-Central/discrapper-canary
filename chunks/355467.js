@@ -12,6 +12,7 @@ n.d(t, {
     Mg: () => eT,
     O1: () => es,
     OP: () => eg,
+    Q5: () => X,
     R5: () => U,
     SQ: () => H,
     UY: () => ew,
@@ -224,12 +225,14 @@ async function j(e) {
         paymentMethodId: n
     };
 }
-async function U() {
+async function U(e) {
+    let t = null != e ? { regional_payment_element_source_types: e.regionalPaymentMethods } : void 0;
     return (
         await l.tn.post({
             url: v.ANM.BILLING_STRIPE_SETUP_INTENT_SECRET,
             oldFormErrors: !0,
-            rejectWithError: !0
+            rejectWithError: !0,
+            body: t
         })
     ).body.client_secret;
 }
@@ -452,83 +455,66 @@ async function z(e, t, n, r) {
         bank: p
     });
 }
-let q = (e) => {
-    if (null == e || !e.enabled)
-        return {
-            enabled: !1,
-            elements: null
-        };
-    if (null == e.elements) throw H('Payment elements context attributes not loaded');
-    return {
-        enabled: !0,
-        elements: e.elements
-    };
+let q = (e, t) => {
+    if (null != t) throw H(t);
+    if (null == e) throw H('SetupIntent not created');
+    if (null == e.payment_method) throw H('setupIntent.payment_method not available with successful stripe call');
+    return (
+        a()('string' == typeof e.payment_method, 'setupIntent.payment_method expanded not supported'),
+        {
+            setupIntent: e,
+            error: t
+        }
+    );
 };
-async function X(e, t, n) {
-    let { elements: r, shouldPreValidateSetupIntent: i } = n;
-    if (i) {
-        let n = Date.now();
-        L.info('Retrieving Stripe SetupIntent for validation');
-        let { setupIntent: r, error: i } = await e.retrieveSetupIntent(t);
-        if ((L.info('Finished Retrieving Stripe SetupIntent for validation. Time (ms): ', Date.now() - n), null != r && 'succeeded' === r.status))
-            return (
-                L.info('Skip confirming Stripe setup intent '.concat(r.id, ' on retry (already succeeded)')),
-                {
-                    setupIntent: r,
-                    error: i
-                }
-            );
-    }
-    return await e
-        .confirmSetup({
-            clientSecret: t,
-            redirect: 'if_required',
-            elements: r,
-            confirmParams: { return_url: '' }
-        })
-        .catch(
-            (e) => (
-                L.error('stripe.confirmSetup error: ', e),
-                {
-                    setupIntent: void 0,
-                    error: e
-                }
-            )
-        );
-}
-async function Q(e, t, n, r, i) {
-    let { enabled: o, elements: s } = q(i);
-    if (null == e || (null == t && !o)) throw H('Stripe or token not loaded');
+async function X(e, t, n, r, i) {
+    if (null == e) throw H('Stripe not loaded');
+    if (null == r) throw H('Stripe Elements not loaded');
     c.Z.dispatch({ type: 'BILLING_PAYMENT_SOURCE_CREATE_START' });
-    let l = null;
+    let a = await G(t),
+        o = await r.submit();
+    if ((L.info('Stripe Elements submit response: ', o), null != o.error)) throw (L.error('Stripe Elements submit error: ', o.error), H(o.error));
+    let s = null;
+    if (n === S.He.CARD) {
+        let { setupIntent: t, error: n } = await e.confirmSetup({
+                redirect: 'if_required',
+                elements: r
+            }),
+            { setupIntent: i } = q(t, n);
+        s = i.payment_method;
+    } else {
+        let { paymentMethod: t, error: n } = await e.createPaymentMethod({ elements: r });
+        if (null != n) throw H(n);
+        if (null == t) throw H('paymentMethod not available with successful stripe call');
+        s = t.id;
+    }
+    return V(v.gg$.STRIPE, s, t, {
+        billingAddressToken: a,
+        analyticsLocation: i
+    });
+}
+async function Q(e, t, n, r) {
+    if (null == e || null == t) throw H('Stripe or token not loaded');
+    c.Z.dispatch({ type: 'BILLING_PAYMENT_SOURCE_CREATE_START' });
+    let i = null;
     try {
-        l = await U();
+        i = await U();
     } catch (e) {
         throw H(e);
     }
-    let u = await G(n);
-    if (o) {
-        let e = await s.submit();
-        L.info('Stripe Elements submit response: ', e);
-    }
-    let d = O.XZ(n),
-        { setupIntent: f, error: _ } = o
-            ? await X(e, l, { elements: s })
-            : await e.confirmCardSetup(l, {
-                  payment_method: {
-                      card: { token: t },
-                      billing_details: d
-                  }
-              });
-    if (null != _) throw H(_);
-    if ((null == f ? void 0 : f.payment_method) == null) throw H('setupIntent.payment_method not available with successful stripe call');
-    return (
-        a()('string' == typeof f.payment_method, 'setupIntent.payment_method expanded not supported'),
-        V(v.gg$.STRIPE, f.payment_method, n, {
-            billingAddressToken: u,
-            analyticsLocation: r
-        })
-    );
+    let a = await G(n),
+        o = O.XZ(n),
+        { setupIntent: s, error: l } = await e.confirmCardSetup(i, {
+            payment_method: {
+                card: { token: t },
+                billing_details: o
+            }
+        }),
+        { setupIntent: u } = q(s, l);
+    return V(v.gg$.STRIPE, u.payment_method, n, {
+        billingAddressToken: a,
+        analyticsLocation: r
+    });
 }
 function J(e, t, n) {
     let { token: r, billingAddressInfo: i } = O.az(e);

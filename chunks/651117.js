@@ -9,8 +9,6 @@ e.exports = {
     premiumTierCardsContainerFullscreen: 'premiumTierCardsContainerFullscreen_c880e8 premiumTierCardsContainer_c880e8',
     promoBannerContainer: 'promoBannerContainer_c880e8',
     giftPromoCard: 'giftPromoCard_c880e8',
-    marginTopForButtons: 'marginTopForButtons_c880e8',
-    buttonShine: 'buttonShine_c880e8',
     perkCardsContainerSpacingSettings: 'perkCardsContainerSpacingSettings_c880e8',
     planComparisonTable: 'planComparisonTable_c880e8',
     planComparisonTableApplicationHome: 'planComparisonTableApplicationHome_c880e8',
@@ -30,7 +28,5 @@ e.exports = {
     heroHeadingV2Art: 'heroHeadingV2Art_c880e8',
     heroHeadingV2ArtContainer: 'heroHeadingV2ArtContainer_c880e8',
     heroHeaderSideGradient: 'heroHeaderSideGradient_c880e8',
-    heroHeaderBackgroundStars: 'heroHeaderBackgroundStars_c880e8',
-    v2SubButtonText: 'v2SubButtonText_c880e8',
-    subButtonText: 'subButtonText_c880e8'
+    heroHeaderBackgroundStars: 'heroHeaderBackgroundStars_c880e8'
 };

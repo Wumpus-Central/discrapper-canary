@@ -7,8 +7,8 @@ var i = n(255367),
     o = n(686546),
     c = n(168301);
 let d = r.forwardRef(function (e, t) {
-    let { tooltipText: n, children: r, onContextMenu: s, onClick: d, disabled: u, icon: m, iconForeground: g, innerClassName: p, className: h, redGlow: f, orangeGlow: b, tooltipClassName: _, onMouseEnter: x, onMouseLeave: E, 'aria-label': j, 'aria-checked': C, role: O, tooltipColor: S, tooltipForceOpen: v, tooltipContentClassName: T, plated: I } = e,
-        N =
+    let { tooltipText: n, children: r, onContextMenu: s, onClick: d, disabled: u, icon: m, iconForeground: g, innerClassName: p, className: h, redGlow: f, orangeGlow: b, tooltipClassName: _, onMouseEnter: x, onMouseLeave: E, 'aria-label': j, 'aria-checked': C, role: O, tooltipColor: S, tooltipForceOpen: v, tooltipContentClassName: T, plated: N } = e,
+        I =
             'function' == typeof m
                 ? (0, i.jsx)(m, {
                       width: 20,
@@ -88,8 +88,8 @@ let d = r.forwardRef(function (e, t) {
                             [c.orangeGlow]: b,
                             [c.disabled]: u,
                             [c.enabled]: !u,
-                            [c.plated]: I,
-                            [c.plateMuted]: f && I
+                            [c.plated]: N,
+                            [c.plateMuted]: f && N
                         }),
                         onClick: (e) => {
                             null != g && g(), null != d && d(e);
@@ -117,9 +117,9 @@ let d = r.forwardRef(function (e, t) {
                                       width: 20,
                                       height: 20,
                                       mask: o.ZP.Masks.PANEL_BUTTON,
-                                      children: N
+                                      children: I
                                   })
-                                : N,
+                                : I,
                             r
                         ]
                     }),

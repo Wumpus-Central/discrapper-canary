@@ -13,12 +13,12 @@ function m(e) {
     let { maxRewardImageSrc: t, claimableRewards: n, size: m } = e,
         C = (0, r.e7)([o.default], () => o.default.getCurrentUser()),
         p = (0, r.e7)([a.Z], () => a.Z.useReducedMotion),
-        g = (0, l.pxk)(m);
+        x = (0, l.pxk)(m);
     return n.length > 2
         ? (0, i.jsx)('img', {
               alt: '',
               src: t,
-              style: { height: 1.2 * g }
+              style: { height: 1.2 * x }
           })
         : (0, i.jsxs)('div', {
               className: c.container,
@@ -33,7 +33,7 @@ function m(e) {
                       }),
                   2 === n.length &&
                       (0, i.jsx)('div', {
-                          style: { marginRight: -Math.round(0.321 * g) },
+                          style: { marginRight: -Math.round(0.321 * x) },
                           children: (0, i.jsx)(l.Xo$, {
                               'aria-label': null == C ? void 0 : C.username,
                               size: m,

@@ -22,7 +22,7 @@ let h = () => {
         h = (0, s.Fg)(),
         f = (0, l.ap)(h),
         j = o.ZP.getName(e),
-        _ = f ? d.Z : c.Z;
+        m = f ? d.Z : c.Z;
     return null == e
         ? null
         : (0, i.jsxs)('div', {
@@ -71,7 +71,7 @@ let h = () => {
                       className: x.bannerHeader,
                       children: p.intl.format(p.t.oxhCOj, { userName: j })
                   }),
-                  (0, i.jsx)(_, { className: x.bannerIcon })
+                  (0, i.jsx)(m, { className: x.bannerIcon })
               ]
           });
 };

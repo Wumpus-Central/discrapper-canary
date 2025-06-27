@@ -23,8 +23,8 @@ var i = n(255367),
     S = n(705262),
     v = n(526156),
     T = n(706705),
-    I = n(726985),
-    N = n(981631),
+    N = n(726985),
+    I = n(981631),
     y = n(231338),
     A = n(426617),
     P = n(177475);
@@ -266,23 +266,23 @@ function G() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(v.Z, {
-                parentSetting: I.s6.DESIGN_SYSTEMS,
-                settingsSection: N.oAB.DESIGN_SYSTEMS,
+                parentSetting: N.s6.DESIGN_SYSTEMS,
+                settingsSection: I.oAB.DESIGN_SYSTEMS,
                 tabs: [
                     {
                         title: 'Components',
                         component: () => (0, i.jsx)(Z, {}),
-                        setting: I.s6.DESIGN_SYSTEMS_COMPONENTS
+                        setting: N.s6.DESIGN_SYSTEMS_COMPONENTS
                     },
                     {
                         title: 'Colors',
                         component: () => (0, i.jsx)(V, {}),
-                        setting: I.s6.DESIGN_SYSTEMS_COLORS
+                        setting: N.s6.DESIGN_SYSTEMS_COLORS
                     },
                     {
                         title: 'Animations',
                         component: () => (0, i.jsx)(T.Z, {}),
-                        setting: I.s6.ANIMATION_TESTING
+                        setting: N.s6.ANIMATION_TESTING
                     }
                 ]
             }),

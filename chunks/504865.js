@@ -12,7 +12,7 @@ var r = n(120356),
     m = n(474936),
     C = n(106112);
 let p = function (e) {
-    let { subscriptionTier: t, interval: n = m.rV.MONTH, className: r, isGift: p = !1, variant: g, priceOptions: x, isApplicationHome: f, enablePremiumBrandRefresh: h } = e,
+    let { subscriptionTier: t, interval: n = m.rV.MONTH, className: r, isGift: p = !1, variant: x, priceOptions: g, isApplicationHome: h, enablePremiumBrandRefresh: f } = e,
         I = (0, a.e7)([u.Z], () => u.Z.isLoadedForPremiumSKUs()),
         v = (0, s.ap)((0, c.ZP)());
     if (!I)
@@ -21,8 +21,8 @@ let p = function (e) {
             className: C.priceSpinner
         });
     let T = u.Z.getForSkuAndInterval((0, d.Wz)(t), n),
-        j = null != T ? (0, d.gy)(T, x, !1, p) : null;
-    if (h) {
+        j = null != T ? (0, d.gy)(T, g, !1, p) : null;
+    if (f) {
         let e = n === m.rV.YEAR;
         return (0, i.jsxs)('div', {
             children: [
@@ -42,13 +42,13 @@ let p = function (e) {
         });
     }
     return (0, i.jsx)(o.X6q, {
-        color: f ? 'none' : 'always-white',
-        variant: null != g ? g : 'heading-md/medium',
+        color: h ? 'none' : 'always-white',
+        variant: null != x ? x : 'heading-md/medium',
         className: l()(C.pricePerInterval, r),
         children: (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('span', {
-                    className: f ? void 0 : C.price,
+                    className: h ? void 0 : C.price,
                     children: j
                 }),
                 ' / ',

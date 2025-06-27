@@ -19,17 +19,17 @@ function x() {
         f = null == h ? void 0 : h.planSelectionBanner,
         { claimableRewards: j } = (0, C.wD)();
     if (null == f || null == j) return null;
-    let _ =
+    let m =
             null == (e = f.gradientConfig)
                 ? void 0
                 : e.call(f, {
                       isDarkMode: x,
                       isAndroid: !1
                   }),
-        m = (0, d.Tl)(_);
+        _ = (0, d.Tl)(m);
     return (0, i.jsxs)('div', {
         className: p.promotionalFooterBanner,
-        style: m,
+        style: _,
         children: [
             (0, i.jsx)(u.Z, {
                 claimableRewards: j,

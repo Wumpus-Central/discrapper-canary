@@ -3,45 +3,46 @@ n.d(t, {
     z: () => d
 });
 var r = n(255367),
+    l = n(481060),
     a = n(598117),
-    l = n(981631),
-    s = n(185923),
-    i = n(388032),
-    o = n(632261);
+    s = n(981631),
+    i = n(185923),
+    o = n(388032);
 let c = (e) => {
         let { error: t } = e;
-        return (0, r.jsx)('div', {
-            className: o.errorBanner,
-            children: (0, r.jsx)('p', { children: u(t) })
+        return (0, r.jsx)(l.Text, {
+            variant: 'text-sm/normal',
+            color: 'text-danger',
+            children: u(t)
         });
     },
     u = (e) => {
         switch (e) {
-            case l.evJ.TOO_MANY_EMOJI:
-                return i.intl.string(i.t['jP/Rqq']);
-            case l.evJ.TOO_MANY_ANIMATED_EMOJI:
-                return i.intl.string(i.t['6v5dPz']);
+            case s.evJ.TOO_MANY_EMOJI:
+                return o.intl.string(o.t['jP/Rqq']);
+            case s.evJ.TOO_MANY_ANIMATED_EMOJI:
+                return o.intl.string(o.t['6v5dPz']);
             case a.ze.TOO_BIG:
-            case l.evJ.INVALID_FILE_ASSET_SIZE:
-            case l.evJ.INVALID_FORM_BODY:
-                return i.intl.formatToPlainString(i.t.kIO9j4, { maxSize: s.xG });
-            case l.evJ.INVALID_FILE_ASSET_SIZE_RESIZE_GIF:
-                return i.intl.string(i.t.sp16MT);
+            case s.evJ.INVALID_FILE_ASSET_SIZE:
+            case s.evJ.INVALID_FORM_BODY:
+                return o.intl.formatToPlainString(o.t.kIO9j4, { maxSize: i.xG });
+            case s.evJ.INVALID_FILE_ASSET_SIZE_RESIZE_GIF:
+                return o.intl.string(o.t.sp16MT);
             case a.ze.MISSING_IMAGE_DATA:
-                return i.intl.string(i.t['41/Kbm']);
+                return o.intl.string(o.t['41/Kbm']);
             case a.ze.MISSING_GUILD:
-                return i.intl.string(i.t['8RCtpK']);
+                return o.intl.string(o.t['8RCtpK']);
             case a.ze.GIF_CROPPING:
-                return i.intl.string(i.t.X6rtiI);
+                return o.intl.string(o.t.X6rtiI);
             case a.ze.IMAGE_LOAD:
-                return i.intl.string(i.t['+ITMYW']);
+                return o.intl.string(o.t['+ITMYW']);
             case a.ze.NO_PERMISSIONS:
-                return i.intl.string(i.t.QY7ZFR);
+                return o.intl.string(o.t.QY7ZFR);
             case 429:
-                return i.intl.string(i.t['4rjikp']);
+                return o.intl.string(o.t['4rjikp']);
             case a.ze.UNKNOWN:
             default:
-                return i.intl.string(i.t.iufib2);
+                return o.intl.string(o.t.iufib2);
         }
     },
     d = (e) => {

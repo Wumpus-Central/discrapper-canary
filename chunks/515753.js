@@ -29,8 +29,8 @@ var i = n(255367),
     S = n(201895),
     v = n(43267),
     T = n(933557),
-    I = n(163889),
-    N = n(111028),
+    N = n(163889),
+    I = n(111028),
     y = n(853856),
     A = n(93687),
     P = n(785232),
@@ -179,7 +179,7 @@ let et = K.ZP.getEnableHardwareAcceleration() ? g.Xo$ : g.qEK,
     ea = (e) => {
         var { route: t, selected: n, icon: r, iconClassName: s, interactiveClassName: a, text: o, children: d, locationState: m, onClick: p, className: h, role: f, 'aria-posinset': b, 'aria-setsize': _, listItemRef: x } = e,
             E = ee(e, ['route', 'selected', 'icon', 'iconClassName', 'interactiveClassName', 'text', 'children', 'locationState', 'onClick', 'className', 'role', 'aria-posinset', 'aria-setsize', 'listItemRef']);
-        return (0, i.jsx)(I.Z, {
+        return (0, i.jsx)(N.Z, {
             className: l()(Q.channel, { [Q.fullWidth]: u.tq }, h),
             onClick: p,
             role: f,
@@ -253,8 +253,8 @@ function eo(e) {
         eS = ex && eC,
         ev = ex && eO,
         eT = (ej || eS || ev) && !(a || K),
-        eI = (0, m.e7)([G.ZP], () => G.ZP.getMentionCount(t.id) > 0),
-        eN = (0, T.ZP)(t),
+        eN = (0, m.e7)([G.ZP], () => G.ZP.getMentionCount(t.id) > 0),
+        eI = (0, T.ZP)(t),
         ey = (0, m.e7)([y.Z], () => y.Z.isFavorite(t.id)),
         eA = (0, L.L)('PrivateChannel'),
         eP = null != V && (a || K),
@@ -318,9 +318,9 @@ function eo(e) {
         },
         eV = (e) => {
             e.preventDefault(), e.stopPropagation();
-            let r = X.intl.formatToPlainString(X.t.hJ5Ap6, { name: eN }),
-                s = X.intl.format(X.t.SSIVOj, { name: eN });
-            t.isManaged() && ((r = X.intl.formatToPlainString(X.t.hVGjER, { name: eN })), (s = X.intl.format(X.t.IK1Qvr, { name: eN }))),
+            let r = X.intl.formatToPlainString(X.t.hJ5Ap6, { name: eI }),
+                s = X.intl.format(X.t.SSIVOj, { name: eI });
+            t.isManaged() && ((r = X.intl.formatToPlainString(X.t.hVGjER, { name: eI })), (s = X.intl.format(X.t.IK1Qvr, { name: eI }))),
                 (0, g.ZDy)(async () => {
                     let { default: e } = await n.e('14604').then(n.bind(n, 960670));
                     return (t) =>
@@ -409,7 +409,7 @@ function eo(e) {
         eH = eE
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
-                      eN,
+                      eI,
                       (0, i.jsx)(R.ZP, {
                           primaryGuild: null == u ? void 0 : u.primaryGuild,
                           userId: null == u ? void 0 : u.id,
@@ -419,14 +419,14 @@ function eo(e) {
                       })
                   ]
               })
-            : eN,
+            : eI,
         ez = r.useRef(null);
     return (0, i.jsx)(d.mh, {
         id: t.id,
         children: (e) => {
             var { role: n } = e,
                 r = ee(e, ['role']);
-            return (0, i.jsxs)(I.Z, {
+            return (0, i.jsxs)(N.Z, {
                 className: l()(Q.channel, Q.dm),
                 role: n,
                 focusProps: $(J({}, en), {
@@ -443,7 +443,7 @@ function eo(e) {
                 'aria-setsize': W,
                 'aria-posinset': Y,
                 children: [
-                    eA && eI ? (0, i.jsx)('div', { className: l()(Q.unreadPill, { [Q.muted]: eT }) }) : null,
+                    eA && eN ? (0, i.jsx)('div', { className: l()(Q.unreadPill, { [Q.muted]: eT }) }) : null,
                     (0, i.jsxs)(g.vjx, {
                         className: l()(Q.interactive, {
                             [Q.interactiveSystemDM]: e_ && eb,
@@ -471,7 +471,7 @@ function eo(e) {
                                             className: l()(Q.link, { [Q.linkPlated]: eP }),
                                             'aria-label': (0, S.ZP)({
                                                 channel: t,
-                                                unread: eI
+                                                unread: eN
                                             })
                                         },
                                         r
@@ -480,10 +480,10 @@ function eo(e) {
                                         children: (0, i.jsx)(C.Z, {
                                             ref: ez,
                                             avatar: eF(),
-                                            highlighted: eI && !(eA && eT),
+                                            highlighted: eN && !(eA && eT),
                                             muted: eT,
                                             subText: eG(),
-                                            name: (0, i.jsx)(N.Z, {
+                                            name: (0, i.jsx)(I.Z, {
                                                 tooltipClassName: Q.overflowTooltip,
                                                 children: eH
                                             }),
