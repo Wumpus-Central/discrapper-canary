@@ -177,22 +177,19 @@ function I(e) {
                       return n === e;
                   })
                 : null;
-    return (
-        (0, o.j)(() => {
-            y.setState((n) =>
-                void 0 === n[t]
-                    ? n
-                    : _(d({}, n), {
-                          [t]: n[t].filter((t) => {
-                              let { key: n } = t;
-                              return n !== e;
-                          })
+    (0, o.j)(() => {
+        y.setState((n) =>
+            void 0 === n[t]
+                ? n
+                : _(d({}, n), {
+                      [t]: n[t].filter((t) => {
+                          let { key: n } = t;
+                          return n !== e;
                       })
-            );
-        }),
-        null != r && null != r.onCloseCallback && r.onCloseCallback(),
-        null != r
-    );
+                  })
+        );
+    }),
+        null != r && null != r.onCloseCallback && r.onCloseCallback();
 }
 function T(e) {
     let t = y.getState(),

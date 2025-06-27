@@ -19,8 +19,8 @@ var r,
     _ = n(541716),
     b = n(28546),
     x = n(963249),
-    E = n(703656),
-    y = n(594174),
+    y = n(703656),
+    E = n(594174),
     v = n(626135),
     C = n(51144),
     O = n(479446),
@@ -36,7 +36,7 @@ var r,
     R = (((r = {}).SYSTEM_MESSAGE = 'system_message'), (r.COACHMARK = 'coachmark'), r);
 function k(e) {
     let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: r, onMouseEnter: a, onMouseLeave: R, popoutPosition: k, analyticsPage: L, analyticsSection: D, glow: M, giftIntentSecondaryAction: U } = e,
-        F = (0, c.e7)([y.default], () => y.default.getCurrentUser()),
+        F = (0, c.e7)([E.default], () => E.default.getCurrentUser()),
         { analyticsLocations: B } = (0, h.ZP)(),
         G = (0, c.e7)([S.Z], () => S.Z.getFriendAnniversaryYears(r.id));
     l.useEffect(() => {
@@ -56,8 +56,8 @@ function k(e) {
         W = V ? Z.recipientUserAvatarCoachmark : Z.recipientUserAvatar,
         K = V ? Z.currentUserAvatarCoachmark : Z.currentUserAvatar,
         Y = V ? Z.subHeaderTextCoachmark : Z.subHeaderText,
-        q = V ? d.zxk.Colors.BRAND : d.zxk.Colors.WHITE,
-        X = V ? u.Z.colors.WHITE : u.Z.colors.BG_BRAND,
+        X = V ? d.zxk.Colors.BRAND : d.zxk.Colors.WHITE,
+        q = V ? u.Z.colors.WHITE : u.Z.colors.BG_BRAND,
         Q = V ? Z.buttonTextPrimaryCoachmark : Z.buttonTextPrimary,
         J = V ? Z.buttonSecondaryCoachmark : Z.buttonSecondary,
         $ = V ? Z.buttonTextSecondaryCoachmark : Z.buttonTextSecondary;
@@ -123,7 +123,7 @@ function k(e) {
                                             cta_type: U
                                         }),
                                         U === T.X2.VIEW_ALL
-                                            ? ((0, E.uL)(N.Z5c.FRIENDS), m.Z.setSection(N.pJs.ALL))
+                                            ? ((0, y.uL)(N.Z5c.FRIENDS), m.Z.setSection(N.pJs.ALL))
                                             : U === T.X2.SEND_MESSAGE &&
                                               ((0, j.PV)(r.id),
                                               p.Z.openPrivateChannel({ recipientIds: r.id }).then(() => {
@@ -177,12 +177,12 @@ function k(e) {
                                 });
                             },
                             size: d.zxk.Sizes.MEDIUM,
-                            color: q,
+                            color: X,
                             children: (0, i.jsxs)('div', {
                                 className: Z.buttonContentContainer,
                                 children: [
                                     (0, i.jsx)(d.OgN, {
-                                        color: X,
+                                        color: q,
                                         size: 'custom',
                                         width: '14',
                                         height: '14'

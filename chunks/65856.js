@@ -36,7 +36,7 @@ class b {
         e.on('connect', (e) => this.handleConnect(e)), e.on('request', (e, t) => this.handleRequest(e, t)), e.on('disconnect', (e, t) => this.handleDisconnect(e, t));
     }
     handleConnect(e) {
-        this.sockets.add(e), this.onConnect(e);
+        this.sockets.add(e), this.abortControllers.set(e, new AbortController()), this.onConnect(e);
         let t = {
             v: e.version,
             config: {
@@ -53,7 +53,8 @@ class b {
         this.dispatch(e, null, _.Etm.DISPATCH, _.zMe.READY, t);
     }
     handleDisconnect(e, t) {
-        e.abortController.abort('DISCONNECTED'), this.removeSubscriptions(e), this.sockets.delete(e), this.onDisconnect(e, t);
+        var n;
+        this.removeSubscriptions(e), this.sockets.delete(e), null == (n = this.abortControllers.get(e)) || n.abort('DISCONNECTED'), this.abortControllers.delete(e), this.onDisconnect(e, t);
     }
     handleRequest(e, t) {
         new Promise((n) => {
@@ -84,16 +85,16 @@ class b {
                     })
             )
             .then((n) => {
-                var r;
+                var r, i;
                 return n.handler({
                     socket: e,
                     server: this,
                     cmd: t.cmd,
                     evt: t.evt,
                     nonce: t.nonce,
-                    args: null != (r = t.args) ? r : {},
+                    args: null != (i = t.args) ? i : {},
                     isSocketConnected: () => this.sockets.has(e),
-                    signal: e.abortController.signal
+                    signal: null == (r = this.abortControllers.get(e)) ? void 0 : r.signal
                 });
             })
             .then((n) => this.dispatch(e, t.nonce, t.cmd, null, n))
@@ -193,6 +194,6 @@ class b {
         }).then((e) => (a(), e));
     }
     constructor(e) {
-        p(this, 'getCurrentUser', () => null), p(this, 'onConnect', () => {}), p(this, 'onDisconnect', () => {}), p(this, 'getJoi', void 0), p(this, 'events', {}), p(this, 'commands', {}), p(this, 'sockets', new Set()), p(this, 'subscriptions', []), (this.getJoi = e);
+        p(this, 'getCurrentUser', () => null), p(this, 'onConnect', () => {}), p(this, 'onDisconnect', () => {}), p(this, 'getJoi', void 0), p(this, 'events', {}), p(this, 'commands', {}), p(this, 'sockets', new Set()), p(this, 'subscriptions', []), p(this, 'abortControllers', new Map()), (this.getJoi = e);
     }
 }

@@ -16,8 +16,8 @@ var r = n(255367),
     _ = n(607070),
     b = n(313201),
     x = n(977885),
-    E = n(778877),
-    y = n(903488),
+    y = n(778877),
+    E = n(903488),
     v = n(416638),
     C = n(592125),
     O = n(984933),
@@ -205,7 +205,7 @@ class G extends i.PureComponent {
                         searchEverywhere: null != i && i
                     }),
                         d.uvj.announce(D.intl.string(D.t.pKCxWF)),
-                        this.onBlur();
+                        this.handleBlur(!0);
                 }
                 return !0;
             }),
@@ -251,26 +251,30 @@ class G extends i.PureComponent {
                 this._editorRef = e;
             }),
             U(this, 'onFocus', () => {
-                let { searchId: e, searchType: t } = this.props;
+                let { searchId: e, searchType: t, isSearchActive: n } = this.props;
                 this.setState({ focused: !0 }),
                     null == e ||
-                        j.Z.isActive(e) ||
+                        n ||
                         (0, w.I1)({
                             searchId: e,
-                            searchType: null != t ? t : (0, Z.g)(e)
+                            searchType: t
                         });
             }),
-            U(this, 'onBlur', () => {
-                let { searchId: e, searchType: t } = this.props;
+            U(this, 'handleBlur', (e) => {
+                let { searchId: t, searchType: n, isSearchActive: r } = this.props;
                 this.setState({ focused: !1 }, () => {
-                    null == e ||
-                        j.Z.isActive(e) ||
+                    null == t ||
+                        r ||
+                        e ||
                         (0, w.IZ)({
-                            searchId: e,
-                            searchType: null != t ? t : (0, Z.g)(e)
+                            searchId: t,
+                            searchType: n
                         }),
                         T.xb(this.props.editorState) && this.clearSearch();
                 });
+            }),
+            U(this, 'onBlur', (e) => {
+                this.handleBlur();
             }),
             U(this, 'handleReturn', (e) => {
                 let { shiftKey: t } = e;
@@ -369,17 +373,18 @@ function V(e) {
         a = i.useMemo(() => ({ type: k.aib.DMS }), []),
         o = (0, u.e7)([j.Z], () => j.Z.getSearchResultsQueryString(k.aib.DMS)),
         s = (0, v.jj)(a, L.sR.MESSAGES, o),
-        c = (0, u.e7)([y.Z], () => {
-            let e = y.Z.getTotalCount(s);
+        c = (0, u.e7)([E.Z], () => {
+            let e = E.Z.getTotalCount(s);
             return null != e && e > 0;
         }),
-        d = (0, u.e7)([y.Z], () => y.Z.getIsFetching(s));
+        d = (0, u.e7)([E.Z], () => E.Z.getIsFetching(s)),
+        m = d || c;
     H({
-        isSearchActive: d || c,
+        isSearchActive: m,
         searchId: k.aib.DMS,
         searchType: k.aib.DMS
     });
-    let m = i.useCallback(
+    let f = i.useCallback(
         (e) => {
             let { queryString: t } = e;
             x.Z.fetchMessages({
@@ -406,7 +411,8 @@ function V(e) {
         editorState: l,
         hasResults: c,
         keyboardModeEnabled: n,
-        onSearch: m
+        onSearch: f,
+        isSearchActive: m
     });
 }
 function z(e) {
@@ -436,7 +442,8 @@ function z(e) {
         editorState: l,
         hasResults: c,
         keyboardModeEnabled: n,
-        onSearch: p
+        onSearch: p,
+        isSearchActive: s
     });
 }
 function W(e) {
@@ -445,7 +452,7 @@ function W(e) {
         l = (0, u.e7)([_.Z], () => _.Z.keyboardModeEnabled),
         a = (0, u.e7)([j.Z], () => (null != n ? j.Z.getEditorState(n) : null)),
         o = i.useMemo(() => (null != a ? a : T.nR(P.Jl(h.ZP))), [a]),
-        s = (0, E.U)({ location: 'Search' });
+        s = (0, y.U)({ location: 'Search' });
     return n === k.aib.DMS && s
         ? (0, r.jsx)(V, {
               className: t,

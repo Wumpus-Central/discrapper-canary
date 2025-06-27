@@ -1,40 +1,73 @@
 n.d(t, {
-    Kt: () => f,
-    Yt: () => m,
-    a1: () => h,
-    bN: () => p
+    I8: () => C,
+    Kt: () => b,
+    Yt: () => _,
+    a1: () => x,
+    bN: () => g
 });
 var r = n(81643),
     i = n(974814),
-    l = n(594174),
-    a = n(709054),
-    o = n(723359),
-    s = n(981631),
-    c = n(388032);
-let u = new Date('06/16/2020'),
-    d = [s.V_K.AGE_RESTRICTED, s.V_K.EXPLICIT];
-function p() {
-    let e = l.default.getCurrentUser();
-    return null != e && a.default.extractTimestamp(e.id) > u.getTime() && null == e.nsfwAllowed;
+    l = n(500496),
+    a = n(592125),
+    o = n(430824),
+    s = n(594174),
+    c = n(709054),
+    u = n(758119),
+    d = n(723359),
+    p = n(981631),
+    m = n(388032);
+let f = new Date('06/16/2020'),
+    h = [p.V_K.AGE_RESTRICTED, p.V_K.EXPLICIT];
+function g() {
+    let e = s.default.getCurrentUser();
+    return null != e && c.default.extractTimestamp(e.id) > f.getTime() && null == e.nsfwAllowed;
 }
-function m(e) {
-    return d.includes(e.nsfwLevel);
+function _(e) {
+    return h.includes(e.nsfwLevel);
 }
-function f() {
+function b() {
     let e = (0, i.s8)({ location: 'age-gate-utils' }),
         t = (0, r.L5)();
     return e && t;
 }
-function h(e) {
+function x(e) {
     let t = (0, r.l6)(),
-        n = e === o.L0.NSFW_SERVER || e === o.L0.NSFW_SERVER_INVITE || e === o.L0.NSFW_SERVER_INVITE_EMBED;
+        n = e === d.L0.NSFW_SERVER || e === d.L0.NSFW_SERVER_INVITE || e === d.L0.NSFW_SERVER_INVITE_EMBED;
     return t
         ? {
-              verifyAgreementButtonText: c.intl.string(c.t.PBG51t),
-              verifyGateDescription: n ? c.intl.format(c.t['7uIWQE'], {}) : c.intl.format(c.t.x1coPj, {})
+              verifyAgreementButtonText: m.intl.string(m.t.PBG51t),
+              verifyGateDescription: n ? m.intl.format(m.t['7uIWQE'], {}) : m.intl.format(m.t.x1coPj, {})
           }
         : {
-              verifyAgreementButtonText: c.intl.string(c.t['5B+npK']),
-              verifyGateDescription: n ? c.intl.string(c.t.akjk0d) : c.intl.string(c.t['u/xqhY'])
+              verifyAgreementButtonText: m.intl.string(m.t['5B+npK']),
+              verifyGateDescription: n ? m.intl.string(m.t.akjk0d) : m.intl.string(m.t['u/xqhY'])
           };
+}
+let y = () => {
+        let e = s.default.getCurrentUser();
+        if (null == e) return !1;
+        let t = (function () {
+            let e = (0, i.H1)({ location: 'age-gate-utils' }),
+                t = (0, r.sf)();
+            return e && t;
+        })();
+        return null == e.nsfwAllowed || t;
+    },
+    E = (e) => {
+        if (!y() || null == e) return !1;
+        let t = o.Z.getGuild(e);
+        return (
+            (null == t ? void 0 : t.isNSFW()) &&
+            (0, l.Tz)({
+                guildId: e,
+                location: 'age-gate-utils'
+            })
+        );
+    },
+    v = (e) => {
+        var t;
+        return !!y() && null != e && (null == (t = a.Z.getChannel(e)) ? void 0 : t.isNSFW());
+    };
+function C(e, t, n) {
+    return E(e) ? void (0, u.mN)(null != n ? n : d.L0.NSFW_SERVER) : v(t) ? void (0, u.mN)(null != n ? n : d.L0.NSFW_CHANNEL) : void 0;
 }

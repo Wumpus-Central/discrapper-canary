@@ -3,7 +3,7 @@ a.d(e, {
     $Q: () => l,
     Dt: () => T,
     HH: () => f,
-    NP: () => R,
+    NP: () => d,
     R2: () => I,
     d8: () => A
 });
@@ -63,11 +63,11 @@ let n = /^\s*at (\S+?)(?::(\d+))(?::(\d+))\s*$/i,
             return e ? _(e[2], e[1] || r.Fi, +e[3], e[4] ? +e[4] : void 0) : void 0;
         }
     ],
-    d = / line (\d+).*script (?:in )?(\S+)(?:: in function (\S+))?$/i,
-    R = [
+    R = / line (\d+).*script (?:in )?(\S+)(?:: in function (\S+))?$/i,
+    d = [
         10,
         (t) => {
-            let e = d.exec(t);
+            let e = R.exec(t);
             return e ? _(e[2], e[3] || r.Fi, +e[1]) : void 0;
         }
     ],

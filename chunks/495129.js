@@ -17,8 +17,8 @@ var i = n(120356),
     _ = n(594174),
     b = n(938475),
     x = n(5192),
-    E = n(981631),
-    y = n(388032),
+    y = n(981631),
+    E = n(388032),
     v = n(653072);
 function C(e) {
     var t, n, i, C, O, j, S, I, T, N;
@@ -65,11 +65,11 @@ function C(e) {
                 : I.rawValue,
         z = null != V ? V.split(',') : [],
         W = (0, a.Wu)([_.default], () => z.map((e) => _.default.getUser(e)).filter(Boolean)),
-        K = D && null != U ? y.intl.formatToPlainString(y.t['er/cHx'], { username: B }) : y.intl.formatToPlainString(y.t.noNjkZ, { username: F.nick }),
+        K = D && null != U ? E.intl.formatToPlainString(E.t['er/cHx'], { username: B }) : E.intl.formatToPlainString(E.t.noNjkZ, { username: F.nick }),
         Y = null != R && null != k,
-        q = null;
-    (q = Y ? (D || H ? y.intl.format(y.t.CaLQqK, { channelHook: (e, t) => (0, r.jsx)(p.Z, { channel: null != k ? k : void 0 }, t) }) : y.intl.format(y.t.VugXpK, { channelHook: (e, t) => (0, r.jsx)(p.Z, { channel: null != k ? k : void 0 }, t) })) : y.intl.string(y.t['tHT/Vl'])), 0 === G.length && (q = D ? y.intl.string(y.t.IE2uZW) : y.intl.string(y.t.QVhmGx));
-    let X = D ? y.intl.string(y.t['00XIbm']) : y.intl.string(y.t['7CrE9/']);
+        X = null;
+    (X = Y ? (D || H ? E.intl.format(E.t.CaLQqK, { channelHook: (e, t) => (0, r.jsx)(p.Z, { channel: null != k ? k : void 0 }, t) }) : E.intl.format(E.t.VugXpK, { channelHook: (e, t) => (0, r.jsx)(p.Z, { channel: null != k ? k : void 0 }, t) })) : E.intl.string(E.t['tHT/Vl'])), 0 === G.length && (X = D ? E.intl.string(E.t.IE2uZW) : E.intl.string(E.t.QVhmGx));
+    let q = D ? E.intl.string(E.t['00XIbm']) : E.intl.string(E.t['7CrE9/']);
     return (0, r.jsxs)('div', {
         children: [
             (0, r.jsxs)('div', {
@@ -83,7 +83,7 @@ function C(e) {
                     (0, r.jsx)(o.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        children: q
+                        children: X
                     }),
                     G.length > 0
                         ? (0, r.jsx)('div', {
@@ -120,7 +120,7 @@ function C(e) {
                     (0, r.jsxs)(o.zxk, {
                         color: o.zxk.Colors.BRAND,
                         onClick: () => {
-                            null != Z && null != w && ((0, f.uL)(E.Z5c.CHANNEL(w, Z)), c.default.selectVoiceChannel(Z));
+                            null != Z && null != w && ((0, f.uL)(y.Z5c.CHANNEL(w, Z)), c.default.selectVoiceChannel(Z));
                         },
                         className: v.button,
                         innerClassName: v.buttonInner,
@@ -130,7 +130,7 @@ function C(e) {
                                 size: 'md',
                                 color: 'currentColor'
                             }),
-                            y.intl.string(y.t.zIeJq6)
+                            E.intl.string(E.t.zIeJq6)
                         ]
                     }),
                     (0, r.jsx)(o.zxk, {
@@ -139,7 +139,7 @@ function C(e) {
                             s.Z.sendMessage(A.id, u.ZP.parse(A, '\uD83D\uDC4B'));
                         },
                         className: v.button,
-                        children: X
+                        children: q
                     })
                 ]
             })

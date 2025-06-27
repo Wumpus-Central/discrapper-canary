@@ -16,8 +16,8 @@ var r = n(255367),
     _ = n(336197),
     b = n(406432),
     x = n(348238),
-    E = n(38267),
-    y = n(884902),
+    y = n(38267),
+    E = n(884902),
     v = n(670188),
     C = n(695346),
     O = n(271383),
@@ -81,11 +81,11 @@ function M(e) {
         G = i.useRef(null),
         H = i.useRef(null),
         V = (0, P.J)(U, F),
-        { setPopout: z } = (0, E.Z)(F.id, w.d$),
+        { setPopout: z } = (0, y.Z)(F.id, w.d$),
         W = (0, x.qo)(F, B, z, !0),
         K = C.QK.useSetting(),
         Y = (0, T.n)(),
-        [q, X] = i.useState(!1),
+        [X, q] = i.useState(!1),
         [Q, J] = i.useState((null == V ? void 0 : V.coverImage) == null),
         $ = (0, c.e7)([d.Z], () => d.Z.useReducedMotion),
         ee = (0, c.e7)(
@@ -102,15 +102,15 @@ function M(e) {
             var e;
             return [null != (e = null == et ? void 0 : et.colorString) ? e : 'inherit', null == et ? void 0 : et.colorStrings, null == et ? void 0 : et.colorRoleId];
         }, [et]),
-        ea = (0, y.X7)(null == et ? void 0 : et.guildId, null != (l = null == V ? void 0 : V.authorId) ? l : void 0, ei),
+        ea = (0, E.X7)(null == et ? void 0 : et.guildId, null != (l = null == V ? void 0 : V.authorId) ? l : void 0, ei),
         { reducedMotion: eo } = i.useContext(u.Sfi),
         [es, ec] = i.useState(!1),
         eu = i.useCallback(() => {
-            X(!0);
-        }, [X]),
+            q(!0);
+        }, [q]),
         ed = i.useCallback(() => {
-            X(!1);
-        }, [X]),
+            q(!1);
+        }, [q]),
         ep = i.useCallback(async () => {
             null != V &&
                 ((0, m.yw)(A.rMx.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
@@ -151,7 +151,7 @@ function M(e) {
                                   onError: () => J(!0)
                               })
                             : (0, r.jsx)(g.Z, {
-                                  src: !(Y && (K || q)) && e_ ? ''.concat(eg, '?format=png') : eg,
+                                  src: !(Y && (K || X)) && e_ ? ''.concat(eg, '?format=png') : eg,
                                   backgroundSrc: ''.concat(eg, '?format=png'),
                                   alt: Z.intl.string(Z.t.rIbh8P),
                                   aspectRatio: 16 / 9,

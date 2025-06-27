@@ -1,5 +1,5 @@
 n.d(t, {
-    e: () => y,
+    e: () => E,
     i: () => v
 }),
     n(35282),
@@ -21,18 +21,18 @@ var r = n(255367),
     _ = n(388032),
     b = n(841935);
 let x = /^<(a?):(\w+):(\d+)>/;
-function E(e) {
+function y(e) {
     let t = i.useMemo(() => {
         var t;
         return null == (t = x.exec(e)) ? void 0 : t[3];
     }, [e]);
     return (0, s.e7)([h.ZP], () => (null == t ? null : h.ZP.getCustomEmojiById(t)));
 }
-function y(e) {
+function E(e) {
     let { message: t, className: n } = e,
         [l, o] = i.useState(!1),
         s = t.getChannelId(),
-        d = E(t.content),
+        d = y(t.content),
         p = i.useCallback(() => {
             null != d &&
                 (0, m.rU)(
@@ -77,8 +77,8 @@ function v(e) {
     let { message: n, channel: l, compact: a, usernameHook: s } = e,
         [m, h] = i.useState(!1),
         x = (0, d.ZP)(n),
-        y = s(x),
-        v = E(n.content),
+        E = s(x),
+        v = y(n.content),
         C = i.useCallback(() => {
             null != v &&
                 f.S.dispatchToLastSubscribed(g.CkL.INSERT_TEXT, {
@@ -86,26 +86,28 @@ function v(e) {
                     addSpace: !0
                 });
         }, [v]);
-    return null == v
-        ? null
-        : (0, r.jsx)(p.Z, {
-              iconNode: (0, r.jsx)(o.EO4, {
-                  size: 'md',
-                  color: 'currentColor'
-              }),
-              iconContainerClassName: b.iconContainer,
-              timestamp: n.timestamp,
-              timestampClassName: b.timestamp,
-              compact: a,
-              contentClassName: b.content,
-              children: (0, r.jsx)('div', {
-                  className: b.textContainer,
-                  children: (0, r.jsx)(c.Text, {
-                      variant: 'text-md/normal',
-                      color: 'text-secondary',
-                      children: _.intl.format(_.t.uoCHWV, {
+    return (0, r.jsx)(p.Z, {
+        iconNode: (0, r.jsx)(o.EO4, {
+            size: 'md',
+            color: 'currentColor'
+        }),
+        iconContainerClassName: b.iconContainer,
+        timestamp: n.timestamp,
+        compact: a,
+        contentClassName: b.content,
+        children: (0, r.jsx)(c.Text, {
+            tag: 'span',
+            variant: 'text-md/normal',
+            color: 'text-secondary',
+            children:
+                null == v
+                    ? _.intl.format(_.t.k6Jc9f, {
                           username: x.nick,
-                          usernameHook: y,
+                          usernameHook: E
+                      })
+                    : _.intl.format(_.t.uoCHWV, {
+                          username: x.nick,
+                          usernameHook: E,
                           emoji: (0, r.jsxs)(c.P3F, {
                               className: b.clickableEmoji,
                               tag: 'span',
@@ -132,7 +134,6 @@ function v(e) {
                               ]
                           })
                       })
-                  })
-              })
-          });
+        })
+    });
 }

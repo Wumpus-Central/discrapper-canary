@@ -6,12 +6,6 @@ e.exports = {
     cta: 'cta_b76614',
     headerSuccess: 'headerSuccess_b76614',
     headerFailure: 'headerFailure_b76614',
-    errorWrapper: 'errorWrapper_b76614',
     authorizedSuccessWrapper: 'authorizedSuccessWrapper_b76614',
-    buttonsContainer: 'buttonsContainer_b76614',
-    authorizedSuccessExternal: 'authorizedSuccessExternal_b76614',
-    authorizedSuccessExternalCopy: 'authorizedSuccessExternalCopy_b76614',
-    authorizedSuccessExternalIcon: 'authorizedSuccessExternalIcon_b76614',
-    authorizedExternalCta: 'authorizedExternalCta_b76614',
-    authorizedExternalCtaInner: 'authorizedExternalCtaInner_b76614'
+    buttonsContainer: 'buttonsContainer_b76614'
 };

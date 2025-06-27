@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(255367);
 n(73800);
 var l = n(120356),
@@ -46,7 +46,7 @@ let p = ['1366494385738354769', '1385035256125591633'],
                       })
         });
     },
-    b = (e) => {
+    g = (e) => {
         let { handleTransition: t, categories: n } = e;
         if (null == n || n.length < 2) return o.Z.captureMessage('Collectible Featured Block requires at least 2 categories'), null;
         let [l, i] = n,
@@ -77,7 +77,7 @@ let p = ['1366494385738354769', '1385035256125591633'],
             })
         });
     },
-    g = (e) => {
+    h = (e) => {
         let { isLoading: t, handleTransition: n, categories: l, featuredBlockRecord: i } = e;
         return t
             ? (0, r.jsxs)('div', {
@@ -99,7 +99,7 @@ let p = ['1366494385738354769', '1385035256125591633'],
                     handleTransition: n,
                     isLoading: !1
                 })
-              : (0, r.jsx)(b, {
+              : (0, r.jsx)(g, {
                     categories: l,
                     handleTransition: n,
                     isLoading: !1

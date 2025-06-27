@@ -10,8 +10,8 @@ var r = n(255367),
     d = n(484920);
 let p = [u.AW.AVATAR_DECORATIONS, u.AW.PROFILE_EFFECTS, u.AW.NAMEPLATES, u.AW.BUNDLES];
 function f(e) {
-    let { isFullScreen: t, scrollerRef: n, tab: l, sortedCategories: u, setIsGiftEasterEggEnabled: f, isGiftEasterEggEnabled: b, setCategoryRef: g } = e,
-        { handlePageChange: h, currentPage: m } = (0, s.h)({
+    let { isFullScreen: t, scrollerRef: n, tab: l, sortedCategories: u, setCategoryRef: f } = e,
+        { handlePageChange: g, currentPage: h } = (0, s.h)({
             scrollerRef: n,
             sortedCategories: u
         });
@@ -30,15 +30,13 @@ function f(e) {
                       l
                   )
                 : (0, r.jsx)(i.k0, {
-                      newValue: { pageIndex: m },
+                      newValue: { pageIndex: h },
                       children: (0, r.jsx)(o.Z, {
                           isFullScreen: t,
                           sortedCategories: u,
-                          setCategoryRef: g,
-                          setIsGiftEasterEggEnabled: f,
-                          isGiftEasterEggEnabled: b,
-                          currentPage: m,
-                          handlePageChange: h
+                          setCategoryRef: f,
+                          currentPage: h,
+                          handlePageChange: g
                       })
                   })
         })

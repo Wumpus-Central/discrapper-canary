@@ -16,8 +16,8 @@ var r = n(255367),
     _ = n(931651),
     b = n(594174),
     x = n(630388),
-    E = n(74538),
-    y = n(566006),
+    y = n(74538),
+    E = n(566006),
     v = n(981631),
     C = n(185923),
     O = n(474936),
@@ -58,10 +58,10 @@ class P extends i.Component {
         let { type: e, message: t, className: n, children: i, useChatFontScaling: l, tabIndex: o = 0 } = this.props,
             { isReactionPickerActive: s } = this.state,
             c = t.state === v.yb.SENDING,
-            f = e === y.O.BURST;
+            f = e === E.O.BURST;
         if (c || (0, x.yE)(t.flags, v.iLy.EPHEMERAL)) return null;
         let h = b.default.getCurrentUser(),
-            g = (0, E.I5)(h),
+            g = (0, y.I5)(h),
             _ = f ? j.intl.string(j.t.Kfcszs) : j.intl.string(j.t.lfIHs7);
         !g && f && (_ = (0, r.jsx)(m.X, { tooltipText: j.intl.string(j.t.Kfcszs) }));
         let O = l ? I : S,
@@ -138,8 +138,8 @@ class P extends i.Component {
                 let { type: t, channel: n } = this.props;
                 e.stopPropagation();
                 let r = b.default.getCurrentUser();
-                t !== y.O.BURST ||
-                    (0, E.I5)(r) ||
+                t !== E.O.BURST ||
+                    (0, y.I5)(r) ||
                     (0, f.m)({
                         analytics: {
                             type: O.cd.BURST_REACTION_UPSELL,
@@ -155,7 +155,7 @@ class P extends i.Component {
                     { type: n, channel: i, message: l } = this.props,
                     a = N(
                         { openPopoutType: 'message_reaction_emoji_picker' },
-                        n === y.O.BURST && {
+                        n === E.O.BURST && {
                             openPopoutType: 'message_super_reaction_emoji_picker',
                             page: null != i.getGuildId() ? v.ZY5.GUILD_CHANNEL : v.ZY5.DM_CHANNEL,
                             section: (0, g.s4)(i),

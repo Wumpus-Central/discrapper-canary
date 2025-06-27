@@ -1,61 +1,61 @@
-n.d(t, { default: () => d }), n(388685);
-var i = n(255367),
-    s = n(73800),
-    a = n(481060),
-    l = n(313201),
-    o = n(117984),
-    r = n(388032),
-    c = n(788428);
-function d(e) {
-    let { onClose: t, transitionState: n } = e,
-        d = (0, l.Dt)(),
-        [h, u] = s.useState('');
+t.d(n, { default: () => c }), t(388685);
+var i = t(255367),
+    a = t(73800),
+    o = t(481060),
+    l = t(313201),
+    s = t(117984),
+    r = t(388032),
+    d = t(788428);
+function c(e) {
+    let { onClose: n, transitionState: t } = e,
+        c = (0, l.Dt)(),
+        [f, u] = a.useState('');
     return (0, i.jsx)('form', {
         onSubmit: function (e) {
-            e.preventDefault(), (0, o.CM)(h), t();
+            e.preventDefault(), (0, s.CM)(f), n();
         },
-        children: (0, i.jsxs)(a.Y0X, {
-            transitionState: n,
-            'aria-labelledby': d,
+        children: (0, i.jsxs)(o.Y0X, {
+            transitionState: t,
+            'aria-labelledby': c,
             parentComponent: 'AddFavoriteCategoryModal',
             children: [
-                (0, i.jsxs)(a.hzk, {
+                (0, i.jsxs)(o.hzk, {
                     children: [
-                        (0, i.jsx)(a.X6q, {
-                            id: d,
-                            className: c.header,
+                        (0, i.jsx)(o.X6q, {
+                            id: c,
+                            className: d.header,
                             variant: 'heading-xl/semibold',
                             children: r.intl.string(r.t['ISN+ND'])
                         }),
-                        (0, i.jsx)(a.olH, {
-                            onClick: t,
-                            className: c.closeButton
+                        (0, i.jsx)(o.olH, {
+                            onClick: n,
+                            className: d.closeButton
                         }),
-                        (0, i.jsx)(a.xJW, {
+                        (0, i.jsx)(o.xJW, {
                             title: r.intl.string(r.t.OCAkGB),
-                            className: c.name,
-                            children: (0, i.jsx)(a.oil, {
-                                value: h,
+                            className: d.name,
+                            children: (0, i.jsx)(o.oil, {
+                                value: f,
                                 onChange: u,
                                 maxLength: 100,
                                 placeholder: r.intl.string(r.t.eTVbt7),
-                                className: c.__invalid_inputWrapper,
+                                className: d.__invalid_inputWrapper,
                                 autoFocus: !0
                             })
                         })
                     ]
                 }),
-                (0, i.jsxs)(a.mzw, {
+                (0, i.jsxs)(o.mzw, {
                     children: [
-                        (0, i.jsx)(a.zxk, {
+                        (0, i.jsx)(o.zxk, {
                             type: 'submit',
-                            disabled: '' === h,
+                            disabled: '' === f,
                             children: r.intl.string(r.t['ISN+ND'])
                         }),
-                        (0, i.jsx)(a.zxk, {
-                            onClick: t,
-                            look: a.zxk.Looks.LINK,
-                            color: a.zxk.Colors.PRIMARY,
+                        (0, i.jsx)(o.zxk, {
+                            onClick: n,
+                            look: o.zxk.Looks.LINK,
+                            color: o.zxk.Colors.PRIMARY,
                             children: r.intl.string(r.t['ETE/oK'])
                         })
                     ]

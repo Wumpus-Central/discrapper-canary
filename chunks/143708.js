@@ -18,9 +18,9 @@ function g(e) {
         n,
         g,
         { author: _, banned: b, channelId: x } = e,
-        E = (0, i.e7)([s.default], () => s.default.getId()),
-        y = p.ZP.useName(_),
-        v = E === _.id,
+        y = (0, i.e7)([s.default], () => s.default.getId()),
+        E = p.ZP.useName(_),
+        v = y === _.id,
         C = (0, i.e7)([c.Z, u.Z], () => {
             let e = c.Z.getChannel(x);
             if (null == e) return !1;
@@ -38,8 +38,8 @@ function g(e) {
             : ((g = f.intl.string(f.t['YVub5+'])),
               b
                   ? (t = f.intl.string(f.t['57nBt7']))
-                  : null != y && C
-                    ? ((t = f.intl.formatToPlainString(f.t['9Akp1t'], { username: y })),
+                  : null != E && C
+                    ? ((t = f.intl.formatToPlainString(f.t['9Akp1t'], { username: E })),
                       (n = (0, r.jsx)(a.Z.Button, {
                           onClick: function () {
                               let { id: e } = _,

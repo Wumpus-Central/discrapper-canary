@@ -10,37 +10,37 @@ var r = n(255367),
     d = n(1870),
     p = n(929255),
     f = n(426171),
-    b = n(752053),
-    g = n(81136),
-    h = n(566564),
+    g = n(752053),
+    h = n(81136),
+    b = n(566564),
     m = n(215023);
 let _ = [m.AW.HOME, m.AW.ORBS];
 function C(e) {
-    let { tab: t, isFullScreen: n, scrollerRef: s, sortedCategories: c, transitionToTab: u, transitionState: d, updateAnalyticsState: g, refreshCategories: C, setIsGiftEasterEggEnabled: E, isGiftEasterEggEnabled: x } = e,
+    let { tab: t, isFullScreen: n, scrollerRef: s, sortedCategories: c, transitionToTab: u, transitionState: d, updateAnalyticsState: h, refreshCategories: C } = e,
         S = v();
     O(S);
-    let j = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
-        { setCategoryRef: y, handleScrollToCategory: k } = (0, f.xV)(s.current),
-        P = l.useCallback(
+    let x = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
+        { setCategoryRef: E, handleScrollToCategory: y } = (0, f.xV)(s.current),
+        j = l.useCallback(
             async (e, t, r) => {
-                g(e, t);
-                let l = r && !n && !j,
+                h(e, t);
+                let l = r && !n && !x,
                     i = t === a.T.ORB ? m.AW.ORBS : m.AW.CATALOG;
-                await u(i, l), null != t && k(t);
+                await u(i, l), null != t && y(t);
             },
-            [n, j, u, k, g]
+            [n, x, u, y, h]
         );
     return null != S
-        ? (0, r.jsx)(b.Z, {
+        ? (0, r.jsx)(g.Z, {
               onRetry: C,
               errorMessage: S,
-              errorOrigin: b.i.SHOP_PAGE
+              errorOrigin: g.i.SHOP_PAGE
           })
         : _.includes(t)
-          ? (0, r.jsx)(h.Z, {
+          ? (0, r.jsx)(b.Z, {
                 isFullScreen: n,
                 scrollerRef: s,
-                handleTransition: P,
+                handleTransition: j,
                 tab: t,
                 transitionState: d
             })
@@ -49,15 +49,13 @@ function C(e) {
                 scrollerRef: s,
                 tab: t,
                 sortedCategories: c,
-                setIsGiftEasterEggEnabled: E,
-                isGiftEasterEggEnabled: x,
-                setCategoryRef: y
+                setCategoryRef: E
             });
 }
 let v = () => (0, i.e7)([u.Z, d.Z], () => (null != u.Z.error ? 'shop load fetch categories error: '.concat(u.Z.error.message) : null != d.Z.claimError ? 'shop load claim error: '.concat(d.Z.claimError.message) : null != d.Z.fetchError ? 'shop load fetch purchase error: '.concat(d.Z.fetchError.message) : void 0)),
     O = (e) => {
         let t = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
-            { noCache: n, includeUnpublished: r } = (0, g.Z)();
+            { noCache: n, includeUnpublished: r } = (0, h.Z)();
         l.useEffect(() => {
             var l, a;
             null != e &&

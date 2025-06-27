@@ -16,8 +16,8 @@ var r = n(255367),
     _ = n(542051),
     b = n(349033),
     x = n(999650),
-    E = n(933557),
-    y = n(471445),
+    y = n(933557),
+    E = n(471445),
     v = n(785232),
     C = n(778877),
     O = n(592125),
@@ -170,16 +170,16 @@ let V = p()('2015-05-15').local(),
                                 size: h.EFr.SIZE_20,
                                 className: U.searchResultGDMChannelIcon
                             });
-                        let e = (0, y.KS)(i);
+                        let e = (0, E.KS)(i);
                         return null == e ? null : (0, r.jsx)(e, { className: U.searchResultChannelIcon });
                     }
                 })(),
                 i.isDM() || i.isGroupDM()
                     ? (0, r.jsx)('span', {
                           className: U.searchResultDMChannelName,
-                          children: (0, E.F6)(i, A.default, S.Z)
+                          children: (0, y.F6)(i, A.default, S.Z)
                       })
-                    : (0, r.jsx)('strong', { children: (0, E.F6)(i, A.default, S.Z) }),
+                    : (0, r.jsx)('strong', { children: (0, y.F6)(i, A.default, S.Z) }),
                 (() => {
                     if (i.isDM()) {
                         let e = i.getRecipientId(),
@@ -194,7 +194,7 @@ let V = p()('2015-05-15').local(),
                     if (null != a)
                         return (0, r.jsx)('span', {
                             className: U.searchResultChannelCategory,
-                            children: (0, E.F6)(a, A.default, S.Z)
+                            children: (0, y.F6)(a, A.default, S.Z)
                         });
                 })()
             ]
@@ -205,10 +205,10 @@ let V = p()('2015-05-15').local(),
             n,
             { id: i, searchId: l, result: o, group: s, className: c, role: u, tabIndex: d, 'aria-selected': p, onSelect: m, onFocus: f, showFilter: g, renderResult: _ } = e;
         if (g) {
-            var b, E;
+            var b, y;
             t = (0, r.jsx)('span', {
                 className: U.filter,
-                children: null != (E = null == (b = x.ZP[s]) ? void 0 : b.key) ? E : 'addme:'
+                children: null != (y = null == (b = x.ZP[s]) ? void 0 : b.key) ? y : 'addme:'
             });
         }
         return (
@@ -236,7 +236,7 @@ let V = p()('2015-05-15').local(),
             })
         );
     },
-    q = (e) =>
+    X = (e) =>
         (0, r.jsx)(
             Y,
             G(B({}, e), {
@@ -244,14 +244,14 @@ let V = p()('2015-05-15').local(),
                 renderResult: W
             })
         ),
-    X = {
+    q = {
         [D.dCx.FILTER_FROM]: {
             titleText: () => M.intl.string(M.t.catERE),
-            component: q
+            component: X
         },
         [D.dCx.FILTER_MENTIONS]: {
             titleText: () => M.intl.string(M.t.l3K4Bw),
-            component: q
+            component: X
         },
         [D.dCx.FILTER_HAS]: { titleText: () => M.intl.string(M.t.IC7gHB) },
         [D.dCx.FILTER_FILE_TYPE]: { titleText: () => M.intl.string(M.t.SXIfV1) },
@@ -548,7 +548,7 @@ class Q extends i.PureComponent {
                     var o, s, c;
                     let u, d;
                     if (null == i || 0 === i.results.length) return null;
-                    let p = null != (o = X[i.group]) ? o : {};
+                    let p = null != (o = q[i.group]) ? o : {};
                     null != p.titleText &&
                         ((d = ''.concat(i.group, '-header')),
                         (u = (0, r.jsx)('div', {

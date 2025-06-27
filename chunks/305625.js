@@ -36,12 +36,12 @@ function u(t) {
         u = E && E.get('sentry.dsc'),
         I = u && (0, _.EN)(u);
     if (I) return I;
-    let d = (0, c.XU)(r),
-        R = d.data || {},
-        N = R[i.TE];
+    let R = (0, c.XU)(r),
+        d = R.data || {},
+        N = d[i.TE];
     null != N && (a.sample_rate = `${N}`);
-    let f = R[i.Zj],
-        A = d.description;
+    let f = d[i.Zj],
+        A = R.description;
     return 'url' !== f && A && (a.transaction = A), (a.sampled = String((0, c.Tt)(r))), e.emit('createDsc', a, r), a;
 }
 function I(t) {

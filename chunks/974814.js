@@ -1,4 +1,7 @@
-n.d(t, { s8: () => a });
+n.d(t, {
+    H1: () => a,
+    s8: () => o
+});
 var r = n(818083),
     i = n(128064);
 let l = (0, r.B)({
@@ -15,6 +18,10 @@ let l = (0, r.B)({
     ]
 });
 function a(e) {
+    let { location: t } = e;
+    return l.getCurrentConfig({ location: t }, { autoTrackExposure: !0 }).enabled || (0, i.c_)(t);
+}
+function o(e) {
     let { location: t } = e,
         n = l.getCurrentConfig({ location: t }, { autoTrackExposure: !0 }),
         r = (0, i.pY)(t);

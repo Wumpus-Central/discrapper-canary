@@ -103,10 +103,10 @@ let g = (e) => {
         let { stageInstance: n, guild: l, isCard: m = !1, isEmbed: _ = !1, onClick: b } = e,
             x = i.useMemo(() => (null == l ? null : l instanceof p.ZP ? l : new p.ZP(l)), [l]);
         if (null == n || null == x) return null;
-        let { topic: E, speaker_count: y, participant_count: v } = n,
+        let { topic: y, speaker_count: E, participant_count: v } = n,
             C = null != (t = n.members) ? t : [],
             O = _ ? C.slice(0, 3) : C,
-            j = y - O.length;
+            j = E - O.length;
         return (
             _ && (j += C.length - O.length),
             (0, r.jsxs)('div', {
@@ -175,7 +175,7 @@ let g = (e) => {
                     (0, r.jsx)(s.Z, {
                         size: m || _ ? s.Z.Sizes.SIZE_16 : s.Z.Sizes.SIZE_20,
                         className: a()(h.header, { [h.embed]: _ }),
-                        children: E
+                        children: y
                     }),
                     (0, r.jsxs)('div', {
                         className: a()(h.members, { [h.embed]: _ }),

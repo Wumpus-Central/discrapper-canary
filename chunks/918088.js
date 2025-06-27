@@ -23,8 +23,8 @@ var r = n(278074),
     _ = n(798628),
     b = n(79390),
     x = n(839963),
-    E = n(897325),
-    y = n(57101),
+    y = n(897325),
+    E = n(57101),
     v = n(562293),
     C = n(981631),
     O = n(388032);
@@ -98,17 +98,17 @@ function N(e, t) {
     let m = e.state === C.yb.SENT,
         f = m ? (null != a ? a : (0, v.H)(o.expiry)) : '',
         h = null == f && m,
-        { selectedAnswerIds: g, submitting: b, editing: x, showResults: E } = null != (i = null != t ? t : (0, _.fU)(e.getChannelId(), e.id)) ? i : j,
-        y = e.reactions,
+        { selectedAnswerIds: g, submitting: b, editing: x, showResults: y } = null != (i = null != t ? t : (0, _.fU)(e.getChannelId(), e.id)) ? i : j,
+        E = e.reactions,
         O = !0;
     if (!T(e)) {
         let t = p.Z.getMessage(e.channel_id, e.id);
-        (O = !e.isSearchHit && null != t), (y = null != (l = null == t ? void 0 : t.reactions) ? l : y);
+        (O = !e.isSearchHit && null != t), (E = null != (l = null == t ? void 0 : t.reactions) ? l : E);
     }
     let S = g.size > 0,
-        I = y.some((e) => !0 === e.me_vote),
+        I = E.some((e) => !0 === e.me_vote),
         N = !x && I,
-        P = N || h || E,
+        P = N || h || y,
         A = m && O && (!I || x || P),
         w = null == (r = u.Z.getChannel(e.getChannelId())) || null == (n = r.getGuildId) ? void 0 : n.call(r),
         Z = null != w ? d.ZP.getSelfMember(w) : null,
@@ -129,11 +129,11 @@ function N(e, t) {
         isExpired: h,
         isInteractive: O,
         isSent: m,
-        reactions: y,
+        reactions: E,
         selectedAnswerIds: g,
         submitting: b,
         tapShouldOpenVotersModal: P,
-        showResults: E
+        showResults: y
     };
 }
 function P(e, t) {
@@ -145,15 +145,15 @@ function P(e, t) {
     if (null == v) return;
     let C = l.Z.useReducedMotion,
         j = null == (s = u.Z.getChannel(e.getChannelId())) || null == (n = s.getGuildId) ? void 0 : n.call(s),
-        T = (0, E.E)(v, j),
+        T = (0, y.E)(v, j),
         P = _.answers,
         A = _.layout_type,
         w = N(e, t, { formattedExpirationLabel: p });
     if (null == w) return;
     let { canTapAnswers: Z, canRemoveVote: R, canShowVoteCounts: k, canSubmitVote: L, expirationLabel: D = O.intl.string(O.t['e+J3JS']), hasSelectedAnswer: M, hasVoted: U, isEditingVote: F, isExpired: B, isInteractive: G, reactions: H, selectedAnswerIds: V, submitting: z, tapShouldOpenVotersModal: W, showResults: K } = w,
         Y = (0, b.cZ)(H),
-        q = O.intl.formatToPlainString(O.t.XRkuoa, { count: Y.toLocaleString() }),
-        X = Math.max(
+        X = O.intl.formatToPlainString(O.t.XRkuoa, { count: Y.toLocaleString() }),
+        q = Math.max(
             ...P.map((e) => {
                 var t, n;
                 let r = S(H, ''.concat(e.answer_id));
@@ -167,7 +167,7 @@ function P(e, t) {
                 d = null != (n = null == u || null == (t = u.count_details) ? void 0 : t.vote) ? n : 0,
                 p = 0 === Y ? 0 : d / Y,
                 m = V.has(s),
-                g = d >= X && 0 !== d,
+                g = d >= q && 0 !== d,
                 _ = U && null != (l = null == u ? void 0 : u.me_vote) && l,
                 b = I({
                     didSelfVote: _,
@@ -284,7 +284,7 @@ function P(e, t) {
                 type: 'cancel'
             }))
             .otherwise(() => ({
-                label: q,
+                label: X,
                 secondaryLabel: D,
                 accessibilityHint: $,
                 presentation: 'text',
@@ -326,7 +326,7 @@ function P(e, t) {
             .exhaustive(),
         answerTapAccessibilityLabel: W ? $ : void 0,
         layoutType: A,
-        resources: (0, y.Z)({
+        resources: (0, E.Z)({
             theme: d,
             layoutType: A
         }),

@@ -1,6 +1,6 @@
 n.d(t, {
-    Wt: () => d,
-    mc: () => _,
+    Wt: () => _,
+    mc: () => E,
     q$: () => O
 }),
     n(415506),
@@ -11,11 +11,11 @@ var r = n(570140),
     l = n(728345),
     o = n(812206),
     a = n(973616),
-    s = n(630388),
-    c = n(591759),
+    c = n(630388),
+    s = n(591759),
     u = n(978085),
-    E = n(981631);
-async function d(e, t) {
+    d = n(981631);
+async function _(e, t) {
     r.Z.dispatch({
         applicationId: e,
         type: 'DEVELOPER_TEST_MODE_AUTHORIZATION_START'
@@ -24,14 +24,14 @@ async function d(e, t) {
         if (!(await (0, i.W5)(e))) throw Error('Do not have access!');
         let n = o.Z.getApplication(e);
         null == n && (n = a.ZP.createFromServer(await l.ZP.fetchApplication(e)));
-        let d = (0, s.yE)(n.flags, E.udG.EMBEDDED);
-        if (d && (null == t || !c.Z.URL_REGEX.test(t))) throw Error('Invalid Origin URL for embedded application');
+        let _ = (0, c.yE)(n.flags, d.udG.EMBEDDED);
+        if (_ && (null == t || !s.Z.URL_REGEX.test(t))) throw Error('Invalid Origin URL for embedded application');
         return (
-            d || u.GR(n),
+            _ || u.GR(n),
             r.Z.dispatch({
                 type: 'DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS',
                 applicationId: e,
-                originURL: d ? t : null
+                originURL: _ ? t : null
             }),
             n
         );
@@ -46,7 +46,7 @@ async function d(e, t) {
         );
     }
 }
-function _() {
+function E() {
     r.Z.dispatch({ type: 'DEVELOPER_TEST_MODE_RESET' });
 }
 function O() {

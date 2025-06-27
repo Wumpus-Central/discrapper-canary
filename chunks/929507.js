@@ -1,8 +1,8 @@
-r.d(t, { Z: () => A }), r(388685);
+r.d(t, { Z: () => T }), r(388685);
 var n = r(73800),
     i = r(399606),
-    o = r(544891),
-    a = r(570140),
+    a = r(544891),
+    o = r(570140),
     l = r(367907),
     s = r(430824),
     c = r(496675),
@@ -54,8 +54,8 @@ function O(e, t) {
     );
 }
 let I = +u.Z.Millis.DAY,
-    T = new Map(),
-    A = {
+    A = new Map(),
+    T = {
         useShouldShowChannelNotice(e) {
             let t = (0, i.e7)([s.Z, c.Z], () => {
                 let t = s.Z.getGuild(e);
@@ -66,10 +66,10 @@ let I = +u.Z.Millis.DAY,
                     (function (e) {
                         var t;
                         let r = Date.now(),
-                            n = null != (t = T.get(e)) ? t : 0;
+                            n = null != (t = A.get(e)) ? t : 0;
                         r < n + I ||
-                            (T.set(e, r),
-                            o.tn
+                            (A.set(e, r),
+                            a.tn
                                 .post({
                                     url: p.ANM.GUILD_MIGRATE_COMMAND_SCOPE(e),
                                     rejectWithError: !0
@@ -77,14 +77,14 @@ let I = +u.Z.Millis.DAY,
                                 .then(
                                     (t) => {
                                         var r, n;
-                                        a.Z.dispatch({
+                                        o.Z.dispatch({
                                             type: 'COMMANDS_MIGRATION_UPDATE_SUCCESS',
                                             guildId: e,
                                             integrationIdsWithAppCommands: null != (n = null == (r = t.body) ? void 0 : r.integration_ids_with_app_commands) ? n : []
                                         });
                                     },
                                     () => {
-                                        T.set(e, n);
+                                        A.set(e, n);
                                     }
                                 ));
                     })(e);
@@ -93,14 +93,14 @@ let I = +u.Z.Millis.DAY,
             return t && r;
         },
         dismissNotice(e) {
-            a.Z.dispatch({
+            o.Z.dispatch({
                 type: 'COMMANDS_MIGRATION_NOTICE_DISMISSED',
                 guildId: e
             });
         },
         dismissOverviewTooltip(e, t) {
             var r;
-            a.Z.dispatch({
+            o.Z.dispatch({
                 type: 'COMMANDS_MIGRATION_OVERVIEW_TOOLTIP_DISMISSED',
                 guildId: e,
                 integrationId: t.id
@@ -116,7 +116,7 @@ let I = +u.Z.Millis.DAY,
         dismissToggleTooltip(e, t) {
             var r;
             void 0 !== t &&
-                (a.Z.dispatch({
+                (o.Z.dispatch({
                     type: 'COMMANDS_MIGRATION_TOGGLE_TOOLTIP_DISMISSED',
                     integrationId: t.id
                 }),

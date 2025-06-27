@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(255367),
     l = n(73800),
     a = n(120356),
@@ -13,7 +13,7 @@ let f = {
         x: 160,
         y: 160
     },
-    b = [
+    g = [
         {
             left: 0,
             top: 20,
@@ -99,11 +99,11 @@ let f = {
             skuId: '1217625794382401577'
         }
     ],
-    g = (e) => {
+    h = (e) => {
         let { peaking: t, transitioning: n, style: a } = e,
             f = window.innerHeight,
-            [g, h] = l.useState(!1),
-            m = b.map((e) => {
+            [h, b] = l.useState(!1),
+            m = g.map((e) => {
                 let { skuId: t } = e;
                 return c.Z.getProduct(t);
             });
@@ -111,18 +111,18 @@ let f = {
             l.useEffect(() => {
                 n &&
                     setTimeout(() => {
-                        h(!0);
+                        b(!0);
                     }, d.lb);
             }, [n]),
             (0, r.jsx)('div', {
                 style: a,
                 className: i()(p.jumbleWrapper, {
                     [p.peaking]: t,
-                    [p.transitioned]: g
+                    [p.transitioned]: h
                 }),
-                children: b.map((e, t) => {
+                children: g.map((e, t) => {
                     var l, a;
-                    let { top: i, left: c, rotation: b, size: g, skuId: h } = e,
+                    let { top: i, left: c, rotation: g, size: h, skuId: b } = e,
                         _ = null == (l = m[t]) ? void 0 : l.items[0],
                         C = null == (a = m[t]) ? void 0 : a.type,
                         v = C === o.Z.AVATAR_DECORATION ? 384 : 512;
@@ -133,9 +133,9 @@ let f = {
                             style: {
                                 top: n ? -f - v : i,
                                 left: n ? ''.concat(c - 75 - 350 * Math.random()) : c,
-                                transform: 'rotate('.concat(b, 'deg)'),
-                                height: g.y,
-                                width: g.x,
+                                transform: 'rotate('.concat(g, 'deg)'),
+                                height: h.y,
+                                width: h.x,
                                 transitionDelay: ''.concat(Math.random() / 3, 's'),
                                 transitionDuration: ''.concat(d.lb - 200 * Math.random(), 'ms')
                             },
@@ -150,7 +150,7 @@ let f = {
                                     })
                             ]
                         },
-                        h + t
+                        b + t
                     );
                 })
             })

@@ -1,19 +1,19 @@
-r.d(t, { Z: () => b });
+r.d(t, { Z: () => v });
 var n = r(255367),
     i = r(120356),
-    o = r.n(i),
-    l = r(442837),
-    a = r(481060),
+    l = r.n(i),
+    a = r(442837),
+    o = r(481060),
     s = r(597688),
     c = r(709999),
     u = r(22267),
     d = r(388032),
     p = r(52431);
-let b = (e) => {
+let v = (e) => {
     let { user: t, selectedNameplate: r, purchased: i } = e,
-        b = (0, l.e7)([s.Z], () => s.Z.getProduct(null == r ? void 0 : r.skuId));
+        v = (0, a.e7)([s.Z], () => s.Z.getProduct(null == r ? void 0 : r.skuId));
     return (0, n.jsxs)('div', {
-        className: o()(p.previewBorder, { [p.upsell]: !i && null != r }),
+        className: l()(p.previewBorder, { [p.upsell]: !i && null != r }),
         children: [
             (0, n.jsx)('div', {
                 className: p.previewBox,
@@ -48,13 +48,13 @@ let b = (e) => {
                 ? (0, n.jsxs)('div', {
                       className: p.previewDescription,
                       children: [
-                          (0, n.jsx)(a.Text, {
+                          (0, n.jsx)(o.Text, {
                               variant: 'text-sm/semibold',
-                              children: null == b ? void 0 : b.name
+                              children: null == v ? void 0 : v.name
                           }),
                           i
                               ? null
-                              : (0, n.jsx)(a.Text, {
+                              : (0, n.jsx)(o.Text, {
                                     variant: 'text-sm/normal',
                                     children: d.intl.string(d.t.fEGjVV)
                                 })

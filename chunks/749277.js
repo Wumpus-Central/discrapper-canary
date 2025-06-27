@@ -1,40 +1,40 @@
-n.d(t, { A: () => U });
+n.d(t, { A: () => h });
 var r = n(255367);
 n(73800);
 var i = n(442837),
     l = n(704215),
     o = n(481060),
     a = n(232567),
-    s = n(230711),
-    c = n(726542),
+    c = n(230711),
+    s = n(726542),
     u = n(100527),
-    E = n(231757),
-    d = n(674525),
-    _ = n(963249),
+    d = n(231757),
+    _ = n(674525),
+    E = n(963249),
     O = n(303172),
     I = n(463230),
     T = n(246965),
-    N = n(703656),
+    p = n(703656),
     S = n(914010),
-    p = n(594174),
-    R = n(933429),
-    A = n(395361),
-    P = n(626135),
-    C = n(243778),
-    D = n(921944),
-    f = n(981631),
-    m = n(801461),
+    N = n(594174),
+    A = n(933429),
+    f = n(395361),
+    m = n(626135),
+    R = n(243778),
+    g = n(921944),
+    P = n(981631),
+    C = n(801461),
     y = n(474936),
-    g = n(388032),
-    h = n(131715);
-let U = (e) => {
-    let { dismissibleContent: t, noticeType: U } = e,
-        b = (0, i.e7)([R.ZP], () => R.ZP.getNotice()),
-        M = (0, i.e7)([p.default], () => p.default.getCurrentUser()),
-        k = (0, i.e7)([S.Z], () => S.Z.getGuildId());
-    return (0, r.jsx)(C.ZP, {
+    b = n(388032),
+    D = n(131715);
+let h = (e) => {
+    let { dismissibleContent: t, noticeType: h } = e,
+        U = (0, i.e7)([A.ZP], () => A.ZP.getNotice()),
+        M = (0, i.e7)([N.default], () => N.default.getCurrentUser()),
+        v = (0, i.e7)([S.Z], () => S.Z.getGuildId());
+    return (0, r.jsx)(R.ZP, {
         contentTypes: [t],
-        groupName: D.R.NOTICE_BAR,
+        groupName: g.R.NOTICE_BAR,
         bypassAutoDismiss: !0,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: i } = e;
@@ -44,15 +44,15 @@ let U = (e) => {
                         color: o.DM8.DEFAULT,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(D.L.UNKNOWN),
-                                noticeType: U
+                                onClick: () => i(g.L.UNKNOWN),
+                                noticeType: h
                             }),
-                            g.intl.string(g.t['+xn1o6']),
-                            (0, r.jsx)('i', { className: h.iconApple }),
-                            (0, r.jsx)('i', { className: h.iconAndroid }),
-                            (0, r.jsx)('i', { className: h.iconWindows }),
+                            b.intl.string(b.t['+xn1o6']),
+                            (0, r.jsx)('i', { className: D.iconApple }),
+                            (0, r.jsx)('i', { className: D.iconAndroid }),
+                            (0, r.jsx)('i', { className: D.iconWindows }),
                             (0, r.jsx)(o.NoS, {
-                                noticeType: U,
+                                noticeType: h,
                                 onClick: () => {
                                     (0, o.ZDy)(async () => {
                                         let { default: e } = await Promise.resolve().then(n.bind(n, 431583));
@@ -87,7 +87,7 @@ let U = (e) => {
                                             );
                                     });
                                 },
-                                children: g.intl.string(g.t['1WjMbG'])
+                                children: b.intl.string(b.t['1WjMbG'])
                             })
                         ]
                     });
@@ -96,19 +96,19 @@ let U = (e) => {
                         color: o.DM8.SPOTIFY,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(D.L.UNKNOWN),
-                                noticeType: U
+                                onClick: () => i(g.L.UNKNOWN),
+                                noticeType: h
                             }),
-                            (0, r.jsx)(A.Z, { className: h.platformIcon }),
-                            g.intl.string(g.t['5NUVHB']),
+                            (0, r.jsx)(f.Z, { className: D.platformIcon }),
+                            b.intl.string(b.t['5NUVHB']),
                             (0, r.jsx)(o.NoS, {
                                 onClick: () =>
-                                    (0, E.Z)({
-                                        platformType: f.ABu.SPOTIFY,
+                                    (0, d.Z)({
+                                        platformType: P.ABu.SPOTIFY,
                                         location: 'Notice Bar'
                                     }),
-                                noticeType: U,
-                                children: g.intl.string(g.t.S0W8Z2)
+                                noticeType: h,
+                                children: b.intl.string(b.t.S0W8Z2)
                             })
                         ]
                     });
@@ -116,20 +116,20 @@ let U = (e) => {
                     return (0, r.jsxs)(o.qXd, {
                         color: o.DM8.PLAYSTATION,
                         children: [
-                            (0, r.jsx)(o.RyX, { onClick: () => i(D.L.UNKNOWN) }),
+                            (0, r.jsx)(o.RyX, { onClick: () => i(g.L.UNKNOWN) }),
                             (0, r.jsx)('img', {
                                 alt: '',
-                                className: h.platformIcon,
-                                src: c.Z.get(f.ABu.PLAYSTATION).icon.whiteSVG
+                                className: D.platformIcon,
+                                src: s.Z.get(P.ABu.PLAYSTATION).icon.whiteSVG
                             }),
-                            g.intl.string(g.t.WHWgoa),
+                            b.intl.string(b.t.WHWgoa),
                             (0, r.jsx)(o.EyT, {
                                 onClick: () =>
-                                    (0, E.Z)({
-                                        platformType: f.ABu.PLAYSTATION,
+                                    (0, d.Z)({
+                                        platformType: P.ABu.PLAYSTATION,
                                         location: 'Notice Bar'
                                     }),
-                                children: g.intl.string(g.t.S0W8Z2)
+                                children: b.intl.string(b.t.S0W8Z2)
                             })
                         ]
                     });
@@ -138,14 +138,14 @@ let U = (e) => {
                         color: o.DM8.DEFAULT,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(D.L.UNKNOWN),
-                                noticeType: U
+                                onClick: () => i(g.L.UNKNOWN),
+                                noticeType: h
                             }),
-                            g.intl.string(g.t.B2hnhY),
+                            b.intl.string(b.t.B2hnhY),
                             (0, r.jsx)(o.NoS, {
-                                onClick: () => s.Z.open(f.oAB.ACCOUNT),
-                                noticeType: U,
-                                children: g.intl.string(g.t['50KYxs'])
+                                onClick: () => c.Z.open(P.oAB.ACCOUNT),
+                                noticeType: h,
+                                children: b.intl.string(b.t['50KYxs'])
                             })
                         ]
                     });
@@ -153,39 +153,39 @@ let U = (e) => {
                     return (0, r.jsxs)(o.qXd, {
                         color: o.DM8.PREMIUM_TIER_2,
                         children: [
-                            (0, r.jsx)('span', { className: h.premiumLogo }),
+                            (0, r.jsx)('span', { className: D.premiumLogo }),
                             (0, r.jsx)('span', {
-                                className: h.premiumText,
-                                children: g.intl.string(g.t['+urf7+'])
+                                className: D.premiumText,
+                                children: b.intl.string(b.t['+urf7+'])
                             }),
                             (0, r.jsx)(o.NoS, {
-                                className: h.premiumAction,
-                                noticeType: U,
+                                className: D.premiumAction,
+                                noticeType: h,
                                 onClick: () => {
-                                    P.default.track(f.rMx.PREMIUM_PROMOTION_OPENED, {
-                                        location_section: f.jXE.NOTIFICATION_BAR,
-                                        location_object: f.qAy.BUTTON_CTA
+                                    m.default.track(P.rMx.PREMIUM_PROMOTION_OPENED, {
+                                        location_section: P.jXE.NOTIFICATION_BAR,
+                                        location_object: P.qAy.BUTTON_CTA
                                     }),
-                                        s.Z.open(f.oAB.PREMIUM);
+                                        c.Z.open(P.oAB.PREMIUM);
                                 },
-                                children: g.intl.string(g.t['8JC5e3'])
+                                children: b.intl.string(b.t['8JC5e3'])
                             }),
                             (0, r.jsx)(o.RyX, {
                                 onClick: () => {
-                                    i(D.L.UNKNOWN), (0, a.mB)(f.xW$.PREMIUM_PROMO_DISMISSED, !0);
+                                    i(g.L.UNKNOWN), (0, a.mB)(P.xW$.PREMIUM_PROMO_DISMISSED, !0);
                                 },
-                                noticeType: U
+                                noticeType: h
                             })
                         ]
                     });
                 case l.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING:
                     return (0, r.jsx)(T.Z, {
-                        dismissCurrentNotice: () => i(D.L.UNKNOWN),
+                        dismissCurrentNotice: () => i(g.L.UNKNOWN),
                         subscriptionTier: y.Si.TIER_2
                     });
                 case l.z.NAGBAR_NOTICE_PREMIUM_TIER_0_TRIAL_ENDING:
                     return (0, r.jsx)(T.Z, {
-                        dismissCurrentNotice: () => i(D.L.UNKNOWN),
+                        dismissCurrentNotice: () => i(g.L.UNKNOWN),
                         subscriptionTier: y.Si.TIER_0
                     });
                 case l.z.NAGBAR_NOTICE_PREMIUM_REACTIVATE:
@@ -193,59 +193,59 @@ let U = (e) => {
                         color: o.DM8.PREMIUM_TIER_2,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                noticeType: U,
-                                onClick: () => i(D.L.UNKNOWN)
+                                noticeType: h,
+                                onClick: () => i(g.L.UNKNOWN)
                             }),
-                            g.intl.string(g.t['0KFB2N']),
+                            b.intl.string(b.t['0KFB2N']),
                             (0, r.jsx)(o.NoS, {
-                                noticeType: U,
+                                noticeType: h,
                                 onClick: () => {
-                                    i(D.L.UNKNOWN), s.Z.open(f.oAB.PREMIUM);
+                                    i(g.L.UNKNOWN), c.Z.open(P.oAB.PREMIUM);
                                 },
-                                children: g.intl.string(g.t.pyYSiI)
+                                children: b.intl.string(b.t.pyYSiI)
                             })
                         ]
                     });
                 case l.z.NAGBAR_NOTICE_LOCALIZED_PRICING:
                     return (0, r.jsx)(I.Z, {
-                        notice: b,
-                        noticeType: U,
-                        dismissCurrentNotice: () => i(D.L.UNKNOWN)
+                        notice: U,
+                        noticeType: h,
+                        dismissCurrentNotice: () => i(g.L.UNKNOWN)
                     });
                 case l.z.NAGBAR_BOUNCED_EMAIL_NOTICE:
                     return (0, r.jsxs)(o.qXd, {
                         color: o.DM8.DANGER,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(D.L.UNKNOWN),
-                                noticeType: U
+                                onClick: () => i(g.L.UNKNOWN),
+                                noticeType: h
                             }),
-                            g.intl.string(g.t['7490vb']),
+                            b.intl.string(b.t['7490vb']),
                             (0, r.jsx)(o.NoS, {
-                                noticeType: U,
+                                noticeType: h,
                                 onClick: () => {
-                                    (0, N.uL)(f.Z5c.SETTINGS('account'));
+                                    (0, p.uL)(P.Z5c.SETTINGS('account'));
                                 },
-                                children: g.intl.string(g.t.Vm8akJ)
+                                children: b.intl.string(b.t.Vm8akJ)
                             })
                         ]
                     });
                 case l.z.NAGBAR_ACTIVATE_SERVER_SUBSCRIPTION:
-                    let S = d.Z.getEligibleGuildsForNagActivate();
+                    let S = _.Z.getEligibleGuildsForNagActivate();
                     return (0, r.jsxs)(o.qXd, {
                         color: o.DM8.DEFAULT,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(D.L.UNKNOWN),
-                                noticeType: U
+                                onClick: () => i(g.L.UNKNOWN),
+                                noticeType: h
                             }),
-                            g.intl.string(g.t.pJ4hJC),
+                            b.intl.string(b.t.pJ4hJC),
                             (0, r.jsx)(o.NoS, {
-                                noticeType: U,
+                                noticeType: h,
                                 onClick: () => {
-                                    i(D.L.PRIMARY), (0, N.uL)(1 === S.length ? f.Z5c.GUILD_SETTINGS(S[0], 'role-subscriptions') : f.Z5c.PICK_GUILD_SETTINGS('role-subscriptions', void 0, 'server-subscriptions-finish-setting-up'));
+                                    i(g.L.PRIMARY), (0, p.uL)(1 === S.length ? P.Z5c.GUILD_SETTINGS(S[0], 'role-subscriptions') : P.Z5c.PICK_GUILD_SETTINGS('role-subscriptions', void 0, 'server-subscriptions-finish-setting-up'));
                                 },
-                                children: g.intl.string(g.t['74s74O'])
+                                children: b.intl.string(b.t['74s74O'])
                             })
                         ]
                     });
@@ -254,14 +254,14 @@ let U = (e) => {
                         color: o.DM8.WARNING,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(D.L.UNKNOWN),
-                                noticeType: U
+                                onClick: () => i(g.L.UNKNOWN),
+                                noticeType: h
                             }),
-                            g.intl.format(g.t.pdYZys, {}),
+                            b.intl.format(b.t.pdYZys, {}),
                             (0, r.jsx)(o.NoS, {
-                                onClick: () => (0, O.Z)(m.Kq.NOTICE),
-                                noticeType: U,
-                                children: g.intl.string(g.t.LhlgY2)
+                                onClick: () => (0, O.Z)(C.Kq.NOTICE),
+                                noticeType: h,
+                                children: b.intl.string(b.t.LhlgY2)
                             })
                         ]
                     });
@@ -270,21 +270,21 @@ let U = (e) => {
                         color: o.DM8.PREMIUM_TIER_2,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(D.L.UNKNOWN),
-                                noticeType: U
+                                onClick: () => i(g.L.UNKNOWN),
+                                noticeType: h
                             }),
-                            g.intl.string(g.t['O9GI+v']),
+                            b.intl.string(b.t['O9GI+v']),
                             (0, r.jsx)(o.NoS, {
                                 onClick: () => {
-                                    (0, _.Z)({
+                                    (0, E.Z)({
                                         subscriptionTier: y.Si.TIER_2,
                                         analyticsLocations: [u.Z.CHECKOUT_RECOVERY_NAGBAR],
-                                        analyticsLocation: f.Sbl.CHECKOUT_RECOVERY_NAGBAR,
-                                        onClose: () => i(D.L.UNKNOWN)
+                                        analyticsLocation: P.Sbl.CHECKOUT_RECOVERY_NAGBAR,
+                                        onClose: () => i(g.L.UNKNOWN)
                                     });
                                 },
-                                noticeType: U,
-                                children: g.intl.string(g.t.Zi69Dw)
+                                noticeType: h,
+                                children: b.intl.string(b.t.Zi69Dw)
                             })
                         ]
                     });
@@ -293,16 +293,16 @@ let U = (e) => {
                         color: o.DM8.BRAND,
                         children: [
                             (0, r.jsx)(o.RyX, {
-                                onClick: () => i(D.L.USER_DISMISS),
-                                noticeType: f.kVF.REPORT_TO_MOD_SURVEY
+                                onClick: () => i(g.L.USER_DISMISS),
+                                noticeType: P.kVF.REPORT_TO_MOD_SURVEY
                             }),
-                            g.intl.string(g.t['Aa+l7e']),
+                            b.intl.string(b.t['Aa+l7e']),
                             (0, r.jsx)(o.NoS, {
                                 onClick: () => {
-                                    window.open('https://discord.sjc1.qualtrics.com/jfe/form/SV_5uP0NWTpoXsYSUu?user_id='.concat(null == M ? void 0 : M.id, '&guild_id=').concat(k), '_blank'), i(D.L.TAKE_ACTION);
+                                    window.open('https://discord.sjc1.qualtrics.com/jfe/form/SV_5uP0NWTpoXsYSUu?user_id='.concat(null == M ? void 0 : M.id, '&guild_id=').concat(v), '_blank'), i(g.L.TAKE_ACTION);
                                 },
-                                noticeType: f.kVF.REPORT_TO_MOD_SURVEY,
-                                children: g.intl.string(g.t['iT+wQ0'])
+                                noticeType: P.kVF.REPORT_TO_MOD_SURVEY,
+                                children: b.intl.string(b.t['iT+wQ0'])
                             })
                         ]
                     });

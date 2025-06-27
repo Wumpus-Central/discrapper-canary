@@ -14,8 +14,6 @@ e.exports = {
     itemTypeTitle: 'itemTypeTitle__6db1d',
     easterEggAnimation: 'easterEggAnimation__6db1d',
     easterEggAnimationReverse: 'easterEggAnimationReverse__6db1d',
-    hiddenWumpus: 'hiddenWumpus__6db1d',
-    hiddenWumpusEnabled: 'hiddenWumpusEnabled__6db1d',
     categories: 'categories__6db1d',
     products: 'products__6db1d',
     skeletons: 'skeletons__6db1d',

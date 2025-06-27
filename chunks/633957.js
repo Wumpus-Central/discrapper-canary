@@ -16,8 +16,8 @@ var r = n(255367),
     _ = n(311819),
     b = n(758199),
     x = n(943762),
-    E = n(914498),
-    y = n(208444),
+    y = n(914498),
+    E = n(208444),
     v = n(429551),
     C = n(973616),
     O = n(314897),
@@ -77,7 +77,7 @@ let U = i.memo(function (e) {
             [H, P.id]
         ),
         Y = null == z ? void 0 : z.userIds,
-        q = (0, l.Wu)(
+        X = (0, l.Wu)(
             [I.default],
             () =>
                 Array.from(null != Y ? Y : [])
@@ -85,7 +85,7 @@ let U = i.memo(function (e) {
                     .filter(A.lm),
             [Y]
         ),
-        X = (0, l.e7)(
+        q = (0, l.e7)(
             [S.Z],
             () => {
                 if (null == Y) return null;
@@ -97,7 +97,7 @@ let U = i.memo(function (e) {
             },
             [P.id, Y]
         ),
-        Q = null == X ? void 0 : X.details,
+        Q = null == q ? void 0 : q.details,
         J = i.useMemo(() => {
             let e = new C.ZP(P);
             return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = k.wT), e;
@@ -142,7 +142,7 @@ let U = i.memo(function (e) {
                       });
         },
         el = et.disabled ? L.intl.string(L.t.JBnc7O) : L.intl.string(L.t.cX9uLS),
-        ea = (0, y.z)(J, () => {
+        ea = (0, E.z)(J, () => {
             T.default.track(R.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
                 application_id: P.id,
                 channel_id: w,
@@ -157,14 +157,14 @@ let U = i.memo(function (e) {
         });
     et.disabled && (v = null != (a = et.tooltip) ? a : et.text);
     let es = I.default.getCurrentUser(),
-        ec = q.length,
-        eu = null != (c = null == X || null == (n = X.timestamps) ? void 0 : n.start) ? c : null == X ? void 0 : X.created_at,
+        ec = X.length,
+        eu = null != (c = null == q || null == (n = q.timestamps) ? void 0 : n.start) ? c : null == q ? void 0 : q.created_at,
         ed = ee ? el : null != Q ? Q : L.intl.string(L.t.oQn0h4),
-        ep = (0, x.r)(X),
+        ep = (0, x.r)(q),
         em = [
             {
                 label: ee ? L.intl.string(L.t.cnBQPD) : L.intl.string(L.t.VJlc0d),
-                trackingArea: E.j_.PLAY,
+                trackingArea: y.j_.PLAY,
                 onClick: ei,
                 disabledReason: v,
                 submitting: er
@@ -202,7 +202,7 @@ let U = i.memo(function (e) {
                         }),
                     ec > 0 &&
                         (0, r.jsx)(x.K, {
-                            activityUsers: q,
+                            activityUsers: X,
                             guildId: U,
                             activityText: ep.text
                         })
@@ -211,7 +211,7 @@ let U = i.memo(function (e) {
             actions: em,
             trackingConfig: {
                 id: P.id,
-                linkType: E.Un.ACTIVITY_INSTANCE
+                linkType: y.Un.ACTIVITY_INSTANCE
             }
         })
     );

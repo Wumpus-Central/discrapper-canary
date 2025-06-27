@@ -27,7 +27,6 @@ class s {
             o(this, 'id', void 0),
             o(this, 'authorization', void 0),
             o(this, 'application', void 0),
-            o(this, 'abortController', void 0),
             (this.transport = e),
             (this.version = t),
             (this.encoding = n),
@@ -43,7 +42,6 @@ class s {
                 name: null,
                 icon: null
             }),
-            (this.abortController = new AbortController()),
             this.checkRpcVersion(t);
     }
 }

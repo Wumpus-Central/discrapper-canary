@@ -1,9 +1,9 @@
 r.d(t, { Z: () => I }), r(642613), r(388685), r(583741);
 var n,
     i = r(255367),
-    o = r(73800),
-    a = r(120356),
-    l = r.n(a),
+    a = r(73800),
+    o = r(120356),
+    l = r.n(o),
     s = r(481060),
     c = r(981631),
     d = r(483849);
@@ -59,7 +59,7 @@ let E = (e) =>
         className: e.className,
         children: e.children
     });
-class O extends (n = o.PureComponent) {
+class O extends (n = a.PureComponent) {
     isSortable(e) {
         return null != e.sort && !1 !== e.sort;
     }
@@ -71,31 +71,31 @@ class O extends (n = o.PureComponent) {
         };
     }
     renderHeader() {
-        let { columns: e, data: t, sortDirection: r, sortKey: n, headerCellClassName: o, headerClassName: a, sortedHeaderCellClassName: u, stickyHeader: _ } = this.props,
+        let { columns: e, data: t, sortDirection: r, sortKey: n, headerCellClassName: a, headerClassName: o, sortedHeaderCellClassName: u, stickyHeader: _ } = this.props,
             p = e.map((e) => {
-                let a = null != e.renderHeader ? e.renderHeader(e, t) : e.key,
+                let o = null != e.renderHeader ? e.renderHeader(e, t) : e.key,
                     _ = r === c.sHY.ASCENDING ? s.u04 : s.CJ0;
                 return (0, i.jsx)(
                     s.P3F,
                     {
-                        className: l()(d.headerCell, o, e.headerCellClassName, e.cellClassName, n === e.key && u, { [d.clickable]: this.isSortable(e) }),
+                        className: l()(d.headerCell, a, e.headerCellClassName, e.cellClassName, n === e.key && u, { [d.clickable]: this.isSortable(e) }),
                         onClick: this.isSortable(e) ? () => this.handleSort(e.key) : void 0,
                         children: (0, i.jsxs)('div', {
                             className: d.headerCellContent,
-                            children: [a, this.isSortable(e) && n === e.key ? (0, i.jsx)(_, { className: d.sortIcon }) : null]
+                            children: [o, this.isSortable(e) && n === e.key ? (0, i.jsx)(_, { className: d.sortIcon }) : null]
                         })
                     },
                     e.key
                 );
             });
         return (0, i.jsx)(E, {
-            className: l()(a, d.row, { [d.stickyHeader]: _ }),
+            className: l()(o, d.row, { [d.stickyHeader]: _ }),
             children: p
         });
     }
     renderBody() {
-        let { columns: e, data: t, sortData: r, sortKey: n, sortDirection: i, bodyCellClassName: a, rowClassName: s, cellProps: u, rowProps: E, rowComponent: O, cellComponent: I } = this.props,
-            T = t;
+        let { columns: e, data: t, sortData: r, sortKey: n, sortDirection: i, bodyCellClassName: o, rowClassName: s, cellProps: u, rowProps: E, rowComponent: O, cellComponent: I } = this.props,
+            A = t;
         if (r) {
             let r =
                     null != n
@@ -104,24 +104,24 @@ class O extends (n = o.PureComponent) {
                               return t === n;
                           })
                         : null,
-                o = [...t],
-                a = null != r && r.sort,
-                l = null != r && null != n && this.isSortable(r) ? o.sort('function' == typeof a ? (e, t) => a(e, t, i) : this.getDefaultSort(n)) : o;
-            T = null != r && i === c.sHY.DESCENDING ? l.reverse() : l;
+                a = [...t],
+                o = null != r && r.sort,
+                l = null != r && null != n && this.isSortable(r) ? a.sort('function' == typeof o ? (e, t) => o(e, t, i) : this.getDefaultSort(n)) : a;
+            A = null != r && i === c.sHY.DESCENDING ? l.reverse() : l;
         }
-        return T.map((t, r) => {
+        return A.map((t, r) => {
             let n = e.map((e) =>
-                (0, o.createElement)(
+                (0, a.createElement)(
                     I,
                     p(_({}, u), {
                         key: e.key,
                         item: t,
-                        className: l()(a, e.bodyCellClassName, e.cellClassName)
+                        className: l()(o, e.bodyCellClassName, e.cellClassName)
                     }),
                     null != e.render ? e.render(t, u, r) : t[e.key]
                 )
             );
-            return (0, o.createElement)(
+            return (0, a.createElement)(
                 O,
                 p(_({}, E), {
                     key: t.key,

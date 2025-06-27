@@ -1,47 +1,44 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => E });
 var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(230711),
     o = n(985754),
     a = n(91802),
-    s = n(222727),
-    c = n(981631),
+    c = n(222727),
+    s = n(981631),
     u = n(921944),
-    E = n(388032),
-    d = n(131715);
-let _ =
-    12633 == n.j
-        ? (e) => {
-              let { notice: t, noticeType: n, dismissCurrentNotice: _ } = e,
-                  O = (null == t ? void 0 : t.metadata.premiumSubscription) != null,
-                  I = (0, a.n)();
-              if (((0, s.U)(c.jXE.NOTIFICATION_BAR, null == I ? void 0 : I.countryCode), null == I)) return null;
-              let T = I.countryCode,
-                  N = I.currency,
-                  S = I.paymentSourceTypes.length > 0;
-              return (0, r.jsxs)(i.qXd, {
-                  color: O ? i.DM8.BRAND : i.DM8.PREMIUM_TIER_2,
-                  children: [
-                      (0, r.jsx)(i.RyX, {
-                          onClick: () => _(u.L.UNKNOWN),
-                          noticeType: n
-                      }),
-                      !O &&
-                          (0, r.jsx)(i.SrA, {
-                              size: 'md',
-                              color: 'currentColor',
-                              className: d.premiumIcon
-                          }),
-                      (0, o.Gv)(T, N, S, O),
-                      (0, r.jsx)(i.NoS, {
-                          onClick: () => {
-                              _(u.L.UNKNOWN), l.Z.open(c.oAB.PREMIUM);
-                          },
-                          noticeType: n,
-                          children: E.intl.string(E.t.hvVgAQ)
-                      })
-                  ]
-              });
-          }
-        : null;
+    d = n(388032),
+    _ = n(131715);
+let E = (e) => {
+    let { notice: t, noticeType: n, dismissCurrentNotice: E } = e,
+        O = (null == t ? void 0 : t.metadata.premiumSubscription) != null,
+        I = (0, a.n)();
+    if (((0, c.U)(s.jXE.NOTIFICATION_BAR, null == I ? void 0 : I.countryCode), null == I)) return null;
+    let T = I.countryCode,
+        p = I.currency,
+        S = I.paymentSourceTypes.length > 0;
+    return (0, r.jsxs)(i.qXd, {
+        color: O ? i.DM8.BRAND : i.DM8.PREMIUM_TIER_2,
+        children: [
+            (0, r.jsx)(i.RyX, {
+                onClick: () => E(u.L.UNKNOWN),
+                noticeType: n
+            }),
+            !O &&
+                (0, r.jsx)(i.SrA, {
+                    size: 'md',
+                    color: 'currentColor',
+                    className: _.premiumIcon
+                }),
+            (0, o.Gv)(T, p, S, O),
+            (0, r.jsx)(i.NoS, {
+                onClick: () => {
+                    E(u.L.UNKNOWN), l.Z.open(s.oAB.PREMIUM);
+                },
+                noticeType: n,
+                children: d.intl.string(d.t.hvVgAQ)
+            })
+        ]
+    });
+};

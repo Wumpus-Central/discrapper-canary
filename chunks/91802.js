@@ -1,10 +1,10 @@
-n.d(t, { n: () => r });
-var i = n(442837),
-    s = n(351402);
-function r() {
-    let { localizedPricingPromo: e, hasError: t } = (0, i.cj)([s.Z], () => ({
-        localizedPricingPromo: s.Z.localizedPricingPromo,
-        hasError: s.Z.localizedPricingPromoHasError
+n.d(t, { n: () => l });
+var r = n(442837),
+    i = n(351402);
+function l() {
+    let { localizedPricingPromo: e, hasError: t } = (0, r.cj)([i.Z], () => ({
+        localizedPricingPromo: i.Z.localizedPricingPromo,
+        hasError: i.Z.localizedPricingPromoHasError
     }));
     return t ? null : e;
 }

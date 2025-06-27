@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => R }), n(388685);
+n.r(t), n.d(t, { default: () => Z }), n(388685);
 var r = n(255367),
     l = n(73800),
     a = n(120356),
@@ -10,57 +10,56 @@ var r = n(255367),
     d = n(150063),
     p = n(211266),
     f = n(906732),
-    b = n(702486),
-    g = n(977395),
-    h = n(214852),
+    g = n(702486),
+    h = n(977395),
+    b = n(214852),
     m = n(290026),
     _ = n(511050),
     C = n(819640),
     v = n(594174),
     O = n(381585),
-    E = n(597688),
+    S = n(597688),
     x = n(780475),
-    S = n(223143),
-    j = n(298228),
-    y = n(309956),
-    k = n(98535),
-    P = n(963102),
+    E = n(223143),
+    y = n(298228),
+    j = n(309956),
+    P = n(98535),
+    k = n(963102),
     T = n(508498),
-    I = n(373113),
     L = n(849217),
-    B = n(215023),
-    N = n(981631),
-    A = n(420212),
-    w = n(484920);
-let Z = (e) => {
+    I = n(215023),
+    B = n(981631),
+    N = n(420212),
+    A = n(484920);
+let w = (e) => {
         let { children: t, shouldAddEventListener: n, onClose: r } = e,
             a = (0, c.f9)();
         return (
             l.useEffect(() => {
                 if (!n || a) return;
                 let e = (e) => {
-                    e.key === A.mR.Escape && r();
+                    e.key === N.mR.Escape && r();
                 };
                 return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
             }, [n, a, r]),
             t
         );
     },
-    R = function (e) {
-        let { isFullScreen: t = !0, tab: n = B.AW.HOME } = e;
-        (0, h.z)(g.f);
+    Z = function (e) {
+        let { isFullScreen: t = !0, tab: n = I.AW.HOME } = e;
+        (0, b.z)(h.f);
         let a = (0, p.Z)((0, o.Z)()),
             c = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
-            A = l.useRef(null),
-            { closeIntroToOrbsClaimedCoachmark: R } = (0, _.Z)({ location: 'CollectiblesShop' });
+            N = l.useRef(null),
+            { closeIntroToOrbsClaimedCoachmark: Z } = (0, _.Z)({ location: 'CollectiblesShop' });
         l.useEffect(
             () => () => {
-                R();
+                Z();
             },
-            [a, R]
+            [a, Z]
         );
-        let { onClose: F } = (0, T.Db)(),
-            { categories: D, refreshCategories: H } = (0, S.ZP)(
+        let { onClose: R } = (0, T.Db)(),
+            { categories: H, refreshCategories: M } = (0, E.ZP)(
                 {
                     location: 'CollectiblesShop.web',
                     logPerf: !0
@@ -72,88 +71,82 @@ let Z = (e) => {
                 }
             );
         (0, m.P)();
-        let M = (0, j.O)(D),
-            [W, V] = l.useState(!1),
-            [U, G] = l.useState(),
-            z = (0, s.e7)([E.Z], () => {
+        let D = (0, y.O)(H),
+            [F, W] = l.useState(),
+            V = (0, s.e7)([S.Z], () => {
                 var e;
-                return null == (e = E.Z.getCategory(U)) ? void 0 : e.name;
+                return null == (e = S.Z.getCategory(F)) ? void 0 : e.name;
             }),
-            [q, Y] = l.useState(),
-            K = l.useCallback((e, t) => {
-                Y(e), G(t);
+            [U, G] = l.useState(),
+            z = l.useCallback((e, t) => {
+                G(e), W(t);
             }, []),
-            { selectedTab: X, transitionState: $, transitionToTab: J } = (0, y.B)(A, n, t),
-            { handleScroll: Q } = (0, b.z)(A, a, X);
-        (0, x.q3)(a, X, z, $, q),
-            (0, x.EB)(X, c),
+            { selectedTab: q, transitionState: Y, transitionToTab: K } = (0, j.B)(N, n, t),
+            { handleScroll: $ } = (0, g.z)(N, a, q);
+        (0, x.q3)(a, q, V, Y, U),
+            (0, x.EB)(q, c),
             (0, L.Z)(),
             l.useEffect(() => {
-                t || (0, d.Y)(N.Z5c.COLLECTIBLES_SHOP);
+                t || (0, d.Y)(B.Z5c.COLLECTIBLES_SHOP);
             }, [t]);
-        let ee = (0, s.e7)([C.Z], () => C.Z.getLayers().includes(N.S9g.COLLECTIBLES_SHOP)),
-            et = l.useRef(null),
-            en = l.useRef(null);
-        (0, u.Tbt)(et),
+        let X = (0, s.e7)([C.Z], () => C.Z.getLayers().includes(B.S9g.COLLECTIBLES_SHOP)),
+            J = l.useRef(null),
+            Q = l.useRef(null);
+        (0, u.Tbt)(J),
             l.useEffect(() => {
                 if (!t) {
                     var e;
-                    null == (e = en.current) || e.focus();
+                    null == (e = Q.current) || e.focus();
                 }
             }, [t]);
-        let { analyticsLocations: er } = (0, x.MV)(X);
+        let { analyticsLocations: ee } = (0, x.MV)(q);
         return (0, r.jsx)(f.Gt, {
-            value: er,
+            value: ee,
             children: (0, r.jsx)(O.k0, {
                 newValue: {
                     sessionId: a,
-                    pageCategory: z,
-                    pageSize: B.kN
+                    pageCategory: V,
+                    pageSize: I.kN
                 },
-                children: (0, r.jsxs)(Z, {
-                    onClose: F,
-                    shouldAddEventListener: t && !ee,
-                    children: [
-                        (0, r.jsx)('div', {
-                            className: w.shop,
-                            ref: t ? et : en,
-                            tabIndex: -1,
-                            children: (0, r.jsx)(u.Den, {
-                                className: w.shopScroll,
-                                ref: A,
-                                onScroll: Q,
-                                children: (0, r.jsxs)('div', {
-                                    className: i()(w.shopViewWrapper, {
-                                        [w.visible]: $ === B.f7.VISIBLE,
-                                        [w.in]: $ === B.f7.IN,
-                                        [w.out]: $ === B.f7.OUT
+                children: (0, r.jsx)(w, {
+                    onClose: R,
+                    shouldAddEventListener: t && !X,
+                    children: (0, r.jsx)('div', {
+                        className: A.shop,
+                        ref: t ? J : Q,
+                        tabIndex: -1,
+                        children: (0, r.jsx)(u.Den, {
+                            className: A.shopScroll,
+                            ref: N,
+                            onScroll: $,
+                            children: (0, r.jsxs)('div', {
+                                className: i()(A.shopViewWrapper, {
+                                    [A.visible]: Y === I.f7.VISIBLE,
+                                    [A.in]: Y === I.f7.IN,
+                                    [A.out]: Y === I.f7.OUT
+                                }),
+                                children: [
+                                    (0, r.jsx)(k.I, {
+                                        isFullScreen: t,
+                                        isLayer: X,
+                                        onClose: R,
+                                        handleTransition: K,
+                                        selectedTab: q
                                     }),
-                                    children: [
-                                        (0, r.jsx)(P.I, {
-                                            isFullScreen: t,
-                                            isLayer: ee,
-                                            onClose: F,
-                                            handleTransition: J,
-                                            selectedTab: X
-                                        }),
-                                        (0, r.jsx)(k.Z, {
-                                            tab: X,
-                                            isFullScreen: t,
-                                            scrollerRef: A,
-                                            refreshCategories: H,
-                                            transitionToTab: J,
-                                            transitionState: $,
-                                            sortedCategories: M,
-                                            updateAnalyticsState: K,
-                                            setIsGiftEasterEggEnabled: V,
-                                            isGiftEasterEggEnabled: W
-                                        })
-                                    ]
-                                })
+                                    (0, r.jsx)(P.Z, {
+                                        tab: q,
+                                        isFullScreen: t,
+                                        scrollerRef: N,
+                                        refreshCategories: M,
+                                        transitionToTab: K,
+                                        transitionState: Y,
+                                        sortedCategories: D,
+                                        updateAnalyticsState: z
+                                    })
+                                ]
                             })
-                        }),
-                        W && (0, r.jsx)(I.Z, {})
-                    ]
+                        })
+                    })
                 })
             })
         });

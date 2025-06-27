@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => y });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -17,18 +17,18 @@ var i = n(120356),
     _ = n(981631),
     b = n(388032),
     x = n(955344);
-function E(e) {
+function y(e) {
     let { message: t, compact: n } = e,
         i = (0, a.e7)([u.Z], () => u.Z.getChannel(d.default.castMessageIdAsChannelId(t.id)));
     return null == i
         ? null
-        : (0, r.jsx)(y, {
+        : (0, r.jsx)(E, {
               channel: i,
               compact: n,
               isSystemMessage: (0, c.Z)(t)
           });
 }
-function y(e) {
+function E(e) {
     let { channel: t, compact: i, isSystemMessage: c } = e,
         u = (0, a.e7)([m.Z], () => m.Z.getCount(t.id)),
         d = (function (e) {
@@ -63,7 +63,7 @@ function y(e) {
                           ]
                       });
         })(t),
-        E = null != u && u > 0;
+        y = null != u && u > 0;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)('div', {
@@ -130,7 +130,7 @@ function y(e) {
                                 }),
                                 (0, r.jsx)('span', {
                                     className: x.cta,
-                                    'aria-hidden': !E,
+                                    'aria-hidden': !y,
                                     children: (0, p.WE)(u, t.id)
                                 })
                             ]
