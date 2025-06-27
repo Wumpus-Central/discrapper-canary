@@ -16339,6 +16339,26 @@ div.modalHeader_c28af8 {
     width: 100vw
 }
 
+.subButton_ac86f6 {
+    margin-top: 60px
+}
+
+.v2SubButtonText_ac86f6 {
+    color: var(--brand-500)
+}
+
+.theme-light .v2SubButtonText_ac86f6 {
+    color: var(--white)
+}
+
+.buttonShine_ac86f6 {
+    color: hsl(var(--brand-500-hsl)/.1)
+}
+
+.subButtonText_ac86f6 {
+    color: var(--brand-500)
+}
+
 .heading_e62f9d {
     margin-bottom: 8px
 }
