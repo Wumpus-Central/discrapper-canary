@@ -1,4 +1,4 @@
-n.d(t, { default: () => T }), n(388685);
+n.d(t, { default: () => P }), n(388685);
 var r = n(255367),
     a = n(73800),
     i = n(120356),
@@ -10,35 +10,36 @@ var r = n(255367),
     u = n(481060),
     m = n(809086),
     x = n(599456),
-    f = n(430824),
-    h = n(937615),
-    j = n(495437),
-    p = n(240864),
-    v = n(942833),
-    C = n(598952),
-    g = n(392739),
-    b = n(400916),
-    Z = n(916001),
-    y = n(388032),
-    N = n(165209);
-function _(e) {
+    f = n(485386),
+    h = n(430824),
+    j = n(937615),
+    p = n(495437),
+    v = n(240864),
+    C = n(942833),
+    g = n(598952),
+    b = n(392739),
+    Z = n(400916),
+    y = n(916001),
+    N = n(388032),
+    _ = n(165209);
+function z(e) {
     let { guildProductListing: t, guildId: n, skuPricePreview: a } = e,
-        i = (0, v.C)(t),
-        l = (0, h.T4)(a.amount, a.currency),
-        s = (0, o.e7)([f.Z], () => f.Z.getGuild(n));
+        i = (0, C.C)(t),
+        l = (0, j.T4)(a.amount, a.currency),
+        s = (0, o.e7)([h.Z], () => h.Z.getGuild(n));
     return (
         c()(null != s, 'guild cannot be null'),
         (0, r.jsxs)('div', {
-            className: N.purchaseSummaryContainer,
+            className: _.purchaseSummaryContainer,
             children: [
                 (0, r.jsx)(m.Z, {
                     alt: '',
-                    className: N.purchaseSummaryImage,
+                    className: _.purchaseSummaryImage,
                     listing: t,
                     imageSize: 100
                 }),
                 (0, r.jsxs)('div', {
-                    className: N.purchaseSummarInfo,
+                    className: _.purchaseSummarInfo,
                     children: [
                         (0, r.jsx)(u.Text, {
                             variant: 'text-md/medium',
@@ -47,14 +48,14 @@ function _(e) {
                         }),
                         (0, r.jsx)(u.LZC, { size: 4 }),
                         (0, r.jsxs)('div', {
-                            className: N.productTypeContainer,
+                            className: _.productTypeContainer,
                             children: [
                                 (0, r.jsx)(u.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'text-muted',
                                     children: i
                                 }),
-                                (0, r.jsx)('div', { className: N.dotSeparator }),
+                                (0, r.jsx)('div', { className: _.dotSeparator }),
                                 (0, r.jsx)(u.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'text-muted',
@@ -66,7 +67,7 @@ function _(e) {
                     ]
                 }),
                 (0, r.jsxs)('div', {
-                    className: N.purchaseSummaryPrice,
+                    className: _.purchaseSummaryPrice,
                     children: [
                         (0, r.jsx)(u.Text, {
                             variant: 'text-md/medium',
@@ -77,7 +78,7 @@ function _(e) {
                         (0, r.jsx)(u.Text, {
                             variant: 'text-xs/normal',
                             color: 'text-muted',
-                            children: y.intl.string(y.t['5dWOZW'])
+                            children: N.intl.string(N.t['5dWOZW'])
                         })
                     ]
                 })
@@ -85,24 +86,24 @@ function _(e) {
         })
     );
 }
-function z(e) {
+function S(e) {
     var t;
     let { guildProductListing: n, guildId: a } = e,
         i = null != (t = n.attachments) ? t : [],
         s = i.length > 1;
     return 0 === i.length
         ? null
-        : (0, r.jsx)(g.Z, {
-              label: y.intl.string(y.t.HOkHPD),
+        : (0, r.jsx)(b.Z, {
+              label: N.intl.string(N.t.HOkHPD),
               children: (0, r.jsxs)('div', {
-                  className: l()(N.attachmentsContainer, { [N.attachmentsContainerMultiple]: s }),
+                  className: l()(_.attachmentsContainer, { [_.attachmentsContainerMultiple]: s }),
                   children: [
                       (0, r.jsx)('div', {
-                          className: N.attachmentGrid,
-                          children: i.map((e) => (0, r.jsx)(C.Z, { attachment: e }, e.id))
+                          className: _.attachmentGrid,
+                          children: i.map((e) => (0, r.jsx)(g.Z, { attachment: e }, e.id))
                       }),
                       (0, r.jsx)('div', {
-                          children: (0, r.jsx)(b.Z, {
+                          children: (0, r.jsx)(Z.Z, {
                               guildId: a,
                               productId: n.id
                           })
@@ -111,16 +112,16 @@ function z(e) {
               })
           });
 }
-function S(e) {
+function L(e) {
     let { role: t } = e;
     return null == t
         ? null
-        : (0, r.jsx)(g.Z, {
-              label: y.intl.string(y.t.gWBNen),
-              children: (0, r.jsx)(Z.Z, { role: t })
+        : (0, r.jsx)(b.Z, {
+              label: N.intl.string(N.t.gWBNen),
+              children: (0, r.jsx)(y.Z, { role: t })
           });
 }
-function L(e) {
+function T(e) {
     return (0, r.jsx)(u.Text, {
         tag: 'span',
         variant: 'text-md/semibold',
@@ -128,22 +129,22 @@ function L(e) {
         children: e
     });
 }
-function T(e) {
+function P(e) {
     var t;
     let { onClose: n, transitionState: i, guildProductListingId: l, guildId: s, skuPricePreview: m } = e,
-        h = (0, o.e7)([p.Z], () => p.Z.getGuildProduct(l));
+        h = (0, o.e7)([v.Z], () => v.Z.getGuildProduct(l));
     c()(null != h, 'guildProductListing cannot be null');
-    let [v, C] = a.useState(!1);
+    let [j, C] = a.useState(!1);
     a.useEffect(() => {
         !(async function () {
             try {
-                C(!0), await (0, j.cf)(s, l), C(!1);
+                C(!0), await (0, p.cf)(s, l), C(!1);
             } catch (e) {
                 n(),
                     (0, x.Z)({
-                        body: y.intl.string(y.t.VQ0lXV),
-                        confirmText: y.intl.string(y.t['NX+WJC']),
-                        header: y.intl.string(y.t.OCwKlp),
+                        body: N.intl.string(N.t.VQ0lXV),
+                        confirmText: N.intl.string(N.t['NX+WJC']),
+                        header: N.intl.string(N.t.OCwKlp),
                         confirmButtonColor: d.zx.Colors.BRAND
                     });
             }
@@ -153,32 +154,32 @@ function T(e) {
         b = h.role_id,
         Z = (0, o.e7)([f.Z], () => (null != b ? f.Z.getRole(s, b) : void 0));
     return (0, r.jsx)(u.Y0X, {
-        className: N.modal,
+        className: _.modal,
         size: u.CgR.DYNAMIC,
         transitionState: i,
         'aria-label': h.name,
         parentComponent: 'GuildProductPurchaseConfirmationModal',
         children: (0, r.jsx)(u.hzk, {
             children: (0, r.jsx)('div', {
-                className: N.container,
-                children: v
+                className: _.container,
+                children: j
                     ? (0, r.jsx)(u.$jN, {})
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsxs)('div', {
-                                  className: N.header,
+                                  className: _.header,
                                   children: [
                                       (0, r.jsx)(u.X6q, {
                                           variant: 'heading-xl/semibold',
                                           color: 'header-primary',
-                                          children: y.intl.string(y.t.dhAgv7)
+                                          children: N.intl.string(N.t.dhAgv7)
                                       }),
                                       (0, r.jsx)(u.P3F, {
                                           onClick: n,
                                           children: (0, r.jsx)(u.Dio, {
                                               size: 'md',
                                               color: 'currentColor',
-                                              className: N.close
+                                              className: _.close
                                           })
                                       })
                                   ]
@@ -187,9 +188,9 @@ function T(e) {
                               (0, r.jsx)(u.Text, {
                                   variant: 'text-md/normal',
                                   color: 'text-default',
-                                  children: y.intl.format(y.t.X6yvvr, {
+                                  children: N.intl.format(N.t.X6yvvr, {
                                       productName: h.name,
-                                      emphasisHook: L
+                                      emphasisHook: T
                                   })
                               }),
                               (0, r.jsx)(u.LZC, { size: 12 }),
@@ -197,11 +198,11 @@ function T(e) {
                                   variant: 'text-md/normal',
                                   color: 'text-default',
                                   children: [
-                                      g ? y.intl.string(y.t['A/RnkJ']) + ' ' : '',
+                                      g ? N.intl.string(N.t['A/RnkJ']) + ' ' : '',
                                       null != Z
-                                          ? y.intl.format(y.t.IeJDKi, {
+                                          ? N.intl.format(N.t.IeJDKi, {
                                                 roleName: Z.name,
-                                                emphasisHook: L
+                                                emphasisHook: T
                                             })
                                           : ''
                                   ]
@@ -210,25 +211,25 @@ function T(e) {
                               (0, r.jsx)(u.Text, {
                                   variant: 'text-md/normal',
                                   color: 'text-default',
-                                  children: y.intl.string(y.t['9S3QHB'])
+                                  children: N.intl.string(N.t['9S3QHB'])
                               }),
                               (0, r.jsx)(u.LZC, { size: 24 }),
-                              (0, r.jsx)(_, {
+                              (0, r.jsx)(z, {
                                   guildProductListing: h,
                                   guildId: s,
                                   skuPricePreview: m
                               }),
                               (0, r.jsx)(u.LZC, { size: 32 }),
-                              (0, r.jsx)('div', { className: N.divider }),
+                              (0, r.jsx)('div', { className: _.divider }),
                               (0, r.jsx)(u.LZC, { size: 32 }),
                               (0, r.jsxs)('ul', {
-                                  className: N.benefitsContainer,
+                                  className: _.benefitsContainer,
                                   children: [
-                                      (0, r.jsx)(z, {
+                                      (0, r.jsx)(S, {
                                           guildProductListing: h,
                                           guildId: s
                                       }),
-                                      (0, r.jsx)(S, { role: Z })
+                                      (0, r.jsx)(L, { role: Z })
                                   ]
                               })
                           ]

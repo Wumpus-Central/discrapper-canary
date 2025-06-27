@@ -118,6 +118,13 @@ function A(e, t) {
                 });
             });
         }),
+        a.on(l.z.UsersMerged, (e, t) => {
+            s.Z.dispatch({
+                type: 'RTC_CONNECTION_USERS_MERGED',
+                userIds: e,
+                context: t
+            });
+        }),
         a.on(l.z.ClientConnect, (e) => {
             s.Z.wait(() => {
                 s.Z.dispatch({

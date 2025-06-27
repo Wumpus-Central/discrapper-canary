@@ -28,19 +28,19 @@ function O() {
             canSetInputDevice: S,
             canSetOutputDevice: v,
             inputDeviceId: T,
-            outputDeviceId: N
+            outputDeviceId: I
         } = (0, s.cj)([g.Z], () => ({
             canSetInputDevice: g.Z.supports(_.AN.AUDIO_INPUT_DEVICE),
             canSetOutputDevice: g.Z.supports(_.AN.AUDIO_OUTPUT_DEVICE),
             inputDeviceId: g.Z.getInputDeviceId(),
             outputDeviceId: g.Z.getOutputDeviceId()
         })),
-        { sortDevicesByFrecency: I } = (0, d._)({ location: 'UserSettingsDevices' }),
-        y = (0, u.zX)({ sortDevicesByFrecency: I }),
-        A = (0, u.rB)({ sortDevicesByFrecency: I }),
+        { sortDevicesByFrecency: N } = (0, d._)({ location: 'UserSettingsDevices' }),
+        y = (0, u.zX)({ sortDevicesByFrecency: N }),
+        A = (0, u.rB)({ sortDevicesByFrecency: N }),
         P = r.useMemo(() => {
             let e = y.find((e) => e.id === T),
-                t = A.find((e) => e.id === N),
+                t = A.find((e) => e.id === I),
                 n = C.some((t) => {
                     var n;
                     return null == e || null == (n = e.hardwareId) ? void 0 : n.startsWith(t);
@@ -50,7 +50,7 @@ function O() {
                     return null == t || null == (n = t.hardwareId) ? void 0 : n.startsWith(e);
                 });
             return n && i && (null == e ? void 0 : e.containerId) != null && e.containerId === (null == t ? void 0 : t.containerId);
-        }, [y, A, T, N]);
+        }, [y, A, T, I]);
     S ||
         (e = (0, i.jsx)(a.R94, {
             type: a.R94.Types.DESCRIPTION,
@@ -135,7 +135,7 @@ function O() {
                             title: x.intl.string(x.t.dl18zc),
                             children: [
                                 (0, i.jsx)(a.q4e, {
-                                    value: N,
+                                    value: I,
                                     onChange: (e) =>
                                         o.Z.setOutputDevice(e, {
                                             location: 'Settings',

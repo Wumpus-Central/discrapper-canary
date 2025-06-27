@@ -10,8 +10,8 @@ var a = n(255367),
     u = n(213609),
     m = n(213713),
     p = n(665149),
-    x = n(238246),
-    h = n(788983),
+    h = n(238246),
+    x = n(788983),
     b = n(906467),
     f = n(259580),
     v = n(31336),
@@ -37,8 +37,8 @@ var j = n(392750),
     D = n(496025),
     M = n(442954),
     B = n(633001),
-    z = n(702904),
-    U = n(178821),
+    U = n(702904),
+    z = n(178821),
     F = n(891401),
     G = n(958328),
     V = n(315384),
@@ -124,7 +124,7 @@ function el(e) {
                         id: 'performance',
                         name: 'Performance',
                         group: Q.v0.DEVELOPMENT,
-                        render: () => (0, a.jsx)(U.ZP, {})
+                        render: () => (0, a.jsx)(z.ZP, {})
                     }),
                     e.push({
                         id: 'feedback',
@@ -240,7 +240,7 @@ function el(e) {
                         id: 'payments',
                         name: 'Payments',
                         group: Q.v0.BILLING,
-                        render: () => (0, a.jsx)(z.Z, {})
+                        render: () => (0, a.jsx)(U.Z, {})
                     }),
                     e.push({
                         id: 'subscriptions',
@@ -313,10 +313,10 @@ function el(e) {
                                       icon: c.rgF,
                                       tooltip: 'Pop Out',
                                       onClick: () => {
-                                          (0, h.bA)(
+                                          (0, x.bA)(
                                               ee.KJ3.DEVTOOLS_POPOUT,
                                               () =>
-                                                  (0, a.jsx)(x.Z, {
+                                                  (0, a.jsx)(h.Z, {
                                                       windowKey: ee.KJ3.DEVTOOLS_POPOUT,
                                                       title: 'DevTools',
                                                       withTitleBar: !0,

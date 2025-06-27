@@ -1,20 +1,21 @@
 n.d(t, {
-    RE: () => u,
-    RN: () => d,
-    po: () => T,
-    vN: () => _,
-    xb: () => I,
-    zq: () => A
+    RE: () => _,
+    RN: () => A,
+    po: () => I,
+    vN: () => d,
+    xb: () => O,
+    zq: () => T
 });
 var r,
     l = n(73800),
     s = n(399606),
     i = n(906732),
     a = n(892001),
-    o = n(430824),
-    E = n(594174),
-    c = n(91047);
-let u = (e, t) => {
+    o = n(485386),
+    E = n(430824),
+    c = n(594174),
+    u = n(91047);
+let _ = (e, t) => {
     let { guildId: n, userId: r, colorRoleId: l } = e;
     (0, a.openUserProfileModal)({
         userId: r,
@@ -23,15 +24,15 @@ let u = (e, t) => {
         roleId: l
     });
 };
-function _(e, t, n, r) {
+function d(e, t, n, r) {
     let { analyticsLocations: s } = (0, i.ZP)();
     return l.useCallback(
         (l) => {
             if (null == e) return;
-            let i = E.default.getUser(e.userId);
+            let i = c.default.getUser(e.userId);
             null != i &&
                 (l.stopPropagation(),
-                (0, c.nm)(l, {
+                (0, u.nm)(l, {
                     user: i,
                     guildId: e.guildId,
                     analyticsLocations: null != n ? [n] : s,
@@ -42,15 +43,15 @@ function _(e, t, n, r) {
         [e, s, r, n, t]
     );
 }
-function d(e, t, n) {
+function A(e, t, n) {
     let { analyticsLocations: r } = (0, i.ZP)();
     return l.useCallback(
         (l) => {
             if (null == e) return;
-            let s = E.default.getUser(e.userId);
+            let s = c.default.getUser(e.userId);
             null != s &&
                 (l.stopPropagation(),
-                (0, c._j)(l, {
+                (0, u._j)(l, {
                     user: s,
                     guildId: e.guildId,
                     analyticsLocations: null != t ? [t] : r,
@@ -61,19 +62,19 @@ function d(e, t, n) {
         [e, n, r, t]
     );
 }
-function A(e) {
+function T(e) {
     return (0, s.e7)(
-        [o.Z],
+        [E.Z, o.Z],
         () => {
             var t;
             if (null == e) return null;
-            let n = o.Z.getGuild(e.guildId);
+            let n = E.Z.getGuild(e.guildId);
             return null == n || null == e.highestRoleId ? null : null != (t = o.Z.getRole(n.id, e.highestRoleId)) ? t : null;
         },
         [e]
     );
 }
-var T = (((r = {})[(r.LOADING = 0)] = 'LOADING'), (r[(r.SUCCESS_STILL_INDEXING = 1)] = 'SUCCESS_STILL_INDEXING'), (r[(r.SUCCESS_EMPTY = 2)] = 'SUCCESS_EMPTY'), (r[(r.SUCCESS_FULL = 3)] = 'SUCCESS_FULL'), r);
-function I(e, t, n) {
+var I = (((r = {})[(r.LOADING = 0)] = 'LOADING'), (r[(r.SUCCESS_STILL_INDEXING = 1)] = 'SUCCESS_STILL_INDEXING'), (r[(r.SUCCESS_EMPTY = 2)] = 'SUCCESS_EMPTY'), (r[(r.SUCCESS_FULL = 3)] = 'SUCCESS_FULL'), r);
+function O(e, t, n) {
     return t ? 0 : e ? 1 : n <= 0 ? 2 : 3;
 }

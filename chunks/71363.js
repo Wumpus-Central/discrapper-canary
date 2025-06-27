@@ -25,8 +25,8 @@ let v = (e) => {
     let t,
         n,
         { isAllPerksVisible: s, setIsAllPerksVisible: v, previousComponent: T } = e,
-        N = r.useRef(null),
         I = r.useRef(null),
+        N = r.useRef(null),
         y = Object.entries((0, _.Z)()).reduce((e, t) => {
             let [n, i] = t;
             return !1 !== i.canReveal && 'upcomingDropUntimed' !== i.name && (e[n] = i), e;
@@ -44,7 +44,7 @@ let v = (e) => {
                 [O.open]: s,
                 [O.openCloseReduceMotion]: D
             }),
-            ref: N,
+            ref: I,
             children: (0, i.jsx)('div', {
                 className: O.container,
                 children: (0, i.jsxs)(m.Gt, {
@@ -122,12 +122,12 @@ let v = (e) => {
                         }),
                         (0, i.jsx)('div', { className: O.footerSpacing }),
                         (0, i.jsx)(o.$, {
-                            innerRef: I,
+                            innerRef: N,
                             onChange: (e) => {
                                 e && !P && (p.default.track(j.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: A }), R(!0));
                             },
                             children: (0, i.jsx)('div', {
-                                ref: I,
+                                ref: N,
                                 className: O.bottomOfPageVisibilitySensor
                             })
                         }),

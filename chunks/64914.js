@@ -94,8 +94,8 @@ function j() {
             });
         }, []),
         {
-            warpEnabled: N,
-            warpConnecting: I,
+            warpEnabled: I,
+            warpConnecting: N,
             warpLog: y
         } = (0, s.cj)([d.Z], () => ({
             warpEnabled: d.Z.enabled,
@@ -158,12 +158,12 @@ function j() {
                 setting: b.s6.SETTINGS_ADVANCED_CF_WARP,
                 children: [
                     (0, i.jsx)(l.j7V, {
-                        value: N,
+                        value: I,
                         note: 'Enable WARP Proxy Connection',
                         onChange: A,
                         children: 'Enable WARP'
                     }),
-                    I ? (0, i.jsx)(l.$jN, {}) : null,
+                    N ? (0, i.jsx)(l.$jN, {}) : null,
                     (0, i.jsx)(l.Text, {
                         variant: 'code',
                         children: y.map((e, t) => (0, i.jsx)('div', { children: JSON.stringify(e) }, t))

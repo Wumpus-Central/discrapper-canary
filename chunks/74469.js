@@ -60,14 +60,14 @@ let x = (0, o.hQ)(),
                 },
                 [C]
             ),
-            N = r.useCallback(
+            I = r.useCallback(
                 (e) => {
                     let t = e[0];
                     return null == t ? null : (0, i.jsx)(i.Fragment, { children: T(t) });
                 },
                 [T]
             ),
-            I = r.useCallback(
+            N = r.useCallback(
                 (e) => {
                     j(h.L.TAKE_ACTION), null == o || o(e);
                 },
@@ -102,8 +102,8 @@ let x = (0, o.hQ)(),
                         optionClassName: _.selectPopout,
                         isSelected: y,
                         options: v,
-                        select: I,
-                        renderOptionValue: N,
+                        select: N,
+                        renderOptionValue: I,
                         renderOptionLabel: T,
                         serialize: A,
                         clear: P,

@@ -10,8 +10,8 @@ var a = n(25209),
     u = n(314897),
     m = n(592125),
     p = n(430824),
-    x = n(594174),
-    h = n(5192),
+    h = n(594174),
+    x = n(5192),
     b = n(709054),
     f = n(981631),
     v = n(388032);
@@ -41,10 +41,10 @@ let N = {
         let g = (function (e) {
                 var t, n, a;
                 let [r] = null != (t = e.mentions) ? t : [];
-                return null == r ? null : 'object' == typeof r ? (null != (n = x.default.getUser(r.id)) ? n : null) : 'string' == typeof r && null != (a = x.default.getUser(r)) ? a : null;
+                return null == r ? null : 'object' == typeof r ? (null != (n = h.default.getUser(r.id)) ? n : null) : 'string' == typeof r && null != (a = h.default.getUser(r)) ? a : null;
             })(e),
             j = e.channel_id,
-            N = h.ZP.getName(null, j, e.author);
+            N = x.ZP.getName(null, j, e.author);
         switch (e.type) {
             case f.uaV.RECIPIENT_ADD:
                 if (null == g) return;
@@ -52,7 +52,7 @@ let N = {
                     v.intl.formatToParts(v.t['7/Xl0d'], {
                         username: N,
                         usernameOnClick: f.dG4,
-                        otherUsername: h.ZP.getName(null, j, g),
+                        otherUsername: x.ZP.getName(null, j, g),
                         otherUsernameOnClick: f.dG4
                     })
                 );
@@ -70,7 +70,7 @@ let N = {
                     v.intl.formatToParts(v.t.QtZ0RE, {
                         username: N,
                         usernameOnClick: f.dG4,
-                        otherUsername: h.ZP.getName(null, j, g),
+                        otherUsername: x.ZP.getName(null, j, g),
                         otherUsernameOnClick: f.dG4
                     })
                 );

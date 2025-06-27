@@ -25,16 +25,16 @@ var i = n(255367),
 function T() {
     let { enabled: e } = (0, p.WX)({ location: 'revenue_storybook' });
     return (0, i.jsxs)('div', {
-        children: [e && (0, i.jsx)(I, {}), (0, i.jsx)(N, {}), (0, i.jsx)(y, {})]
+        children: [e && (0, i.jsx)(N, {}), (0, i.jsx)(I, {}), (0, i.jsx)(y, {})]
     });
 }
-function N() {
+function I() {
     let { openIntroToOrbsClaimedCoachmark: e } = (0, m.l)({ location: 'VirtualCurrencyComponents' }),
         [t, n] = r.useState(150),
         [g, p] = r.useState(150),
         [x, E] = r.useState(500),
         [j, T] = r.useState(h.b.DEFAULT),
-        N = () => {
+        I = () => {
             switch (j) {
                 case h.b.DEFAULT:
                     T(h.b.HIGHLIGHTED);
@@ -46,7 +46,7 @@ function N() {
                     T(h.b.DEFAULT);
             }
         },
-        { analyticsLocations: I } = (0, c.ZP)(o.Z.PAYMENT_FLOW_TEST_PAGE);
+        { analyticsLocations: N } = (0, c.ZP)(o.Z.PAYMENT_FLOW_TEST_PAGE);
     return (0, i.jsxs)(C.$0, {
         children: [
             (0, i.jsx)(l.X6q, {
@@ -86,7 +86,7 @@ function N() {
                                 (0, u.s1)().location.pathname.includes(O.Z5c.COLLECTIBLES_SHOP) ||
                                     (0, d.mK)({
                                         openInLayer: !1,
-                                        analyticsLocations: I,
+                                        analyticsLocations: N,
                                         analyticsSource: o.Z.REVENUE_STORYBOOK_TEST_PAGE
                                     }),
                                 e({
@@ -147,7 +147,7 @@ function N() {
                         children: (0, i.jsx)(_.A4, {
                             balance: g,
                             balanceWidgetMode: j,
-                            onClick: () => N()
+                            onClick: () => I()
                         })
                     }),
                     (0, i.jsx)(l.Text, {
@@ -174,7 +174,7 @@ function N() {
                         children: (0, i.jsx)(_.A4, {
                             balance: g,
                             balanceWidgetMode: j,
-                            onClick: () => N()
+                            onClick: () => I()
                         })
                     })
                 ]
@@ -190,7 +190,7 @@ function N() {
         ]
     });
 }
-function I() {
+function N() {
     let [e, t] = r.useState('1144308439720394944');
     return (0, i.jsxs)(C.$0, {
         children: [

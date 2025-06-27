@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(642613);
+n.d(t, { Z: () => y }), n(642613);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -8,17 +8,18 @@ var r = n(255367),
     c = n(893966),
     u = n(472596),
     d = n(285173),
-    p = n(430824),
-    h = n(496675),
-    f = n(776767),
-    m = n(981631),
-    g = n(388032),
-    b = n(12740);
-function _(e) {
+    p = n(485386),
+    h = n(430824),
+    f = n(496675),
+    m = n(776767),
+    g = n(981631),
+    b = n(388032),
+    _ = n(12740);
+function y(e) {
     let { member: t } = e,
-        n = (0, a.e7)([p.Z], () => p.Z.getGuild(t.guildId)),
+        n = (0, a.e7)([h.Z], () => h.Z.getGuild(t.guildId)),
         l = (0, a.e7)([p.Z], () => p.Z.getRoles(t.guildId)),
-        _ = i.useMemo(
+        y = i.useMemo(
             () =>
                 null == n
                     ? []
@@ -33,66 +34,66 @@ function _(e) {
                             .map((e) => e.id),
             [t.roles, t.highestRoleId, n, l]
         ),
-        y = (0, a.e7)([c.Z], () => c.Z.getEnhancedMember(t.guildId, t.userId), [t.guildId, t.userId]),
-        C = (0, u.zq)(y),
-        x = (0, u.vN)(t),
-        v = (0, a.e7)([h.Z], () => h.Z.can(m.Plq.MANAGE_ROLES, n), [n]);
+        C = (0, a.e7)([c.Z], () => c.Z.getEnhancedMember(t.guildId, t.userId), [t.guildId, t.userId]),
+        x = (0, u.zq)(C),
+        v = (0, u.vN)(t),
+        j = (0, a.e7)([f.Z], () => f.Z.can(g.Plq.MANAGE_ROLES, n), [n]);
     return null == n
         ? null
         : (0, r.jsx)(s.xJW, {
-              title: g.intl.string(g.t.LPJmLy),
-              titleClassName: b.infoTitle,
-              children: (0, r.jsx)(f.WM, {
-                  children: (0, r.jsx)(f._2, {
+              title: b.intl.string(b.t.LPJmLy),
+              titleClassName: _.infoTitle,
+              children: (0, r.jsx)(m.WM, {
+                  children: (0, r.jsx)(m._2, {
                       description:
-                          t.roles.length > 0 || v
+                          t.roles.length > 0 || j
                               ? (0, r.jsxs)('div', {
-                                    className: b.roleContainer,
+                                    className: _.roleContainer,
                                     children: [
                                         (0, r.jsx)(s.ua7, {
-                                            'aria-label': g.intl.string(g.t['0g8Xd3']),
+                                            'aria-label': b.intl.string(b.t['0g8Xd3']),
                                             allowOverflow: !0,
-                                            text: g.intl.string(g.t['93S+lJ']),
+                                            text: b.intl.string(b.t['93S+lJ']),
                                             children: (e) => {
                                                 let { onMouseEnter: n, onMouseLeave: i } = e;
                                                 return (0, r.jsx)(s.P3F, {
                                                     onMouseEnter: n,
                                                     onMouseLeave: i,
                                                     children: (0, r.jsx)(d.Z, {
-                                                        className: o()(b.roleTooltipItem, b.highestRole),
-                                                        role: C,
+                                                        className: o()(_.roleTooltipItem, _.highestRole),
+                                                        role: x,
                                                         guildId: t.guildId
                                                     })
                                                 });
                                             }
                                         }),
-                                        _.map((e) =>
+                                        y.map((e) =>
                                             (0, r.jsx)(
                                                 d.Z,
                                                 {
-                                                    className: b.roleTooltipItem,
+                                                    className: _.roleTooltipItem,
                                                     role: l[e],
                                                     guildId: t.guildId
                                                 },
                                                 e
                                             )
                                         ),
-                                        v &&
+                                        j &&
                                             (0, r.jsx)(s.ua7, {
-                                                'aria-label': g.intl.string(g.t.ljnBlp),
+                                                'aria-label': b.intl.string(b.t.ljnBlp),
                                                 allowOverflow: !0,
-                                                text: g.intl.string(g.t.ljnBlp),
+                                                text: b.intl.string(b.t.ljnBlp),
                                                 children: (e) => {
                                                     let { onMouseEnter: t, onMouseLeave: n } = e;
                                                     return (0, r.jsx)(s.P3F, {
-                                                        className: b.addRoleContainer,
-                                                        onClick: x,
+                                                        className: _.addRoleContainer,
+                                                        onClick: v,
                                                         onMouseEnter: t,
                                                         onMouseLeave: n,
                                                         children: (0, r.jsx)(s.oFk, {
                                                             size: 'custom',
                                                             color: 'currentColor',
-                                                            className: b.addRoleIcon,
+                                                            className: _.addRoleIcon,
                                                             width: 20,
                                                             height: 20
                                                         })
@@ -102,10 +103,10 @@ function _(e) {
                                     ]
                                 })
                               : (0, r.jsx)('div', {
-                                    className: b.noRoles,
+                                    className: _.noRoles,
                                     children: (0, r.jsx)(s.Text, {
                                         variant: 'text-sm/normal',
-                                        children: g.intl.string(g.t.nZfHsb)
+                                        children: b.intl.string(b.t.nZfHsb)
                                     })
                                 })
                   })

@@ -23,8 +23,8 @@ var i = n(255367),
     S = n(639119),
     v = n(8647),
     T = n(784238),
-    N = n(605289),
-    I = n(218390),
+    I = n(605289),
+    N = n(218390),
     y = n(823188),
     A = n(135785),
     P = n(498765),
@@ -128,7 +128,7 @@ let G = (e) => {
                 }),
                 (0, i.jsx)(G, { inOfferExperience: ea }),
                 er
-                    ? (0, i.jsx)(N.Z, {
+                    ? (0, i.jsx)(I.Z, {
                           localizedPricingPromo: ei,
                           smallGap: !0
                       })
@@ -157,7 +157,7 @@ let G = (e) => {
                 }),
                 eg,
                 null != ed &&
-                    (0, i.jsx)(I.C, {
+                    (0, i.jsx)(N.C, {
                         className: U.giftPromoCard,
                         config: ed
                     }),

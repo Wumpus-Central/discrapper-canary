@@ -233,7 +233,7 @@ class L extends _.Z {
                                             .concat(null != (n = null == (t = e.videoSsrcs) ? void 0 : t.join(',')) ? n : 0)
                                     );
                                 }),
-                                t.mergeUsers(O),
+                                this.mergeUsers(O),
                                 this.emit(m.Sh.RemoteStreamsReady, O.length),
                                 Object.keys(this.localSpeakingFlags)))
                                     e !== this.userId && this.setSpeakingFlags(e, this.localSpeakingFlags[e]);
@@ -313,7 +313,7 @@ class L extends _.Z {
                         .concat(t, ' and video SSRCs: ')
                         .concat(null != (s = null == n ? void 0 : n.join(',')) ? s : 0)
                 ),
-                    this.conn.mergeUsers([i]);
+                    this.mergeUsers([i]);
             }
             let a = this.localPans[e];
             null != a && this.setLocalPan(e, a.left, a.right);
@@ -480,7 +480,7 @@ class L extends _.Z {
                 this.pttReleaseDelay = t.pttReleaseDelay;
                 break;
             case v.pM.VOICE_ACTIVITY:
-                (this.vadThreshold = t.vadThreshold), (this.vadAutoThreshold = t.vadAutoThreshold), (this.vadUseKrisp = t.vadUseKrisp), (this.vadLeading = t.vadLeading), (this.vadTrailing = t.vadTrailing);
+                (this.vadThreshold = t.vadThreshold), (this.vadAutoThreshold = t.vadAutoThreshold), (this.vadUseKrisp = t.vadUseKrisp), (this.vadLeading = t.vadLeading), (this.vadTrailing = t.vadTrailing), (this.vadKrispActivationThreshold = t.vadKrispActivationThreshold);
                 break;
             default:
                 throw Error('Unknown Input Mode: '.concat(e));
@@ -717,7 +717,8 @@ class L extends _.Z {
                     vadAutoThreshold: this.vadAutoThreshold ? E.a.VERY_AGGRESSIVE : E.a.DISABLED,
                     vadUseKrisp: this.vadUseKrisp,
                     vadLeading: this.vadLeading,
-                    vadTrailing: this.vadTrailing
+                    vadTrailing: this.vadTrailing,
+                    vadKrispActivationThreshold: this.vadKrispActivationThreshold
                 };
             case v.pM.PUSH_TO_TALK:
                 return { pttReleaseDelay: this.pttReleaseDelay };
@@ -881,6 +882,9 @@ class L extends _.Z {
         var t, n;
         null == (t = (n = this.conn).presentDesktopSourcePicker) || t.call(n, e);
     }
+    mergeUsers(e) {
+        this.conn.mergeUsers(e), this.emit(m.Sh.UsersMerged, e);
+    }
     constructor(e, t, n) {
         super(e, t),
             I(this, 'mediaEngineConnectionId', 'Native-'.concat(P++)),
@@ -899,6 +903,7 @@ class L extends _.Z {
             I(this, 'inputMode', v.pM.VOICE_ACTIVITY),
             I(this, 'vadThreshold', -40),
             I(this, 'vadAutoThreshold', !0),
+            I(this, 'vadKrispActivationThreshold', 0.5),
             I(this, 'vadUseKrisp', !0),
             I(this, 'vadLeading', 5),
             I(this, 'vadTrailing', 25),

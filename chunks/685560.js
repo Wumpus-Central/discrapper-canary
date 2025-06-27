@@ -10,8 +10,8 @@ var a = n(255367),
     u = n(621628),
     m = n(667815),
     p = n(645041),
-    x = n(713081),
-    h = n(675478),
+    h = n(713081),
+    x = n(675478),
     b = n(581883),
     f = n(899667),
     v = n(430824),
@@ -50,7 +50,7 @@ async function E(e, t, n) {
         )
     ),
         (0, d.C0)(e),
-        (0, x.Fm)(e, !0);
+        (0, h.Fm)(e, !0);
 }
 async function T(e) {
     await s.tn.post({
@@ -99,7 +99,7 @@ function S() {
                         }),
                         (0, a.jsx)(c.zxk, {
                             onClick: () => {
-                                (0, x.Qh)();
+                                (0, h.Qh)();
                             },
                             children: 'Reset'
                         })
@@ -180,7 +180,7 @@ function S() {
                                 {
                                     className: j.formSwitch,
                                     onChange: (n) => {
-                                        n ? (0, p.Qd)(e, t, !1) : ((0, h.Z1)(o.z.GUILD_POWERUP_NOTIFICATION), (0, p.c7)(e, t));
+                                        n ? (0, p.Qd)(e, t, !1) : ((0, x.Z1)(o.z.GUILD_POWERUP_NOTIFICATION), (0, p.c7)(e, t));
                                     },
                                     value: r.includes(e),
                                     children: (0, a.jsx)(c.Text, {
@@ -206,7 +206,7 @@ function S() {
                                 {
                                     className: j.formSwitch,
                                     onChange: (n) => {
-                                        n ? (0, p.Qd)(e, t, !1) : ((0, h.Z1)(o.z.GUILD_POWERUP_NOTIFICATION), (0, p.c7)(e, t));
+                                        n ? (0, p.Qd)(e, t, !1) : ((0, x.Z1)(o.z.GUILD_POWERUP_NOTIFICATION), (0, p.c7)(e, t));
                                     },
                                     value: r.includes(e),
                                     children: (0, a.jsx)(c.Text, {

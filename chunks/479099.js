@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => S,
-    f: () => p
+    f: () => h
 }),
     n(388685);
 var r,
@@ -64,9 +64,9 @@ function g(e, t) {
 }
 var f = (((r = f || {})[(r.SMALL = 0)] = 'SMALL'), (r[(r.MEDIUM = 1)] = 'MEDIUM'), r);
 function S(e) {
-    let { tag: t, size: r = 1, disabled: i, className: f, onClick: S, onRemove: p, selected: h, ariaLabel: U } = e,
+    let { tag: t, size: r = 1, disabled: i, className: f, onClick: S, onRemove: h, selected: p, ariaLabel: U } = e,
         { name: L, emojiId: D, emojiName: C } = t,
-        M = null != p,
+        M = null != h,
         [m, v] = s.useState(!1),
         b = (0, E.e7)([A.ZP], () => (null != D ? A.ZP.getUsableCustomEmojiById(D) : null)),
         P = M || null != S,
@@ -120,13 +120,13 @@ function S(e) {
                     [N.disabled]: i,
                     [N.clickable]: P,
                     [N.small]: j,
-                    [N.selected]: h,
+                    [N.selected]: p,
                     [N[t.color]]: null != t.color && !P
                 },
                 f
             ),
             onClick: (e) => {
-                null == S || S(e), null == p || p(t), G || null == y.current || y.current.blur();
+                null == S || S(e), null == h || h(t), G || null == y.current || y.current.blur();
             },
             onContextMenu: (e) => F(e),
             onMouseEnter: () => M && v(!0),
@@ -143,7 +143,7 @@ function S(e) {
                           focusProps: { ringTarget: y },
                           'aria-label': null != U ? U : O.intl.formatToPlainString(O.t.iyRTLi, { tagName: L }),
                           role: 'button',
-                          'aria-pressed': h
+                          'aria-pressed': p
                       }),
                       B
                   ),
@@ -152,7 +152,7 @@ function S(e) {
           )
         : (0, l.jsx)('div', g(R({}, B), { children: z }));
 }
-function p(e) {
+function h(e) {
     let { tags: t, count: n, size: r = 1 } = e,
         s = 0 === r;
     return (0, l.jsx)(c.ua7, {

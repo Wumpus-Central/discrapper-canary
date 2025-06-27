@@ -11,7 +11,7 @@ let d = (e) => {
     var t,
         n,
         { width: a = 24, height: l = 24, color: c = 'currentColor', direction: d, foreground: u, className: m, title: p } = e,
-        x = (function (e, t) {
+        h = (function (e, t) {
             if (null == e) return {};
             var n,
                 a,
@@ -56,7 +56,7 @@ let d = (e) => {
                     });
             }
             return e;
-        })({}, (0, s.Z)(x))),
+        })({}, (0, s.Z)(h))),
         (n = n =
             {
                 width: a,

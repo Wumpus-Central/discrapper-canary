@@ -10,8 +10,8 @@ var a = n(255367),
     u = n(481060),
     m = n(411149),
     p = n(151480),
-    x = n(461762),
-    h = n(680783),
+    h = n(461762),
+    x = n(680783),
     b = n(605236),
     f = n(675478),
     v = n(944486),
@@ -69,9 +69,9 @@ function C() {
 function N() {
     var e, t;
     let n = (0, c.e7)([v.Z], () => v.Z.getChannelId()),
-        l = (0, h.Z)(n),
+        l = (0, x.Z)(n),
         s = null == l ? void 0 : l.wallpaperId,
-        d = (0, x.Z)(s),
+        d = (0, h.Z)(s),
         b = r.useCallback(
             (e) => {
                 null != s && (0, p.i)(s, { opacity: e });

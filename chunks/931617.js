@@ -1,4 +1,4 @@
-t.d(n, { Z: () => j });
+t.d(n, { Z: () => P });
 var l = t(255367);
 t(73800);
 var i = t(866442),
@@ -10,114 +10,115 @@ var i = t(866442),
     c = t(434404),
     d = t(402235),
     g = t(271383),
-    Z = t(430824),
-    b = t(496675),
-    f = t(823379),
-    p = t(981631),
-    O = t(388032),
-    m = t(895261);
-function h(e, n, t) {
+    Z = t(485386),
+    b = t(430824),
+    f = t(496675),
+    p = t(823379),
+    O = t(981631),
+    m = t(388032),
+    h = t(895261);
+function j(e, n, t) {
     var r, o;
     return (0, l.jsxs)('div', {
-        className: m.roleRow,
+        className: h.roleRow,
         children: [
             'dot' === n
                 ? (0, l.jsx)(a.FhE, {
-                      className: m.roleDot,
-                      color: null != (r = e.colorString) ? r : (0, i.Rf)(p.p6O),
+                      className: h.roleDot,
+                      color: null != (r = e.colorString) ? r : (0, i.Rf)(O.p6O),
                       colors: t ? e.colorStrings : null,
                       background: !1,
                       tooltip: !1
                   })
                 : (0, l.jsx)(a.xko, {
-                      className: m.roleDot,
-                      color: null != (o = e.colorString) ? o : (0, i.Rf)(p.p6O),
+                      className: h.roleDot,
+                      color: null != (o = e.colorString) ? o : (0, i.Rf)(O.p6O),
                       colors: t ? e.colorStrings : null
                   }),
             (0, l.jsx)('div', { children: e.name })
         ]
     });
 }
-function j(e, n) {
+function P(e, n) {
     let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-        m = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-        j = (0, r.e7)([Z.Z], () => Z.Z.getGuild(n)),
-        P = (0, r.e7)([Z.Z], () => Z.Z.getRoles(n)),
-        x = (0, r.e7)([o.Z], () => o.Z.roleStyle),
-        v = (0, s.sE)(n, {
+        h = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+        P = (0, r.e7)([b.Z], () => b.Z.getGuild(n)),
+        x = (0, r.e7)([Z.Z], () => Z.Z.getRoles(n)),
+        v = (0, r.e7)([o.Z], () => o.Z.roleStyle),
+        _ = (0, s.sE)(n, {
             location: i,
             targetUserId: e
         }),
         {
-            userRoles: _,
-            isGuildMember: y,
-            canManageRoles: N
+            userRoles: y,
+            isGuildMember: N,
+            canManageRoles: E
         } = (0, r.cj)(
-            [g.ZP, b.Z],
+            [g.ZP, f.Z],
             () => {
                 let t = g.ZP.getMember(n, e);
                 return {
                     userRoles: null != t ? t.roles : [],
                     isGuildMember: null != t,
-                    canManageRoles: null != j && b.Z.can(p.Plq.MANAGE_ROLES, j)
+                    canManageRoles: null != P && f.Z.can(O.Plq.MANAGE_ROLES, P)
                 };
             },
-            [e, n, j]
+            [e, n, P]
         ),
-        E = (0, d.ZP)(n, e);
-    if (__OVERLAY__ || null == _ || null == j || !y) return null;
-    let C = b.Z.getHighestRole(j),
-        I = Object.values(P).filter((e) => !(0, u.pM)(j.id, e.id)),
-        S =
-            N && !m
-                ? I.map((t) => {
-                      let i = t.managed || !b.Z.isRoleHigher(j, C, t),
-                          r = -1 !== _.indexOf(t.id);
+        C = (0, d.ZP)(n, e);
+    if (__OVERLAY__ || null == y || null == P || !N) return null;
+    let I = f.Z.getHighestRole(P),
+        S = Object.values(x).filter((e) => !(0, u.pM)(P.id, e.id)),
+        T =
+            E && !h
+                ? S.map((t) => {
+                      let i = t.managed || !f.Z.isRoleHigher(P, I, t),
+                          r = -1 !== y.indexOf(t.id);
                       return i && !r
                           ? null
                           : (0, l.jsx)(
                                 a.S89,
                                 {
                                     id: t.id,
-                                    label: () => h(t, x, E),
+                                    label: () => j(t, v, C),
                                     disabled: i,
                                     action: () => {
-                                        _.includes(t.id)
+                                        y.includes(t.id)
                                             ? (c.Z.updateMemberRoles(
                                                   n,
                                                   e,
-                                                  _.filter((e) => e !== t.id),
+                                                  y.filter((e) => e !== t.id),
                                                   [],
                                                   [t.id]
                                               ),
-                                              v(s.jQ.REMOVE_ROLE))
-                                            : (c.Z.updateMemberRoles(n, e, _.concat([t.id]), [t.id], []), v(s.jQ.ADD_ROLE));
+                                              _(s.jQ.REMOVE_ROLE))
+                                            : (c.Z.updateMemberRoles(n, e, y.concat([t.id]), [t.id], []), _(s.jQ.ADD_ROLE));
                                     },
                                     checked: r
                                 },
                                 t.id
                             );
                   })
-                : I.filter((e) => -1 !== _.indexOf(e.id)).map((e) =>
-                      (0, u.pM)(j.id, e.id)
+                : S.filter((e) => -1 !== y.indexOf(e.id)).map((e) =>
+                      (0, u.pM)(P.id, e.id)
                           ? null
                           : (0, l.jsx)(
                                 a.sNh,
                                 {
                                     id: e.id,
-                                    label: () => h(e, x, E)
+                                    label: () => j(e, v, C)
                                 },
                                 e.id
                             )
                   );
-    return 0 === S.filter(f.lm).length
+    return 0 === T.filter(p.lm).length
         ? null
         : t
-          ? S
+          ? T
           : (0, l.jsx)(a.sNh, {
                 id: 'roles',
-                label: O.intl.formatToPlainString(O.t.PCs0oq, { numRoles: S.length }),
-                children: S
+                label: m.intl.formatToPlainString(m.t.PCs0oq, { numRoles: T.length }),
+                children: T
             });
 }

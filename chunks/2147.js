@@ -29,8 +29,8 @@ var i = n(255367),
     S = n(893718),
     E = n(600164),
     O = n(313201),
-    w = n(318766),
-    Z = n(907040),
+    Z = n(318766),
+    w = n(907040),
     T = n(906411),
     R = n(633302),
     _ = n(109434),
@@ -179,13 +179,13 @@ let eu = (0, O.hQ)(),
             }
         };
     })(j.Z);
-function ew(e) {
+function eZ(e) {
     let { onEmojiPicked: t, channel: n, guildId: r } = e,
         s = l.useRef(null),
         a = l.useCallback(
             (e) => {
                 let { closePopout: l } = e;
-                return (0, i.jsx)(Z.Z, {
+                return (0, i.jsx)(w.Z, {
                     channel: n,
                     guildId: r,
                     pickerIntention: en.Hz.CHANNEL_NAME,
@@ -210,7 +210,7 @@ function ew(e) {
         children: (e, t) => {
             let { isShown: n } = t;
             return (0, i.jsx)(
-                w.Z,
+                Z.Z,
                 ed(ec({}, e), {
                     ref: s,
                     active: n,
@@ -229,7 +229,7 @@ function ew(e) {
         }
     });
 }
-class eZ extends l.PureComponent {
+class ew extends l.PureComponent {
     componentDidMount() {
         null == this.props.regions && null != this.props.guild && p.Z.fetchRegions(this.props.guild.id);
     }
@@ -257,8 +257,8 @@ class eZ extends l.PureComponent {
         var n, l, r, d, h, m;
         let p,
             j,
-            { canManageChannels: x, canSendMessages: b, isThreadModerator: v, canManageThread: y, guild: N, isForumPost: E, isOwner: O, showAdvancedSlowModeSetting: w } = this.props,
-            Z = B.Ec.has(e.type),
+            { canManageChannels: x, canSendMessages: b, isThreadModerator: v, canManageThread: y, guild: N, isForumPost: E, isOwner: O, showAdvancedSlowModeSetting: Z } = this.props,
+            w = B.Ec.has(e.type),
             T = e.isForumLikeChannel(),
             _ = T && (null == (n = e.availableTags) ? void 0 : n.every((e) => e.moderated)),
             L = (null == (l = F.default.getCurrentUser()) ? void 0 : l.isStaff()) === !0,
@@ -516,7 +516,7 @@ class eZ extends l.PureComponent {
                       ]
                   })
                 : null,
-            z = Z ? v : x,
+            z = w ? v : x,
             X = B.X_.has(e.type)
                 ? (0, i.jsxs)('div', {
                       children: [
@@ -533,7 +533,7 @@ class eZ extends l.PureComponent {
                                             children: er.intl.string(er.t.O1c02t)
                                         })
                                       : null,
-                                  !0 === w
+                                  !0 === Z
                                       ? (0, i.jsx)($.Z, {
                                             channel: e,
                                             onChange: this.handleChangeSlowmode
@@ -553,7 +553,7 @@ class eZ extends l.PureComponent {
                                   (0, i.jsx)(g.R94, {
                                       id: ep,
                                       type: g.R94.Types.DESCRIPTION,
-                                      children: T ? er.intl.string(er.t['a+1pdH']) : Z ? er.intl.string(er.t.OMmNCg) : er.intl.string(er.t['HEA/DQ'])
+                                      children: T ? er.intl.string(er.t['a+1pdH']) : w ? er.intl.string(er.t.OMmNCg) : er.intl.string(er.t['HEA/DQ'])
                                   }),
                                   T
                                       ? (0, i.jsxs)(i.Fragment, {
@@ -588,7 +588,7 @@ class eZ extends l.PureComponent {
                   })
                 : null,
             J =
-                Z && null != e.threadMetadata
+                w && null != e.threadMetadata
                     ? (0, i.jsxs)('div', {
                           children: [
                               (0, i.jsx)(g.xJW, {
@@ -711,7 +711,7 @@ class eZ extends l.PureComponent {
                   })
                 : null;
         return (
-            e.type === ee.d4z.GUILD_CATEGORY ? ((j = er.intl.string(er.t.OCAkGB)), (p = 'category-name')) : e.isForumPost() ? ((j = er.intl.string(er.t.uyVrTE)), (p = 'post-title')) : Z ? ((j = er.intl.string(er.t.j3XWjI)), (p = 'thread-name')) : ((j = er.intl.string(er.t.PVbHDg)), (p = 'channel-name')),
+            e.type === ee.d4z.GUILD_CATEGORY ? ((j = er.intl.string(er.t.OCAkGB)), (p = 'category-name')) : e.isForumPost() ? ((j = er.intl.string(er.t.uyVrTE)), (p = 'post-title')) : w ? ((j = er.intl.string(er.t.j3XWjI)), (p = 'thread-name')) : ((j = er.intl.string(er.t.PVbHDg)), (p = 'channel-name')),
             (0, i.jsxs)('div', {
                 children: [
                     (0, i.jsx)(g.xJW, {
@@ -734,7 +734,7 @@ class eZ extends l.PureComponent {
                                           inputClassName: es.nameInputInnerWithEmojiPicker,
                                           focusProps: { offset: { right: -30 } }
                                       }),
-                                      (0, i.jsx)(ew, {
+                                      (0, i.jsx)(eZ, {
                                           onEmojiPicked: this.insertEmojiAtPosition,
                                           channel: e,
                                           guildId: null == e ? void 0 : e.guild_id
@@ -992,7 +992,7 @@ class eZ extends l.PureComponent {
             eo(this, 'renderEmojiPicker', (e) => {
                 let { closePopout: t } = e,
                     { channel: n } = this.props;
-                return (0, i.jsx)(Z.Z, {
+                return (0, i.jsx)(w.Z, {
                     guildId: null == n ? void 0 : n.guild_id,
                     closePopout: t,
                     onSelectEmoji: (e) => {
@@ -1178,7 +1178,7 @@ function eT() {
             },
             [j, f]
         );
-    return (0, i.jsx)(eZ, {
+    return (0, i.jsx)(ew, {
         errors: e,
         channel: t,
         channelName: m,

@@ -23,8 +23,8 @@ var i = n(255367),
     S = n(220654),
     v = n(91802),
     T = n(8647),
-    N = n(568126),
-    I = n(744129),
+    I = n(568126),
+    N = n(744129),
     y = n(823188),
     A = n(611116),
     P = n(349803),
@@ -122,7 +122,7 @@ let F = () => {
             }),
             (0, i.jsxs)('div', {
                 className: B.promoBannerContainer,
-                children: [(0, i.jsx)(T.Z, { variant: T.C.APPLICATION_NITRO_HOME }), null != ec && (0, i.jsx)(N.Z, { localizedPricingPromo: ec })]
+                children: [(0, i.jsx)(T.Z, { variant: T.C.APPLICATION_NITRO_HOME }), null != ec && (0, i.jsx)(I.Z, { localizedPricingPromo: ec })]
             }),
             (0, i.jsx)('div', {
                 className: l()(B.whatsNewSectionBackground, B.whatsNewSectionBackgroundV2),
@@ -139,7 +139,7 @@ let F = () => {
                     threshold: 0.1,
                     active: !0,
                     children: eg
-                        ? (0, i.jsx)(I.rz, { innerRef: n })
+                        ? (0, i.jsx)(N.rz, { innerRef: n })
                         : (0, i.jsx)(y.Ub, {
                               innerRef: n,
                               hasActiveTier2PremiumPromotion: eu

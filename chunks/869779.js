@@ -23,8 +23,8 @@ var i = n(255367),
     S = n(496675),
     E = n(699516),
     O = n(594174),
-    w = n(585483),
-    Z = n(787263),
+    Z = n(585483),
+    w = n(787263),
     T = n(975316),
     R = n(428813),
     _ = n(2147),
@@ -142,8 +142,8 @@ class M extends l.PureComponent {
                           {
                               section: P.CoT.DELETE,
                               onClick() {
-                                  (0, Z.w)(t, function () {
-                                      w.S.subscribeOnce(P.CkL.LAYER_POP_COMPLETE, () => {
+                                  (0, w.w)(t, function () {
+                                      Z.S.subscribeOnce(P.CkL.LAYER_POP_COMPLETE, () => {
                                           (0, o.zz)(t.id);
                                       }),
                                           (0, c.xf)();

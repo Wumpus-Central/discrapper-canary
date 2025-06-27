@@ -24,8 +24,8 @@ var r = n(512722),
     S = n(643879),
     v = n(350327),
     T = n(621853),
-    N = n(687158),
-    I = n(25990),
+    I = n(687158),
+    N = n(25990),
     y = n(594174),
     A = n(74538),
     P = n(388032),
@@ -48,10 +48,10 @@ function D() {
             pendingLegacyUsernameDisabled: Y,
             pendingPrimaryGuildId: W,
             errors: K
-        } = (0, l.cj)([I.Z], () => {
+        } = (0, l.cj)([N.Z], () => {
             var e, t;
-            let n = I.Z.getAllPending(),
-                i = I.Z.getErrors();
+            let n = N.Z.getAllPending(),
+                i = N.Z.getErrors();
             return (
                 (e = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
@@ -111,7 +111,7 @@ function D() {
             location: ee + ' auto off',
             autoTrackExposure: !1
         });
-    let et = (0, N.ZP)(L.id),
+    let et = (0, I.ZP)(L.id),
         en = null == et ? void 0 : et.getLegacyUsername(),
         ei = (null != (n = null == (e = K.global_name) ? void 0 : e.length) ? n : 0) > 0 ? K.global_name : null != (r = null == X ? void 0 : X.nick) ? r : [],
         er = (null != (D = null == (t = K.bio) ? void 0 : t.length) ? D : 0) > 0 ? K.bio : null != (Z = null == X ? void 0 : X.bio) ? Z : [],

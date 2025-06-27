@@ -14,8 +14,8 @@ var a = n(255367),
     u = n(246992),
     m = n(232867),
     p = n(981631),
-    x = n(123393),
-    h = n(616257),
+    h = n(123393),
+    x = n(616257),
     b = n(173166);
 let f = {
         [p.kNB.QUEST_REWARD]: 'Quest Reward',
@@ -29,7 +29,7 @@ let f = {
         let { entitlement: n, active: r, onDelete: l } = e,
             s = (e) => (null != e ? (0, d.vc)(e, 'LLL') : '---');
         return (0, a.jsxs)('div', {
-            className: i()(x.card, r ? b.gradientWrapperTier2 : ''),
+            className: i()(h.card, r ? b.gradientWrapperTier2 : ''),
             children: [
                 (0, a.jsxs)(o.Text, {
                     variant: 'text-md/normal',
@@ -67,7 +67,7 @@ let f = {
                 r &&
                     null != l &&
                     (0, a.jsx)(o.zxk, {
-                        className: x.deleteEntitlementButton,
+                        className: h.deleteEntitlementButton,
                         size: o.zxk.Sizes.TINY,
                         color: o.zxk.Colors.RED,
                         look: o.zxk.Looks.OUTLINED,
@@ -107,7 +107,7 @@ function g() {
             f(S(E)), j(P(E));
         }, [E]),
         (0, a.jsx)(o.zJl, {
-            className: h.panel,
+            className: x.panel,
             children: (0, a.jsxs)('div', {
                 className: b.panelInner,
                 children: [
@@ -121,7 +121,7 @@ function g() {
                             }),
                             (0, a.jsxs)(o.P3F, {
                                 onClick: () => t(!e),
-                                className: x.clickableGroup,
+                                className: h.clickableGroup,
                                 children: [
                                     (0, a.jsx)('div', {
                                         children: (0, a.jsx)(o.Text, {
@@ -155,7 +155,7 @@ function g() {
                         }),
                     (0, a.jsxs)('section', {
                         style: { marginBottom: '8px' },
-                        className: i()([x.section, b.buttons]),
+                        className: i()([h.section, b.buttons]),
                         children: [
                             (0, a.jsx)(o.Text, {
                                 variant: 'text-md/normal',
@@ -176,7 +176,7 @@ function g() {
                         ]
                     }),
                     (0, a.jsxs)('section', {
-                        className: x.section,
+                        className: h.section,
                         children: [
                             (0, a.jsxs)('div', {
                                 style: { flexWrap: 'wrap' },
@@ -188,7 +188,7 @@ function g() {
                                         children: 'Entitlements'
                                     }),
                                     (0, a.jsxs)('div', {
-                                        className: x.buttonGroup,
+                                        className: h.buttonGroup,
                                         children: [
                                             (0, a.jsx)(o.zxk, {
                                                 disabled: T,

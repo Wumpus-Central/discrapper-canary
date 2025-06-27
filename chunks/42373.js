@@ -15,8 +15,8 @@ var i = n(255367),
     f = n(869783),
     b = n(888723);
 let _ = (e) => {
-    let { name: t, title: n, description: s, descriptionCta: _, previewImage: x, videoUrl: E, shouldLoadVideo: j, index: C, customVideoStyle: O, isReducedMotion: S, onClick: v, badgeText: T, size: N } = e,
-        I = (0, g.rO)(),
+    let { name: t, title: n, description: s, descriptionCta: _, previewImage: x, videoUrl: E, shouldLoadVideo: j, index: C, customVideoStyle: O, isReducedMotion: S, onClick: v, badgeText: T, size: I } = e,
+        N = (0, g.rO)(),
         y = r.useRef(null),
         A = r.useRef(0),
         P = (function (e) {
@@ -66,9 +66,9 @@ let _ = (e) => {
         B = () =>
             (0, i.jsxs)('div', {
                 className: l()({
-                    [b.largeTextBox]: N === p.y$.LARGE,
-                    [b.mediumTextBox]: N === p.y$.MEDIUM,
-                    [b.smallTextBox]: N === p.y$.SMALL
+                    [b.largeTextBox]: I === p.y$.LARGE,
+                    [b.mediumTextBox]: I === p.y$.MEDIUM,
+                    [b.smallTextBox]: I === p.y$.SMALL
                 }),
                 children: [
                     (0, i.jsxs)('div', {
@@ -83,12 +83,12 @@ let _ = (e) => {
                                     })
                                 }),
                             (0, i.jsx)(c.X6q, {
-                                variant: N === p.y$.SMALL ? 'heading-xl/extrabold' : 'heading-xxl/extrabold',
+                                variant: I === p.y$.SMALL ? 'heading-xl/extrabold' : 'heading-xxl/extrabold',
                                 color: 'header-primary',
                                 className: l()(b.header, {
-                                    [b.largeBoxHeader]: N === p.y$.LARGE,
-                                    [b.mediumBoxHeader]: N === p.y$.MEDIUM,
-                                    [b.smallBoxHeader]: N === p.y$.SMALL
+                                    [b.largeBoxHeader]: I === p.y$.LARGE,
+                                    [b.mediumBoxHeader]: I === p.y$.MEDIUM,
+                                    [b.smallBoxHeader]: I === p.y$.SMALL
                                 }),
                                 children: n
                             })
@@ -116,9 +116,9 @@ let _ = (e) => {
         M = () =>
             (0, i.jsx)('div', {
                 className: l()({
-                    [b.largeBoxArtContainer]: N === p.y$.LARGE,
-                    [b.mediumBoxArtContainer]: N === p.y$.MEDIUM,
-                    [b.smallBoxArtContainer]: N === p.y$.SMALL
+                    [b.largeBoxArtContainer]: I === p.y$.LARGE,
+                    [b.mediumBoxArtContainer]: I === p.y$.MEDIUM,
+                    [b.smallBoxArtContainer]: I === p.y$.SMALL
                 }),
                 children: (0, i.jsx)(
                     u.Z,
@@ -129,15 +129,15 @@ let _ = (e) => {
                         poster: x,
                         loop: !0,
                         className: l()({
-                            [b.largeBoxVideo]: N === p.y$.LARGE,
-                            [b.mediumBoxVideo]: N === p.y$.MEDIUM,
-                            [b.smallBoxVideo]: N === p.y$.SMALL,
+                            [b.largeBoxVideo]: I === p.y$.LARGE,
+                            [b.mediumBoxVideo]: I === p.y$.MEDIUM,
+                            [b.smallBoxVideo]: I === p.y$.SMALL,
                             [O]: null != O
                         }),
                         ref: y,
                         children: (0, i.jsx)('source', {
                             src: E,
-                            type: I ? f.m.MP4 : f.m.WEBM
+                            type: N ? f.m.MP4 : f.m.WEBM
                         })
                     },
                     E
@@ -145,9 +145,9 @@ let _ = (e) => {
             });
     return (0, i.jsx)('div', {
         className: l()(P, {
-            [b.largeBoxContainer]: N === p.y$.LARGE,
-            [b.mediumBoxContainer]: N === p.y$.MEDIUM,
-            [b.smallBoxContainer]: N === p.y$.SMALL
+            [b.largeBoxContainer]: I === p.y$.LARGE,
+            [b.mediumBoxContainer]: I === p.y$.MEDIUM,
+            [b.smallBoxContainer]: I === p.y$.SMALL
         }),
         onMouseEnter: k,
         onFocus: k,

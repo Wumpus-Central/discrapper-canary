@@ -24,8 +24,8 @@ var o = n(442837),
     g = n(594174),
     f = n(998502),
     S = n(981631),
-    p = n(490897),
-    h = n(915887),
+    h = n(490897),
+    p = n(915887),
     U = n(768107);
 function L(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -207,7 +207,7 @@ let P = (e) => {
                           withGuildIcon: q,
                           hasActiveEvent: X = !1
                       } = e,
-                      J = W === p.i.ALL_MESSAGES || (null != Z && Z > 0),
+                      J = W === h.i.ALL_MESSAGES || (null != Z && Z > 0),
                       Q = (0, a.JA)(s.id),
                       { role: $ } = Q,
                       ee = (function (e, t) {
@@ -311,8 +311,8 @@ let P = (e) => {
                               x,
                               null != g || null != m || null != f || K ? U.wrapper : U.notInteractive,
                               (() => {
-                                  if (_) return i()(h.selectedChannel, C.SELECTED);
-                                  if (T) return i()(h.selectedChannel, C.CONNECTED);
+                                  if (_) return i()(p.selectedChannel, C.SELECTED);
+                                  if (T) return i()(p.selectedChannel, C.CONNECTED);
                                   if (N) return C.LOCKED;
                                   if (c) return C.MUTED;
                                   if (O)

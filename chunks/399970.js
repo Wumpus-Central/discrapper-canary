@@ -28,8 +28,8 @@ function b(e) {
         [C, O] = r.useState('8080'),
         [S, v] = r.useState('localhost'),
         T = (0, u.Dt)(),
-        N = f.test(E);
-    async function I() {
+        I = f.test(E);
+    async function N() {
         o.q$();
         let e = (function (e, t, n) {
             if (null == e) return null;
@@ -48,7 +48,7 @@ function b(e) {
             ? function () {
                   o.mc(), j(''), v(null);
               }
-            : I;
+            : N;
     return (0, i.jsxs)(l.Y0X, {
         'aria-labelledby': T,
         transitionState: n,
@@ -96,7 +96,7 @@ function b(e) {
                                     children: (0, i.jsx)(l.oil, {
                                         value: E,
                                         maxLength: 19,
-                                        error: N ? null : g.intl.string(g.t.gPNgKC),
+                                        error: I ? null : g.intl.string(g.t.gPNgKC),
                                         onChange: function (e) {
                                             j(e);
                                         },
@@ -107,7 +107,7 @@ function b(e) {
                                     className: p.inputWrapper,
                                     title: g.intl.string(g.t['/GTqXF']),
                                     children: (0, i.jsx)(l.q4e, {
-                                        isDisabled: !N || '' === E,
+                                        isDisabled: !I || '' === E,
                                         value: S,
                                         options: [
                                             {
@@ -143,7 +143,7 @@ function b(e) {
                                 (0, i.jsx)(l.zxk, {
                                     submitting: x,
                                     type: 'submit',
-                                    disabled: !N || 0 === E.length || ('localhost' === S && 0 === C.length),
+                                    disabled: !I || 0 === E.length || ('localhost' === S && 0 === C.length),
                                     color: y ? l.zxk.Colors.RED : l.zxk.Colors.GREEN,
                                     children: y ? g.intl.string(g.t.d6TR3N) : g.intl.string(g.t.qwuK5O)
                                 })

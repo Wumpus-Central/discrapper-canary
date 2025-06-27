@@ -1,4 +1,4 @@
-n.d(t, { Z: () => W }), n(388685);
+n.d(t, { Z: () => K }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -19,21 +19,22 @@ var r = n(255367),
     y = n(590956),
     O = n(703656),
     v = n(271383),
-    I = n(430824),
-    T = n(572004),
-    S = n(746878),
-    A = n(285063),
-    N = n(943362),
-    C = n(551452),
-    R = n(69626),
-    P = n(142990),
-    w = n(532901),
-    D = n(311739),
-    L = n(981631),
-    x = n(176505),
-    k = n(73433),
-    M = n(283574);
-function j(e, t, n) {
+    I = n(485386),
+    T = n(430824),
+    S = n(572004),
+    A = n(746878),
+    N = n(285063),
+    C = n(943362),
+    R = n(551452),
+    P = n(69626),
+    w = n(142990),
+    D = n(532901),
+    L = n(311739),
+    x = n(981631),
+    k = n(176505),
+    M = n(73433),
+    j = n(283574);
+function U(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -46,7 +47,7 @@ function j(e, t, n) {
         e
     );
 }
-function U(e) {
+function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,12 +58,12 @@ function U(e) {
                 })
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                U(e, t, n[t]);
             });
     }
     return e;
 }
-function G(e, t) {
+function B(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -74,18 +75,18 @@ function G(e, t) {
     }
     return n;
 }
-function B(e, t) {
+function V(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : G(Object(t)).forEach(function (n) {
+            : B(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function V(e) {
+function F(e) {
     let { emojiTooltipPosition: t = 'top', enableEmojiClick: n = !0 } = e;
     return {
         react(e, i, a) {
@@ -106,7 +107,7 @@ function V(e) {
         }
     };
 }
-function F(e) {
+function Z(e) {
     let { emojiTooltipPosition: t = 'top', enableEmojiClick: n = !0 } = e;
     return {
         react(e, i, a) {
@@ -114,7 +115,7 @@ function F(e) {
                 d = _.ZP.getDisambiguatedEmojiContext(s).getById(e.emojiId);
             if (null != d) {
                 let t = d.require_colons;
-                e = B(U({}, e), { name: t ? ':'.concat(d.name, ':') : d.name });
+                e = V(G({}, e), { name: t ? ':'.concat(d.name, ':') : d.name });
             }
             return (0, r.jsx)(
                 y.Y,
@@ -131,22 +132,22 @@ function F(e) {
         }
     };
 }
-function Z(e, t, n) {
-    let r = I.Z.getGuild(e);
+function H(e, t, n) {
+    let r = T.Z.getGuild(e);
     if (null == e || null == r) return;
     let i = (t) => {
-        r.hasFeature(L.oNc.COMMUNITY) && (0, O.uL)(L.Z5c.CHANNEL(e, t));
+        r.hasFeature(x.oNc.COMMUNITY) && (0, O.uL)(x.Z5c.CHANNEL(e, t));
     };
     switch (t) {
         case 'home':
         case 'guide':
-            i(x.oC.GUILD_HOME);
+            i(k.oC.GUILD_HOME);
             break;
         case 'browse':
-            i(x.oC.CHANNEL_BROWSER);
+            i(k.oC.CHANNEL_BROWSER);
             break;
         case 'customize':
-            i(x.oC.CUSTOMIZE_COMMUNITY);
+            i(k.oC.CUSTOMIZE_COMMUNITY);
             break;
         case 'linked-roles':
             if (null != n) {
@@ -170,11 +171,11 @@ function Z(e, t, n) {
                 });
     }
 }
-function H(e) {
+function Y(e) {
     let { text: t } = e,
         [n, a] = i.useState(!1),
         o = () => {
-            (0, T.JG)(
+            (0, S.JG)(
                 t,
                 () => a(!0),
                 () => a(!1)
@@ -194,14 +195,14 @@ function H(e) {
     });
 }
 n(484944);
-let Y = {
+let W = {
     blockQuote: {
         react: (e, t, n) =>
             (0, r.jsxs)(
                 'div',
                 {
-                    className: k.blockquoteContainer,
-                    children: [(0, r.jsx)('div', { className: k.blockquoteDivider }), (0, r.jsx)('blockquote', { children: t(e.content, n) })]
+                    className: M.blockquoteContainer,
+                    children: [(0, r.jsx)('div', { className: M.blockquoteDivider }), (0, r.jsx)('blockquote', { children: t(e.content, n) })]
                 },
                 n.key
             )
@@ -225,7 +226,7 @@ let Y = {
                 'code',
                 {
                     className: 'inline',
-                    children: (0, S.S)(e, t, n)
+                    children: (0, A.S)(e, t, n)
                 },
                 n.key
             )
@@ -234,19 +235,19 @@ let Y = {
         react(e, t, i) {
             let a = () =>
                 (0, r.jsx)('code', {
-                    className: o()(M.scrollbarGhostHairline, 'hljs'),
-                    children: (0, S.S)(e, t, i)
+                    className: o()(j.scrollbarGhostHairline, 'hljs'),
+                    children: (0, A.S)(e, t, i)
                 });
             return (0, r.jsx)(
                 'pre',
                 {
                     children: (0, r.jsxs)('div', {
-                        className: k.codeContainer,
+                        className: M.codeContainer,
                         children: [
-                            T.wS
+                            S.wS
                                 ? (0, r.jsx)('div', {
-                                      className: k.codeActions,
-                                      children: (0, r.jsx)(H, { text: e.content })
+                                      className: M.codeActions,
+                                      children: (0, r.jsx)(Y, { text: e.content })
                                   })
                                 : null,
                             (0, r.jsx)(d.GI, {
@@ -260,7 +261,7 @@ let Y = {
                                         return null == n
                                             ? a()
                                             : (0, r.jsx)('code', {
-                                                  className: o()(M.scrollbarGhostHairline, 'hljs', n.language),
+                                                  className: o()(j.scrollbarGhostHairline, 'hljs', n.language),
                                                   dangerouslySetInnerHTML: { __html: n.value }
                                               });
                                     }
@@ -300,9 +301,9 @@ let Y = {
     staticRouteLink: {
         react(e, t, n) {
             let i = () => {
-                Z(e.guildId, e.id, e.itemId);
+                H(e.guildId, e.id, e.itemId);
             };
-            return (0, S.k)(e.id)
+            return (0, A.k)(e.id)
                 ? (0, r.jsxs)(
                       m.Z,
                       {
@@ -317,14 +318,14 @@ let Y = {
                 : null;
         }
     },
-    timestamp: { react: (e, t, n) => (0, r.jsx)(A.Z, { node: e }, n.key) },
+    timestamp: { react: (e, t, n) => (0, r.jsx)(N.Z, { node: e }, n.key) },
     list: {
         react: (e, t, n) => {
             let i = e.ordered ? 'ol' : 'ul',
                 a = null == e.start ? void 0 : (e.start + (e.items.length - 1)).toString().length;
             return (0, s.reactElement)(i, ''.concat(n.key), {
                 start: e.start,
-                className: n.formatInline ? k.inlineFormat : null,
+                className: n.formatInline ? M.inlineFormat : null,
                 style: { '--totalCharacters': a },
                 children: e.items.map((e, i) => {
                     let a = (0, s.reactElement)('span', ''.concat(n.key, '-').concat(i, '-innerSpan'), { children: t(e, n) });
@@ -340,18 +341,18 @@ let Y = {
             let i = (0, s.reactElement)('span', ''.concat(n.key, '-innerSpan'), { children: t(e.content, n) });
             return (0, s.reactElement)('h' + e.level, (null == n ? void 0 : n.key) != null ? ''.concat(n.key) : null, {
                 children: [i, (0, r.jsx)(l.nn4, { children: ',' }, 'screen-reader-pause')],
-                className: n.formatInline ? k.inlineFormat : null
+                className: n.formatInline ? M.inlineFormat : null
             });
         }
     },
     guild: {
         react: (e, t, n) => {
-            let i = I.Z.getGuild(e.guildId);
+            let i = T.Z.getGuild(e.guildId);
             return (0, r.jsx)(
                 h.Z,
                 {
                     guild: i,
-                    children: (0, S.S)(e, t, n)
+                    children: (0, A.S)(e, t, n)
                 },
                 n.key
             );
@@ -363,7 +364,7 @@ let Y = {
                 p.Z,
                 {
                     iconType: e.iconType,
-                    children: (0, S.S)(e, t, n)
+                    children: (0, A.S)(e, t, n)
                 },
                 n.key
             )
@@ -374,21 +375,21 @@ let Y = {
             let r = (0, s.reactElement)('span', ''.concat(n.key, '-innerSpan'), { children: t(e.content, n) });
             return (0, s.reactElement)('small', (null == n ? void 0 : n.key) != null ? ''.concat(n.key) : null, {
                 children: r,
-                className: n.formatInline ? k.inlineFormat : null
+                className: n.formatInline ? M.inlineFormat : null
             });
         }
     },
     silentPrefix: { react: (e, t, n) => ('string' == typeof e.content ? (0, r.jsx)('span', { children: e.content }, n.key) : (0, r.jsx)('span', { children: t(e.content, n) }, n.key)) }
 };
-function W(e) {
-    return B(U({}, Y), {
-        link: (0, w.Z)(e),
-        devLink: (0, P.Z)(e),
-        emoji: V(e),
-        customEmoji: F(e),
-        channelMention: (0, C.Z)(e),
-        commandMention: (0, R.ZP)(e),
-        attachmentLink: (0, N.Z)(e),
-        shopLink: (0, D.Z)(e)
+function K(e) {
+    return V(G({}, W), {
+        link: (0, D.Z)(e),
+        devLink: (0, w.Z)(e),
+        emoji: F(e),
+        customEmoji: Z(e),
+        channelMention: (0, R.Z)(e),
+        commandMention: (0, P.ZP)(e),
+        attachmentLink: (0, C.Z)(e),
+        shopLink: (0, L.Z)(e)
     });
 }

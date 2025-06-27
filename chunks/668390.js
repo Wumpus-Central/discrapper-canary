@@ -88,7 +88,7 @@ function j(e) {
         : null;
 }
 function x(e) {
-    let { color: t, id: r, role: s, guild: d, children: x, isDragging: b, selectedItem: v, onItemSelect: y, itemType: C, locked: N, lockTooltip: S, showContextMenu: E, theme: O, roleStyle: w, 'aria-label': Z } = e,
+    let { color: t, id: r, role: s, guild: d, children: x, isDragging: b, selectedItem: v, onItemSelect: y, itemType: C, locked: N, lockTooltip: S, showContextMenu: E, theme: O, roleStyle: Z, 'aria-label': w } = e,
         T = (0, h._f)(d.id, s, null == s ? void 0 : s.colorStrings),
         R = l.useCallback(
             (e) => {
@@ -114,12 +114,12 @@ function x(e) {
               selectedItem: v,
               onItemSelect: y,
               itemType: C,
-              'aria-label': null != S ? ''.concat(Z, ', ').concat(S) : Z,
+              'aria-label': null != S ? ''.concat(w, ', ').concat(S) : w,
               children: (0, i.jsxs)('div', {
                   className: m.roleContent,
                   onContextMenu: R,
                   children: [
-                      'dot' === w
+                      'dot' === Z
                           ? (0, i.jsx)(o.FhE, {
                                 color: null != t ? t : void 0,
                                 colors: T,

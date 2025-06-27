@@ -38,8 +38,8 @@ var a = n(255367),
     u = n(407146),
     m = n(481060),
     p = n(410030),
-    x = n(705262),
-    h = n(374794),
+    h = n(705262),
+    x = n(374794),
     b = n(58755),
     f = n(246992),
     v = n(500949),
@@ -187,9 +187,9 @@ function E() {
                             })
                         ]
                     }),
-                    (0, a.jsx)(x.ZP, {
-                        type: x.yH.SETTINGS,
-                        children: (0, a.jsx)(x.ZP.Basic, {
+                    (0, a.jsx)(h.ZP, {
+                        type: h.yH.SETTINGS,
+                        children: (0, a.jsx)(h.ZP.Basic, {
                             className: _.toolbarThemeSelector,
                             hideSystemSelector: !0
                         })
@@ -213,7 +213,7 @@ function E() {
                                 disabled: !u,
                                 children: (0, a.jsx)(m.zGS, {})
                             }),
-                            (0, a.jsx)(h.Z, {
+                            (0, a.jsx)(x.Z, {
                                 'aria-label': 'Import',
                                 filters: [
                                     {
@@ -327,7 +327,7 @@ function T(e) {
             },
             [n]
         ),
-        x = r.useCallback(
+        h = r.useCallback(
             (e) => {
                 n((t) => {
                     let { semanticColorOverrides: n } = t,
@@ -337,7 +337,7 @@ function T(e) {
             },
             [n]
         ),
-        h = r.useCallback(
+        x = r.useCallback(
             (e) => {
                 n((t) => {
                     let { semanticColorOverrides: n } = t,
@@ -401,8 +401,8 @@ function T(e) {
                                     return j(g({}, e), { semanticColorOverrides: j(g({}, n), { [t]: a }) });
                                 });
                             },
-                            onRemove: () => x(t),
-                            onHighlightToggle: () => h(t),
+                            onRemove: () => h(t),
+                            onHighlightToggle: () => x(t),
                             children: (0, a.jsxs)('div', {
                                 className: _.semanticOverride,
                                 children: [

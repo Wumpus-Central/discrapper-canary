@@ -1,7 +1,7 @@
 n.d(t, {
-    U: () => L,
-    default: () => N,
-    t: () => M
+    U: () => M,
+    default: () => P,
+    t: () => N
 }),
     n(953529),
     n(388685),
@@ -21,70 +21,71 @@ var r = n(255367),
     u = n(131704),
     m = n(592125),
     x = n(271383),
-    h = n(430824),
-    b = n(626135),
-    f = n(934415),
-    y = n(892880),
-    p = n(226951),
-    g = n(605436),
-    j = n(971628),
-    v = n(71080),
-    E = n(981631),
-    S = n(494831),
-    T = n(388032),
-    w = n(208838);
-function R(e) {
+    h = n(485386),
+    b = n(430824),
+    f = n(626135),
+    y = n(934415),
+    p = n(892880),
+    g = n(226951),
+    j = n(605436),
+    v = n(971628),
+    E = n(71080),
+    S = n(981631),
+    T = n(494831),
+    w = n(388032),
+    R = n(208838);
+function O(e) {
     var t = (function (e, t) {
-        if ('object' !== O(e) || null === e) return e;
+        if ('object' !== k(e) || null === e) return e;
         var n = e[Symbol.toPrimitive];
         if (void 0 !== n) {
             var r = n.call(e, t || 'default');
-            if ('object' !== O(r)) return r;
+            if ('object' !== k(r)) return r;
             throw TypeError('@@toPrimitive must return a primitive value.');
         }
         return ('string' === t ? String : Number)(e);
     })(e, 'string');
-    return 'symbol' === O(t) ? t : String(t);
+    return 'symbol' === k(t) ? t : String(t);
 }
-function O(e) {
+function k(e) {
     return e && 'undefined' != typeof Symbol && e.constructor === Symbol ? 'symbol' : typeof e;
 }
-let k = (0, d.hQ)();
-function C(e, t) {
+let C = (0, d.hQ)();
+function L(e, t) {
     return t ? e.slice(1) : e;
 }
-function L(e) {
+function M(e) {
     let t,
         { guild: n, channel: a, permission: s, pendingAdditions: c, setPendingAdditions: d, isStageChannel: u = null != a && a.isGuildStageVoice(), description: m } = e,
         [b, f] = l.useState(!1),
-        [E, S] = l.useState(''),
-        w = (0, i.e7)([h.Z], () => h.Z.getRoles(n.id));
-    function O(e) {
-        let t = C(E.trim(), b);
-        return RegExp(''.concat(p.Z.escape(t)), 'i').test(e);
+        [y, S] = l.useState(''),
+        T = (0, i.e7)([h.Z], () => h.Z.getRoles(n.id));
+    function R(e) {
+        let t = L(y.trim(), b);
+        return RegExp(''.concat(g.Z.escape(t)), 'i').test(e);
     }
     let k = (0, i.Wu)([x.ZP], () => x.ZP.getMemberIds(n.id));
-    b ? (t = []) : u ? (t = g.Wx(n, w, a, s, O)) : 0 !== (t = g.ik(n, w, a, s, O)).length || '' !== E.trim() || g.RD(n, w) || (t = g.aq());
-    let L = g.iI(k, a, n, s, O),
+    b ? (t = []) : u ? (t = j.Wx(n, T, a, s, R)) : 0 !== (t = j.ik(n, T, a, s, R)).length || '' !== y.trim() || j.RD(n, T) || (t = j.aq());
+    let C = j.iI(k, a, n, s, R),
         {
-            placeholderText: N,
+            placeholderText: M,
             hintText: P,
             renderEmptyText: A
         } = {
-            placeholderText: T.intl.string(T.t.iezLLi),
-            hintText: T.intl.string(T.t['rwFx8/']),
-            renderEmptyText: (e) => T.intl.format(T.t.ErpIY2, { query: e })
+            placeholderText: w.intl.string(w.t.iezLLi),
+            hintText: w.intl.string(w.t['rwFx8/']),
+            renderEmptyText: (e) => w.intl.format(w.t.ErpIY2, { query: e })
         };
-    return (0, r.jsx)(M, {
+    return (0, r.jsx)(N, {
         pendingAdditions: c,
-        query: E,
+        query: y,
         onQueryChange: function (e) {
             let t = e.trim(),
                 r = '@' === t.charAt(0);
-            y.Z.requestMembers(n.id, C(t, r), v.EQ), S(e), f(r);
+            p.Z.requestMembers(n.id, L(t, r), E.EQ), S(e), f(r);
         },
         onClickRow: function (e) {
-            let t = (0, j.G)(e);
+            let t = (0, v.G)(e);
             d((n) => {
                 let r = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
@@ -114,13 +115,13 @@ function L(e) {
                 if (t in r) delete r[t];
                 else {
                     let n;
-                    e.rowType === v.aC.ROLE || e.rowType === v.aC.ADMINISTRATOR
+                    e.rowType === E.aC.ROLE || e.rowType === E.aC.ADMINISTRATOR
                         ? (n = {
                               type: o.Fj.ROLE,
                               label: e.name,
                               color: e.colorString
                           })
-                        : (e.rowType === v.aC.MEMBER || e.rowType === v.aC.OWNER) &&
+                        : (e.rowType === E.aC.MEMBER || e.rowType === E.aC.OWNER) &&
                           (n = {
                               type: o.Fj.MEMBER,
                               label: e.name,
@@ -156,33 +157,33 @@ function L(e) {
                         for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
                     }
                     return l;
-                })(t, [e].map(R));
+                })(t, [e].map(O));
             });
         },
         roles: t,
-        members: L,
-        placeholderText: N,
+        members: C,
+        placeholderText: M,
         hintText: P,
         renderEmptyText: A,
         isStageChannel: u,
         description: m
     });
 }
-function M(e) {
+function N(e) {
     let t,
         { listClassName: n, pendingAdditions: l, query: i, onQueryChange: s, onClickRow: o, onRemovePendingAddition: c, roles: d, members: u, placeholderText: m, hintText: x, renderEmptyText: h, isStageChannel: b, focusSearchAfterReady: f, isReady: y, description: p } = e;
     return (0, r.jsxs)('div', {
-        className: w.content,
+        className: R.content,
         children: [
-            (null == (t = p) && b && (t = T.intl.string(T.t.f7VbhI)), null == t || '' === t)
+            (null == (t = p) && b && (t = w.intl.string(w.t.f7VbhI)), null == t || '' === t)
                 ? null
                 : (0, r.jsx)(a.Text, {
                       color: 'header-secondary',
-                      className: w.description,
+                      className: R.description,
                       variant: 'text-sm/normal',
                       children: t
                   }),
-            (0, r.jsx)(j.Z, {
+            (0, r.jsx)(v.Z, {
                 listClassName: n,
                 pendingAdditions: l,
                 query: i,
@@ -194,30 +195,30 @@ function M(e) {
                 placeholderText: m,
                 hintText: x,
                 renderEmptyText: h,
-                disabledText: b ? T.intl.string(T.t.MVVOCg) : null,
+                disabledText: b ? w.intl.string(w.t.MVVOCg) : null,
                 focusSearchAfterReady: f,
                 isReady: y,
-                maxCount: S.ey
+                maxCount: T.ey
             })
         ]
     });
 }
-function N(e) {
+function P(e) {
     let { transitionState: t, onClose: n, channelId: o, newChannel: d, inSettings: x } = e,
-        [y, p] = l.useState(!1),
+        [h, p] = l.useState(!1),
         [g, j] = l.useState({}),
-        S = (0, i.e7)([m.Z], () => m.Z.getChannel(o), [o]),
-        R = (0, i.e7)([h.Z], () => h.Z.getGuild(null == S ? void 0 : S.getGuildId()));
+        v = (0, i.e7)([m.Z], () => m.Z.getChannel(o), [o]),
+        T = (0, i.e7)([b.Z], () => b.Z.getGuild(null == v ? void 0 : v.getGuildId()));
     if (
         (l.useEffect(() => {
-            b.default.track(E.rMx.OPEN_MODAL, { type: 'Grant Channel Access' });
+            f.default.track(S.rMx.OPEN_MODAL, { type: 'Grant Channel Access' });
         }, []),
-        null == S || null == R)
+        null == v || null == T)
     )
         return null;
     let O = d && 0 === Object.keys(g).length;
-    async function C() {
-        if (null == S || 0 === Object.keys(g).length) return void n();
+    async function k() {
+        if (null == v || 0 === Object.keys(g).length) return void n();
         p(!0);
         try {
             await (function (e, t, n) {
@@ -225,55 +226,55 @@ function N(e) {
                 return (
                     Object.values(t).forEach((t) => {
                         let { row: n } = t;
-                        null != n.id && '' !== n.id && (n.rowType === v.aC.ROLE ? r.push((0, f.rX)(n.id, e.type)) : n.rowType === v.aC.MEMBER && r.push((0, f.jZ)(n.id, e.type)));
+                        null != n.id && '' !== n.id && (n.rowType === E.aC.ROLE ? r.push((0, y.rX)(n.id, e.type)) : n.rowType === E.aC.MEMBER && r.push((0, y.jZ)(n.id, e.type)));
                     }),
                     (0, s.hw)(e.id, r, n)
                 );
-            })(S, g, x),
+            })(v, g, x),
                 n(),
                 p(!1);
         } catch (e) {
             p(!1);
         }
     }
-    let M = (0, u.zi)(S.type) ? a.W4G : a.gjC;
+    let L = (0, u.zi)(v.type) ? a.W4G : a.gjC;
     return (0, r.jsxs)(a.Y0X, {
         transitionState: t,
         size: a.CgR.SMALL,
-        'aria-labelledby': k,
-        className: w.modalRoot,
+        'aria-labelledby': C,
+        className: R.modalRoot,
         parentComponent: 'AddMembersModal',
         children: [
             (0, r.jsxs)(a.xBx, {
                 separator: !1,
                 direction: c.Z.Direction.VERTICAL,
                 align: c.Z.Align.CENTER,
-                className: w.header,
+                className: R.header,
                 children: [
                     (0, r.jsx)(a.X6q, {
-                        id: k,
+                        id: C,
                         variant: 'heading-xl/semibold',
-                        children: T.intl.string(T.t.dMJ3Y2)
+                        children: w.intl.string(w.t.dMJ3Y2)
                     }),
                     (0, r.jsxs)(a.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        className: w.headerSubtitle,
+                        className: R.headerSubtitle,
                         children: [
-                            (0, r.jsx)(M, {
+                            (0, r.jsx)(L, {
                                 size: 'xs',
                                 color: 'currentColor',
-                                className: w.headerSubtitleIcon
+                                className: R.headerSubtitleIcon
                             }),
-                            S.name
+                            v.name
                         ]
                     })
                 ]
             }),
-            (0, r.jsx)(L, {
-                guild: R,
-                channel: S,
-                permission: S.accessPermissions,
+            (0, r.jsx)(M, {
+                guild: T,
+                channel: v,
+                permission: v.accessPermissions,
                 pendingAdditions: g,
                 setPendingAdditions: j
             }),
@@ -283,19 +284,19 @@ function N(e) {
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(a.zxk, {
-                                    onClick: C,
+                                    onClick: k,
                                     look: a.zxk.Looks.FILLED,
                                     size: a.zxk.Sizes.SMALL,
-                                    className: w.button,
-                                    submitting: y,
-                                    children: T.intl.string(T.t.i4jeWV)
+                                    className: R.button,
+                                    submitting: h,
+                                    children: w.intl.string(w.t.i4jeWV)
                                 }),
                                 (0, r.jsx)(a.zxk, {
                                     look: a.zxk.Looks.LINK,
                                     color: a.zxk.Colors.TRANSPARENT,
                                     onClick: n,
                                     size: a.zxk.Sizes.SMALL,
-                                    children: T.intl.string(T.t['ETE/oK'])
+                                    children: w.intl.string(w.t['ETE/oK'])
                                 })
                             ]
                         }),
@@ -305,7 +306,7 @@ function N(e) {
                             color: a.zxk.Colors.PRIMARY,
                             onClick: n,
                             size: a.zxk.Sizes.SMALL,
-                            children: T.intl.string(T.t.u46sxc)
+                            children: w.intl.string(w.t.u46sxc)
                         })
                 ]
             })

@@ -1,15 +1,16 @@
-n.d(t, { Z: () => S }), n(388685), n(997841);
+n.d(t, { Z: () => A }), n(388685), n(997841);
 var r,
     i = n(442837),
     a = n(570140),
-    o = n(430824),
-    s = n(630388),
-    l = n(251625),
-    c = n(709054),
-    u = n(225675),
-    d = n(981631),
-    f = n(526761);
-function _(e, t, n) {
+    o = n(485386),
+    s = n(430824),
+    l = n(630388),
+    c = n(251625),
+    u = n(709054),
+    d = n(225675),
+    f = n(981631),
+    _ = n(526761);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +23,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,12 +34,12 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,62 +51,62 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let g = {};
-function E(e) {
-    let { guildId: t, data: n } = e;
-    delete n.roles[c.default.castGuildIdAsEveryoneGuildRoleId(t)], (g[t] = m(p({}, n), { timestamp: Date.now() }));
-}
+let E = {};
 function b(e) {
-    let { guildId: t } = e;
-    if (null == g[t]) return !1;
-    delete g[t];
+    let { guildId: t, data: n } = e;
+    delete n.roles[u.default.castGuildIdAsEveryoneGuildRoleId(t)], (E[t] = g(h({}, n), { timestamp: Date.now() }));
 }
 function y(e) {
-    let { guildId: t, roleId: n } = e;
-    if (null == g[t]) return !1;
-    delete g[t].roles[n];
+    let { guildId: t } = e;
+    if (null == E[t]) return !1;
+    delete E[t];
 }
 function O(e) {
+    let { guildId: t, roleId: n } = e;
+    if (null == E[t]) return !1;
+    delete E[t].roles[n];
+}
+function v(e) {
     var t;
     let { guildId: n, overrides: r } = e;
-    if (null == n || null == g[n]) return !1;
-    let i = g[n];
-    if (null == i || i.type !== u.z.NEW_MEMBER) return !1;
+    if (null == n || null == E[n]) return !1;
+    let i = E[n];
+    if (null == i || i.type !== d.z.NEW_MEMBER) return !1;
     let a = null != (t = i.optInChannels) ? t : new Set();
     return (
-        c.default.keys(r).forEach((e) => {
+        u.default.keys(r).forEach((e) => {
             var t;
             let n = r[e];
-            s.yE(null != (t = n.flags) ? t : 0, f.ic.OPT_IN_ENABLED) ? a.add(e) : a.delete(e);
+            l.yE(null != (t = n.flags) ? t : 0, _.ic.OPT_IN_ENABLED) ? a.add(e) : a.delete(e);
         }),
         (i.optInChannels = a),
         !0
     );
 }
-function v(e) {
+function I(e) {
     var t;
     let { guildId: n, optionId: r, selected: i, removedOptionIds: a } = e;
-    if (null == n || null == g[n]) return !1;
-    let o = g[n];
-    if (null == o || o.type !== u.z.NEW_MEMBER) return !1;
+    if (null == n || null == E[n]) return !1;
+    let o = E[n];
+    if (null == o || o.type !== d.z.NEW_MEMBER) return !1;
     let s = null != (t = o.onboardingResponses) ? t : new Set();
     return null != a && a.length > 0 && a.forEach((e) => s.delete(e)), i ? s.add(r) : s.delete(r), (o.onboardingResponses = s), !0;
 }
-function I(e) {
+function T(e) {
     let { guildId: t, roles: n, flags: r } = e;
     if (null == t) return !1;
-    let i = g[t];
+    let i = E[t];
     return (
         null != i &&
         (null != n &&
@@ -113,51 +114,54 @@ function I(e) {
                 let r = o.Z.getRole(t, n);
                 return null != r && (e[n] = r), e;
             }, {})),
-        null != r && i.type === u.z.NEW_MEMBER && (i.memberOptions.flags = r),
+        null != r && i.type === d.z.NEW_MEMBER && (i.memberOptions.flags = r),
         !0)
     );
 }
-class T extends (r = i.ZP.Store) {
+class S extends (r = i.ZP.Store) {
+    initialize() {
+        this.waitFor(s.Z, o.Z);
+    }
     hasViewingRoles() {
-        return !(0, l.ld)(g);
+        return !(0, c.ld)(E);
     }
     isViewingRoles(e) {
-        return null != e && null != g[e];
+        return null != e && null != E[e];
     }
     getViewingRoles(e) {
         var t;
-        return null == (t = g[e]) ? void 0 : t.roles;
+        return null == (t = E[e]) ? void 0 : t.roles;
     }
     getViewingRolesTimestamp(e) {
         var t;
-        return null != e ? (null == (t = g[e]) ? void 0 : t.timestamp) : null;
+        return null != e ? (null == (t = E[e]) ? void 0 : t.timestamp) : null;
     }
     getData(e) {
-        return g[e];
+        return E[e];
     }
     isFullServerPreview(e) {
         var t;
-        return (null == (t = g[e]) ? void 0 : t.type) === u.z.NEW_MEMBER;
+        return (null == (t = E[e]) ? void 0 : t.type) === d.z.NEW_MEMBER;
     }
     isOptInEnabled(e) {
-        let t = g[e];
-        return null != t && t.type === u.z.NEW_MEMBER && t.optInEnabled;
+        let t = E[e];
+        return null != t && t.type === d.z.NEW_MEMBER && t.optInEnabled;
     }
     isOnboardingEnabled(e) {
-        let t = g[e];
-        return null != t && t.type === u.z.NEW_MEMBER && t.onboardingEnabled;
+        let t = E[e];
+        return null != t && t.type === d.z.NEW_MEMBER && t.onboardingEnabled;
     }
     getViewingChannels(e) {
-        let t = g[e];
-        return null == t || t.type !== u.z.NEW_MEMBER ? null : t.optInChannels;
+        let t = E[e];
+        return null == t || t.type !== d.z.NEW_MEMBER ? null : t.optInChannels;
     }
     getOnboardingResponses(e) {
-        let t = g[e];
-        return null == t || t.type !== u.z.NEW_MEMBER ? null : t.onboardingResponses;
+        let t = E[e];
+        return null == t || t.type !== d.z.NEW_MEMBER ? null : t.onboardingResponses;
     }
     getMemberOptions(e) {
-        let t = g[e];
-        return null == t || t.type !== u.z.NEW_MEMBER ? null : t.memberOptions;
+        let t = E[e];
+        return null == t || t.type !== d.z.NEW_MEMBER ? null : t.memberOptions;
     }
     isChannelOptedIn(e, t) {
         let n = this.getViewingChannels(e);
@@ -165,34 +169,34 @@ class T extends (r = i.ZP.Store) {
     }
     isViewingServerShop(e) {
         var t;
-        return null != e && (null == (t = g[e]) ? void 0 : t.type) === u.z.SERVER_SHOP;
+        return null != e && (null == (t = E[e]) ? void 0 : t.type) === d.z.SERVER_SHOP;
     }
     getImpersonateType(e) {
         if (null == e) return null;
-        let t = g[e];
+        let t = E[e];
         return null == t ? null : t.type;
     }
     getBackNavigationSection(e) {
-        if (null == e) return d.pNK.ROLES;
-        let t = g[e];
-        if (null == t) return d.pNK.ROLES;
+        if (null == e) return f.pNK.ROLES;
+        let t = E[e];
+        if (null == t) return f.pNK.ROLES;
         switch (t.type) {
-            case u.z.ROLES:
-            case u.z.SERVER_SHOP:
+            case d.z.ROLES:
+            case d.z.SERVER_SHOP:
                 return t.returnToSection;
-            case u.z.NEW_MEMBER:
-                return d.pNK.ONBOARDING;
+            case d.z.NEW_MEMBER:
+                return f.pNK.ONBOARDING;
             default:
-                return d.pNK.ROLES;
+                return f.pNK.ROLES;
         }
     }
 }
-_(T, 'displayName', 'ImpersonateStore');
-let S = new T(a.Z, {
-    IMPERSONATE_UPDATE: E,
-    IMPERSONATE_STOP: b,
-    GUILD_ROLE_DELETE: y,
-    USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: O,
-    GUILD_ONBOARDING_SELECT_OPTION: v,
-    GUILD_MEMBER_UPDATE_LOCAL: I
+p(S, 'displayName', 'ImpersonateStore');
+let A = new S(a.Z, {
+    IMPERSONATE_UPDATE: b,
+    IMPERSONATE_STOP: y,
+    GUILD_ROLE_DELETE: O,
+    USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: v,
+    GUILD_ONBOARDING_SELECT_OPTION: I,
+    GUILD_MEMBER_UPDATE_LOCAL: T
 });

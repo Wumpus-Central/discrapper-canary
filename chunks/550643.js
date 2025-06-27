@@ -125,7 +125,6 @@ class O extends i.Z {
                 NATIVE_SCREEN_SHARE_PICKER_ERROR: this.updateActiveErrors,
                 MEDIA_SESSION_JOINED: this.updateActiveErrors,
                 RTC_CONNECTION_UPDATE_ID: this.updateActiveErrors,
-                RTC_CONNECTION_USER_CREATE: this.updateActiveErrors,
                 RTC_CONNECTION_VIDEO: this.updateActiveErrors,
                 RTC_CONNECTION_REMOTE_VIDEO_SINK_WANTS: this.updateActiveErrors,
                 VIDEO_STREAM_READY_TIMEOUT: this.updateActiveErrors,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(642613), n(388685);
+n.d(t, { Z: () => h }), n(642613), n(388685);
 var a = n(255367),
     r = n(73800),
     l = n(481060),
@@ -43,7 +43,7 @@ let p = {
         return (t) => (0, a.jsx)(e, m({}, t));
     }
 };
-function x() {
+function h() {
     let e = r.useMemo(
             () =>
                 Object.keys(p)

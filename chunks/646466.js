@@ -34,7 +34,7 @@ function p(e) {
     }
     return e;
 }
-let x = [
+let h = [
         {
             name: 'Preview',
             value: 'preview'
@@ -44,7 +44,7 @@ let x = [
             value: 'validate'
         }
     ],
-    h = {
+    x = {
         label: '[none selected]',
         value: null
     },
@@ -85,7 +85,7 @@ let x = [
             { previewProfileEffectId: t, setPreviewProfileEffectId: n } = (0, o.N9)(),
             s = r.useMemo(
                 () => [
-                    h,
+                    x,
                     ...e.map((e) => ({
                         label: e.name,
                         value: e.id
@@ -262,8 +262,8 @@ let x = [
             o = Object.entries(s),
             d = Object.entries(i),
             p = o.length > 0,
-            x = d.length > 0,
-            h = r.useCallback(
+            h = d.length > 0,
+            x = r.useCallback(
                 (n) => {
                     t(), e(n);
                 },
@@ -271,7 +271,7 @@ let x = [
             );
         return (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, a.jsx)(c.L, { onDrop: h }),
+                (0, a.jsx)(c.L, { onDrop: x }),
                 n
                     ? (0, a.jsxs)('div', {
                           className: m.validationSummary,
@@ -283,7 +283,7 @@ let x = [
                               }),
                               (0, a.jsx)(l.Text, {
                                   variant: 'text-md/normal',
-                                  color: x ? 'text-feedback-warning' : 'text-default',
+                                  color: h ? 'text-feedback-warning' : 'text-default',
                                   children: ''.concat(d.length, ' warnings')
                               }),
                               (0, a.jsx)(l.zxk, {
@@ -346,7 +346,7 @@ let x = [
                             })
                         ]
                     }),
-                x &&
+                h &&
                     (0, a.jsxs)(a.Fragment, {
                         children: [
                             (0, a.jsx)(l.X6q, {
@@ -398,7 +398,7 @@ let x = [
     N = () => {
         let { previewEnabled: e, setPreviewEnabled: t, clearAssets: n } = (0, o.N9)(),
             { ignoredFilenames: i, clearAssets: s, clearIgnoredFilenames: u, processAndUpsertAssets: p } = (0, d.hm)(),
-            x = r.useCallback(
+            h = r.useCallback(
                 (e) => {
                     n(), p(e);
                 },
@@ -406,7 +406,7 @@ let x = [
             );
         return (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, a.jsx)(c.L, { onDrop: x }),
+                (0, a.jsx)(c.L, { onDrop: h }),
                 (0, a.jsx)(l.Text, {
                     variant: 'text-md/normal',
                     children: 'Drop files in this panel to begin preview.'
@@ -450,7 +450,7 @@ let x = [
             className: m.container,
             children: [
                 (0, a.jsx)(l.sY7, {
-                    options: x,
+                    options: h,
                     value: e,
                     onChange: (e) => {
                         let { value: n } = e;

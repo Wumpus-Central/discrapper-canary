@@ -11,8 +11,8 @@ var r = n(120356),
     u = n(358221),
     m = n(754347),
     p = n(428548),
-    x = n(718759),
-    h = n(679219),
+    h = n(718759),
+    x = n(679219),
     b = n(835225),
     f = n(939039),
     v = n(117795),
@@ -39,7 +39,7 @@ let C = (e) => g.ZP.close(e),
                 onClick: (e) => O(n, e),
                 'aria-label': j.intl.string(j.t.G1u0hI),
                 tabIndex: -1,
-                children: (0, a.jsx)(h.Z, {})
+                children: (0, a.jsx)(x.Z, {})
             }),
             d = (0, a.jsx)(s.P3F, {
                 className: y.winButtonMinMax,
@@ -87,7 +87,7 @@ let C = (e) => g.ZP.close(e),
                                           onClick: () => C(n),
                                           'aria-label': j.intl.string(j.t.ZdNUj4),
                                           tabIndex: -1,
-                                          children: (0, a.jsx)(x.Z, { color: '#4c0000' })
+                                          children: (0, a.jsx)(h.Z, { color: '#4c0000' })
                                       }),
                                       (0, a.jsx)(s.P3F, {
                                           className: y.macButtonMinimize,
