@@ -5666,6 +5666,7 @@
   "Zqn2BA": "{count, plural, =0 {no emoji} one {!!{count}!! emoji} other {!!{count}!! emoji} }",
   "uoCHWV": "$[!!{username}!!]({{usernameHook}}) added a new emoji, !!{emoji}!!",
   "z5Rnl5": "React with !!{renderedEmoji}!!",
+  "k6Jc9f": "$[!!{username}!!]({{usernameHook}}) added a new emoji.",
   "yZFibW": "Add to Favorites",
   "gi2qEB": "Available with Nitro",
   "O783tb": "Activities",
