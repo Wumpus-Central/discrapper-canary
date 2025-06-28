@@ -1,8 +1,8 @@
-n.r(t),
+(n.r(t),
     n.d(t, {
         default: () => r,
         messagesLoader: () => a
-    });
+    }));
 let { createLoader: l } = n(515149),
     a = l(
         {
