@@ -1343,6 +1343,7 @@ function Q(e) {
             region: e.region,
             viewerIds: e.viewer_ids,
             rtcServerId: e.rtc_server_id,
+            rtcChannelId: e.rtc_channel_id,
             paused: e.paused
         });
     }),

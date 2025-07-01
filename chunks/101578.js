@@ -35,7 +35,7 @@ let E = (e) => {
             },
             [d, n, E]
         ),
-        C = (0, a.l)(),
+        { enabled: C } = a.m.useExperiment({ location: 'ActivityInviteEmbed' }, { autoTrackExposure: !0 }),
         x = b(d),
         { data: v } = (0, u.IX)(null == (t = d.application) ? void 0 : t.id),
         O = null != v ? v : x;

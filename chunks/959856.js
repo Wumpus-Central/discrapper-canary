@@ -3,10 +3,10 @@ var r = n(512722),
     i = n.n(r),
     a = n(264344),
     o = n.n(a),
-    s = n(259443),
-    l = n(47770),
-    c = n(174498),
-    u = n.n(c),
+    s = n(47770),
+    l = n(174498),
+    c = n.n(l),
+    u = n(579092),
     d = n(839548),
     f = n(46973),
     _ = n(734298),
@@ -35,8 +35,8 @@ function A(e, t, n) {
         e
     );
 }
-let N = new s.Yd('MediaEngineWebRTC');
-class C extends l.Z {
+let N = new u.Yd('MediaEngineWebRTC');
+class C extends s.Z {
     destroy() {
         (null != this.voiceActivityInput && (this.voiceActivityInput.destroy(), (this.voiceActivityInput = null)), this.eachConnection((e) => e.destroy()), this.emit(f.aB.Destroy), this.removeAllListeners());
     }
@@ -71,7 +71,7 @@ class C extends l.Z {
             case T.AN.AUTOMATIC_GAIN_CONTROL:
                 return 'Safari' !== o().name;
             case T.AN.NOISE_CANCELLATION:
-                return u()();
+                return c()();
             case T.AN.QOS:
             case T.AN.ATTENUATION:
             case T.AN.AUTOMATIC_VAD:

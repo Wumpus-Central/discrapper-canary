@@ -2,7 +2,7 @@ n.d(t, {
     X: () => _,
     e: () => f
 });
-var r = n(259443),
+var r = n(579092),
     i = n(128813);
 let a = null,
     o = new r.Yd('libdiscore');

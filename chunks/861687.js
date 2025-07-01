@@ -326,8 +326,12 @@ class ev extends d.Z {
     get channelId() {
         return this._channelId;
     }
+    get trueServerId() {
+        var e, t;
+        return null != (t = null != (e = this.streamServerId) ? e : this.guildId) ? t : this.channelId;
+    }
     get trueChannelId() {
-        return null != this.rtcServerId ? i()(this.rtcServerId).prev().toString() : this.channelId;
+        return null == this.streamServerId ? this.channelId : null != this.streamChannelId ? this.streamChannelId : i()(this.streamServerId).prev().toString();
     }
     _cleanupSocket() {
         let e = this._socket;
@@ -368,9 +372,8 @@ class ev extends d.Z {
                     H.Z.captureException(e);
                 })
                 .finally(() => {
-                    var n, r;
                     (e.identify({
-                        serverId: null != (r = null != (n = this.rtcServerId) ? n : this.guildId) ? r : this.channelId,
+                        serverId: this.trueServerId,
                         userId: this.userId,
                         sessionId: this.sessionId,
                         token: t,
@@ -637,7 +640,7 @@ class ev extends d.Z {
                             })));
             }),
             d.on(f.Sh.FirstFrame, (e, t, n) => {
-                (null != this._localMediaSinkWantsManager && (this._localMediaSinkWantsManager.setFirstFrameReceived(t), this.emit(z.z.Video, this.guildId, this.channelId, eO(e), n, this.rtcServerId)), null != this._goLiveQualityManager && (this._goLiveQualityManager.setFirstFrameReceived(t), this.emit(z.z.Video, this.guildId, this.channelId, eO(e), n, this.rtcServerId)));
+                (null != this._localMediaSinkWantsManager && (this._localMediaSinkWantsManager.setFirstFrameReceived(t), this.emit(z.z.Video, this.guildId, this.channelId, eO(e), n, this.streamServerId)), null != this._goLiveQualityManager && (this._goLiveQualityManager.setFirstFrameReceived(t), this.emit(z.z.Video, this.guildId, this.channelId, eO(e), n, this.streamServerId)));
             }),
             d.on(f.Sh.Silence, (e) => {
                 this._inputDetected = this._inputDetected || !e;
@@ -792,7 +795,7 @@ class ev extends d.Z {
         var t, n, r, i;
         let { userId: a, streamId: o, videoSsrc: s, videoStreamParameters: l } = e;
         if (
-            (this.emit(z.z.Video, this.guildId, this.channelId, a, o, this.rtcServerId),
+            (this.emit(z.z.Video, this.guildId, this.channelId, a, o, this.streamServerId),
             null != o && null == this.getOrCreateVideoQuality() && this.logger.error('_handleVideoStreamId: Unable to create videoQuality.'),
             null != this._videoQuality &&
                 this.userId === a &&
@@ -1286,8 +1289,7 @@ class ev extends d.Z {
     getGoLiveSource() {
         return x.Z.getGoLiveSource();
     }
-    constructor({ userId: e, sessionId: t, guildId: n, channelId: r, context: i = es.Yn.DEFAULT, rtcServerId: a, parentMediaSessionId: s }) {
-        var l, d;
+    constructor({ userId: e, sessionId: t, guildId: n, channelId: r, context: i = es.Yn.DEFAULT, streamServerId: a, streamChannelId: s, parentMediaSessionId: l }) {
         (super(),
             el(this, 'context', void 0),
             el(this, 'userId', void 0),
@@ -1299,7 +1301,8 @@ class ev extends d.Z {
             el(this, '_videoQuality', void 0),
             el(this, '_soundshareStats', void 0),
             el(this, 'logger', void 0),
-            el(this, 'rtcServerId', void 0),
+            el(this, 'streamServerId', void 0),
+            el(this, 'streamChannelId', void 0),
             el(this, '_channelId', void 0),
             el(this, 'channelIds', void 0),
             el(this, '_endpoint', void 0),
@@ -1451,15 +1454,16 @@ class ev extends d.Z {
             }),
             (this.context = i),
             (this._fetchAsyncResourcesPromise = x.Z.fetchAsyncResources()),
-            (this.logger = new b.Z('RTCConnection('.concat(null != (l = null != a ? a : n) ? l : r, ', ').concat(this.context, ')'))),
+            (this.logger = new b.Z('RTCConnection('.concat(this.trueServerId, ', ').concat(this.context, ')'))),
             this.logger.enableNativeLogger(!0),
             (this.userId = e),
             (this.sessionId = t),
             (this.guildId = n),
             (this._channelId = r),
             (this.channelIds = new Set([r])),
-            (this.rtcServerId = a),
-            (this.parentMediaSessionId = s),
+            (this.streamServerId = a),
+            (this.streamChannelId = s),
+            (this.parentMediaSessionId = l),
             (this._endpoint = null),
             (this.hostname = null),
             (this.port = null),
@@ -1503,10 +1507,11 @@ class ev extends d.Z {
             (this._mediaEngineConnectionId = null),
             (this._lastSentSpeakingStatus = 0),
             (this._lastSentSSRC = void 0));
-        let f = x.Z.supports(es.AN.FIRST_FRAME_CALLBACK) && x.Z.supports(es.AN.REMOTE_USER_MULTI_STREAM);
+        let d = x.Z.supports(es.AN.FIRST_FRAME_CALLBACK) && x.Z.supports(es.AN.REMOTE_USER_MULTI_STREAM);
         if (i === es.Yn.DEFAULT) {
-            let t = (null == (d = L.Z.getChannel(this.channelId)) ? void 0 : d.type) === eo.d4z.GUILD_STAGE_VOICE;
-            ((this._localMediaSinkWantsManager = new Q.ZP(e, t, f)),
+            var f;
+            let t = (null == (f = L.Z.getChannel(this.channelId)) ? void 0 : f.type) === eo.d4z.GUILD_STAGE_VOICE;
+            ((this._localMediaSinkWantsManager = new Q.ZP(e, t, d)),
                 this._localMediaSinkWantsManager.on(Q.ai.Update, (e) => {
                     if (this.state === eo.hes.RTC_CONNECTED && null != this._socket) {
                         var t;

@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => v }), n(35282), n(388685), n(415506));
 var r = n(264344),
     i = n.n(r),
-    a = n(259443),
-    o = n(47770),
+    a = n(47770),
+    o = n(579092),
     s = n(46973),
     l = n(734298),
     c = n(997545),
@@ -70,7 +70,7 @@ function y(e) {
 function O(e, t, n) {
     return t + ((n - t) * e) / 100;
 }
-class v extends o.Z {
+class v extends a.Z {
     destroy() {
         (this.eachConnection((e) => e.destroy()), this.emit(s.aB.Destroy), this.removeAllListeners());
     }
@@ -598,7 +598,7 @@ class v extends o.Z {
         return 0 === this.connections.size;
     }
     constructor() {
-        var e, t, n, r, i, o, c, p;
+        var e, t, n, r, i, a, c, p;
         (super(),
             (e = this),
             m(this, 'Video', _.Z),
@@ -611,7 +611,7 @@ class v extends o.Z {
             m(this, 'deviceChangeGeneration', 0),
             m(this, 'consecutiveWatchdogFailures', 0),
             m(this, 'codecSurvey', null),
-            m(this, 'logger', new a.Yd('MediaEngineNative')),
+            m(this, 'logger', new o.Yd('MediaEngineNative')),
             m(this, 'handleDeviceChange', function () {
                 let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
                     n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
@@ -677,7 +677,7 @@ class v extends o.Z {
             }),
             null == (r = g.setNativeScreenSharePickerCallbacks) || r.call(g, this.handleNativeScreenSharePickerUpdate, this.handleNativeScreenSharePickerCancel, this.handleNativeScreenSharePickerError),
             null == (i = g.setAudioDeviceModuleErrorCallback) || i.call(g, this.handleAudioDeviceModuleErrorCallback),
-            null == (o = g.setVideoCodecErrorCallback) || o.call(g, this.handleVideoCodecErrorCallback),
+            null == (a = g.setVideoCodecErrorCallback) || a.call(g, this.handleVideoCodecErrorCallback),
             this.on('removeListener', this.handleRemoveListener),
             this.on('newListener', this.handleNewListener),
             null != (0, d.zS)().getAudioSubsystem

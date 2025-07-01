@@ -2,8 +2,8 @@ n.d(t, {
     X: () => u,
     Z: () => d
 });
-var r = n(259443),
-    i = n(47770),
+var r = n(47770),
+    i = n(579092),
     a = n(740197),
     o = n(376398),
     s = n(65154);
@@ -20,11 +20,11 @@ function l(e, t, n) {
         e
     );
 }
-let c = new r.Yd('Output');
+let c = new i.Yd('Output');
 var u = (function (e) {
     return ((e.InteractionRequired = 'interactionrequired'), (e.Speaking = 'speaking'), (e.Video = 'video'), e);
 })({});
-class d extends i.Z {
+class d extends r.Z {
     play() {
         var e;
         null == (e = this.audioElement) || e.play();

@@ -1,36 +1,32 @@
 (n.d(t, {
-    fz: () => x,
-    ge: () => B,
-    r5: () => V,
-    rk: () => k,
-    wV: () => G
+    fz: () => P,
+    ge: () => k,
+    r5: () => M,
+    rk: () => w,
+    wV: () => x
 }),
     n(388685),
     n(415506),
     n(457542));
-var r = n(512722),
-    i = n.n(r),
-    a = n(392711),
-    o = n(544891),
-    s = n(46973),
-    l = n(283693),
-    c = n(570140),
-    u = n(710845),
-    d = n(314897),
-    f = n(131951),
-    _ = n(626135),
-    p = n(460366),
-    h = n(358085),
-    m = n(960048),
-    g = n(998502),
-    E = n(743498),
-    b = n(111677),
-    y = n(709706),
-    O = n(750180),
-    v = n(547614),
-    I = n(999224),
-    T = n(981631);
-function S(e, t, n) {
+var r = n(392711),
+    i = n(544891),
+    a = n(46973),
+    o = n(283693),
+    s = n(570140),
+    l = n(710845),
+    c = n(131951),
+    u = n(626135),
+    d = n(460366),
+    f = n(358085),
+    _ = n(960048),
+    p = n(998502),
+    h = n(743498),
+    m = n(709706),
+    g = n(750180),
+    E = n(547614),
+    b = n(999224),
+    y = n(981631);
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,7 +39,7 @@ function S(e, t, n) {
         e
     );
 }
-function A(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -54,12 +50,12 @@ function A(e) {
                 })
             )),
             r.forEach(function (t) {
-                S(e, t, n[t]);
+                O(e, t, n[t]);
             }));
     }
     return e;
 }
-function N(e, t) {
+function I(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -71,41 +67,41 @@ function N(e, t) {
     }
     return n;
 }
-function C(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : N(Object(t)).forEach(function (n) {
+            : I(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let R = new u.Z('VoiceFilterActionCreators'),
-    P = 1000,
-    w = (0, a.debounce)(
+let S = new l.Z('VoiceFilterActionCreators'),
+    A = 1000,
+    N = (0, r.debounce)(
         () => {
-            c.Z.dispatch({ type: 'VOICE_FILTER_LAGGING' });
+            s.Z.dispatch({ type: 'VOICE_FILTER_LAGGING' });
         },
-        P,
+        A,
         { leading: !0 }
     ),
-    D = !1,
-    L = new Map();
-function x(e) {
+    C = !1,
+    R = new Map();
+function P(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         { url: n, modelId: r, fileName: i } = e,
-        a = y.Z.getModelState(r),
-        o = L.get(r);
+        a = m.Z.getModelState(r),
+        o = R.get(r);
     if (null != o) return o;
-    if ((null == a ? void 0 : a.status) === O.L.DOWNLOADED) return Promise.resolve();
-    if ((null == a ? void 0 : a.status) === O.L.DOWNLOADING) return Promise.reject(Error('Voice filter model is downloading but not in active downloads map'));
-    c.Z.dispatch(A({ type: 'VOICE_FILTER_DOWNLOAD_STARTED' }, e));
-    let s = g.ZP.downloadVoiceFilterFile(n, i, (t) => {
+    if ((null == a ? void 0 : a.status) === g.L.DOWNLOADED) return Promise.resolve();
+    if ((null == a ? void 0 : a.status) === g.L.DOWNLOADING) return Promise.reject(Error('Voice filter model is downloading but not in active downloads map'));
+    s.Z.dispatch(v({ type: 'VOICE_FILTER_DOWNLOAD_STARTED' }, e));
+    let l = p.ZP.downloadVoiceFilterFile(n, i, (t) => {
         let { downloadedBytes: n, totalBytes: r } = t;
-        c.Z.dispatch(
-            C(A({ type: 'VOICE_FILTER_DOWNLOAD_PROGRESS' }, e), {
+        s.Z.dispatch(
+            T(v({ type: 'VOICE_FILTER_DOWNLOAD_PROGRESS' }, e), {
                 downloadedBytes: n,
                 totalBytes: r
             })
@@ -114,65 +110,65 @@ function x(e) {
         .then((n) => {
             if (n.fetchedFromNetwork) {
                 var i, a;
-                _.default.track(T.rMx.VOICE_FILTER_DOWNLOAD_ATTEMPTED, {
-                    active_voice_filter_id: null != (i = f.Z.getActiveVoiceFilter()) ? i : null,
+                u.default.track(y.rMx.VOICE_FILTER_DOWNLOAD_ATTEMPTED, {
+                    active_voice_filter_id: null != (i = c.Z.getActiveVoiceFilter()) ? i : null,
                     success: !0,
                     voice_filter_id: e.voiceFilterId,
                     model_id: r,
                     reason: null != (a = null == t ? void 0 : t.reason) ? a : null
                 });
             }
-            c.Z.dispatch(C(A({ type: 'VOICE_FILTER_FILE_READY' }, e), { analyticsContext: t }));
+            s.Z.dispatch(T(v({ type: 'VOICE_FILTER_FILE_READY' }, e), { analyticsContext: t }));
         })
         .catch((t) => {
-            if (null == t ? void 0 : t.USER_CANCELED_DOWNLOAD) R.info('User canceled the download for Voice Filter dependency', e);
+            if (null == t ? void 0 : t.USER_CANCELED_DOWNLOAD) S.info('User canceled the download for Voice Filter dependency', e);
             else {
                 let n = 'Failed to download voice filter dependency';
-                (R.error(n, A({ reason: t }, e)),
-                    _.default.track(T.rMx.VOICE_FILTER_ERROR, {
+                (S.error(n, v({ reason: t }, e)),
+                    u.default.track(y.rMx.VOICE_FILTER_ERROR, {
                         error_message: n,
-                        cause: (0, p.X)(Error(t))
+                        cause: (0, d.X)(Error(t))
                     }),
-                    m.Z.captureException(Error(n, { cause: t }), {
+                    _.Z.captureException(Error(n, { cause: t }), {
                         tags: { modelId: r },
                         extra: { reason: t }
                     }));
             }
-            c.Z.dispatch(C(A({ type: 'VOICE_FILTER_DOWNLOAD_FAILED' }, e), { error: t }));
+            s.Z.dispatch(T(v({ type: 'VOICE_FILTER_DOWNLOAD_FAILED' }, e), { error: t }));
         })
         .finally(() => {
-            L.delete(r);
+            R.delete(r);
         });
-    return (L.set(r, s), s);
+    return (R.set(r, l), l);
 }
-async function k(e) {
+async function w(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-    await V();
+    await M();
     let n = performance.now();
     try {
-        let r = g.ZP.getVoiceFilters();
-        (R.info('Setting voice filter in native module:', e),
+        let r = p.ZP.getVoiceFilters();
+        (S.info('Setting voice filter in native module:', e),
             await r.setVoiceFilter({ name: e }),
-            c.Z.dispatch({
+            s.Z.dispatch({
                 type: 'VOICE_FILTER_APPLIED',
                 voiceFilterId: e,
                 analyticsContext: t,
                 activationDurationMs: performance.now() - n
             }));
     } catch (t) {
-        (R.error('failed to set voice filter', t),
-            c.Z.dispatch({
+        (S.error('failed to set voice filter', t),
+            s.Z.dispatch({
                 type: 'VOICE_FILTER_APPLY_FAILED',
                 voiceFilterId: e,
                 error: t
             }));
     }
 }
-async function M(e) {
+async function D(e) {
     if (null == e.getCatalogNonce || null == e.getModuleVersion || null == e.getRequestedModelIds || null == e.setCatalog) throw Error('Voice filters signed catalog is not supported');
     let t = e.getCatalogNonce(),
-        n = await o.tn.get({
-            url: T.ANM.VOICE_FILTERS_CATALOG,
+        n = await i.tn.get({
+            url: y.ANM.VOICE_FILTERS_CATALOG,
             query: {
                 vfm_version: e.getModuleVersion(),
                 models: e.getRequestedModelIds().join(','),
@@ -181,119 +177,103 @@ async function M(e) {
             rejectWithError: !0
         }),
         r = n.text,
-        i = n.body,
-        a = n.headers['x-discord-catalog-signature'];
-    if (null == i.models) throw Error('Voice filters catalog response is empty');
-    if (null == a) throw Error('Voice filters catalog signature is missing');
-    return (await e.setCatalog(r, a), i);
+        a = n.body,
+        o = n.headers['x-discord-catalog-signature'];
+    if (null == a.models) throw Error('Voice filters catalog response is empty');
+    if (null == o) throw Error('Voice filters catalog signature is missing');
+    return (await e.setCatalog(r, o), a);
 }
-async function j(e) {
-    let t = d.default.getToken(),
-        n = _.default.getSuperPropertiesBase64();
-    (i()(null != t, 'Authentication token must be available'), i()(null != n, 'Analytics superProperties must be available'));
-    let r = JSON.parse(await e.fetchCatalog(t, n));
-    if (!r.models) throw Error('Voice filters catalog response is empty');
-    return r;
-}
-async function U(e) {
-    if (!g.ZP.canCheckVoiceFilterFilesExist()) return;
+async function L(e) {
+    if (!p.ZP.canCheckVoiceFilterFilesExist()) return;
     let t = Object.keys(e.models).map((e) => ({
             id: e,
-            fileName: (0, I.i)(e)
+            fileName: (0, b.i)(e)
         })),
-        n = await g.ZP.checkVoiceFilterFilesExist(t),
+        n = await p.ZP.checkVoiceFilterFilesExist(t),
         r = {};
-    for (let { id: e, exists: t } of n) r[e] = { status: t ? O.L.DOWNLOADED : O.L.MISSING };
+    for (let { id: e, exists: t } of n) r[e] = { status: t ? g.L.DOWNLOADED : g.L.MISSING };
     let i = t.map((e) => e.fileName);
-    return ((0, l.dZ)(i) && (await (0, v.A)(i)), r);
+    return ((0, o.dZ)(i) && (await (0, E.A)(i)), r);
 }
-async function G() {
-    if (!y.Z.isNativeModuleLoaded()) return void R.info('Voice Filter catalog refresh ignored, module not loaded.');
-    if (!D)
+async function x() {
+    if (!m.Z.isNativeModuleLoaded()) return void S.info('Voice Filter catalog refresh ignored, module not loaded.');
+    if (!C)
         try {
-            let e;
-            D = !0;
-            let t = g.ZP.getVoiceFilters(),
-                n = null != t.getCatalogNonce && null != t.getModuleVersion && null != t.getRequestedModelIds && null != t.setCatalog;
-            e = (0, b.t)({
-                location: 'refreshVoiceFiltersCatalog',
-                autoTrackExposure: !0,
-                disable: !n
-            })
-                ? await M(t)
-                : await j(t);
-            let r = null == y.Z.getCatalogLastFetchTime() ? await U(e) : void 0;
-            await c.Z.dispatch({
+            C = !0;
+            let e = p.ZP.getVoiceFilters(),
+                t = await D(e),
+                n = null == m.Z.getCatalogLastFetchTime() ? await L(t) : void 0;
+            await s.Z.dispatch({
                 type: 'VOICE_FILTER_CATALOG_FETCH_SUCCESS',
-                catalog: e,
-                initialModelState: r
+                catalog: t,
+                initialModelState: n
             });
         } catch (e) {
-            (R.warn('Failed to refresh voice filters catalog: '.concat(e.message)),
-                _.default.track(T.rMx.VOICE_FILTER_ERROR, {
+            (S.warn('Failed to refresh voice filters catalog: '.concat(e.message)),
+                u.default.track(y.rMx.VOICE_FILTER_ERROR, {
                     error_message: 'Failed to refresh voice filters catalog',
-                    cause: (0, p.X)(e)
+                    cause: (0, d.X)(e)
                 }),
-                m.Z.captureException(e),
-                await c.Z.dispatch({ type: 'VOICE_FILTER_CATALOG_FETCH_FAILED' }));
+                _.Z.captureException(e),
+                await s.Z.dispatch({ type: 'VOICE_FILTER_CATALOG_FETCH_FAILED' }));
         } finally {
-            D = !1;
+            C = !1;
         }
 }
-function B() {
-    c.Z.dispatch({ type: 'VOICE_FILTER_DOWNLOAD_CANCELED' });
+function k() {
+    s.Z.dispatch({ type: 'VOICE_FILTER_DOWNLOAD_CANCELED' });
 }
-async function V() {
-    if (!(y.Z.isNativeModuleLoaded() || y.Z.isNativeModuleLoading()) && !__OVERLAY__) {
-        if (!(0, h.isWindows)() && !(0, h.isMac)())
-            return void c.Z.dispatch({
+async function M() {
+    if (!(m.Z.isNativeModuleLoaded() || m.Z.isNativeModuleLoading()) && !__OVERLAY__) {
+        if (!(0, f.isWindows)() && !(0, f.isMac)())
+            return void s.Z.dispatch({
                 type: 'VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE',
-                state: O.O.UNSUPPORTED
+                state: g.O.UNSUPPORTED
             });
         try {
-            (c.Z.dispatch({
+            (s.Z.dispatch({
                 type: 'VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE',
-                state: O.O.LOADING
+                state: g.O.LOADING
             }),
-                await g.ZP.ensureModule('discord_voice_filters'));
-            let t = g.ZP.getVoiceFilters();
+                await p.ZP.ensureModule('discord_voice_filters'));
+            let t = p.ZP.getVoiceFilters();
             (await t.setupResources(),
-                void 0 !== t.setVoiceFilterLaggingCallback && (await t.setVoiceFilterLaggingCallback(w)),
+                void 0 !== t.setVoiceFilterLaggingCallback && (await t.setVoiceFilterLaggingCallback(N)),
                 void 0 !== t.setVoiceFilterReadyCallback &&
                     (await t.setVoiceFilterReadyCallback((e) => {
-                        c.Z.dispatch({
+                        s.Z.dispatch({
                             type: 'VOICE_FILTER_READY',
                             name: e
                         });
                     })),
-                await c.Z.dispatch({
+                await s.Z.dispatch({
                     type: 'VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE',
-                    state: O.O.LOADED
+                    state: g.O.LOADED
                 }),
-                await G());
-            let n = f.Z.getMostRecentlyRequestedVoiceFilter();
+                await x());
+            let n = c.Z.getMostRecentlyRequestedVoiceFilter();
             if (null != n) {
                 var e;
-                (null == (e = y.Z.getVoiceFilter(n)) ? void 0 : e.available) !== !0 ? (0, E.v6)(null) : (0, E.v6)(n);
+                (null == (e = m.Z.getVoiceFilter(n)) ? void 0 : e.available) !== !0 ? (0, h.v6)(null) : (0, h.v6)(n);
             }
-            f.Z.getMediaEngine().on(s.aB.VoiceFiltersFailed, (e) => {
-                (R.warn('Voice Filters failed in process: '.concat(e)),
-                    _.default.track(T.rMx.VOICE_FILTER_ERROR, {
+            c.Z.getMediaEngine().on(a.aB.VoiceFiltersFailed, (e) => {
+                (S.warn('Voice Filters failed in process: '.concat(e)),
+                    u.default.track(y.rMx.VOICE_FILTER_ERROR, {
                         error_message: 'Voice Filters failed in process',
-                        cause: (0, p.X)(Error(e))
+                        cause: (0, d.X)(Error(e))
                     }),
-                    m.Z.captureException(Error('Voice Filters failed in process', { cause: e })));
+                    _.Z.captureException(Error('Voice Filters failed in process', { cause: e })));
             });
         } catch (e) {
-            (R.warn('Failed to load Voice Filters module: '.concat(e.message)),
-                _.default.track(T.rMx.VOICE_FILTER_ERROR, {
+            (S.warn('Failed to load Voice Filters module: '.concat(e.message)),
+                u.default.track(y.rMx.VOICE_FILTER_ERROR, {
                     error_message: 'Failed to load Voice Filters module',
-                    cause: (0, p.X)(e)
+                    cause: (0, d.X)(e)
                 }),
-                m.Z.captureException(e),
-                c.Z.dispatch({
+                _.Z.captureException(e),
+                s.Z.dispatch({
                     type: 'VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE',
-                    state: O.O.FAILED
+                    state: g.O.FAILED
                 }));
         }
     }

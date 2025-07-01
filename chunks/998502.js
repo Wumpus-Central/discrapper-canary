@@ -16,9 +16,9 @@ var r,
     o,
     s = n(512722),
     l = n.n(s),
-    c = n(259443),
-    u = n(719711),
-    d = n(544891),
+    c = n(719711),
+    u = n(544891),
+    d = n(579092),
     f = n(433517),
     _ = n(593472),
     p = n(189451),
@@ -184,7 +184,7 @@ let z = {
             try {
                 e = this.requireModule('discord_overlay2');
             } catch (e) {}
-            (e && e.reset && e.reset(), e && e.disconnectAllProcesses && e.destroyHostProcess && (e.disconnectAllProcesses(), e.destroyHostProcess()), I.remotePowerMonitor.removeAllListeners(), window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN && !0 !== f.K.get(u.SV) && this.supportsFeature(g.eRX.USER_DATA_CACHE) && I.userDataCache.cacheUserData(f.K.stringify()));
+            (e && e.reset && e.reset(), e && e.disconnectAllProcesses && e.destroyHostProcess && (e.disconnectAllProcesses(), e.destroyHostProcess()), I.remotePowerMonitor.removeAllListeners(), window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN && !0 !== f.K.get(c.SV) && this.supportsFeature(g.eRX.USER_DATA_CACHE) && I.userDataCache.cacheUserData(f.K.stringify()));
         },
         inputEventRegister(e, t, n, r) {
             this.getDiscordUtils().inputEventRegister(
@@ -255,7 +255,7 @@ let z = {
             let e = this.requireModule('discord_voice');
             return (
                 L ||
-                    (0, c.Bl)((t, n, r) => {
+                    (0, d.Bl)((t, n, r) => {
                         e.consoleLog(n, '['.concat(t, '] ').concat(r));
                     }),
                 (L = !0),
@@ -593,7 +593,7 @@ let z = {
             h.isPlatformEmbedded && null != I.remoteApp.relaunch && I.remoteApp.relaunch();
         },
         makeChunkedRequest(e, t, n) {
-            let r = ''.concat((0, d.K0)()).concat(e);
+            let r = ''.concat((0, u.K0)()).concat(e);
             if (!h.isPlatformEmbedded) return Promise.reject(Error('Not embedded!'));
             if (null == I.http) return Promise.reject(Error('HTTP module not available'));
             let {
@@ -612,12 +612,12 @@ let z = {
                 ),
                 c = t;
             'application/json' === l && (c = JSON.stringify(t));
-            let u = (s / 1000) * a,
-                f = Math.ceil(c.length / u),
+            let d = (s / 1000) * a,
+                f = Math.ceil(c.length / d),
                 _ = Array(f);
             for (let e = 0; e < f; e++) {
-                let t = e * u;
-                _[e] = c.substring(t, t + u);
+                let t = e * d;
+                _[e] = c.substring(t, t + d);
             }
             return new Promise((e, t) => {
                 null != I.http &&

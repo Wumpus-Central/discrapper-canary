@@ -386,16 +386,17 @@ class M extends s.Z {
     _getExtraConnectionOptions() {
         return { streamUserId: (0, T.my)(this._streamKey).ownerId };
     }
-    constructor({ sessionId: e, streamKey: t, serverId: n, initialLayout: r, analyticsContext: a, isStreamer: s, parentMediaSessionId: l }) {
-        let c = (0, T.my)(t),
-            { guildId: u, channelId: d } = c;
+    constructor({ sessionId: e, streamKey: t, serverId: n, initialLayout: r, analyticsContext: a, isStreamer: s, parentMediaSessionId: l, channelId: c }) {
+        let u = (0, T.my)(t),
+            { guildId: d, channelId: f } = u;
         (super({
             userId: p.default.getId(),
             sessionId: e,
-            guildId: u,
-            channelId: d,
+            guildId: d,
+            channelId: f,
             context: N.Yn.STREAM,
-            rtcServerId: n,
+            streamServerId: n,
+            streamChannelId: c,
             parentMediaSessionId: l
         }),
             C(this, 'analyticsContext', void 0),
@@ -406,7 +407,7 @@ class M extends s.Z {
             C(this, '_updateVideoStreamId', void 0),
             C(this, '_bandwidthSamples', []),
             C(this, '_goliveCurrentMaxResolution', void 0),
-            (this._streamContext = c),
+            (this._streamContext = u),
             (this._streamKey = t),
             (this._isStreamer = s),
             (this._videoStreamStats = new I.Z(r, this.isOwner)),

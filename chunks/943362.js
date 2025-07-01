@@ -101,7 +101,7 @@ function y(e) {
                         (0, r.jsx)(o.Ujz, {
                             size: 'xs',
                             className: a()(h.icon, p.icon),
-                            color: o.TVs.colors.MENTION_FOREGROUND
+                            color: 'currentColor'
                         }),
                         (0, f.S)(t, i, m)
                     ]

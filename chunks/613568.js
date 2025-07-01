@@ -4,8 +4,8 @@ var r = n(500268),
     a = n.n(i),
     o = n(956067);
 n(17089);
-var s = n(259443),
-    l = n(986529),
+var s = n(986529),
+    l = n(579092),
     c = n(153102),
     u = n(625306),
     d = n(420970);
@@ -23,7 +23,7 @@ function f(e, t, n) {
     );
 }
 let _ = new Set(['APP_STATE_UPDATE', 'CLEAR_CACHES', 'CONNECTION_CLOSED', 'CONNECTION_OPEN', 'CONNECTION_RESUMED', 'LOGIN_SUCCESS', 'LOGIN', 'LOGOUT', 'MESSAGE_SEND_FAILED', 'PUSH_NOTIFICATION_CLICK', 'RESET_SOCKET', 'SESSION_START', 'UPLOAD_FAIL', 'WRITE_CACHES']),
-    p = new s.Yd('Flux'),
+    p = new l.Yd('Flux'),
     h = 100,
     m = 10,
     g = '__subscriptions';
@@ -76,7 +76,7 @@ class E {
         this._dispatchWithLogging(e);
     }
     _dispatchWithLogging(e) {
-        (a()(null == this._currentDispatchActionType, 'Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: '.concat(e.type, ' Already dispatching: ').concat(this._currentDispatchActionType)), a()(e.type, 'Dispatch.dispatch(...) called without an action type'), _.has(e.type) && p.log('Dispatching '.concat(e.type)), (0, l.B1)(e.type), u.IH(e.type));
+        (a()(null == this._currentDispatchActionType, 'Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: '.concat(e.type, ' Already dispatching: ').concat(this._currentDispatchActionType)), a()(e.type, 'Dispatch.dispatch(...) called without an action type'), _.has(e.type) && p.log('Dispatching '.concat(e.type)), (0, s.B1)(e.type), u.IH(e.type));
         let t = this.actionLogger.log(e, (t) => {
             try {
                 ((this._currentDispatchActionType = e.type), this._dispatch(e, t));
@@ -86,7 +86,7 @@ class E {
         });
         t.totalTime > h && p.verbose('Slow dispatch on '.concat(e.type, ': ').concat(t.totalTime, 'ms'));
         try {
-            (0, l.L8)('DISPATCH['.concat(e.type, ']'), e.type);
+            (0, s.L8)('DISPATCH['.concat(e.type, ']'), e.type);
         } catch (e) {}
     }
     _dispatch(e, t) {

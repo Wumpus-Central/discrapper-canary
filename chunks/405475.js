@@ -1,6 +1,6 @@
 (n.d(t, { j: () => c }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(415506), n(49124));
-var r = n(259443),
-    i = n(47770),
+var r = n(47770),
+    i = n(579092),
     a = n(46973),
     o = n(625612),
     s = n(413135).Buffer;
@@ -17,7 +17,7 @@ function l(e, t, n) {
         e
     );
 }
-class c extends i.Z {
+class c extends r.Z {
     createUser(e) {
         (this.recognizedUserIds.add(e), this.setupKeyRatchetForUser(e, this.latestPreparedTransitionVersion, o.Bp.DECRYPT));
     }
@@ -144,10 +144,10 @@ class c extends i.Z {
         (null == this.lastSecureFramesStateUpdate || this.lastSecureFramesStateUpdate.version !== t.version || this.lastSecureFramesStateUpdate.epochAuthenticator !== t.epochAuthenticator) && (this.logger.info('DAVE protocol state update: '.concat(JSON.stringify(t))), this.emit(a.Sh.SecureFramesUpdate, t), (this.lastSecureFramesStateUpdate = t));
     }
     constructor(e, t, n) {
-        (super(), l(this, 'logger', void 0), l(this, 'dave', void 0), l(this, 'transientKeys', void 0), l(this, 'mlsSession', void 0), l(this, 'encryptionWorker', void 0), l(this, 'userId', void 0), l(this, 'currentEncryptorProtocolVersion', 0), l(this, 'recognizedUserIds', new Set()), l(this, 'secureFramesTransitions', new Map()), l(this, 'latestPreparedTransitionVersion', 0), l(this, 'lastSecureFramesStateUpdate', null), (this.logger = new r.Yd('DaveSessionManager')), (this.dave = e), (this.transientKeys = t), (this.userId = n));
-        let i = '',
+        (super(), l(this, 'logger', void 0), l(this, 'dave', void 0), l(this, 'transientKeys', void 0), l(this, 'mlsSession', void 0), l(this, 'encryptionWorker', void 0), l(this, 'userId', void 0), l(this, 'currentEncryptorProtocolVersion', 0), l(this, 'recognizedUserIds', new Set()), l(this, 'secureFramesTransitions', new Map()), l(this, 'latestPreparedTransitionVersion', 0), l(this, 'lastSecureFramesStateUpdate', null), (this.logger = new i.Yd('DaveSessionManager')), (this.dave = e), (this.transientKeys = t), (this.userId = n));
+        let r = '',
             o = '';
-        ((this.mlsSession = new e.Session(i, o, (e, t) => {
+        ((this.mlsSession = new e.Session(r, o, (e, t) => {
             (this.logger.error('[TAG] MLS failure', e, t), this.emit(a.Sh.MLSFailure, e, t));
         })),
             (this.encryptionWorker = this.setupEncryptionWorker()));

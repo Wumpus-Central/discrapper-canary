@@ -593,11 +593,14 @@ class eB extends (r = c.ZP.PersistedStore) {
     get emojiReactionFrecencyWithoutFetchingLatest() {
         return ep;
     }
+    getGuildEmojiOrUndefined(e) {
+        ec();
+        let t = null == e ? void 0 : en[e];
+        return null == t ? void 0 : t.emojis;
+    }
     getGuildEmoji(e) {
         var t;
-        ec();
-        let n = en[e];
-        return null != (t = null == n ? void 0 : n.emojis) ? t : [];
+        return null != (t = this.getGuildEmojiOrUndefined(e)) ? t : [];
     }
     getUsableGuildEmoji(e) {
         var t;

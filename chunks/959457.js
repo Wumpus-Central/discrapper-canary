@@ -38,15 +38,16 @@ let I = {},
     N = {},
     C = O.hVg.THEATRE,
     R = {};
-function P(e, t, n) {
+function P(e, t, n, i) {
     return (
         o()(null != r, 'Creating RTCConnection without session.'),
         new f.Z({
             sessionId: r,
             streamKey: e,
             serverId: t,
+            channelId: n,
             initialLayout: C,
-            analyticsContext: n,
+            analyticsContext: i,
             isStreamer: null != T[e],
             parentMediaSessionId: y.Z.getMediaSessionId()
         })
@@ -104,25 +105,25 @@ function k(e) {
         delete N[n]);
 }
 function M(e) {
-    let { streamKey: t, rtcServerId: n, region: r, viewerIds: i } = e,
-        a = R[t];
-    if (null == a && null != n) {
+    let { streamKey: t, rtcServerId: n, rtcChannelId: r, region: i, viewerIds: a } = e,
+        o = R[t];
+    if (null == o && null != n) {
         null == S[t] && (T[t] = null);
         let e = (0, _.my)(t);
         null == T[t] && null == A[t] && (T[t] = (0, p.L2)(e, b.Z));
-        let o = new f.A({
-            streamRegion: r,
+        let s = new f.A({
+            streamRegion: i,
             streamApplication: T[t],
             streamSourceType: W(A[t]),
             actionContext: I[t],
-            numViewers: null != i ? i.length : 0,
+            numViewers: null != a ? a.length : 0,
             goLiveModalDurationMs: N[t]
         });
-        ((a = P(t, n, o)), (R[t] = a));
+        ((o = P(t, n, r, s)), (R[t] = o));
     }
     u.Z.dispatch({
         type: 'MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET',
-        mediaEngineConnectionId: a.getMediaEngineConnectionId()
+        mediaEngineConnectionId: o.getMediaEngineConnectionId()
     });
 }
 function j(e) {
