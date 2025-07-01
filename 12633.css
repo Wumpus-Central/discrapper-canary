@@ -20450,7 +20450,10 @@ span.clanTag__5d473 {
 }
 
 .avatarWithBackground__183c2 {
-    background-color: var(--background-mod-strong);
+    align-items: center;
+    background-color: var(--opacity-black-52);
+    display: flex;
+    justify-content: center;
     position: relative
 }
 
